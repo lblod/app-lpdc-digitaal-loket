@@ -1,33 +1,273 @@
-version: '3.4'
+version: "3.7"
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
 
 services:
   identifier:
-    image: semtech/mu-identifier:1.9.1
-    environment:
-      SESSION_COOKIE_SECURE: "on"
-    links:
-      - dispatcher:dispatcher
-    ports:
-      - "80:80"
+    image: semtech/mu-identifier:1.10.0
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
   dispatcher:
-    image: semtech/mu-dispatcher:2.0.0
-    links:
-      - resource:resource
+    image: semtech/mu-dispatcher:2.1.0-beta.2
     volumes:
       - ./config/dispatcher:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3
+    volumes:
+      - ./config/delta:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
   database:
-    image: redpencil/virtuoso:1.0.0
+    image: semtech/mu-authorization:feature-service-roam-r1
+    environment:
+      MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
+      DATABASE_OVERLOAD_RECOVERY: "true"
+      # Note: not sure whether it gets picked up properly; it is meant for healing-process which may make
+      # heavy queries
+      QUERY_MAX_PROCESSING_TIME: 605000
+      QUERY_MAX_EXECUTION_TIME: 605000
+    volumes:
+      - ./config/authorization:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  virtuoso:
+    image: redpencil/virtuoso:1.1.0 # A new version has been released, but has not been tagged yet
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
-    ports:
-      - "8890:8890"
     volumes:
       - ./data/db:/data
-      - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
-  resource:
-    image: semtech/mu-cl-resources:1.20.0
+      - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini # Note: Override this setting on production
+      - ./config/virtuoso/:/opt/virtuoso-scripts
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0
     links:
-      - database:database
+      - virtuoso:database
+    environment:
+      MU_SPARQL_TIMEOUT: "300"
+    volumes:
+      - ./config/migrations:/data/migrations
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  cache:
+    image: semtech/mu-cache:2.0.2
+    links:
+      - resource:backend
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  resource:
+    image: semtech/mu-cl-resources:1.21.1
+    environment:
+      CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
     volumes:
       - ./config/resources:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  login:
+    image: lblod/acmidm-login-service:0.9.2
+    environment:
+      MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
+      MU_APPLICATION_AUTH_CLIENT_ID: "a2c0d6ea-01b4-4f68-920b-10834a943c27"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "https://loket.lblod.info/authorization/callback"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
+      LOG_SINK_URL: "http://sink"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  validation:
+    image: semtech/mu-validation-service:0.3.0
+    volumes:
+      - ./config/validations:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  file:
+    image: cecemel/file-service:3.3.0
+    volumes:
+      - ./data/files:/share
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  dbcleanup:
+    image: lblod/db-cleanup-service:0.3.0
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  filehost:
+    image: nginx:1.25.1
+    volumes:
+      - ./config/filehost/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/filehost/conf.d:/etc/nginx/conf.d
+      - ./data/files:/data:ro
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  sink:
+    image: nginx:1.25.1
+    volumes:
+      - ./config/sink/sink.conf:/etc/nginx/conf.d/default.conf
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  download-url:
+    image: lblod/download-url-service:1.0.3
+    environment:
+      CACHING_MAX_RETRIES: "10"
+    volumes:
+      - ./data/files:/share
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  jobs-controller:
+    image: lblod/job-controller-service:0.7.0
+    volumes:
+      - ./config/jobs-controller/:/config/
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  update-bestuurseenheid-mock-login:
+    image: lblod/update-bestuurseenheid-mock-login-service:0.1.2
+    volumes:
+      - ./config/mock-login:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  
+  ##############################################################################
+  # Vendor endpoint
+  ##############################################################################
+  vendor-login:
+    image: lblod/vendor-login-service:1.0.0
+    restart: always
+    logging: *default-logging
+  sparql-authorization-wrapper:
+    image: lblod/sparql-authorization-wrapper-service:1.0.0
+    volumes:
+      - ./config/sparql-authorization-wrapper:/config
+    restart: always
+    logging: *default-logging
+  vendor-data-distribution:
+    image: lblod/vendor-data-distribution-service:1.0.1-rc1
+    restart: always
+    logging: *default-logging
+  
+  ################################################################################
+  # DELTA GENERAL
+  ################################################################################
+  publication-triplestore:
+    image: redpencil/virtuoso:1.1.0 # A new version has been released, but has not been tagged yet
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "http://mu.semte.ch/application"
+    volumes:
+      - ./data/publication-triplestore:/data
+      - ./config/publication-triple-store/virtuoso.ini:/data/virtuoso.ini
+      - ./config/publication-triple-store/:/opt/virtuoso-scripts
+    restart: always
+    logging: *default-logging
+  delta-producer-report-generator:
+    image: lblod/delta-producer-report-generator:0.4.0
+    volumes:
+      - ./config/delta-producer/report-generator:/config
+    environment:
+      EMAIL_FROM: "noreply@lblod.info"
+      EMAIL_TO: "support+lblod@redpencil.io"
+      APP_NAME: "app-digitaal-loket-dev"
+      OUTBOX: "http://data.lblod.info/id/mail-folders/2"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  delta-producer-dump-file-publisher:
+    image: lblod/delta-producer-dump-file-publisher:0.9.1
+    volumes:
+      - ./config/delta-producer/dump-file-publisher:/config
+      - ./data/files:/share
+    # Disable temporarily to not saturate app-http-logger (should be fixed in a next version)
+    #    labels:
+    #      - "logging=true"
+    restart: always
+    logging: *default-logging
+  delta-files-share:
+    image: redpencil/file-share-sync:0.0.5
+    volumes:
+      - ./data/files:/share
+    environment:
+      ALLOW_SUPER_CONSUMER: "true"
+      ALLOWED_ACCOUNTS: "http://services.lblod.info/diff-consumer/account,http://data.lblod.info/foaf/account/id/dd85f516-ee7c-406b-8245-91ce7f9545b7"
+    restart: always
+    logging: *default-logging
+
+  ################################################################################
+  # DELTA CONSUMERS
+  ################################################################################
+  
+  ################################################################################
+  # OP PUBLIC CONSUMER
+  ################################################################################
+  reasoner:
+    image: eyereasoner/reasoning-service:increased-stack-limit
+    volumes:
+      - ./config/reasoner:/config
+    restart: always
+    labels:
+      - "logging=true"
+    logging: *default-logging
+  op-public-consumer:
+    image: lblod/delta-consumer:0.0.18
+    environment:
+      DCR_SERVICE_NAME: "op-public-consumer"
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # replace with link to OP API
+      DCR_SYNC_DATASET_SUBJECT: "http://data.lblod.info/datasets/delta-producer/dumps/PublicCacheGraphDump"
+      DCR_INITIAL_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/consumer/initialSync/op-public"
+      DCR_DELTA_SYNC_JOB_OPERATION: "http://redpencil.data.gift/id/jobs/concept/JobOperation/deltas/consumer/deltaSync/op-public"
+      DCR_JOB_CREATOR_URI: "http://data.lblod.info/services/id/op-public-consumer"
+      DCR_DISABLE_INITIAL_SYNC: "true"
+      BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: "true"
+      BATCH_SIZE: 1000
+      DCR_SYNC_FILES_PATH: "/sync/public/files"
+      FILE_SYNC_GRAPH: "http://mu.semte.ch/graphs/temp/original-physical-files-data"
+      KEEP_DELTA_FILES: "true"
+      DCR_ENABLE_DELTA_CONTEXT: "true"
+      DCR_LANDING_ZONE_DATABASE: "publication-triplestore"
+      DCR_LANDING_ZONE_GRAPH: "http://mu.semte.ch/graphs/landing-zone/op-public"
+    volumes:
+      - ./config/op-consumer/public:/config/triples-dispatching/custom-dispatching
+      - ./data/files/consumer-files/op-public:/consumer-files/
+    restart: always
+    labels:
+      - "logging=true"
+    logging: *default-logging
