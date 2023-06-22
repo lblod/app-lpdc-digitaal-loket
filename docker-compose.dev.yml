@@ -1,0 +1,72 @@
+version: '3.7'
+
+services:
+  proxy:
+    image: nginx:1.25.1
+    volumes:
+      - ./config/proxy:/etc/nginx/conf.d
+    ports:
+      - "443:443"
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0
+  identifier:
+    ports:
+      - "90:80"
+    restart: "no"
+  dispatcher:
+    restart: "no"
+  database:
+    restart: "no"
+  virtuoso:
+    ports:
+      - "8890:8890"
+    restart: "no"
+  deltanotifier:
+    restart: "no"
+  migrations:
+    restart: "no"
+  cache:
+    restart: "no"
+  resource:
+    restart: "no"
+  validation:
+    entrypoint: ["echo", "Service disabled"] # Note: this probably go in the future
+    restart: "no"
+  file:
+    restart: "no"
+  dbcleanup:
+    restart: "no"
+  filehost:
+    restart: "no"
+  sink:
+    restart: "no"
+  download-url:
+    restart: "no"
+  publication-triplestore:
+    restart: "no"
+    ports:
+      - "8891:8890"
+  delta-producer-report-generator:
+    restart: "no"
+  delta-producer-dump-file-publisher:
+    restart: "no"
+  delta-producer-publication-graph-maintainer-leidinggevenden:
+    restart: "no"
+  delta-producer-publication-graph-maintainer-mandatarissen:
+    restart: "no"
+  delta-producer-publication-graph-maintainer-submissions:
+    restart: "no"
+  delta-producer-publication-graph-maintainer-ws-sensitive:
+    restart: "no"
+  update-bestuurseenheid-mock-login:
+    restart: "no"
+  reasoner:
+    restart: "no"
+  op-public-consumer:
+    restart: "no"
+  vendor-login:
+    restart: "no"
+  sparql-authorization-wrapper:
+    restart: "no"
+  vendor-data-distribution:
+    restart: "no"
