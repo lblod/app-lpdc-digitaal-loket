@@ -32,41 +32,19 @@ services:
   validation:
     entrypoint: ["echo", "Service disabled"] # Note: this probably go in the future
     restart: "no"
-  file:
-    restart: "no"
   dbcleanup:
     restart: "no"
   filehost:
     restart: "no"
   sink:
     restart: "no"
-  download-url:
-    restart: "no"
   publication-triplestore:
     restart: "no"
     ports:
       - "8891:8890"
-  delta-producer-report-generator:
-    restart: "no"
-  delta-producer-dump-file-publisher:
-    restart: "no"
-  delta-producer-publication-graph-maintainer-leidinggevenden:
-    restart: "no"
-  delta-producer-publication-graph-maintainer-mandatarissen:
-    restart: "no"
-  delta-producer-publication-graph-maintainer-submissions:
-    restart: "no"
-  delta-producer-publication-graph-maintainer-ws-sensitive:
-    restart: "no"
   update-bestuurseenheid-mock-login:
     restart: "no"
   reasoner:
     restart: "no"
   op-public-consumer:
-    restart: "no"
-  vendor-login:
-    restart: "no"
-  sparql-authorization-wrapper:
-    restart: "no"
-  vendor-data-distribution:
     restart: "no"

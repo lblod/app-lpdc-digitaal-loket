@@ -139,48 +139,12 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-  download-url:
-    image: lblod/download-url-service:1.0.3
-    environment:
-      CACHING_MAX_RETRIES: "10"
-    volumes:
-      - ./data/files:/share
-    labels:
-      - "logging=true"
-    restart: always
-    logging: *default-logging
-  jobs-controller:
-    image: lblod/job-controller-service:0.7.0
-    volumes:
-      - ./config/jobs-controller/:/config/
-    labels:
-      - "logging=true"
-    restart: always
-    logging: *default-logging
   update-bestuurseenheid-mock-login:
     image: lblod/update-bestuurseenheid-mock-login-service:0.1.2
     volumes:
       - ./config/mock-login:/config
     labels:
       - "logging=true"
-    restart: always
-    logging: *default-logging
-  
-  ##############################################################################
-  # Vendor endpoint
-  ##############################################################################
-  vendor-login:
-    image: lblod/vendor-login-service:1.0.0
-    restart: always
-    logging: *default-logging
-  sparql-authorization-wrapper:
-    image: lblod/sparql-authorization-wrapper-service:1.0.0
-    volumes:
-      - ./config/sparql-authorization-wrapper:/config
-    restart: always
-    logging: *default-logging
-  vendor-data-distribution:
-    image: lblod/vendor-data-distribution-service:1.0.1-rc1
     restart: always
     logging: *default-logging
   
