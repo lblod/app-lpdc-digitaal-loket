@@ -1,0 +1,15 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+INSERT {
+  GRAPH ?g {
+    ?person ?p_person ?o_person .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/temp> {
+    ?person a foaf:Person ;
+      ?p_person ?o_person ;
+      ext:wasInGraph ?g .
+  }
+}
