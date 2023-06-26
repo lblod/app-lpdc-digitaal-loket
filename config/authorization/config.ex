@@ -165,6 +165,7 @@ defmodule Acl.UserGroups.Config do
                         "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder" #TODO: not sure why this is here
                       ]
                     } } ] },
+
       # // LPDC-IPDC
       %GroupSpec{
         name: "o-ipdc-lpdc-rwf",
@@ -194,6 +195,7 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/ns/locn#Address",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration"
                         ] } } ] },
+
       # // ORGANIZATION HAS POSSIBLY DUPLICATE USER DATA
       %GroupSpec{
         name: "org",

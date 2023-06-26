@@ -1,0 +1,15 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+INSERT {
+  GRAPH ?g {
+    ?account ?p_account ?o_account .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/temp> {
+    ?account a foaf:OnlineAccount ;
+      ?p_account ?o_account ;
+      ext:wasInGraph ?g .
+  }
+}
