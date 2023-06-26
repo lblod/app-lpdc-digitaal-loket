@@ -5,6 +5,14 @@
 ;; ORDER REALLY MATTERS FOR NOW!
 
 ;;"RESHUFFLED" from slave-besluit.lisp
+(define-resource bestuurseenheid-classificatie-code ()
+  :class (s-prefix "ext:BestuurseenheidClassificatieCode")
+  :properties `((:label :string ,(s-prefix "skos:prefLabel"))
+                (:scope-note :string ,(s-prefix "skos:scopeNote")))
+  :resource-base (s-url "http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/")
+  :features '(include-uri)
+  :on-path "bestuurseenheid-classificatie-codes")
+
 (define-resource bestuurseenheid () ;; Subclass of m8g:PublicOrganisation, which is a subclass of dct:Agent
   :class (s-prefix "besluit:Bestuurseenheid")
   :properties `((:naam :string ,(s-prefix "skos:prefLabel"))
