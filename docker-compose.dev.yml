@@ -38,6 +38,10 @@ services:
   #   restart: "no"
   sink:
     restart: "no"
+
+  lpdc-management:
+    restart: "no"
+
   publication-triplestore:
     restart: "no"
     ports:
