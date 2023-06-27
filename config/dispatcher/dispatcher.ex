@@ -36,6 +36,17 @@ defmodule Dispatcher do
   end
 
   #################################################################
+  # Concepts and Concept Schemes
+  #################################################################
+  get "/concept-schemes/*path" do
+    forward conn, path, "http://cache/concept-schemes/"
+  end
+
+  get "/concepts/*path" do
+    forward conn, path, "http://cache/concepts/"
+  end
+
+  #################################################################
   # Public Services - LPDC-IPDC: custom API endpoints
   #################################################################
   get "/lpdc-management/*path" do
