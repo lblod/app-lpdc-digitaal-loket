@@ -149,6 +149,17 @@ services:
   #   logging: *default-logging
   
   ################################################################################
+  # LPDC
+  ################################################################################
+  lpdc-management:
+    image: lblod/lpdc-management-service:0.24.0
+    volumes:
+      - ./config/lpdc-management:/config
+      - ./data/files/lpdc:/data
+    labels:
+      - "logging=true"
+
+  ################################################################################
   # DELTA GENERAL
   ################################################################################
   publication-triplestore:
