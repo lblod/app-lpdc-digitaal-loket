@@ -45,7 +45,7 @@ services:
     restart: always
     logging: *default-logging
   virtuoso:
-    image: redpencil/virtuoso:1.1.0 # A new version has been released, but has not been tagged yet
+    image: redpencil/virtuoso:1.0.0 # A new version has been released, but has not been tagged yet
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
@@ -163,7 +163,7 @@ services:
   # DELTA GENERAL
   ################################################################################
   publication-triplestore:
-    image: redpencil/virtuoso:1.1.0 # A new version has been released, but has not been tagged yet
+    image: redpencil/virtuoso:1.0.0 # A new version has been released, but has not been tagged yet
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
