@@ -19,9 +19,7 @@ dvc:Burger
   a                 skos:Concept ;
   mu:uuid           "243480bf-c2f2-4200-8d76-58b779e39904" ;
   skos:prefLabel    "Burger"@nl ;
-  skos:prefLabel    "Citizen"@en ;
   skos:definition   "Doelgroep burgers"@nl ;
-  skos:definition   "Target audience citizens"@en ;
   skos:inScheme     dvcs:Doelgroep ;
   skos:topConceptOf dvcs:Doelgroep .
 
@@ -29,9 +27,7 @@ dvc:Onderneming
   a                 skos:Concept ;
   mu:uuid           "bcad861a-f971-4363-adc3-3811bf327f95" ;
   skos:prefLabel    "Onderneming"@nl ;
-  skos:prefLabel    "Company"@en ;
   skos:definition   "Doelgroep onderemingen"@nl ;
-  skos:definition   "Target audience companies"@en ;
   skos:inScheme     dvcs:Doelgroep ;
   skos:topConceptOf dvcs:Doelgroep .
 
@@ -39,9 +35,7 @@ dvc:Organisatie
     a                 skos:Concept ;
     mu:uuid           "98183fca-45dd-4141-a191-9a2cbdba85cb" ;
     skos:prefLabel    "Organisatie"@nl ;
-    skos:prefLabel    "Organisation"@en ;
     skos:definition   "Doelgroep organisaties"@nl ;
-    skos:definition   "Target audience organisation"@en ;
     skos:inScheme     dvcs:Doelgroep ;
     skos:topConceptOf dvcs:Doelgroep .
 
@@ -49,9 +43,7 @@ dvc:Vereniging
   a                 skos:Concept ;
   mu:uuid           "bd1e7ba5-4b12-4cb5-a303-687277897ace" ;
   skos:prefLabel    "Vereniging"@nl ;
-  skos:prefLabel    "Association"@en ;
   skos:definition   "Doelgroep verenigingen"@nl ;
-  skos:definition   "Target audience association"@en ;
   skos:inScheme     dvcs:Doelgroep ;
   skos:topConceptOf dvcs:Doelgroep .
 

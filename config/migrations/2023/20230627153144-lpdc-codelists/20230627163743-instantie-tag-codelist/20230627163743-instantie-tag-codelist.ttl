@@ -7,6 +7,4 @@ dvcs:InstantieTag
   a               skos:ConceptScheme ;
   mu:uuid         "577824d0-0e66-44ef-a384-63b0bf8f849f" ;
   skos:prefLabel  "Instantie tag"@nl ;
-  skos:prefLabel  "Instance tag"@en ;
-  skos:definition "Instantie tag voor een publieke dienst"@nl ;
-  skos:definition "Instance tag of a public service"@en .
+  skos:definition "Instantie tag voor een publieke dienst"@nl .
