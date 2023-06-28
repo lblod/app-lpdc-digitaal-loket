@@ -10,9 +10,7 @@ dvcs:PublicatieKanaal
   skos:prefLabel      "Publication medium"@en ;
   skos:definition     "Publicatiekanaal van een publieke dienst beschrijft op welke plaaten de dienst zichtbaar zal zijn"@nl ;
   skos:definition     "Publication medium of a public service describes on wich sites the service is visible"@en ;
-  skos:hasTopConcept  dvc:YourEurope ;
-  skos:hasTopConcept  dvc:Rechtenverkenner ;
-  skos:hasTopConcept  dvc:VLoket .
+  skos:hasTopConcept  dvc:YourEurope .
 
 dvc:YourEurope
   a                 skos:Concept ;
@@ -21,25 +19,5 @@ dvc:YourEurope
   skos:prefLabel    "Your Europe"@en ;
   skos:definition   "Publicatiekanaal: Your Europe"@nl ;
   skos:definition   "Publication medium: Your Europe"@en ;
-  skos:inScheme     dvcs:PublicatieKanaal ;
-  skos:topConceptOf dvcs:PublicatieKanaal .
-
-dvc:Rechtenverkenner
-  a                 skos:Concept ;
-  mu:uuid           "79bf2b83-f087-4a87-86dd-e962dbca16e4" ;
-  skos:prefLabel    "Rechtenverkenner"@nl ;
-  skos:prefLabel    "Rechtenverkenner"@en ;
-  skos:definition   "Publicatiekanaal: Rechtenverkenner"@nl ;
-  skos:definition   "Publication medium: Rechtenverkenner"@en ;
-  skos:inScheme     dvcs:PublicatieKanaal ;
-  skos:topConceptOf dvcs:PublicatieKanaal .
-
-dvc:VLoket
-  a                 skos:Concept ;
-  mu:uuid           "74016a22-e2aa-41da-9313-798a8129d010" ;
-  skos:prefLabel    "V-loket"@nl ;
-  skos:prefLabel    "V-loket"@en ;
-  skos:definition   "Publicatiekanaal: V-loket"@nl ;
-  skos:definition   "Publication medium: V-loket"@en ;
   skos:inScheme     dvcs:PublicatieKanaal ;
   skos:topConceptOf dvcs:PublicatieKanaal .
