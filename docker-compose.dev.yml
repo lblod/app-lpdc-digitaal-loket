@@ -41,6 +41,8 @@ services:
 
   lpdc-management:
     restart: "no"
+  lpdc-publish:
+    restart: "no"
 
   publication-triplestore:
     restart: "no"
