@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3.7"
 
 services:
   proxy:
@@ -29,14 +29,11 @@ services:
     restart: "no"
   resource:
     restart: "no"
-  # validation:
-  #   entrypoint: ["echo", "Service disabled"] # Note: this probably go in the future
-  #   restart: "no"
   dbcleanup:
     restart: "no"
-  # filehost:
-  #   restart: "no"
   sink:
+    restart: "no"
+  update-bestuurseenheid-mock-login:
     restart: "no"
 
   ################################################################################
@@ -60,9 +57,4 @@ services:
     restart: "no"
     ports:
       - "8891:8890"
-  # update-bestuurseenheid-mock-login:
-  #   restart: "no"
-  # reasoner:
-  #   restart: "no"
-  # op-public-consumer:
-  #   restart: "no"
+  
