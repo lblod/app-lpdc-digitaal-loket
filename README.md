@@ -37,14 +37,14 @@ First install `git-lfs` (see <https://github.com/git-lfs/git-lfs/wiki/Installati
   cd app-lpdc-digitaal-loket
 ```
 
-To ease all typing for `docker-compose` commands, start by creating the following files in the directory of the project.
-A `docker-compose.override.yml` file with following content:
+To ease all typing for `docker compose` commands, start by creating the following files in the directory of the project:
+* A `docker-compose.override.yml` file with following content:
 
 ```
 version: "3.7"
 ```
 
-And an `.env` file with following content:
+* And an `.env` file with following content:
 
 ```
 COMPOSE_FILE=docker-compose.yml:docker-compose.dev.yml:docker-compose.override.yml
@@ -56,7 +56,7 @@ This is an optional step. If you trust your machine is powerful enough, you can 
 First start virtuoso and let it setup itself:
 
 ```
-docker-compose up virtuoso (# or docker compose up virtuoso if you have the new docker engine installed)
+docker compose up virtuoso
 ```
 
 Wait for the following logs:
@@ -66,13 +66,13 @@ HTTP/WebDAV server online at 8890
 Server online at 1111 (pid 1)
 ```
 
-Stop the service, usually through `ctrl+c` and run the migrations:
+Stop the service, usually through `ctrl+c` and then run the migrations service:
 
 ```
-docker-compose up migrations
+docker compose up migrations
 ```
 
-This will take a while; you may choose to monitor the migrations service in a separate terminal to and wait for the overview of all migrations to appear: `docker-compose logs -f --tail=100 migrations`. When finished, it should look similar to this:
+This will take a while; you may choose to monitor the migrations service in a separate terminal to and wait for the overview of all migrations to appear: `docker compose logs -f --tail=200 migrations`. When finished, it should look similar to this:
 
 ```
 [2023-04-07 20:13:15] INFO  WEBrick 1.4.2
@@ -86,17 +86,17 @@ This will take a while; you may choose to monitor the migrations service in a se
 This should be your go-to way of starting the stack:
 
 ```
-docker-compose up # or 'docker-compose up -d' if you want to run it in the background
+docker compose up # or "docker compose up -d" if you want to run it in the background
 ```
 
-Always double check the status of the migrations `docker-compose logs -f --tail=100 migrations` and wait for everything to boot to ensure clean caches.
+Always double check the status of the migrations `docker compose logs -f --tail=200 migrations` and wait for everything to boot to ensure clean caches.
 
 Once the migrations have run, you can start developing your application by connecting the ember frontend application to this backend. See <https://github.com/lblod/frontend-lpdc> for more information on development with the ember application.
 
 #### Running the regular setup
 
 ```
-docker-compose up -d
+docker compose up -d
 ```
 
 The stack is built starting from [mu-project](https://github.com/mu-semtech/mu-project).
@@ -136,15 +136,15 @@ For the dev setup, we assume you'll pull more often and will most likely clear t
 # This assumes the .env file has been set
 
 # Bring the application down
-docker-compose down
+docker compose down
 
 # Pull in the changes
 git pull
 
 # Launch the stack
-docker-compose up -d
+docker compose up -d
 ```
-As with the initial setup, we wait for everything to boot to ensure clean caches.  You may choose to monitor the migrations service in a separate terminal to and wait for the overview of all migrations to appear: `docker-compose logs -f --tail=100 migrations`.
+As with the initial setup, we wait for everything to boot to ensure clean caches.  You may choose to monitor the migrations service in a separate terminal to and wait for the overview of all migrations to appear: `docker compose logs -f --tail=200 migrations`.
 
 Once the migrations have run, you can go on with your current setup.
 
@@ -160,15 +160,16 @@ At some point, you may want to clean the database and make sure it's in a pristi
 # This assumes the .env file has been set
 
 # Bring down our current setup
-docker-compose down
+docker compose down
 
 # Keep only required database files
 rm -Rf data/db
 git checkout data/db
 
 # Bring the stack back up
-docker-compose up -d
+docker compose up -d
 ```
 
 Notes:
   - Virtuoso can take a while to execute its first run; the database will be inaccessible in the meantime. Make sure to also wait for the migrations to run.
+  - `docker compose` (bundled with the new docker engine) is used in the README instead of the old `docker-compose` command.
