@@ -34,7 +34,7 @@ services:
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_OVERLOAD_RECOVERY: "true"
-      DATABASE_COMPATIBILITY: "Virtuoso"
+      # DATABASE_COMPATIBILITY: "Virtuoso"
       # Note: not sure whether it gets picked up properly; it is meant for healing-process which may make
       # heavy queries
       QUERY_MAX_PROCESSING_TIME: 605000
@@ -46,7 +46,7 @@ services:
     restart: always
     logging: *default-logging
   virtuoso:
-    image: redpencil/virtuoso:1.0.0 # A new version has been released, but has not been tagged yet
+    image: redpencil/virtuoso:latest # Using latest until a new tag is released
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
@@ -172,7 +172,7 @@ services:
   # DELTA GENERAL
   ################################################################################
   publication-triplestore:
-    image: redpencil/virtuoso:1.0.0 # A new version has been released, but has not been tagged yet
+    image: redpencil/virtuoso:latest # Using latest until a new tag is released
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
