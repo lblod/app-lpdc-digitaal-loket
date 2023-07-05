@@ -93,6 +93,16 @@ Always double check the status of the migrations `docker compose logs -f --tail=
 
 Once the migrations have run, you can start developing your application by connecting the ember frontend application to this backend. See <https://github.com/lblod/frontend-lpdc> for more information on development with the ember application.
 
+In case your work only involves changes in the backend, you can use the included `frontend-lpdc` image in order to interface with the frontend without having to run it separately on your local machine; you can do so by adding the following to your `docker-compose.override.yml` file:
+
+```
+lpdc:
+  ports:
+    - 4205:80
+```
+
+You can then access the frontend by going to `http://localhost:4205/mock-login` (4205 can be changed to any other unused port on your system).
+
 #### Running the regular setup
 
 ```

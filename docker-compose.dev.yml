@@ -1,6 +1,8 @@
 version: "3.7"
 
 services:
+  lpdc:
+    restart: "no"
   proxy:
     image: nginx:1.25.1
     volumes:
