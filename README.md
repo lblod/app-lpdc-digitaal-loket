@@ -19,7 +19,7 @@ General information on running and maintaining an installation
 
 ### Running your setup
 
-#### System requirments
+#### System requirements
 
 You'll need a beefy machine, with at least 16 GB of RAM.
 
@@ -132,7 +132,7 @@ If files need to be shared over deltas (attachments, form-data, cached-files), y
     KEY: "foo-bar
 ```
 
-This will need to be set in the consuming stack too. See [delta-producer-publication-graph-maintainer](https://github.com/lblod/delta-producer-publication-graph-maintainer) for more informmation on the implications.
+This will need to be set in the consuming stack too. See [delta-producer-publication-graph-maintainer](https://github.com/lblod/delta-producer-publication-graph-maintainer) for more information on the implications.
 
 ### Upgrading your setup
 
