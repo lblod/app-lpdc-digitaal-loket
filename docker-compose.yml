@@ -108,20 +108,6 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-  file:
-    image: cecemel/file-service:3.3.0
-    volumes:
-      - ./data/files:/share
-    labels:
-      - "logging=true"
-    restart: always
-    logging: *default-logging
-  dbcleanup:
-    image: lblod/db-cleanup-service:0.3.0
-    labels:
-      - "logging=true"
-    restart: always
-    logging: *default-logging
   sink:
     image: nginx:1.25.1
     volumes:
@@ -140,7 +126,7 @@ services:
     logging: *default-logging
   
   ################################################################################
-  # LPDC
+  # LPDC-specific Services
   ################################################################################
   lpdc-management:
     image: lblod/lpdc-management-service:0.24.1
@@ -173,20 +159,5 @@ services:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/ldes-data"
     labels:
       - "logging=true"
-    restart: always
-    logging: *default-logging
-
-  ################################################################################
-  # DELTA GENERAL
-  ################################################################################
-  publication-triplestore:
-    image: redpencil/virtuoso:latest # Using latest until a new tag is released
-    environment:
-      SPARQL_UPDATE: "true"
-      DEFAULT_GRAPH: "http://mu.semte.ch/application"
-    volumes:
-      - ./data/publication-triplestore:/data
-      - ./config/publication-triple-store/virtuoso.ini:/data/virtuoso.ini
-      - ./config/publication-triple-store/:/opt/virtuoso-scripts
     restart: always
     logging: *default-logging
