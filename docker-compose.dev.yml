@@ -27,8 +27,6 @@ services:
     restart: "no"
   sink:
     restart: "no"
-  update-bestuurseenheid-mock-login:
-    restart: "no"
 
   ################################################################################
   # LPDC-related Services
