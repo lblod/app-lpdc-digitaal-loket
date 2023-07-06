@@ -113,27 +113,6 @@ The stack is built starting from [mu-project](https://github.com/mu-semtech/mu-p
 
 OpenAPI documentation can be generated using [cl-resources-openapi-generator](https://github.com/mu-semtech/cl-resources-openapi-generator).
 
-##### Deltas producer: extra considerations
-
-###### Separate publication-triplestore
-
-Due to performance issues, related to high usage, a separate triplestore (virtuoso) has been introduced to offload the publication of the data.
-This architectural change is currently under evaluation; the criteria for evaluation will be: the performance win vs the practical consequences of such change.
-
-As a consequence, producers using the separate triplestore will also publish and host the json-diff files, mainly to simplify the transition to a separate publication triple-store (else we would need a separate mu-auth and delta-notifier). In essence, it takes over https://github.com/lblod/delta-producer-json-diff-file-publisher, although both can still be combined.
-
-###### Sharing of attachments and other file data
- 
-If files need to be shared over deltas (attachments, form-data, cached-files), you will need to set in a docker-compose.override.yml:
-
-```
-#(...)
-  delta-producer-publication-graph-maintainer-submissions:
-    KEY: "foo-bar
-```
-
-This will need to be set in the consuming stack too. See [delta-producer-publication-graph-maintainer](https://github.com/lblod/delta-producer-publication-graph-maintainer) for more information on the implications.
-
 ### Upgrading your setup
 
 Once installed, you may desire to upgrade your current setup to follow development of the main stack. The following example describes how to do this easily for both the demo setup, as well as for the development one.
