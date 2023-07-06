@@ -1,16 +1,16 @@
 # LPDC - Digitaal loket
 
-The LPDC application is built on the application profile defined in:
+The LPDC application is built on the data model defined in:
 * https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/
 
 ## What's included?
 
-This repository has two setups. The base of these setups resides in the standard *docker-compose.yml* file.
+This repository has two setups:
 
-* *docker-compose.yml*: This provides you with the backend components. There is an included frontend application which you can publish using a separate proxy (we tend to put a letsencrypt proxy in front).
+* *docker-compose.yml*: This provides you with the backend components; there is an included frontend application which you can publish using a separate proxy (we tend to put a letsencrypt proxy in front).
 * *docker-compose.dev.yml*: Provides changes for a good frontend development setup.
   - publishes the backend services on port 90 directly, so you can run `ember serve --proxy http://localhost:90/` when developing the frontend apps natively.
-  - publishes the database instance on port 8890 so you can easily see what content is stored in the base triplestore.
+  - publishes the database instance on port 8890, so you can easily see what content is stored in the base triplestore.
   - provides a mock-login backend service, so you don't need the ACM/IDM integration.
 
 ## Running and maintaining
@@ -66,7 +66,7 @@ HTTP/WebDAV server online at 8890
 Server online at 1111 (pid 1)
 ```
 
-Stop the service, usually through `ctrl+c` and then run the migrations service:
+Stop the service (usually through `ctrl+c`) and then run the migrations service:
 
 ```
 docker compose up migrations
@@ -89,7 +89,7 @@ At this point, you should be able to access the `/mock-login` path and see the a
 
 You can force-trigger the service to run by overriding the `CRON_PATTERN` in your `docker-compose.override.yml` file; [crontab guru](https://crontab.guru/) is a nice playground to explore changing the pattern, and it houses a dedicated [examples section](https://crontab.guru/examples.html) where you can view the different options.
 
-After changing the cron pattern, run `docker compose up -d lpdc-ldes-consumer` to let the service pick up this new change. Once the cron pattern is triggered, you can see the consumer pulling in the concepts from the IPDC TNI environment:
+After changing the cron pattern, run `docker compose up -d` if the stack is offline or `docker compose up -d lpdc-ldes-consumer` if the stack is already running in order to let the consumer service pick up this new change. Once the cron pattern is triggered, you can see the consumer pulling in the concepts from the IPDC TNI environment:
 
 ```
 [EventStream] info: GET https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?pageNumber=5
@@ -134,14 +134,14 @@ OpenAPI documentation can be generated using [cl-resources-openapi-generator](ht
 
 Once installed, you may desire to upgrade your current setup to follow development of the main stack. The following example describes how to do this easily for both the demo setup, as well as for the development one.
 
-#### Upgrading the dev setup
+#### Upgrading the development setup
 
 For the dev setup, we assume you'll pull more often and will most likely clear the database separately:
 
 ```
 # This assumes the .env file has been set
 
-# Bring the application down
+# Bring the stack down
 docker compose down
 
 # Pull in the changes
@@ -150,7 +150,8 @@ git pull
 # Launch the stack
 docker compose up -d
 ```
-As with the initial setup, we wait for everything to boot to ensure clean caches.  You may choose to monitor the migrations service in a separate terminal to and wait for the overview of all migrations to appear: `docker compose logs -f --tail=200 migrations`.
+
+As with the initial setup, we wait for everything to boot to ensure clean caches. You may choose to monitor the migrations service in a separate terminal to and wait for the overview of all migrations to appear: `docker compose logs -f --tail=200 migrations`.
 
 Once the migrations have run, you can go on with your current setup.
 
