@@ -81,6 +81,10 @@ This will take a while; you may choose to monitor the migrations service in a se
 [2023-04-07 20:13:15] INFO  WEBrick::HTTPServer#start: pid=13 port=80
 ```
 
+At this point, you should be able to access the `/mock-login` path and see the available `bestuurseenheden`. After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `lpdc-ldes-consumer` service, which is set to run at 00:00 UTC time on a daily basis. You can force-trigger the service to run by overriding the `CRON_PATTER` in your `docker-compose.override.yml` file; [crontab guru](https://crontab.guru/) is nice playground to explore changing the pattern, and it houses a dedicated [examples section](https://crontab.guru/examples.html) where you can view the different options.
+
+After changing the cron pattern, run `docker compose up -d lpdc-ldes-consumer` to let the service pick up this new change. Once the cron pattern is triggered, you can see the consumer pulling in the concepts from the IPDC TNI environment. The entire process takes between 30-60 minutes; you can confirm the job is done when no new logs are printed (the service itself does not log the end of the consumption process). At this stage, you can repeat the `/mock-login` flow again and click on `Product of dienst toevoegen`, where you will see the loaded IPDC TNI concepts.
+
 #### Normal start
 
 This should be your go-to way of starting the stack:
