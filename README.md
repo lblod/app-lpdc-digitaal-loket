@@ -158,6 +158,24 @@ Once the migrations have run, you can go on with your current setup.
 
 One helpful way to ease your development process is to back up your local database (the `/data/db/` folder) after migrations are completed, and concepts are pulled through the `lpdc-ldes-consumer` service.
 
+If your local data reaches a stage you deem to be tainted and you want to start anew, you can do the following:
+
+```
+# Bring down the running stack
+docker compose down
+
+# Remove existing database folder
+rm -rf data/db
+
+# Copy backed-up database folder
+cp -r [location-of-backed-up-db-folder] data/
+
+# Bring the stack back up again
+docker compose up
+```
+
+This process will restore your local data to the state in which they were backed up in.
+
 ### Cleaning the database
 
 At some point, you may want to clean the database and make sure it's in a pristine state.
@@ -165,7 +183,7 @@ At some point, you may want to clean the database and make sure it's in a pristi
 ```
 # This assumes the .env file has been set
 
-# Bring down our current setup
+# Bring down the current setup
 docker compose down
 
 # Keep only required database files
