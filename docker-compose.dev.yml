@@ -3,12 +3,6 @@ version: "3.7"
 services:
   lpdc:
     restart: "no"
-  proxy:
-    image: nginx:1.25.1
-    volumes:
-      - ./config/proxy:/etc/nginx/conf.d
-    ports:
-      - "443:443"
   mocklogin:
     image: lblod/mock-login-service:0.4.0
   identifier:
@@ -31,15 +25,13 @@ services:
     restart: "no"
   resource:
     restart: "no"
-  dbcleanup:
-    restart: "no"
   sink:
     restart: "no"
   update-bestuurseenheid-mock-login:
     restart: "no"
 
   ################################################################################
-  # LPDC
+  # LPDC-related Services
   ################################################################################
 
   lpdc-management:
@@ -50,13 +42,4 @@ services:
 
   lpdc-ldes-consumer:
     restart: "no"
-
-  ################################################################################
-  # DELTA GENERAL
-  ################################################################################
-
-  publication-triplestore:
-    restart: "no"
-    ports:
-      - "8891:8890"
   
