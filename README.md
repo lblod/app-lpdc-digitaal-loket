@@ -36,5 +36,5 @@ Other repos:
 
 ## 12. [Development Environment](docs/development-environment.md)
 
-## 13. Decision Log
+## 13. [Decision Log](docs/adr/adrs.md)
 
