@@ -12,5 +12,9 @@
 !/tmp/
 
 docker-compose.override.yml
+
+/.idea
+/.idea/*
+
 .htpasswd
 .env
