@@ -83,7 +83,7 @@ This will take a while; you may choose to monitor the migrations service in a se
 
 At this point, you should be able to access the `/mock-login` path and see the available `bestuurseenheden`. After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `lpdc-ldes-consumer` service, which is set to run at 00:00 UTC time on a daily basis. Do note that you need to be mindful of the `UTC vs Local Time` and `Summer vs Winter Time` differences:
 
-* A cron pattern of **"20 17 * * *"** runs at 17:20 UTC time every day
+* A cron pattern of **"20 17 \* \* \*"** runs at 17:20 UTC time every day
   - During *Summer Time*: Runs at 19:20 Brussels Time (UTC+2)
   - During *Winter Time*: Runs at 18:20 Brussels Time (UTC+1)
 
