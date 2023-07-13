@@ -81,7 +81,7 @@ defmodule Dispatcher do
   end
 
   get "/public-services/*path" do
-    forward conn, path, "http://resource/public-services/"  ## TODO: solve cache issue in frontend
+    forward conn, path, "http://resource/public-services/"
   end
 
   match "/public-services/*path" do

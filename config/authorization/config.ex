@@ -1,6 +1,5 @@
 alias Acl.Accessibility.Always, as: AlwaysAccessible
 alias Acl.Accessibility.ByQuery, as: AccessByQuery
-#alias Acl.GraphSpec.Constraint.Resource.AllPredicates, as: AllPredicates
 alias Acl.GraphSpec.Constraint.Resource.NoPredicates, as: NoPredicates
 alias Acl.GraphSpec.Constraint.ResourceFormat, as: ResourceFormatConstraint
 alias Acl.GraphSpec.Constraint.Resource, as: ResourceConstraint
