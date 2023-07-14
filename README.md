@@ -7,7 +7,7 @@ _Note_: Documentation is structured using [The software guidebook by Simon Brown
 The LPDC application is built on the data model defined in:
 * https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/
 
-[Context Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764558708522486&cot=14).
+[Context Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559416630047&cot=14).
 
 Other repos:
 - [LPDC frontend](https://github.com/lblod/frontend-lpdc/tree/kunlabora)
@@ -24,6 +24,14 @@ Other repos:
 
 ## 6. Software Architecture
 
+[Component Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764558708522486&cot=14)
+
+Container Diagram (TODO)
+
+[Sequence Diagram For 'Bewaren of Eigenschappen tab' on an 'Instantie'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559335291592&cot=14)
+
+[Sequence Diagram For 'Bewaren of Inhoud tab' on an 'Instantie'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559427364604&cot=14)
+
 ## 7. Code
 
 ## 8. Data
@@ -31,6 +39,8 @@ Other repos:
 ## 9. Infrastructure Architecture
 
 ## 10. Deployment
+
+[Build container and deploy on shared development environment - lpdc-dev.s.redhost.be](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559423167666&cot=14)
 
 ## 11. Operation and Support
 
