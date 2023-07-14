@@ -28,9 +28,7 @@ Other repos:
 
 Container Diagram (TODO)
 
-[Sequence Diagram For 'Bewaren of Eigenschappen tab' on an 'Instantie'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559335291592&cot=14)
-
-[Sequence Diagram For 'Bewaren of Inhoud tab' on an 'Instantie'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559427364604&cot=14)
+[Sequence Diagram For 'Wijzigingen bewaren' on an 'Instantie'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559335291592&cot=14)
 
 ## 7. Code
 
