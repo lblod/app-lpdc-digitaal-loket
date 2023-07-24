@@ -5,17 +5,17 @@ services:
     image: alpine:latest
     command: "true"
     entrypoint: "true"
-    restart: 'no'
+    restart: "no"
   identifier:
     ports:
       - "91:80"
-    restart: 'no'
+    restart: "no"
   dispatcher:
-    restart: 'no'
+    restart: "no"
   deltanotifier:
-    restart: 'no'
+    restart: "no"
   database:
-    restart: 'no'
+    restart: "no"
   virtuoso:
     ports:
       - "8891:8890"
@@ -23,23 +23,24 @@ services:
       - ./data-test/db:/data
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini # Note: Override this setting on production
       - ./config/virtuoso/:/opt/virtuoso-scripts
-    restart: 'no'
+    restart: "no"
   migrations:
-    restart: 'no'
+    restart: "no"
   cache:
-    restart: 'no'
+    restart: "no"
   resource:
-    restart: 'no'
+    restart: "no"
   mocklogin:
     image: lblod/mock-login-service:0.4.0
-    restart: 'no'
+    restart: "no"
   login:
     image: alpine:latest
     command: "true"
     entrypoint: "true"
-    restart: 'no'
+    restart: "no"
   sink:
-    restart: 'no'
+    restart: "no"
+
   ################################################################################
   # LPDC-specific Services
   ################################################################################
@@ -47,14 +48,14 @@ services:
     volumes:
       - ./config/lpdc-management:/config
       - ./data-test/files/lpdc:/data
-    restart: 'no'
+    restart: "no"
   lpdc-publish:
     image: alpine:latest
     command: "true"
     entrypoint: "true"
-    restart: 'no'
+    restart: "no"
   lpdc-ldes-consumer:
     image: alpine:latest
     command: "true"
     entrypoint: "true"
-    restart: 'no'
+    restart: "no"
