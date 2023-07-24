@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Contains end to end tests for lpdc",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test"
+  },
   "author": "Kunlabora",
   "license": "MIT",
   "devDependencies": {
