@@ -11,8 +11,68 @@ test(`Can get a bestuurseenheid`, async ({request}) => {
                 uri: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
             },
             id: "73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
-            type: "bestuurseenheden"
+            type: "bestuurseenheden",
+            relationships: {
+                contactinfo: {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/contactinfo",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/contactinfo"
+                    }
+                },
+                bestuursorganen: {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/bestuursorganen",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/bestuursorganen"
+                    }
+                },
+                vendors: {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/vendors",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/vendors"
+                    }
+                },
+                participations: {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/participations",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/participations"
+                    }
+                },
+                werkingsgebied: {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/werkingsgebied",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/werkingsgebied"
+                    }
+                },
+                provincie: {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/provincie",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/provincie"
+                    }
+                },
+                classificatie: {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/classificatie",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/classificatie"
+                    }
+                },
+                "formal-informal-choice": {
+                    links: {
+                        self: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/links/formal-informal-choice",
+                        related: "/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/formal-informal-choice"
+                    }
+                }
+            }
         }
     })
+
+});
+
+test('Can get a unchosen formal informal choice of bestuurseenheid', async ({request}) => {
+    const formalInformalChoicePepingen = await request.get("http://localhost:91/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589/formal-informal-choice");
+
+    expect(formalInformalChoicePepingen.ok()).toBeTruthy();
+    expect(await formalInformalChoicePepingen.json()).toMatchObject({
+        data: null
+    });
 
 });

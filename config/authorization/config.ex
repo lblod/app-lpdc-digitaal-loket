@@ -130,7 +130,8 @@ defmodule Acl.UserGroups.Config do
                         "http://xmlns.com/foaf/0.1/Document",
                         "http://www.w3.org/ns/org#Organization",
                         "http://lblod.data.gift/vocabularies/organisatie/TypeVestiging",
-                        "http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode"
+                        "http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode",
+                        "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FormalInformalChoice"
                       ]
                     } },
                   %GraphSpec{
