@@ -197,8 +197,20 @@ _Notes_:
 
 ## Running tests
 
-You can start local test environment with following command. 
+A test container is provided. It creates a new project called app-lpdc-digitaal-loket-test, using a separate environment than the development container.
+
+You can start local environment for running tests with following command:
 
 ```
 docker compose -f docker-compose.yml -f docker-compose.test.yml -f docker-compose.override.yml -p app-lpdc-digitaal-loket-test up -d
+```
+
+This includes:
+- A virtuoso database is available on port 8891 (instead of standard port 8890), and has its data stored in the ./data-test folder
+- An identifier / dispatcher endpoint available on port 91 (instead of standard port 90)
+- Following containers have been disabled: lpdc, login, lpdc-publish and lpdc-ldes-consumer container.
+
+Viewing logs :
+```
+docker compose -p app-lpdc-digitaal-loket-test logs
 ```
