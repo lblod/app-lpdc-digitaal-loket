@@ -193,3 +193,12 @@ docker compose up -d
 _Notes_:
 - Virtuoso can take a while to execute its first run; the database will be inaccessible in the meantime. Make sure to also wait for the migrations to run.
 - `docker compose` (bundled with the new docker engine) is used in the README instead of the old `docker-compose` command.
+
+
+## Running tests
+
+You can start local test environment with following command. 
+
+```
+docker compose -f docker-compose.yml -f docker-compose.test.yml -f docker-compose.override.yml -p app-lpdc-digitaal-loket-test up -d
+```
