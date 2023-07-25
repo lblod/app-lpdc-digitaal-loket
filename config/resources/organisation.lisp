@@ -17,6 +17,8 @@
   :class (s-prefix "lpdcExt:FormalInformalChoice")
   :properties `((:chosen-form :string ,(s-prefix "lpdcExt:chosenForm"))
                 (:date-created :string ,(s-prefix "schema:dateCreated")))
+  :has-one `((bestuurseenheid :via ,(s-prefix "dct:relation")
+                              :as "bestuurseenheid"))
   :resource-base (s-url "http://data.lblod.info/id/formalInformalChoice/")
   :features '(include-uri)
   :on-path "formal-informal-choice")
@@ -46,10 +48,7 @@
              (werkingsgebied :via ,(s-prefix "ext:inProvincie")
                              :as "provincie")
              (bestuurseenheid-classificatie-code :via ,(s-prefix "besluit:classificatie")
-                                                 :as "classificatie")
-             (formal-informal-choice :via ,(s-prefix "dct:relation")
-                                     :inverse t
-                                     :as "formal-informal-choice"))
+                                                 :as "classificatie"))
 
   :resource-base (s-url "http://data.lblod.info/id/bestuurseenheden/")
   :features '(include-uri)

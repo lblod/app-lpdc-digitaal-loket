@@ -193,7 +193,8 @@ defmodule Acl.UserGroups.Config do
                         "http://purl.org/dc/terms/Location",
                         "http://schema.org/WebSite",
                         "http://www.w3.org/ns/locn#Address",
-                        "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration"
+                        "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration",
+                        "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FormalInformalChoice",
                         ] } } ] },
 
       # // ORGANIZATION HAS POSSIBLY DUPLICATE USER DATA

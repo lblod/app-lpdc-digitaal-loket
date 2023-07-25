@@ -12,6 +12,10 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
 
+  match "/formal-informal-choice/*path" do
+    forward conn, path, "http://cache/formal-informal-choice/"
+  end
+
   match "/bestuurseenheden/*path" do
     forward conn, path, "http://cache/bestuurseenheden/"
   end
