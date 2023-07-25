@@ -21,7 +21,7 @@
                               :as "bestuurseenheid"))
   :resource-base (s-url "http://data.lblod.info/id/formalInformalChoice/")
   :features '(include-uri)
-  :on-path "formal-informal-choice")
+  :on-path "formal-informal-choices")
 
 (define-resource bestuurseenheid () ;; Subclass of m8g:PublicOrganisation, which is a subclass of dct:Agent
   :class (s-prefix "besluit:Bestuurseenheid")

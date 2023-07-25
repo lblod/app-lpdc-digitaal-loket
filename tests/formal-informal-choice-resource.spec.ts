@@ -15,7 +15,7 @@ test.beforeEach(async ({request}) => {
 
 test('Can get a unchosen formal informal choice of bestuurseenheid', async ({request}) => {
     const cookie = await loginAsPepingen(request);
-    const formalInformalChoicePepingen = await request.get("http://localhost:91/formal-informal-choice", {headers: {cookie: cookie}});
+    const formalInformalChoicePepingen = await request.get("http://localhost:91/formal-informal-choices", {headers: {cookie: cookie}});
 
     expect(formalInformalChoicePepingen.ok()).toBeTruthy();
     expect(await formalInformalChoicePepingen.json()).toMatchObject({
@@ -27,12 +27,12 @@ test('Can save chose formal informal choice of bestuurseenheid', async ({request
     const cookie = await loginAsPepingen(request);
 
     const response = await request.post(
-        "http://localhost:91/formal-informal-choice",
+        "http://localhost:91/formal-informal-choices",
         {
             headers: {cookie: cookie, 'Content-Type': 'application/vnd.api+json'},
             data: {
                 data: {
-                    type: 'formal-informal-choice',
+                    type: 'formal-informal-choices',
                     attributes: {
                         'chosen-form': 'formal',
                         'date-created': '2023-07-24T13:44:19.326Z'
@@ -54,7 +54,7 @@ test('Can save chose formal informal choice of bestuurseenheid', async ({request
     const id = postFormalInformalChoiceResponse.data.id;
 
     const formalInformalChoicePepingen = await request.get(
-        `http://localhost:91/formal-informal-choice`,
+        `http://localhost:91/formal-informal-choices`,
         {params: {include: 'bestuurseenheid'}}
     );
 
@@ -68,8 +68,8 @@ test('Can save chose formal informal choice of bestuurseenheid', async ({request
             relationships: {
                 bestuurseenheid: {
                     links: {
-                        related: `/formal-informal-choice/${id}/bestuurseenheid`,
-                        self: `/formal-informal-choice/${id}/links/bestuurseenheid?include=bestuurseenheid`,
+                        related: `/formal-informal-choices/${id}/bestuurseenheid`,
+                        self: `/formal-informal-choices/${id}/links/bestuurseenheid?include=bestuurseenheid`,
                     },
                     data: {
                         type: "bestuurseenheden",
@@ -93,12 +93,12 @@ test('Can save chose formal informal choice of bestuurseenheid', async ({request
 test('login as other bestuurseenheid should not return formal informal choice of Peppingen', async ({request}) => {
     let cookie = await loginAsPepingen(request);
     const response = await request.post(
-        "http://localhost:91/formal-informal-choice",
+        "http://localhost:91/formal-informal-choices",
         {
             headers: {cookie: cookie, 'Content-Type': 'application/vnd.api+json'},
             data: {
                 data: {
-                    type: 'formal-informal-choice',
+                    type: 'formal-informal-choices',
                     attributes: {
                         'chosen-form': 'formal',
                         'date-created': '2023-07-24T13:44:19.326Z'
@@ -117,7 +117,7 @@ test('login as other bestuurseenheid should not return formal informal choice of
     );
     expect(response.ok()).toBeTruthy();
     cookie = await loginAsBilzen(request);
-    const formalInformalChoiceBilzen = await request.get(`http://localhost:91/formal-informal-choice`, {headers: {cookie: cookie}});
+    const formalInformalChoiceBilzen = await request.get(`http://localhost:91/formal-informal-choices`, {headers: {cookie: cookie}});
     expect(await formalInformalChoiceBilzen.json()).toMatchObject({
         data: []
     });
