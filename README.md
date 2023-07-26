@@ -34,11 +34,11 @@ Container Diagram (TODO)
 
 ## 8. Data
 
-## 9. Infrastructure Architecture
+## 9. [Infrastructure Architecture](docs/infrastructure-architecture.md)
 
 ## 10. Deployment
 
-[Build container and deploy on shared development environment - lpdc-dev.s.redhost.be](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559423167666&cot=14)
+[Build docker containers and deploy on shared development environment - lpdc-dev.s.redhost.be](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559423167666&cot=14)
 
 ## 11. Operation and Support
 
