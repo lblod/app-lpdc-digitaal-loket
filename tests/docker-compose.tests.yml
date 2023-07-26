@@ -20,7 +20,7 @@ services:
     ports:
       - "8891:8890"
     volumes:
-      - ./data-test/db:/data
+      - ./tests/data-tests/db:/data
       - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini # Note: Override this setting on production
       - ./config/virtuoso/:/opt/virtuoso-scripts
     restart: "no"
@@ -47,7 +47,7 @@ services:
   lpdc-management:
     volumes:
       - ./config/lpdc-management:/config
-      - ./data-test/files/lpdc:/data
+      - ./tests/data-tests/files/lpdc:/data
     restart: "no"
   lpdc-publish:
     image: alpine:latest

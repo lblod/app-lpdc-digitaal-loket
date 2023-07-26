@@ -202,7 +202,7 @@ A test container is provided. It creates a new project called app-lpdc-digitaal-
 You can start local environment for running tests with following command:
 
 ```
-docker compose -f docker-compose.yml -f docker-compose.test.yml -f docker-compose.override.yml -p app-lpdc-digitaal-loket-test up -d
+docker compose -f docker-compose.yml -f ./tests/docker-compose.tests.yml -f docker-compose.override.yml -p app-lpdc-digitaal-loket-tests up -d
 ```
 
 This includes:
@@ -212,5 +212,5 @@ This includes:
 
 Viewing logs :
 ```
-docker compose -p app-lpdc-digitaal-loket-test logs
+docker compose -p app-lpdc-digitaal-loket-tests logs
 ```
