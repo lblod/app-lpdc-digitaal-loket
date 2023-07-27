@@ -34,10 +34,6 @@ services:
 
   lpdc-management:
     restart: "no"
-    ports:
-      - "9229:9229"
-    environment:
-      NODE_ENV: "development"
 
   lpdc-publish:
     restart: "no"
