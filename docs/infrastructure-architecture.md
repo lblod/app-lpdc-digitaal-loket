@@ -56,7 +56,7 @@ services:
       - "8890:8890"
 
   lpdc:
-    image: lblod/frontend-lpdc:development
+    image: lblod/frontend-lpdc:latest
     environment:
       VIRTUAL_HOST: "dev.lpdc-dev.s.redhost.be"
       LETSENCRYPT_HOST: "dev.lpdc-dev.s.redhost.be"
@@ -71,10 +71,6 @@ services:
 
   lpdc-management:
     image: lblod/lpdc-management-service:development
-    ports:
-      - "9229:9229"
-    environment:
-      NODE_ENV: "development"
 
   lpdc-publish:
     image: lblod/lpdc-publish-service:development
@@ -84,14 +80,13 @@ services:
 
   lpdc-ldes-consumer:
     environment:
-      CRON_PATTERN: "0 0 * * *"
+      LDES_ENDPOINT_HEADER_X-API-KEY: <your api key here>
 
 networks:
   proxy:
     external:
       name: letsencrypt_default
 ```
-
 
 _tst environment docker-compose.override.yml:_
 ```yml
@@ -111,7 +106,7 @@ services:
       - "8891:8890"
   
   lpdc:
-    image: lblod/frontend-lpdc:development
+    image: lblod/frontend-lpdc:latest
     environment:
       VIRTUAL_HOST: "tst.lpdc-dev.s.redhost.be"
       LETSENCRYPT_HOST: "tst.lpdc-dev.s.redhost.be"
@@ -137,7 +132,7 @@ services:
 
   lpdc-ldes-consumer:
     environment:
-      CRON_PATTERN: "0 0 * * *"
+      LDES_ENDPOINT_HEADER_X-API-KEY: <your api key here>
 
 networks:
   proxy:
@@ -163,7 +158,7 @@ services:
       - "8892:8890"
 
   lpdc:
-    image: lblod/frontend-lpdc:development
+    image: lblod/frontend-lpdc:latest
     environment:
       VIRTUAL_HOST: "acc.lpdc-dev.s.redhost.be"
       LETSENCRYPT_HOST: "acc.lpdc-dev.s.redhost.be"
@@ -172,14 +167,8 @@ services:
       - proxy
       - default
 
-  database:
-    environment:
-      LOG_OUTGOING_SPARQL_QUERIES : "true"
-
   lpdc-management:
     image: lblod/lpdc-management-service:development
-    ports:
-      - "9231:9229"
 
   lpdc-publish:
     image: lblod/lpdc-publish-service:development
@@ -189,8 +178,8 @@ services:
 
   lpdc-ldes-consumer:
     environment:
-      CRON_PATTERN: "0 0 * * *"
-
+      LDES_ENDPOINT_HEADER_X-API-KEY: <your api key here>
+      
 networks:
   proxy:
     external:
