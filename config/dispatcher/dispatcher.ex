@@ -69,7 +69,7 @@ defmodule Dispatcher do
   # Public Services - LPDC-IPDC
   #################################################################
   match "/conceptual-public-services/*path" do
-    forward conn, path, "http://resource/conceptual-public-services/"
+    forward conn, path, "http://cache/conceptual-public-services/"
   end
 
   match "/identifiers/*path" do
