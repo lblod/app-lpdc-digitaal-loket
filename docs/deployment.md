@@ -6,7 +6,7 @@ app-lpdc-digitaal-loket uses 3 other docker containers we also develop directly:
 - lblod/lpdc-publish-service:<version>
 
 After the demo after each sprint, we want to make a release of app-lpdc-digitaal-loket. For this we should first verify if we made any changes to any of the three other docker containers. (frontend, management, publish).
-If needed, we first make a new release of these containers. Then we can update the versions in the docker-compose file. And make a release of app-lpdc-digitaal-loket, by making a release version in git (which also tags).
+If needed, we first make a new release of these containers (instructions to be found in these repos). Then we can update the versions in the docker-compose file. And make a release of app-lpdc-digitaal-loket, by making a release version in git (which also tags).
 
 # Deploying a release / latest
 
