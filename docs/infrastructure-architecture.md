@@ -70,10 +70,10 @@ services:
       LOG_OUTGOING_SPARQL_QUERIES : "true"
 
   lpdc-management:
-    image: lblod/lpdc-management-service:development
+    image: lblod/lpdc-management-service:latest
 
   lpdc-publish:
-    image: lblod/lpdc-publish-service:development
+    image: lblod/lpdc-publish-service:latest
     environment:
       IPDC_JSON_ENDPOINT: <your endpoint here>
       IPDC_X_API_KEY: <and its api key>
@@ -106,7 +106,6 @@ services:
       - "8891:8890"
   
   lpdc:
-    image: lblod/frontend-lpdc:latest
     environment:
       VIRTUAL_HOST: "tst.lpdc-dev.s.redhost.be"
       LETSENCRYPT_HOST: "tst.lpdc-dev.s.redhost.be"
@@ -119,13 +118,7 @@ services:
     environment:
       LOG_OUTGOING_SPARQL_QUERIES : "true"
 
-  lpdc-management:
-    image: lblod/lpdc-management-service:development
-    ports:
-      - "9230:9229"
-
   lpdc-publish:
-    image: lblod/lpdc-publish-service:development
     environment:
       IPDC_JSON_ENDPOINT: <your endpoint here>
       IPDC_X_API_KEY: <and its api key>
