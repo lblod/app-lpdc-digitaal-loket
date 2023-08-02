@@ -197,20 +197,44 @@ _Notes_:
 
 ## Running tests
 
-A test container is provided. It creates a new project called app-lpdc-digitaal-loket-test, using a separate environment than the development container.
+A test container is provided. It creates a new project called app-lpdc-digitaal-loket-tests, using a separate environment than the development container.
 
 You can start local environment for running tests with following command:
 
+```shell
+docker compose -f ./tests/docker-compose.standalone.tests.yml -f ./tests/docker-compose.standalone.tests.override.yml -p app-lpdc-digitaal-loket-tests up -d
 ```
-docker compose -f docker-compose.yml -f ./tests/docker-compose.tests.yml -f docker-compose.override.yml -p app-lpdc-digitaal-loket-tests up -d
+in which ./tests/docker-compose.standalone.tests.override.yml should on a mac m2 only contain an override for the resource :
+
+```dockerfile
+version: "3.7"
+
+services:
+
+  resource:
+    image: semtech/mu-cl-resources:feature-arm64-builds
 ```
 
 This includes:
-- A virtuoso database is available on port 8891 (instead of standard port 8890), and has its data stored in the ./data-test folder
-- An identifier / dispatcher endpoint available on port 91 (instead of standard port 90)
-- Following containers have been disabled: lpdc, login, lpdc-publish and lpdc-ldes-consumer container.
+- A virtuoso database is available on port 8896 (instead of standard port 8890), and has its data stored in the ./data-test folder
+- An identifier / dispatcher endpoint available on port 96 (instead of standard port 90)
+- Following containers have been disabled or are not included: lpdc, login, lpdc-publish and lpdc-ldes-consumer container.
 
 Viewing logs :
-```
+```shell
 docker compose -p app-lpdc-digitaal-loket-tests logs
 ```
+
+Running the tests:
+```shell
+cd tests
+npm run tests
+```
+
+Stopping the docker container for tests:
+```shell
+docker compose -p app-lpdc-digitaal-loket-tests down
+```
+
+_Note_: the test container keeps it database under the folder /tests/data-tests. It is reused over test runs. It contains the migrated data related to bestuurseenheden, personen, etc. If you want to have a very clean test run, stop docker, delete this folder, and restart test container.
+

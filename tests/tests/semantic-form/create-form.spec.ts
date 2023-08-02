@@ -16,6 +16,7 @@ import {
     ConceptDisplayConfigurationType
 } from "../test-helpers/concept-display-configuration.test-builder";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
+import {dispatcherUrl} from "../test-helpers/test-options";
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
@@ -577,7 +578,7 @@ test('Create instance from concept: When concept contains english language then 
 
 async function createForm(conceptUUID: string, request: APIRequestContext) {
     const cookie = await loginAsPepingen(request);
-    const response = await request.post('http://localhost:91/public-services', {
+    const response = await request.post(`${dispatcherUrl}/public-services`, {
         data: createPublicServiceFromConceptBody(conceptUUID),
         headers: {cookie: cookie}
     });

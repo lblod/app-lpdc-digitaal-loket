@@ -1,0 +1,101 @@
+version: "3.7"
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0
+    ports:
+      - "11996:80"
+
+  identifier:
+    image: semtech/mu-identifier:1.10.0
+    ports:
+      - "96:80"
+    restart: always
+    logging: *default-logging
+
+  dispatcher:
+    image: semtech/mu-dispatcher:2.1.0-beta.2
+    volumes:
+      - ../config/dispatcher:/config
+    restart: always
+    logging: *default-logging
+
+  database:
+    image: semtech/mu-authorization:feature-service-roam-r1.1
+    environment:
+      MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
+      DATABASE_OVERLOAD_RECOVERY: "true"
+      QUERY_MAX_PROCESSING_TIME: 605000
+      QUERY_MAX_EXECUTION_TIME: 605000
+    volumes:
+      - ../config/authorization:/config
+    restart: always
+    logging: *default-logging
+
+  virtuoso:
+    image: redpencil/virtuoso:1.2.0-rc.1
+    ports:
+      - "8896:8890"
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "http://mu.semte.ch/application"
+    volumes:
+      - ./data-tests/db:/data
+      - ../config/virtuoso/virtuoso.ini:/data/virtuoso.ini # Note: Override this setting on production
+      - ../config/virtuoso/:/opt/virtuoso-scripts
+    restart: always
+    logging: *default-logging
+
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3
+    volumes:
+      - ../config/delta:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0
+    ports:
+      - "9996:80"
+    links:
+      - virtuoso:database
+    environment:
+      MU_SPARQL_TIMEOUT: "300"
+      BATCH_SIZE: "1000"
+    volumes:
+      - ../config/migrations:/data/migrations
+    restart: always
+    logging: *default-logging
+
+  cache:
+    image: semtech/mu-cache:2.0.2
+    links:
+      - resource:backend
+    restart: always
+    logging: *default-logging
+
+  resource:
+    image: semtech/mu-cl-resources:feature-optionally-accept-strange-resource-types
+    environment:
+      CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
+    volumes:
+      - ../config/resources:/config
+    restart: always
+    logging: *default-logging
+
+  lpdc-management:
+    image: lblod/lpdc-management-service:latest
+    ports:
+      - "10996:80"
+    volumes:
+      - ../config/lpdc-management:/config
+      - ./data-tests/files/lpdc:/data

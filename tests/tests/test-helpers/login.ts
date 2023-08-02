@@ -1,9 +1,10 @@
 import type {APIRequestContext} from "@playwright/test"
 import {expect} from "@playwright/test";
+import {dispatcherUrl} from "./test-options";
 
 export const pepingenId = '73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589';
 export async function loginAsPepingen(request: APIRequestContext): Promise<string> {
-    const postSessionResponse = await request.post('http://localhost:91/mock/sessions', {
+    const postSessionResponse = await request.post(`${dispatcherUrl}/mock/sessions`, {
         headers: {'Content-Type': 'application/vnd.api+json'},
 
         data: {
@@ -31,7 +32,7 @@ export async function loginAsPepingen(request: APIRequestContext): Promise<strin
 }
 
 export async function loginAsBilzen(request: APIRequestContext): Promise<string> {
-    const postSessionResponse = await request.post('http://localhost:91/mock/sessions', {
+    const postSessionResponse = await request.post(`${dispatcherUrl}/mock/sessions`, {
         headers: {'Content-Type': 'application/vnd.api+json'},
 
         data: {
