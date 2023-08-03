@@ -25,7 +25,17 @@ Caching will not solve the initial query's slowness.
 
 We will use the include features of json-api from the frontend, which is [implemented by the mu-cl-resources](https://github.com/mu-semtech/mu-cl-resources/blob/master/README.md#including-results); and remove the manually loading of the relationships.
 
-This will include all the relationships in the json-api result, and ember-data component in the frontend automatically understands. 
+This will include all the relationships in the json-api result, and ember-data component in the frontend automatically understands.
+
+In the ember router, we will add to the query object an include section: e.g.
+
+```javascript
+    let query = {
+    //... other keys
+    include:
+        'display-configuration,target-audiences,concept-tags,competent-authority-levels,type',
+};
+```
 
 ## Notes
 
