@@ -57,11 +57,11 @@ ext:titlePg a form:PropertyGroup;
   ext:titleF a form:Field ;
       sh:order 1 ;
       sh:name "Titel";
-      form:language "nl";
+      form:language "nl-be-x-informal";
       sh:path dct:title ;
       form:validations [
         a form:RequiredConstraint ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:grouping form:Bag ;
         sh:resultMessage "Dit veld is verplicht." ;
         sh:path dct:title
@@ -94,10 +94,10 @@ ext:descriptionPg a form:PropertyGroup;
   ext:descriptionF a form:Field ;
       sh:order 1 ;
       sh:name "Beschrijving";
-      form:language "nl";
+      form:language "nl-be-x-informal";
       form:validations [
         a form:RequiredConstraint ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:grouping form:Bag ;
         sh:resultMessage "Dit veld is verplicht." ;
         sh:path dct:description
@@ -131,7 +131,7 @@ ext:additionalDescriptionPg a form:PropertyGroup;
   ext:additionalDescriptionF a form:Field ;
       sh:order 1 ;
       sh:name "Aanvullende Beschrijving";
-      form:language "nl";
+      form:language "nl-be-x-informal";
       sh:path lpdcExt:additionalDescription ;
       form:displayType displayTypes:richText ;
       sh:group ext:additionalDescriptionPg .
@@ -161,7 +161,7 @@ ext:exceptionPg a form:PropertyGroup;
   ext:exceptionF a form:Field ;
       sh:order 1 ;
       sh:name "Uitzonderingen" ;
-      form:language "nl";
+      form:language "nl-be-x-informal";
       sh:path lpdcExt:exception ;
       form:displayType displayTypes:richText ;
       sh:group ext:exceptionPg .
@@ -239,10 +239,10 @@ ext:requirementsPg a form:PropertyGroup;
     ext:requirementTitleF a form:Field ;
         sh:name "Titel voorwaarde" ;
         sh:order 1 ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:title
@@ -268,10 +268,10 @@ ext:requirementsPg a form:PropertyGroup;
     ext:requirementDescriptionF a form:Field ;
         sh:name "Beschrijving voorwaarde" ;
         sh:order 3 ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:description
@@ -352,10 +352,10 @@ ext:requirementsPg a form:PropertyGroup;
           ext:evidenceTitleF a form:Field ;
               sh:name "Titel bewijsstuk" ;
               sh:order 1 ;
-              form:language "nl";
+              form:language "nl-be-x-informal";
               form:validations [
                 a form:RequiredConstraint ;
-                form:language "nl";
+                form:language "nl-be-x-informal";
                 form:grouping form:Bag ;
                 sh:resultMessage "Dit veld is verplicht." ;
                 sh:path dct:title
@@ -381,10 +381,10 @@ ext:requirementsPg a form:PropertyGroup;
           ext:evidenceDescriptionF a form:Field ;
               sh:name "Beschrijving bewijsstuk" ;
               sh:order 3 ;
-              form:language "nl";
+              form:language "nl-be-x-informal";
               form:validations [
                 a form:RequiredConstraint ;
-                form:language "nl";
+                form:language "nl-be-x-informal";
                 form:grouping form:Bag ;
                 sh:resultMessage "Dit veld is verplicht." ;
                 sh:path dct:description
@@ -466,10 +466,10 @@ ext:rulesPg a form:PropertyGroup;
     ext:ruleTitleF a form:Field ;
         sh:name "Titel procedure" ;
         sh:order 1 ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:title
@@ -495,10 +495,10 @@ ext:rulesPg a form:PropertyGroup;
     ext:ruleDescriptionF a form:Field ;
         sh:name "Beschrijving procedure" ;
         sh:order 3 ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:description
@@ -579,10 +579,10 @@ ext:rulesPg a form:PropertyGroup;
           ext:procedureWebsiteTitleF a form:Field ;
               sh:name "Titel website" ;
               sh:order 1 ;
-              form:language "nl";
+              form:language "nl-be-x-informal";
               form:validations [
                 a form:RequiredConstraint ;
-                form:language "nl";
+                form:language "nl-be-x-informal";
                 form:grouping form:Bag ;
                 sh:resultMessage "Dit veld is verplicht." ;
                 sh:path dct:title
@@ -608,7 +608,7 @@ ext:rulesPg a form:PropertyGroup;
           ext:procedureWebsiteDescriptionF a form:Field ;
               sh:name "Beschrijving website" ;
               sh:order 2 ;
-              form:language "nl";
+              form:language "nl-be-x-informal";
               sh:path dct:description ;
               form:displayType displayTypes:richText ;
               sh:group ext:procedureWebsitesPg-sub .
@@ -705,10 +705,10 @@ ext:costPg a form:PropertyGroup;
     ##########################################################
     ext:costTitleF a form:Field ;
         sh:name "Titel kost" ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:title
@@ -734,10 +734,10 @@ ext:costPg a form:PropertyGroup;
     ##########################################################
     ext:costDescriptionF a form:Field ;
         sh:name "Beschrijving kost" ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:description
@@ -817,10 +817,10 @@ ext:finAdvPg a form:PropertyGroup;
     ##########################################################
     ext:finAdvTitleF a form:Field ;
         sh:name "Titel financieel voordeel" ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:title
@@ -846,10 +846,10 @@ ext:finAdvPg a form:PropertyGroup;
     ##########################################################
     ext:finAdvDescriptionF a form:Field ;
         sh:name "Beschrijving financieel voordeel" ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:description
@@ -884,7 +884,7 @@ ext:regulationsPg a form:PropertyGroup;
   ##########################################################
   ext:regulationitleF a form:Field ;
       sh:order 1 ;
-      form:language "nl";
+      form:language "nl-be-x-informal";
       sh:name "Regelgeving";
       sh:path lpdcExt:regulation;
       form:displayType displayTypes:richText ;
@@ -1078,7 +1078,7 @@ ext:contactpointsPg a form:PropertyGroup;
           ext:contactPointAddressStreetF a form:Field ;
             sh:name "Straat" ;
             sh:order 1 ;
-            form:language "nl";
+            form:language "nl-be-x-informal";
             sh:path adres:Straatnaam ;
             form:displayType displayTypes:defaultInput ;
             sh:group ext:contactPointAddressPg-sub .
@@ -1119,7 +1119,7 @@ ext:contactpointsPg a form:PropertyGroup;
           ext:contactPointAddressMunicipalityF a form:Field ;
             sh:name "Gemeente" ;
             sh:order 5 ;
-            form:language "nl";
+            form:language "nl-be-x-informal";
             sh:path adres:gemeentenaam ;
             form:displayType displayTypes:defaultInput ;
             sh:group ext:contactPointAddressPg-sub .
@@ -1130,7 +1130,7 @@ ext:contactpointsPg a form:PropertyGroup;
           ext:contactPointAddressCountryF a form:Field ;
             sh:name "Land" ;
             sh:order 6 ;
-            form:language "nl";
+            form:language "nl-be-x-informal";
             sh:path adres:land ;
             form:displayType displayTypes:defaultInput ;
             sh:group ext:contactPointAddressPg-sub .
@@ -1197,10 +1197,10 @@ ext:websitesPg a form:PropertyGroup;
     ext:websiteTitleF a form:Field ;
         sh:name "Titel website" ;
         sh:order 1 ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         form:validations [
           a form:RequiredConstraint ;
-          form:language "nl";
+          form:language "nl-be-x-informal";
           form:grouping form:Bag ;
           sh:resultMessage "Dit veld is verplicht." ;
           sh:path dct:title
@@ -1226,7 +1226,7 @@ ext:websitesPg a form:PropertyGroup;
     ext:websiteDescriptionF a form:Field ;
         sh:name "Beschrijving website" ;
         sh:order 3 ;
-        form:language "nl";
+        form:language "nl-be-x-informal";
         sh:path dct:description ;
         form:displayType displayTypes:richText ;
         sh:group ext:websitesPg-sub .
