@@ -1,7 +1,7 @@
 import {expect, test} from '@playwright/test';
 import fs from 'fs';
 import {loginAsPepingen, pepingenId} from "../test-helpers/login";
-import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
+import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/public-service.test-builder";
 import {deleteAllOfType} from "../test-helpers/sparql";
 import {ConceptTestBuilder, ConceptType} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
@@ -11,7 +11,7 @@ const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
 
 test.beforeEach(async ({request}) => {
     await deleteAllOfType(request, ConceptType);
-    await deleteAllOfType(request, 'http://purl.org/vocab/cpsv#PublicService');
+    await deleteAllOfType(request, PublicServiceType);
 });
 
 test('Can get content form for concept', async ({request}) => {
