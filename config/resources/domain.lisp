@@ -15,6 +15,8 @@
 (read-domain-file "organisation.lisp")
 (read-domain-file "concept-scheme.lisp")
 (read-domain-file "master-users-domain.lisp")
+(read-domain-file "master-reports-domain.lisp")
+(read-domain-file "master-files-domain.lisp")
 (read-domain-file "lpdc.lisp")
 
 ;; Extra security layer to return 403 on GET /files
