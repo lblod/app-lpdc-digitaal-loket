@@ -1,136 +1,165 @@
 import {v4 as uuid} from 'uuid';
 import {insertTriples} from "./sparql";
-import {TripleValue} from "./triple-value";
 import {Language} from "./language";
+import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
+import type {APIRequestContext} from "@playwright/test";
 
 export const ConceptType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService';
 
 export class ConceptTestBuilder {
 
-    private id = `https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`;
-    private type: TripleValue;
-    private uuid: TripleValue;
-    private titles: TripleValue[] = [];
-    private description: TripleValue;
-    private startDate: TripleValue;
-    private endDate: TripleValue;
-    private productId: TripleValue;
+    private id = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
+    private type: Uri;
+    private uuid: Literal;
+    private titles: Literal[] = [];
+    private descriptions: Literal[] = [];
+    private additionalDescriptions: Literal[] = [];
+    private exceptions: Literal[] = [];
+    private regulations: Literal[] = [];
+    private startDate: Literal;
+    private endDate: Literal;
+    private productId: Literal;
+    private requirement: Uri;
+    private procedure: Uri;
+    private moreInfo: Uri;
+    private cost: Uri;
+    private financialAdvantage: Uri;
+    private conceptDisplayConfiguration: Uri;
 
     static aConcept() {
         return new ConceptTestBuilder()
             .withType()
             .withUUID(uuid())
-            .withTitle('Concept title', Language.NL)
-            .withDescription('Concept description', Language.NL)
+            .withTitles([
+                {value: 'title nl', language: Language.NL},
+                {value: 'title generated informal', language: Language.GENERATED_INFORMAL},
+                {value: 'title generated formal', language: Language.GENERATED_FORMAL},
+            ])
+            .withDescriptions([
+                {value: 'description', language: Language.NL},
+                {value: 'description', language: Language.GENERATED_INFORMAL},
+                {value: 'description', language: Language.GENERATED_FORMAL}
+            ])
             .withStartDate(new Date())
             .withEndDate(new Date())
             .withProductID(1000)
     }
 
     private withType() {
-        this.type = new TripleValue(
-            'Concept',
-            '<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>',
-            `<${ConceptType}>`
-        )
+        this.type = new Uri(ConceptType);
         return this;
     }
 
     withUUID(uuid: string) {
-        this.uuid = new TripleValue(
-            uuid,
-            "<http://mu.semte.ch/vocabularies/core/uuid>",
-            `"${uuid}"`
-        );
+        this.uuid = new Literal(uuid);
         return this;
     }
 
     withTitle(title: string, language: Language) {
-        this.titles = [new TripleValue(
-            title,
-            "<http://purl.org/dc/terms/title>",
-            `"${title}"@${language}`
-        )];
+        this.titles = [new Literal(title, language)];
         return this;
     }
 
-    withTitles(titles: { title: string, language: Language }[]) {
-        this.titles = titles.map(item =>
-            new TripleValue(
-                item.title,
-                "<http://purl.org/dc/terms/title>",
-                `"${item.title}"@${item.language}`
-            )
-        );
+    withTitles(titles: { value: string, language: Language }[]) {
+        this.titles = titles.map(item => new Literal(item.value, item.language));
         return this;
     }
 
     withDescription(description: string, language: Language) {
-        this.description = new TripleValue(
-            description,
-            "<http://purl.org/dc/terms/description>",
-            `"${description}"@${language}`
-        );
+        this.descriptions = [new Literal(description, language)];
+        return this;
+    }
+
+    withDescriptions(descriptions: { value: string, language: Language }[]) {
+        this.descriptions = descriptions.map(item => new Literal(item.value, item.language));
+        return this;
+    }
+
+    withAdditionalDescriptions(additionalDescriptions: { value: string, language: Language }[]) {
+        this.additionalDescriptions = additionalDescriptions.map(item => new Literal(item.value, item.language));
+        return this;
+    }
+
+    withException(exceptions: {value: string, language: Language}[]) {
+        this.exceptions = exceptions.map(item => new Literal(item.value, item.language));
+        return this;
+    }
+
+    withRegulations(regulations: {value: string, language: Language}[]) {
+        this.regulations = regulations.map(item => new Literal(item.value, item.language));
         return this;
     }
 
     withStartDate(date: Date) {
-        this.startDate = new TripleValue(
-            date.toISOString(),
-            "<http://schema.org/startDate>",
-            `"${date.toISOString()}"^^<http://www.w3.org/2001/XMLSchema#dateTime>`
-        );
+        this.startDate = new Literal(date.toISOString(), undefined, "http://www.w3.org/2001/XMLSchema#dateTime");
         return this;
     }
 
     withEndDate(date: Date) {
-        this.endDate = new TripleValue(
-            date.toISOString(),
-            "<http://schema.org/endDate>",
-            `"${date.toISOString()}"^^<http://www.w3.org/2001/XMLSchema#dateTime>`
-        );
+        this.endDate = new Literal(date.toISOString(), undefined, "http://www.w3.org/2001/XMLSchema#dateTime");
         return this;
     }
 
     withProductID(productId: number) {
-        this.productId = new TripleValue(
-            productId.toString(),
-            "<http://schema.org/productID>",
-            `"${productId}"^^<http://www.w3.org/2001/XMLSchema#string>`
-        );
+        this.productId = new Literal(productId.toString(), undefined, "http://www.w3.org/2001/XMLSchema#string");
         return this;
     }
 
-    build() {
-        return {
-            id: this.id,
-            type: this.type,
-            uuid: this.uuid,
-            titles: this.titles,
-            description: this.description,
-            startDate: this.startDate,
-            endDate: this.endDate,
-            productId: this.productId,
-            triples: this.buildTriples()
-        }
+    withRequirement(requirementUri: Uri) {
+        this.requirement = requirementUri;
+        return this;
     }
 
-    buildTriples(): string[] {
-        const values = [
-            this.type,
-            this.uuid,
-            ...this.titles,
-            this.description,
-            this.startDate,
-            this.endDate,
-            this.productId,
+    withProcedure(procedureUri: Uri) {
+        this.procedure = procedureUri;
+        return this;
+    }
+
+    withMoreInfo(websiteUri: Uri) {
+        this.moreInfo = websiteUri;
+        return this;
+    }
+
+    withCost(costUri: Uri) {
+        this.cost = costUri;
+        return this;
+    }
+
+    withFinancialAdvantage(financialAdvantageUri: Uri) {
+        this.financialAdvantage = financialAdvantageUri;
+        return this;
+    }
+
+    withConceptDisplayConfiguration(displayConfigUri: Uri) {
+        this.conceptDisplayConfiguration = displayConfigUri;
+        return this;
+    }
+
+    buildTripleArray(): TripleArray {
+        const triples = [
+            new Triple(this.id, Predicates.type, this.type),
+            new Triple(this.id, Predicates.uuid, this.uuid),
+            ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
+            ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
+            ...this.additionalDescriptions.map(description => new Triple(this.id, Predicates.additionalDescription, description)),
+            ...this.exceptions.map(exception => new Triple(this.id, Predicates.exception, exception)),
+            ...this.regulations.map(regulation => new Triple(this.id, Predicates.regulation, regulation)),
+            new Triple(this.id, Predicates.startDate, this.startDate),
+            new Triple(this.id, Predicates.endDate, this.endDate),
+            new Triple(this.id, Predicates.productId, this.productId),
+            new Triple(this.id, Predicates.hasRequirement, this.requirement),
+            new Triple(this.id, Predicates.follows, this.procedure),
+            new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
+            new Triple(this.id, Predicates.hasCost, this.cost),
+            new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
+            new Triple(this.id, Predicates.hasDisplayConfiguration, this.conceptDisplayConfiguration)
         ];
-        return values.filter(item => !!item).map(value => value.toTriple(this.id));
+        return new TripleArray(triples);
     }
 
-    async buildAndPersist(request): Promise<any> {
-        const concept = this.build();
-        await insertTriples(request, `http://mu.semte.ch/graphs/public`, concept.triples);
+    async buildAndPersist(request: APIRequestContext): Promise<TripleArray> {
+        const concept = this.buildTripleArray();
+        await insertTriples(request, `http://mu.semte.ch/graphs/public`, concept.asStringArray());
         return concept;
     }
 

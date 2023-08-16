@@ -1,17 +1,17 @@
 import {expect, test} from '@playwright/test';
 import fs from 'fs';
 import {loginAsPepingen, pepingenId} from "../test-helpers/login";
-import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/public-service.test-builder";
-import {deleteAllOfType} from "../test-helpers/sparql";
-import {ConceptTestBuilder, ConceptType} from "../test-helpers/concept.test-builder";
+import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
+import {deleteAll} from "../test-helpers/sparql";
+import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
+import {Predicates, TripleArray} from "../test-helpers/triple-array";
 
 const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
 const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
 
 test.beforeEach(async ({request}) => {
-    await deleteAllOfType(request, ConceptType);
-    await deleteAllOfType(request, PublicServiceType);
+    await deleteAll(request);
 });
 
 test('Can get content form for concept', async ({request}) => {
@@ -21,14 +21,14 @@ test('Can get content form for concept', async ({request}) => {
         .withTitle('Concept title', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`http://localhost:91/lpdc-management/${concept.uuid.value}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`http://localhost:91/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
     const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
-    expect(responseBody.serviceUri).toStrictEqual(concept.id);
-    const triplesWithoutUUID = concept.triples.filter(triple => !triple.includes('<http://mu.semte.ch/vocabularies/core/uuid>'));
+    expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
+    const triplesWithoutUUID = new TripleArray(concept.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
     expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
     // TODO check if meta field contains the right content
 });
@@ -40,14 +40,14 @@ test('Can get characteristics form for concept', async ({request}) => {
         .withTitle('Concept title', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`http://localhost:91/lpdc-management/${concept.uuid.value}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`http://localhost:91/lpdc-management/${concept.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
     const expectedForm = fs.readFileSync('../config/lpdc-management/characteristics/form.ttl', 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
-    expect(responseBody.serviceUri).toStrictEqual(concept.id);
-    const triplesWithoutUUID = concept.triples.filter(triple => !triple.includes('<http://mu.semte.ch/vocabularies/core/uuid>'));
+    expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
+    const triplesWithoutUUID = new TripleArray(concept.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
     expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
 });
 
@@ -58,14 +58,14 @@ test('Can get content form for public service', async ({request}) => {
         .withNoPublicationMedium()
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`http://localhost:91/lpdc-management/${publicService.uuid.value}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`http://localhost:91/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
     const responseBody = await response.json();
     expect(responseBody.form).toStrictEqual(expectedForm);
-    expect(responseBody.serviceUri).toStrictEqual(publicService.id);
-    const triplesWithoutUUID = publicService.triples.filter(triple => !triple.includes('<http://mu.semte.ch/vocabularies/core/uuid>'));
+    expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
+    const triplesWithoutUUID = new TripleArray(publicService.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
     expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
 });
 
@@ -75,14 +75,14 @@ test('Can get characteristics form for public service', async ({request}) => {
         .withNoPublicationMedium()
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`http://localhost:91/lpdc-management/${publicService.uuid.value}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`http://localhost:91/lpdc-management/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync('../config/lpdc-management/characteristics/form.ttl', 'utf8');
     const responseBody = await response.json();
     expect(responseBody.form).toStrictEqual(expectedForm);
-    expect(responseBody.serviceUri).toStrictEqual(publicService.id);
-    const triplesWithoutUUID = publicService.triples.filter(triple => !triple.includes('<http://mu.semte.ch/vocabularies/core/uuid>'));
+    expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
+    const triplesWithoutUUID = new TripleArray(publicService.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
     expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
 });
 
@@ -92,13 +92,30 @@ test('English form is only added when publicationMedium is yourEurope and form i
         .withPublicationMedium('YourEurope')
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`http://localhost:91/lpdc-management/${publicService.uuid.value}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`http://localhost:91/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
     const expectedEnglishForm = fs.readFileSync('../config/lpdc-management/content/add-english-requirement.ttl', 'utf8');
     const responseBody = await response.json();
     expect(responseBody.form).toStrictEqual(expectedForm + expectedEnglishForm);
+});
+
+
+test('When getting content form for public service than form language is replaced to language of public service', async ({request}) => {
+    const cookie = await loginAsPepingen(request);
+    const publicService = await PublicServiceTestBuilder.aPublicService()
+        .withTitle('Instance title', Language.FORMAL)
+        .withDescription('Instance description', Language.FORMAL)
+        .buildAndPersist(request, pepingenId);
+
+
+    const response = await request.get(`http://localhost:91/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    expect(response.ok()).toBeTruthy();
+
+    const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
+    const responseBody = await response.json();
+    expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
 function parseToSortedTripleArray(source: string) {

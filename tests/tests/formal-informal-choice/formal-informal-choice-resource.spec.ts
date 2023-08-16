@@ -1,10 +1,9 @@
-import {test, expect} from '@playwright/test';
+import {expect, test} from '@playwright/test';
 import {loginAsBilzen, loginAsPepingen} from "../test-helpers/login";
-import {deleteAllOfType} from "../test-helpers/sparql";
-import {FormalInformalChoiceType} from "../test-helpers/formal-informal-choice.test-builder";
+import {deleteAll} from "../test-helpers/sparql";
 
 test.beforeEach(async ({request}) => {
-    await deleteAllOfType(request, FormalInformalChoiceType);
+    await deleteAll(request);
 });
 
 test('Can get a unchosen formal informal choice of bestuurseenheid', async ({request}) => {
