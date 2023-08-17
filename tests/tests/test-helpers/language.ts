@@ -1,4 +1,5 @@
 export enum Language {
+    EN = 'en',
     NL = 'nl',
     FORMAL = 'nl-be-x-formal',
     INFORMAL = 'nl-be-x-informal',

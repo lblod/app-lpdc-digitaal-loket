@@ -22,10 +22,9 @@ test.beforeEach(async ({request}) => {
 });
 
 test('Create instance from concept', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
-
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('The title', Language.NL)
+        .withDescription('The description', Language.NL)
         .buildAndPersist(request);
 
     const response = await createForm(concept.getUUID(), request);
@@ -547,6 +546,31 @@ test('Create instance from concept: all instance fields with language should hav
     expect(publicService.findObject(Predicates.exception)).toEqual(new Literal('exception generated formal', Language.FORMAL));
     expect(publicService.findAllTriples(Predicates.regulation)).toHaveLength(1);
     expect(publicService.findObject(Predicates.regulation)).toEqual(new Literal('regulation generated formal', Language.FORMAL));
+});
+
+test('Create instance from concept: When concept contains english language then this should not be removed', async ({request}) => {
+    const concept = await ConceptTestBuilder.aConcept()
+        .withTitles([
+            {value: 'title', language: Language.NL},
+            {value: 'title', language: Language.GENERATED_INFORMAL},
+            {value: 'title', language: Language.GENERATED_FORMAL},
+            {value: 'title', language: Language.EN},
+        ])
+        .withDescriptions([
+            {value: 'description', language: Language.NL},
+            {value: 'description', language: Language.GENERATED_INFORMAL},
+            {value: 'description', language: Language.GENERATED_FORMAL},
+            {value: 'description', language: Language.EN},
+        ])
+        .buildAndPersist(request);
+
+    const response = await createForm(concept.getUUID(), request);
+    const publicService = await fetchType(request, response.data.uri, PublicServiceType);
+
+    expect(publicService.findAllTriples(Predicates.title)).toHaveLength(2);
+    expect(publicService.findObjects(Predicates.title)).toContainEqual(new Literal('title', Language.EN));
+    expect(publicService.findAllTriples(Predicates.description)).toHaveLength(2);
+    expect(publicService.findObjects(Predicates.description)).toContainEqual(new Literal('description', Language.EN));
 });
 
 // TODO: find out what spacial means

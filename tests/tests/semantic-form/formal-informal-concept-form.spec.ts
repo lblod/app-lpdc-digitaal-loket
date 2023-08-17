@@ -271,6 +271,7 @@ test('When chosenForm informal and concept only in nl version then language in f
 
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('Concept title', Language.NL)
+        .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
     const response = await request.get(`http://localhost:91/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
@@ -289,6 +290,7 @@ test('When chosenForm formal and concept only in nl then language in form should
 
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('Concept title', Language.NL)
+        .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
     const response = await request.get(`http://localhost:91/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
@@ -304,6 +306,7 @@ test('When no chosenForm and concept only in nl then language in form should be 
 
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('Concept title', Language.NL)
+        .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
     const response = await request.get(`http://localhost:91/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});

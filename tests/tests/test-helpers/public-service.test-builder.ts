@@ -47,8 +47,18 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withNoTitle() {
+        this.title = undefined;
+        return this;
+    }
+
     withDescription(description: string, language: Language) {
         this.description = new Literal(description, language);
+        return this;
+    }
+
+    withNoDescription() {
+        this.description = undefined;
         return this;
     }
 

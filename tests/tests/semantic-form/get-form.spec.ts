@@ -6,6 +6,7 @@ import {deleteAll} from "../test-helpers/sparql";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
 import {Predicates, TripleArray} from "../test-helpers/triple-array";
+import {FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 
 const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
 const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
@@ -19,6 +20,7 @@ test('Can get content form for concept', async ({request}) => {
 
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('Concept title', Language.NL)
+        .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
     const response = await request.get(`http://localhost:91/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
@@ -38,6 +40,7 @@ test('Can get characteristics form for concept', async ({request}) => {
 
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('Concept title', Language.NL)
+        .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
     const response = await request.get(`http://localhost:91/lpdc-management/${concept.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
@@ -117,6 +120,47 @@ test('When getting content form for public service than form language is replace
     const responseBody = await response.json();
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
+
+const chosenForms: ('formal' | 'informal')[] = ['formal', 'informal'];
+for (const chosenForm of chosenForms) {
+    test(`When getting content form for public service only has no language then chosenform(${chosenForm}) is used in form`, async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withNoTitle()
+            .withNoDescription()
+            .buildAndPersist(request, pepingenId);
+
+        await FormalInformalChoiceTestBuilder.aChoice()
+            .withChosenForm(chosenForm)
+            .buildAndPersist(request);
+
+        const response = await request.get(`http://localhost:91/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+        expect(response.ok()).toBeTruthy();
+
+        const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
+        const responseBody = await response.json();
+        expect(responseBody.form).toStrictEqual(expectedForm);
+    });
+
+    test(`When getting content form for public service only has english language then chosenform(${chosenForm}) is used in form`, async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withTitle('english title', Language.EN)
+            .withDescription('english description', Language.EN)
+            .buildAndPersist(request, pepingenId);
+
+        await FormalInformalChoiceTestBuilder.aChoice()
+            .withChosenForm(chosenForm)
+            .buildAndPersist(request);
+
+        const response = await request.get(`http://localhost:91/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+        expect(response.ok()).toBeTruthy();
+
+        const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
+        const responseBody = await response.json();
+        expect(responseBody.form).toStrictEqual(expectedForm);
+    });
+}
 
 function parseToSortedTripleArray(source: string) {
     return source
