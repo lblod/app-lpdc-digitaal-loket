@@ -1,0 +1,12 @@
+DELETE {
+    GRAPH ?g {
+        ?s ?p ?o .
+    }
+} WHERE {
+    GRAPH ?g {
+      ?publicService a <http://purl.org/vocab/cpsv#PublicService>.
+      ?publicService ?has ?s.
+      ?s ?p ?o.
+      FILTER(lang(?o) = 'nl-be-x-generated-informal' || lang(?o) = 'nl-be-x-generated-formal')
+   }
+}
