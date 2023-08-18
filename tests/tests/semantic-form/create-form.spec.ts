@@ -344,13 +344,13 @@ test('Create instance from concept: When chosenForm is formal then language fiel
     const response = await createForm(concept.getUUID(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
-    expect(publicService.findObject(Predicates.title).getValue()).toEqual('title generated formal');
-    expect(publicService.findObject(Predicates.description).getValue()).toEqual('description generated formal');
+    expect(publicService.findObject(Predicates.title).getValue()).toEqual('title nl');
+    expect(publicService.findObject(Predicates.description).getValue()).toEqual('description nl');
 });
 
 test('Create instance from concept: When chosenForm is informal then language fields of instance should contain generated informal text', async ({request}) => {
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm('informal')
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -369,8 +369,8 @@ test('Create instance from concept: When chosenForm is informal then language fi
     const response = await createForm(concept.getUUID(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
-    expect(publicService.findObject(Predicates.title).getValue()).toEqual('title generated formal');
-    expect(publicService.findObject(Predicates.description).getValue()).toEqual('description generated formal');
+    expect(publicService.findObject(Predicates.title).getValue()).toEqual('title generated informal');
+    expect(publicService.findObject(Predicates.description).getValue()).toEqual('description generated informal');
 });
 
 test('Create instance from concept: When concept with requirement then instance has requirement with correct text and language version', async ({request}) => {
@@ -387,9 +387,9 @@ test('Create instance from concept: When concept with requirement then instance 
     const requirementUri = publicService.findObject(Predicates.hasRequirement).getValue();
     const requirement = await fetchType(request, requirementUri, RequirementType);
     expect(requirement.findAllTriples(Predicates.title)).toHaveLength(1);
-    expect(requirement.findObject(Predicates.title)).toEqual(new Literal('requirement title generated formal', Language.FORMAL));
+    expect(requirement.findObject(Predicates.title)).toEqual(new Literal('requirement title nl', Language.FORMAL));
     expect(requirement.findAllTriples(Predicates.description)).toHaveLength(1);
-    expect(requirement.findObject(Predicates.description)).toEqual(new Literal('requirement description generated formal', Language.FORMAL));
+    expect(requirement.findObject(Predicates.description)).toEqual(new Literal('requirement description nl', Language.FORMAL));
 });
 
 test('Create instance from concept: When concept with requirement with evidence then instance has requirement with evidence with correct text and language version', async ({request}) => {
@@ -412,9 +412,9 @@ test('Create instance from concept: When concept with requirement with evidence 
     const evidenceUri = requirement.findObject(Predicates.hasSupportingEvidence).getValue();
     const evidence = await fetchType(request, evidenceUri, EvidenceType);
     expect(evidence.findAllTriples(Predicates.title)).toHaveLength(1);
-    expect(evidence.findObject(Predicates.title)).toEqual(new Literal('evidence title generated formal', Language.FORMAL));
+    expect(evidence.findObject(Predicates.title)).toEqual(new Literal('evidence title nl', Language.FORMAL));
     expect(evidence.findAllTriples(Predicates.description)).toHaveLength(1);
-    expect(evidence.findObject(Predicates.description)).toEqual(new Literal('evidence description generated formal', Language.FORMAL));
+    expect(evidence.findObject(Predicates.description)).toEqual(new Literal('evidence description nl', Language.FORMAL));
 });
 
 test('Create instance from concept: When concept with procedure then instance has procedure with correct text and language version', async ({request}) => {
@@ -431,9 +431,9 @@ test('Create instance from concept: When concept with procedure then instance ha
     const procedureUri = publicService.findObject(Predicates.follows).getValue();
     const procedure = await fetchType(request, procedureUri, ProcedureType);
     expect(procedure.findAllTriples(Predicates.title)).toHaveLength(1);
-    expect(procedure.findObject(Predicates.title)).toEqual(new Literal('procedure title generated formal', Language.FORMAL));
+    expect(procedure.findObject(Predicates.title)).toEqual(new Literal('procedure title nl', Language.FORMAL));
     expect(procedure.findAllTriples(Predicates.description)).toHaveLength(1);
-    expect(procedure.findObject(Predicates.description)).toEqual(new Literal('procedure description generated formal', Language.FORMAL));
+    expect(procedure.findObject(Predicates.description)).toEqual(new Literal('procedure description nl', Language.FORMAL));
 });
 
 test('Create instance from concept: When concept with procedure with website then instance has procedure with website with correct text and language version', async ({request}) => {
@@ -456,9 +456,9 @@ test('Create instance from concept: When concept with procedure with website the
     const websiteUri = procedure.findObject(Predicates.hasWebsite).getValue();
     const website = await fetchType(request, websiteUri, WebsiteType);
     expect(website.findAllTriples(Predicates.title)).toHaveLength(1);
-    expect(website.findObject(Predicates.title)).toEqual(new Literal('website title generated formal', Language.FORMAL));
+    expect(website.findObject(Predicates.title)).toEqual(new Literal('website title nl', Language.FORMAL));
     expect(website.findAllTriples(Predicates.description)).toHaveLength(1);
-    expect(website.findObject(Predicates.description)).toEqual(new Literal('website description generated formal', Language.FORMAL));
+    expect(website.findObject(Predicates.description)).toEqual(new Literal('website description nl', Language.FORMAL));
 });
 
 test('Create instance from concept: When concept with website then instance has website with correct text and language version', async ({request}) => {
@@ -475,9 +475,9 @@ test('Create instance from concept: When concept with website then instance has 
     const moreInfoUri = publicService.findObject(Predicates.hasMoreInfo).getValue();
     const moreInfo = await fetchType(request, moreInfoUri, WebsiteType);
     expect(moreInfo.findAllTriples(Predicates.title)).toHaveLength(1);
-    expect(moreInfo.findObject(Predicates.title)).toEqual(new Literal('website title generated formal', Language.FORMAL));
+    expect(moreInfo.findObject(Predicates.title)).toEqual(new Literal('website title nl', Language.FORMAL));
     expect(moreInfo.findAllTriples(Predicates.description)).toHaveLength(1);
-    expect(moreInfo.findObject(Predicates.description)).toEqual(new Literal('website description generated formal', Language.FORMAL));
+    expect(moreInfo.findObject(Predicates.description)).toEqual(new Literal('website description nl', Language.FORMAL));
 });
 
 test('Create instance from concept: When concept with cost then instance has cost with correct text and language version', async ({request}) => {
@@ -494,9 +494,9 @@ test('Create instance from concept: When concept with cost then instance has cos
     const costUri = publicService.findObject(Predicates.hasCost).getValue();
     const cost = await fetchType(request, costUri, CostType);
     expect(cost.findAllTriples(Predicates.title)).toHaveLength(1);
-    expect(cost.findObject(Predicates.title)).toEqual(new Literal('cost title generated formal', Language.FORMAL));
+    expect(cost.findObject(Predicates.title)).toEqual(new Literal('cost title nl', Language.FORMAL));
     expect(cost.findAllTriples(Predicates.description)).toHaveLength(1);
-    expect(cost.findObject(Predicates.description)).toEqual(new Literal('cost description generated formal', Language.FORMAL));
+    expect(cost.findObject(Predicates.description)).toEqual(new Literal('cost description nl', Language.FORMAL));
 });
 
 test('Create instance from concept: When concept with financial advantage then instance has financial advantage with correct text and language version', async ({request}) => {
@@ -513,9 +513,9 @@ test('Create instance from concept: When concept with financial advantage then i
     const financialAdvantageUri = publicService.findObject(Predicates.hasFinancialAdvantage).getValue();
     const financialAdvantage = await fetchType(request, financialAdvantageUri, FinancialAdvantageType);
     expect(financialAdvantage.findAllTriples(Predicates.title)).toHaveLength(1);
-    expect(financialAdvantage.findObject(Predicates.title)).toEqual(new Literal('financial advantage title generated formal', Language.FORMAL));
+    expect(financialAdvantage.findObject(Predicates.title)).toEqual(new Literal('financial advantage title nl', Language.FORMAL));
     expect(financialAdvantage.findAllTriples(Predicates.description)).toHaveLength(1);
-    expect(financialAdvantage.findObject(Predicates.description)).toEqual(new Literal('financial advantage description generated formal', Language.FORMAL));
+    expect(financialAdvantage.findObject(Predicates.description)).toEqual(new Literal('financial advantage description nl', Language.FORMAL));
 });
 
 test('Create instance from concept: all instance fields with language should have correct text and languageVersion', async ({request}) => {
@@ -541,11 +541,11 @@ test('Create instance from concept: all instance fields with language should hav
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect(publicService.findAllTriples(Predicates.additionalDescription)).toHaveLength(1);
-    expect(publicService.findObject(Predicates.additionalDescription)).toEqual(new Literal('additional description generated formal', Language.FORMAL));
+    expect(publicService.findObject(Predicates.additionalDescription)).toEqual(new Literal('additional description nl', Language.FORMAL));
     expect(publicService.findAllTriples(Predicates.exception)).toHaveLength(1);
-    expect(publicService.findObject(Predicates.exception)).toEqual(new Literal('exception generated formal', Language.FORMAL));
+    expect(publicService.findObject(Predicates.exception)).toEqual(new Literal('exception nl', Language.FORMAL));
     expect(publicService.findAllTriples(Predicates.regulation)).toHaveLength(1);
-    expect(publicService.findObject(Predicates.regulation)).toEqual(new Literal('regulation generated formal', Language.FORMAL));
+    expect(publicService.findObject(Predicates.regulation)).toEqual(new Literal('regulation nl', Language.FORMAL));
 });
 
 test('Create instance from concept: When concept contains english language then this should not be removed', async ({request}) => {

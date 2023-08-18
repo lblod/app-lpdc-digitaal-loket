@@ -33,7 +33,7 @@ test('When chosenForm informal and concept in unknown version then language in f
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
-test('When chosenForm formal and concept in unknown versions then language in form should be @nl-be-x-generated-formal', async ({request}) => {
+test('When chosenForm formal and concept in unknown versions then language in form should be @nl', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
         .withChosenForm('formal')
@@ -51,11 +51,11 @@ test('When chosenForm formal and concept in unknown versions then language in fo
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-generated-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
-test('When no chosenForm and concept in unknown versions then language in form should be @nl-be-x-generated-formal', async ({request}) => {
+test('When no chosenForm and concept in unknown versions then language in form should be @nl', async ({request}) => {
     const cookie = await loginAsPepingen(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -70,7 +70,7 @@ test('When no chosenForm and concept in unknown versions then language in form s
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-generated-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
