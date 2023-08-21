@@ -128,7 +128,6 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-
   ################################################################################
   # LPDC-specific Services
   ################################################################################
@@ -139,7 +138,6 @@ services:
       - ./data/files/lpdc:/data
     labels:
       - "logging=true"
-
   lpdc-publish:
     image: lblod/lpdc-publish-service:0.8.0
     environment:
@@ -150,7 +148,6 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-
   lpdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.0
     environment:
