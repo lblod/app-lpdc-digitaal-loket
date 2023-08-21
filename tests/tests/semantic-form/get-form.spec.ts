@@ -6,7 +6,7 @@ import {deleteAll} from "../test-helpers/sparql";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
 import {Predicates, TripleArray} from "../test-helpers/triple-array";
-import {FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
+import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 
 const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
 const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
@@ -121,8 +121,7 @@ test('When getting content form for public service than form language is replace
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
-const chosenForms: ('formal' | 'informal')[] = ['formal', 'informal'];
-for (const chosenForm of chosenForms) {
+for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
     test(`When getting content form for public service only has no language then chosenform(${chosenForm}) is used in form`, async ({request}) => {
         const cookie = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()

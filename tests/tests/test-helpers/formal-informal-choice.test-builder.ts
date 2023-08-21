@@ -6,6 +6,11 @@ import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 
 export const FormalInformalChoiceType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FormalInformalChoice';
 
+export enum ChosenForm {
+    FORMAL = 'formal',
+    INFORMAL = 'informal',
+}
+
 export class FormalInformalChoiceTestBuilder {
 
     private id = new Uri(`http://data.lblod.info/id/formalInformalChoice/${uuid()}`);
@@ -20,7 +25,7 @@ export class FormalInformalChoiceTestBuilder {
         return new FormalInformalChoiceTestBuilder()
             .withType()
             .withUUID(uuid())
-            .withChosenForm('formal')
+            .withChosenForm(ChosenForm.FORMAL)
             .withDateCreated(new Date())
             .withBestuurseenheid(pepingenId)
     }
@@ -35,7 +40,7 @@ export class FormalInformalChoiceTestBuilder {
         return this;
     }
 
-    withChosenForm(chosenForm: 'formal' | 'informal'): FormalInformalChoiceTestBuilder {
+    withChosenForm(chosenForm: ChosenForm): FormalInformalChoiceTestBuilder {
         this.chosenForm = new Literal(chosenForm);
         return this;
     }

@@ -15,7 +15,7 @@ import {
     ConceptDisplayConfigurationTestBuilder,
     ConceptDisplayConfigurationType
 } from "../test-helpers/concept-display-configuration.test-builder";
-import {FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
+import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
@@ -275,7 +275,7 @@ test('Create instance from concept: When no chosenForm then instance language ve
 
 test('Create instance from concept: When chosenForm is formal then instance language version should be formal', async ({request}) => {
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm(ChosenForm.FORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -300,7 +300,7 @@ test('Create instance from concept: When chosenForm is formal then instance lang
 
 test('Create instance from concept: When chosenForm is informal then instance language version should be informal', async ({request}) => {
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('informal')
+        .withChosenForm(ChosenForm.INFORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -325,7 +325,7 @@ test('Create instance from concept: When chosenForm is informal then instance la
 
 test('Create instance from concept: When chosenForm is formal then language fields of instance should contain generated formal text', async ({request}) => {
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm(ChosenForm.FORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -350,7 +350,7 @@ test('Create instance from concept: When chosenForm is formal then language fiel
 
 test('Create instance from concept: When chosenForm is informal then language fields of instance should contain generated informal text', async ({request}) => {
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('informal')
+        .withChosenForm(ChosenForm.INFORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()

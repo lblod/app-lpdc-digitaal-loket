@@ -1,7 +1,7 @@
 import {expect, test} from "@playwright/test";
 import fs from "fs";
 import {loginAsPepingen} from "../test-helpers/login";
-import {FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
+import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 import {deleteAll} from "../test-helpers/sparql";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
@@ -15,7 +15,7 @@ test.beforeEach(async ({request}) => {
 test('When chosenForm informal and concept in unknown version then language in form should be @nl-be-x-generated-informal', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('informal')
+        .withChosenForm(ChosenForm.INFORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -36,7 +36,7 @@ test('When chosenForm informal and concept in unknown version then language in f
 test('When chosenForm formal and concept in unknown versions then language in form should be @nl', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm(ChosenForm.FORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -77,7 +77,7 @@ test('When no chosenForm and concept in unknown versions then language in form s
 test('When chosenForm informal and concept in informal version then language in form should be @nl-be-x-informal', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('informal')
+        .withChosenForm(ChosenForm.INFORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -99,7 +99,7 @@ test('When chosenForm informal and concept in informal version then language in 
 test('When chosenForm formal and concept in informal version then language in form should be @nl-be-x-generated-formal', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm(ChosenForm.FORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -140,7 +140,7 @@ test('When no chosenForm and concept in informal version then language in form s
 test('When chosenForm informal and concept in formal version then language in form should be @nl-be-x-generated-informal', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('informal')
+        .withChosenForm(ChosenForm.INFORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -162,7 +162,7 @@ test('When chosenForm informal and concept in formal version then language in fo
 test('When chosenForm formal and concept in formal version then language in form should be @nl-be-x-formal', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm(ChosenForm.FORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -203,7 +203,7 @@ test('When no chosenForm and concept in formal version then language in form sho
 test('When chosenForm informal and concept in both version then language in form should be @nl-be-x-informal', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('informal')
+        .withChosenForm(ChosenForm.INFORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -225,7 +225,7 @@ test('When chosenForm informal and concept in both version then language in form
 test('When chosenForm formal and concept in both versions then language in form should be @nl-be-x-formal', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm(ChosenForm.FORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -266,7 +266,7 @@ test('When no chosenForm and concept in both versions then language in form shou
 test('When chosenForm informal and concept only in nl version then language in form should be @nl', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('informal')
+        .withChosenForm(ChosenForm.INFORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -285,7 +285,7 @@ test('When chosenForm informal and concept only in nl version then language in f
 test('When chosenForm formal and concept only in nl then language in form should be @nl', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     await FormalInformalChoiceTestBuilder.aChoice()
-        .withChosenForm('formal')
+        .withChosenForm(ChosenForm.FORMAL)
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
