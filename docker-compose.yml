@@ -19,7 +19,6 @@ services:
       # These should be overriden in docker-compose.override.yml
       EMBER_LOKET_URL: "https://loket.lblod.info/"
       EMBER_ACMIDM_CLIENT_ID: "ce73422e-63ea-417d-9cee-7e85f2ee21b9"
-      EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       EMBER_ACMIDM_AUTH_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
       EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
       EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/authorization/callback"
