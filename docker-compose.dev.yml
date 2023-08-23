@@ -27,17 +27,12 @@ services:
     restart: "no"
   sink:
     restart: "no"
-
   ################################################################################
   # LPDC-related Services
   ################################################################################
-
   lpdc-management:
     restart: "no"
-
   lpdc-publish:
     restart: "no"
-
   lpdc-ldes-consumer:
     restart: "no"
-  
