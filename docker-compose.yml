@@ -132,7 +132,6 @@ services:
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################
-  
   report-generation:
     image: lblod/loket-report-generation-service:0.6.3
     volumes:
@@ -141,8 +140,9 @@ services:
     labels:
       - "logging=true"
     restart: always
+    links:
+      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
     logging: *default-logging
-  
   dashboard:
     image: lblod/frontend-dashboard:1.6.0
     environment:
@@ -153,7 +153,6 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-
   file:
     image: cecemel/file-service:3.3.0
     volumes:
@@ -162,13 +161,9 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-  
-=======
->>>>>>> development
   ################################################################################
   # LPDC-specific Services
   ################################################################################
-
   lpdc-management:
     image: lblod/lpdc-management-service:0.24.4
     volumes:
