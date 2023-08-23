@@ -31,40 +31,6 @@ defmodule Acl.UserGroups.Config do
     }"
   end
 
-  defp is_authenticated() do
-    %AccessByQuery{
-      # Let's be restrictive,
-      # we want the session to be attached to a role and uuid of bestuurseeneheid ( == ?session_group )
-      vars: [],
-      query: "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
-        PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
-        SELECT DISTINCT ?session_group ?session_role WHERE {
-          <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group;
-                       ext:sessionRole ?session_role.
-        }"
-      }
-  end
-
-  defp access_sensitive_delta_producer_data() do
-    %AccessByQuery{
-      vars: [ "group_name" ],
-      query: "
-        PREFIX foaf: <http://xmlns.com/foaf/0.1/>
-        PREFIX muAccount: <http://mu.semte.ch/vocabularies/account/>
-        SELECT DISTINCT ?group_name WHERE {
-          <SESSION_ID> muAccount:account ?onlineAccount.
-
-          ?onlineAccount  a foaf:OnlineAccount.
-
-          ?agent a foaf:Agent;
-            foaf:account ?onlineAccount.
-
-          ?group foaf:member ?agent;
-            foaf:name ?group_name.
-        }"
-      }
-  end
-
   def user_groups do
     # These elements are walked from top to bottom.  Each of them may
     # alter the quads to which the current query applies.  Quads are
@@ -138,32 +104,6 @@ defmodule Acl.UserGroups.Config do
                     graph: "http://mu.semte.ch/graphs/sessions",
                     constraint: %ResourceFormatConstraint{
                       resource_prefix: "http://mu.semte.ch/sessions/"
-                    } } ] },
-      %GroupSpec{
-        name: "public-r",
-        useage: [:read],
-        access: is_authenticated(),
-        graphs: [%GraphSpec{
-                    graph: "http://mu.semte.ch/graphs/authenticated/public",
-                    constraint: %ResourceConstraint{
-                       resource_types: [
-                         "http://data.vlaanderen.be/ns/besluit#Bestuurseenheid",
-                       ],
-                       predicates: %NoPredicates{
-                         except: [
-                           "http://mu.semte.ch/vocabularies/ext/viewOnlyModules"
-                         ] } } } ] },
-    %GroupSpec{
-        name: "public-wf",
-        useage: [:write, :read_for_write],
-        access: %AlwaysAccessible{}, # TODO: Should be only for logged in users
-        graphs: [%GraphSpec{
-                    graph: "http://mu.semte.ch/graphs/public",
-                    constraint: %ResourceConstraint{
-                      resource_types: [
-                        "http://mu.semte.ch/vocabularies/ext/BeleidsdomeinCode",
-                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#Folder" #TODO: not sure why this is here
-                      ]
                     } } ] },
 
       # // LPDC-IPDC

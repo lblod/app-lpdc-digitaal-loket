@@ -27,7 +27,6 @@ services:
     restart: "no"
   sink:
     restart: "no"
-
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################
@@ -44,13 +43,9 @@ services:
   ################################################################################
   # LPDC-specific services
   ################################################################################
-
   lpdc-management:
     restart: "no"
-
   lpdc-publish:
     restart: "no"
-
   lpdc-ldes-consumer:
     restart: "no"
-  
