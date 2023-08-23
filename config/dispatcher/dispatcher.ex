@@ -62,6 +62,39 @@ defmodule Dispatcher do
   end
 
   #################################################################
+  # Reports
+  #################################################################
+  match "/reports/*path" do
+    forward conn, path, "http://resource/reports/"
+  end
+
+  get "/files/:id/download" do
+    forward conn, [], "http://file/files/" <> id <> "/download"
+  end
+  
+  get "/files/*path" do
+    forward conn, path, "http://resource/files/"
+  end
+  
+  patch "/files/*path" do
+    forward conn, path, "http://resource/files/"
+  end
+  
+  post "/files/*path" do
+    forward conn, path, "http://file/files/"
+  end
+
+  # TODO: find all usage of this endpoint and replace it with `POST /files`
+  # This is kept to maintain compatibility with code that uses the "old" endpoint.
+  post "/file-service/files/*path" do
+    forward conn, path, "http://file/files/"
+  end
+
+  delete "/files/*path" do
+    forward conn, path, "http://file/files/"
+  end
+
+  #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
   match "/conceptual-public-services/*path" do
