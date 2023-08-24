@@ -92,10 +92,3 @@ services:
     restart: always
     logging: *default-logging
 
-  lpdc-management:
-    image: lblod/lpdc-management-service:latest
-    ports:
-      - "10996:80"
-    volumes:
-      - ../config/lpdc-management:/config
-      - ./data-tests/files/lpdc:/data

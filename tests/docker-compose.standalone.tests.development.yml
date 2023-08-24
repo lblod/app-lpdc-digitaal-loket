@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+
+  lpdc-management:
+    image: semtech/mu-javascript-template:feature-node-18
+    ports:
+      - "10996:80"
+      - "9229:9229"
+    environment:
+      NODE_ENV: "development"
+    volumes:
+      - ../../lpdc-management-service/:/app/
+      - ../config/lpdc-management:/config
+      - ./data-tests/files/lpdc:/data

@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+
+  lpdc-management:
+    image: lblod/lpdc-management-service:latest
+    ports:
+      - "10996:80"
+    volumes:
+      - ../config/lpdc-management:/config
+      - ./data-tests/files/lpdc:/data
