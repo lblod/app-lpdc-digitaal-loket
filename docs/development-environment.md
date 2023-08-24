@@ -197,12 +197,25 @@ _Notes_:
 
 ## Running tests
 
-A test container is provided. It creates a new project called app-lpdc-digitaal-loket-tests, using a separate environment than the development container.
+A test container is provided. It creates a new docker project called app-lpdc-digitaal-loket-tests, using a separate environment from the development container.
+It serves as an end-to-end test suite for the app-lpdc-digitaal-loket, stubbing any dependencies outside the bounded context (e.g. ipdc).
 
-You can start local environment for running tests with following command:
+### Running all tests against latest
+
+A script is provided to serve as a no-brainer to configure the container and run all tests.
 
 ```shell
-docker compose -f ./tests/docker-compose.standalone.tests.yml -f ./tests/docker-compose.standalone.tests.override.yml -p app-lpdc-digitaal-loket-tests up -d
+cd tests
+./run-latest.sh
+```
+
+#### All steps explained for running all tests against latest
+
+You can start docker environment for running tests with the with following command:
+
+```shell
+cd tests
+docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.override.yml -p app-lpdc-digitaal-loket-tests up -d
 ```
 in which ./tests/docker-compose.standalone.tests.override.yml should on a mac m2 only contain an override for the resource :
 
@@ -218,10 +231,11 @@ services:
 This includes:
 - A virtuoso database is available on port 8896 (instead of standard port 8890), and has its data stored in the ./data-test folder
 - An identifier / dispatcher endpoint available on port 96 (instead of standard port 90)
-- Following containers have been disabled or are not included: lpdc, login, lpdc-publish and lpdc-ldes-consumer container.
+- Following containers have been disabled or are not included: lpdc, login, lpdc-publish and lpdc-ldes-consumer container (for now).
 
 Viewing logs :
 ```shell
+cd tests
 docker compose -p app-lpdc-digitaal-loket-tests logs
 ```
 
@@ -233,8 +247,17 @@ npm run tests
 
 Stopping the docker container for tests:
 ```shell
-docker compose -p app-lpdc-digitaal-loket-tests down
+cd tests
+docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.override.yml -p app-lpdc-digitaal-loket-tests down
+```
+
+Refreshing the latest docker containers (update the latest versions)
+```shell
+cd tests
+docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.override.yml -p app-lpdc-digitaal-loket-tests pull
 ```
 
 _Note_: the test container keeps it database under the folder /tests/data-tests. It is reused over test runs. It contains the migrated data related to bestuurseenheden, personen, etc. If you want to have a very clean test run, stop docker, delete this folder, and restart test container.
+
+
 
