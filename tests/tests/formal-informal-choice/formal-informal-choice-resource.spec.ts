@@ -1,14 +1,17 @@
 import {expect, test} from '@playwright/test';
 import {loginAsBilzen, loginAsPepingen} from "../test-helpers/login";
 import {deleteAll} from "../test-helpers/sparql";
+import {dispatcherUrl} from "../test-helpers/test-options";
+
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
 });
 
+
 test('Can get a unchosen formal informal choice of bestuurseenheid', async ({request}) => {
     const cookie = await loginAsPepingen(request);
-    const formalInformalChoicePepingen = await request.get("http://localhost:91/formal-informal-choices", {headers: {cookie: cookie}});
+    const formalInformalChoicePepingen = await request.get(`${dispatcherUrl}/formal-informal-choices`, {headers: {cookie: cookie}});
 
     expect(formalInformalChoicePepingen.ok()).toBeTruthy();
     expect(await formalInformalChoicePepingen.json()).toMatchObject({
@@ -20,7 +23,7 @@ test('Can save chose formal informal choice of bestuurseenheid', async ({request
     const cookie = await loginAsPepingen(request);
 
     const response = await request.post(
-        "http://localhost:91/formal-informal-choices",
+        `${dispatcherUrl}/formal-informal-choices`,
         {
             headers: {cookie: cookie, 'Content-Type': 'application/vnd.api+json'},
             data: {
@@ -47,7 +50,7 @@ test('Can save chose formal informal choice of bestuurseenheid', async ({request
     const id = postFormalInformalChoiceResponse.data.id;
 
     const formalInformalChoicePepingen = await request.get(
-        `http://localhost:91/formal-informal-choices`,
+        `${dispatcherUrl}/formal-informal-choices`,
         {params: {include: 'bestuurseenheid'}}
     );
 
@@ -86,7 +89,7 @@ test('Can save chose formal informal choice of bestuurseenheid', async ({request
 test('login as other bestuurseenheid should not return formal informal choice of Peppingen', async ({request}) => {
     let cookie = await loginAsPepingen(request);
     const response = await request.post(
-        "http://localhost:91/formal-informal-choices",
+        `${dispatcherUrl}/formal-informal-choices`,
         {
             headers: {cookie: cookie, 'Content-Type': 'application/vnd.api+json'},
             data: {
@@ -110,7 +113,7 @@ test('login as other bestuurseenheid should not return formal informal choice of
     );
     expect(response.ok()).toBeTruthy();
     cookie = await loginAsBilzen(request);
-    const formalInformalChoiceBilzen = await request.get(`http://localhost:91/formal-informal-choices`, {headers: {cookie: cookie}});
+    const formalInformalChoiceBilzen = await request.get(`${dispatcherUrl}/formal-informal-choices`, {headers: {cookie: cookie}});
     expect(await formalInformalChoiceBilzen.json()).toMatchObject({
         data: []
     });

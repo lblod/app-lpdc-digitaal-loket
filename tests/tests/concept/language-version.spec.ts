@@ -3,6 +3,7 @@ import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {loginAsPepingen} from "../test-helpers/login";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 import {deleteAll} from "../test-helpers/sparql";
+import {dispatcherUrl} from "../test-helpers/test-options";
 
 test.beforeEach(async ({request}) => {
    await deleteAll(request);
@@ -30,7 +31,7 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
 
 async function getConceptLanguageVersion(request: APIRequestContext, conceptUUID: string) {
     const cookie = await loginAsPepingen(request);
-    const response = await request.get(`http://localhost:91/lpdc-management/conceptual-public-services/${conceptUUID}/language-version`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${conceptUUID}/language-version`, {headers: {cookie: cookie}});
     expect(response.ok()).toBeTruthy();
     return response.json();
 }

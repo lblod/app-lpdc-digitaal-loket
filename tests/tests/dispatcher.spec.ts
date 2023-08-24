@@ -1,8 +1,9 @@
-import {test, expect} from '@playwright/test';
+import {expect, test} from '@playwright/test';
+import {dispatcherUrl} from "./test-helpers/test-options";
 
 for (const url of ['', 'non-existing-url']) {
     test(`Dispatcher Reports Not Found on url ${url}`, async ({request}) => {
-        const result = await request.get("http://localhost:91");
+        const result = await request.get(dispatcherUrl);
 
         expect(result.status()).toEqual(404);
 
