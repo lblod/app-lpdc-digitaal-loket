@@ -133,6 +133,11 @@ services:
   ################################################################################
   lpdc-management:
     image: lblod/lpdc-management-service:0.26.0
+    environment:
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
     volumes:
       - ./config/lpdc-management:/config
       - ./data/files/lpdc:/data

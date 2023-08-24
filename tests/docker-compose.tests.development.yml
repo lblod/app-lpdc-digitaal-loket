@@ -9,6 +9,10 @@ services:
       - "9229:9229"
     environment:
       NODE_ENV: "development"
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
     volumes:
       - ../../lpdc-management-service/:/app/
       - ../config/lpdc-management:/config

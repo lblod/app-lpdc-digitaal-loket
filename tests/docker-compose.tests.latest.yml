@@ -6,6 +6,11 @@ services:
     image: lblod/lpdc-management-service:latest
     ports:
       - "10996:80"
+    environment:
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
     volumes:
       - ../config/lpdc-management:/config
       - ./data-tests/files/lpdc:/data
