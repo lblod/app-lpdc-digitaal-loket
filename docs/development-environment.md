@@ -202,6 +202,18 @@ It serves as an end-to-end test suite for the app-lpdc-digitaal-loket, stubbing 
 
 You can either run all tests against 'latest', or in a development mode.
 
+### Prerequisites 
+
+Create Dockerfile in tests folder with name `docker-compose.standalone.tests.override.yml` and following content when running mac arm64
+```dockerfile
+version: "3.7"
+
+services:
+
+  resource:
+    image: semtech/mu-cl-resources:feature-arm64-builds
+```
+
 ### Running all tests against a local development version
 
 A script is provided to start the docker containers for the tests in development mode. This will navigate use the local sources of the lpdc-management-service project and start a container in node development mode.
@@ -233,16 +245,6 @@ You can start docker environment for running tests with the with following comma
 ```shell
 cd tests
 docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.latest.yml -f ./docker-compose.standalone.tests.override.yml -p app-lpdc-digitaal-loket-tests up -d
-```
-in which ./tests/docker-compose.standalone.tests.override.yml should on a mac m2 only contain an override for the resource :
-
-```dockerfile
-version: "3.7"
-
-services:
-
-  resource:
-    image: semtech/mu-cl-resources:feature-arm64-builds
 ```
 
 This includes:
