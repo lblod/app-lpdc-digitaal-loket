@@ -19,5 +19,5 @@ docker-compose.override.yml
 .htpasswd
 .env
 data-backup
-/tests/docker-compose.standalone.tests.latest.override.yml
-/tests/docker-compose.standalone.tests.development.override.yml
+/tests/docker-compose.tests.latest.override.yml
+/tests/docker-compose.tests.development.override.yml

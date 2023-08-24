@@ -204,7 +204,7 @@ You can either run all tests against 'latest', or in a development mode.
 
 ### Prerequisites when running on mac arm64
 
-Create Dockerfile in tests folder with name `docker-compose.standalone.tests.latest.override.yml` and following content when running mac arm64
+Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content when running mac arm64
 ```dockerfile
 version: "3.7"
 
@@ -214,7 +214,7 @@ services:
     image: semtech/mu-cl-resources:feature-arm64-builds
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.standalone.tests.development.override.yml` and following content when running mac arm64
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content when running mac arm64
 ```dockerfile
 version: "3.7"
 
@@ -235,14 +235,14 @@ docker build -t mu-javascript-template:feature-node-18-arm64-build .
 
 ### Prerequisites when not running on mac arm64
 
-Create Dockerfile in tests folder with name `docker-compose.standalone.tests.latest.override.yml` and following content
+Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content
 
 ```dockerfile
 version: "3.7"
 
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.standalone.tests.development.override.yml` and following content
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content
 
 ```dockerfile
 version: "3.7"
@@ -279,7 +279,7 @@ You can start docker environment for running tests with the with following comma
 
 ```shell
 cd tests
-docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.latest.yml -f ./docker-compose.standalone.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests up -d
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests up -d
 ```
 
 This includes:
@@ -302,13 +302,13 @@ npm run tests
 Stopping the docker container for tests:
 ```shell
 cd tests
-docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.latest.yml -f ./docker-compose.standalone.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests down
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests down
 ```
 
 Refreshing the latest docker containers (update the latest versions)
 ```shell
 cd tests
-docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.latest.yml -f ./docker-compose.standalone.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests pull
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests pull
 ```
 
 _Note_: the test container keeps it database under the folder /tests/data-tests. It is reused over test runs. It contains the migrated data related to bestuurseenheden, personen, etc. If you want to have a very clean test run, stop docker, delete this folder, and restart test container.

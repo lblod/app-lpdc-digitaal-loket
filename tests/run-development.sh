@@ -16,6 +16,6 @@ then
 fi
 
 npm install
-docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.development.yml -f ./docker-compose.standalone.tests.development.override.yml -p app-lpdc-digitaal-loket-tests down
-docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.development.yml -f ./docker-compose.standalone.tests.development.override.yml -p app-lpdc-digitaal-loket-tests pull
-docker compose -f ./docker-compose.standalone.tests.yml -f ./docker-compose.standalone.tests.development.yml -f ./docker-compose.standalone.tests.development.override.yml -p app-lpdc-digitaal-loket-tests up -d
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.development.yml -f ./docker-compose.tests.development.override.yml -p app-lpdc-digitaal-loket-tests down
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.development.yml -f ./docker-compose.tests.development.override.yml -p app-lpdc-digitaal-loket-tests pull
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.development.yml -f ./docker-compose.tests.development.override.yml -p app-lpdc-digitaal-loket-tests up -d
