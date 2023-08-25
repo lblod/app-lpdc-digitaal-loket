@@ -190,6 +190,55 @@ git checkout data/db
 docker compose up -d
 ```
 
+### Prerequisites when running on mac arm64
+
+Build all arm64 images using script
+```shell
+cd tools
+./build-arm-images.sh
+```
+
+On mac arm64, an example docker-compose.override.yml might look like:
+```dockerfile
+version: "3.7"
+
+services:
+  lpdc:
+    image: lblod/frontend-lpdc:latest
+
+  resource:
+    image: semtech/mu-cl-resources:feature-arm64-builds
+#  database:
+#    environment:
+#      LOG_OUTGOING_SPARQL_QUERIES: "yes"
+#      LOG_INCOMING_SPARQL_QUERIES: "yes"
+
+  lpdc-management:
+    image: lblod/lpdc-management-service:latest
+
+  lpdc-ldes-consumer:
+    environment:
+      LDES_ENDPOINT_HEADER_X-API-KEY: <your ldes endpoint header api key here>
+
+  lpdc-publish:
+    image: lblod/lpdc-publish-service:latest
+
+  database:
+    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
+    
+  cache:
+    image: semtech/mu-cache:2.0.2-arm64-build
+
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0-arm64-build
+
+  dispatcher:
+    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
+
+  identifier:
+    image: semtech/mu-identifier:1.10.0-arm64-build    
+```
+
 _Notes_:
 - Virtuoso can take a while to execute its first run; the database will be inaccessible in the meantime. Make sure to also wait for the migrations to run.
 - `docker compose` (bundled with the new docker engine) is used in the README instead of the old `docker-compose` command.
@@ -200,9 +249,7 @@ _Notes_:
 A test container is provided. It creates a new docker project called app-lpdc-digitaal-loket-tests, using a separate environment from the development container.
 It serves as an end-to-end test suite for the app-lpdc-digitaal-loket, stubbing any dependencies outside the bounded context (e.g. ipdc).
 
-You can either run all tests against 'latest', or in a development mode.
-
-### Prerequisites when running on mac arm64
+You can either run all tests against 'latest' images built on dockerhub, or in a development mode (which uses your local sources - so don't forget to update to correct branch).
 
 Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content when running mac arm64
 ```dockerfile
@@ -212,6 +259,22 @@ services:
 
   resource:
     image: semtech/mu-cl-resources:feature-arm64-builds
+
+  database:
+    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
+
+  cache:
+    image: semtech/mu-cache:2.0.2-arm64-build
+
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0-arm64-build
+
+  dispatcher:
+    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
+
+  identifier:
+    image: semtech/mu-identifier:1.10.0-arm64-build
+    
 ```
 
 Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content when running mac arm64
@@ -224,13 +287,29 @@ services:
     image: semtech/mu-cl-resources:feature-arm64-builds
 
   lpdc-management:
-    image: mu-javascript-template:feature-node-18-arm64-build
+    image: semtech/mu-javascript-template:feature-node-18-arm64-build
+
+  database:
+    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
+
+  cache:
+    image: semtech/mu-cache:2.0.2-arm64-build
+
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0-arm64-build
+
+  dispatcher:
+    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
+
+  identifier:
+    image: semtech/mu-identifier:1.10.0-arm64-build
+    
 ```
 
 Build a local arm64 image from https://github.com/gauquiebart/mu-javascript-template/tree/feature/node-18-decrease-development-reload-time . (temporary from this repo till PR is merged into main mu-javascript-template ) 
 
 ```shell
-docker build -t mu-javascript-template:feature-node-18-arm64-build .
+docker build -t semtech/mu-javascript-template:feature-node-18-arm64-build .
 ```
 
 ### Prerequisites when not running on mac arm64

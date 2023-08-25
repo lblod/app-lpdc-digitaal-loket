@@ -10,8 +10,8 @@ fi
 if [ "$1" = "--clear-test-data" ]
 then
   echo "Clearing test data".
-  rm -rf data-tests.
-  rm -rf test-results.
+  rm -rf data-tests
+  rm -rf test-results
 fi
 
 npm install
