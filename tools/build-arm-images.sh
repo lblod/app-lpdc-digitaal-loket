@@ -28,6 +28,13 @@ git checkout feature/node-16-support
 docker build -t semtech/mu-javascript-template:feature-node-16-support-arm64-build .
 cd ..
 
+rm -rf mu-javascript-template
+git clone https://github.com/mu-semtech/mu-javascript-template.git
+cd mu-javascript-template || exit
+git checkout tags/v1.5.0-beta.3
+docker build -t semtech/mu-javascript-template:1.5.0-beta.3-arm64-build .
+cd ..
+
 #ruby
 git clone https://github.com/erikap/docker-ruby-sinatra.git
 cd docker-ruby-sinatra || exit
@@ -126,3 +133,9 @@ sed -i '' -e 's/mu-javascript-template:feature-node-16-support/mu-javascript-tem
 docker build -t redpencil/ldes-consumer:0.7.1-arm64-build .
 cd ..
 
+git clone https://github.com/lblod/acmidm-login-service.git
+cd acmidm-login-service || exit
+git checkout tags/v0.9.2
+sed -i '' -e 's/mu-javascript-template:1.5.0-beta.3/mu-javascript-template:1.5.0-beta.3-arm64-build/g' Dockerfile
+docker build -t lblod/acmidm-login-service:0.9.2-arm64-build .
+cd ..

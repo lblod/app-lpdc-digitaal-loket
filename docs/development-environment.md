@@ -203,6 +203,9 @@ On mac arm64, an example docker-compose.override.yml might look like:
 version: "3.7"
 
 services:
+  login:
+    image: lblod/acmidm-login-service:0.9.2-arm64-build
+  
   lpdc:
     image: lblod/frontend-lpdc:latest
 
