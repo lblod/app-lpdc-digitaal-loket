@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.2.0
+    image: lblod/frontend-lpdc:0.3.0
     links:
       - identifier:backend
     labels:
@@ -132,7 +132,7 @@ services:
   # LPDC-specific Services
   ################################################################################
   lpdc-management:
-    image: lblod/lpdc-management-service:0.26.0
+    image: lblod/lpdc-management-service:0.27.0
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
