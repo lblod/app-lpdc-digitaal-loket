@@ -308,9 +308,6 @@ services:
   resource:
     image: semtech/mu-cl-resources:feature-arm64-builds
 
-  lpdc-management:
-    image: semtech/mu-javascript-template:feature-node-18-arm64-build
-
   database:
     image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
 
@@ -325,18 +322,24 @@ services:
 
   identifier:
     image: semtech/mu-identifier:1.10.0-arm64-build
-    
+
   deltanotifier:
     image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build
-    
+
   mocklogin:
-    image: lblod/mock-login-service:0.4.0-arm64-build        
-    
+    image: lblod/mock-login-service:0.4.0-arm64-build
+
   lpdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
     environment:
-      LDES_ENDPOINT_HEADER_X-API-KEY: <your api key here> 
-        
+      LDES_ENDPOINT_HEADER_X-API-KEY: "yvgqpA&zdY@a4EjQWP$*22Lk&7TbZgzKxfbTQhHN"
+
+  lpdc-management:
+    image: semtech/mu-javascript-template:feature-node-18-arm64-build
+
+  lpdc-publish:
+    image: semtech/mu-javascript-template:feature-node-18-arm64-build
+       
 ```
 
 Build a local arm64 image from https://github.com/gauquiebart/mu-javascript-template/tree/feature/node-18-decrease-development-reload-time . (temporary from this repo till PR is merged into main mu-javascript-template ) 

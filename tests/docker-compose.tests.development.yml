@@ -17,3 +17,19 @@ services:
       - ../../lpdc-management-service/:/app/
       - ../config/lpdc-management:/config
       - ./data-tests/files/lpdc:/data
+
+  lpdc-publish:
+    image: semtech/mu-javascript-template:feature-node-18
+    ports:
+      - "10229:9229"
+    volumes:
+      - ../../lpdc-publish-service/:/app/
+    environment:
+      NODE_ENV: "development"
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
+      LDES_ENDPOINT: "https://dev.lpdc.lblod.info"
+      LDES_FOLDER: "dev-lpdc-stream"
+      CRON_PATTERN: "0 * * * *" # every hour

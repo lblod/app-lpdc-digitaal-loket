@@ -14,3 +14,14 @@ services:
     volumes:
       - ../config/lpdc-management:/config
       - ./data-tests/files/lpdc:/data
+
+  lpdc-publish:
+    image: lblod/lpdc-publish-service:latest
+    environment:
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
+      LDES_ENDPOINT: "https://dev.lpdc.lblod.info"
+      LDES_FOLDER: "dev-lpdc-stream"
+      CRON_PATTERN: "0 * * * *" # every hour
