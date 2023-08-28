@@ -239,7 +239,11 @@ services:
     image: semtech/mu-identifier:1.10.0-arm64-build
 
   deltanotifier:
-    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build        
+    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build
+
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0-arm64-build
+                
 ```
 
 _Notes_:
@@ -281,6 +285,9 @@ services:
   deltanotifier:
     image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build    
     
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0-arm64-build
+    
 ```
 
 Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content when running mac arm64
@@ -311,7 +318,10 @@ services:
     image: semtech/mu-identifier:1.10.0-arm64-build
     
   deltanotifier:
-    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build    
+    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build
+    
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0-arm64-build        
     
 ```
 
