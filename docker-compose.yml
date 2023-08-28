@@ -159,7 +159,7 @@ services:
     image: redpencil/ldes-consumer:0.7.1
     environment:
       LDES_STREAM: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot"
-      LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?pageNumber=0" # first page of the stream
+      LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=0" # first page of the stream
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
       CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
       LDES_POLLING_INTERVAL: 3600000 # since ipdcs caching headers indicate no caching, this means the polling interval to initiate the request again (3 600 000 millis = 1 hour)

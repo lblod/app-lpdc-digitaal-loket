@@ -217,6 +217,7 @@ services:
     image: lblod/lpdc-management-service:latest
 
   lpdc-ldes-consumer:
+    image: redpencil/ldes-consumer:0.7.1-arm64-build
     environment:
       LDES_ENDPOINT_HEADER_X-API-KEY: <your ldes endpoint header api key here>
 
@@ -288,6 +289,11 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0-arm64-build
     
+  lpdc-ldes-consumer:
+    image: redpencil/ldes-consumer:0.7.1-arm64-build
+    environment:
+      LDES_ENDPOINT_HEADER_X-API-KEY: <your api key here> 
+    
 ```
 
 Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content when running mac arm64
@@ -323,6 +329,11 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0-arm64-build        
     
+  lpdc-ldes-consumer:
+    image: redpencil/ldes-consumer:0.7.1-arm64-build
+    environment:
+      LDES_ENDPOINT_HEADER_X-API-KEY: <your api key here> 
+        
 ```
 
 Build a local arm64 image from https://github.com/gauquiebart/mu-javascript-template/tree/feature/node-18-decrease-development-reload-time . (temporary from this repo till PR is merged into main mu-javascript-template ) 
