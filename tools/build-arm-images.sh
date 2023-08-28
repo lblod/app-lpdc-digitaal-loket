@@ -13,6 +13,13 @@ git checkout feature/node-18-decrease-development-reload-time
 docker build -t semtech/mu-javascript-template:feature-node-18-arm64-build .
 cd ..
 
+rm -rf mu-javascript-template
+git clone https://github.com/mu-semtech/mu-javascript-template.git
+cd mu-javascript-template || exit
+git checkout tags/v1.3.5
+docker build -t semtech/mu-javascript-template:1.3.5-arm64-build .
+cd ..
+
 git clone https://github.com/mu-semtech/mu-authorization.git
 cd mu-authorization || exit
 git checkout feature/service-roam-r1
@@ -89,11 +96,9 @@ sed -i '' -e 's/elixir-server:1.9/elixir-server:1.9-arm64-build/g' Dockerfile
 docker build -t semtech/mu-identifier:1.10.0-arm64-build .
 cd ..
 
-#does not seem to work, disabling for now
-#git clone https://github.com/cecemel/delta-notifier.git
-#cd delta-notifier || exit
-#sed -i '' -e 's/mu-javascript-template/mu-javascript-template:feature-node-18-arm64-build/g' Dockerfile
-#docker build -t cecemel/delta-notifier:0.2.0-beta.3-arm64-build .
-#cd ..
-
+git clone https://github.com/cecemel/delta-notifier.git
+cd delta-notifier || exit
+sed -i '' -e 's/mu-javascript-template/mu-javascript-template:1.3.5-arm64-build/g' Dockerfile
+docker build -t cecemel/delta-notifier:0.2.0-beta.3-arm64-build .
+cd ..
 

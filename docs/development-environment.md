@@ -236,7 +236,10 @@ services:
     image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
 
   identifier:
-    image: semtech/mu-identifier:1.10.0-arm64-build    
+    image: semtech/mu-identifier:1.10.0-arm64-build
+
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build        
 ```
 
 _Notes_:
@@ -275,6 +278,9 @@ services:
   identifier:
     image: semtech/mu-identifier:1.10.0-arm64-build
     
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build    
+    
 ```
 
 Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content when running mac arm64
@@ -303,6 +309,9 @@ services:
 
   identifier:
     image: semtech/mu-identifier:1.10.0-arm64-build
+    
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build    
     
 ```
 
