@@ -109,3 +109,5 @@ services:
 
   ipdc-stub:
     image: ipdc-stub:latest
+    ports:
+      - "33000:80"

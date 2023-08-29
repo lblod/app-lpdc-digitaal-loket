@@ -3,8 +3,13 @@ import fs from "fs";
 
 const app = express();
 
+app.use(express.json({type: 'application/ld+json'}));
+
+const instances = [];
+
 function errorHandler(err, req, res, next) {
     if (err) {
+        console.log(err);
         res.status(404).send();
     }
 }
@@ -20,9 +25,28 @@ app.get('/doc/conceptsnapshot', (req, res, next) => {
     }
 });
 
+app.put('/instanties', (req, res, next) => {
+   try {
+       console.log('received instances');
+       instances.push(...req.body);
+       console.log(instances);
+       res.status(200).send();
+   } catch (e) {
+       next(e);
+   }
+});
+
+app.get('/instanties', (req, res, next) => {
+    try {
+        res.status(200).json(instances);
+    } catch (e) {
+        next(e);
+    }
+});
+
 app.use(errorHandler);
 
 app.listen(80, () => {
-    console.log(`IPDC producer stub listening on port 80`)
+    console.log(`IPDC stub listening on port 80`)
 });
 
