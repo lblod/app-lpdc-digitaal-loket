@@ -1,0 +1,2365 @@
+{
+  "timestampPath": "generatedAtTime",
+  "versionOfPath": "isVersionOf",
+  "view": {
+    "@id": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0",
+    "@type": "Node",
+    "relation": [
+      {
+        "node": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=1",
+        "path": "generatedAtTime",
+        "value": "2023-03-07T15:13:36.384195Z",
+        "@type": "GreaterThanOrEqualToRelation"
+      }
+    ]
+  },
+  "@context": "https://ipdc.tni-vlaanderen.be/ConceptJsonLdContext.jsonld",
+  "@id": "http:localhost:3000/doc/conceptsnapshot?pageNumber=0",
+  "@type": "EventStream",
+  "member": [
+    {
+      "id": "b0cb12c4-8668-4e50-9f85-9bd31654bc5d",
+      "generatedAtTime": "2023-03-07T15:13:36.384195Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Lokaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Gemeentelijke aanpassingspremie voor personen met een handicap"
+      },
+      "beschrijving": {
+        "nl": "<p>Hebt u uw woning aangepast aan de noden van een persoon met een handicap en hebt u hiervoor een tussenkomst van het Vlaams Agentschap voor Personen met een Handicap (VAPH) gekregen, dan kunt u een bijkomende gemeentelijk premie aanvragen.\n\nHet gaat om aanpassingen die het comfort en de veiligheid verhogen zoals goede verlichting, hellende vlakken in plaats van drempels, leuningen aan de trap, werkbladen, laden en kasten op een handige hoogte, handgrepen aan bad, douche en toilet, antislipmatjes, brede deurenopeningen, toilet en badkamer binnenshuis, het ombouwen van de garage tot bad- of slaapkamer, ...</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "FinancieelVoordeel",
+      "themas": [
+        "BouwenWonen"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen"
+      ],
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><ul>\n<li>U hebt een tussenkomst voor een woningaanpassing ontvangen van het Vlaams Agentschap voor Personen met een Handicap.</li>\n<li>De aanpassingen verhogen het comfort en de veiligheid en maken zelfstandig wonen mogelijk.</li>\n</ul>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarde"
+          },
+          "bewijs": {
+            "beschrijving": {
+              "nl": "<div class=\"typography\"><p></p><p>Als u het document zelf ophaalt:</p>\n<ul>\n<li>uw eigen identiteitskaart of verblijfsvergunning.</li>\n</ul>\n<p>Als u het document voor iemand anders aanvraagt:</p>\n<ul>\n<li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li>\n<li>uw eigen identiteitskaart.</li>\n</ul>\n<p></p></div>"
+            },
+            "naam": {
+              "nl": "Wat meebrengen"
+            },
+            "@type": "bewijsType"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:35.601718652Z",
+      "laatstGewijzigd": "2023-03-07T15:13:35.601719428Z",
+      "productnummer": "10078",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/b0cb12c4-8668-4e50-9f85-9bd31654bc5d",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/ebc18832-3c42-4fa5-9767-e1f13cac1ca7"
+    },
+    {
+      "id": "c35a3a0b-3fb7-4e7f-8ba0-a32c89b7651e",
+      "generatedAtTime": "2023-03-07T15:13:35.70685Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Aangifte van adreswijziging"
+      },
+      "beschrijving": {
+        "nl": "<div class=\"typography\"><p></p><p>Als u verhuist, moet u uw nieuwe adres <strong>binnen de 8 werkdagen</strong> aangeven bij de dienst Burgerzaken van uw nieuwe stad of gemeente. Maar ook als u binnen dezelfde gemeente verhuist, moet u dit aangeven.</p>\n<p></p></div>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Bewijs",
+      "themas": [
+        "BouwenWonen",
+        "BurgerOverheid"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "VerblijfVerhuizing"
+      ],
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<p>U kunt de verhuis pas aangeven als u ook effectief verhuisd bent.</p>"
+          },
+          "naam": {
+            "nl": "Voorwaarde"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U moet de adreswijziging melden aan de gemeente waar het nieuwe adres gelegen is:</p>\n<ul>\n<li>U kunt de adreswijziging online melden via het digitaal loket van uw (nieuwe) gemeente.</li>\n<li>U kunt langsgaan bij de dienst Burgerzaken van uw (nieuwe) gemeente.</li>\n</ul>\n<p>Om de adreswijziging voor het hele gezin door te geven, volstaat het dat één van de meerderjarige leden van het gezin de aangifte doet.</p>\n<p>Om de adreswijziging te kunnen doorgeven, hebt u een geldig identiteitsbewijs nodig met uw rijksregisternummer.</p>\n<p>Als een niet-ontvoogde minderjarige de verblijfplaats van zijn ouders voor het eerst verlaat om zijn hoofdverblijf elders te vestigen, moet hij vergezeld zijn door iemand die het ouderlijke gezag uitoefent.</p>\n<h3>Controle van domicilie en aanpassing identiteitsdocumenten</h3>\n<p>Na de aangifte controleert een wijkagent of een bevoegde ambtenaar of u werkelijk op het aangegeven adres uw hoofdverblijfplaats hebt. Na deze controle wordt u ingeschreven op uw nieuwe adres en wordt u uitgenodigd om uw identiteitskaart op het gemeentehuis te laten aanpassen. Hiervoor hebt u uw elektronische identiteitskaart met pincode nodig.</p>\n<p>Vanaf het moment dat uw identiteitskaart aangepast is, kunt u alle andere instanties van uw adresverandering op de hoogte brengen.</p>\n<h3>Inschrijvingsbewijs van voertuigen</h3>\n<p>De adreswijziging moet niet langer aangebracht worden op het inschrijvingsbewijs van uw voertuig(en). Het kentekenbewijs zal enkel nog het adres vermelden dat geldig was op het moment van uitgifte.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Inschrijving in de bevolkingsregisters</p>"
+          },
+          "naam": {
+            "nl": "Inschrijving in de bevolkingsregisters"
+          },
+          "url": "https://www.ibz.rrn.fgov.be/nl/bevolking/faq/de-inschrijving-in-de-bevolkingsregisters/",
+          "@type": "website"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:34.092298884Z",
+      "laatstGewijzigd": "2023-03-07T15:13:34.092299819Z",
+      "productnummer": "10076",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/c35a3a0b-3fb7-4e7f-8ba0-a32c89b7651e",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/38f480a7-0642-43d4-b31b-fc2e5ea02f94"
+    },
+    {
+      "id": "bdf46434-6fd5-44c0-83a6-ef00a510e292",
+      "generatedAtTime": "2023-03-07T15:13:35.485515Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Europees rijbewijs"
+      },
+      "beschrijving": {
+        "nl": "<div class=\"typography\"><p></p><p>Een Europees rijbewijs is een document in bankkaartformaat met foto, waarmee u als bestuurder van een gemotoriseerd voertuig kunt aantonen dat u beschikt over voldoende kennis, inzicht en vaardigheid om een gemotoriseerd voertuig van een bepaalde categorie te kunnen en mogen besturen. Wie op de openbare weg een motorvoertuig bestuurt, moet beschikken over een rijbewijs, geldig voor de categorie waartoe het voertuig behoort.</p>\n<p>Het Europees rijbewijs is 10 jaar geldig. Het is geldig in:</p>\n<ul>\n<li>alle landen van de <strong>Europese Economische Ruimte (EER)</strong>: dat zijn de landen van de Europese Unie plus IJsland, Liechtenstein en Noorwegen</li>\n<li>de landen buiten de EER die het Belgisch rijbewijs erkennen. </li>\n</ul>\n<p></p></div>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Bewijs",
+      "themas": [
+        "BurgerOverheid",
+        "MobiliteitOpenbareWerken"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "zoektermen": {
+        "nl": [
+          "europese",
+          "rijbewijzen"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Als u een rijbewijs wil behalen, moet u slagen voor een <strong>theoretisch en een praktisch examen</strong>. U kunt pas aan het praktisch examen deelnemen na het volgen van een rijopleiding (met of zonder begeleider) en na een oefenperiode. Daarvoor hebt u een voorlopig rijbewijs nodig.</p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarde"
+          },
+          "bewijs": {
+            "beschrijving": {
+              "nl": "<div class=\"typography\"><p></p><ul>\n<li><strong>Identiteitskaart</strong>.</li>\n<li><strong>Voorlopig rijbewijs</strong>.</li>\n<li>Document (<strong>attest van slagen</strong>) afgeleverd door het examencentrum.</li>\n<li>Als de foto op uw elektronische identiteitskaart (eID) nog voldoende gelijkend is, dan kan die gebruikt worden voor uw rijbewijs.<br>Is de foto op uw eID niet gelijkend genoeg meer? Of wilt u een andere foto op uw rijbewijs? Breng dan ook een nieuwe <strong>foto </strong>mee.</li>\n</ul>\n<p></p></div>"
+            },
+            "naam": {
+              "nl": "Wat meebrengen"
+            },
+            "@type": "bewijsType"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<p>U vraagt het Europese rijbewijs aan in de gemeente waar u bent ingeschreven.</p>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:34.700696428Z",
+      "laatstGewijzigd": "2023-03-07T15:13:34.700697237Z",
+      "productnummer": "10077",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/bdf46434-6fd5-44c0-83a6-ef00a510e292",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/031a6d3b-1be6-4606-be63-c138654443ff"
+    },
+    {
+      "id": "d5152ed9-39c7-4ce7-bdca-bbdf96721e09",
+      "generatedAtTime": "2023-03-07T15:13:34.446664Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Toelating voor vaste standplaats op een openbare markt"
+      },
+      "beschrijving": {
+        "nl": "<p>Een vaste standplaats op een openbare markt wordt toegewezen per abonnement. Als marktkramer kunt u daarvoor een aanvraag indienen bij de gemeente. Als kandidaat-aanvrager wordt u, mits u de nodige documenten hebt, in een wachtregister geplaatst. Zodra er een plaats vrijkomt, waarvoor u als eerste in aanmerking komt, kunt u een abonnement verkrijgen. Als er geen geschikte kandidaten zijn in het wachtregister, volgt er een vacature waarvoor u zich ook kandidaat kunt stellen.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten; </p>\n</li>\n<li>\n<p>Koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten; </p>\n</li>\n<li>\n<p>Decreet van 24 februari 2017 tot wijziging van artikel 8 en 10 van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten; </p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 21 april 2017 houdende de wijziging van diverse bepalingen van het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten; </p>\n</li>\n<li>\n<p>Gemeentelijk reglement en/of politieverordening </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "openbare markt",
+          "wekelijkse markt",
+          "ambulante handel",
+          "ambulante activiteiten",
+          "ambulante activiteit",
+          "standplaats",
+          "marktstandplaats",
+          "abonnement",
+          "abonnementsplaats"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Om opgenomen te worden in het wachtregister en in aanmerking te komen voor een vaste standplaats op de openbare markt, moet u aan de onderstaande voorwaarden voldoen.</p>\n<ul>\n<li>\n<p>U hebt een machtiging tot het uitoefenen van ambulante activiteiten als werkgever (de zogenaamde ‘leurkaart’). Die machtiging wordt afgeleverd door een <a href=\"http://economie.fgov.be/nl/themas/ondernemingen/een-onderneming-oprichten/belangrijkste-stappen-om-een/te-ondernemen-stappen-bij-een/de-erkende\" rel=\"noreferrer noopener\" target=\"_blank\" data-content-type=\"Website\" data-identifier=\"0cdbd90e-bf57-47e2-819e-745d09d3dd32\" data-language=\"nl\">erkend ondernemingsloket</a> en is geldig in heel België voor de duur van de activiteit. </p>\n</li>\n<li>\n<p>U hebt een verzekering voor burgerlijke aansprakelijkheid en brandrisico’s en, indien van toepassing, een keuringsattest voor uw gas- en/of elektriciteitsinstallatie. </p>\n</li>\n<li>\n<p>U hebt, als u voeding wilt verkopen, een registratie, erkenning of toelating van het Federaal Agentschap voor de Veiligheid van de Voedselketen (FAVV) .</p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt schenken, een drankvergunning voor een reizende drankgelegenheid. Die drankvergunning vraagt u aan bij de gemeente waar u gedomicilieerd bent. </p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt verkopen (geen consumptie ter plaatse), een handelaarsvergunning ethylalcohol en alcoholhoudende dranken. <a href=\"https://financien.belgium.be/douane_accijnzen/contacteer-de-aada\" data-content-type=\"Website\" data-identifier=\"56370de5-b55b-45bb-84de-4ccfeda827c3\" data-language=\"nl\">U vraagt die vergunning aan</a> bij de gewestelijke directie van Douane en Accijnzen. </p>\n</li>\n</ul>\n<h3>Geldigheidsduur</h3>\n<ul>\n<li>\n<p>Abonnement: de gemeente bepaalt in haar reglement de duur van het abonnement. De abonnementen worden telkens stilzwijgend verlengd. </p>\n</li>\n<li>\n<p>Opname in wachtregister: de gemeente bepaalt in haar reglement hoe lang de kandidaturen op het wachtregister blijven staan. </p>\n</li>\n</ul>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U dient uw kandidatuur in via het aanvraagformulier en voegt daar de onderstaande documenten bij: </p>\n<ul>\n<li>\n<p>een kopie van uw machtiging als werkgever </p>\n</li>\n<li>\n<p>een kopie van uw e-ID </p>\n</li>\n<li>\n<p>een kopie van de verzekeringspolis burgerlijke aansprakelijkheid (bewijs van een geldige dekking) </p>\n</li>\n<li>\n<p>een kopie van de brandverzekering (bewijs van een geldige dekking) </p>\n</li>\n<li>\n<p>een kopie van het attest keuring elektriciteitsinstallatie (indien van toepassing) </p>\n</li>\n<li>\n<p>een kopie van het attest keuring gasinstallatie (indien van toepassing) </p>\n</li>\n<li>\n<p>een kopie van de registratie, erkenning of toelating van het FAVV (indien van toepassing) </p>\n</li>\n<li>\n<p>een drankvergunning voor reizende drankgelegenheid (indien van toepassing) </p>\n</li>\n<li>\n<p>een handelaarsvergunning ethylalcohol en alcoholhoudende dranken (indien van toepassing) </p>\n</li>\n</ul>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen: </p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs </p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs </p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>Uw aanvraag wordt chronologisch ingeschreven in het wachtregister. <br>Het college van burgemeester en schepenen beslist over de toekenning van de standplaats. </p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Organisatie van ambulante activiteiten en kermissen (VLAIO.be)</p>"
+          },
+          "naam": {
+            "nl": "Website"
+          },
+          "url": "https://www.vlaio.be/nl/vlaio-netwerk/lokale-besturen/organisatie-van-ambulante-activiteiten-en-kermissen/organisatie-van",
+          "@type": "website"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag tot opname in het wachtregister is gratis. De kostprijs voor het abonnement vaste standplaats is bepaald in het gemeentelijk belasting-/retributiereglement.</p>"
+          },
+          "naam": {
+            "nl": "Kost"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:33.644777018Z",
+      "laatstGewijzigd": "2023-03-07T15:13:33.644777838Z",
+      "productnummer": "10075",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/d5152ed9-39c7-4ce7-bdca-bbdf96721e09",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/468c1762-4603-4311-bb91-6d924bd49c50"
+    },
+    {
+      "id": "3787edab-8b2b-4ac7-a2ed-14bf412b46c8",
+      "generatedAtTime": "2023-03-07T15:13:33.949724Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Aanpassing van de geslachtsregistratie"
+      },
+      "beschrijving": {
+        "nl": "<div class=\"typography\"><p></p><p>Transgenders kunnen hun geslachtsregistratie en <a href=\"https://www.vlaanderen.be/veranderen-van-voornaam\" data-content-type=\"Product\" data-identifier=\"df4a22be-2edd-420a-8cdd-5711be71b1c7\" data-language=\"nl\">hun voornaam</a> officieel laten aanpassen. Als u de overtuiging hebt dat het geslacht vermeld op uw geboorteakte niet overeenstemt met uw innerlijk beleefde genderidentiteit, dan kunt u een aanvraag indienen om uw geslachtsregistratie te wijzigen.</p>\n<p></p></div>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "BurgerOverheid"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "VerblijfVerhuizing"
+      ],
+      "regelgevingTekst": {
+        "nl": "<p>Wet van 25 juni 2017 tot hervorming van regelingen inzake transgenders wat de vermelding van een aanpassing van de registratie van het geslacht in de akten van de burgerlijke stand en de gevolgen hiervan betreft (B.S. 10 juli 2017)</p>"
+      },
+      "zoektermen": {
+        "nl": [
+          "geslachtsverandering",
+          "geslachtswijziging",
+          "geslachtsaanpassing"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<p>Sinds 1 januari 2018 moet een transgender persoon niet meer voldoen aan bepaalde medische voorwaarden om het geslacht en de voornaam officieel te laten aanpassen op de akten van de burgerlijke stand en in het bevolkingsregister.\n\nVanaf de leeftijd van 16 jaar kunnen minderjarigen ook de geslachtsregistratie in de geboorteakte laten aanpassen als zij daarbij zijn bijgestaan door hun ouders of wettelijke vertegenwoordiger. Zij moeten dan ook een verklaring kunnen afgeven van een kinder- en jeugdpsychiater die bevestigt dat het gaat om een vrije en bewuste keuze.\n\n</p>"
+          },
+          "naam": {
+            "nl": "Voorwaarde"
+          },
+          "bewijs": {
+            "beschrijving": {
+              "nl": "<div class=\"typography\"><p></p><ul>\n<li>uw identiteitsbewijs</li>\n<li>uw ondertekende verklaring (u vindt de <a href=\"https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/transgenders\" data-content-type=\"Website\" data-identifier=\"95d91905-a8fb-41e2-9db9-1e28710d029b\" data-language=\"nl\">documenten op de website van de FOD Justitie</a>)</li>\n</ul>\n<p></p></div>"
+            },
+            "naam": {
+              "nl": "Wat meebrengen"
+            },
+            "@type": "bewijsType"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>De procedure bestaat uit twee stappen: de aangifte en de opmaak van de akte.</p>\n<h3>Aangifte</h3>\n<p>U overhandigt een verklaring aan de dienst Burgerzaken van uw gemeente waarin staat dat u er al een hele tijd van overtuigd bent dat het geslacht vermeld in de geboorteakte niet overeenstemt met uw innerlijk beleefde genderidentiteit. In de verklaring bevestigt u dat u wenst dat dit administratief en juridisch wordt aangepast.</p>\n<p>De gemeente bezorgt u een ontvangstbewijs en meer informatie over het verdere verloop van de procedure en de administratieve en juridische gevolgen van de aanpassing.</p>\n<h3>Opmaak van de akte</h3>\n<p>U verschijnt een tweede keer voor de dienst Burgerzaken en bevestigt uw eerste verklaring, minimum 3 en maximum 6 maanden na de aangifte. U overhandigt een tweede verklaring die uw eerdere overtuiging bevestigt. Met die verklaring bevestigt u ook dat u zich bewust bent van de administratieve en juridische gevolgen en van het onherroepelijke karakter van de aanpassing van de geslachtsregistratie.</p>\n<p>Daarna maakt de dienst Burgerzaken de akte tot aanpassing van de geslachtsregistratie op.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Aanpassen geslachtsregistratie transgender</p>"
+          },
+          "naam": {
+            "nl": "Aanpassen geslachtsregistratie transgender"
+          },
+          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/transgenders",
+          "@type": "website"
+        }
+      ],
+      "regelgeving": [
+        {
+          "id": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/transgenders",
+          "@type": "regel"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:33.161390777Z",
+      "laatstGewijzigd": "2023-03-07T15:13:33.161448061Z",
+      "productnummer": "10074",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/3787edab-8b2b-4ac7-a2ed-14bf412b46c8",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/c5b95c80-3584-4610-be2d-bb342365318a"
+    },
+    {
+      "id": "9598a4a0-a625-4c53-b396-4c0ebe486ef3",
+      "generatedAtTime": "2023-03-07T15:13:33.532733Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Attest van wettelijke samenwoning"
+      },
+      "beschrijving": {
+        "nl": "<p>Het attest van wettelijke samenwoning bewijst dat u een verklaring van wettelijke samenwoning hebt afgelegd samen met de persoon waarmee u een woning deelt.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Bewijs",
+      "themas": [
+        "BurgerOverheid"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "BedrijfPersoonsgegevens"
+      ],
+      "zoektermen": {
+        "nl": [
+          "ongehuwd samenwonen",
+          "samenwonen",
+          "wettelijk samenwonen"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>De volgende partijen kunnen het attest met betrekking tot uzelf aanvragen:</p>\n<ul>\n<li>uzelf</li>\n<li>uw wettelijke vertegenwoordiger (bv. ouder of voogd)</li>\n<li>bijzondere gemachtigden zoals een notaris of advocaat</li>\n<li>derden (bv. publieke of private instellingen) als de afgifte ervan voorgeschreven is door of krachtens de wet</li>\n<li>een derde persoon op voorwaarde dat die in het bezit is van een volmacht en de identiteitskaart (of kopie ervan) van de aanvrager.</li>\n</ul>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarde"
+          },
+          "bewijs": {
+            "beschrijving": {
+              "nl": "<div class=\"typography\"><p></p><p>Als u het attest <strong>zelf ophaalt</strong>:</p>\n<ul>\n<li>uw eigen identiteitskaart of verblijfsvergunning.</li>\n</ul>\n<p>Als u het attest <strong>voor iemand anders </strong>aanvraagt:</p>\n<ul>\n<li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li>\n<li>uw eigen identiteitskaart.</li>\n</ul>\n<p></p></div>"
+            },
+            "naam": {
+              "nl": "Wat meebrengen"
+            },
+            "@type": "bewijsType"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Het attest bevat een aantal persoonlijke gegevens zoals:</p>\n<ul>\n<li>naam en voornamen</li>\n<li>plaats en datum van geboorte</li>\n<li>adres</li>\n<li>datum verklaring van wettelijke samenwoning</li>\n<li>plaats waar de verklaring is opgemaakt.</li>\n</ul>\n<p>U kunt het attest van wettelijke samenwoning opvragen bij uw <strong>gemeente</strong>.</p>\n<p>Als u beschikt over een elektronische identiteitskaart (eID), kunt u het document ook <strong>online </strong>raadplegen, downloaden en afdrukken:</p>\n<ul>\n<li>op <a href=\"https://www.ibz.rrn.fgov.be/nl/rijksregister/mijn-dossier\" data-content-type=\"Website\" data-identifier=\"8fc5c034-c8f2-46bb-ba2c-0778f10a40c2\" data-language=\"nl\">‘Mijn dossier’</a>, de online toepassing van het Rijksregister</li>\n<li>op <a href=\"https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel\" data-content-type=\"Website\" data-identifier=\"02ee3fd5-6592-4f23-a4fb-343f5cb0426a\" data-language=\"nl\">‘Mijn Burgerprofiel’</a>, de online toepassing van de Vlaamse overheid</li>\n<li>het e-loket van uw gemeente.</li>\n</ul>\n<p>Anderen kunnen het attest enkel aan het loket van de dienst Burgerzaken aanvragen.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:32.747159488Z",
+      "laatstGewijzigd": "2023-03-07T15:13:32.747160874Z",
+      "productnummer": "10073",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/9598a4a0-a625-4c53-b396-4c0ebe486ef3",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/3ec7b13b-a4d5-43f4-999e-0d11de571a6a"
+    },
+    {
+      "id": "3719f2e1-a604-4933-aafc-eaf08f06ef40",
+      "generatedAtTime": "2023-03-07T15:13:32.906266Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Uitbatingsvergunning nachtwinkels (phoneshops)"
+      },
+      "beschrijving": {
+        "nl": "<p>Voor de uitbating van een nachtwinkel of phoneshop moet u een uitbatingsvergunning hebben. Die vergunning vraagt u aan bij het college van burgemeester en schepenen. Als u op meerdere locaties een nachtwinkel of phoneshop uitbaat, is een vergunning vereist per locatie.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Decreet lokaal bestuur van 22 december 2017 en latere wijzigingen </p>\n</li>\n<li>\n<p>Gemeentelijk reglement vestigings- en uitbatingsvergunning nachtwinkels en phoneshops (indien van toepassing) </p>\n</li>\n<li>\n<p>Gemeentelijk belastingreglement (indien van toepassing) </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "nightshop",
+          "phoneshop",
+          "belwinkel",
+          "uitbating",
+          "nachtwinkel"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Een <strong>nachtwinkel </strong>is een handelszaak die:</p>\n<ul>\n<li>\n<p>de netto verkoopoppervlakte van 150 m² niet overstijgt</p>\n</li>\n<li>\n<p>geen andere activiteit uitoefent dan de verkoop van algemene voedingswaren en huishoudelijke artikelen</p>\n</li>\n<li>\n<p>de vermelding ‘nachtwinkel’ duidelijk en permanent uithangt.</p>\n</li>\n</ul>\n<p>De sluitingsuren van nachtwinkels liggen tussen 7 uur en 18 uur.<br><br>Een <strong>privaat bureau voor telecommunicatie</strong> (‘<strong>phoneshop</strong>’) wordt gedefinieerd als een publiek toegankelijke vestigingseenheid voor het verlenen van telecommunicatiediensten. De sluitingsuren van phoneshops liggen tussen 20 uur en 5 uur.</p>\n<h3>Administratief onderzoek</h3>\n<p>U kunt pas een uitbatingsvergunning verkrijgen als voldaan is aan de volgende administratieve onderzoeken: </p>\n<ul>\n<li>\n<p>brandveiligheidsonderzoek </p>\n</li>\n<li>\n<p>financieel onderzoek </p>\n</li>\n<li>\n<p>moraliteitsonderzoek </p>\n</li>\n<li>\n<p>stedenbouwkundig onderzoek </p>\n</li>\n<li>\n<p>onderzoek naar vestigingsformaliteiten.</p>\n</li>\n</ul>\n<p>De uitbater is verplicht alle wijzigingen in de inrichting die een verandering uitmaken ten opzichte van de veiligheid, onmiddellijk te melden aan het college van burgemeester en schepenen. </p>\n<h3>Geldigheidsduur</h3>\n<p>De vergunning vervalt bij een of meerdere van de volgende omstandigheden: </p>\n<ul>\n<li>\n<p>als de uitbater verandert </p>\n</li>\n<li>\n<p>als de nachtwinkel meer dan 6 maanden onafgebroken gesloten is </p>\n</li>\n<li>\n<p>als de nachtwinkel failliet is </p>\n</li>\n<li>\n<p>als de nachtwinkel gerechtelijk verzegeld is </p>\n</li>\n<li>\n<p>als het pand van functie verandert of het geen nachtwinkel meer is.</p>\n</li>\n</ul>\n<p>De vergunning wordt afgeleverd aan een uitbater voor een welbepaalde vestiging. De vergunning kan niet worden overgedragen aan een andere uitbater of naar een andere vestiging.</p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U vraagt een vestigingsvergunning aan in de gemeente van de vestiging(en) via het standaard aanvraagformulier en vervolledigt uw aanvraag met de onderstaande documenten.</p>\n<ul>\n<li>\n<p>Uittreksel uit het strafregister (uittreksel strafregister model 596.2) van: </p>\n<ul>\n<li>\n<p>de exploitant </p>\n</li>\n<li>\n<p>als de exploitant een rechtspersoon is, ook de uittreksels van zijn organen of vertegenwoordiger </p>\n</li>\n</ul>\n</li>\n<li>\n<p>Kopie van de identiteitskaarten van alle personen die deelnemen aan de exploitatie </p>\n</li>\n<li>\n<p>Kopie van de beroepskaart (indien van toepassing)</p>\n</li>\n<li>\n<p>Geldig bewijs van de brandverzekering en de verzekering burgerlijke aansprakelijkheid uitbating </p>\n</li>\n<li>\n<p>Kopie van de eigendomsakte (als de aanvrager eigenaar is van het exploitatiepand of van het volledige pand waarin het exploitatiepand zich bevindt) </p>\n</li>\n</ul>\n<h3>Extra documenten</h3>\n<ul>\n<li>Voor de uitbating van een <strong>nachtwinkel</strong>:\n<ul>\n<li>\n<p>de registratie, erkenning of toelating van FAVV </p>\n</li>\n<li>\n<p>een kopie van de beroepsaangifte 108 voor tabak</p>\n</li>\n<li>\n<p>een kopie van een handelaarsvergunning voor ethylalcohol en alcoholhoudende dranken </p>\n</li>\n<li>\n<p>een plan van de handelszaak met aanduiding van de oppervlakte</p>\n</li>\n</ul>\n</li>\n<li>Voor de uitbating van een <strong>phoneshop</strong>:\n<ul>\n<li>\n<p>overzicht van de operatoren wiens prepaid SIM- en/of herlaadkaart verkocht (zullen) worden.</p>\n</li>\n</ul>\n</li>\n</ul>\n<h3>Aanvraag</h3>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen:</p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs</p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs</p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>Het college van burgemeester en schepenen beslist over de toekenning van de vergunning.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>Openingsbelasting en jaarlijkse belasting voor nachtwinkels en/of phoneshops (indien van toepassing)</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:31.287885323Z",
+      "laatstGewijzigd": "2023-03-07T15:13:31.287886607Z",
+      "productnummer": "10071",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/3719f2e1-a604-4933-aafc-eaf08f06ef40",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/5f3425b7-8cb0-4d81-8ab9-0a23b842e993"
+    },
+    {
+      "id": "95a26948-b746-4252-a3f3-0a2b6dcaa4fb",
+      "generatedAtTime": "2023-03-07T15:13:32.618253Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Toelating voor losse standplaats op een openbare markt"
+      },
+      "beschrijving": {
+        "nl": "<p>Een losse standplaats op een openbare markt is een standplaats voor de marktdag zelf en onderscheidt zich van een standplaats per abonnement. De gemeente bepaalt autonoom de werkwijze voor de toewijzing van de losse standplaatsen en legt de bepalingen vast in haar gemeentelijk reglement.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten; </p>\n</li>\n<li>\n<p>Koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten; </p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 21 april 2017 houdende de wijziging van diverse bepalingen van het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten; </p>\n</li>\n<li>\n<p>Gemeentelijk reglement en/of politieverordening </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "openbare markt",
+          "wekelijkse markt",
+          "ambulante activiteit",
+          "ambulante activiteiten",
+          "ambulante handel",
+          "marktstandplaats",
+          "standplaats",
+          "losse standplaats"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Voor een losse standplaats op de openbare markt moet u aan de onderstaande voorwaarden voldoen.</p>\n<ul>\n<li>\n<p>U hebt een machtiging tot het uitoefenen van ambulante activiteiten als werkgever (de zogenaamde leurkaart). Die machtiging wordt afgeleverd door een <a href=\"http://economie.fgov.be/nl/themas/ondernemingen/een-onderneming-oprichten/belangrijkste-stappen-om-een/te-ondernemen-stappen-bij-een/de-erkende\" rel=\"noreferrer noopener\" target=\"_blank\" data-content-type=\"Website\" data-identifier=\"0cdbd90e-bf57-47e2-819e-745d09d3dd32\" data-language=\"nl\">erkend ondernemingsloket</a> en is geldig in heel België voor de duur van de activiteit. <br>Uitzondering: voor occasionele verkopen met niet-commercieel karakter is geen machtiging vereist. </p>\n</li>\n<li>\n<p>U hebt een verzekering voor burgerlijke aansprakelijkheid en brandrisico’s en, indien van toepassing, een keuringsattest voor uw gas- en/of elektriciteitsinstallatie. </p>\n</li>\n<li>\n<p>U hebt, als u voeding wilt verkopen, een registratie, erkenning of toelating van het Federaal Agentschap voor de Veiligheid van de Voedselketen (FAVV) .</p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt schenken, een drankvergunning voor een reizende drankgelegenheid. Die drankvergunning vraagt u aan bij de gemeente waar u gedomicilieerd bent.</p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt verkopen (geen consumptie ter plaatse), een handelaarsvergunning ethylalcohol en alcoholhoudende dranken. <a href=\"https://financien.belgium.be/douane_accijnzen/contacteer-de-aada\" data-content-type=\"Website\" data-identifier=\"56370de5-b55b-45bb-84de-4ccfeda827c3\" data-language=\"nl\">U vraagt die vergunning aan</a> bij de gewestelijke directie van Douane en Accijnzen.</p>\n</li>\n</ul>\n<p>De toelating is geldig voor de duur van de marktdag.</p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>De losse standplaats kan toegewezen worden: </p>\n<ul>\n<li>\n<p>op de marktdag zelf</p>\n</li>\n<li>\n<p>voorafgaand aan de marktdag via een voorinschrijving</p>\n</li>\n</ul>\n<h3>Toewijzing op de marktdag zelf </h3>\n<p>De losse standplaatsen worden toegewezen op de marktdag zelf: </p>\n<ul>\n<li>\n<p>via loting</p>\n</li>\n<li>\n<p>of op basis van de chronologische volgorde van aankomst op de markt. Als er twee of meer kandidaten gelijktijdig aankomen, wordt de toewijzing beslist via loting. </p>\n</li>\n</ul>\n<p>De toewijzing op de dag van de markt zelf kan alleen als de houder van een machtiging ambulante handel als werkgever fysiek aanwezig is. </p>\n<h3>Toewijzing op basis van voorinschrijvingen </h3>\n<p>De losse standplaatsen worden toegewezen op basis van (voorafgaande) voorinschrijvingen. </p>\n<h3>Documenten</h3>\n<p>Voor beide opties geldt dat de volgende documenten worden gecontroleerd: </p>\n<ul>\n<li>\n<p>een kopie van een machtiging als werkgever </p>\n</li>\n<li>\n<p>een kopie van uw eID </p>\n</li>\n<li>\n<p>een kopie van de brandverzekering (bewijs van een geldige dekking) </p>\n</li>\n<li>\n<p>een kopie van het attest keuring elektriciteitsinstallatie (indien van toepassing) </p>\n</li>\n<li>\n<p>een kopie van het attest keuring gasinstallatie (indien van toepassing) </p>\n</li>\n<li>\n<p>een kopie van de toelating van het FAVV (indien van toepassing) </p>\n</li>\n<li>\n<p>een drankvergunning voor reizende drankgelegenheid (indien van toepassing)</p>\n</li>\n<li>\n<p>een handelaarsvergunning ethylalcohol en alcoholhoudende dranken (indien van toepassing). </p>\n</li>\n</ul>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Organisatie van ambulante activiteiten en kermissen (VLAIO.be)</p>"
+          },
+          "naam": {
+            "nl": "Website"
+          },
+          "url": "https://www.vlaio.be/nl/vlaio-netwerk/lokale-besturen/organisatie-van-ambulante-activiteiten-en-kermissen/organisatie-van",
+          "@type": "website"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>Beschrijving van een kost</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "financieleVoordelen": [
+        {
+          "beschrijving": {
+            "nl": "<p>Beschrijving van een financieelVoordeel</p>"
+          },
+          "naam": {
+            "nl": "FinancieelVoordeel"
+          },
+          "@type": "financieelVoordeel"
+        }
+      ],
+      "regelgeving": [
+        {
+          "id": "https://ipdc.be/regelgeving",
+          "@type": "regel"
+        }
+      ],
+      "documenten": [
+        {
+          "beschrijving": {
+            "nl": "<p>Beschrijving van een document</p>"
+          },
+          "naam": {
+            "nl": "Document"
+          },
+          "url": "https://ipdc.be/documenten/mijn-document",
+          "@type": "document"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:31.832686606Z",
+      "laatstGewijzigd": "2023-03-07T15:13:31.832688187Z",
+      "productnummer": "10072",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/95a26948-b746-4252-a3f3-0a2b6dcaa4fb",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/446d97aa-f369-4e76-9bb4-317ecd675234"
+    },
+    {
+      "id": "179c5af2-644f-4188-a145-0c34239b9567",
+      "generatedAtTime": "2023-03-07T15:13:31.655527Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Vestigingsvergunning voor specifieke sectoren"
+      },
+      "beschrijving": {
+        "nl": "<p>Voor specifieke sectoren (vb. nachtwinkel, belwinkel, wedkantoor, handcarwash…) moet u voorafgaand aan de opening een vestigingsvergunning aanvragen bij uw stad of gemeente.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<p>Of en hoe u een vestigingsvergunning moet aanvragen kunt u nagaan bij uw stad of gemeente.</p>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:30.829616008Z",
+      "laatstGewijzigd": "2023-03-07T15:13:30.829617134Z",
+      "productnummer": "10070",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/179c5af2-644f-4188-a145-0c34239b9567",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/ac555477-1290-4e7a-a9e3-6b9c7681386c"
+    },
+    {
+      "id": "00ee7b12-3830-4fdb-9592-4e7fc0998272",
+      "generatedAtTime": "2023-03-07T15:13:31.050231Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Bestuurderspas voor taxibestuurders"
+      },
+      "beschrijving": {
+        "nl": "<p>Taxibestuurders, zowel vergunninghouders die zelf rijden als hun personeelsleden, moeten sinds 1 juli 2020 in het bezit zijn van een bestuurderspas.\n\n</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "FinancieleVerplichting",
+      "themas": [
+        "MobiliteitOpenbareWerken"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming",
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "zoektermen": {
+        "nl": [
+          "bestuurderpas",
+          "taxi",
+          "verplicht"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Om een bestuurderspas te kunnen verkrijgen, moet u:</p>\n<ul>\n<li>minstens <strong>21 jaar</strong> zijn;</li>\n<li>minstens <strong>2 jaar</strong> over een <strong>rijbewijs categorie B</strong> beschikken, inclusief geldige medische keuring,</li>\n<li>een <strong>uittreksel uit het strafregister</strong> kunnen voorleggen dat niet ouder is dan 3 maanden,</li>\n<li>voldoen aan <strong>alle wettelijke en reglementaire voorwaarden</strong> om in België deze beroepsactiviteit uit te oefenen,</li>\n<li>een bewijs van <strong>minimale kennis Nederlands op niveau B1</strong> van het Europees Referentiekader voor Talen. Wie over een bewijs van niveau A2 beschikt, krijgt 2 jaar de tijd om niveau B1 te halen.</li>\n</ul>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U vraagt de bestuurderspas aan:</p>\n<ul>\n<li><a href=\"https://centaurus2020.vlaanderen.be\" data-content-type=\"Website\" data-identifier=\"aa249554-84af-459f-89cc-644e6f5ca117\" data-language=\"nl\">online via het platform Centaurus 2020</a><br>of</li>\n<li>in de gemeente of stad waar u gedomicilieerd bent.</li>\n</ul>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Een bestuurderspas kost <strong>20 euro </strong>en is<strong> 5 jaar geldig</strong>. Dit bedrag wordt jaarlijks geïndexeerd en bedraagt voor 2022 €21,23.</p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:30.679902196Z",
+      "laatstGewijzigd": "2023-03-07T15:13:30.679903908Z",
+      "productnummer": "10069",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/00ee7b12-3830-4fdb-9592-4e7fc0998272",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/4f5969ed-eedf-4666-8b69-882ef19cb3bb"
+    },
+    {
+      "id": "7803a049-bd96-40d2-8fc3-45fd3d8f7cf6",
+      "generatedAtTime": "2023-03-07T15:13:30.723198Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Toelating voor ambulante activiteit op private plaatsen langs de openbare weg en op commerciële parkings"
+      },
+      "beschrijving": {
+        "nl": "<p>Bij de uitbating van een kraam op privédomein is er sprake van een ambulante activiteit als er op dat adres geen vestigingseenheid in de KBO is geregistreerd en als het kraam aan de openbare weg grenst of geplaatst wordt op een commerciële parking. Voor die ambulante activiteit op privédomein is een toelating van de gemeente nodig. In andere gevallen is er sprake van een geregistreerd verkooppunt en geen ambulante activiteit, waardoor er geen toelating van de gemeente nodig is.\n\n</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Decreet van 24 februari 2017 tot wijziging van artikel 8 en 10 van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 21 april 2017 houdende de wijziging van diverse bepalingen van het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten </p>\n</li>\n<li>\n<p>Gemeentelijk reglement en/of politieverordening </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "ambulante activiteit",
+          "ambulante activiteiten",
+          "ambulante handel",
+          "openbaar domein",
+          "privédomein",
+          "privé domein",
+          "standplaats",
+          "marktkramer",
+          "marktkraam",
+          "foodtrucks",
+          "foodtruck",
+          "food truck"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<p>ambulante activiteit\n\nambulante activiteiten\n\nambulante handel\n\nopenbaar domein\n\nprivédomein\n\nprivé domein\n\nstandplaats\n\nmarktkramer\n\nmarktkraam\n\nfoodtrucks\n\nfoodtruck\n\nfood truck</p>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U dient uw kandidatuur in via het aanvraagformulier en voegt daar de onderstaande documenten bij:</p>\n<ul>\n<li>\n<p>een kopie van uw machtiging als werkgever</p>\n</li>\n<li>\n<p>een kopie van uw e-ID</p>\n</li>\n<li>\n<p>een kopie van de verzekeringspolis burgerlijke aansprakelijkheid (bewijs van een geldige dekking)</p>\n</li>\n<li>\n<p>een kopie van de brandverzekering (bewijs van een geldige dekking)</p>\n</li>\n<li>\n<p>een kopie van het attest keuring elektriciteitsinstallatie (indien van toepassing)</p>\n</li>\n<li>\n<p>een kopie van het attest keuring gasinstallatie (indien van toepassing)</p>\n</li>\n<li>\n<p>een kopie van de registratie, erkenning of toelating van het FAVV (indien van toepassing)</p>\n</li>\n<li>\n<p>een drankvergunning voor reizende drankgelegenheid (indien van toepassing)</p>\n</li>\n<li>\n<p>een handelaarsvergunning ethylalcohol en alcoholhoudende dranken (indien van toepassing)</p>\n</li>\n<li>\n<p>als het privaat domein eigendom is van een derde partij: het schriftelijk akkoord van de eigenaar(s), de uitbater(s) of de huurder(s) van de private eigendommen. </p>\n</li>\n</ul>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen:</p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs</p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs</p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>Het college van burgemeester en schepenen beslist over de toekenning van de toelating.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Organisatie van ambulante activiteiten en kermissen (VLAIO.be)</p>"
+          },
+          "naam": {
+            "nl": "VLAIO.be"
+          },
+          "url": "https://www.vlaio.be/nl/vlaio-netwerk/lokale-besturen/organisatie-van-ambulante-activiteiten-en-kermissen/organisatie-van",
+          "@type": "website"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag is gratis. De kostprijs voor de activiteit is bepaald in het gemeentelijke belasting- of retributiereglement.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:30.298370386Z",
+      "laatstGewijzigd": "2023-03-07T15:13:30.29837233Z",
+      "productnummer": "10068",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/7803a049-bd96-40d2-8fc3-45fd3d8f7cf6",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/f0bf4030-2a31-451f-89c1-d601e5445936"
+    },
+    {
+      "id": "2919ae57-7845-4a88-bad7-13776f1dfd3d",
+      "generatedAtTime": "2023-03-07T15:13:30.525659Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Toelating voor ambulante activiteit op openbaar domein buiten de openbare markt"
+      },
+      "beschrijving": {
+        "nl": "<p>Voor de uitbating van een kraam op het openbaar domein (ambulante activiteit) hebt u een toelating van de gemeente nodig. Een ambulante activiteit heeft betrekking op de verkoop, het te koop aanbieden of het uitstallen met het oog op de verkoop aan de consument van producten of diensten, door een handelaar buiten de vestiging vermeld in zijn inschrijving in de Kruispuntbank van Ondernemingen (KBO) of door een persoon die niet over zo’n vestiging beschikt.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Decreet van 24 februari 2017 tot wijziging van artikel 8 en 10 van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 21 april 2017 houdende de wijziging van diverse bepalingen van het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten; </p>\n</li>\n<li>\n<p>Gemeentelijk reglement en/of politieverordening </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "ambulante activiteit",
+          "ambulante activiteiten",
+          "ambulante handel",
+          "openbaar domein",
+          "foodtrucks",
+          "foodtruck",
+          "food truck",
+          "standplaats",
+          "marktkraam"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Om een ambulante activiteit te kunnen uitoefenen, moet u aan de onderstaande voorwaarden voldoen.</p>\n<ul>\n<li>\n<p>U hebt een machtiging tot het uitoefenen van ambulante activiteiten als werkgever (de zogenaamde leurkaart). Die machtiging wordt afgeleverd door een <a href=\"http://economie.fgov.be/nl/themas/ondernemingen/een-onderneming-oprichten/belangrijkste-stappen-om-een/te-ondernemen-stappen-bij-een/de-erkende\" data-content-type=\"Website\" data-identifier=\"0cdbd90e-bf57-47e2-819e-745d09d3dd32\" data-language=\"nl\">erkend ondernemingsloket</a> en is geldig in heel België voor de duur van de activiteit.</p>\n</li>\n<li>\n<p>U hebt een verzekering voor burgerlijke aansprakelijkheid en brandrisico’s en, indien van toepassing, een keuringsattest voor uw gas- en/of elektriciteitsinstallatie.</p>\n</li>\n<li>\n<p>U hebt, als u voeding wilt verkopen, een registratie, erkenning of toelating van het Federaal Agentschap voor de Veiligheid van de Voedselketen (FAVV) .</p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt schenken, een drankvergunning voor een reizende drankgelegenheid. Die drankvergunning vraagt u aan bij de gemeente waar u gedomicilieerd bent.</p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt verkopen (geen consumptie ter plaatse), een handelaarsvergunning ethylalcohol en alcoholhoudende dranken. <a href=\"https://financien.belgium.be/douane_accijnzen/contacteer-de-aada\" data-content-type=\"Website\" data-identifier=\"56370de5-b55b-45bb-84de-4ccfeda827c3\" data-language=\"nl\">U vraagt die vergunning</a> aan bij de gewestelijke directie van Douane en Accijnzen.</p>\n</li>\n</ul>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U dient uw kandidatuur in via het aanvraagformulier en voegt daar de onderstaande documenten bij:</p>\n<ul>\n<li>\n<p>een kopie van uw machtiging als werkgever</p>\n</li>\n<li>\n<p>een kopie van uw e-ID</p>\n</li>\n<li>\n<p>een kopie van de verzekeringspolis burgerlijke aansprakelijkheid (bewijs van een geldige dekking)</p>\n</li>\n<li>\n<p>een kopie van de brandverzekering (bewijs van een geldige dekking)</p>\n</li>\n<li>\n<p>een kopie van het attest keuring elektriciteitsinstallatie (indien van toepassing)</p>\n</li>\n<li>\n<p>een kopie van het attest keuring gasinstallatie (indien van toepassing)</p>\n</li>\n<li>\n<p>een kopie van de registratie, erkenning of toelating van het FAVV (indien van toepassing)</p>\n</li>\n<li>\n<p>een drankvergunning voor reizende drankgelegenheid (indien van toepassing)</p>\n</li>\n<li>\n<p>een handelaarsvergunning ethylalcohol en alcoholhoudende dranken (indien van toepassing)</p>\n</li>\n<li>\n<p>als het privaat domein eigendom is van een derde partij: het schriftelijk akkoord van de eigenaar(s), de uitbater(s) of de huurder(s) van de private eigendommen.</p>\n</li>\n</ul>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen:</p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs</p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs</p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>Het college van burgemeester en schepenen beslist over de toekenning van de toelating.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Organisatie van ambulante activiteiten en kermissen (VLAIO.be)</p>"
+          },
+          "naam": {
+            "nl": "VLAIO.be"
+          },
+          "url": "https://www.vlaio.be/nl/vlaio-netwerk/lokale-besturen/organisatie-van-ambulante-activiteiten-en-kermissen/organisatie-van",
+          "@type": "website"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag is gratis. De kostprijs voor de inname van de standplaats is bepaald in het gemeentelijk belasting- of retributiereglement.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:29.740302676Z",
+      "laatstGewijzigd": "2023-03-07T15:13:29.740304248Z",
+      "productnummer": "10067",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/2919ae57-7845-4a88-bad7-13776f1dfd3d",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/a898d7e6-6c0a-4c27-83fe-11ab129a7e63"
+    },
+    {
+      "id": "0ac5cd40-8a68-4323-a354-423e3f04e3cb",
+      "generatedAtTime": "2023-03-07T15:13:30.043705Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Toelating voor occasionele verkoop met een niet-commercieel karakter"
+      },
+      "beschrijving": {
+        "nl": "<p>Voor een occasionele niet-commerciële verkoop moet u een aanvraag tot een toestemming indienen bij de gemeente. Die ambulante activiteit is vrijgesteld van de machtiging tot het uitoefenen van ambulante activiteiten (de zogenaamde leurkaart) wegens zijn specifieke aard.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming",
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Decreet van 24 februari 2017 tot wijziging van artikel 8 en 10 van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 21 april 2017 houdende de wijziging van diverse bepalingen van het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Gemeentelijke reglement </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "Niet-commerciële verkoop",
+          "verkoop voor een goed doel",
+          "occasionele verkoop",
+          "standplaats"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U hebt geen <a href=\"https://www.vlaanderen.be/machtiging-tot-het-uitoefenen-van-ambulante-activiteiten-leurkaart\" data-content-type=\"Product\" data-identifier=\"9019b6c4-6c7a-4a78-b64a-ed62740d65a2\" data-language=\"nl\">machtiging tot het uitoefenen van ambulante activiteiten</a> (de zogenaamde leurkaart) nodig voor een occasionele verkoop met een niet-commercieel karakter, voor zover het occasionele karakter behouden blijft en de opbrengst bestemd is voor één van volgende goede doelen: </p>\n<ul>\n<li>\n<p>menslievend, sociaal, cultureel, sportief of educatief doel </p>\n</li>\n<li>\n<p>de verdediging en promotie van de natuur, van de dierenwereld, van een ambacht of van streekproducten </p>\n</li>\n<li>\n<p>een humanitaire catastrofe, steun bij een ramp of steun bij belangrijke schade </p>\n</li>\n</ul>\n<p>De toestemming wordt afgeleverd door de gemeente en beperkt zich tot het grondgebied van de gemeente. Als de occasionele verkoop met niet-commercieel karakter plaatsvindt in meerdere gemeenten in het Vlaams Gewest, vraagt u een toelating aan bij elke gemeente. Als een (of meerdere) van de gemeenten geen toestemming hanteert, richt u voor die gemeente(n) aanvullend een aanvraag tot toestemming tot het Agentschap Innoveren en Ondernemen (VLAIO).</p>\n<p>De toelating is geldig tot één jaar na aflevering van de toelating.</p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U dient uw aanvraag in via het aanvraagformulier met de volgende elementen: </p>\n<ul>\n<li>\n<p>de verantwoordelijke van de actie </p>\n</li>\n<li>\n<p>het doel van de actie</p>\n</li>\n<li>\n<p>de plaats(en) waar de actie zal plaatvinden</p>\n</li>\n<li>\n<p>de periode(s) van verkoop</p>\n</li>\n<li>\n<p>de te koop aangeboden producten of diensten</p>\n</li>\n<li>\n<p>een schatting van de hoeveelheid producten of diensten. </p>\n</li>\n</ul>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen:</p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs</p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs</p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>Het college van burgemeester en schepenen beslist over de toekenning van de toelating.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Organisatie van ambulante activiteiten en kermissen (VLAIO.be)</p>"
+          },
+          "naam": {
+            "nl": "VLAIO.be"
+          },
+          "url": "https://www.vlaio.be/nl/vlaio-netwerk/lokale-besturen/organisatie-van-ambulante-activiteiten-en-kermissen/organisatie-van",
+          "@type": "website"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag en de activiteit zijn gratis.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:29.257876867Z",
+      "laatstGewijzigd": "2023-03-07T15:13:29.257878174Z",
+      "productnummer": "10066",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/0ac5cd40-8a68-4323-a354-423e3f04e3cb",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/7ba39681-11b4-4c93-99e0-211c2d6e206a"
+    },
+    {
+      "id": "233e49cf-75ea-4299-b3b5-5ac945548efa",
+      "generatedAtTime": "2023-03-07T15:13:29.533975Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Toelating voor ambulante activiteit op rondtrekkende wijze"
+      },
+      "beschrijving": {
+        "nl": "<p>Bij een ambulante activiteit op rondtrekkende wijze verplaatst de handelaar zich langs (al dan niet vooraf bepaald) traject, waarbij een verkooppunt telkens voor een korte stoptijd wordt ingenomen. De stoptijd beperkt zich tot de duur van de directe transactie(s), waarna het traject onmiddellijk voortgezet wordt. Voor deze vorm van ambulante activiteit is een toelating van de gemeente nodig.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Decreet van 24 februari 2017 tot wijziging van artikel 8 en 10 van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 21 april 2017 houdende de wijziging van diverse bepalingen van het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Gemeentelijk reglement en/of politieverordening </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "foodtruck",
+          "eetkraam",
+          "ijsventer",
+          "ijskar",
+          "ijskraam",
+          "ambulante handel",
+          "rondtrekkende wijze",
+          "foodtrucks",
+          "food truck",
+          "ambulante activiteit",
+          "ambulante activiteiten"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Om een toelating voor het uitoefenen van een ambulante activiteit op rondtrekkende wijze te verkrijgen, moet u aan de onderstaande voorwaarden voldoen.</p>\n<ul>\n<li>\n<p>U hebt een machtiging tot het uitoefenen van ambulante activiteiten als werkgever (de zogenaamde leurkaart). Die machtiging wordt afgeleverd door een <a href=\"http://economie.fgov.be/nl/themas/ondernemingen/een-onderneming-oprichten/belangrijkste-stappen-om-een/te-ondernemen-stappen-bij-een/de-erkende\" data-content-type=\"Website\" data-identifier=\"0cdbd90e-bf57-47e2-819e-745d09d3dd32\" data-language=\"nl\">erkend ondernemingsloket</a> en is geldig in heel België voor de duur van de activiteit.</p>\n</li>\n<li>\n<p>U hebt een verzekering voor burgerlijke aansprakelijkheid en brandrisico’s en, indien van toepassing, een keuringsattest voor uw gas- en/of elektriciteitsinstallatie.</p>\n</li>\n<li>\n<p>U hebt, als u voeding wilt verkopen, een registratie, erkenning of toelating van het Federaal Agentschap voor de Veiligheid van de Voedselketen (FAVV) .</p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt schenken, een drankvergunning voor een reizende drankgelegenheid. Die drankvergunning vraagt u aan bij de gemeente waar u gedomicilieerd bent.</p>\n</li>\n<li>\n<p>U hebt, als u gegiste en/of sterke drank wilt verkopen (geen consumptie ter plaatse), een handelaarsvergunning ethylalcohol en alcoholhoudende dranken. <a href=\"https://financien.belgium.be/douane_accijnzen/contacteer-de-aada\" data-content-type=\"Website\" data-identifier=\"56370de5-b55b-45bb-84de-4ccfeda827c3\" data-language=\"nl\">U vraagt die vergunning</a> aan bij de gewestelijke directie van Douane en Accijnzen.</p>\n</li>\n</ul>\n<p>De geldigheidsduur staat vermeld op de toelating.</p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U dient uw kandidatuur in via het aanvraagformulier en voegt daar de onderstaande documenten bij:</p>\n<ul>\n<li>\n<p>een kopie van uw machtiging als werkgever</p>\n</li>\n<li>\n<p>een kopie van uw e-ID</p>\n</li>\n<li>\n<p>een kopie van de verzekeringspolis burgerlijke aansprakelijkheid (bewijs van een geldige dekking)</p>\n</li>\n<li>\n<p>een kopie van de brandverzekering (bewijs van een geldige dekking)</p>\n</li>\n<li>\n<p>een kopie van het attest keuring elektriciteitsinstallatie (indien van toepassing)</p>\n</li>\n<li>\n<p>een kopie van het attest keuring gasinstallatie (indien van toepassing)</p>\n</li>\n<li>\n<p>een kopie van de registratie, erkenning of toelating van het FAVV (indien van toepassing)</p>\n</li>\n<li>\n<p>een drankvergunning voor reizende drankgelegenheid (indien van toepassing)</p>\n</li>\n<li>\n<p>een handelaarsvergunning ethylalcohol en alcoholhoudende dranken (indien van toepassing)</p>\n</li>\n<li>\n<p>als het privaat domein eigendom is van een derde partij: het schriftelijk akkoord van de eigenaar(s), de uitbater(s) of de huurder(s) van de private eigendommen.</p>\n</li>\n</ul>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen:</p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs</p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs</p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>Het college van burgemeester en schepenen beslist over de toekenning van de toelating.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Organisatie van ambulante activiteiten en kermissen (VLAIO.be)</p>"
+          },
+          "naam": {
+            "nl": "VLAIO.be"
+          },
+          "url": "https://www.vlaio.be/nl/vlaio-netwerk/lokale-besturen/organisatie-van-ambulante-activiteiten-en-kermissen/organisatie-van",
+          "@type": "website"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag is gratis. De kostprijs voor de activiteit is bepaald in het gemeentelijk belasting- of retributiereglement.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:28.742437683Z",
+      "laatstGewijzigd": "2023-03-07T15:13:28.742438936Z",
+      "productnummer": "10065",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/233e49cf-75ea-4299-b3b5-5ac945548efa",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/b99b99f3-3b51-4a9c-a929-458a33ca2fd5"
+    },
+    {
+      "id": "a46f2e78-a684-47ed-84e3-4e86116574ab",
+      "generatedAtTime": "2023-03-07T15:13:29.059538Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Toelating voor occasionele verkoop met een niet-commercieel karakter"
+      },
+      "beschrijving": {
+        "nl": "<p>Voor een occasionele niet-commerciële verkoop moet u een aanvraag tot een toestemming indienen bij de gemeente. Die ambulante activiteit is vrijgesteld van de machtiging tot het uitoefenen van ambulante activiteiten (de zogenaamde leurkaart) wegens zijn specifieke aard.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming",
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Decreet van 24 februari 2017 tot wijziging van artikel 8 en 10 van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten</p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 21 april 2017 houdende de wijziging van diverse bepalingen van het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten</p>\n</li>\n<li>\n<p>Gemeentelijke reglement </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "Niet-commerciële verkoop",
+          "verkoop voor een goed doel",
+          "occasionele verkoop",
+          "standplaats"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U hebt geen <a href=\"https://www.vlaanderen.be/machtiging-tot-het-uitoefenen-van-ambulante-activiteiten-leurkaart\" data-content-type=\"Product\" data-identifier=\"9019b6c4-6c7a-4a78-b64a-ed62740d65a2\" data-language=\"nl\">machtiging tot het uitoefenen van ambulante activiteiten</a> (de zogenaamde leurkaart) nodig voor een occasionele verkoop met een niet-commercieel karakter, voor zover het occasionele karakter behouden blijft en de opbrengst bestemd is voor één van volgende goede doelen: </p>\n<ul>\n<li>\n<p>menslievend, sociaal, cultureel, sportief of educatief doel </p>\n</li>\n<li>\n<p>de verdediging en promotie van de natuur, van de dierenwereld, van een ambacht of van streekproducten </p>\n</li>\n<li>\n<p>een humanitaire catastrofe, steun bij een ramp of steun bij belangrijke schade </p>\n</li>\n</ul>\n<p>De toestemming wordt afgeleverd door de gemeente en beperkt zich tot het grondgebied van de gemeente. Als de occasionele verkoop met niet-commercieel karakter plaatsvindt in meerdere gemeenten in het Vlaams Gewest, vraagt u een toelating aan bij elke gemeente. Als een (of meerdere) van de gemeenten geen toestemming hanteert, richt u voor die gemeente(n) aanvullend een aanvraag tot toestemming tot het Agentschap Innoveren en Ondernemen (VLAIO).</p>\n<p>De toelating is geldig tot één jaar na aflevering van de toelating.</p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U dient uw aanvraag in via het aanvraagformulier met de volgende elementen: </p>\n<ul>\n<li>\n<p>de verantwoordelijke van de actie </p>\n</li>\n<li>\n<p>het doel van de actie</p>\n</li>\n<li>\n<p>de plaats(en) waar de actie zal plaatvinden</p>\n</li>\n<li>\n<p>de periode(s) van verkoop</p>\n</li>\n<li>\n<p>de te koop aangeboden producten of diensten</p>\n</li>\n<li>\n<p>een schatting van de hoeveelheid producten of diensten. </p>\n</li>\n</ul>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen:</p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs</p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs</p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>Het college van burgemeester en schepenen beslist over de toekenning van de toelating.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "websites": [
+        {
+          "beschrijving": {
+            "nl": "<p>Organisatie van ambulante activiteiten en kermissen (VLAIO.be)</p>"
+          },
+          "naam": {
+            "nl": "VLAIO.be"
+          },
+          "url": "https://www.vlaio.be/nl/vlaio-netwerk/lokale-besturen/organisatie-van-ambulante-activiteiten-en-kermissen/organisatie-van",
+          "@type": "website"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag en de activiteit zijn gratis.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:28.274218503Z",
+      "laatstGewijzigd": "2023-03-07T15:13:28.274219983Z",
+      "productnummer": "10064",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/a46f2e78-a684-47ed-84e3-4e86116574ab",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/e59e97a2-a839-4119-b737-55edbbac584c"
+    },
+    {
+      "id": "c3c3eaf8-ac86-4e21-94c9-ca3c366e2818",
+      "generatedAtTime": "2023-03-07T15:13:28.589694Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Machtiging standplaatstaxi"
+      },
+      "beschrijving": {
+        "nl": "<p>Om in een gemeente de taxistandplaatsen op de openbare weg of op een publiek toegankelijke (dus zonder slagbomen) privéparking te mogen gebruiken, moet u een aanvraag indienen bij de gemeente. U doet een aanvraag per gemeente waar u een taxistandplaats wilt gebruiken en per voertuig waarvoor u een machtiging wilt.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Decreet van 29 maart 2019 betreffende het individueel bezoldigd personenvervoer </p>\n</li>\n<li>\n<p>Besluit van de Vlaamse Regering van 8 november 2019 betreffende de exploitatievoorwaarden voor het individueel bezoldigd personenvervoer </p>\n</li>\n<li>\n<p>Boetecatalogus (bedragen van de onmiddellijke inningen), vanaf 1 november 2020 </p>\n</li>\n<li>\n<p>Gemeentelijk reglement </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "standplaats",
+          "standplaatstaxi",
+          "standplaats taxi",
+          "taxistandplaats"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Om een machtiging voor standplaatstaxi te verkrijgen, moet u een vergunning voor individueel bezoldigd personenvervoer (nieuwe vergunning sinds 1 januari 2020). De machtiging wordt slechts afgegeven als de aanvrager ofwel al een vergunning voor individueel bezoldigd personenvervoer heeft, ofwel die vergunning samen met de machtigingsaanvraag aanvraagt. </p>\n<p>De bestuurder, die in het bezit is van een machtiging standplaatstaxi, is verplicht een tarievenkaart en een taxilicht te gebruiken, zodra hij op de standplaatsen gaat staan. </p>\n<p>Wie over een machtiging beschikt is niet langer verplicht om in de gemeente waarvoor de machtiging geldt de perimeter van 200 meter loopafstand rondom standplaatsen te respecteren. Die standplaatsen zijn immers bestemd voor standplaatstaxi’s met een machtiging van de betrokkene gemeente. </p>\n<p>De machtiging standplaatstaxi is persoonlijk en onoverdraagbaar. Ze geldt voor het gebruik van alle taxistandplaatsen in de gemeente. </p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U dient uw aanvraag in via <a href=\"https://centaurus2020.vlaanderen.be\" data-content-type=\"Website\" data-identifier=\"aa249554-84af-459f-89cc-644e6f5ca117\" data-language=\"nl\">Centaurus2020</a> of via het aanvraagformulier en voegt daarbij de onderstaande documenten. </p>\n<ul>\n<li>\n<p>Kopie van de identiteitskaart </p>\n</li>\n<li>\n<p>Vergunning voor individueel bezoldigd personenvervoer (of gelijktijdige aanvraag) </p>\n</li>\n<li>\n<p>Uittreksel uit het strafregister conform artikel 596.1-27 voor elke zaakvoerder of bestuurder belast met het dagelijks beheer. Dat attest mag bij het indienen niet ouder zijn dan drie maanden </p>\n</li>\n<li>\n<p>Attest kennis Nederlands van niveau B1 voor elke zaakvoerder of bestuurder die belast is met het dagelijks beheer </p>\n</li>\n<li>\n<p>Attest dat bewijst dat de exploitant in orde is met de sociale bijdragen (socialeverzekeringsfonds voor zelfstandige of RSZ) </p>\n</li>\n<li>\n<p>Attest dat bewijst dat de exploitant in orde is met fiscale lasten (attest FOD Financiën) </p>\n</li>\n<li>\n<p>Bewijsstukken die aantonen dat de exploitant over de voertuigen mag beschikken (bestelbon, aankoopfactuur, leaseovereenkomst, …) </p>\n</li>\n<li>\n<p>Kopie van het verzekeringsbewijs (groene kaart), de verzekeringspolis, het keuringsbewijs, het certificaat van overeenstemming, het kentekenbewijs (inschrijvingsbewijs). </p>\n</li>\n</ul>\n<p>U kunt uw aanvraag, gericht aan de gemeente ter attentie van het college van burgemeester en schepenen, indienen:</p>\n<ul>\n<li>\n<p>per brief tegen ontvangstbewijs</p>\n</li>\n<li>\n<p>per aangetekende brief met ontvangstbewijs</p>\n</li>\n<li>\n<p>per e-mail (duurzame drager tegen ontvangstbewijs).</p>\n</li>\n</ul>\n<p>U moet de machtiging standplaatstaxi ophalen ten laatste drie maanden na de toekenning. </p>\n<p>De machtiging is maximaal vijf jaar geldig.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag is gratis. De kostprijs voor de inname van de standplaats is bepaald in het gemeentelijke belasting- of retributiereglement (indien van toepassing).</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:28.219659477Z",
+      "laatstGewijzigd": "2023-03-07T15:13:28.219661061Z",
+      "productnummer": "10063",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/c3c3eaf8-ac86-4e21-94c9-ca3c366e2818",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/f282396b-a718-4496-87d9-9d4cf956ed17"
+    },
+    {
+      "id": "674f5c27-d5b2-4a4a-9858-1562d216fb76",
+      "generatedAtTime": "2023-03-07T15:13:28.095276Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Machtiging voor het schenken van sterke drank bij openbare manifestaties"
+      },
+      "beschrijving": {
+        "nl": "<p>Om sterke te drank te mogen schenken (verkopen of gratis aanbieden voor gebruik ter plaatse) in tijdelijke drankgelegenheden in het kader van een sportieve, culturele of politieke manifestatie, is een speciale machtiging van het college van burgemeester en schepenen vereist.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<p>Wet van 28 december 1983 betreffende de vergunning voor het verstrekken van sterke drank</p>"
+      },
+      "zoektermen": {
+        "nl": [
+          "sterke drank",
+          "manifestatie",
+          "wielerwedstrijd",
+          "jaarmarkt",
+          "sportactiviteit",
+          "culturele activiteit",
+          "politieke activiteit",
+          "occasionele",
+          "sterkedrank",
+          "korte drank",
+          "alcoholische drank",
+          "alcopop",
+          "alcopops",
+          "breezer"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Voorbeelden van sterke drank zijn: wodka, rum, cognac, whisky, gin, … Ook alcoholpops en cocktails vallen onder deze noemer. Voorbeelden van een manifestatie zijn een wielerwedstrijd, een jaarmarkt, een kerstmarkt, …</p>\n<p>Voor het verkrijgen van een machtiging voor het schenken van sterke dranken op een manifestatie zijn er geen specifieke voorwaarden van toepassing. Het college van burgemeester en schepen heeft de vrije keuze om de machtiging al dan niet toe te kennen. </p>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>De machtiging is een toelating die moet aangevraagd worden door de organisator van de manifestatie. Ze is van toepassing op alle drankgelegenheden van de hele manifestatie en geldt zolang als de toelating vermeldt. </p>\n<p>U vraagt een machtiging aan bij de gemeente waar de manifestatie plaatsvindt via het aanvraagformulier voor de organisatie van een manifestatie. Het college van burgemeester en schepenen levert de machtiging af</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag en de machtiging zijn gratis.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:27.115360844Z",
+      "laatstGewijzigd": "2023-03-07T15:13:27.115362602Z",
+      "productnummer": "10061",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/674f5c27-d5b2-4a4a-9858-1562d216fb76",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/83f0633e-f988-4b50-9b0d-620f6dd780c1"
+    },
+    {
+      "id": "5948b7ff-77b7-4379-90ab-c42687d9891a",
+      "generatedAtTime": "2023-03-07T15:13:28.091892Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Drankvergunning vaste drankgelegenheid"
+      },
+      "beschrijving": {
+        "nl": "<p>Als uitbater van een vaste drankgelegenheid (bijv. een café, restaurant, cafetaria, …) hebt u een drankvergunning nodig voor het schenken van alcoholhoudende dranken voor consumptie ter plaatse. Het gaat daarbij om gegiste dranken (bijv. bier, wijn, mousserende wijn, …) en sterke drank (bijv. gin, cognac, cocktail, …). De vergunning is persoons- en plaatsgebonden en kan niet worden overgedragen.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Koninklijk Besluit van 3 april 1953 tot samenordening van de wetsbepalingen inzake de slijterijen van gegiste dranken </p>\n</li>\n<li>\n<p>Koninklijk Besluit van 4 april 1953 tot regeling van de uitvoering van de wetsbepalingen inzake de slijterijen van gegiste dranken </p>\n</li>\n<li>\n<p>Wet van 28 december 1983 betreffende het verstrekken van sterke drank en het betreffende vergunningsrecht </p>\n</li>\n<li>\n<p>Wet van 15 december 2005 houdende administratieve vereenvoudiging II </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "drankvergunning",
+          "vergunning gegiste dranken",
+          "vergunning sterke drank",
+          "alcoholische drank",
+          "alcohol",
+          "cafe",
+          "restaurant",
+          "cafetaria",
+          "sterkedrank",
+          "korte drank",
+          "spirits",
+          "geestrijke"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Om in aanmerking te komen voor een drankvergunning, moet u voldoen aan de door de federale overheid bepaalde de moraliteits- en hygiënevoorwaarden. </p>\n<h3>Moraliteitsvoorwaarden</h3>\n<p>De controle op de moraliteitsvoorwaarden gebeurt op basis van een <a href=\"https://www.vlaanderen.be/uittreksel-uit-het-strafregister\" data-content-type=\"Product\" data-identifier=\"b116aed7-ea1b-42b3-8034-10e6b8f29877\" data-language=\"nl\">uittreksel uit het strafregister</a> (uittreksel strafregister model 596.1, met het oog op het verkrijgen van een drankvergunning). Dat attest moet aangeleverd worden door: </p>\n<ul>\n<li>\n<p>de uitbater </p>\n</li>\n<li>\n<p>de eventuele zaakvoerder of zijn aangestelde </p>\n</li>\n<li>\n<p>de inwonende personen die in de uitbating zouden kunnen deelnemen.</p>\n</li>\n</ul>\n<p>Als de uitbating in handen is van een vennootschap moeten alle medezaakvoerders een attest kunnen voorleggen. De moraliteitsvoorwaarden zijn persoonsgeboden. </p>\n<h3>Hygiënevoorwaarden</h3>\n<p>De hygiënevoorwaarden voor een vaste drankgelegenheid hebben betrekking op: </p>\n<ul>\n<li>\n<p>een minimale hoogte van 2,75 meter en minimaal 90 m³ inhoudsruimte </p>\n</li>\n<li>\n<p>een goede toegankelijkheid </p>\n</li>\n<li>\n<p>voldoende gescheiden toiletten </p>\n</li>\n<li>\n<p>een goede verlichting voor een optimale zichtbaarheid </p>\n</li>\n<li>\n<p>een goed verwarmingssysteem voor een aangename gevoelstemperatuur </p>\n</li>\n<li>\n<p>voldoende verluchting </p>\n</li>\n<li>\n<p>de naleving van de geldende rookreglementering.</p>\n</li>\n</ul>\n<p>De hygiënevoorwaarden zijn plaatsgebonden. </p>\n<h3>Geldigheidsduur</h3>\n<p>De drankvergunning blijft gelden tot de stopzetting van de uitbating of als er sprake is van een wijziging op het vlak van: </p>\n<ul>\n<li>\n<p>de uitbater of inwonende personen, medevennoten, …, of </p>\n</li>\n<li>\n<p>het pand (bv. verhuis, grondige verbouwing, …)</p>\n</li>\n</ul>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U vraagt een drankvergunning aan bij de gemeente waar uw drankgelegenheid zich bevindt via het aanvraagformulier en vervolledigt de aanvraag met een uittreksel uit het strafregister (model 596.1) voor elk van volgende personen: </p>\n<ul>\n<li>\n<p>de uitbater </p>\n</li>\n<li>\n<p>de eventuele zaakvoerder of zijn aangestelde en inwonende personen die aan de uitbating zouden deelnemen </p>\n</li>\n<li>\n<p>alle medezaakvoerders, wanneer een vennootschap de zaak uitbaat </p>\n</li>\n</ul>\n<p>Na controle van de moraliteit (op basis van het uittreksel uit het strafregister) en de hygiëne (via een controle ter plaatse door de verantwoordelijke dienst) levert de gemeente de drankvergunning af.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag en de vergunning zijn gratis.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:27.116049087Z",
+      "laatstGewijzigd": "2023-03-07T15:13:27.116050368Z",
+      "productnummer": "10062",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/5948b7ff-77b7-4379-90ab-c42687d9891a",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/93872822-de5a-4a69-8773-df434253e182"
+    },
+    {
+      "id": "d0f95b26-7d28-4318-b563-7db6fb920d2f",
+      "generatedAtTime": "2023-03-07T15:13:26.918851Z",
+      "snapshotType": "Create",
+      "naam": {
+        "nl": "Stemming bij verkiezingen"
+      },
+      "beschrijving": {
+        "nl": "Stemming bij verkiezingen"
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:26.133141271Z",
+      "laatstGewijzigd": "2023-03-07T15:13:26.133142944Z",
+      "productnummer": "731",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/d0f95b26-7d28-4318-b563-7db6fb920d2f",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/37606803-dfe2-4b45-b8e1-41511022709d"
+    },
+    {
+      "id": "859a5449-5c97-4e7c-a530-de6674ebddfc",
+      "generatedAtTime": "2023-03-07T15:13:26.869318Z",
+      "snapshotType": "Create",
+      "naam": {
+        "nl": "Bewonerskaart"
+      },
+      "beschrijving": {
+        "nl": "Bewonerskaart"
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:26.084690384Z",
+      "laatstGewijzigd": "2023-03-07T15:13:26.084692102Z",
+      "productnummer": "181",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/859a5449-5c97-4e7c-a530-de6674ebddfc",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/a02559bc-9aef-40ab-8284-04aba841b6bf"
+    },
+    {
+      "id": "7995334e-a534-40c1-ab4e-180fb318a026",
+      "generatedAtTime": "2023-03-07T15:13:25.903463Z",
+      "snapshotType": "Create",
+      "naam": {
+        "nl": "Elektronische identiteitskaart (eID)"
+      },
+      "beschrijving": {
+        "nl": "Elektronische identiteitskaart (eID)"
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "creatie": "2023-03-07T15:13:25.118245315Z",
+      "laatstGewijzigd": "2023-03-07T15:13:25.11824691Z",
+      "productnummer": "148",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/7995334e-a534-40c1-ab4e-180fb318a026",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/a09a26a3-d1e8-40f5-bc81-da64ee819e1e"
+    },
+    {
+      "id": "6e385ee1-9579-4ea6-9d1a-ce282714be69",
+      "generatedAtTime": "2023-03-07T15:12:36.738693Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Aanvragen van een parkeerplaats voor personen met een handicap"
+      },
+      "beschrijving": {
+        "nl": "<p>Als u zich door een handicap of aandoening moeilijk kan verplaatsen, kunt u een parkeerplaats voor personen met een handicap aanvragen in de nabijheid van uw woning of uw werk.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "InfrastructuurMateriaal",
+      "themas": [
+        "MobiliteitOpenbareWerken",
+        "WelzijnGezondheid"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenOndersteuningBeperkteMobiliteit"
+      ],
+      "zoektermen": {
+        "nl": [
+          "Parkeerplaats"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<p>U moet in het bezit zijn van een parkeerkaart voor personen met een handicap.</p>"
+          },
+          "naam": {
+            "nl": "Bezit parkeerkaart voor personen met een handicap "
+          },
+          "bewijs": {
+            "beschrijving": {
+              "nl": "<p>parkeerkaart voor personen met een handicap. Identiteitskaart</p>"
+            },
+            "naam": {
+              "nl": "Parkeerkaart"
+            },
+            "@type": "bewijsType"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Controle politie"
+          },
+          "beschrijving": {
+            "nl": "<p>De politie zal onderzoeken of de omstandigheden het toelaten een voorbehouden plaats te maken dicht bij uw woning of uw werk.</p>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "creatie": "2023-03-07T15:12:34.905112762Z",
+      "laatstGewijzigd": "2023-03-07T15:12:34.905115088Z",
+      "productnummer": "10006",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/6e385ee1-9579-4ea6-9d1a-ce282714be69",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/354a9c65-283a-4d5c-b992-3e794f03584f"
+    },
+    {
+      "id": "b273a548-e571-4981-94c9-e63be0b7a847",
+      "generatedAtTime": "2023-03-07T15:12:34.592548Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Huwelijk"
+      },
+      "beschrijving": {
+        "nl": "<p>Het huwelijk is een verbintenis tussen twee mensen, voltrokken door een ambtenaar van de burgerlijke stand. Het huwelijk vindt plaats in het gemeentehuis, maar kan eventueel ook op een andere openbare plaats met neutraal karakter, als de gemeenteraad zo'n plaats heeft aangewezen.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "BurgerOverheid"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "BeschermingPersoonsgegevensUitoefeningRechten"
+      ],
+      "zoektermen": {
+        "nl": [
+          "huwelijk",
+          "huwelijkscontract",
+          "huwelijksstelsel",
+          "huwen"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<p>De voorwaarden om te kunnen trouwen, worden bepaald door de wet van het land waarvan men de nationaliteit heeft. De belangrijkste huwelijksvoorwaarden voor Belgen zijn:\n\nminimumleeftijd: de minimumleeftijd om te trouwen, is 18 jaar. De jeugdrechtbank kan die leeftijdsbeperking opheffen als daar goede redenen voor zijn.\ntoestemming van de echtgenoten: beide partners moeten vrijwillig toestemmen in het huwelijk. Een gedwongen huwelijk is dus verboden.\nafwezigheid van een huwelijksbeletsel: huwelijken tussen personen die onderling een te nauwe bloed- of aanverwantschap hebben, zijn verboden. De koning kan, om gewichtige redenen, dat verbod opheffen. Zo'n verzoek moet gericht worden aan de minister van Justitie.\nverbod op bigamie: iemand die al getrouwd is, mag geen ander huwelijk aangaan. Dat verbod geldt ook voor vreemdelingen die in België trouwen, zelfs als hun eigen nationale wet polygamie toestaat. Bigamie is een strafbaar feit.\nverbod op schijnhuwelijk: een huwelijk waarbij de intentie van minstens één van de echtgenoten niet gericht is op het totstandbrenging van een duurzame levensgemeenschap, maar alleen op het verkrijgen van een verblijfsrechtelijk voordeel, is verboden.\nDe voorwaarden voor vreemdelingen worden bepaald door hun eigen nationale wet.</p>"
+          },
+          "naam": {
+            "nl": "Voorwaarden om te kunnen trouwen"
+          },
+          "bewijs": {
+            "beschrijving": {
+              "nl": "<p>Beide partners en de eventuele getuigen moeten hun identiteitskaart meenemen.\nAls er een huwelijkscontract is, moet u niet langer een attest van de notaris voorleggen. De akte wordt door de notaris geregistreerd in het Centraal Register van Huwelijksovereenkomsten.</p>"
+            },
+            "naam": {
+              "nl": "Bewijs om te kunnen trouwen"
+            },
+            "@type": "bewijsType"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure om te trouwen"
+          },
+          "beschrijving": {
+            "nl": "<p>Ten vroegste 6 maanden en ten laatste 14 dagen voor de geplande huwelijksdatum moet u de huwelijksaangifte doen bij de ambtenaar van de burgerlijke stand van de gemeente waar één van de aanstaande echtgenoten woont of ingeschreven is in het bevolkings-, vreemdelingen- of wachtregister.\n\nWonen beide partners in het buitenland? Dan kunt u aangifte doen in\nde laatste woonplaats van u of uw partner\nde woonplaats van een bloedverwant tot en met de tweede graad (dat zijn grootouders, ouders, broers, zussen, kinderen, kleinkinderen) van u of uw partner\nde geboorteplaats van u of uw partner\nAls u een andere nationaliteit hebt, moet u eerst de nodige documenten voorleggen aan de dienst Burgerzaken. Deze documenten mogen maximaal 6 maanden oud zijn.\nEventueel kunt u getuigen aanduiden (maximum 2 per huwelijkspartner) om aanwezig te zijn bij uw huwelijksvoltrekking en om de huwelijksakte mee te ondertekenen. Een getuige moet meerderjarig zijn, maar hoeft geen bloedverwant te zijn.\n\nOp de huwelijksdag wordt u door een ambtenaar van de burgerlijke stand in de echt verbonden. De ambtenaar maakt dadelijk een huwelijksakte op en ondertekent die digitaal.\n\nHet burgerlijk huwelijk kan pas voltrokken worden minimaal 14 dagen en maximaal 6 maanden na de huwelijksaangifte, op voorwaarde dat alle documenten in orde zijn. Het burgerlijk huwelijk moet plaatsvinden vóór het eventuele religieuze huwelijk.</p>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "creatie": "2023-03-07T15:12:32.794244171Z",
+      "laatstGewijzigd": "2023-03-07T15:12:32.79424643Z",
+      "productnummer": "10004",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/b273a548-e571-4981-94c9-e63be0b7a847",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/2f527a1a-23ba-4b2c-81a7-0b94dc96c6d0"
+    },
+    {
+      "id": "cb23aebf-7698-496b-a3d9-29daa74d7284",
+      "generatedAtTime": "2023-03-07T15:12:31.293112Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Concept met volledige instantie"
+      },
+      "beschrijving": {
+        "nl": "<p>Als uitbater van een vaste drankgelegenheid (bijv. een café, restaurant, cafetaria, …) hebt u een drankvergunning nodig voor het schenken van alcoholhoudende dranken voor consumptie ter plaatse. Het gaat daarbij om gegiste dranken (bijv. bier, wijn, mousserende wijn, …) en sterke drank (bijv. gin, cognac, cocktail, …). De vergunning is persoons- en plaatsgebonden en kan niet worden overgedragen.</p>"
+      },
+      "verdereBeschrijving": {
+        "nl": "<p>Een verdere beschrijving kan steeds opgevraagd worden aan de receptie.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Toelating",
+      "themas": [
+        "EconomieWerk"
+      ],
+      "doelgroepen": [
+        "Organisatie",
+        "Onderneming"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "regelgevingTekst": {
+        "nl": "<div class=\"typography\"><p></p><ul>\n<li>\n<p>Koninklijk Besluit van 3 april 1953 tot samenordening van de wetsbepalingen inzake de slijterijen van gegiste dranken </p>\n</li>\n<li>\n<p>Koninklijk Besluit van 4 april 1953 tot regeling van de uitvoering van de wetsbepalingen inzake de slijterijen van gegiste dranken </p>\n</li>\n<li>\n<p>Wet van 28 december 1983 betreffende het verstrekken van sterke drank en het betreffende vergunningsrecht </p>\n</li>\n<li>\n<p>Wet van 15 december 2005 houdende administratieve vereenvoudiging II </p>\n</li>\n</ul>\n<p></p></div>"
+      },
+      "zoektermen": {
+        "nl": [
+          "drankvergunning",
+          "vergunning gegiste dranken",
+          "vergunning sterke drank",
+          "alcoholische drank",
+          "alcohol",
+          "cafe",
+          "restaurant",
+          "cafetaria",
+          "sterkedrank",
+          "korte drank",
+          "spirits",
+          "geestrijke"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>Om in aanmerking te komen voor een drankvergunning, moet u voldoen aan de door de federale overheid bepaalde de moraliteits- en hygiënevoorwaarden. </p>\n<h3>Moraliteitsvoorwaarden</h3>\n<p>De controle op de moraliteitsvoorwaarden gebeurt op basis van een <a href=\"https://www.vlaanderen.be/uittreksel-uit-het-strafregister\" data-content-type=\"Product\" data-identifier=\"b116aed7-ea1b-42b3-8034-10e6b8f29877\" data-language=\"nl\">uittreksel uit het strafregister</a> (uittreksel strafregister model 596.1, met het oog op het verkrijgen van een drankvergunning). Dat attest moet aangeleverd worden door: </p>\n<ul>\n<li>\n<p>de uitbater </p>\n</li>\n<li>\n<p>de eventuele zaakvoerder of zijn aangestelde </p>\n</li>\n<li>\n<p>de inwonende personen die in de uitbating zouden kunnen deelnemen.</p>\n</li>\n</ul>\n<p>Als de uitbating in handen is van een vennootschap moeten alle medezaakvoerders een attest kunnen voorleggen. De moraliteitsvoorwaarden zijn persoonsgeboden. </p>\n<h3>Hygiënevoorwaarden</h3>\n<p>De hygiënevoorwaarden voor een vaste drankgelegenheid hebben betrekking op: </p>\n<ul>\n<li>\n<p>een minimale hoogte van 2,75 meter en minimaal 90 m³ inhoudsruimte </p>\n</li>\n<li>\n<p>een goede toegankelijkheid </p>\n</li>\n<li>\n<p>voldoende gescheiden toiletten </p>\n</li>\n<li>\n<p>een goede verlichting voor een optimale zichtbaarheid </p>\n</li>\n<li>\n<p>een goed verwarmingssysteem voor een aangename gevoelstemperatuur </p>\n</li>\n<li>\n<p>voldoende verluchting </p>\n</li>\n<li>\n<p>de naleving van de geldende rookreglementering.</p>\n</li>\n</ul>\n<p>De hygiënevoorwaarden zijn plaatsgebonden. </p>\n<h3>Geldigheidsduur</h3>\n<p>De drankvergunning blijft gelden tot de stopzetting van de uitbating of als er sprake is van een wijziging op het vlak van: </p>\n<ul>\n<li>\n<p>de uitbater of inwonende personen, medevennoten, …, of </p>\n</li>\n<li>\n<p>het pand (bv. verhuis, grondige verbouwing, …)</p>\n</li>\n</ul>\n<p></p></div>"
+          },
+          "naam": {
+            "nl": "Voorwaarden"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<div class=\"typography\"><p></p><p>U vraagt een drankvergunning aan bij de gemeente waar uw drankgelegenheid zich bevindt via het aanvraagformulier en vervolledigt de aanvraag met een uittreksel uit het strafregister (model 596.1) voor elk van volgende personen: </p>\n<ul>\n<li>\n<p>de uitbater </p>\n</li>\n<li>\n<p>de eventuele zaakvoerder of zijn aangestelde en inwonende personen die aan de uitbating zouden deelnemen </p>\n</li>\n<li>\n<p>alle medezaakvoerders, wanneer een vennootschap de zaak uitbaat </p>\n</li>\n</ul>\n<p>Na controle van de moraliteit (op basis van het uittreksel uit het strafregister) en de hygiëne (via een controle ter plaatse door de verantwoordelijke dienst) levert de gemeente de drankvergunning af.</p>\n<p></p></div>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag en de vergunning zijn gratis.</p>"
+          },
+          "naam": {
+            "nl": "Bedrag"
+          },
+          "@type": "kost"
+        }
+      ],
+      "creatie": "2023-03-07T15:12:26.795458528Z",
+      "laatstGewijzigd": "2023-03-07T15:12:26.79546129Z",
+      "productnummer": "10000",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/cb23aebf-7698-496b-a3d9-29daa74d7284",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/d66d6492-0833-4b2a-9306-e97e06a07f44"
+    },
+    {
+      "id": "57e2d242-7d85-4b27-b970-fe80d4884543",
+      "generatedAtTime": "2023-03-07T15:12:29.754634Z",
+      "snapshotType": "Create",
+      "bevoegdBestuursniveaus": [
+        "Federaal"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "naam": {
+        "nl": "Voorlopig rijbewijs"
+      },
+      "beschrijving": {
+        "nl": "<p>Een voorlopig rijbewijs geeft u de toelating om met een voertuig op de openbare weg te rijden als voorbereiding op het praktisch rijexamen. U moet minstens 3 maanden oefenen met uw voorlopig rijbewijs.\n\nU kunt kiezen uit:\n\nvoorlopig rijbewijs mét begeleider. Dit is 36 maanden geldig en niet verlengbaar.\nvoorlopig rijbewijs zonder begeleider. Dit is 18 maanden geldig en niet verlengbaar of hernieuwbaar.</p>"
+      },
+      "startDienstVerlening": "2020-01-01T00:00:00Z",
+      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "type": "Bewijs",
+      "themas": [
+        "BurgerOverheid"
+      ],
+      "doelgroepen": [
+        "Burger"
+      ],
+      "talen": [
+        "NLD"
+      ],
+      "yourEuropeCategorieen": [
+        "ReizenDocumenten"
+      ],
+      "zoektermen": {
+        "nl": [
+          "voorlopige",
+          "rijbewijzen"
+        ]
+      },
+      "bevoegdeOverheden": [
+        {
+          "id": "OVO000001"
+        }
+      ],
+      "uitvoerendeOverheden": [
+        {
+          "id": "OVO004718"
+        }
+      ],
+      "voorwaarden": [
+        {
+          "beschrijving": {
+            "nl": "<p><div class=\"typography\"><p></p><h2>Een voorlopig rijbewijs met begeleider aanvragen</h2>\n<h3><strong>Hoe aanvragen?</strong></h3>\n<ul>\n<li>U krijgt een aanvraagformulier in het examencentrum als u voor het theorie-examen bent geslaagd.</li>\n<li>Kies maximaal 2 begeleiders die allebei voldoen aan de voorwaarden om kandidaat-chauffeurs te begeleiden.</li>\n<li>Vraag uw voorlopig rijbewijs aan bij uw gemeentebestuur. Neem het aanvraagformulier mee, samen met uw identiteitskaart.</li>\n</ul>\n<h3><strong>Voorwaarden voor de begeleider(s)</strong></h3>\n<ul>\n<li>De begeleider moet ingeschreven zijn in België, en houder en drager zijn van een identiteitsdocument afgegeven in België.</li>\n<li>De begeleider heeft minstens 8 jaar een Belgisch of Europees rijbewijs dat geldig is voor het besturen van het soort voertuig waarvoor hij de leerling begeleidt.</li>\n<li>Als de begeleider een handicap heeft en daardoor enkel een aangepast voertuig mag besturen, mag hij enkel leerlingen begeleiden die eenzelfde voertuigaanpassing nodig hebben.</li>\n<li>De begeleider mag de laatste 3 jaar niet ontzet zijn uit zijn recht tot sturen. Een verval van het recht tot sturen wordt opgelegd door de rechter en kan gekoppeld zijn aan herstelexamens en -onderzoeken.</li>\n<li>De begeleider heeft het afgelopen jaar geen andere leerling-chauffeur begeleid, tenzij het gaat om kinderen, kleinkinderen, zussen, broers of pleegkinderen van uzelf of van de partner waarmee u gehuwd bent, met wie u wettelijk samenwoont of feitelijk een gezin vormt.</li>\n</ul>\n<h3>Goed om te weten</h3>\n<ul>\n<li>U mag alleen oefenen met één of beide begeleiders of met een erkende rij-instructeur. Andere passagiers mag u niet meenemen.</li>\n<li>Uw voertuig moet een tweede achteruitkijkspiegel hebben voor uw begeleider.</li>\n<li>Rijlessen bij een rijschool zijn niet verplicht.</li>\n<li>Ga naar uw gemeentebestuur als u een tweede begeleider wilt laten registreren of van begeleider wilt veranderen.<br> </li>\n</ul>\n<h2>Een voorlopig rijbewijs zonder begeleider aanvragen</h2>\n<h3><strong>Hoe aanvragen?</strong></h3>\n<ul>\n<li>U krijgt een <strong>aanvraagformulier</strong> in het examencentrum als u voor het theorie-examen geslaagd bent.</li>\n<li>U volgt minstens <strong>20 uur rijles</strong> bij een <span>erkende rijschool.</span> Na afloop krijgt u een bekwaamheidsattest als u in staat bent om alleen verder te oefenen. Dat bekwaamheidsattest is 3 jaar geldig.</li>\n<li>Met het aanvraagformulier en het bekwaamheidsattest vraagt u uw <strong>voorlopig rijbewijs</strong> aan bij uw gemeentebestuur. Neem ook uw identiteitskaart mee.</li>\n</ul>\n<h3><strong>Passagiers</strong></h3>\n<ul>\n<li>U mag <strong>2 passagiers</strong> meenemen die beiden moeten voldoen aan de volgende voorwaarden:\n<ul>\n<li>Ingeschreven zijn in België, en houder en drager zijn van een identiteitsdocument afgeleverd in België.</li>\n<li>Minstens 8 jaar houder en drager zijn van een Belgische of Europees rijbewijs dat geldig is voor het besturen van het soort voertuig waarmee de kandidaat-chauffeur rijdt.</li>\n<li>De laatste 3 jaar niet vervallen zijn van het recht tot sturen opgelegd door een rechter.</li>\n<li>Bestuurders die enkel een speciaal aan hun handicap aangepast voertuig mogen besturen, mogen niet meerijden.</li>\n</ul>\n</li>\n</ul>\n<p>U mag geen andere passagiers meenemen. </p>\n<p></p></div></p>"
+          },
+          "naam": {
+            "nl": "Voorwaarde"
+          },
+          "@type": "voorwaarde"
+        }
+      ],
+      "procedures": [
+        {
+          "naam": {
+            "nl": "Procedure"
+          },
+          "beschrijving": {
+            "nl": "<p>Het voorlopig rijbewijs moet u aanvragen in de gemeente waar u bent ingeschreven in het bevolkingsregister.</p>"
+          },
+          "@type": "procedure"
+        }
+      ],
+      "regelgeving": [
+        {
+          "id": "http://www.ejustice.just.fgov.be/cgi_loi/change_lg.pl?language=nl&la=N&cn=1998032331&table_name=wet",
+          "@type": "regel"
+        }
+      ],
+      "creatie": "2023-03-07T15:12:26.773312114Z",
+      "laatstGewijzigd": "2023-03-07T15:12:26.773318472Z",
+      "productnummer": "10001",
+      "gearchiveerd": false,
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/57e2d242-7d85-4b27-b970-fe80d4884543",
+      "@type": "ConceptualPublicService",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/16d95662-2f0c-45fa-bb71-de7448644f80"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ldes-consumer",
+  "version": "1.0.0",
+  "description": "Stub of the IPDC ldes producer",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -94,13 +94,18 @@ services:
 
   lpdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.1
+    depends_on:
+      lpdc-management:
+        condition: service_healthy
     environment:
-      LDES_STREAM: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot"
-      LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=0" # first page of the stream
+      LDES_STREAM: "http://ipdc-stub/doc/conceptsnapshot"
+      LDES_ENDPOINT_VIEW: "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0" # first page of the stream
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
-      CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
+      CRON_PATTERN: "*/1 * * * *" # run the job every minute
       LDES_POLLING_INTERVAL: 3600000 # since ipdcs caching headers indicate no caching, this means the polling interval to initiate the request again (3 600 000 millis = 1 hour)
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/ldes-data"
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
 
+  ipdc-stub:
+    image: ipdc-stub:latest
