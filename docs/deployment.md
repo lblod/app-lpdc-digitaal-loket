@@ -63,7 +63,7 @@ _Configuration notes_
 ```
   This might cause problems if the ip address from the woodpecker ci changes ... 
 - We did a checkout in the folder _data/app-lpdc-digitaal-loket-ci_  on the lpdc dev machine, on branch kunlabora.
-  
+- For the frontend-lpdc, lpdc-management-service, and the lpdc-publish project in woodpecker, a secret with name _woodpecker_token_ was added containing a ['Personal Access Token'](https://build.redpencil.io/user) from a user of the project that has access to the app-lpdc-digitaal-loket project.
 
 # Making a release
 
