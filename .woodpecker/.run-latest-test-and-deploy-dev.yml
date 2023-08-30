@@ -11,7 +11,7 @@ steps:
       - echo "$${SSH_KEY}" >> ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
       - echo "Building from branch = ${CI_COMMIT_BRANCH}"
-      - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-ci && git fetch && git checkout ${CI_COMMIT_BRANCH} && git pull && cd /data/app-lpdc-digitaal-loket-ci/tests && npx playwright install && ./run-latest.sh'
+      - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-ci && git fetch && git checkout ${CI_COMMIT_BRANCH} && git pull && cd /data/app-lpdc-digitaal-loket-ci/tests && npx playwright install && npx playwright install-deps && ./run-latest.sh'
       - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-dev && git fetch && git pull && docker compose down && docker compose pull && docker compose up -d'
 
     secrets: [ ssh_key ]
