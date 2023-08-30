@@ -1,5 +1,5 @@
 import { defineConfig } from '@playwright/test';
-import type { TestOptions } from './tests/test-helpers/test-options';
+import type { TestOptions } from './test-api/test-helpers/test-options';
 
 /**
  * Read environment variables from file.

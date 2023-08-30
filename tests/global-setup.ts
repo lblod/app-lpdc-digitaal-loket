@@ -1,5 +1,5 @@
 import {type FullConfig, request, APIRequestContext} from '@playwright/test';
-import {dispatcherUrl, virtuosoUrl, mockLoginUrl, migrationsUrl, lpdcManagementUrl} from './tests/test-helpers/test-options';
+import {dispatcherUrl, virtuosoUrl, mockLoginUrl, migrationsUrl, lpdcManagementUrl} from './test-api/test-helpers/test-options';
 
 async function globalSetup(config: FullConfig) {
     console.log('verify services running');
