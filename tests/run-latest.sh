@@ -3,24 +3,49 @@
 if [ "$1" = "--help" ]
 then
   echo "Refreshes docker test container and runs all latest tests".
-  echo "You can use --clear-test-data to clear the test data folder before running".
   exit
 fi
 
-if [ "$1" = "--clear-test-data" ]
-then
-  echo "Clearing test data".
-  rm -rf data-tests
-  rm -rf test-results
-fi
+echo "Stopping and removing containers"
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests stop
+docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests down
 
+echo "Clearing test data"
+rm -rf data-tests
+rm -rf test-results
+
+echo "Building and starting latest containers"
 npm install
 docker build -t ipdc-stub:latest ./ipdc-stub
-docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests down
 docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests pull
 docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests up -d
+
+echo "Running playwright api tests"
 npx playwright test test-api
 code=$?
-echo "npx playwright exit code = $code"
+echo "playwright api tests exit code = $code"
+
+if [ "$code" -eq 0 ]; then
+  echo "Stopping and removing containers"
+  docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests stop
+  docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests down
+
+  echo "Clearing test data"
+  rm -rf data-tests
+  rm -rf test-results
+
+  echo "Starting latest containers"
+  docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests up -d
+
+  echo "Running playwright e2e tests"
+  npx playwright test test-e2e
+  code=$?
+  echo "playwright e2e tests exit code = $code"
+else
+  echo "Not running playwright e2e tests"
+fi
+
+echo "Stopping containers"
 docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests stop
+
 exit $code

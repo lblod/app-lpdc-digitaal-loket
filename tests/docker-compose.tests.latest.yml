@@ -32,3 +32,10 @@ services:
       LDES_FOLDER: "dev-lpdc-stream"
       IPDC_JSON_ENDPOINT: "http://ipdc-stub/instanties"
       CRON_PATTERN: "* * * * *" # every minute
+
+  lpdc:
+    image: lblod/frontend-lpdc:latest
+    ports:
+      - "4200:80"
+    links:
+      - identifier:backend
