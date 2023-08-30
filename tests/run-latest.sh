@@ -32,6 +32,8 @@ echo "playwright api tests exit code = $code"
 if [ "$code" -eq 0 ]; then
 
   refresh_latest_containers
+  echo "Waiting..."
+  sleep 120 ## wait for ldes-consumer to finish
 
   echo "Running playwright e2e tests"
   npx playwright test --project=e2e
