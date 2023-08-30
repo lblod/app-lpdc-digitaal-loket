@@ -1,4 +1,4 @@
-# 1. Trunk-based Development
+# 2. Trunk-based Development
 
 Date: 2023-07-13
 

@@ -46,7 +46,12 @@ Following steps can be used if you want to manually deploy a new version on dev 
 # Continuous Integration
 
 Continuous integration (CI) is the practice of merging all developers' working copies to a shared mainline several times a day. 
+However, we agreed to [use trunk-based-development](./adr/0002-trunk-based-development.md). Developers commit directly on the kunlabora branch (for each of the projects).  
+So we need a continuous integration build that verifies all commits (either on the app-lpdc-digitaal-loket, or frontend-lpdc, or lpdc-management-service, or lpdc-publish). A commit on lpdc-publish can also break something on app-lpdc-digitaal-loket ...
 
+So we created a pipeline that verifies all when committing on kunlabora branches: [overview of Continuous Integration setup (private link)](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764562721514615&cot=14). 
+
+More in detail:
 We have an automated build pipeline in woodpecker ci that:
 - [builds frontend-lpdc, runs its component and unit tests and deploys a new latest docker container on commit of kunlabora branch](https://build.redpencil.io/repos/2368)
 - [builds lpdc-management-service, runs its unit tests and deploys a new latest docker container on commit of kunlabora branch](https://build.redpencil.io/repos/2378)
