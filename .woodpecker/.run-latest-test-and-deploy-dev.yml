@@ -17,5 +17,5 @@ steps:
     secrets: [ ssh_key ]
 
 when:
-  branch: chore/lpdc-551
+  branch: kunlabora
   event: push
