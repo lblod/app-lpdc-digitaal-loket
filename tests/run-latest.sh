@@ -25,7 +25,7 @@ refresh_latest_containers() {
 refresh_latest_containers
 
 echo "Running playwright api tests"
-npx playwright test test-api
+npx playwright test --project=api
 code=$?
 echo "playwright api tests exit code = $code"
 
@@ -34,7 +34,7 @@ if [ "$code" -eq 0 ]; then
   refresh_latest_containers
 
   echo "Running playwright e2e tests"
-  npx playwright test test-e2e
+  npx playwright test --project=e2e
   code=$?
   echo "playwright e2e tests exit code = $code"
 else
