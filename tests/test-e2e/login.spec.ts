@@ -1,15 +1,15 @@
 import {expect, test} from "@playwright/test";
+import {loginAsPepingen} from "./test-helpers/login";
+import UOrJeModal from "./test-helpers/u-or-je-modal";
 
-test(`Login`, async ({page}) => {
-    await page.goto('http://localhost:4200/');
+test(`Concepts loaded form ldes-stream are visible on concept overview page`, async ({page}) => {
+    await loginAsPepingen(page);
 
-    await page.locator('#ember133').click();
+    await expect(page.getByRole('heading', { name: 'Lokale Producten- en Dienstencatalogus' })).toBeVisible();
+    await new UOrJeModal(page).choseLater();
+    await page.getByRole('link', { name: 'Product of dienst toevoegen' }).click();
 
-    await expect(page.getByRole('heading', { name: 'Kies een bestuurseenheid om mee in te loggen.' })).toBeVisible();
-    await page.getByPlaceholder('Aalst, Berchem,...').fill('pepi');
+    await expect(page.getByText('Akte van Belgische nationaliteit')).toBeVisible();
+    await expect(page.getByText('Concept 1 edited')).toBeVisible();
 
-    await expect(page.getByText('Gemeente Pepingen')).toBeVisible()
-    await page.getByText('Gemeente Pepingen').click();
-
-    await expect(page.getByRole('heading', { name: 'Lokale Producten- en Dienstencatalogus' })).toBeVisible()
 });
