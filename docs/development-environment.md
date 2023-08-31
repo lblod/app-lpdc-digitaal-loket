@@ -294,8 +294,6 @@ services:
     
   lpdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
-    environment:
-      LDES_ENDPOINT_HEADER_X-API-KEY: <your api key here> 
     
 ```
 
@@ -331,8 +329,6 @@ services:
 
   lpdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
-    environment:
-      LDES_ENDPOINT_HEADER_X-API-KEY: "yvgqpA&zdY@a4EjQWP$*22Lk&7TbZgzKxfbTQhHN"
 
   lpdc-management:
     image: semtech/mu-javascript-template:feature-node-18-arm64-build
