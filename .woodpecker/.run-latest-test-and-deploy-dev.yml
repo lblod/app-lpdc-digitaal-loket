@@ -11,13 +11,8 @@ steps:
       - echo "$${SSH_KEY}" >> ~/.ssh/id_rsa
       - chmod 600 ~/.ssh/id_rsa
       - echo "Building from branch = ${CI_COMMIT_BRANCH}"
-      - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-ci && git fetch && git checkout ${CI_COMMIT_BRANCH} && git pull && cd /data/app-lpdc-digitaal-loket-ci/tests && npx playwright install && npx playwright install-deps && ./run-latest.sh'
-      - exitcode=$?
-      - echo "run latest exit code = $exitcode"
-      - echo "run latest exit code = $exitcode"
-      - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-ci/tests && mkdir /data/woodpecker-ci-app-lpdc-digitaal-loket-ci-build-results/build-${CI_PIPELINE_NUMBER} && cp -r all-reports/ /data/woodpecker-ci-app-lpdc-digitaal-loket-ci-build-results/build-${CI_PIPELINE_NUMBER}/'
-      - echo "Test results available on lpdc-dev.s.redhost.be in folder /data/woodpecker-ci-app-lpdc-digitaal-loket-ci-build-results/build-${CI_PIPELINE_NUMBER}"
-      - if [ "$exitcode" -eq 0 ]; then ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-dev && git fetch && git pull && docker compose down && docker compose pull && docker compose up -d' ; fi
+      - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-ci && git fetch && git checkout ${CI_COMMIT_BRANCH} && git pull && cd /data/app-lpdc-digitaal-loket-ci/tests && npx playwright install && npx playwright install-deps && ./run-latest.sh; exitcode=$?; (cd /data/app-lpdc-digitaal-loket-ci/tests && mkdir /data/woodpecker-ci-app-lpdc-digitaal-loket-ci-build-results/build-${CI_PIPELINE_NUMBER} && cp -r all-reports/ /data/woodpecker-ci-app-lpdc-digitaal-loket-ci-build-results/build-${CI_PIPELINE_NUMBER}/); exit $exitcode'
+      - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-dev && git fetch && git pull && docker compose down && docker compose pull && docker compose up -d'
 
     secrets: [ ssh_key ]
 
