@@ -24,6 +24,7 @@ refresh_latest_containers() {
 
 refresh_latest_containers
 
+mkdir -p all-reports
 rm -rf all-reports/playwright-report-api
 rm -rf all-reports/playwright-report-e2e
 
