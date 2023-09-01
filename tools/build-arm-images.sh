@@ -11,7 +11,7 @@ cd arm64-builds || exit
 git clone https://github.com/gauquiebart/mu-javascript-template
 cd mu-javascript-template || exit
 git checkout feature/node-18-decrease-development-reload-time
-docker build -t semtech/mu-javascript-template:feature-node-18-arm64-build .
+docker build -t semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build .
 cd ..
 
 rm -rf mu-javascript-template
@@ -26,6 +26,13 @@ git clone https://github.com/mu-semtech/mu-javascript-template.git
 cd mu-javascript-template || exit
 git checkout feature/node-16-support
 docker build -t semtech/mu-javascript-template:feature-node-16-support-arm64-build .
+cd ..
+
+rm -rf mu-javascript-template
+git clone https://github.com/mu-semtech/mu-javascript-template.git
+cd mu-javascript-template || exit
+git checkout feature/node-18
+docker build -t semtech/mu-javascript-template:feature-node-18-arm64-build .
 cd ..
 
 rm -rf mu-javascript-template
@@ -131,6 +138,14 @@ cd ldes-consumer-service || exit
 git checkout tags/v0.7.1
 sed -i '' -e 's/mu-javascript-template:feature-node-16-support/mu-javascript-template:feature-node-16-support-arm64-build/g' Dockerfile
 docker build -t redpencil/ldes-consumer:0.7.1-arm64-build .
+cd ..
+
+rm -rf ldes-consumer-service
+git clone https://github.com/redpencilio/ldes-consumer-service
+cd ldes-consumer-service || exit
+git checkout tags/v0.8.0-rc1
+sed -i '' -e 's/mu-javascript-template:feature-node-18/mu-javascript-template:feature-node-18-arm64-build/g' Dockerfile
+docker build -t redpencil/ldes-consumer:0.8.0-rc1-arm64-build .
 cd ..
 
 git clone https://github.com/lblod/acmidm-login-service.git

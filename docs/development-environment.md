@@ -331,17 +331,11 @@ services:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
 
   lpdc-management:
-    image: semtech/mu-javascript-template:feature-node-18-arm64-build
+    image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
 
   lpdc-publish:
-    image: semtech/mu-javascript-template:feature-node-18-arm64-build
+    image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
        
-```
-
-Build a local arm64 image from https://github.com/gauquiebart/mu-javascript-template/tree/feature/node-18-decrease-development-reload-time . (temporary from this repo till PR is merged into main mu-javascript-template ) 
-
-```shell
-docker build -t semtech/mu-javascript-template:feature-node-18-arm64-build .
 ```
 
 ### Prerequisites when not running on mac arm64
