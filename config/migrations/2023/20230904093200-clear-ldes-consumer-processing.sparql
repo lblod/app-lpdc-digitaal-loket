@@ -1,0 +1,9 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
+        <https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot> <http://mu.semte.ch/vocabularies/ext/state> ?state.
+    }
+} WHERE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
+        <https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot> <http://mu.semte.ch/vocabularies/ext/state> ?state.
+    }
+}
