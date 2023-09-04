@@ -88,7 +88,7 @@ cd ..
 #services
 git clone https://github.com/mu-semtech/mu-authorization.git
 cd mu-authorization || exit
-git checkout feature/service-roam-r1
+git checkout feature/service-roam-r1.1
 sed -i '' -e 's/elixir-server:1.10.0/elixir-server:1.10.0-arm64-build/g' Dockerfile
 docker build -t semtech/mu-authorization:feature-service-roam-r1.1-arm64-build .
 cd ..
