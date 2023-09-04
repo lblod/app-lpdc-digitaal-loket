@@ -20,7 +20,7 @@ Other repos:
 
 ## 4. Constraints
 
-## 5. Principles
+## 5. [Principles](docs/principles.md)
 
 ## 6. Software Architecture
 
