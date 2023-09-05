@@ -28,7 +28,7 @@ app.get('/doc/conceptsnapshot', (req, res, next) => {
 app.put('/instanties', (req, res, next) => {
    try {
        console.log('received instances');
-       instances.push(...req.body);
+       instances.push(req.body);
        console.log(instances);
        res.status(200).send();
    } catch (e) {
