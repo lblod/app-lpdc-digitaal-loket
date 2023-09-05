@@ -30,6 +30,8 @@ Container Diagram (TODO)
 
 [Sequence Diagram For 'Wijzigingen bewaren' on an 'Instantie'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559335291592&cot=14)
 
+[Sequence Diagram For 'Reading and updating concepts from LDES stream'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559654392138&cot=14)
+
 ## 7. Code
 
 ## 8. Data
