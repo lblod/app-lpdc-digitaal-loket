@@ -30,6 +30,7 @@ export default class EvidenceTestBuilder {
                 {value: 'evidence description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'evidence description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(1)
     }
 
     private withType() {
@@ -69,6 +70,7 @@ export default class EvidenceTestBuilder {
 
     withOrder(value: number) {
         this.order = new Literal(value.toString());
+        return this;
     }
 
     buildTripleArray(): TripleArray {
@@ -78,6 +80,7 @@ export default class EvidenceTestBuilder {
             ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
             new Triple(this.id, Predicates.source, this.source),
+            new Triple(this.id, Predicates.order, this.order),
         ];
         return new TripleArray(triples);
     }

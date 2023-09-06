@@ -31,6 +31,7 @@ export class RequirementTestBuilder {
                 {value: 'requirement description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'requirement description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(1)
     }
 
     private withType() {
@@ -73,8 +74,9 @@ export class RequirementTestBuilder {
         return this;
     }
 
-    withOrder() {
-        // http://www.w3.org/ns/shacl#order
+    withOrder(value: number) {
+        this.order = new Literal(value.toString());
+        return this;
     }
 
     buildTripleArray(): TripleArray {
@@ -83,7 +85,8 @@ export class RequirementTestBuilder {
             new Triple(this.id, Predicates.uuid, this.uuid),
             ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
-            new Triple(this.id, Predicates.hasSupportingEvidence, this.supportingEvidence)
+            new Triple(this.id, Predicates.hasSupportingEvidence, this.supportingEvidence),
+            new Triple(this.id, Predicates.order, this.order)
         ];
         return new TripleArray(triples);
     }

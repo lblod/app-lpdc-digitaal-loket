@@ -13,6 +13,7 @@ export class FinancialAdvantageTestBuilder {
     private uuid: Literal;
     private titles: Literal[] = [];
     private descriptions: Literal[] = [];
+    private order: Literal;
 
     static aFinancialAdvantage() {
         return new FinancialAdvantageTestBuilder()
@@ -28,6 +29,7 @@ export class FinancialAdvantageTestBuilder {
                 {value: 'financial advantage description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'financial advantage description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(1)
     }
 
     private withType() {
@@ -60,12 +62,18 @@ export class FinancialAdvantageTestBuilder {
         return this;
     }
 
+    withOrder(value: number) {
+        this.order = new Literal(value.toString());
+        return this;
+    }
+
     buildTripleArray(): TripleArray {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
             new Triple(this.id, Predicates.uuid, this.uuid),
             ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
+            new Triple(this.id, Predicates.order, this.order),
         ];
         return new TripleArray(triples);
     }

@@ -14,6 +14,7 @@ export class WebsiteTestBuilder {
     private titles: Literal[] = [];
     private descriptions: Literal[] = [];
     private url: Literal;
+    private order: Literal;
 
     static aWebsite() {
         return new WebsiteTestBuilder()
@@ -30,6 +31,7 @@ export class WebsiteTestBuilder {
                 {value: 'website description generated formal', language: Language.GENERATED_FORMAL},
             ])
             .withUrl('https://www.vlaio.be')
+            .withOrder(1)
     }
 
     private withType() {
@@ -67,6 +69,11 @@ export class WebsiteTestBuilder {
         return this;
     }
 
+    withOrder(value: number) {
+        this.order = new Literal(value.toString());
+        return this;
+    }
+
     buildTripleArray(): TripleArray {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
@@ -74,7 +81,7 @@ export class WebsiteTestBuilder {
             ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
             new Triple(this.id, Predicates.url, this.url),
-
+            new Triple(this.id, Predicates.order, this.order),
         ];
         return new TripleArray(triples);
     }

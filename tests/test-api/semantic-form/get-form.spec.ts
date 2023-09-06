@@ -8,6 +8,8 @@ import {Language} from "../test-helpers/language";
 import {Predicates, TripleArray} from "../test-helpers/triple-array";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
+import {TestDataFactory} from "../test-helpers/test-data-factory";
+import {PublicationMedium} from "../test-helpers/codelists";
 
 const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
 const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
@@ -33,7 +35,6 @@ test('Can get content form for concept', async ({request}) => {
     expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
     const triplesWithoutUUID = new TripleArray(concept.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
     expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
-    // TODO check if meta field contains the right content
 });
 
 test('Can get characteristics form for concept', async ({request}) => {
@@ -57,7 +58,6 @@ test('Can get characteristics form for concept', async ({request}) => {
 
 test('Can get content form for public service', async ({request}) => {
     const cookie = await loginAsPepingen(request);
-    // TODO: create public service with all fields (evidence, requirements, procedure, contactPoints, attachments, ...)
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withNoPublicationMedium()
         .buildAndPersist(request, pepingenId);
@@ -93,7 +93,7 @@ test('Can get characteristics form for public service', async ({request}) => {
 test('English form is only added when publicationMedium is yourEurope and form is content', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
-        .withPublicationMedium('YourEurope')
+        .withPublicationMedium(PublicationMedium.YourEurope)
         .buildAndPersist(request, pepingenId);
 
     const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
@@ -105,8 +105,44 @@ test('English form is only added when publicationMedium is yourEurope and form i
     expect(responseBody.form).toStrictEqual(expectedForm + expectedEnglishForm);
 });
 
+test('When getting characteristics form then meta field contains codelist of all bestuurseenheden', async ({request}) => {
+    const cookie = await loginAsPepingen(request);
+    const publicService = await PublicServiceTestBuilder.aPublicService().buildAndPersist(request, pepingenId);
 
-test('When getting content form for public service than form language is replaced to language of public service', async ({request}) => {
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
+    expect(response.ok()).toBeTruthy();
+    const responseBody = await response.json();
+    const expectedMeta = fs.readFileSync(`${__dirname}/meta.txt`, 'utf8');
+    expect(parseToSortedTripleArray(responseBody.meta)).toEqual(parseToSortedTripleArray(expectedMeta, '\n'));
+});
+
+test('Can get content form for full concept', async ({request}) => {
+    const cookie = await loginAsPepingen(request);
+
+    const {concept, triples} = await new TestDataFactory().createFullConcept(request);
+
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    expect(response.ok()).toBeTruthy();
+
+    const responseBody = await response.json();
+    const triplesWithoutUUID = new TripleArray(triples.filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
+    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+});
+
+test('Can get content form for full public service', async ({request}) => {
+    const cookie = await loginAsPepingen(request);
+
+    const {publicService, triples} = await new TestDataFactory().createFullPublicService(request, pepingenId);
+
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    expect(response.ok()).toBeTruthy();
+
+    const responseBody = await response.json();
+    const triplesWithoutUUID = new TripleArray(triples.filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
+    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+});
+
+test('When getting content form for public service then form language is replaced to language of public service', async ({request}) => {
     const cookie = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withTitle('Instance title', Language.FORMAL)
@@ -162,10 +198,11 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
     });
 }
 
-function parseToSortedTripleArray(source: string) {
+function parseToSortedTripleArray(source: string, split = '\r\n') {
     return source
-        .split('\r\n')
+        .split(split)
         .map(triple => triple.trim())
         .map(triple => triple.replaceAll(`"""`, `"`))
+        .map(triple => triple.replaceAll(`\t`, ` `))
         .sort();
 }

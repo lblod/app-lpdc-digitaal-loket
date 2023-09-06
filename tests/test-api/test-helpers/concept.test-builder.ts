@@ -3,6 +3,14 @@ import {insertTriples} from "./sparql";
 import {Language} from "./language";
 import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import type {APIRequestContext} from "@playwright/test";
+import {
+    CompetentAuthorityLevel, ConceptTag,
+    ExecutingAuthorityLevel, ProductType,
+    PublicationMedium,
+    ResourceLanguage,
+    TargetAudience,
+    Theme, YourEuropeCategory
+} from "./codelists";
 
 export const ConceptType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService';
 
@@ -19,6 +27,15 @@ export class ConceptTestBuilder {
     private startDate: Literal;
     private endDate: Literal;
     private productId: Literal;
+    private theme: Uri;
+    private targetAudience: Uri;
+    private competentAuthorityLevel: Uri;
+    private executingAuthorityLevel: Uri;
+    private keywords: Literal[] = [];
+    private publicationMedium: Uri;
+    private yourEuropeCategory: Uri;
+    private productType: Uri;
+    private conceptTag: Uri;
     private requirement: Uri;
     private procedure: Uri;
     private moreInfo: Uri;
@@ -105,6 +122,51 @@ export class ConceptTestBuilder {
         return this;
     }
 
+    withTheme(theme: Theme) {
+        this.theme = new Uri(theme);
+        return this;
+    }
+
+    withTargetAudience(targetAudience: TargetAudience) {
+        this.targetAudience = new Uri(targetAudience);
+        return this;
+    }
+
+    withCompetentAuthorityLevel(competentAuthorityLevel: CompetentAuthorityLevel) {
+        this.competentAuthorityLevel = new Uri(competentAuthorityLevel);
+        return this;
+    }
+
+    withExecutingAuthorityLevel(executingAuthorityLevel: ExecutingAuthorityLevel) {
+        this.executingAuthorityLevel = new Uri(executingAuthorityLevel);
+        return this;
+    }
+
+    withKeywords(keywords: string[]) {
+        this.keywords = keywords.map(keyword => new Literal(keyword, Language.NL))
+        return this;
+    }
+
+    withPublicationMedium(publicationMedium: PublicationMedium) {
+        this.publicationMedium = new Uri(publicationMedium);
+        return this;
+    }
+
+    withYourEuropeCategory(yourEuropeCategory: YourEuropeCategory) {
+        this.yourEuropeCategory = new Uri(yourEuropeCategory);
+        return this;
+    }
+
+    withProductType(productType: ProductType) {
+        this.productType = new Uri(productType);
+        return this;
+    }
+
+    withConceptTag(conceptTag: ConceptTag) {
+        this.conceptTag = new Uri(conceptTag);
+        return this;
+    }
+
     withRequirement(requirementUri: Uri) {
         this.requirement = requirementUri;
         return this;
@@ -147,6 +209,15 @@ export class ConceptTestBuilder {
             new Triple(this.id, Predicates.startDate, this.startDate),
             new Triple(this.id, Predicates.endDate, this.endDate),
             new Triple(this.id, Predicates.productId, this.productId),
+            new Triple(this.id, Predicates.thematicArea, this.theme),
+            new Triple(this.id, Predicates.targetAudience, this.targetAudience),
+            new Triple(this.id, Predicates.competentAuthorityLevel, this.competentAuthorityLevel),
+            new Triple(this.id, Predicates.executingAuthorityLevel, this.executingAuthorityLevel),
+            ...this.keywords.map(keyword => new Triple(this.id, Predicates.keyword, keyword)),
+            new Triple(this.id, Predicates.publicationMedium, this.publicationMedium),
+            new Triple(this.id, Predicates.yourEuropeCategory, this.yourEuropeCategory),
+            new Triple(this.id, Predicates.productType, this.productType),
+            new Triple(this.id, Predicates.conceptTag, this.conceptTag),
             new Triple(this.id, Predicates.hasRequirement, this.requirement),
             new Triple(this.id, Predicates.follows, this.procedure),
             new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
