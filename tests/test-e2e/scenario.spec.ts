@@ -1,4 +1,4 @@
-import {expect, Page, test} from "@playwright/test";
+import {expect, Page, request, test, APIRequestContext} from "@playwright/test";
 
 test('Scenario: Load concept from ldes-stream', async ({page}) => {
     await navigateToBaseUrl(page);
@@ -15,8 +15,43 @@ test('Scenario: Create instance from concept', async ({page}) => {
     await navigateFromInstanceOverviewToConceptOverview(page);
 
     // TODO
+    await page.getByText('Voeg toe').first().click();
+    await expect(page.getByRole('heading', { name: 'Akte van Belgische nationaliteit' })).toBeVisible();
 
+    await expect(page.getByLabel('Website URL')).toBeVisible();
+    await page.getByText('Engelse vertaling van de titel Verplicht').nth(4).fill('Amount');
+    await page.locator('div:nth-child(7) > div:nth-child(2) > div > .au-o-grid > .au-o-flow > div > div:nth-child(4) > .rich-text-editor > .say-container > .say-container__main > .say-editor > .say-editor__paper > .ProseMirror')
+        .fill('The application and the certificate are free.');
 
+    await page.getByRole('link', { name: 'Eigenschappen' }).click();
+    await expect(page.getByText('Wijzigingen bewaren?')).toBeVisible();
+
+    await page.getByRole('button', { name: 'Bewaar' }).click();
+    await expect(page.getByRole('heading', { name: 'Algemene info' })).toBeVisible();
+
+    const bevoegdeOverheidField = await page.getByText('Bevoegde overheid Verplicht').getAttribute('for');
+    await page.locator(`#${bevoegdeOverheidField} > ul > li > input`).fill('pepi');
+    await expect(page.getByRole('option', { name: 'Pepingen (Gemeente)' })).toBeVisible();
+    await page.getByRole('option', { name: 'Pepingen (Gemeente)' }).click();
+
+    const geografischToepassingsgebiedField = await page.getByText('Geografisch toepassingsgebied Verplicht').getAttribute('for');
+    await page.locator(`#${geografischToepassingsgebiedField} > ul > li > input`).fill('pepi');
+    await expect(page.getByRole('option', { name: 'Pepingen' })).toBeVisible();
+    await page.getByRole('option', { name: 'Pepingen' }).click();
+
+    await page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' }).click();
+
+    await page.getByRole('dialog').getByRole('button', { name: 'Verzend naar Vlaamse overheid' }).click();
+    await expect(page.getByRole('heading', { name: 'Lokale Producten- en Dienstencatalogus' })).toBeVisible();
+    await expect(page.getByText('Verzonden').first()).toBeVisible();
+
+    const apiRequest = await request.newContext({
+        extraHTTPHeaders: {
+            'Accept': 'application/ld+json',
+        }
+    });
+    const result = await verifyInstanceCreated(apiRequest);
+    console.log(result);
 });
 
 async function navigateToBaseUrl(page: Page) {
@@ -33,4 +68,35 @@ async function dismissUJeModal(page: Page) {
 async function navigateFromInstanceOverviewToConceptOverview(page: Page) {
     await page.getByRole('link', { name: 'Product of dienst toevoegen' }).click();
     await expect(page.getByRole('heading', { name: 'Product of dienst toevoegen' })).toBeVisible();
+}
+
+async function verifyInstanceCreated(apiRequest: APIRequestContext) {
+    let waitTurn = 0;
+    while (true) {
+        waitTurn ++;
+        try {
+            const response = await apiRequest.get('http://localhost:33000/instanties');
+            console.log(response.status());
+            console.log(response.headers());
+            const result = await response.json();
+            if (result.length > 0) {
+                console.log('Instance successfully published');
+                return result;
+            }
+        } catch (error) {
+            console.log('Error retrieving instances' + error);
+        }
+        console.log('No response from IPDC Stub yet, retrying... number of tries: ' + waitTurn);
+        await delay(2000);
+        if (waitTurn > 60) {
+            console.log(`No response form IPDC Stub after 5 minutes, stopped waiting (number of tries = ${waitTurn}`);
+            break;
+        }
+    }
+}
+
+function delay(milliseconds) {
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
 }
