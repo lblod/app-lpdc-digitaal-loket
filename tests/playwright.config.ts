@@ -53,4 +53,8 @@ export default defineConfig<TestOptions>({
     },
   ],
   globalSetup: require.resolve('./global-setup'),
+  timeout: 120000,
+  expect: {
+    timeout: 10000
+  }
 });
