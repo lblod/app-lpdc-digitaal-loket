@@ -74,7 +74,7 @@ When this build succeeds, a new latest build is automatically deployed on develo
 
 Woodpecker ci can unfortunately not directly be configured to view the playwright html test results or the traces. Only a textual output can be viewed in woodpecker ci. 
 
-If you would like to view the html report (and traces), you have to _manually copy the results from the lpdc-dev machine to your locally machine_.
+If you would like to view the html report (and traces), you have to _manually copy the results from the lpdc-dev machine to your local machine_.
 
 _How_ ? The build automatically copies the playwright build results to a folder specific per build on the lpdc-dev machine.
 

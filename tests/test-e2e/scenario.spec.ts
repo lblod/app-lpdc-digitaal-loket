@@ -15,7 +15,9 @@ test('Scenario: Create instance from concept', async ({page}) => {
     await dismissUJeModal(page);
     await navigateFromInstanceOverviewToConceptOverview(page);
 
-    //TODO select specific concept instead of first
+    await page.getByRole('link', { name: 'Akte van Belgische nationaliteit' }).click();
+    await expect(page.getByRole('heading', {name: 'Concept: Akte van Belgische nationaliteit'})).toBeVisible();
+
     await page.getByText('Voeg toe').first().click();
     await expect(page.getByRole('heading', {name: 'Akte van Belgische nationaliteit'})).toBeVisible();
 
@@ -23,9 +25,9 @@ test('Scenario: Create instance from concept', async ({page}) => {
     const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
     await page.locator(`#${titelField}`).fill(nieuweTitel);
 
-    // await expect(page.getByLabel('Website URL')).toBeVisible();
     //TODO select field in another way
-    await page.getByText('Engelse vertaling van de titel Verplicht').nth(4).fill('Amount');
+    await page.locator('div:nth-child(7) > div:nth-child(2) > div > .au-o-grid > .au-o-flow > div > div:nth-child(2) > input').fill('Amount');
+    // await page.getByText('Engelse vertaling van de titel Verplicht').nth(4).fill('Amount');
     await page.locator('div:nth-child(7) > div:nth-child(2) > div > .au-o-grid > .au-o-flow > div > div:nth-child(4) > .rich-text-editor > .say-container > .say-container__main > .say-editor > .say-editor__paper > .ProseMirror')
         .fill('The application and the certificate are free.');
 
@@ -48,8 +50,7 @@ test('Scenario: Create instance from concept', async ({page}) => {
     await page.getByRole('button', {name: 'Verzend naar Vlaamse overheid'}).click();
 
     await page.getByRole('dialog').getByRole('button', {name: 'Verzend naar Vlaamse overheid'}).click();
-    await expect(page.getByRole('heading', {name: 'Lokale Producten- en Dienstencatalogus'})).toBeVisible();
-    await expect(page.getByText('Verzonden').first()).toBeVisible();
+    await expect(page.getByRole('cell', {name: nieuweTitel})).toBeVisible();await expect(page.getByText('Verzonden').first()).toBeVisible();
 
     const apiRequest = await request.newContext({
         extraHTTPHeaders: {
