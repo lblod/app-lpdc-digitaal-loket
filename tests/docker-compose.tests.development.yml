@@ -13,6 +13,7 @@ services:
       LOG_SPARQL_QUERIES: "false"
       LOG_SPARQL_UPDATES: "false"
       DEBUG_AUTH_HEADERS: "false"
+      QUEUE_POLL_INTERVAL: 1000
     volumes:
       - ../../lpdc-management-service/:/app/
       - ../config/lpdc-management:/config

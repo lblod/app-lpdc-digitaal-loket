@@ -38,8 +38,8 @@ cp -r playwright-report all-reports/playwright-report-api
 if [ "$code" -eq 0 ]; then
 
   refresh_latest_containers
-  echo "Waiting for 120 seconds on ldes consumer to finish all processing ..."
-  sleep 120
+  echo "Waiting for 10 seconds on ldes consumer to finish all processing ..."
+  sleep 10
 
   echo "Running playwright e2e tests"
   npx playwright test --project=e2e
