@@ -26,9 +26,7 @@ test('Scenario: Create instance from concept', async ({page}) => {
     const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
     await page.locator(`#${titelField}`).fill(nieuweTitel);
 
-    //TODO select field in another way
     await page.locator('div:nth-child(7) > div:nth-child(2) > div > .au-o-grid > .au-o-flow > div > div:nth-child(2) > input').fill('Amount');
-    // await page.getByText('Engelse vertaling van de titel Verplicht').nth(4).fill('Amount');
     await page.locator('div:nth-child(7) > div:nth-child(2) > div > .au-o-grid > .au-o-flow > div > div:nth-child(4) > .rich-text-editor > .say-container > .say-container__main > .say-editor > .say-editor__paper > .ProseMirror')
         .fill('The application and the certificate are free.');
 
