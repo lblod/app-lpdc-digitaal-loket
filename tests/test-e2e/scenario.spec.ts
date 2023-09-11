@@ -22,9 +22,8 @@ test('Scenario: Create instance from concept', async ({page}) => {
     await page.getByText('Voeg toe').first().click();
     await expect(page.getByRole('heading', {name: 'Akte van Belgische nationaliteit'})).toBeVisible();
 
-    const titelField = await page.getByText('Titel Verplicht', {exact: true}).getAttribute('for');
     const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
-    await page.locator(`#${titelField}`).fill(nieuweTitel);
+    await page.locator(`input:below(label:text-is('Titel'))`).first().fill(nieuweTitel);
 
     await page.locator(`input:right-of(label:has-text('Titel Kost'))`).first().fill('Amount');
     await page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first().fill('The application and the certificate are free.');
@@ -35,21 +34,21 @@ test('Scenario: Create instance from concept', async ({page}) => {
     await page.getByRole('button', {name: 'Bewaar'}).click();
     await expect(page.getByRole('heading', {name: 'Algemene info'})).toBeVisible();
 
-    const bevoegdeOverheidField = await page.getByText('Bevoegde overheid Verplicht').getAttribute('for');
-    await page.locator(`#${bevoegdeOverheidField} > ul > li > input`).fill('pepi');
+    await page.locator(`input:below(label:text-is('Bevoegde overheid'))`).first().fill('pepi');
     await expect(page.getByRole('option', {name: 'Pepingen (Gemeente)'})).toBeVisible();
     await page.getByRole('option', {name: 'Pepingen (Gemeente)'}).click();
 
-    const geografischToepassingsgebiedField = await page.getByText('Geografisch toepassingsgebied Verplicht').getAttribute('for');
-    await page.locator(`#${geografischToepassingsgebiedField} > ul > li > input`).fill('pepi');
+    await page.locator(`input:below(label:text-is('Geografisch toepassingsgebied'))`).first().fill('pepi');
     await expect(page.getByRole('option', {name: 'Pepingen'})).toBeVisible();
     await page.getByRole('option', {name: 'Pepingen'}).click();
 
     await page.getByRole('button', {name: 'Verzend naar Vlaamse overheid'}).click();
 
     await page.getByRole('dialog').getByRole('button', {name: 'Verzend naar Vlaamse overheid'}).click();
-    await expect(page.getByRole('cell', {name: nieuweTitel})).toBeVisible();
-    await expect(page.getByText('Verzonden').first()).toBeVisible();
+
+    const firstRowOfTable = page.locator(`:nth-match(table > tbody > tr, 1)`);
+    await expect(firstRowOfTable.locator(':nth-match(td, 1)')).toHaveText(nieuweTitel);
+    await expect(firstRowOfTable.locator(':nth-match(td, 6)')).toHaveText('Verzonden');
 
     const apiRequest = await request.newContext({
         extraHTTPHeaders: {
