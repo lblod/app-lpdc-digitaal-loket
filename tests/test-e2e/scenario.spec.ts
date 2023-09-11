@@ -16,7 +16,7 @@ test('Scenario: Create instance from concept', async ({page}) => {
     await dismissUJeModal(page);
     await navigateFromInstanceOverviewToConceptOverview(page);
 
-    await page.getByRole('link', { name: 'Akte van Belgische nationaliteit' }).click();
+    await page.getByRole('link', {name: 'Akte van Belgische nationaliteit'}).click();
     await expect(page.getByRole('heading', {name: 'Concept: Akte van Belgische nationaliteit'})).toBeVisible();
 
     await page.getByText('Voeg toe').first().click();
@@ -26,9 +26,8 @@ test('Scenario: Create instance from concept', async ({page}) => {
     const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
     await page.locator(`#${titelField}`).fill(nieuweTitel);
 
-    await page.locator('div:nth-child(7) > div:nth-child(2) > div > .au-o-grid > .au-o-flow > div > div:nth-child(2) > input').fill('Amount');
-    await page.locator('div:nth-child(7) > div:nth-child(2) > div > .au-o-grid > .au-o-flow > div > div:nth-child(4) > .rich-text-editor > .say-container > .say-container__main > .say-editor > .say-editor__paper > .ProseMirror')
-        .fill('The application and the certificate are free.');
+    await page.locator(`input:right-of(label:has-text('Titel Kost'))`).first().fill('Amount');
+    await page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first().fill('The application and the certificate are free.');
 
     await page.getByRole('link', {name: 'Eigenschappen'}).click();
     await expect(page.getByText('Wijzigingen bewaren?')).toBeVisible();
@@ -49,7 +48,8 @@ test('Scenario: Create instance from concept', async ({page}) => {
     await page.getByRole('button', {name: 'Verzend naar Vlaamse overheid'}).click();
 
     await page.getByRole('dialog').getByRole('button', {name: 'Verzend naar Vlaamse overheid'}).click();
-    await expect(page.getByRole('cell', {name: nieuweTitel})).toBeVisible();await expect(page.getByText('Verzonden').first()).toBeVisible();
+    await expect(page.getByRole('cell', {name: nieuweTitel})).toBeVisible();
+    await expect(page.getByText('Verzonden').first()).toBeVisible();
 
     const apiRequest = await request.newContext({
         extraHTTPHeaders: {
@@ -79,6 +79,7 @@ async function navigateFromInstanceOverviewToConceptOverview(page: Page) {
 
 async function verifyInstanceCreated(apiRequest: APIRequestContext, titel: string) {
     let waitTurn = 0;
+    const maxRetries = 45;
     while (true) {
         waitTurn++;
         try {
@@ -91,18 +92,18 @@ async function verifyInstanceCreated(apiRequest: APIRequestContext, titel: strin
                             translatedValue['@language'] === 'nl-be-x-formal'
                             && translatedValue['@value'] === titel)
                 })
-            })
+            });
             if (publishedInstanceWithTitel) {
-                console.log('Instance successfully published');
                 return publishedInstanceWithTitel;
             }
         } catch (error) {
-            console.log('Error retrieving instances' + error);
+            console.log('Error retrieving instances ', error);
+            throw error;
         }
-        console.log('No response from IPDC Stub yet, retrying... number of tries: ' + waitTurn);
+        console.log(`No response from IPDC Stub yet, retrying... number of tries (${waitTurn})`);
         await delay(1000);
-        if (waitTurn > 45) {
-            console.log(`No response form IPDC Stub after 45 seconds, stopped waiting (number of tries = ${waitTurn}`);
+        if (waitTurn > maxRetries) {
+            console.log(`No response form IPDC Stub after ${waitTurn} retries, stopped waiting.`);
             return undefined;
         }
     }
