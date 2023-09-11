@@ -29,7 +29,7 @@ rm -rf all-reports/playwright-report-api
 rm -rf all-reports/playwright-report-e2e
 
 echo "Running playwright api tests"
-npx playwright test --project=api
+npx playwright test test-api
 code=$?
 echo "playwright api tests exit code = $code"
 
@@ -42,7 +42,7 @@ if [ "$code" -eq 0 ]; then
   sleep 10
 
   echo "Running playwright e2e tests"
-  npx playwright test --project=e2e
+  npx playwright test test-e2e
   code=$?
   echo "playwright e2e tests exit code = $code"
 

@@ -33,25 +33,6 @@ export default defineConfig<TestOptions>({
     trace: 'on-first-retry',
     headless: true
   },
-  projects: [
-    {
-      name: 'e2e-setup',
-      testMatch: 'auth.setup.ts'
-    },
-    {
-      name: 'api',
-      testDir: './test-api',
-    },
-    {
-      name: 'e2e',
-      testDir: './test-e2e',
-      use: {
-        storageState: 'playwright/.auth/user.json',
-        baseURL: 'http://localhost:4200'
-      },
-      dependencies: ['e2e-setup'],
-    },
-  ],
   globalSetup: require.resolve('./global-setup'),
   timeout: 30000,
   expect: {

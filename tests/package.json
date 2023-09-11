@@ -4,9 +4,9 @@
   "description": "Contains end to end tests for lpdc",
   "main": "index.js",
   "scripts": {
-    "test:api": "npx playwright test --project=api",
-    "test:e2e": "npx playwright test --project=e2e",
-    "test:e2e-ui": "npx playwright test --ui --project=e2e"
+    "test:api": "npx playwright test test-api",
+    "test:e2e": "npx playwright test test-e2e",
+    "test:e2e-ui": "npx playwright test --ui test-e2e"
   },
   "author": "Kunlabora",
   "license": "MIT",
