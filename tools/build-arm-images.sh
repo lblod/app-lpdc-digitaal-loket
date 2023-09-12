@@ -154,3 +154,11 @@ git checkout tags/v0.9.2
 sed -i '' -e 's/mu-javascript-template:1.5.0-beta.3/mu-javascript-template:1.5.0-beta.3-arm64-build/g' Dockerfile
 docker build -t lblod/acmidm-login-service:0.9.2-arm64-build .
 cd ..
+
+git clone https://github.com/cecemel/file-service.git
+cd file-service || exit
+git checkout tags/v3.3.0
+sed -i '' -e 's/mu-ruby-template:2.11.0/mu-ruby-template:2.11.0-ruby2.5-arm64-build/g' Dockerfile
+docker build -t cecemel/file-service:3.3.0-arm64-build .
+cd ..
+

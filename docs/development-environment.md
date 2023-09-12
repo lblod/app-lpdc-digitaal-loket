@@ -247,6 +247,9 @@ services:
 
   mocklogin:
     image: lblod/mock-login-service:0.4.0-arm64-build
+    
+  file:
+    image: cecemel/file-service:3.3.0-arm64-build
                 
 ```
 
