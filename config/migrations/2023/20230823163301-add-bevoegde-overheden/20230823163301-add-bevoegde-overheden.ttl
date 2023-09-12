@@ -1,0 +1,1120 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<https://data.vlaanderen.be/id/organisatie/> .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns4:	<http://mu.semte.ch/vocabularies/core/> .
+@prefix ns5:	<https://productencatalogus.data.vlaanderen.be/id/conceptscheme/> .
+
+ns1:OVO027249
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"608a38c8-a7b5-4ff9-85c6-80f4600a3c78" ;
+	skos:prefLabel	"Bevolking en Identiteitskaarten" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO027247
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"359cca74-4a32-48ba-9cb9-650d8d733110" ;
+	skos:prefLabel	"Dienst Verkiezingen" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003988
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"41a24a6c-76d2-4d30-8fd5-4b69c23f58d5" ;
+	skos:prefLabel	"Federale Overheidsdienst Justitie" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO027312
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"82dd5682-c5eb-46bf-86fb-e13b60e6cc90" ;
+	skos:prefLabel	"Kansspelcommissie" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO027227
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"68fdf8e1-6ffa-40b2-aad5-3f286f8d6880" ;
+	skos:prefLabel	"Federale overheidsdiensten" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO024762
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"2cd4d33e-5b90-4090-ae13-daae7ae429b9" ;
+	skos:prefLabel	"Federale Overheidsdienst Buitenlandse Zaken, Buitenlandse Handel en Ontwikkelingssamenwerking" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003118
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"07d4c8ba-6f73-4958-82fe-d77260cc1355" ;
+	skos:prefLabel	"Organisatieondersteuning"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009025
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"a317a50d-a59d-4ec5-a047-515f4d060f43" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in de Verenigde Staten"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO010087
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"6d1350fd-1b7b-4d75-aa15-b2921a0bb86a" ;
+	skos:prefLabel	"Rekenhof"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001601
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"e6957329-efd7-4f4a-971d-3b8a487fdc3b" ;
+	skos:prefLabel	"LUCHTHAVENONTWIKKELINGSMAATSCHAPPIJ VLAANDEREN"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003953
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b5aa6adc-1f35-4dfb-8585-f38c63cb88b1" ;
+	skos:prefLabel	"be-DIVE"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003323
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"d07024de-e9c7-4067-9d34-b134d7f758ce" ;
+	skos:prefLabel	"Departement Omgeving"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000090
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"87cad6c3-0600-4ff7-bf59-e448b9bfedfb" ;
+	skos:prefLabel	"Vlaams Energie- en Klimaatagentschap"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000094
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"8235bd56-bc5d-4c60-b4cd-1796812874d0" ;
+	skos:prefLabel	"VLAAMSE LANDMAATSCHAPPIJ"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009023
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"1be23211-d614-4207-aec9-37d0c23b4101" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in Nederland"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001846
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b22f4b20-099e-44e0-bdc3-9d2c493e4460" ;
+	skos:prefLabel	"Agentschap Integratie en Inburgering"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO010516
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"a67aabdf-e477-47d1-9d50-6bfdae65507c" ;
+	skos:prefLabel	"Directoraat-generaal Begroting en Beleidsevaluatie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003898
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"26168455-3464-4c66-a82c-01e0a2efe213" ;
+	skos:prefLabel	"Europees Milieuagentschap"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO028966
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"1554bc36-e75d-4a34-82c0-2d5ab9aa52eb" ;
+	skos:prefLabel	"Commissie Juridische Bijstand Limburg"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008237
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"295f70a8-951e-4282-ae73-cf16110c1458" ;
+	skos:prefLabel	"Federale Overheidsdienst Binnenlandse Zaken"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO024763
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"42f7d489-d2d5-4953-b33b-86583ebc985c" ;
+	skos:prefLabel	"Federale Overheidsdienst Kanselarij van de Eerste Minister"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000176
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"a831674a-5c8e-437e-8f78-1bb4cd915d3f" ;
+	skos:prefLabel	"DeSingel"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001843
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"e2e4846a-0e06-43ba-8741-e8639f3ff180" ;
+	skos:prefLabel	"Toegankelijk Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO049152
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"5e97fcf5-72e0-4a9c-96fa-24b349c7cca9" ;
+	skos:prefLabel	"Agentschap Justitie en Handhaving"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000706
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"c5bc6ef9-caaf-44cd-9c93-595a501d816f" ;
+	skos:prefLabel	"Beleid en Belangenbehartiging"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003944
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"716959e8-841f-480b-bb5d-5b5f1d70cd5e" ;
+	skos:prefLabel	"Sociale Dienst voor de Personeelsleden van het GO! Onderwijs van de vlaamse Gemeenschap"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000058
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"1fe6e479-1e1d-4147-9776-c23af627b628" ;
+	skos:prefLabel	"Opgroeien"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000063
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"235da198-8a2d-4f6f-a50a-361deb44d7fb" ;
+	skos:prefLabel	"Openbaar Psychiatrisch Zorgcentrum Rekem"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO019809
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"7aa41159-24a6-4a47-877f-3a53c77ccd42" ;
+	skos:prefLabel	"Belgisch Instituut voor postdiensten en telecommunicatie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000177
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"7ea444a7-4825-43da-87ed-98d9c5e7d429" ;
+	skos:prefLabel	"MUSEUM VAN HEDENDAAGSE KUNST ANTWERPEN"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008225
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b09e4adc-382b-4249-b2bd-5edd32a4cb0e" ;
+	skos:prefLabel	"Gedeconcentreerde gerechtelijke directie van de federale politie Antwerpen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008214
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"636d75da-6470-4df1-8a3b-c84e72199a28" ;
+	skos:prefLabel	"Algemene directie van het middelenbeheer en de informatie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000237
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"35390e1d-ab03-46cd-bcd8-e785d916e50c" ;
+	skos:prefLabel	"Vlaamse Havens"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000103
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"517bdcaf-b71a-4173-b6cf-fc1ce16f7ec0" ;
+	skos:prefLabel	"VLAAMSE MAATSCHAPPIJ VOOR SOCIAAL WONEN"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO006466
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"84edb4e0-95b3-4b44-ae69-4400a933bc55" ;
+	skos:prefLabel	"Grindcomite> '- Het Herstructureringscomit\u00E9"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000061
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"37d3cc3b-bf67-4ea9-a9e4-2c9cd03ad205" ;
+	skos:prefLabel	"Opgroeien regie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000106
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"1b991c09-51b4-49b1-8d23-efcc3ca98046" ;
+	skos:prefLabel	"Wonen-Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009045
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"583734e0-cc30-4898-a633-86c5a8e86138" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen bij de EU"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009027
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"ed46166d-6af9-4577-b341-308a1d71dd47" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in Polen en de Baltische Staten"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001845
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"3a5ab5ef-19c7-4445-a6a7-ee32f605c3e5" ;
+	skos:prefLabel	"VLAAMSE VERENIGING VOOR ICT-PERSONEEL"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008202
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"627666d1-96bb-4308-abaa-1aa7b51c490a" ;
+	skos:prefLabel	"Commissie Juridische Bijstand"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000092
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"ea378521-8165-4ebc-abd2-17981213558f" ;
+	skos:prefLabel	"VLAAMSE MILIEUMAATSCHAPPIJ"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001831
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"706463ee-f89a-4e0b-8bf3-69faf542de32" ;
+	skos:prefLabel	"Dienst van de Bestuursrechtscolleges"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000089
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"45501311-6161-4deb-961b-f48ee8636aa1" ;
+	skos:prefLabel	"Agentschap voor Natuur en Bos"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000210
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"4398dde9-6db8-444c-a930-25087cdb1e25" ;
+	skos:prefLabel	"Mobiliteitsraad van Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000795
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"48c75a75-f4ec-407e-8318-206a133fc002" ;
+	skos:prefLabel	"Het Kinderrechtencommissariaat"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008229
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f30d1142-0bf9-4008-b0ca-c9c491663a37" ;
+	skos:prefLabel	"Algemene directie van de bestuurlijke politie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009024
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"72f47ddc-6924-4114-b238-9f99b45efa0f" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in het Verenigd Koninkrijk"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008218
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"5ef6dfa0-edd8-461d-bc68-b648d06cf610" ;
+	skos:prefLabel	"Kruispuntbank van de Sociale Zekerheid"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO005190
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"fd27fac6-a119-4b08-b5b8-e468796149b6" ;
+	skos:prefLabel	"Federale Overheidsdienst Financi\u00EBn"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO027169
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"5185ee0d-110b-47c2-ab2b-bc60cfe1600c" ;
+	skos:prefLabel	"Nationale Bank van Belgi\u00EB"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO038766
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"a8636018-9852-4d38-b013-1f07017aea71" ;
+	skos:prefLabel	"Directoraat-generaal Digitale Transformatie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000059
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"c4bbfdf5-fdec-4868-aead-a0efb8f65926" ;
+	skos:prefLabel	"Agentschap Zorg en Gezondheid"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009030
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"4ed11c02-56ff-40a7-a4f6-f858dfb81be1" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in Duitsland"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008643
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"db632f9f-71fc-472f-9d54-ab972b12e4c8" ;
+	skos:prefLabel	"Vlaams Agentschap voor de Uitbetaling van Toelagen in het kader van het Gezinsbeleid"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008238
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"ba4a2286-3098-413a-b563-a86532e8152a" ;
+	skos:prefLabel	"Federale Overheidsdienst Volksgezondheid, Veiligheid van de Voedselketen en Leefmilieu"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000174
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"614f5eb0-467a-464d-9601-cc058d1ee0ac" ;
+	skos:prefLabel	"Literatuur Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009029
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"1a9f38d4-7fd3-464c-afbe-071a2fab3c39" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in zuidelijk Afrika"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000080
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"8df0f08c-1c53-48d1-a1e0-16a66ebb3911" ;
+	skos:prefLabel	"ESF - AGENTSCHAP VLAANDEREN"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO008217
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"c4465a59-39bd-41fa-8199-7d2dba3eb4d3" ;
+	skos:prefLabel	"Federale Overheidsdienst Sociale Zekerheid"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009031
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"0946c18f-fae7-4d91-8f39-eab4b7e87fa5" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in Frankrijk"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000107
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"cfc2c4f7-918b-4024-8fc1-82c047c2dd34" ;
+	skos:prefLabel	"STRATEGISCHE ADVIESRAAD RUIMTELIJKE ORDENING - ONROEREND ERFGOED"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO025860
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"0035adcc-1d7d-45d9-9973-8324e31704c2" ;
+	skos:prefLabel	"Directoraat-generaal Rekrutering en Ontwikkeling"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO014006
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"df6fc02e-379f-41bb-a4e1-e75c84a841e1" ;
+	skos:prefLabel	"ONZE-LIEVE-VROUW VAN LOURDES ZIEKENHUIS WAREGEM"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001835
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"eadd7fba-9fa0-485f-9fea-1e28f4b17d5f" ;
+	skos:prefLabel	"Agentschap Binnenlands Bestuur"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001847
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"57899a26-4b33-4437-ba60-cad23fffb99d" ;
+	skos:prefLabel	"Sociaal Economische Raad van Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO002300
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"a709a4d0-297c-41a6-8070-617657a4de5b" ;
+	skos:prefLabel	"Flanders Make"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003139
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"1a6bf64e-6ae7-4792-a785-00e347d87e38" ;
+	skos:prefLabel	"Autonome Raad van het Gemeenschapsonderwijs - Administratieve Diensten"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000175
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"8ae4d64d-3f44-4893-96ee-fb01bd9cb38c" ;
+	skos:prefLabel	"VLAAMS AUDIOVISUEEL FONDS"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000088
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"200915ec-89e0-4cd6-9954-68e1da755cd8" ;
+	skos:prefLabel	"Instituut voor Natuur- en Bosonderzoek"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO002949
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"7735dc9d-5207-4567-95e7-4378ec6731eb" ;
+	skos:prefLabel	"agentschap Digitaal Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000073
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"13423c65-a8a3-4d91-b966-d0137c71ade5" ;
+	skos:prefLabel	"De Vlaamse Radio- en Televisieomroeporganisatie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001729
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"2150276d-2083-43d2-9d26-63b3e183adf7" ;
+	skos:prefLabel	"Vlaams Woningfonds"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO024760
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"7fb07d46-9cdc-4c4c-a5e3-fe57f4ad4bc3" ;
+	skos:prefLabel	"Federaal Agentschap voor de Opvang van Asielzoekers"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO004539
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"aa12aac3-fdc3-472d-884a-f1f1df4b7baf" ;
+	skos:prefLabel	"Federale Overheidsdienst Economie, K.M.O., Middenstand en Energie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003884
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b9d4d8c0-014c-4981-8836-510a6f52be13" ;
+	skos:prefLabel	"Commissie voor de Regulering van de Elektriciteit en het Gas"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000098
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"bfa5a43c-e8f6-400f-ae8b-c3e1bdfa98a7" ;
+	skos:prefLabel	"Agentschap Wegen en Verkeer"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001951
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b8964f10-3325-44c0-b5de-4cd7b202c85d" ;
+	skos:prefLabel	"Agentschap voor Hoger Onderwijs, Volwassenenonderwijs, Kwalificaties en Studietoelagen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009026
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"17acbf42-74ca-4083-976b-38158a4e3ba9" ;
+	skos:prefLabel	"Diplomatiek Vertegenwoordiger van Vlaanderen in Oostenrijk, de Tsjechische Republiek, Hongarije, Slovakije en Sloveni\u00EB"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000158
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"3198d742-a016-4c97-b88a-01f300890a94" ;
+	skos:prefLabel	"Vlaamse Hogescholenraad"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO027160
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"557f21fe-5d84-4a29-b431-613b8b6bc66c" ;
+	skos:prefLabel	"VLAAMS PENSIOENFONDS"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000082
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"27342e1a-dbcb-4676-85d2-72746b239828" ;
+	skos:prefLabel	"Departement Landbouw en Visserij"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000857
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"6148c99a-637c-4908-8ac6-b70774e2c473" ;
+	skos:prefLabel	"Raad voor Betwisting studievoortgangsbeslissingen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000104
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"578c9a70-a6af-478f-ac9a-af2a277e010d" ;
+	skos:prefLabel	"Onroerend Erfgoed"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO019876
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"fba757a6-0229-4728-9b26-dbb1bd9e6131" ;
+	skos:prefLabel	"Belgisch Staatsblad"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO009746
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"8ef3c959-e318-4f65-87e6-b3cfc1618b6c" ;
+	skos:prefLabel	"Grondwettelijk Hof -  Cour constitutionnelle"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000110
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"87b131ed-6a83-45aa-bfec-6df40cbcd5c0" ;
+	skos:prefLabel	"Universitair Ziekenhuis Gent"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001688
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"3bd749c3-0f52-46b1-b6c6-cf1727f0ba0d" ;
+	skos:prefLabel	"Raad voor Vergunningsbetwistingen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001834
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"cb8dcae2-1703-46c2-a286-f1c696e01978" ;
+	skos:prefLabel	"Agentschap Facilitair Bedrijf"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003747
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"22f26540-304d-4919-8dcb-5923c7260009" ;
+	skos:prefLabel	"SELOR"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO025085
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"41d2d023-7b49-40bf-a000-50ee519f1b2b" ;
+	skos:prefLabel	"Nationaal Geografisch Instituut"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003735
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"9ac2973a-931c-43a2-afb3-6f407db6f02a" ;
+	skos:prefLabel	"Eurom\u00E9tropole Lille - Kortrijk - Tournai GECT"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003954
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"3a45d74e-b92b-44a1-8cd1-11509f4d5ab1" ;
+	skos:prefLabel	"UHasselt Plus"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO025178
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"00ade91f-45bd-4ffd-a1be-c8e69f5d9f89" ;
+	skos:prefLabel	"Federale Overheidsdienst Beleid en Ondersteuning"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000084
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"afc56a87-298f-4584-be86-736ce01ff619" ;
+	skos:prefLabel	"Instituut voor Landbouw- en Visserijonderzoek"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000078
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"553a1b26-78ce-42cf-bee5-8403fae7ce3d" ;
+	skos:prefLabel	"Vlaamse Dienst voor Arbeidsbemiddeling en Beroepsopleiding"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO002410
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b272632d-3dcc-4fdc-b799-3aa7cf27dec5" ;
+	skos:prefLabel	"Onderwijsinspectie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000100
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"874e2188-3140-4d7d-bebb-a5a7af13f739" ;
+	skos:prefLabel	"Vlaamse Vervoermaatschappij - De Lijn"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000076
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"dd24bb0f-021a-49d5-98c4-3959be13bbcb" ;
+	skos:prefLabel	"Departement Werk en Sociale Economie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO002411
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"59d6fcc8-839e-44b4-83b1-b7c6b7a33fb7" ;
+	skos:prefLabel	"Vlaams Agentschap voor Samenwerking rond Gegevensdeling tussen de Actoren in de Zorg"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003117
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"7276d509-a2c8-427b-bd03-2b855d15be75" ;
+	skos:prefLabel	"Netbrede ondersteuning en ontwikkeling"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO003119
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"3ae2f1cf-149c-42bc-98ca-1878d56ebf1f" ;
+	skos:prefLabel	"Pedagogische Begeleidingsdienst"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001841
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f296c33d-0b13-44cc-b625-7507f9c4534a" ;
+	skos:prefLabel	"vzw \u2018de Rand\u2019"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000045
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"861191f6-838f-48a5-8f68-cc9d052eeb12" ;
+	skos:prefLabel	"VLAAMSE PARTICIPATIEMAATSCHAPPIJ"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001002
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"30f3fea5-7e25-494f-bf9c-71f30c93784e" ;
+	skos:prefLabel	"Hoge Raad voor de Handhavingsuitvoering"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000042
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"e4bca51f-2c6a-4190-8a56-da27965330a1" ;
+	skos:prefLabel	"Fonds voor wetenschappelijk Onderzoek - Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000184
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"6652d35c-f584-4fad-bf28-9b5609089a31" ;
+	skos:prefLabel	"Koninklijke Academie voor Nederlandse Taal en Letteren"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000060
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"11eee612-30a6-4371-a725-3da91f5d1056" ;
+	skos:prefLabel	"VLAAMS AGENTSCHAP VOOR PERSONEN MET EEN HANDICAP"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000062
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f10b8f9c-8ced-42fa-95dc-428a14d8521b" ;
+	skos:prefLabel	"OPENBAAR PSYCHIATRISCH ZORGCENTRUM GEEL"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO004066
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"7af69192-86b8-495a-9c9a-ee22151ae925" ;
+	skos:prefLabel	"skeyes"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001833
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"736072c1-5660-4bf5-833f-37a2f454c130" ;
+	skos:prefLabel	"Agentschap Overheidspersoneel"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001832
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"bf216089-bc87-4220-b170-8b7244ea496e" ;
+	skos:prefLabel	"Audit Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000067
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"44eafd17-3219-409a-a45d-9f61cbe93cdd" ;
+	skos:prefLabel	"Departement Cultuur, Jeugd en Media"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO006465
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"3ca601de-7c8c-4ae7-8349-66d7b0503651" ;
+	skos:prefLabel	"Grindcomit\u00E9 - Het Sociaal comit\u00E9"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000142
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"7ed7e976-19e1-4c9b-9373-fb7a462ccbfc" ;
+	skos:prefLabel	"VLAAMS INSTITUUT VOOR BIOTECHNOLOGIE - FLANDERS INSTITUTE FOR BIOTECHNOLOGY"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000146
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"045fc871-5a2b-4bbd-8ae0-fbddf0eead2f" ;
+	skos:prefLabel	"Eigen Vermogen van het Instituut voor Natuur- en Bosonderzoek"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO027149
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"5c137349-aacb-4091-a471-604c62871750" ;
+	skos:prefLabel	"Algemene Administratie van de Fiscaliteit"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO004530
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"ea1f632f-8df0-4314-860c-d82ffd54c7cc" ;
+	skos:prefLabel	"Universitair Ziekenhuis Leuven"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO004018
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"ea3d639e-0cde-4d81-80b1-4e31a6f33d6a" ;
+	skos:prefLabel	"Federale Overheidsdienst Werkgelegenheid, Arbeid en Sociaal Overleg"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO006467
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"89bf8455-463a-4aa0-bb14-62e6cf6394ae" ;
+	skos:prefLabel	"ONESTO WOONPUNT"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001689
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"d30a5f85-92b3-44b0-8947-654c6228d000" ;
+	skos:prefLabel	"Handhavingscollege"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001523
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"d8f8eb50-553f-4cf3-9940-1204c64e29fb" ;
+	skos:prefLabel	"Agentschap Plantentuin Meise"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO002305
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"146a043e-8dff-4bc4-a261-2e3f9029dccd" ;
+	skos:prefLabel	"Universiteit Hasselt"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000071
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"e16414df-878f-44a0-b9db-5449b3f85795" ;
+	skos:prefLabel	"VLAAMSE REGULATOR VOOR DE MEDIA"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000112
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"604a9593-34ae-47fc-9c8a-8cdb767f152c" ;
+	skos:prefLabel	"DE VLAAMSE WATERWEG"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000039
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f4372885-0146-4a26-8a47-f8fc44e4fe21" ;
+	skos:prefLabel	"Agentschap Innoveren en Ondernemen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000474
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"e777d193-bcf1-4280-903e-df2ab153047e" ;
+	skos:prefLabel	"Vlaams Centrum voor Agro- en Visserijmarketing"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000733
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"21eb8c59-9121-4d82-a1ad-8886dd006372" ;
+	skos:prefLabel	"Vlaams Energiebedrijf"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000049
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"aee2e524-2103-4c07-8a7e-f171fb16fa50" ;
+	skos:prefLabel	"Departement Onderwijs en Vorming"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000157
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"246d6874-ff14-44ea-9b74-7ff53a1635cb" ;
+	skos:prefLabel	"Vlaamse Interuniversitaire Raad"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000029
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"46429f6a-61f6-453e-a89e-f53bd1906014" ;
+	skos:prefLabel	"Departement Financi\u00EBn en Begroting"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000013
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"402af849-8c2b-49f8-9bba-8e973c65a93c" ;
+	skos:prefLabel	"Beleidsdomein Mobiliteit en Openbare Werken"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000095
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"4b20eab9-0b13-46ba-873d-735c518fb429" ;
+	skos:prefLabel	"Milieu- en Natuurraad van Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000072
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"426bc9d0-20e4-4ec9-9a1e-ffe210ae605a" ;
+	skos:prefLabel	"Opera Ballet Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000038
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"6517a74d-c046-48f0-ba2d-2da900b21297" ;
+	skos:prefLabel	"Departement Economie, Wetenschap en Innovatie"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000182
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"ec8fd8b1-ce11-4576-8b35-6cdb98b82915" ;
+	skos:prefLabel	"KONINKLIJKE VLAAMSE ACADEMIE VAN BELGIE VOOR WETENSCHAPPEN & KUNSTEN"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000054
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"bc19d694-cfd4-4520-bfcd-2aa653c7298c" ;
+	skos:prefLabel	"Vlaamse Onderwijsraad - Conseil flamand de l'Enseignement"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001680
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b20a13dd-e4ff-4ca5-914c-33c9ba834aeb" ;
+	skos:prefLabel	"Raad voor Verkiezingsbetwistingen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000043
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b3c5653a-52ab-4017-ad24-5d65c829887f" ;
+	skos:prefLabel	"LIMBURGSE RECONVERSIE MAATSCHAPPIJ"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000236
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"e2ea923a-1799-4878-b680-4c68d6a551df" ;
+	skos:prefLabel	"VLAAMS INSTITUUT VOOR DE ZEE"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001842
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"65d9bc2a-c4c7-46d4-bc91-f0c59b465b8f" ;
+	skos:prefLabel	"Muntpunt"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000070
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"12c04145-9db8-4b67-afef-71b3d245164f" ;
+	skos:prefLabel	"SPORT VLAANDEREN"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000044
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f761e6fc-21f1-4822-8e5a-fd3b80d53665" ;
+	skos:prefLabel	"Participatiemaatschappij Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000035
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"480986df-9bdc-47de-b016-642042b5796f" ;
+	skos:prefLabel	"Vlaams Agentschap voor Internationaal Ondernemen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000096
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"5fa02239-d2f3-4a59-aa15-cf0320d4b6ed" ;
+	skos:prefLabel	"Departement Mobiliteit en Openbare Werken"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000041
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"489d25a4-7a84-4d96-a468-37920e4eda44" ;
+	skos:prefLabel	"VLAAMSE INSTELLING VOOR TECHNOLOGISCH ONDERZOEK"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000031
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f7671bf4-872d-4a06-b79b-76dff7d38029" ;
+	skos:prefLabel	"Vlaamse Belastingdienst"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000053
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"c78243c5-a8de-43e0-83dd-4f32b8f989c0" ;
+	skos:prefLabel	"Agentschap voor Infrastructuur in het Onderwijs"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000056
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"83875816-5184-4340-932e-4552f7d16a66" ;
+	skos:prefLabel	"Departement Welzijn, Volksgezondheid en Gezin"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000009
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"c7a0ac68-adf0-41dc-a840-3c0450927328" ;
+	skos:prefLabel	"Beleidsdomein Cultuur, Jeugd, Sport en Media"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000034
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"e8f6ef00-4e54-4576-a38d-5ae0cf2460cb" ;
+	skos:prefLabel	"Toerisme Vlaanderen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000097
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"b7c15492-1185-4728-af2a-8453cf1b7885" ;
+	skos:prefLabel	"Agentschap voor Maritieme Dienstverlening en Kust"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000707
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"87ff97a8-5c89-4440-b2b0-ce8a10d17798" ;
+	skos:prefLabel	"Infrastructuur"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000050
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"8d411f47-9695-424c-8ef0-a9839878d90f" ;
+	skos:prefLabel	"Agentschap voor Onderwijsdiensten"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000091
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"cc893387-d588-49a2-ae21-bf78f0cf81a9" ;
+	skos:prefLabel	"Openbare Vlaamse Afvalstoffenmaatschappij"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000032
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f45759ba-5b17-4e1d-9a60-265087e9c79e" ;
+	skos:prefLabel	"Departement Kanselarij en Buitenlandse Zaken"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO000001
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"bb5e10ff-9375-4027-a889-e604a0ded63c" ;
+	skos:prefLabel	"Administratieve diensten van de Vlaamse overheid" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO027305
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f766d08c-1b34-43b1-8260-60726220614b" ;
+	skos:prefLabel	"Dienst Naamsveranderingen" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+ns1:OVO001708
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"a91a457d-5037-418c-b4f0-03cfb10c6bc3" ;
+	skos:prefLabel	"Lokale Organisatie en Werking" ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+	skos:inScheme	ns5:IPDCOrganisaties .

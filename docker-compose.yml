@@ -13,6 +13,16 @@ services:
       - identifier:backend
     labels:
       - "logging=true"
+    environment:
+      EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
+      # The next variables are environment-specific.
+      # These should be overriden in docker-compose.override.yml
+      EMBER_LOKET_URL: "https://loket.lblod.info/"
+      EMBER_ACMIDM_CLIENT_ID: ""
+      EMBER_ACMIDM_AUTH_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
+      EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
+      EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      EMBER_ACMIDM_SWITCH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/switch-login"
     restart: always
     logging: *default-logging
 
@@ -109,11 +119,14 @@ services:
   login:
     image: lblod/acmidm-login-service:0.9.2
     environment:
-      MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
-      MU_APPLICATION_AUTH_CLIENT_ID: "a2c0d6ea-01b4-4f68-920b-10834a943c27"
-      MU_APPLICATION_AUTH_REDIRECT_URI: "https://loket.lblod.info/authorization/callback"
-      MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
+      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
       LOG_SINK_URL: "http://sink"
+      # The next variables are environment-specific.
+      # These should be overriden in docker-compose.override.yml
+      MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
+      MU_APPLICATION_AUTH_CLIENT_ID: "ce73422e-63ea-417d-9cee-7e85f2ee21b9"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "https://dev.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
     labels:
       - "logging=true"
     restart: always
@@ -127,7 +140,38 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-  
+  ################################################################################
+  # Report generation and dashboard specific services
+  ################################################################################
+  report-generation:
+    image: lblod/loket-report-generation-service:0.6.3
+    volumes:
+      - ./data/files:/share
+      - ./config/reports/:/config/
+    labels:
+      - "logging=true"
+    restart: always
+    links:
+      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
+    logging: *default-logging
+  dashboard:
+    image: lblod/frontend-dashboard:1.6.0
+    environment:
+      EMBER_LOGIN_ROUTE: "mock-login"
+    links:
+      - identifier:backend
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  file:
+    image: cecemel/file-service:3.3.0
+    volumes:
+      - ./data/files:/share
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
   ################################################################################
   # LPDC-specific Services
   ################################################################################
@@ -158,9 +202,8 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-
   lpdc-ldes-consumer:
-    image: redpencil/ldes-consumer:0.7.1
+    image: redpencil/ldes-consumer:0.8.0-rc1
     environment:
       LDES_STREAM: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot"
       LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=0" # first page of the stream

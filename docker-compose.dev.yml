@@ -27,17 +27,25 @@ services:
     restart: "no"
   sink:
     restart: "no"
-
   ################################################################################
-  # LPDC-related Services
+  # Report generation and dashboard specific services
   ################################################################################
 
-  lpdc-management:
-    restart: "no"
-
-  lpdc-publish:
-    restart: "no"
-
-  lpdc-ldes-consumer:
+  dashboard:
     restart: "no"
   
+  report-generation:
+    restart: "no"
+  
+  file:
+    restart: "no"
+
+  ################################################################################
+  # LPDC-specific services
+  ################################################################################
+  lpdc-management:
+    restart: "no"
+  lpdc-publish:
+    restart: "no"
+  lpdc-ldes-consumer:
+    restart: "no"
