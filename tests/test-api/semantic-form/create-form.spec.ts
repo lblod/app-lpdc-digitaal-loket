@@ -227,8 +227,8 @@ test('Create instance from concept: ConceptInitiated flag of ConceptDisplayConfi
     await createForm(concept.getUUID(), request);
 
     const displayConfiguration = await fetchType(request, conceptDisplayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
-    expect(displayConfiguration.findObject(Predicates.conceptIsNew).getValue()).toEqual('false');
-    expect(displayConfiguration.findObject(Predicates.conceptInitiated).getValue()).toEqual('true');
+    expect(displayConfiguration.findObject(Predicates.conceptIsNew).getValue()).toEqual('true');
+    expect(displayConfiguration.findObject(Predicates.conceptInitiated).getValue()).toEqual('false');
 });
 
 test('Create instance from concept: Instance should contain only one language version', async ({request}) => {

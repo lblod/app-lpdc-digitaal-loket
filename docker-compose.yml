@@ -140,6 +140,7 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################
@@ -154,6 +155,7 @@ services:
     links:
       - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
     logging: *default-logging
+
   dashboard:
     image: lblod/frontend-dashboard:1.6.0
     environment:
@@ -164,6 +166,7 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   file:
     image: cecemel/file-service:3.3.0
     volumes:
@@ -172,6 +175,7 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   ################################################################################
   # LPDC-specific Services
   ################################################################################
@@ -182,6 +186,7 @@ services:
       LOG_SPARQL_QUERIES: "false"
       LOG_SPARQL_UPDATES: "false"
       DEBUG_AUTH_HEADERS: "false"
+      ENABLE_CONCEPT_MODIFICATION_FLAG_UPDATE: "true"
     volumes:
       - ./config/lpdc-management:/config
       - ./data/files/lpdc:/data
@@ -202,8 +207,9 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   lpdc-ldes-consumer:
-    image: redpencil/ldes-consumer:0.8.0-rc1
+    image: redpencil/ldes-consumer:0.7.1
     environment:
       LDES_STREAM: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot"
       LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=0" # first page of the stream
