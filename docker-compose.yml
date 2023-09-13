@@ -149,11 +149,11 @@ services:
     volumes:
       - ./data/files:/share
       - ./config/reports/:/config/
+    links:
+      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
     labels:
       - "logging=true"
     restart: always
-    links:
-      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
     logging: *default-logging
 
   dashboard:

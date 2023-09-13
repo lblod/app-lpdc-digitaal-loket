@@ -162,3 +162,11 @@ sed -i '' -e 's/mu-ruby-template:2.11.0/mu-ruby-template:2.11.0-ruby2.5-arm64-bu
 docker build -t cecemel/file-service:3.3.0-arm64-build .
 cd ..
 
+git clone https://github.com/lblod/loket-report-generation-service.git
+cd loket-report-generation-service || exit
+git checkout tags/v0.6.3
+sed -i '' -e 's/mu-javascript-template:1.6.0/mu-javascript-template:feature-node-16-support-arm64-build/g' Dockerfile
+docker build -t lblod/loket-report-generation-service:0.6.3-arm64-build .
+cd ..
+
+

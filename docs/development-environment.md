@@ -248,6 +248,9 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0-arm64-build
     
+  report-generation:
+    image: lblod/loket-report-generation-service:0.6.3-arm64-build    
+    
   file:
     image: cecemel/file-service:3.3.0-arm64-build
                 
