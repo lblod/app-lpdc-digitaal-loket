@@ -45,7 +45,7 @@ async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
                 console.log(`${new Date()} - ${service.description} running on status code ${result.status()}`);
             }
         } catch (error) {
-            console.log(error);
+            //console.log(error);
         }
         console.log(`${new Date()} - ${service.description} not running on ${service.url} with expected status code ${service.httpStatus}, retrying ... `)
         await delay(1000);
