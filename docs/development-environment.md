@@ -208,6 +208,8 @@ services:
   
   lpdc:
     image: lblod/frontend-lpdc:latest
+    ports:
+      - "8200:80"
 
   resource:
     image: semtech/mu-cl-resources:feature-arm64-builds
@@ -248,6 +250,10 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0-arm64-build
     
+  dashboard:
+    ports:
+      - "9200:80"
+        
   report-generation:
     image: lblod/loket-report-generation-service:0.6.3-arm64-build    
     
