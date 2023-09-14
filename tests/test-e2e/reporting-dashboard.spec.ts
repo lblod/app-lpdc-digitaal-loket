@@ -1,4 +1,4 @@
-import {expect, test} from "./test";
+import {expect, test} from '@playwright/test';
 import {Page, request, APIRequestContext} from "@playwright/test";
 import {v4 as uuid} from 'uuid';
 
