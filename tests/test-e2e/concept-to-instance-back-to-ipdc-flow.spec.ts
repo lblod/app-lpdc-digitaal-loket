@@ -3,17 +3,21 @@ import { Page, request, APIRequestContext } from "@playwright/test";
 import { v4 as uuid } from 'uuid';
 import { LpdcHomePage } from "./pages/lpdc-home-page";
 import { MockLoginPage } from "./pages/mock-login-page";
-import { UJeModalPage } from './pages/u-je-modal-page';
+import { UJeModal } from './pages/u-je-modal';
 import { AddProductOrServicePage as ProductOfDienstToevoegenPage} from './pages/product-of-dienst-toevoegen-page';
 import { first_row, second_row } from './pages/table';
 import { ConceptDetailsPage as ConceptDetailsPage } from './pages/concept-details-page';
+import { InstantieDetailsPage } from './pages/instantie-details-page';
+import { WijzigingenBewarenModal } from './pages/wijzigingen-bewaren-modal';
 
 test.describe('Concept to Instance back to IPDC Flow', () => {
 
     let mockLoginPage: MockLoginPage;
     let homePage: LpdcHomePage;
     let toevoegenPage: ProductOfDienstToevoegenPage;
-    let conceptDetailspage: ConceptDetailsPage;
+    let conceptDetailsPage: ConceptDetailsPage;
+    let instantieDetailsPage: InstantieDetailsPage;
+    let wijzigingenBewarenModal: WijzigingenBewarenModal;
 
     test.beforeEach(async ({ page }) => {
 
@@ -25,15 +29,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         homePage = LpdcHomePage.create(page);
         homePage.expectToBeVisible();
 
-        const uJeModal = UJeModalPage.create(page);
+        const uJeModal = UJeModal.create(page);
         await uJeModal.expectToBeVisible();
         await uJeModal.laterKiezenButton.click();
         await uJeModal.expectToBeClosed();
 
         toevoegenPage = ProductOfDienstToevoegenPage.create(page);
-
-        conceptDetailspage = ConceptDetailsPage.create(page);
-
+        conceptDetailsPage = ConceptDetailsPage.create(page);
+        instantieDetailsPage = InstantieDetailsPage.create(page);
+        wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
     });
 
     test('Load concept overview from ldes-stream', async ({ page }) => {
@@ -54,22 +58,25 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.resultTable.linkWithTextInRow('Akte van Belgische nationaliteit', first_row).click();
 
-        await conceptDetailspage.expectToBeVisible();
-        await expect(conceptDetailspage.heading).toHaveText('Concept: Akte van Belgische nationaliteit');
-        await conceptDetailspage.voegToeButton.click();
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit');
+        await conceptDetailsPage.voegToeButton.click();
 
-        await expect(page.getByRole('heading', { name: 'Akte van Belgische nationaliteit' })).toBeVisible();
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText('Akte van Belgische nationaliteit');
 
         const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
-        await page.locator(`input:below(label:text-is('Titel'))`).first().fill(nieuweTitel);
+        await instantieDetailsPage.titelInput.fill(nieuweTitel);
 
-        await page.locator(`input:right-of(label:has-text('Titel Kost'))`).first().fill('Amount');
-        await page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first().fill('The application and the certificate are free.');
+        await instantieDetailsPage.titelKostEngels.fill('Amount');
+        await instantieDetailsPage.beschrijvingKostEngels.fill('The application and the certificate are free.');
 
-        await page.getByRole('link', { name: 'Eigenschappen' }).click();
-        await expect(page.getByText('Wijzigingen bewaren?')).toBeVisible();
+        await instantieDetailsPage.eigenschappenTab.click();
+        
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
 
-        await page.getByRole('button', { name: 'Bewaar' }).click();
         await expect(page.getByRole('heading', { name: 'Algemene info' })).toBeVisible();
 
         await page.locator(`input:below(label:text-is('Bevoegde overheid'))`).first().fill('pepi');
