@@ -17,7 +17,6 @@ export class LpdcHomePage extends AbstractPage {
         return new LpdcHomePage(page);
     }
 
-
     async expectToBeVisible() {
         await expect(this.header).toBeVisible();
     }

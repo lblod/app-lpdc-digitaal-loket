@@ -6,12 +6,14 @@ import { MockLoginPage } from "./pages/mock-login-page";
 import { UJeModalPage } from './pages/u-je-modal-page';
 import { AddProductOrServicePage as ProductOfDienstToevoegenPage} from './pages/product-of-dienst-toevoegen-page';
 import { first_row, second_row } from './pages/table';
+import { ConceptDetailsPage as ConceptDetailsPage } from './pages/concept-details-page';
 
 test.describe('Concept to Instance back to IPDC Flow', () => {
 
     let mockLoginPage: MockLoginPage;
     let homePage: LpdcHomePage;
     let toevoegenPage: ProductOfDienstToevoegenPage;
+    let conceptDetailspage: ConceptDetailsPage;
 
     test.beforeEach(async ({ page }) => {
 
@@ -23,21 +25,27 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         homePage = LpdcHomePage.create(page);
         homePage.expectToBeVisible();
 
-        const ujeModalPage = UJeModalPage.create(page);
-        await ujeModalPage.expectToBeVisible();
-        await ujeModalPage.laterKiezenButton.click();
-        await ujeModalPage.expectToBeClosed();
+        const uJeModal = UJeModalPage.create(page);
+        await uJeModal.expectToBeVisible();
+        await uJeModal.laterKiezenButton.click();
+        await uJeModal.expectToBeClosed();
 
         toevoegenPage = ProductOfDienstToevoegenPage.create(page);
 
+        conceptDetailspage = ConceptDetailsPage.create(page);
+
     });
 
-    test('Load concept from ldes-stream', async ({ page }) => {
+    test('Load concept overview from ldes-stream', async ({ page }) => {
         await homePage.productOfDienstToevoegenButton.click();
         
         await toevoegenPage.expectToBeVisible();
         await expect(toevoegenPage.resultTable.linkWithTextInRow('Akte van Belgische nationaliteit', first_row)).toBeVisible();
         await expect(toevoegenPage.resultTable.linkWithTextInRow('Concept 1 edited', second_row)).toBeVisible();
+    });
+
+    test('Load concept detail', async ({page}) => {
+        //TODO LPDC-680: add test to verify in detail all fields of the concept
     });
 
     test('Create instance from concept and send to IPDC', async ({ page }) => {
@@ -46,9 +54,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.resultTable.linkWithTextInRow('Akte van Belgische nationaliteit', first_row).click();
 
-        await expect(page.getByRole('heading', { name: 'Concept: Akte van Belgische nationaliteit' })).toBeVisible();
+        await conceptDetailspage.expectToBeVisible();
+        await expect(conceptDetailspage.heading).toHaveText('Concept: Akte van Belgische nationaliteit');
+        await conceptDetailspage.voegToeButton.click();
 
-        await page.getByText('Voeg toe').first().click();
         await expect(page.getByRole('heading', { name: 'Akte van Belgische nationaliteit' })).toBeVisible();
 
         const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
