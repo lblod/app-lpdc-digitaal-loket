@@ -93,7 +93,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.type('pepi');
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.option('Pepingen').click();
 
-        //TODO LPDC-680 figure out about the 'unsaved changes ... ' ???
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
         await verzendNaarVlaamseOverheidModal.expectToBeVisible();
@@ -107,6 +106,21 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(nieuweTitel);
         expect(instancePublishedInIpdc).toBeTruthy();
+
+        await homePage.resultTable.linkWithTextInRow('Bekijk', first_row).click();
+        
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.titelHeading).toBeVisible();
+
+        await instantieDetailsPage.eigenschappenTab.click();
+        await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+        await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText('Pepingen (Gemeente)');
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');
+
     });
 
 });

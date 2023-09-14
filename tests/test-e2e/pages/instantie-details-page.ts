@@ -8,6 +8,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly heading: Locator; 
     readonly inhoudTab: Locator;
     readonly eigenschappenTab: Locator;
+    readonly titelHeading: Locator;
     readonly titelInput: Locator;
     readonly titelKostEngels: Locator;
     readonly beschrijvingKostEngels: Locator;
@@ -23,6 +24,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.heading = page.getByRole('heading').first();
         this.inhoudTab = page.getByRole('link', { name: 'Inhoud', exact: true })
         this.eigenschappenTab = page.getByRole('link', { name: 'Eigenschappen', exact: true  });
+        this.titelHeading = page.getByRole('heading', { name: 'Titel', exact: true });
         this.titelInput = page.locator(`input:below(label:text-is('Titel'))`).first();
         this.titelKostEngels = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
         this.beschrijvingKostEngels = page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first();
