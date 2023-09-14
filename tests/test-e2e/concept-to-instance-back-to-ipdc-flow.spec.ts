@@ -4,46 +4,48 @@ import { v4 as uuid } from 'uuid';
 import { LpdcHomePage } from "./pages/lpdc-home-page";
 import { MockLoginPage } from "./pages/mock-login-page";
 import { UJeModalPage } from './pages/u-je-modal-page';
-import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from './pages/product-of-dienst-toevoegen-page';
+import { AddProductOrServicePage as ProductOfDienstToevoegenPage} from './pages/product-of-dienst-toevoegen-page';
+import { first_row, second_row } from './pages/table';
 
 test.describe('Concept to Instance back to IPDC Flow', () => {
 
-    let mockLogin: MockLoginPage;
-    let lpdcHome: LpdcHomePage;
-    let productOfDienstToevoegenPage: ProductOfDienstToevoegenPage;
+    let mockLoginPage: MockLoginPage;
+    let homePage: LpdcHomePage;
+    let toevoegenPage: ProductOfDienstToevoegenPage;
 
     test.beforeEach(async ({ page }) => {
 
-        mockLogin = MockLoginPage.createForLpdc(page);
-        await mockLogin.goto();
-        await mockLogin.searchFor('Pepingen');
-        await mockLogin.login('Gemeente Pepingen');
+        mockLoginPage = MockLoginPage.createForLpdc(page);
+        await mockLoginPage.goto();
+        await mockLoginPage.searchFor('Pepingen');
+        await mockLoginPage.login('Gemeente Pepingen');
 
-        lpdcHome = LpdcHomePage.create(page);
-        lpdcHome.expectToBeVisible();
+        homePage = LpdcHomePage.create(page);
+        homePage.expectToBeVisible();
 
         const ujeModalPage = UJeModalPage.create(page);
         await ujeModalPage.expectToBeVisible();
         await ujeModalPage.laterKiezenButton.click();
         await ujeModalPage.expectToBeClosed();
 
-        productOfDienstToevoegenPage = ProductOfDienstToevoegenPage.create(page);
+        toevoegenPage = ProductOfDienstToevoegenPage.create(page);
 
     });
 
     test('Load concept from ldes-stream', async ({ page }) => {
-        await lpdcHome.productOfDienstToevoegenButton.click();
-        await productOfDienstToevoegenPage.expectToBeVisible();    
-
-        await expect(page.getByText('Akte van Belgische nationaliteit')).toBeVisible();
-        await expect(page.getByText('Concept 1 edited')).toBeVisible();
+        await homePage.productOfDienstToevoegenButton.click();
+        
+        await toevoegenPage.expectToBeVisible();
+        await expect(toevoegenPage.resultTable.linkWithTextInRow('Akte van Belgische nationaliteit', first_row)).toBeVisible();
+        await expect(toevoegenPage.resultTable.linkWithTextInRow('Concept 1 edited', second_row)).toBeVisible();
     });
 
     test('Create instance from concept and send to IPDC', async ({ page }) => {
-        await lpdcHome.productOfDienstToevoegenButton.click();
-        await productOfDienstToevoegenPage.expectToBeVisible();    
+        await homePage.productOfDienstToevoegenButton.click();
 
-        await page.getByRole('link', { name: 'Akte van Belgische nationaliteit' }).click();
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.resultTable.linkWithTextInRow('Akte van Belgische nationaliteit', first_row).click();
+
         await expect(page.getByRole('heading', { name: 'Concept: Akte van Belgische nationaliteit' })).toBeVisible();
 
         await page.getByText('Voeg toe').first().click();
