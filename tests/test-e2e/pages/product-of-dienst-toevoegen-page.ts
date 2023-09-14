@@ -1,6 +1,6 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
-import { Table } from "./table";
+import { Table } from "../components/table";
 
 export class AddProductOrServicePage extends AbstractPage {
     private readonly header: Locator;

@@ -3,12 +3,14 @@ import { Page, request, APIRequestContext } from "@playwright/test";
 import { v4 as uuid } from 'uuid';
 import { LpdcHomePage } from "./pages/lpdc-home-page";
 import { MockLoginPage } from "./pages/mock-login-page";
-import { UJeModal } from './pages/u-je-modal';
+import { UJeModal } from './modals/u-je-modal';
 import { AddProductOrServicePage as ProductOfDienstToevoegenPage} from './pages/product-of-dienst-toevoegen-page';
-import { first_row, second_row } from './pages/table';
+import { first_row, second_row } from './components/table';
 import { ConceptDetailsPage as ConceptDetailsPage } from './pages/concept-details-page';
 import { InstantieDetailsPage } from './pages/instantie-details-page';
-import { WijzigingenBewarenModal } from './pages/wijzigingen-bewaren-modal';
+import { WijzigingenBewarenModal } from './modals/wijzigingen-bewaren-modal';
+import { VerzendNaarVlaamseOverheidModal } from './modals/verzend-naar-vlaamse-overheid-modal';
+import { ipdcStubUrl } from '../test-api/test-helpers/test-options';
 
 test.describe('Concept to Instance back to IPDC Flow', () => {
 
@@ -18,6 +20,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
     let conceptDetailsPage: ConceptDetailsPage;
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
+    let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
 
     test.beforeEach(async ({ page }) => {
 
@@ -38,6 +41,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         conceptDetailsPage = ConceptDetailsPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
+        verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
     });
 
     test('Load concept overview from ldes-stream', async ({ page }) => {
@@ -90,13 +94,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.type('pepi');
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.option('Pepingen').click();
 
-        await page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' }).click();
+        //TODO LPDC-680 figure out about the 'unsaved changes ... ' ???
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
-        await page.getByRole('dialog').getByRole('button', { name: 'Verzend naar Vlaamse overheid' }).click();
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
 
-        const firstRowOfTable = page.locator(`:nth-match(table > tbody > tr, 1)`);
-        await expect(firstRowOfTable.locator(':nth-match(td, 1)')).toHaveText(nieuweTitel);
-        await expect(firstRowOfTable.locator(':nth-match(td, 6)')).toHaveText('Verzonden');
+        await homePage.expectToBeVisible();
+
+        await expect(homePage.resultTable.row(first_row)).toContainText(nieuweTitel);
+        await expect(homePage.resultTable.row(first_row)).toContainText('Verzonden');
 
         const apiRequest = await request.newContext({
             extraHTTPHeaders: {
@@ -114,7 +122,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         while (true) {
             waitTurn++;
             try {
-                const response = await apiRequest.get('http://localhost:33000/instanties');
+                const response = await apiRequest.get(ipdcStubUrl);
                 const result = await response.json();
                 const publishedInstanceWithTitel = result.find((ipdcPublish) => {
                     return ipdcPublish.find((element) => {

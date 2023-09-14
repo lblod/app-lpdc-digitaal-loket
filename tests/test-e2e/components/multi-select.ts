@@ -19,6 +19,4 @@ export class MultiSelect {
         return this.page.getByRole('option', { name: text });
     }
 
-
-
 }

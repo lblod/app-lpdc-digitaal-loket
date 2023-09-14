@@ -6,3 +6,4 @@ export const lpdcManagementUrl = 'http://localhost:10996';
 export const dashboardUrl = 'http://localhost:11200';
 export const reportGenerationUrl = 'http://localhost:11300';
 export const lpdcUrl = 'http://localhost:4200';
+export const ipdcStubUrl = 'http://localhost:33000/instanties';

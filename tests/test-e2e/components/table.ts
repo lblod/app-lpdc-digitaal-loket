@@ -10,8 +10,12 @@ export class Table {
         this.rows = page.locator(`table > tbody > tr`);
     }
 
-    linkWithTextInRow(title: string, row: number): Locator {
-        return this.rows.nth(row).getByRole('link', { name: title });
+    linkWithTextInRow(title: string, rowNmbr: number): Locator {
+        return this.row(rowNmbr).getByRole('link', { name: title });
+    }
+
+    row(row: number): Locator {
+        return this.rows.nth(row);
     }
 
 }

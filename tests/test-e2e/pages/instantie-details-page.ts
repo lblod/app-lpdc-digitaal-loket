@@ -1,6 +1,6 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
-import { MultiSelect } from "./multi-select";
+import { MultiSelect } from "../components/multi-select";
 
 export class InstantieDetailsPage extends AbstractPage {
     
@@ -14,6 +14,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly algemeneInfoHeading: Locator;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
+    readonly verzendNaarVlaamseOverheidButton: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -28,6 +29,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
+        this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
     }
 
     static create(page: Page): InstantieDetailsPage {
