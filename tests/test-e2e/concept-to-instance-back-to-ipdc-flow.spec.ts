@@ -3,11 +3,14 @@ import { Page, request, APIRequestContext } from "@playwright/test";
 import { v4 as uuid } from 'uuid';
 import { LpdcHomePage } from "./pages/lpdc-home-page";
 import { MockLoginPage } from "./pages/mock-login-page";
+import { UJeModalPage } from './pages/u-je-modal-page';
+import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from './pages/product-of-dienst-toevoegen-page';
 
 test.describe('Concept to Instance back to IPDC Flow', () => {
 
     let mockLogin: MockLoginPage;
     let lpdcHome: LpdcHomePage;
+    let productOfDienstToevoegenPage: ProductOfDienstToevoegenPage;
 
     test.beforeEach(async ({ page }) => {
 
@@ -19,19 +22,26 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         lpdcHome = LpdcHomePage.create(page);
         lpdcHome.expectToBeVisible();
 
+        const ujeModalPage = UJeModalPage.create(page);
+        await ujeModalPage.expectToBeVisible();
+        await ujeModalPage.laterKiezenButton.click();
+        await ujeModalPage.expectToBeClosed();
+
+        productOfDienstToevoegenPage = ProductOfDienstToevoegenPage.create(page);
+
     });
 
     test('Load concept from ldes-stream', async ({ page }) => {
-        await dismissUJeModal(page);
-        await navigateFromInstanceOverviewToConceptOverview(page);
+        await lpdcHome.productOfDienstToevoegenButton.click();
+        await productOfDienstToevoegenPage.expectToBeVisible();    
 
         await expect(page.getByText('Akte van Belgische nationaliteit')).toBeVisible();
         await expect(page.getByText('Concept 1 edited')).toBeVisible();
     });
 
     test('Create instance from concept and send to IPDC', async ({ page }) => {
-        await dismissUJeModal(page);
-        await navigateFromInstanceOverviewToConceptOverview(page);
+        await lpdcHome.productOfDienstToevoegenButton.click();
+        await productOfDienstToevoegenPage.expectToBeVisible();    
 
         await page.getByRole('link', { name: 'Akte van Belgische nationaliteit' }).click();
         await expect(page.getByRole('heading', { name: 'Concept: Akte van Belgische nationaliteit' })).toBeVisible();
@@ -76,18 +86,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(result).toBeTruthy();
 
     });
-
-
-    async function dismissUJeModal(page: Page) {
-        await expect(page.locator('.au-c-modal')).toBeVisible();
-        await page.getByRole('button', { name: 'Later kiezen' }).click();
-        await expect(page.locator('.au-c-modal')).not.toBeAttached();
-    }
-
-    async function navigateFromInstanceOverviewToConceptOverview(page: Page) {
-        await page.getByRole('link', { name: 'Product of dienst toevoegen' }).click();
-        await expect(page.getByRole('heading', { name: 'Product of dienst toevoegen' })).toBeVisible();
-    }
 
     async function verifyInstanceCreated(apiRequest: APIRequestContext, titel: string) {
         let waitTurn = 0;

@@ -5,10 +5,12 @@ import { lpdcUrl } from "../../test-api/test-helpers/test-options";
 export class MockLoginPage extends AbstractPage {
 
     private readonly search: Locator;
+    private readonly baseURL: string;
 
     private constructor(page: Page, baseURL: string) {
-        super(page, baseURL);
+        super(page);
 
+        this.baseURL = baseURL;
         this.search = page.getByPlaceholder('Aalst, Berchem,...');
     }
 
@@ -17,7 +19,7 @@ export class MockLoginPage extends AbstractPage {
     }
 
     async goto() {
-        await this.openPage('/mock-login');
+        await this.page.goto(`${this.baseURL}/mock-login`)
         await this.expectToBeVisible();
     }
 
