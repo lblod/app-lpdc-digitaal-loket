@@ -64,6 +64,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.heading).toHaveText('Akte van Belgische nationaliteit');
+        await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
 
         const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
         await instantieDetailsPage.titelInput.fill(nieuweTitel);
@@ -77,15 +79,16 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await wijzigingenBewarenModal.bewaarButton.click();
         await wijzigingenBewarenModal.expectToBeClosed();
 
-        await expect(page.getByRole('heading', { name: 'Algemene info' })).toBeVisible();
+        await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+        
+        await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
 
-        await page.locator(`input:below(label:text-is('Bevoegde overheid'))`).first().fill('pepi');
-        await expect(page.getByRole('option', { name: 'Pepingen (Gemeente)' })).toBeVisible();
-        await page.getByRole('option', { name: 'Pepingen (Gemeente)' }).click();
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.type('pepi');
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.option('Pepingen (Gemeente)').click();
 
-        await page.locator(`input:below(label:text-is('Geografisch toepassingsgebied'))`).first().fill('pepi');
-        await expect(page.getByRole('option', { name: 'Pepingen' })).toBeVisible();
-        await page.getByRole('option', { name: 'Pepingen' }).click();
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.type('pepi');
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.option('Pepingen').click();
 
         await page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' }).click();
 
