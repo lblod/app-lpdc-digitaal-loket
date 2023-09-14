@@ -1,10 +1,8 @@
 import {expect, test} from "./test";
 import {Page, request, APIRequestContext} from "@playwright/test";
 import {v4 as uuid} from 'uuid';
-import { lpdcUrl } from "../test-api/test-helpers/test-options";
 
 test('Scenario: Load concept from ldes-stream', async ({page}) => {
-    await navigateToBaseUrl(page);
     await dismissUJeModal(page);
     await navigateFromInstanceOverviewToConceptOverview(page);
 
@@ -13,7 +11,6 @@ test('Scenario: Load concept from ldes-stream', async ({page}) => {
 });
 
 test('Scenario: Create instance from concept', async ({page}) => {
-    await navigateToBaseUrl(page);
     await dismissUJeModal(page);
     await navigateFromInstanceOverviewToConceptOverview(page);
 
@@ -61,10 +58,6 @@ test('Scenario: Create instance from concept', async ({page}) => {
 
 });
 
-async function navigateToBaseUrl(page: Page) {
-    await page.goto(lpdcUrl);
-    await expect(page.getByRole('heading', {name: 'Lokale Producten- en Dienstencatalogus'})).toBeVisible();
-}
 
 async function dismissUJeModal(page: Page) {
     await expect(page.locator('.au-c-modal')).toBeVisible();

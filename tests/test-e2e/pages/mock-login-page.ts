@@ -1,14 +1,19 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
+import { lpdcUrl } from "../../test-api/test-helpers/test-options";
 
 export class MockLoginPage extends AbstractPage {
 
     private readonly search: Locator;
 
-    constructor(page: Page, baseSpaURL: string) {
-        super(page, baseSpaURL);
+    private constructor(page: Page, baseURL: string) {
+        super(page, baseURL);
 
         this.search = page.getByPlaceholder('Aalst, Berchem,...');
+    }
+
+    static createForLpdc(page: Page): MockLoginPage {
+        return new MockLoginPage(page, lpdcUrl);
     }
 
     async goto() {
