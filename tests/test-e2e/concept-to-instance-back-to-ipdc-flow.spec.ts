@@ -89,6 +89,16 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingEngels = beschrijvingEngels + uuid();
         await instantieDetailsPage.beschrijvingEngelsEditor.fill(newBeschrijvingEngels);
 
+        //TODO LPDC-680: aanvullendeBeschrijving from concept does not flow through to instantie ...
+/*        const aanvullendeBeschrijving = await instantieDetailsPage.aanvullendeBeschrijvingEditor.textContent();
+        expect(beschrijving).toContain('Akte van Belgische nationaliteit nederlands');
+        const newAanvullendeBeschrijving = aanvullendeBeschrijving + uuid();
+        await instantieDetailsPage.aanvullendeBeschrijvingEditor.fill(newAanvullendeBeschrijving);*/
+        const aanvullendeBeschrijvingEngels = await instantieDetailsPage.aanvullendeBeschrijvingEngelsEditor.textContent();
+        expect(aanvullendeBeschrijvingEngels).toContain('The certificate states:the last name, first names, date and place of birth of the person to whom the certificate relatesthe legal foundation of the declaration on the basis of which the certificate was drawn upin the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.');
+        const newAanvullendeBeschrijvingEngels = aanvullendeBeschrijvingEngels + uuid();
+        await instantieDetailsPage.aanvullendeBeschrijvingEngelsEditor.fill(newAanvullendeBeschrijvingEngels);
+
         await instantieDetailsPage.titelKostEngelsInput.fill('Amount');
         await instantieDetailsPage.beschrijvingKostEngelsEditor.fill('The application and the certificate are free.');
 
@@ -139,6 +149,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(await instantieDetailsPage.beschrijvingReadonly.textContent()).toContain(newBeschrijving);
         await expect(instantieDetailsPage.beschrijvingEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingEngelsReadonly.textContent()).toContain(newBeschrijvingEngels);
+
+        //TODO LPDC-680: add asserts for aanvullendeBeschrijvingEditor and readonly
+        await expect(instantieDetailsPage.aanvullendeBeschrijvingEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.aanvullendeBeschrijvingEngelsReadonly.textContent()).toContain(newAanvullendeBeschrijvingEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
