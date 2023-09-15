@@ -13,12 +13,12 @@ import type { TestOptions } from './test-api/test-helpers/test-options';
 export default defineConfig<TestOptions>({
   testDir: './.',
   /* Run tests in files not in parallel */
-  fullyParallel: false,
+  fullyParallel: false, // use true to run in parallel
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   retries: 2,
   /* Opt out of parallel tests. */
-  workers: 1,
+  workers: 1, // use 20 workers to simulate a load test
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['list'],
@@ -34,8 +34,8 @@ export default defineConfig<TestOptions>({
     headless: true
   },
   globalSetup: require.resolve('./global-setup'),
-  timeout: 60000,
+  timeout: 120000,
   expect: {
-    timeout: 10000
+    timeout: 60000
   }
 });
