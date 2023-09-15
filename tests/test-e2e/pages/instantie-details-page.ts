@@ -20,6 +20,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingEngelsReadonly: Locator;
 
     readonly aanvullendeBeschrijvingEditor: Locator;
+    readonly aanvullendeBeschrijvingReadonly: Locator;
     readonly aanvullendeBeschrijvingEngelsEditor: Locator;
     readonly aanvullendeBeschrijvingEngelsReadonly: Locator;
 
@@ -30,6 +31,11 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly titelVoorwaardeInput: Locator;
     readonly titelVoorwaardeEngelsInput: Locator;
+
+    readonly beschrijvingVoorwaardeEditor: Locator;
+    readonly beschrijvingVoorwaardeReadonly: Locator;
+    readonly beschrijvingVoorwaardeEngelsEditor: Locator;
+    readonly beschrijvingVoorwaardeEngelsReadonly: Locator;
 
     readonly titelKostEngelsInput: Locator;
     readonly beschrijvingKostEngelsEditor: Locator;
@@ -57,6 +63,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving'))`).first();
 
         this.aanvullendeBeschrijvingEditor = page.locator(`div.ProseMirror:below(label:text-is('Aanvullende Beschrijving'))`).first();
+        this.aanvullendeBeschrijvingReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Aanvullende Beschrijving'))`).first();
         this.aanvullendeBeschrijvingEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Aanvullende Beschrijving'))`).first();
         this.aanvullendeBeschrijvingEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Aanvullende Beschrijving'))`).first();
 
@@ -67,6 +74,11 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelVoorwaardeInput = page.locator(`input:below(label:text-is('Titel voorwaarde'))`).first();
         this.titelVoorwaardeEngelsInput = page.locator(`input:right-of(label:text-is('Titel voorwaarde'))`).first();
+
+        this.beschrijvingVoorwaardeEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving voorwaarde'))`).first();
+        this.beschrijvingVoorwaardeReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving voorwaarde'))`).first();
+        this.beschrijvingVoorwaardeEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving voorwaarde'))`).first();
+        this.beschrijvingVoorwaardeEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving voorwaarde'))`).first();
 
         this.titelKostEngelsInput = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
         this.beschrijvingKostEngelsEditor = page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first();
