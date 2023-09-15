@@ -140,6 +140,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newTitelBewijsstukEngels = titelBewijsstukEngels + uuid();
         await instantieDetailsPage.titelBewijsstukEngelsInput.fill(newTitelBewijsstukEngels);
 
+        const beschrijvingBewijsstuk = await instantieDetailsPage.beschrijvingBewijsstukEditor.textContent();
+        expect(beschrijvingBewijsstuk).toEqual('Als u het document zelf ophaalt:uw eigen identiteitskaart.Als u het document voor iemand anders aanvraagt:een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaartuw eigen identiteitskaart. - nl');
+        const newBeschrijvingBewijsstuk = beschrijvingBewijsstuk + uuid();
+        await instantieDetailsPage.beschrijvingBewijsstukEditor.fill(newBeschrijvingBewijsstuk);
+        const beschrijvingBewijsstukEngels = await instantieDetailsPage.beschrijvingBewijsstukEngelsEditor.textContent();
+        expect(beschrijvingBewijsstukEngels).toEqual('If you collect the document yourself:your own identity card.If you are requesting the document for someone else:a power of attorney from that person and a copy of their identity cardas well as your own identity card.');
+        const newBeschrijvingBewijsstukEngels = beschrijvingBewijsstukEngels + uuid();
+        await instantieDetailsPage.beschrijvingBewijsstukEngelsEditor.fill(newBeschrijvingBewijsstukEngels);
+
         await instantieDetailsPage.titelKostEngelsInput.fill('Amount');
         await instantieDetailsPage.beschrijvingKostEngelsEditor.fill('The application and the certificate are free.');
 
@@ -216,6 +225,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.titelBewijsstukInput).toHaveValue(newTitelBewijsstuk);
         await expect(instantieDetailsPage.titelBewijsstukEngelsInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelBewijsstukEngelsInput).toHaveValue(newTitelBewijsstukEngels);
+
+        await expect(instantieDetailsPage.beschrijvingBewijsstukEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingBewijsstukReadonly.textContent()).toContain(newBeschrijvingBewijsstuk);
+        await expect(instantieDetailsPage.beschrijvingBewijsstukEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingBewijsstukEngelsReadonly.textContent()).toContain(newBeschrijvingBewijsstukEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);

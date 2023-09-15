@@ -40,6 +40,11 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly titelBewijsstukInput: Locator;
     readonly titelBewijsstukEngelsInput: Locator;
 
+    readonly beschrijvingBewijsstukEditor: Locator;
+    readonly beschrijvingBewijsstukReadonly: Locator;
+    readonly beschrijvingBewijsstukEngelsEditor: Locator;
+    readonly beschrijvingBewijsstukEngelsReadonly: Locator;
+
     readonly titelKostEngelsInput: Locator;
     readonly beschrijvingKostEngelsEditor: Locator;
     readonly algemeneInfoHeading: Locator;
@@ -85,6 +90,11 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelBewijsstukInput = page.locator(`input:below(label:text-is('Titel bewijsstuk'))`).first();
         this.titelBewijsstukEngelsInput = page.locator(`input:right-of(label:text-is('Titel bewijsstuk'))`).first();
+
+        this.beschrijvingBewijsstukEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving bewijsstuk'))`).first();
+        this.beschrijvingBewijsstukReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving bewijsstuk'))`).first();
+        this.beschrijvingBewijsstukEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving bewijsstuk'))`).first();
+        this.beschrijvingBewijsstukEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving bewijsstuk'))`).first();
         
         this.titelKostEngelsInput = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
         this.beschrijvingKostEngelsEditor = page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first();
