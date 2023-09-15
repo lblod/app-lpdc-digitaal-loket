@@ -99,6 +99,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newAanvullendeBeschrijvingEngels = aanvullendeBeschrijvingEngels + uuid();
         await instantieDetailsPage.aanvullendeBeschrijvingEngelsEditor.fill(newAanvullendeBeschrijvingEngels);
 
+        const uitzonderingen = await instantieDetailsPage.uitzonderingenEditor.textContent();
+        expect(uitzonderingen).toContain('Uitzonderingen nl');
+        const newUitzonderingen = uitzonderingen + uuid();
+        await instantieDetailsPage.uitzonderingenEditor.fill(newUitzonderingen);
+        const uitzonderingenEngels = await instantieDetailsPage.uitzonderingenEngelsEditor.textContent();
+        expect(uitzonderingenEngels).toContain('Uitzonderingen en');
+        const newUitzonderingenEngels = uitzonderingenEngels + uuid();
+        await instantieDetailsPage.uitzonderingenEngelsEditor.fill(newUitzonderingenEngels);
+
         await instantieDetailsPage.titelKostEngelsInput.fill('Amount');
         await instantieDetailsPage.beschrijvingKostEngelsEditor.fill('The application and the certificate are free.');
 
@@ -153,6 +162,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         //TODO LPDC-680: add asserts for aanvullendeBeschrijvingEditor and readonly
         await expect(instantieDetailsPage.aanvullendeBeschrijvingEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.aanvullendeBeschrijvingEngelsReadonly.textContent()).toContain(newAanvullendeBeschrijvingEngels);
+
+        await expect(instantieDetailsPage.uitzonderingenEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.uitzonderingenReadonly.textContent()).toContain(newUitzonderingen);
+        await expect(instantieDetailsPage.uitzonderingenEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.uitzonderingenEngelsReadonly.textContent()).toContain(newUitzonderingenEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
