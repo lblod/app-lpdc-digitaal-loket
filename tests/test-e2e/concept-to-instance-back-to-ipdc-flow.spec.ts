@@ -79,12 +79,12 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         const titel = await instantieDetailsPage.titelInput.inputValue();
         expect(titel).toEqual('Akte van Belgische nationaliteit - nl');
-        const nieuweTitel = titel + uuid();
-        await instantieDetailsPage.titelInput.fill(nieuweTitel);
+        const newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
         const titelEngels = await instantieDetailsPage.titelEngelsInput.inputValue();
         expect(titelEngels).toEqual('Certificate of Belgian nationality');
-        const nieuweTitelEngels = titelEngels + uuid();
-        await instantieDetailsPage.titelEngelsInput.fill(nieuweTitelEngels);
+        const newTitelEngels = titelEngels + uuid();
+        await instantieDetailsPage.titelEngelsInput.fill(newTitelEngels);
 
         const beschrijving = await instantieDetailsPage.beschrijvingEditor.textContent();
         expect(beschrijving).toEqual('De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen. - nl');
@@ -176,12 +176,12 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
 
         await homePage.expectToBeVisible();
-        await homePage.searchInput.fill(nieuweTitel);
+        await homePage.searchInput.fill(newTitel);
 
-        await expect(homePage.resultTable.row(first_row)).toContainText(nieuweTitel);
+        await expect(homePage.resultTable.row(first_row)).toContainText(newTitel);
         await expect(homePage.resultTable.row(first_row)).toContainText('Verzonden');
 
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(nieuweTitel);
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(newTitel);
         expect(instancePublishedInIpdc).toBeTruthy();
 
         await homePage.resultTable.linkWithTextInRow('Bekijk', first_row).click();
@@ -192,9 +192,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.titelHeading).toBeVisible();
 
         await expect(instantieDetailsPage.titelInput).not.toBeEditable();
-        await expect(instantieDetailsPage.titelInput).toHaveValue(nieuweTitel);
+        await expect(instantieDetailsPage.titelInput).toHaveValue(newTitel);
         await expect(instantieDetailsPage.titelEngelsInput).not.toBeEditable();
-        await expect(instantieDetailsPage.titelEngelsInput).toHaveValue(nieuweTitelEngels);
+        await expect(instantieDetailsPage.titelEngelsInput).toHaveValue(newTitelEngels);
 
         await expect(instantieDetailsPage.beschrijvingEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingReadonly.textContent()).toContain(newBeschrijving);

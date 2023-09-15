@@ -15,8 +15,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly titelEngelsInput: Locator;
 
     readonly beschrijvingEditor: Locator;
-    readonly beschrijvingReadonly: Locator;
     readonly beschrijvingEngelsEditor: Locator;
+    readonly beschrijvingReadonly: Locator;
     readonly beschrijvingEngelsReadonly: Locator;
 
     readonly aanvullendeBeschrijvingEditor: Locator;
@@ -25,28 +25,29 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly aanvullendeBeschrijvingEngelsReadonly: Locator;
 
     readonly uitzonderingenEditor: Locator;
-    readonly uitzonderingenReadonly: Locator;
     readonly uitzonderingenEngelsEditor: Locator;
+    readonly uitzonderingenReadonly: Locator;
     readonly uitzonderingenEngelsReadonly: Locator;
 
     readonly titelVoorwaardeInput: Locator;
     readonly titelVoorwaardeEngelsInput: Locator;
 
     readonly beschrijvingVoorwaardeEditor: Locator;
-    readonly beschrijvingVoorwaardeReadonly: Locator;
     readonly beschrijvingVoorwaardeEngelsEditor: Locator;
+    readonly beschrijvingVoorwaardeReadonly: Locator;
     readonly beschrijvingVoorwaardeEngelsReadonly: Locator;
 
     readonly titelBewijsstukInput: Locator;
     readonly titelBewijsstukEngelsInput: Locator;
 
     readonly beschrijvingBewijsstukEditor: Locator;
-    readonly beschrijvingBewijsstukReadonly: Locator;
     readonly beschrijvingBewijsstukEngelsEditor: Locator;
+    readonly beschrijvingBewijsstukReadonly: Locator;
     readonly beschrijvingBewijsstukEngelsReadonly: Locator;
 
     readonly titelKostEngelsInput: Locator;
     readonly beschrijvingKostEngelsEditor: Locator;
+
     readonly algemeneInfoHeading: Locator;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
@@ -62,42 +63,44 @@ export class InstantieDetailsPage extends AbstractPage {
         this.eigenschappenTab = page.getByRole('link', { name: 'Eigenschappen', exact: true  });
         
         this.titelHeading = page.getByRole('heading', { name: 'Titel', exact: true });
-        this.titelInput = page.locator(`input:below(label:text-is('Titel'))`).first();
-        this.titelEngelsInput = page.locator(`input:right-of(label:text-is('Titel'))`).first();
+
+        this.titelInput = this.inputBelow('Titel');
+        this.titelEngelsInput = this.inputRightOf('Titel');
         
-        this.beschrijvingEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving'))`).first();
-        this.beschrijvingReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving'))`).first();
-        this.beschrijvingEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving'))`).first();
-        this.beschrijvingEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving'))`).first();
+        this.beschrijvingEditor = this.editorBelow('Beschrijving');
+        this.beschrijvingEngelsEditor = this.editorRightOf('Beschrijving');
+        this.beschrijvingReadonly = this.readonlyBelow('Beschrijving');
+        this.beschrijvingEngelsReadonly = this.readonlyRightOf('Beschrijving');
 
-        this.aanvullendeBeschrijvingEditor = page.locator(`div.ProseMirror:below(label:text-is('Aanvullende Beschrijving'))`).first();
-        this.aanvullendeBeschrijvingReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Aanvullende Beschrijving'))`).first();
-        this.aanvullendeBeschrijvingEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Aanvullende Beschrijving'))`).first();
-        this.aanvullendeBeschrijvingEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Aanvullende Beschrijving'))`).first();
+        this.aanvullendeBeschrijvingEditor = this.editorBelow('Aanvullende Beschrijving');
+        this.aanvullendeBeschrijvingEngelsEditor = this.editorRightOf('Aanvullende Beschrijving');
+        this.aanvullendeBeschrijvingReadonly = this.readonlyBelow('Aanvullende Beschrijving');
+        this.aanvullendeBeschrijvingEngelsReadonly = this.readonlyRightOf('Aanvullende Beschrijving');;
 
-        this.uitzonderingenEditor = page.locator(`div.ProseMirror:below(label:text-is('Uitzonderingen'))`).first();
-        this.uitzonderingenReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Uitzonderingen'))`).first();
-        this.uitzonderingenEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Uitzonderingen'))`).first();
-        this.uitzonderingenEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Uitzonderingen'))`).first();
+        this.uitzonderingenEditor = this.editorBelow('Uitzonderingen');
+        this.uitzonderingenEngelsEditor = this.editorRightOf('Uitzonderingen');
+        this.uitzonderingenReadonly = this.readonlyBelow('Uitzonderingen');
+        this.uitzonderingenEngelsReadonly = this.readonlyRightOf('Uitzonderingen');
 
-        this.titelVoorwaardeInput = page.locator(`input:below(label:text-is('Titel voorwaarde'))`).first();
-        this.titelVoorwaardeEngelsInput = page.locator(`input:right-of(label:text-is('Titel voorwaarde'))`).first();
+        this.titelVoorwaardeInput = this.inputBelow('Titel voorwaarde');
+        this.titelVoorwaardeEngelsInput = this.inputRightOf('Titel voorwaarde');
 
-        this.beschrijvingVoorwaardeEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving voorwaarde'))`).first();
-        this.beschrijvingVoorwaardeReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving voorwaarde'))`).first();
-        this.beschrijvingVoorwaardeEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving voorwaarde'))`).first();
-        this.beschrijvingVoorwaardeEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving voorwaarde'))`).first();
+        this.beschrijvingVoorwaardeEditor = this.editorBelow('Beschrijving voorwaarde');
+        this.beschrijvingVoorwaardeEngelsEditor = this.editorRightOf('Beschrijving voorwaarde');
+        this.beschrijvingVoorwaardeReadonly = this.readonlyBelow('Beschrijving voorwaarde');
+        this.beschrijvingVoorwaardeEngelsReadonly = this.readonlyRightOf('Beschrijving voorwaarde');
 
-        this.titelBewijsstukInput = page.locator(`input:below(label:text-is('Titel bewijsstuk'))`).first();
-        this.titelBewijsstukEngelsInput = page.locator(`input:right-of(label:text-is('Titel bewijsstuk'))`).first();
+        this.titelBewijsstukInput = this.inputBelow('Titel bewijsstuk');
+        this.titelBewijsstukEngelsInput = this.inputRightOf('Titel bewijsstuk');
 
-        this.beschrijvingBewijsstukEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving bewijsstuk'))`).first();
-        this.beschrijvingBewijsstukReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving bewijsstuk'))`).first();
-        this.beschrijvingBewijsstukEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving bewijsstuk'))`).first();
-        this.beschrijvingBewijsstukEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving bewijsstuk'))`).first();
+        this.beschrijvingBewijsstukEditor = this.editorBelow('Beschrijving bewijsstuk');
+        this.beschrijvingBewijsstukEngelsEditor = this.editorRightOf('Beschrijving bewijsstuk');
+        this.beschrijvingBewijsstukReadonly = this.readonlyBelow('Beschrijving bewijsstuk');
+        this.beschrijvingBewijsstukEngelsReadonly = this.readonlyRightOf('Beschrijving bewijsstuk');
         
         this.titelKostEngelsInput = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
-        this.beschrijvingKostEngelsEditor = page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first();
+        this.beschrijvingKostEngelsEditor = this.editorRightOf('Beschrijving kost');
+
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
@@ -110,6 +113,30 @@ export class InstantieDetailsPage extends AbstractPage {
     
     async expectToBeVisible() {
         await expect(this.menuHeader).toBeVisible();
+    }
+ 
+    private inputBelow(label: string): Locator {
+        return this.page.locator(`input:below(label:text-is('${label}'))`).first();
+    }
+
+    private inputRightOf(label: string): Locator {
+        return this.page.locator(`input:right-of(label:text-is('${label}'))`).first();
+    }
+
+    private editorBelow(label: string): Locator {
+        return this.page.locator(`div.ProseMirror:below(label:text-is('${label}'))`).first();
+    }
+
+    private readonlyBelow(label: string): Locator {
+        return this.page.locator(`div.rich-text-editor-content:below(label:text-is('${label}'))`).first();;
+    }
+
+    private editorRightOf(label: string): Locator {
+        return this.page.locator(`div.ProseMirror:right-of(label:text-is('${label}'))`).first();
+    }
+
+    private readonlyRightOf(label: string): Locator {
+        return this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('${label}'))`).first();;
     }
 
 }
