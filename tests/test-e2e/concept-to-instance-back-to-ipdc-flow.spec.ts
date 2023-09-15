@@ -108,6 +108,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newUitzonderingenEngels = uitzonderingenEngels + uuid();
         await instantieDetailsPage.uitzonderingenEngelsEditor.fill(newUitzonderingenEngels);
 
+        const titelVoorwaarde = await instantieDetailsPage.titelVoorwaardeInput.inputValue();
+        expect(titelVoorwaarde).toContain('Voorwaarden nl');
+        const newTitelVoorwaarde = titelVoorwaarde + uuid();
+        await instantieDetailsPage.titelVoorwaardeInput.fill(newTitelVoorwaarde);
+        const titelVoorwaardeEngels = await instantieDetailsPage.titelVoorwaardeEngelsInput.inputValue();
+        expect(titelVoorwaardeEngels).toContain('Requirements');
+        const newTitelVoorwaardeEngels = titelVoorwaardeEngels + uuid();
+        await instantieDetailsPage.titelVoorwaardeEngelsInput.fill(newTitelVoorwaardeEngels);
+
         await instantieDetailsPage.titelKostEngelsInput.fill('Amount');
         await instantieDetailsPage.beschrijvingKostEngelsEditor.fill('The application and the certificate are free.');
 
@@ -168,6 +177,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.uitzonderingenEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.uitzonderingenEngelsReadonly.textContent()).toContain(newUitzonderingenEngels);
 
+        await expect(instantieDetailsPage.titelVoorwaardeInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelVoorwaardeInput).toHaveValue(newTitelVoorwaarde);
+        await expect(instantieDetailsPage.titelVoorwaardeEngelsInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelVoorwaardeEngelsInput).toHaveValue(newTitelVoorwaardeEngels);
+        
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);

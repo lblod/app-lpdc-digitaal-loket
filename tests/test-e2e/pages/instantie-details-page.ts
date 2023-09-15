@@ -28,6 +28,9 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly uitzonderingenEngelsEditor: Locator;
     readonly uitzonderingenEngelsReadonly: Locator;
 
+    readonly titelVoorwaardeInput: Locator;
+    readonly titelVoorwaardeEngelsInput: Locator;
+
     readonly titelKostEngelsInput: Locator;
     readonly beschrijvingKostEngelsEditor: Locator;
     readonly algemeneInfoHeading: Locator;
@@ -61,6 +64,9 @@ export class InstantieDetailsPage extends AbstractPage {
         this.uitzonderingenReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Uitzonderingen'))`).first();
         this.uitzonderingenEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Uitzonderingen'))`).first();
         this.uitzonderingenEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Uitzonderingen'))`).first();
+
+        this.titelVoorwaardeInput = page.locator(`input:below(label:text-is('Titel voorwaarde'))`).first();
+        this.titelVoorwaardeEngelsInput = page.locator(`input:right-of(label:text-is('Titel voorwaarde'))`).first();
 
         this.titelKostEngelsInput = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
         this.beschrijvingKostEngelsEditor = page.locator(`div.ProseMirror:right-of(label:has-text('Beschrijving kost'))`).first();
