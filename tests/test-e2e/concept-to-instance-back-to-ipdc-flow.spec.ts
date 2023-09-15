@@ -22,25 +22,26 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
 
     test.beforeEach(async ({ page }) => {
-
+        //TODO LPDC-680: can creation be moved to before all ? 
         mockLoginPage = MockLoginPage.createForLpdc(page);
-        await mockLoginPage.goto();
-        await mockLoginPage.searchFor('Pepingen');
-        await mockLoginPage.login('Gemeente Pepingen');
-
         homePage = LpdcHomePage.create(page);
-        homePage.expectToBeVisible();
-
         const uJeModal = UJeModal.create(page);
-        await uJeModal.expectToBeVisible();
-        await uJeModal.laterKiezenButton.click();
-        await uJeModal.expectToBeClosed();
-
         toevoegenPage = ProductOfDienstToevoegenPage.create(page);
         conceptDetailsPage = ConceptDetailsPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
+
+        await mockLoginPage.goto();
+        await mockLoginPage.searchInput.fill('Pepingen');
+        //TODO LPDC-680: expose row in table, and click it.
+        await mockLoginPage.login('Gemeente Pepingen');
+
+        await homePage.expectToBeVisible();
+
+        await uJeModal.expectToBeVisible();
+        await uJeModal.laterKiezenButton.click();
+        await uJeModal.expectToBeClosed();
     });
 
     test('Load concept overview from ldes-stream', async () => {
@@ -55,7 +56,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         //TODO LPDC-680: add test to verify in detail all fields of the concept
     });
 
-    test('Create instance from concept and send to IPDC', async () => {
+    test('Create instance from concept and edit fully and send to IPDC and verify readonly version fully', async () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
@@ -70,11 +71,26 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
 
-        const nieuweTitel = `Akte van Belgische nationaliteit ${uuid()}`;
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        expect(titel).toContain('Akte van Belgische nationaliteit');
+        const nieuweTitel = titel + uuid();
         await instantieDetailsPage.titelInput.fill(nieuweTitel);
+        const titelEngels = await instantieDetailsPage.titelEngelsInput.inputValue();
+        expect(titelEngels).toContain('Certificate of Belgian nationality');
+        const nieuweTitelEngels = titelEngels + uuid();
+        await instantieDetailsPage.titelEngelsInput.fill(nieuweTitelEngels);
 
-        await instantieDetailsPage.titelKostEngels.fill('Amount');
-        await instantieDetailsPage.beschrijvingKostEngels.fill('The application and the certificate are free.');
+        const beschrijving = await instantieDetailsPage.beschrijvingEditor.textContent();
+        expect(beschrijving).toContain('De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.');
+        const newBeschrijving = beschrijving + uuid();
+        await instantieDetailsPage.beschrijvingEditor.fill(newBeschrijving);
+        const beschrijvingEngels = await instantieDetailsPage.beschrijvingEngelsEditor.textContent();
+        expect(beschrijvingEngels).toContain('The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.');
+        const newBeschrijvingEngels = beschrijvingEngels + uuid();
+        await instantieDetailsPage.beschrijvingEngelsEditor.fill(newBeschrijvingEngels);
+
+        await instantieDetailsPage.titelKostEngelsInput.fill('Amount');
+        await instantieDetailsPage.beschrijvingKostEngelsEditor.fill('The application and the certificate are free.');
 
         await instantieDetailsPage.eigenschappenTab.click();
 
@@ -113,6 +129,16 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
         await expect(instantieDetailsPage.titelHeading).toBeVisible();
+
+        await expect(instantieDetailsPage.titelInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelInput).toHaveValue(nieuweTitel);
+        await expect(instantieDetailsPage.titelEngelsInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelEngelsInput).toHaveValue(nieuweTitelEngels);
+
+        await expect(instantieDetailsPage.beschrijvingEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingReadonly.textContent()).toContain(newBeschrijving);
+        await expect(instantieDetailsPage.beschrijvingEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingEngelsReadonly.textContent()).toContain(newBeschrijvingEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);

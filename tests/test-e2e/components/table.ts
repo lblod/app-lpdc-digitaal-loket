@@ -14,6 +14,8 @@ export class Table {
         return this.row(rowNmbr).getByRole('link', { name: title });
     }
 
+    //TODO LPDC-680: create a 'Row' class.
+
     row(row: number): Locator {
         return this.rows.nth(row);
     }

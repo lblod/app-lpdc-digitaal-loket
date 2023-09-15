@@ -4,14 +4,14 @@ import { lpdcUrl } from "../../test-api/test-helpers/test-options";
 
 export class MockLoginPage extends AbstractPage {
 
-    private readonly search: Locator;
+    readonly searchInput: Locator;
     private readonly baseURL: string;
 
     private constructor(page: Page, baseURL: string) {
         super(page);
 
         this.baseURL = baseURL;
-        this.search = page.getByPlaceholder('Aalst, Berchem,...');
+        this.searchInput = page.getByPlaceholder('Aalst, Berchem,...');
     }
 
     static createForLpdc(page: Page): MockLoginPage {
@@ -23,14 +23,12 @@ export class MockLoginPage extends AbstractPage {
         await this.expectToBeVisible();
     }
 
+    //TODO LPDC-680: expose searchInput
     async expectToBeVisible() {
-        await expect(this.search).toBeVisible();
+        await expect(this.searchInput).toBeVisible();
     }
 
-    async searchFor(bestuur: string) {
-        await this.search.fill(bestuur);
-    }
-
+    //TODO LPDC-680: expose login link ? (use table idea)
     async login(bestuur: string){
         await this.page.getByText(bestuur).click();
     }
