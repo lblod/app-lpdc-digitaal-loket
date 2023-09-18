@@ -186,7 +186,7 @@ services:
       LOG_SPARQL_QUERIES: "false"
       LOG_SPARQL_UPDATES: "false"
       DEBUG_AUTH_HEADERS: "false"
-      ENABLE_CONCEPT_MODIFICATION_FLAG_UPDATE: "true"
+      ENABLE_CONCEPT_MODIFICATION_FLAG_UPDATE: "false"
     volumes:
       - ./config/lpdc-management:/config
       - ./data/files/lpdc:/data
