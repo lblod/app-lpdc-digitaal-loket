@@ -45,6 +45,11 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingBewijsstukReadonly: Locator;
     readonly beschrijvingBewijsstukEngelsReadonly: Locator;
 
+    readonly titelProcedureInput: Locator;
+    readonly titelProcedureEngelsInput: Locator;
+
+    readonly voegWebsiteToeVoorProcedureButton: Locator; 
+
     readonly titelKostEngelsInput: Locator;
     readonly beschrijvingKostEngelsEditor: Locator;
 
@@ -97,6 +102,11 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingBewijsstukEngelsEditor = this.editorRightOf('Beschrijving bewijsstuk');
         this.beschrijvingBewijsstukReadonly = this.readonlyBelow('Beschrijving bewijsstuk');
         this.beschrijvingBewijsstukEngelsReadonly = this.readonlyRightOf('Beschrijving bewijsstuk');
+
+        this.titelProcedureInput = this.inputBelow('Titel procedure');
+        this.titelProcedureEngelsInput = this.inputRightOf('Titel procedure');
+
+        this.voegWebsiteToeVoorProcedureButton = page.locator(`button:text-is('Voeg website toe'):below(h2:text-is('Website procedure'))`).first();
         
         this.titelKostEngelsInput = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
         this.beschrijvingKostEngelsEditor = this.editorRightOf('Beschrijving kost');
