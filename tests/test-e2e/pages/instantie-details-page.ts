@@ -48,6 +48,11 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly titelProcedureInput: Locator;
     readonly titelProcedureEngelsInput: Locator;
 
+    readonly beschrijvingProcedureEditor: Locator;
+    readonly beschrijvingProcedureEngelsEditor: Locator;
+    readonly beschrijvingProcedureReadonly: Locator;
+    readonly beschrijvingProcedureEngelsReadonly: Locator;
+
     readonly voegWebsiteToeVoorProcedureButton: Locator; 
 
     readonly titelKostEngelsInput: Locator;
@@ -105,6 +110,11 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelProcedureInput = this.inputBelow('Titel procedure');
         this.titelProcedureEngelsInput = this.inputRightOf('Titel procedure');
+
+        this.beschrijvingProcedureEditor = this.editorBelow('Beschrijving procedure');
+        this.beschrijvingProcedureEngelsEditor = this.editorRightOf('Beschrijving procedure');
+        this.beschrijvingProcedureReadonly = this.readonlyBelow('Beschrijving procedure');
+        this.beschrijvingProcedureEngelsReadonly = this.readonlyRightOf('Beschrijving procedure');
 
         this.voegWebsiteToeVoorProcedureButton = page.locator(`button:text-is('Voeg website toe'):below(h2:text-is('Website procedure'))`).first();
         

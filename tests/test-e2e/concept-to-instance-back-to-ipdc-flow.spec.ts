@@ -158,6 +158,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newTitelProcedureEngels = titelProcedureEngels + uuid();
         await instantieDetailsPage.titelProcedureEngelsInput.fill(newTitelProcedureEngels);
 
+        const beschrijvingProcedure = await instantieDetailsPage.beschrijvingProcedureEditor.textContent();
+        expect(beschrijvingProcedure).toEqual(`U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:via het e-loket van uw gemeenteof via de attestenpagina van 'Mijn Burgerprofiel'.Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht. - nl`);
+        const newBeschrijvingProcedure = beschrijvingProcedure + uuid();
+        await instantieDetailsPage.beschrijvingProcedureEditor.fill(newBeschrijvingProcedure);
+        const beschrijvingProcedureEngels = await instantieDetailsPage.beschrijvingProcedureEngelsEditor.textContent();
+        expect(beschrijvingProcedureEngels).toEqual(`You can request a copy of or an extract from the certificate of nationality from your municipality.If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate onlinevia the e-desk of your municipalityor via the certificates page of ‘My Citizen Profile’>‘Mijn Burgerprofiel’).Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.`);
+        const newBeschrijvingProcedureEngels = beschrijvingProcedureEngels + uuid();
+        await instantieDetailsPage.beschrijvingProcedureEngelsEditor.fill(newBeschrijvingProcedureEngels);
+
         //TODO LPDC-680: also add a website voor procedure
         //await instantieDetailsPage.voegWebsiteToeVoorProcedureButton.click();
 
@@ -247,6 +256,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.titelProcedureInput).toHaveValue(newTitelProcedure);
         await expect(instantieDetailsPage.titelProcedureEngelsInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelProcedureEngelsInput).toHaveValue(newTitelProcedureEngels);
+
+        await expect(instantieDetailsPage.beschrijvingProcedureEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingProcedureReadonly.textContent()).toContain(newBeschrijvingProcedure);
+        await expect(instantieDetailsPage.beschrijvingProcedureEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingProcedureEngelsReadonly.textContent()).toContain(newBeschrijvingProcedureEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
