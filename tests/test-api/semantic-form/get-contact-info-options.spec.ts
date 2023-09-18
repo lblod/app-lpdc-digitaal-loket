@@ -27,15 +27,15 @@ test('When instance contact point has a telephone number return that number', as
     expect(result).toEqual(['111111111']);
 })
 
-test('When multiple instances have multiple contact points, return multiple telephone numbers without duplicates', async ({request}) => {
+test('When multiple instances have multiple contact points, return multiple telephone numbers sorted without duplicates', async ({request}) => {
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
         .withTelephone('111111111')
         .buildAndPersist(request, pepingenId);
-    const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
-        .withTelephone('2222222222')
-        .buildAndPersist(request, pepingenId);
     const contactPoint3 = await ContactPointTestBuilder.aContactPoint()
         .withTelephone('333333333')
+        .buildAndPersist(request, pepingenId);
+    const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
+        .withTelephone('2222222222')
         .buildAndPersist(request, pepingenId);
     const contactPoint4 = await ContactPointTestBuilder.aContactPoint()
         .withTelephone('111111111')
