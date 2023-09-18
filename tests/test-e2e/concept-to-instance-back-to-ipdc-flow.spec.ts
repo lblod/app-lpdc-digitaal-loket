@@ -182,11 +182,25 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor.fill(newBeschrijvingWebsiteVoorProcedureEngels);
         const websiteURLVoorProcedure = await instantieDetailsPage.websiteURLVoorProcedureInput.inputValue();
         expect(websiteURLVoorProcedure).toEqual('https://procedure-website.com');
-        const newWebsiteURLVoorProcedure = websiteURLVoorProcedure + 'mie';
+        const newWebsiteURLVoorProcedure = 'https://new-procedure-website.com';
         await instantieDetailsPage.websiteURLVoorProcedureInput.fill(newWebsiteURLVoorProcedure);
-        
-        await instantieDetailsPage.titelKostEngelsInput.fill('Amount');
-        await instantieDetailsPage.beschrijvingKostEngelsEditor.fill('The application and the certificate are free.');
+
+        const titelKost = await instantieDetailsPage.titelKostInput.inputValue();
+        expect(titelKost).toEqual('Bedrag kost - nl');
+        const newTitelKost = titelKost + uuid();
+        await instantieDetailsPage.titelKostInput.fill(newTitelKost);
+        const titelKostEngels = await instantieDetailsPage.titelKostEngelsInput.inputValue();
+        expect(titelKostEngels).toEqual('bedrag kost - en');
+        const newTitelKostEngels = titelKostEngels + uuid();
+        await instantieDetailsPage.titelKostEngelsInput.fill(newTitelKostEngels);
+        const beschrijvingKost = await instantieDetailsPage.beschrijvingKostEditor.textContent();
+        expect(beschrijvingKost).toEqual('De aanvraag en het attest zijn gratis. - nl');
+        const newBeschrijvingKost = beschrijvingKost + uuid();
+        await instantieDetailsPage.beschrijvingKostEditor.fill(newBeschrijvingKost);
+        const beschrijvingKostEngels = await instantieDetailsPage.beschrijvingKostEngelsEditor.textContent();
+        expect(beschrijvingKostEngels).toEqual('De aanvraag en het attest zijn gratis. - en');
+        const newBeschrijvingKostEngels = beschrijvingKostEngels + uuid();
+        await instantieDetailsPage.beschrijvingKostEngelsEditor.fill(newBeschrijvingKostEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
 
@@ -275,15 +289,24 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(await instantieDetailsPage.beschrijvingProcedureEngelsReadonly.textContent()).toContain(newBeschrijvingProcedureEngels);
 
         await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput).not.toBeEditable();
-        expect(await instantieDetailsPage.titelWebsiteVoorProcedureInput).toHaveValue(newTitelWebsiteVoorProcedure);
+        await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput).toHaveValue(newTitelWebsiteVoorProcedure);
         await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput).not.toBeEditable();
-        expect(await instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput).toHaveValue(newTitelWebsiteVoorProcedureEngels);
+        await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput).toHaveValue(newTitelWebsiteVoorProcedureEngels);
         await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly.textContent()).toContain(newBeschrijvingWebsiteVoorProcedure);
         await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly.textContent()).toContain(newBeschrijvingWebsiteVoorProcedureEngels);
         await expect(instantieDetailsPage.websiteURLVoorProcedureInput).not.toBeEditable();
-        expect(await instantieDetailsPage.websiteURLVoorProcedureInput).toHaveValue(newWebsiteURLVoorProcedure);
+        await expect(instantieDetailsPage.websiteURLVoorProcedureInput).toHaveValue(newWebsiteURLVoorProcedure);
+
+        await expect(instantieDetailsPage.titelKostInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelKostInput).toHaveValue(newTitelKost);
+        await expect(instantieDetailsPage.titelKostEngelsInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelKostEngelsInput).toHaveValue(newTitelKostEngels);
+        await expect(instantieDetailsPage.beschrijvingKostEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingKostReadonly.textContent()).toContain(newBeschrijvingKost);
+        await expect(instantieDetailsPage.beschrijvingKostEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingKostEngelsReadonly.textContent()).toContain(newBeschrijvingKostEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
@@ -292,7 +315,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText('Pepingen (Gemeente)');
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');
 
-    });    
+    });
 
 });
 

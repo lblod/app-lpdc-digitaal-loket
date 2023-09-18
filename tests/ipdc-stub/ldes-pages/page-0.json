@@ -141,14 +141,16 @@
       "kosten": [
         {
           "beschrijving": {
-            "nl": "<p>De aanvraag en het attest zijn gratis.</p>",
-            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis.</p>",
-            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis.</p>"
+            "nl": "<p>De aanvraag en het attest zijn gratis.</p> - nl",
+            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis.</p> - informal",
+            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis.</p> - formal",
+            "en": "<p>De aanvraag en het attest zijn gratis.</p> - en"
           },
           "naam": {
-            "nl": "Bedrag",
-            "nl-BE-x-generated-informal": "Bedrag",
-            "nl-BE-x-generated-formal": "Bedrag"
+            "nl": "Bedrag kost - nl",
+            "nl-BE-x-generated-informal": "Bedrag - informal",
+            "nl-BE-x-generated-formal": "Bedrag - formal",
+            "en": "bedrag kost - en"
           },
           "@type": "kost"
         }

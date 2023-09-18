@@ -59,8 +59,12 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingWebsiteVoorProcedureEngelsReadonly: Locator;
     readonly websiteURLVoorProcedureInput: Locator;
 
+    readonly titelKostInput: Locator;
     readonly titelKostEngelsInput: Locator;
+    readonly beschrijvingKostEditor: Locator;
+    readonly beschrijvingKostReadonly: Locator;
     readonly beschrijvingKostEngelsEditor: Locator;
+    readonly beschrijvingKostEngelsReadonly: Locator;
 
     readonly algemeneInfoHeading: Locator;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
@@ -124,8 +128,12 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingWebsiteVoorProcedureEngelsReadonly = this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
         this.websiteURLVoorProcedureInput = this.page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Website procedure')))`).first();
 
-        this.titelKostEngelsInput = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
+        this.titelKostInput = this.inputBelow('Titel kost');
+        this.titelKostEngelsInput = this.inputRightOf('Titel kost');
+        this.beschrijvingKostEditor = this.editorBelow('Beschrijving kost');
+        this.beschrijvingKostReadonly = this.readonlyBelow('Beschrijving kost');
         this.beschrijvingKostEngelsEditor = this.editorRightOf('Beschrijving kost');
+        this.beschrijvingKostEngelsReadonly = this.readonlyRightOf('Beschrijving kost');
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
