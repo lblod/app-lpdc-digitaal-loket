@@ -153,6 +153,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(titelProcedure).toEqual("Procedure - nl");
         const newTitelProcedure = titelProcedure + uuid();
         await instantieDetailsPage.titelProcedureInput.fill(newTitelProcedure);
+        const titelProcedureEngels = await instantieDetailsPage.titelProcedureEngelsInput.inputValue();
+        expect(titelProcedureEngels).toEqual('Procedure - en');
+        const newTitelProcedureEngels = titelProcedureEngels + uuid();
+        await instantieDetailsPage.titelProcedureEngelsInput.fill(newTitelProcedureEngels);
 
         //TODO LPDC-680: also add a website voor procedure
         //await instantieDetailsPage.voegWebsiteToeVoorProcedureButton.click();
@@ -241,6 +245,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         await expect(instantieDetailsPage.titelProcedureInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelProcedureInput).toHaveValue(newTitelProcedure);
+        await expect(instantieDetailsPage.titelProcedureEngelsInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelProcedureEngelsInput).toHaveValue(newTitelProcedureEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
