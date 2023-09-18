@@ -43,7 +43,7 @@ export class PublicServiceTestBuilder {
     private moreInfo: Uri;
     private cost: Uri;
     private financialAdvantage: Uri;
-    private contactPoint: Uri;
+    private contactPoints: Uri[] = [];
     private spatial: Uri;
 
     static aPublicService() {
@@ -205,7 +205,12 @@ export class PublicServiceTestBuilder {
     }
 
     withContactPoint(contactPointUri: Uri) {
-        this.contactPoint = contactPointUri;
+        this.contactPoints = [contactPointUri];
+        return this;
+    }
+
+    withContactPoints(contactPointUris: Uri[]) {
+        this.contactPoints = contactPointUris;
         return this;
     }
 
@@ -242,7 +247,7 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
             new Triple(this.id, Predicates.hasCost, this.cost),
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
-            new Triple(this.id, Predicates.hasContactPoint, this.contactPoint),
+            ...this.contactPoints.map(contactPoint => new Triple(this.id, Predicates.hasContactPoint, contactPoint)),
             new Triple(this.id, Predicates.spatial, this.spatial),
         ];
         return new TripleArray(triples);

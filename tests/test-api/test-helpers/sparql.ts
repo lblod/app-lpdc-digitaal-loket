@@ -11,6 +11,8 @@ import {CostType} from "./cost.test-builder";
 import {FinancialAdvantageType} from "./financial-advantage.test-builder";
 import {FormalInformalChoiceType} from "./formal-informal-choice.test-builder";
 import {virtuosoUrl} from "./test-options";
+import {ContactpointType} from "./contact-point-test.builder";
+import {AddressType} from "./address.test-builder";
 
 async function insertTriples(request: APIRequestContext, graph: string, triples: string[]): Promise<void> {
     const batches: string[][] = splitInBatches(triples);
@@ -65,6 +67,8 @@ async function deleteAll(request: APIRequestContext) {
     await deleteAllOfType(request, PublicServiceType, virtuosoUrl);
     await deleteAllOfType(request, RequirementType, virtuosoUrl);
     await deleteAllOfType(request, WebsiteType, virtuosoUrl);
+    await deleteAllOfType(request, ContactpointType, virtuosoUrl);
+    await deleteAllOfType(request, AddressType, virtuosoUrl);
 }
 
 async function fetchType(request: APIRequestContext, uri: string, type: string): Promise<TripleArray> {
