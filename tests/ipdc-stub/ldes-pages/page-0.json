@@ -105,6 +105,24 @@
             "en": "<p>You can request a copy of or an extract from the certificate of nationality from your municipality.</p><p>If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate online</p><ul><li>via the e-desk of your municipality</li><li>or via the certificates page of ‘My Citizen Profile’>‘Mijn Burgerprofiel’</a>).</li></ul><p>Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).</p><p>Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.</p>",
             "nl-BE-x-generated-informal": "<p>Je kan een afschrift of een uittreksel van de akte van nationaliteit aanvragen in jouw gemeente.</p><p>Als je beschikt over een elektronische identiteitskaart (eID), kan je een afschrift of uittreksel van de akte online aanvragen:</p><ul><li>via het e-loket van jouw gemeente</li><li>of via de attestenpagina van <a href=\"https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel\">'Mijn Burgerprofiel'</a>.</li></ul><p>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kan je het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).</p><p>Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert jouw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.</p> - informal"
           },
+          "websites": [
+            {
+              "naam": {
+                "nl-BE-x-generated-formal": "Procedure website naam - formal",
+                "nl": "Procedure website naam - nl",
+                "nl-BE-x-generated-informal": "Procedure website naam - informal",
+                "en": "Procedure website naam - en"
+              },
+              "beschrijving": {
+                "nl-BE-x-generated-formal": "procedure website beschrijving - formal",
+                "nl": "procedure website beschrijving - nl",
+                "en": "procedure website beschrijving - en",
+                "nl-BE-x-generated-informal": "procedure website beschrijving - informal"
+              },
+              "url": "https://procedure-website.com",
+              "@type": "website"
+            }
+          ],
           "@type": "procedure"
         }
       ],

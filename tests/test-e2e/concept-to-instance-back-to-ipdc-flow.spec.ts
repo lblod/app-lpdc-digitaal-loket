@@ -121,7 +121,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(titelVoorwaardeEngels).toEqual('Requirements');
         const newTitelVoorwaardeEngels = titelVoorwaardeEngels + uuid();
         await instantieDetailsPage.titelVoorwaardeEngelsInput.fill(newTitelVoorwaardeEngels);
-
         const beschrijvingVoorwaarde = await instantieDetailsPage.beschrijvingVoorwaardeEditor.textContent();
         expect(beschrijvingVoorwaarde).toEqual('De akte vermeldt:de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeftde wettelijke basis van de verklaring op basis waarvan de akte werd opgesteldin geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.Wie kan een afschrift of uittreksel aanvragen?Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:uzelfde echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonendeuw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)uw erfgenamenbijzondere gemachtigden zoals een notaris of advocaat.Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel. - nl');
         const newBeschrijvingVoorwaarde = beschrijvingVoorwaarde + uuid();
@@ -139,7 +138,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(titelBewijsstukEngels).toEqual('Evidence');
         const newTitelBewijsstukEngels = titelBewijsstukEngels + uuid();
         await instantieDetailsPage.titelBewijsstukEngelsInput.fill(newTitelBewijsstukEngels);
-
         const beschrijvingBewijsstuk = await instantieDetailsPage.beschrijvingBewijsstukEditor.textContent();
         expect(beschrijvingBewijsstuk).toEqual('Als u het document zelf ophaalt:uw eigen identiteitskaart.Als u het document voor iemand anders aanvraagt:een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaartuw eigen identiteitskaart. - nl');
         const newBeschrijvingBewijsstuk = beschrijvingBewijsstuk + uuid();
@@ -157,7 +155,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(titelProcedureEngels).toEqual('Procedure - en');
         const newTitelProcedureEngels = titelProcedureEngels + uuid();
         await instantieDetailsPage.titelProcedureEngelsInput.fill(newTitelProcedureEngels);
-
         const beschrijvingProcedure = await instantieDetailsPage.beschrijvingProcedureEditor.textContent();
         expect(beschrijvingProcedure).toEqual(`U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:via het e-loket van uw gemeenteof via de attestenpagina van 'Mijn Burgerprofiel'.Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht. - nl`);
         const newBeschrijvingProcedure = beschrijvingProcedure + uuid();
@@ -167,9 +164,27 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingProcedureEngels = beschrijvingProcedureEngels + uuid();
         await instantieDetailsPage.beschrijvingProcedureEngelsEditor.fill(newBeschrijvingProcedureEngels);
 
-        //TODO LPDC-680: also add a website voor procedure
-        //await instantieDetailsPage.voegWebsiteToeVoorProcedureButton.click();
-
+        const titelWebsiteVoorProcedure = await instantieDetailsPage.titelWebsiteVoorProcedureInput.inputValue();
+        expect(titelWebsiteVoorProcedure).toEqual('Procedure website naam - nl');
+        const newTitelWebsiteVoorProcedure = titelWebsiteVoorProcedure + uuid();
+        await instantieDetailsPage.titelWebsiteVoorProcedureInput.fill(newTitelWebsiteVoorProcedure);
+        const titelWebsiteVoorProcedureEngels = await instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput.inputValue();
+        expect(titelWebsiteVoorProcedureEngels).toEqual('Procedure website naam - en');
+        const newTitelWebsiteVoorProcedureEngels = titelWebsiteVoorProcedureEngels + uuid();
+        await instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput.fill(newTitelWebsiteVoorProcedureEngels);
+        const beschrijvingWebsiteVoorProcedure = await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor.textContent();
+        expect(beschrijvingWebsiteVoorProcedure).toEqual('procedure website beschrijving - nl');
+        const newBeschrijvingWebsiteVoorProcedure = beschrijvingWebsiteVoorProcedure + uuid();
+        await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor.fill(newBeschrijvingWebsiteVoorProcedure);
+        const beschrijvingWebsiteVoorProcedureEngels = await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor.textContent();
+        expect(beschrijvingWebsiteVoorProcedureEngels).toEqual('procedure website beschrijving - en');
+        const newBeschrijvingWebsiteVoorProcedureEngels = beschrijvingWebsiteVoorProcedureEngels + uuid();
+        await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor.fill(newBeschrijvingWebsiteVoorProcedureEngels);
+        const websiteURLVoorProcedure = await instantieDetailsPage.websiteURLVoorProcedureInput.inputValue();
+        expect(websiteURLVoorProcedure).toEqual('https://procedure-website.com');
+        const newWebsiteURLVoorProcedure = websiteURLVoorProcedure + 'mie';
+        await instantieDetailsPage.websiteURLVoorProcedureInput.fill(newWebsiteURLVoorProcedure);
+        
         await instantieDetailsPage.titelKostEngelsInput.fill('Amount');
         await instantieDetailsPage.beschrijvingKostEngelsEditor.fill('The application and the certificate are free.');
 
@@ -236,7 +251,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.titelVoorwaardeInput).toHaveValue(newTitelVoorwaarde);
         await expect(instantieDetailsPage.titelVoorwaardeEngelsInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelVoorwaardeEngelsInput).toHaveValue(newTitelVoorwaardeEngels);
-
         await expect(instantieDetailsPage.beschrijvingVoorwaardeEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingVoorwaardeReadonly.textContent()).toContain(newBeschrijvingVoorwaarde);
         await expect(instantieDetailsPage.beschrijvingVoorwaardeEngelsEditor).not.toBeVisible();
@@ -246,7 +260,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.titelBewijsstukInput).toHaveValue(newTitelBewijsstuk);
         await expect(instantieDetailsPage.titelBewijsstukEngelsInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelBewijsstukEngelsInput).toHaveValue(newTitelBewijsstukEngels);
-
         await expect(instantieDetailsPage.beschrijvingBewijsstukEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingBewijsstukReadonly.textContent()).toContain(newBeschrijvingBewijsstuk);
         await expect(instantieDetailsPage.beschrijvingBewijsstukEngelsEditor).not.toBeVisible();
@@ -256,11 +269,21 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.titelProcedureInput).toHaveValue(newTitelProcedure);
         await expect(instantieDetailsPage.titelProcedureEngelsInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelProcedureEngelsInput).toHaveValue(newTitelProcedureEngels);
-
         await expect(instantieDetailsPage.beschrijvingProcedureEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingProcedureReadonly.textContent()).toContain(newBeschrijvingProcedure);
         await expect(instantieDetailsPage.beschrijvingProcedureEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingProcedureEngelsReadonly.textContent()).toContain(newBeschrijvingProcedureEngels);
+
+        await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput).not.toBeEditable();
+        expect(await instantieDetailsPage.titelWebsiteVoorProcedureInput).toHaveValue(newTitelWebsiteVoorProcedure);
+        await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput).not.toBeEditable();
+        expect(await instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput).toHaveValue(newTitelWebsiteVoorProcedureEngels);
+        await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly.textContent()).toContain(newBeschrijvingWebsiteVoorProcedure);
+        await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly.textContent()).toContain(newBeschrijvingWebsiteVoorProcedureEngels);
+        await expect(instantieDetailsPage.websiteURLVoorProcedureInput).not.toBeEditable();
+        expect(await instantieDetailsPage.websiteURLVoorProcedureInput).toHaveValue(newWebsiteURLVoorProcedure);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);

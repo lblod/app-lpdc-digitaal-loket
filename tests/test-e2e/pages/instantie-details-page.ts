@@ -3,17 +3,17 @@ import { AbstractPage } from "./abstract-page";
 import { MultiSelect } from "../components/multi-select";
 
 export class InstantieDetailsPage extends AbstractPage {
-    
+
     private readonly menuHeader: Locator;
-    readonly heading: Locator; 
+    readonly heading: Locator;
 
     readonly inhoudTab: Locator;
     readonly eigenschappenTab: Locator;
 
     readonly titelHeading: Locator;
+
     readonly titelInput: Locator;
     readonly titelEngelsInput: Locator;
-
     readonly beschrijvingEditor: Locator;
     readonly beschrijvingEngelsEditor: Locator;
     readonly beschrijvingReadonly: Locator;
@@ -31,7 +31,6 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly titelVoorwaardeInput: Locator;
     readonly titelVoorwaardeEngelsInput: Locator;
-
     readonly beschrijvingVoorwaardeEditor: Locator;
     readonly beschrijvingVoorwaardeEngelsEditor: Locator;
     readonly beschrijvingVoorwaardeReadonly: Locator;
@@ -47,13 +46,18 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly titelProcedureInput: Locator;
     readonly titelProcedureEngelsInput: Locator;
-
     readonly beschrijvingProcedureEditor: Locator;
     readonly beschrijvingProcedureEngelsEditor: Locator;
     readonly beschrijvingProcedureReadonly: Locator;
     readonly beschrijvingProcedureEngelsReadonly: Locator;
 
-    readonly voegWebsiteToeVoorProcedureButton: Locator; 
+    readonly titelWebsiteVoorProcedureInput: Locator;
+    readonly titelWebsiteVoorProcedureEngelsInput: Locator;
+    readonly beschrijvingWebsiteVoorProcedureEditor: Locator;
+    readonly beschrijvingWebsiteVoorProcedureReadonly: Locator;
+    readonly beschrijvingWebsiteVoorProcedureEngelsEditor: Locator;
+    readonly beschrijvingWebsiteVoorProcedureEngelsReadonly: Locator;
+    readonly websiteURLVoorProcedureInput: Locator;
 
     readonly titelKostEngelsInput: Locator;
     readonly beschrijvingKostEngelsEditor: Locator;
@@ -70,13 +74,12 @@ export class InstantieDetailsPage extends AbstractPage {
         this.heading = page.getByRole('heading').first();
 
         this.inhoudTab = page.getByRole('link', { name: 'Inhoud', exact: true })
-        this.eigenschappenTab = page.getByRole('link', { name: 'Eigenschappen', exact: true  });
-        
+        this.eigenschappenTab = page.getByRole('link', { name: 'Eigenschappen', exact: true });
+
         this.titelHeading = page.getByRole('heading', { name: 'Titel', exact: true });
 
         this.titelInput = this.inputBelow('Titel');
         this.titelEngelsInput = this.inputRightOf('Titel');
-        
         this.beschrijvingEditor = this.editorBelow('Beschrijving');
         this.beschrijvingEngelsEditor = this.editorRightOf('Beschrijving');
         this.beschrijvingReadonly = this.readonlyBelow('Beschrijving');
@@ -94,7 +97,6 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelVoorwaardeInput = this.inputBelow('Titel voorwaarde');
         this.titelVoorwaardeEngelsInput = this.inputRightOf('Titel voorwaarde');
-
         this.beschrijvingVoorwaardeEditor = this.editorBelow('Beschrijving voorwaarde');
         this.beschrijvingVoorwaardeEngelsEditor = this.editorRightOf('Beschrijving voorwaarde');
         this.beschrijvingVoorwaardeReadonly = this.readonlyBelow('Beschrijving voorwaarde');
@@ -102,7 +104,6 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelBewijsstukInput = this.inputBelow('Titel bewijsstuk');
         this.titelBewijsstukEngelsInput = this.inputRightOf('Titel bewijsstuk');
-
         this.beschrijvingBewijsstukEditor = this.editorBelow('Beschrijving bewijsstuk');
         this.beschrijvingBewijsstukEngelsEditor = this.editorRightOf('Beschrijving bewijsstuk');
         this.beschrijvingBewijsstukReadonly = this.readonlyBelow('Beschrijving bewijsstuk');
@@ -110,14 +111,19 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelProcedureInput = this.inputBelow('Titel procedure');
         this.titelProcedureEngelsInput = this.inputRightOf('Titel procedure');
-
         this.beschrijvingProcedureEditor = this.editorBelow('Beschrijving procedure');
         this.beschrijvingProcedureEngelsEditor = this.editorRightOf('Beschrijving procedure');
         this.beschrijvingProcedureReadonly = this.readonlyBelow('Beschrijving procedure');
         this.beschrijvingProcedureEngelsReadonly = this.readonlyRightOf('Beschrijving procedure');
 
-        this.voegWebsiteToeVoorProcedureButton = page.locator(`button:text-is('Voeg website toe'):below(h2:text-is('Website procedure'))`).first();
-        
+        this.titelWebsiteVoorProcedureInput = this.page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
+        this.titelWebsiteVoorProcedureEngelsInput = this.page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureEditor = this.page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureReadonly = this.page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureEngelsEditor = this.page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureEngelsReadonly = this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.websiteURLVoorProcedureInput = this.page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Website procedure')))`).first();
+
         this.titelKostEngelsInput = page.locator(`input:right-of(label:has-text('Titel Kost'))`).first();
         this.beschrijvingKostEngelsEditor = this.editorRightOf('Beschrijving kost');
 
@@ -130,11 +136,11 @@ export class InstantieDetailsPage extends AbstractPage {
     static create(page: Page): InstantieDetailsPage {
         return new InstantieDetailsPage(page);
     }
-    
+
     async expectToBeVisible() {
         await expect(this.menuHeader).toBeVisible();
     }
- 
+
     private inputBelow(label: string): Locator {
         return this.page.locator(`input:below(label:text-is('${label}'))`).first();
     }
