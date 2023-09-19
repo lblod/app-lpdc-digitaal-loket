@@ -271,6 +271,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.productOfDienstGeldigTotInput.clear();
         await page.keyboard.type(newProductOfDienstGeldigTot);
 
+        const productType = await instantieDetailsPage.productTypeSelect.selectedItem.textContent();
+        expect(productType).toContain('Financieel voordeel');
+        const newProductType = 'Infrastructuur en materiaal';
+        await instantieDetailsPage.productTypeSelect.selectValue(newProductType);
+
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.type('pepi');
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.option('Pepingen (Gemeente)').click();
 
@@ -401,6 +406,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(newProductOfDienstGeldigVanaf);
         await expect(instantieDetailsPage.productOfDienstGeldigTotInput).not.toBeEditable();
         await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(newProductOfDienstGeldigTot);
+
+        expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(newProductType);
 
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText('Pepingen (Gemeente)');
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');

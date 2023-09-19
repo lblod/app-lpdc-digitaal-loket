@@ -1,6 +1,7 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
 import { MultiSelect } from "../components/multi-select";
+import { Select } from "../components/select";
 
 export class InstantieDetailsPage extends AbstractPage {
 
@@ -89,6 +90,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly algemeneInfoHeading: Locator;
     readonly productOfDienstGeldigVanafInput: Locator;
     readonly productOfDienstGeldigTotInput: Locator;
+    readonly productTypeSelect: Select;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
     readonly verzendNaarVlaamseOverheidButton: Locator;
@@ -180,6 +182,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
         this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf');
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot');
+        this.productTypeSelect = new Select(page, 'Product type');
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
