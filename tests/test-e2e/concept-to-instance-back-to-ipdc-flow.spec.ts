@@ -260,6 +260,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
 
+        const productOfDienstGeldigVanaf = await instantieDetailsPage.productOfDienstGeldigVanafInput.inputValue();
+        expect(productOfDienstGeldigVanaf).toEqual('26-08-2020');
+        const newProductOfDienstGeldigVanaf = '13-04-2019';
+        await instantieDetailsPage.productOfDienstGeldigVanafInput.clear();
+        await page.keyboard.type(newProductOfDienstGeldigVanaf);
+        const productOfDienstGeldigTot = await instantieDetailsPage.productOfDienstGeldigTotInput.inputValue();
+        expect(productOfDienstGeldigTot).toEqual('12-07-2025');
+        const newProductOfDienstGeldigTot = '27-11-2026';
+        await instantieDetailsPage.productOfDienstGeldigTotInput.clear();
+        await page.keyboard.type(newProductOfDienstGeldigTot);
+
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.type('pepi');
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.option('Pepingen (Gemeente)').click();
 
@@ -385,6 +396,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+        await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).not.toBeEditable();
+        await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(newProductOfDienstGeldigVanaf);
+        await expect(instantieDetailsPage.productOfDienstGeldigTotInput).not.toBeEditable();
+        await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(newProductOfDienstGeldigTot);
 
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText('Pepingen (Gemeente)');
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');

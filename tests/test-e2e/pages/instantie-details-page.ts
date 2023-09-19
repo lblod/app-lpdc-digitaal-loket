@@ -87,6 +87,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly websiteURLInput: Locator;
 
     readonly algemeneInfoHeading: Locator;
+    readonly productOfDienstGeldigVanafInput: Locator;
+    readonly productOfDienstGeldigTotInput: Locator;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
     readonly verzendNaarVlaamseOverheidButton: Locator;
@@ -140,13 +142,13 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingProcedureReadonly = this.readonlyBelow('Beschrijving procedure');
         this.beschrijvingProcedureEngelsReadonly = this.readonlyRightOf('Beschrijving procedure');
 
-        this.titelWebsiteVoorProcedureInput = this.page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
-        this.titelWebsiteVoorProcedureEngelsInput = this.page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureEditor = this.page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureReadonly = this.page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureEngelsEditor = this.page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureEngelsReadonly = this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.websiteURLVoorProcedureInput = this.page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Website procedure')))`).first();
+        this.titelWebsiteVoorProcedureInput = page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
+        this.titelWebsiteVoorProcedureEngelsInput = page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.beschrijvingWebsiteVoorProcedureEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
+        this.websiteURLVoorProcedureInput = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Website procedure')))`).first();
 
         this.titelKostInput = this.inputBelow('Titel kost');
         this.titelKostEngelsInput = this.inputRightOf('Titel kost');
@@ -167,15 +169,17 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevingEngelsEditor = this.editorRightOf('Regelgeving');
         this.beschrijvingRegelgevingEngelsReadonly = this.readonlyRightOf('Regelgeving');
 
-        this.titelWebsiteInput = this.page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
-        this.titelWebsiteEngelsInput = this.page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteEditor = this.page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteReadonly = this.page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteEngelsEditor = this.page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteEngelsReadonly = this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.websiteURLInput = this.page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).first();
+        this.titelWebsiteInput = page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
+        this.titelWebsiteEngelsInput = page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.websiteURLInput = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).first();
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
+        this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf');
+        this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot');
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
