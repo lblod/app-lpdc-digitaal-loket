@@ -288,6 +288,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.themasMultiSelect.selectValue('Economie en Werk');
         await instantieDetailsPage.themasMultiSelect.selectValue('Milieu en Energie');
 
+        //TODO LPDC-698: talen is not correctly processed from the ipdc ldes stream ... add test to unclick ENG and DUE and select FRA and NED (and verify in readonly view)
+
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
 
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Pepingen');
