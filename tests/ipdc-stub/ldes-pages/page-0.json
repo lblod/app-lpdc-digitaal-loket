@@ -135,11 +135,17 @@
       "websites": [
         {
           "naam": {
-            "nl-BE-x-generated-formal": "Belgische nationaliteit en naturalisatie",
-            "nl": "Belgische nationaliteit en naturalisatie",
-            "nl-BE-x-generated-informal": "Belgische nationaliteit en naturalisatie",
-            "en": "Belgische nationaliteit en naturalisatie"
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal",
+            "nl": "Website Belgische nationaliteit en naturalisatie - nl",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal",
+            "en": "Website Belgische nationaliteit en naturalisatie - en"
           },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal",
+            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl",
+            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal"
+          },          
           "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
           "@type": "website"
         }

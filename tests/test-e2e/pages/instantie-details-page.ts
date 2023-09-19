@@ -78,6 +78,14 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingRegelgevingEngelsEditor: Locator;
     readonly beschrijvingRegelgevingEngelsReadonly: Locator;
 
+    readonly titelWebsiteInput: Locator;
+    readonly titelWebsiteEngelsInput: Locator;
+    readonly beschrijvingWebsiteEditor: Locator;
+    readonly beschrijvingWebsiteReadonly: Locator;
+    readonly beschrijvingWebsiteEngelsEditor: Locator;
+    readonly beschrijvingWebsiteEngelsReadonly: Locator;
+    readonly websiteURLInput: Locator;
+
     readonly algemeneInfoHeading: Locator;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
@@ -158,6 +166,14 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevingReadonly = this.readonlyBelow('Regelgeving');
         this.beschrijvingRegelgevingEngelsEditor = this.editorRightOf('Regelgeving');
         this.beschrijvingRegelgevingEngelsReadonly = this.readonlyRightOf('Regelgeving');
+
+        this.titelWebsiteInput = this.page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
+        this.titelWebsiteEngelsInput = this.page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteEditor = this.page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteReadonly = this.page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteEngelsEditor = this.page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.beschrijvingWebsiteEngelsReadonly = this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
+        this.websiteURLInput = this.page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).first();
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');

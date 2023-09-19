@@ -228,6 +228,27 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingRegelgevingEngels = beschrijvingRegelgevingEngels + uuid();
         await instantieDetailsPage.beschrijvingRegelgevingEngelsEditor.fill(newBeschrijvingRegelgevingEngels);
 
+        const titelWebsite = await instantieDetailsPage.titelWebsiteInput.inputValue();
+        expect(titelWebsite).toEqual('Website Belgische nationaliteit en naturalisatie - nl');
+        const newTitelWebsite = titelWebsite + uuid();
+        await instantieDetailsPage.titelWebsiteInput.fill(newTitelWebsite);
+        const titelWebsiteEngels = await instantieDetailsPage.titelWebsiteEngelsInput.inputValue();
+        expect(titelWebsiteEngels).toEqual('Website Belgische nationaliteit en naturalisatie - en');
+        const newTitelWebsiteEngels = titelWebsiteEngels + uuid();
+        await instantieDetailsPage.titelWebsiteEngelsInput.fill(newTitelWebsiteEngels);
+        const beschrijvingWebsite = await instantieDetailsPage.beschrijvingWebsiteEditor.textContent();
+        expect(beschrijvingWebsite).toEqual('Website Belgische nationaliteit en naturalisatie beschrijving - nl');
+        const newBeschrijvingWebsite = beschrijvingWebsite + uuid();
+        await instantieDetailsPage.beschrijvingWebsiteEditor.fill(newBeschrijvingWebsite);
+        const beschrijvingWebsiteEngels = await instantieDetailsPage.beschrijvingWebsiteEngelsEditor.textContent();
+        expect(beschrijvingWebsiteEngels).toEqual('Website Belgische nationaliteit en naturalisatie beschrijving - en');
+        const newBeschrijvingWebsiteEngels = beschrijvingWebsiteEngels + uuid();
+        await instantieDetailsPage.beschrijvingWebsiteEngelsEditor.fill(newBeschrijvingWebsiteEngels);
+        const websiteURL = await instantieDetailsPage.websiteURLInput.inputValue();
+        expect(websiteURL).toEqual('https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit');
+        const newWebsiteURL = 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/new-nationaliteit';
+        await instantieDetailsPage.websiteURLInput.fill(newWebsiteURL);
+
         await instantieDetailsPage.eigenschappenTab.click();
 
         await wijzigingenBewarenModal.expectToBeVisible();
@@ -348,6 +369,18 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(await instantieDetailsPage.beschrijvingRegelgevingReadonly.textContent()).toContain(newBeschrijvingRegelgeving);
         await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly.textContent()).toContain(newBeschrijvingRegelgevingEngels);
+
+        await expect(instantieDetailsPage.titelWebsiteInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelWebsiteInput).toHaveValue(newTitelWebsite);
+        await expect(instantieDetailsPage.titelWebsiteEngelsInput).not.toBeEditable();
+        await expect(instantieDetailsPage.titelWebsiteEngelsInput).toHaveValue(newTitelWebsiteEngels);
+        await expect(instantieDetailsPage.beschrijvingWebsiteEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteReadonly.textContent()).toContain(newBeschrijvingWebsite);
+        await expect(instantieDetailsPage.beschrijvingWebsiteEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteEngelsReadonly.textContent()).toContain(newBeschrijvingWebsiteEngels);
+        await expect(instantieDetailsPage.websiteURLInput).not.toBeEditable();
+        //TODO LPDC-689: uncomment when bug fixed ... the old triple does not get removed from the database, so now and then the old one pops up in as the data
+        //await expect(instantieDetailsPage.websiteURLInput).toHaveValue(newWebsiteURL);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
