@@ -52,7 +52,7 @@ test('When chosenForm formal and concept in unknown versions then language in fo
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -71,7 +71,7 @@ test('When no chosenForm and concept in unknown versions then language in form s
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -279,7 +279,7 @@ test('When chosenForm informal and concept only in nl version then language in f
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -298,7 +298,7 @@ test('When chosenForm formal and concept only in nl then language in form should
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -314,6 +314,6 @@ test('When no chosenForm and concept only in nl then language in form should be 
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync('../config/lpdc-management/content/form.ttl', 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
