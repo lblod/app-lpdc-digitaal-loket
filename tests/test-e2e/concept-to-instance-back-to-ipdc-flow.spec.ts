@@ -276,6 +276,16 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newProductType = 'Infrastructuur en materiaal';
         await instantieDetailsPage.productTypeSelect.selectValue(newProductType);
 
+        await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(['Burger', 'Onderneming']);
+        await instantieDetailsPage.doelgroepenMultiSelect.type('Burger');
+        await instantieDetailsPage.doelgroepenMultiSelect.option('Burger').click();
+        await instantieDetailsPage.doelgroepenMultiSelect.type('Onderneming');
+        await instantieDetailsPage.doelgroepenMultiSelect.option('Onderneming').click();
+        await instantieDetailsPage.doelgroepenMultiSelect.type('Vereniging');
+        await instantieDetailsPage.doelgroepenMultiSelect.option('Vereniging').click();
+        await instantieDetailsPage.doelgroepenMultiSelect.type('Organisatie');
+        await instantieDetailsPage.doelgroepenMultiSelect.option('Organisatie').click();
+
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.type('pepi');
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.option('Pepingen (Gemeente)').click();
 
@@ -408,6 +418,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(newProductOfDienstGeldigTot);
 
         expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(newProductType);
+        await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(['Organisatie', 'Vereniging']);
 
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText('Pepingen (Gemeente)');
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');
