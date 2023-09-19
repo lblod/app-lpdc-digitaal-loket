@@ -1,0 +1,67 @@
+version: "3.7"
+
+services:
+
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0
+  
+  ######################
+  # START: DASHBOARD
+  ######################
+  # Hello LPDC-Team, once you merge master in to the kunlabora branch you'll probaly just need to uncomment this block
+  # cheers
+
+  # dashboard:
+  #   environment:
+  #     VIRTUAL_HOST: "tst.dashboard.lpdc.lpdc-dev.s.redhost.be"
+  #     LETSENCRYPT_HOST: "tst.dashboard.lpdc.lpdc-dev.s.redhost.be"
+  #     LETSENCRYPT_EMAIL: "info@redpencil.io"
+  #   networks:
+  #     - proxy
+  #     - default
+  ######################
+  # END: DASHBOARD
+  ######################
+
+  lpdc:
+    environment:
+      VIRTUAL_HOST: "tst.lpdc-dev.s.redhost.be,test.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_HOST: "tst.lpdc-dev.s.redhost.be,test.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_EMAIL: "info@redpencil.io"
+      EMBER_ACMIDM_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
+      EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
+      EMBER_ACMIDM_AUTH_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
+      EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
+      EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://test.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      EMBER_ACMIDM_SWITCH_REDIRECT_URL: "https://test.lpdc.lokaalbestuur.lblod.info/switch-login"
+    networks:
+      - proxy
+      - default
+
+  login:
+    environment:
+      MU_APPLICATION_AUTH_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "https://test.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "<ACMIDM_AUTH_CLIENT_SECRET>"
+      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
+      DEBUG_LOG_TOKENSETS: "yes"
+      LOG_SINK_URL: "http://sink"
+
+  database:
+    environment:
+      LOG_OUTGOING_SPARQL_QUERIES : "true"
+
+  lpdc-publish:
+    environment:
+      IPDC_JSON_ENDPOINT: "https://ipdc.tni-vlaanderen.be/api/abb/instanties"
+      IPDC_X_API_KEY: "<IPDC_API_KEY>"
+
+  lpdc-ldes-consumer:
+    environment:
+      LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC_API_KEY>"
+
+networks:
+  proxy:
+    external:
+      name: letsencrypt_default
+
