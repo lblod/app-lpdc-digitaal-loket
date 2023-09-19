@@ -3,6 +3,7 @@ import { Locator, Page } from "@playwright/test";
 export class MultiSelect {
 
     private readonly page: Page;
+    private readonly selectDiv: Locator;
     private readonly input: Locator;
     private readonly listContainer: Locator;
 
@@ -10,14 +11,17 @@ export class MultiSelect {
         this.page = page;
 
         this.input = page.locator(`input:below(label:text-is('${forLabel}'))`).first();
+        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).first();
         this.listContainer = page.locator(`ul.ember-power-select-multiple-options:below(label:text-is('${forLabel}'))`).first();
     }
 
-    async type(text: string) {
-        await this.input.fill(text);
+    async selectValue(text: string) {
+        await this.selectDiv.click();
+        await this.page.keyboard.type(text);
+        await this.option(text).click();
     }
 
-    option(text: string): Locator {
+    private option(text: string): Locator {
         return this.page.getByRole('option', { name: text });
     }
 

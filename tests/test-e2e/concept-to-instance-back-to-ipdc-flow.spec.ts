@@ -277,20 +277,20 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.productTypeSelect.selectValue(newProductType);
 
         await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(['Burger', 'Onderneming']);
-        await instantieDetailsPage.doelgroepenMultiSelect.type('Burger');
-        await instantieDetailsPage.doelgroepenMultiSelect.option('Burger').click();
-        await instantieDetailsPage.doelgroepenMultiSelect.type('Onderneming');
-        await instantieDetailsPage.doelgroepenMultiSelect.option('Onderneming').click();
-        await instantieDetailsPage.doelgroepenMultiSelect.type('Vereniging');
-        await instantieDetailsPage.doelgroepenMultiSelect.option('Vereniging').click();
-        await instantieDetailsPage.doelgroepenMultiSelect.type('Organisatie');
-        await instantieDetailsPage.doelgroepenMultiSelect.option('Organisatie').click();
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Burger');
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Onderneming');
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Vereniging');
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Organisatie');
+        
+        await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(['Burger en Overheid', 'Cultuur, Sport en Vrije Tijd']);
+        await instantieDetailsPage.themasMultiSelect.selectValue('Burger en Overheid');
+        await instantieDetailsPage.themasMultiSelect.selectValue('Cultuur, Sport en Vrije Tijd');
+        await instantieDetailsPage.themasMultiSelect.selectValue('Economie en Werk');
+        await instantieDetailsPage.themasMultiSelect.selectValue('Milieu en Energie');
 
-        await instantieDetailsPage.bevoegdeOverheidMultiSelect.type('pepi');
-        await instantieDetailsPage.bevoegdeOverheidMultiSelect.option('Pepingen (Gemeente)').click();
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
 
-        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.type('pepi');
-        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.option('Pepingen').click();
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Pepingen');
 
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
@@ -419,6 +419,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(newProductType);
         await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(['Organisatie', 'Vereniging']);
+        await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(['Economie en Werk', 'Milieu en Energie']);
 
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText('Pepingen (Gemeente)');
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');

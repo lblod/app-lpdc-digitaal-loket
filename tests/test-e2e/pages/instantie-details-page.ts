@@ -92,6 +92,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly productOfDienstGeldigTotInput: Locator;
     readonly productTypeSelect: Select;
     readonly doelgroepenMultiSelect: MultiSelect;
+    readonly themasMultiSelect: MultiSelect;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
     readonly verzendNaarVlaamseOverheidButton: Locator;
@@ -185,6 +186,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot');
         this.productTypeSelect = new Select(page, 'Product type');
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
+        this.themasMultiSelect = new MultiSelect(page, `Thema\\\'s`);
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });

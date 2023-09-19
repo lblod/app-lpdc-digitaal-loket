@@ -45,19 +45,21 @@
         "YourEuropeVerplicht"
       ],
       "themas": [
-        "BurgerOverheid"
+        "BurgerOverheid",
+        "CultuurSportVrijeTijd"
       ],
       "doelgroepen": [
-        "Burger", "Onderneming"
+        "Burger",
+        "Onderneming"
       ],
       "yourEuropeCategorieen": [
         "VerblijfNaturalisatie"
       ],
       "uitzonderingen": {
-          "nl": "Uitzonderingen - nl",
-          "nl-BE-x-generated-formal": "Uitzonderingen - formal",
-          "nl-BE-x-generated-informal": "Uitzondering - informal",
-          "en": "Uitzonderingen - en"
+        "nl": "Uitzonderingen - nl",
+        "nl-BE-x-generated-formal": "Uitzonderingen - formal",
+        "nl-BE-x-generated-informal": "Uitzondering - informal",
+        "en": "Uitzonderingen - en"
       },
       "regelgevingTekst": {
         "nl-BE-x-generated-informal": "Regelgeving - informal",
@@ -145,7 +147,7 @@
             "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl",
             "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en",
             "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal"
-          },          
+          },
           "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
           "@type": "website"
         }
@@ -182,10 +184,10 @@
             "en": "Titel financieel voordeel. - en"
           },
           "@type": "financieelVoordeel"
-        }      
+        }
       ],
-      "startDienstVerlening":"2020-08-26T11:40:20.026205561Z", 
-      "eindeDienstVerlening":"2025-07-12T11:40:20.026205561Z",
+      "startDienstVerlening": "2020-08-26T11:40:20.026205561Z",
+      "eindeDienstVerlening": "2025-07-12T11:40:20.026205561Z",
       "type": "FinancieelVoordeel",
       "talen": [
         "NLD"
