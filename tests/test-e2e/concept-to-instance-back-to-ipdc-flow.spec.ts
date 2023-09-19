@@ -219,6 +219,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingFinancieelVoordeelEngels = beschrijvingFinancieelVoordeelEngels + uuid();
         await instantieDetailsPage.beschrijvingFinancieelVoordeelEngelsEditor.fill(newBeschrijvingFinancieelVoordeelEngels);
 
+        const beschrijvingRegelgeving = await instantieDetailsPage.beschrijvingRegelgevingEditor.textContent();
+        expect(beschrijvingRegelgeving).toEqual('Regelgeving - nl');
+        const newBeschrijvingRegelgeving = beschrijvingRegelgeving + uuid();
+        await instantieDetailsPage.beschrijvingRegelgevingEditor.fill(newBeschrijvingRegelgeving);
+        const beschrijvingRegelgevingEngels = await instantieDetailsPage.beschrijvingRegelgevingEngelsEditor.textContent();
+        expect(beschrijvingRegelgevingEngels).toEqual('Regelgeving - en');
+        const newBeschrijvingRegelgevingEngels = beschrijvingRegelgevingEngels + uuid();
+        await instantieDetailsPage.beschrijvingRegelgevingEngelsEditor.fill(newBeschrijvingRegelgevingEngels);
+
         await instantieDetailsPage.eigenschappenTab.click();
 
         await wijzigingenBewarenModal.expectToBeVisible();
@@ -334,6 +343,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelReadonly.textContent()).toContain(newBeschrijvingFinancieelVoordeel);
         await expect(instantieDetailsPage.beschrijvingFinancieelVoordeelEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelEngelsReadonly.textContent()).toContain(newBeschrijvingFinancieelVoordeelEngels);
+
+        await expect(instantieDetailsPage.beschrijvingRegelgevingEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingRegelgevingReadonly.textContent()).toContain(newBeschrijvingRegelgeving);
+        await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly.textContent()).toContain(newBeschrijvingRegelgevingEngels);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);

@@ -73,6 +73,11 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingFinancieelVoordeelEngelsEditor: Locator;
     readonly beschrijvingFinancieelVoordeelEngelsReadonly: Locator;
 
+    readonly beschrijvingRegelgevingEditor: Locator;
+    readonly beschrijvingRegelgevingReadonly: Locator;
+    readonly beschrijvingRegelgevingEngelsEditor: Locator;
+    readonly beschrijvingRegelgevingEngelsReadonly: Locator;
+
     readonly algemeneInfoHeading: Locator;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
@@ -148,6 +153,11 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingFinancieelVoordeelReadonly = this.readonlyBelow('Beschrijving financieel voordeel');
         this.beschrijvingFinancieelVoordeelEngelsEditor = this.editorRightOf('Beschrijving financieel voordeel');
         this.beschrijvingFinancieelVoordeelEngelsReadonly = this.readonlyRightOf('Beschrijving financieel voordeel');
+
+        this.beschrijvingRegelgevingEditor = this.editorBelow('Regelgeving');
+        this.beschrijvingRegelgevingReadonly = this.readonlyBelow('Regelgeving');
+        this.beschrijvingRegelgevingEngelsEditor = this.editorRightOf('Regelgeving');
+        this.beschrijvingRegelgevingEngelsReadonly = this.readonlyRightOf('Regelgeving');
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
