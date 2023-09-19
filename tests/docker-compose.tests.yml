@@ -73,8 +73,15 @@ services:
       BATCH_SIZE: "1000"
     volumes:
       - ../config/migrations:/data/migrations
+      - ./health_checks:/tmp/health_checks
     restart: always
     logging: *default-logging
+    healthcheck:
+      test: [ "CMD-SHELL", "chmod +x /tmp/health_checks/migrations-healthcheck.sh; /tmp/health_checks/migrations-healthcheck.sh" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 10
 
   cache:
     image: semtech/mu-cache:2.0.2
@@ -96,6 +103,8 @@ services:
     image: redpencil/ldes-consumer:0.7.1
     depends_on:
       lpdc-management:
+        condition: service_healthy
+      migrations:
         condition: service_healthy
     environment:
       LDES_STREAM: "http://ipdc-stub/doc/conceptsnapshot"
