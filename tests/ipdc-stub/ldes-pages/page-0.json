@@ -155,6 +155,23 @@
           "@type": "kost"
         }
       ],
+      "financieleVoordelen": [
+        {
+          "beschrijving": {
+            "nl": "<p>Beschrijving financieel voordeel.</p> - nl",
+            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel.</p> - informal",
+            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel.</p> - formal",
+            "en": "<p>Beschrijving financieel voordeel.</p> - en"
+          },
+          "naam": {
+            "nl": "Titel financieel voordeel. - nl",
+            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal",
+            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
+            "en": "Titel financieel voordeel. - en"
+          },
+          "@type": "financieelVoordeel"
+        }      
+      ],
       "eindeDienstVerlening":"2025-07-12T11:40:20.026205561Z",
       "creatie": "2023-07-12T11:40:20.026205561Z",
       "laatstGewijzigd": "2023-07-12T11:40:20.026209604Z",
