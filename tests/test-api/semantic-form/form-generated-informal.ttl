@@ -970,7 +970,7 @@ ext:contactpointsPg a form:PropertyGroup;
           sh:resultMessage "Geef een geldig e-mailadres op."@nl
         ] ;
         sh:path schema:email ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:selectWithCreate ;
         sh:group ext:contactpointsPg-sub .
 
     ##########################################################
@@ -987,7 +987,7 @@ ext:contactpointsPg a form:PropertyGroup;
           sh:resultMessage "Geef een geldig telefoonnummer in."@nl
         ] ;
         sh:path schema:telephone ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:selectWithCreate ;
         sh:group ext:contactpointsPg-sub .
 
     ##########################################################
@@ -1003,7 +1003,7 @@ ext:contactpointsPg a form:PropertyGroup;
           sh:path schema:url
         ];
         sh:path schema:url ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:selectWithCreate ;
         sh:group ext:contactpointsPg-sub .
 
     ##########################################################
@@ -1013,7 +1013,7 @@ ext:contactpointsPg a form:PropertyGroup;
         sh:name "openingsuren" ;
         sh:order 4 ;
         sh:path schema:openingHours ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:selectWithCreate ;
         sh:group ext:contactpointsPg-sub .
 
         ##########################################################
