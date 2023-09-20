@@ -310,6 +310,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'Nationaliteit - nl']);
         await instantieDetailsPage.tagsMultiSelect.insertNewValue('een-nieuwe-tag');
         await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText('Your Europe');
+        await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(['Nationale verkeersregels en voorschriften voor bestuurders', 'Voorwaarden voor naturalisatie']);
+        await instantieDetailsPage.categorieenYourEuropeMultiSelect.selectValue('Nationale verkeersregels en voorschriften voor bestuurders');
+        await instantieDetailsPage.categorieenYourEuropeMultiSelect.selectValue('Voorwaarden voor naturalisatie');
+        await instantieDetailsPage.categorieenYourEuropeMultiSelect.selectValue('Medische behandeling ondergaan');
+        await instantieDetailsPage.categorieenYourEuropeMultiSelect.selectValue('Rechten en verplichtingen tot preventieve openbare gezondheidsmaatregelen');
 
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
@@ -447,6 +452,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'Nationaliteit - nl', 'een-nieuwe-tag']);
         await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText('Your Europe');
+        await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(['Medische behandeling ondergaan', 'Rechten en verplichtingen tot preventieve openbare gezondheidsmaatregelen']);
 
     });
 
