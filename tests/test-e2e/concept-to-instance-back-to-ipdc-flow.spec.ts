@@ -309,6 +309,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'Nationaliteit - nl']);
         await instantieDetailsPage.tagsMultiSelect.insertNewValue('een-nieuwe-tag');
+        await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText('Your Europe');
 
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
@@ -445,6 +446,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Oud-Heverlee', 'Pepingen']);
 
         await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'Nationaliteit - nl', 'een-nieuwe-tag']);
+        await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText('Your Europe');
 
     });
 

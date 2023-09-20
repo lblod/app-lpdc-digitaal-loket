@@ -101,6 +101,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
 
     readonly tagsMultiSelect: MultiSelect;
+    readonly publicatieKanalenMultiSelect: MultiSelect;
 
     readonly verzendNaarVlaamseOverheidButton: Locator;
 
@@ -202,6 +203,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
 
         this.tagsMultiSelect = new MultiSelect(page, "Tags");
+        this.publicatieKanalenMultiSelect = new MultiSelect(page, "Publicatiekanalen");
 
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
     }

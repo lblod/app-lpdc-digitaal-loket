@@ -30,7 +30,7 @@ export class MultiSelect {
     }
 
     options(): Locator {
-        return this.listContainer.locator('li');
+        return this.listContainer.locator(':is(li.ember-power-select-multiple-option, li:has(> span))');
     }
 
 }
