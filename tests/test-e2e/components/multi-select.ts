@@ -21,6 +21,12 @@ export class MultiSelect {
         await this.option(text).click();
     }
 
+    async insertNewValue(text: string) {
+        await this.selectDiv.click();
+        await this.page.keyboard.type(text);
+        await this.page.keyboard.press('Enter');
+    }
+
     private option(text: string): Locator {
         return this.page.getByRole('option', { name: text });
     }
