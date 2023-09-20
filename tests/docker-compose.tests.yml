@@ -117,7 +117,7 @@ services:
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
 
   ipdc-stub:
-    image: ipdc-stub:latest
+    build: ./ipdc-stub
     ports:
       - "33000:80"
 

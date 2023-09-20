@@ -17,7 +17,6 @@ refresh_latest_containers() {
 
   echo "Building and starting latest containers"
   npm install
-  docker build -t ipdc-stub:latest ./ipdc-stub
   docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests pull
   docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.yml -f ./docker-compose.tests.latest.override.yml -p app-lpdc-digitaal-loket-tests up -d
 }
