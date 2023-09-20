@@ -297,6 +297,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Lokale overheid');
 
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Aalst (Gemeente)');
 
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Pepingen');
 
@@ -430,7 +431,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(['Economie en Werk', 'Milieu en Energie']);
 
         await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(['Lokale overheid', 'Vlaamse overheid']);
-        await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText('Pepingen (Gemeente)');
+        await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(['Aalst (Gemeente)', 'Pepingen (Gemeente)']);
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');
 
     });
