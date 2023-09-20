@@ -95,6 +95,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly themasMultiSelect: MultiSelect;
     readonly bevoegdBestuursniveauMultiSelect: MultiSelect;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
+    readonly uitvoerendBestuursniveauMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
     readonly verzendNaarVlaamseOverheidButton: Locator;
 
@@ -190,6 +191,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.themasMultiSelect = new MultiSelect(page, `Thema\\\'s`);
         this.bevoegdBestuursniveauMultiSelect = new MultiSelect(page, 'Bevoegd bestuursniveau');
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
+        this.uitvoerendBestuursniveauMultiSelect = new MultiSelect(page, 'Uitvoerend bestuursniveau');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
     }
