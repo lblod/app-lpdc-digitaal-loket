@@ -295,6 +295,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Federale overheid');
         await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Vlaamse overheid');
         await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Lokale overheid');
+        await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText([]);
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Aalst (Gemeente)');
         await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(['Derden', 'Lokale overheid']);
@@ -302,7 +303,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Lokale overheid');
         await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Provinciale overheid');
         await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Federale overheid');
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText([]);
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Pepingen');
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Heverlee');
 
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
@@ -436,7 +439,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(['Lokale overheid', 'Vlaamse overheid']);
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(['Aalst (Gemeente)', 'Pepingen (Gemeente)']);
         await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(['Federale overheid', 'Provinciale overheid']);
-        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText('Pepingen');
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Oud-Heverlee', 'Pepingen']);
 
     });
 
