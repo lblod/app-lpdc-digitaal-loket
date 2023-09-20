@@ -23,12 +23,10 @@ export class MockLoginPage extends AbstractPage {
         await this.expectToBeVisible();
     }
 
-    //TODO LPDC-680: expose searchInput
     async expectToBeVisible() {
         await expect(this.searchInput).toBeVisible();
     }
 
-    //TODO LPDC-680: expose login link ? (use table idea)
     async login(bestuur: string){
         await this.page.getByText(bestuur).click();
     }

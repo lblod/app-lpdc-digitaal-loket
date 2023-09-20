@@ -24,7 +24,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
     test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
-        //TODO LPDC-680: can creation be moved to before all ? 
         mockLoginPage = MockLoginPage.createForLpdc(page);
         homePage = LpdcHomePage.create(page);
         const uJeModal = UJeModal.create(page);
@@ -36,7 +35,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         await mockLoginPage.goto();
         await mockLoginPage.searchInput.fill('Pepingen');
-        //TODO LPDC-680: expose row in table, and click it.
         await mockLoginPage.login('Gemeente Pepingen');
 
         await homePage.expectToBeVisible();
@@ -54,19 +52,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
-        await expect(toevoegenPage.resultTable.linkWithTextInRow('Akte van Belgische nationaliteit', first_row)).toBeVisible();
-        await expect(toevoegenPage.resultTable.linkWithTextInRow('Concept 1 edited', second_row)).toBeVisible();
-    });
-
-    test('Load concept detail', async () => {
-        //TODO LPDC-680: add test to verify in detail all fields of the concept
+        await expect(toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit')).toBeVisible();
+        await expect(toevoegenPage.resultTable.row(second_row).link('Concept 1 edited')).toBeVisible();
     });
 
     test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully`, async () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.resultTable.linkWithTextInRow('Akte van Belgische nationaliteit', first_row).click();
+        await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
 
         await conceptDetailsPage.expectToBeVisible();
         await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
@@ -288,7 +282,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.themasMultiSelect.selectValue('Economie en Werk');
         await instantieDetailsPage.themasMultiSelect.selectValue('Milieu en Energie');
 
-        //TODO LPDC-698: talen is not correctly processed from the ipdc ldes stream ... add test to unclick ENG and DUE and select FRA and NED (and verify in readonly view)
+        //TODO LPDC-698: talen is not correctly processed from the ipdc ldes stream ... add test to unclick ENG and DEU and select FRA and NED (and verify in readonly view)
 
         await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(['Europese overheid', 'Federale overheid']);
         await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Europese overheid');
@@ -325,13 +319,13 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await homePage.expectToBeVisible();
         await homePage.searchInput.fill(newTitel);
 
-        await expect(homePage.resultTable.row(first_row)).toContainText(newTitel);
-        await expect(homePage.resultTable.row(first_row)).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(newTitel);
         expect(instancePublishedInIpdc).toBeTruthy();
 
-        await homePage.resultTable.linkWithTextInRow('Bekijk', first_row).click();
+        await homePage.resultTable.row(first_row).link('Bekijk').click();
 
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);

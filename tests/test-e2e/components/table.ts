@@ -1,23 +1,29 @@
-import { Locator, Page } from "@playwright/test";
+import { Locator, LocatorScreenshotOptions, Page } from "@playwright/test";
 
 export class Table {
 
-    private readonly page: Page;
     private readonly rows: Locator;
 
     constructor(page: Page) {
-        this.page = page;
         this.rows = page.locator(`table > tbody > tr`);
     }
 
-    linkWithTextInRow(title: string, rowNmbr: number): Locator {
-        return this.row(rowNmbr).getByRole('link', { name: title });
+    row(row: number): Row {
+        return new Row(this.rows.nth(row));
     }
 
-    //TODO LPDC-680: create a 'Row' class.
+}
 
-    row(row: number): Locator {
-        return this.rows.nth(row);
+export class Row {
+
+    readonly locator: Locator;
+
+    constructor(locator: Locator) {
+        this.locator = locator;
+    }
+
+    link(title: string) {
+        return this.locator.getByRole('link', { name: title });
     }
 
 }
