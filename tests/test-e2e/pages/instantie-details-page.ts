@@ -88,15 +88,20 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly websiteURLInput: Locator;
 
     readonly algemeneInfoHeading: Locator;
+
     readonly productOfDienstGeldigVanafInput: Locator;
     readonly productOfDienstGeldigTotInput: Locator;
     readonly productTypeSelect: Select;
     readonly doelgroepenMultiSelect: MultiSelect;
     readonly themasMultiSelect: MultiSelect;
+
     readonly bevoegdBestuursniveauMultiSelect: MultiSelect;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly uitvoerendBestuursniveauMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
+
+    readonly tagsMultiSelect: MultiSelect;
+
     readonly verzendNaarVlaamseOverheidButton: Locator;
 
     private constructor(page: Page) {
@@ -184,15 +189,20 @@ export class InstantieDetailsPage extends AbstractPage {
         this.websiteURLInput = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).first();
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
+        
         this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf');
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot');
         this.productTypeSelect = new Select(page, 'Product type');
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
         this.themasMultiSelect = new MultiSelect(page, `Thema\\\'s`);
+
         this.bevoegdBestuursniveauMultiSelect = new MultiSelect(page, 'Bevoegd bestuursniveau');
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
         this.uitvoerendBestuursniveauMultiSelect = new MultiSelect(page, 'Uitvoerend bestuursniveau');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
+
+        this.tagsMultiSelect = new MultiSelect(page, "Tags");
+
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
     }
 

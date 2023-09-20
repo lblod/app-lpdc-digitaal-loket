@@ -4,15 +4,13 @@ export class MultiSelect {
 
     private readonly page: Page;
     private readonly selectDiv: Locator;
-    private readonly input: Locator;
     private readonly listContainer: Locator;
 
     constructor(page: Page, forLabel: string) {
         this.page = page;
 
-        this.input = page.locator(`input:below(label:text-is('${forLabel}'))`).first();
         this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).first();
-        this.listContainer = page.locator(`ul.ember-power-select-multiple-options:below(label:text-is('${forLabel}'))`).first();
+        this.listContainer = page.locator(`ul:below(label:text-is('${forLabel}'))`).first();
     }
 
     async selectValue(text: string) {
@@ -32,7 +30,7 @@ export class MultiSelect {
     }
 
     options(): Locator {
-        return this.listContainer.locator('li.ember-power-select-multiple-option');
+        return this.listContainer.locator('li');
     }
 
 }

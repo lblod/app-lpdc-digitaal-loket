@@ -307,6 +307,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Pepingen');
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Heverlee');
 
+        await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'Nationaliteit - nl']);
+        await instantieDetailsPage.tagsMultiSelect.insertNewValue('een-nieuwe-tag');
+
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
         await verzendNaarVlaamseOverheidModal.expectToBeVisible();
@@ -440,6 +443,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(['Aalst (Gemeente)', 'Pepingen (Gemeente)']);
         await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(['Federale overheid', 'Provinciale overheid']);
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Oud-Heverlee', 'Pepingen']);
+
+        await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'Nationaliteit - nl', 'een-nieuwe-tag']);
 
     });
 
