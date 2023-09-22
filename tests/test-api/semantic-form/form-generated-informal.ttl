@@ -1010,7 +1010,7 @@ ext:contactpointsPg a form:PropertyGroup;
     # Field: ContactPunt openingsuren
     ##########################################################
     ext:contactPOpeningF a form:Field ;
-        sh:name "openingsuren" ;
+        sh:name "Openingsuren" ;
         sh:order 4 ;
         sh:path schema:openingHours ;
         form:displayType displayTypes:selectWithCreate ;
