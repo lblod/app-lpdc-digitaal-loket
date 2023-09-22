@@ -1,15 +1,21 @@
-import { test, expect, Page } from '@playwright/test';
-import { v4 as uuid } from 'uuid';
-import { LpdcHomePage } from "./pages/lpdc-home-page";
-import { MockLoginPage } from "./pages/mock-login-page";
-import { UJeModal } from './modals/u-je-modal';
-import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from './pages/product-of-dienst-toevoegen-page';
-import { first_row, second_row } from './components/table';
-import { ConceptDetailsPage as ConceptDetailsPage } from './pages/concept-details-page';
-import { InstantieDetailsPage } from './pages/instantie-details-page';
-import { WijzigingenBewarenModal } from './modals/wijzigingen-bewaren-modal';
-import { VerzendNaarVlaamseOverheidModal } from './modals/verzend-naar-vlaamse-overheid-modal';
-import { IpdcStub } from './components/ipdc-stub';
+import {test, expect, Page} from '@playwright/test';
+import {v4 as uuid} from 'uuid';
+import {LpdcHomePage} from "./pages/lpdc-home-page";
+import {MockLoginPage} from "./pages/mock-login-page";
+import {UJeModal} from './modals/u-je-modal';
+import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from './pages/product-of-dienst-toevoegen-page';
+import {first_row, second_row} from './components/table';
+import {ConceptDetailsPage as ConceptDetailsPage} from './pages/concept-details-page';
+import {InstantieDetailsPage} from './pages/instantie-details-page';
+import {WijzigingenBewarenModal} from './modals/wijzigingen-bewaren-modal';
+import {VerzendNaarVlaamseOverheidModal} from './modals/verzend-naar-vlaamse-overheid-modal';
+import {IpdcStub} from './components/ipdc-stub';
+
+const BestuurseenheidUri = {
+    pepingen: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
+    aarschot: "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522",
+    leuven: "http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77"
+}
 
 test.describe('Concept to Instance back to IPDC Flow', () => {
 
@@ -22,18 +28,16 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
 
-    test.beforeEach(async ({ browser }) => {
+    test.beforeEach(async ({browser}) => {
         page = await browser.newPage();
         mockLoginPage = MockLoginPage.createForLpdc(page);
         homePage = LpdcHomePage.create(page);
-        
+
         toevoegenPage = ProductOfDienstToevoegenPage.create(page);
         conceptDetailsPage = ConceptDetailsPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
-
-        
     });
 
     test.afterEach(async () => {
@@ -41,13 +45,13 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
     });
 
     test.describe('For unchosen formal/informal', () => {
-        
+
         test.beforeEach(async () => {
 
             await mockLoginPage.goto();
             await mockLoginPage.searchInput.fill('Pepingen');
             await mockLoginPage.login('Gemeente Pepingen');
-    
+
             await homePage.expectToBeVisible();
 
             const uJeModal = UJeModal.create(page);
@@ -61,9 +65,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         });
 
         test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully`, async () => {
-            await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('nl', 'nl-be-x-formal');
+            await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('nl', 'nl-be-x-formal', BestuurseenheidUri.pepingen);
         });
-            
+
     });
 
     test.describe('For chosen informal', () => {
@@ -73,12 +77,12 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             await mockLoginPage.goto();
             await mockLoginPage.searchInput.fill('Aarschot');
             await mockLoginPage.login('Gemeente Aarschot');
-    
+
             await homePage.expectToBeVisible();
 
             const uJeModal = UJeModal.create(page);
             const informalNotYetChosen = await uJeModal.isVisible();
-            if(informalNotYetChosen) {
+            if (informalNotYetChosen) {
                 await uJeModal.expectToBeVisible();
                 await uJeModal.mijnBestuurKiestVoorDeJeVormRadio.click();
                 await uJeModal.bevestigenButton.click();
@@ -91,20 +95,20 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         });
 
         test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully`, async () => {
-            await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('informal', 'nl-be-x-informal');
+            await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('informal', 'nl-be-x-informal', BestuurseenheidUri.aarschot);
         });
 
     });
 
-    const loadConceptOverviewFromLdesStream = async() => {
+    const loadConceptOverviewFromLdesStream = async () => {
         await homePage.productOfDienstToevoegenButton.click();
-    
+
         await toevoegenPage.expectToBeVisible();
         await expect(toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit')).toBeVisible();
         await expect(toevoegenPage.resultTable.row(second_row).link('Concept 1 edited')).toBeVisible();
     };
 
-    const createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully = async (formalInformalChoiceSuffix: string, expectedFormalOrInformalTripleLanguage) => {
+    const createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully = async (formalInformalChoiceSuffix: string, expectedFormalOrInformalTripleLanguage: string, bestuurseenheidUri: string) => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
@@ -127,7 +131,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(titelEngels).toEqual('Certificate of Belgian nationality');
         const newTitelEngels = titelEngels + uuid();
         await instantieDetailsPage.titelEngelsInput.fill(newTitelEngels);
- 
+
         const beschrijving = await instantieDetailsPage.beschrijvingEditor.textContent();
         expect(beschrijving).toEqual(`De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen. - ${formalInformalChoiceSuffix}`);
         const newBeschrijving = beschrijving + uuid();
@@ -396,47 +400,49 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(newTitel, expectedFormalOrInformalTripleLanguage);
         expect(instancePublishedInIpdc).toBeTruthy();
         verifyPublishedInstance(instancePublishedInIpdc, {
-            titel: newTitel,
-            titelEngels: newTitelEngels,
-            beschrijving: newBeschrijving,
-            beschrijvingEngels: newBeschrijvingEngels,
-            aanvullendeBeschrijving: newAanvullendeBeschrijving,
-            aanvullendeBeschrijvingEngels: newAanvullendeBeschrijvingEngels,
-            uitzonderingen: newUitzonderingen,
-            uitzonderingenEngels: newUitzonderingenEngels,
-            regelgeving: newBeschrijvingRegelgeving,
-            regelgevingEngels: newBeschrijvingRegelgevingEngels,
-            kostTitel: newTitelKost,
-            kostTitelEngels: newTitelKostEngels,
-            kostBeschrijving: newBeschrijvingKost,
-            kostBeschrijvingEngels: newBeschrijvingKostEngels,
-            bewijsTitel: newTitelBewijsstuk,
-            bewijsTitelEngels: newTitelBewijsstukEngels,
-            bewijsBeschrijving: newBeschrijvingBewijsstuk,
-            bewijsBeschrijvingEngels: newBeschrijvingBewijsstukEngels,
-            financieelVoordeelTitel: newTitelFinancieelVoordeel,
-            financieelVoordeelTitelEngels: newTitelFinancieelVoordeelEngels,
-            financieelVoordeelBeschrijving: newBeschrijvingFinancieelVoordeel,
-            financieelVoordeelBeschrijvingEngels: newBeschrijvingFinancieelVoordeelEngels,
-            voorwaardeTitel: newTitelVoorwaarde,
-            voorwaardeTitelEngels: newTitelVoorwaardeEngels,
-            voorwaardeBeschrijving: newBeschrijvingVoorwaarde,
-            voorwaardeBeschrijvingEngels: newBeschrijvingVoorwaardeEngels,
-            procedureTitel: newTitelProcedure,
-            procedureTitelEngels: newTitelProcedureEngels,
-            procedureBeschrijving: newBeschrijvingProcedure,
-            procedureBeschrijvingEngels: newBeschrijvingProcedureEngels,
-            procedureWebsiteTitel: newTitelWebsiteVoorProcedure,
-            procedureWebsiteTitelEngels: newTitelWebsiteVoorProcedureEngels,
-            procedureWebsiteBeschrijving: newBeschrijvingWebsiteVoorProcedure,
-            procedureWebsiteBeschrijvingEngels: newBeschrijvingWebsiteVoorProcedureEngels,
-            procedureWebsiteUrl: newWebsiteURLVoorProcedure,
-            websiteTitel: newTitelWebsite,
-            websiteTitelEngels: newTitelWebsiteEngels,
-            websiteBeschrijving: newBeschrijvingWebsite,
-            websiteBeschrijvingEngels: newBeschrijvingWebsiteEngels,
-            websiteUrl: newWebsiteURL
-        }, expectedFormalOrInformalTripleLanguage);
+                titel: newTitel,
+                titelEngels: newTitelEngels,
+                beschrijving: newBeschrijving,
+                beschrijvingEngels: newBeschrijvingEngels,
+                aanvullendeBeschrijving: newAanvullendeBeschrijving,
+                aanvullendeBeschrijvingEngels: newAanvullendeBeschrijvingEngels,
+                uitzonderingen: newUitzonderingen,
+                uitzonderingenEngels: newUitzonderingenEngels,
+                regelgeving: newBeschrijvingRegelgeving,
+                regelgevingEngels: newBeschrijvingRegelgevingEngels,
+                kostTitel: newTitelKost,
+                kostTitelEngels: newTitelKostEngels,
+                kostBeschrijving: newBeschrijvingKost,
+                kostBeschrijvingEngels: newBeschrijvingKostEngels,
+                bewijsTitel: newTitelBewijsstuk,
+                bewijsTitelEngels: newTitelBewijsstukEngels,
+                bewijsBeschrijving: newBeschrijvingBewijsstuk,
+                bewijsBeschrijvingEngels: newBeschrijvingBewijsstukEngels,
+                financieelVoordeelTitel: newTitelFinancieelVoordeel,
+                financieelVoordeelTitelEngels: newTitelFinancieelVoordeelEngels,
+                financieelVoordeelBeschrijving: newBeschrijvingFinancieelVoordeel,
+                financieelVoordeelBeschrijvingEngels: newBeschrijvingFinancieelVoordeelEngels,
+                voorwaardeTitel: newTitelVoorwaarde,
+                voorwaardeTitelEngels: newTitelVoorwaardeEngels,
+                voorwaardeBeschrijving: newBeschrijvingVoorwaarde,
+                voorwaardeBeschrijvingEngels: newBeschrijvingVoorwaardeEngels,
+                procedureTitel: newTitelProcedure,
+                procedureTitelEngels: newTitelProcedureEngels,
+                procedureBeschrijving: newBeschrijvingProcedure,
+                procedureBeschrijvingEngels: newBeschrijvingProcedureEngels,
+                procedureWebsiteTitel: newTitelWebsiteVoorProcedure,
+                procedureWebsiteTitelEngels: newTitelWebsiteVoorProcedureEngels,
+                procedureWebsiteBeschrijving: newBeschrijvingWebsiteVoorProcedure,
+                procedureWebsiteBeschrijvingEngels: newBeschrijvingWebsiteVoorProcedureEngels,
+                procedureWebsiteUrl: newWebsiteURLVoorProcedure,
+                websiteTitel: newTitelWebsite,
+                websiteTitelEngels: newTitelWebsiteEngels,
+                websiteBeschrijving: newBeschrijvingWebsite,
+                websiteBeschrijvingEngels: newBeschrijvingWebsiteEngels,
+                websiteUrl: newWebsiteURL
+            },
+            expectedFormalOrInformalTripleLanguage,
+            bestuurseenheidUri);
 
         await homePage.resultTable.row(first_row).link('Bekijk').click();
 
@@ -569,141 +575,148 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
     };
 
     function verifyPublishedInstance(instance: any[], {
-        titel,
-        titelEngels,
-        beschrijving,
-        beschrijvingEngels,
-        aanvullendeBeschrijving,
-        aanvullendeBeschrijvingEngels,
-        uitzonderingen,
-        uitzonderingenEngels,
-        regelgeving,
-        regelgevingEngels,
-        kostTitel,
-        kostTitelEngels,
-        kostBeschrijving,
-        kostBeschrijvingEngels,
-        bewijsTitel,
-        bewijsTitelEngels,
-        bewijsBeschrijving,
-        bewijsBeschrijvingEngels,
-        financieelVoordeelTitel,
-        financieelVoordeelTitelEngels,
-        financieelVoordeelBeschrijving,
-        financieelVoordeelBeschrijvingEngels,
-        voorwaardeTitel,
-        voorwaardeTitelEngels,
-        voorwaardeBeschrijving,
-        voorwaardeBeschrijvingEngels,
-        procedureTitel,
-        procedureTitelEngels,
-        procedureBeschrijving,
-        procedureBeschrijvingEngels,
-        procedureWebsiteTitel,
-        procedureWebsiteTitelEngels,
-        procedureWebsiteBeschrijving,
-        procedureWebsiteBeschrijvingEngels,
-        procedureWebsiteUrl,
-        websiteTitel,
-        websiteTitelEngels,
-        websiteBeschrijving,
-        websiteBeschrijvingEngels,
-        websiteUrl }, 
-        expectedFormalOrInformalTripleLanguage: string) {
+                                         titel,
+                                         titelEngels,
+                                         beschrijving,
+                                         beschrijvingEngels,
+                                         aanvullendeBeschrijving,
+                                         aanvullendeBeschrijvingEngels,
+                                         uitzonderingen,
+                                         uitzonderingenEngels,
+                                         regelgeving,
+                                         regelgevingEngels,
+                                         kostTitel,
+                                         kostTitelEngels,
+                                         kostBeschrijving,
+                                         kostBeschrijvingEngels,
+                                         bewijsTitel,
+                                         bewijsTitelEngels,
+                                         bewijsBeschrijving,
+                                         bewijsBeschrijvingEngels,
+                                         financieelVoordeelTitel,
+                                         financieelVoordeelTitelEngels,
+                                         financieelVoordeelBeschrijving,
+                                         financieelVoordeelBeschrijvingEngels,
+                                         voorwaardeTitel,
+                                         voorwaardeTitelEngels,
+                                         voorwaardeBeschrijving,
+                                         voorwaardeBeschrijvingEngels,
+                                         procedureTitel,
+                                         procedureTitelEngels,
+                                         procedureBeschrijving,
+                                         procedureBeschrijvingEngels,
+                                         procedureWebsiteTitel,
+                                         procedureWebsiteTitelEngels,
+                                         procedureWebsiteBeschrijving,
+                                         procedureWebsiteBeschrijvingEngels,
+                                         procedureWebsiteUrl,
+                                         websiteTitel,
+                                         websiteTitelEngels,
+                                         websiteBeschrijving,
+                                         websiteBeschrijvingEngels,
+                                         websiteUrl
+                                     },
+                                     expectedFormalOrInformalTripleLanguage: string,
+                                     bestuurseenheidUri: string) {
         // PUBLIC SERVICE
         const publicService = IpdcStub.getObjectByType(instance, 'http://purl.org/vocab/cpsv#PublicService');
 
         expect(publicService['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(publicService['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": titel },
-            { "@language": "en", "@value": titelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": titel},
+            {"@language": "en", "@value": titelEngels}
         ]));
 
         expect(publicService['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(publicService['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${beschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${beschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${beschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${beschrijvingEngels}</p>`}
         ]));
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${aanvullendeBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${aanvullendeBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${aanvullendeBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${aanvullendeBeschrijvingEngels}</p>`}
         ]));
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${uitzonderingen}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${uitzonderingenEngels}</p>` }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${uitzonderingen}</p>`},
+            {"@language": "en", "@value": `<p data-indentation-level="0">${uitzonderingenEngels}</p>`}
         ]));
 
         expect(publicService['http://data.europa.eu/m8g/thematicArea']).toHaveLength(2);
         expect(publicService['http://data.europa.eu/m8g/thematicArea']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/EconomieWerk" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie"},
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/EconomieWerk"}
         ]));
 
         expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(2);
         expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
-            { "@id": "http://vocab.belgif.be/auth/refnis2019/24086" },
-            { "@id": "http://vocab.belgif.be/auth/refnis2019/23064" }
+            {"@id": "http://vocab.belgif.be/auth/refnis2019/24086"},
+            {"@id": "http://vocab.belgif.be/auth/refnis2019/23064"}
         ]));
 
         expect(publicService['http://purl.org/dc/terms/type']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/type']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal"}
         ]));
 
         expect(publicService['http://schema.org/startDate']).toHaveLength(1);
         expect(publicService['http://schema.org/startDate']).toEqual(expect.arrayContaining([
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2019-04-13T00:00:00Z" }
+            {"@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2019-04-13T00:00:00Z"}
         ]));
 
         expect(publicService['http://schema.org/endDate']).toHaveLength(1);
         expect(publicService['http://schema.org/endDate']).toEqual(expect.arrayContaining([
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2026-11-27T00:00:00Z" }
+            {"@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2026-11-27T00:00:00Z"}
         ]));
 
         expect(publicService['http://www.w3.org/ns/dcat#keyword']).toHaveLength(3);
         expect(publicService['http://www.w3.org/ns/dcat#keyword']).toEqual(expect.arrayContaining([
-            { "@language": "nl", "@value": "Akte - nl" },
-            { "@language": "nl", "@value": "Nationaliteit - nl" },
-            { "@language": "nl", "@value": "een-nieuwe-tag" }
+            {"@language": "nl", "@value": "Akte - nl"},
+            {"@language": "nl", "@value": "Nationaliteit - nl"},
+            {"@language": "nl", "@value": "een-nieuwe-tag"}
         ]));
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams"},
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal"}
         ]));
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Federaal" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Federaal"},
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal"}
         ]));
 
         expect(publicService['http://data.europa.eu/m8g/hasCompetentAuthority']).toHaveLength(2);
         expect(publicService['http://data.europa.eu/m8g/hasCompetentAuthority']).toEqual(expect.arrayContaining([
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589" },
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4" }
+            {"@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"},
+            {"@id": "http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4"}
         ]));
 
-        //TODO LPDC-680 uncomment + fix for informal ... 
-       /* expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority']).toHaveLength(1);
+        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority']).toHaveLength(1);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority']).toEqual(expect.arrayContaining([
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589" }
-        ]));*/
+            {"@id": bestuurseenheidUri}
+        ]));
 
         expect(publicService['http://purl.org/dc/terms/source']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/source'][0]).toEqual(
-            { "@id": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84" }
+            {"@id": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84"}
         );
 
         //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://schema.org/productID']).toHaveLength(1);
         expect(publicService['http://schema.org/productID']).toEqual(expect.arrayContaining([
-            { "@value": "1502" }
+            {"@value": "1502"}
         ]));
 
         expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
@@ -711,57 +724,59 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(expect.objectContaining(
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+            {"@type": "http://www.w3.org/2001/XMLSchema#dateTime"}
         ));
 
         //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(expect.objectContaining(
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+            {"@type": "http://www.w3.org/2001/XMLSchema#dateTime"}
         ));
 
         //TODO LPDC-709 This should not be send to IPDC
-        //TODO LPDC-680 uncomment + fix for informal ... 
-        /*expect(publicService['http://purl.org/pav/createdBy']).toHaveLength(1);
+        expect(publicService['http://purl.org/pav/createdBy']).toHaveLength(1);
         expect(publicService['http://purl.org/pav/createdBy'][0]).toEqual(
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589" }
-        );*/
+            {"@id": bestuurseenheidUri}
+        );
 
         //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://www.w3.org/ns/adms#status']).toHaveLength(1);
         expect(publicService['http://www.w3.org/ns/adms#status'][0]).toEqual(
-            { "@id": 'http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c' }
+            {"@id": 'http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c'}
         );
 
         //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag']).toHaveLength(1);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag'][0]).toEqual(
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht"}
         );
 
         //TODO LPDC-698 verify Language is send to IPDC
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium']).toHaveLength(1);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium'][0]).toEqual(
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope"}
         );
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${regelgeving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${regelgevingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${regelgeving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${regelgevingEngels}</p>`}
         ]));
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Organisatie" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging"},
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Organisatie"}
         ]));
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgMedischeBehandeling" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen" }
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgMedischeBehandeling"},
+            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen"}
         ]));
 
         expect(publicService['http://data.europa.eu/m8g/hasCost']).toHaveLength(1);
@@ -784,14 +799,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(cost['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(cost['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": kostTitel },
-            { "@language": "en", "@value": kostTitelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": kostTitel},
+            {"@language": "en", "@value": kostTitelEngels}
         ]));
 
         expect(cost['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(cost['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${kostBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${kostBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${kostBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${kostBeschrijvingEngels}</p>`}
         ]));
 
         // REQUIREMENT
@@ -799,14 +817,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(voorwaarde['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(voorwaarde['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": voorwaardeTitel },
-            { "@language": "en", "@value": voorwaardeTitelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": voorwaardeTitel},
+            {"@language": "en", "@value": voorwaardeTitelEngels}
         ]));
 
         expect(voorwaarde['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(voorwaarde['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${voorwaardeBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${voorwaardeBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${voorwaardeBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${voorwaardeBeschrijvingEngels}</p>`}
         ]));
 
         expect(voorwaarde['http://data.europa.eu/m8g/hasSupportingEvidence']).toHaveLength(1);
@@ -817,14 +838,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(evidence['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(evidence['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": bewijsTitel },
-            { "@language": "en", "@value": bewijsTitelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": bewijsTitel},
+            {"@language": "en", "@value": bewijsTitelEngels}
         ]));
 
         expect(evidence['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(evidence['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${bewijsBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${bewijsBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${bewijsBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${bewijsBeschrijvingEngels}</p>`}
         ]));
 
         // FINANCIAL ADVANTAGE
@@ -832,14 +856,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(financialAdvantage['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(financialAdvantage['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": financieelVoordeelTitel },
-            { "@language": "en", "@value": financieelVoordeelTitelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": financieelVoordeelTitel},
+            {"@language": "en", "@value": financieelVoordeelTitelEngels}
         ]));
 
         expect(financialAdvantage['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(financialAdvantage['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${financieelVoordeelBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${financieelVoordeelBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${financieelVoordeelBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${financieelVoordeelBeschrijvingEngels}</p>`}
         ]));
 
         // PROCEDURE
@@ -847,15 +874,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(procedure['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(procedure['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": procedureTitel },
-            { "@language": "en", "@value": procedureTitelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": procedureTitel},
+            {"@language": "en", "@value": procedureTitelEngels}
         ]));
 
-        // TODO: character worden escaped
         expect(procedure['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(procedure['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${procedureBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${procedureBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${procedureBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${procedureBeschrijvingEngels}</p>`}
         ]));
 
         expect(procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites']).toHaveLength(1);
@@ -866,14 +895,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(procedureWebsite['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(procedureWebsite['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": procedureWebsiteTitel },
-            { "@language": "en", "@value": procedureWebsiteTitelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": procedureWebsiteTitel},
+            {"@language": "en", "@value": procedureWebsiteTitelEngels}
         ]));
 
         expect(procedureWebsite['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(procedureWebsite['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijvingEngels}</p>`}
         ]));
 
         //TODO LPDC-689: uncomment when bug LPDC-689 is fixed
@@ -886,14 +918,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(website['http://purl.org/dc/terms/title']).toHaveLength(2);
         expect(website['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": websiteTitel },
-            { "@language": "en", "@value": websiteTitelEngels }
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": websiteTitel},
+            {"@language": "en", "@value": websiteTitelEngels}
         ]));
 
         expect(website['http://purl.org/dc/terms/description']).toHaveLength(2);
         expect(website['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": `<p data-indentation-level="0">${websiteBeschrijving}</p>` },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${websiteBeschrijvingEngels}</p>` }
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${websiteBeschrijving}</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${websiteBeschrijvingEngels}</p>`}
         ]));
 
         //TODO LPDC-689: uncomment when bug LPDC-689 is fixed
