@@ -1,5 +1,5 @@
-import { APIRequest, request } from "@playwright/test";
-import { ipdcStubUrl } from "../../test-api/test-helpers/test-options";
+import {expect, request} from "@playwright/test";
+import {ipdcStubUrl} from "../../test-api/test-helpers/test-options";
 
 export class IpdcStub {
 
@@ -43,10 +43,21 @@ export class IpdcStub {
         }
     }
 
+    static getObjectByType(instance: any[], type: string): any[] {
+        const object = instance.filter(object => object['@type'][0] === type);
+        expect(object).toHaveLength(1);
+        return object[0];
+    }
+
+    static getObjectById(instance: any[], id: string) {
+        const object = instance.filter(object => object['@id'] === id);
+        expect(object).toHaveLength(1);
+        return object[0];
+    }
+
     private static delay(milliseconds) {
         return new Promise(resolve => {
             setTimeout(resolve, milliseconds);
         });
     }
-
 }
