@@ -2,6 +2,7 @@ import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
 import { MultiSelect } from "../components/multi-select";
 import { Select } from "../components/select";
+import {SelectWithCreate} from "../components/select-with-create";
 
 export class InstantieDetailsPage extends AbstractPage {
 
@@ -78,6 +79,17 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingRegelgevingReadonly: Locator;
     readonly beschrijvingRegelgevingEngelsEditor: Locator;
     readonly beschrijvingRegelgevingEngelsReadonly: Locator;
+
+    readonly voegContactpuntToeButton: Locator;
+    readonly contactpuntHeading: Locator;
+    readonly contactpuntEmailSelect: SelectWithCreate;
+    readonly contactpuntEmailReadonly: Locator;
+    readonly contactpuntTelefoonSelect: SelectWithCreate;
+    readonly contactpuntTelefoonReadonly: Locator;
+    readonly contactpuntWebsiteURLSelect: SelectWithCreate;
+    readonly contactpuntWebsiteURLReadonly: Locator;
+    readonly contactpuntOpeningsurenSelect: SelectWithCreate;
+    readonly contactpuntOpeningsurenReadonly: Locator;
 
     readonly titelWebsiteInput: Locator;
     readonly titelWebsiteEngelsInput: Locator;
@@ -182,6 +194,17 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevingEngelsEditor = this.editorRightOf('Regelgeving');
         this.beschrijvingRegelgevingEngelsReadonly = this.readonlyRightOf('Regelgeving');
 
+        this.voegContactpuntToeButton = page.getByRole('button', { name: 'Voeg contactpunt toe' });
+        this.contactpuntHeading = page.getByRole('heading', { name: 'Contactpunt', exact: true });
+        this.contactpuntEmailSelect = new SelectWithCreate(page, 'Email');
+        this.contactpuntEmailReadonly = page.locator(`input:below(label:text-is('Email'):below(h2:text-is('Contactpunt')))`).first();
+        this.contactpuntTelefoonSelect = new SelectWithCreate(page, 'Telefoon');
+        this.contactpuntTelefoonReadonly = page.locator(`input:below(label:text-is('Telefoon'):below(h2:text-is('Contactpunt')))`).first();
+        this.contactpuntWebsiteURLSelect = new SelectWithCreate(page, 'Website URL');
+        this.contactpuntWebsiteURLReadonly = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Contactpunt')))`).first();
+        this.contactpuntOpeningsurenSelect = new SelectWithCreate(page, 'openingsuren');
+        this.contactpuntOpeningsurenReadonly = page.locator(`input:below(label:text-is('openingsuren'):below(h2:text-is('Contactpunt')))`).first();
+
         this.titelWebsiteInput = page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
         this.titelWebsiteEngelsInput = page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
         this.beschrijvingWebsiteEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
@@ -231,7 +254,7 @@ export class InstantieDetailsPage extends AbstractPage {
     }
 
     private readonlyBelow(label: string): Locator {
-        return this.page.locator(`div.rich-text-editor-content:below(label:text-is('${label}'))`).first();;
+        return this.page.locator(`div.rich-text-editor-content:below(label:text-is('${label}'))`).first();
     }
 
     private editorRightOf(label: string): Locator {
@@ -239,7 +262,7 @@ export class InstantieDetailsPage extends AbstractPage {
     }
 
     private readonlyRightOf(label: string): Locator {
-        return this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('${label}'))`).first();;
+        return this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('${label}'))`).first();
     }
 
 }

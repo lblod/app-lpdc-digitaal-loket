@@ -222,6 +222,29 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingRegelgevingEngels = beschrijvingRegelgevingEngels + uuid();
         await instantieDetailsPage.beschrijvingRegelgevingEngelsEditor.fill(newBeschrijvingRegelgevingEngels);
 
+        await instantieDetailsPage.voegContactpuntToeButton.click();
+        await expect(instantieDetailsPage.contactpuntHeading).toBeVisible();
+        await instantieDetailsPage.contactpuntEmailSelect.insertNewValue('1111@example.com');
+        await instantieDetailsPage.contactpuntEmailSelect.insertNewValue('2222@example.com');
+        await instantieDetailsPage.contactpuntEmailSelect.selectValue('1111@example.com');
+        const selectedContactpuntEmail = (await instantieDetailsPage.contactpuntEmailSelect.selectedItem.textContent());
+        expect(selectedContactpuntEmail).toContain('1111@example.com');
+        await instantieDetailsPage.contactpuntTelefoonSelect.insertNewValue('111111111');
+        await instantieDetailsPage.contactpuntTelefoonSelect.insertNewValue('222222222');
+        await instantieDetailsPage.contactpuntTelefoonSelect.selectValue('111111111');
+        const selectedContactpuntTelefoon = (await instantieDetailsPage.contactpuntTelefoonSelect.selectedItem.textContent());
+        expect(selectedContactpuntTelefoon).toContain('111111111');
+        await instantieDetailsPage.contactpuntWebsiteURLSelect.insertNewValue('https://www.example1.com');
+        await instantieDetailsPage.contactpuntWebsiteURLSelect.insertNewValue('https://www.example2.com');
+        await instantieDetailsPage.contactpuntWebsiteURLSelect.selectValue('https://www.example1.com');
+        const selectedContactpuntWebsiteURL = (await instantieDetailsPage.contactpuntWebsiteURLSelect.selectedItem.textContent());
+        expect(selectedContactpuntWebsiteURL).toContain('https://www.example1.com');
+        await instantieDetailsPage.contactpuntOpeningsurenSelect.insertNewValue('https://www.example1.com/openinghours');
+        await instantieDetailsPage.contactpuntOpeningsurenSelect.insertNewValue('https://www.example2.com/openinghours');
+        await instantieDetailsPage.contactpuntOpeningsurenSelect.selectValue('https://www.example1.com/openinghours');
+        const selectedContactpuntOpeningsuren = (await instantieDetailsPage.contactpuntOpeningsurenSelect.selectedItem.textContent());
+        expect(selectedContactpuntOpeningsuren).toContain('https://www.example1.com/openinghours');
+
         const titelWebsite = await instantieDetailsPage.titelWebsiteInput.inputValue();
         expect(titelWebsite).toEqual('Website Belgische nationaliteit en naturalisatie - nl');
         const newTitelWebsite = titelWebsite + uuid();
@@ -455,6 +478,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(await instantieDetailsPage.beschrijvingRegelgevingReadonly.textContent()).toContain(newBeschrijvingRegelgeving);
         await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly.textContent()).toContain(newBeschrijvingRegelgevingEngels);
+
+        await expect(instantieDetailsPage.contactpuntEmailReadonly).toHaveValue('1111@example.com');
+        await expect(instantieDetailsPage.contactpuntTelefoonReadonly).toHaveValue('111111111');
+        await expect(instantieDetailsPage.contactpuntWebsiteURLReadonly).toHaveValue('https://www.example1.com');
+        await expect(instantieDetailsPage.contactpuntOpeningsurenReadonly).toHaveValue('https://www.example1.com/openinghours');
 
         await expect(instantieDetailsPage.titelWebsiteInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelWebsiteInput).toHaveValue(newTitelWebsite);
