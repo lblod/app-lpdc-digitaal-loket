@@ -574,8 +574,6 @@ test('Create instance from concept: When concept contains english language then 
     expect(publicService.findObjects(Predicates.description)).toContainEqual(new Literal('description', Language.EN));
 });
 
-// TODO: find out what spacial means
-
 async function createForm(conceptUUID: string, request: APIRequestContext) {
     const cookie = await loginAsPepingen(request);
     const response = await request.post(`${dispatcherUrl}/public-services`, {

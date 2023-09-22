@@ -6,7 +6,7 @@ export class IpdcStub {
     constructor() {
     }
 
-    static async findPublishedInstance(titel: string) {
+    static async findPublishedInstance(titel: string, expectedFormalOrInformalTripleLanguage: string) {
         const apiRequest = await request.newContext({
             extraHTTPHeaders: {
                 'Accept': 'application/ld+json',
@@ -23,7 +23,7 @@ export class IpdcStub {
                     return ipdcPublish.find((element) => {
                         return element['@type'].includes('http://purl.org/vocab/cpsv#PublicService')
                             && element['http://purl.org/dc/terms/title'].some((translatedValue) =>
-                                translatedValue['@language'] === 'nl-be-x-formal'
+                                translatedValue['@language'] === expectedFormalOrInformalTripleLanguage
                                 && translatedValue['@value'] === titel)
                     })
                 });
