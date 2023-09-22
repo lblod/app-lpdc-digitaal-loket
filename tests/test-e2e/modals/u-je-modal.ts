@@ -4,6 +4,7 @@ import { Locator, Page } from '@playwright/test';
 export class UJeModal extends AbstractModal {
 
     readonly mijnBestuurKiestVoorDeJeVormRadio: Locator;
+    readonly mijnBestuurKiestVoorDeUVormRadio: Locator;
     readonly laterKiezenButton: Locator;
     readonly bevestigenButton: Locator;
 
@@ -11,6 +12,7 @@ export class UJeModal extends AbstractModal {
         super(page, 'Kiest jouw lokaal bestuur voor "je" of voor "u"?');
 
         this.mijnBestuurKiestVoorDeJeVormRadio = page.getByText('Mijn bestuur kiest voor de "je"-vorm');
+        this.mijnBestuurKiestVoorDeUVormRadio = page.getByText('Mijn bestuur kiest voor de "u"-vorm');
         this.laterKiezenButton = page.getByRole('button', { name: 'Later kiezen' });
         this.bevestigenButton = page.getByRole('button', { name: 'Bevestigen' });
     }

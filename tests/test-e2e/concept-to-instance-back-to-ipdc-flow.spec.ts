@@ -100,6 +100,36 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
     });
 
+    test.describe('For chosen formal', () => {
+
+        test.beforeEach(async () => {
+
+            await mockLoginPage.goto();
+            await mockLoginPage.searchInput.fill('Leuven');
+            await mockLoginPage.login('Gemeente Leuven');
+
+            await homePage.expectToBeVisible();
+
+            const uJeModal = UJeModal.create(page);
+            const informalNotYetChosen = await uJeModal.isVisible();
+            if (informalNotYetChosen) {
+                await uJeModal.expectToBeVisible();
+                await uJeModal.mijnBestuurKiestVoorDeUVormRadio.click();
+                await uJeModal.bevestigenButton.click();
+                await uJeModal.expectToBeClosed();
+            }
+        });
+
+        test('Load concept overview from ldes-stream', async () => {
+            await loadConceptOverviewFromLdesStream();
+        });
+
+        test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully`, async () => {
+            await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('nl', 'nl-be-x-formal', BestuurseenheidUri.leuven);
+        });
+
+    });
+
     const loadConceptOverviewFromLdesStream = async () => {
         await homePage.productOfDienstToevoegenButton.click();
 
