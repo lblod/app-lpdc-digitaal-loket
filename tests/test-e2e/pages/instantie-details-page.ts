@@ -202,8 +202,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.contactpuntTelefoonReadonly = page.locator(`input:below(label:text-is('Telefoon'):below(h2:text-is('Contactpunt')))`).first();
         this.contactpuntWebsiteURLSelect = new SelectWithCreate(page, 'Website URL');
         this.contactpuntWebsiteURLReadonly = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Contactpunt')))`).first();
-        this.contactpuntOpeningsurenSelect = new SelectWithCreate(page, 'openingsuren');
-        this.contactpuntOpeningsurenReadonly = page.locator(`input:below(label:text-is('openingsuren'):below(h2:text-is('Contactpunt')))`).first();
+        this.contactpuntOpeningsurenSelect = new SelectWithCreate(page, 'Openingsuren');
+        this.contactpuntOpeningsurenReadonly = page.locator(`input:below(label:text-is('Openingsuren'):below(h2:text-is('Contactpunt')))`).first();
 
         this.titelWebsiteInput = page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
         this.titelWebsiteEngelsInput = page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
