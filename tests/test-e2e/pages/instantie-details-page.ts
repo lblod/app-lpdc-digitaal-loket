@@ -117,6 +117,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly categorieenYourEuropeMultiSelect: MultiSelect;
 
     readonly verzendNaarVlaamseOverheidButton: Locator;
+    readonly terugNaarHetOverzichtButton: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -139,7 +140,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.aanvullendeBeschrijvingEditor = this.editorBelow('Aanvullende Beschrijving');
         this.aanvullendeBeschrijvingEngelsEditor = this.editorRightOf('Aanvullende Beschrijving');
         this.aanvullendeBeschrijvingReadonly = this.readonlyBelow('Aanvullende Beschrijving');
-        this.aanvullendeBeschrijvingEngelsReadonly = this.readonlyRightOf('Aanvullende Beschrijving');;
+        this.aanvullendeBeschrijvingEngelsReadonly = this.readonlyRightOf('Aanvullende Beschrijving');
 
         this.uitzonderingenEditor = this.editorBelow('Uitzonderingen');
         this.uitzonderingenEngelsEditor = this.editorRightOf('Uitzonderingen');
@@ -231,6 +232,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.categorieenYourEuropeMultiSelect = new MultiSelect(page, "Categorieën Your Europe");
 
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
+        this.terugNaarHetOverzichtButton = page.getByRole('link', {name: 'Terug naar het overzicht'});
     }
 
     static create(page: Page): InstantieDetailsPage {

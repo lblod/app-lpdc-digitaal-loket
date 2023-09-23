@@ -19,6 +19,12 @@ export class SelectWithCreate {
         await this.option(text).click();
     }
 
+    async searchValue(text: string): Promise<string> {
+        await this.selectDiv.click();
+        await this.page.keyboard.type(text);
+        return this.option(text).last().innerText();
+    }
+
     async insertNewValue(text: string) {
         await this.selectDiv.click();
         await this.page.keyboard.type(text);
