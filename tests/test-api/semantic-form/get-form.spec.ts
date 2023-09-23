@@ -10,6 +10,8 @@ import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/forma
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {TestDataFactory} from "../test-helpers/test-data-factory";
 import {PublicationMedium} from "../test-helpers/codelists";
+import {ContactPointTestBuilder} from "../test-helpers/contact-point-test.builder";
+import {AddressTestBuilder} from "../test-helpers/address.test-builder";
 
 const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
 const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
@@ -197,6 +199,34 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
         expect(responseBody.form).toStrictEqual(expectedForm);
     });
 }
+
+test('When getting instance with fields that can only contain NL language version then form should be loaded in chosenVersion', async ({request}) => {
+    const cookie = await loginAsPepingen(request);
+
+    const address = await AddressTestBuilder.anAddress()
+        .withLand('Belgie')
+        .withGemeente('Pepingen')
+        .withStraat('dorpstraat')
+        .buildAndPersist(request, pepingenId);
+
+    const contactPoint = await ContactPointTestBuilder.aContactPoint()
+        .withAddress(address.getSubject())
+        .buildAndPersist(request, pepingenId);
+
+    const publicService = await PublicServiceTestBuilder.aPublicService()
+        .withNoTitle()
+        .withNoDescription()
+        .withKeywords(['test'])
+        .withContactPoint(contactPoint.getSubject())
+        .buildAndPersist(request, pepingenId);
+
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    expect(response.ok()).toBeTruthy();
+
+    const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
+    const responseBody = await response.json();
+    expect(responseBody.form).toStrictEqual(expectedForm);
+});
 
 function parseToSortedTripleArray(source: string, split = '\r\n') {
     return source

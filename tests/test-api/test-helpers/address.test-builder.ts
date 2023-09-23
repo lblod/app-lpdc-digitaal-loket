@@ -2,6 +2,7 @@ import {v4 as uuid} from 'uuid';
 import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import {APIRequestContext} from "@playwright/test";
 import {insertTriples} from "./sparql";
+import {Language} from "./language";
 
 export const AddressType = 'http://www.w3.org/ns/location#Address';
 
@@ -47,7 +48,7 @@ export class AddressTestBuilder {
     }
 
     withStraat(straat: string) {
-        this.straat = new Literal(straat);
+        this.straat = new Literal(straat, Language.NL);
         return this;
     }
 
@@ -62,7 +63,7 @@ export class AddressTestBuilder {
     }
 
     withGemeente(gemeente: string) {
-        this.gemeente = new Literal(gemeente);
+        this.gemeente = new Literal(gemeente, Language.NL);
         return this;
     }
 
@@ -72,7 +73,7 @@ export class AddressTestBuilder {
     }
 
     withLand(land: string) {
-        this.land = new Literal(land);
+        this.land = new Literal(land, Language.NL);
         return this;
     }
 
