@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.3.2
+    image: lblod/frontend-lpdc:0.4.0
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific.
@@ -180,7 +180,7 @@ services:
   # LPDC-specific Services
   ################################################################################
   lpdc-management:
-    image: lblod/lpdc-management-service:0.27.1
+    image: lblod/lpdc-management-service:0.28.0
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
@@ -194,7 +194,7 @@ services:
       - "logging=true"
 
   lpdc-publish:
-    image: lblod/lpdc-publish-service:0.8.0
+    image: lblod/lpdc-publish-service:0.9.1
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
