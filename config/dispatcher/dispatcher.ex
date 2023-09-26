@@ -61,6 +61,10 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/contact-info-options/"
   end
 
+  match "/lpdc-management/address/*path" do
+    forward conn, path, "http://lpdc-management/address/"
+  end
+
   get "/lpdc-management/*path" do
     forward conn, path, "http://lpdc-management/semantic-forms/"
   end
