@@ -17,6 +17,7 @@ services:
       EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
       EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/authorization/callback"
       EMBER_ACMIDM_SWITCH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/switch-login"
+      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
     networks:
       - proxy
       - default

@@ -220,6 +220,8 @@ services:
 
   lpdc-management:
     image: lblod/lpdc-management-service:latest
+    environment:
+      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 
   lpdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
@@ -311,7 +313,11 @@ services:
     image: lblod/loket-report-generation-service:0.6.3-arm64-build
 
   file:
-    image: cecemel/file-service:3.3.0-arm64-build    
+    image: cecemel/file-service:3.3.0-arm64-build
+  
+  lpdc-management:
+    environment:
+      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 ```
 
 Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content when running mac arm64
@@ -349,6 +355,8 @@ services:
 
   lpdc-management:
     image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
+    environment:
+      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 
   lpdc-publish:
     image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build

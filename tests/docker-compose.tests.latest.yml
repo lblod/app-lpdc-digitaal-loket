@@ -13,6 +13,7 @@ services:
       DEBUG_AUTH_HEADERS: "false"
       ENABLE_CONCEPT_MODIFICATION_FLAG_UPDATE: "false"
       QUEUE_POLL_INTERVAL: 1000
+      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
     volumes:
       - ../config/lpdc-management:/config
       - ./data-tests/files/lpdc:/data
