@@ -1,4 +1,4 @@
-# DEV - TST - ACC
+# DEV - TEST - ACC
 
 Docker container technology is used. 
 

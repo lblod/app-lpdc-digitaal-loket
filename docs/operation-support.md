@@ -4,7 +4,7 @@ On the installed servers, _drc_ is used as an alias for _docker compose_
 
 # Logs
 
-## dev tst acc
+## dev test acc
 
 **http traffic**
 

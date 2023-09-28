@@ -104,14 +104,14 @@ If needed, we first make a new release of these containers (instructions to be f
 
 # Deploying a release
 
-## Tst
+## Test
 
-On tst we always deploy a released version.
+On test we always deploy a released version.
 
 ```shell
   ssh root@lpdc-dev.s.redhost.be
 
-  cd /data/app-lpdc-digitaal-loket-tst
+  cd /data/app-lpdc-digitaal-loket-test
   
   drc down
 
