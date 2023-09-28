@@ -4,41 +4,31 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0
 
-######################
-# START: DASHBOARD
-######################
   dashboard:
     environment:
       VIRTUAL_HOST: "acc.dashboard.lpdc.lpdc-dev.s.redhost.be"
       LETSENCRYPT_HOST: "acc.dashboard.lpdc.lpdc-dev.s.redhost.be"
       LETSENCRYPT_EMAIL: "info@redpencil.io"
+    #############################
+    # Basic auth config.
+    #############################
     volumes:
       - ./config/basic-auth:/etc/nginx/conf.d
     networks:
       - proxy
       - default
-######################
-# END: DASHBOARD
-######################
-
-  virtuoso:
-    volumes:
-      - ./config/virtuoso/virtuoso.ini:/data/virtuoso.ini
-      - /data/export-and-import-lpdc-data/production_ttl_files:/tmp/lpdc-production-ttl-files
-      - /data/export-and-import-lpdc-data/import-lpdc-production-data.sh:/tmp/import-lpdc-production-data.sh
 
   lpdc:
     environment:
       VIRTUAL_HOST: "acc.lpdc-dev.s.redhost.be,acc.lpdc.lokaalbestuur.lblod.info"
       LETSENCRYPT_HOST: "acc.lpdc-dev.s.redhost.be,acc.lpdc.lokaalbestuur.lblod.info"
       LETSENCRYPT_EMAIL: "info@redpencil.io"
-      EMBER_LOKET_URL: "" # TODO: figure out what you want for this.
+      EMBER_LOKET_URL: "https://loket.lblod.info/"
       EMBER_ACMIDM_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
       EMBER_ACMIDM_AUTH_URL: "https://authenticatie.vlaanderen.be/op/v1/auth"
       EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie.vlaanderen.be/op/v1/logout"
       EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://acc.lpdc.lokaalbestuur.lblod.info/authorization/callback"
       EMBER_ACMIDM_SWITCH_REDIRECT_URL: "https://acc.lpdc.lokaalbestuur.lblod.info/switch-login"
-      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
     #############################
     # Basic auth config.
     #############################
@@ -50,31 +40,19 @@ services:
 
   login:
     environment:
-      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
-      LOG_SINK_URL: "http://sink"
       MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie.vlaanderen.be/op"
       MU_APPLICATION_AUTH_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
       MU_APPLICATION_AUTH_REDIRECT_URI: "https://acc.lpdc.lokaalbestuur.lblod.info/authorization/callback"
       MU_APPLICATION_AUTH_CLIENT_SECRET: "<ACMIDM_AUTH_CLIENT_SECRET>"
 
   lpdc-publish:
-    environment:
-      CRON_PATTERN: "*/5 * * * *"
-      IPDC_JSON_ENDPOINT: "https://ipdc.tni-vlaanderen.be/api/abb/instanties"
-      IPDC_X_API_KEY: "<IPDC_API_KEY>"
-    entrypoint: ["echo", "Service-disabled since not sure where I should be pointed to."]
+    entrypoint: ["echo", "Service-disabled since production data cannot be connected to test ipdc environment"]
     restart: "no"
 
   lpdc-ldes-consumer:
-    environment:
-      #CRON_PATTERN: "*/5 * * * *"
-      CRON_PATTERN: "0 * * * *"
-      #CRON_PATTERN: "30 14 * * *"
-      LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC_API_KEY>"
-      SUDO_QUERY_RETRY: "true"
-      SUDO_QUERY_RETRY_FOR_HTTP_STATUS_CODES: "400,500"
-      LOG_SPARQL_ALL: "true"
-      SPARQL_BATCH_SIZE: 10
+    entrypoint: ["echo", "Service-disabled since production data cannot be connected to test ipdc environment"]
+    restart: "no"
+
 networks:
   proxy:
     external:
