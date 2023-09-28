@@ -100,3 +100,83 @@ test(`find street for unknown municipality`, async ({request}) => {
     const actual = await response.json();
     expect(actual).toEqual([]);
 });
+
+test(`validate address for correct address`, async ({request}) => {
+
+    const params = {municipality: 'Aarschot', street: 'Ten Drossaarde', houseNumber: '1'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+    const actual = await response.json();
+    expect(actual).toEqual({ volledigAdres: "Ten Drossaarde 1, 3200 Aarschot" });
+});
+
+test(`validate address for invalid address`, async ({request}) => {
+
+    const params = {municipality: 'Aarschot', street: 'Ten Drossaarde', houseNumber: '1', busNumber: '1'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+    const actual = await response.json();
+    expect(actual).toEqual({ volledigAdres: undefined });
+});
+
+test(`validate address for invalid address where letter of houseNumber in put in busNumber field`, async ({request}) => {
+
+    const params = {municipality: 'Torhout', street: 'Aartrijkestraat', houseNumber: '11', busNumber: 'B'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+    const actual = await response.json();
+    expect(actual).toEqual({ volledigAdres: undefined });
+});
+
+test(`validate address for invalid address where houseNumber contains '/'`, async ({request}) => {
+
+    const params = {municipality: 'Torhout', street: 'Aartrijkestraat', houseNumber: '11/B'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+    const actual = await response.json();
+    expect(actual).toEqual({ volledigAdres: undefined });
+});
+
+test(`validate address for address where letter of number is correctly put in houseNumber field`, async ({request}) => {
+
+    const params = {municipality: 'Torhout', street: 'Aartrijkestraat', houseNumber: '11B'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+    const actual = await response.json();
+    expect(actual).toEqual({ volledigAdres: 'Aartrijkestraat 11B, 8820 Torhout' });
+});
+
+test(`validate address throws error when municipality is missing`, async ({request}) => {
+
+    const params = {street: 'Aartrijkestraat', houseNumber: '11B'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok()).toBeFalsy();
+    const actual = await response.json();
+    expect(actual).toEqual({message: 'Invalid request: municipality, street and houseNumber are required'});
+});
+
+test(`validate address throws error when street is missing`, async ({request}) => {
+
+    const params = {municipality: 'Torhout', houseNumber: '11B'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok()).toBeFalsy();
+    const actual = await response.json();
+    expect(actual).toEqual({message: 'Invalid request: municipality, street and houseNumber are required'});
+});
+
+test(`validate address throws error when houseNumber is missing`, async ({request}) => {
+
+    const params = {municipality: 'Torhout', street: 'Aartrijkestraat'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+    expect(response.ok()).toBeFalsy();
+    const actual = await response.json();
+    expect(actual).toEqual({message: 'Invalid request: municipality, street and houseNumber are required'});
+});
