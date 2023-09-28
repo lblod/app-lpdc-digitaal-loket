@@ -13,7 +13,7 @@ services:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific.
       # These should be overriden in docker-compose.override.yml
-      EMBER_LOKET_URL: "https://loket.lblod.info/"
+      EMBER_LOKET_URL: "<LOKET_URL>"
       EMBER_ACMIDM_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
       EMBER_ACMIDM_AUTH_URL: "<ACMIDM_AUTH_URL>"
       EMBER_ACMIDM_LOGOUT_URL: "<ACMIDM_LOGOUT_URL>"

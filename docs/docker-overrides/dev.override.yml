@@ -5,6 +5,15 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0
 
+  dashboard:
+    environment:
+      VIRTUAL_HOST: "dev.dashboard.lpdc.lpdc-dev.s.redhost.be"
+      LETSENCRYPT_HOST: "dev.dashboard.lpdc.lpdc-dev.s.redhost.be"
+      LETSENCRYPT_EMAIL: "info@redpencil.io"
+    networks:
+      - proxy
+      - default
+
   lpdc:
     image: lblod/frontend-lpdc:latest
     environment:
@@ -17,7 +26,6 @@ services:
       EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
       EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/authorization/callback"
       EMBER_ACMIDM_SWITCH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/switch-login"
-      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
     networks:
       - proxy
       - default
@@ -30,21 +38,14 @@ services:
       MU_APPLICATION_AUTH_CLIENT_SECRET: "<ACMIDM_AUTH_CLIENT_SECRET>"
       DEBUG_LOG_TOKENSETS: "yes"
 
-  dashboard:
-    environment:
-      VIRTUAL_HOST: "dashboard-dev.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_HOST: "dashboard-dev.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_EMAIL: "info@redpencil.io"
-    networks:
-      - proxy
-      - default
-
   database:
     environment:
       LOG_OUTGOING_SPARQL_QUERIES : "true"
 
   lpdc-management:
     image: lblod/lpdc-management-service:latest
+    environment:
+      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
 
   lpdc-publish:
     image: lblod/lpdc-publish-service:latest

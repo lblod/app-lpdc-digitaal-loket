@@ -113,12 +113,12 @@ On tst we always deploy a released version.
 
   cd /data/app-lpdc-digitaal-loket-tst
   
+  drc down
+
   git fetch --all --tags
 
   git checkout tags/<my version>
   #e.g. of a version: v0.2.0 
-
-  drc down
   
   drc pull
 
