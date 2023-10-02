@@ -89,12 +89,19 @@ services:
       BATCH_SIZE: "1000"
     volumes:
       - ./config/migrations:/data/migrations
+      - ./health_checks:/tmp/health_checks
     links:
       - virtuoso:database
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
+    healthcheck:
+      test: [ "CMD-SHELL", "chmod +x /tmp/health_checks/migrations-healthcheck.sh; /tmp/health_checks/migrations-healthcheck.sh" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 10
 
   cache:
     image: semtech/mu-cache:2.0.2
@@ -193,6 +200,12 @@ services:
       - ./data/files/lpdc:/data
     labels:
       - "logging=true"
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 50
 
   lpdc-publish:
     image: lblod/lpdc-publish-service:0.9.1
@@ -213,6 +226,11 @@ services:
 
   lpdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.1
+    depends_on:
+      lpdc-management:
+        condition: service_healthy
+      migrations:
+        condition: service_healthy
     environment:
       LDES_STREAM: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot"
       LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=0" # first page of the stream

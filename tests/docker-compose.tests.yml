@@ -73,7 +73,7 @@ services:
       BATCH_SIZE: "1000"
     volumes:
       - ../config/migrations:/data/migrations
-      - ./health_checks:/tmp/health_checks
+      - ../health_checks:/tmp/health_checks
     restart: always
     logging: *default-logging
     healthcheck:
