@@ -1,0 +1,62 @@
+version: "3.7"
+
+services:
+  login:
+    image: lblod/acmidm-login-service:0.9.2-arm64-build
+
+  resource:
+    image: semtech/mu-cl-resources:feature-arm64-builds
+
+  lpdc-ldes-consumer:
+    image: redpencil/ldes-consumer:0.7.1-arm64-build
+    environment:
+      LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC api key>"
+
+  database:
+    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
+  #  environment:
+  #    LOG_OUTGOING_SPARQL_QUERIES: "yes"
+  #      LOG_INCOMING_SPARQL_QUERIES: "yes"
+
+  cache:
+    image: semtech/mu-cache:2.0.2-arm64-build
+
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0-arm64-build
+
+  dispatcher:
+    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
+
+  identifier:
+    image: semtech/mu-identifier:1.10.0-arm64-build
+
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build
+
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0-arm64-build
+
+  dashboard:
+    ports:
+      - "9200:80"
+
+  report-generation:
+    image: lblod/loket-report-generation-service:0.6.3-arm64-build
+
+  file:
+    image: cecemel/file-service:3.3.0-arm64-build
+
+  lpdc:
+    image: lblod/frontend-lpdc:latest
+    ports:
+      - "8200:80"
+    environment:
+      EMBER_LOKET_URL: "https://loket.lblod.info/"
+
+  lpdc-management:
+    image: lblod/lpdc-management-service:latest
+    environment:
+      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
+
+  lpdc-publish:
+    image: lblod/lpdc-publish-service:latest

@@ -198,190 +198,54 @@ cd tools
 ./build-arm-images.sh
 ```
 
-On mac arm64, an example docker-compose.override.yml might look like:
-```dockerfile
-version: "3.7"
-
-services:
-  login:
-    image: lblod/acmidm-login-service:0.9.2-arm64-build
-  
-  lpdc:
-    image: lblod/frontend-lpdc:latest
-    ports:
-      - "8200:80"
-
-  resource:
-    image: semtech/mu-cl-resources:feature-arm64-builds
-#  database:
-#    environment:
-#      LOG_OUTGOING_SPARQL_QUERIES: "yes"
-#      LOG_INCOMING_SPARQL_QUERIES: "yes"
-
-  lpdc-management:
-    image: lblod/lpdc-management-service:latest
-    environment:
-      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
-
-  lpdc-ldes-consumer:
-    image: redpencil/ldes-consumer:0.7.1-arm64-build
-    environment:
-      LDES_ENDPOINT_HEADER_X-API-KEY: <your ldes endpoint header api key here>
-
-  lpdc-publish:
-    image: lblod/lpdc-publish-service:latest
-
-  database:
-    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
-    
-  cache:
-    image: semtech/mu-cache:2.0.2-arm64-build
-
-  migrations:
-    image: semtech/mu-migrations-service:0.8.0-arm64-build
-
-  dispatcher:
-    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
-
-  identifier:
-    image: semtech/mu-identifier:1.10.0-arm64-build
-
-  deltanotifier:
-    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build
-
-  mocklogin:
-    image: lblod/mock-login-service:0.4.0-arm64-build
-    
-  dashboard:
-    ports:
-      - "9200:80"
-        
-  report-generation:
-    image: lblod/loket-report-generation-service:0.6.3-arm64-build    
-    
-  file:
-    image: cecemel/file-service:3.3.0-arm64-build
-                
-```
-
-_Notes_:
-- Virtuoso can take a while to execute its first run; the database will be inaccessible in the meantime. Make sure to also wait for the migrations to run.
-- `docker compose` (bundled with the new docker engine) is used in the README instead of the old `docker-compose` command.
-
+On mac arm64, create dockerfile with name `docker-compose.override.yml`. See [an example docker-compose.override-arm64.yml](docker-overrides/docker-compose.override-arm64.yml) for an example; don't forget to replace api keys templates.
 
 ## Running tests
 
 A test container is provided. It creates a new docker project called app-lpdc-digitaal-loket-tests, using a separate environment from the development container.
 It serves as an end-to-end test suite for the app-lpdc-digitaal-loket, stubbing any dependencies outside the bounded context (e.g. ipdc).
 
-You can either run all tests against 'latest' images built on dockerhub, or in a development mode (which uses your local sources - so don't forget to update to correct branch).
+You can either run all tests against 'latest' images built on dockerhub, or in a development mode (which uses your local sources - so don't forget to update to correct branch from this project and all dependent projects).
 
-Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content when running mac arm64
-```dockerfile
-version: "3.7"
+### Prerequisites when running on mac arm64
 
-services:
-
-  resource:
-    image: semtech/mu-cl-resources:feature-arm64-builds
-
-  database:
-    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
-
-  cache:
-    image: semtech/mu-cache:2.0.2-arm64-build
-
-  migrations:
-    image: semtech/mu-migrations-service:0.8.0-arm64-build
-
-  dispatcher:
-    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
-
-  identifier:
-    image: semtech/mu-identifier:1.10.0-arm64-build
-    
-  deltanotifier:
-    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build    
-    
-  mocklogin:
-    image: lblod/mock-login-service:0.4.0-arm64-build
-    
-  lpdc-ldes-consumer:
-    image: redpencil/ldes-consumer:0.7.1-arm64-build
-
-  report-generation:
-    image: lblod/loket-report-generation-service:0.6.3-arm64-build
-
-  file:
-    image: cecemel/file-service:3.3.0-arm64-build
-  
-  lpdc-management:
-    environment:
-      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
+Build all arm64 images using script
+```shell
+cd tools
+./build-arm-images.sh
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content when running mac arm64
-```dockerfile
-version: "3.7"
+Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml`. 
+See [contents for mac arm64](docker-overrides/docker-compose.tests.latest.override-arm64.yml) for an example; don't forget to replace api keys templates..
 
-services:
-
-  resource:
-    image: semtech/mu-cl-resources:feature-arm64-builds
-
-  database:
-    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
-
-  cache:
-    image: semtech/mu-cache:2.0.2-arm64-build
-
-  migrations:
-    image: semtech/mu-migrations-service:0.8.0-arm64-build
-
-  dispatcher:
-    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
-
-  identifier:
-    image: semtech/mu-identifier:1.10.0-arm64-build
-
-  deltanotifier:
-    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build
-
-  mocklogin:
-    image: lblod/mock-login-service:0.4.0-arm64-build
-
-  lpdc-ldes-consumer:
-    image: redpencil/ldes-consumer:0.7.1-arm64-build
-
-  lpdc-management:
-    image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
-    environment:
-      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
-
-  lpdc-publish:
-    image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
-    
-  report-generation:
-    image: lblod/loket-report-generation-service:0.6.3-arm64-build
-
-  file:
-    image: cecemel/file-service:3.3.0-arm64-build    
-       
-```
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml`. 
+See [contents for mac arm64](docker-overrides/docker-compose.tests.development.override-arm64.yml) for an example; don't forget to replace api keys templates..
 
 ### Prerequisites when not running on mac arm64
 
-Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content
+Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content; don't forget to replace api keys templates..
 
 ```dockerfile
 version: "3.7"
+
+services:
+
+  lpdc-management:
+    environment:
+      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content; don't forget to replace api keys templates..
 
 ```dockerfile
 version: "3.7"
+
+services:
+
+  lpdc-management:
+    environment:
+      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 
 ```
 
@@ -392,6 +256,12 @@ A script is provided to start the docker containers for the tests in development
 ```shell
 cd tests
 ./run-development.sh
+```
+
+Clear all test data before running:
+```shell
+cd tests
+./run-development.sh --clear-test-data
 ```
 
 Run tests by running

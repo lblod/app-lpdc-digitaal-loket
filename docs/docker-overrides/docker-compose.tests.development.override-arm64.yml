@@ -1,0 +1,51 @@
+version: "3.7"
+
+services:
+
+  resource:
+    image: semtech/mu-cl-resources:feature-arm64-builds
+
+  database:
+    image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
+    #environment:
+    #  LOG_INCOMING_SPARQL_QUERIES: "yes"
+    #  LOG_OUTGOING_SPARQL_QUERIES: "yes"
+
+  cache:
+    image: semtech/mu-cache:2.0.2-arm64-build
+
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0-arm64-build
+
+  dispatcher:
+    image: semtech/mu-dispatcher:2.1.0-beta.2-arm64-build
+
+  identifier:
+    image: semtech/mu-identifier:1.10.0-arm64-build
+
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3-arm64-build
+
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0-arm64-build
+
+  lpdc-ldes-consumer:
+    image: redpencil/ldes-consumer:0.7.1-arm64-build
+
+  lpdc-management:
+    image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
+    environment:
+      ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
+#      LOG_SPARQL_UPDATES: "true"
+#      LOG_INCOMING_DELTA: "true"
+
+  lpdc-publish:
+    image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
+
+  report-generation:
+    image: lblod/loket-report-generation-service:0.6.3-arm64-build
+
+  file:
+    image: cecemel/file-service:3.3.0-arm64-build
+
+
