@@ -1,0 +1,43 @@
+GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=torhout&straatnaam=Aartrijkestraat&postcode=8820&huisnummer=11B
+Accept: application/ld+json
+
+###
+
+GET https://api.basisregisters.vlaanderen.be/v2/adressen?gemeentenaam=leuven&straatnaam=diestsevest&huisnummer=32
+Accept: application/ld+json
+
+###
+
+GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=harelbeke&straatnaam=generaal deprezstraat&huisnummer=2&busnummer=50
+Accept: application/ld+json
+
+###
+
+GET https://api.basisregisters.vlaanderen.be/v2/adressen?gemeentenaam=harelbeke&postcode=8530&straatnaam=generaal deprezstraat&huisnummer=2&busnummer=0050
+Accept: application/ld+json
+
+###
+
+GET https://api.basisregisters.vlaanderen.be/v2/postinfo?gemeentenaam=harelbeke
+
+### huisnumers met 100% match: 18, 20
+
+GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=kruibeke&straatnaam=O.L. Vrouwplein&postcode=9150&huisnummer=18-20
+Accept: application/ld+json
+
+### huisnumers met 100% match: 24 (26 does not exist)
+
+GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=diest&straatnaam=Nijverheidslaan&postcode=3290&huisnummer=24-26
+Accept: application/ld+json
+
+### huisnumers met 100% match: 27, 29, 31, 33
+
+GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=gent&straatnaam=Sint-Lievenslaan&postcode=9000&huisnummer=27-33
+Accept: application/ld+json
+
+### huisnumers met 100% match: 3, 5
+
+GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=sint-truiden&straatnaam=Gazometerstraat&postcode=3800&huisnummer=3-5
+Accept: application/ld+json
+
+###
