@@ -118,7 +118,7 @@ export class ConceptTestBuilder {
     }
 
     withProductID(productId: number) {
-        this.productId = new Literal(productId.toString(), undefined, "http://www.w3.org/2001/XMLSchema#string");
+        this.productId = new Literal(productId.toString(), undefined);
         return this;
     }
 

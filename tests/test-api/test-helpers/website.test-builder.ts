@@ -65,7 +65,7 @@ export class WebsiteTestBuilder {
     }
 
     withUrl(url: string) {
-        this.url = new Literal(url, undefined, 'http://www.w3.org/2001/XMLSchema#string');
+        this.url = new Literal(url, undefined);
         return this;
     }
 
