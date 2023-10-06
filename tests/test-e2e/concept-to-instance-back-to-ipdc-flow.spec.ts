@@ -537,8 +537,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly.textContent()).toContain(newBeschrijvingWebsiteVoorProcedureEngels);
         await expect(instantieDetailsPage.websiteURLVoorProcedureInput).not.toBeEditable();
-        //TODO LPDC-689: uncomment when bug fixed ... the old triple does not get removed from the database, so now and then the old one pops up in as the data
-        //await expect(instantieDetailsPage.websiteURLVoorProcedureInput).toHaveValue(newWebsiteURLVoorProcedure);
+        await expect(instantieDetailsPage.websiteURLVoorProcedureInput).toHaveValue(newWebsiteURLVoorProcedure);
 
         await expect(instantieDetailsPage.titelKostInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelKostInput).toHaveValue(newTitelKost);
@@ -577,8 +576,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.beschrijvingWebsiteEngelsEditor).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingWebsiteEngelsReadonly.textContent()).toContain(newBeschrijvingWebsiteEngels);
         await expect(instantieDetailsPage.websiteURLInput).not.toBeEditable();
-        //TODO LPDC-689: uncomment when bug fixed ... the old triple does not get removed from the database, so now and then the old one pops up in as the data
-        //await expect(instantieDetailsPage.websiteURLInput).toHaveValue(newWebsiteURL);
+        await expect(instantieDetailsPage.websiteURLInput).toHaveValue(newWebsiteURL);
 
         await instantieDetailsPage.eigenschappenTab.click();
         await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
@@ -938,9 +936,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             {"@language": "en", "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijvingEngels}</p>`}
         ]));
 
-        //TODO LPDC-689: uncomment when bug LPDC-689 is fixed
-        // expect(procedureWebsite['http://schema.org/url']).toHaveLength(1);
-        // expect(procedureWebsite['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl});
+        expect(procedureWebsite['http://schema.org/url']).toHaveLength(1);
+        expect(procedureWebsite['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl});
 
 
         // WEBSITE
@@ -961,9 +958,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             {"@language": "en", "@value": `<p data-indentation-level="0">${websiteBeschrijvingEngels}</p>`}
         ]));
 
-        //TODO LPDC-689: uncomment when bug LPDC-689 is fixed
-        // expect(website['http://schema.org/url']).toHaveLength(1);
-        // expect(website['http://schema.org/url'][0]).toEqual({"@value": websiteUrl});
+        expect(website['http://schema.org/url']).toHaveLength(1);
+        expect(website['http://schema.org/url'][0]).toEqual({"@value": websiteUrl});
     }
 
 });
