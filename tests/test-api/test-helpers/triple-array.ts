@@ -183,4 +183,5 @@ export const Predicates = {
     postcode: new Uri('https://data.vlaanderen.be/ns/adres#postcode'),
     straatnaam: new Uri('https://data.vlaanderen.be/ns/adres#Straatnaam'),
     spatial: new Uri('http://purl.org/dc/terms/spatial'),
+    hasCompetentAuthority: new Uri('http://data.europa.eu/m8g/hasCompetentAuthority')
 }

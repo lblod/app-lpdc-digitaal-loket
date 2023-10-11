@@ -26,10 +26,16 @@ export class AddressTestBuilder {
             .withOrder(1)
             .withStraat('Professor Roger Van Overstraetenplein')
             .withHuisnummer('1')
-            .withBusnummer('')
             .withPostcode('3000')
             .withGemeente('Leuven')
             .withLand('België')
+    }
+
+    static anEmptyAddress() {
+        return new AddressTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withOrder(1)
     }
 
     private withType() {
