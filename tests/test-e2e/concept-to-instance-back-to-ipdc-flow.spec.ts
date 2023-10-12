@@ -327,6 +327,14 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const selectedContactpuntOpeningsuren = (await instantieDetailsPage.contactpuntOpeningsurenSelect.selectedItem.textContent());
         expect(selectedContactpuntOpeningsuren).toContain('https://www.example1.com/openinghours');
 
+        await instantieDetailsPage.voegAdresToeButton.click();
+        await instantieDetailsPage.contactpuntAdresGemeenteSelect.selectValue('Harelbeke');
+        await instantieDetailsPage.contactpuntAdresStraatSelect.selectValue('Generaal Deprezstraat');
+        await instantieDetailsPage.contactpuntAdresHuisnummerInput.fill('2');
+        await instantieDetailsPage.contactpuntAdresBusnummerInput.fill('50');
+        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Adres gevonden');
+        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Generaal Deprezstraat 2 bus 0050, 8530 Harelbeke');
+
         const titelWebsite = await instantieDetailsPage.titelWebsiteInput.inputValue();
         expect(titelWebsite).toEqual(`Website Belgische nationaliteit en naturalisatie - ${formalInformalChoiceSuffix}`);
         const newTitelWebsite = titelWebsite + uuid();
@@ -566,6 +574,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.contactpuntTelefoonReadonly).toHaveValue('111111111');
         await expect(instantieDetailsPage.contactpuntWebsiteURLReadonly).toHaveValue('https://www.example1.com');
         await expect(instantieDetailsPage.contactpuntOpeningsurenReadonly).toHaveValue('https://www.example1.com/openinghours');
+
+        await expect(instantieDetailsPage.contactpuntAdresGemeenteSelect.selectedItem).toContainText('Harelbeke');
+        await expect(instantieDetailsPage.contactpuntAdresStraatSelect.selectedItem).toContainText('Generaal Deprezstraat');
+        await expect(instantieDetailsPage.contactpuntAdresHuisnummerInput).toHaveValue('2');
+        await expect(instantieDetailsPage.contactpuntAdresBusnummerInput).toHaveValue('50');
 
         await expect(instantieDetailsPage.titelWebsiteInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelWebsiteInput).toHaveValue(newTitelWebsite);
@@ -822,6 +835,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(publicService['http://www.w3.org/2000/01/rdf-schema#seeAlso']).toHaveLength(1);
         const websiteUri = publicService['http://www.w3.org/2000/01/rdf-schema#seeAlso'][0]['@id'];
 
+        expect(publicService['http://data.europa.eu/m8g/hasContactPoint']).toHaveLength(1);
+        const contactPuntUri = publicService['http://data.europa.eu/m8g/hasContactPoint'][0]['@id'];
+
         // COST
         const cost = IpdcStub.getObjectById(instance, costUri);
 
@@ -960,6 +976,57 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(website['http://schema.org/url']).toHaveLength(1);
         expect(website['http://schema.org/url'][0]).toEqual({"@value": websiteUrl});
+
+        // CONTACT POINT
+        const contactPunt = IpdcStub.getObjectById(instance, contactPuntUri);
+
+        expect(contactPunt['http://schema.org/email']).toHaveLength(1);
+        expect(contactPunt['http://schema.org/email']).toEqual([{"@value": '1111@example.com'}]);
+
+        expect(contactPunt['http://schema.org/telephone']).toHaveLength(1);
+        expect(contactPunt['http://schema.org/telephone']).toEqual([{"@value": '111111111'}]);
+
+        expect(contactPunt['http://schema.org/url']).toHaveLength(1);
+        expect(contactPunt['http://schema.org/url']).toEqual([{"@value": 'https://www.example1.com'}]);
+
+        expect(contactPunt['http://schema.org/openingHours']).toHaveLength(1);
+        expect(contactPunt['http://schema.org/openingHours']).toEqual([{"@value": 'https://www.example1.com/openinghours'}]);
+
+        expect(contactPunt['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+        const contactpuntAdresUri = contactPunt['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address'][0]['@id'];
+
+        // CONTACT POINT ADRES
+        const contactPuntAdres = IpdcStub.getObjectById(instance, contactpuntAdresUri);
+
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#land']).toHaveLength(1);
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#land']).toEqual([
+            {"@language": 'nl', "@value": 'België'},
+        ]);
+
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#gemeentenaam']).toHaveLength(1);
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#gemeentenaam']).toEqual([
+            {"@language": 'nl', "@value": 'Harelbeke'},
+        ]);
+
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#postcode']).toHaveLength(1);
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#postcode']).toEqual([
+            {"@value": '8530'},
+        ]);
+
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Straatnaam']).toHaveLength(1);
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Straatnaam']).toEqual([
+            {"@language": 'nl', "@value": 'Generaal Deprezstraat'},
+        ]);
+
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer']).toHaveLength(1);
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer']).toEqual([
+            {"@value": '2'},
+        ]);
+
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer']).toHaveLength(1);
+        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer']).toEqual([
+            {"@value": '50'},
+        ]);
     }
 
 });

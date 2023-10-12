@@ -90,6 +90,18 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly contactpuntWebsiteURLReadonly: Locator;
     readonly contactpuntOpeningsurenSelect: SelectWithCreate;
     readonly contactpuntOpeningsurenReadonly: Locator;
+    readonly voegAdresToeButton: Locator;
+    readonly contactpuntAdresGemeenteSelect: Select;
+    readonly contactpuntAdresStraatSelect: Select;
+    readonly contactpuntAdresHuisnummerInput: Locator;
+    readonly contactpuntAdresBusnummerInput: Locator;
+    readonly contactpuntAdresValidatie: Locator;
+
+    readonly secondContactpuntAdresGemeenteSelect: Select;
+    readonly secondContactpuntAdresStraatSelect: Select;
+    readonly secondContactpuntAdresHuisnummerInput: Locator;
+    readonly secondContactpuntAdresBusnummerInput: Locator;
+    readonly secondContactpuntAdresValidatie: Locator;
 
     readonly titelWebsiteInput: Locator;
     readonly titelWebsiteEngelsInput: Locator;
@@ -117,6 +129,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly categorieenYourEuropeMultiSelect: MultiSelect;
 
     readonly verzendNaarVlaamseOverheidButton: Locator;
+    readonly wijzigingenBewarenButton: Locator;
     readonly terugNaarHetOverzichtButton: Locator;
 
     private constructor(page: Page) {
@@ -206,6 +219,19 @@ export class InstantieDetailsPage extends AbstractPage {
         this.contactpuntOpeningsurenSelect = new SelectWithCreate(page, 'Openingsuren');
         this.contactpuntOpeningsurenReadonly = page.locator(`input:below(label:text-is('Openingsuren'):below(h2:text-is('Contactpunt')))`).first();
 
+        this.voegAdresToeButton = page.getByRole('button', { name: 'Voeg adres toe' });
+        this.contactpuntAdresGemeenteSelect = new Select(page,'Gemeente');
+        this.contactpuntAdresStraatSelect = new Select(page,'Straat');
+        this.contactpuntAdresHuisnummerInput = this.inputBelow('Huisnummer');
+        this.contactpuntAdresBusnummerInput = this.inputBelow('Bus');
+        this.contactpuntAdresValidatie = page.getByRole('alert').nth(0);
+
+        this.secondContactpuntAdresGemeenteSelect = new Select(page, 'Gemeente', 'Adres', 2);
+        this.secondContactpuntAdresStraatSelect = new Select(page, 'Straat', 'Adres', 2);
+        this.secondContactpuntAdresHuisnummerInput = this.inputBelowLabelAndNthTitle('Huisnummer', 'Adres', 2);
+        this.secondContactpuntAdresBusnummerInput = this.inputBelowLabelAndNthTitle('Bus', 'Adres', 2);
+        this.secondContactpuntAdresValidatie = page.getByRole('alert').nth(1);
+
         this.titelWebsiteInput = page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
         this.titelWebsiteEngelsInput = page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
         this.beschrijvingWebsiteEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
@@ -232,6 +258,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.categorieenYourEuropeMultiSelect = new MultiSelect(page, "Categorieën Your Europe");
 
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
+        this.wijzigingenBewarenButton = page.getByRole('button', {name: 'Wijzigingen bewaren'});
         this.terugNaarHetOverzichtButton = page.getByRole('link', {name: 'Terug naar het overzicht'});
     }
 
@@ -245,6 +272,10 @@ export class InstantieDetailsPage extends AbstractPage {
 
     private inputBelow(label: string): Locator {
         return this.page.locator(`input:below(label:text-is('${label}'))`).first();
+    }
+
+    private inputBelowLabelAndNthTitle(label: string, title: string, nthTitle: number): Locator {
+        return this.page.locator(`input:below(:nth-match(h2:text-is('${title}'), ${nthTitle})):below(label:text-is('${label}'))`).first();
     }
 
     private inputRightOf(label: string): Locator {

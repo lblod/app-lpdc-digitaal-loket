@@ -6,12 +6,13 @@ export class Select {
     private readonly selectDiv: Locator;
     readonly selectedItem: Locator;
 
-    constructor(page: Page, forLabel: string) {
+    constructor(page: Page, forLabel: string, belowTitle?: string, nthMatchTitle?: number) {
         this.page = page;
 
-        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).first();
-        this.selectedItem = page.locator(`span.ember-power-select-selected-item:below(label:text-is('${forLabel}'))`).first();
-    } 
+        const belowTitleSelector = belowTitle && nthMatchTitle ? `:below(:nth-match(h2:text-is('${belowTitle}'), ${nthMatchTitle}))` : '';
+        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger${belowTitleSelector}:below(label:text-is('${forLabel}'))`).first();
+        this.selectedItem = page.locator(`span.ember-power-select-selected-item${belowTitleSelector}:below(label:text-is('${forLabel}'))`).first();
+    }
 
     async selectValue(text: string) {
         await this.selectDiv.click();
@@ -22,6 +23,5 @@ export class Select {
     private option(text: string): Locator {
         return this.page.getByRole('option', { name: text });
     }
-
 
 }

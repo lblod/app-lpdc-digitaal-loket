@@ -1073,7 +1073,6 @@ ext:contactpointsPg a form:PropertyGroup;
 
           ext:contactPointAddress a form:Field ;
             sh:name "Adres" ;
-            form:language "nl";
             sh:path lpdcExt:address;
             form:displayType displayTypes:addressSelector ;
             sh:group ext:contactPointAddressPg-sub .
