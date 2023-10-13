@@ -42,6 +42,10 @@ services:
     environment:
       LOG_OUTGOING_SPARQL_QUERIES : "true"
 
+  lpdc-management:
+    environment:
+      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
+
   lpdc-publish:
     environment:
       IPDC_JSON_ENDPOINT: "https://ipdc.tni-vlaanderen.be/api/abb/instanties"
