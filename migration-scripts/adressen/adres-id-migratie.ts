@@ -48,9 +48,16 @@ async function findAddressMatch(address: Address) {
     if (address.bus && address.bus.trim()) {
         queryParams.set('busnummer', address.bus);
     }
+
     const response = await fetch(
         `https://api.basisregisters.vlaanderen.be/v2/adresmatch?${queryParams}`,
+        {headers: {'x-api-key': process.env.ADRESSEN_REGISTER_API_KEY || ''}}
     );
+    if (!response.ok) {
+        if (response.status != 400) {
+            throw Error(`Error ${response.status}: ${await response.text()}`)
+        }
+    }
     const jsonResponse: any = await response.json();
     if (jsonResponse?.adresMatches?.length && jsonResponse?.adresMatches[0]?.score === 100) {
         return jsonResponse.adresMatches[0].identificator.id;

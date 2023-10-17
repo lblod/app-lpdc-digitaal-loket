@@ -8,11 +8,11 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ts-node adres-id-migratie.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node -r dotenv/config adres-id-migratie.ts"
   },
   "dependencies": {
-    "sparql-client-2": "https://github.com/erikap/node-sparql-client.git"
+    "sparql-client-2": "https://github.com/erikap/node-sparql-client.git",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "@types/node": "^20.6.5",
