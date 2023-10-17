@@ -39,7 +39,7 @@ Following steps can be used if you want to manually deploy a new version on dev 
 
   drc up -d
 
-  docker compose logs  --follow --timestamps --since 1m
+  drc logs  --follow --timestamps --since 1m
  
 ```
 
@@ -124,14 +124,61 @@ On test we always deploy a released version.
 
   drc up -d
 
-  docker compose logs  --follow --timestamps --since 1m
+  drc logs  --follow --timestamps --since 1m
  
 ```
 
 ## Acc
 
-On acc we always deploy a released version. Similar instructions as tst.
+On acc we always deploy a released version. Similar instructions as test.
 
-## Prd
+## Prod
 
-//TODO 
+On prod we always deploy a released version. Similar instructions as test (do not execute this step by step), production currently has special configs we want to remove over time.
+
+```shell
+  ssh root@lpdc-prod.s.redhost.be
+ 
+  cd /data/app-lpdc-digitaal-loket
+  
+  drc down
+  
+  cd /data
+  
+  #take a backup of all
+  tar -zcvf app-lpdc-digitaal-loket-prod.tar.gz app-lpdc-digitaal-loket/
+  
+  cd /data/app-lpdc-digitaal-loket
+
+  git fetch --all --tags
+  
+  #some configs are only for prod, so stash them for now
+  git stash -u
+
+  git checkout tags/<my version>
+  #e.g. of a version: v0.2.0 
+  
+  # get back those configs
+  git stash apply
+  
+  #manually merge and verify the configs unstashed (sometimes new configs have been added, and need manual additions/corrections)
+  #update / correct docker-compose.override.yml
+  
+  drc pull
+
+  drc up -d
+
+  drc logs  --follow --timestamps --since 1m
+  
+  git stash clear
+  
+  cd /data
+  
+  #take a backup of all
+  tar -zcvf app-lpdc-digitaal-loket-prod-2.tar.gz app-lpdc-digitaal-loket/
+  
+  #move backups in /data/backups/<releasename> folder (e.g. 2023-09)
+ 
+```
+
+
