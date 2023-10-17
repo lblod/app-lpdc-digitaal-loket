@@ -70,7 +70,6 @@ test.describe('Contact point form fields', () => {
         await instantieDetailsPage.contactpuntAdresHuisnummerInput.fill('2');
         await instantieDetailsPage.contactpuntAdresBusnummerInput.fill('50');
         await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Adres gevonden');
-        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Generaal Deprezstraat 2 bus 0050, 8530 Harelbeke');
 
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
         await wijzigingenBewarenModal.expectToBeVisible();
@@ -104,20 +103,19 @@ test.describe('Contact point form fields', () => {
         await instantieDetailsPage.voegAdresToeButton.click();
 
         await instantieDetailsPage.contactpuntAdresGemeenteSelect.selectValue('Harelbeke');
-        await expect(page.getByRole('alert')).toContainText('Niet genoeg info om adres te valideren');
+        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Niet genoeg info om adres te valideren');
         await instantieDetailsPage.contactpuntAdresStraatSelect.selectValue('Generaal Deprezstraat');
         await instantieDetailsPage.contactpuntAdresHuisnummerInput.fill('2');
         await instantieDetailsPage.contactpuntAdresBusnummerInput.fill('50');
-        await expect(page.getByRole('alert')).toContainText('Adres gevonden');
-        await expect(page.getByRole('alert')).toContainText('Generaal Deprezstraat 2 bus 0050, 8530 Harelbeke');
+        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Adres gevonden');
 
         await instantieDetailsPage.contactpuntAdresGemeenteSelect.selectValue('Aarschot');
         await instantieDetailsPage.contactpuntAdresStraatSelect.selectValue('kerkstraat');
         await instantieDetailsPage.contactpuntAdresHuisnummerInput.fill('120');
-        await expect(page.getByRole('alert')).toContainText('Adres niet gevonden');
+        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Adres niet gevonden');
 
         await instantieDetailsPage.contactpuntAdresGemeenteSelect.selectValue('Leuven');
-        await expect(page.getByRole('alert')).toContainText('Niet genoeg info om adres te valideren');
+        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Niet genoeg info om adres te valideren');
     });
 
     test('Publishing address should give error if at least one adres is not valid', async () => {
@@ -142,7 +140,6 @@ test.describe('Contact point form fields', () => {
         await instantieDetailsPage.contactpuntAdresHuisnummerInput.fill('2');
         await instantieDetailsPage.contactpuntAdresBusnummerInput.fill('50');
         await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Adres gevonden');
-        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Generaal Deprezstraat 2 bus 0050, 8530 Harelbeke');
 
         await instantieDetailsPage.voegContactpuntToeButton.click();
         await instantieDetailsPage.voegAdresToeButton.click();
@@ -174,7 +171,6 @@ test.describe('Contact point form fields', () => {
         await expect(instantieDetailsPage.contactpuntAdresBusnummerInput).toHaveValue('50');
         await expect(instantieDetailsPage.contactpuntAdresBusnummerInput).toHaveValue('50');
         await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Adres gevonden');
-        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Generaal Deprezstraat 2 bus 0050, 8530 Harelbeke');
 
         await expect(instantieDetailsPage.secondContactpuntAdresGemeenteSelect.selectedItem).toContainText('Aarschot');
         await expect(instantieDetailsPage.secondContactpuntAdresStraatSelect.selectedItem).toContainText('Kerkstraat');

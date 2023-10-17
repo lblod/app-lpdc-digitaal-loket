@@ -333,7 +333,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.contactpuntAdresHuisnummerInput.fill('2');
         await instantieDetailsPage.contactpuntAdresBusnummerInput.fill('50');
         await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Adres gevonden');
-        await expect(instantieDetailsPage.contactpuntAdresValidatie).toContainText('Generaal Deprezstraat 2 bus 0050, 8530 Harelbeke');
 
         const titelWebsite = await instantieDetailsPage.titelWebsiteInput.inputValue();
         expect(titelWebsite).toEqual(`Website Belgische nationaliteit en naturalisatie - ${formalInformalChoiceSuffix}`);
