@@ -65,7 +65,7 @@ async function findAddressMatch(address: Address) {
 }
 
 function toQuad(address: Address) {
-    return `<${address.address}> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <${address.id}> <${address.graph}>`
+    return `<${address.address}> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <${address.id}> <${address.graph}> .`
 }
 
 function matchedToTtlFile(addresses: Address[]) {
