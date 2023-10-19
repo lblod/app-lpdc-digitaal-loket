@@ -4,7 +4,7 @@ import * as fs from 'fs';
 import {processPromisesBatch} from "./batch-promise";
 
 async function executeQuery(query: any) {
-    const sparqlClient = new SparqlClient('http://localhost:8890/sparql');
+    const sparqlClient = new SparqlClient(process.env.SPARQL_URL);
     const response = await sparqlClient.query(query).executeRaw();
     return JSON.parse(response.body)?.results?.bindings;
 }
@@ -64,24 +64,24 @@ async function findAddressMatch(address: Address) {
     }
 }
 
-function toQuad(address: Address) {
+function addressIdToQuad(address: Address): string {
     return `<${address.address}> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <${address.id}> <${address.graph}> .`
 }
 
 function matchedToTtlFile(addresses: Address[]) {
     const quads = addresses
         .filter(address => !!address.id)
-        .map(address => toQuad(address))
+        .map(address => addressIdToQuad(address))
         .join('\n');
 
-    fs.writeFileSync('./addressesId.ttl', quads);
+    fs.writeFileSync('./migration-results/addressesId.ttl', quads);
 }
 
 function unmatchedToJsonFile(addresses: Address[]) {
     const addressesJson = addresses
         .filter(address => !address.id)
 
-    fs.writeFileSync('./unmatched.json', JSON.stringify(addressesJson));
+    fs.writeFileSync('./migration-results/unmatched.json', JSON.stringify(addressesJson));
 }
 
 async function main() {
