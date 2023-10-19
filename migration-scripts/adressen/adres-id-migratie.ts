@@ -9,26 +9,26 @@ async function executeQuery(query: any) {
     return JSON.parse(response.body)?.results?.bindings;
 }
 
-async function getAddresses(): Promise<Address[]> {
+async function getAdressen(): Promise<Adres[]> {
     const response = await executeQuery(`
-        select distinct ?graph ?s ?address ?straat ?huisnummer ?bus ?gemeente ?postcode ?land where {
+        select distinct ?graph ?s ?adres ?straat ?huisnummer ?bus ?gemeente ?postcode ?land where {
             GRAPH ?graph {
                 ?s a <http://purl.org/vocab/cpsv#PublicService> .
                 ?s <http://data.europa.eu/m8g/hasContactPoint> ?contactPoint .
-                ?contactPoint <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> ?address .
-                ?address <https://data.vlaanderen.be/ns/adres#Straatnaam> ?straat .
-                ?address <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer> ?huisnummer .
-                ?address <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer> ?bus .
-                ?address <https://data.vlaanderen.be/ns/adres#gemeentenaam> ?gemeente . 
-                ?address <https://data.vlaanderen.be/ns/adres#postcode> ?postcode .
-                ?address <https://data.vlaanderen.be/ns/adres#land> ?land .
+                ?contactPoint <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> ?adres .
+                ?adres <https://data.vlaanderen.be/ns/adres#Straatnaam> ?straat .
+                ?adres <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer> ?huisnummer .
+                ?adres <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer> ?bus .
+                ?adres <https://data.vlaanderen.be/ns/adres#gemeentenaam> ?gemeente . 
+                ?adres <https://data.vlaanderen.be/ns/adres#postcode> ?postcode .
+                ?adres <https://data.vlaanderen.be/ns/adres#land> ?land .
             }
         }
     `);
     return response.map((item: any) => ({
         graph: item.graph.value,
         publicService: item.s.value,
-        address: item.address.value,
+        adres: item.adres.value,
         straat: item.straat.value,
         huisnummer: item.huisnummer.value,
         bus: item.bus.value,
@@ -38,15 +38,15 @@ async function getAddresses(): Promise<Address[]> {
     }));
 }
 
-async function findAddressMatch(address: Address) {
+async function findAdresMatch(adres: Adres) {
     const queryParams = new URLSearchParams({
-        gemeentenaam: address.gemeente,
-        postcode: address.postcode,
-        straatnaam: address.straat,
-        huisnummer: address.huisnummer,
+        gemeentenaam: adres.gemeente,
+        postcode: adres.postcode,
+        straatnaam: adres.straat,
+        huisnummer: adres.huisnummer,
     });
-    if (address.bus && address.bus.trim()) {
-        queryParams.set('busnummer', address.bus);
+    if (adres.bus && adres.bus.trim()) {
+        queryParams.set('busnummer', adres.bus);
     }
 
     const response = await fetch(
@@ -64,41 +64,41 @@ async function findAddressMatch(address: Address) {
     }
 }
 
-function addressIdToQuad(address: Address): string {
-    return `<${address.address}> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <${address.id}> <${address.graph}> .`
+function adresIdToQuad(adres: Adres): string {
+    return `<${adres.adres}> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <${adres.id}> <${adres.graph}> .`
 }
 
-function matchedToTtlFile(addresses: Address[]) {
-    const quads = addresses
-        .filter(address => !!address.id)
-        .map(address => addressIdToQuad(address))
+function matchedToTtlFile(adressen: Adres[]) {
+    const quads = adressen
+        .filter(adres => !!adres.id)
+        .map(adres => adresIdToQuad(adres))
         .join('\n');
 
-    fs.writeFileSync('./migration-results/addressesId.ttl', quads);
+    fs.writeFileSync('./migration-results/adressenId.ttl', quads);
 }
 
-function unmatchedToJsonFile(addresses: Address[]) {
-    const addressesJson = addresses
-        .filter(address => !address.id)
+function unmatchedToJsonFile(adressen: Adres[]) {
+    const adresenJson = adressen
+        .filter(adres => !adres.id)
 
-    fs.writeFileSync('./migration-results/unmatched.json', JSON.stringify(addressesJson));
+    fs.writeFileSync('./migration-results/unmatched.json', JSON.stringify(adresenJson));
 }
 
 async function main() {
-    const addresses = await getAddresses();
-    const addressMatches: Address[] = await processPromisesBatch<Address, Address>(addresses, 100, async (address) => ({
-        ...address,
-        id: await findAddressMatch(address)
+    const adressen = await getAdressen();
+    const adresMatches: Adres[] = await processPromisesBatch<Adres, Adres>(adressen, 100, async (adres) => ({
+        ...adres,
+        id: await findAdresMatch(adres)
     }))
 
-    matchedToTtlFile(addressMatches);
-    unmatchedToJsonFile(addressMatches)
+    matchedToTtlFile(adresMatches);
+    unmatchedToJsonFile(adresMatches)
 }
 
-type Address = {
+type Adres = {
     graph: string
     publicService: string
-    address: string
+    adres: string
     straat: string
     huisnummer: string
     bus: string
