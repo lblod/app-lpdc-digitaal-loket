@@ -57,7 +57,7 @@ export class PublicServiceTestBuilder {
             .withModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
-            .withProductID(1000)
+            .withProductID('1000')
     }
 
     private withType() {
@@ -160,7 +160,7 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
-    withProductID(productId: number) {
+    withProductID(productId: string) {
         this.productId = new Literal(productId.toString(), undefined);
         return this;
     }

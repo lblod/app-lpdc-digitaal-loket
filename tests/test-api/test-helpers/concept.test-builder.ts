@@ -7,7 +7,6 @@ import {
     CompetentAuthorityLevel, ConceptTag,
     ExecutingAuthorityLevel, ProductType,
     PublicationMedium,
-    ResourceLanguage,
     TargetAudience,
     Theme, YourEuropeCategory
 } from "./codelists";
@@ -59,7 +58,7 @@ export class ConceptTestBuilder {
             ])
             .withStartDate(new Date())
             .withEndDate(new Date())
-            .withProductID(1000)
+            .withProductID('1000')
     }
 
     private withType() {
@@ -117,7 +116,7 @@ export class ConceptTestBuilder {
         return this;
     }
 
-    withProductID(productId: number) {
+    withProductID(productId: string) {
         this.productId = new Literal(productId.toString(), undefined);
         return this;
     }

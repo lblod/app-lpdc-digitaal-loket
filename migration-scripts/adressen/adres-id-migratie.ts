@@ -89,7 +89,7 @@ async function main() {
     const adresMatches: Adres[] = await processPromisesBatch<Adres, Adres>(adressen, 100, async (adres) => ({
         ...adres,
         id: await findAdresMatch(adres)
-    }))
+    }));
 
     matchedToTtlFile(adresMatches);
     unmatchedToJsonFile(adresMatches)
