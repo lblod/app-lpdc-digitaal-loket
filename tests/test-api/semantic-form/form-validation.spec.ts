@@ -47,6 +47,7 @@ test(`Submit form: validate publicService with valid address`, async ({request})
         .withHuisnummer('116')
         .withPostcode('1670')
         .withLand('België')
+        .withAddressregisterId('https://data.vlaanderen.be/id/adres/659808')
         .buildAndPersist(request, pepingenId);
 
     const contactPoint = await ContactPointTestBuilder.aContactPoint()

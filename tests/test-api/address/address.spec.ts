@@ -31,6 +31,16 @@ test(`find municipality for string 'qsdccgyuj'`, async ({request}) => {
     expect(actual).toEqual([]);
 });
 
+test(`find main municipality for sub municipality 'kessel-lo'`, async ({request}) => {
+
+    const params = {search: 'kessel-lo'};
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {params});
+
+    expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+    const actual = await response.json();
+    expect(actual).toEqual(['Leuven']);
+});
+
 test(`find municipality for postcode '3000'`, async ({request}) => {
 
     const params = {search: '3000'};
@@ -114,7 +124,6 @@ test(`validate address for correct address`, async ({request}) => {
         straat: 'Ten Drossaarde',
         huisnummer: '1',
         busnummer: undefined,
-        volledigAdres: "Ten Drossaarde 1, 3200 Aarschot",
         adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2648372'
     });
 });
@@ -132,7 +141,6 @@ test(`validate address for address where letter of number is correctly put in ho
         straat: 'Aartrijkestraat',
         huisnummer: '11B',
         busnummer: undefined,
-        volledigAdres: 'Aartrijkestraat 11B, 8820 Torhout',
         adressenRegisterId: "https://data.vlaanderen.be/id/adres/3654524"
     });
 });
@@ -150,7 +158,6 @@ test(`validate address for address with bus number`, async ({request}) => {
         straat: 'Generaal Deprezstraat',
         huisnummer: '2',
         busnummer: '0050',
-        volledigAdres: 'Generaal Deprezstraat 2 bus 0050, 8530 Harelbeke',
         adressenRegisterId: "https://data.vlaanderen.be/id/adres/5516749"
     });
 });
@@ -168,7 +175,6 @@ test(`validate address for address range`, async ({request}) => {
         straat: 'O.L.Vrouwplein',
         huisnummer: '18',
         busnummer: undefined,
-        volledigAdres: 'O.L.Vrouwplein 18, 9150 Kruibeke',
         adressenRegisterId: "https://data.vlaanderen.be/id/adres/548604",
     });
 });
@@ -202,7 +208,6 @@ test(`validate address for invalid address where houseNumber contains '/'`, asyn
     const actual = await response.json();
     expect(actual).toEqual({});
 });
-
 
 test(`validate address throws error when municipality is missing`, async ({request}) => {
 

@@ -17,7 +17,8 @@ export class AddressTestBuilder {
     private busnummer: Literal;
     private gemeente: Literal;
     private postcode: Literal;
-    private land: Literal
+    private land: Literal;
+    private addressRegisterId: Uri;
 
     static anAddress() {
         return new AddressTestBuilder()
@@ -29,6 +30,7 @@ export class AddressTestBuilder {
             .withPostcode('3000')
             .withGemeente('Leuven')
             .withLand('België')
+            .withAddressregisterId('https://data.vlaanderen.be/id/adres/3357105')
     }
 
     static anEmptyAddress() {
@@ -83,6 +85,11 @@ export class AddressTestBuilder {
         return this;
     }
 
+    withAddressregisterId(id: string) {
+        this.addressRegisterId = new Uri(id);
+        return this;
+    }
+
     buildTripleArray(): TripleArray {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
@@ -94,7 +101,7 @@ export class AddressTestBuilder {
             new Triple(this.id, Predicates.postcode, this.postcode),
             new Triple(this.id, Predicates.gemeentenaam, this.gemeente),
             new Triple(this.id, Predicates.land, this.land),
-
+            new Triple(this.id, Predicates.addressRegisterId, this.addressRegisterId),
         ];
         return new TripleArray(triples);
     }

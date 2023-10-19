@@ -182,6 +182,7 @@ export const Predicates = {
     busnummer: new Uri('https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer'),
     postcode: new Uri('https://data.vlaanderen.be/ns/adres#postcode'),
     straatnaam: new Uri('https://data.vlaanderen.be/ns/adres#Straatnaam'),
+    addressRegisterId: new Uri('https://data.vlaanderen.be/ns/adres#verwijstNaar'),
     spatial: new Uri('http://purl.org/dc/terms/spatial'),
     hasCompetentAuthority: new Uri('http://data.europa.eu/m8g/hasCompetentAuthority')
 }
