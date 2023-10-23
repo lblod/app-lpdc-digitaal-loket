@@ -28,7 +28,7 @@ git clone https://github.com/lblod/app-lpdc-digitaal-loket.git app-lpdc-digitaal
 git checkout development
 ```
 
-**create docker-compose-override.yml:**
+**create docker-compose.override.yml:**
 
 For [dev](docker-overrides/dev.override.yml), [test](docker-overrides/test.override.yml), [acc](docker-overrides/acc.override.yml).
 
