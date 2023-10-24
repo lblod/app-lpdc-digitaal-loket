@@ -902,6 +902,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(voorwaarde['http://data.europa.eu/m8g/hasSupportingEvidence']).toHaveLength(1);
         const evidenceUri = voorwaarde['http://data.europa.eu/m8g/hasSupportingEvidence'][0]['@id'];
 
+        expect(voorwaarde['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(voorwaarde['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
         // REQUIREMENT EVIDENCE
         const evidence = IpdcStub.getObjectById(instance, evidenceUri);
 
@@ -938,6 +942,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             { "@language": "en", "@value": `<p data-indentation-level="0">${financieelVoordeelBeschrijvingEngels}</p>` }
         ]));
 
+        expect(financialAdvantage['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(financialAdvantage['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
         // PROCEDURE
         const procedure = IpdcStub.getObjectById(instance, procedureUri);
 
@@ -958,6 +966,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites']).toHaveLength(1);
         const procedureWebsiteUri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][0]['@id'];
+
+        expect(procedure['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(procedure['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // PROCEDURE WEBSITE
         const procedureWebsite = IpdcStub.getObjectById(instance, procedureWebsiteUri);
