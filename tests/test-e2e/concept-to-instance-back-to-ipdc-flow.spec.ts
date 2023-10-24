@@ -976,6 +976,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(procedureWebsite['http://schema.org/url']).toHaveLength(1);
         expect(procedureWebsite['http://schema.org/url'][0]).toEqual({ "@value": procedureWebsiteUrl });
 
+        expect(procedureWebsite['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(procedureWebsite['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // WEBSITE
         const website = IpdcStub.getObjectById(instance, websiteUri);
