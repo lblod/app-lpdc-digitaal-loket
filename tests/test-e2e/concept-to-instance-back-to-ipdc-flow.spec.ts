@@ -980,7 +980,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(procedureWebsite['http://www.w3.org/ns/shacl#order'][0])
             .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
-        // WEBSITE
+        // MORE INFO WEBSITE
         const website = IpdcStub.getObjectById(instance, websiteUri);
 
         expect(website['http://purl.org/dc/terms/title']).toHaveLength(2);
@@ -1000,6 +1000,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(website['http://schema.org/url']).toHaveLength(1);
         expect(website['http://schema.org/url'][0]).toEqual({ "@value": websiteUrl });
+
+        expect(website['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(website['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // CONTACT POINT
         const contactPunt = IpdcStub.getObjectById(instance, contactPuntUri);
