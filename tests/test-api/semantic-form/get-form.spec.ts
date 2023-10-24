@@ -1,11 +1,11 @@
-import {expect, test} from '@playwright/test';
+import {expect, request, test} from '@playwright/test';
 import fs from 'fs';
 import {loginAsPepingen, pepingenId} from "../test-helpers/login";
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
 import {deleteAll} from "../test-helpers/sparql";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
-import {Predicates, TripleArray} from "../test-helpers/triple-array";
+import {Predicates, TripleArray, Uri} from "../test-helpers/triple-array";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {TestDataFactory} from "../test-helpers/test-data-factory";
@@ -227,6 +227,58 @@ test('When getting instance with fields that can only contain NL language versio
     const responseBody = await response.json();
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
+
+test('When retrieving an instance that has all types of Bevoegde Overheid filled in we want to see all these types', async ({request}) => {
+    const cookie = await loginAsPepingen(request);
+
+    const ocmwUri = new Uri('http://data.lblod.info/id/bestuurseenheden/d769b4b9411ad25f67c1d60b0a403178e24a800e1671fb3258280495011d8e18');
+    const politieZoneUri = new Uri('http://data.lblod.info/id/bestuurseenheden/7cb2089a8c6746d514711908abfd38414a2b01f6ad9a83f28be2e835888b3da7');
+    const ocmwVerenigingUri = new Uri('http://data.lblod.info/id/bestuurseenheden/cce1926b-51ff-4b66-a702-ea985f1d250b');
+    const agbUri = new Uri('http://data.lblod.info/id/bestuurseenheden/5b6b1771d90a683e65f3473ea76c0d37d80d08a8647fd96783eda9af179a8115');
+    const gemeenteUri = new Uri('http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589');
+    const opdrachthoudendeVerenigingUri = new Uri('http://data.lblod.info/id/bestuurseenheden/b090b8f36088e8d98a4d1f9ebf43191cefa2b9f84387aa4821835a7b233d2579');
+    const autonoomProvincieBedrijfUri = new Uri('http://data.lblod.info/id/bestuurseenheden/59a00f5bf4b00f2bc64c72d3d3a2d645e0659a662f4daca943995cbf2625138d');
+    const projectVerenigingUri = new Uri('http://data.lblod.info/id/bestuurseenheden/4f4fb74c49f5d68b4d2e4875bc7daf7f25a565748f89b49e37e41d12ff474f00');
+    const dienstverlenendeVerenigingUri = new Uri('http://data.lblod.info/id/bestuurseenheden/71dc3947-975f-4540-bd50-1f50f29d7567');
+    const hulpverleningszoneUri = new Uri('http://data.lblod.info/id/bestuurseenheden/b3e202bf5ab9d30f1928f7a1ea8911c60da595819774702eb1745e83c25cf106');
+    const provincieUri = new Uri('http://data.lblod.info/id/bestuurseenheden/8b7e7bf05ace5bb1a68f5bc0d870e20c20f147b00bd9a3dcce3a01733d4da744');
+    const districtUri = new Uri('http://data.lblod.info/id/bestuurseenheden/fb56bc40ce36390d2f12fc2057c89d4b6bc5b3217eabd41995b6401318ff648a');
+
+    const publicService = await PublicServiceTestBuilder.aPublicService()
+        .withCompetentAuthority([
+            ocmwUri,
+            politieZoneUri,
+            ocmwVerenigingUri,
+            agbUri,
+            gemeenteUri,
+            opdrachthoudendeVerenigingUri,
+            autonoomProvincieBedrijfUri,
+            projectVerenigingUri,
+            dienstverlenendeVerenigingUri,
+            hulpverleningszoneUri,
+            provincieUri,
+            districtUri
+        ])
+        .buildAndPersist(request, pepingenId);
+
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    expect(response.ok()).toBeTruthy();
+
+    const responseBody = await response.json();
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${gemeenteUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${provincieUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${ocmwUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${politieZoneUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${ocmwVerenigingUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${agbUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${opdrachthoudendeVerenigingUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${autonoomProvincieBedrijfUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${projectVerenigingUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${dienstverlenendeVerenigingUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${hulpverleningszoneUri} .`);
+    expect(parseToSortedTripleArray(responseBody.source)).toContain(`${publicService.getSubject()} <http://data.europa.eu/m8g/hasCompetentAuthority> ${districtUri} .`);
+
+})
 
 function parseToSortedTripleArray(source: string, split = '\r\n') {
     return source

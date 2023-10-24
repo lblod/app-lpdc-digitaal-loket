@@ -1,0 +1,16 @@
+INSERT {
+  GRAPH ?g {
+        ?s <http://www.w3.org/2004/02/skos/core#inScheme> <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties>.
+        ?s <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> .
+        ?s <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://centrale-vindplaats.lblod.info>.
+  }
+} WHERE {
+  GRAPH ?g {
+       ?s a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>.
+    }
+    FILTER NOT EXISTS { 
+        ?s <http://www.w3.org/2004/02/skos/core#inScheme> <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties>.
+        ?s <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> .
+        ?s <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://centrale-vindplaats.lblod.info>.
+    }
+}

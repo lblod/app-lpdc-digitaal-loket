@@ -10,7 +10,7 @@ test(`Submit form: validate publicService valid form`, async ({request}) => {
     const cookie = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});
@@ -57,7 +57,7 @@ test(`Submit form: validate publicService with valid address`, async ({request})
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoint(contactPoint.getSubject())
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});
@@ -81,7 +81,7 @@ test(`Submit form: validate publicService with invalid address`, async ({request
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoint(contactPoint.getSubject())
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});
@@ -111,7 +111,7 @@ test(`Submit form: validate publicService with address that has not enough field
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoint(contactPoint.getSubject())
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});
@@ -158,7 +158,7 @@ test(`Submit form: validate publicService with multiple address - both valid`, a
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoints([contactPoint1.getSubject(), contactPoint2.getSubject()])
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});
@@ -191,7 +191,7 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoints([contactPoint1.getSubject(), contactPoint2.getSubject()])
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});
@@ -232,7 +232,7 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoints([contactPoint1.getSubject(), contactPoint2.getSubject()])
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});
@@ -267,7 +267,7 @@ test(`Submit form: validate publicService with several errors on inhoud tab`, as
         .withNoTitle()
         .withContactPoint(contactPoint.getSubject())
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
-        .withCompetentAuthority(new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: cookie}});

@@ -45,7 +45,7 @@ export class PublicServiceTestBuilder {
     private financialAdvantage: Uri;
     private contactPoints: Uri[] = [];
     private spatial: Uri;
-    private competentAuthority: Uri;
+    private competentAuthority: Uri[];
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -220,8 +220,8 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
-    withCompetentAuthority(competentAutority: Uri) {
-        this.competentAuthority = competentAutority;
+    withCompetentAuthority(competentAuthority: Uri[]) {
+        this.competentAuthority = competentAuthority;
         return this;
     }
 
@@ -255,7 +255,7 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
             ...this.contactPoints.map(contactPoint => new Triple(this.id, Predicates.hasContactPoint, contactPoint)),
             new Triple(this.id, Predicates.spatial, this.spatial),
-            new Triple(this.id, Predicates.hasCompetentAuthority, this.competentAuthority)
+            ...this.competentAuthority.map(aCompetentAuthority => new Triple(this.id, Predicates.hasCompetentAuthority, aCompetentAuthority))
         ];
         return new TripleArray(triples);
     }
