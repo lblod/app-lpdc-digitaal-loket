@@ -877,6 +877,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             { "@language": "en", "@value": `<p data-indentation-level="0">${kostBeschrijvingEngels}</p>` }
         ]));
 
+        expect(cost['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(cost['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
         // REQUIREMENT
         const voorwaarde = IpdcStub.getObjectById(instance, voorwaardeUri);
 
