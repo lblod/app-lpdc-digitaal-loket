@@ -45,7 +45,7 @@ export class PublicServiceTestBuilder {
     private financialAdvantage: Uri;
     private contactPoints: Uri[] = [];
     private spatial: Uri;
-    private competentAuthority: Uri[];
+    private competentAuthority: Uri[] = [];
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
