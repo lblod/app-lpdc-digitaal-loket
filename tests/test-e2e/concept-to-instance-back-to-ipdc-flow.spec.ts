@@ -879,7 +879,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(cost['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(cost['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // REQUIREMENT
         const voorwaarde = IpdcStub.getObjectById(instance, voorwaardeUri);
@@ -904,7 +904,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(voorwaarde['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(voorwaarde['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // REQUIREMENT EVIDENCE
         const evidence = IpdcStub.getObjectById(instance, evidenceUri);
@@ -944,7 +944,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(financialAdvantage['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(financialAdvantage['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // PROCEDURE
         const procedure = IpdcStub.getObjectById(instance, procedureUri);
@@ -969,7 +969,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(procedure['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(procedure['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // PROCEDURE WEBSITE
         const procedureWebsite = IpdcStub.getObjectById(instance, procedureWebsiteUri);
@@ -994,7 +994,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(procedureWebsite['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(procedureWebsite['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // MORE INFO WEBSITE
         const website = IpdcStub.getObjectById(instance, websiteUri);
@@ -1019,7 +1019,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(website['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(website['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         // CONTACT POINT
         const contactPunt = IpdcStub.getObjectById(instance, contactPuntUri);

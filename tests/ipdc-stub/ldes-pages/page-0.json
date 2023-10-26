@@ -99,7 +99,8 @@
             },
             "@type": "bewijsType"
           },
-          "@type": "voorwaarde"
+          "@type": "voorwaarde",
+          "order": 0.0
         }
       ],
       "procedures": [
@@ -131,10 +132,12 @@
                 "nl-BE-x-generated-informal": "procedure website beschrijving - informal"
               },
               "url": "https://procedure-website.com",
-              "@type": "website"
+              "@type": "website",
+              "order": 0.0
             }
           ],
-          "@type": "procedure"
+          "@type": "procedure",
+          "order": 0.0
         }
       ],
       "websites": [
@@ -152,7 +155,8 @@
             "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal"
           },
           "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
-          "@type": "website"
+          "@type": "website",
+          "order": 0.0
         }
       ],
       "kosten": [
@@ -169,7 +173,8 @@
             "nl-BE-x-generated-formal": "Bedrag kost - formal",
             "en": "bedrag kost - en"
           },
-          "@type": "kost"
+          "@type": "kost",
+          "order": 0.0
         }
       ],
       "financieleVoordelen": [
@@ -186,7 +191,8 @@
             "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
             "en": "Titel financieel voordeel. - en"
           },
-          "@type": "financieelVoordeel"
+          "@type": "financieelVoordeel",
+          "order": 0.0
         }
       ],
       "startDienstVerlening": "2020-08-26T11:40:20.026205561Z",
