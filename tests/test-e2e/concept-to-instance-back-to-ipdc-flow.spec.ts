@@ -4,7 +4,7 @@ import { LpdcHomePage } from "./pages/lpdc-home-page";
 import { MockLoginPage } from "./pages/mock-login-page";
 import { UJeModal } from './modals/u-je-modal';
 import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from './pages/product-of-dienst-toevoegen-page';
-import { first_row, second_row } from './components/table';
+import {first_row, second_row, third_row} from './components/table';
 import { ConceptDetailsPage as ConceptDetailsPage } from './pages/concept-details-page';
 import { InstantieDetailsPage } from './pages/instantie-details-page';
 import { WijzigingenBewarenModal } from './modals/wijzigingen-bewaren-modal';
@@ -153,7 +153,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         await toevoegenPage.expectToBeVisible();
         await expect(toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit')).toBeVisible();
-        await expect(toevoegenPage.resultTable.row(second_row).link('Concept 1 edited')).toBeVisible();
+        await expect(toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum')).toBeVisible();
+        await expect(toevoegenPage.resultTable.row(third_row).link('Concept 1 edited')).toBeVisible();
     };
 
     const createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully = async (formalInformalChoiceSuffix: string, expectedFormalOrInformalTripleLanguage: string, bestuurseenheidConfig: BestuursEenheidConfig) => {
