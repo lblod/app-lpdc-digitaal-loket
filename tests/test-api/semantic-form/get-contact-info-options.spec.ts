@@ -29,16 +29,16 @@ test('When instance contact point has a telephone number return that number', as
 
 test('When multiple instances have multiple contact points, return multiple telephone numbers sorted without duplicates', async ({request}) => {
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
-        .withTelephone('111111111')
+        .withTelephone('aaaaaaaaaa')
         .buildAndPersist(request, pepingenId);
     const contactPoint3 = await ContactPointTestBuilder.aContactPoint()
-        .withTelephone('333333333')
+        .withTelephone('cccccccccc')
         .buildAndPersist(request, pepingenId);
     const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
-        .withTelephone('2222222222')
+        .withTelephone('BBBBBBBBBB')
         .buildAndPersist(request, pepingenId);
     const contactPoint4 = await ContactPointTestBuilder.aContactPoint()
-        .withTelephone('111111111')
+        .withTelephone('aaaaaaaaaa')
         .buildAndPersist(request, pepingenId);
 
     await PublicServiceTestBuilder.aPublicService()
@@ -51,7 +51,7 @@ test('When multiple instances have multiple contact points, return multiple tele
 
     const result = await getContactInfoOptions(request, 'telephone');
 
-    expect(result).toEqual(['111111111', '2222222222', '333333333']);
+    expect(result).toEqual(['aaaaaaaaaa', 'BBBBBBBBBB', 'cccccccccc']);
 })
 
 test('When instance contact point has an email, telephone, url and openingHours then getContactInfoOptions should return these fields', async ({request}) => {
