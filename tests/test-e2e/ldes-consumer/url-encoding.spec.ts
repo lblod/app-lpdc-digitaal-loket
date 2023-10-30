@@ -36,6 +36,51 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
               }
             },
             {
+                g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data' },
+                o: {
+                    type: 'typed-literal',
+                    datatype: 'http://www.w3.org/2001/XMLSchema#string',
+                    value: 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_0'
+                }
+            },
+            {
+                g: { type: 'uri', value: 'http://mu.semte.ch/graphs/public' },
+                o: {
+                    type: 'literal',
+                    value: 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_0'
+                }
+            },
+            {
+                g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data' },
+                o: {
+                    type: 'typed-literal',
+                    datatype: 'http://www.w3.org/2001/XMLSchema#string',
+                    value: 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_1'
+                }
+            },
+            {
+                g: { type: 'uri', value: 'http://mu.semte.ch/graphs/public' },
+                o: {
+                    type: 'literal',
+                    value: 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_1'
+                }
+            },
+            {
+                g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data' },
+                o: {
+                    type: 'typed-literal',
+                    datatype: 'http://www.w3.org/2001/XMLSchema#string',
+                    value: 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_2'
+                }
+            },
+            {
+                g: { type: 'uri', value: 'http://mu.semte.ch/graphs/public' },
+                o: {
+                    type: 'literal',
+                    value: 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_2'
+                }
+            },
+            {
               g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data' },
               o: {
                 type: 'typed-literal',

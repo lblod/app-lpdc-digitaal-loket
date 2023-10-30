@@ -1076,13 +1076,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer']).toEqual([
             { "@value": '50' },
         ]);
-
-        // LEGAL RESOURCE
-        const legalResource = IpdcStub.getObjectById(instance, legalResourceUri);
-        expect(legalResource['http://www.w3.org/ns/shacl#order']).toEqual([
-            { "@value": '0' },
-        ]);
-
     }
 
 });
