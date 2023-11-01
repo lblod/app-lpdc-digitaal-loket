@@ -6,10 +6,10 @@ export class SelectWithCreate {
     private readonly selectDiv: Locator;
     readonly selectedItem: Locator;
 
-    constructor(page: Page, forLabel: string) {
+    constructor(page: Page, forLabel: string, order:number =0) {
         this.page = page;
 
-        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).first();
+        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).nth(order)
         this.selectedItem = page.locator(`span.ember-power-select-selected-item:below(label:text-is('${forLabel}'))`).first();
     }
 

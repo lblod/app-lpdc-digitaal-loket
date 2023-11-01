@@ -258,7 +258,6 @@
         "en": "<p>If you have problems paying for your stay in a residential care center, the OCMW can contribute to the financial costs.</p>",
         "nl-BE-x-generated-informal": "<p>Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - informal</p>",
         "nl-BE-x-generated-formal": "<p>Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - formal</p>"
-
       },
       "publicatiekanalen": [
         "YourEurope"
@@ -275,34 +274,33 @@
       ],
       "yourEuropeCategorieen": [
         "GezondheidszorgWoonzorgcentrum"
-      ]
-      ,
+      ],
       "voorwaarden": [
         {
           "beschrijving": {
-            "nl": "<p>Wat meebrengen</p>",
-            "nl-BE-x-generated-informal": "<p>Wat meebrengen - informal</p>",
-            "nl-BE-x-generated-formal": "<p>Wat meebrengen - formal</p>",
-            "en": "<p>Bring something</p>"
+            "nl": "<p>Wat meebrengen 1</p>",
+            "nl-BE-x-generated-informal": "<p>Wat meebrengen - informal 1</p>",
+            "nl-BE-x-generated-formal": "<p>Wat meebrengen - formal 1</p>",
+            "en": "<p>Bring something 1</p>"
           },
           "naam": {
-            "nl": "Wat meebrengen",
-            "nl-BE-x-generated-informal": "Wat meebrengen - informal",
-            "nl-BE-x-generated-formal": "Wat meebrengen - formal",
-            "en": "Bring something"
+            "nl": "Wat meebrengen 1",
+            "nl-BE-x-generated-informal": "Wat meebrengen - informal 1",
+            "nl-BE-x-generated-formal": "Wat meebrengen - formal 1",
+            "en": "Bring something 1"
           },
           "bewijs": {
             "beschrijving": {
-              "nl": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart</p>",
-              "nl-BE-x-generated-informal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - informal</p>",
-              "nl-BE-x-generated-formal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - formal</p>",
-              "en": "<p>An overview of the complete family income, an overview of savings, a copy of your identity card</p>"
+              "nl": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart 1</p>",
+              "nl-BE-x-generated-informal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - informal 1</p>",
+              "nl-BE-x-generated-formal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - formal 1</p>",
+              "en": "<p>An overview of the complete family income, an overview of savings, a copy of your identity card 1</p>"
             },
             "naam": {
-              "nl": "Bewijs om mee te brengen",
-              "nl-BE-x-generated-informal": "Bewijs om mee te brengen - informal",
-              "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal",
-              "en": "Evidence to bring with you"
+              "nl": "Bewijs om mee te brengen 1",
+              "nl-BE-x-generated-informal": "Bewijs om mee te brengen - informal 1",
+              "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal 1",
+              "en": "Evidence to bring with you 1"
             },
             "@type": "bewijsType"
           },
@@ -375,48 +373,70 @@
       "procedures": [
         {
           "naam": {
-            "nl": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. 3",
-            "nl-BE-x-generated-informal": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - informal 3",
-            "nl-BE-x-generated-formal": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - formal 3",
-            "en": "If you have children, the social worker will also investigate the maintenance obligation. 3"
+            "nl": "Procedure titel.",
+            "nl-BE-x-generated-informal": "Procedure titel. - informal",
+            "nl-BE-x-generated-formal": "Procedure titel. - formal",
+            "en": "Procedure titel. - en"
           },
           "beschrijving": {
-            "nl": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. 3</p>",
-            "nl-BE-x-generated-informal": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - informal 3</p>",
-            "nl-BE-x-generated-formal": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - formal 3</p>",
-            "en": "<p>If you have children, the social worker will also investigate the maintenance obligation. 3</p>"
+            "nl": "<p>Procedure beschrijving.</p>",
+            "nl-BE-x-generated-informal": "<p>Procedure beschrijving. - informal</p>",
+            "nl-BE-x-generated-formal": "<p>Procedure beschrijving. - formal</p>",
+            "en": "<p>Procedure beschrijving. - en</p>"
           },
-          "@type": "procedure",
-          "order": 2.0
-        },        {
-          "naam": {
-            "nl": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. 2",
-            "nl-BE-x-generated-informal": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - informal 2",
-            "nl-BE-x-generated-formal": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - formal 2",
-            "en": "If you have children, the social worker will also investigate the maintenance obligation. 2"
-          },
-          "beschrijving": {
-            "nl": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. 2</p>",
-            "nl-BE-x-generated-informal": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - informal 2</p>",
-            "nl-BE-x-generated-formal": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - formal 2</p>",
-            "en": "<p>If you have children, the social worker will also investigate the maintenance obligation. 2</p>"
-          },
-          "@type": "procedure",
-          "order": 1.0
-        },
-        {
-          "naam": {
-            "nl": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht.",
-            "nl-BE-x-generated-informal": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - informal",
-            "nl-BE-x-generated-formal": "Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - formal",
-            "en": "If you have children, the social worker will also investigate the maintenance obligation."
-          },
-          "beschrijving": {
-            "nl": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht.</p>",
-            "nl-BE-x-generated-informal": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - informal</p>",
-            "nl-BE-x-generated-formal": "<p>Als u kinderen hebt, onderzoekt de maatschappelijk werker ook de onderhoudsplicht. - formal</p>",
-            "en": "<p>If you have children, the social worker will also investigate the maintenance obligation.</p>"
-          },
+          "websites": [
+            {
+              "naam": {
+                "nl-BE-x-generated-formal": "Procedure website naam - formal 2",
+                "nl": "Procedure website naam - nl 2",
+                "nl-BE-x-generated-informal": "Procedure website naam - informal 2",
+                "en": "Procedure website naam - en 2"
+              },
+              "beschrijving": {
+                "nl-BE-x-generated-formal": "procedure website beschrijving - formal 2",
+                "nl": "procedure website beschrijving - nl 2",
+                "en": "procedure website beschrijving - en 2",
+                "nl-BE-x-generated-informal": "procedure website beschrijving - informal 2"
+              },
+              "url": "https://procedure-website2.com",
+              "@type": "website",
+              "order": 1.0
+            },
+            {
+              "naam": {
+                "nl-BE-x-generated-formal": "Procedure website naam - formal 1",
+                "nl": "Procedure website naam - nl 1",
+                "nl-BE-x-generated-informal": "Procedure website naam - informal 1",
+                "en": "Procedure website naam - en 1"
+              },
+              "beschrijving": {
+                "nl-BE-x-generated-formal": "procedure website beschrijving - formal 1",
+                "nl": "procedure website beschrijving - nl 1",
+                "en": "procedure website beschrijving - en 1",
+                "nl-BE-x-generated-informal": "procedure website beschrijving - informal 1"
+              },
+              "url": "https://procedure-website1.com",
+              "@type": "website",
+              "order": 0.0
+            },
+            {
+              "naam": {
+                "nl-BE-x-generated-formal": "Procedure website naam - formal 3",
+                "nl": "Procedure website naam - nl 3",
+                "nl-BE-x-generated-informal": "Procedure website naam - informal 3",
+                "en": "Procedure website naam - en 3"
+              },
+              "beschrijving": {
+                "nl-BE-x-generated-formal": "procedure website beschrijving - formal 3",
+                "nl": "procedure website beschrijving - nl 3",
+                "en": "procedure website beschrijving - en 3",
+                "nl-BE-x-generated-informal": "procedure website beschrijving - informal 3"
+              },
+              "url": "https://procedure-website3.com",
+              "@type": "website",
+              "order": 2.0
+            }
+          ],
           "@type": "procedure",
           "order": 0.0
         }
@@ -424,18 +444,18 @@
       "websites": [
         {
           "naam": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal",
-            "nl": "Website Belgische nationaliteit en naturalisatie - nl",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal",
-            "en": "Website Belgische nationaliteit en naturalisatie - en"
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 1",
+            "nl": "Website Belgische nationaliteit en naturalisatie - nl 1",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 1",
+            "en": "Website Belgische nationaliteit en naturalisatie - en 1"
           },
           "beschrijving": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal",
-            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl",
-            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal"
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 1",
+            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl 1",
+            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 1",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 1"
           },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_0",
+          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_1",
           "@type": "website",
           "order": 0.0
         },
@@ -444,15 +464,15 @@
             "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 3",
             "nl": "Website Belgische nationaliteit en naturalisatie 3",
             "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 3",
-            "en": "Website Belgian nationality and naturalization 3"
+            "en": "Website Belgische nationaliteit en naturalisatie - en 3"
           },
           "beschrijving": {
             "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 3",
             "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 3",
-            "en": "Website Belgian nationality and naturalization description 3",
+            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 3",
             "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 3"
           },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_2",
+          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_3",
           "@type": "website",
           "order": 2.0
         },
@@ -461,15 +481,15 @@
             "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 2",
             "nl": "Website Belgische nationaliteit en naturalisatie 2",
             "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 2",
-            "en": "Website Belgian nationality and naturalization 2"
+            "en": "Website Belgische nationaliteit en naturalisatie - en 2"
           },
           "beschrijving": {
             "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 2",
             "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 2",
-            "en": "Website Belgian nationality and naturalization description 2",
+            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 2",
             "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 2"
           },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_1",
+          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_2",
           "@type": "website",
           "order": 1.0
         }
@@ -480,29 +500,29 @@
             "nl": "<p>De aanvraag en het attest zijn gratis. 3</p>",
             "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis. - informal 3</p>",
             "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis. - formal 3</p>",
-            "en": "<p>The application and certificate are free. 3</p>"
+            "en": "<p>De aanvraag en het attest zijn gratis. - en 3</p>"
           },
           "naam": {
             "nl": "Bedrag kost 3",
             "nl-BE-x-generated-informal": "Bedrag kost - informal 3",
             "nl-BE-x-generated-formal": "Bedrag kost - formal 3",
-            "en": "Amount cost 3"
+            "en": "Bedrag kost - en 3"
           },
           "@type": "kost",
           "order": 2.0
         },
         {
           "beschrijving": {
-            "nl": "<p>De aanvraag en het attest zijn gratis.</p>",
-            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis. - informal</p>",
-            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis. - formal</p>",
-            "en": "<p>The application and certificate are free.</p>"
+            "nl": "<p>De aanvraag en het attest zijn gratis. 1</p>",
+            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis. - informal 1</p>",
+            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis. - formal 1</p>",
+            "en": "<p>De aanvraag en het attest zijn gratis. - en 1</p>"
           },
           "naam": {
             "nl": "Bedrag kost",
-            "nl-BE-x-generated-informal": "Bedrag kost - informal",
-            "nl-BE-x-generated-formal": "Bedrag kost - formal",
-            "en": "Amount cost"
+            "nl-BE-x-generated-informal": "Bedrag kost - informal 1",
+            "nl-BE-x-generated-formal": "Bedrag kost - formal 1",
+            "en": "Bedrag kost - en 1"
           },
           "@type": "kost",
           "order": 0.0
@@ -512,13 +532,13 @@
             "nl": "<p>De aanvraag en het attest zijn gratis. 2</p>",
             "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis. - informal 2</p>",
             "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis. - formal 2</p>",
-            "en": "<p>The application and certificate are free. 2</p>"
+            "en": "<p>De aanvraag en het attest zijn gratis. - en 2</p>"
           },
           "naam": {
             "nl": "Bedrag kost 2",
             "nl-BE-x-generated-informal": "Bedrag kost - informal 2",
             "nl-BE-x-generated-formal": "Bedrag kost - formal 2",
-            "en": "Amount cost 2"
+            "en": "Bedrag kost - en 2"
           },
           "@type": "kost",
           "order": 1.0
@@ -527,16 +547,16 @@
       "financieleVoordelen": [
         {
           "beschrijving": {
-            "nl": "<p>Beschrijving financieel voordeel.</p>",
-            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel. - informal</p>",
-            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel. - formal</p>",
-            "en": "<p>Description of financial benefit.</p>"
+            "nl": "<p>Beschrijving financieel voordeel. 1</p>",
+            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel. - informal 1</p>",
+            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel. - formal 1</p>",
+            "en": "<p>Beschrijving financieel voordeel. - en 1</p>"
           },
           "naam": {
-            "nl": "Titel financieel voordeel.",
-            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal",
-            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
-            "en": "Title financial benefit"
+            "nl": "Titel financieel voordeel. 1",
+            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal 1",
+            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 1",
+            "en": "Titel financieel voordeel. - en 1"
           },
           "@type": "financieelVoordeel",
           "order": 0.0
@@ -546,13 +566,13 @@
             "nl": "<p>Beschrijving financieel voordeel. 2</p>",
             "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel. - informal 2</p>",
             "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel. - formal 2</p>",
-            "en": "<p>Description of financial benefit. 2</p>"
+            "en": "<p>Beschrijving financieel voordeel. - en 2</p>"
           },
           "naam": {
             "nl": "Titel financieel voordeel. 2",
             "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal 2",
             "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 2",
-            "en": "Title financial benefit 2"
+            "en": "Titel financieel voordeel. - en 2"
           },
           "@type": "financieelVoordeel",
           "order": 1.0
@@ -562,13 +582,13 @@
             "nl": "<p>Beschrijving financieel voordeel. 3</p>",
             "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel. - informal 3</p>",
             "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel. - formal 3</p>",
-            "en": "<p>Description of financial benefit. 3</p>"
+            "en": "<p>Beschrijving financieel voordeel. - en 3</p>"
           },
           "naam": {
             "nl": "Titel financieel voordeel. 3",
             "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal 3",
             "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 3",
-            "en": "Title financial benefit 3"
+            "en": "Titel financieel voordeel. - en 3"
           },
           "@type": "financieelVoordeel",
           "order": 2.0

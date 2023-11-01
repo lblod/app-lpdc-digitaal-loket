@@ -31,86 +31,82 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly uitzonderingenReadonly: Locator;
     readonly uitzonderingenEngelsReadonly: Locator;
 
-    readonly titelVoorwaardeInput: Locator;
-    readonly titelVoorwaardeEngelsInput: Locator;
-    readonly beschrijvingVoorwaardeEditor: Locator;
-    readonly beschrijvingVoorwaardeEngelsEditor: Locator;
-    readonly beschrijvingVoorwaardeReadonly: Locator;
-    readonly beschrijvingVoorwaardeEngelsReadonly: Locator;
+    readonly titelVoorwaardeInput: (order?: number) => Locator;
+    readonly titelVoorwaardeEngelsInput:(order?: number) => Locator;
+    readonly beschrijvingVoorwaardeEditor:(order?: number) => Locator;
+    readonly beschrijvingVoorwaardeEngelsEditor:(order?: number) => Locator;
+    readonly beschrijvingVoorwaardeReadonly:(order?: number) => Locator;
+    readonly beschrijvingVoorwaardeEngelsReadonly:(order?: number) => Locator;
 
-    readonly titelBewijsstukInput: Locator;
-    readonly titelBewijsstukEngelsInput: Locator;
+    readonly titelBewijsstukInput:(order?: number) => Locator;
+    readonly titelBewijsstukEngelsInput:(order?: number) => Locator;
 
-    readonly beschrijvingBewijsstukEditor: Locator;
-    readonly beschrijvingBewijsstukEngelsEditor: Locator;
-    readonly beschrijvingBewijsstukReadonly: Locator;
-    readonly beschrijvingBewijsstukEngelsReadonly: Locator;
+    readonly beschrijvingBewijsstukEditor:(order?: number) => Locator;
+    readonly beschrijvingBewijsstukEngelsEditor:(order?: number) => Locator;
+    readonly beschrijvingBewijsstukReadonly:(order?: number) => Locator;
+    readonly beschrijvingBewijsstukEngelsReadonly:(order?: number) => Locator;
 
-    readonly titelProcedureInput: Locator;
-    readonly titelProcedureEngelsInput: Locator;
-    readonly beschrijvingProcedureEditor: Locator;
-    readonly beschrijvingProcedureEngelsEditor: Locator;
-    readonly beschrijvingProcedureReadonly: Locator;
-    readonly beschrijvingProcedureEngelsReadonly: Locator;
+    readonly titelProcedureInput:(order?: number) => Locator;
+    readonly titelProcedureEngelsInput:(order?: number) => Locator;
+    readonly beschrijvingProcedureEditor:(order?: number) => Locator;
+    readonly beschrijvingProcedureEngelsEditor:(order?: number) => Locator;
+    readonly beschrijvingProcedureReadonly:(order?: number) => Locator;
+    readonly beschrijvingProcedureEngelsReadonly:(order?: number) => Locator;
 
-    readonly titelWebsiteVoorProcedureInput: Locator;
-    readonly titelWebsiteVoorProcedureEngelsInput: Locator;
-    readonly beschrijvingWebsiteVoorProcedureEditor: Locator;
-    readonly beschrijvingWebsiteVoorProcedureReadonly: Locator;
-    readonly beschrijvingWebsiteVoorProcedureEngelsEditor: Locator;
-    readonly beschrijvingWebsiteVoorProcedureEngelsReadonly: Locator;
-    readonly websiteURLVoorProcedureInput: Locator;
+    readonly titelWebsiteVoorProcedureInput:(childOrder?: number, parentOrder?: number) => Locator;
+    readonly titelWebsiteVoorProcedureEngelsInput:(childOrder?: number, parentOrder?: number)=> Locator;
+    readonly beschrijvingWebsiteVoorProcedureEditor:(childOrder?: number, parentOrder?: number)=> Locator;
+    readonly beschrijvingWebsiteVoorProcedureReadonly:(childOrder?: number, parentOrder?: number)=> Locator;
+    readonly beschrijvingWebsiteVoorProcedureEngelsEditor:(childOrder?: number, parentOrder?: number)=> Locator;
+    readonly beschrijvingWebsiteVoorProcedureEngelsReadonly:(childOrder?: number, parentOrder?: number)=> Locator;
+    readonly websiteURLVoorProcedureInput:(childOrder?: number, parentOrder?: number)=> Locator;
 
-    readonly titelKostInput: Locator;
-    readonly titelKostEngelsInput: Locator;
-    readonly beschrijvingKostEditor: Locator;
-    readonly beschrijvingKostReadonly: Locator;
-    readonly beschrijvingKostEngelsEditor: Locator;
-    readonly beschrijvingKostEngelsReadonly: Locator;
+    readonly titelKostInput:(order?: number) => Locator;
+    readonly titelKostEngelsInput:(order?: number) => Locator;
+    readonly beschrijvingKostEditor:(order?: number) => Locator;
+    readonly beschrijvingKostReadonly:(order?: number) => Locator;
+    readonly beschrijvingKostEngelsEditor:(order?: number) => Locator;
+    readonly beschrijvingKostEngelsReadonly:(order?: number) => Locator;
 
-    readonly titelFinancieelVoordeelInput: Locator;
-    readonly titelFinancieelVoordeelEngelsInput: Locator;
-    readonly beschrijvingFinancieelVoordeelEditor: Locator;
-    readonly beschrijvingFinancieelVoordeelReadonly: Locator;
-    readonly beschrijvingFinancieelVoordeelEngelsEditor: Locator;
-    readonly beschrijvingFinancieelVoordeelEngelsReadonly: Locator;
+    readonly titelFinancieelVoordeelInput:(order?: number) => Locator;
+    readonly titelFinancieelVoordeelEngelsInput:(order?: number) => Locator;
+    readonly beschrijvingFinancieelVoordeelEditor:(order?: number) => Locator;
+    readonly beschrijvingFinancieelVoordeelReadonly:(order?: number) => Locator;
+    readonly beschrijvingFinancieelVoordeelEngelsEditor:(order?: number) => Locator;
+    readonly beschrijvingFinancieelVoordeelEngelsReadonly:(order?: number) => Locator;
 
-    readonly beschrijvingRegelgevingEditor: Locator;
-    readonly beschrijvingRegelgevingReadonly: Locator;
-    readonly beschrijvingRegelgevingEngelsEditor: Locator;
-    readonly beschrijvingRegelgevingEngelsReadonly: Locator;
+    readonly beschrijvingRegelgevingEditor:(order?: number) => Locator;
+    readonly beschrijvingRegelgevingReadonly:(order?: number) => Locator;
+    readonly beschrijvingRegelgevingEngelsEditor:(order?: number) => Locator;
+    readonly beschrijvingRegelgevingEngelsReadonly:(order?: number) => Locator;
 
     readonly voegContactpuntToeButton: Locator;
     readonly contactpuntHeading: Locator;
-    readonly contactpuntEmailSelect: SelectWithCreate;
-    readonly contactpuntEmailReadonly: Locator;
-    readonly contactpuntTelefoonSelect: SelectWithCreate;
-    readonly contactpuntTelefoonReadonly: Locator;
-    readonly contactpuntWebsiteURLSelect: SelectWithCreate;
-    readonly contactpuntWebsiteURLReadonly: Locator;
-    readonly contactpuntOpeningsurenSelect: SelectWithCreate;
-    readonly contactpuntOpeningsurenReadonly: Locator;
-    readonly voegAdresToeButton: Locator;
-    readonly contactpuntAdresGemeenteSelect: Select;
-    readonly contactpuntAdresStraatSelect: Select;
-    readonly contactpuntAdresHuisnummerInput: Locator;
-    readonly contactpuntAdresBusnummerInput: Locator;
-    readonly contactpuntAdresValidatie: Locator;
+    readonly contactpuntEmailSelect:(order?: number)=> SelectWithCreate;
+    readonly contactpuntEmailReadonly:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly contactpuntTelefoonSelect:(order?: number)=> SelectWithCreate;
+    readonly contactpuntTelefoonReadonly:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly contactpuntWebsiteURLSelect:(order?: number)=> SelectWithCreate;
+    readonly contactpuntWebsiteURLReadonly:(order?:number)=> Locator;
+    readonly contactpuntOpeningsurenSelect:(order?: number)=> SelectWithCreate;
+    readonly contactpuntOpeningsurenReadonly:(order?:number)=> Locator;
+    readonly voegAdresToeButton:(order?: number)=> Locator;
+    readonly contactpuntAdresGemeenteSelect:(order?: number)=> Select;
+    readonly contactpuntAdresStraatSelect:(order?: number)=> Select;
+    readonly contactpuntAdresHuisnummerInput:(order?: number) => Locator;
+    readonly contactpuntAdresBusnummerInput:(order?: number) => Locator;
+    readonly contactpuntAdresValidatie:(order?: number) => Locator;
 
-    readonly secondContactpuntAdresGemeenteSelect: Select;
-    readonly secondContactpuntAdresStraatSelect: Select;
-    readonly secondContactpuntAdresHuisnummerInput: Locator;
-    readonly secondContactpuntAdresBusnummerInput: Locator;
-    readonly secondContactpuntAdresValidatie: Locator;
+    readonly titelWebsiteInput:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly titelWebsiteEngelsInput:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly beschrijvingWebsiteEditor:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly beschrijvingWebsiteReadonly:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly beschrijvingWebsiteEngelsEditor:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly beschrijvingWebsiteEngelsReadonly:(childOrder?:number, parentOrder?:number)=> Locator;
+    readonly websiteURLInput:(childOrder?:number, parentOrder?:number)=> Locator;
 
-    readonly titelWebsiteInput: Locator;
-    readonly titelWebsiteEngelsInput: Locator;
-    readonly beschrijvingWebsiteEditor: Locator;
-    readonly beschrijvingWebsiteReadonly: Locator;
-    readonly beschrijvingWebsiteEngelsEditor: Locator;
-    readonly beschrijvingWebsiteEngelsReadonly: Locator;
-    readonly websiteURLInput: Locator;
 
+    //Eigenschappen
     readonly algemeneInfoHeading: Locator;
 
     readonly productOfDienstGeldigVanafInput: Locator;
@@ -143,107 +139,112 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelHeading = page.getByRole('heading', { name: 'Titel', exact: true });
 
-        this.titelInput = this.inputBelow('Titel');
-        this.titelEngelsInput = this.inputRightOf('Titel');
-        this.beschrijvingEditor = this.editorBelow('Beschrijving');
-        this.beschrijvingEngelsEditor = this.editorRightOf('Beschrijving');
-        this.beschrijvingReadonly = this.readonlyBelow('Beschrijving');
-        this.beschrijvingEngelsReadonly = this.readonlyRightOf('Beschrijving');
+        this.titelInput = this.inputBelow('Titel').first();
+        this.titelEngelsInput = this.inputRightOf('Titel').first()
+        this.beschrijvingEditor = this.editorBelow('Beschrijving').first();
+        this.beschrijvingEngelsEditor = this.editorRightOf('Beschrijving').first()
+        this.beschrijvingReadonly = this.readonlyBelow('Beschrijving').first();
+        this.beschrijvingEngelsReadonly = this.readonlyRightOf('Beschrijving').first();
 
-        this.aanvullendeBeschrijvingEditor = this.editorBelow('Aanvullende Beschrijving');
-        this.aanvullendeBeschrijvingEngelsEditor = this.editorRightOf('Aanvullende Beschrijving');
-        this.aanvullendeBeschrijvingReadonly = this.readonlyBelow('Aanvullende Beschrijving');
-        this.aanvullendeBeschrijvingEngelsReadonly = this.readonlyRightOf('Aanvullende Beschrijving');
+        this.aanvullendeBeschrijvingEditor = this.editorBelow('Aanvullende Beschrijving').first();
+        this.aanvullendeBeschrijvingEngelsEditor = this.editorRightOf('Aanvullende Beschrijving').first();
+        this.aanvullendeBeschrijvingReadonly = this.readonlyBelow('Aanvullende Beschrijving').first();
+        this.aanvullendeBeschrijvingEngelsReadonly = this.readonlyRightOf('Aanvullende Beschrijving').first();
 
-        this.uitzonderingenEditor = this.editorBelow('Uitzonderingen');
-        this.uitzonderingenEngelsEditor = this.editorRightOf('Uitzonderingen');
-        this.uitzonderingenReadonly = this.readonlyBelow('Uitzonderingen');
-        this.uitzonderingenEngelsReadonly = this.readonlyRightOf('Uitzonderingen');
+        this.uitzonderingenEditor = this.editorBelow('Uitzonderingen').first();
+        this.uitzonderingenEngelsEditor = this.editorRightOf('Uitzonderingen').first();
+        this.uitzonderingenReadonly = this.readonlyBelow('Uitzonderingen').first();
+        this.uitzonderingenEngelsReadonly = this.readonlyRightOf('Uitzonderingen').first();
 
-        this.titelVoorwaardeInput = this.inputBelow('Titel voorwaarde');
-        this.titelVoorwaardeEngelsInput = this.inputRightOf('Titel voorwaarde');
-        this.beschrijvingVoorwaardeEditor = this.editorBelow('Beschrijving voorwaarde');
-        this.beschrijvingVoorwaardeEngelsEditor = this.editorRightOf('Beschrijving voorwaarde');
-        this.beschrijvingVoorwaardeReadonly = this.readonlyBelow('Beschrijving voorwaarde');
-        this.beschrijvingVoorwaardeEngelsReadonly = this.readonlyRightOf('Beschrijving voorwaarde');
+        this.titelVoorwaardeInput = (order: number = 0) => this.inputBelow('Titel voorwaarde').nth(order);
+        this.titelVoorwaardeEngelsInput = (order: number = 0) => this.inputRightOf('Titel voorwaarde').nth(order);
+        this.beschrijvingVoorwaardeEditor = (order: number = 0) => this.editorBelow('Beschrijving voorwaarde').nth(order);
+        this.beschrijvingVoorwaardeEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving voorwaarde').nth(order);
+        this.beschrijvingVoorwaardeReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving voorwaarde').nth(order);
+        this.beschrijvingVoorwaardeEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving voorwaarde').nth(order);
 
-        this.titelBewijsstukInput = this.inputBelow('Titel bewijsstuk');
-        this.titelBewijsstukEngelsInput = this.inputRightOf('Titel bewijsstuk');
-        this.beschrijvingBewijsstukEditor = this.editorBelow('Beschrijving bewijsstuk');
-        this.beschrijvingBewijsstukEngelsEditor = this.editorRightOf('Beschrijving bewijsstuk');
-        this.beschrijvingBewijsstukReadonly = this.readonlyBelow('Beschrijving bewijsstuk');
-        this.beschrijvingBewijsstukEngelsReadonly = this.readonlyRightOf('Beschrijving bewijsstuk');
+        this.titelBewijsstukInput = (order: number = 0) => this.inputBelow('Titel bewijsstuk').nth(order);
+        this.titelBewijsstukEngelsInput = (order: number = 0) => this.inputRightOf('Titel bewijsstuk').nth(order);
+        this.beschrijvingBewijsstukEditor = (order: number = 0) => this.editorBelow('Beschrijving bewijsstuk').nth(order);
+        this.beschrijvingBewijsstukEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving bewijsstuk').nth(order);
+        this.beschrijvingBewijsstukReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving bewijsstuk').nth(order);
+        this.beschrijvingBewijsstukEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving bewijsstuk').nth(order);
 
-        this.titelProcedureInput = this.inputBelow('Titel procedure');
-        this.titelProcedureEngelsInput = this.inputRightOf('Titel procedure');
-        this.beschrijvingProcedureEditor = this.editorBelow('Beschrijving procedure');
-        this.beschrijvingProcedureEngelsEditor = this.editorRightOf('Beschrijving procedure');
-        this.beschrijvingProcedureReadonly = this.readonlyBelow('Beschrijving procedure');
-        this.beschrijvingProcedureEngelsReadonly = this.readonlyRightOf('Beschrijving procedure');
+        this.titelProcedureInput = (order: number = 0) => this.inputBelow('Titel procedure').nth(order);
+        this.titelProcedureEngelsInput = (order: number = 0) => this.inputRightOf('Titel procedure').nth(order);
+        this.beschrijvingProcedureEditor = (order: number = 0) => this.editorBelow('Beschrijving procedure').nth(order);
+        this.beschrijvingProcedureEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving procedure').nth(order);
+        this.beschrijvingProcedureReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving procedure').nth(order);
+        this.beschrijvingProcedureEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving procedure').nth(order);
 
-        this.titelWebsiteVoorProcedureInput = page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
-        this.titelWebsiteVoorProcedureEngelsInput = page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.beschrijvingWebsiteVoorProcedureEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Website procedure')))`).first();
-        this.websiteURLVoorProcedureInput = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Website procedure')))`).first();
+        this.titelWebsiteVoorProcedureInput = (childOrder: number = 0, parentOrder:number = 0) =>  this.nestedLocator(this.inputBelow('Titel website'),childOrder, 'Website procedure', parentOrder);
+        this.titelWebsiteVoorProcedureEngelsInput = (childOrder: number = 0, parentOrder:number = 0) => this.nestedLocator(this.inputRightOf('Titel website'),childOrder, 'Website procedure', parentOrder);
+        this.beschrijvingWebsiteVoorProcedureEditor =(childOrder:number = 0, parentOrder:number = 0) => this.nestedLocator(this.editorBelow('Beschrijving website'),childOrder, 'Website procedure', parentOrder);
+        this.beschrijvingWebsiteVoorProcedureReadonly =(childOrder:number = 0, parentOrder:number = 0) => this.nestedLocator(this.readonlyBelow('Beschrijving website'),childOrder, 'Website procedure', parentOrder);
+        this.beschrijvingWebsiteVoorProcedureEngelsEditor =(childOrder:number = 0, parentOrder:number = 0) => this.nestedLocator(this.editorRightOf('Beschrijving website'),childOrder, 'Website procedure', parentOrder);
+        this.beschrijvingWebsiteVoorProcedureEngelsReadonly =(childOrder:number = 0, parentOrder:number = 0) => this.nestedLocator(this.readonlyRightOf('Beschrijving website'),childOrder, 'Website procedure', parentOrder);
+        this.websiteURLVoorProcedureInput=(childOrder:number = 0, parentOrder:number = 0) => this.nestedLocator(this.inputBelow('Website URL'),childOrder, 'Website procedure', parentOrder);
 
-        this.titelKostInput = this.inputBelow('Titel kost');
-        this.titelKostEngelsInput = this.inputRightOf('Titel kost');
-        this.beschrijvingKostEditor = this.editorBelow('Beschrijving kost');
-        this.beschrijvingKostReadonly = this.readonlyBelow('Beschrijving kost');
-        this.beschrijvingKostEngelsEditor = this.editorRightOf('Beschrijving kost');
-        this.beschrijvingKostEngelsReadonly = this.readonlyRightOf('Beschrijving kost');
+        this.titelKostInput = (order: number = 0) => this.inputBelow('Titel kost').nth(order);
+        this.titelKostEngelsInput = (order: number = 0) => this.inputRightOf('Titel kost').nth(order);
+        this.beschrijvingKostEditor = (order: number = 0) => this.editorBelow('Beschrijving kost').nth(order);
+        this.beschrijvingKostReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving kost').nth(order);
+        this.beschrijvingKostEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving kost').nth(order);
+        this.beschrijvingKostEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving kost').nth(order);
 
-        this.titelFinancieelVoordeelInput = this.inputBelow('Titel financieel voordeel');
-        this.titelFinancieelVoordeelEngelsInput = this.inputRightOf('Titel financieel voordeel');
-        this.beschrijvingFinancieelVoordeelEditor = this.editorBelow('Beschrijving financieel voordeel');
-        this.beschrijvingFinancieelVoordeelReadonly = this.readonlyBelow('Beschrijving financieel voordeel');
-        this.beschrijvingFinancieelVoordeelEngelsEditor = this.editorRightOf('Beschrijving financieel voordeel');
-        this.beschrijvingFinancieelVoordeelEngelsReadonly = this.readonlyRightOf('Beschrijving financieel voordeel');
+        this.titelFinancieelVoordeelInput = (order: number = 0) => this.inputBelow('Titel financieel voordeel').nth(order);
+        this.titelFinancieelVoordeelEngelsInput = (order: number = 0) => this.inputRightOf('Titel financieel voordeel').nth(order);
+        this.beschrijvingFinancieelVoordeelEditor = (order: number = 0) => this.editorBelow('Beschrijving financieel voordeel').nth(order);
+        this.beschrijvingFinancieelVoordeelReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving financieel voordeel').nth(order);
+        this.beschrijvingFinancieelVoordeelEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving financieel voordeel').nth(order);
+        this.beschrijvingFinancieelVoordeelEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving financieel voordeel').nth(order);
 
-        this.beschrijvingRegelgevingEditor = this.editorBelow('Regelgeving');
-        this.beschrijvingRegelgevingReadonly = this.readonlyBelow('Regelgeving');
-        this.beschrijvingRegelgevingEngelsEditor = this.editorRightOf('Regelgeving');
-        this.beschrijvingRegelgevingEngelsReadonly = this.readonlyRightOf('Regelgeving');
+        this.beschrijvingRegelgevingEditor =(order: number = 0) => this.editorBelow('Regelgeving').nth(order);
+        this.beschrijvingRegelgevingReadonly =(order: number = 0) => this.readonlyBelow('Regelgeving').nth(order);
+        this.beschrijvingRegelgevingEngelsEditor =(order: number = 0) => this.editorRightOf('Regelgeving').nth(order);
+        this.beschrijvingRegelgevingEngelsReadonly =(order: number = 0) => this.readonlyRightOf('Regelgeving').nth(order);
 
         this.voegContactpuntToeButton = page.getByRole('button', { name: 'Voeg contactpunt toe' });
         this.contactpuntHeading = page.getByRole('heading', { name: 'Contactpunt', exact: true });
-        this.contactpuntEmailSelect = new SelectWithCreate(page, 'Email');
-        this.contactpuntEmailReadonly = page.locator(`input:below(label:text-is('Email'):below(h2:text-is('Contactpunt')))`).first();
-        this.contactpuntTelefoonSelect = new SelectWithCreate(page, 'Telefoon');
-        this.contactpuntTelefoonReadonly = page.locator(`input:below(label:text-is('Telefoon'):below(h2:text-is('Contactpunt')))`).first();
-        this.contactpuntWebsiteURLSelect = new SelectWithCreate(page, 'Website URL');
-        this.contactpuntWebsiteURLReadonly = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Contactpunt')))`).first();
-        this.contactpuntOpeningsurenSelect = new SelectWithCreate(page, 'Openingsuren');
-        this.contactpuntOpeningsurenReadonly = page.locator(`input:below(label:text-is('Openingsuren'):below(h2:text-is('Contactpunt')))`).first();
+        this.contactpuntEmailSelect = (order: number = 0) => new SelectWithCreate(page, 'Email',order);
+        this.contactpuntEmailReadonly = (childOrder:number = 0, parentOrder:number = 0 ) => this.nestedLocator(this.inputBelow('Email'), childOrder,'Contactpunt', parentOrder);
+        this.contactpuntTelefoonSelect = (order: number = 0)=> new SelectWithCreate(page, 'Telefoon', order);
+        this.contactpuntTelefoonReadonly = (childOrder:number = 0, parentOrder:number = 0 ) => this.nestedLocator(this.inputBelow('Telefoon'), childOrder,'Contactpunt', parentOrder);
+        this.contactpuntWebsiteURLSelect = (order: number = 0)=> new SelectWithCreate(page, 'Website URL', order);
+        this.contactpuntWebsiteURLReadonly = (childOrder:number = 0, parentOrder:number = 0 ) => this.nestedLocator(this.inputBelow('Website URL'), childOrder,'Contactpunt', parentOrder);
+        this.contactpuntOpeningsurenSelect = (order: number = 0)=> new SelectWithCreate(page, 'Openingsuren', order);
+        this.contactpuntOpeningsurenReadonly = (childOrder:number = 0, parentOrder:number = 0 ) => this.nestedLocator(this.inputBelow('Openingsuren'), childOrder,'Contactpunt', parentOrder);
 
-        this.voegAdresToeButton = page.getByRole('button', { name: 'Voeg adres toe' });
-        this.contactpuntAdresGemeenteSelect = new Select(page,'Gemeente');
-        this.contactpuntAdresStraatSelect = new Select(page,'Straat');
-        this.contactpuntAdresHuisnummerInput = this.inputBelow('Huisnummer');
-        this.contactpuntAdresBusnummerInput = this.inputBelow('Bus');
-        this.contactpuntAdresValidatie = page.getByRole('alert').nth(0);
+        this.voegAdresToeButton = (order: number = 0)=> page.getByRole('button', { name: 'Voeg adres toe' }).nth(order);
+        this.contactpuntAdresGemeenteSelect = (order: number = 0) => new Select(page,'Gemeente','Adres',order+1);
+        this.contactpuntAdresStraatSelect = (order: number = 0) => new Select(page,'Straat', 'Adres', order+1);
+        this.contactpuntAdresHuisnummerInput = (order: number = 0) => this.inputBelow('Huisnummer').nth(order);
+        this.contactpuntAdresBusnummerInput = (order: number = 0) => this.inputBelow('Bus').nth(order);
+        this.contactpuntAdresValidatie = (order: number = 0)=> page.getByRole('alert').nth(order);
 
-        this.secondContactpuntAdresGemeenteSelect = new Select(page, 'Gemeente', 'Adres', 2);
-        this.secondContactpuntAdresStraatSelect = new Select(page, 'Straat', 'Adres', 2);
-        this.secondContactpuntAdresHuisnummerInput = this.inputBelowLabelAndNthTitle('Huisnummer', 'Adres', 2);
-        this.secondContactpuntAdresBusnummerInput = this.inputBelowLabelAndNthTitle('Bus', 'Adres', 2);
-        this.secondContactpuntAdresValidatie = page.getByRole('alert').nth(1);
+        // this.titelWebsiteInput = (childOrder: number = 0, parentOrder:number = 0) =>  this.nestedLocator(this.inputBelow('Titel website'),childOrder, 'Gegevens website', parentOrder);
+        // this.titelWebsiteInput =(childOrder: number = 0, parentOrder:number = 0)=> page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder);
+        // this.titelWebsiteEngelsInput = (childOrder:number = 0, parentOrder:number = 0 ) => this.nestedLocator(this.inputBelow('Engelse vertaling van de titel'), childOrder,'Gegevens website', parentOrder);
+        // this.beschrijvingWebsiteEditor =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.editorBelow('Beschrijving website'),childOrder, 'Gegevens website', parentOrder);
+        // this.beschrijvingWebsiteReadonly =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.readonlyBelow('Beschrijving website'),childOrder, 'Gegevens website', parentOrder);
+        // this.beschrijvingWebsiteEngelsEditor =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.editorBelow('Engelse vertaling van de beschrijving'),childOrder, 'Gegevens website', parentOrder);
+        // this.beschrijvingWebsiteEngelsReadonly =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.readonlyBelow('Engelse vertaling van de beschrijving'),childOrder, 'Gegevens website', parentOrder);
+        // this.websiteURLInput =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.inputBelow('Website URL'),childOrder, 'Gegevens website', parentOrder);
 
-        this.titelWebsiteInput = page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
-        this.titelWebsiteEngelsInput = page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteEditor = page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteReadonly = page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteEngelsEditor = page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.beschrijvingWebsiteEngelsReadonly = page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).first();
-        this.websiteURLInput = page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).first();
+
+        this.titelWebsiteInput =(childOrder: number = 0, parentOrder:number = 0)=>  page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
+        this.titelWebsiteEngelsInput =(childOrder: number = 0, parentOrder:number = 0)=>  page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
+        this.beschrijvingWebsiteEditor =(childOrder: number = 0, parentOrder:number = 0)=>  page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
+        this.beschrijvingWebsiteReadonly =(childOrder: number = 0, parentOrder:number = 0)=>  page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
+        this.beschrijvingWebsiteEngelsEditor =(childOrder: number = 0, parentOrder:number = 0)=>  page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
+        this.beschrijvingWebsiteEngelsReadonly =(childOrder: number = 0, parentOrder:number = 0)=>  page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
+        this.websiteURLInput =(childOrder: number = 0, parentOrder:number = 0)=>  page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
+
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
         
-        this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf');
-        this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot');
+        this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf').first();
+        this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot').first();
         this.productTypeSelect = new Select(page, 'Product type');
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
         this.themasMultiSelect = new MultiSelect(page, `Thema\\\'s`);
@@ -271,7 +272,7 @@ export class InstantieDetailsPage extends AbstractPage {
     }
 
     private inputBelow(label: string): Locator {
-        return this.page.locator(`input:below(label:text-is('${label}'))`).first();
+        return this.page.locator(`input:below(label:text-is('${label}'))`)
     }
 
     private inputBelowLabelAndNthTitle(label: string, title: string, nthTitle: number): Locator {
@@ -279,23 +280,27 @@ export class InstantieDetailsPage extends AbstractPage {
     }
 
     private inputRightOf(label: string): Locator {
-        return this.page.locator(`input:right-of(label:text-is('${label}'))`).first();
+        return this.page.locator(`input:right-of(label:text-is('${label}'))`);
     }
 
     private editorBelow(label: string): Locator {
-        return this.page.locator(`div.ProseMirror:below(label:text-is('${label}'))`).first();
+        return this.page.locator(`div.ProseMirror:below(label:text-is('${label}'))`);
     }
 
-    private readonlyBelow(label: string): Locator {
-        return this.page.locator(`div.rich-text-editor-content:below(label:text-is('${label}'))`).first();
+       private readonlyBelow(label: string): Locator {
+        return this.page.locator(`div.rich-text-editor-content:below(label:text-is('${label}'))`);
     }
 
     private editorRightOf(label: string): Locator {
-        return this.page.locator(`div.ProseMirror:right-of(label:text-is('${label}'))`).first();
+        return this.page.locator(`div.ProseMirror:right-of(label:text-is('${label}'))`);
     }
 
     private readonlyRightOf(label: string): Locator {
-        return this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('${label}'))`).first();
+        return this.page.locator(`div.rich-text-editor-content:right-of(label:text-is('${label}'))`);
+    }
+
+    private nestedLocator(childLocator: Locator, childOrder: number,  parentLocator: string, parentOrder:number):Locator {
+        return this.page.locator(`:below(:nth-match(h2:text-is('${parentLocator}'), ${parentOrder+1}))`).locator(childLocator.nth(childOrder));
     }
 
 }
