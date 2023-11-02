@@ -149,12 +149,14 @@ export const Predicates = {
     hasRequirement: new Uri('http://vocab.belgif.be/ns/publicservice#hasRequirement'),
     chosenForm: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#chosenForm'),
     dateCreated: new Uri('http://schema.org/dateCreated'),
+    dateModified: new Uri('http://schema.org/dateModified'),
+    generatedAtTime: new Uri('http://www.w3.org/ns/prov#generatedAtTime'),
     relation: new Uri('http://purl.org/dc/terms/relation'),
     yourEuropeCategory: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory'),
     publicationMedium: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium'),
     hasSupportingEvidence: new Uri('http://data.europa.eu/m8g/hasSupportingEvidence'),
     hasWebsite: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite'),
-    follows: new Uri('http://purl.org/vocab/cpsv#follows'),
+    hasProcedure: new Uri('http://purl.org/vocab/cpsv#follows'),
     url: new Uri('http://schema.org/url'),
     hasMoreInfo: new Uri('http://www.w3.org/2000/01/rdf-schema#seeAlso'),
     hasCost: new Uri('http://data.europa.eu/m8g/hasCost'),
@@ -184,5 +186,7 @@ export const Predicates = {
     straatnaam: new Uri('https://data.vlaanderen.be/ns/adres#Straatnaam'),
     addressRegisterId: new Uri('https://data.vlaanderen.be/ns/adres#verwijstNaar'),
     spatial: new Uri('http://purl.org/dc/terms/spatial'),
-    hasCompetentAuthority: new Uri('http://data.europa.eu/m8g/hasCompetentAuthority')
+    hasCompetentAuthority: new Uri('http://data.europa.eu/m8g/hasCompetentAuthority'),
+    isVersionOf: new Uri('http://purl.org/dc/terms/isVersionOf'),
+    snapshotType: new Uri('https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create')
 }

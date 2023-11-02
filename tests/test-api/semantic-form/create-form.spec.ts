@@ -107,7 +107,7 @@ test('Create instance from concept: When concept has procedure then instance has
     const response = await createForm(concept.getUUID(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
-    const procedureUri = publicServiceTriples.findObject(Predicates.follows).getValue();
+    const procedureUri = publicServiceTriples.findObject(Predicates.hasProcedure).getValue();
     const procedureTriples = await fetchType(request, procedureUri, ProcedureType);
 
     expect(procedureTriples.getSubject()).not.toEqual(procedure.getSubject());
@@ -133,7 +133,7 @@ test('Create instance from concept: When concept has procedure with website then
     const response = await createForm(concept.getUUID(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
-    const procedureUri = publicServiceTriples.findObject(Predicates.follows).getValue();
+    const procedureUri = publicServiceTriples.findObject(Predicates.hasProcedure).getValue();
     const procedureTriples = await fetchType(request, procedureUri, ProcedureType);
     const websiteUri = procedureTriples.findObject(Predicates.hasWebsite).getValue();
     const websiteTriples = await fetchType(request, websiteUri, WebsiteType);
@@ -429,7 +429,7 @@ test('Create instance from concept: When concept with procedure then instance ha
     const response = await createForm(concept.getUUID(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
-    const procedureUri = publicService.findObject(Predicates.follows).getValue();
+    const procedureUri = publicService.findObject(Predicates.hasProcedure).getValue();
     const procedure = await fetchType(request, procedureUri, ProcedureType);
     expect(procedure.findAllTriples(Predicates.title)).toHaveLength(1);
     expect(procedure.findObject(Predicates.title)).toEqual(new Literal('procedure title nl', Language.FORMAL));
@@ -452,7 +452,7 @@ test('Create instance from concept: When concept with procedure with website the
     const response = await createForm(concept.getUUID(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
-    const procedureUri = publicService.findObject(Predicates.follows).getValue();
+    const procedureUri = publicService.findObject(Predicates.hasProcedure).getValue();
     const procedure = await fetchType(request, procedureUri, ProcedureType);
     const websiteUri = procedure.findObject(Predicates.hasWebsite).getValue();
     const website = await fetchType(request, websiteUri, WebsiteType);

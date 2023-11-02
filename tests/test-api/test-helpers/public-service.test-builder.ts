@@ -249,7 +249,7 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.yourEuropeCategory, this.yourEuropeCategory),
             new Triple(this.id, Predicates.publicationMedium, this.publicationMedium),
             new Triple(this.id, Predicates.hasRequirement, this.requirement),
-            new Triple(this.id, Predicates.follows, this.procedure),
+            new Triple(this.id, Predicates.hasProcedure, this.procedure),
             new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
             new Triple(this.id, Predicates.hasCost, this.cost),
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),

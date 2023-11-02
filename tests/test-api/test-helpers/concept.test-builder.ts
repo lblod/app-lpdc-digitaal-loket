@@ -218,7 +218,7 @@ export class ConceptTestBuilder {
             new Triple(this.id, Predicates.productType, this.productType),
             new Triple(this.id, Predicates.conceptTag, this.conceptTag),
             new Triple(this.id, Predicates.hasRequirement, this.requirement),
-            new Triple(this.id, Predicates.follows, this.procedure),
+            new Triple(this.id, Predicates.hasProcedure, this.procedure),
             new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
             new Triple(this.id, Predicates.hasCost, this.cost),
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),

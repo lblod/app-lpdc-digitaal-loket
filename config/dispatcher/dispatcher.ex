@@ -65,6 +65,10 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/address/"
   end
 
+  get "/lpdc-management/concept-snapshot-compare/*path" do
+    forward conn, path, "http://lpdc-management/concept-snapshot-compare/"
+  end
+
   get "/lpdc-management/*path" do
     forward conn, path, "http://lpdc-management/semantic-forms/"
   end
