@@ -14,6 +14,12 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly titelHeading: Locator;
 
+    readonly herzieningNodigAlert: Locator;
+    readonly herzieningNodigAlertGeenAanpassigenNodig: Locator;
+
+    readonly conceptGearchiveerdAlert: Locator;
+    readonly conceptGearchiveerdAlertGeenAanpassigenNodig: Locator;
+
     readonly titelInput: Locator;
     readonly titelEngelsInput: Locator;
     readonly beschrijvingEditor: Locator;
@@ -138,6 +144,12 @@ export class InstantieDetailsPage extends AbstractPage {
         this.eigenschappenTab = page.getByRole('link', { name: 'Eigenschappen', exact: true });
 
         this.titelHeading = page.getByRole('heading', { name: 'Titel', exact: true });
+
+        this.herzieningNodigAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Herziening nodig")');
+        this.herzieningNodigAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Herziening nodig") button:has-text("Geen aanpassingen nodig")')
+
+        this.conceptGearchiveerdAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Concept gearchiveerd")');
+        this.conceptGearchiveerdAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Concept gearchiveerd") button:has-text("Geen aanpassingen nodig")')
 
         this.titelInput = this.inputBelow('Titel').first();
         this.titelEngelsInput = this.inputRightOf('Titel').first()

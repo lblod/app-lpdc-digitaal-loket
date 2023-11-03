@@ -1,11 +1,13 @@
 import express from "express";
 import fs from "fs";
+import {conceptArchive, conceptUpdate} from "./ldes-pages/extra-conceptsnapshots.js";
 
 const app = express();
 
 app.use(express.json({type: 'application/ld+json'}));
 
 const instances = [];
+const extraConceptsnapshots = [];
 
 function errorHandler(err, req, res, next) {
     if (err) {
@@ -13,28 +15,47 @@ function errorHandler(err, req, res, next) {
         res.status(404).send();
     }
 }
+
 app.get('/doc/conceptsnapshot', (req, res, next) => {
     try {
         const pageNumber = Number(req.query.pageNumber) || 0;
         console.log(`page ${pageNumber} requested`);
         const page = fs.readFileSync(`./ldes-pages/page-${pageNumber}.json`, "utf8");
         const jsonLd = JSON.parse(page);
+        jsonLd.member = jsonLd.member.concat(extraConceptsnapshots);
         res.status(200).type('application/ld+json').json(jsonLd);
     } catch (e) {
         next(e);
     }
 });
 
+app.post('/conceptsnapshot/:concept', (req, res, next) => {
+    try {
+        const concepts = {
+            update: conceptUpdate(),
+            archive: conceptArchive()
+        }
+        console.log(req.params.concept);
+        const conceptToAdd = concepts[req.params.concept];
+        if (conceptToAdd) {
+            extraConceptsnapshots.push(conceptToAdd);
+        }
+        res.sendStatus(200);
+    } catch (e) {
+        next(e);
+    }
+});
+
 app.put('/instanties', (req, res, next) => {
-   try {
-       console.log('received new instances');
-       const newInstances = req.body;
-       instances.push(newInstances);
-       console.log(JSON.stringify(newInstances, null, 2));
-       res.status(200).send();
-   } catch (e) {
-       next(e);
-   }
+    try {
+        console.log('received new instances');
+        const newInstances = req.body;
+        instances.push(newInstances);
+        console.log(JSON.stringify(newInstances, null, 2));
+        res.status(200).send();
+    } catch (e) {
+        next(e);
+    }
 });
 
 app.get('/instanties', (req, res, next) => {

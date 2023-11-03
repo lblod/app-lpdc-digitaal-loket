@@ -111,7 +111,7 @@ services:
       LDES_ENDPOINT_VIEW: "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0" # first page of the stream
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
       CRON_PATTERN: "*/5 * * * * *" # run the job every 5 seconds
-      LDES_POLLING_INTERVAL: 3600000 # since ipdcs caching headers indicate no caching, this means the polling interval to initiate the request again (3 600 000 millis = 1 hour)
+      LDES_POLLING_INTERVAL: 5000 # every 5 seconds
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/ldes-data"
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"

@@ -1,6 +1,7 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
 import { Table } from "../components/table";
+import { lpdcUrl } from "../../test-api/test-helpers/test-options";
 
 export class LpdcHomePage extends AbstractPage {
 
@@ -25,5 +26,10 @@ export class LpdcHomePage extends AbstractPage {
     async expectToBeVisible() {
         await expect(this.header).toBeVisible();
     }
-    
+
+    async goto() {
+        await this.page.goto(`${lpdcUrl}`)
+        await this.expectToBeVisible();
+    }
+
 }

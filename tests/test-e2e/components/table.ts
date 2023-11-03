@@ -31,5 +31,6 @@ export class Row {
 const first_row = 0;
 const second_row = 1;
 const third_row = 2;
+const fourth_row = 3;
 
-export { first_row, second_row, third_row }
+export { first_row, second_row, third_row, fourth_row }

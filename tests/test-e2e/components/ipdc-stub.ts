@@ -17,7 +17,7 @@ export class IpdcStub {
         while (true) {
             waitTurn++;
             try {
-                const response = await apiRequest.get(ipdcStubUrl);
+                const response = await apiRequest.get(`${ipdcStubUrl}/instanties`);
                 const result = await response.json();
                 const publishedInstanceWithTitel = result.find((ipdcPublish) => {
                     return ipdcPublish.find((element) => {
