@@ -6,9 +6,10 @@ import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from "./pages/p
 import {InstantieDetailsPage} from "./pages/instantie-details-page";
 import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
 import {UJeModal} from "./modals/u-je-modal";
-import {first_row, fourth_row} from "./components/table";
+import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {ipdcStubUrl} from "../test-api/test-helpers/test-options";
+import {AbstractPage} from "./pages/abstract-page";
 
 test.describe('Herziening nodig status', () => {
 
@@ -49,16 +50,25 @@ test.describe('Herziening nodig status', () => {
     test('Updating concept after instance is created should set reviewStatus on instance to updated', async ({request}) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
-
+        
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.resultTable.row(fourth_row).link('Concept to update').click();
+        const conceptId = uuid();
+        const conceptTitle = `Concept created ${conceptId}`;
+        await createConcept(request, conceptId);
+        await refreshUntil(toevoegenPage, async () => {
+            await toevoegenPage.searchConcept(conceptTitle);
+            const text = await toevoegenPage.resultTable.row(first_row).locator.innerText();
+            return text.includes(conceptTitle);
+        });
+        await toevoegenPage.searchConcept(conceptTitle);
+        await toevoegenPage.resultTable.row(first_row).link(conceptTitle).click();
 
         await conceptDetailsPage.expectToBeVisible();
-        await expect(conceptDetailsPage.heading).toHaveText('Concept: Concept to update');
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${conceptTitle}`);
         await conceptDetailsPage.voegToeButton.click();
 
         await instantieDetailsPage.expectToBeVisible();
-        await expect(instantieDetailsPage.heading).toHaveText(`Concept to update`);
+        await expect(instantieDetailsPage.heading).toHaveText(conceptTitle);
 
         const titel = await instantieDetailsPage.titelInput.inputValue();
         const newTitel = titel + uuid();
@@ -70,10 +80,14 @@ test.describe('Herziening nodig status', () => {
         await wijzigingenBewarenModal.expectToBeClosed();
 
         // update concept
-        await updateConcept(request);
+        await homePage.goto();
+        await updateConcept(request, conceptId);
+        await refreshUntil(homePage, async () => {
+            const text = await homePage.resultTable.row(first_row).locator.innerText();
+            return text.includes('Herziening nodig');
+        });
 
         // instantie moet vlagje 'herziening nodig' hebben
-        await homePage.goto();
         await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         await homePage.resultTable.row(first_row).link('Bewerk').click();
@@ -85,10 +99,14 @@ test.describe('Herziening nodig status', () => {
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
         // update concept
-        await archiveConcept(request);
+        await homePage.goto();
+        await archiveConcept(request, conceptId);
+        await refreshUntil(homePage, async () => {
+            const text = await homePage.resultTable.row(first_row).locator.innerText();
+            return text.includes('Herziening nodig');
+        });
 
         // instantie moet vlagje 'herziening nodig' hebben
-        await homePage.goto();
         await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         await homePage.resultTable.row(first_row).link('Bewerk').click();
@@ -102,14 +120,29 @@ test.describe('Herziening nodig status', () => {
 
 });
 
-async function updateConcept(request: APIRequestContext) {
-    await request.post(`${ipdcStubUrl}/conceptsnapshot/update`);
-    await delay(10000);
+async function createConcept(request: APIRequestContext, uuid: string) {
+    await request.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/create`);
 }
 
-async function archiveConcept(request: APIRequestContext) {
-    await request.post(`${ipdcStubUrl}/conceptsnapshot/archive`);
-    await delay(10000);
+async function updateConcept(request: APIRequestContext, uuid: string) {
+    await request.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`);
+}
+
+async function archiveConcept(request: APIRequestContext, uuid: string) {
+    await request.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
+}
+
+async function refreshUntil(page: AbstractPage, assertion:  () => Promise<boolean>) {
+    const maxRefreshAttempts = 5;
+    for (let i = 0; i < maxRefreshAttempts; i++) {
+        await delay(5000);
+        await page.getPage().reload();
+        await delay(500);
+        const dataChanged = await assertion();
+        if (dataChanged) {
+            return;
+        }
+    }
 }
 
 function delay(milliseconds: number) {

@@ -1,6 +1,6 @@
 import express from "express";
 import fs from "fs";
-import {conceptArchive, conceptUpdate} from "./ldes-pages/extra-conceptsnapshots.js";
+import {conceptArchive, conceptCreate, conceptUpdate} from "./ldes-pages/extra-conceptsnapshots.js";
 
 const app = express();
 
@@ -29,14 +29,15 @@ app.get('/doc/conceptsnapshot', (req, res, next) => {
     }
 });
 
-app.post('/conceptsnapshot/:concept', (req, res, next) => {
+app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
     try {
+        const conceptId = req.params.conceptId;
         const concepts = {
-            update: conceptUpdate(),
-            archive: conceptArchive()
+            create: conceptCreate(conceptId),
+            update: conceptUpdate(conceptId),
+            archive: conceptArchive(conceptId)
         }
-        console.log(req.params.concept);
-        const conceptToAdd = concepts[req.params.concept];
+        const conceptToAdd = concepts[req.params.conceptStatus];
         if (conceptToAdd) {
             extraConceptsnapshots.push(conceptToAdd);
         }

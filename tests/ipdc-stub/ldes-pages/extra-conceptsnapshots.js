@@ -1,15 +1,15 @@
 import {v4 as uuid} from 'uuid';
 
-export const conceptUpdate = () => {
+export const conceptCreate = (conceptId) => {
     const id = uuid();
     return {
         "id": id,
-        "generatedAtTime": "2023-03-08T16:05:10.515702Z",
-        "snapshotType": "Update",
+        "generatedAtTime": new Date().toISOString(),
+        "snapshotType": "Create",
         "naam": {
-            "nl": "Concept is updated",
-            "nl-BE-x-generated-formal": "Concept is updated",
-            "nl-BE-x-generated-informal": "Concept is updated"
+            "nl": `Concept created ${conceptId}`,
+            "nl-BE-x-generated-formal": `Concept created ${conceptId}`,
+            "nl-BE-x-generated-informal": `Concept created ${conceptId}`
         },
         "beschrijving": {
             "nl": "<p>Concept</p>",
@@ -22,20 +22,46 @@ export const conceptUpdate = () => {
         "gearchiveerd": false,
         "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
         "@type": "ConceptualPublicService",
-        "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/68246193-5797-4d3e-a8dd-bafa252f8889"
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
     };
 };
 
-export const conceptArchive = () => {
+export const conceptUpdate = (conceptId) => {
     const id = uuid();
     return {
         "id": id,
-        "generatedAtTime": "2023-03-08T16:05:10.515702Z",
+        "generatedAtTime": new Date().toISOString(),
+        "snapshotType": "Update",
+        "naam": {
+            "nl": `Concept updated ${conceptId}`,
+            "nl-BE-x-generated-formal": `Concept updated ${conceptId}`,
+            "nl-BE-x-generated-informal": `Concept updated ${conceptId}`
+        },
+        "beschrijving": {
+            "nl": "<p>Concept</p>",
+            "nl-BE-x-generated-formal": "<p>Concept</p>",
+            "nl-BE-x-generated-informal": "<p>Concept</p>"
+        },
+        "creatie": "2023-10-10T15:25:09.822193785Z",
+        "laatstGewijzigd": new Date().toISOString(),
+        "productnummer": "3000",
+        "gearchiveerd": false,
+        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
+        "@type": "ConceptualPublicService",
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
+    };
+};
+
+export const conceptArchive = (conceptId) => {
+    const id = uuid();
+    return {
+        "id": id,
+        "generatedAtTime": new Date().toISOString(),
         "snapshotType": "Delete",
         "naam": {
-            "nl": "Concept is archived",
-            "nl-BE-x-generated-formal": "Concept is archived",
-            "nl-BE-x-generated-informal": "Concept is archived"
+            "nl": `Concept archived ${conceptId}`,
+            "nl-BE-x-generated-formal": `Concept archived ${conceptId}`,
+            "nl-BE-x-generated-informal": `Concept archived ${conceptId}`
         },
         "beschrijving": {
             "nl": "<p>Concept</p>",
@@ -48,6 +74,6 @@ export const conceptArchive = () => {
         "gearchiveerd": true,
         "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
         "@type": "ConceptualPublicService",
-        "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/68246193-5797-4d3e-a8dd-bafa252f8889"
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
     }
 };

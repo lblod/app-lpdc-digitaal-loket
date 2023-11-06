@@ -689,6 +689,35 @@ test.describe('Compare snapshots', () => {
 
             expect(await compareSnapshots(currentSnapshot, newSnapshot, request)).toEqual({isChanged: true});
         });
+
+        test(`When requirement evidence is removed then isChanged should be true`, async ({request}) => {
+            const currentSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+                .withRequirements([
+                    new ConceptRequirement(
+                        [{value: 'requirement title', language: Language.NL}],
+                        [{value: 'requirement description', language: Language.NL}],
+                        '0',
+                        new ConceptEvidence(
+                            [{value: 'evidence title', language: Language.NL},],
+                            [{value: 'evidence description', language: Language.NL}],
+                        )
+                    )
+                ])
+                .buildAndPersist(request);
+
+            const newSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+                .withRequirements([
+                    new ConceptRequirement(
+                        [{value: 'requirement title', language: Language.NL}],
+                        [{value: 'requirement description', language: Language.NL}],
+                        '0',
+
+                    )
+                ])
+                .buildAndPersist(request);
+
+            expect(await compareSnapshots(currentSnapshot, newSnapshot, request)).toEqual({isChanged: true});
+        });
     });
 
     test.describe('Procedure', () => {

@@ -10,4 +10,8 @@ export abstract class AbstractPage {
 
   abstract expectToBeVisible(): Promise<void>;
 
+  getPage() {
+    return this.page;
+  }
+
 }
