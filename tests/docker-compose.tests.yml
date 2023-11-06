@@ -115,6 +115,7 @@ services:
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/ldes-data"
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
+    restart: always
 
   ipdc-stub:
     build: ./ipdc-stub

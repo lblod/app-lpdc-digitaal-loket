@@ -55,10 +55,9 @@ test.describe('Herziening nodig status', () => {
         const conceptId = uuid();
         const conceptTitle = `Concept created ${conceptId}`;
         await createConcept(request, conceptId);
-        await refreshUntil(toevoegenPage, async () => {
+        await homePage.reloadUntil(async () => {
             await toevoegenPage.searchConcept(conceptTitle);
-            const text = await toevoegenPage.resultTable.row(first_row).locator.innerText();
-            return text.includes(conceptTitle);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptTitle);
         });
         await toevoegenPage.searchConcept(conceptTitle);
         await toevoegenPage.resultTable.row(first_row).link(conceptTitle).click();
@@ -80,17 +79,16 @@ test.describe('Herziening nodig status', () => {
         await wijzigingenBewarenModal.expectToBeClosed();
 
         // update concept
-        await homePage.goto();
         await updateConcept(request, conceptId);
-        await refreshUntil(homePage, async () => {
-            const text = await homePage.resultTable.row(first_row).locator.innerText();
-            return text.includes('Herziening nodig');
-        });
 
         // instantie moet vlagje 'herziening nodig' hebben
-        await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
+
 
         // instantie moet alert 'herziening nodig' hebben
         await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
@@ -98,17 +96,15 @@ test.describe('Herziening nodig status', () => {
         await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
-        // update concept
-        await homePage.goto();
+        // archive concept
         await archiveConcept(request, conceptId);
-        await refreshUntil(homePage, async () => {
-            const text = await homePage.resultTable.row(first_row).locator.innerText();
-            return text.includes('Herziening nodig');
-        });
 
         // instantie moet vlagje 'herziening nodig' hebben
-        await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
         // instantie moet alert 'concept gearchiveerd' hebben
@@ -130,23 +126,4 @@ async function updateConcept(request: APIRequestContext, uuid: string) {
 
 async function archiveConcept(request: APIRequestContext, uuid: string) {
     await request.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
-}
-
-async function refreshUntil(page: AbstractPage, assertion:  () => Promise<boolean>) {
-    const maxRefreshAttempts = 10;
-    for (let i = 0; i < maxRefreshAttempts; i++) {
-        await delay(5000);
-        await page.getPage().reload();
-        await delay(1000);
-        const dataChanged = await assertion();
-        if (dataChanged) {
-            return;
-        }
-    }
-}
-
-function delay(milliseconds: number) {
-    return new Promise(resolve => {
-        setTimeout(resolve, milliseconds);
-    });
 }
