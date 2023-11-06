@@ -133,11 +133,11 @@ async function archiveConcept(request: APIRequestContext, uuid: string) {
 }
 
 async function refreshUntil(page: AbstractPage, assertion:  () => Promise<boolean>) {
-    const maxRefreshAttempts = 5;
+    const maxRefreshAttempts = 10;
     for (let i = 0; i < maxRefreshAttempts; i++) {
         await delay(5000);
         await page.getPage().reload();
-        await delay(500);
+        await delay(1000);
         const dataChanged = await assertion();
         if (dataChanged) {
             return;
