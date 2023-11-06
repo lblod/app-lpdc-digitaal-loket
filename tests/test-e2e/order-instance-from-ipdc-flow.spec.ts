@@ -3,34 +3,17 @@ import {LpdcHomePage} from "./pages/lpdc-home-page";
 import {MockLoginPage} from "./pages/mock-login-page";
 import {UJeModal} from './modals/u-je-modal';
 import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from './pages/product-of-dienst-toevoegen-page';
-import {second_row} from './components/table';
+import {first_row, second_row} from './components/table';
 import {ConceptDetailsPage as ConceptDetailsPage} from './pages/concept-details-page';
 import {InstantieDetailsPage} from './pages/instantie-details-page';
 import {WijzigingenBewarenModal} from './modals/wijzigingen-bewaren-modal';
 import {VerzendNaarVlaamseOverheidModal} from './modals/verzend-naar-vlaamse-overheid-modal';
+import {IpdcStub} from "./components/ipdc-stub";
 
 type BestuursEenheidConfig = {
     uri: string,
     name: string;
     spatialNisCode: string;
-}
-
-const pepingen: BestuursEenheidConfig = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
-    name: "Pepingen",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/20001",
-}
-
-const aarschot: BestuursEenheidConfig = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522",
-    name: "Aarschot",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/24001",
-}
-
-const leuven: BestuursEenheidConfig = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77",
-    name: "Leuven",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/24062",
 }
 
 test.describe('Order instance from IPDC flow', () => {
@@ -81,12 +64,100 @@ test.describe('Order instance from IPDC flow', () => {
         });
 
         test(`Create instance from concept with orders and ensure the orders are Correct`, async () => {
-            await CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect('informal', 'nl-be-x-informal', aarschot);
+            await CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect('informal');
         });
+
+        test('Adding and removing keeps orders correct', async () => {
+            const titelWebsiteVoorProcedure = 'Procedure website naam - informal';
+            const titelWebsiteVoorProcedureEngels = 'Procedure website naam - en';
+            const beschrijvingWebsiteVoorProcedure = 'procedure website beschrijving - informal';
+            const beschrijvingWebsiteVoorProcedureEngels = 'procedure website beschrijving - en';
+            const websiteURLVoorProcedure1 = 'https://procedure-website1.com';
+            const websiteURLVoorProcedure3 = 'https://procedure-website3.com';
+            const websiteURLVoorProcedureNew = 'https://procedure-websiteNew.com';
+
+            await homePage.productOfDienstToevoegenButton.click();
+
+            await toevoegenPage.expectToBeVisible();
+            await toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum').click();
+
+            await conceptDetailsPage.expectToBeVisible();
+            await conceptDetailsPage.voegToeButton.click();
+
+            await instantieDetailsPage.expectToBeVisible();
+            const titel = await instantieDetailsPage.titelInput.inputValue();
+            expect(titel).toEqual(`Financiële tussenkomst voor een verblijf in een woonzorgcentrum - informal`);
+
+            const beschrijving = await instantieDetailsPage.beschrijvingEditor.textContent();
+            expect(beschrijving).toEqual(`Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - informal`);
+
+            await instantieDetailsPage.verwijderWebsiteButtonVoorProcedure(1).click();
+
+            //add website to procedure
+            await instantieDetailsPage.voegWebsiteToeButtonVoorProcedure().click();
+
+            await instantieDetailsPage.titelWebsiteVoorProcedureInput(2).fill(`${titelWebsiteVoorProcedure} new`);
+            await instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(2).fill(`${titelWebsiteVoorProcedureEngels} new`);
+            await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor(2).fill(`${beschrijvingWebsiteVoorProcedure} new`);
+            await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor(2).fill(`${beschrijvingWebsiteVoorProcedureEngels} new`);
+            await instantieDetailsPage.websiteURLVoorProcedureInput(2).fill(websiteURLVoorProcedureNew);
+
+            await instantieDetailsPage.eigenschappenTab.click();
+            await wijzigingenBewarenModal.expectToBeVisible();
+            await wijzigingenBewarenModal.bewaarButton.click();
+            await wijzigingenBewarenModal.expectToBeClosed();
+
+            await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Aarschot (Gemeente)');
+            await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Provincie Vlaams-Brabant');
+
+
+            await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+            await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+            //check order after send
+            await homePage.resultTable.row(first_row).link('Bekijk').click();
+
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput(0)).toHaveValue(`${titelWebsiteVoorProcedure} 1`);
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(0)).toHaveValue(`${titelWebsiteVoorProcedureEngels} 1`);
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly(0).textContent()).toContain(`${beschrijvingWebsiteVoorProcedure} 1`);
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly(0).textContent()).toContain(`${beschrijvingWebsiteVoorProcedureEngels} 1`);
+            await expect(instantieDetailsPage.websiteURLVoorProcedureInput(0)).toHaveValue(websiteURLVoorProcedure1);
+
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput(1)).toHaveValue(`${titelWebsiteVoorProcedure} 3`);
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(1)).toHaveValue(`${titelWebsiteVoorProcedureEngels} 3`);
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly(1).textContent()).toContain(`${beschrijvingWebsiteVoorProcedure} 3`);
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly(1).textContent()).toContain(`${beschrijvingWebsiteVoorProcedureEngels} 3`);
+            await expect(instantieDetailsPage.websiteURLVoorProcedureInput(1)).toHaveValue(websiteURLVoorProcedure3);
+
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput(2)).toHaveValue(`${titelWebsiteVoorProcedure} new`);
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(2)).toHaveValue(`${titelWebsiteVoorProcedureEngels} new`);
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly(2).textContent()).toContain(`${beschrijvingWebsiteVoorProcedure} new`);
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly(2).textContent()).toContain(`${beschrijvingWebsiteVoorProcedureEngels} new`);
+            await expect(instantieDetailsPage.websiteURLVoorProcedureInput(2)).toHaveValue(websiteURLVoorProcedureNew);
+
+            //check order in Ipdc
+            const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(titel, expectedFormalOrInformalTripleLanguage);
+            expect(instancePublishedInIpdc).toBeTruthy();
+
+            verifyPublishedInstance(instancePublishedInIpdc, {
+                    procedureWebsiteTitel: titelWebsiteVoorProcedure,
+                    procedureWebsiteTitelEngels: titelWebsiteVoorProcedureEngels,
+                    procedureWebsiteBeschrijving: beschrijvingWebsiteVoorProcedure,
+                    procedureWebsiteBeschrijvingEngels: beschrijvingWebsiteVoorProcedureEngels,
+                    procedureWebsiteUrl1: websiteURLVoorProcedure1,
+                    procedureWebsiteUrl3: websiteURLVoorProcedure3,
+                    procedureWebsiteUrlNew: websiteURLVoorProcedureNew,
+                },
+                expectedFormalOrInformalTripleLanguage,
+                )
+        })
 
     });
 
-    const CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect = async (formalInformalChoiceSuffix: string, expectedFormalOrInformalTripleLanguage: string, bestuurseenheidConfig: BestuursEenheidConfig) => {
+    const CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect = async (formalInformalChoiceSuffix: string) => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
@@ -214,16 +285,6 @@ test.describe('Order instance from IPDC flow', () => {
 
     const financieelVoordeelOrderCheck = async (formalInformalChoiceSuffix: string) => {
 
-        let titelProcedure;
-        let titelProcedureEngels;
-        let beschrijvingProcedure;
-        let beschrijvingProcedureEngels;
-        let websiteURLVoorProcedure;
-        let titelWebsiteVoorProcedure;
-        let titelWebsiteVoorProcedureEngels;
-        let beschrijvingWebsiteVoorProcedure;
-        let beschrijvingWebsiteVoorProcedureEngels;
-
         for (let i = 1; i < 4; i++) {
             let order = i - 1
 
@@ -265,6 +326,106 @@ test.describe('Order instance from IPDC flow', () => {
         }
     }
 
+    function verifyPublishedInstance(instance: any[], {
+                                         procedureWebsiteTitel,
+                                         procedureWebsiteTitelEngels,
+                                         procedureWebsiteBeschrijving,
+                                         procedureWebsiteBeschrijvingEngels,
+                                         procedureWebsiteUrl1,
+                                         procedureWebsiteUrl3,
+                                         procedureWebsiteUrlNew,
+                                     },
+                                     expectedFormalOrInformalTripleLanguage: string) {
 
+        // PROCEDURE
+        const publicService = IpdcStub.getObjectByType(instance, 'http://purl.org/vocab/cpsv#PublicService');
+        const procedureUri = publicService['http://purl.org/vocab/cpsv#follows'][0]["@id"];
+        const procedure = IpdcStub.getObjectById(instance, procedureUri);
+
+
+        expect(procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites']).toHaveLength(3);
+        const procedureWebsiteNewUri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][0]['@id'];
+        const procedureWebsiteNew = IpdcStub.getObjectById(instance, procedureWebsiteNewUri);
+
+        const procedureWebsite1Uri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][1]['@id'];
+        const procedureWebsite1 = IpdcStub.getObjectById(instance, procedureWebsite1Uri);
+
+        const procedureWebsite3Uri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][2]['@id'];
+        const procedureWebsite3 = IpdcStub.getObjectById(instance, procedureWebsite3Uri);
+
+        expect(procedure['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(procedure['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({"@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+        // PROCEDURE WEBSITE NEW
+        expect(procedureWebsiteNew['http://purl.org/dc/terms/title']).toHaveLength(2);
+        expect(procedureWebsiteNew['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": `${procedureWebsiteTitel} new`},
+            {"@language": "en", "@value": `${procedureWebsiteTitelEngels} new`}
+        ]));
+
+        expect(procedureWebsiteNew['http://purl.org/dc/terms/description']).toHaveLength(2);
+        expect(procedureWebsiteNew['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijving} new</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijvingEngels} new</p>`}
+        ]));
+
+        expect(procedureWebsiteNew['http://schema.org/url']).toHaveLength(1);
+        expect(procedureWebsiteNew['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrlNew});
+
+        expect(procedureWebsiteNew['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(procedureWebsiteNew['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({"@value": "3", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+
+        // PROCEDURE WEBSITE 1
+        expect(procedureWebsite1['http://purl.org/dc/terms/title']).toHaveLength(2);
+        expect(procedureWebsite1['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": `${procedureWebsiteTitel} 1`},
+            {"@language": "en", "@value": `${procedureWebsiteTitelEngels} 1`}
+        ]));
+
+        expect(procedureWebsite1['http://purl.org/dc/terms/description']).toHaveLength(2);
+        expect(procedureWebsite1['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `${procedureWebsiteBeschrijving} 1`
+            },
+            {"@language": "en", "@value": `${procedureWebsiteBeschrijvingEngels} 1`}
+        ]));
+
+        expect(procedureWebsite1['http://schema.org/url']).toHaveLength(1);
+        expect(procedureWebsite1['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl1});
+
+        expect(procedureWebsite1['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(procedureWebsite1['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({"@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+      // PROCEDURE WEBSITE 3
+        expect(procedureWebsite3['http://purl.org/dc/terms/title']).toHaveLength(2);
+        expect(procedureWebsite3['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": `${procedureWebsiteTitel} 3`},
+            {"@language": "en", "@value": `${procedureWebsiteTitelEngels} 3`}
+        ]));
+
+        expect(procedureWebsite3['http://purl.org/dc/terms/description']).toHaveLength(2);
+        expect(procedureWebsite3['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `${procedureWebsiteBeschrijving} 3`
+            },
+            {"@language": "en", "@value": `${procedureWebsiteBeschrijvingEngels} 3`}
+        ]));
+
+        expect(procedureWebsite3['http://schema.org/url']).toHaveLength(1);
+        expect(procedureWebsite3['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl3});
+
+        expect(procedureWebsite3['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(procedureWebsite3['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({"@value": "2", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+    }
 
 });
