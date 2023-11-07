@@ -18,10 +18,12 @@ async function getAdressen(): Promise<Adres[]> {
                 ?contactPoint <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> ?adres .
                 ?adres <https://data.vlaanderen.be/ns/adres#Straatnaam> ?straat .
                 ?adres <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer> ?huisnummer .
-                ?adres <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer> ?bus .
                 ?adres <https://data.vlaanderen.be/ns/adres#gemeentenaam> ?gemeente . 
                 ?adres <https://data.vlaanderen.be/ns/adres#postcode> ?postcode .
                 ?adres <https://data.vlaanderen.be/ns/adres#land> ?land .
+                OPTIONAL {
+                    ?adres <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer> ?bus .
+                }
             }
         }
     `);
@@ -31,7 +33,7 @@ async function getAdressen(): Promise<Adres[]> {
         adres: item.adres.value,
         straat: item.straat.value,
         huisnummer: item.huisnummer.value,
-        bus: item.bus.value,
+        bus: item?.bus?.value,
         postcode: item.postcode.value,
         gemeente: item.gemeente.value,
         land: item.land.value
@@ -57,6 +59,7 @@ async function findAdresMatch(adres: Adres) {
         if (response.status != 400) {
             throw Error(`Error ${response.status}: ${await response.text()}`)
         }
+        console.log(await response.text());
     }
     const jsonResponse: any = await response.json();
     if (jsonResponse?.adresMatches?.length && jsonResponse?.adresMatches[0]?.score === 100) {

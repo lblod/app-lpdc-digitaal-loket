@@ -8,7 +8,7 @@ Accept: application/ld+json
 
 ###
 
-GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=harelbeke&straatnaam=generaal deprezstraat&huisnummer=2&busnummer=50
+GET https://api.basisregisters.vlaanderen.be/v2/adresmatch?gemeentenaam=harelbeke&postcode=8530&straatnaam=generaal deprezstraat&huisnummer=2&busnummer=50
 Accept: application/ld+json
 
 ###
