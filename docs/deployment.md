@@ -130,11 +130,17 @@ On test we always deploy a released version.
 
 ## Acc
 
-On acc we always deploy a released version. Similar instructions as test.
+On acc we always deploy a released version. 
+
+_Infrastructure notes_:  [acceptance currently has special configs we want to remove over time](infrastructure-architecture.md#acc).
+
+Deployment instructions: see [prod](#prod).
 
 ## Prod
 
-On prod we always deploy a released version. Similar instructions as test (do not execute this step by step), production currently has special configs we want to remove over time.
+On prod we always deploy a released version. 
+
+_Infrastructure notes_:  [production currently has special configs we want to remove over time](infrastructure-architecture.md#prod).
 
 ```shell
   ssh root@lpdc-prod.s.redhost.be
@@ -162,7 +168,12 @@ On prod we always deploy a released version. Similar instructions as test (do no
   git stash apply
   
   #manually merge and verify the configs unstashed (sometimes new configs have been added, and need manual additions/corrections)
-  #update / correct docker-compose.override.yml
+  
+  #(possibly non exhaustive) list of manual changes: 
+  
+  #Ensure to copy the /config/dispatcher/dispatcher.ex (without the commented /mock/sessions) to /config/controle-dispatcher/dispatcher.ex. .
+  #Merge the /config/dispatcher/dispatcher.ex change of the /mock/sessions with the latest version of this file.
+  #Update in the docker-compose-override.yml manually the frontend version (controle container), identifier version (controle-identifier container) and dispatcher version (controle-dispatcher) to the one of this release.
   
   drc pull
 
@@ -177,7 +188,7 @@ On prod we always deploy a released version. Similar instructions as test (do no
   #take a backup of all
   tar -zcvf app-lpdc-digitaal-loket-prod-2.tar.gz app-lpdc-digitaal-loket/
   
-  #move backups in /data/backups/<releasename> folder (e.g. 2023-09)
+  #move backups to /backups/prod-data-backups/<releasename> folder (e.g. 2023-09)
  
 ```
 
