@@ -1041,6 +1041,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(contactPunt['http://schema.org/openingHours']).toHaveLength(1);
         expect(contactPunt['http://schema.org/openingHours']).toEqual([{ "@value": 'https://www.example1.com/openinghours' }]);
 
+        expect(contactPunt['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(contactPunt['http://www.w3.org/ns/shacl#order'][0]).toEqual(
+            { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
         expect(contactPunt['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
         const contactpuntAdresUri = contactPunt['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address'][0]['@id'];
 
