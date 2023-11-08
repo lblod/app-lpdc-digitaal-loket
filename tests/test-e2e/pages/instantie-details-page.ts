@@ -14,6 +14,13 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly titelHeading: Locator;
 
+    readonly koppelConceptLink: Locator;
+    readonly conceptLoskoppelenButton: Locator;
+    readonly gekoppeldConceptLink: Locator;
+
+    readonly instantieLoskoppelenAlert: Locator;
+    readonly instantieLoskoppelenAlertLoskoppelenButton: Locator;
+
     readonly herzieningNodigAlert: Locator;
     readonly herzieningNodigAlertGeenAanpassigenNodig: Locator;
 
@@ -151,8 +158,15 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.titelHeading = page.getByRole('heading', {name: 'Titel', exact: true});
 
+        this.koppelConceptLink = page.getByRole('link', {name: 'Koppelen'});
+        this.gekoppeldConceptLink = page.locator('a:left-of(button:has-text("Loskoppelen"))').first();
+        this.conceptLoskoppelenButton = page.getByRole('button', {name: 'Loskoppelen'});
+
+        this.instantieLoskoppelenAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Instantie loskoppelen van het concept")');
+        this.instantieLoskoppelenAlertLoskoppelenButton = page.locator('[role="alert"]:has-text("Instantie loskoppelen van het concept") button:has-text("Loskoppelen")');
+
         this.herzieningNodigAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Herziening nodig")');
-        this.herzieningNodigAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Herziening nodig") button:has-text("Geen aanpassingen nodig")')
+        this.herzieningNodigAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Herziening nodig") button:has-text("Geen aanpassingen nodig")');
 
         this.conceptGearchiveerdAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Concept gearchiveerd")');
         this.conceptGearchiveerdAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Concept gearchiveerd") button:has-text("Geen aanpassingen nodig")')

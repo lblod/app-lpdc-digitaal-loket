@@ -1,4 +1,4 @@
-import {APIRequestContext, expect, Page, test} from "@playwright/test";
+import {expect, Page, test} from "@playwright/test";
 import {v4 as uuid} from 'uuid';
 import {MockLoginPage} from "./pages/mock-login-page";
 import {LpdcHomePage} from "./pages/lpdc-home-page";
@@ -8,8 +8,7 @@ import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
 import {UJeModal} from "./modals/u-je-modal";
 import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
-import {ipdcStubUrl} from "../test-api/test-helpers/test-options";
-import {AbstractPage} from "./pages/abstract-page";
+import {IpdcStub} from "./components/ipdc-stub";
 
 test.describe('Herziening nodig status', () => {
 
@@ -54,7 +53,7 @@ test.describe('Herziening nodig status', () => {
         await toevoegenPage.expectToBeVisible();
         const conceptId = uuid();
         const conceptTitle = `Concept created ${conceptId}`;
-        await createConcept(request, conceptId);
+        await IpdcStub.createConcept(conceptId);
         await homePage.reloadUntil(async () => {
             await toevoegenPage.searchConcept(conceptTitle);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptTitle);
@@ -79,7 +78,7 @@ test.describe('Herziening nodig status', () => {
         await wijzigingenBewarenModal.expectToBeClosed();
 
         // update concept
-        await updateConcept(request, conceptId);
+        await IpdcStub.updateConcept(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
@@ -97,7 +96,7 @@ test.describe('Herziening nodig status', () => {
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
         // archive concept
-        await archiveConcept(request, conceptId);
+        await IpdcStub.archiveConcept(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
@@ -116,14 +115,3 @@ test.describe('Herziening nodig status', () => {
 
 });
 
-async function createConcept(request: APIRequestContext, uuid: string) {
-    await request.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/create`);
-}
-
-async function updateConcept(request: APIRequestContext, uuid: string) {
-    await request.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`);
-}
-
-async function archiveConcept(request: APIRequestContext, uuid: string) {
-    await request.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
-}

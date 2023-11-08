@@ -55,6 +55,21 @@ export class IpdcStub {
         return object[0];
     }
 
+    static async createConcept(uuid: string) {
+        const apiRequest = await request.newContext();
+        await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/create`);
+    }
+
+    static async updateConcept(uuid: string) {
+        const apiRequest = await request.newContext();
+        await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`);
+    }
+
+    static async archiveConcept(uuid: string) {
+        const apiRequest = await request.newContext();
+        await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
+    }
+
     private static delay(milliseconds) {
         return new Promise(resolve => {
             setTimeout(resolve, milliseconds);
