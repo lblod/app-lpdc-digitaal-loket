@@ -10,12 +10,6 @@ import {WijzigingenBewarenModal} from './modals/wijzigingen-bewaren-modal';
 import {VerzendNaarVlaamseOverheidModal} from './modals/verzend-naar-vlaamse-overheid-modal';
 import {IpdcStub} from "./components/ipdc-stub";
 
-type BestuursEenheidConfig = {
-    uri: string,
-    name: string;
-    spatialNisCode: string;
-}
-
 test.describe('Order instance from IPDC flow', () => {
 
     let page: Page;
@@ -26,6 +20,8 @@ test.describe('Order instance from IPDC flow', () => {
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
+    let formalInformalChoiceSuffix= 'informal';
+    let titel: string;
 
     test.beforeEach(async ({browser}) => {
         page = await browser.newPage();
@@ -61,10 +57,14 @@ test.describe('Order instance from IPDC flow', () => {
                 await uJeModal.bevestigenButton.click();
                 await uJeModal.expectToBeClosed();
             }
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
         });
 
         test(`Create instance from concept with orders and ensure the orders are Correct`, async () => {
-            await CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect('informal');
+            await startVanConcept();
+            await CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect();
         });
 
         test('Adding and removing keeps orders correct', async () => {
@@ -76,21 +76,7 @@ test.describe('Order instance from IPDC flow', () => {
             const websiteURLVoorProcedure3 = 'https://procedure-website3.com';
             const websiteURLVoorProcedureNew = 'https://procedure-websiteNew.com';
 
-            await homePage.productOfDienstToevoegenButton.click();
-
-            await toevoegenPage.expectToBeVisible();
-            await toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum').click();
-
-            await conceptDetailsPage.expectToBeVisible();
-            await conceptDetailsPage.voegToeButton.click();
-
-            await instantieDetailsPage.expectToBeVisible();
-            const titel = await instantieDetailsPage.titelInput.inputValue();
-            expect(titel).toEqual(`Financiële tussenkomst voor een verblijf in een woonzorgcentrum - informal`);
-
-            const beschrijving = await instantieDetailsPage.beschrijvingEditor.textContent();
-            expect(beschrijving).toEqual(`Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - informal`);
-
+            await startVanConcept();
             await instantieDetailsPage.verwijderWebsiteButtonVoorProcedure(1).click();
 
             //add website to procedure
@@ -155,12 +141,123 @@ test.describe('Order instance from IPDC flow', () => {
                 )
         })
 
+        test('Starting an instance from scratch and adding and removing items keeps the order', async() =>{
+            titel = "Order test";
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`)
+
+            //KOST 1
+            await instantieDetailsPage.voegKostToeButton.click();
+            await instantieDetailsPage.titelKostInput().fill("Kost 1");
+            await instantieDetailsPage.beschrijvingKostEditor().fill("Kost beschrijving 1");
+
+            //KOST 2
+            await instantieDetailsPage.voegKostToeButton.click();
+            await instantieDetailsPage.titelKostInput(1).fill("Kost 2");
+            await instantieDetailsPage.beschrijvingKostEditor(1).fill("Kost beschrijving 2");
+
+            //KOST 3
+            await instantieDetailsPage.voegKostToeButton.click();
+            await instantieDetailsPage.titelKostInput(2).fill("Kost 3");
+            await instantieDetailsPage.beschrijvingKostEditor(2).fill("Kost beschrijving 3");
+
+            //DELETE KOST 2
+            await instantieDetailsPage.verwijderKostButton(1).click();
+
+            //KOST 4
+            await instantieDetailsPage.voegKostToeButton.click();
+            await instantieDetailsPage.titelKostInput(2).fill("Kost 4");
+            await instantieDetailsPage.beschrijvingKostEditor(2).fill("Kost beschrijving 4");
+
+            await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+            await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+            await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+            //check order in Ipdc
+            const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(titel, expectedFormalOrInformalTripleLanguage);
+            expect(instancePublishedInIpdc).toBeTruthy();
+            const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
+
+            expect(publicService['http://data.europa.eu/m8g/hasCost'].length).toEqual(3)
+            const costUri4 = publicService['http://data.europa.eu/m8g/hasCost'][0]['@id'];
+            const costUri3 = publicService['http://data.europa.eu/m8g/hasCost'][1]['@id'];
+            const costUri1 = publicService['http://data.europa.eu/m8g/hasCost'][2]['@id'];
+
+
+            // COST 4
+            const cost4 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri4);
+
+            expect(cost4['http://purl.org/dc/terms/title']).toHaveLength(1);
+            expect(cost4['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+                { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 4' },
+            ]));
+
+            expect(cost4['http://purl.org/dc/terms/description']).toHaveLength(1);
+            expect(cost4['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+                {
+                    "@language": expectedFormalOrInformalTripleLanguage,
+                    "@value": `<p data-indentation-level="0">Kost beschrijving 4</p>`
+                }
+            ]));
+
+            expect(cost4['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(cost4['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "4", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+
+            // COST 3
+            const cost3 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri3);
+
+            expect(cost3['http://purl.org/dc/terms/title']).toHaveLength(1);
+            expect(cost3['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+                { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 3' },
+            ]));
+
+            expect(cost3['http://purl.org/dc/terms/description']).toHaveLength(1);
+            expect(cost3['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+                {
+                    "@language": expectedFormalOrInformalTripleLanguage,
+                    "@value": `<p data-indentation-level="0">Kost beschrijving 3</p>`
+                }
+            ]));
+
+            expect(cost3['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(cost3['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "3", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+            // COST 1
+            const cost1 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri1);
+
+            expect(cost1['http://purl.org/dc/terms/title']).toHaveLength(1);
+            expect(cost1['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+                { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 1' },
+            ]));
+
+            expect(cost1['http://purl.org/dc/terms/description']).toHaveLength(1);
+            expect(cost1['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+                {
+                    "@language": expectedFormalOrInformalTripleLanguage,
+                    "@value": `<p data-indentation-level="0">Kost beschrijving 1</p>`
+                }
+            ]));
+
+            expect(cost1['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(cost1['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+
+        } )
+
     });
 
-    const CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect = async (formalInformalChoiceSuffix: string) => {
-        await homePage.productOfDienstToevoegenButton.click();
-
-        await toevoegenPage.expectToBeVisible();
+    const startVanConcept = async () =>{
         await toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum').click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -172,20 +269,22 @@ test.describe('Order instance from IPDC flow', () => {
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
 
-        const titel = await instantieDetailsPage.titelInput.inputValue();
+        titel = await instantieDetailsPage.titelInput.inputValue();
         expect(titel).toEqual(`Financiële tussenkomst voor een verblijf in een woonzorgcentrum - ${formalInformalChoiceSuffix}`);
 
         const beschrijving = await instantieDetailsPage.beschrijvingEditor.textContent();
         expect(beschrijving).toEqual(`Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - ${formalInformalChoiceSuffix}`);
 
+    }
 
-        await voorwaardeOrderCheck(formalInformalChoiceSuffix);
-        await procedureOrderCheck(formalInformalChoiceSuffix);
-        await kostOrderCheck(formalInformalChoiceSuffix);
-        await financieelVoordeelOrderCheck(formalInformalChoiceSuffix);
-        await websiteOrderCheck(formalInformalChoiceSuffix);
+    const CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect = async () => {
+        await voorwaardeOrderCheck();
+        await procedureOrderCheck();
+        await kostOrderCheck();
+        await financieelVoordeelOrderCheck();
+        await websiteOrderCheck();
     };
-    const voorwaardeOrderCheck = async (formalInformalChoiceSuffix: string) => {
+    const voorwaardeOrderCheck = async () => {
 
         let titelVoorwaarde;
         let titelVoorwaardeEngels;
@@ -222,7 +321,7 @@ test.describe('Order instance from IPDC flow', () => {
         }
 
     }
-    const procedureOrderCheck = async (formalInformalChoiceSuffix: string) => {
+    const procedureOrderCheck = async () => {
 
         let titelProcedure;
         let titelProcedureEngels;
@@ -262,7 +361,7 @@ test.describe('Order instance from IPDC flow', () => {
 
         }
     }
-    const kostOrderCheck = async (formalInformalChoiceSuffix: string) => {
+    const kostOrderCheck = async () => {
 
         let titelKost;
         let titelKostEngels;
@@ -283,7 +382,7 @@ test.describe('Order instance from IPDC flow', () => {
         }
     }
 
-    const financieelVoordeelOrderCheck = async (formalInformalChoiceSuffix: string) => {
+    const financieelVoordeelOrderCheck = async () => {
 
         for (let i = 1; i < 4; i++) {
             let order = i - 1
@@ -300,7 +399,7 @@ test.describe('Order instance from IPDC flow', () => {
         }
     }
 
-    const websiteOrderCheck = async (formalInformalChoiceSuffix: string) => {
+    const websiteOrderCheck = async () => {
 
         let titelWebsite;
         let titelWebsiteEngels;

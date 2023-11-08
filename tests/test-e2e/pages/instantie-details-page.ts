@@ -70,6 +70,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly verwijderWebsiteButtonVoorProcedure: (order?: number) => Locator;
     readonly voegWebsiteToeButtonVoorProcedure: (order?: number) => Locator;
 
+    readonly voegKostToeButton: Locator;
+    readonly verwijderKostButton:(order?: number) => Locator;
     readonly titelKostInput: (order?: number) => Locator;
     readonly titelKostEngelsInput: (order?: number) => Locator;
     readonly beschrijvingKostEditor: (order?: number) => Locator;
@@ -203,6 +205,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.verwijderWebsiteButtonVoorProcedure = (order: number = 0) => this.buttonFor('Verwijder website','Procedure').nth(order);
         this.voegWebsiteToeButtonVoorProcedure = (order: number = 0) => this.buttonFor('Voeg website toe','Procedure').nth(order);
 
+        this.voegKostToeButton = this.buttonFor("Voeg kost toe","Kosten");
+        this.verwijderKostButton = (order: number = 0) => this.buttonFor('Verwijder kost','Kosten').nth(order);
         this.titelKostInput = (order: number = 0) => this.inputBelow('Titel kost').nth(order);
         this.titelKostEngelsInput = (order: number = 0) => this.inputRightOf('Titel kost').nth(order);
         this.beschrijvingKostEditor = (order: number = 0) => this.editorBelow('Beschrijving kost').nth(order);
@@ -239,16 +243,6 @@ export class InstantieDetailsPage extends AbstractPage {
         this.contactpuntAdresHuisnummerInput = (order: number = 0) => this.inputBelow('Huisnummer').nth(order);
         this.contactpuntAdresBusnummerInput = (order: number = 0) => this.inputBelow('Bus').nth(order);
         this.contactpuntAdresValidatie = (order: number = 0) => page.getByRole('alert').nth(order);
-
-        // this.titelWebsiteInput = (childOrder: number = 0, parentOrder:number = 0) =>  this.nestedLocator(this.inputBelow('Titel website'),childOrder, 'Gegevens website', parentOrder);
-        // this.titelWebsiteInput =(childOrder: number = 0, parentOrder:number = 0)=> page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder);
-        // this.titelWebsiteEngelsInput = (childOrder:number = 0, parentOrder:number = 0 ) => this.nestedLocator(this.inputBelow('Engelse vertaling van de titel'), childOrder,'Gegevens website', parentOrder);
-        // this.beschrijvingWebsiteEditor =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.editorBelow('Beschrijving website'),childOrder, 'Gegevens website', parentOrder);
-        // this.beschrijvingWebsiteReadonly =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.readonlyBelow('Beschrijving website'),childOrder, 'Gegevens website', parentOrder);
-        // this.beschrijvingWebsiteEngelsEditor =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.editorBelow('Engelse vertaling van de beschrijving'),childOrder, 'Gegevens website', parentOrder);
-        // this.beschrijvingWebsiteEngelsReadonly =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.readonlyBelow('Engelse vertaling van de beschrijving'),childOrder, 'Gegevens website', parentOrder);
-        // this.websiteURLInput =(childOrder:number=0, parentOrder:number=0) => this.nestedLocator(this.inputBelow('Website URL'),childOrder, 'Gegevens website', parentOrder);
-
 
         this.titelWebsiteInput = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
         this.titelWebsiteEngelsInput = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
