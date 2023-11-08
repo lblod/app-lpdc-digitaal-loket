@@ -65,7 +65,12 @@ test.describe('Order instance from IPDC flow', () => {
 
         test(`Create instance from concept with orders and ensure the orders are Correct`, async () => {
             await startVanConcept();
-            await createInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect();
+
+            await voorwaardeOrderCheck();
+            await procedureOrderCheck();
+            await kostOrderCheck();
+            await financieelVoordeelOrderCheck();
+            await websiteOrderCheck();
         });
 
         test('Adding and removing keeps orders correct', async () => {
@@ -180,72 +185,67 @@ test.describe('Order instance from IPDC flow', () => {
             const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
             expect(publicService['http://data.europa.eu/m8g/hasCost'].length).toEqual(3)
-            const costUri4 = publicService['http://data.europa.eu/m8g/hasCost'][0]['@id'];
-            const costUri3 = publicService['http://data.europa.eu/m8g/hasCost'][1]['@id'];
-            const costUri1 = publicService['http://data.europa.eu/m8g/hasCost'][2]['@id'];
-
-
-            // COST 4
-            const cost4 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri4);
-
-            expect(cost4['http://purl.org/dc/terms/title']).toHaveLength(1);
-            expect(cost4['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-                { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 4' },
-            ]));
-
-            expect(cost4['http://purl.org/dc/terms/description']).toHaveLength(1);
-            expect(cost4['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-                {
-                    "@language": expectedFormalOrInformalTripleLanguage,
-                    "@value": `<p data-indentation-level="0">Kost beschrijving 4</p>`
-                }
-            ]));
-
-            expect(cost4['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-            expect(cost4['http://www.w3.org/ns/shacl#order'][0])
-                .toEqual({ "@value": "4", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
-
-
-            // COST 3
-            const cost3 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri3);
-
-            expect(cost3['http://purl.org/dc/terms/title']).toHaveLength(1);
-            expect(cost3['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-                { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 3' },
-            ]));
-
-            expect(cost3['http://purl.org/dc/terms/description']).toHaveLength(1);
-            expect(cost3['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-                {
-                    "@language": expectedFormalOrInformalTripleLanguage,
-                    "@value": `<p data-indentation-level="0">Kost beschrijving 3</p>`
-                }
-            ]));
-
-            expect(cost3['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-            expect(cost3['http://www.w3.org/ns/shacl#order'][0])
-                .toEqual({ "@value": "3", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
-
-            // COST 1
+            const costUri1 = publicService['http://data.europa.eu/m8g/hasCost'][0]['@id'];
             const cost1 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri1);
 
-            expect(cost1['http://purl.org/dc/terms/title']).toHaveLength(1);
-            expect(cost1['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+            const costUri2 = publicService['http://data.europa.eu/m8g/hasCost'][1]['@id'];
+            const cost2 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri2);
+
+            const costUri3 = publicService['http://data.europa.eu/m8g/hasCost'][2]['@id'];
+            const cost3 = IpdcStub.getObjectById(instancePublishedInIpdc, costUri3);
+
+            const costs = [cost1,cost2,cost3];
+            const sortedCosts = sortBy(costs, (cost) => Number(cost['http://www.w3.org/ns/shacl#order'][0]['@value']))
+
+            // COST 1
+            expect(sortedCosts[0]['http://purl.org/dc/terms/title']).toHaveLength(1);
+            expect(sortedCosts[0]['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
                 { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 1' },
             ]));
-
-            expect(cost1['http://purl.org/dc/terms/description']).toHaveLength(1);
-            expect(cost1['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+            expect(sortedCosts[0]['http://purl.org/dc/terms/description']).toHaveLength(1);
+            expect(sortedCosts[0]['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
                 {
                     "@language": expectedFormalOrInformalTripleLanguage,
                     "@value": `<p data-indentation-level="0">Kost beschrijving 1</p>`
                 }
             ]));
-
-            expect(cost1['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-            expect(cost1['http://www.w3.org/ns/shacl#order'][0])
+            expect(sortedCosts[0]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(sortedCosts[0]['http://www.w3.org/ns/shacl#order'][0])
                 .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
+
+            // COST 3
+            expect(sortedCosts[1]['http://purl.org/dc/terms/title']).toHaveLength(1);
+            expect(sortedCosts[1]['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+                { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 3' },
+            ]));
+            expect(sortedCosts[1]['http://purl.org/dc/terms/description']).toHaveLength(1);
+            expect(sortedCosts[1]['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+                {
+                    "@language": expectedFormalOrInformalTripleLanguage,
+                    "@value": `<p data-indentation-level="0">Kost beschrijving 3</p>`
+                }
+            ]));
+            expect(sortedCosts[1]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(sortedCosts[1]['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "3", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+
+            // COST 4
+            expect(sortedCosts[2]['http://purl.org/dc/terms/title']).toHaveLength(1);
+            expect(sortedCosts[2]['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+                { "@language": expectedFormalOrInformalTripleLanguage, "@value": 'Kost 4' },
+            ]));
+            expect(sortedCosts[2]['http://purl.org/dc/terms/description']).toHaveLength(1);
+            expect(sortedCosts[2]['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+                {
+                    "@language": expectedFormalOrInformalTripleLanguage,
+                    "@value": `<p data-indentation-level="0">Kost beschrijving 4</p>`
+                }
+            ]));
+            expect(sortedCosts[2]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(sortedCosts[2]['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "4", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
         } )
 
@@ -357,62 +357,75 @@ test.describe('Order instance from IPDC flow', () => {
             const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
             expect(publicService['http://data.europa.eu/m8g/hasContactPoint']).toHaveLength(3);
-            const contactPuntUri4 = publicService['http://data.europa.eu/m8g/hasContactPoint'][0]['@id'];
-            const contactPuntUri3 = publicService['http://data.europa.eu/m8g/hasContactPoint'][1]['@id'];
-            const contactPuntUri1 = publicService['http://data.europa.eu/m8g/hasContactPoint'][2]['@id'];
+            const contactpuntUri1 = publicService['http://data.europa.eu/m8g/hasContactPoint'][0]['@id'];
+            const contactpunt1 = IpdcStub.getObjectById(instancePublishedInIpdc, contactpuntUri1);
 
+            const contactpuntUri2 = publicService['http://data.europa.eu/m8g/hasContactPoint'][1]['@id'];
+            const contactpunt2 = IpdcStub.getObjectById(instancePublishedInIpdc, contactpuntUri2);
 
-            // CONTACT POINT 4
-            const contactPunt4 = IpdcStub.getObjectById(instancePublishedInIpdc, contactPuntUri4);
+            const contactpuntUri3 = publicService['http://data.europa.eu/m8g/hasContactPoint'][2]['@id'];
+            const contactpunt3 = IpdcStub.getObjectById(instancePublishedInIpdc, contactpuntUri3);
 
-            expect(contactPunt4['http://schema.org/email']).toHaveLength(1);
-            expect(contactPunt4['http://schema.org/email']).toEqual([{ "@value": `4${email}` }]);
-
-            expect(contactPunt4['http://schema.org/telephone']).toHaveLength(1);
-            expect(contactPunt4['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}4` }]);
-
-            expect(contactPunt4['http://schema.org/url']).toHaveLength(1);
-            expect(contactPunt4['http://schema.org/url']).toEqual([{ "@value": `${website}/4` }]);
-
-            expect(contactPunt4['http://schema.org/openingHours']).toHaveLength(1);
-            expect(contactPunt4['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/4/openingsuren` }]);
-
-            expect(contactPunt4['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
-
-            // CONTACT POINT 3
-            const contactPunt3 = IpdcStub.getObjectById(instancePublishedInIpdc, contactPuntUri3);
-
-            expect(contactPunt3['http://schema.org/email']).toHaveLength(1);
-            expect(contactPunt3['http://schema.org/email']).toEqual([{ "@value": `3${email}` }]);
-
-            expect(contactPunt3['http://schema.org/telephone']).toHaveLength(1);
-            expect(contactPunt3['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}3` }]);
-
-            expect(contactPunt3['http://schema.org/url']).toHaveLength(1);
-            expect(contactPunt3['http://schema.org/url']).toEqual([{ "@value": `${website}/3` }]);
-
-            expect(contactPunt3['http://schema.org/openingHours']).toHaveLength(1);
-            expect(contactPunt3['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/3/openingsuren` }]);
-
-            expect(contactPunt3['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+            const contactpunten = [contactpunt1,contactpunt2,contactpunt3];
+            const sortedContactpunten = sortBy(contactpunten, (contactpunt) => Number(contactpunt['http://www.w3.org/ns/shacl#order'][0]['@value']))
 
             // CONTACT POINT 1
-            const contactPunt1 = IpdcStub.getObjectById(instancePublishedInIpdc, contactPuntUri1);
+            expect(sortedContactpunten[0]['http://schema.org/email']).toHaveLength(1);
+            expect(sortedContactpunten[0]['http://schema.org/email']).toEqual([{ "@value": `1${email}` }]);
 
-            expect(contactPunt1['http://schema.org/email']).toHaveLength(1);
-            expect(contactPunt1['http://schema.org/email']).toEqual([{ "@value": `1${email}` }]);
+            expect(sortedContactpunten[0]['http://schema.org/telephone']).toHaveLength(1);
+            expect(sortedContactpunten[0]['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}1` }]);
 
-            expect(contactPunt1['http://schema.org/telephone']).toHaveLength(1);
-            expect(contactPunt1['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}1` }]);
+            expect(sortedContactpunten[0]['http://schema.org/url']).toHaveLength(1);
+            expect(sortedContactpunten[0]['http://schema.org/url']).toEqual([{ "@value": `${website}/1` }]);
 
-            expect(contactPunt1['http://schema.org/url']).toHaveLength(1);
-            expect(contactPunt1['http://schema.org/url']).toEqual([{ "@value": `${website}/1` }]);
+            expect(sortedContactpunten[0]['http://schema.org/openingHours']).toHaveLength(1);
+            expect(sortedContactpunten[0]['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/1/openingsuren` }]);
 
-            expect(contactPunt1['http://schema.org/openingHours']).toHaveLength(1);
-            expect(contactPunt1['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/1/openingsuren` }]);
+            expect(sortedContactpunten[0]['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
 
-            expect(contactPunt1['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+            expect(sortedContactpunten[0]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(sortedContactpunten[0]['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
+
+            // CONTACT POINT 3
+            expect(sortedContactpunten[1]['http://schema.org/email']).toHaveLength(1);
+            expect(sortedContactpunten[1]['http://schema.org/email']).toEqual([{ "@value": `3${email}` }]);
+
+            expect(sortedContactpunten[1]['http://schema.org/telephone']).toHaveLength(1);
+            expect(sortedContactpunten[1]['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}3` }]);
+
+            expect(sortedContactpunten[1]['http://schema.org/url']).toHaveLength(1);
+            expect(sortedContactpunten[1]['http://schema.org/url']).toEqual([{ "@value": `${website}/3` }]);
+
+            expect(sortedContactpunten[1]['http://schema.org/openingHours']).toHaveLength(1);
+            expect(sortedContactpunten[1]['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/3/openingsuren` }]);
+
+            expect(sortedContactpunten[1]['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+
+            expect(sortedContactpunten[1]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(sortedContactpunten[1]['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "3", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+            // CONTACT POINT 4
+            expect(sortedContactpunten[2]['http://schema.org/email']).toHaveLength(1);
+            expect(sortedContactpunten[2]['http://schema.org/email']).toEqual([{ "@value": `4${email}` }]);
+
+            expect(sortedContactpunten[2]['http://schema.org/telephone']).toHaveLength(1);
+            expect(sortedContactpunten[2]['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}4` }]);
+
+            expect(sortedContactpunten[2]['http://schema.org/url']).toHaveLength(1);
+            expect(sortedContactpunten[2]['http://schema.org/url']).toEqual([{ "@value": `${website}/4` }]);
+
+            expect(sortedContactpunten[2]['http://schema.org/openingHours']).toHaveLength(1);
+            expect(sortedContactpunten[2]['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/4/openingsuren` }]);
+
+            expect(sortedContactpunten[2]['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+
+            expect(sortedContactpunten[2]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+            expect(sortedContactpunten[2]['http://www.w3.org/ns/shacl#order'][0])
+                .toEqual({ "@value": "4", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
         })
     });
 
@@ -435,16 +448,8 @@ test.describe('Order instance from IPDC flow', () => {
         expect(beschrijving).toEqual(`Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - ${formalInformalChoiceSuffix}`);
 
     }
-    async function voorwaardeOrderCheck () {
 
-    const createInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect = async () => {
-        await voorwaardeOrderCheck();
-        await procedureOrderCheck();
-        await kostOrderCheck();
-        await financieelVoordeelOrderCheck();
-        await websiteOrderCheck();
-    };
-    const voorwaardeOrderCheck = async () => {
+    async function voorwaardeOrderCheck (){
 
         let titelVoorwaarde;
         let titelVoorwaardeEngels;
@@ -600,16 +605,16 @@ test.describe('Order instance from IPDC flow', () => {
         const procedure = IpdcStub.getObjectById(instance, procedureUri);
 
         expect(procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites']).toHaveLength(3);
-        const procedureWebsiteNewUri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][0]['@id'];
-        const procedureWebsiteNew = IpdcStub.getObjectById(instance, procedureWebsiteNewUri);
+        const procedureWebsiteUri1 = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][0]['@id'];
+        const procedureWebsite1 = IpdcStub.getObjectById(instance, procedureWebsiteUri1);
 
-        const procedureWebsite1Uri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][1]['@id'];
-        const procedureWebsite1 = IpdcStub.getObjectById(instance, procedureWebsite1Uri);
+        const procedureWebsiteUri2 = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][1]['@id'];
+        const procedureWebsite2 = IpdcStub.getObjectById(instance, procedureWebsiteUri2);
 
-        const procedureWebsite3Uri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][2]['@id'];
-        const procedureWebsite3 = IpdcStub.getObjectById(instance, procedureWebsite3Uri);
+        const procedureWebsiteUri3 = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][2]['@id'];
+        const procedureWebsite3 = IpdcStub.getObjectById(instance, procedureWebsiteUri3);
 
-        const procedureWebsites = [procedureWebsiteNew, procedureWebsite1, procedureWebsite3];
+        const procedureWebsites = [procedureWebsite1, procedureWebsite2, procedureWebsite3];
         const sortedProcedureWebsites = sortBy(procedureWebsites, (procedureWebsite) => Number(procedureWebsite['http://www.w3.org/ns/shacl#order'][0]['@value']))
 
         expect(procedure['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
