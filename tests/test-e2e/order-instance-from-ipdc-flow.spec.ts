@@ -9,6 +9,7 @@ import {InstantieDetailsPage} from './pages/instantie-details-page';
 import {WijzigingenBewarenModal} from './modals/wijzigingen-bewaren-modal';
 import {VerzendNaarVlaamseOverheidModal} from './modals/verzend-naar-vlaamse-overheid-modal';
 import {IpdcStub} from "./components/ipdc-stub";
+import {sortBy} from "lodash";
 
 test.describe('Order instance from IPDC flow', () => {
 
@@ -64,12 +65,7 @@ test.describe('Order instance from IPDC flow', () => {
 
         test(`Create instance from concept with orders and ensure the orders are Correct`, async () => {
             await startVanConcept();
-
-            await voorwaardeOrderCheck();
-            await procedureOrderCheck();
-            await kostOrderCheck();
-            await financieelVoordeelOrderCheck();
-            await websiteOrderCheck();
+            await createInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect();
         });
 
         test('Adding and removing keeps orders correct', async () => {
@@ -441,6 +437,15 @@ test.describe('Order instance from IPDC flow', () => {
     }
     async function voorwaardeOrderCheck () {
 
+    const createInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect = async () => {
+        await voorwaardeOrderCheck();
+        await procedureOrderCheck();
+        await kostOrderCheck();
+        await financieelVoordeelOrderCheck();
+        await websiteOrderCheck();
+    };
+    const voorwaardeOrderCheck = async () => {
+
         let titelVoorwaarde;
         let titelVoorwaardeEngels;
         let beschrijvingVoorwaarde;
@@ -594,7 +599,6 @@ test.describe('Order instance from IPDC flow', () => {
         const procedureUri = publicService['http://purl.org/vocab/cpsv#follows'][0]["@id"];
         const procedure = IpdcStub.getObjectById(instance, procedureUri);
 
-
         expect(procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites']).toHaveLength(3);
         const procedureWebsiteNewUri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][0]['@id'];
         const procedureWebsiteNew = IpdcStub.getObjectById(instance, procedureWebsiteNewUri);
@@ -605,43 +609,22 @@ test.describe('Order instance from IPDC flow', () => {
         const procedureWebsite3Uri = procedure['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites'][2]['@id'];
         const procedureWebsite3 = IpdcStub.getObjectById(instance, procedureWebsite3Uri);
 
+        const procedureWebsites = [procedureWebsiteNew, procedureWebsite1, procedureWebsite3];
+        const sortedProcedureWebsites = sortBy(procedureWebsites, (procedureWebsite) => Number(procedureWebsite['http://www.w3.org/ns/shacl#order'][0]['@value']))
+
         expect(procedure['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(procedure['http://www.w3.org/ns/shacl#order'][0])
             .toEqual({"@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
-        // PROCEDURE WEBSITE NEW
-        expect(procedureWebsiteNew['http://purl.org/dc/terms/title']).toHaveLength(2);
-        expect(procedureWebsiteNew['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            {"@language": expectedFormalOrInformalTripleLanguage, "@value": `${procedureWebsiteTitel} new`},
-            {"@language": "en", "@value": `${procedureWebsiteTitelEngels} new`}
-        ]));
-
-        expect(procedureWebsiteNew['http://purl.org/dc/terms/description']).toHaveLength(2);
-        expect(procedureWebsiteNew['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            {
-                "@language": expectedFormalOrInformalTripleLanguage,
-                "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijving} new</p>`
-            },
-            {"@language": "en", "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijvingEngels} new</p>`}
-        ]));
-
-        expect(procedureWebsiteNew['http://schema.org/url']).toHaveLength(1);
-        expect(procedureWebsiteNew['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrlNew});
-
-        expect(procedureWebsiteNew['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-        expect(procedureWebsiteNew['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({"@value": "3", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
-
-
         // PROCEDURE WEBSITE 1
-        expect(procedureWebsite1['http://purl.org/dc/terms/title']).toHaveLength(2);
-        expect(procedureWebsite1['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+        expect(sortedProcedureWebsites[0]['http://purl.org/dc/terms/title']).toHaveLength(2);
+        expect(sortedProcedureWebsites[0]['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
             {"@language": expectedFormalOrInformalTripleLanguage, "@value": `${procedureWebsiteTitel} 1`},
             {"@language": "en", "@value": `${procedureWebsiteTitelEngels} 1`}
         ]));
 
-        expect(procedureWebsite1['http://purl.org/dc/terms/description']).toHaveLength(2);
-        expect(procedureWebsite1['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+        expect(sortedProcedureWebsites[0]['http://purl.org/dc/terms/description']).toHaveLength(2);
+        expect(sortedProcedureWebsites[0]['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
             {
                 "@language": expectedFormalOrInformalTripleLanguage,
                 "@value": `${procedureWebsiteBeschrijving} 1`
@@ -649,22 +632,22 @@ test.describe('Order instance from IPDC flow', () => {
             {"@language": "en", "@value": `${procedureWebsiteBeschrijvingEngels} 1`}
         ]));
 
-        expect(procedureWebsite1['http://schema.org/url']).toHaveLength(1);
-        expect(procedureWebsite1['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl1});
+        expect(sortedProcedureWebsites[0]['http://schema.org/url']).toHaveLength(1);
+        expect(sortedProcedureWebsites[0]['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl1});
 
-        expect(procedureWebsite1['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-        expect(procedureWebsite1['http://www.w3.org/ns/shacl#order'][0])
+        expect(sortedProcedureWebsites[0]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(sortedProcedureWebsites[0]['http://www.w3.org/ns/shacl#order'][0])
             .toEqual({"@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
 
       // PROCEDURE WEBSITE 3
-        expect(procedureWebsite3['http://purl.org/dc/terms/title']).toHaveLength(2);
-        expect(procedureWebsite3['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+        expect(sortedProcedureWebsites[1]['http://purl.org/dc/terms/title']).toHaveLength(2);
+        expect(sortedProcedureWebsites[1]['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
             {"@language": expectedFormalOrInformalTripleLanguage, "@value": `${procedureWebsiteTitel} 3`},
             {"@language": "en", "@value": `${procedureWebsiteTitelEngels} 3`}
         ]));
 
-        expect(procedureWebsite3['http://purl.org/dc/terms/description']).toHaveLength(2);
-        expect(procedureWebsite3['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+        expect(sortedProcedureWebsites[1]['http://purl.org/dc/terms/description']).toHaveLength(2);
+        expect(sortedProcedureWebsites[1]['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
             {
                 "@language": expectedFormalOrInformalTripleLanguage,
                 "@value": `${procedureWebsiteBeschrijving} 3`
@@ -672,12 +655,35 @@ test.describe('Order instance from IPDC flow', () => {
             {"@language": "en", "@value": `${procedureWebsiteBeschrijvingEngels} 3`}
         ]));
 
-        expect(procedureWebsite3['http://schema.org/url']).toHaveLength(1);
-        expect(procedureWebsite3['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl3});
+        expect(sortedProcedureWebsites[1]['http://schema.org/url']).toHaveLength(1);
+        expect(sortedProcedureWebsites[1]['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrl3});
 
-        expect(procedureWebsite3['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-        expect(procedureWebsite3['http://www.w3.org/ns/shacl#order'][0])
+        expect(sortedProcedureWebsites[1]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(sortedProcedureWebsites[1]['http://www.w3.org/ns/shacl#order'][0])
             .toEqual({"@value": "2", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+
+        // PROCEDURE WEBSITE NEW
+        expect(sortedProcedureWebsites[2]['http://purl.org/dc/terms/title']).toHaveLength(2);
+        expect(sortedProcedureWebsites[2]['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
+            {"@language": expectedFormalOrInformalTripleLanguage, "@value": `${procedureWebsiteTitel} new`},
+            {"@language": "en", "@value": `${procedureWebsiteTitelEngels} new`}
+        ]));
+
+        expect(sortedProcedureWebsites[2]['http://purl.org/dc/terms/description']).toHaveLength(2);
+        expect(sortedProcedureWebsites[2]['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+            {
+                "@language": expectedFormalOrInformalTripleLanguage,
+                "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijving} new</p>`
+            },
+            {"@language": "en", "@value": `<p data-indentation-level="0">${procedureWebsiteBeschrijvingEngels} new</p>`}
+        ]));
+
+        expect(sortedProcedureWebsites[2]['http://schema.org/url']).toHaveLength(1);
+        expect(sortedProcedureWebsites[2]['http://schema.org/url'][0]).toEqual({"@value": procedureWebsiteUrlNew});
+
+        expect(sortedProcedureWebsites[2]['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
+        expect(sortedProcedureWebsites[2]['http://www.w3.org/ns/shacl#order'][0])
+            .toEqual({"@value": "3", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
     }
 
     async function verzendNaarVlaamseOverheid(){

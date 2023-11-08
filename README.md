@@ -7,7 +7,7 @@ _Note_: Documentation is structured using [The software guidebook by Simon Brown
 The LPDC application is built on the data model defined in:
 * https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/
 
-[Context Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559416630047&cot=14).
+[System Context Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559416630047&cot=14).
 
 Other repos:
 - [LPDC frontend](https://github.com/lblod/frontend-lpdc/tree/development)
@@ -24,9 +24,9 @@ Other repos:
 
 ## 6. Software Architecture
 
-[Component Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764558708522486&cot=14)
+[Container Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764558708522486&cot=14)
 
-Container Diagram (TODO)
+Component Diagram: The architecture is that each docker can in fact be seen as a component. So in this system, the component diagram is the same than the container diagram. We would like to revise and simplify this in the future.
 
 [Sequence Diagram For 'Wijzigingen bewaren' on an 'Instantie'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559335291592&cot=14)
 

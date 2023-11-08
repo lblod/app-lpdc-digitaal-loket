@@ -11,7 +11,9 @@
   "author": "Kunlabora",
   "license": "MIT",
   "devDependencies": {
+    "@types/lodash": "^4.14.201",
     "@playwright/test": "^1.36.1",
-    "uuid": "^9.0.0"
+    "uuid": "^9.0.0",
+    "lodash": "^4.17.21"
   }
 }
