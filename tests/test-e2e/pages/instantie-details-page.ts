@@ -91,8 +91,9 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingRegelgevingEngelsEditor: (order?: number) => Locator;
     readonly beschrijvingRegelgevingEngelsReadonly: (order?: number) => Locator;
 
-    readonly voegContactpuntToeButton: Locator;
     readonly contactpuntHeading: Locator;
+    readonly voegContactpuntToeButton: Locator;
+    readonly verwijderContactpuntButton:(order?: number) => Locator;
     readonly contactpuntEmailSelect: (order?: number) => SelectWithCreate;
     readonly contactpuntEmailReadonly: (childOrder?: number, parentOrder?: number) => Locator;
     readonly contactpuntTelefoonSelect: (order?: number) => SelectWithCreate;
@@ -227,6 +228,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevingEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Regelgeving').nth(order);
 
         this.voegContactpuntToeButton = page.getByRole('button', {name: 'Voeg contactpunt toe'});
+        this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt','Contactpunten').nth(order);
         this.contactpuntHeading = page.getByRole('heading', {name: 'Contactpunt', exact: true});
         this.contactpuntEmailSelect = (order: number = 0) => new SelectWithCreate(page, 'Email', order);
         this.contactpuntEmailReadonly = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputBelow('Email'), childOrder, 'Contactpunt', parentOrder);

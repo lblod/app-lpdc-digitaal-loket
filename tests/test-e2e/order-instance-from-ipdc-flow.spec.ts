@@ -64,7 +64,12 @@ test.describe('Order instance from IPDC flow', () => {
 
         test(`Create instance from concept with orders and ensure the orders are Correct`, async () => {
             await startVanConcept();
-            await CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect();
+
+            await voorwaardeOrderCheck();
+            await procedureOrderCheck();
+            await kostOrderCheck();
+            await financieelVoordeelOrderCheck();
+            await websiteOrderCheck();
         });
 
         test('Adding and removing keeps orders correct', async () => {
@@ -97,10 +102,7 @@ test.describe('Order instance from IPDC flow', () => {
             await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Provincie Vlaams-Brabant');
 
 
-            await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
-            await verzendNaarVlaamseOverheidModal.expectToBeVisible();
-            await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
-            await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+            await verzendNaarVlaamseOverheid();
 
             //check order after send
             await homePage.resultTable.row(first_row).link('Bekijk').click();
@@ -142,7 +144,7 @@ test.describe('Order instance from IPDC flow', () => {
         })
 
         test('Starting an instance from scratch and adding and removing items keeps the order', async() =>{
-            titel = "Order test";
+            titel = 'Order test';
 
             await toevoegenPage.volledigNieuwProductToevoegenButton.click();
             await instantieDetailsPage.expectToBeVisible();
@@ -152,32 +154,28 @@ test.describe('Order instance from IPDC flow', () => {
 
             //KOST 1
             await instantieDetailsPage.voegKostToeButton.click();
-            await instantieDetailsPage.titelKostInput().fill("Kost 1");
-            await instantieDetailsPage.beschrijvingKostEditor().fill("Kost beschrijving 1");
+            await instantieDetailsPage.titelKostInput().fill('Kost 1');
+            await instantieDetailsPage.beschrijvingKostEditor().fill('Kost beschrijving 1');
 
             //KOST 2
             await instantieDetailsPage.voegKostToeButton.click();
-            await instantieDetailsPage.titelKostInput(1).fill("Kost 2");
-            await instantieDetailsPage.beschrijvingKostEditor(1).fill("Kost beschrijving 2");
+            await instantieDetailsPage.titelKostInput(1).fill('Kost 2');
+            await instantieDetailsPage.beschrijvingKostEditor(1).fill('Kost beschrijving 2');
 
             //KOST 3
             await instantieDetailsPage.voegKostToeButton.click();
-            await instantieDetailsPage.titelKostInput(2).fill("Kost 3");
-            await instantieDetailsPage.beschrijvingKostEditor(2).fill("Kost beschrijving 3");
+            await instantieDetailsPage.titelKostInput(2).fill('Kost 3');
+            await instantieDetailsPage.beschrijvingKostEditor(2).fill('Kost beschrijving 3');
 
             //DELETE KOST 2
             await instantieDetailsPage.verwijderKostButton(1).click();
 
             //KOST 4
             await instantieDetailsPage.voegKostToeButton.click();
-            await instantieDetailsPage.titelKostInput(2).fill("Kost 4");
-            await instantieDetailsPage.beschrijvingKostEditor(2).fill("Kost beschrijving 4");
+            await instantieDetailsPage.titelKostInput(2).fill('Kost 4');
+            await instantieDetailsPage.beschrijvingKostEditor(2).fill('Kost beschrijving 4');
 
-            await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
-
-            await verzendNaarVlaamseOverheidModal.expectToBeVisible();
-            await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
-            await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+            await verzendNaarVlaamseOverheid();
 
             //check order in Ipdc
             const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
@@ -255,9 +253,174 @@ test.describe('Order instance from IPDC flow', () => {
 
         } )
 
+        test('Contactpunten order gets saved and send correctly', async ()=>{
+            titel = 'Contactpunten order test';
+            const email ='mail@example.com'
+            const telefoon ='041234567'
+            const website = 'https://www.example.com'
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`)
+
+            //CONTACTPUNT 1
+            await instantieDetailsPage.voegContactpuntToeButton.click();
+            await instantieDetailsPage.contactpuntEmailSelect().insertNewValue(`1${email}`);
+            await instantieDetailsPage.contactpuntEmailSelect().selectValue(`1${email}`);
+
+            await instantieDetailsPage.contactpuntTelefoonSelect().insertNewValue(`${telefoon}1`);
+            await instantieDetailsPage.contactpuntTelefoonSelect().selectValue(`${telefoon}1`);
+
+            await instantieDetailsPage.contactpuntWebsiteURLSelect().insertNewValue(`${website}/1`);
+            await instantieDetailsPage.contactpuntWebsiteURLSelect().selectValue(`${website}/1`);
+
+            await instantieDetailsPage.contactpuntOpeningsurenSelect().insertNewValue(`${website}/1/openingsuren`);
+            await instantieDetailsPage.contactpuntOpeningsurenSelect().selectValue(`${website}/1/openingsuren`);
+
+            await instantieDetailsPage.voegAdresToeButton().click();
+            await instantieDetailsPage.contactpuntAdresGemeenteSelect().selectValue('Harelbeke');
+            await instantieDetailsPage.contactpuntAdresStraatSelect().selectValue('Generaal Deprezstraat');
+            await instantieDetailsPage.contactpuntAdresHuisnummerInput().fill('2');
+            await instantieDetailsPage.contactpuntAdresBusnummerInput().fill('50');
+            await expect(instantieDetailsPage.contactpuntAdresValidatie()).toContainText('Adres gevonden');
+
+            //CONTACTPUNT 2
+            await instantieDetailsPage.voegContactpuntToeButton.click();
+            await instantieDetailsPage.contactpuntEmailSelect(1).insertNewValue(`2${email}`);
+            await instantieDetailsPage.contactpuntEmailSelect(1).selectValue(`2${email}`);
+
+            await instantieDetailsPage.contactpuntTelefoonSelect(1).insertNewValue(`${telefoon}2`);
+            await instantieDetailsPage.contactpuntTelefoonSelect(1).selectValue(`${telefoon}2`);
+
+            await instantieDetailsPage.contactpuntWebsiteURLSelect(1).insertNewValue(`${website}/2`);
+            await instantieDetailsPage.contactpuntWebsiteURLSelect(1).selectValue(`${website}/2`);
+
+            await instantieDetailsPage.contactpuntOpeningsurenSelect(1).insertNewValue(`${website}/2/openingsuren`);
+            await instantieDetailsPage.contactpuntOpeningsurenSelect(1).selectValue(`${website}/2/openingsuren`);
+
+            await instantieDetailsPage.voegAdresToeButton().click();
+            await instantieDetailsPage.contactpuntAdresGemeenteSelect(1).selectValue('Harelbeke');
+            await instantieDetailsPage.contactpuntAdresStraatSelect(1).selectValue('Generaal Deprezstraat');
+            await instantieDetailsPage.contactpuntAdresHuisnummerInput(1).fill('2');
+            await instantieDetailsPage.contactpuntAdresBusnummerInput(1).fill('50');
+            await expect(instantieDetailsPage.contactpuntAdresValidatie(1)).toContainText('Adres gevonden');
+
+            //CONTACTPUNT 3
+            await instantieDetailsPage.voegContactpuntToeButton.click();
+            await instantieDetailsPage.contactpuntEmailSelect(2).insertNewValue(`3${email}`);
+            await instantieDetailsPage.contactpuntEmailSelect(2).selectValue(`3${email}`);
+
+            await instantieDetailsPage.contactpuntTelefoonSelect(2).insertNewValue(`${telefoon}3`);
+            await instantieDetailsPage.contactpuntTelefoonSelect(2).selectValue(`${telefoon}3`);
+
+            await instantieDetailsPage.contactpuntWebsiteURLSelect(2).insertNewValue(`${website}/3`);
+            await instantieDetailsPage.contactpuntWebsiteURLSelect(2).selectValue(`${website}/3`);
+
+            await instantieDetailsPage.contactpuntOpeningsurenSelect(2).insertNewValue(`${website}/3/openingsuren`);
+            await instantieDetailsPage.contactpuntOpeningsurenSelect(2).selectValue(`${website}/3/openingsuren`);
+
+            await instantieDetailsPage.voegAdresToeButton().click();
+            await instantieDetailsPage.contactpuntAdresGemeenteSelect(2).selectValue('Harelbeke');
+            await instantieDetailsPage.contactpuntAdresStraatSelect(2).selectValue('Generaal Deprezstraat');
+            await instantieDetailsPage.contactpuntAdresHuisnummerInput(2).fill('2');
+            await instantieDetailsPage.contactpuntAdresBusnummerInput(2).fill('50');
+            await expect(instantieDetailsPage.contactpuntAdresValidatie(2)).toContainText('Adres gevonden');
+
+            //DELETE CONTACTPUNT 2
+            await instantieDetailsPage.verwijderContactpuntButton(1).click();
+
+            //CONTACTPUNT 4
+            await instantieDetailsPage.voegContactpuntToeButton.click();
+            await instantieDetailsPage.contactpuntEmailSelect(2).insertNewValue(`4${email}`);
+            await instantieDetailsPage.contactpuntEmailSelect(2).selectValue(`4${email}`);
+
+            await instantieDetailsPage.contactpuntTelefoonSelect(2).insertNewValue(`${telefoon}4`);
+            await instantieDetailsPage.contactpuntTelefoonSelect(2).selectValue(`${telefoon}4`);
+
+            await instantieDetailsPage.contactpuntWebsiteURLSelect(2).insertNewValue(`${website}/4`);
+            await instantieDetailsPage.contactpuntWebsiteURLSelect(2).selectValue(`${website}/4`);
+
+            await instantieDetailsPage.contactpuntOpeningsurenSelect(2).insertNewValue(`${website}/4/openingsuren`);
+            await instantieDetailsPage.contactpuntOpeningsurenSelect(2).selectValue(`${website}/4/openingsuren`);
+
+            await instantieDetailsPage.voegAdresToeButton().click();
+            await instantieDetailsPage.contactpuntAdresGemeenteSelect(2).selectValue('Harelbeke');
+            await instantieDetailsPage.contactpuntAdresStraatSelect(2).selectValue('Generaal Deprezstraat');
+            await instantieDetailsPage.contactpuntAdresHuisnummerInput(2).fill('2');
+            await instantieDetailsPage.contactpuntAdresBusnummerInput(2).fill('50');
+            await expect(instantieDetailsPage.contactpuntAdresValidatie(2)).toContainText('Adres gevonden');
+
+            await verzendNaarVlaamseOverheid()
+
+            //check order in Ipdc
+            const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(titel, expectedFormalOrInformalTripleLanguage);
+            expect(instancePublishedInIpdc).toBeTruthy();
+            const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
+
+            expect(publicService['http://data.europa.eu/m8g/hasContactPoint']).toHaveLength(3);
+            const contactPuntUri4 = publicService['http://data.europa.eu/m8g/hasContactPoint'][0]['@id'];
+            const contactPuntUri3 = publicService['http://data.europa.eu/m8g/hasContactPoint'][1]['@id'];
+            const contactPuntUri1 = publicService['http://data.europa.eu/m8g/hasContactPoint'][2]['@id'];
+
+
+            // CONTACT POINT 4
+            const contactPunt4 = IpdcStub.getObjectById(instancePublishedInIpdc, contactPuntUri4);
+
+            expect(contactPunt4['http://schema.org/email']).toHaveLength(1);
+            expect(contactPunt4['http://schema.org/email']).toEqual([{ "@value": `4${email}` }]);
+
+            expect(contactPunt4['http://schema.org/telephone']).toHaveLength(1);
+            expect(contactPunt4['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}4` }]);
+
+            expect(contactPunt4['http://schema.org/url']).toHaveLength(1);
+            expect(contactPunt4['http://schema.org/url']).toEqual([{ "@value": `${website}/4` }]);
+
+            expect(contactPunt4['http://schema.org/openingHours']).toHaveLength(1);
+            expect(contactPunt4['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/4/openingsuren` }]);
+
+            expect(contactPunt4['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+
+            // CONTACT POINT 3
+            const contactPunt3 = IpdcStub.getObjectById(instancePublishedInIpdc, contactPuntUri3);
+
+            expect(contactPunt3['http://schema.org/email']).toHaveLength(1);
+            expect(contactPunt3['http://schema.org/email']).toEqual([{ "@value": `3${email}` }]);
+
+            expect(contactPunt3['http://schema.org/telephone']).toHaveLength(1);
+            expect(contactPunt3['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}3` }]);
+
+            expect(contactPunt3['http://schema.org/url']).toHaveLength(1);
+            expect(contactPunt3['http://schema.org/url']).toEqual([{ "@value": `${website}/3` }]);
+
+            expect(contactPunt3['http://schema.org/openingHours']).toHaveLength(1);
+            expect(contactPunt3['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/3/openingsuren` }]);
+
+            expect(contactPunt3['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+
+            // CONTACT POINT 1
+            const contactPunt1 = IpdcStub.getObjectById(instancePublishedInIpdc, contactPuntUri1);
+
+            expect(contactPunt1['http://schema.org/email']).toHaveLength(1);
+            expect(contactPunt1['http://schema.org/email']).toEqual([{ "@value": `1${email}` }]);
+
+            expect(contactPunt1['http://schema.org/telephone']).toHaveLength(1);
+            expect(contactPunt1['http://schema.org/telephone']).toEqual([{ "@value": `${telefoon}1` }]);
+
+            expect(contactPunt1['http://schema.org/url']).toHaveLength(1);
+            expect(contactPunt1['http://schema.org/url']).toEqual([{ "@value": `${website}/1` }]);
+
+            expect(contactPunt1['http://schema.org/openingHours']).toHaveLength(1);
+            expect(contactPunt1['http://schema.org/openingHours']).toEqual([{ "@value": `${website}/1/openingsuren` }]);
+
+            expect(contactPunt1['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
+
+        })
     });
 
-    const startVanConcept = async () =>{
+    async function startVanConcept () {
         await toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum').click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -276,15 +439,7 @@ test.describe('Order instance from IPDC flow', () => {
         expect(beschrijving).toEqual(`Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - ${formalInformalChoiceSuffix}`);
 
     }
-
-    const CreateInstanceFromConceptWithOrdersAndEnsureTheOrdersAreCorrect = async () => {
-        await voorwaardeOrderCheck();
-        await procedureOrderCheck();
-        await kostOrderCheck();
-        await financieelVoordeelOrderCheck();
-        await websiteOrderCheck();
-    };
-    const voorwaardeOrderCheck = async () => {
+    async function voorwaardeOrderCheck () {
 
         let titelVoorwaarde;
         let titelVoorwaardeEngels;
@@ -321,7 +476,7 @@ test.describe('Order instance from IPDC flow', () => {
         }
 
     }
-    const procedureOrderCheck = async () => {
+    async function procedureOrderCheck () {
 
         let titelProcedure;
         let titelProcedureEngels;
@@ -361,7 +516,7 @@ test.describe('Order instance from IPDC flow', () => {
 
         }
     }
-    const kostOrderCheck = async () => {
+    async function kostOrderCheck () {
 
         let titelKost;
         let titelKostEngels;
@@ -381,8 +536,7 @@ test.describe('Order instance from IPDC flow', () => {
             expect(beschrijvingKostEngels).toEqual(`De aanvraag en het attest zijn gratis. - en ${i}`);
         }
     }
-
-    const financieelVoordeelOrderCheck = async () => {
+    async function financieelVoordeelOrderCheck () {
 
         for (let i = 1; i < 4; i++) {
             let order = i - 1
@@ -398,8 +552,7 @@ test.describe('Order instance from IPDC flow', () => {
             expect(beschrijvingFinancieelVoordeelEngels).toEqual(`Beschrijving financieel voordeel. - en ${i}`);
         }
     }
-
-    const websiteOrderCheck = async () => {
+    async function websiteOrderCheck () {
 
         let titelWebsite;
         let titelWebsiteEngels;
@@ -525,6 +678,14 @@ test.describe('Order instance from IPDC flow', () => {
         expect(procedureWebsite3['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
         expect(procedureWebsite3['http://www.w3.org/ns/shacl#order'][0])
             .toEqual({"@value": "2", "@type": "http://www.w3.org/2001/XMLSchema#integer"});
+    }
+
+    async function verzendNaarVlaamseOverheid(){
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
     }
 
 });
