@@ -35,7 +35,6 @@ export class PublicServiceTestBuilder {
     private modified: Literal;
     private startDate: Literal;
     private endDate: Literal;
-    private productId: Literal;
     private yourEuropeCategory: Uri;
     private publicationMedium: Uri;
     private requirement: Uri;
@@ -57,7 +56,6 @@ export class PublicServiceTestBuilder {
             .withModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
-            .withProductID('1000')
     }
 
     private withType() {
@@ -160,11 +158,6 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
-    withProductID(productId: string) {
-        this.productId = new Literal(productId.toString(), undefined);
-        return this;
-    }
-
     withYourEuropeCategory(yourEuropeCategory: YourEuropeCategory) {
         this.yourEuropeCategory = new Uri(yourEuropeCategory);
         return this;
@@ -245,7 +238,6 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.modified, this.modified),
             new Triple(this.id, Predicates.startDate, this.startDate),
             new Triple(this.id, Predicates.endDate, this.endDate),
-            new Triple(this.id, Predicates.productId, this.productId),
             new Triple(this.id, Predicates.yourEuropeCategory, this.yourEuropeCategory),
             new Triple(this.id, Predicates.publicationMedium, this.publicationMedium),
             new Triple(this.id, Predicates.hasRequirement, this.requirement),
