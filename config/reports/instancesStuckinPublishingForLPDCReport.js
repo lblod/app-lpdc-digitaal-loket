@@ -34,7 +34,7 @@ export default {
               pav:createdBy ?bestuurseenheid ;
               adms:status   <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
 
-              FILTER(LANG(?title) = "nl")
+              FILTER(LANG(?title) = "nl" || LANG(?title) = "nl-be-x-formal" || LANG(?title) = "nl-be-x-informal")
           }
 
           GRAPH ?g {
@@ -58,7 +58,7 @@ export default {
               adms:status         <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> ;
               schema:publication  <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> .
 
-              FILTER(LANG(?title) = "nl")
+              FILTER(LANG(?title) = "nl" || LANG(?title) = "nl-be-x-formal" || LANG(?title) = "nl-be-x-informal")
           }
 
           GRAPH ?g {
