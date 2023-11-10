@@ -11,7 +11,7 @@ export class ConceptDisplayConfigurationTestBuilder {
     private id = new Uri(`http://data.lblod.info/id/conceptual-display-configuration/${uuid()}`);
     private type: Uri;
     private uuid: Literal;
-    private conceptInitiated: Literal;
+    private conceptInstantiated: Literal;
     private conceptIsNew: Literal;
     private bestuurseenheidId: string;
     private bestuurseenheid: Uri;
@@ -21,7 +21,7 @@ export class ConceptDisplayConfigurationTestBuilder {
         return new ConceptDisplayConfigurationTestBuilder()
             .withType()
             .withUUID(uuid())
-            .withConceptInitiated(false)
+            .withConceptInstantiated(false)
             .withConceptIsNew(true)
             .withBestuurseenheid(pepingenId)
     }
@@ -36,8 +36,8 @@ export class ConceptDisplayConfigurationTestBuilder {
         return this;
     }
 
-    withConceptInitiated(value: boolean) {
-        this.conceptInitiated = new Literal(value.toString(), undefined, 'http://mu.semte.ch/vocabularies/typed-literals/boolean');
+    withConceptInstantiated(value: boolean) {
+        this.conceptInstantiated = new Literal(value.toString(), undefined, 'http://mu.semte.ch/vocabularies/typed-literals/boolean');
         return this;
     }
 
@@ -56,7 +56,7 @@ export class ConceptDisplayConfigurationTestBuilder {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
             new Triple(this.id, Predicates.uuid, this.uuid),
-            new Triple(this.id, Predicates.conceptInitiated, this.conceptInitiated),
+            new Triple(this.id, Predicates.conceptInstantiated, this.conceptInstantiated),
             new Triple(this.id, Predicates.conceptIsNew, this.conceptIsNew),
             new Triple(this.id, Predicates.relation, this.bestuurseenheid),
         ];

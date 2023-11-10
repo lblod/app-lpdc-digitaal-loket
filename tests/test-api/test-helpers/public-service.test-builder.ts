@@ -45,6 +45,8 @@ export class PublicServiceTestBuilder {
     private contactPoints: Uri[] = [];
     private spatial: Uri;
     private competentAuthority: Uri[] = [];
+    private concept: Uri;
+    private createdBy: Uri;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -218,6 +220,17 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withLinkedConcept(concept: Uri) {
+        this.concept = concept;
+        return this;
+    }
+
+    withCreatedBy(bestuurseenheidId: string){
+        this.createdBy = new Uri(`http://data.lblod.info/id/bestuurseenheden/${bestuurseenheidId}`);
+        return this;
+    }
+
+
     buildTripleArray(): TripleArray {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
@@ -247,15 +260,16 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
             ...this.contactPoints.map(contactPoint => new Triple(this.id, Predicates.hasContactPoint, contactPoint)),
             new Triple(this.id, Predicates.spatial, this.spatial),
-            ...this.competentAuthority.map(aCompetentAuthority => new Triple(this.id, Predicates.hasCompetentAuthority, aCompetentAuthority))
+            ...this.competentAuthority.map(aCompetentAuthority => new Triple(this.id, Predicates.hasCompetentAuthority, aCompetentAuthority)),
+            new Triple(this.id, Predicates.source, this.concept),
+            new Triple(this.id, Predicates.createdBy, this.createdBy)
         ];
         return new TripleArray(triples);
     }
 
-    async buildAndPersist(request, organisationId: string): Promise<any> {
+    async buildAndPersist(request, organisationId: string): Promise<TripleArray> {
         const publicService = this.buildTripleArray();
         await insertTriples(request, `http://mu.semte.ch/graphs/organizations/${organisationId}/LoketLB-LPDCGebruiker`, publicService.asStringArray());
         return publicService;
     }
-
 }

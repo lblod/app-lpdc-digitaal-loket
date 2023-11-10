@@ -161,7 +161,7 @@ export const Predicates = {
     hasMoreInfo: new Uri('http://www.w3.org/2000/01/rdf-schema#seeAlso'),
     hasCost: new Uri('http://data.europa.eu/m8g/hasCost'),
     hasFinancialAdvantage: new Uri('http://purl.org/vocab/cpsv#produces'),
-    conceptInitiated: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptInstantiated'),
+    conceptInstantiated: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptInstantiated'),
     conceptIsNew: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptIsNew'),
     hasDisplayConfiguration: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasConceptDisplayConfiguration'),
     thematicArea: new Uri('http://data.europa.eu/m8g/thematicArea'),

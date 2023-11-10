@@ -4,11 +4,14 @@ import {Language} from "./language";
 import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import type {APIRequestContext} from "@playwright/test";
 import {
-    CompetentAuthorityLevel, ConceptTag,
-    ExecutingAuthorityLevel, ProductType,
+    CompetentAuthorityLevel,
+    ConceptTag,
+    ExecutingAuthorityLevel,
+    ProductType,
     PublicationMedium,
     TargetAudience,
-    Theme, YourEuropeCategory
+    Theme,
+    YourEuropeCategory
 } from "./codelists";
 
 export const ConceptType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService';
@@ -40,7 +43,7 @@ export class ConceptTestBuilder {
     private moreInfo: Uri;
     private cost: Uri;
     private financialAdvantage: Uri;
-    private conceptDisplayConfiguration: Uri;
+    private conceptDisplayConfigurations: Uri[] = [];
 
     static aConcept() {
         return new ConceptTestBuilder()
@@ -96,12 +99,12 @@ export class ConceptTestBuilder {
         return this;
     }
 
-    withException(exceptions: {value: string, language: Language}[]) {
+    withException(exceptions: { value: string, language: Language }[]) {
         this.exceptions = exceptions.map(item => new Literal(item.value, item.language));
         return this;
     }
 
-    withRegulations(regulations: {value: string, language: Language}[]) {
+    withRegulations(regulations: { value: string, language: Language }[]) {
         this.regulations = regulations.map(item => new Literal(item.value, item.language));
         return this;
     }
@@ -192,7 +195,12 @@ export class ConceptTestBuilder {
     }
 
     withConceptDisplayConfiguration(displayConfigUri: Uri) {
-        this.conceptDisplayConfiguration = displayConfigUri;
+        this.conceptDisplayConfigurations = [displayConfigUri];
+        return this;
+    }
+
+    withConceptDisplayConfigurations(displayConfigUris: Uri[]) {
+        this.conceptDisplayConfigurations = displayConfigUris;
         return this;
     }
 
@@ -222,7 +230,7 @@ export class ConceptTestBuilder {
             new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
             new Triple(this.id, Predicates.hasCost, this.cost),
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
-            new Triple(this.id, Predicates.hasDisplayConfiguration, this.conceptDisplayConfiguration)
+            ...this.conceptDisplayConfigurations.map(conceptDisplayConfig => new Triple(this.id, Predicates.hasDisplayConfiguration, conceptDisplayConfig))
         ];
         return new TripleArray(triples);
     }

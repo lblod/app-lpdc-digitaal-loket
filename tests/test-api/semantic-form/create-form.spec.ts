@@ -214,9 +214,9 @@ test('Create instance from concept: When concept has financialAdvantage then con
     expect(financialAdvantageTriples.findObject(Predicates.source)).toEqual(financialAdvantage.getSubject());
 });
 
-test('Create instance from concept: ConceptInitiated flag of ConceptDisplayConfiguration should be true', async ({request}) => {
+test('Create instance from concept: ConceptInstantiated flag of ConceptDisplayConfiguration should be true', async ({request}) => {
     const conceptDisplayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
-        .withConceptInitiated(false)
+        .withConceptInstantiated(false)
         .withConceptIsNew(true)
         .buildAndPersist(request);
 
@@ -228,7 +228,7 @@ test('Create instance from concept: ConceptInitiated flag of ConceptDisplayConfi
 
     const displayConfiguration = await fetchType(request, conceptDisplayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
     expect(displayConfiguration.findObject(Predicates.conceptIsNew).getValue()).toEqual('true');
-    expect(displayConfiguration.findObject(Predicates.conceptInitiated).getValue()).toEqual('false');
+    expect(displayConfiguration.findObject(Predicates.conceptInstantiated).getValue()).toEqual('false');
 });
 
 test('Create instance from concept: Instance should contain only one language version', async ({request}) => {
