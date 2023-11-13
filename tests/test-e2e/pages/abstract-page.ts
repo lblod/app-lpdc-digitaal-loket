@@ -11,10 +11,10 @@ export abstract class AbstractPage {
   abstract expectToBeVisible(): Promise<void>;
 
   async reloadUntil(assertion: () => Promise<void>) {
-    const maxRefreshAttempts = 10;
+    const maxRefreshAttempts = 60;
     for (let i = 0; i < maxRefreshAttempts; i++) {
-      await this.delay(5000);
       await this.page.reload();
+      await this.delay(1000);
       try {
         await assertion();
         return;

@@ -160,10 +160,11 @@ test.describe('Contact point form fields', () => {
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
         await homePage.expectToBeVisible();
-        await homePage.searchInput.fill(newTitel);
-
-        await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+        });
 
         await expect(instantieDetailsPage.contactpuntAdresGemeenteSelect(0).selectedItem).toContainText('Harelbeke');
         await expect(instantieDetailsPage.contactpuntAdresStraatSelect(0).selectedItem).toContainText('Generaal Deprezstraat');

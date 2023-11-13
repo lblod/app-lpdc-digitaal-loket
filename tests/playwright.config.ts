@@ -1,5 +1,4 @@
 import { defineConfig } from '@playwright/test';
-import type { TestOptions } from './test-api/test-helpers/test-options';
 
 /**
  * Read environment variables from file.
@@ -10,7 +9,7 @@ import type { TestOptions } from './test-api/test-helpers/test-options';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
-export default defineConfig<TestOptions>({
+export default defineConfig ({
   testDir: './.',
   /* Run tests in files not in parallel */
   fullyParallel: false, // use true to run in parallel
@@ -34,8 +33,8 @@ export default defineConfig<TestOptions>({
     headless: true
   },
   globalSetup: require.resolve('./global-setup'),
-  timeout: 240000,
+  timeout: 120000,
   expect: {
-    timeout: 30000
+    timeout: 10000
   }
 });

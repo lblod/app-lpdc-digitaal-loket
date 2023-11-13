@@ -56,6 +56,7 @@ test.describe('Link concept', () => {
 
         const titel = uuid();
         await instantieDetailsPage.titelInput.fill(titel);
+        await instantieDetailsPage.titelEngelsInput.click();
 
         await instantieDetailsPage.koppelConceptLink.click()
         await wijzigingenBewarenModal.expectToBeVisible();
@@ -66,7 +67,7 @@ test.describe('Link concept', () => {
 
         // Create concept
         const conceptId = uuid();
-        console.log(conceptId);
+        console.log(`concept created (${conceptId})`);
         await IpdcStub.createConcept(conceptId);
         await koppelConceptPage.reloadUntil(async () => {
             await koppelConceptPage.searchInput.fill(conceptId);
@@ -90,8 +91,11 @@ test.describe('Link concept', () => {
 
         // unlink concept
         await homePage.goto();
-        await homePage.searchInput.fill(titel);
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.reloadUntil(async () => {
+            console.log(`searching for instantie met titel ${titel}`);
+            await homePage.searchInput.fill(titel);
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+        });
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.heading).toHaveText(titel);
         await expect(instantieDetailsPage.gekoppeldConceptLink).toContainText("3000");
