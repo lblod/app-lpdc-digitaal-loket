@@ -549,19 +549,23 @@ test('Create instance from concept: all instance fields with language should hav
     expect(publicService.findObject(Predicates.regulation)).toEqual(new Literal('regulation nl', Language.FORMAL));
 });
 
-test('Create instance from concept: When concept contains english language then this should not be removed', async ({request}) => {
+test('Create instance from concept: When concept contains english language then this should not be removed, other languages but english/dutch should be removed', async ({request}) => {
     const concept = await ConceptTestBuilder.aConcept()
         .withTitles([
             {value: 'title', language: Language.NL},
             {value: 'title', language: Language.GENERATED_INFORMAL},
             {value: 'title', language: Language.GENERATED_FORMAL},
             {value: 'title', language: Language.EN},
+            {value: 'title', language: Language.DE},
+            {value: 'title', language: Language.FR},
         ])
         .withDescriptions([
             {value: 'description', language: Language.NL},
             {value: 'description', language: Language.GENERATED_INFORMAL},
             {value: 'description', language: Language.GENERATED_FORMAL},
             {value: 'description', language: Language.EN},
+            {value: 'description', language: Language.DE},
+            {value: 'description', language: Language.FR},
         ])
         .buildAndPersist(request);
 
