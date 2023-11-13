@@ -260,14 +260,13 @@ export class InstantieDetailsPage extends AbstractPage {
         this.contactpuntAdresBusnummerInput = (order: number = 0) => this.inputBelow('Bus').nth(order);
         this.contactpuntAdresValidatie = (order: number = 0) => page.getByRole('alert').nth(order);
 
-        this.titelWebsiteInput = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
-        this.titelWebsiteEngelsInput = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
-        this.beschrijvingWebsiteEditor = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
-        this.beschrijvingWebsiteReadonly = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
-        this.beschrijvingWebsiteEngelsEditor = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
-        this.beschrijvingWebsiteEngelsReadonly = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
-        this.websiteURLInput = (childOrder: number = 0, parentOrder: number = 0) => page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(childOrder)
-
+        this.titelWebsiteInput = (order: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order)
+        this.titelWebsiteEngelsInput = (order: number = 0) => page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order)
+        this.beschrijvingWebsiteEditor = (order: number = 0) => page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order)
+        this.beschrijvingWebsiteReadonly = (order: number = 0) => page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order)
+        this.beschrijvingWebsiteEngelsEditor = (order: number = 0) => page.locator(`div.ProseMirror:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order)
+        this.beschrijvingWebsiteEngelsReadonly = (order: number = 0) => page.locator(`div.rich-text-editor-content:right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order)
+        this.websiteURLInput = (order: number = 0) => page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(order)
 
         this.algemeneInfoHeading = page.getByRole('heading', {name: 'Algemene info'});
 
@@ -301,10 +300,6 @@ export class InstantieDetailsPage extends AbstractPage {
 
     private inputBelow(label: string): Locator {
         return this.page.locator(`input:below(label:text-is('${label}'))`)
-    }
-
-    private inputBelowLabelAndNthTitle(label: string, title: string, nthTitle: number): Locator {
-        return this.page.locator(`input:below(:nth-match(h2:text-is('${title}'), ${nthTitle})):below(label:text-is('${label}'))`).first();
     }
 
     private inputRightOf(label: string): Locator {
