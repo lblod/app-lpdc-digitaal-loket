@@ -19,7 +19,7 @@ export class PublicServiceTestBuilder {
     private id = new Uri(`http://data.lblod.info/id/public-service/${uuid()}`);
     private type: Uri;
     private uuid: Literal;
-    private title: Literal;
+    private titles: Literal[] = [];
     private description: Literal;
     private additionalDescription: Literal;
     private exception: Literal;
@@ -71,12 +71,17 @@ export class PublicServiceTestBuilder {
     }
 
     withTitle(title: string, language: Language) {
-        this.title = new Literal(title, language);
+        this.titles = [new Literal(title, language)];
+        return this;
+    }
+
+    withTitles(titles: {value: string, language: Language}[]) {
+        this.titles = titles.map(title => new Literal(title.value, title.language));
         return this;
     }
 
     withNoTitle() {
-        this.title = undefined;
+        this.titles = [];
         return this;
     }
 
@@ -235,7 +240,7 @@ export class PublicServiceTestBuilder {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
             new Triple(this.id, Predicates.uuid, this.uuid),
-            new Triple(this.id, Predicates.title, this.title),
+            ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             new Triple(this.id, Predicates.description, this.description),
             new Triple(this.id, Predicates.additionalDescription, this.additionalDescription),
             new Triple(this.id, Predicates.exception, this.exception),
