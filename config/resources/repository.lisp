@@ -73,3 +73,4 @@
 
 (add-prefix "lpdcExt" "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#")
 (add-prefix "pera" "http://publications.europa.eu/resource/authority/")
+(add-prefix "ext" "http://mu.semte.ch/vocabularies/ext/")
