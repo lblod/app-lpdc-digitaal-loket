@@ -11,18 +11,18 @@ export abstract class AbstractPage {
   abstract expectToBeVisible(): Promise<void>;
 
   async reloadUntil(assertion: () => Promise<void>) {
-    const maxRefreshAttempts = 60;
-    for (let i = 0; i < maxRefreshAttempts; i++) {
+    const maxReloadAttempts = 60;
+    for (let i = 0; i < maxReloadAttempts; i++) {
       await this.page.reload();
       await this.delay(1000);
       try {
         await assertion();
         return;
       } catch (e) {
-        console.error('refresh until: assertion not met');
+        console.error(`reload until: assertion not met, retrying ... ${assertion.toString()}`);
       }
     }
-    throw Error(`refresh until: assertion not met after ${maxRefreshAttempts} attempts. ${assertion.toString()}`);
+    throw Error(`reload until: assertion not met after ${maxReloadAttempts} attempts. ${assertion.toString()}`);
   }
 
   private delay(milliseconds: number) {

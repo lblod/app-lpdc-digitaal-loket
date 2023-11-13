@@ -67,7 +67,6 @@ test.describe('Link concept', () => {
 
         // Create concept
         const conceptId = uuid();
-        console.log(`concept created (${conceptId})`);
         await IpdcStub.createConcept(conceptId);
         await koppelConceptPage.reloadUntil(async () => {
             await koppelConceptPage.searchInput.fill(conceptId);
@@ -86,13 +85,14 @@ test.describe('Link concept', () => {
         await homePage.goto();
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.searchConcept(conceptId);
-        await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Toegevoegd');
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(conceptId);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Toegevoegd');
+        });
 
         // unlink concept
         await homePage.goto();
         await homePage.reloadUntil(async () => {
-            console.log(`searching for instantie met titel ${titel}`);
             await homePage.searchInput.fill(titel);
             await homePage.resultTable.row(first_row).link('Bewerk').click();
         });
@@ -111,8 +111,10 @@ test.describe('Link concept', () => {
         await homePage.expectToBeVisible();
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.searchConcept(conceptId);
-        await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Toegevoegd');
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(conceptId);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Toegevoegd');
+        });
     });
 
 });
