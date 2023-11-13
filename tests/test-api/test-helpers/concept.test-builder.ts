@@ -44,6 +44,7 @@ export class ConceptTestBuilder {
     private cost: Uri;
     private financialAdvantage: Uri;
     private conceptDisplayConfigurations: Uri[] = [];
+    private versionedSource: Uri;
 
     static aConcept() {
         return new ConceptTestBuilder()
@@ -62,6 +63,7 @@ export class ConceptTestBuilder {
             .withStartDate(new Date())
             .withEndDate(new Date())
             .withProductID('1000')
+            .withVersionedSource(new Uri(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${uuid()}`))
     }
 
     private withType() {
@@ -204,6 +206,11 @@ export class ConceptTestBuilder {
         return this;
     }
 
+    withVersionedSource(snapshotUri: Uri) {
+        this.versionedSource = snapshotUri;
+        return this;
+    }
+
     buildTripleArray(): TripleArray {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
@@ -230,7 +237,8 @@ export class ConceptTestBuilder {
             new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
             new Triple(this.id, Predicates.hasCost, this.cost),
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
-            ...this.conceptDisplayConfigurations.map(conceptDisplayConfig => new Triple(this.id, Predicates.hasDisplayConfiguration, conceptDisplayConfig))
+            ...this.conceptDisplayConfigurations.map(conceptDisplayConfig => new Triple(this.id, Predicates.hasDisplayConfiguration, conceptDisplayConfig)),
+            new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource)
         ];
         return new TripleArray(triples);
     }

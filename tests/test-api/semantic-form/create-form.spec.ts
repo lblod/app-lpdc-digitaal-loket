@@ -22,7 +22,7 @@ test.beforeEach(async ({request}) => {
     await deleteAll(request);
 });
 
-test('Create instance from concept', async ({request}) => {
+test('Create instance from concept includes base fields', async ({request}) => {
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('The title', Language.NL)
         .withDescription('The description', Language.NL)
@@ -44,6 +44,7 @@ test('Create instance from concept', async ({request}) => {
     expect(triples.findTriple(Predicates.createdBy).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/79a52da4-f491-4e2f-9374-89a13cde8ecd');
+    expect(triples.findObject(Predicates.hasVersionedSource)).toEqual(concept.findObject(Predicates.hasVersionedSource));
 });
 
 test('Create instance from concept: When concept has requirement than instance has it too', async ({request}) => {
