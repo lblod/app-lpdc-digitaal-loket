@@ -1,0 +1,32 @@
+PREFIX cpsv: <http://purl.org/vocab/cpsv#>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ipdc: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+INSERT {
+    GRAPH ?g {
+        ?publicService ext:hasVersionedSource ?oldestSnapshot.
+    }
+}
+WHERE {
+  GRAPH ?g {
+    ?publicService a cpsv:PublicService ;
+                 ext:reviewStatus <http://lblod.data.gift/concepts/cf22e8d1-23c3-45da-89bc-00826eaf23c3> ;
+                 dcterms:source ?concept.
+
+  }
+  {
+    SELECT ?concept (MAX(?generatedAtTime) AS ?maxGeneratedAtTime)
+    WHERE {
+      ?snapshot a ipdc:ConceptualPublicService ;
+                dcterms:isVersionOf ?concept ;
+                prov:generatedAtTime ?generatedAtTime.
+    }
+    GROUP BY ?concept
+  }
+
+  ?oldestSnapshot a ipdc:ConceptualPublicService ;
+                  dcterms:isVersionOf ?concept ;
+                  prov:generatedAtTime ?maxGeneratedAtTime.
+}

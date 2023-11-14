@@ -54,7 +54,7 @@ test.describe('Herziening nodig status', () => {
         const conceptId = uuid();
         const conceptTitle = `Concept created ${conceptId}`;
         await IpdcStub.createConcept(conceptId);
-        await homePage.reloadUntil(async () => {
+        await toevoegenPage.reloadUntil(async () => {
             await toevoegenPage.searchConcept(conceptTitle);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptTitle);
         });

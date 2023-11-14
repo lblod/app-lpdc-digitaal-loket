@@ -69,7 +69,7 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/concept-snapshot-compare/"
   end
 
-  put "/lpdc-management/public-services/*path" do
+  match "/lpdc-management/public-services/*path" do
     forward conn, path, "http://lpdc-management/public-services/"
   end
 
