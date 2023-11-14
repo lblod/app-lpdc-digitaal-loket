@@ -46,6 +46,7 @@ test.describe('unlink', () => {
         expect(updatedInstance.findAllTriples(Predicates.modified)).toHaveLength(1);
         expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
     });
+
     test('unlink a concept from an instance, should update the isInstantiated flag of displayConfiguration to false, if no other instance from the same bestuurseenheid is linked to this concept', async ({request}) => {
         const cookie = await loginAsPepingen(request);
         const displayConfigurationPepingen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
@@ -125,7 +126,6 @@ test.describe('unlink', () => {
         expect(updatedDisplayConfigurationBilzen.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('true')
     });
 
-
     test('unlink a concept from an instance without a concept, the isInstantiated flag of displayConfiguration should remain true, and no error is thrown', async ({request}) => {
         const cookie = await loginAsPepingen(request);
         const displayConfigurationPepingen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
@@ -148,6 +148,110 @@ test.describe('unlink', () => {
         const updatedDisplayConfigurationPepingen2 = await fetchType(request, displayConfigurationPepingen.getSubject().getValue(), ConceptDisplayConfigurationType);
         expect(updatedDisplayConfigurationPepingen2.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('false')
 
+    });
+});
+test.describe('link', () => {
+
+    test('link a concept with an instance, should add the source triple', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const concept = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${concept.getUUID()}`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.source)).toHaveLength(1);
+        expect(updatedInstance.findAllTriples(Predicates.source)[0].subject.getValue()).toBe(instance.getSubject().getValue())
+        expect(updatedInstance.findAllTriples(Predicates.source)[0].object.getValue()).toBe(concept.getSubject().getValue())
+    });
+
+    test('link a concept to an instance, should update modified date of instance', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const concept = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const modified = new Date();
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withModified(modified)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${concept.getUUID()}`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.modified)).toHaveLength(1);
+        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
+    });
+
+    test('link a concept to an instance, should update the isInstantiated flag of displayConfiguration to true', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const displayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+            .withBestuurseenheid(pepingenId)
+            .buildAndPersist(request);
+
+        const concept = await ConceptTestBuilder.aConcept()
+            .withConceptDisplayConfigurations([
+                displayConfiguration.getSubject(),
+            ])
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${concept.getUUID()}`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedDisplayConfiguration = await fetchType(request, displayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
+        expect(updatedDisplayConfiguration.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('true')
+
+    });
+    test('link a concept to an instance, should update the isNewConcept flag of displayConfiguration to false', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const displayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+            .withBestuurseenheid(pepingenId)
+            .buildAndPersist(request);
+
+        const concept = await ConceptTestBuilder.aConcept()
+            .withConceptDisplayConfigurations([
+                displayConfiguration.getSubject(),
+            ])
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${concept.getUUID()}`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedDisplayConfiguration = await fetchType(request, displayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
+        expect(updatedDisplayConfiguration.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('true')
+
+    });
+
+
+    test('link a concept to an instance that is already linked to a concept, should update the source triple to the new concept', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const conceptOld = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const conceptNew = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withLinkedConcept(conceptOld.getSubject())
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${conceptNew.getUUID()}`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.source)).toHaveLength(1);
+        expect(updatedInstance.findAllTriples(Predicates.source)[0].subject.getValue()).toBe(instance.getSubject().getValue())
+        expect(updatedInstance.findAllTriples(Predicates.source)[0].object.getValue()).toBe(conceptNew.getSubject().getValue())
     });
 });
 
