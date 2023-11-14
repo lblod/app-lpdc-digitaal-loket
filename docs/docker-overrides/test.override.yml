@@ -20,6 +20,7 @@ services:
       LETSENCRYPT_HOST: "test.lpdc-dev.s.redhost.be,test.lpdc.lokaalbestuur.lblod.info"
       LETSENCRYPT_EMAIL: "info@redpencil.io"
       EMBER_LOKET_URL: "https://loket.lblod.info/"
+      EMBER_IPDC_URL: "https://productcatalogus.ipdc.tni-vlaanderen.be"
       EMBER_ACMIDM_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
       EMBER_ACMIDM_AUTH_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
       EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"

@@ -14,6 +14,7 @@ services:
       # The next variables are environment-specific.
       # These should be overriden in docker-compose.override.yml
       EMBER_LOKET_URL: "<LOKET_URL>"
+      EMBER_IPDC_URL: "<IPDC_URL>"
       EMBER_ACMIDM_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
       EMBER_ACMIDM_AUTH_URL: "<ACMIDM_AUTH_URL>"
       EMBER_ACMIDM_LOGOUT_URL: "<ACMIDM_LOGOUT_URL>"

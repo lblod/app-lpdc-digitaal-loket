@@ -37,6 +37,8 @@ services:
 
   lpdc:
     image: lblod/frontend-lpdc:latest
+    environment:
+      EMBER_IPDC_URL: 'http://ipdc-stub'
     ports:
       - "4200:80"
     links:
