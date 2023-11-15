@@ -63,15 +63,17 @@ async function zijnConceptSnapshotsFunctioneelVerschillend(ene: string, andere: 
 }
 
 async function instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshot(instantiesTeControleren: InstantieNietGekoppeldAanLaatsteConceptSnapshot[]): Promise<InstantieNietGekoppeldAanLaatsteConceptSnapshot[]> {
-    //TODO 837: mogelijke performantie optimalisatie ?
-    //TODO 837: neem uit de lijst alle combinaties (snapshot vergelijking paren)
-    //TODO 837: ga voor elk van die opvragen
-    //TODO 837: pas dat toe op de lijst van de instanties te controleren (filter die lijst?)
 
-    return instantiesTeControleren.filter(async instantie => {
-            return await zijnConceptSnapshotsFunctioneelVerschillend(instantie.instantieConceptSnapshot, instantie.recentsteConceptSnapshot);
+    const result: InstantieNietGekoppeldAanLaatsteConceptSnapshot[] = [];
+    for (let instantieTeControleren of instantiesTeControleren) {
+        const conceptSnapshotsFunctioneelVerschillend = await zijnConceptSnapshotsFunctioneelVerschillend(instantieTeControleren.instantieConceptSnapshot, instantieTeControleren.recentsteConceptSnapshot);
+        console.log(`${instantieTeControleren.instantie} review nodig (${conceptSnapshotsFunctioneelVerschillend})`);
+        if(conceptSnapshotsFunctioneelVerschillend) {
+            result.push(instantieTeControleren);
         }
-    );
+    }
+
+    return result;
 }
 
 function reviewStatusHerzieningNodigVoorInstantieQuad(instantie: InstantieNietGekoppeldAanLaatsteConceptSnapshot): string {
