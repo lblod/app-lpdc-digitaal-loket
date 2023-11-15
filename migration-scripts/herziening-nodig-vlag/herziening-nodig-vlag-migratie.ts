@@ -1,5 +1,7 @@
 //@ts-ignore
 import SparqlClient from "sparql-client-2";
+// @ts-ignore
+import fs from "fs";
 
 async function executeQuery(query: any) {
     const sparqlClient = new SparqlClient(process.env.SPARQL_URL);
@@ -72,14 +74,21 @@ async function instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillend
     );
 }
 
+function reviewStatusHerzieningNodigVoorInstantieQuad(instantie: InstantieNietGekoppeldAanLaatsteConceptSnapshot): string {
+    return `<${instantie.instantie}> <http://mu.semte.ch/vocabularies/ext/reviewStatus> <http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83> <${instantie.bestuurseenheidGraph}> .`;
+}
+
 async function main() {
     const instantiesTeControleren = await instantiesNietGekoppeldAanLaatsteConceptSnapshot();
+    console.log(`"${instantiesTeControleren.length}" instanties te controleren`);
+//    console.log(JSON.stringify(instantiesTeControleren, null, 2));
 
     const instantiesWaarvoorReviewStatusNodigIs = await instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshot(instantiesTeControleren);
+    console.log(`"${instantiesWaarvoorReviewStatusNodigIs.length}" instanties waarvoor review nodig is`);
+//    console.log(JSON.stringify(instantiesWaarvoorReviewStatusNodigIs, null, 2));
 
-    console.log(JSON.stringify(instantiesTeControleren, null, 2));
-    console.log(JSON.stringify(instantiesWaarvoorReviewStatusNodigIs, null, 2));
-
+    const quads: String[] = instantiesWaarvoorReviewStatusNodigIs.map(reviewStatusHerzieningNodigVoorInstantieQuad);
+    fs.writeFileSync(`./migration-results/reviewStatussen.ttl`, quads.join('\n'));
 
 }
 
