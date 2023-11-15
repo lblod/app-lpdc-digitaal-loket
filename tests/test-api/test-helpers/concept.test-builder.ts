@@ -18,7 +18,7 @@ export const ConceptType = 'https://productencatalogus.data.vlaanderen.be/ns/ipd
 
 export class ConceptTestBuilder {
 
-    private id = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
+    private id: Uri;
     private type: Uri;
     private uuid: Literal;
     private titles: Literal[] = [];
@@ -48,6 +48,7 @@ export class ConceptTestBuilder {
 
     static aConcept() {
         return new ConceptTestBuilder()
+            .withId(new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`))
             .withType()
             .withUUID(uuid())
             .withTitles([
@@ -68,6 +69,11 @@ export class ConceptTestBuilder {
 
     private withType() {
         this.type = new Uri(ConceptType);
+        return this;
+    }
+
+    withId(id: Uri) {
+        this.id = id;
         return this;
     }
 

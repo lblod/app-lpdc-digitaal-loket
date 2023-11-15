@@ -47,6 +47,7 @@ export class PublicServiceTestBuilder {
     private competentAuthority: Uri[] = [];
     private concept: Uri;
     private createdBy: Uri;
+    private versionedSource: Uri;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -230,6 +231,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withVersionedSource(conceptSnapshot: Uri) {
+        this.versionedSource = conceptSnapshot;
+        return this;
+    }
+
     withCreatedBy(bestuurseenheidId: string){
         this.createdBy = new Uri(`http://data.lblod.info/id/bestuurseenheden/${bestuurseenheidId}`);
         return this;
@@ -267,7 +273,8 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.spatial, this.spatial),
             ...this.competentAuthority.map(aCompetentAuthority => new Triple(this.id, Predicates.hasCompetentAuthority, aCompetentAuthority)),
             new Triple(this.id, Predicates.source, this.concept),
-            new Triple(this.id, Predicates.createdBy, this.createdBy)
+            new Triple(this.id, Predicates.createdBy, this.createdBy),
+            new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource)
         ];
         return new TripleArray(triples);
     }

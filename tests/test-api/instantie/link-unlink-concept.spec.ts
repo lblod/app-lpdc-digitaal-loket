@@ -4,11 +4,13 @@ import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {bilzenId, loginAsPepingen, pepingenId} from "../test-helpers/login";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {fetchType} from "../test-helpers/sparql";
-import {Predicates} from "../test-helpers/triple-array";
+import {Predicates, Uri} from "../test-helpers/triple-array";
 import {
     ConceptDisplayConfigurationTestBuilder,
     ConceptDisplayConfigurationType
 } from "../test-helpers/concept-display-configuration.test-builder";
+import {ConceptSnapshotTestBuilder} from "../test-helpers/concept-snapshot.test-builder";
+import {v4 as uuid} from "uuid";
 
 test.describe('unlink', () => {
 
@@ -26,6 +28,69 @@ test.describe('unlink', () => {
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findAllTriples(Predicates.source)).toEqual([]);
+        expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)).toEqual([]);
+    });
+
+    test('unlink a concept from an instance, should remove hasVersionedSource triple from instance', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+
+        const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withVersionedSource(conceptSnapshot.getSubject())
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/ontkoppelen`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.source)).toEqual([]);
+        expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)).toEqual([]);
+    });
+
+    test('unlink a concept from an instance, both source and versionedSource on instance should be removed', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const conceptId = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
+        const first = new Date(2023, 1, 12);
+        const second = new Date(2023, 1, 25);
+
+        const conceptSnapshot1 = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .withGeneratedAtTime(first)
+            .withIsVersionOf(conceptId)
+            .buildAndPersist(request);
+
+        const concept = await ConceptTestBuilder.aConcept()
+            .withId(conceptId)
+            .withVersionedSource(conceptSnapshot1.getSubject())
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withLinkedConcept(conceptId)
+            .withVersionedSource(conceptSnapshot1.getSubject())
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/ontkoppelen`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.source)).toEqual([]);
+        expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)).toEqual([]);
+    });
+
+    test('unlink a concept from an instance, already unlinked', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/ontkoppelen`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.source)).toEqual([]);
+        expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)).toEqual([]);
+
     });
 
     test('unlink a concept from an instance, should update modified date of instance', async ({request}) => {
@@ -150,6 +215,7 @@ test.describe('unlink', () => {
 
     });
 });
+
 test.describe('link', () => {
 
     test('link a concept with an instance, should add the source triple', async ({request}) => {
@@ -165,8 +231,31 @@ test.describe('link', () => {
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findAllTriples(Predicates.source)).toHaveLength(1);
-        expect(updatedInstance.findAllTriples(Predicates.source)[0].subject.getValue()).toBe(instance.getSubject().getValue())
-        expect(updatedInstance.findAllTriples(Predicates.source)[0].object.getValue()).toBe(concept.getSubject().getValue())
+        expect(updatedInstance.findAllTriples(Predicates.source)[0].object.getValue()).toBe(concept.getSubject().getValue());
+    });
+
+    test('link a concept to an instance, should add hasVersionedSource triple', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+        const conceptId = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
+
+        const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .withIsVersionOf(conceptId)
+            .buildAndPersist(request);
+
+        const concept = await ConceptTestBuilder.aConcept()
+            .withId(conceptId)
+            .withVersionedSource(conceptSnapshot.getSubject())
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${concept.getUUID()}`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)).toHaveLength(1);
+        expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)[0].object.getValue()).toEqual(conceptSnapshot.getSubject().getValue());
     });
 
     test('link a concept to an instance, should update modified date of instance', async ({request}) => {
@@ -209,6 +298,7 @@ test.describe('link', () => {
         expect(updatedDisplayConfiguration.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('true')
 
     });
+
     test('link a concept to an instance, should update the isNewConcept flag of displayConfiguration to false', async ({request}) => {
         const cookie = await loginAsPepingen(request);
         const displayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
@@ -231,7 +321,6 @@ test.describe('link', () => {
         expect(updatedDisplayConfiguration.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('true')
 
     });
-
 
     test('link a concept to an instance that is already linked to a concept, should update the source triple to the new concept', async ({request}) => {
         const cookie = await loginAsPepingen(request);

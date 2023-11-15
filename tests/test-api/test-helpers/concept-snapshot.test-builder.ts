@@ -69,7 +69,7 @@ export class ConceptSnapshotTestBuilder {
             .withDateModified(new Date())
             .withGeneratedAtTime(new Date())
             .withSnapshotType()
-            .withIsVersionOf(new Uri('https://ipdc.tni-vlaanderen.be/id/concept/29175736-d888-40f2-ac1d-ed48c871e7ec'))
+            .withIsVersionOf(new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`))
     }
 
     private withType() {
