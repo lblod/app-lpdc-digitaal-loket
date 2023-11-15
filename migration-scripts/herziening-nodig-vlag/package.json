@@ -8,7 +8,7 @@
     "test": "tests"
   },
   "scripts": {
-    "start": "ts-node -r dotenv/config adres-id-migratie.ts"
+    "start": "ts-node -r dotenv/config herziening-nodig-vlag-migratie.ts"
   },
   "dependencies": {
     "sparql-client-2": "https://github.com/erikap/node-sparql-client.git",
