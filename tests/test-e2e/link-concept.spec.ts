@@ -67,7 +67,7 @@ test.describe('Link concept', () => {
 
         // Create concept
         const conceptId = uuid();
-        await IpdcStub.createConcept(conceptId);
+        await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await koppelConceptPage.reloadUntil(async () => {
             await koppelConceptPage.searchInput.fill(conceptId);
             await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(conceptId);

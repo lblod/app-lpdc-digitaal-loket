@@ -55,19 +55,23 @@ export class IpdcStub {
         return object[0];
     }
 
-    static async createConcept(uuid: string) {
+    static async createSnapshotOfTypeCreate(uuid: string): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/create`);
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/create`);
+        return response.json();
     }
 
-    static async updateConcept(uuid: string) {
+    static async createSnapshotOfTypeUpdate(uuid: string): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`);
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`);
+        return response.json();
+
     }
 
-    static async archiveConcept(uuid: string) {
+    static async createSnapshotOfTypeArchive(uuid: string): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
+        return response.json();
     }
 
     private static delay(milliseconds) {
@@ -75,4 +79,9 @@ export class IpdcStub {
             setTimeout(resolve, milliseconds);
         });
     }
+}
+
+type Snapshot = {
+    id: string,
+    productId: string
 }

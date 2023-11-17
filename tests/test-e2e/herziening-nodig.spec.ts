@@ -54,7 +54,7 @@ test.describe('Herziening nodig status', () => {
         await toevoegenPage.expectToBeVisible();
         const conceptId = uuid();
         const conceptTitle = `Concept created ${conceptId}`;
-        await IpdcStub.createConcept(conceptId);
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
             await toevoegenPage.searchConcept(conceptTitle);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptTitle);
@@ -79,7 +79,7 @@ test.describe('Herziening nodig status', () => {
         await wijzigingenBewarenModal.expectToBeClosed();
 
         // update concept
-        await IpdcStub.updateConcept(conceptId);
+        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
@@ -94,14 +94,14 @@ test.describe('Herziening nodig status', () => {
 
         //check link concept bekijken
         const href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
-        expect(href.startsWith(`${ipdcStubUrl}/nl/concept/3000/revisie/vergelijk`)).toBeTruthy();
+        expect(href.startsWith(`${ipdcStubUrl}/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.id}&revisie2=${updateSnapshot.id}`)).toBeTruthy();
 
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
         await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
         // archive concept
-        await IpdcStub.archiveConcept(conceptId);
+        await IpdcStub.createSnapshotOfTypeArchive(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();

@@ -40,8 +40,13 @@ app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
         const conceptToAdd = concepts[req.params.conceptStatus];
         if (conceptToAdd) {
             extraConceptsnapshots.push(conceptToAdd);
+            return res.status(200).json({
+                id: conceptToAdd.id,
+                productId: conceptToAdd.productnummer,
+            });
+        } else {
+            return res.sendStatus(400);
         }
-        res.sendStatus(200);
     } catch (e) {
         next(e);
     }
