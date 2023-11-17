@@ -26,7 +26,7 @@ export type Snapshot = {
 }
 
 function toQuad(instance: Instance): string {
-    return `<${instance.uri}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <${instance.snapshotUri}> <${instance.graphUri}>`
+    return `<${instance.uri}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <${instance.snapshotUri}> <${instance.graphUri}> .`
 }
 
 async function getInstancesWithConcept(): Promise<Instance[]> {
