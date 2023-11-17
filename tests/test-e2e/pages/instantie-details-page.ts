@@ -22,6 +22,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly instantieLoskoppelenAlertLoskoppelenButton: Locator;
 
     readonly herzieningNodigAlert: Locator;
+    readonly herzieningNodigAlertConceptBekijken: Locator;
     readonly herzieningNodigAlertGeenAanpassigenNodig: Locator;
 
     readonly conceptGearchiveerdAlert: Locator;
@@ -166,6 +167,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.instantieLoskoppelenAlertLoskoppelenButton = page.locator('[role="alert"]:has-text("Instantie loskoppelen van het concept") button:has-text("Loskoppelen")');
 
         this.herzieningNodigAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Herziening nodig")');
+        this.herzieningNodigAlertConceptBekijken = page.locator('[role="alert"]:has-text("Herziening nodig") a:has-text("Concept bekijken")');
         this.herzieningNodigAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Herziening nodig") button:has-text("Geen aanpassingen nodig")');
 
         this.conceptGearchiveerdAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Concept gearchiveerd")');

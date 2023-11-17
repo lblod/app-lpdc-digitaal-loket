@@ -9,6 +9,7 @@ import {UJeModal} from "./modals/u-je-modal";
 import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {IpdcStub} from "./components/ipdc-stub";
+import { ipdcStubUrl } from "../test-api/test-helpers/test-options";
 
 test.describe('Herziening nodig status', () => {
 
@@ -88,9 +89,13 @@ test.describe('Herziening nodig status', () => {
         });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
-
         // instantie moet alert 'herziening nodig' hebben
         await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+
+        //check link concept bekijken
+        const href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
+        expect(href.startsWith(`${ipdcStubUrl}/nl/concept/3000/revisie/vergelijk`)).toBeTruthy();
+
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
         await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
