@@ -52,7 +52,7 @@ On production machine
 ```shell
 cd /tmp
 
-# connect to storagebox where backups are saved
+# connect to storagebox where backups are saved (or use recursive search control + r)
 ssh -p 23 -i /root/.ssh/backups_rsa <your storagebox host>
 # find backup you want to restore
 ls
