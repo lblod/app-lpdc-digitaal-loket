@@ -58,8 +58,8 @@ async function zijnConceptSnapshotsFunctioneelVerschillend(ene: string, andere: 
         console.log(await response.text());
         throw Error(`Error ${response.status}: ${await response.text()}`);
     }
-    const jsonResponse: any = await response.json();
-    return jsonResponse['isChanged'];
+    const jsonResponse: { isChanged:boolean } = await response.json();
+    return jsonResponse.isChanged;
 }
 
 async function instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshot(instantiesTeControleren: InstantieNietGekoppeldAanLaatsteConceptSnapshot[]): Promise<InstantieNietGekoppeldAanLaatsteConceptSnapshot[]> {
