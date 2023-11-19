@@ -43,6 +43,7 @@ app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
             return res.status(200).json({
                 id: conceptToAdd.id,
                 productId: conceptToAdd.productnummer,
+                title: conceptToAdd?.naam?.nl
             });
         } else {
             return res.sendStatus(400);

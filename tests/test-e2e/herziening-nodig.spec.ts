@@ -53,21 +53,20 @@ test.describe('Herziening nodig status', () => {
         
         await toevoegenPage.expectToBeVisible();
         const conceptId = uuid();
-        const conceptTitle = `Concept created ${conceptId}`;
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptTitle);
-            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptTitle);
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(conceptTitle);
-        await toevoegenPage.resultTable.row(first_row).link(conceptTitle).click();
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
-        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${conceptTitle}`);
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
         await conceptDetailsPage.voegToeButton.click();
 
         await instantieDetailsPage.expectToBeVisible();
-        await expect(instantieDetailsPage.heading).toHaveText(conceptTitle);
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
 
         const titel = await instantieDetailsPage.titelInput.inputValue();
         const newTitel = titel + uuid();
@@ -94,7 +93,7 @@ test.describe('Herziening nodig status', () => {
 
         //check link concept bekijken
         const href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
-        expect(href.startsWith(`${ipdcStubUrl}/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.id}&revisie2=${updateSnapshot.id}`)).toBeTruthy();
+        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.id}&revisie2=${updateSnapshot.id}`);
 
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
         await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();

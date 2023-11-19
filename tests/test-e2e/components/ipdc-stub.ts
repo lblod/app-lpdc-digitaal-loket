@@ -83,5 +83,6 @@ export class IpdcStub {
 
 type Snapshot = {
     id: string,
-    productId: string
+    productId: string,
+    title: string
 }
