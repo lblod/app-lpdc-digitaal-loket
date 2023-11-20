@@ -279,6 +279,7 @@ test.describe('link', () => {
     test('link a concept to an instance, should update the isInstantiated flag of displayConfiguration to true', async ({request}) => {
         const cookie = await loginAsPepingen(request);
         const displayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+            .withConceptInstantiated(false)
             .withBestuurseenheid(pepingenId)
             .buildAndPersist(request);
 
@@ -302,6 +303,7 @@ test.describe('link', () => {
     test('link a concept to an instance, should update the isNewConcept flag of displayConfiguration to false', async ({request}) => {
         const cookie = await loginAsPepingen(request);
         const displayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+            .withConceptIsNew(true)
             .withBestuurseenheid(pepingenId)
             .buildAndPersist(request);
 
@@ -318,7 +320,7 @@ test.describe('link', () => {
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedDisplayConfiguration = await fetchType(request, displayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
-        expect(updatedDisplayConfiguration.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('true')
+        expect(updatedDisplayConfiguration.findTriple(Predicates.conceptIsNew).getObjectValue()).toEqual('false')
 
     });
 
