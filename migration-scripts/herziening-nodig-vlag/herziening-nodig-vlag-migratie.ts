@@ -47,7 +47,13 @@ select distinct ?bestuurseenheidGraph ?instantie ?instantieConceptSnapshot ?conc
     }));
 }
 
+const cachedConceptSnapshotsFunctioneelVerschillend :{ [key:string]: boolean} = {};
+
 async function zijnConceptSnapshotsFunctioneelVerschillend(ene: string, andere: string): Promise<boolean> {
+    const cacheKey = `${ene}_${andere}`;
+    if(cacheKey in cachedConceptSnapshotsFunctioneelVerschillend) {
+        return cachedConceptSnapshotsFunctioneelVerschillend[cacheKey];
+    }
     const queryParams = new URLSearchParams({
         currentSnapshotUri: ene,
         newSnapshotUri: andere
@@ -58,8 +64,10 @@ async function zijnConceptSnapshotsFunctioneelVerschillend(ene: string, andere: 
         console.log(await response.text());
         throw Error(`Error ${response.status}: ${await response.text()}`);
     }
-    const jsonResponse: { isChanged:boolean } = await response.json();
-    return jsonResponse.isChanged;
+    const jsonResponse: { isChanged:boolean } = await response.json() as { isChanged:boolean };
+    const result = jsonResponse.isChanged;
+    cachedConceptSnapshotsFunctioneelVerschillend[cacheKey] = result;
+    return result;
 }
 
 async function instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshot(instantiesTeControleren: InstantieNietGekoppeldAanLaatsteConceptSnapshot[]): Promise<InstantieNietGekoppeldAanLaatsteConceptSnapshot[]> {
@@ -83,15 +91,12 @@ function reviewStatusHerzieningNodigVoorInstantieQuad(instantie: InstantieNietGe
 async function main() {
     const instantiesTeControleren = await instantiesNietGekoppeldAanLaatsteConceptSnapshot();
     console.log(`"${instantiesTeControleren.length}" instanties te controleren`);
-//    console.log(JSON.stringify(instantiesTeControleren, null, 2));
 
     const instantiesWaarvoorReviewStatusNodigIs = await instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshot(instantiesTeControleren);
     console.log(`"${instantiesWaarvoorReviewStatusNodigIs.length}" instanties waarvoor review nodig is`);
-//    console.log(JSON.stringify(instantiesWaarvoorReviewStatusNodigIs, null, 2));
 
     const quads: String[] = instantiesWaarvoorReviewStatusNodigIs.map(reviewStatusHerzieningNodigVoorInstantieQuad);
     fs.writeFileSync(`./migration-results/reviewStatussen.ttl`, quads.join('\n'));
-
 }
 
 type InstantieNietGekoppeldAanLaatsteConceptSnapshot = {
