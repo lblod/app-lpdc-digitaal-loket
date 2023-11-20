@@ -1,0 +1,2 @@
+DELETE { GRAPH <http://mu.semte.ch/graphs/public> { <http://lblod.data.gift/concept-schemes/effb1058-d469-4064-a7a6-9d98ba081962> <http://www.w3.org/2004/02/skos/core#prefLabel> "The statuses of the underlying concept of a public service instance" } }
+INSERT { GRAPH <http://mu.semte.ch/graphs/public> { <http://lblod.data.gift/concept-schemes/effb1058-d469-4064-a7a6-9d98ba081962> <http://www.w3.org/2004/02/skos/core#prefLabel> "The statuses of public service instance" } }
