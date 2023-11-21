@@ -13,48 +13,65 @@ async function executeQuery(query: any) {
 
 export type Instance = {
     uri: string,
-    conceptUri: string,
+    concept: Concept,
     graphUri: string,
     created: string,
     modified: string,
     snapshotUri?: string;
 }
 
-export type Snapshot = {
+export type Concept = {
+    uri: string,
+    status?: string
+}
+
+export type ConceptSnapshot = {
     uri: string,
     generatedAtTime: string,
 }
 
 function toQuad(instance: Instance): string {
+    if(instance.snapshotUri === undefined) {
+        throw new Error(`No snapshot found for instance ${instance.uri}`);
+    }
     return `<${instance.uri}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <${instance.snapshotUri}> <${instance.graphUri}> .`
 }
 
 async function getInstancesWithConcept(): Promise<Instance[]> {
     const query = `
-        SELECT ?instance ?concept ?graph ?created ?modified WHERE {
-            GRAPH ?graph {
+        SELECT ?instance ?concept ?bestuurseenheidsGraph ?created ?modified ?conceptStatus WHERE {
+            GRAPH ?bestuurseenheidsGraph {
                 ?instance a <http://purl.org/vocab/cpsv#PublicService> .
                 ?instance <http://purl.org/dc/terms/created> ?created .
                 ?instance <http://purl.org/dc/terms/modified> ?modified .
                 ?instance <http://purl.org/dc/terms/source> ?concept .
+            }
+            
+            OPTIONAL {
+               GRAPH <http://mu.semte.ch/graphs/public> {                
+                    ?concept <http://www.w3.org/ns/adms#status> ?conceptStatus.  
+                }
             }
         }
     `;
     const response = await executeQuery(query);
     return response.map((binding: any) => ({
         uri: binding.instance.value,
-        conceptUri: binding.concept.value,
-        graphUri: binding.graph.value,
+        concept: {
+            uri: binding.concept.value,
+            status: binding.conceptStatus?.value,
+        },
+        graphUri: binding.bestuurseenheidsGraph.value,
         created: binding.created.value,
         modified: binding.modified.value,
     }));
 }
 
-async function findSnapshotsOrderedQuery(conceptUri: string): Promise<Snapshot[]> {
+async function findSnapshotsOrderedQuery(concept: Concept): Promise<ConceptSnapshot[]> {
     const query = `
         SELECT ?snapshotUri ?generatedAtTime WHERE {
-                <${conceptUri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
-                ?snapshotUri <http://purl.org/dc/terms/isVersionOf> <${conceptUri}> .
+                <${concept.uri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
+                ?snapshotUri <http://purl.org/dc/terms/isVersionOf> <${concept.uri}> .
                 ?snapshotUri <http://www.w3.org/ns/prov#generatedAtTime> ?generatedAtTime .
         } ORDER BY ?generatedAtTime
     `;
@@ -64,44 +81,50 @@ async function findSnapshotsOrderedQuery(conceptUri: string): Promise<Snapshot[]
     }));
 }
 
-const cachedConcepts: { uri: string, snapshots: Snapshot[] }[] = [];
+const cachedConcepts: { uri: string, snapshots: ConceptSnapshot[] }[] = [];
 
-async function findSnapshotsOrdered(conceptUri: string): Promise<Snapshot[]> {
-    const cachedConcept = cachedConcepts.find(concept => concept.uri === conceptUri);
+async function findSnapshotsOrdered(concept: Concept): Promise<ConceptSnapshot[]> {
+    const cachedConcept = cachedConcepts.find(c => c.uri === concept.uri);
     if (cachedConcept) {
-        return cachedConcept.snapshots
+        return cachedConcept.snapshots;
     } else {
-        const snapshots = await findSnapshotsOrderedQuery(conceptUri);
-        cachedConcepts.push({uri: conceptUri, snapshots: snapshots});
+        const snapshots = await findSnapshotsOrderedQuery(concept);
+        cachedConcepts.push({uri: concept.uri, snapshots: snapshots});
         return snapshots;
     }
 }
 
-export function findFirstSnapshotAfterDate(snapshots: Snapshot[], date: string): Snapshot | undefined {
+export function findFirstSnapshotAfterDate(snapshots: ConceptSnapshot[], date: string): ConceptSnapshot | undefined {
     return first(snapshots.filter(snapshot => snapshot.generatedAtTime > date));
 }
 
-export function findLastSnapshotBeforeDate(snapshots: Snapshot[], date: string): Snapshot | undefined {
+export function findLastSnapshotBeforeDate(snapshots: ConceptSnapshot[], date: string): ConceptSnapshot | undefined {
     return last(snapshots.filter(snapshot => snapshot.generatedAtTime < date));
 }
 
-export function findPossibleSnapshotsToLink(instance: Instance, snapshots: Snapshot[]): Snapshot[] {
+export function findPossibleSnapshotsToLink(instance: Instance, snapshots: ConceptSnapshot[]): ConceptSnapshot[] {
     const snapshotBeforeInstanceModified = snapshots.filter(snapshot => snapshot.generatedAtTime < instance.modified);
     const snapshotInstanceWasCreatedWith = last(snapshots.filter(snapshot => snapshot.generatedAtTime < instance.created))
     return snapshotBeforeInstanceModified.slice(snapshotBeforeInstanceModified.indexOf(snapshotInstanceWasCreatedWith!));
 }
 
-export function determineSnapshotToLinkToInstance(instance: Instance, orderedSnapshots: Snapshot[]): Snapshot {
-    const possibleSnapshots = findPossibleSnapshotsToLink(instance, orderedSnapshots);
+export const archivedStatusConcept = 'http://lblod.data.gift/concepts/3f2666df-1dae-4cc2-a8dc-e8213e713081';
 
-    if (possibleSnapshots.length === 1) {
-        return possibleSnapshots[0];
-    } else if (findLastSnapshotBeforeDate(possibleSnapshots, DATE_17_JULY) !== undefined) {
-        return findLastSnapshotBeforeDate(possibleSnapshots, DATE_17_JULY)!;
-    } else if (findFirstSnapshotAfterDate(possibleSnapshots, DATE_17_JULY) !== undefined) {
-        return findFirstSnapshotAfterDate(possibleSnapshots, DATE_17_JULY)!;
+export function determineSnapshotToLinkToInstance(instance: Instance, orderedSnapshots: ConceptSnapshot[]): ConceptSnapshot {
+    if (instance.concept.status !== undefined) {
+        return orderedSnapshots[orderedSnapshots.length - 1];
     } else {
-        throw new Error(`No snapshot selected for instance ${instance.uri}`)
+        const possibleSnapshots = findPossibleSnapshotsToLink(instance, orderedSnapshots);
+
+        if (possibleSnapshots.length === 1) {
+            return possibleSnapshots[0];
+        } else if (findLastSnapshotBeforeDate(possibleSnapshots, DATE_17_JULY) !== undefined) {
+            return findLastSnapshotBeforeDate(possibleSnapshots, DATE_17_JULY)!;
+        } else if (findFirstSnapshotAfterDate(possibleSnapshots, DATE_17_JULY) !== undefined) {
+            return findFirstSnapshotAfterDate(possibleSnapshots, DATE_17_JULY)!;
+        } else {
+            throw new Error(`No snapshot selected for instance ${instance.uri}`)
+        }
     }
 }
 
@@ -109,7 +132,7 @@ export async function main() {
     const instances = await getInstancesWithConcept();
     console.log(`Processing ${instances.length} instances..`);
     for (const instance of instances) {
-        const orderedSnapshots = await findSnapshotsOrdered(instance.conceptUri);
+        const orderedSnapshots = await findSnapshotsOrdered(instance.concept);
         const snapshotToLink = determineSnapshotToLinkToInstance(instance, orderedSnapshots);
         instance.snapshotUri = snapshotToLink.uri;
     }

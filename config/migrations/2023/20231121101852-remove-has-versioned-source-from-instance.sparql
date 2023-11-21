@@ -1,0 +1,12 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> ?snapshot.
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> ?snapshot.
+    }
+    FILTER(STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/")
+    && STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker"))
+}
