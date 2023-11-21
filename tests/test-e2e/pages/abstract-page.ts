@@ -25,7 +25,7 @@ export abstract class AbstractPage {
     throw Error(`reload until: assertion not met after ${maxReloadAttempts} attempts. ${assertion.toString()}`);
   }
 
-  private delay(milliseconds: number) {
+  protected delay(milliseconds: number) {
     return new Promise(resolve => {
       setTimeout(resolve, milliseconds);
     });
