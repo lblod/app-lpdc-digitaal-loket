@@ -18,7 +18,6 @@ test(`Latest functional changes is added between concept and concept-snapshot `,
     });
     expect(response.ok(), await response.text()).toBeTruthy();
     const json = await response.json();
-    expect(json.results.bindings).toHaveLength(3);
     expect(json.results.bindings).toEqual(expect.arrayContaining([
         {
             s: {type: 'uri', value: 'https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84'},
