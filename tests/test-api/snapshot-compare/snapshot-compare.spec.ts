@@ -25,6 +25,13 @@ import {bilzenId, pepingenId} from "../test-helpers/login";
 
 test.describe('Compare snapshots', () => {
 
+    test('When comparing same snapshot then isChanged should be false', async ({request}) => {
+        const aSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .buildAndPersist(request);
+
+        expect(await compareSnapshots(aSnapshot, aSnapshot, request)).toEqual({isChanged: false});
+    });
+
     test('When no content change then isChanged should be false', async ({request}) => {
         const currentSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
             .buildAndPersist(request);

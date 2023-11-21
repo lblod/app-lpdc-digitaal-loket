@@ -1,17 +1,15 @@
 import {
     DATE_17_JULY, determineSnapshotToLinkToInstance,
     findFirstSnapshotAfterDate,
-    findLastSnapshotBeforeDate,
-    Instance,
-    ConceptSnapshot, archivedStatusConcept
+    findLastSnapshotBeforeDate, Instance,
+    Snapshot
 } from "./link-instantie-to-snapshot-migratie";
-import {arch} from "os";
 
 
 describe('findFirstSnapshotAfterDate', () => {
 
     test('no snapshot after DATE 17 JULY', () => {
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: '2022-10-06T13:25:11.734755Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: '2022-10-06T13:30:20.567914Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/78999140-14c0-4028-a550-f1aa49c68cdc', generatedAtTime: '2022-10-07T10:50:15.688381Z'},
@@ -25,7 +23,7 @@ describe('findFirstSnapshotAfterDate', () => {
 
 
     test('one snapshot after DATE 17 JULY ', () => {
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: '2022-10-06T13:25:11.734755Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: '2022-10-06T13:30:20.567914Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/78999140-14c0-4028-a550-f1aa49c68cdc', generatedAtTime: '2022-10-07T10:50:15.688381Z'},
@@ -38,7 +36,7 @@ describe('findFirstSnapshotAfterDate', () => {
     });
 
     test('multiple snapshots after DATE 17 JULY ', () => {
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: '2022-10-06T13:25:11.734755Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: '2022-10-06T13:30:20.567914Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/78999140-14c0-4028-a550-f1aa49c68cdc', generatedAtTime: '2023-07-18T10:50:15.688381Z'},
@@ -56,7 +54,7 @@ describe('findFirstSnapshotAfterDate', () => {
 describe('findLastSnapshotBeforeDate', () => {
 
     test('no snapshot before DATE 17 JULY', () => {
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: '2023-10-06T13:25:11.734755Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: '2023-10-06T13:30:20.567914Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/78999140-14c0-4028-a550-f1aa49c68cdc', generatedAtTime: '2023-10-07T10:50:15.688381Z'},
@@ -69,7 +67,7 @@ describe('findLastSnapshotBeforeDate', () => {
     });
 
     test('one snapshot before DATE 17 JULY ', () => {
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: '2023-07-06T13:25:11.734755Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: '2023-10-06T13:30:20.567914Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/78999140-14c0-4028-a550-f1aa49c68cdc', generatedAtTime: '2023-10-07T10:50:15.688381Z'},
@@ -82,7 +80,7 @@ describe('findLastSnapshotBeforeDate', () => {
     });
 
     test('multiple snapshots before DATE 17 JULY ', () => {
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: '2023-07-06T13:25:11.734755Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: '2023-07-06T13:30:20.567914Z'},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/78999140-14c0-4028-a550-f1aa49c68cdc', generatedAtTime: '2023-11-18T10:50:15.688381Z'},
@@ -110,7 +108,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('concept never changed', () => {
         // snapshot 1 -> instance created
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: DATE_1_BEFORE},
         ];
 
@@ -119,9 +117,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_1_BEFORE,
             modified: DATE_2_BEFORE,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -130,7 +126,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance never changed', () => {
         // snapshot 1 -> instance created -> snapshot 2
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: DATE_1_BEFORE},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: DATE_3_BEFORE},
         ];
@@ -140,9 +136,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_2_BEFORE,
             modified: DATE_2_BEFORE,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -151,7 +145,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance never changed after concept update', () => {
         // snapshot 1 -> instance created -> instance last updated -> snapshot 2
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: DATE_1_BEFORE},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: DATE_4_BEFORE},
         ];
@@ -161,9 +155,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_2_BEFORE,
             modified: DATE_3_BEFORE,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -172,7 +164,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance created before 17/7 and last updated before', () => {
         // snapshot 1 -> instance created -> snapshot 2 -> instance last updated -> 17/7
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/d3d110a1-248e-478d-aec5-d1aae9d8772e', generatedAtTime: DATE_1_BEFORE},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/fa789f2f-fbf4-4ea6-bee7-77953d8d0c7e', generatedAtTime: DATE_3_BEFORE},
         ];
@@ -182,9 +174,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_2_BEFORE,
             modified: DATE_4_BEFORE,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -193,7 +183,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance created before 17/7 and last updated after', () => {
         // snapshot 1 -> instance created -> snapshot 2 -> 17/7 -> snapshot 3 -> instance last updated
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/1', generatedAtTime: DATE_1_BEFORE},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/2', generatedAtTime: DATE_3_BEFORE},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/3', generatedAtTime: DATE_1_AFTER},
@@ -204,9 +194,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_2_BEFORE,
             modified: DATE_2_AFTER,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -216,7 +204,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance created after 17/7 based on snapshot created before 17/7', () => {
         // snapshot 1 -> 17/7 -> instance created -> snapshot 2 -> instance last updated
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/1', generatedAtTime: DATE_1_BEFORE},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/2', generatedAtTime: DATE_2_AFTER},
         ];
@@ -226,9 +214,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_1_AFTER,
             modified: DATE_3_AFTER,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -238,7 +224,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance created after 17/7 based on snapshot created after 17/7', () => {
         // snapshot 1 -> 17/7 -> snapshot 2 -> instance created -> snapshot 3 -> instance last updated
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/1', generatedAtTime: DATE_1_BEFORE},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/2', generatedAtTime: DATE_1_AFTER},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/3', generatedAtTime: DATE_3_AFTER},
@@ -249,9 +235,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_2_AFTER,
             modified: DATE_4_AFTER,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -261,7 +245,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance created after 17/7 based on 2nd snapshot created after 17/7', () => {
         // 17/7 -> snapshot 1 -> snapshot 2 -> instance created -> snapshot 3 -> instance last updated
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/1', generatedAtTime: DATE_1_AFTER},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/2', generatedAtTime: DATE_2_AFTER},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/2', generatedAtTime: DATE_4_AFTER},
@@ -272,9 +256,7 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_3_AFTER,
             modified: DATE_5_AFTER,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
@@ -284,7 +266,7 @@ describe('determineSnapshotToLinkToInstance', () => {
 
     test('instance created after 17/7 with multiple concept updates before instance last updated', () => {
         // 17/7 -> snapshot 1 -> instance created -> snapshot 2 -> snapshot 3 -> instance last updated
-        const snapshots: ConceptSnapshot[] = [
+        const snapshots: Snapshot[] = [
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/1', generatedAtTime: DATE_1_AFTER},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/2', generatedAtTime: DATE_3_AFTER},
             {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/3', generatedAtTime: DATE_4_AFTER},
@@ -295,44 +277,13 @@ describe('determineSnapshotToLinkToInstance', () => {
             graphUri: 'http://graph',
             created: DATE_2_AFTER,
             modified: DATE_5_AFTER,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
-            }
+            conceptUri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a'
         }
 
         const actual = determineSnapshotToLinkToInstance(instance, snapshots);
         expect(actual.uri).toEqual('https://ipdc.vlaanderen.be/id/conceptsnapshot/1');
         expect(actual.generatedAtTime).toEqual(DATE_1_AFTER);
     });
-
-    test('instance from archived concept takes most recent conceptsnapshot', () => {
-        const snapshots: ConceptSnapshot[] = [
-            {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/0', generatedAtTime: DATE_1_BEFORE},
-            {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/1', generatedAtTime: DATE_1_AFTER},
-            {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/2', generatedAtTime: DATE_3_AFTER},
-            {uri: 'https://ipdc.vlaanderen.be/id/conceptsnapshot/3', generatedAtTime: DATE_4_AFTER},
-        ];
-
-        const instance: Instance = {
-            uri: 'http://data.lblod.info/id/public-service/edf13227-a6b2-4cf4-aec2-24be8ff96922',
-            graphUri: 'http://graph',
-            created: DATE_2_AFTER,
-            modified: DATE_5_AFTER,
-            concept: {
-                uri: 'https://ipdc.vlaanderen.be/id/concept/8ea4bc43-80a9-4362-aa71-ae9505ad210a',
-                status: archivedStatusConcept
-            }
-        }
-
-        const actual = determineSnapshotToLinkToInstance(instance, snapshots);
-        expect(actual.uri).toEqual('https://ipdc.vlaanderen.be/id/conceptsnapshot/3');
-        expect(actual.generatedAtTime).toEqual(DATE_4_AFTER);
-
-
-
-
-
-    })
 
 
 });

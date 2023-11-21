@@ -9,14 +9,14 @@ async function executeQuery(query: any) {
     return JSON.parse(response.body)?.results?.bindings;
 }
 
-async function instantiesNietGekoppeldAanLaatsteConceptSnapshot(): Promise<InstantieNietGekoppeldAanLaatsteConceptSnapshot[]> {
+async function instantiesZonderReviewStatus(): Promise<Instantie[]> {
     const response = await executeQuery(`
 PREFIX ext:     <http://mu.semte.ch/vocabularies/ext/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
 PREFIX adms: <http://www.w3.org/ns/adms#>
 
-select distinct ?bestuurseenheidGraph ?instantie ?instantieConceptSnapshot ?concept ?recentsteConceptSnapshot where {
+select distinct ?bestuurseenheidGraph ?instantie ?instantieConceptSnapshot ?concept ?recentsteConceptSnapshot ?conceptStatus where {
 
     GRAPH ?bestuurseenheidGraph {
         ?instantie a cpsv:PublicService .
@@ -31,18 +31,17 @@ select distinct ?bestuurseenheidGraph ?instantie ?instantieConceptSnapshot ?conc
     GRAPH ?conceptGraph {
         ?concept ext:hasVersionedSource ?recentsteConceptSnapshot .
         OPTIONAL {
-            ?concept adms:status ?conceptStatus .
+            ?concept adms:status ?conceptStatus.
         }
-        FILTER(!bound(?conceptStatus)) # neem concepten met status gearchiveerd niet mee
     }
 
-    FILTER(?instantieConceptSnapshot != ?recentsteConceptSnapshot)
 }`);
     return response.map((item: any) => ({
         bestuurseenheidGraph: item.bestuurseenheidGraph.value,
         instantie: item.instantie.value,
         instantieConceptSnapshot: item.instantieConceptSnapshot.value,
         concept: item.concept.value,
+        conceptStatus: item.conceptStatus?.value,
         recentsteConceptSnapshot: item.recentsteConceptSnapshot.value
     }));
 }
@@ -70,13 +69,15 @@ async function zijnConceptSnapshotsFunctioneelVerschillend(ene: string, andere: 
     return result;
 }
 
-async function instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshot(instantiesTeControleren: InstantieNietGekoppeldAanLaatsteConceptSnapshot[]): Promise<InstantieNietGekoppeldAanLaatsteConceptSnapshot[]> {
-
-    const result: InstantieNietGekoppeldAanLaatsteConceptSnapshot[] = [];
+async function instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshotOfConceptGearchiveerd(instantiesTeControleren: Instantie[]): Promise<Instantie[]> {
+    const result: Instantie[] = [];
     for (let instantieTeControleren of instantiesTeControleren) {
         const conceptSnapshotsFunctioneelVerschillend = await zijnConceptSnapshotsFunctioneelVerschillend(instantieTeControleren.instantieConceptSnapshot, instantieTeControleren.recentsteConceptSnapshot);
-        console.log(`${instantieTeControleren.instantie} review nodig (${conceptSnapshotsFunctioneelVerschillend})`);
-        if(conceptSnapshotsFunctioneelVerschillend) {
+        const conceptIsGearchiveerd = instantieTeControleren.conceptStatus !== undefined;
+
+        //console.log(`${instantieTeControleren.instantie} review updated nodig (${conceptSnapshotsFunctioneelVerschillend}), of review gearchiveerd nodig (${conceptIsGearchiveerd})`);
+
+        if(conceptSnapshotsFunctioneelVerschillend || conceptIsGearchiveerd) {
             result.push(instantieTeControleren);
         }
     }
@@ -84,26 +85,32 @@ async function instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillend
     return result;
 }
 
-function reviewStatusHerzieningNodigVoorInstantieQuad(instantie: InstantieNietGekoppeldAanLaatsteConceptSnapshot): string {
-    return `<${instantie.instantie}> <http://mu.semte.ch/vocabularies/ext/reviewStatus> <http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83> <${instantie.bestuurseenheidGraph}> .`;
+function reviewStatusVoorInstantieQuad(instantie: Instantie): string {
+    const possibleReviewStatus = {
+        conceptUpdated: 'http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83',
+        conceptArchived: 'http://lblod.data.gift/concepts/cf22e8d1-23c3-45da-89bc-00826eaf23c3'
+    };
+    const reviewStatus = instantie.conceptStatus !== null ? possibleReviewStatus.conceptArchived : possibleReviewStatus.conceptUpdated;
+    return `<${instantie.instantie}> <http://mu.semte.ch/vocabularies/ext/reviewStatus> <${reviewStatus}> <${instantie.bestuurseenheidGraph}> .`;
 }
 
 async function main() {
-    const instantiesTeControleren = await instantiesNietGekoppeldAanLaatsteConceptSnapshot();
+    const instantiesTeControleren = await instantiesZonderReviewStatus();
     console.log(`"${instantiesTeControleren.length}" instanties te controleren`);
 
-    const instantiesWaarvoorReviewStatusNodigIs = await instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshot(instantiesTeControleren);
+    const instantiesWaarvoorReviewStatusNodigIs = await instantiesWaarvoorGekoppeldConceptSnapshotInhoudelijkVerschillendVanLaatsteConceptSnapshotOfConceptGearchiveerd(instantiesTeControleren);
     console.log(`"${instantiesWaarvoorReviewStatusNodigIs.length}" instanties waarvoor review nodig is`);
 
-    const quads: String[] = instantiesWaarvoorReviewStatusNodigIs.map(reviewStatusHerzieningNodigVoorInstantieQuad);
+    const quads: String[] = instantiesWaarvoorReviewStatusNodigIs.map(reviewStatusVoorInstantieQuad);
     fs.writeFileSync(`./migration-results/reviewStatussen.ttl`, quads.join('\n'));
 }
 
-type InstantieNietGekoppeldAanLaatsteConceptSnapshot = {
+type Instantie = {
     bestuurseenheidGraph: string
     instantie: string
     instantieConceptSnapshot: string
-    concept: string
+    concept: string,
+    conceptStatus: string,
     recentsteConceptSnapshot: string
 };
 
