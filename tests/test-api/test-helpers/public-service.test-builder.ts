@@ -7,7 +7,7 @@ import {
     ExecutingAuthorityLevel,
     ProductType,
     PublicationMedium,
-    ResourceLanguage,
+    ResourceLanguage, ReviewStatus,
     TargetAudience,
     Theme,
     YourEuropeCategory
@@ -48,6 +48,7 @@ export class PublicServiceTestBuilder {
     private concept: Uri;
     private createdBy: Uri;
     private versionedSource: Uri;
+    private reviewStatus: Uri;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -241,6 +242,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withReviewStatus(reviewStatus: ReviewStatus) {
+        this.reviewStatus = new Uri(reviewStatus);
+        return this;
+}
+
 
     buildTripleArray(): TripleArray {
         const triples = [
@@ -274,7 +280,8 @@ export class PublicServiceTestBuilder {
             ...this.competentAuthority.map(aCompetentAuthority => new Triple(this.id, Predicates.hasCompetentAuthority, aCompetentAuthority)),
             new Triple(this.id, Predicates.source, this.concept),
             new Triple(this.id, Predicates.createdBy, this.createdBy),
-            new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource)
+            new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource),
+            new Triple(this.id, Predicates.reviewStatus, this.reviewStatus)
         ];
         return new TripleArray(triples);
     }

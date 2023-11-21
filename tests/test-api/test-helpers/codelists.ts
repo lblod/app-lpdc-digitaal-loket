@@ -47,6 +47,11 @@ export enum PublicationMedium {
     Rechtenverkenner = 'https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/Rechtenverkenner',
 }
 
+export enum ReviewStatus {
+    conceptUpdated = 'http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83',
+    conceptArchived = 'http://lblod.data.gift/concepts/cf22e8d1-23c3-45da-89bc-00826eaf23c3'
+}
+
 export enum YourEuropeCategory {
     Gezondheidszorg = 'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/Gezondheidszorg',
     GezondheidszorgWoonzorgcentrum = 'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgWoonzorgcentrum',

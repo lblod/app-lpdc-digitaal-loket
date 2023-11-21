@@ -45,6 +45,7 @@ export class ConceptTestBuilder {
     private financialAdvantage: Uri;
     private conceptDisplayConfigurations: Uri[] = [];
     private versionedSource: Uri;
+    private latestFunctionalChange: Uri;
 
     static aConcept() {
         return new ConceptTestBuilder()
@@ -217,6 +218,11 @@ export class ConceptTestBuilder {
         return this;
     }
 
+    withLatestFunctionalChange(snapshotUri: Uri) {
+        this.latestFunctionalChange = snapshotUri;
+        return this;
+    }
+
     buildTripleArray(): TripleArray {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
@@ -244,7 +250,8 @@ export class ConceptTestBuilder {
             new Triple(this.id, Predicates.hasCost, this.cost),
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
             ...this.conceptDisplayConfigurations.map(conceptDisplayConfig => new Triple(this.id, Predicates.hasDisplayConfiguration, conceptDisplayConfig)),
-            new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource)
+            new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource),
+            new Triple(this.id, Predicates.hasLatestFunctionalChange, this.latestFunctionalChange),
         ];
         return new TripleArray(triples);
     }
