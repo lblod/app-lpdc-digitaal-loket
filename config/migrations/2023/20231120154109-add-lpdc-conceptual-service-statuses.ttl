@@ -1,0 +1,11 @@
+<http://lblod.data.gift/concept-schemes/cb0a8d0d-450e-4506-b9bf-d704e045d905>
+  a                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel> "The statuses of an lpdc conceptual service instance" ;
+  <http://mu.semte.ch/vocabularies/core/uuid>     "cb0a8d0d-450e-4506-b9bf-d704e045d905" .
+
+<http://lblod.data.gift/concepts/3f2666df-1dae-4cc2-a8dc-e8213e713081>
+  a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+  <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/cb0a8d0d-450e-4506-b9bf-d704e045d905> ;
+  <http://www.w3.org/2004/02/skos/core#prefLabel>     "Conceptual service instance was archived." ;
+  <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/cb0a8d0d-450e-4506-b9bf-d704e045d905> ;
+  <http://mu.semte.ch/vocabularies/core/uuid>         "3f2666df-1dae-4cc2-a8dc-e8213e713081" .

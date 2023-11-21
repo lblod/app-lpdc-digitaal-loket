@@ -9,9 +9,8 @@ import {UJeModal} from "./modals/u-je-modal";
 import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {IpdcStub} from "./components/ipdc-stub";
-import { ipdcStubUrl } from "../test-api/test-helpers/test-options";
 
-test.describe('Herziening nodig status', () => {
+test.describe('Concept Snapshot Updates Are Processed', () => {
 
     let page: Page;
     let mockLoginPage: MockLoginPage;
@@ -47,8 +46,8 @@ test.describe('Herziening nodig status', () => {
         await page.close();
     });
 
-    test('Updating concept after instance is created should set reviewStatus on instance to updated', async ({request}) => {
-        // maak instantie van concept
+    test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({request}) => {
+        // maak instantie van concept 
         await homePage.productOfDienstToevoegenButton.click();
         
         await toevoegenPage.expectToBeVisible();
@@ -77,7 +76,7 @@ test.describe('Herziening nodig status', () => {
         await wijzigingenBewarenModal.bewaarButton.click();
         await wijzigingenBewarenModal.expectToBeClosed();
 
-        // update concept
+        // update concept snapshot
         const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
@@ -99,8 +98,17 @@ test.describe('Herziening nodig status', () => {
         await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
+        // concept moet updated tekst bevatten
+        await homePage.expectToBeVisible();
+        await homePage.productOfDienstToevoegenButton.click();
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(updateSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
+        });
+
         // archive concept
-        await IpdcStub.createSnapshotOfTypeArchive(conceptId);
+        const archivedConcept = await IpdcStub.createSnapshotOfTypeArchive(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
@@ -115,6 +123,15 @@ test.describe('Herziening nodig status', () => {
         await instantieDetailsPage.conceptGearchiveerdAlertGeenAanpassigenNodig.click();
         await expect(instantieDetailsPage.conceptGearchiveerdAlert).not.toBeVisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+        // gearchiveerde concepten mogen niet meer gevonden worden
+        await homePage.expectToBeVisible();
+        await homePage.productOfDienstToevoegenButton.click();
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(archivedConcept.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText(archivedConcept.title);
+        });
     });
 
 });
