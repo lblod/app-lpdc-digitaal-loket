@@ -9,8 +9,9 @@ import {UJeModal} from "./modals/u-je-modal";
 import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {IpdcStub} from "./components/ipdc-stub";
+import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 
-test.describe('Concept Snapshot Updates Are Processed', () => {
+test.describe('Herziening nodig', () => {
 
     let page: Page;
     let mockLoginPage: MockLoginPage;
@@ -19,6 +20,8 @@ test.describe('Concept Snapshot Updates Are Processed', () => {
     let conceptDetailsPage: ConceptDetailsPage;
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
+    let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
+
 
     test.beforeEach(async ({browser}) => {
         page = await browser.newPage();
@@ -29,6 +32,7 @@ test.describe('Concept Snapshot Updates Are Processed', () => {
         conceptDetailsPage = ConceptDetailsPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
+        verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
 
         await mockLoginPage.goto();
         await mockLoginPage.searchInput.fill('Pepingen');
@@ -132,6 +136,67 @@ test.describe('Concept Snapshot Updates Are Processed', () => {
             await toevoegenPage.searchConcept(archivedConcept.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText(archivedConcept.title);
         });
+    });
+
+    test('Geen aanpassingen nodig, updates link to latest functional concept snapshot', async ({request}) => {
+        // maak instantie van concept
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+        // update concept snapshot
+        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        // instantie moet vlagje 'herziening nodig' hebben
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        // instantie moet alert 'herziening nodig' hebben
+        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+
+        // click geen aanpassingen nodig
+        await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
+        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await instantieDetailsPage.eigenschappenTab.click();
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+        // herziening nodig label is moet verdwenen zijn
+        await homePage.expectToBeVisible();
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
+        await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+
+        // instance should be linked to latest functional changed concept snapshot
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(`Concept created ${conceptId}`, 'nl-be-x-formal');
+        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
+
+        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${updateSnapshot.id}`);
+        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).not.toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${createSnapshot.id}`);
+
     });
 
 });
