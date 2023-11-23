@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   resource:
-    image: semtech/mu-cl-resources:feature-arm64-builds
+    image: semtech/mu-cl-resources:feature-supply-info-on-empty-included-arm64-build
 
   database:
     image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
