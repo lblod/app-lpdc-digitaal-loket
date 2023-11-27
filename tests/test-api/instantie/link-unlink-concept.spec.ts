@@ -11,6 +11,7 @@ import {
 } from "../test-helpers/concept-display-configuration.test-builder";
 import {ConceptSnapshotTestBuilder} from "../test-helpers/concept-snapshot.test-builder";
 import {v4 as uuid} from "uuid";
+import {ReviewStatus} from "../test-helpers/codelists";
 
 test.describe('unlink', () => {
 
@@ -47,6 +48,42 @@ test.describe('unlink', () => {
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findAllTriples(Predicates.source)).toEqual([]);
         expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)).toEqual([]);
+    });
+
+    test('unlink a concept form an instance, should remove reviewStatus conceptUpdated if exists', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+
+        const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withVersionedSource(conceptSnapshot.getSubject())
+            .withReviewStatus(ReviewStatus.conceptUpdated)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/ontkoppelen`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.reviewStatus)).toEqual([]);
+    });
+
+    test('unlink a concept form an instance, should remove reviewStatus conceptArchived if exists', async ({request}) => {
+        const cookie = await loginAsPepingen(request);
+
+        const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withVersionedSource(conceptSnapshot.getSubject())
+            .withReviewStatus(ReviewStatus.conceptArchived)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/ontkoppelen`, {headers: {cookie: cookie}});
+        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findAllTriples(Predicates.reviewStatus)).toEqual([]);
     });
 
     test('unlink a concept from an instance, both source and versionedSource on instance should be removed', async ({request}) => {
