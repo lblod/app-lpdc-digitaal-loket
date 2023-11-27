@@ -10,6 +10,7 @@ import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {IpdcStub} from "./components/ipdc-stub";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
+import {wait} from "./shared/shared";
 
 test.describe('Herziening nodig', () => {
 
@@ -72,7 +73,7 @@ test.describe('Herziening nodig', () => {
         await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
 
         const titel = await instantieDetailsPage.titelInput.inputValue();
-        const newTitel = titel + uuid();
+        let newTitel = titel + uuid();
         await instantieDetailsPage.titelInput.fill(newTitel);
 
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
@@ -82,6 +83,9 @@ test.describe('Herziening nodig', () => {
 
         // update concept snapshot
         const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+        //TODO: LPDC-791: remove wait after fix
+        await wait(10000);
+        const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
@@ -95,7 +99,7 @@ test.describe('Herziening nodig', () => {
         await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
 
         //check link concept bekijken
-        const href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
+        let href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
         expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.id}&revisie2=${updateSnapshot.id}`);
 
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
@@ -111,6 +115,24 @@ test.describe('Herziening nodig', () => {
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
         });
 
+        //create new functional changed snapshot
+        const updateSnapshotWithFunctionalChange = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
+
+        // instantie moet vlagje 'herziening nodig' hebben
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        //check link concept bekijken
+        href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
+        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshot.id}&revisie2=${updateSnapshotWithFunctionalChange.id}`);
+        await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
+        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
         // archive concept
         const archivedConcept = await IpdcStub.createSnapshotOfTypeArchive(conceptId);
 
@@ -124,6 +146,8 @@ test.describe('Herziening nodig', () => {
 
         // instantie moet alert 'concept gearchiveerd' hebben
         await expect(instantieDetailsPage.conceptGearchiveerdAlert).toBeVisible();
+        href = await instantieDetailsPage.conceptGearchiveerdAlertConceptBekijken.getAttribute('href');
+        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshotWithFunctionalChange.id}&revisie2=${archivedConcept.id}`);
         await instantieDetailsPage.conceptGearchiveerdAlertGeenAanpassigenNodig.click();
         await expect(instantieDetailsPage.conceptGearchiveerdAlert).not.toBeVisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();

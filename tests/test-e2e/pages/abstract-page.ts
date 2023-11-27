@@ -1,4 +1,5 @@
 import {Page} from '@playwright/test';
+import {wait} from "../shared/shared";
 
 export abstract class AbstractPage {
     
@@ -14,7 +15,7 @@ export abstract class AbstractPage {
     const maxReloadAttempts = 60;
     for (let i = 0; i < maxReloadAttempts; i++) {
       await this.page.reload();
-      await this.delay(1000);
+      await wait(1000);
       try {
         await assertion();
         return;
@@ -23,11 +24,5 @@ export abstract class AbstractPage {
       }
     }
     throw Error(`reload until: assertion not met after ${maxReloadAttempts} attempts. ${assertion.toString()}`);
-  }
-
-  protected delay(milliseconds: number) {
-    return new Promise(resolve => {
-      setTimeout(resolve, milliseconds);
-    });
   }
 }

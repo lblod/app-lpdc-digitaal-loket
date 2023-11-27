@@ -1,5 +1,6 @@
 import {expect, request} from "@playwright/test";
 import {ipdcStubUrl} from "../../test-api/test-helpers/test-options";
+import {wait} from "../shared/shared";
 
 export class IpdcStub {
 
@@ -35,7 +36,7 @@ export class IpdcStub {
                 throw error;
             }
             console.log(`No response from IPDC Stub yet, retrying... number of tries (${waitTurn})`);
-            await IpdcStub.delay(1000);
+            await wait(1000);
             if (waitTurn > maxRetries) {
                 console.log(`No response form IPDC Stub after ${waitTurn} retries, stopped waiting.`);
                 return undefined;
@@ -61,9 +62,9 @@ export class IpdcStub {
         return response.json();
     }
 
-    static async createSnapshotOfTypeUpdate(uuid: string): Promise<Snapshot> {
+    static async createSnapshotOfTypeUpdate(uuid: string, withRandomTitle: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`);
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`,{params:{withRandomTitle: withRandomTitle}});
         return response.json();
 
     }
@@ -72,12 +73,6 @@ export class IpdcStub {
         const apiRequest = await request.newContext();
         const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
         return response.json();
-    }
-
-    private static delay(milliseconds) {
-        return new Promise(resolve => {
-            setTimeout(resolve, milliseconds);
-        });
     }
 }
 

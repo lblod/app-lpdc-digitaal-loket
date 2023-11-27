@@ -48,7 +48,7 @@ async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
             //console.log(error);
         }
         console.log(`${new Date()} - ${service.description} not running on ${service.url} with expected status code ${service.httpStatus}, retrying ... `)
-        await delay(1000);
+        await wait(1000);
         if (waitTurn > 480) {
             console.log(`${new Date()} - ${service.description} not running on ${service.url} with expected status code ${service.httpStatus}, stopped waiting after ${waitTurn} tries ... `)
             break;
@@ -57,7 +57,7 @@ async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
 }
 
 
-function delay(milliseconds) {
+function wait(milliseconds) {
     return new Promise(resolve => {
         setTimeout(resolve, milliseconds);
     });

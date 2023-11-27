@@ -25,7 +25,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly herzieningNodigAlertConceptBekijken: Locator;
     readonly herzieningNodigAlertGeenAanpassigenNodig: Locator;
 
-    readonly conceptGearchiveerdAlert: Locator;
+    readonly conceptGearchiveerdAlert: Locator; 
+    readonly conceptGearchiveerdAlertConceptBekijken: Locator;
     readonly conceptGearchiveerdAlertGeenAanpassigenNodig: Locator;
 
     readonly titelInput: Locator;
@@ -171,6 +172,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.herzieningNodigAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Herziening nodig") button:has-text("Geen aanpassingen nodig")');
 
         this.conceptGearchiveerdAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Concept gearchiveerd")');
+        this.conceptGearchiveerdAlertConceptBekijken = page.locator('[role="alert"]:has-text("Concept gearchiveerd") a:has-text("Concept bekijken")');
         this.conceptGearchiveerdAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Concept gearchiveerd") button:has-text("Geen aanpassingen nodig")')
 
         this.titelInput = this.inputBelow('Titel').first();

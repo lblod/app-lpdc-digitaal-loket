@@ -26,16 +26,17 @@ export const conceptCreate = (conceptId) => {
     };
 };
 
-export const conceptUpdate = (conceptId) => {
+export const conceptUpdate = (conceptId, withRandomTitle) => {
     const id = uuid();
+    const titel = withRandomTitle? uuid(): '';
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
         "snapshotType": "Update",
         "naam": {
-            "nl": `Concept updated ${conceptId}`,
-            "nl-BE-x-generated-formal": `Concept updated ${conceptId}`,
-            "nl-BE-x-generated-informal": `Concept updated ${conceptId}`
+            "nl": `Concept updated ${conceptId}${titel}`,
+            "nl-BE-x-generated-formal": `Concept updated ${conceptId}${titel}`,
+            "nl-BE-x-generated-informal": `Concept updated ${conceptId}${titel}`
         },
         "beschrijving": {
             "nl": "<p>Concept</p>",
