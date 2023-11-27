@@ -49,7 +49,7 @@ export class RequirementTestBuilder {
         return this;
     }
 
-    withTitles(titles: {value: string, language: Language}[]) {
+    withTitles(titles: { value: string, language: Language }[]) {
         this.titles = titles.map(item => new Literal(item.value, item.language));
         return this;
     }
@@ -59,10 +59,10 @@ export class RequirementTestBuilder {
         return this;
     }
 
-    withDescriptions(descriptions: {value: string, language: Language}[]) {
-    this.descriptions = descriptions.map(item => new Literal(item.value, item.language));
-    return this;
-}
+    withDescriptions(descriptions: { value: string, language: Language }[]) {
+        this.descriptions = descriptions.map(item => new Literal(item.value, item.language));
+        return this;
+    }
 
     withSupportingEvidence(evidence: Uri) {
         this.supportingEvidence = evidence;
@@ -91,7 +91,10 @@ export class RequirementTestBuilder {
         return new TripleArray(triples);
     }
 
-    async buildAndPersist(request: APIRequestContext, graph = 'http://mu.semte.ch/graphs/public'): Promise<any> {
+    async buildAndPersist(request: APIRequestContext, organisatieId: string): Promise<any> {
+        const graph = organisatieId ?
+            `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`
+            : 'http://mu.semte.ch/graphs/public';
         const requirement = this.buildTripleArray();
         await insertTriples(request, graph, requirement.asStringArray());
         return requirement;

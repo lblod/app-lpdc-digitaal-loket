@@ -79,7 +79,10 @@ export class CostTestBuilder {
         return new TripleArray(triples);
     }
 
-    async buildAndPersist(request: APIRequestContext, graph = 'http://mu.semte.ch/graphs/public'): Promise<TripleArray> {
+    async buildAndPersist(request: APIRequestContext, organisatieId: string): Promise<TripleArray> {
+        const graph = organisatieId ?
+            `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`
+            : 'http://mu.semte.ch/graphs/public';
         const cost = this.buildTripleArray();
         await insertTriples(request, graph, cost.asStringArray());
         return cost;

@@ -191,5 +191,7 @@ export const Predicates = {
     snapshotType: new Uri('https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create'),
     hasVersionedSource: new Uri('http://mu.semte.ch/vocabularies/ext/hasVersionedSource'),
     hasLatestFunctionalChange: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasLatestFunctionalChange'),
-    reviewStatus: new Uri('http://mu.semte.ch/vocabularies/ext/reviewStatus')
+    reviewStatus: new Uri('http://mu.semte.ch/vocabularies/ext/reviewStatus'),
+    formerType: new Uri('https://www.w3.org/ns/activitystreams#formerType'),
+    deleteTime: new Uri('https://www.w3.org/ns/activitystreams#deleted')
 }

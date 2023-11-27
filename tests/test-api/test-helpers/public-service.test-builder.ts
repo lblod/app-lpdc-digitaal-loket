@@ -7,13 +7,16 @@ import {
     ExecutingAuthorityLevel,
     ProductType,
     PublicationMedium,
-    ResourceLanguage, ReviewStatus,
+    ResourceLanguage,
+    ReviewStatus,
     TargetAudience,
     Theme,
     YourEuropeCategory
 } from "./codelists";
+import {pepingenId} from "./login";
 
 export const PublicServiceType = 'http://purl.org/vocab/cpsv#PublicService';
+export const TombstoneType = 'https://www.w3.org/ns/activitystreams#Tombstone';
 export class PublicServiceTestBuilder {
 
     private id = new Uri(`http://data.lblod.info/id/public-service/${uuid()}`);
@@ -45,6 +48,7 @@ export class PublicServiceTestBuilder {
     private contactPoints: Uri[] = [];
     private spatial: Uri;
     private competentAuthority: Uri[] = [];
+    private executingAuthority: Uri[] = [];
     private concept: Uri;
     private createdBy: Uri;
     private versionedSource: Uri;
@@ -60,6 +64,34 @@ export class PublicServiceTestBuilder {
             .withModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
+    }
+
+    static aFullPublicService() {
+        return new PublicServiceTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withTitle('Instance title', Language.NL)
+            .withDescription('Instance description', Language.NL)
+            .withCreated(new Date())
+            .withModified(new Date())
+            .withStartDate(new Date())
+            .withEndDate(new Date())
+            .withAdditionalDescriptions('Additional description', Language.NL)
+            .withException('exception', Language.NL)
+            .withRegulation('regulation', Language.NL)
+            .withTheme(Theme.BurgerOverheid)
+            .withTargetAudience(TargetAudience.Onderneming)
+            .withCompetentAuthorityLevel(CompetentAuthorityLevel.Europees)
+            .withExecutingAuthorityLevel(ExecutingAuthorityLevel.Lokaal)
+            .withLanguage(ResourceLanguage.NLD)
+            .withKeywords(['Keyword1', 'keyword2'])
+            .withProductType(ProductType.Bewijs)
+            .withYourEuropeCategory(YourEuropeCategory.Bedrijf)
+            .withPublicationMedium(PublicationMedium.YourEurope)
+            .withReviewStatus(ReviewStatus.conceptUpdated)
+            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+            .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
     }
 
     private withType() {
@@ -227,6 +259,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withExecutingAuthority(executingAuthority: Uri[]) {
+        this.executingAuthority = executingAuthority;
+        return this;
+    }
+
     withLinkedConcept(concept: Uri) {
         this.concept = concept;
         return this;
@@ -278,6 +315,7 @@ export class PublicServiceTestBuilder {
             ...this.contactPoints.map(contactPoint => new Triple(this.id, Predicates.hasContactPoint, contactPoint)),
             new Triple(this.id, Predicates.spatial, this.spatial),
             ...this.competentAuthority.map(aCompetentAuthority => new Triple(this.id, Predicates.hasCompetentAuthority, aCompetentAuthority)),
+            ...this.executingAuthority.map(anExecutingAuthority => new Triple(this.id, Predicates.hasExecutingAuthority, anExecutingAuthority)),
             new Triple(this.id, Predicates.source, this.concept),
             new Triple(this.id, Predicates.createdBy, this.createdBy),
             new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource),

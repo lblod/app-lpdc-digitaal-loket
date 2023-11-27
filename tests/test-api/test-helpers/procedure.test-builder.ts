@@ -79,7 +79,10 @@ export default class ProcedureTestBuilder {
         return new TripleArray(triples);
     }
 
-    async buildAndPersist(request: APIRequestContext, graph = 'http://mu.semte.ch/graphs/public'): Promise<TripleArray> {
+    async buildAndPersist(request: APIRequestContext, organisatieId): Promise<TripleArray> {
+        const graph = organisatieId ?
+            `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`
+            : 'http://mu.semte.ch/graphs/public';
         const procedure = this.buildTripleArray();
         await insertTriples(request, graph, procedure.asStringArray());
         return procedure;
