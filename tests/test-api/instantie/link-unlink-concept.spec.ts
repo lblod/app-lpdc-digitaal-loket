@@ -50,7 +50,7 @@ test.describe('unlink', () => {
         expect(updatedInstance.findAllTriples(Predicates.hasVersionedSource)).toEqual([]);
     });
 
-    test('unlink a concept form an instance, should remove reviewStatus conceptUpdated if exists', async ({request}) => {
+    test('unlink a concept from an instance, should remove reviewStatus conceptUpdated if exists', async ({request}) => {
         const cookie = await loginAsPepingen(request);
 
         const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
@@ -68,7 +68,7 @@ test.describe('unlink', () => {
         expect(updatedInstance.findAllTriples(Predicates.reviewStatus)).toEqual([]);
     });
 
-    test('unlink a concept form an instance, should remove reviewStatus conceptArchived if exists', async ({request}) => {
+    test('unlink a concept from an instance, should remove reviewStatus conceptArchived if exists', async ({request}) => {
         const cookie = await loginAsPepingen(request);
 
         const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
@@ -164,7 +164,7 @@ test.describe('unlink', () => {
         const concept = await ConceptTestBuilder.aConcept()
             .withConceptDisplayConfigurations([
                 displayConfigurationPepingen.getSubject(),
-                displayConfigurationBilzen.getSubject()
+                displayConfigurationBilzen.getSubject(),
             ])
             .buildAndPersist(request);
 
@@ -172,7 +172,7 @@ test.describe('unlink', () => {
             .withLinkedConcept(concept.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        const instanceFromBilzen = await PublicServiceTestBuilder.aPublicService()
+        await PublicServiceTestBuilder.aPublicService()
             .withLinkedConcept(concept.getSubject())
             .buildAndPersist(request, bilzenId);
 
