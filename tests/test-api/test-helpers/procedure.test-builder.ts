@@ -79,7 +79,7 @@ export default class ProcedureTestBuilder {
         return new TripleArray(triples);
     }
 
-    async buildAndPersist(request: APIRequestContext, organisatieId): Promise<TripleArray> {
+    async buildAndPersist(request: APIRequestContext, organisatieId?: string): Promise<TripleArray> {
         const graph = organisatieId ?
             `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`
             : 'http://mu.semte.ch/graphs/public';

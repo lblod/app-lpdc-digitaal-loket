@@ -12,13 +12,13 @@ import {CostTestBuilder, CostType} from "../test-helpers/cost.test-builder";
 import {FinancialAdvantageTestBuilder, FinancialAdvantageType} from "../test-helpers/financial-advantage.test-builder";
 import {ContactPointTestBuilder, ContactpointType} from "../test-helpers/contact-point-test.builder";
 import EvidenceTestBuilder, {EvidenceType} from "../test-helpers/evidence.test-builder";
+import {TestDataFactory} from "../test-helpers/test-data-factory";
 
 test.describe('delete instance', () => {
 
     test('should remove triples and create tombstone', async ({request}) => {
         const cookie = await loginAsPepingen(request);
-        const publicService = await PublicServiceTestBuilder.aFullPublicService()
-            .buildAndPersist(request, pepingenId);
+        const {publicService} = await new TestDataFactory().createFullPublicService(request, pepingenId);
 
         await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
 

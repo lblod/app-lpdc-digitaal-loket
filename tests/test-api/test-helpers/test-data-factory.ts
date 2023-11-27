@@ -13,7 +13,7 @@ import {
     ExecutingAuthorityLevel,
     ProductType,
     PublicationMedium,
-    ResourceLanguage,
+    ResourceLanguage, ReviewStatus,
     TargetAudience,
     Theme,
     YourEuropeCategory
@@ -100,36 +100,38 @@ export class TestDataFactory {
 
     async createFullPublicService(request: APIRequestContext, organisatieId: string) {
         const supportingEvidence = await EvidenceTestBuilder.anEvidence()
-            .buildAndPersist(request, `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`);
+            .buildAndPersist(request, organisatieId);
 
         const requirement = await RequirementTestBuilder.aRequirement()
             .withSupportingEvidence(supportingEvidence.getSubject())
-            .buildAndPersist(request,`http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`);
+            .buildAndPersist(request,organisatieId);
 
         const websiteOfProcedure = await WebsiteTestBuilder.aWebsite()
-            .buildAndPersist(request, `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`);
+            .buildAndPersist(request, organisatieId);
 
         const seeAlsoWebsite = await WebsiteTestBuilder.aWebsite()
-            .buildAndPersist(request, `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`);
+            .buildAndPersist(request, organisatieId);
 
         const procedure = await ProcedureTestBuilder.aProcedure()
             .withWebsite(websiteOfProcedure.getSubject())
-            .buildAndPersist(request, `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`);
+            .buildAndPersist(request, organisatieId);
 
         const cost = await CostTestBuilder.aCost()
-            .buildAndPersist(request, `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`);
+            .buildAndPersist(request, organisatieId);
 
         const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
-            .buildAndPersist(request, `http://mu.semte.ch/graphs/organizations/${organisatieId}/LoketLB-LPDCGebruiker`);
+            .buildAndPersist(request, organisatieId);
 
         const address = await AddressTestBuilder.anAddress()
-            .buildAndPersist(request, pepingenId);
+            .buildAndPersist(request, organisatieId);
 
         const contactPoint = await ContactPointTestBuilder.aContactPoint()
             .withAddress(address.getSubject())
-            .buildAndPersist(request, pepingenId);
+            .buildAndPersist(request, organisatieId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withTitle('Instance title', Language.NL)
+            .withDescription('Instance description', Language.NL)
             .withAdditionalDescriptions('additional description nl', Language.NL)
             .withException('exception nl', Language.NL)
             .withRegulation('regulation', Language.NL)
@@ -149,6 +151,12 @@ export class TestDataFactory {
             .withFinancialAdvantage(financialAdvantage.getSubject())
             .withContactPoint(contactPoint.getSubject())
             .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/23064'))
+            .withCreated(new Date())
+            .withModified(new Date())
+            .withStartDate(new Date())
+            .withEndDate(new Date())
+            .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .buildAndPersist(request, organisatieId);
 
         return {
