@@ -119,6 +119,8 @@ services:
 
   ipdc-stub:
     build: ./ipdc-stub
+    volumes:
+      - ./ipdc-stub:/usr/app/src
     ports:
       - "33000:80"
 

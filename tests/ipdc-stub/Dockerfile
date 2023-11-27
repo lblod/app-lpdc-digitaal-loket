@@ -6,4 +6,4 @@ RUN npm ci
 
 EXPOSE 80
 
-CMD [ "node", "index.js" ]
+CMD [ "npm", "run", "start" ]
