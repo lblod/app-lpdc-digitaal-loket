@@ -7,3 +7,4 @@
 * [5. Don't cache the instantie overview](0005-do-not-cache-instantie-overview.md)
 * [6. Testing Approach](0006-testing-approach.md)
 * [7. Playwright best practices](0007-playwright-best-practices.md)
+* [8. Frontend initiates state changes via backend operations](0008-frontend-initiates-state-changes-via-backend-operations.md)
