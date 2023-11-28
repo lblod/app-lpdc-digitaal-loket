@@ -1,0 +1,12 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+
+ex:an-instance
+    a lpdcExt:InstancePublicService ;
+    dc:title """title-nl"""@nl ;
+    dc:title """title-fr"""@fr ;
+    dc:description  """description-nl"""@nl .

@@ -43,19 +43,19 @@ oss:AddressShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "The region of the address, usually a county, state or other such area that typically encompasses several localities. The domain of locn:adminUnitL2 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
           shacl:maxCount 1;
           shacl:name "administrativeUnitLevel2"@nl;
           shacl:path locn:adminUnitL2
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
           shacl:maxCount 1;
           shacl:name "country"@nl;
           shacl:path adres:land
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "The complete address written as a string, with or without formatting. The domain of locn:fullAddress is locn:Address."@nl;
           shacl:maxCount 1;
           shacl:name "fullAddress"@nl;
@@ -73,7 +73,7 @@ oss:AddressShape
           shacl:name "mailbox"@nl;
           shacl:path adres:Adresvoorstelling.busnummer
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\"). The domain of locn:postName is locn:Address."@nl;
           shacl:maxCount 1;
           shacl:name "municipality"@nl;
@@ -85,7 +85,7 @@ oss:AddressShape
           shacl:name "postCode"@nl;
           shacl:path adres:postcode
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. The domain of locn:thoroughfare is locn:Address."@nl;
           shacl:maxCount 1;
           shacl:name "thoroughfare"@nl;
@@ -106,7 +106,7 @@ oss:ConceptualPublicServiceShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
           shacl:maxCount 1;
           shacl:name "additionalDescription"@nl;
@@ -121,7 +121,7 @@ oss:ConceptualPublicServiceShape
           shacl:name "conceptTag"@nl;
           shacl:path lpdcExt:conceptTag
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -134,7 +134,7 @@ oss:ConceptualPublicServiceShape
           shacl:name "endDate"@nl;
           shacl:path schemas:endDate
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin uitzonderingen op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
           shacl:maxCount 1;
           shacl:name "exception"@nl;
@@ -180,12 +180,12 @@ oss:ConceptualPublicServiceShape
           shacl:name "hasRequirement"@nl;
           shacl:path ps:hasRequirement
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
           shacl:name "keyword"@nl;
           shacl:path dcat:keyword
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents the official Name of the Public Service."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -202,7 +202,7 @@ oss:ConceptualPublicServiceShape
           shacl:name "publicationMedium"@nl;
           shacl:path lpdcExt:publicationMedium
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
           shacl:maxCount 1;
           shacl:name "regulation"@nl;
@@ -265,7 +265,7 @@ oss:ContactPointShape
           shacl:name "openinghours"@nl;
           shacl:path schemas:openingHours
       ], [
-          shacl:class xsd:string;
+          shacl:datatype xsd:string;
           shacl:description "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs."@nl;
           shacl:maxCount 1;
           shacl:name "website"@nl;
@@ -277,14 +277,14 @@ oss:CostShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a free text description of the Cost."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "description"@nl;
           shacl:path dc:description
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "name"@nl;
@@ -296,14 +296,14 @@ oss:EvidenceShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "Geeft omschrijving van de vereiste input"@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "description"@nl;
           shacl:path dc:description
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "name"@nl;
@@ -320,14 +320,14 @@ oss:FinancialAdvantageShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a free text Description of the Output."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "description"@nl;
           shacl:path dc:description
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents the official Name of the Output."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -340,7 +340,7 @@ oss:InstancePublicServiceShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
           shacl:maxCount 1;
           shacl:name "additionalDescription"@nl;
@@ -350,7 +350,7 @@ oss:InstancePublicServiceShape
           shacl:name "competentAuthorityLevel"@nl;
           shacl:path lpdcExt:competentAuthorityLevel
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -363,7 +363,7 @@ oss:InstancePublicServiceShape
           shacl:name "endDate"@nl;
           shacl:path schemas:endDate
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
           shacl:maxCount 1;
           shacl:name "exception"@nl;
@@ -373,7 +373,7 @@ oss:InstancePublicServiceShape
           shacl:name "executingAuthorityLevel"@nl;
           shacl:path lpdcExt:executingAuthorityLevel
       ], [
-          shacl:class <http://purl.org/vocab/cpsv#Rule>;
+          shacl:class cpsv:Rule;
           shacl:description "The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. This model is flexible to allow for significant variation in such a scenario."@nl;
           shacl:maxCount 1;
           shacl:name "follows"@nl;
@@ -425,7 +425,7 @@ oss:InstancePublicServiceShape
           shacl:name "instanceTag"@nl;
           shacl:path lpdcExt:instanceTag
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
           shacl:name "keyword"@nl;
           shacl:path dcat:keyword
@@ -435,7 +435,7 @@ oss:InstancePublicServiceShape
           shacl:name "language"@nl;
           shacl:path pera:language
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents the official Name of the Public Service."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -452,7 +452,7 @@ oss:InstancePublicServiceShape
           shacl:name "publicationMedium"@nl;
           shacl:path lpdcExt:publicationMedium
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
           shacl:maxCount 1;
           shacl:name "regulation"@nl;
@@ -502,7 +502,7 @@ oss:ProcedureShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a free text Description of the Rule."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -514,7 +514,7 @@ oss:ProcedureShape
           shacl:name "hasWebsite"@nl;
           shacl:path lpdcExt:hasWebsite
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents the Name of the Rule."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -537,7 +537,7 @@ oss:RequirementShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -550,7 +550,7 @@ oss:RequirementShape
           shacl:name "hasSupportingEvidence"@nl;
           shacl:path m8g:hasSupportingEvidence
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents the official Name of the Requirement."@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
@@ -583,19 +583,19 @@ oss:WebsiteShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:property [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:description "This property represents a free text description of the Website."@nl;
           shacl:maxCount 1;
           shacl:name "description"@nl;
           shacl:path dc:description
       ], [
-          shacl:class xsd:string;
+          shacl:datatype xsd:string;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "location"@nl;
           shacl:path schemas:url
       ], [
-          shacl:class rdf:langString;
+          shacl:datatype rdf:langString;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "name"@nl;

@@ -1,0 +1,29 @@
+<http://data.lblod.info/id/cost/6922d110-5754-4a9c-abba-357c32bf9f8e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Cost> .
+<http://data.lblod.info/id/cost/30d85732-3851-4565-bfd5-1343d6bacb4f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Cost> .
+<http://data.lblod.info/id/cost/6922d110-5754-4a9c-abba-357c32bf9f8e> <http://purl.org/dc/terms/source> <http://mu.semte.ch/blank#9de97b17-5790-4a00-81c9-1e79efd4e254> .
+<http://data.lblod.info/id/cost/30d85732-3851-4565-bfd5-1343d6bacb4f> <http://purl.org/dc/terms/source> <http://mu.semte.ch/blank#5229b22a-5c24-4e05-9708-5597d6571bcc> .
+<http://data.lblod.info/id/cost/6922d110-5754-4a9c-abba-357c32bf9f8e> <http://purl.org/dc/terms/title> """dit is de naam van kost"""@nl-be-x-formal .
+<http://data.lblod.info/id/cost/30d85732-3851-4565-bfd5-1343d6bacb4f> <http://purl.org/dc/terms/title> """dit is de naam van kost"""@nl-be-x-formal .
+<http://data.lblod.info/id/cost/6922d110-5754-4a9c-abba-357c32bf9f8e> <http://purl.org/dc/terms/description> """<p>beschrijving van kost</p>"""@nl-be-x-formal .
+<http://data.lblod.info/id/cost/30d85732-3851-4565-bfd5-1343d6bacb4f> <http://purl.org/dc/terms/description> """<p>beschrijving van kost</p>"""@nl-be-x-formal .
+<http://data.lblod.info/id/cost/6922d110-5754-4a9c-abba-357c32bf9f8e> <http://www.w3.org/ns/shacl#order> """0"""^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/cost/30d85732-3851-4565-bfd5-1343d6bacb4f> <http://www.w3.org/ns/shacl#order> """0"""^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc##InstancePublicService> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/created> """2023-11-28T20:15:42.007Z"""^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/modified> """2023-11-28T20:15:42.007Z"""^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/03fca8d4-5bf7-42c2-8312-14c85325b8d1> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/source> <https://ipdc.tni-vlaanderen.be/id/concept/4b5fbd2b-448a-4f70-bdb9-c1ff585a31e2> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/79a52da4-f491-4e2f-9374-89a13cde8ecd> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://schema.org/productID> """2839""" .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/title> """vertaling opslaan VLS -2 - WPCMS-2991"""@en .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/title> """vertaling opslaan VLS -2 - WPCMS-2991"""@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/description> """<p>dit is de inleiding</p>"""@en .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/description> """<p>dit is de inleiding</p>"""@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://data.europa.eu/m8g/hasCost> <http://data.lblod.info/id/cost/6922d110-5754-4a9c-abba-357c32bf9f8e> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://data.europa.eu/m8g/hasCost> <http://data.lblod.info/id/cost/30d85732-3851-4565-bfd5-1343d6bacb4f> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/AdviesBegeleiding> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/41002> .
+<http://data.lblod.info/id/public-service/b9a0e9e9-5b69-4f54-a14b-f93e9735d2a2> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/LokaalBestuur> .

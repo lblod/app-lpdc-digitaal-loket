@@ -29,9 +29,34 @@ BlankNode { value: 'b2' }
 ```
 
 when data type = xsd:string, then it rightly complains that "dd"@nl is not the correct datatype, but "data" is
+
+======> 
+
+shacl:class rdf:langString ===> shacl:datatype rdf:langString
+shacl:class xsd:string ===> shacl:datatype xsd:string
+
+... and others
+
 - prefix: @prefix lpdcExt:  <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
 - prefix: @prefix cpsv:	<http://purl.org/vocab/cpsv#> .
 - prefix: @prefix m8g:	<http://data.europa.eu/m8g/> .
 - shacl:class <http://fixme.com#URL>; ???  => (url): xsd:string ??
 - prefix: @prefix pera: <http://publications.europa.eu/resource/authority/> .
+- how to limit on the amount of language strings ?
+  A definition like [
+  shacl:datatype rdf:langString;
+  shacl:description "This property represents the official Name of the Public Service."@nl;
+  shacl:maxCount 1;
+  shacl:minCount 1;
+  shacl:name "name"@nl;
+  shacl:path dc:title
+  ] does not allow data like:
+   ex:an-instance
+  a lpdcExt:InstancePublicService ;
+  dc:title """title-nl"""@nl ;
+  dc:title """title-fr"""@fr ;
+= > which is correclty validated => how to allow multiple language strings ?
+=> @see : https://www.w3.org/TR/shacl/#LanguageInConstraintComponent 
+- and https://www.w3.org/TR/shacl/#UniqueLangConstraintComponent
+ 
 
