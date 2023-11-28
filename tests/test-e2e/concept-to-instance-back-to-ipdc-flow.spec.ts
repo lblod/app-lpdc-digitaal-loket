@@ -453,7 +453,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(newTitel, expectedFormalOrInformalTripleLanguage);
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({titel: newTitel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage});
         expect(instancePublishedInIpdc).toBeTruthy();
         verifyPublishedInstance(instancePublishedInIpdc, {
             titel: newTitel,

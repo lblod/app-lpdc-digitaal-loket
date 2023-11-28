@@ -3,9 +3,11 @@ import { Locator, LocatorScreenshotOptions, Page } from "@playwright/test";
 export class Table {
 
     private readonly rows: Locator;
+    readonly alertMessage: Locator;
 
     constructor(page: Page) {
         this.rows = page.locator(`table > tbody > tr`);
+        this.alertMessage = page.locator(`table > tr > td > div[role=alert]`);
     }
 
     row(row: number): Row {

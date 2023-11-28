@@ -215,7 +215,7 @@ test.describe('Herziening nodig', () => {
         await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
 
         // instance should be linked to latest functional changed concept snapshot
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance(`Concept created ${conceptId}`, 'nl-be-x-formal');
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({titel: `Concept created ${conceptId}`, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'});
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
         expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${updateSnapshot.id}`);

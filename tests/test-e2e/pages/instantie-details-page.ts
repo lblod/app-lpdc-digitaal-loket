@@ -148,6 +148,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly verzendNaarVlaamseOverheidButton: Locator;
     readonly wijzigingenBewarenButton: Locator;
     readonly terugNaarHetOverzichtButton: Locator;
+    readonly productOpnieuwBewerkenButton: Locator;
+    readonly productVerwijderenButton: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -292,6 +294,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', {name: 'Verzend naar Vlaamse overheid'});
         this.wijzigingenBewarenButton = page.getByRole('button', {name: 'Wijzigingen bewaren'});
         this.terugNaarHetOverzichtButton = page.getByRole('link', {name: 'Terug naar het overzicht'});
+        this.productOpnieuwBewerkenButton = page.getByRole('button', { name: 'Product opnieuw bewerken' });
+        this.productVerwijderenButton = page.getByRole('button', { name: 'Product verwijderen' });
     }
 
     static create(page: Page): InstantieDetailsPage {

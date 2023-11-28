@@ -1,13 +1,22 @@
-import {expect, request} from "@playwright/test";
-import {ipdcStubUrl} from "../../test-api/test-helpers/test-options";
-import {wait} from "../shared/shared";
+import { expect, request } from "@playwright/test";
+import { ipdcStubUrl } from "../../test-api/test-helpers/test-options";
+import { wait } from "../shared/shared";
+
+export type PublicServiceFilter = {
+    titel: string,
+    expectedFormalOrInformalTripleLanguage: string
+};
+
+export type ThombstonedPublicServiceFilter = {
+    thombstonedId: string
+};
 
 export class IpdcStub {
 
     constructor() {
     }
 
-    static async findPublishedInstance(titel: string, expectedFormalOrInformalTripleLanguage: string) {
+    static async findPublishedInstance(filter: PublicServiceFilter | ThombstonedPublicServiceFilter) {
         const apiRequest = await request.newContext({
             extraHTTPHeaders: {
                 'Accept': 'application/ld+json',
@@ -20,16 +29,24 @@ export class IpdcStub {
             try {
                 const response = await apiRequest.get(`${ipdcStubUrl}/instanties`);
                 const result = await response.json();
-                const publishedInstanceWithTitel = result.find((ipdcPublish) => {
+                const publishedInstance = result.find((ipdcPublish) => {
                     return ipdcPublish.find((element) => {
-                        return element['@type'].includes('http://purl.org/vocab/cpsv#PublicService')
-                            && element['http://purl.org/dc/terms/title'].some((translatedValue) =>
-                                translatedValue['@language'] === expectedFormalOrInformalTripleLanguage
-                                && translatedValue['@value'] === titel)
+                        if ((filter as PublicServiceFilter).titel !== undefined) {
+                            const publicServiceFilter = filter as PublicServiceFilter;
+                            return element['@type'].includes('http://purl.org/vocab/cpsv#PublicService')
+                                && element['http://purl.org/dc/terms/title'].some((translatedValue) =>
+                                    translatedValue['@language'] === publicServiceFilter.expectedFormalOrInformalTripleLanguage
+                                    && translatedValue['@value'] === publicServiceFilter.titel);
+                        } else {
+                            const thombstonedPublicServiceFilter = filter as ThombstonedPublicServiceFilter;
+                            return element['@type'].includes('https://www.w3.org/ns/activitystreams#Tombstone')
+                                && element['@id'] === thombstonedPublicServiceFilter.thombstonedId;
+                        }
                     })
                 });
-                if (publishedInstanceWithTitel) {
-                    return publishedInstanceWithTitel;
+
+                if (publishedInstance) {
+                    return publishedInstance;
                 }
             } catch (error) {
                 console.log('Error retrieving instances ', error);
@@ -64,7 +81,7 @@ export class IpdcStub {
 
     static async createSnapshotOfTypeUpdate(uuid: string, withRandomTitle: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`,{params:{withRandomTitle: withRandomTitle}});
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`, { params: { withRandomTitle: withRandomTitle } });
         return response.json();
 
     }
