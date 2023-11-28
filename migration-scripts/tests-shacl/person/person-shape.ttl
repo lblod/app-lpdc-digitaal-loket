@@ -9,7 +9,7 @@
 ex:PersonShape
     a sh:NodeShape ;
     sh:targetClass ex:Person ;    # Applies to all persons
-    sh:property [                 # _:b1
+    sh:property [
                                   sh:path ex:ssn ;           # constrains the values of ex:ssn
                                   sh:maxCount 1 ;
                                   sh:datatype xsd:string ;
