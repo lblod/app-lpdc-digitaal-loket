@@ -7,6 +7,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix m8g: <http://data.europa.eu/m8g/> .
 @prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix schemas: <https://schema.org/> .
+@prefix cpsv:	<http://purl.org/vocab/cpsv#> .
+
 
 <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>
     a besluit:Bestuurseenheid.
@@ -14,10 +17,60 @@
 <http://vocab.belgif.be/auth/refnis2019/41002>
     a skos:Concept.
 
-ex:an-minimal-valid-instance
+ex:bevoegd-bestuursniveau-federaal
+    a skos:Concept.
+
+ex:uitvoerend-bestuursniveau-federaal
+    a skos:Concept.
+
+ex:a-website-for-a-rule
+    a schemas:WebSite ;
+    dc:title """a-website-for-a-rule-title"""@nl ;
+    dc:description """a-website-for-a-rule-description"""@nl ;
+    schemas:url "https://a-website-for-a-rule.org".
+
+ex:a-rule
+    a cpsv:Rule;
+    dc:title """rule-title"""@nl ;
+    dc:description """rule-description"""@nl ;
+    lpdcExt:hasWebsite ex:a-website-for-a-rule.
+
+ex:a-contactpoint-address
+    a locn:Address.
+
+ex:a-contactpoint
+    a schemas:ContactPoint ;
+    lpdcExt:address ex:a-contactpoint-address ;
+    schemas:email "a-contactpoint@email.org" ;
+    schemas:telephone "6873546876767" ;
+    schemas:openingHours "9-12 each day" ;
+    schemas:url "a-contact-point@domein.org".
+
+#an instance that has a minimal valid data filled in; expect no validation errors
+ex:a-minimal-valid-instance
     a lpdcExt:InstancePublicService ;
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
     dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
-    m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>.
+    m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> .
+
+#an instance that has full data filled in (except multiple languages for now); expect no validation errors
+ex:a-full-valid-instance
+    a lpdcExt:InstancePublicService ;
+    dc:title """title-nl"""@nl ;
+    dc:description  """description-nl"""@nl ;
+    lpdcExt:additionalDescription """additional-description-nl"""@nl ;
+    lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
+    schemas:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    lpdcExt:exception """exception"""@nl ;
+    lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
+    cpsv:follows ex:a-rule ;
+    m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
+    m8g:hasContactPoint ex:a-contactpoint;
+    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> .
+
+
+
+
+
 

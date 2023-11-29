@@ -1,0 +1,95 @@
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix vann: <http://purl.org/vocab/vann/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix adms: <http://www.w3.org/ns/adms#>.
+@prefix frbr: <http://purl.org/vocab/frbr/core#>.
+
+@prefix cpsv: <http://purl.org/vocab/cpsv#>. 
+
+# metadata
+
+<http://purl.org/vocab/cpsv> a owl:Ontology, adms:Asset;
+  dcterms:title "Core Public Service Vocabulary"@en;
+  dcterms:description "The Core Public Service Vocabulary (CPSV) is designed to make it easy to exchange basic information about the functions carried out by the public sector and the services in which those functions are carried out."@en;
+  dcterms:created "2013-02-06"^^xsd:date;
+  vann:preferredNamespacePrefix "cpsv";
+  foaf:homepage <http://joinup.ec.europa.eu/asset/core_public_service/description>;
+  dcterms:publisher [foaf:name "European Commission"];
+  dcterms:creator [foaf:name "Core Public Service Working Group"; foaf:homepage <http://joinup.ec.europa.eu/asset/core_public_service/document/core-public-service-working-group>.];
+  dcterms:type <http://purl.org/adms/assettype/Ontology>;
+  dcterms:status <http://purl.org/adms/status/UnderDevelopment>.
+
+# classes
+
+cpsv:PublicService a rdfs:Class, owl:Class;
+  rdfs:label "Public Service"@en;
+  rdfs:comment "This class represents the service itself. A public service is the capacity to carry out a procedure and exists whether it is used or not. It is a set of deeds and acts performed by or on behalf of a public agency for the benefit of a citizen, a business or another public agency."@en.
+
+cpsv:Input a rdfs:Class, owl:Class;
+  rdfs:label "Input"@en;
+  rdfs:comment "Inputs can by any resource - document, artefact - anything. In a specific context it is likely to be useful to either define a sub class or declare the particular resource to also be of another type as well. A general case might be a foaf:Document but where possible, it is better to refer to a controlled vocabulary of types. dcterms:type should be used to use to provide this information linking to a SKOS Concept."@en.
+
+cpsv:Output a rdfs:Class, owl:Class;
+  rdfs:label "Output"@en;
+  rdfs:comment "Outputs can by any resource - document, artefact - anything. In a specific context it is likely to be useful to either define a sub class or declare the particular resource to also be of another type as well. A general case might be a foaf:Document but where possible, it is better to refer to a controlled vocabulary of types. dcterms:type should be used to use to provide this information linking to a SKOS Concept."@en.
+
+cpsv:Rule a rdfs:Class, owl:Class;
+  rdfs:subClassOf frbr:Expression;
+  rdfs:label "Rule"@en;
+  rdfs:comment "The Rule class represents the specific rules, guidelines or procedures that the Public Service follows. Instances of the Rule class are FRBR Expressions, that is, a concrete expression, such as a document, of the more abstract concept of the rules themselves."@en.
+
+cpsv:FormalFramework a rdfs:Class, owl:Class;
+  rdfs:subClassOf frbr:Expression;
+  rdfs:label "This class represents the legislation, policy or policies that lie behind the rules that govern the service. As with the Rule class, the Formal Framework class is a sub class of frbr:Expression, i.e. instances of the class are concrete expressions of the more abstract concept of the piece of legislation or policy itself."@en.
+
+# properties (all of which are object type properties)
+
+cpsv:physicallyAvailableAt a rdf:Property, owl:ObjectProperty;
+  rdfs:label "physically available at"@en;
+  rdfs:comment "A physical location at which a user may interact with the Public Service."@en;
+  rdfs:domain cpsv:PublicService;
+  rdfs:range dcterms:Location.
+
+cpsv:hasInput a rdf:Property, owl:ObjectProperty;
+  rdfs:label "has input"@en;
+  rdfs:comment "The hasInput property links a Public Service to one or more instances of the Input class (see below). A specific service may require the presence of certain inputs or combinations of inputs in order to operate. These should be described in an application profile for a given service."@en;
+  rdfs:range cpsv:Input.
+  # No domain defined as this would hinder re-use of the property unnecessarily.
+
+cpsv:produces a rdf:Property, owl:ObjectProperty;
+  rdfs:label "produces"@en;
+  rdfs:comment "The produces property links a Public Service to one or more instances of the Output class which is its range."@en;
+  rdfs:range cpsv:Output.
+  # No domain defined as this would hinder re-use of the property unnecessarily.
+
+cpsv:implements a rdf:Property, owl:ObjectProperty;
+  rdfs:label "implements"@en;
+  rdfs:comment "The implements property links a Rule to relevant legislation or policy documents i.e. the formal framework under which the Rules are defined."@en;
+  rdfs:domain cpsv:Rule;
+  rdfs:range cpsv:FormalFramework.
+
+cpsv:hasRole a rdf:Property, owl:ObjectProperty;
+  rdfs:label "has role"@en;
+  rdfs:comment "This very general property links an Agent to a Public Service in which it plays some role. Both 'provides' and 'uses' are sub properties of playsRole with specific semantics."@en;
+  rdfs:domain dcterms:Agent;
+  rdfs:range cpsv:PublicService. 
+
+cpsv:provides a rdf:Property, owl:ObjectProperty;
+  rdfs:label "provides"@en;
+  rdfs:comment "The provides property links an Agent to a Public Service for which it is responsible. Whether it provides the service directly or outsources it is not relevant, the Agent that provides the service is the one that is ultimately responsible for its provision."@en;
+  rdfs:subPropertyOf cpsv:hasRole.
+
+cpsv:uses a rdf:Property, owl:ObjectProperty;
+  rdfs:label "uses"@en;
+  rdfs:comment "The uses property links an Agent to a Public Service in which it plays the specific role of user, meaning that it provides the input and receives the output but does not play any direct role in providing the service. This will typically be an individual citizen or an outside organisation."@en;
+  rdfs:subPropertyOf cpsv:hasRole.
+
+cpsv:follows a rdf:Property, owl:ObjectProperty;
+  rdfs:label "follows"@en;
+  rdfs:comment "The follows property links a Public Service to the Rule(s) under which it operates."@en;
+  rdfs:domain cpsv:PublicService;
+  rdfs:range cpsv:Rule.

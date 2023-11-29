@@ -31,8 +31,6 @@
                                                                                                                                                                                 oss:PublicationMediumShape,
                                                                                                                                                                                 oss:InstanceTagShape,
                                                                                                                                                                                 oss:ConceptTagShape,
-                                                                                                                                                                                oss:CompetentAuthorityLevelShape,
-                                                                                                                                                                                oss:ExecutingAuthorityLevelShape,
                                                                                                                                                                                 oss:ThemeShape,
                                                                                                                                                                                 oss:AddressShape,
                                                                                                                                                                                 oss:ContactPointShape,
@@ -384,10 +382,6 @@ oss:AddressShape
       ];
     shacl:targetClass locn:Address .
 
-oss:CompetentAuthorityLevelShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
 
 oss:ConceptTagShape a shacl:NodeShape;
     shacl:closed false;
@@ -466,11 +460,6 @@ oss:EvidenceShape
           shacl:path dc:title
       ];
     shacl:targetClass m8g:Evidence .
-
-oss:ExecutingAuthorityLevelShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
 
 oss:FinancialAdvantageShape
     a shacl:NodeShape;

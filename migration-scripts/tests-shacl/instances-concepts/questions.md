@@ -71,6 +71,9 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   ; we need ... only ... to include the besluit.ttl in the shapes AND merge all shapes also in the data (for this validator?)
   (because internally in the code, strangely the class validation logic happens on the context.$data graph instead of the context.$shapes graph) - which seems like a bug ?  Or a lack of understanding from our part.
 - still need to fix the warning     a lpdcExt:InstancePublicService ; (there is no class definition of this type )
+- augment ex:a-full-valid-instance to have multiple languages for each
+- the explanations in the shacl are sometimes in english, sometimes in nl; but the language string is always nl
+- should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
 - 
 
  
