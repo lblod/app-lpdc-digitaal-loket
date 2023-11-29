@@ -63,7 +63,13 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - In the LINK editor, you need to add all the ttl files used ... They then appear under External Libraries - some are already added by default. others custom ones you need to add.
   This allows proper navigation in the editor - AND - proper validation in the editor. Don't know how this works in the shacl library. How to add all these shape definition ttl's as well ?
 - In the shapes loading in the typescript code, I think you need to add all the ontologies in the form of ttl files which are not standard libraries ...
-- 
-- 
+- ask Dieter ipdc for the ontology of ipdc / lpdc contract (turtle representation https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/)
+- When validating chains of classes. e.g. 
+ <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>
+  a besluit:Bestuurseenheid. 
+  for which a a besluit:Bestuurseenheid. is defined to be a subclass of rdfs:subClassOf <http://data.europa.eu/m8g/PublicOrganisation> . (in m8g file)., and specified in the shacl shape
+  ; we need ... only ... to include the besluit.ttl in the shapes AND merge all shapes also in the data (for this validator?)
+  (because internally in the code, strangely the class validation logic happens on the context.$data graph instead of the context.$shapes graph) - which seems like a bug ?  Or a lack of understanding from our part.
+-  
  
 
