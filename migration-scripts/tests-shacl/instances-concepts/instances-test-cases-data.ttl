@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix m8g: <http://data.europa.eu/m8g/> .
+@prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+
+<http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>
+    a besluit:Bestuurseenheid.
+
+<http://vocab.belgif.be/auth/refnis2019/41002>
+    a skos:Concept.
+
+ex:an-minimal-valid-instance
+    a lpdcExt:InstancePublicService ;
+    dc:title """title-nl"""@nl ;
+    dc:description  """description-nl"""@nl ;
+    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
+    m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>.
+

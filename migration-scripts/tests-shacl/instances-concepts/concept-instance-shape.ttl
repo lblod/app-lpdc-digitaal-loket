@@ -16,91 +16,28 @@
 @prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
 @prefix pera: <http://publications.europa.eu/resource/authority/> .
 
-<https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15shapes> oss:eli::LegalResourceShape,
-                                                                                                                                                                                          oss:CostShape,
-                                                                                                                                                                                          oss:EvidenceShape,
-                                                                                                                                                                                          oss:FinancialAdvantageShape,
-                                                                                                                                                                                          oss:PubliekeOrganisatieShape,
-                                                                                                                                                                                          oss:RequirementShape,
-                                                                                                                                                                                          oss:ProcedureShape,
-                                                                                                                                                                                          oss:YourEuropeCategoryShape,
-                                                                                                                                                                                          oss:TargetAudienceShape,
-                                                                                                                                                                                          oss:TypeShape,
-                                                                                                                                                                                          oss:PublicationMediumShape,
-                                                                                                                                                                                          oss:InstanceTagShape,
-                                                                                                                                                                                          oss:ConceptTagShape,
-                                                                                                                                                                                          oss:CompetentAuthorityLevelShape,
-                                                                                                                                                                                          oss:ExecutingAuthorityLevelShape,
-                                                                                                                                                                                          oss:SpatialShape,
-                                                                                                                                                                                          oss:ThemeShape,
-                                                                                                                                                                                          oss:AddressShape,
-                                                                                                                                                                                          oss:ConceptualPublicServiceShape,
-                                                                                                                                                                                          oss:InstancePublicServiceShape,
-                                                                                                                                                                                          oss:ContactPointShape,
-                                                                                                                                                                                          oss:WebsiteShape .
-
-oss:AddressShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "The region of the address, usually a county, state or other such area that typically encompasses several localities. The domain of locn:adminUnitL2 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
-          shacl:maxCount 1;
-          shacl:name "administrativeUnitLevel2"@nl;
-          shacl:path locn:adminUnitL2
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description "The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
-          shacl:maxCount 1;
-          shacl:name "country"@nl;
-          shacl:path adres:land
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description "The complete address written as a string, with or without formatting. The domain of locn:fullAddress is locn:Address."@nl;
-          shacl:maxCount 1;
-          shacl:name "fullAddress"@nl;
-          shacl:path adres:volledigAdres
-      ], [
-          shacl:datatype xsd:string;
-          shacl:description "houseNumber is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
-          shacl:maxCount 1;
-          shacl:name "houseNumber"@nl;
-          shacl:path adres:Adresvoorstelling.huisnummer
-      ], [
-          shacl:datatype xsd:string;
-          shacl:description "mailbox is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
-          shacl:maxCount 1;
-          shacl:name "mailbox"@nl;
-          shacl:path adres:Adresvoorstelling.busnummer
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\"). The domain of locn:postName is locn:Address."@nl;
-          shacl:maxCount 1;
-          shacl:name "municipality"@nl;
-          shacl:path adres:gemeentenaam
-      ], [
-          shacl:datatype xsd:string;
-          shacl:description "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems. The domain of locn:postCode is locn:Address."@nl;
-          shacl:maxCount 1;
-          shacl:name "postCode"@nl;
-          shacl:path adres:postcode
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description "An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. The domain of locn:thoroughfare is locn:Address."@nl;
-          shacl:maxCount 1;
-          shacl:name "thoroughfare"@nl;
-          shacl:path adres:Straatnaam
-      ];
-    shacl:targetClass locn:Address .
-
-oss:CompetentAuthorityLevelShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
-
-oss:ConceptTagShape a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
+<https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15shapes> oss:ConceptualPublicServiceShape,
+                                                                                                                                                                                oss:InstancePublicServiceShape,
+                                                                                                                                                                                oss:eli::LegalResourceShape,
+                                                                                                                                                                                oss:CostShape,
+                                                                                                                                                                                oss:EvidenceShape,
+                                                                                                                                                                                oss:FinancialAdvantageShape,
+                                                                                                                                                                                oss:PubliekeOrganisatieShape,
+                                                                                                                                                                                oss:RequirementShape,
+                                                                                                                                                                                oss:ProcedureShape,
+                                                                                                                                                                                oss:YourEuropeCategoryShape,
+                                                                                                                                                                                oss:TargetAudienceShape,
+                                                                                                                                                                                oss:TypeShape,
+                                                                                                                                                                                oss:PublicationMediumShape,
+                                                                                                                                                                                oss:InstanceTagShape,
+                                                                                                                                                                                oss:ConceptTagShape,
+                                                                                                                                                                                oss:CompetentAuthorityLevelShape,
+                                                                                                                                                                                oss:ExecutingAuthorityLevelShape,
+                                                                                                                                                                                oss:SpatialShape,
+                                                                                                                                                                                oss:ThemeShape,
+                                                                                                                                                                                oss:AddressShape,
+                                                                                                                                                                                oss:ContactPointShape,
+                                                                                                                                                                                oss:WebsiteShape.
 
 oss:ConceptualPublicServiceShape
     a shacl:NodeShape;
@@ -236,105 +173,6 @@ oss:ConceptualPublicServiceShape
           shacl:path lpdcExt:yourEuropeCategory
       ];
     shacl:targetClass lpdcExt:ConceptualPublicService .
-
-oss:ContactPointShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:class locn:Address;
-          shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
-          shacl:maxCount 1;
-          shacl:name "address"@nl;
-          shacl:path lpdcExt:address
-      ], [
-          shacl:datatype xsd:string;
-          shacl:description "A property through which an e-mail address for the Public Organization, or a representative of it, can be contacted."@nl;
-          shacl:maxCount 1;
-          shacl:name "hasEmail"@nl;
-          shacl:path schemas:email
-      ], [
-          shacl:datatype xsd:string;
-          shacl:description "A property through which a phone number for the Public Organization, or a representative of it, can be contacted."@nl;
-          shacl:maxCount 1;
-          shacl:name "hasTelephone"@nl;
-          shacl:path schemas:telephone
-      ], [
-          shacl:datatype xsd:string;
-          shacl:description "The value of this property is structured text that gives the hours at which the contact point is normally available."@nl;
-          shacl:maxCount 1;
-          shacl:name "openinghours"@nl;
-          shacl:path schemas:openingHours
-      ], [
-          shacl:datatype xsd:string;
-          shacl:description "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs."@nl;
-          shacl:maxCount 1;
-          shacl:name "website"@nl;
-          shacl:path schemas:url
-      ];
-    shacl:targetClass schemas:ContactPoint .
-
-oss:CostShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents a free text description of the Cost."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path dc:title
-      ];
-    shacl:targetClass m8g:Cost .
-
-oss:EvidenceShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "Geeft omschrijving van de vereiste input"@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path dc:title
-      ];
-    shacl:targetClass m8g:Evidence .
-
-oss:ExecutingAuthorityLevelShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
-
-oss:FinancialAdvantageShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents a free text Description of the Output."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents the official Name of the Output."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path dc:title
-      ];
-    shacl:targetClass m8g:Output .
 
 oss:InstancePublicServiceShape
     a shacl:NodeShape;
@@ -492,6 +330,168 @@ oss:InstancePublicServiceShape
           shacl:path lpdcExt:yourEuropeCategory
       ];
     shacl:targetClass lpdcExt:InstancePublicService .
+
+oss:AddressShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:property [
+          shacl:datatype rdf:langString;
+          shacl:description "The region of the address, usually a county, state or other such area that typically encompasses several localities. The domain of locn:adminUnitL2 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
+          shacl:maxCount 1;
+          shacl:name "administrativeUnitLevel2"@nl;
+          shacl:path locn:adminUnitL2
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
+          shacl:maxCount 1;
+          shacl:name "country"@nl;
+          shacl:path adres:land
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "The complete address written as a string, with or without formatting. The domain of locn:fullAddress is locn:Address."@nl;
+          shacl:maxCount 1;
+          shacl:name "fullAddress"@nl;
+          shacl:path adres:volledigAdres
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "houseNumber is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
+          shacl:maxCount 1;
+          shacl:name "houseNumber"@nl;
+          shacl:path adres:Adresvoorstelling.huisnummer
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "mailbox is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
+          shacl:maxCount 1;
+          shacl:name "mailbox"@nl;
+          shacl:path adres:Adresvoorstelling.busnummer
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\"). The domain of locn:postName is locn:Address."@nl;
+          shacl:maxCount 1;
+          shacl:name "municipality"@nl;
+          shacl:path adres:gemeentenaam
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems. The domain of locn:postCode is locn:Address."@nl;
+          shacl:maxCount 1;
+          shacl:name "postCode"@nl;
+          shacl:path adres:postcode
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. The domain of locn:thoroughfare is locn:Address."@nl;
+          shacl:maxCount 1;
+          shacl:name "thoroughfare"@nl;
+          shacl:path adres:Straatnaam
+      ];
+    shacl:targetClass locn:Address .
+
+oss:CompetentAuthorityLevelShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:targetClass skos:Concept .
+
+oss:ConceptTagShape a shacl:NodeShape;
+    shacl:closed false;
+    shacl:targetClass skos:Concept .
+
+oss:ContactPointShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:property [
+          shacl:class locn:Address;
+          shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+          shacl:maxCount 1;
+          shacl:name "address"@nl;
+          shacl:path lpdcExt:address
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A property through which an e-mail address for the Public Organization, or a representative of it, can be contacted."@nl;
+          shacl:maxCount 1;
+          shacl:name "hasEmail"@nl;
+          shacl:path schemas:email
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A property through which a phone number for the Public Organization, or a representative of it, can be contacted."@nl;
+          shacl:maxCount 1;
+          shacl:name "hasTelephone"@nl;
+          shacl:path schemas:telephone
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "The value of this property is structured text that gives the hours at which the contact point is normally available."@nl;
+          shacl:maxCount 1;
+          shacl:name "openinghours"@nl;
+          shacl:path schemas:openingHours
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs."@nl;
+          shacl:maxCount 1;
+          shacl:name "website"@nl;
+          shacl:path schemas:url
+      ];
+    shacl:targetClass schemas:ContactPoint .
+
+oss:CostShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:property [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents a free text description of the Cost."@nl;
+          shacl:maxCount 1;
+          shacl:minCount 1;
+          shacl:name "description"@nl;
+          shacl:path dc:description
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:maxCount 1;
+          shacl:minCount 1;
+          shacl:name "name"@nl;
+          shacl:path dc:title
+      ];
+    shacl:targetClass m8g:Cost .
+
+oss:EvidenceShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:property [
+          shacl:datatype rdf:langString;
+          shacl:description "Geeft omschrijving van de vereiste input"@nl;
+          shacl:maxCount 1;
+          shacl:minCount 1;
+          shacl:name "description"@nl;
+          shacl:path dc:description
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:maxCount 1;
+          shacl:minCount 1;
+          shacl:name "name"@nl;
+          shacl:path dc:title
+      ];
+    shacl:targetClass m8g:Evidence .
+
+oss:ExecutingAuthorityLevelShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:targetClass skos:Concept .
+
+oss:FinancialAdvantageShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:property [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents a free text Description of the Output."@nl;
+          shacl:maxCount 1;
+          shacl:minCount 1;
+          shacl:name "description"@nl;
+          shacl:path dc:description
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents the official Name of the Output."@nl;
+          shacl:maxCount 1;
+          shacl:minCount 1;
+          shacl:name "name"@nl;
+          shacl:path dc:title
+      ];
+    shacl:targetClass m8g:Output .
 
 oss:InstanceTagShape
     a shacl:NodeShape;

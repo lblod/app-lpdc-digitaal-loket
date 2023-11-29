@@ -55,8 +55,15 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   a lpdcExt:InstancePublicService ;
   dc:title """title-nl"""@nl ;
   dc:title """title-fr"""@fr ;
-= > which is correclty validated => how to allow multiple language strings ?
+= > which is correctlty validated => how to allow multiple language strings ?
 => @see : https://www.w3.org/TR/shacl/#LanguageInConstraintComponent 
 - and https://www.w3.org/TR/shacl/#UniqueLangConstraintComponent
+- when validating a turtle file, and you for instance have a concept -> you have to provide this data as well in the turtle file (at least the type ...)
+ otherwise it can not validate it ... (and gives a class type exception)
+- In the LINK editor, you need to add all the ttl files used ... They then appear under External Libraries - some are already added by default. others custom ones you need to add.
+  This allows proper navigation in the editor - AND - proper validation in the editor. Don't know how this works in the shacl library. How to add all these shape definition ttl's as well ?
+- In the shapes loading in the typescript code, I think you need to add all the ontologies in the form of ttl files which are not standard libraries ...
+- 
+- 
  
 

@@ -10,7 +10,8 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "node dist/poc.js"
+    "start-poc": "node dist/poc.js",
+    "start-instances-concepts": "node dist/instances-concepts.js"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
