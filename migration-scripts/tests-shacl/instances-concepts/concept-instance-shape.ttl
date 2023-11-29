@@ -33,7 +33,6 @@
                                                                                                                                                                                 oss:ConceptTagShape,
                                                                                                                                                                                 oss:CompetentAuthorityLevelShape,
                                                                                                                                                                                 oss:ExecutingAuthorityLevelShape,
-                                                                                                                                                                                oss:SpatialShape,
                                                                                                                                                                                 oss:ThemeShape,
                                                                                                                                                                                 oss:AddressShape,
                                                                                                                                                                                 oss:ContactPointShape,
@@ -558,11 +557,6 @@ oss:RequirementShape
           shacl:path skos:prefLabel
       ];
     shacl:targetClass m8g:Requirement .
-
-oss:SpatialShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
 
 oss:TargetAudienceShape
     a shacl:NodeShape;

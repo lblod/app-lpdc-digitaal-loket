@@ -70,6 +70,8 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   for which a a besluit:Bestuurseenheid. is defined to be a subclass of rdfs:subClassOf <http://data.europa.eu/m8g/PublicOrganisation> . (in m8g file)., and specified in the shacl shape
   ; we need ... only ... to include the besluit.ttl in the shapes AND merge all shapes also in the data (for this validator?)
   (because internally in the code, strangely the class validation logic happens on the context.$data graph instead of the context.$shapes graph) - which seems like a bug ?  Or a lack of understanding from our part.
--  
+- still need to fix the warning     a lpdcExt:InstancePublicService ; (there is no class definition of this type )
+- 
+
  
 
