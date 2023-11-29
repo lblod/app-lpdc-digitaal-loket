@@ -139,6 +139,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly bevoegdBestuursniveauMultiSelect: MultiSelect;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
     readonly uitvoerendBestuursniveauMultiSelect: MultiSelect;
+    readonly uitvoerendeOverheidMultiSelect: MultiSelect;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
 
     readonly tagsMultiSelect: MultiSelect;
@@ -285,6 +286,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.bevoegdBestuursniveauMultiSelect = new MultiSelect(page, 'Bevoegd bestuursniveau');
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
         this.uitvoerendBestuursniveauMultiSelect = new MultiSelect(page, 'Uitvoerend bestuursniveau');
+        this.uitvoerendeOverheidMultiSelect = new MultiSelect(page, 'Uitvoerende overheid');
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
 
         this.tagsMultiSelect = new MultiSelect(page, "Tags");
