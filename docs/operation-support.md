@@ -287,8 +287,32 @@ restart ldes docker container
 docker restart app-lpdc-digitaal-loket-lpdc-ldes-consumer-1
 ```
 
+# Republish all instances
 
+```
+DELETE {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
+  }
+}
 
+INSERT {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> .
+  }
+}
+
+ WHERE {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
+  }
+
+  FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+  )
+}
+```
 
 
 
