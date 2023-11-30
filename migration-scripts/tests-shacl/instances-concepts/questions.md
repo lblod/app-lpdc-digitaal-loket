@@ -55,7 +55,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   a lpdcExt:InstancePublicService ;
   dc:title """title-nl"""@nl ;
   dc:title """title-fr"""@fr ;
-= > which is correctlty validated => how to allow multiple language strings ?
+= > which is correctly validated => how to allow multiple language strings ?
 => @see : https://www.w3.org/TR/shacl/#LanguageInConstraintComponent 
 - and https://www.w3.org/TR/shacl/#UniqueLangConstraintComponent
 - when validating a turtle file, and you for instance have a concept -> you have to provide this data as well in the turtle file (at least the type ...)
@@ -70,7 +70,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   for which a a besluit:Bestuurseenheid. is defined to be a subclass of rdfs:subClassOf <http://data.europa.eu/m8g/PublicOrganisation> . (in m8g file)., and specified in the shacl shape
   ; we need ... only ... to include the besluit.ttl in the shapes AND merge all shapes also in the data (for this validator?)
   (because internally in the code, strangely the class validation logic happens on the context.$data graph instead of the context.$shapes graph) - which seems like a bug ?  Or a lack of understanding from our part.
-- still need to fix the warning     a lpdcExt:InstancePublicService ; (there is no class definition of this type )
 - augment ex:a-full-valid-instance to have multiple languages for each
 - the explanations in the shacl are sometimes in english, sometimes in nl; but the language string is always nl
 - should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
@@ -90,6 +89,12 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   niet bij Instance shape?
 - pera:language ontbreekt bij concept ? 
 - dc:type ontbreekt bij concept ? 
+- concept: publicationMedium ontbreekt?
+- languages:
+    - concept : same as instantie (en, nl, nl-be-x-formal, nl-be-x-informal), nl-be-x-generated-formal, nl-be-x-generated-informal, de, fr
+    - instantie : en, nl, nl-be-x-formal, nl-be-x-informal
+- <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> is not used as a type -> cpsv:PublicService is used instead ... 
+- 
 
  
 

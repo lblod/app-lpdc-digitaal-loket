@@ -1,0 +1,554 @@
+[
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/023bafc7-06be-4d46-befa-a56d387b2e72",
+    "@type": [
+      "http://schema.org/ContactPoint"
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "1111@example.com"
+      }
+    ],
+    "http://schema.org/openingHours": [
+      {
+        "@value": "https://www.example1.com/openinghours"
+      }
+    ],
+    "http://schema.org/telephone": [
+      {
+        "@value": "111111111"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://www.example1.com"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address": [
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/3a4ffcd1-48a5-4fbd-bda5-e4008822fb07"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/3a4ffcd1-48a5-4fbd-bda5-e4008822fb07",
+    "@type": [
+      "http://www.w3.org/ns/locn#Address"
+    ],
+    "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer": [
+      {
+        "@value": "50"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer": [
+      {
+        "@value": "2"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#Straatnaam": [
+      {
+        "@language": "nl",
+        "@value": "Generaal Deprezstraat"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#gemeentenaam": [
+      {
+        "@language": "nl",
+        "@value": "Harelbeke"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#land": [
+      {
+        "@language": "nl",
+        "@value": "België"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#postcode": [
+      {
+        "@value": "8530"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/cost/dc7534e1-98d1-4da8-8395-1425d6faa8c7",
+    "@type": [
+      "http://data.europa.eu/m8g/Cost"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">De aanvraag en het attest zijn gratis. - nlbbf8a59d-8b59-4d5e-805c-0ffdb21e30b1</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">De aanvraag en het attest zijn gratis. - ene5427e5a-f798-4327-920d-f4b62b62e6bb</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "bedrag kost - en4586b8da-6edf-4ab5-aba2-02a447018190"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Bedrag kost - nl46ae150d-575c-4353-82e1-d0f0401038b5"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "0"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/evidence/042a666b-96ae-482f-b314-ddd98f975922",
+    "@type": [
+      "http://data.europa.eu/m8g/Evidence"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">Als u het document zelf ophaalt:uw eigen identiteitskaart.Als u het document voor iemand anders aanvraagt:een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaartuw eigen identiteitskaart. - nl7eefbfd3-b2f9-4eaa-9b6a-d98c08b2e596</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">If you collect the document yourself:your own identity card.If you are requesting the document for someone else:a power of attorney from that person and a copy of their identity cardas well as your own identity card.8e4e073f-9c80-462c-bb26-84bc94ddbf14</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Evidence6f91ee04-e023-434a-84e8-4b31e8cbce35"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Bewijs - nl0457fc18-6047-4986-bd32-74522ac65a3d"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/financial-advantage/932620f3-ca52-4ba6-bc77-f64539c567da",
+    "@type": [
+      "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">Beschrijving financieel voordeel. - en6b201bc4-0dc8-4e9c-b420-7d4a1462dedd</p>"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">Beschrijving financieel voordeel. - nl33edfb5d-f39f-412d-a550-b8788ef6d67b</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Titel financieel voordeel. - en1f243f0c-3edd-4f9c-ac2e-1ed8fd657d0e"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Titel financieel voordeel. - nl7cfb2e79-966c-4225-a76f-640025594f94"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "0"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a",
+    "@type": [
+      "http://purl.org/vocab/cpsv#PublicService"
+    ],
+    "http://data.europa.eu/m8g/hasCompetentAuthority": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4"
+      },
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
+      }
+    ],
+    "http://data.europa.eu/m8g/hasContactPoint": [
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/023bafc7-06be-4d46-befa-a56d387b2e72"
+      }
+    ],
+    "http://data.europa.eu/m8g/hasCost": [
+      {
+        "@id": "http://data.lblod.info/id/cost/dc7534e1-98d1-4da8-8395-1425d6faa8c7"
+      }
+    ],
+    "http://data.europa.eu/m8g/hasLegalResource": [
+      {
+        "@id": "https://ipdc.be/regelgeving"
+      }
+    ],
+    "http://data.europa.eu/m8g/thematicArea": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie"
+      },
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/EconomieWerk"
+      }
+    ],
+    "http://mu.semte.ch/vocabularies/core/uuid": [
+      {
+        "@value": "4102816b-9cee-4698-8b7d-4bcb60f2dba9"
+      }
+    ],
+    "http://mu.semte.ch/vocabularies/ext/hasVersionedSource": [
+      {
+        "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-11-30T12:25:18.623Z"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen. - nl2e47b4b4-80fe-416a-9c72-76a27d879e63</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.f16972a5-3a4e-4ef6-a016-3b78c3c60c3e</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-11-30T12:25:55.789Z"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "http://vocab.belgif.be/auth/refnis2019/23064"
+      },
+      {
+        "@id": "http://vocab.belgif.be/auth/refnis2019/70000"
+      },
+      {
+        "@id": "http://vocab.belgif.be/auth/refnis2019/24086"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Akte van Belgische nationaliteit - nl9b6faa21-40f6-431c-b6a5-d6a005655a7c"
+      },
+      {
+        "@language": "en",
+        "@value": "Certificate of Belgian nationality4bb7886a-6685-4823-848f-c18daf54c6e3"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal"
+      }
+    ],
+    "http://purl.org/pav/createdBy": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
+      }
+    ],
+    "http://purl.org/vocab/cpsv#follows": [
+      {
+        "@id": "http://data.lblod.info/id/rule/e9c7e1ef-5574-41bf-b41d-bec733f88061"
+      }
+    ],
+    "http://purl.org/vocab/cpsv#produces": [
+      {
+        "@id": "http://data.lblod.info/id/financial-advantage/932620f3-ca52-4ba6-bc77-f64539c567da"
+      }
+    ],
+    "http://schema.org/endDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2026-11-27T00:00:00Z"
+      }
+    ],
+    "http://schema.org/productID": [
+      {
+        "@value": "1502"
+      }
+    ],
+    "http://schema.org/startDate": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2019-04-13T00:00:00Z"
+      }
+    ],
+    "http://vocab.belgif.be/ns/publicservice#hasRequirement": [
+      {
+        "@id": "http://data.lblod.info/id/requirement/bf411975-4ced-4c74-a746-555ed0fe1024"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2"
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+        "@id": "http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c"
+      }
+    ],
+    "http://www.w3.org/ns/dcat#keyword": [
+      {
+        "@language": "nl",
+        "@value": "Akte - nl"
+      },
+      {
+        "@language": "nl",
+        "@value": "Nationaliteit - nl"
+      },
+      {
+        "@language": "nl",
+        "@value": "een-nieuwe-tag"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">Verdere beschrijving - nlef6094e3-b38c-4c81-8e48-e9fbb2c23c36</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">The certificate states:the last name, first names, date and place of birth of the person to whom the certificate relatesthe legal foundation of the declaration on the basis of which the certificate was drawn upin the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.89bb3614-518b-415c-ad98-c78e5e8ad283</p>"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal"
+      },
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception": [
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">Uitzonderingen - ena18c0a59-af0a-453e-97af-02b449f89425</p>"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">Uitzonderingen - nla1a0c7af-5327-45b2-bd09-e8f7aa7e1fbf</p>"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal"
+      },
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Federaal"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">Regelgeving - nl10039a2e-4154-4056-94f7-9947f136a7fe</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">Regelgeving - enc7bc5539-ce38-4e35-8de6-5fd207bcf147</p>"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Organisatie"
+      },
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgMedischeBehandeling"
+      },
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/requirement/bf411975-4ced-4c74-a746-555ed0fe1024",
+    "@type": [
+      "http://data.europa.eu/m8g/Requirement"
+    ],
+    "http://data.europa.eu/m8g/hasSupportingEvidence": [
+      {
+        "@id": "http://data.lblod.info/id/evidence/042a666b-96ae-482f-b314-ddd98f975922"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">De akte vermeldt:de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeftde wettelijke basis van de verklaring op basis waarvan de akte werd opgesteldin geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.Wie kan een afschrift of uittreksel aanvragen?Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:uzelfde echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonendeuw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)uw erfgenamenbijzondere gemachtigden zoals een notaris of advocaat.Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel. - nlecdf4e36-1a5b-48c8-965e-8c1253cdcba7</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">The right to receive a copy of or an extract from certificates of Belgian nationality is limited to:yourselfyour spouse, surviving spouse, or legal cohabitantyour legal representative (e.g. a parent, guardian, conservator)blood relatives in the ascending or descending line (no relatives by affinity and side branches)your heirsspecial agents, such as notaries or lawyers.If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract.b1b6aa67-0f2b-4ff2-8a4b-5af31ed6fd52</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Voorwaarden - nl3c9296ce-a41e-49ad-b366-c32970a371ae"
+      },
+      {
+        "@language": "en",
+        "@value": "Requirements54e71742-9c31-4f65-8508-72a64b354e72"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "0"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/rule/e9c7e1ef-5574-41bf-b41d-bec733f88061",
+    "@type": [
+      "http://purl.org/vocab/cpsv#Rule"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">You can request a copy of or an extract from the certificate of nationality from your municipality.If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate onlinevia the e-desk of your municipalityor via the certificates page of ‘My Citizen Profile’ ‘Mijn Burgerprofiel’).Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.cc7d5eec-1075-442e-8348-4621ac2b1084</p>"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:via het e-loket van uw gemeenteof via de attestenpagina van 'Mijn Burgerprofiel'.Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht. - nl9477db59-abea-405a-88a0-4556595e174a</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Procedure - en1cb9f64c-ea06-4256-9da7-7788db70ffd0"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Procedure - nlbec08176-b123-49e3-91ee-3682001fd259"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "0"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsites": [
+      {
+        "@id": "http://data.lblod.info/id/website/20dddcec-1245-44c2-8e7d-eb2bf7aa4091"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/website/20dddcec-1245-44c2-8e7d-eb2bf7aa4091",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">procedure website beschrijving - nlda7563ce-92dd-483a-a9e1-da2f78d59f4a</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">procedure website beschrijving - en57ceb307-2954-4aec-bf8d-999dab13d4ce</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Procedure website naam - nl9d7b3831-a756-4e51-a3bd-50dd4b8e8344"
+      },
+      {
+        "@language": "en",
+        "@value": "Procedure website naam - en19e6f8e9-6af6-4459-b7c4-0b3a8fcbb802"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://new-procedure-website.com"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "0"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - enf96420e3-3c6b-4f59-8d5c-d61ca91b3b97</p>"
+      },
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - nle57578ec-a196-4077-b86a-9a50e41c4d6e</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-formal",
+        "@value": "Website Belgische nationaliteit en naturalisatie - nl8d755e57-1910-45c8-a4c3-a3f6d8646b4f"
+      },
+      {
+        "@language": "en",
+        "@value": "Website Belgische nationaliteit en naturalisatie - enea0c9313-80e5-4245-b654-e09e8f6986cd"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/new-nationaliteit"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "0"
+      }
+    ]
+  }
+]

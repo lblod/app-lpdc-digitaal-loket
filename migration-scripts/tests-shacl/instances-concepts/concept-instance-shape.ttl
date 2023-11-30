@@ -20,7 +20,6 @@
                                                                                                                                                                                 oss:InstancePublicServiceShape,
                                                                                                                                                                                 oss:SpatialShape,
                                                                                                                                                                                 oss:eli::LegalResourceShape,
-                                                                                                                                                                                oss:CostShape,
                                                                                                                                                                                 oss:EvidenceShape,
                                                                                                                                                                                 oss:FinancialAdvantageShape,
                                                                                                                                                                                 oss:PubliekeOrganisatieShape,
@@ -35,7 +34,28 @@
                                                                                                                                                                                 oss:ThemeShape,
                                                                                                                                                                                 oss:AddressShape,
                                                                                                                                                                                 oss:ContactPointShape,
-                                                                                                                                                                                oss:WebsiteShape.
+                                                                                                                                                                                oss:WebsiteShape,
+                                                                                                                                                                                oss:allowedLanguagesOnConcept,
+                                                                                                                                                                                oss:allowedLanguagesOnInstance.
+
+oss:allowedLanguagesOnConcept
+    rdf:first "en" ;
+    rdf:rest  [ rdf:first "nl" ;
+                rdf:rest  [ rdf:first "fr" ;
+                            rdf:rest  [ rdf:first "de" ;
+                                        rdf:rest  [ rdf:first "nl-be-x-formal" ;
+                                                    rdf:rest  [ rdf:first "nl-be-x-informal" ;
+                                                                rdf:rest  [ rdf:first "nl-be-x-generated-formal" ;
+                                                                            rdf:rest  [ rdf:first "nl-be-x-generated-informal" ;
+                                                                                        rdf:rest  rdf:nil ] ] ] ] ] ] ].
+oss:allowedLanguagesOnInstance
+    rdf:first "en" ;
+    rdf:rest  [ rdf:first "nl" ;
+                rdf:rest  [ rdf:first "nl-be-x-formal" ;
+                            rdf:rest  [ rdf:first "nl-be-x-informal" ;
+                                        rdf:rest  rdf:nil ] ] ] .
+
+
 
 oss:ConceptualPublicServiceShape
     a shacl:NodeShape;
@@ -96,6 +116,20 @@ oss:ConceptualPublicServiceShape
           shacl:name "hasCost"@nl;
           shacl:path m8g:hasCost
       ], [
+            shacl:description "The description of the Has Cost property"@nl;
+            shacl:name "hasCost > description"@nl;
+            shacl:datatype rdf:langString;
+            shacl:uniqueLang true;
+            shacl:languageIn oss:allowedLanguagesOnConcept;
+            shacl:path (m8g:hasCost dc:description)
+     ], [
+           shacl:description "The title of the Has Cost property"@nl;
+           shacl:name "hasCost > title"@nl;
+           shacl:datatype rdf:langString;
+           shacl:uniqueLang true;
+           shacl:languageIn oss:allowedLanguagesOnConcept;
+           shacl:path (m8g:hasCost dc:title)
+       ],[
           shacl:class m8g:PublicOrganisation;
           shacl:name "hasExecutingAuthority"@nl;
           shacl:path lpdcExt:hasExecutingAuthority
@@ -231,8 +265,22 @@ oss:InstancePublicServiceShape
           shacl:class m8g:Cost;
           shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@nl;
           shacl:name "hasCost"@nl;
-          shacl:path m8g:hasCost
+          shacl:path m8g:hasCost;
       ], [
+        shacl:description "The description of the Has Cost property"@nl;
+        shacl:name "hasCost > description"@nl;
+        shacl:datatype rdf:langString;
+        shacl:uniqueLang true;
+        shacl:languageIn oss:allowedLanguagesOnInstance;
+        shacl:path (m8g:hasCost dc:description)
+      ], [
+        shacl:description "The title of the Has Cost property"@nl;
+        shacl:name "hasCost > title"@nl;
+        shacl:datatype rdf:langString;
+        shacl:uniqueLang true;
+        shacl:languageIn oss:allowedLanguagesOnInstance;
+        shacl:path (m8g:hasCost dc:title)
+    ], [
           shacl:class m8g:PublicOrganisation;
           shacl:name "hasExecutingAuthority"@nl;
           shacl:path lpdcExt:hasExecutingAuthority
@@ -328,7 +376,7 @@ oss:InstancePublicServiceShape
           shacl:name "yourEuropeCategory"@nl;
           shacl:path lpdcExt:yourEuropeCategory
       ];
-    shacl:targetClass lpdcExt:InstancePublicService .
+    shacl:targetClass cpsv:PublicService .
 
 oss:AddressShape
     a shacl:NodeShape;
@@ -424,25 +472,6 @@ oss:ContactPointShape
           shacl:path schemas:url
       ];
     shacl:targetClass schemas:ContactPoint .
-
-oss:CostShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents a free text description of the Cost."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path dc:title
-      ];
-    shacl:targetClass m8g:Cost .
 
 oss:EvidenceShape
     a shacl:NodeShape;

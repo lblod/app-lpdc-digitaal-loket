@@ -48,6 +48,36 @@ ex:a-cost
     dc:title """cost-title"""@nl ;
     dc:description """cost-description"""@nl.
 
+ex:an-concept-cost-all-languages-valid
+    a m8g:Cost;
+    dc:title """cost-title-en"""@en ;
+    dc:title """cost-title-nl"""@nl ;
+    dc:title """cost-title-fr"""@fr ;
+    dc:title """cost-title-de"""@de ;
+    dc:title """cost-title-nl-be-x-formal"""@nl-be-x-formal;
+    dc:title """cost-title-nl-be-x-informal"""@nl-be-x-informal;
+    dc:title """cost-title-nl-be-x-generated-formal"""@nl-be-x-generated-formal;
+    dc:title """cost-title-nl-be-x-generated-informal"""@nl-be-x-generated-informal;
+    dc:description """cost-description-en"""@en;
+    dc:description """cost-description-nl"""@nl;
+    dc:description """cost-description-fr"""@fr;
+    dc:description """cost-description-de"""@de;
+    dc:description """cost-description-nl-be-x-formal"""@nl-be-x-formal;
+    dc:description """cost-description-nl-be-x-informal"""@nl-be-x-informal;
+    dc:description """cost-description-nl-be-x-generated-formal"""@nl-be-x-generated-formal;
+    dc:description """cost-description-nl-be-x-generated-informal"""@nl-be-x-generated-informal.
+
+ex:an-instance-cost-all-languages-valid
+    a m8g:Cost;
+    dc:title """cost-title-en"""@en ;
+    dc:title """cost-title-nl"""@nl ;
+    dc:title """cost-title-nl-be-x-formal"""@nl-be-x-formal;
+    dc:title """cost-title-nl-be-x-informal"""@nl-be-x-informal ;
+    dc:description """cost-description-en"""@en;
+    dc:description """cost-description-nl"""@nl;
+    dc:description """cost-description-nl-be-x-formal"""@nl-be-x-formal;
+    dc:description """cost-description-nl-be-x-informal"""@nl-be-x-informal.
+
 ex:a-supporting-evidence
     a m8g:Evidence ;
     dc:title """supporting-evidence-title"""@nl ;
@@ -74,7 +104,8 @@ ex:an-output
 ex:a-minimal-valid-concept
     a lpdcExt:ConceptualPublicService;
     dc:title """title-nl"""@nl ;
-    dc:description  """description-nl"""@nl.
+    dc:description  """description-nl"""@nl;
+    m8g:hasCost ex:an-concept-cost-all-languages-valid.
 
 #a concept that has full data filled in; expect no validation errors
 ex:a-full-valid-concept
@@ -97,7 +128,6 @@ ex:a-full-valid-concept
     ps:hasRequirement ex:a-requirement;
     dcat:keyword """a-keyword"""@nl ;
     cpsv:produces ex:an-output;
-    lpdcExt:publicationMedium ex:a-publication-medium;
     lpdcExt:regulation """regulation-nl"""@nl ;
     lpdcExt:targetAudience ex:a-target-audience ;
     m8g:thematicArea ex:a-thematic-area;
@@ -105,15 +135,16 @@ ex:a-full-valid-concept
 
 #an instance that has a minimal valid data filled in; expect no validation errors
 ex:a-minimal-valid-instance
-    a lpdcExt:InstancePublicService ;
+    a cpsv:PublicService ;
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
     dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
+    m8g:hasCost ex:an-instance-cost-all-languages-valid;
     m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> .
 
 #an instance that has full data filled in (except multiple languages for now); expect no validation errors
 ex:a-full-valid-instance
-    a lpdcExt:InstancePublicService ;
+    a cpsv:PublicService ;
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
     lpdcExt:additionalDescription """additional-description-nl"""@nl ;

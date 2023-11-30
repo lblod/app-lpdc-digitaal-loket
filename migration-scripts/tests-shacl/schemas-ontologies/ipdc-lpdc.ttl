@@ -8,6 +8,7 @@
 @prefix schemas: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cpsv:	<http://purl.org/vocab/cpsv#> .
 
 <http://data.europa.eu/eli/ontology#LegalResource> a rdfs:Class;
   rdfs:label "LegalResource"@nl .
@@ -35,7 +36,7 @@ skos:Concept a rdfs:Class .
 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> a rdfs:Class;
   rdfs:label "ConceptualPublicService"@nl .
 
-<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> a rdfs:Class;
+cpsv:PublicService a rdfs:Class;
   rdfs:label "InstancePublicService"@nl .
 
 schemas:ContactPoint a rdfs:Class;

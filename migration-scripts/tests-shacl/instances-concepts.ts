@@ -3,8 +3,9 @@ import SHACLValidator from 'rdf-validate-shacl';
 
 export async function main() {
     console.log('concept/instance');
-    await conceptInstance();
+    await conceptInstanceTestData();
     //await readOntologies();
+    //await publishedInstance();
 }
 
 //trying out clownface ...
@@ -26,7 +27,7 @@ async function readOntologies() {
 
 }
 
-async function conceptInstance() {
+async function conceptInstanceTestData() {
     const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
 
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
@@ -67,6 +68,18 @@ async function conceptInstance() {
         console.log(result.sourceShape)
     }
     //console.log(await report.dataset.serialize({ format: 'text/n3' }))
+
+}
+
+async function publishedInstance() {
+    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
+
+    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.json'));
+    //FYI: how to serialize in another format ... and you can also add prefixes ...  / but it does not seem to produce compact results ... but it works
+    //console.log(await instanceData.serialize({format: "text/turtle"}));
+
+
+
 
 }
 
