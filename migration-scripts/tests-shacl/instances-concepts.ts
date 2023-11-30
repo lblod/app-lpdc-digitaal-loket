@@ -27,16 +27,19 @@ async function readOntologies() {
 }
 
 async function conceptInstance() {
-    let shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
-    //shapes = shapes.merge(await rdf.dataset().import(rdf.fromFile('extra-shacls/m8g.ttl'))); //not needed to validate because the pointer of   a besluit:  rdfs:subClassOf <http://data.europa.eu/m8g/PublicOrganisation> .
-   shapes = shapes.merge(await rdf.dataset().import(rdf.fromFile('extra-shacls/besluit.ttl')));
-    console.log(shapes.size);
+    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
 
-    let data = await rdf.dataset().import(rdf.fromFile('instances-concepts/instances-test-cases-data.ttl'));
-    data = data.merge(shapes); // internally, the data is also used to verify class type matches ... it seems that data and structure is mixed internally ... in the validator
+    const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
+    const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
+
+    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instances-test-cases-data.ttl'));
+
+    const data = instanceData
+        .merge(schemasOntologies) // to be able to validate the data, we should also include the schemas / ontologies the data / and or code lists data is referencing. // note we might need to split this up?
+        .merge(codeLists); // and also the code lists (the validator needs to for example be able to verify the class type of one of the referenced objects).
 
     const validator = new SHACLValidator(shapes, {factory: rdf})
-    const report = validator.validate(data)
+    const report = validator.validate(data);
 
     // Check conformance: `true` or `false`
     console.log(report.conforms);

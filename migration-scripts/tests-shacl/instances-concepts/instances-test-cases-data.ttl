@@ -11,18 +11,6 @@
 @prefix cpsv:	<http://purl.org/vocab/cpsv#> .
 
 
-<http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>
-    a besluit:Bestuurseenheid.
-
-<http://vocab.belgif.be/auth/refnis2019/41002>
-    a skos:Concept.
-
-ex:bevoegd-bestuursniveau-federaal
-    a skos:Concept.
-
-ex:uitvoerend-bestuursniveau-federaal
-    a skos:Concept.
-
 ex:a-website-for-a-rule
     a schemas:WebSite ;
     dc:title """a-website-for-a-rule-title"""@nl ;
