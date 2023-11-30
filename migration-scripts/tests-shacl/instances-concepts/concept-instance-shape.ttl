@@ -18,6 +18,7 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15shapes> oss:ConceptualPublicServiceShape,
                                                                                                                                                                                 oss:InstancePublicServiceShape,
+                                                                                                                                                                                oss:SpatialShape,
                                                                                                                                                                                 oss:eli::LegalResourceShape,
                                                                                                                                                                                 oss:CostShape,
                                                                                                                                                                                 oss:EvidenceShape,
@@ -38,7 +39,8 @@
 
 oss:ConceptualPublicServiceShape
     a shacl:NodeShape;
-    shacl:closed false;
+    shacl:closed true;
+    shacl:ignoredProperties ( rdf:type ) ;
     shacl:property [
           shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
@@ -173,7 +175,8 @@ oss:ConceptualPublicServiceShape
 
 oss:InstancePublicServiceShape
     a shacl:NodeShape;
-    shacl:closed false;
+    shacl:closed true;
+    shacl:ignoredProperties ( rdf:type ) ;
     shacl:property [
           shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
@@ -282,7 +285,6 @@ oss:InstancePublicServiceShape
           shacl:name "produces"@nl;
           shacl:path cpsv:produces
       ], [
-          shacl:class skos:Concept;
           shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
           shacl:name "publicationMedium"@nl;
           shacl:path lpdcExt:publicationMedium
@@ -382,6 +384,11 @@ oss:AddressShape
       ];
     shacl:targetClass locn:Address .
 
+oss:ConceptTagShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:targetClass skos:Concept .
+
 oss:ContactPointShape
     a shacl:NodeShape;
     shacl:closed false;
@@ -449,7 +456,7 @@ oss:EvidenceShape
           shacl:path dc:description
       ], [
           shacl:datatype rdf:langString;
-          shacl:description "Geeft titel van de vereiste input"@nl;
+          shacl:description  "Geeft titel van de vereiste input"@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "name"@nl;
@@ -591,3 +598,8 @@ oss:eli::LegalResourceShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:targetClass eli:LegalResource .
+
+oss:SpatialShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:targetClass skos:Concept .

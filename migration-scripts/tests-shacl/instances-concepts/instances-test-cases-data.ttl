@@ -76,6 +76,33 @@ ex:a-minimal-valid-concept
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl.
 
+#a concept that has full data filled in; expect no validation errors
+ex:a-full-valid-concept
+    a lpdcExt:ConceptualPublicService ;
+    dc:title """title-nl"""@nl ;
+    dc:description  """description-nl"""@nl ;
+    lpdcExt:additionalDescription """additional-description-nl"""@nl ;
+    lpdcExt:conceptTag ex:a-concept-tag ;
+    lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
+    schemas:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    schemas:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    lpdcExt:exception """exception"""@nl ;
+    lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
+    cpsv:follows ex:a-rule ;
+    m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
+    m8g:hasCost ex:a-cost;
+    lpdcExt:hasExecutingAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
+    m8g:hasLegalResource ex:a-legal-resource ;
+    rdfs:seeAlso ex:a-website-for-an-instance;
+    ps:hasRequirement ex:a-requirement;
+    dcat:keyword """a-keyword"""@nl ;
+    cpsv:produces ex:an-output;
+    lpdcExt:publicationMedium ex:a-publication-medium;
+    lpdcExt:regulation """regulation-nl"""@nl ;
+    lpdcExt:targetAudience ex:a-target-audience ;
+    m8g:thematicArea ex:a-thematic-area;
+    lpdcExt:yourEuropeCategory ex:a-your-europe-category.
+
 #an instance that has a minimal valid data filled in; expect no validation errors
 ex:a-minimal-valid-instance
     a lpdcExt:InstancePublicService ;
@@ -91,7 +118,7 @@ ex:a-full-valid-instance
     dc:description  """description-nl"""@nl ;
     lpdcExt:additionalDescription """additional-description-nl"""@nl ;
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
-    schemas:endDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    schemas:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     schemas:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     lpdcExt:exception """exception"""@nl ;
     lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
@@ -103,7 +130,7 @@ ex:a-full-valid-instance
     m8g:hasLegalResource ex:a-legal-resource ;
     rdfs:seeAlso ex:a-website-for-an-instance;
     ps:hasRequirement ex:a-requirement;
-    dc:source ex:a-minimal-valid-concept;
+    dc:source ex:a-full-valid-concept;
     lpdcExt:instanceTag ex:a-tag;
     dcat:keyword """a-keyword"""@nl ;
     pera:language ex:a-language ;

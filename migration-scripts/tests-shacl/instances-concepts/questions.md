@@ -81,6 +81,15 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
           shacl:name "language"@nl;
           shacl:path pera:language
  why not just use one of the pera.ttl file? 
+- ontbreekt [
+  shacl:class skos:Concept;
+  shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
+  shacl:name "conceptTag"@nl;
+  shacl:path lpdcExt:conceptTag
+  ], 
+  niet bij Instance shape?
+- pera:language ontbreekt bij concept ? 
+- dc:type ontbreekt bij concept ? 
 
  
 
