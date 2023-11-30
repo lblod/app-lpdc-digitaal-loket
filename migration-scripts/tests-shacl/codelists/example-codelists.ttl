@@ -1,6 +1,7 @@
 @prefix ex: <http://example.com/ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
 
 <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>
     a besluit:Bestuurseenheid.
@@ -12,4 +13,22 @@ ex:bevoegd-bestuursniveau-federaal
     a skos:Concept.
 
 ex:uitvoerend-bestuursniveau-federaal
+    a skos:Concept.
+
+ex:a-legal-resource
+    a eli:LegalResource.
+
+ex:a-target-audience
+    a skos:Concept.
+
+ex:a-thematic-area
+    a skos:Concept.
+
+ex:a-type
+    a skos:Concept.
+
+ex:a-your-europe-category
+    a skos:Concept.
+
+ex:a-publication-medium
     a skos:Concept.

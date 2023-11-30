@@ -382,11 +382,6 @@ oss:AddressShape
       ];
     shacl:targetClass locn:Address .
 
-
-oss:ConceptTagShape a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
-
 oss:ContactPointShape
     a shacl:NodeShape;
     shacl:closed false;
@@ -454,6 +449,7 @@ oss:EvidenceShape
           shacl:path dc:description
       ], [
           shacl:datatype rdf:langString;
+          shacl:description "Geeft titel van de vereiste input"@nl;
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "name"@nl;

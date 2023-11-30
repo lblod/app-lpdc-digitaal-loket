@@ -9,13 +9,22 @@
 @prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
 @prefix schemas: <https://schema.org/> .
 @prefix cpsv:	<http://purl.org/vocab/cpsv#> .
-
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix pera: <http://publications.europa.eu/resource/authority/> .
 
 ex:a-website-for-a-rule
     a schemas:WebSite ;
     dc:title """a-website-for-a-rule-title"""@nl ;
     dc:description """a-website-for-a-rule-description"""@nl ;
     schemas:url "https://a-website-for-a-rule.org".
+
+ex:a-website-for-an-instance
+    a schemas:WebSite ;
+    dc:title """a-website-for-an-instance-title"""@nl ;
+    dc:description """a-website-for-an-instance-description"""@nl ;
+    schemas:url "https://a-website-for-an-instance.org".
 
 ex:a-rule
     a cpsv:Rule;
@@ -34,6 +43,39 @@ ex:a-contactpoint
     schemas:openingHours "9-12 each day" ;
     schemas:url "a-contact-point@domein.org".
 
+ex:a-cost
+    a m8g:Cost;
+    dc:title """cost-title"""@nl ;
+    dc:description """cost-description"""@nl.
+
+ex:a-supporting-evidence
+    a m8g:Evidence ;
+    dc:title """supporting-evidence-title"""@nl ;
+    dc:description """supporting-evidence-description"""@nl.
+
+ex:a-requirement
+    a m8g:Requirement;
+    dc:description """requirement-description"""@nl ;
+    skos:prefLabel """requirement-preferred-label"""@nl ;
+    m8g:hasSupportingEvidence ex:a-supporting-evidence.
+
+ex:a-tag
+    a skos:Concept.
+
+ex:a-language
+    a dc:LinguisticSystem.
+
+ex:an-output
+    a m8g:Output ;
+    dc:title """an-output-title"""@nl ;
+    dc:description """an-output-description"""@nl.
+
+#a concept that has a minimal valid data filled in; expect no validation errors
+ex:a-minimal-valid-concept
+    a lpdcExt:ConceptualPublicService;
+    dc:title """title-nl"""@nl ;
+    dc:description  """description-nl"""@nl.
+
 #an instance that has a minimal valid data filled in; expect no validation errors
 ex:a-minimal-valid-instance
     a lpdcExt:InstancePublicService ;
@@ -49,16 +91,27 @@ ex:a-full-valid-instance
     dc:description  """description-nl"""@nl ;
     lpdcExt:additionalDescription """additional-description-nl"""@nl ;
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
+    schemas:endDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     schemas:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     lpdcExt:exception """exception"""@nl ;
     lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
     cpsv:follows ex:a-rule ;
     m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
     m8g:hasContactPoint ex:a-contactpoint;
-    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> .
-
-
-
-
-
-
+    m8g:hasCost ex:a-cost;
+    lpdcExt:hasExecutingAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
+    m8g:hasLegalResource ex:a-legal-resource ;
+    rdfs:seeAlso ex:a-website-for-an-instance;
+    ps:hasRequirement ex:a-requirement;
+    dc:source ex:a-minimal-valid-concept;
+    lpdcExt:instanceTag ex:a-tag;
+    dcat:keyword """a-keyword"""@nl ;
+    pera:language ex:a-language ;
+    cpsv:produces ex:an-output;
+    lpdcExt:publicationMedium ex:a-publication-medium;
+    lpdcExt:regulation """regulation-nl"""@nl ;
+    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
+    lpdcExt:targetAudience ex:a-target-audience ;
+    m8g:thematicArea ex:a-thematic-area;
+    dc:type ex:a-type;
+    lpdcExt:yourEuropeCategory ex:a-your-europe-category.

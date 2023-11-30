@@ -1,0 +1,329 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix schemas: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://data.europa.eu/eli/ontology#LegalResource> a rdfs:Class;
+  rdfs:label "LegalResource"@nl .
+
+<http://data.europa.eu/m8g/Cost> a rdfs:Class;
+  rdfs:label "Cost"@nl .
+
+<http://data.europa.eu/m8g/Evidence> a rdfs:Class;
+  rdfs:label "Evidence"@nl .
+
+<http://data.europa.eu/m8g/Output> a rdfs:Class;
+  rdfs:label "FinancialAdvantage"@nl .
+
+<http://data.europa.eu/m8g/Requirement> a rdfs:Class;
+  rdfs:label "Requirement"@nl .
+
+<http://purl.org/vocab/cpsv#Rule> a rdfs:Class;
+  rdfs:label "Procedure"@nl .
+
+skos:Concept a rdfs:Class .
+
+<http://www.w3.org/ns/locn#Address> a rdfs:Class;
+  rdfs:label "Address"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> a rdfs:Class;
+  rdfs:label "ConceptualPublicService"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> a rdfs:Class;
+  rdfs:label "InstancePublicService"@nl .
+
+schemas:ContactPoint a rdfs:Class;
+  rdfs:label "ContactPoint"@nl .
+
+schemas:WebSite a rdfs:Class;
+  rdfs:label "Website"@nl .
+
+<http://fixme.com> a owl:Ontology;
+  rdfs:label "ipdc-lpdc"@en,
+    "ipdc-lpdc"@nl;
+  dc:contributor [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://redpencil.io>;
+      foaf:name "redpencil"
+    ];
+    foaf:firstName "Niels";
+    foaf:lastName "Vandekeybus";
+    foaf:mbox <mailto:niels.vandekeybus@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Bert";
+    foaf:lastName "Van Nuffelen";
+    foaf:mbox <mailto:bert.vannuffelen@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://redpencil.io>;
+      foaf:name "redpencil"
+    ];
+    foaf:firstName "Felix";
+    foaf:lastName "Ruiz de Arcaute";
+    foaf:mbox <mailto:felix.ruizdearcaute@redpencil.io>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Stefanie";
+    foaf:lastName "Kerkhof";
+    foaf:mbox <mailto:stefanie.kerkhof@vlaanderen.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.linkedin.com/in/borisdevloed>;
+      foaf:name "devloed.com"
+    ];
+    foaf:firstName "Boris";
+    foaf:lastName "De Vloed";
+    foaf:mbox <mailto:boris@devloed.com>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.vlaanderen.be/digitaal-vlaanderen>;
+      foaf:name "Digitaal Vlaanderen"
+    ];
+    foaf:firstName "Dirk";
+    foaf:lastName "De Smedt";
+    foaf:mbox <mailto:dirk.desmedt@vlaanderen.be>
+  ];
+  dc:issued "TODO";
+  dc:license "https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0",
+    <https://data.vlaanderen.be/id/licentie/modellicentie-gratis-hergebruik/v1.0>;
+  dc:mediator [
+    foaf:homepage <https://data.vlaanderen.be>;
+    foaf:mbox <mailto:oslo@kb.vlaanderen.be>;
+    foaf:name "Data Vlaanderen"
+  ];
+  rdfs:seeAlso <http://data.europa.eu/eli/ontology#LegalResource>,
+    <http://data.europa.eu/m8g/Cost>,
+    <http://data.europa.eu/m8g/Evidence>,
+    <http://data.europa.eu/m8g/Output>,
+    <http://data.europa.eu/m8g/Requirement>,
+    <http://purl.org/vocab/cpsv#Rule>,
+    skos:Concept,
+    <http://www.w3.org/ns/locn#Address>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>,
+    schemas:ContactPoint,
+    schemas:WebSite,
+    <https://www.w3.org/ns/locn#adminUnitL2>,
+    schemas:url,
+    schemas:telephone,
+    schemas:startDate,
+    schemas:openingHours,
+    schemas:endDate,
+    schemas:email,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#instanceTag>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>,
+    <https://data.vlaanderen.be/ns/adres#volledigAdres>,
+    <https://data.vlaanderen.be/ns/adres#postcode>,
+    <https://data.vlaanderen.be/ns/adres#land>,
+    <https://data.vlaanderen.be/ns/adres#gemeentenaam>,
+    <https://data.vlaanderen.be/ns/adres#Straatnaam>,
+    <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>,
+    <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>,
+    dcat:keyword,
+    skos:prefLabel,
+    rdfs:seeAlso,
+    <http://vocab.belgif.be/ns/publicservice#hasRequirement>,
+    <http://purl.org/vocab/cpsv#produces>,
+    <http://purl.org/vocab/cpsv#follows>,
+    dc:type,
+    dc:title,
+    dc:spatial,
+    dc:source,
+    dc:description,
+    <http://publications.europa.eu/resource/authority/language>,
+    <http://data.europa.eu/m8g/thematicArea>,
+    <http://data.europa.eu/m8g/hasSupportingEvidence>,
+    <http://data.europa.eu/m8g/hasLegalResource>,
+    <http://data.europa.eu/m8g/hasCost>,
+    <http://data.europa.eu/m8g/hasContactPoint>;
+  <http://www.w3.org/2001/02pd/rec54#editor> [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kunlabora.be>;
+      foaf:name "Kunlabora"
+    ];
+    foaf:firstName "Dieter";
+    foaf:lastName "Van Peer";
+    foaf:mbox <mailto:dieter.vanpeer@kunlabora.be>
+  ], [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.kunlabora.be>;
+      foaf:name "Kunlabora"
+    ];
+    foaf:firstName "Heidi";
+    foaf:lastName "Bottu";
+    foaf:mbox <mailto:heidi.bottu@kunlabora.be>
+  ];
+  foaf:maker [
+    a foaf:Person;
+    schema:affiliation [
+      foaf:homepage <https://www.wdcsolutions.be>;
+      foaf:name "WDC Solutions"
+    ];
+    foaf:firstName "Wouter";
+    foaf:lastName "De Cock";
+    foaf:mbox <mailto:wouter.decock@wdcsolutions.be>
+  ] .
+
+<http://data.europa.eu/m8g/hasContactPoint> a rdf:Property;
+  rdfs:label "hasContactPoint"@nl .
+
+<http://data.europa.eu/m8g/hasCost> a rdf:Property;
+  rdfs:label "hasCost"@nl .
+
+<http://data.europa.eu/m8g/hasLegalResource> a rdf:Property;
+  rdfs:label "hasLegalResource"@nl .
+
+<http://data.europa.eu/m8g/hasSupportingEvidence> a rdf:Property;
+  rdfs:label "hasSupportingEvidence"@nl .
+
+<http://data.europa.eu/m8g/thematicArea> a rdf:Property;
+  rdfs:label "theme"@nl .
+
+<http://publications.europa.eu/resource/authority/language> a rdf:Property;
+  rdfs:label "language"@nl .
+
+dc:description a rdf:Property;
+  rdfs:label "description"@nl .
+
+dc:source a rdf:Property;
+  rdfs:label "hasSource"@nl .
+
+dc:spatial a rdf:Property;
+  rdfs:label "spatial"@nl .
+
+dc:title a rdf:Property;
+  rdfs:label "name"@nl .
+
+dc:type a rdf:Property;
+  rdfs:label "type"@nl .
+
+<http://purl.org/vocab/cpsv#follows> a rdf:Property;
+  rdfs:label "follows"@nl .
+
+<http://purl.org/vocab/cpsv#produces> a rdf:Property;
+  rdfs:label "produces"@nl .
+
+<http://vocab.belgif.be/ns/publicservice#hasRequirement> a rdf:Property;
+  rdfs:label "hasRequirement"@nl .
+
+rdfs:seeAlso a rdf:Property;
+  rdfs:label "hasMoreInfo"@nl .
+
+skos:prefLabel a rdf:Property;
+  rdfs:label "name"@nl .
+
+dcat:keyword a rdf:Property;
+  rdfs:label "keyword"@nl .
+
+<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer> a rdf:Property;
+  rdfs:label "mailbox"@nl .
+
+<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer> a rdf:Property;
+  rdfs:label "houseNumber"@nl .
+
+<https://data.vlaanderen.be/ns/adres#Straatnaam> a rdf:Property;
+  rdfs:label "thoroughfare"@nl .
+
+<https://data.vlaanderen.be/ns/adres#gemeentenaam> a rdf:Property;
+  rdfs:label "municipality"@nl .
+
+<https://data.vlaanderen.be/ns/adres#land> a rdf:Property;
+  rdfs:label "country"@nl .
+
+<https://data.vlaanderen.be/ns/adres#postcode> a rdf:Property;
+  rdfs:label "postCode"@nl .
+
+<https://data.vlaanderen.be/ns/adres#volledigAdres> a rdf:Property;
+  rdfs:label "fullAddress"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription> a rdf:Property;
+  rdfs:label "additionalDescription"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> a rdf:Property;
+  rdfs:label "address"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> a rdf:Property;
+  rdfs:label "competentAuthorityLevel"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag> a rdf:Property;
+  rdfs:label "conceptTag"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception> a rdf:Property;
+  rdfs:label "exception"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> a rdf:Property;
+  rdfs:label "executingAuthorityLevel"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> a rdf:Property;
+  rdfs:label "hasExecutingAuthority"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite> a rdf:Property;
+  rdfs:label "hasWebsite"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#instanceTag> a rdf:Property;
+  rdfs:label "instanceTag"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium> a rdf:Property;
+  rdfs:label "publicationMedium"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation> a rdf:Property;
+  rdfs:label "regulation"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> a rdf:Property;
+  rdfs:label "targetAudience"@nl .
+
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> a rdf:Property;
+  rdfs:label "yourEuropeCategory"@nl .
+
+schemas:email a rdf:Property;
+  rdfs:label "hasEmail"@nl .
+
+schemas:endDate a rdf:Property;
+  rdfs:label "endDate"@nl .
+
+schemas:openingHours a rdf:Property;
+  rdfs:label "openinghours"@nl .
+
+schemas:startDate a rdf:Property;
+  rdfs:label "startDate"@nl .
+
+schemas:telephone a rdf:Property;
+  rdfs:label "hasTelephone"@nl .
+
+schemas:url a rdf:Property;
+  rdfs:label "website"@nl,
+    "location"@nl .
+
+<https://www.w3.org/ns/locn#adminUnitL2> a rdf:Property;
+  rdfs:label "administrativeUnitLevel2"@nl .

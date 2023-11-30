@@ -74,7 +74,13 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - augment ex:a-full-valid-instance to have multiple languages for each
 - the explanations in the shacl are sometimes in english, sometimes in nl; but the language string is always nl
 - should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
-- 
+- we should add all shacl:description for each shacl property we restrict ...  (see warnings in the file)
+- concept tag has no restrictions ... ? should we define a type for this?
+- ??           shacl:class dc:LinguisticSystem;
+          shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
+          shacl:name "language"@nl;
+          shacl:path pera:language
+ why not just use one of the pera.ttl file? 
 
  
 
