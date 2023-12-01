@@ -84,7 +84,7 @@ test.describe('Herziening nodig', () => {
         // update concept snapshot
         const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
         //TODO: LPDC-791: remove wait after fix
-        await wait(10000);
+        await wait(20000);
         const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
         // instantie moet vlagje 'herziening nodig' hebben
