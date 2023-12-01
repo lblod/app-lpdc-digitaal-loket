@@ -100,7 +100,9 @@ oss:ConceptualPublicServiceShape
           shacl:path lpdcExt:exception
       ], [
           shacl:class skos:Concept;
+          shacl:description "Uitvoerend bestuursniveau van een publieke dienst"@nl;
           shacl:name "executingAuthorityLevel"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/uitvoerend-bestuursniveau.ttl";
           shacl:path lpdcExt:executingAuthorityLevel
       ], [
           shacl:class cpsv:Rule;
@@ -263,7 +265,9 @@ oss:InstancePublicServiceShape
           shacl:path lpdcExt:exception
       ], [
           shacl:class skos:Concept;
+          shacl:description "Uitvoerend bestuursniveau van een publieke dienst"@nl;
           shacl:name "executingAuthorityLevel"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/uitvoerend-bestuursniveau.ttl";
           shacl:path lpdcExt:executingAuthorityLevel
       ], [
           shacl:class cpsv:Rule;
