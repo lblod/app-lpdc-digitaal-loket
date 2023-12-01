@@ -70,7 +70,7 @@ ex:an-concept-cost-all-languages-valid
 ex:an-instance-cost-all-languages-valid
     a m8g:Cost;
     dc:title """cost-title-en"""@en ;
-    dc:title """cost-title-nl"""@nl ;
+    dc:title """cost-title-nl"""@nl;
     dc:title """cost-title-nl-be-x-formal"""@nl-be-x-formal;
     dc:title """cost-title-nl-be-x-informal"""@nl-be-x-informal ;
     dc:description """cost-description-en"""@en;

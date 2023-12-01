@@ -264,22 +264,21 @@ oss:InstancePublicServiceShape
           shacl:class m8g:Cost;
           shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@nl;
           shacl:name "hasCost"@nl;
-          shacl:path m8g:hasCost;
+          shacl:path m8g:hasCost ;
           shacl:property [
-                             shacl:description "The title of the Has Cost property"@nl;
-                             shacl:name "hasCost > title"@nl;
-                             shacl:datatype rdf:langString;
-                             shacl:uniqueLang true;
-                             shacl:languageIn oss:allowedLanguagesOnInstance;
-                             shacl:path dc:title
-                         ], [
-                             shacl:description "The description of the Has Cost property"@nl;
-                             shacl:name "hasCost > description"@nl;
-                             shacl:datatype rdf:langString;
-                             shacl:uniqueLang true;
-                             shacl:languageIn oss:allowedLanguagesOnInstance;
-                             shacl:path dc:description
-                         ]
+              shacl:description "The title of the Has Cost property"@nl;
+              shacl:name "hasCost > title"@nl;
+              shacl:datatype rdf:langString;
+              shacl:uniqueLang true;
+              shacl:languageIn oss:allowedLanguagesOnInstance;
+              shacl:path dc:title
+          ], [
+              shacl:description "The description of the Has Cost property"@nl;
+              shacl:name "hasCost > description"@nl;
+              shacl:datatype rdf:langString;
+              shacl:uniqueLang true;
+              shacl:languageIn oss:allowedLanguagesOnInstance;
+              shacl:path dc:description ]
       ], [
           shacl:class m8g:PublicOrganisation;
           shacl:name "hasExecutingAuthority"@nl;

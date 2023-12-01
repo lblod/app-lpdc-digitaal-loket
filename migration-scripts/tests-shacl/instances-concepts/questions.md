@@ -95,6 +95,14 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
     - instantie : en, nl, nl-be-x-formal, nl-be-x-informal
 - <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> is not used as a type -> cpsv:PublicService is used instead ... 
 - currently, for cost, there is no closed = true present. so we don't validate if any other fields are present ... maybe that is ok ? 
+- langMatches -> formal / informal is not really working ? because of the hierarchical nature of validations ... 
+- oss:allowedLanguagesOnInstance
+  rdf:first "en" ;
+  rdf:rest  [ rdf:first "nl" ;
+  rdf:rest  [ rdf:first "nl-be-x-formal" ;
+  rdf:rest  [ rdf:first "nl-be-x-informal" ;
+  rdf:rest  rdf:nil ] ] ] .  => op termijn zal "nl" verdwijnen uit instanties.
+- 
 
  
 

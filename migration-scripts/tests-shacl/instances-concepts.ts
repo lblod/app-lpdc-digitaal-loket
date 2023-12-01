@@ -1,11 +1,12 @@
 import rdf from '@zazuko/env-node';
+import Dataset from '@zazuko/env';
 import SHACLValidator from 'rdf-validate-shacl';
 
 export async function main() {
     console.log('concept/instance');
-    await conceptInstanceTestData();
+    //await conceptInstanceTestData();
     //await readOntologies();
-    //await publishedInstance();
+    await publishedInstance();
 }
 
 //trying out clownface ...
@@ -27,6 +28,8 @@ async function readOntologies() {
 
 }
 
+
+
 async function conceptInstanceTestData() {
     const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
 
@@ -35,6 +38,27 @@ async function conceptInstanceTestData() {
 
     const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instances-test-cases-data.ttl'));
 
+    validate(instanceData, schemasOntologies, codeLists, shapes);
+
+}
+
+async function publishedInstance() {
+    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
+
+    //FYI: how to serialize in another format ... and you can also add prefixes ...  / but it does not seem to produce compact results ... but it works
+    //const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.json'));
+    //console.log(await instanceData.serialize({format: "text/turtle"}));
+
+    const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
+    const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
+
+    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.ttl'));
+
+    validate(instanceData, schemasOntologies, codeLists, shapes);
+}
+
+// @ts-ignore
+function validate(instanceData: Dataset, schemasOntologies: Dataset, codeLists: Dataset, shapes: Dataset) {
     const data = instanceData
         .merge(schemasOntologies) // to be able to validate the data, we should also include the schemas / ontologies the data / and or code lists data is referencing. // note we might need to split this up?
         .merge(codeLists); // and also the code lists (the validator needs to for example be able to verify the class type of one of the referenced objects).
@@ -68,19 +92,6 @@ async function conceptInstanceTestData() {
         console.log(result.sourceShape)
     }
     //console.log(await report.dataset.serialize({ format: 'text/n3' }))
-
-}
-
-async function publishedInstance() {
-    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
-
-    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.json'));
-    //FYI: how to serialize in another format ... and you can also add prefixes ...  / but it does not seem to produce compact results ... but it works
-    //console.log(await instanceData.serialize({format: "text/turtle"}));
-
-
-
-
 }
 
 main();
