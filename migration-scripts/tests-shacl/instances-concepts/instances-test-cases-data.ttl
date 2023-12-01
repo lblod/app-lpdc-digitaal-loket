@@ -7,7 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix m8g: <http://data.europa.eu/m8g/> .
 @prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
-@prefix schemas: <https://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix cpsv:	<http://purl.org/vocab/cpsv#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
@@ -16,16 +16,16 @@
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 
 ex:a-website-for-a-rule
-    a schemas:WebSite ;
+    a schema:WebSite ;
     dc:title """a-website-for-a-rule-title"""@nl ;
     dc:description """a-website-for-a-rule-description"""@nl ;
-    schemas:url "https://a-website-for-a-rule.org".
+    schema:url "https://a-website-for-a-rule.org".
 
 ex:a-website-for-an-instance
-    a schemas:WebSite ;
+    a schema:WebSite ;
     dc:title """a-website-for-an-instance-title"""@nl ;
     dc:description """a-website-for-an-instance-description"""@nl ;
-    schemas:url "https://a-website-for-an-instance.org".
+    schema:url "https://a-website-for-an-instance.org".
 
 ex:a-rule
     a cpsv:Rule;
@@ -37,12 +37,12 @@ ex:a-contactpoint-address
     a locn:Address.
 
 ex:a-contactpoint
-    a schemas:ContactPoint ;
+    a schema:ContactPoint ;
     lpdcExt:address ex:a-contactpoint-address ;
-    schemas:email "a-contactpoint@email.org" ;
-    schemas:telephone "6873546876767" ;
-    schemas:openingHours "9-12 each day" ;
-    schemas:url "a-contact-point@domein.org".
+    schema:email "a-contactpoint@email.org" ;
+    schema:telephone "6873546876767" ;
+    schema:openingHours "9-12 each day" ;
+    schema:url "a-contact-point@domein.org".
 
 ex:a-cost
     a m8g:Cost;
@@ -121,8 +121,8 @@ ex:a-full-valid-concept
     lpdcExt:additionalDescription """additional-description-nl"""@nl ;
     lpdcExt:conceptTag ex:a-concept-tag ;
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
-    schemas:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
-    schemas:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    schema:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    schema:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     lpdcExt:exception """exception"""@nl ;
     lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
     cpsv:follows ex:a-rule ;
@@ -157,8 +157,8 @@ ex:a-full-valid-instance
     dc:description  """description-en"""@en ;
     lpdcExt:additionalDescription """additional-description-nl"""@nl ;
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
-    schemas:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
-    schemas:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    schema:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    schema:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     lpdcExt:exception """exception"""@nl ;
     lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
     cpsv:follows ex:a-rule ;

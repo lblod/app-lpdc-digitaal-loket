@@ -2,7 +2,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schemas: <https://schema.org/> .
+@prefix schema: <http://schema.org/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -89,7 +89,7 @@ oss:ConceptualPublicServiceShape
           shacl:description "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
           shacl:maxCount 1;
           shacl:name "endDate"@nl;
-          shacl:path schemas:endDate
+          shacl:path schema:endDate
       ], [
           shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin uitzonderingen op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
@@ -150,7 +150,7 @@ oss:ConceptualPublicServiceShape
           shacl:name "hasLegalResource"@nl;
           shacl:path m8g:hasLegalResource
       ], [
-          shacl:class schemas:WebSite;
+          shacl:class schema:WebSite;
           shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
           shacl:name "hasMoreInfo"@nl;
           shacl:path rdfs:seeAlso
@@ -194,7 +194,7 @@ oss:ConceptualPublicServiceShape
           shacl:description "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
           shacl:maxCount 1;
           shacl:name "startDate"@nl;
-          shacl:path schemas:startDate
+          shacl:path schema:startDate
       ], [
           shacl:class skos:Concept;
           shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
@@ -250,7 +250,7 @@ oss:InstancePublicServiceShape
           shacl:description "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
           shacl:maxCount 1;
           shacl:name "endDate"@nl;
-          shacl:path schemas:endDate
+          shacl:path schema:endDate
       ], [
           shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
@@ -274,7 +274,7 @@ oss:InstancePublicServiceShape
           shacl:name "hasCompetentAuthority"@nl;
           shacl:path m8g:hasCompetentAuthority
       ], [
-          shacl:class schemas:ContactPoint;
+          shacl:class schema:ContactPoint;
           shacl:description "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant."@nl;
           shacl:name "hasContactPoint"@nl;
           shacl:path m8g:hasContactPoint
@@ -317,7 +317,7 @@ oss:InstancePublicServiceShape
           shacl:name "hasLegalResource"@nl;
           shacl:path m8g:hasLegalResource
       ], [
-          shacl:class schemas:WebSite;
+          shacl:class schema:WebSite;
           shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
           shacl:name "hasMoreInfo"@nl;
           shacl:path rdfs:seeAlso
@@ -381,7 +381,7 @@ oss:InstancePublicServiceShape
           shacl:description "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
           shacl:maxCount 1;
           shacl:name "startDate"@nl;
-          shacl:path schemas:startDate
+          shacl:path schema:startDate
       ], [
           shacl:class skos:Concept;
           shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
@@ -481,27 +481,27 @@ oss:ContactPointShape
           shacl:description "A property through which an e-mail address for the Public Organization, or a representative of it, can be contacted."@nl;
           shacl:maxCount 1;
           shacl:name "hasEmail"@nl;
-          shacl:path schemas:email
+          shacl:path schema:email
       ], [
           shacl:datatype xsd:string;
           shacl:description "A property through which a phone number for the Public Organization, or a representative of it, can be contacted."@nl;
           shacl:maxCount 1;
           shacl:name "hasTelephone"@nl;
-          shacl:path schemas:telephone
+          shacl:path schema:telephone
       ], [
           shacl:datatype xsd:string;
           shacl:description "The value of this property is structured text that gives the hours at which the contact point is normally available."@nl;
           shacl:maxCount 1;
           shacl:name "openinghours"@nl;
-          shacl:path schemas:openingHours
+          shacl:path schema:openingHours
       ], [
           shacl:datatype xsd:string;
           shacl:description "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs."@nl;
           shacl:maxCount 1;
           shacl:name "website"@nl;
-          shacl:path schemas:url
+          shacl:path schema:url
       ];
-    shacl:targetClass schemas:ContactPoint .
+    shacl:targetClass schema:ContactPoint .
 
 oss:EvidenceShape
     a shacl:NodeShape;
@@ -559,7 +559,7 @@ oss:ProcedureShape
           shacl:name "description"@nl;
           shacl:path dc:description
       ], [
-          shacl:class schemas:WebSite;
+          shacl:class schema:WebSite;
           shacl:description "Link naar online locatie waar de procedure opgestart kan worden."@nl;
           shacl:name "hasWebsite"@nl;
           shacl:path lpdcExt:hasWebsite
@@ -638,7 +638,7 @@ oss:WebsiteShape
           shacl:maxCount 1;
           shacl:minCount 1;
           shacl:name "location"@nl;
-          shacl:path schemas:url
+          shacl:path schema:url
       ], [
           shacl:datatype rdf:langString;
           shacl:maxCount 1;
@@ -646,7 +646,7 @@ oss:WebsiteShape
           shacl:name "name"@nl;
           shacl:path dc:title
       ];
-    shacl:targetClass schemas:WebSite .
+    shacl:targetClass schema:WebSite .
 
 oss:YourEuropeCategoryShape
     a shacl:NodeShape;

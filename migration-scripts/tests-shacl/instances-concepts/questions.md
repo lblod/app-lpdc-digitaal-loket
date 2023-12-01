@@ -108,5 +108,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - code lijsten voor bestuurseenheid voorzien? --> instructie geven  
 - code lijsten voor spatial voorzien ? --> instructie geven
 - code lijsten voor thematic area: verwijzen vanuit de shacl + mee in validatie context nemen -> geeft netjes een fout indien er niet aan voldoet. -> instructie geven
-- 
+- code lisjten voor type: verwijzen vanuit de shacl + mee in validatie context nemen -> geeft netjes een fout indien er niet aan voldoet. -> instructie geven
+- schemas -> schema ... 
 
