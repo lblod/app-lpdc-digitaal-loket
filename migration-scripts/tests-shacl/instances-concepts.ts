@@ -57,13 +57,17 @@ async function publishedInstance() {
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 
     const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.ttl'));
+    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concepts.ttl'));
+    const instanceAndConceptData
+        = instanceData
+        .merge(conceptData);
 
-    validate(instanceData, schemasOntologies, codeLists, shapes);
+    validate(instanceAndConceptData, schemasOntologies, codeLists, shapes);
 }
 
 // @ts-ignore
-function validate(instanceData: Dataset, schemasOntologies: Dataset, codeLists: Dataset, shapes: Dataset) {
-    const data = instanceData
+function validate(instanceAndConceptData: Dataset, schemasOntologies: Dataset, codeLists: Dataset, shapes: Dataset) {
+    const data = instanceAndConceptData
         .merge(schemasOntologies) // to be able to validate the data, we should also include the schemas / ontologies the data / and or code lists data is referencing. // note we might need to split this up?
         .merge(codeLists); // and also the code lists (the validator needs to for example be able to verify the class type of one of the referenced objects).
 
