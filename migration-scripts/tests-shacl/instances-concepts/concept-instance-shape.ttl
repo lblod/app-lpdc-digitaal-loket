@@ -122,6 +122,7 @@ oss:ConceptualPublicServiceShape
                              shacl:datatype rdf:langString;
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnConcept;
+                             shacl:minCount 1;
                              shacl:path dc:title
                          ], [
                              shacl:description "The description of the Has Cost property"@nl;
@@ -129,8 +130,16 @@ oss:ConceptualPublicServiceShape
                              shacl:datatype rdf:langString;
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnConcept;
+                             shacl:minCount 1;
                              shacl:path dc:description
-                         ]
+                         ],  [
+                              shacl:description "The order of the Has Cost property"@nl;
+                              shacl:name "hasCost > order"@nl;
+                              shacl:datatype xsd:integer ;
+                              shacl:minCount 1;
+                              shacl:maxCount 1;
+                              shacl:path shacl:order
+                          ]
       ], [
           shacl:class m8g:PublicOrganisation;
           shacl:name "hasExecutingAuthority"@nl;
@@ -278,6 +287,7 @@ oss:InstancePublicServiceShape
                               shacl:datatype rdf:langString;
                               shacl:uniqueLang true;
                               shacl:languageIn oss:allowedLanguagesOnInstance;
+                              shacl:minCount 1;
                               shacl:path dc:title
                           ], [
                               shacl:description "The description of the Has Cost property"@nl;
@@ -285,7 +295,15 @@ oss:InstancePublicServiceShape
                               shacl:datatype rdf:langString;
                               shacl:uniqueLang true;
                               shacl:languageIn oss:allowedLanguagesOnInstance;
+                              shacl:minCount 1;
                               shacl:path dc:description
+                          ], [
+                              shacl:description "The order of the Has Cost property"@nl;
+                              shacl:name "hasCost > order"@nl;
+                              shacl:datatype xsd:integer ;
+                              shacl:minCount 1;
+                              shacl:maxCount 1;
+                              shacl:path shacl:order
                           ]
       ], [
           shacl:class m8g:PublicOrganisation;

@@ -4,7 +4,7 @@ import SHACLValidator from 'rdf-validate-shacl';
 
 export async function main() {
     console.log('concept/instance');
-    //await conceptInstanceTestData();
+    await conceptInstanceTestData();
     //await readOntologies();
     await publishedInstance();
 }
@@ -27,7 +27,6 @@ async function readOntologies() {
     // -> empty array, unless we load more shapes ...
 
 }
-
 
 
 async function conceptInstanceTestData() {

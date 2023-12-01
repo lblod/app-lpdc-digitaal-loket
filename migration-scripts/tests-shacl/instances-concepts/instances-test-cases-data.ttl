@@ -13,6 +13,7 @@
 @prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix pera: <http://publications.europa.eu/resource/authority/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
 
 ex:a-website-for-a-rule
     a schemas:WebSite ;
@@ -46,7 +47,8 @@ ex:a-contactpoint
 ex:a-cost
     a m8g:Cost;
     dc:title """cost-title"""@nl ;
-    dc:description """cost-description"""@nl.
+    dc:description """cost-description"""@nl;
+    shacl:order 1.
 
 ex:an-concept-cost-all-languages-valid
     a m8g:Cost;
@@ -65,7 +67,8 @@ ex:an-concept-cost-all-languages-valid
     dc:description """cost-description-nl-be-x-formal"""@nl-be-x-formal;
     dc:description """cost-description-nl-be-x-informal"""@nl-be-x-informal;
     dc:description """cost-description-nl-be-x-generated-formal"""@nl-be-x-generated-formal;
-    dc:description """cost-description-nl-be-x-generated-informal"""@nl-be-x-generated-informal.
+    dc:description """cost-description-nl-be-x-generated-informal"""@nl-be-x-generated-informal;
+    shacl:order 1.
 
 ex:an-instance-cost-all-languages-valid
     a m8g:Cost;
@@ -76,7 +79,8 @@ ex:an-instance-cost-all-languages-valid
     dc:description """cost-description-en"""@en;
     dc:description """cost-description-nl"""@nl;
     dc:description """cost-description-nl-be-x-formal"""@nl-be-x-formal;
-    dc:description """cost-description-nl-be-x-informal"""@nl-be-x-informal.
+    dc:description """cost-description-nl-be-x-informal"""@nl-be-x-informal;
+    shacl:order 1.
 
 ex:a-supporting-evidence
     a m8g:Evidence ;
