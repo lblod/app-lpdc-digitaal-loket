@@ -146,6 +146,7 @@ oss:ConceptualPublicServiceShape
                           ]
       ], [
           shacl:class m8g:PublicOrganisation;
+          shacl:description "Uitvoerend bestuur van een publieke dienst"@nl;
           shacl:name "hasExecutingAuthority"@nl;
           shacl:path lpdcExt:hasExecutingAuthority
       ], [
@@ -317,6 +318,7 @@ oss:InstancePublicServiceShape
                           ]
       ], [
           shacl:class m8g:PublicOrganisation;
+          shacl:description "Uitvoerend bestuur van een publieke dienst"@nl;
           shacl:name "hasExecutingAuthority"@nl;
           shacl:path lpdcExt:hasExecutingAuthority
       ], [
