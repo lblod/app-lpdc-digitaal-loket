@@ -51,10 +51,12 @@ async function publishedInstance() {
     const exampleCodeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const themaCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230627161016-thema-codelist/20230627161016-thema-codelist.ttl'));
     const typeCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230627163552-type-codelist/20230627163552-type-codelist.ttl'));
+    const bevoegdBestuursniveauCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230628112712-bevoegd-bestuursniveau/20230628112712-bevoegd-bestuursniveau.ttl'));
     const codeLists
         = exampleCodeLists
         .merge(themaCodeList)
-        .merge(typeCodeList);
+        .merge(typeCodeList)
+        .merge(bevoegdBestuursniveauCodeList);
 
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 
