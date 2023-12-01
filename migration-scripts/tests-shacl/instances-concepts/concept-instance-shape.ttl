@@ -203,8 +203,9 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "This property represents the theme of a Public Service as described in a controlled vocabulary."@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/thema.ttl";
           shacl:name "theme"@nl;
-          shacl:path m8g:thematicArea
+          shacl:path m8g:thematicArea;
       ], [
           shacl:class skos:Concept;
           shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...)"@nl;
@@ -389,6 +390,7 @@ oss:InstancePublicServiceShape
           shacl:class skos:Concept;
           shacl:description "This property represents the theme of a Public Service as described in a controlled vocabulary."@nl;
           shacl:name "theme"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/thema.ttl";
           shacl:path m8g:thematicArea
       ], [
           shacl:class skos:Concept;

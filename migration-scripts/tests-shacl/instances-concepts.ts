@@ -48,7 +48,12 @@ async function publishedInstance() {
     //const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.json'));
     //console.log(await instanceData.serialize({format: "text/turtle"}));
 
-    const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
+    const exampleCodeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
+    const themaCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230627161016-thema-codelist/20230627161016-thema-codelist.ttl'));
+    const codeLists
+        = exampleCodeLists
+        .merge(themaCodeList);
+
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 
     const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.ttl'));

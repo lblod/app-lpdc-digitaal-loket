@@ -95,14 +95,18 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
     - instantie : en, nl, nl-be-x-formal, nl-be-x-informal
 - <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> is not used as a type -> cpsv:PublicService is used instead ... 
 - currently, for cost, there is no closed = true present. so we don't validate if any other fields are present ... maybe that is ok ? 
-- langMatches -> formal / informal is not really working ? because of the hierarchical nature of validations ... (and thus a ''known' limitation for all language specified strings) => we should add a note ...  
+- known limitation: langMatches -> formal / informal is not really working ? because of the hierarchical nature of validations ... (and thus a ''known' limitation for all language specified strings) => we should add a note ...  
+  ... kan wel opgelost worden met sparql queries
 - oss:allowedLanguagesOnInstance
   rdf:first "en" ;
   rdf:rest  [ rdf:first "nl" ;
   rdf:rest  [ rdf:first "nl-be-x-formal" ;
   rdf:rest  [ rdf:first "nl-be-x-informal" ;
   rdf:rest  rdf:nil ] ] ] .  => op termijn zal "nl" verdwijnen uit instanties.
+- known limitation:  the order type has an order ; not easy to deeply validate that on each cost, the orders are unique
+  ... kan wel opgelost worden met sparql queries
+- code lijsten voor bestuurseenheid voorzien? --> instructie geven  
+- code lijsten voor spatial voorzien ? --> instructie geven
+- code lijsten voor thematic area: verwijzen vanuit de shacl + mee in validatie context nemen -> geeft netjes een fout indien er niet aan voldoet. -> instructie geven
 - 
-
- 
 
