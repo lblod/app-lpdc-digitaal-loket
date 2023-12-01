@@ -62,7 +62,9 @@ oss:ConceptualPublicServiceShape
     shacl:property [
           shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
-          shacl:maxCount 1;
+          shacl:languageIn oss:allowedLanguagesOnConcept;
+          shacl:uniqueLang true;
+          shacl:maxCount 8; # one for each language allowed
           shacl:name "additionalDescription"@nl;
           shacl:path lpdcExt:additionalDescription
       ], [
@@ -215,7 +217,9 @@ oss:InstancePublicServiceShape
     shacl:property [
           shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
-          shacl:maxCount 1;
+          shacl:languageIn oss:allowedLanguagesOnInstance;
+          shacl:uniqueLang true;
+          shacl:maxCount 4; # one for each language allowed
           shacl:name "additionalDescription"@nl;
           shacl:path lpdcExt:additionalDescription
       ], [
