@@ -208,7 +208,8 @@ oss:ConceptualPublicServiceShape
           shacl:path m8g:thematicArea;
       ], [
           shacl:class skos:Concept;
-          shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...)"@nl;
+          shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...), in een gecontroleerde vocabularium."@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/type.ttl";
           shacl:maxCount 1;
           shacl:name "type"@nl;
           shacl:path dc:type
@@ -394,7 +395,8 @@ oss:InstancePublicServiceShape
           shacl:path m8g:thematicArea
       ], [
           shacl:class skos:Concept;
-          shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...)"@nl;
+          shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...), in een gecontroleerde vocabularium."@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/type.ttl";
           shacl:maxCount 1;
           shacl:name "type"@nl;
           shacl:path dc:type
