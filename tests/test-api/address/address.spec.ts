@@ -31,9 +31,9 @@ test(`find municipality for string 'qsdccgyuj'`, async ({request}) => {
     expect(actual).toEqual([]);
 });
 
-test(`find main municipality for sub municipality 'kessel-lo'`, async ({request}) => {
+test(`find main municipality for sub municipality 'wilsele'`, async ({request}) => {
 
-    const params = {search: 'kessel-lo'};
+    const params = {search: 'wilsele'};
     const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {params});
 
     expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
