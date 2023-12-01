@@ -1,7 +1,3 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xs:   <http://www.w3.org/2001/XMLSchema#> .
-
 #<http://data.lblod.info/form-data/nodes/023bafc7-06be-4d46-befa-a56d387b2e72> <http://schema.org/email> "1111@example.com" .
 #<http://data.lblod.info/form-data/nodes/023bafc7-06be-4d46-befa-a56d387b2e72> <http://schema.org/openingHours> "https://www.example1.com/openinghours" .
 #<http://data.lblod.info/form-data/nodes/023bafc7-06be-4d46-befa-a56d387b2e72> <http://schema.org/telephone> "111111111" .
@@ -63,9 +59,9 @@
 #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/bf411975-4ced-4c74-a746-555ed0fe1024> .
 #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> .
 #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
-#<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/dcat#keyword> "Akte - nl"@nl .
-#<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/dcat#keyword> "Nationaliteit - nl"@nl .
-#<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/dcat#keyword> "een-nieuwe-tag"@nl .
+<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/dcat#keyword> "Akte - nl"@nl .
+<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/dcat#keyword> "Nationaliteit - nl"@nl .
+<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/dcat#keyword> "een-nieuwe-tag"@nl .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription> "<p data-indentation-level=\"0\">Verdere beschrijving - nlef6094e3-b38c-4c81-8e48-e9fbb2c23c36</p>"@nl-be-x-formal .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription> "<p data-indentation-level=\"0\">The certificate states:the last name, first names, date and place of birth of the person to whom the certificate relatesthe legal foundation of the declaration on the basis of which the certificate was drawn upin the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.89bb3614-518b-415c-ad98-c78e5e8ad283</p>"@en .
 #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
