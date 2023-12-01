@@ -112,4 +112,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - schemas -> schema ... 
 - keywords: moeten we de talen beperken ? nl / en ? 
 - TODO: verify all kardinaliteiten ... 
+- question: should conceptTag be present on an instance ?
+- 
 

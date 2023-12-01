@@ -30,7 +30,6 @@
                                                                                                                                                                                 oss:TypeShape,
                                                                                                                                                                                 oss:PublicationMediumShape,
                                                                                                                                                                                 oss:InstanceTagShape,
-                                                                                                                                                                                oss:ConceptTagShape,
                                                                                                                                                                                 oss:ThemeShape,
                                                                                                                                                                                 oss:AddressShape,
                                                                                                                                                                                 oss:ContactPointShape,
@@ -76,6 +75,7 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/concept-tag.ttl";
           shacl:name "conceptTag"@nl;
           shacl:path lpdcExt:conceptTag
       ], [
@@ -471,11 +471,6 @@ oss:AddressShape
           shacl:path adres:Straatnaam
       ];
     shacl:targetClass locn:Address .
-
-oss:ConceptTagShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
 
 oss:ContactPointShape
     a shacl:NodeShape;
