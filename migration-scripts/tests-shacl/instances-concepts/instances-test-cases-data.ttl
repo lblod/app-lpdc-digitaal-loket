@@ -111,7 +111,9 @@ ex:a-minimal-valid-concept
 ex:a-full-valid-concept
     a lpdcExt:ConceptualPublicService ;
     dc:title """title-nl"""@nl ;
+    dc:title """title-en"""@en ;
     dc:description  """description-nl"""@nl ;
+    dc:description  """description-en"""@en ;
     lpdcExt:additionalDescription """additional-description-nl"""@nl ;
     lpdcExt:conceptTag ex:a-concept-tag ;
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
@@ -146,7 +148,9 @@ ex:a-minimal-valid-instance
 ex:a-full-valid-instance
     a cpsv:PublicService ;
     dc:title """title-nl"""@nl ;
+    dc:title """title-en"""@en ;
     dc:description  """description-nl"""@nl ;
+    dc:description  """description-en"""@en ;
     lpdcExt:additionalDescription """additional-description-nl"""@nl ;
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
     schemas:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;

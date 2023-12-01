@@ -77,8 +77,9 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
-          shacl:maxCount 1;
           shacl:minCount 1;
+          shacl:languageIn oss:allowedLanguagesOnConcept;
+          shacl:uniqueLang true;
           shacl:name "description"@nl;
           shacl:path dc:description
       ], [
@@ -156,8 +157,9 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "This property represents the official Name of the Public Service."@nl;
-          shacl:maxCount 1;
           shacl:minCount 1;
+          shacl:languageIn oss:allowedLanguagesOnConcept;
+          shacl:uniqueLang true;
           shacl:name "name"@nl;
           shacl:path dc:title
       ], [
@@ -223,8 +225,9 @@ oss:InstancePublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
-          shacl:maxCount 1;
           shacl:minCount 1;
+          shacl:languageIn oss:allowedLanguagesOnInstance;
+          shacl:uniqueLang true;
           shacl:name "description"@nl;
           shacl:path dc:description
       ], [
@@ -266,19 +269,20 @@ oss:InstancePublicServiceShape
           shacl:name "hasCost"@nl;
           shacl:path m8g:hasCost ;
           shacl:property [
-              shacl:description "The title of the Has Cost property"@nl;
-              shacl:name "hasCost > title"@nl;
-              shacl:datatype rdf:langString;
-              shacl:uniqueLang true;
-              shacl:languageIn oss:allowedLanguagesOnInstance;
-              shacl:path dc:title
-          ], [
-              shacl:description "The description of the Has Cost property"@nl;
-              shacl:name "hasCost > description"@nl;
-              shacl:datatype rdf:langString;
-              shacl:uniqueLang true;
-              shacl:languageIn oss:allowedLanguagesOnInstance;
-              shacl:path dc:description ]
+                              shacl:description "The title of the Has Cost property"@nl;
+                              shacl:name "hasCost > title"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnInstance;
+                              shacl:path dc:title
+                          ], [
+                              shacl:description "The description of the Has Cost property"@nl;
+                              shacl:name "hasCost > description"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnInstance;
+                              shacl:path dc:description
+                          ]
       ], [
           shacl:class m8g:PublicOrganisation;
           shacl:name "hasExecutingAuthority"@nl;
@@ -322,8 +326,9 @@ oss:InstancePublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "This property represents the official Name of the Public Service."@nl;
-          shacl:maxCount 1;
           shacl:minCount 1;
+          shacl:languageIn oss:allowedLanguagesOnInstance;
+          shacl:uniqueLang true;
           shacl:name "name"@nl;
           shacl:path dc:title
       ], [
