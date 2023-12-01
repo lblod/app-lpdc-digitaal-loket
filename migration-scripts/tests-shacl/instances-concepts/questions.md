@@ -94,7 +94,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
     - concept : same as instantie (en, nl, nl-be-x-formal, nl-be-x-informal), nl-be-x-generated-formal, nl-be-x-generated-informal, de, fr
     - instantie : en, nl, nl-be-x-formal, nl-be-x-informal
 - <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> is not used as a type -> cpsv:PublicService is used instead ... 
-- 
+- currently, for cost, there is no closed = true present. so we don't validate if any other fields are present ... maybe that is ok ? 
 
  
 
