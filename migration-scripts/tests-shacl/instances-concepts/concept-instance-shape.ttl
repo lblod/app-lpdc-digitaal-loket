@@ -29,7 +29,6 @@
                                                                                                                                                                                 oss:ThemeShape,
                                                                                                                                                                                 oss:AddressShape,
                                                                                                                                                                                 oss:ContactPointShape,
-                                                                                                                                                                                oss:WebsiteShape,
                                                                                                                                                                                 oss:allowedLanguagesOnConcept,
                                                                                                                                                                                 oss:allowedLanguagesOnInstance.
 
@@ -136,6 +135,36 @@ oss:ConceptualPublicServiceShape
                              shacl:description "Link naar online locatie waar de procedure opgestart kan worden."@nl;
                              shacl:name "hasWebsite"@nl;
                              shacl:path lpdcExt:hasWebsite
+                         ],[
+                              shacl:description "This property represents the title of the Website."@nl;
+                              shacl:name "follows > hasWebsite > title"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnConcept;
+                              shacl:minCount 1;
+                              shacl:path (lpdcExt:hasWebsite dc:title)
+                         ], [
+                             shacl:description "This property represents the description of the Website."@nl;
+                             shacl:name "follows > hasWebsite > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnConcept;
+                             shacl:minCount 1;
+                             shacl:path (lpdcExt:hasWebsite dc:description)
+                         ], [
+                             shacl:datatype xsd:string;
+                             shacl:description "This property represents the url of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name "follows > hasWebsite > location"@nl;
+                             shacl:path (lpdcExt:hasWebsite schema:url)
+                         ], [
+                             shacl:datatype xsd:integer ;
+                             shacl:description "This property represents the order of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name  "follows > hasWebsite > order"@nl;
+                             shacl:path (lpdcExt:hasWebsite shacl:order)
                          ]
       ], [
           shacl:class m8g:PublicOrganisation;
@@ -336,8 +365,38 @@ oss:InstancePublicServiceShape
                          ], [
                               shacl:class schema:WebSite;
                               shacl:description "Link naar online locatie waar de procedure opgestart kan worden."@nl;
-                              shacl:name "hasWebsite"@nl;
+                              shacl:name "follows > hasWebsite"@nl;
                               shacl:path lpdcExt:hasWebsite
+                         ],[
+                              shacl:description "This property represents the title of the Website."@nl;
+                              shacl:name "follows > hasWebsite > title"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnInstance;
+                              shacl:minCount 1;
+                              shacl:path (lpdcExt:hasWebsite dc:title)
+                         ], [
+                             shacl:description "This property represents the description of the Website."@nl;
+                             shacl:name "follows > hasWebsite > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnInstance;
+                             shacl:minCount 1;
+                             shacl:path (lpdcExt:hasWebsite dc:description)
+                         ], [
+                             shacl:datatype xsd:string;
+                             shacl:description "This property represents the url of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name "follows > hasWebsite > location"@nl;
+                             shacl:path (lpdcExt:hasWebsite schema:url)
+                         ], [
+                             shacl:datatype xsd:integer ;
+                             shacl:description "This property represents the order of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name  "follows > hasWebsite > order"@nl;
+                             shacl:path (lpdcExt:hasWebsite shacl:order)
                          ]
       ], [
           shacl:class m8g:PublicOrganisation;
@@ -662,30 +721,6 @@ oss:TypeShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:targetClass skos:Concept .
-
-oss:WebsiteShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents a free text description of the Website."@nl;
-          shacl:maxCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:datatype xsd:string;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "location"@nl;
-          shacl:path schema:url
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path dc:title
-      ];
-    shacl:targetClass schema:WebSite .
 
 oss:eli::LegalResourceShape
     a shacl:NodeShape;

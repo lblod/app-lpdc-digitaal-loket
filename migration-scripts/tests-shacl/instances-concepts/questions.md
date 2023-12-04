@@ -116,5 +116,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - TODO: add a concept.ttl example and validate
 - REMARK: since the library we are using (https://github.com/zazuko/rdf-validate-shacl) does not support [shacl - sparql based constraints](https://www.w3.org/TR/shacl/#sparql-constraints) ; more complex validations that talk about the actual data for instance if for a certain type (title) a language en is filled in, then also a description with a language en is filled in; is not possible to express...
 - TODO: how to do / document these fields ?
+- REMARK: procedure > website : added order
 - 
 

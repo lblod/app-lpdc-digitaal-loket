@@ -19,7 +19,8 @@ ex:a-website-for-a-rule
     a schema:WebSite ;
     dc:title """a-website-for-a-rule-title"""@nl ;
     dc:description """a-website-for-a-rule-description"""@nl ;
-    schema:url "https://a-website-for-a-rule.org".
+    schema:url "https://a-website-for-a-rule.org";
+    shacl:order 1.
 
 ex:a-website-for-an-instance
     a schema:WebSite ;
