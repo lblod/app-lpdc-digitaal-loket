@@ -31,7 +31,8 @@ ex:a-rule
     a cpsv:Rule;
     dc:title """rule-title"""@nl ;
     dc:description """rule-description"""@nl ;
-    lpdcExt:hasWebsite ex:a-website-for-a-rule.
+    lpdcExt:hasWebsite ex:a-website-for-a-rule ;
+    shacl:order 1.
 
 ex:a-contactpoint-address
     a locn:Address.
