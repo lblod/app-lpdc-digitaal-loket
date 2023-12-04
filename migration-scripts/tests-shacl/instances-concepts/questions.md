@@ -113,5 +113,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - keywords: moeten we de talen beperken ? nl / en ? 
 - TODO: verify all kardinaliteiten ... 
 - question: should conceptTag be present on an instance ?
+- publicationMedium: also add RechtenVerkenner ? / and others ? currently only YourEurope is in 'official code list'
 - 
 

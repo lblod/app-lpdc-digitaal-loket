@@ -28,7 +28,6 @@
                                                                                                                                                                                 oss:YourEuropeCategoryShape,
                                                                                                                                                                                 oss:TargetAudienceShape,
                                                                                                                                                                                 oss:TypeShape,
-                                                                                                                                                                                oss:PublicationMediumShape,
                                                                                                                                                                                 oss:InstanceTagShape,
                                                                                                                                                                                 oss:ThemeShape,
                                                                                                                                                                                 oss:AddressShape,
@@ -187,6 +186,7 @@ oss:ConceptualPublicServiceShape
           shacl:class skos:Concept;
           shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
           shacl:name "publicationMedium"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/publicatie-kanaal.ttl";
           shacl:path lpdcExt:publicationMedium
       ], [
           shacl:datatype rdf:langString;
@@ -371,8 +371,10 @@ oss:InstancePublicServiceShape
           shacl:name "produces"@nl;
           shacl:path cpsv:produces
       ], [
+          shacl:class skos:Concept;
           shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
           shacl:name "publicationMedium"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/publicatie-kanaal.ttl";
           shacl:path lpdcExt:publicationMedium
       ], [
           shacl:datatype rdf:langString;
@@ -577,11 +579,6 @@ oss:ProcedureShape
           shacl:path dc:title
       ];
     shacl:targetClass cpsv:Rule .
-
-oss:PublicationMediumShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
 
 oss:PubliekeOrganisatieShape
     a shacl:NodeShape;
