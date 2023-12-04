@@ -191,7 +191,9 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
-          shacl:maxCount 1;
+          shacl:languageIn oss:allowedLanguagesOnConcept;
+          shacl:uniqueLang true;
+          shacl:maxCount 8; # one for each language allowed
           shacl:name "regulation"@nl;
           shacl:path lpdcExt:regulation
       ], [
@@ -383,7 +385,9 @@ oss:InstancePublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
-          shacl:maxCount 1;
+          shacl:languageIn oss:allowedLanguagesOnInstance;
+          shacl:uniqueLang true;
+          shacl:maxCount 4; # one for each language allowed
           shacl:name "regulation"@nl;
           shacl:path lpdcExt:regulation
       ], [
