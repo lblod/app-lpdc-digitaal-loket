@@ -123,7 +123,10 @@ ex:a-full-valid-concept
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
     schema:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     schema:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
-    lpdcExt:exception """exception"""@nl ;
+    lpdcExt:exception """exception-nl"""@nl ;
+    lpdcExt:exception """exception-en"""@en ;
+    lpdcExt:exception """exception-de"""@de ;
+    lpdcExt:exception """exception-fr"""@fr ;
     lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
     cpsv:follows ex:a-rule ;
     m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
@@ -159,7 +162,8 @@ ex:a-full-valid-instance
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
     schema:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
     schema:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
-    lpdcExt:exception """exception"""@nl ;
+    lpdcExt:exception """exception-nl"""@nl ;
+    lpdcExt:exception """exception-en"""@en ;
     lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
     cpsv:follows ex:a-rule ;
     m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;

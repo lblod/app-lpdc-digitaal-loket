@@ -94,7 +94,9 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin uitzonderingen op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
-          shacl:maxCount 1;
+          shacl:languageIn oss:allowedLanguagesOnConcept;
+          shacl:uniqueLang true;
+          shacl:maxCount 8; # one for each language allowed
           shacl:name "exception"@nl;
           shacl:path lpdcExt:exception
       ], [
@@ -261,7 +263,9 @@ oss:InstancePublicServiceShape
       ], [
           shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
-          shacl:maxCount 1;
+          shacl:languageIn oss:allowedLanguagesOnInstance;
+          shacl:uniqueLang true;
+          shacl:maxCount 4; # one for each language allowed
           shacl:name "exception"@nl;
           shacl:path lpdcExt:exception
       ], [
