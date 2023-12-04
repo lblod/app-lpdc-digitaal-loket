@@ -117,5 +117,12 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - REMARK: since the library we are using (https://github.com/zazuko/rdf-validate-shacl) does not support [shacl - sparql based constraints](https://www.w3.org/TR/shacl/#sparql-constraints) ; more complex validations that talk about the actual data for instance if for a certain type (title) a language en is filled in, then also a description with a language en is filled in; is not possible to express...
 - TODO: how to do / document these fields ?
 - REMARK: procedure > website : added order
+- REMARK: contactpoint > email: pattern
+- TODO: contactpoint > url: ipv literal (xsd:string) -> [IRI](https://www.w3.org/TR/shacl/#NodeKindConstraintComponent) _verwijst code wijziging bij lpdc en ipdc
+- TODO: locn:adminUnitL2 : no example in instance-published.ttl
+- REMARK: AddressShape ? country required?              shacl:minCount 1;
+- REMARK: AddressShape > fullAddress verwijderd
+- REMARK: Adress : gemeente, straatnaam, land : we beperken nu tot en / nl als taal
+- REMARK: Address > startnaam: min count = 1 + taal nl / en
 - 
 

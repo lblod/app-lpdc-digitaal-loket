@@ -14,6 +14,7 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix pera: <http://publications.europa.eu/resource/authority/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix adres: <https://data.vlaanderen.be/ns/adres#> .
 
 ex:a-website-for-a-rule
     a schema:WebSite ;
@@ -36,7 +37,13 @@ ex:a-rule
     shacl:order 1.
 
 ex:a-contactpoint-address
-    a locn:Address.
+    a locn:Address;
+    adres:Adresvoorstelling.huisnummer "1";
+    adres:Adresvoorstelling.busnummer "b";
+    adres:Straatnaam "boter straat"@nl;
+    adres:gemeentenaam "Harelbeke"@nl;
+    adres:postcode "11000";
+    adres:land "België"@nl.
 
 ex:a-contactpoint
     a schema:ContactPoint ;
@@ -44,7 +51,8 @@ ex:a-contactpoint
     schema:email "a-contactpoint@email.org" ;
     schema:telephone "6873546876767" ;
     schema:openingHours "9-12 each day" ;
-    schema:url "a-contact-point@domein.org".
+    schema:url "a-contact-point@domein.org";
+    shacl:order 1.
 
 ex:a-cost
     a m8g:Cost;
