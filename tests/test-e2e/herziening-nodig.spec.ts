@@ -1,4 +1,4 @@
-import {expect, Page, test} from "@playwright/test";
+import {APIRequestContext, expect, Page, test} from "@playwright/test";
 import {v4 as uuid} from 'uuid';
 import {MockLoginPage} from "./pages/mock-login-page";
 import {LpdcHomePage} from "./pages/lpdc-home-page";
@@ -11,6 +11,7 @@ import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {IpdcStub} from "./components/ipdc-stub";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 import {wait} from "./shared/shared";
+import {BevestigHerzieningVerverwerktModal} from "./modals/bevestig-herziening-ververwerkt-modal";
 
 test.describe('Herziening nodig', () => {
 
@@ -21,8 +22,8 @@ test.describe('Herziening nodig', () => {
     let conceptDetailsPage: ConceptDetailsPage;
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
+    let bevestigHerzieningVerwerktModal: BevestigHerzieningVerverwerktModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
-
 
     test.beforeEach(async ({browser}) => {
         page = await browser.newPage();
@@ -33,6 +34,7 @@ test.describe('Herziening nodig', () => {
         conceptDetailsPage = ConceptDetailsPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
+        bevestigHerzieningVerwerktModal = BevestigHerzieningVerverwerktModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
 
         await mockLoginPage.goto();
@@ -222,6 +224,177 @@ test.describe('Herziening nodig', () => {
         expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).not.toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${createSnapshot.id}`);
 
     });
+
+    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when saving form', async ({request}) => {
+        //create instance with herziening nodig label
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        let newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+
+        // popup should show when saving
+        await instantieDetailsPage.beschrijvingEditor.fill(uuid());
+        await instantieDetailsPage.beschrijvingEditor.blur();
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click()
+
+        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+    });
+
+    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when navigating away with changes', async ({request}) => {
+        //create instance with herziening nodig label
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        let newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+
+        // popup should show bij wegklikken
+        await instantieDetailsPage.beschrijvingEditor.fill(uuid());
+        await instantieDetailsPage.beschrijvingEditor.blur();
+
+        await instantieDetailsPage.eigenschappenTab.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click()
+
+        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+    });
+
+    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when verzend naar overheid', async ({request}) => {
+        //create instance with herziening nodig label
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        let newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+
+        // popup should show bij verzend naar overheid
+        await instantieDetailsPage.beschrijvingEditor.fill(uuid());
+        await instantieDetailsPage.beschrijvingEditor.blur();
+
+        await instantieDetailsPage.eigenschappenTab.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.nee.click();
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+
+        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+    });
+
 
 });
 

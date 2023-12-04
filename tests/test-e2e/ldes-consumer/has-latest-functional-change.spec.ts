@@ -26,10 +26,6 @@ test(`Latest functional changes is added between concept and concept-snapshot `,
         {
             s: {type: 'uri', value: 'https://ipdc.tni-vlaanderen.be/id/concept/9adcd3db-3acc-4707-867f-e82a8b6429f8'},
             o: {type: 'uri', value: 'https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/f23a4afa-5d92-4331-8f1d-a2b17382b6e9'}
-        },
-        {
-            s: {type: 'uri', value: 'https://ipdc.tni-vlaanderen.be/id/concept/9a69eb39-c6c2-4244-aedd-1847d4f72586'},
-            o: {type: 'uri', value: 'https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/ad6635b9-6259-414b-968e-458e7e4a38e1'}
         }
     ]));
 
