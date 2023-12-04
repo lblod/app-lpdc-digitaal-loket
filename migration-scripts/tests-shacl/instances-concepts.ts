@@ -67,7 +67,12 @@ async function publishedInstance() {
         .merge(yourEuropeCategoryCodeList)
         .merge(doelgroepCodeList);
 
-    const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
+    const besluitOntology = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
+    const ipdcLpdcOntology = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/ipdc-lpdc.ttl'));
+
+    const schemasOntologies
+        = besluitOntology
+        .merge(ipdcLpdcOntology);
 
     const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.ttl'));
     const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concepts.ttl'));

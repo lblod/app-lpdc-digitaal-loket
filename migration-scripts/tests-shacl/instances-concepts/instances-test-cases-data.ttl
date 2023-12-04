@@ -112,8 +112,16 @@ ex:a-language
 
 ex:an-output
     a m8g:Output ;
-    dc:title """an-output-title"""@nl ;
-    dc:description """an-output-description"""@nl.
+    dc:title """an-output-title"""@nl;
+    dc:title """an-output-title-en"""@en;
+    dc:description """an-output-description"""@nl;
+    shacl:order 1.
+
+ex:another-output
+    a m8g:Output ;
+    dc:title """an-output-title"""@nl;
+    dc:description """an-output-description"""@nl;
+    shacl:order 2.
 
 ex:a-legal-resource
     a eli:LegalResource;
@@ -152,6 +160,7 @@ ex:a-full-valid-concept
     ps:hasRequirement ex:a-requirement;
     dcat:keyword """a-keyword"""@nl ;
     cpsv:produces ex:an-output;
+    cpsv:produces ex:another-output;
     lpdcExt:regulation """regulation-nl"""@nl ;
     lpdcExt:targetAudience ex:a-target-audience ;
     m8g:thematicArea ex:a-thematic-area;

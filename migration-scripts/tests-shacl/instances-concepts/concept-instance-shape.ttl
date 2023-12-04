@@ -114,6 +114,7 @@ oss:ConceptualPublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnConcept;
                              shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
                              shacl:path dc:title
                          ], [
                              shacl:description "The description of the follows rule property"@nl;
@@ -122,6 +123,7 @@ oss:ConceptualPublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnConcept;
                              shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
                              shacl:path dc:description
                          ], [
                              shacl:description "The order of the follows rule property"@nl;
@@ -142,6 +144,7 @@ oss:ConceptualPublicServiceShape
                               shacl:uniqueLang true;
                               shacl:languageIn oss:allowedLanguagesOnConcept;
                               shacl:minCount 1;
+                              shacl:maxCount 8; # one for each language allowed
                               shacl:path (lpdcExt:hasWebsite dc:title)
                          ], [
                              shacl:description "This property represents the description of the Website."@nl;
@@ -150,6 +153,7 @@ oss:ConceptualPublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnConcept;
                              shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
                              shacl:path (lpdcExt:hasWebsite dc:description)
                          ], [
                              shacl:datatype xsd:string;
@@ -183,6 +187,7 @@ oss:ConceptualPublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnConcept;
                              shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
                              shacl:path dc:title
                          ], [
                              shacl:description "The description of the Has Cost property"@nl;
@@ -191,6 +196,7 @@ oss:ConceptualPublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnConcept;
                              shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
                              shacl:path dc:description
                          ],  [
                               shacl:description "The order of the Has Cost property"@nl;
@@ -238,7 +244,33 @@ oss:ConceptualPublicServiceShape
           shacl:class m8g:Output;
           shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
           shacl:name "produces"@nl;
-          shacl:path cpsv:produces
+          shacl:path cpsv:produces;
+          shacl:property [
+             shacl:description "The title of the produces property"@nl;
+             shacl:name "produces > title"@nl;
+             shacl:datatype rdf:langString;
+             shacl:uniqueLang true;
+             shacl:languageIn oss:allowedLanguagesOnConcept;
+             shacl:minCount 1;
+             shacl:maxCount 8; # one for each language allowed
+             shacl:path dc:title
+         ], [
+             shacl:description "The description of the produces property"@nl;
+             shacl:name "produces > description"@nl;
+             shacl:datatype rdf:langString;
+             shacl:uniqueLang true;
+             shacl:languageIn oss:allowedLanguagesOnConcept;
+             shacl:minCount 1;
+             shacl:maxCount 8; # one for each language allowed
+             shacl:path dc:description
+         ],  [
+              shacl:description "The order of the produces property"@nl;
+              shacl:name "produces > order"@nl;
+              shacl:datatype xsd:integer ;
+              shacl:minCount 1;
+              shacl:maxCount 1;
+              shacl:path shacl:order
+          ]
       ], [
           shacl:class skos:Concept;
           shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
@@ -309,6 +341,7 @@ oss:InstancePublicServiceShape
           shacl:datatype rdf:langString;
           shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
           shacl:minCount 1;
+          shacl:maxCount 4; # one for each language allowed
           shacl:languageIn oss:allowedLanguagesOnInstance;
           shacl:uniqueLang true;
           shacl:name "description"@nl;
@@ -346,6 +379,7 @@ oss:InstancePublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnInstance;
                              shacl:minCount 1;
+                             shacl:maxCount 4; # one for each language allowed
                              shacl:path dc:title
                          ], [
                              shacl:description "The description of the follows rule property"@nl;
@@ -354,6 +388,7 @@ oss:InstancePublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnInstance;
                              shacl:minCount 1;
+                             shacl:maxCount 4; # one for each language allowed
                              shacl:path dc:description
                          ], [
                              shacl:description "The order of the follows rule property"@nl;
@@ -374,6 +409,7 @@ oss:InstancePublicServiceShape
                               shacl:uniqueLang true;
                               shacl:languageIn oss:allowedLanguagesOnInstance;
                               shacl:minCount 1;
+                              shacl:maxCount 4; # one for each language allowed
                               shacl:path (lpdcExt:hasWebsite dc:title)
                          ], [
                              shacl:description "This property represents the description of the Website."@nl;
@@ -382,6 +418,7 @@ oss:InstancePublicServiceShape
                              shacl:uniqueLang true;
                              shacl:languageIn oss:allowedLanguagesOnInstance;
                              shacl:minCount 1;
+                             shacl:maxCount 4; # one for each language allowed
                              shacl:path (lpdcExt:hasWebsite dc:description)
                          ], [
                              shacl:datatype xsd:string;
@@ -421,6 +458,7 @@ oss:InstancePublicServiceShape
                               shacl:uniqueLang true;
                               shacl:languageIn oss:allowedLanguagesOnInstance;
                               shacl:minCount 1;
+                              shacl:maxCount 4; # one for each language allowed
                               shacl:path dc:title
                           ], [
                               shacl:description "The description of the Has Cost property"@nl;
@@ -429,6 +467,7 @@ oss:InstancePublicServiceShape
                               shacl:uniqueLang true;
                               shacl:languageIn oss:allowedLanguagesOnInstance;
                               shacl:minCount 1;
+                              shacl:maxCount 4; # one for each language allowed
                               shacl:path dc:description
                           ], [
                               shacl:description "The order of the Has Cost property"@nl;
@@ -483,6 +522,7 @@ oss:InstancePublicServiceShape
           shacl:datatype rdf:langString;
           shacl:description "This property represents the official Name of the Public Service."@nl;
           shacl:minCount 1;
+          shacl:maxCount 4; # one for each language allowed
           shacl:languageIn oss:allowedLanguagesOnInstance;
           shacl:uniqueLang true;
           shacl:name "name"@nl;
@@ -491,8 +531,34 @@ oss:InstancePublicServiceShape
           shacl:class m8g:Output;
           shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
           shacl:name "produces"@nl;
-          shacl:path cpsv:produces
-      ], [
+          shacl:path cpsv:produces;
+          shacl:property [
+             shacl:description "The title of the produces property"@nl;
+             shacl:name "produces > title"@nl;
+             shacl:datatype rdf:langString;
+             shacl:uniqueLang true;
+             shacl:languageIn oss:allowedLanguagesOnInstance;
+             shacl:minCount 1;
+             shacl:maxCount 4; # one for each language allowed
+             shacl:path dc:title
+         ], [
+             shacl:description "The description of the produces property"@nl;
+             shacl:name "produces > description"@nl;
+             shacl:datatype rdf:langString;
+             shacl:uniqueLang true;
+             shacl:languageIn oss:allowedLanguagesOnInstance;
+             shacl:minCount 1;
+             shacl:maxCount 4; # one for each language allowed
+             shacl:path dc:description
+         ],  [
+             shacl:description "The order of the produces property"@nl;
+             shacl:name "produces > order"@nl;
+             shacl:datatype xsd:integer ;
+             shacl:minCount 1;
+             shacl:maxCount 1;
+             shacl:path shacl:order
+         ]
+    ], [
           shacl:class skos:Concept;
           shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
           shacl:name "publicationMedium"@nl;
@@ -674,26 +740,6 @@ oss:EvidenceShape
           shacl:path dc:title
       ];
     shacl:targetClass m8g:Evidence .
-
-oss:FinancialAdvantageShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents a free text Description of the Output."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents the official Name of the Output."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path dc:title
-      ];
-    shacl:targetClass m8g:Output .
 
 oss:InstanceTagShape
     a shacl:NodeShape;
