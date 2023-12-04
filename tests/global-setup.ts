@@ -1,12 +1,11 @@
-import {type FullConfig, request, APIRequestContext} from '@playwright/test';
+import {APIRequestContext, type FullConfig, request} from '@playwright/test';
 import {
     dispatcherUrl,
-    virtuosoUrl,
-    mockLoginUrl,
-    migrationsUrl,
     lpdcManagementUrl,
-    dashboardUrl,
-    reportGenerationUrl
+    migrationsUrl,
+    mockLoginUrl,
+    reportGenerationUrl,
+    virtuosoUrl
 } from './test-api/test-helpers/test-options';
 
 async function globalSetup(config: FullConfig) {
@@ -27,7 +26,11 @@ async function globalSetup(config: FullConfig) {
         await waitTillServiceRunning(apiRequest, service);
     }
 
-    await waitTillInitialConceptsAreLoaded(apiRequest);
+    const expectedNumberOfConcepts = 2;
+    const expectedNumberOfBestuurseenheden = 1288;
+    await waitTillInitialConceptsAreLoaded(apiRequest, expectedNumberOfConcepts);
+    await waitTillInitialBestuurseenhedenAreLoaded(apiRequest, expectedNumberOfBestuurseenheden);
+    await waitTillInitialDisplayConfigurationsAreLoaded(apiRequest, expectedNumberOfConcepts, expectedNumberOfBestuurseenheden);
 }
 
 async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
@@ -37,7 +40,7 @@ async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
 }) {
     let waitTurn = 0;
     while (true) {
-        waitTurn ++;
+        waitTurn++;
         try {
             const result = await apiRequest.get(service.url)
             if (result.status() === service.httpStatus) {
@@ -58,9 +61,9 @@ async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
     }
 }
 
-async function waitTillInitialConceptsAreLoaded(apiRequest: APIRequestContext) {
+async function waitTillInitialConceptsAreLoaded(apiRequest: APIRequestContext, expectedNrOfConcepts: number) {
     let waitTurn = 0;
-    const expectedNrOfConcepts = 2;
+
     const query = `
         SELECT COUNT(?concept) as ?count WHERE {
             ?concept a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
@@ -68,7 +71,12 @@ async function waitTillInitialConceptsAreLoaded(apiRequest: APIRequestContext) {
         }`;
     while (true) {
         waitTurn++;
-        const response = await apiRequest.get(`${virtuosoUrl}/sparql`, {params: {query: query, format: 'application/sparql-results+json'}});
+        const response = await apiRequest.get(`${virtuosoUrl}/sparql`, {
+            params: {
+                query: query,
+                format: 'application/sparql-results+json'
+            }
+        });
         const result = await response.json();
         const nrOfConcepts = result.results.bindings[0].count.value;
         if (nrOfConcepts >= expectedNrOfConcepts) {
@@ -79,6 +87,66 @@ async function waitTillInitialConceptsAreLoaded(apiRequest: APIRequestContext) {
         await wait(1000);
         if (waitTurn > 480) {
             console.log(`${new Date()} - There are ${nrOfConcepts} concepts, while expected nr of concepts is ${expectedNrOfConcepts}, stopped waiting after ${waitTurn} tries ... `)
+            break;
+        }
+    }
+}
+
+async function waitTillInitialBestuurseenhedenAreLoaded(apiRequest: APIRequestContext, expectedNrOfBestuurseenheden: number) {
+    let waitTurn = 0;
+    const query = `
+        SELECT COUNT(?bestuurseenheid) as ?count WHERE {
+            ?bestuurseenheid a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+        }`;
+    while (true) {
+        waitTurn++;
+        const response = await apiRequest.get(`${virtuosoUrl}/sparql`, {
+            params: {
+                query: query,
+                format: 'application/sparql-results+json'
+            }
+        });
+        const result = await response.json();
+        const nrOfBestuurseenheden = result.results.bindings[0].count.value;
+        if (nrOfBestuurseenheden >= expectedNrOfBestuurseenheden) {
+            console.log(`${new Date()} - Processing bestuurseenheden finished, there are ${nrOfBestuurseenheden} bestuurseenheden`)
+            break;
+        }
+        console.log(`${new Date()} - There are ${nrOfBestuurseenheden} bestuurseenheden, while expected nr of bestuurseenheden is ${expectedNrOfBestuurseenheden}, retrying ...`)
+        await wait(1000);
+        if (waitTurn > 480) {
+            console.log(`${new Date()} - There are ${nrOfBestuurseenheden} bestuurseenheden, while expected nr of bestuurseenheden is ${expectedNrOfBestuurseenheden}, stopped waiting after ${waitTurn} tries ... `)
+            break;
+        }
+    }
+}
+
+async function waitTillInitialDisplayConfigurationsAreLoaded(apiRequest: APIRequestContext, concepts: number, bestuurseenheden: number) {
+    let waitTurn = 0;
+    const expectedNrOfDisplayConfigurations = concepts * bestuurseenheden;
+    const query = `
+        SELECT COUNT(?displayConfiguration) as ?count WHERE {
+            ?displayConfiguration a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration> .
+        }`;
+
+    while (true) {
+        waitTurn++;
+        const response = await apiRequest.get(`${virtuosoUrl}/sparql`, {
+            params: {
+                query: query,
+                format: 'application/sparql-results+json'
+            }
+        });
+        const result = await response.json();
+        const nrOfDisplayConfigurations = result.results.bindings[0].count.value;
+        if (nrOfDisplayConfigurations >= expectedNrOfDisplayConfigurations) {
+            console.log(`${new Date()} - Processing display configurations finished, there are ${nrOfDisplayConfigurations} display configurations`)
+            break;
+        }
+        console.log(`${new Date()} - There are ${nrOfDisplayConfigurations} display configurations, while expected nr of display configurations is ${expectedNrOfDisplayConfigurations}, retrying ...`)
+        await wait(1000);
+        if (waitTurn > 480) {
+            console.log(`${new Date()} - There are ${nrOfDisplayConfigurations} display configurations, while expected nr of display configurations is ${expectedNrOfDisplayConfigurations}, stopped waiting after ${waitTurn} tries ... `)
             break;
         }
     }
