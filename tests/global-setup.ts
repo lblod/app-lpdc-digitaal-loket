@@ -26,6 +26,8 @@ async function globalSetup(config: FullConfig) {
     for (const service of services) {
         await waitTillServiceRunning(apiRequest, service);
     }
+
+    await waitTillInitialConceptsAreLoaded(apiRequest);
 }
 
 async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
@@ -56,8 +58,34 @@ async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
     }
 }
 
+async function waitTillInitialConceptsAreLoaded(apiRequest: APIRequestContext) {
+    let waitTurn = 0;
+    const expectedNrOfConcepts = 2;
+    const query = `
+        SELECT COUNT(?concept) as ?count WHERE {
+            ?concept a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
+            ?concept <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> ?versionedSource .
+        }`;
+    while (true) {
+        waitTurn++;
+        const response = await apiRequest.get(`${virtuosoUrl}/sparql`, {params: {query: query, format: 'application/sparql-results+json'}});
+        const result = await response.json();
+        const nrOfConcepts = result.results.bindings[0].count.value;
+        if (nrOfConcepts >= expectedNrOfConcepts) {
+            console.log(`${new Date()} - Processing concepts finished, there are ${nrOfConcepts} concepts`)
+            break;
+        }
+        console.log(`${new Date()} - There are ${nrOfConcepts} concepts, while expected nr of concepts is ${expectedNrOfConcepts}, retrying ...`)
+        await wait(1000);
+        if (waitTurn > 480) {
+            console.log(`${new Date()} - There are ${nrOfConcepts} concepts, while expected nr of concepts is ${expectedNrOfConcepts}, stopped waiting after ${waitTurn} tries ... `)
+            break;
+        }
+    }
+}
 
-function wait(milliseconds) {
+
+function wait(milliseconds: number) {
     return new Promise(resolve => {
         setTimeout(resolve, milliseconds);
     });

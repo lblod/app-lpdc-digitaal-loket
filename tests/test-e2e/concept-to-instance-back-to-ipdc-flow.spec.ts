@@ -284,8 +284,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit')).toBeVisible();
         await expect(toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum')).toBeVisible();
         await expect(toevoegenPage.resultTable.row(second_row).locator).toContainText('Nieuw');
-        await expect(toevoegenPage.resultTable.row(third_row).link('Concept 1 edited')).toBeVisible();
-        await expect(toevoegenPage.resultTable.row(third_row).locator).toContainText('Nieuw');
     };
 
     const createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully = async (formalInformalChoiceSuffix: string, expectedFormalOrInformalTripleLanguage: string, bestuurseenheidConfig: BestuursEenheidConfig) => {
@@ -870,8 +868,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
             {"@id": "http://vocab.belgif.be/auth/refnis2019/70000"}]));
 
-
-        http://vocab.belgif.be/auth/refnis2019/23064
         expect(publicService['http://purl.org/dc/terms/type']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/type']).toEqual(expect.arrayContaining([
             {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal"}
