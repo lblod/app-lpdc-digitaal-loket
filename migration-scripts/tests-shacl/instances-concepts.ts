@@ -54,13 +54,16 @@ async function publishedInstance() {
     const bevoegdBestuursniveauCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230628112712-bevoegd-bestuursniveau/20230628112712-bevoegd-bestuursniveau.ttl'));
     const uitvoerendBestuursniveauCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230628113208-uitvoerend-bestuursniveau/20230628113208-uitvoerend-bestuursniveau.ttl'));
     const publicatieKanaalCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230627162927-publicatie-kanaal-codelist/20230627162927-publicatie-kanaal-codelist.ttl'));
+    const yourEuropeCategoryCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230627161917-your-europe-category-codelist/20230627161917-your-europe-category-codelist.ttl'));
+
     const codeLists
         = exampleCodeLists
         .merge(themaCodeList)
         .merge(typeCodeList)
         .merge(bevoegdBestuursniveauCodeList)
         .merge(uitvoerendBestuursniveauCodeList)
-        .merge(publicatieKanaalCodeList);
+        .merge(publicatieKanaalCodeList)
+        .merge(yourEuropeCategoryCodeList);
 
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 

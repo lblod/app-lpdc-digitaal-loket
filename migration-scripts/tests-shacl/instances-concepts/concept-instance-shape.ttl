@@ -25,7 +25,6 @@
                                                                                                                                                                                 oss:PubliekeOrganisatieShape,
                                                                                                                                                                                 oss:RequirementShape,
                                                                                                                                                                                 oss:ProcedureShape,
-                                                                                                                                                                                oss:YourEuropeCategoryShape,
                                                                                                                                                                                 oss:TargetAudienceShape,
                                                                                                                                                                                 oss:TypeShape,
                                                                                                                                                                                 oss:InstanceTagShape,
@@ -223,6 +222,7 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/your-europe-categorie.ttl";
           shacl:name "yourEuropeCategory"@nl;
           shacl:path lpdcExt:yourEuropeCategory
       ];
@@ -419,6 +419,7 @@ oss:InstancePublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/your-europe-categorie.ttl";
           shacl:name "yourEuropeCategory"@nl;
           shacl:path lpdcExt:yourEuropeCategory
       ];
@@ -653,11 +654,6 @@ oss:WebsiteShape
           shacl:path dc:title
       ];
     shacl:targetClass schema:WebSite .
-
-oss:YourEuropeCategoryShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
 
 oss:eli::LegalResourceShape
     a shacl:NodeShape;
