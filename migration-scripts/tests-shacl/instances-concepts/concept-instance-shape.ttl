@@ -646,7 +646,7 @@ oss:ContactPointShape
           shacl:name "website"@nl;
           shacl:path schema:url
       ], [
-          shacl:description "The order this contact point"@nl;
+          shacl:description "The order of this contact point"@nl;
           shacl:name "order"@nl;
           shacl:datatype xsd:integer ;
           shacl:minCount 1;
@@ -744,6 +744,14 @@ oss:TypeShape
 oss:eli::LegalResourceShape
     a shacl:NodeShape;
     shacl:closed false;
+    shacl:property  [
+        shacl:description "The order of this Legal Resource"@nl;
+        shacl:name "order"@nl;
+        shacl:datatype xsd:integer ;
+        shacl:minCount 1;
+        shacl:maxCount 1;
+        shacl:path shacl:order
+    ];
     shacl:targetClass eli:LegalResource .
 
 oss:SpatialShape

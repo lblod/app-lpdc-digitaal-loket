@@ -124,5 +124,10 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - REMARK: AddressShape > fullAddress verwijderd
 - REMARK: Adress : gemeente, straatnaam, land : we beperken nu tot en / nl als taal
 - REMARK: Address > startnaam: min count = 1 + taal nl / en
+- TODO: eli:LegalResource 1/ our publish code does not add a type of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie) 
+- TODO: eli:LegalResource 2/ our publish code does not add the order of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie)
+- TODO: eli:LegalResource : should we add a title / descrption as well ? LPDC-781 , LPDC-786, 
+- REMARK: added <https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
+  <https://ipdc.be/regelgeving> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> . in output ... 
 - 
 
