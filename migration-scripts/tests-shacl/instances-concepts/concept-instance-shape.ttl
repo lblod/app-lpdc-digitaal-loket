@@ -25,7 +25,6 @@
                                                                                                                                                                                 oss:PubliekeOrganisatieShape,
                                                                                                                                                                                 oss:RequirementShape,
                                                                                                                                                                                 oss:ProcedureShape,
-                                                                                                                                                                                oss:TargetAudienceShape,
                                                                                                                                                                                 oss:TypeShape,
                                                                                                                                                                                 oss:InstanceTagShape,
                                                                                                                                                                                 oss:ThemeShape,
@@ -204,6 +203,7 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/doelgroep.ttl";
           shacl:name "targetAudience"@nl;
           shacl:path lpdcExt:targetAudience
       ], [
@@ -401,6 +401,7 @@ oss:InstancePublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/doelgroep.ttl";
           shacl:name "targetAudience"@nl;
           shacl:path lpdcExt:targetAudience
       ], [
@@ -615,11 +616,6 @@ oss:RequirementShape
           shacl:path skos:prefLabel
       ];
     shacl:targetClass m8g:Requirement .
-
-oss:TargetAudienceShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
 
 oss:ThemeShape
     a shacl:NodeShape;
