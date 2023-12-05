@@ -47,6 +47,10 @@ async function publishedInstance() {
     //FYI: how to serialize in another format ... and you can also add prefixes ...  / but it does not seem to produce compact results ... but it works
     //const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.json'));
     //console.log(await instanceData.serialize({format: "text/turtle"}));
+    //const instanceData2 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-2.json'));
+    //console.log(await instanceData2.serialize({format: "text/turtle"}));
+    //const instanceData3 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-3.json'));
+    //console.log(await instanceData3.serialize({format: "text/turtle"}));
 
     const exampleCodeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const themaCodeList = await rdf.dataset().import(rdf.fromFile('../../config/migrations/2023/20230627153144-lpdc-codelists/20230627161016-thema-codelist/20230627161016-thema-codelist.ttl'));
@@ -74,10 +78,15 @@ async function publishedInstance() {
         = besluitOntology
         .merge(ipdcLpdcOntology);
 
-    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.ttl'));
+    const instanceData1 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.ttl'));
+    const instanceData2 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-2.ttl'));
+    const instanceData3 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-3.ttl'));
     const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concepts.ttl'));
+
     const instanceAndConceptData
-        = instanceData
+        = instanceData1
+        .merge(instanceData2)
+        .merge(instanceData3)
         .merge(conceptData);
 
     validate(instanceAndConceptData, schemasOntologies, codeLists, shapes);

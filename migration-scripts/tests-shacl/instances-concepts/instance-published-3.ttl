@@ -1,0 +1,26 @@
+<http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Kost beschrijving 3</p>"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b> <http://purl.org/dc/terms/title> "Kost 3"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b> <http://www.w3.org/ns/shacl#order> "3"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Cost> .
+<http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Kost beschrijving 1</p>"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523> <http://purl.org/dc/terms/title> "Kost 1"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Cost> .
+<http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Kost beschrijving 4</p>"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb> <http://purl.org/dc/terms/title> "Kost 4"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb> <http://www.w3.org/ns/shacl#order> "4"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Cost> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Order test beschrijving</p>"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/dc/terms/title> "Order test"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#PublicService> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://data.europa.eu/m8g/hasCost> <http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://data.europa.eu/m8g/hasCost> <http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://data.europa.eu/m8g/hasCost> <http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb> .
+#<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://mu.semte.ch/vocabularies/core/uuid> "7e390478-c39c-4378-96c6-2eae89cb907a" .
+#<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/dc/terms/created> "2023-12-05T10:03:31.069Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+#<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/dc/terms/modified> "2023-12-05T10:03:35.897Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/24001> .
+#<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522> .
+#<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522> .

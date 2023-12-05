@@ -1,0 +1,145 @@
+[
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b",
+    "@type": [
+      "http://data.europa.eu/m8g/Cost"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "<p data-indentation-level=\"0\">Kost beschrijving 3</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "Kost 3"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "3"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523",
+    "@type": [
+      "http://data.europa.eu/m8g/Cost"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "<p data-indentation-level=\"0\">Kost beschrijving 1</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "Kost 1"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "1"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb",
+    "@type": [
+      "http://data.europa.eu/m8g/Cost"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "<p data-indentation-level=\"0\">Kost beschrijving 4</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "Kost 4"
+      }
+    ],
+    "http://www.w3.org/ns/shacl#order": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#integer",
+        "@value": "4"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a",
+    "@type": [
+      "http://purl.org/vocab/cpsv#PublicService"
+    ],
+    "http://data.europa.eu/m8g/hasCompetentAuthority": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522"
+      }
+    ],
+    "http://data.europa.eu/m8g/hasCost": [
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb"
+      },
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b"
+      },
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523"
+      }
+    ],
+    "http://mu.semte.ch/vocabularies/core/uuid": [
+      {
+        "@value": "7e390478-c39c-4378-96c6-2eae89cb907a"
+      }
+    ],
+    "http://purl.org/dc/terms/created": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-12-05T10:03:31.069Z"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "<p data-indentation-level=\"0\">Order test beschrijving</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/modified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-12-05T10:03:35.897Z"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "http://vocab.belgif.be/auth/refnis2019/24001"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl-be-x-informal",
+        "@value": "Order test"
+      }
+    ],
+    "http://purl.org/pav/createdBy": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522"
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+        "@id": "http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522"
+      }
+    ]
+  }
+]
