@@ -56,7 +56,7 @@ test.describe('Herziening nodig', () => {
     test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({request}) => {
         // maak instantie van concept 
         await homePage.productOfDienstToevoegenButton.click();
-        
+
         await toevoegenPage.expectToBeVisible();
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
@@ -221,7 +221,10 @@ test.describe('Herziening nodig', () => {
         await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
 
         // instance should be linked to latest functional changed concept snapshot
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({titel: `Concept created ${conceptId}`, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'});
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({
+            titel: `Concept created ${conceptId}`,
+            expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
+        });
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
         expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${updateSnapshot.id}`);
@@ -389,14 +392,16 @@ test.describe('Herziening nodig', () => {
         await bevestigHerzieningVerwerktModal.expectToBeVisible();
         await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
         await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
-
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
         await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
-        await homePage.goto();
+
+        await homePage.expectToBeVisible();
         await homePage.reloadUntil(async () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
     });
 
 
@@ -409,7 +414,12 @@ async function isConceptProcessed(request: APIRequestContext, conceptId: string,
         <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${snapshotId}>.
     }       
     `;
-    const response = await request.get(`${virtuosoUrl}/sparql`, {params: {query: query, format: 'application/sparql-results+json'}});
+    const response = await request.get(`${virtuosoUrl}/sparql`, {
+        params: {
+            query: query,
+            format: 'application/sparql-results+json'
+        }
+    });
     expect(response.ok(), await response.text()).toBeTruthy();
     expect((await response.json()).boolean).toBeTruthy();
 }
