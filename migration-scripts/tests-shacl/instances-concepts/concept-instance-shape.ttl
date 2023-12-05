@@ -18,12 +18,7 @@
 
 <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15shapes> oss:ConceptualPublicServiceShape,
                                                                                                                                                                                 oss:InstancePublicServiceShape,
-                                                                                                                                                                                oss:SpatialShape,
                                                                                                                                                                                 oss:eli::LegalResourceShape,
-                                                                                                                                                                                oss:PubliekeOrganisatieShape,
-                                                                                                                                                                                oss:TypeShape,
-                                                                                                                                                                                oss:InstanceTagShape,
-                                                                                                                                                                                oss:ThemeShape,
                                                                                                                                                                                 oss:AddressShape,
                                                                                                                                                                                 oss:ContactPointShape,
                                                                                                                                                                                 oss:allowedLanguagesOnConcept,
@@ -670,6 +665,7 @@ oss:InstancePublicServiceShape
           shacl:class skos:Concept;
           shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
           shacl:name "instanceTag"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/instantie-tag.ttl";
           shacl:path lpdcExt:instanceTag
       ], [
           shacl:datatype rdf:langString;
@@ -884,26 +880,6 @@ oss:ContactPointShape
       ];
     shacl:targetClass schema:ContactPoint .
 
-oss:InstanceTagShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
-
-oss:PubliekeOrganisatieShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass m8g:PublicOrganisation .
-
-oss:ThemeShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
-
-oss:TypeShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
-
 oss:eli::LegalResourceShape
     a shacl:NodeShape;
     shacl:closed false;
@@ -916,8 +892,3 @@ oss:eli::LegalResourceShape
         shacl:path shacl:order
     ];
     shacl:targetClass eli:LegalResource .
-
-oss:SpatialShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:targetClass skos:Concept .
