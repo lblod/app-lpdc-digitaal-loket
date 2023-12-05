@@ -89,6 +89,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   for which a a besluit:Bestuurseenheid. is defined to be a subclass of rdfs:subClassOf <http://data.europa.eu/m8g/PublicOrganisation> . (in m8g file)., and specified in the shacl shape
   ; we need ... only ... to include the besluit.ttl in the shapes AND merge all shapes also in the data (for this validator?)
   (because internally in the code, strangely the class validation logic happens on the context.$data graph instead of the context.$shapes graph) - which seems like a bug ?  Or a lack of understanding from our part.
+- split up shapes into concept-shape.ttl, instance-shape.ttl and common-shapes.ttl  + prefixed the specific ones with Concept / Instance xxx Shape
 
 #### Code Lists
 - For the _fixed_ code lists, we chose to not have an explicit validation which are valid ones. We reference the possible values via a rdfs:seeAlso predicate, with a link to the possible values 
