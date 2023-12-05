@@ -85,13 +85,8 @@ test.describe('Herziening nodig', () => {
 
         // update concept snapshot
         const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
-        await homePage.reloadUntil(async () => {
-            await isConceptProcessed(request, conceptId, updateSnapshot.id);
-        });
+
         const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
-        await homePage.reloadUntil(async () => {
-            await isConceptProcessed(request, conceptId, updateSnapshotNoFunctionalChangeIgnored.id);
-        });
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
@@ -406,20 +401,3 @@ test.describe('Herziening nodig', () => {
 
 
 });
-
-async function isConceptProcessed(request: APIRequestContext, conceptId: string, snapshotId: string) {
-    const query = `
-    ASK WHERE {
-        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>.
-        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${snapshotId}>.
-    }       
-    `;
-    const response = await request.get(`${virtuosoUrl}/sparql`, {
-        params: {
-            query: query,
-            format: 'application/sparql-results+json'
-        }
-    });
-    expect(response.ok(), await response.text()).toBeTruthy();
-    expect((await response.json()).boolean).toBeTruthy();
-}

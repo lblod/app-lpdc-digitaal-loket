@@ -1,6 +1,6 @@
-import { expect, request } from "@playwright/test";
-import { ipdcStubUrl } from "../../test-api/test-helpers/test-options";
-import { wait } from "../shared/shared";
+import {APIRequestContext, expect, request} from "@playwright/test";
+import {ipdcStubUrl, virtuosoUrl} from "../../test-api/test-helpers/test-options";
+import {wait} from "../shared/shared";
 
 export type PublicServiceFilter = {
     titel: string,
@@ -73,24 +73,55 @@ export class IpdcStub {
         return object[0];
     }
 
-    static async createSnapshotOfTypeCreate(uuid: string): Promise<Snapshot> {
+    static async createSnapshotOfTypeCreate(conceptId: string): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/create`);
-        return response.json();
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/create`);
+        const snapshot: Snapshot = await response.json();
+        await processSnapshot(apiRequest, conceptId, snapshot.id);
+
+        return snapshot
     }
 
-    static async createSnapshotOfTypeUpdate(uuid: string, withRandomTitle: boolean = false): Promise<Snapshot> {
+    static async createSnapshotOfTypeUpdate(conceptId: string, withRandomTitle: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/update`, { params: { withRandomTitle: withRandomTitle } });
-        return response.json();
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, {params: {withRandomTitle: withRandomTitle}});
+        const snapshot: Snapshot = await response.json();
+        await processSnapshot(apiRequest, conceptId, snapshot.id);
 
+        return snapshot;
     }
 
-    static async createSnapshotOfTypeArchive(uuid: string): Promise<Snapshot> {
+    static async createSnapshotOfTypeArchive(conceptId: string): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${uuid}/archive`);
-        return response.json();
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`);
+        const snapshot: Snapshot = await response.json();
+        await processSnapshot(apiRequest, conceptId, snapshot.id);
+
+        return snapshot;    }
+}
+
+async function processSnapshot(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<void> {
+    let published = false;
+    while (!published) {
+        published = await isConceptSnapshotProcessed(request, conceptId, snapshotId)
     }
+}
+
+async function isConceptSnapshotProcessed(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<boolean> {
+    const query = `
+    ASK WHERE {
+        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>.
+        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${snapshotId}>.
+    }       
+    `;
+    const response = await request.get(`${virtuosoUrl}/sparql`, {
+        params: {
+            query: query,
+            format: 'application/sparql-results+json'
+        }
+    });
+    expect(response.ok(), await response.text()).toBeTruthy();
+    return (await response.json()).boolean;
 }
 
 type Snapshot = {
