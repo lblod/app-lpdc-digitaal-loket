@@ -217,7 +217,40 @@ oss:ConceptualPublicServiceShape
           shacl:class schema:WebSite;
           shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
           shacl:name "hasMoreInfo"@nl;
-          shacl:path rdfs:seeAlso
+          shacl:path rdfs:seeAlso;
+          shacl:property [
+                              shacl:description "This property represents the title of the Website."@nl;
+                              shacl:name "hasMoreInfo > title"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnConcept;
+                              shacl:minCount 1;
+                              shacl:maxCount 8; # one for each language allowed
+                              shacl:path dc:title
+                         ], [
+                             shacl:description "This property represents the description of the Website."@nl;
+                             shacl:name "hasMoreInfo > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnConcept;
+                             shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
+                             shacl:path dc:description
+                         ], [
+                             shacl:datatype xsd:string;
+                             shacl:description "This property represents the url of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name "hasMoreInfo > location"@nl;
+                             shacl:path schema:url
+                         ], [
+                             shacl:datatype xsd:integer ;
+                             shacl:description "This property represents the order of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name "hasMoreInfo > order"@nl;
+                             shacl:path shacl:order
+                         ]
       ], [
           shacl:class m8g:Requirement;
           shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
@@ -253,7 +286,7 @@ oss:ConceptualPublicServiceShape
                               shacl:class m8g:Evidence;
                               shacl:description "The Evidence that supplies information (proof, support) for this Requirement."@nl;
                               shacl:maxCount 1;
-                              shacl:name "hasSupportingEvidence"@nl;
+                              shacl:name "hasRequirement > hasSupportingEvidence"@nl;
                               shacl:path m8g:hasSupportingEvidence
                          ], [
                               shacl:description "This property represents the title of the supporting evidence."@nl;
@@ -538,7 +571,40 @@ oss:InstancePublicServiceShape
           shacl:class schema:WebSite;
           shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
           shacl:name "hasMoreInfo"@nl;
-          shacl:path rdfs:seeAlso
+          shacl:path rdfs:seeAlso;
+          shacl:property [
+                              shacl:description "This property represents the title of the Website."@nl;
+                              shacl:name "hasMoreInfo > title"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnInstance;
+                              shacl:minCount 1;
+                              shacl:maxCount 4; # one for each language allowed
+                              shacl:path dc:title
+                         ], [
+                             shacl:description "This property represents the description of the Website."@nl;
+                             shacl:name "hasMoreInfo > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnInstance;
+                             shacl:minCount 1;
+                             shacl:maxCount 4; # one for each language allowed
+                             shacl:path dc:description
+                         ], [
+                             shacl:datatype xsd:string;
+                             shacl:description "This property represents the url of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name "hasMoreInfo > location"@nl;
+                             shacl:path schema:url
+                         ], [
+                             shacl:datatype xsd:integer ;
+                             shacl:description "This property represents the order of the Website."@nl;
+                             shacl:maxCount 1;
+                             shacl:minCount 1;
+                             shacl:name "hasMoreInfo > order"@nl;
+                             shacl:path shacl:order
+                         ]
       ], [
           shacl:class m8g:Requirement;
           shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
@@ -574,7 +640,7 @@ oss:InstancePublicServiceShape
                               shacl:class m8g:Evidence;
                               shacl:description "The Evidence that supplies information (proof, support) for this Requirement."@nl;
                               shacl:maxCount 1;
-                              shacl:name "hasSupportingEvidence"@nl;
+                              shacl:name "hasRequirement > hasSupportingEvidence"@nl;
                               shacl:path m8g:hasSupportingEvidence
                          ], [
                               shacl:description "This property represents the title of the supporting evidence."@nl;

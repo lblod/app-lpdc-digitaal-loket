@@ -28,7 +28,8 @@ ex:a-website-for-an-instance
     a schema:WebSite ;
     dc:title """a-website-for-an-instance-title"""@nl ;
     dc:description """a-website-for-an-instance-description"""@nl ;
-    schema:url "https://a-website-for-an-instance.org".
+    schema:url "https://a-website-for-an-instance.org";
+    shacl:order 1.
 
 ex:a-rule
     a cpsv:Rule;

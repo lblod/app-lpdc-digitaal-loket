@@ -55,7 +55,7 @@
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://data.europa.eu/m8g/hasLegalResource> <https://ipdc.be/regelgeving> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/vocab/cpsv#produces> <http://data.lblod.info/id/financial-advantage/932620f3-ca52-4ba6-bc77-f64539c567da> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/bf411975-4ced-4c74-a746-555ed0fe1024> .
-#<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> .
+<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> .
 <http://data.lblod.info/id/cost/dc7534e1-98d1-4da8-8395-1425d6faa8c7> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <http://data.lblod.info/id/cost/dc7534e1-98d1-4da8-8395-1425d6faa8c7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Cost> .
 <http://data.lblod.info/id/cost/dc7534e1-98d1-4da8-8395-1425d6faa8c7> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">De aanvraag en het attest zijn gratis. - nlbbf8a59d-8b59-4d5e-805c-0ffdb21e30b1</p>"@nl-be-x-formal .
@@ -108,10 +108,10 @@
 <http://data.lblod.info/id/evidence/042a666b-96ae-482f-b314-ddd98f975922> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">If you collect the document yourself:your own identity card.If you are requesting the document for someone else:a power of attorney from that person and a copy of their identity cardas well as your own identity card.8e4e073f-9c80-462c-bb26-84bc94ddbf14</p>"@en .
 <http://data.lblod.info/id/evidence/042a666b-96ae-482f-b314-ddd98f975922> <http://purl.org/dc/terms/title> "Evidence6f91ee04-e023-434a-84e8-4b31e8cbce35"@en .
 <http://data.lblod.info/id/evidence/042a666b-96ae-482f-b314-ddd98f975922> <http://purl.org/dc/terms/title> "Bewijs - nl0457fc18-6047-4986-bd32-74522ac65a3d"@nl-be-x-formal .
-#<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://schema.org/url> "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/new-nationaliteit" .
-#<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
-#<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
-#<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - enf96420e3-3c6b-4f59-8d5c-d61ca91b3b97</p>"@en .
-#<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - nle57578ec-a196-4077-b86a-9a50e41c4d6e</p>"@nl-be-x-formal .
-#<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/title> "Website Belgische nationaliteit en naturalisatie - nl8d755e57-1910-45c8-a4c3-a3f6d8646b4f"@nl-be-x-formal .
-#<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/title> "Website Belgische nationaliteit en naturalisatie - enea0c9313-80e5-4245-b654-e09e8f6986cd"@en .
+<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
+<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/title> "Website Belgische nationaliteit en naturalisatie - nl8d755e57-1910-45c8-a4c3-a3f6d8646b4f"@nl-be-x-formal .
+<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/title> "Website Belgische nationaliteit en naturalisatie - enea0c9313-80e5-4245-b654-e09e8f6986cd"@en .
+<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - enf96420e3-3c6b-4f59-8d5c-d61ca91b3b97</p>"@en .
+<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - nle57578ec-a196-4077-b86a-9a50e41c4d6e</p>"@nl-be-x-formal .
+<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://schema.org/url> "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/new-nationaliteit" .
+<http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
