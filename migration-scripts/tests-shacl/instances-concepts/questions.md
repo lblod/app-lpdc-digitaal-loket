@@ -129,5 +129,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - TODO: eli:LegalResource : should we add a title / descrption as well ? LPDC-781 , LPDC-786, 
 - REMARK: added <https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
   <https://ipdc.be/regelgeving> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> . in output ... 
-- 
+- REMARK: requirement shape : skos:prefLabel -> dc:title 
+- TODO: hasRequirement: een of meerdere ?  want als slechts een, dan mag ook order weg ... 
 

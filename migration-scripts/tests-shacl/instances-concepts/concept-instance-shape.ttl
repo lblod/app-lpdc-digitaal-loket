@@ -20,10 +20,7 @@
                                                                                                                                                                                 oss:InstancePublicServiceShape,
                                                                                                                                                                                 oss:SpatialShape,
                                                                                                                                                                                 oss:eli::LegalResourceShape,
-                                                                                                                                                                                oss:EvidenceShape,
-                                                                                                                                                                                oss:FinancialAdvantageShape,
                                                                                                                                                                                 oss:PubliekeOrganisatieShape,
-                                                                                                                                                                                oss:RequirementShape,
                                                                                                                                                                                 oss:TypeShape,
                                                                                                                                                                                 oss:InstanceTagShape,
                                                                                                                                                                                 oss:ThemeShape,
@@ -226,7 +223,57 @@ oss:ConceptualPublicServiceShape
           shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
           shacl:maxCount 1;
           shacl:name "hasRequirement"@nl;
-          shacl:path ps:hasRequirement
+          shacl:path ps:hasRequirement;
+          shacl:property [
+                             shacl:description "This property represents the official Name of the Requirement."@nl;
+                             shacl:name "hasRequirement > name"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnConcept;
+                             shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
+                             shacl:path dc:title
+                         ], [
+                             shacl:description "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated."@nl;
+                             shacl:name "hasRequirement > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnConcept;
+                             shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
+                             shacl:path dc:description
+                         ], [
+                             shacl:description "The order of the Has Requirement property"@nl;
+                             shacl:name "hasRequirement > order"@nl;
+                             shacl:datatype xsd:integer ;
+                             shacl:minCount 1;
+                             shacl:maxCount 1;
+                             shacl:path shacl:order
+                         ], [
+                              shacl:class m8g:Evidence;
+                              shacl:description "The Evidence that supplies information (proof, support) for this Requirement."@nl;
+                              shacl:maxCount 1;
+                              shacl:name "hasSupportingEvidence"@nl;
+                              shacl:path m8g:hasSupportingEvidence
+                         ], [
+                              shacl:description "This property represents the title of the supporting evidence."@nl;
+                              shacl:name "hasRequirement > hasSupportingEvidence > title"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnConcept;
+                              shacl:minCount 1;
+                              shacl:maxCount 8; # one for each language allowed
+                              shacl:path (m8g:hasSupportingEvidence dc:title)
+                          ], [
+                             shacl:description "This property represents the description of the supporting evidence."@nl;
+                             shacl:name "hasRequirement > hasSupportingEvidence > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnConcept;
+                             shacl:minCount 1;
+                             shacl:maxCount 8; # one for each language allowed
+                             shacl:path (m8g:hasSupportingEvidence dc:description)
+                         ]
       ], [
           shacl:datatype rdf:langString;
           shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
@@ -497,7 +544,57 @@ oss:InstancePublicServiceShape
           shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
           shacl:maxCount 1;
           shacl:name "hasRequirement"@nl;
-          shacl:path ps:hasRequirement
+          shacl:path ps:hasRequirement;
+          shacl:property [
+                             shacl:description "This property represents the official Name of the Requirement."@nl;
+                             shacl:name "hasRequirement > name"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnInstance;
+                             shacl:minCount 1;
+                             shacl:maxCount 4; # one for each language allowed
+                             shacl:path dc:title
+                         ], [
+                             shacl:description "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated."@nl;
+                             shacl:name "hasRequirement > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnInstance;
+                             shacl:minCount 1;
+                             shacl:maxCount 4; # one for each language allowed
+                             shacl:path dc:description
+                         ], [
+                             shacl:description "The order of the Has Requirement property"@nl;
+                             shacl:name "hasRequirement > order"@nl;
+                             shacl:datatype xsd:integer ;
+                             shacl:minCount 1;
+                             shacl:maxCount 1;
+                             shacl:path shacl:order
+                         ], [
+                              shacl:class m8g:Evidence;
+                              shacl:description "The Evidence that supplies information (proof, support) for this Requirement."@nl;
+                              shacl:maxCount 1;
+                              shacl:name "hasSupportingEvidence"@nl;
+                              shacl:path m8g:hasSupportingEvidence
+                         ], [
+                              shacl:description "This property represents the title of the supporting evidence."@nl;
+                              shacl:name "hasRequirement > hasSupportingEvidence > title"@nl;
+                              shacl:datatype rdf:langString;
+                              shacl:uniqueLang true;
+                              shacl:languageIn oss:allowedLanguagesOnInstance;
+                              shacl:minCount 1;
+                              shacl:maxCount 4; # one for each language allowed
+                              shacl:path (m8g:hasSupportingEvidence dc:title)
+                          ], [
+                             shacl:description "This property represents the description of the supporting evidence."@nl;
+                             shacl:name "hasRequirement > hasSupportingEvidence > description"@nl;
+                             shacl:datatype rdf:langString;
+                             shacl:uniqueLang true;
+                             shacl:languageIn oss:allowedLanguagesOnInstance;
+                             shacl:minCount 1;
+                             shacl:maxCount 4; # one for each language allowed
+                             shacl:path (m8g:hasSupportingEvidence dc:description)
+                         ]
       ], [
           shacl:class lpdcExt:ConceptualPublicService;
           shacl:maxCount 1;
@@ -721,26 +818,6 @@ oss:ContactPointShape
       ];
     shacl:targetClass schema:ContactPoint .
 
-oss:EvidenceShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "Geeft omschrijving van de vereiste input"@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description  "Geeft titel van de vereiste input"@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path dc:title
-      ];
-    shacl:targetClass m8g:Evidence .
-
 oss:InstanceTagShape
     a shacl:NodeShape;
     shacl:closed false;
@@ -750,32 +827,6 @@ oss:PubliekeOrganisatieShape
     a shacl:NodeShape;
     shacl:closed false;
     shacl:targetClass m8g:PublicOrganisation .
-
-oss:RequirementShape
-    a shacl:NodeShape;
-    shacl:closed false;
-    shacl:property [
-          shacl:datatype rdf:langString;
-          shacl:description "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "description"@nl;
-          shacl:path dc:description
-      ], [
-          shacl:class m8g:Evidence;
-          shacl:description "The Evidence that supplies information (proof, support) for this Requirement."@nl;
-          shacl:maxCount 1;
-          shacl:name "hasSupportingEvidence"@nl;
-          shacl:path m8g:hasSupportingEvidence
-      ], [
-          shacl:datatype rdf:langString;
-          shacl:description "This property represents the official Name of the Requirement."@nl;
-          shacl:maxCount 1;
-          shacl:minCount 1;
-          shacl:name "name"@nl;
-          shacl:path skos:prefLabel
-      ];
-    shacl:targetClass m8g:Requirement .
 
 oss:ThemeShape
     a shacl:NodeShape;

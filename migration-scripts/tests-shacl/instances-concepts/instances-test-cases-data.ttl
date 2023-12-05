@@ -101,7 +101,8 @@ ex:a-supporting-evidence
 ex:a-requirement
     a m8g:Requirement;
     dc:description """requirement-description"""@nl ;
-    skos:prefLabel """requirement-preferred-label"""@nl ;
+    dc:title """requirement-preferred-label"""@nl ;
+    shacl:order 1;
     m8g:hasSupportingEvidence ex:a-supporting-evidence.
 
 ex:a-tag
