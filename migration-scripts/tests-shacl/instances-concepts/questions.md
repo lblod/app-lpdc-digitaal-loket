@@ -151,4 +151,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - eli:LegalResource : should we add a title / description as well ? LPDC-781 , LPDC-786, 
 - hasRequirement: een of meerdere ?  want als slechts een, dan mag ook order weg ...
 - instantieTag wordt niet gebruikt (er zijn gedefinieerde waarden in code lijst ) + lpdc stuurt concept tag op in de plaats
-
+- instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie is nog lpdcExt:hasWebsites (hier en daar)
+- the constructie met nested properties werkt niet in combinatie met min en max count . als je bvb meerdere wbsites toevoegt aan een rule ; klaagt hij ivm te veel titles, descriptions, etc ...
+  => opsplitsen en dan wel terug met deftige shapes werken per type ?  
