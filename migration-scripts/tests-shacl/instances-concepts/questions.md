@@ -154,3 +154,5 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie is nog lpdcExt:hasWebsites (hier en daar)
 - the constructie met nested properties werkt niet in combinatie met min en max count . als je bvb meerdere wbsites toevoegt aan een rule ; klaagt hij ivm te veel titles, descriptions, etc ...
   => opsplitsen en dan wel terug met deftige shapes werken per type ?  
+  => als we opsplitsen en per type een shape restrictie doen, dan kun je ze nooit samen valideren ...; maar misschien is dat ook wel ok ?
+  => shape split up into  instance-shape.ttl and concept-shape.ttl

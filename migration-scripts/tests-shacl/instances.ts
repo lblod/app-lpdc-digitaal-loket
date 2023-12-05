@@ -3,16 +3,18 @@ import Dataset from '@zazuko/env';
 import SHACLValidator from 'rdf-validate-shacl';
 
 export async function main() {
-    console.log('concept/instance');
-    await conceptInstanceTestData();
+    console.log('instance tests');
+    console.log('instance test cases');
+    await instanceTestData();
     //await readOntologies();
+    console.log('published instances');
     await publishedInstance();
 }
 
 //trying out clownface ...
 async function readOntologies() {
-    let shapes = await rdf.dataset().import(rdf.fromFile('extra-shacls/besluit.ttl'));
-    shapes = shapes.merge(await rdf.dataset().import(rdf.fromFile('extra-shacls/m8g.ttl')));
+    let shapes = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
+    shapes = shapes.merge(await rdf.dataset().import(rdf.fromFile('schemas-ontologies/m8g.ttl')));
     const clownface = rdf.clownface({dataset: shapes});
     console.log(clownface.has(rdf.namedNode("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")).values);
     console.log(clownface.has(rdf.namedNode("http://www.w3.org/2000/01/rdf-schema#subClassOf")).values);
@@ -29,29 +31,29 @@ async function readOntologies() {
 }
 
 
-async function conceptInstanceTestData() {
-    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
+async function instanceTestData() {
+    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/instance-shape.ttl'));
 
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 
-    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instances-test-cases-data.ttl'));
+    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-test-cases-data.ttl'));
 
     validate(instanceData, schemasOntologies, codeLists, shapes);
 
 }
 
 async function publishedInstance() {
-    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-instance-shape.ttl'));
+    const shapes = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/instance-shape.ttl'));
 
     //FYI: how to serialize in another format ... and you can also add prefixes ...  / but it does not seem to produce compact results ... but it works
-    //const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.json'));
+    //const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published.json'));
     //console.log(await instanceData.serialize({format: "text/turtle"}));
-    //const instanceData2 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-2.json'));
+    //const instanceData2 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published-2.json'));
     //console.log(await instanceData2.serialize({format: "text/turtle"}));
-    //const instanceData3 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-3.json'));
+    //const instanceData3 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published-3.json'));
     //console.log(await instanceData3.serialize({format: "text/turtle"}));
-    //const instanceData4 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-4.json'));
+    //const instanceData4 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published-4.json'));
     //console.log(await instanceData4.serialize({format: "text/turtle"}));
 
     const exampleCodeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
@@ -80,11 +82,11 @@ async function publishedInstance() {
         = besluitOntology
         .merge(ipdcLpdcOntology);
 
-    const instanceData1 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published.ttl'));
-    const instanceData2 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-2.ttl'));
-    const instanceData3 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-3.ttl'));
-    const instanceData4 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-published-4.ttl'));
-    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concepts.ttl'));
+    const instanceData1 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published.ttl'));
+    const instanceData2 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published-2.ttl'));
+    const instanceData3 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published-3.ttl'));
+    const instanceData4 = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published-4.ttl'));
+    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concepts.ttl'));
 
     const instanceAndConceptData
         = instanceData1
