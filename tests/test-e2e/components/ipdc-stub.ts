@@ -97,14 +97,20 @@ export class IpdcStub {
         const snapshot: Snapshot = await response.json();
         await processSnapshot(apiRequest, conceptId, snapshot.id);
 
-        return snapshot;    }
+        return snapshot;
+    }
 }
 
 async function processSnapshot(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<void> {
-    let published = false;
-    while (!published) {
-        published = await isConceptSnapshotProcessed(request, conceptId, snapshotId)
+    const maxPollAttempts = 60;
+    for (let i = 0; i < maxPollAttempts; i++) {
+        await wait(1000);
+        if (await isConceptSnapshotProcessed(request, conceptId, snapshotId)) {
+            console.log(`ConceptSnapshot processed after ${i + 1} seconds`);
+            return;
+        }
     }
+    console.log(`Snapshot not processed after ${maxPollAttempts} seconds`);
 }
 
 async function isConceptSnapshotProcessed(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<boolean> {

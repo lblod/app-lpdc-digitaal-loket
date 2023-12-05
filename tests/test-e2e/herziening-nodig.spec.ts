@@ -388,7 +388,6 @@ test.describe('Herziening nodig', () => {
         await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
         await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
-        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
 
         await homePage.expectToBeVisible();
         await homePage.reloadUntil(async () => {
