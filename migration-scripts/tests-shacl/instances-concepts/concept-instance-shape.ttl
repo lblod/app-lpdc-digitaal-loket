@@ -16,13 +16,17 @@
 @prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
 @prefix pera: <http://publications.europa.eu/resource/authority/> .
 
-<https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15shapes> oss:ConceptualPublicServiceShape,
-                                                                                                                                                                                oss:InstancePublicServiceShape,
-                                                                                                                                                                                oss:eli::LegalResourceShape,
-                                                                                                                                                                                oss:AddressShape,
-                                                                                                                                                                                oss:ContactPointShape,
-                                                                                                                                                                                oss:allowedLanguagesOnConcept,
-                                                                                                                                                                                oss:allowedLanguagesOnInstance.
+oss:shapes a rdf:Property;
+     rdfs:label "shacl shapes for implementatiemodel"@nl .
+
+
+<https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> oss:shapes oss:ConceptualPublicServiceShape,
+                                                                                           oss:InstancePublicServiceShape,
+                                                                                           oss:eli::LegalResourceShape,
+                                                                                           oss:AddressShape,
+                                                                                           oss:ContactPointShape,
+                                                                                           oss:allowedLanguagesOnConcept,
+                                                                                           oss:allowedLanguagesOnInstance.
 
 oss:allowedLanguagesOnConcept
     rdf:first "en" ;
@@ -658,6 +662,7 @@ oss:InstancePublicServiceShape
                          ]
       ], [
           shacl:class lpdcExt:ConceptualPublicService;
+          shacl:description "De conceptuele publieke service waarop deze instantie gebaseerd werd"@nl;
           shacl:maxCount 1;
           shacl:name "hasSource"@nl;
           shacl:path dc:source
