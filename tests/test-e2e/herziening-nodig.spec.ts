@@ -10,7 +10,7 @@ import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {IpdcStub} from "./components/ipdc-stub";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
-import {BevestigHerzieningVerverwerktModal} from "./modals/bevestig-herziening-ververwerkt-modal";
+import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
 import {virtuosoUrl} from "../test-api/test-helpers/test-options";
 
 test.describe('Herziening nodig', () => {
@@ -22,7 +22,7 @@ test.describe('Herziening nodig', () => {
     let conceptDetailsPage: ConceptDetailsPage;
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
-    let bevestigHerzieningVerwerktModal: BevestigHerzieningVerverwerktModal;
+    let bevestigHerzieningVerwerktModal: BevestigHerzieningVerwerktModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
 
     test.beforeEach(async ({browser}) => {
@@ -34,7 +34,7 @@ test.describe('Herziening nodig', () => {
         conceptDetailsPage = ConceptDetailsPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
-        bevestigHerzieningVerwerktModal = BevestigHerzieningVerverwerktModal.create(page);
+        bevestigHerzieningVerwerktModal = BevestigHerzieningVerwerktModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
 
         await mockLoginPage.goto();
