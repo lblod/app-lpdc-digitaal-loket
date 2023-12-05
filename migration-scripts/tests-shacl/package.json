@@ -11,7 +11,8 @@
   "scripts": {
     "test": "jest",
     "start-poc": "node dist/poc.js",
-    "start-instances": "node dist/instances.js"
+    "start-instances": "node dist/instances.js",
+    "start-concepts": "node dist/concepts.js"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",
