@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   lpdc-management:
-    image: semtech/mu-javascript-template:feature-node-18
+    image: node:20-alpine
     ports:
       - "10996:80"
       - "9229:9229"
@@ -15,10 +15,14 @@ services:
       DEBUG_AUTH_HEADERS: "false"
       QUEUE_POLL_INTERVAL: 1000
       ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
+      MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
     volumes:
       - ../../lpdc-management-service/:/app/
       - ../config/lpdc-management:/config
       - ./data-tests/files/lpdc:/data
+    working_dir: "/app"
+    command: ["npm", "run", "development"]
     healthcheck:
       test: [ "CMD", "wget", "--spider", "http://localhost" ]
       interval: 5s
