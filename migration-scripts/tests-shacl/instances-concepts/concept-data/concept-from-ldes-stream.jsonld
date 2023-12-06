@@ -1,0 +1,538 @@
+{
+  "@context": {
+    "conceptNs": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#",
+    "dct": "http://purl.org/dc/terms/",
+    "purlCpsv": "http://purl.org/vocab/cpsv#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "deu": "http://data.europa.eu/m8g/",
+    "deuOntology": "http://data.europa.eu/eli/ontology/#",
+    "publicationsEu": "https://publications.europa.eu/resource/authority/",
+    "locn": "http://www.w3.org/ns/locn#",
+    "sch": "http://schema.org/",
+    "ldes": "https://w3id.org/ldes#",
+    "tree": "https://w3id.org/tree#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "dtv": "https://data.vlaanderen.be/ns/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "ConceptualPublicService": "conceptNs:ConceptualPublicService",
+    "id": {
+      "@id": "sch:identifier"
+    },
+    "order": {
+      "@id": "sh:order"
+    },
+    "productnummer": {
+      "@id": "sch:productID",
+      "@type": "xsd:string"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "isVersionOf": {
+      "@id": "dct:isVersionOf",
+      "@type": "@id"
+    },
+    "snapshotType": {
+      "@id": "conceptNs:snapshotType",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/"
+      }
+    },
+    "bevoegdBestuursniveaus": {
+      "@id": "conceptNs:competentAuthorityLevel",
+      "@container": "@set",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+      }
+    },
+    "uitvoerendBestuursniveaus": {
+      "@id": "conceptNs:executingAuthorityLevel",
+      "@container": "@set",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+      }
+    },
+    "naam": {
+      "@id": "dct:title",
+      "@container": "@language"
+    },
+    "verdereBeschrijving": {
+      "@id": "conceptNs:additionalDescription",
+      "@container": "@language"
+    },
+    "beschrijving": {
+      "@id": "dct:description",
+      "@container": "@language"
+    },
+    "eindeDienstVerlening": {
+      "@id": "sch:endDate",
+      "@type": "xsd:dateTime"
+    },
+    "uitzonderingen": {
+      "@id": "conceptNs:exception",
+      "@container": "@language"
+    },
+    "url": {
+      "@id": "sch:url"
+    },
+    "procedures": {
+      "@id": "http://purl.org/vocab/cpsv#follows",
+      "@container": "@set",
+      "@context": {
+        "websites": {
+          "@id": "conceptNs:hasWebsite",
+          "@container": "@set"
+        }
+      }
+    },
+    "procedure": {
+      "@id": "purlCpsv:Rule"
+    },
+    "bevoegdeOverheden": {
+      "@id": "deu:hasCompetentAuthority",
+      "@container": "@set",
+      "@context": {
+        "id": "@id",
+        "@base": "https://data.vlaanderen.be/id/organisatie/"
+      }
+    },
+    "kosten": {
+      "@id": "deu:hasCost",
+      "@container": "@set"
+    },
+    "kost": {
+      "@id": "deu:Cost"
+    },
+    "uitvoerendeOverheden": {
+      "@id": "conceptNs:hasExecutingAuthority",
+      "@container": "@set",
+      "@context": {
+        "id": "@id",
+        "@base": "https://data.vlaanderen.be/id/organisatie/"
+      }
+    },
+    "regelgeving": {
+      "@container": "@set",
+      "@id": "deu:hasLegalResource",
+      "@context": {
+        "id": "@id"
+      }
+    },
+    "regel": {
+      "@id": "deuOntology:LegalResource"
+    },
+    "websites": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "website": {
+      "@id": "sch:WebSite"
+    },
+    "voorwaarden": {
+      "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+      "@container": "@set",
+      "@context": {
+        "bewijs": {
+          "@id": "deu:hasSupportingEvidence"
+        }
+      }
+    },
+    "voorwaarde": {
+      "@id": "deu:Requirement"
+    },
+    "bewijsType": {
+      "@id": "deu:Evidence"
+    },
+    "zoektermen": {
+      "@container": [
+        "@language",
+        "@set"
+      ],
+      "@id": "http://www.w3.org/ns/dcat#keyword"
+    },
+    "talen": {
+      "@container": "@set",
+      "@id": "publicationsEu:language",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://publications.europa.eu/resource/authority/language/"
+      }
+    },
+    "financieleVoordelen": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#produces"
+    },
+    "financieelVoordeel": {
+      "@id": "conceptNs:FinancialAdvantage"
+    },
+    "publicatiekanalen": {
+      "@container": "@set",
+      "@id": "conceptNs:publicationMedium",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+      }
+    },
+    "regelgevingTekst": {
+      "@id": "conceptNs:regulation",
+      "@container": "@language"
+    },
+    "geografischToepassingsgebieden": {
+      "@container": "@set",
+      "@id": "dct:spatial",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://data.europa.eu/nuts/code/"
+      }
+    },
+    "startDienstVerlening": {
+      "@id": "sch:startDate",
+      "@type": "xsd:dateTime"
+    },
+    "tags": {
+      "@container": "@set",
+      "@id": "conceptNs:conceptTag",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/"
+      }
+    },
+    "doelgroepen": {
+      "@container": "@set",
+      "@id": "conceptNs:targetAudience",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+      }
+    },
+    "themas": {
+      "@container": "@set",
+      "@id": "deu:thematicArea",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+      }
+    },
+    "type": {
+      "@id": "dct:type",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
+      }
+    },
+    "yourEuropeCategorieen": {
+      "@container": "@set",
+      "@id": "conceptNs:yourEuropeCategory",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
+      }
+    },
+    "creatie": {
+      "@id": "sch:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "laatstGewijzigd": {
+      "@id": "sch:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "EventStream": "ldes:EventStream",
+    "Node": "tree:Node",
+    "relation": {
+      "@container": "@set",
+      "@id": "tree:relation"
+    },
+    "view": "tree:view",
+    "shape": "tree:shape",
+    "member": {
+      "@id": "tree:member",
+      "@container": "@set"
+    },
+    "GreaterThanOrEqualToRelation": "tree:GreaterThanOrEqualToRelation",
+    "LessThanOrEqualToRelation": "tree:LessThanOrEqualToRelation",
+    "LessThanRelation": "tree:LessThanRelation",
+    "versionOfPath": {
+      "@id": "ldes:versionOfPath",
+      "@type": "@id"
+    },
+    "timestampPath": {
+      "@id": "ldes:timestampPath",
+      "@type": "@id"
+    },
+    "node": {
+      "@id": "tree:node",
+      "@type": "@id"
+    },
+    "path": {
+      "@id": "tree:path",
+      "@type": "@id"
+    },
+    "value": {
+      "@id": "tree:value",
+      "@type": "xsd:dateTime"
+    },
+    "hydraMember": {
+      "@id": "hydra:member",
+      "@type": "@id"
+    },
+    "hydraLimit": {
+      "@id": "hydra:limit",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "hydraPageIndex": {
+      "@id": "hydra:pageIndex",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "hydraView": {
+      "@id": "hydra:view",
+      "@type": "@id"
+    },
+    "hydraTotalItems": "hydra:totalItems",
+    "hydraFirst": {
+      "@id": "hydra:first",
+      "@type": "@id"
+    },
+    "hydraLast": {
+      "@id": "hydra:last",
+      "@type": "@id"
+    },
+    "hydraNext": {
+      "@id": "hydra:next",
+      "@type": "@id"
+    },
+    "hydraPrevious": {
+      "@id": "hydra:previous",
+      "@type": "@id"
+    }
+  },
+  "id": "50fd7f03-276f-403e-ad39-152dba4e39be",
+  "generatedAtTime": "2023-07-12T11:40:20.441775Z",
+  "snapshotType": "Create",
+  "bevoegdBestuursniveaus": [
+    "Federaal",
+    "Europees"
+  ],
+  "uitvoerendBestuursniveaus": [
+    "Lokaal",
+    "Derden"
+  ],
+  "naam": {
+    "nl-BE-x-generated-informal": "Akte van Belgische nationaliteit - informal",
+    "nl-BE-x-generated-formal": "Akte van Belgische nationaliteit - formal",
+    "nl": "Akte van Belgische nationaliteit - nl",
+    "en": "Certificate of Belgian nationality"
+  },
+  "beschrijving": {
+    "nl": "<p>De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.</p> - nl",
+    "en": "<p>The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.</p>",
+    "nl-BE-x-generated-informal": "<p>De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.</p> - informal",
+    "nl-BE-x-generated-formal": "<p>De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.</p> - formal"
+  },
+  "verdereBeschrijving": {
+    "nl": "Verdere beschrijving - nl",
+    "nl-BE-x-generated-informal": "Verdere beschrijving - informal",
+    "nl-BE-x-generated-formal": "Verdere beschrijving - formal",
+    "en": "<p>The certificate states:</p><ul><li>the last name, first names, date and place of birth of the person to whom the certificate relates</li><li>the legal foundation of the declaration on the basis of which the certificate was drawn up</li><li>in the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.</li></ul><p>Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:</p><ul><li>A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.</li></ul><ul><li>An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.</li></ul>"
+  },
+  "publicatiekanalen": [
+    "YourEurope"
+  ],
+  "tags": [
+    "YourEuropeVerplicht"
+  ],
+  "themas": [
+    "BurgerOverheid",
+    "CultuurSportVrijeTijd"
+  ],
+  "doelgroepen": [
+    "Burger",
+    "Onderneming"
+  ],
+  "yourEuropeCategorieen": [
+    "VerblijfNaturalisatie",
+    "VoertuigenVerkeersregels"
+  ],
+  "uitzonderingen": {
+    "nl": "Uitzonderingen - nl",
+    "nl-BE-x-generated-formal": "Uitzonderingen - formal",
+    "nl-BE-x-generated-informal": "Uitzonderingen - informal",
+    "en": "Uitzonderingen - en"
+  },
+  "regelgevingTekst": {
+    "nl-BE-x-generated-informal": "Regelgeving - informal",
+    "nl-BE-x-generated-formal": "Regelgeving - formal",
+    "nl": "Regelgeving - nl",
+    "en": "Regelgeving - en"
+  },
+  "voorwaarden": [
+    {
+      "beschrijving": {
+        "en": "<p>The right to receive a copy of or an extract from certificates of Belgian nationality is limited to:</p><ul><li>yourself</li><li>your spouse, surviving spouse, or legal cohabitant</li><li>your legal representative (e.g. a parent, guardian, conservator)</li><li>blood relatives in the ascending or descending line (no relatives by affinity and side branches)</li><li>your heirs</li><li>special agents, such as notaries or lawyers.</li></ul><p>If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract.</p>",
+        "nl-BE-x-generated-informal": "<p>De akte vermeldt:</p><ul><li>de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeft</li><li>de wettelijke basis van de verklaring op basis waarvan de akte werd opgesteld</li><li>in geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.</li></ul><p>Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:</p><ul><li>Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3><p>Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:</p><ul><li>uzelf</li><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>uw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>uw erfgenamen</li><li>bijzondere gemachtigden zoals een notaris of advocaat.</li></ul><p>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel.</p> - informal",
+        "nl": "<p>De akte vermeldt:</p><ul><li>de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeft</li><li>de wettelijke basis van de verklaring op basis waarvan de akte werd opgesteld</li><li>in geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.</li></ul><p>Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:</p><ul><li>Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3><p>Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:</p><ul><li>uzelf</li><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>uw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>uw erfgenamen</li><li>bijzondere gemachtigden zoals een notaris of advocaat.</li></ul><p>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel.</p> - nl",
+        "nl-BE-x-generated-formal": "<p>De akte vermeldt:</p><ul><li>de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeft</li><li>de wettelijke basis van de verklaring op basis waarvan de akte werd opgesteld</li><li>in geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.</li></ul><p>Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:</p><ul><li>Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3><p>Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:</p><ul><li>uzelf</li><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>uw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>uw erfgenamen</li><li>bijzondere gemachtigden zoals een notaris of advocaat.</li></ul><p>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel.</p> - formal"
+      },
+      "naam": {
+        "nl": "Voorwaarden - nl",
+        "en": "Requirements",
+        "nl-BE-x-generated-formal": "Voorwaarden - formal",
+        "nl-BE-x-generated-informal": "Voorwaarden - informal"
+      },
+      "bewijs": {
+        "beschrijving": {
+          "nl-BE-x-generated-informal": "<p>Als u het document zelf ophaalt:</p><ul><li>uw eigen identiteitskaart.</li></ul><p>Als u het document voor iemand anders aanvraagt:</p><ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - informal",
+          "nl-BE-x-generated-formal": "<p>Als u het document zelf ophaalt:</p><ul><li>uw eigen identiteitskaart.</li></ul><p>Als u het document voor iemand anders aanvraagt:</p><ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - formal",
+          "en": "<p>If you collect the document yourself:</p><ul><li>your own identity card.</li></ul><p>If you are requesting the document for someone else:</p><ul><li>a power of attorney from that person and a copy of their identity card</li></ul><ul><li>as well as your own identity card.</li></ul>",
+          "nl": "<p>Als u het document zelf ophaalt:</p><ul><li>uw eigen identiteitskaart.</li></ul><p>Als u het document voor iemand anders aanvraagt:</p><ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - nl"
+        },
+        "naam": {
+          "nl": "Bewijs - nl",
+          "nl-BE-x-generated-informal": "Bewijs - informal",
+          "nl-BE-x-generated-formal": "Bewijs - formal",
+          "en": "Evidence"
+        },
+        "@type": "bewijsType"
+      },
+      "@type": "voorwaarde",
+      "order": 0.0
+    }
+  ],
+  "procedures": [
+    {
+      "naam": {
+        "nl-BE-x-generated-formal": "Procedure - formal",
+        "en": "Procedure - en",
+        "nl": "Procedure - nl",
+        "nl-BE-x-generated-informal": "Procedure - informal"
+      },
+      "beschrijving": {
+        "nl-BE-x-generated-formal": "<p>U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.</p><p>Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:</p><ul><li>via het e-loket van uw gemeente</li><li>of via de attestenpagina van <a href=\"https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel\">'Mijn Burgerprofiel'</a>.</li></ul><p>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).</p><p>Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.</p> - formal",
+        "nl": "<p>U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.</p><p>Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:</p><ul><li>via het e-loket van uw gemeente</li><li>of via de attestenpagina van 'Mijn Burgerprofiel'.</li></ul><p>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).</p><p>Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.</p> - nl",
+        "en": "<p>You can request a copy of or an extract from the certificate of nationality from your municipality.</p><p>If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate online</p><ul><li>via the e-desk of your municipality</li><li>or via the certificates page of ‘My Citizen Profile’ ‘Mijn Burgerprofiel’</a>).</li></ul><p>Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).</p><p>Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.</p>",
+        "nl-BE-x-generated-informal": "<p>U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.</p><p>Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:</p><ul><li>via het e-loket van uw gemeente</li><li>of via de attestenpagina van 'Mijn Burgerprofiel'.</li></ul><p>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).</p><p>Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.</p> - informal"
+      },
+      "websites": [
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Procedure website naam - formal",
+            "nl": "Procedure website naam - nl",
+            "nl-BE-x-generated-informal": "Procedure website naam - informal",
+            "en": "Procedure website naam - en"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "procedure website beschrijving - formal",
+            "nl": "procedure website beschrijving - nl",
+            "en": "procedure website beschrijving - en",
+            "nl-BE-x-generated-informal": "procedure website beschrijving - informal"
+          },
+          "url": "https://procedure-website.com",
+          "@type": "website",
+          "order": 0.0
+        }
+      ],
+      "@type": "procedure",
+      "order": 0.0
+    }
+  ],
+  "websites": [
+    {
+      "naam": {
+        "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal",
+        "nl": "Website Belgische nationaliteit en naturalisatie - nl",
+        "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal",
+        "en": "Website Belgische nationaliteit en naturalisatie - en"
+      },
+      "beschrijving": {
+        "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal",
+        "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl",
+        "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en",
+        "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal"
+      },
+      "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
+      "@type": "website",
+      "order": 0.0
+    }
+  ],
+  "kosten": [
+    {
+      "beschrijving": {
+        "nl": "<p>De aanvraag en het attest zijn gratis.</p> - nl",
+        "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis.</p> - informal",
+        "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis.</p> - formal",
+        "en": "<p>De aanvraag en het attest zijn gratis.</p> - en"
+      },
+      "naam": {
+        "nl": "Bedrag kost - nl",
+        "nl-BE-x-generated-informal": "Bedrag kost - informal",
+        "nl-BE-x-generated-formal": "Bedrag kost - formal",
+        "en": "bedrag kost - en"
+      },
+      "@type": "kost",
+      "order": 0.0
+    }
+  ],
+  "financieleVoordelen": [
+    {
+      "beschrijving": {
+        "nl": "<p>Beschrijving financieel voordeel.</p> - nl",
+        "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel.</p> - informal",
+        "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel.</p> - formal",
+        "en": "<p>Beschrijving financieel voordeel.</p> - en"
+      },
+      "naam": {
+        "nl": "Titel financieel voordeel. - nl",
+        "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal",
+        "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
+        "en": "Titel financieel voordeel. - en"
+      },
+      "@type": "financieelVoordeel",
+      "order": 0.0
+    }
+  ],
+  "regelgeving": [
+    {
+      "id": "https://ipdc.be/regelgeving",
+      "@type": "regel",
+      "order": 0.0
+    }
+  ],
+  "startDienstVerlening": "2020-08-26T11:40:20.026205561Z",
+  "eindeDienstVerlening": "2025-07-12T11:40:20.026205561Z",
+  "type": "FinancieelVoordeel",
+  "talen": [
+    "ENG",
+    "DEU"
+  ],
+  "creatie": "2023-07-12T11:40:20.026205561Z",
+  "laatstGewijzigd": "2023-07-12T11:40:20.026209604Z",
+  "productnummer": "1502",
+  "gearchiveerd": false,
+  "publicatieLink": {
+    "naam": {
+      "nl-BE-x-generated-informal": "Lees meer op vlaanderen.be",
+      "nl-BE-x-generated-formal": "Lees meer op vlaanderen.be",
+      "en": "See also on vlaanderen.be",
+      "nl": "Lees meer op vlaanderen.be"
+    },
+    "url": "https://www.uat-vlaanderen.be/Product/df0f92ad-ea40-4b74-b7da-3c3b31836895"
+  },
+  "metadata": {
+    "uJeVersie": "31.3.0",
+    "generatedFormeleFields": true,
+    "generatedInformeleFields": true
+  },
+  "zoektermen": {
+    "nl": [
+      "Akte - nl",
+      "Nationaliteit - nl"
+    ]
+  },
+  "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be",
+  "@type": "ConceptualPublicService",
+  "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84"
+}

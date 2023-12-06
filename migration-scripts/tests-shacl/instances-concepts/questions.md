@@ -110,6 +110,27 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag> <https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht> .
 
+#### json ld parsing of concepts
+- included in the concept-from-ldes-stream examples, the @context tag, containing the full context document (ConceptJsonLdContext.json)
+
+#### Concept fields that are in data, but are missing
+- <http://purl.org/dc/terms/isVersionOf> op het implementatie model ; en ook op shacl validatie 
+- <http://schema.org/dateCreated> op het implementatie model ; en ook op shacl validatie
+- <http://schema.org/dateModified> op het implementatie model ; en ook op shacl validatie
+- <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
+- <http://schema.org/productID> op het implementatie model ; en ook op shacl validatie
+- <http://www.w3.org/ns/prov#generatedAtTime> op het implementatie model ; en ook op shacl validatie
+- <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> op vocabularium, op het implementatie model ; en ook op shacl validatie; 
+- <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> en andere ? geen code lijst gedefinieerd ?
+- <https://publications.europa.eu/resource/authority/language> op het implementatie model ? en ook op shacl validatie ; bij instantie wordt er dc:linguisticSystem gebruikt ?  
+- <http://publications.europa.eu/resource/authority/language/ENG> de vermelde waarden bestaan als concept in codelijst [20230627161047-taal-codelist.ttl]; wordt niet naar verwezen vanuit implementatie model documentatie
+
+#### Incorrect Concept Fields
+- <http://data.europa.eu/eli/ontology/#LegalResource> type is incorrect =>  should be <http://data.europa.eu/eli/ontology#LegalResource> ? is an error in jsonld context file
+  <https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology/#LegalResource> .
+- 
+
+
 #### About other content
 - should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
 - concept tag has no restrictions ... ? should we define a type for this?
@@ -132,6 +153,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - Address > startnaam: min count = 1 + taal nl / en
 - added <https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
   <https://ipdc.be/regelgeving> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> . in output ...
+- added a schema/ontology for <http://www.w3.org/ns/prov#> (prov.ttl)
 
 # TODO
 - the explanations in the shacl are sometimes in english, sometimes in nl; but the language string is always nl
@@ -157,3 +179,4 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   => opsplitsen en dan wel terug met deftige shapes werken per type ?  
   => als we opsplitsen en per type een shape restrictie doen, dan kun je ze nooit samen valideren ...; maar misschien is dat ook wel ok ?
   => shape split up into  instance-shape.ttl and concept-shape.ttl
+- Fix this ugly validation error by reintroducing a list of all languages (then at least it prints the list in the message)?

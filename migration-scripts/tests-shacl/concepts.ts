@@ -5,6 +5,8 @@ export async function main() {
     console.log('concepts tests');
     console.log('concepts test cases');
     await conceptTestData();
+    console.log('concepts from ldes stream');
+    await conceptFromLdesStream();
 }
 
 async function conceptTestData() {
@@ -17,10 +19,34 @@ async function conceptTestData() {
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 
-    const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-test-cases-data.ttl'));
+    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-test-cases-data.ttl'));
 
-    validate(instanceData, schemasOntologies, codeLists, shapes);
+    validate(conceptData, schemasOntologies, codeLists, shapes);
+}
 
+async function conceptFromLdesStream() {
+    const conceptShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/concept-shape.ttl'));
+    const commonShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/common-shapes.ttl'));
+    const shapes =
+        conceptShape
+            .merge(commonShape);
+
+    const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
+    const besluitOntology = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
+    const ipdcLpdcOntology = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/ipdc-lpdc.ttl'));
+
+    const schemasOntologies
+        = besluitOntology
+        .merge(ipdcLpdcOntology);
+
+    //example how to parse and interpret a jsonld file, and write out as turtle format
+    //const conceptFromLdesStream = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-from-ldes-stream.jsonld'));
+    //console.log(conceptFromLdesStream);
+    //console.log(await conceptFromLdesStream.serialize({format: "text/turtle"}));
+
+    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-from-ldes-stream.ttl'));
+
+    validate(conceptData, schemasOntologies, codeLists, shapes);
 }
 
 // @ts-ignore
