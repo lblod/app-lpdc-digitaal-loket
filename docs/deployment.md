@@ -173,7 +173,15 @@ _Infrastructure notes_:  [production currently has special configs we want to re
   
   #Ensure to copy the /config/dispatcher/dispatcher.ex (without the commented /mock/sessions) to /config/controle-dispatcher/dispatcher.ex. .
   #Merge the /config/dispatcher/dispatcher.ex change of the /mock/sessions with the latest version of this file.
-  #Update in the docker-compose-override.yml manually the frontend version (controle container), identifier version (controle-identifier container) and dispatcher version (controle-dispatcher) to the one of this release.
+  #Update in the docker-compose.override.yml manually the frontend version (controle container), identifier version (controle-identifier container) and dispatcher version (controle-dispatcher) to the one of this release.
+  
+  # enable maintenance frontend docker-compose.override.yml when migrations need to be executed
+  # lpdc:
+  #  image: lblod/frontend-generic-maintenance
+  #  environment:
+  #    EMBER_MAINTENANCE_MESSAGE: "We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikm>
+  #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
+  #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
   
   drc pull
 
