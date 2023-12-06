@@ -20,7 +20,6 @@ services:
     volumes:
       - ../../lpdc-management-service/:/app/
       - ../config/lpdc-management:/config
-      - ./data-tests/files/lpdc:/data
     working_dir: "/app"
     command: ["npm", "run", "development"]
     healthcheck:

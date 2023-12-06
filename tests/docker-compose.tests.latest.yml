@@ -17,7 +17,6 @@ services:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
     volumes:
       - ../config/lpdc-management:/config
-      - ./data-tests/files/lpdc:/data
     healthcheck:
       test: [ "CMD", "wget", "--spider", "http://localhost" ]
       interval: 5s

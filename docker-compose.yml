@@ -199,7 +199,6 @@ services:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
     volumes:
       - ./config/lpdc-management:/config
-      - ./data/files/lpdc:/data
     labels:
       - "logging=true"
     healthcheck:
