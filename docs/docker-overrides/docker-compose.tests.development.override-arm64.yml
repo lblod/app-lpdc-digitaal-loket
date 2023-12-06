@@ -33,7 +33,6 @@ services:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
 
   lpdc-management:
-    image: semtech/mu-javascript-template:feature-node-18-decrease-development-reload-time-arm64-build
     environment:
       ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 #      LOG_SPARQL_UPDATES: "true"
