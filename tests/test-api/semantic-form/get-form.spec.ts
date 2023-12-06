@@ -51,7 +51,7 @@ test('Can get characteristics form for concept', async ({request}) => {
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync('../config/lpdc-management/characteristics/form.ttl', 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
     expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
     const triplesWithoutUUID = new TripleArray(concept.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
@@ -84,7 +84,7 @@ test('Can get characteristics form for public service', async ({request}) => {
     const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
     expect(response.ok()).toBeTruthy();
 
-    const expectedForm = fs.readFileSync('../config/lpdc-management/characteristics/form.ttl', 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
     const responseBody = await response.json();
     expect(responseBody.form).toStrictEqual(expectedForm);
     expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
@@ -102,7 +102,7 @@ test('English form is only added when publicationMedium is yourEurope and form i
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
-    const expectedEnglishForm = fs.readFileSync('../config/lpdc-management/content/add-english-requirement.ttl', 'utf8');
+    const expectedEnglishForm = fs.readFileSync(`${__dirname}/form-add-english-requirement.ttl`, 'utf8');
     const responseBody = await response.json();
     expect(responseBody.form).toStrictEqual(expectedForm + expectedEnglishForm);
 });
