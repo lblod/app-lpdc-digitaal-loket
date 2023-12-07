@@ -44,7 +44,15 @@ async function conceptFromLdesStream() {
     //console.log(conceptFromLdesStream);
     //console.log(await conceptFromLdesStream.serialize({format: "text/turtle"}));
 
-    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-from-ldes-stream.ttl'));
+    const concept1Data = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-from-ldes-stream.ttl'));
+    const concept2Data = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-from-ldes-stream-2.ttl'));
+    const concept3Data = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-from-ldes-stream-3.ttl'));
+    const concept4Data = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-from-ldes-stream-4.ttl'));
+    const conceptData =
+        concept1Data
+            .merge(concept2Data)
+            .merge(concept3Data)
+            .merge(concept4Data);
 
     validate(conceptData, schemasOntologies, codeLists, shapes);
 }

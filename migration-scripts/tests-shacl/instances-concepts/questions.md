@@ -9,7 +9,7 @@
 - AddressShape > fullAddress verwijderd
 - shacl:path <https://www.w3.org/ns/locn#adminUnitL2> : ? updated to ? shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
 - shacl:class <http://fixme.com#URL>; (url): xsd:string ??
-- add oss:shapes a rdf:Property; 
+- add oss:shapes a rdf:Property;
 
 # Remarks
 
@@ -125,10 +125,11 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - <https://publications.europa.eu/resource/authority/language> op het implementatie model ? en ook op shacl validatie ; bij instantie wordt er dc:linguisticSystem gebruikt ?  
 - <http://publications.europa.eu/resource/authority/language/ENG> de vermelde waarden bestaan als concept in codelijst [20230627161047-taal-codelist.ttl]; wordt niet naar verwezen vanuit implementatie model documentatie
 
-#### Incorrect Concept Fields
+#### Incorrect Concept Fields ?
 - <http://data.europa.eu/eli/ontology/#LegalResource> type is incorrect =>  should be <http://data.europa.eu/eli/ontology#LegalResource> ? is an error in jsonld context file
   <https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology/#LegalResource> .
-- 
+- What is required in a Website ? is a description required if a title is also present ? e.g. in concept 2 : <http://mu.semte.ch/blank#741bd782-900e-41fa-9ceb-dbaa8b7e457b> does not have any description ? ==> According to the implementatie model doc, the description is optional ...
+  => updated for concept shape and instantie shape as well 
 
 
 #### About other content

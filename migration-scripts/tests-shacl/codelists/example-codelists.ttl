@@ -65,13 +65,31 @@ ex:a-concept-tag
 <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VoertuigenVerkeersregels>
     a skos:Concept.
 
+<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/BurgerEnFamilieRechtenKinderen>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VerblijfOverlijden>
+    a skos:Concept.
+
 <https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Toelating>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs>
     a skos:Concept.
 
 <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid>
     a skos:Concept.
 
 <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>
     a skos:Concept.
 
 <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>
@@ -89,11 +107,18 @@ ex:a-concept-tag
 <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Europees>
     a skos:Concept.
 
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams>
+    a skos:Concept.
+
 <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>
     a skos:Concept.
 
 <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Derden>
     a skos:Concept.
 
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal>
+    a skos:Concept.
+
 <https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht>
     a skos:Concept.
+

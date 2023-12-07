@@ -260,7 +260,7 @@ oss:InstanceWebsiteShape
        ], [
            shacl:datatype rdf:langString;
            shacl:description "This property represents the description of the Website."@nl;
-           shacl:minCount 1;
+           shacl:minCount 0;
            shacl:maxCount 4; # one for each language allowed
            shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
            shacl:uniqueLang true;
