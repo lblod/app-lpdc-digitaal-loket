@@ -60,10 +60,12 @@ async function findAdresMatch(adres: Adres) {
             throw Error(`Error ${response.status}: ${await response.text()}`)
         }
         console.log(await response.text());
-    }
-    const jsonResponse: any = await response.json();
-    if (jsonResponse?.adresMatches?.length && jsonResponse?.adresMatches[0]?.score === 100) {
-        return jsonResponse.adresMatches[0].identificator.id;
+        return undefined;
+    } else {
+        const jsonResponse: any = await response.json();
+        if (jsonResponse?.adresMatches?.length && jsonResponse?.adresMatches[0]?.score === 100) {
+            return jsonResponse.adresMatches[0].identificator.id;
+        }
     }
 }
 
