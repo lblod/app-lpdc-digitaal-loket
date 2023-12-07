@@ -10,7 +10,7 @@ import {
 
 async function globalSetup(config: FullConfig) {
     console.log('verify services running');
-
+    const isE2e = config[Object.getOwnPropertySymbols(config)[0].valueOf()].cliArgs[0].includes('test-e2e')
     const apiRequest = await request.newContext();
 
     const services =
@@ -26,11 +26,13 @@ async function globalSetup(config: FullConfig) {
         await waitTillServiceRunning(apiRequest, service);
     }
 
-    const expectedNumberOfConcepts = 2;
-    const expectedNumberOfBestuurseenheden = 1288;
-    await waitTillInitialConceptsAreLoaded(apiRequest, expectedNumberOfConcepts);
-    await waitTillInitialBestuurseenhedenAreLoaded(apiRequest, expectedNumberOfBestuurseenheden);
-    await waitTillInitialDisplayConfigurationsAreLoaded(apiRequest, expectedNumberOfConcepts, expectedNumberOfBestuurseenheden);
+    if (isE2e) {
+        const expectedNumberOfConcepts = 2;
+        const expectedNumberOfBestuurseenheden = 1288;
+        await waitTillInitialConceptsAreLoaded(apiRequest, expectedNumberOfConcepts);
+        await waitTillInitialBestuurseenhedenAreLoaded(apiRequest, expectedNumberOfBestuurseenheden);
+        await waitTillInitialDisplayConfigurationsAreLoaded(apiRequest, expectedNumberOfConcepts, expectedNumberOfBestuurseenheden);
+    }
 }
 
 async function waitTillServiceRunning(apiRequest: APIRequestContext, service: {
