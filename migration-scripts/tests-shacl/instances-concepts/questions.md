@@ -181,3 +181,4 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   => als we opsplitsen en per type een shape restrictie doen, dan kun je ze nooit samen valideren ...; maar misschien is dat ook wel ok ?
   => shape split up into  instance-shape.ttl and concept-shape.ttl
 - Fix this ugly validation error by reintroducing a list of all languages (then at least it prints the list in the message)?
+- nl-be-x-formal -> nl-BE-x-formal ? and for others?

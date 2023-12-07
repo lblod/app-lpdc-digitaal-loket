@@ -22,8 +22,6 @@ oss:conceptShapes a rdf:Property;
 
 <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> oss:conceptShapes oss:ConceptualPublicServiceShape,
                                                                                                   oss:eli::LegalResourceShape,
-                                                                                                  oss:AddressShape,
-                                                                                                  oss:ContactPointShape,
                                                                                                   oss:ConceptRuleShape,
                                                                                                   oss:ConceptWebsiteShape,
                                                                                                   oss:ConceptCostShape,
