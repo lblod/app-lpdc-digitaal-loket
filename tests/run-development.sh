@@ -19,6 +19,11 @@ npm install
 cd ipdc-stub || exit
 npm install
 cd ..
+
+cd ../../lpdc-management-service || exit
+npm install
+cd ../app-lpdc-digitaal-loket/tests || exit
+
 docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.development.yml -f ./docker-compose.tests.development.override.yml -p app-lpdc-digitaal-loket-tests down --remove-orphans
 docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.development.yml -f ./docker-compose.tests.development.override.yml -p app-lpdc-digitaal-loket-tests pull
 docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.development.yml -f ./docker-compose.tests.development.override.yml -p app-lpdc-digitaal-loket-tests up -d --build
