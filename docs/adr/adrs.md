@@ -8,3 +8,4 @@
 * [6. Testing Approach](0006-testing-approach.md)
 * [7. Playwright best practices](0007-playwright-best-practices.md)
 * [8. Frontend initiates state changes via backend operations](0008-frontend-initiates-state-changes-via-backend-operations.md)
+* [9. Technically Optimize Backend](0009-technically-optimize-backend.md)
