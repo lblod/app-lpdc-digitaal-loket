@@ -17,6 +17,7 @@ services:
       ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
       MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
+      FEATURE_FLAG_ATOMIC_UPDATE: 'true'
     volumes:
       - ../../lpdc-management-service/:/app/
     working_dir: "/app"
