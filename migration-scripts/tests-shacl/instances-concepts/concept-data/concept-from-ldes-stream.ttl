@@ -1,10 +1,21 @@
+# CONCEPT SNAPSHOT FIELDS
+        #=> put them in the ldes meta data .
 #ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://purl.org/dc/terms/isVersionOf> <https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84> .
+#ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> .
+#ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://www.w3.org/ns/prov#generatedAtTime> "2023-07-12T11:40:20.441775Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+#CONCEPT FIELDS ADD To Contract
 #ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/dateCreated> "2023-07-12T11:40:20.026205561Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 #ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/dateModified> "2023-07-12T11:40:20.026209604Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+#ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/productID> "1502"
+
+#not used? => may be remove from json ld context ?
 #ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/identifier> "50fd7f03-276f-403e-ad39-152dba4e39be" .
-#ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/productID> "1502" .
-#ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://www.w3.org/ns/prov#generatedAtTime> "2023-07-12T11:40:20.441775Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-#ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> .
+
+
+
+#Niet codelijst van digitaal vlaanderen, maar lijst van europa.
+#pera:language : OK
 #ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <https://publications.europa.eu/resource/authority/language> <http://publications.europa.eu/resource/authority/language/ENG> .
 #ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <https://publications.europa.eu/resource/authority/language> <http://publications.europa.eu/resource/authority/language/DEU> .
 

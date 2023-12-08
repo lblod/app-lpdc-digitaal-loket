@@ -122,8 +122,19 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - <http://www.w3.org/ns/prov#generatedAtTime> op het implementatie model ; en ook op shacl validatie
 - <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> op vocabularium, op het implementatie model ; en ook op shacl validatie; 
 - <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> en andere ? geen code lijst gedefinieerd ?
-- <https://publications.europa.eu/resource/authority/language> op het implementatie model ? en ook op shacl validatie ; bij instantie wordt er dc:linguisticSystem gebruikt ?  
+ => of geen lijst toevoegen, vervangen door archived vlag ... (create / update : impliciet, archived kan aan en af gezet worden).
+- pera:language - <https://publications.europa.eu/resource/authority/language> op het implementatie model ? en ook op shacl validatie ; bij instantie wordt er dc:linguisticSystem gebruikt ?  
 - <http://publications.europa.eu/resource/authority/language/ENG> de vermelde waarden bestaan als concept in codelijst [20230627161047-taal-codelist.ttl]; wordt niet naar verwezen vanuit implementatie model documentatie
+  ==> talen functioneel qua type: ok; maar moet dit wel op een concept staan ?
+  ==> talen worden nu niet doorgestuurd naar IPDC
+ instance shape:
+-  [
+   shacl:class dc:LinguisticSystem;
+   shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
+   shacl:name "language"@nl;
+   shacl:path pera:language
+   ], => skos:Concept
+- 
 
 #### Incorrect Concept Fields ?
 - <http://data.europa.eu/eli/ontology/#LegalResource> type is incorrect =>  should be <http://data.europa.eu/eli/ontology#LegalResource> ? is an error in jsonld context file
@@ -146,9 +157,9 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   shacl:name "conceptTag"@nl;
   shacl:path lpdcExt:conceptTag
   ],
-  niet bij Instance shape?
+  niet bij Instance shape? : moet er niet op.
 - known limitation:  the order type has an order ; not easy to deeply validate that on each cost, the orders are unique
-  ... kan wel opgelost worden met sparql queries
+  ... kan wel opgelost worden met sparql queries > of types te definieren
 - AddressShape ? country required?              shacl:minCount 1;
 - Adress : gemeente, straatnaam, land : we beperken nu tot en / nl als taal
 - Address > startnaam: min count = 1 + taal nl / en
