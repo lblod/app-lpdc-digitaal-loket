@@ -15,6 +15,7 @@
 @prefix eli:    <http://data.europa.eu/eli/ontology#> .
 @prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
 @prefix pera: <http://publications.europa.eu/resource/authority/> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
 
 oss:instanceShapes a rdf:Property;
      rdfs:label "shacl shapes for instanties van implementatiemodel"@nl .
@@ -36,6 +37,12 @@ oss:InstancePublicServiceShape
     shacl:closed true;
     shacl:ignoredProperties ( rdf:type ) ;
     shacl:property [
+           shacl:datatype xsd:string;
+           shacl:description "This property represents an additional uuid to identify the instance. The uuid might be the same as the IRI."@nl;
+           shacl:maxCount 1;
+           shacl:name "uuid"@nl;
+           shacl:path mu:uuid
+       ],[
           shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
           shacl:maxCount 4; # one for each language allowed

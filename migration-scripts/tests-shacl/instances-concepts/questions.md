@@ -10,6 +10,7 @@
 - shacl:path <https://www.w3.org/ns/locn#adminUnitL2> : ? updated to ? shacl:path <http://www.w3.org/ns/locn#adminUnitL2>
 - shacl:class <http://fixme.com#URL>; (url): xsd:string ??
 - add oss:shapes a rdf:Property;
+- added mu-semtech.ttl (containing uuid description; maybe we should elaborate on this a bit more)
 
 # Remarks
 
@@ -102,14 +103,15 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/dc/terms/created> "2023-11-30T12:25:18.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/dc/terms/modified> "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589> .
-- #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/productID> "1502" .
+- ADDED - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://mu.semte.ch/vocabularies/core/uuid> "4102816b-9cee-4698-8b7d-4bcb60f2dba9" .
+
 
 #### Fields that are sent from LPDC -> IPDC that are not in vocabularium, nor shacl shape; but should not be added ? 
-- #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://mu.semte.ch/vocabularies/core/uuid> "4102816b-9cee-4698-8b7d-4bcb60f2dba9" .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag> <https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht> .
-
+- #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/productID> "1502" .
+- 
 #### json ld parsing of concepts
 - included in the concept-from-ldes-stream examples, the @context tag, containing the full context document (ConceptJsonLdContext.json)
 

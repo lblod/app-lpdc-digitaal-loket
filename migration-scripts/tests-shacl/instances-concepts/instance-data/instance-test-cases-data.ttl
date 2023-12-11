@@ -16,6 +16,7 @@
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix adres: <https://data.vlaanderen.be/ns/adres#> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
 
 ex:a-website-for-a-rule
     a schema:WebSite ;
@@ -180,4 +181,5 @@ ex:a-full-valid-instance
     lpdcExt:targetAudience ex:a-target-audience ;
     m8g:thematicArea ex:a-thematic-area;
     dc:type ex:a-type;
-    lpdcExt:yourEuropeCategory ex:a-your-europe-category.
+    lpdcExt:yourEuropeCategory ex:a-your-europe-category;
+    mu:uuid "4102816b-9cee-4698-8b7d-4bcb60f2dba9".
