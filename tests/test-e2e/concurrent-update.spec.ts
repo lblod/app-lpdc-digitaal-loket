@@ -10,6 +10,7 @@ import {v4 as uuid} from "uuid";
 import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 import {IpdcStub} from "./components/ipdc-stub";
+import {Toaster} from "./components/toaster";
 
 
 test.describe('Concurrent Update', () => {
@@ -47,7 +48,9 @@ test.describe('Concurrent Update', () => {
         await instantieDetailsPageOtherUser.beschrijvingEditor.fill("second description");
         await instantieDetailsPageOtherUser.beschrijvingEditor.blur();
         await instantieDetailsPageOtherUser.wijzigingenBewarenButton.click();
-        await expect(instantieDetailsPageOtherUser.wijzigingenBewarenButton).toBeDisabled();
+        const toaster = new Toaster(pageOtherUser);
+        await expect(toaster.message).toContainText("Error: De gegevens zijn aangepast door een andere gebruiker. Refresh en pas wijzigingen opnieuw toe. ");
+        await toaster.closeButton.click();
 
         instantieDetailsPage = await openInstantie(page, instantieTitel);
         expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain("first description");
