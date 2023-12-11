@@ -193,3 +193,9 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   => shape split up into  instance-shape.ttl and concept-shape.ttl
 - Fix this ugly validation error by reintroducing a list of all languages (then at least it prints the list in the message)?
 - nl-be-x-formal -> nl-BE-x-formal ? and for others?
+- split shapes into cardinaliteiten en structure/types : so we can use structure in domain saving, and cardinalities in publish (on top of extra publish validation e.g. in english: title / description)
+- create an official shacl shape for the form structure + expand with our own shacl semantic form shape stuff. Normally it should be possible to automatically merge it by loading both parts and then getting an official form tree.
+  it would maybe then also be possible to in a strategy kind of mode, to load other components for each of the leaves ... 
+  is it possible to seperate the 1/ form structure 2/ the data structure + validation rules about it 3/ the rendering of the components (e.g. compare components or left nederlands, right engels + other labels)
+- See 2.1.1 Constraints, Parameters and Constraint Components of shacl documentation: you can extend shacl itself. and create a new validator. Only thing to do is to define for instance -> exactLanguageIn ; and then see if our validator supports validating this ... This might also be used to do all other validations ...
+  -> degene die we gebruiken heeft geen directe optie om extension validators te registreren -> via options deze optie toevoegen ... aan de validator; en dan zelf er wat aan toevoegen ...
