@@ -65,10 +65,10 @@ The shape for 2022-0-15 can be found [here](instances-concepts%2Fshapes%2F2022-0
   - `schemas:url` specified as `datatype:string`
 - On all sub entities that represent a list (procedure, website, rule, etc), a `shacl:order` is added. This is to ensure an order on these sub entities.
 
-## Other info
+# Other info
 
-- Referenced schema's or ontologies are found under `schemas-ontologies` 
-
+- Referenced schema's or ontologies are found under `schemas-ontologies`
+- The (current) remaining tasks in this proces are found [here](instances-concepts%2Fquestions.md#todo)
 
 
 # Executing the code
