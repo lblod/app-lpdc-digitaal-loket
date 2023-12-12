@@ -90,7 +90,8 @@ ex:a-minimal-valid-concept
     dc:description  """description-nl"""@nl ;
     schema:productID "678";
     dc:isVersionOf <some-iri> ;
-    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime.
+    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
+    lpdcExt:isArchived true.
 
 #a concept that has full data filled in; expect no validation errors
 ex:a-full-valid-concept

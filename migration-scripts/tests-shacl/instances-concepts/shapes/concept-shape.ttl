@@ -35,6 +35,12 @@ oss:ConceptualPublicServiceShape
     shacl:closed true;
     shacl:ignoredProperties ( rdf:type ) ;
     shacl:property [
+          shacl:datatype xsd:boolean ;
+          shacl:description "This property represents if this conceptual public service snapshot was archived. This means that it should not be actively be used as a concept, but can be historically referenced from instances. Archival can be temporary. A conceptual public service can be unarchived. In this regard, archival should be viewed as a state of a conceptual public service. Optional property, if lacking means not archived."@nl;
+          shacl:maxCount 1;
+          shacl:name "isArchived"@nl;
+          shacl:path lpdcExt:isArchived
+      ],[
           shacl:datatype xsd:dateTime ;
           shacl:description "This property represents the time at which the conceptual public service snapshot was created and is available for use."@nl;
           shacl:minCount 1;

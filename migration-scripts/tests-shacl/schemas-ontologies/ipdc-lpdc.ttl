@@ -309,6 +309,9 @@ dcat:keyword a rdf:Property;
 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> a rdf:Property;
   rdfs:label "yourEuropeCategory"@nl .
 
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived> a rdf:Property;
+  rdfs:label "isArchived"@nl .
+
 schemas:email a rdf:Property;
   rdfs:label "hasEmail"@nl .
 
@@ -330,3 +333,5 @@ schemas:url a rdf:Property;
 
 <http://www.w3.org/ns/locn#adminUnitL2> a rdf:Property;
   rdfs:label "administrativeUnitLevel2"@nl .
+
+

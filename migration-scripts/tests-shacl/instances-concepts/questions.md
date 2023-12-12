@@ -121,8 +121,9 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - ADDED - <http://schema.org/dateModified> op het implementatie model ; en ook op shacl validatie
 - ADDED - <http://schema.org/productID> op het implementatie model ; en ook op shacl validatie
 - ADDED - <http://www.w3.org/ns/prov#generatedAtTime> op het implementatie model ; en ook op shacl validatie
-- <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> op vocabularium, op het implementatie model ; en ook op shacl validatie; 
-- <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> en andere ? geen code lijst gedefinieerd ?
+- ADDED - https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived> to indicate if the concept was archived.
+- REMOVED<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> op vocabularium, op het implementatie model ; en ook op shacl validatie; 
+ <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> en andere ? geen code lijst gedefinieerd ?
  => of geen lijst toevoegen, vervangen door archived vlag ... (create / update : impliciet, archived kan aan en af gezet worden).
 - pera:language - <https://publications.europa.eu/resource/authority/language> op het implementatie model ? en ook op shacl validatie ; bij instantie wordt er dc:linguisticSystem gebruikt ?  
 - <http://publications.europa.eu/resource/authority/language/ENG> de vermelde waarden bestaan als concept in codelijst [20230627161047-taal-codelist.ttl]; wordt niet naar verwezen vanuit implementatie model documentatie
@@ -135,7 +136,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
    shacl:name "language"@nl;
    shacl:path pera:language
    ], => skos:Concept
-- <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
+- NIET NODIG - <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
 
 
 #### Incorrect Concept Fields ?
