@@ -33,9 +33,23 @@ oss:ConceptualPublicServiceShape
     a shacl:NodeShape;
     shacl:closed true;
     shacl:ignoredProperties ( rdf:type ) ;
-    shacl:property [
+    shacl:property  [
+          shacl:datatype xsd:dateTime;
+          shacl:description "This property represents the datetime of creation of the Public Service."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:name "created"@nl;
+          shacl:path schema:dateCreated
+      ],[
+          shacl:datatype xsd:dateTime;
+          shacl:description "This property represents the datetime of modification of the Public Service."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:name "modified"@nl;
+          shacl:path schema:dateModified
+        ], [
           shacl:datatype rdf:langString;
-          shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
+          shacl:description "This property represents free text for additional information regarding the Description of the Public Service."@nl;
           shacl:maxCount 8; # one for each language allowed
           shacl:languageIn ("en" "nl" "fr" "de" "nl-be-x-formal" "nl-be-x-informal" "nl-be-x-generated-formal" "nl-be-x-generated-informal");
           shacl:uniqueLang true;

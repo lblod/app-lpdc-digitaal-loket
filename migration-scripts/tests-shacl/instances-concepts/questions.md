@@ -117,8 +117,8 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 
 #### Concept fields that are in data, but are missing
 - <http://purl.org/dc/terms/isVersionOf> op het implementatie model ; en ook op shacl validatie 
-- <http://schema.org/dateCreated> op het implementatie model ; en ook op shacl validatie
-- <http://schema.org/dateModified> op het implementatie model ; en ook op shacl validatie
+- ADDED - <http://schema.org/dateCreated> op het implementatie model ; en ook op shacl validatie
+- ADDED - <http://schema.org/dateModified> op het implementatie model ; en ook op shacl validatie
 - <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
 - <http://schema.org/productID> op het implementatie model ; en ook op shacl validatie
 - <http://www.w3.org/ns/prov#generatedAtTime> op het implementatie model ; en ook op shacl validatie
