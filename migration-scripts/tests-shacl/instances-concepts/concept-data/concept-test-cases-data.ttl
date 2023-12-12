@@ -13,6 +13,7 @@
 @prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix pera: <http://publications.europa.eu/resource/authority/> .
+@prefix lang: <http://publications.europa.eu/resource/authority/language/> .
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix adres: <https://data.vlaanderen.be/ns/adres#> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
@@ -129,6 +130,7 @@ ex:a-full-valid-concept
     lpdcExt:yourEuropeCategory ex:a-your-europe-category;
     schema:productID "1234";
     dc:isVersionOf <some-other-iri>;
-    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime.
+    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
+    pera:language lang:NLD.
 
 

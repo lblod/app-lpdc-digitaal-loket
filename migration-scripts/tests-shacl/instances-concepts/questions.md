@@ -129,6 +129,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - <http://publications.europa.eu/resource/authority/language/ENG> de vermelde waarden bestaan als concept in codelijst [20230627161047-taal-codelist.ttl]; wordt niet naar verwezen vanuit implementatie model documentatie
   ==> talen functioneel qua type: ok; maar moet dit wel op een concept staan ?
   ==> talen worden nu niet doorgestuurd naar IPDC
+ => http://publications.europa.eu/resource/authority/language ipv https://publications.europa.eu/resource/authority/language
  instance shape:
 -  [
    shacl:class dc:LinguisticSystem;
@@ -136,6 +137,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
    shacl:name "language"@nl;
    shacl:path pera:language
    ], => skos:Concept
+- 
 - NIET NODIG - <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
 
 

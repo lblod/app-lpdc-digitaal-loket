@@ -167,8 +167,9 @@ oss:InstancePublicServiceShape
           shacl:name "keyword"@nl;
           shacl:path dcat:keyword
       ], [
-          shacl:class dc:LinguisticSystem;
+          shacl:class skos:Concept;
           shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/taal.ttl";
           shacl:name "language"@nl;
           shacl:path pera:language
       ], [
