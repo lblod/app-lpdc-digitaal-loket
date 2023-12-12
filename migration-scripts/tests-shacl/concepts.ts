@@ -19,7 +19,11 @@ async function conceptTestData() {
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 
-    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-test-cases-data.ttl'));
+    const concept1Data = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-test-cases-data.ttl'));
+    const concept2Data = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concepts.ttl'));
+    const conceptData =
+        concept1Data
+            .merge(concept2Data);
 
     validate(conceptData, schemasOntologies, codeLists, shapes);
 }

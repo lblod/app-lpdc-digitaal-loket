@@ -116,11 +116,11 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - included in the concept-from-ldes-stream examples, the @context tag, containing the full context document (ConceptJsonLdContext.json)
 
 #### Concept fields that are in data, but are missing
-- <http://purl.org/dc/terms/isVersionOf> op het implementatie model ; en ook op shacl validatie 
+- ADDED - <http://purl.org/dc/terms/isVersionOf> op het implementatie model ; en ook op shacl validatie 
 - ADDED - <http://schema.org/dateCreated> op het implementatie model ; en ook op shacl validatie
 - ADDED - <http://schema.org/dateModified> op het implementatie model ; en ook op shacl validatie
 - ADDED - <http://schema.org/productID> op het implementatie model ; en ook op shacl validatie
-- <http://www.w3.org/ns/prov#generatedAtTime> op het implementatie model ; en ook op shacl validatie
+- ADDED - <http://www.w3.org/ns/prov#generatedAtTime> op het implementatie model ; en ook op shacl validatie
 - <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> op vocabularium, op het implementatie model ; en ook op shacl validatie; 
 - <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> en andere ? geen code lijst gedefinieerd ?
  => of geen lijst toevoegen, vervangen door archived vlag ... (create / update : impliciet, archived kan aan en af gezet worden).

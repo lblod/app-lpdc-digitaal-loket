@@ -16,6 +16,7 @@
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix adres: <https://data.vlaanderen.be/ns/adres#> .
 @prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 
 ex:a-concept-website-for-a-rule
     a schema:WebSite ;
@@ -88,7 +89,8 @@ ex:a-minimal-valid-concept
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
     schema:productID "678";
-    dc:isVersionOf <some-iri>.
+    dc:isVersionOf <some-iri> ;
+    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime.
 
 #a concept that has full data filled in; expect no validation errors
 ex:a-full-valid-concept
@@ -125,6 +127,7 @@ ex:a-full-valid-concept
     m8g:thematicArea ex:a-thematic-area;
     lpdcExt:yourEuropeCategory ex:a-your-europe-category;
     schema:productID "1234";
-    dc:isVersionOf <some-other-iri>.
+    dc:isVersionOf <some-other-iri>;
+    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime.
 
 
