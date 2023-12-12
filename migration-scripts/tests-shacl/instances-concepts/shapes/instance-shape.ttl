@@ -42,14 +42,14 @@ oss:InstancePublicServiceShape
            shacl:minCount 1;
            shacl:maxCount 1;
            shacl:name "created"@nl;
-           shacl:path dc:created
+           shacl:path schema:dateCreated
        ],[
            shacl:datatype xsd:dateTime;
            shacl:description "This property represents the datetime of modification of an instance."@nl;
            shacl:minCount 1;
            shacl:maxCount 1;
            shacl:name "modified"@nl;
-           shacl:path dc:modified
+           shacl:path schema:dateModified
        ],[
            shacl:datatype xsd:string;
            shacl:description "This property represents an additional uuid to identify the instance. The uuid might be the same as the IRI."@nl;

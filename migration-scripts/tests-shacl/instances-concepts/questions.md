@@ -100,8 +100,8 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - code lijsten voor andere: verwijzen vanuit de shacl + mee in validatie context nemen -> geeft netjes een fout indien er niet aan voldoet. -> instructie geven waar codelijst te vinden via rdfs:seeAlso
 
 #### Fields that are sent from LPDC -> IPDC that are not in vocabularium, nor shacl shape; and should be added?
-- ADDED - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/dc/terms/created> "2023-11-30T12:25:18.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-- ADDED - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/dc/terms/modified> "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+- ADDED - but using http://schema.org/dateCreated (to make it in sync with concepts) - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/dc/terms/created> "2023-11-30T12:25:18.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+- ADDED - but using <http://schema.org/dateModified> (to make it in sync with concepts) - (#<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/dc/terms/modified> "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 - ADDED - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589> .
 - ADDED - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://mu.semte.ch/vocabularies/core/uuid> "4102816b-9cee-4698-8b7d-4bcb60f2dba9" .
 
