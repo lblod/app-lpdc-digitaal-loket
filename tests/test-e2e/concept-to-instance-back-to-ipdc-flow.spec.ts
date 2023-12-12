@@ -918,7 +918,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             {"@id": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84"}
         );
 
-        //TODO LPDC-709 This should not be send to IPDC
+        //TODO LPDC-709 product id should not be send to IPDC
         expect(publicService['http://schema.org/productID']).toHaveLength(1);
         expect(publicService['http://schema.org/productID']).toEqual(expect.arrayContaining([
             {"@value": "1502"}
@@ -926,19 +926,16 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
 
         expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
 
-        //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(expect.objectContaining(
             {"@type": "http://www.w3.org/2001/XMLSchema#dateTime"}
         ));
 
-        //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(expect.objectContaining(
             {"@type": "http://www.w3.org/2001/XMLSchema#dateTime"}
         ));
 
-        //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://purl.org/pav/createdBy']).toHaveLength(1);
         expect(publicService['http://purl.org/pav/createdBy'][0]).toEqual(
             {"@id": bestuurseenheidConfig.uri}

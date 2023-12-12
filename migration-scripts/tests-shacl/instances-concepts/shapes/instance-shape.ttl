@@ -16,6 +16,7 @@
 @prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
 @prefix pera: <http://publications.europa.eu/resource/authority/> .
 @prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix pav: <http://purl.org/pav/> .
 
 oss:instanceShapes a rdf:Property;
      rdfs:label "shacl shapes for instanties van implementatiemodel"@nl .
@@ -31,14 +32,13 @@ oss:instanceShapes a rdf:Property;
                                                                                                    oss:InstanceEvidenceShape,
                                                                                                    oss:InstanceOutputShape.
 
-
 oss:InstancePublicServiceShape
     a shacl:NodeShape;
     shacl:closed true;
     shacl:ignoredProperties ( rdf:type ) ;
     shacl:property [
            shacl:datatype xsd:dateTime;
-           shacl:description "This property represents thedate time of creation of an instance."@nl;
+           shacl:description "This property represents the datetime of creation of an instance."@nl;
            shacl:minCount 1;
            shacl:maxCount 1;
            shacl:name "created"@nl;
@@ -56,6 +56,13 @@ oss:InstancePublicServiceShape
            shacl:maxCount 1;
            shacl:name "uuid"@nl;
            shacl:path mu:uuid
+       ],[
+           shacl:class m8g:PublicOrganisation;
+           shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the creation of the Public Service."@nl;
+           shacl:minCount  1;
+           shacl:maxCount 1;
+           shacl:name "createdBy"@nl;
+           shacl:path pav:createdBy
        ],[
           shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
