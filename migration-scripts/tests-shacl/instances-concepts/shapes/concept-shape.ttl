@@ -33,14 +33,21 @@ oss:ConceptualPublicServiceShape
     a shacl:NodeShape;
     shacl:closed true;
     shacl:ignoredProperties ( rdf:type ) ;
-    shacl:property  [
-            shacl:datatype xsd:string;
-            shacl:description "This property represents the product id of the Public Service. This is human readable string to uniquely identify the concept."@nl;
-            shacl:minCount 1;
-            shacl:maxCount 1;
-            shacl:name "productID"@nl;
-            shacl:path schema:productID
-        ],[
+    shacl:property [
+          shacl:nodeKind shacl:IRI ;
+          shacl:description "This property represents the concept this conceptual public service (snapshot) is a version of. This IRI represents the holder in which all published versions can be linked."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:name "isVersionOf"@nl;
+          shacl:path dc:isVersionOf
+      ],[
+          shacl:datatype xsd:string;
+          shacl:description "This property represents the product id of the Public Service. This is human readable string to uniquely identify the concept."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:name "productID"@nl;
+          shacl:path schema:productID
+      ],[
           shacl:datatype xsd:dateTime;
           shacl:description "This property represents the datetime of creation of the Public Service."@nl;
           shacl:minCount 1;
