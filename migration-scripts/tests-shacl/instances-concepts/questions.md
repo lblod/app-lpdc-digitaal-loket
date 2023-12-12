@@ -148,59 +148,37 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   => updated for concept shape and instantie shape as well 
 
 
-#### About other content
+# TODO
+- the explanations in the shacl are sometimes in english, sometimes in nl; but the language string is always nl
+- keywords: moeten we de talen beperken ? nl / en ? 
+- verify all kardinaliteiten ... 
+- publicationMedium: also add RechtenVerkenner ? / and others ? currently only YourEurope is in 'official code list'
+- how to do / document these fields ?
+- locn:adminUnitL2 : no example in instance-published.ttl
+- eli:LegalResource 1/ our publish code does not add a type of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie) 
+  eli:LegalResource 2/ our publish code does not add the order of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie)
+  eli:LegalResource : should we add a title / description as well ? LPDC-781 , LPDC-786, 
+- hasRequirement: een of meerdere ?  want als slechts een, dan mag ook order weg ...
+- instantieTag wordt niet gebruikt (er zijn gedefinieerde waarden in code lijst ) + lpdc stuurt concept tag op in de plaats
+- Fix this non meaningful validation error by reintroducing a list of all languages (then at least it prints the list in the message)?
+- maybe ?? split shapes into cardinaliteiten en structure/types : so we can use structure in domain saving, and cardinalities in publish (on top of extra publish validation e.g. in english: title / description)
+- maybe create an official shacl shape for the form structure + expand with our own shacl semantic form shape stuff. Normally it should be possible to automatically merge it by loading both parts and then getting an official form tree.
+  it would maybe then also be possible to in a strategy kind of mode, to load other components for each of the leaves ... 
+  is it possible to seperate the 1/ form structure 2/ the data structure + validation rules about it 3/ the rendering of the components (e.g. compare components or left nederlands, right engels + other labels)
+
+# DONE
 - should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
-- concept tag has no restrictions ... ? should we define a type for this?
+  => just reference a code list in rdfs:seeAlso
 - ??           shacl:class dc:LinguisticSystem;
   shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
   shacl:name "language"@nl;
   shacl:path pera:language
   why not just use one of the pera.ttl file?
-- ontbreekt [
-  shacl:class skos:Concept;
-  shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
-  shacl:name "conceptTag"@nl;
-  shacl:path lpdcExt:conceptTag
-  ],
-  niet bij Instance shape? : moet er niet op.
-- known limitation:  the order type has an order ; not easy to deeply validate that on each cost, the orders are unique
-  ... kan wel opgelost worden met sparql queries > of types te definieren
-- AddressShape ? country required?              shacl:minCount 1;
-- Adress : gemeente, straatnaam, land : we beperken nu tot en / nl als taal
-- Address > startnaam: min count = 1 + taal nl / en
-- added <https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
-  <https://ipdc.be/regelgeving> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> . in output ...
-- added a schema/ontology for <http://www.w3.org/ns/prov#> (prov.ttl)
+  => do not use dc:LinguisticSystem, use pera:language
+- we should add all shacl:description for each shacl property we restrict ...  (see warnings in the file) => DONE
+- pera:language ontbreekt bij concept ? = DONE
+- question: should conceptTag be present on an instance ? or should it be instance tag => INSTANCE TAG
+- dc:type ontbreekt bij concept ? = DONE 
+- concept: publicationMedium ontbreekt? = DONE
+- instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie die we naar ipdc sturen is lpdcExt:hasWebsites; we are not using a context object when generating the json-ld; so this seems incorrect ...
 
-# TODO
-- the explanations in the shacl are sometimes in english, sometimes in nl; but the language string is always nl
-- we should add all shacl:description for each shacl property we restrict ...  (see warnings in the file)
-- pera:language ontbreekt bij concept ? 
-- dc:type ontbreekt bij concept ? 
-- concept: publicationMedium ontbreekt?
-- keywords: moeten we de talen beperken ? nl / en ? 
-- verify all kardinaliteiten ... 
-- question: should conceptTag be present on an instance ? or should it be instance tag
-- publicationMedium: also add RechtenVerkenner ? / and others ? currently only YourEurope is in 'official code list'
-- add a concept.ttl example and validate
-- how to do / document these fields ?
-- contactpoint > url: ipv literal (xsd:string) -> [IRI](https://www.w3.org/TR/shacl/#NodeKindConstraintComponent) _verwijst code wijziging bij lpdc en ipdc
-- locn:adminUnitL2 : no example in instance-published.ttl
-- eli:LegalResource 1/ our publish code does not add a type of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie) 
-- eli:LegalResource 2/ our publish code does not add the order of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie)
-- eli:LegalResource : should we add a title / description as well ? LPDC-781 , LPDC-786, 
-- hasRequirement: een of meerdere ?  want als slechts een, dan mag ook order weg ...
-- instantieTag wordt niet gebruikt (er zijn gedefinieerde waarden in code lijst ) + lpdc stuurt concept tag op in de plaats
-- instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie is nog lpdcExt:hasWebsites (hier en daar)
-- the constructie met nested properties werkt niet in combinatie met min en max count . als je bvb meerdere wbsites toevoegt aan een rule ; klaagt hij ivm te veel titles, descriptions, etc ...
-  => opsplitsen en dan wel terug met deftige shapes werken per type ?  
-  => als we opsplitsen en per type een shape restrictie doen, dan kun je ze nooit samen valideren ...; maar misschien is dat ook wel ok ?
-  => shape split up into  instance-shape.ttl and concept-shape.ttl
-- Fix this ugly validation error by reintroducing a list of all languages (then at least it prints the list in the message)?
-- nl-be-x-formal -> nl-BE-x-formal ? and for others?
-- split shapes into cardinaliteiten en structure/types : so we can use structure in domain saving, and cardinalities in publish (on top of extra publish validation e.g. in english: title / description)
-- create an official shacl shape for the form structure + expand with our own shacl semantic form shape stuff. Normally it should be possible to automatically merge it by loading both parts and then getting an official form tree.
-  it would maybe then also be possible to in a strategy kind of mode, to load other components for each of the leaves ... 
-  is it possible to seperate the 1/ form structure 2/ the data structure + validation rules about it 3/ the rendering of the components (e.g. compare components or left nederlands, right engels + other labels)
-- See 2.1.1 Constraints, Parameters and Constraint Components of shacl documentation: you can extend shacl itself. and create a new validator. Only thing to do is to define for instance -> exactLanguageIn ; and then see if our validator supports validating this ... This might also be used to do all other validations ...
-  -> degene die we gebruiken heeft geen directe optie om extension validators te registreren -> via options deze optie toevoegen ... aan de validator; en dan zelf er wat aan toevoegen ...
