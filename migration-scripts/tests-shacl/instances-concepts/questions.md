@@ -165,6 +165,8 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - maybe create an official shacl shape for the form structure + expand with our own shacl semantic form shape stuff. Normally it should be possible to automatically merge it by loading both parts and then getting an official form tree.
   it would maybe then also be possible to in a strategy kind of mode, to load other components for each of the leaves ... 
   is it possible to seperate the 1/ form structure 2/ the data structure + validation rules about it 3/ the rendering of the components (e.g. compare components or left nederlands, right engels + other labels)
+- Bring [ConceptJsonLdContext.json](concept-data%2FConceptJsonLdContext.json) up to date, and in sync with the concept shape.
+- Bring [InstantieJsonLdContext.json](instance-data%2FInstantieJsonLdContext.json) up to date, and in sync with the instance shape.
 
 # DONE
 - should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
