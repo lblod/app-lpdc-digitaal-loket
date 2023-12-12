@@ -119,8 +119,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - <http://purl.org/dc/terms/isVersionOf> op het implementatie model ; en ook op shacl validatie 
 - ADDED - <http://schema.org/dateCreated> op het implementatie model ; en ook op shacl validatie
 - ADDED - <http://schema.org/dateModified> op het implementatie model ; en ook op shacl validatie
-- <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
-- <http://schema.org/productID> op het implementatie model ; en ook op shacl validatie
+- ADDED - <http://schema.org/productID> op het implementatie model ; en ook op shacl validatie
 - <http://www.w3.org/ns/prov#generatedAtTime> op het implementatie model ; en ook op shacl validatie
 - <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> op vocabularium, op het implementatie model ; en ook op shacl validatie; 
 - <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> en andere ? geen code lijst gedefinieerd ?
@@ -136,7 +135,8 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
    shacl:name "language"@nl;
    shacl:path pera:language
    ], => skos:Concept
-- 
+- <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
+
 
 #### Incorrect Concept Fields ?
 - <http://data.europa.eu/eli/ontology/#LegalResource> type is incorrect =>  should be <http://data.europa.eu/eli/ontology#LegalResource> ? is an error in jsonld context file

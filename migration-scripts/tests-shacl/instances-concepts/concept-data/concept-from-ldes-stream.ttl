@@ -7,7 +7,7 @@
 #CONCEPT FIELDS ADDED To Contract
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/dateCreated> "2023-07-12T11:40:20.026205561Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/dateModified> "2023-07-12T11:40:20.026209604Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-#ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/productID> "1502"
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/productID> "1502" .
 
 #not used? => may be remove from json ld context ?
 #ADD TO CONTRACT ? #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/identifier> "50fd7f03-276f-403e-ad39-152dba4e39be" .

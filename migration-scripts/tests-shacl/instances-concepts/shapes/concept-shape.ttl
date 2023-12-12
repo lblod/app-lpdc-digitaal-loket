@@ -34,20 +34,27 @@ oss:ConceptualPublicServiceShape
     shacl:closed true;
     shacl:ignoredProperties ( rdf:type ) ;
     shacl:property  [
+            shacl:datatype xsd:string;
+            shacl:description "This property represents the product id of the Public Service. This is human readable string to uniquely identify the concept."@nl;
+            shacl:minCount 1;
+            shacl:maxCount 1;
+            shacl:name "productID"@nl;
+            shacl:path schema:productID
+        ],[
           shacl:datatype xsd:dateTime;
           shacl:description "This property represents the datetime of creation of the Public Service."@nl;
           shacl:minCount 1;
           shacl:maxCount 1;
           shacl:name "created"@nl;
           shacl:path schema:dateCreated
-      ],[
+       ], [
           shacl:datatype xsd:dateTime;
           shacl:description "This property represents the datetime of modification of the Public Service."@nl;
           shacl:minCount 1;
           shacl:maxCount 1;
           shacl:name "modified"@nl;
           shacl:path schema:dateModified
-        ], [
+       ], [
           shacl:datatype rdf:langString;
           shacl:description "This property represents free text for additional information regarding the Description of the Public Service."@nl;
           shacl:maxCount 8; # one for each language allowed

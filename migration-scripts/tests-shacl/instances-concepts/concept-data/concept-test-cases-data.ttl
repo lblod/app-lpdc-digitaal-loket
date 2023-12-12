@@ -86,7 +86,8 @@ ex:a-minimal-valid-concept
     schema:dateCreated "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
     schema:dateModified "2023-11-30T12:25:55.789Z"^^xsd:dateTime ;
     dc:title """title-nl"""@nl ;
-    dc:description  """description-nl"""@nl.
+    dc:description  """description-nl"""@nl ;
+    schema:productID "678".
 
 #a concept that has full data filled in; expect no validation errors
 ex:a-full-valid-concept
@@ -121,6 +122,7 @@ ex:a-full-valid-concept
     lpdcExt:regulation """regulation-nl"""@nl ;
     lpdcExt:targetAudience ex:a-target-audience ;
     m8g:thematicArea ex:a-thematic-area;
-    lpdcExt:yourEuropeCategory ex:a-your-europe-category.
+    lpdcExt:yourEuropeCategory ex:a-your-europe-category;
+    schema:productID "1234".
 
 
