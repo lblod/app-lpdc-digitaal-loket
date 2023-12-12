@@ -6,7 +6,7 @@
 @prefix shacl: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix oss: <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2022-06-15#> .
+@prefix oss: <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-01-11#> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix adres: <https://data.vlaanderen.be/ns/adres#> .
 @prefix lpdcExt:  <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
@@ -41,21 +41,15 @@ oss:InstancePublicServiceShape
            shacl:description "This property represents the datetime of creation of an instance."@nl;
            shacl:minCount 1;
            shacl:maxCount 1;
-           shacl:name "created"@nl;
+           shacl:name "dateCreated"@nl;
            shacl:path schema:dateCreated
        ],[
            shacl:datatype xsd:dateTime;
            shacl:description "This property represents the datetime of modification of an instance."@nl;
            shacl:minCount 1;
            shacl:maxCount 1;
-           shacl:name "modified"@nl;
+           shacl:name "dateModified"@nl;
            shacl:path schema:dateModified
-       ],[
-           shacl:datatype xsd:string;
-           shacl:description "This property represents an additional uuid to identify the instance. The uuid might be the same as the IRI."@nl;
-           shacl:maxCount 1;
-           shacl:name "uuid"@nl;
-           shacl:path mu:uuid
        ],[
            shacl:class m8g:PublicOrganisation;
            shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the creation of the Public Service."@nl;
