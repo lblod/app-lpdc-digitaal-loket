@@ -43,10 +43,10 @@ The shape for 2022-0-15 can be found [here](instances-concepts%2Fshapes%2F2022-0
   - specified 8 allowed languages: `shacl:languageIn ("en" "nl" "fr" "de" "nl-be-x-formal" "nl-be-x-informal" "nl-be-x-generated-formal" "nl-be-x-generated-informal")`;
     Since [SHACL languageIn validation](https://www.w3.org/TR/shacl/#LanguageInConstraintComponent) uses SPARQL langMatches, all the 'nl-' languages can not be fully validated, and should be interpreted as acceptable values
   - language triples should be unique: `shacl:uniqueLang true`;  
-- For all concepts (`a Concept`), a list of allowed values is reference via `rdfs:seeAlso`
+- For all code lists (`a skos:Concept`), a list of allowed values is referenced via `rdfs:seeAlso`
 - Website shape
   - `schemas:url` specified as `datatype:string`
-- On all sub entities that represent a list (procedure, website, rule, etc), a `shacl:order` is added. This is to ensure an order on these sub entities.
+- On all sub entities that represent a list (procedure, website, rule, etc.), a `shacl:order` is added. This is to ensure an order on these sub entities.
 
 ## Instance Shape Additions
 - `schema:dateModified`
@@ -60,7 +60,7 @@ The shape for 2022-0-15 can be found [here](instances-concepts%2Fshapes%2F2022-0
   - specified 8 allowed languages: `          shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal")`;
     Since [SHACL languageIn validation](https://www.w3.org/TR/shacl/#LanguageInConstraintComponent) uses SPARQL langMatches, all the 'nl-' languages can not be fully validated, and should be interpreted as acceptable values
   - language triples should be unique: `shacl:uniqueLang true`;
-- For all concepts (`a Concept`), a list of allowed values is reference via `rdfs:seeAlso`
+- For all code lists (`a skos:Concept`), a list of allowed values is reference via `rdfs:seeAlso`
 - Website shape
   - `schemas:url` specified as `datatype:string`
 - On all sub entities that represent a list (procedure, website, rule, etc), a `shacl:order` is added. This is to ensure an order on these sub entities.
@@ -68,7 +68,7 @@ The shape for 2022-0-15 can be found [here](instances-concepts%2Fshapes%2F2022-0
 # Other info
 
 - Referenced schema's or ontologies are found under `schemas-ontologies`
-- The (current) remaining tasks in this proces are found [here](instances-concepts%2Fquestions.md#todo)
+- The (current) remaining tasks in this process are found [here](instances-concepts%2Fquestions.md#todo)
 
 
 # Executing the code
