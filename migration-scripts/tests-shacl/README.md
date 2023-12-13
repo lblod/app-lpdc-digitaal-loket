@@ -69,7 +69,8 @@ The shape for 2022-0-15 can be found [here](instances-concepts%2Fshapes%2F2022-0
 
 - Referenced schema's or ontologies are found under `schemas-ontologies`
 - The (current) remaining tasks in this process are found [here](instances-concepts%2Fquestions.md#todo)
-
+- For the `m8g:PublicOrganisation` references, we expect 'LBLOD URI's . One example is <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>, which represents 'Gent'.
+  To find all possible, you can query https://data.lblod.info/sparql, using [filter on all bestuurseenheden](https://data.lblod.info/sparql#query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20ns2%3A%09%3Chttp%3A%2F%2Fdata.vlaanderen.be%2Fns%2Fbesluit%23%3E%0APREFIX%20skos%3A%09%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Fsub%20%3Flabel%20WHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%09ns2%3ABestuurseenheid%20.%0A%20%20%3Fsub%20skos%3AprefLabel%20%3Flabel%0A%7D%20%0AORDER%20BY%20%3Flabel&endpoint=%2Fsparql&requestMethod=POST&tabTitle=Query&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table)
 
 # Executing the code
 
