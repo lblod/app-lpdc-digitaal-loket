@@ -142,6 +142,8 @@ On prod we always deploy a released version.
 
 _Infrastructure notes_:  [production currently has special configs we want to remove over time](infrastructure-architecture.md#prod).
 
+Mention on rocket chat that we will perform a new release, so the operations team is warned.
+
 ```shell
   ssh root@lpdc-prod.s.redhost.be
  
@@ -179,7 +181,7 @@ _Infrastructure notes_:  [production currently has special configs we want to re
   # lpdc:
   #  image: lblod/frontend-generic-maintenance
   #  environment:
-  #    EMBER_MAINTENANCE_MESSAGE: "We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikm>
+  #    EMBER_MAINTENANCE_MESSAGE: " We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikmaken van een verbeterde versie van LPDC voor een nog vlottere gebruikerservaring."
   #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
   #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
   
@@ -199,5 +201,7 @@ _Infrastructure notes_:  [production currently has special configs we want to re
   #move backups to /backups/prod-data-backups/<releasename> folder (e.g. 2023-09)
  
 ```
+
+Mention on rocket chat that we will a new release was performed, operations monitoring can continue.
 
 
