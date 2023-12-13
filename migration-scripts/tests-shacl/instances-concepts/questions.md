@@ -167,6 +167,9 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   is it possible to seperate the 1/ form structure 2/ the data structure + validation rules about it 3/ the rendering of the components (e.g. compare components or left nederlands, right engels + other labels)
 - Bring [ConceptJsonLdContext.jsonld](concept-data%2FConceptJsonLdContext.jsonld) up to date, and in sync with the concept shape.
 - Bring [InstantieJsonLdContext.jsonld](instance-data%2FInstantieJsonLdContext.jsonld) up to date, and in sync with the instance shape.
+- Your Europe Category -> engels required -> moet dit in shacl shape?
+- Other specific validations: e.g. when a title in english is created ; then also a description is required
+
 
 # DONE
 - should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
