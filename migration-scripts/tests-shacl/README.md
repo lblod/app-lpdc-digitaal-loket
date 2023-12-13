@@ -15,7 +15,7 @@ The goal is to publish a new version of https://data.vlaanderen.be/doc/implement
 
 # Model changes compared to version 2022-06-15
 
-The shape for 2022-0-15 can be found [here](instances-concepts%2Fshapes%2F2022-06-15-ipdc-lpdc-im-SHACL.ttl.old)
+The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-06-15-ipdc-lpdc-im-SHACL.ttl.old)
 
 *Notes*: 
 - The changes mentioned here are **Work In Progress**, and **subject to change**.
