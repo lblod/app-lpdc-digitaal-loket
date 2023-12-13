@@ -37,8 +37,8 @@ test.describe('Concurrent Update', () => {
         let instantieDetailsPage = await openInstantie(page, instantieTitel);
         let instantieDetailsPageOtherUser = await openInstantie(pageOtherUser, instantieTitel);
 
-        const verzendNaarVlaamseOverheidModal = await VerzendNaarVlaamseOverheidModal.create(page);
-        const homePage = await LpdcHomePage.create(page);
+        const verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
+        const homePage = LpdcHomePage.create(page);
 
         await instantieDetailsPage.beschrijvingEditor.fill("first description");
         await instantieDetailsPage.beschrijvingEditor.blur();
