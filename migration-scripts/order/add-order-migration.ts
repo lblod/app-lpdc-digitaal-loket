@@ -1,5 +1,6 @@
 //@ts-ignore
 import * as SparqlClient from "sparql-client-2";
+import * as fs from "fs";
 
 async function executeQuery(query: any) {
     const sparqlClient = new SparqlClient(process.env.SPARQL_URL);
@@ -209,16 +210,16 @@ function validateEitherAllOrdersFilledInOrNone(arrayWithOrders: Orderable[]) {
     }
 }
 
-function createQuadsIfUndefined(arrayWithOrders: Orderable[]): string[] {
+function createQuadsIfUndefined(arrayWithOrders: Orderable[], graph: string): string[] {
     return arrayWithOrders
         .filter((value) => value.order === undefined)
-        // TODO: check if type integer correct works in UI
-        .map((value, index) => `<${value.uri}> <http://www.w3.org/ns/shacl#order> "${index + 1}"^<http://www.w3.org/2001/XMLSchema#integer> . //TODO GRAPH`);
+        .map((value, index) => `<${value.uri}> <http://www.w3.org/ns/shacl#order> "${index + 1}"^^<http://www.w3.org/2001/XMLSchema#integer> <${graph}> .`);
 }
 
 export async function main() {
     const instances = await findInstancesWithPublicationStatusToRepublish();
-    for (const instance of instances.slice(0, 1000)) {
+    const quads = []
+    for (const instance of instances) {
         instance.requirements = await findRequirementsFor(instance)
         validateEitherAllOrdersFilledInOrNone(instance.requirements);
         instance.procedures = await findProceduresFor(instance);
@@ -235,11 +236,17 @@ export async function main() {
         validateEitherAllOrdersFilledInOrNone(instance.financialAdvantages);
         instance.contactPoints = await findContactPointsFor(instance);
         validateEitherAllOrdersFilledInOrNone(instance.contactPoints);
+
+        const quadsForInstance = [
+            ...createQuadsIfUndefined(instance.requirements, instance.graphUri),
+            ...createQuadsIfUndefined(instance.procedures, instance.graphUri),
+            ...instance.procedures.flatMap(procedure => createQuadsIfUndefined(procedure.websites, instance.graphUri)),
+            ...createQuadsIfUndefined(instance.websites, instance.graphUri),
+            ...createQuadsIfUndefined(instance.costs, instance.graphUri),
+            ...createQuadsIfUndefined(instance.financialAdvantages, instance.graphUri),
+            ...createQuadsIfUndefined(instance.contactPoints, instance.graphUri),
+        ];
+        quads.push(...quadsForInstance)
     }
-
-    for (const instance of instances.slice(0, 1000)) {
-        console.log(createQuadsIfUndefined(instance.websites));
-    }
-
-
+    fs.writeFileSync(`./migration-results/add-order.ttl`, quads.join('\n'));
 }
