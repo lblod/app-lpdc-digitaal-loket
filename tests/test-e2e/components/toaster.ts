@@ -10,7 +10,7 @@ export class Toaster {
     constructor(page: Page) {
         this.page = page;
 
-        this.message = page.locator('div.au-c-toaster div.au-c-alert__message:has-text("Error")')
+        this.message = page.locator('div.au-c-toaster div.au-c-alert__message p')
         this.closeButton = page.locator('div.au-c-toaster button:has-text("sluit")')
     }
 
