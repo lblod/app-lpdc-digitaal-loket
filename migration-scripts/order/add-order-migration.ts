@@ -60,7 +60,7 @@ async function findInstancesWithPublicationStatusToRepublish(): Promise<Instance
         SELECT ?instance ?graph WHERE {
             GRAPH ?graph {
                 ?instance a <http://purl.org/vocab/cpsv#PublicService> .
-                ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> . 
+                ?instance <http://schema.org/publication> ?publicationStatus . 
             }
         }
     `;
@@ -184,7 +184,7 @@ async function findFinancialAdvantageFor(instance: Instance): Promise<FinancialA
     }))
 }
 
-async function findContactPointsFor(instance: Instance): Promise<FinancialAdvantage[]> {
+async function findContactPointsFor(instance: Instance): Promise<ContactPoint[]> {
     const query = `
         SELECT ?contactPointUri ?order WHERE {
             GRAPH ?graph {
