@@ -36,8 +36,11 @@ async function getInstancesWithConcept(): Promise<Instance[]> {
                 ?instance a <http://purl.org/vocab/cpsv#PublicService> .
                 ?instance <http://purl.org/dc/terms/created> ?created .
                 ?instance <http://purl.org/dc/terms/modified> ?modified .
-                ?instance <http://purl.org/dc/terms/source> ?concept .
+                ?instance <http://purl.org/dc/terms/source> ?concept .                
             }
+            FILTER NOT EXISTS {
+                ?instance <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> ?conceptSnapshot .
+            }            
         }
     `;
     const response = await executeQuery(query);
