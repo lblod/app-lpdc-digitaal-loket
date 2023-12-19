@@ -114,11 +114,11 @@ On test we always deploy a released version.
   cd /data/app-lpdc-digitaal-loket-test
 
   git fetch --all --tags
+  
+  drc down
 
   git checkout tags/<my version>
   #e.g. of a version: v0.2.0 
-  
-  drc down
   
   drc pull
 
