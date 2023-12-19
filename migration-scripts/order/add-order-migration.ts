@@ -60,7 +60,7 @@ async function findInstancesWithPublicationStatusToRepublish(): Promise<Instance
         SELECT ?instance ?graph WHERE {
             GRAPH ?graph {
                 ?instance a <http://purl.org/vocab/cpsv#PublicService> .
-                ?instance <http://schema.org/publication> ?publicationStatus . 
+                ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
             }
         }
     `;
