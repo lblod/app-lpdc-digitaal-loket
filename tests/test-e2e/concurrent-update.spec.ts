@@ -49,7 +49,7 @@ test.describe('Concurrent Update', () => {
         await instantieDetailsPageOtherUser.beschrijvingEditor.blur();
         await instantieDetailsPageOtherUser.wijzigingenBewarenButton.click();
         const toaster = new Toaster(pageOtherUser);
-        await expect(toaster.message).toContainText("De productfiche is gelijktijdig aangepast door een andere gebruiker. Refresh en geef je aanpassingen opnieuw in.");
+        await expect(toaster.message).toContainText("De productfiche is gelijktijdig aangepast door een andere gebruiker. Herlaad de pagina en geef je aanpassingen opnieuw in.");
         await toaster.closeButton.click();
 
         instantieDetailsPage = await openInstantie(page, instantieTitel);
