@@ -23,8 +23,11 @@ async function getAdressen(): Promise<Adres[]> {
                 ?adres <https://data.vlaanderen.be/ns/adres#land> ?land .
                 OPTIONAL {
                     ?adres <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer> ?bus .
-                }
+                }               
             }
+            FILTER NOT EXISTS {
+                ?adres <https://data.vlaanderen.be/ns/adres#verwijstNaar> ?adresVerwijzingId .
+            }             
         }
     `);
     return response.map((item: any) => ({
@@ -91,7 +94,7 @@ function unmatchedToJsonFile(adressen: Adres[]) {
 
 async function main() {
     const adressen = await getAdressen();
-    const adresMatches: Adres[] = await processPromisesBatch<Adres, Adres>(adressen, 100, async (adres) => ({
+    const adresMatches: Adres[] = await processPromisesBatch<Adres, Adres>(adressen, 10, async (adres) => ({
         ...adres,
         id: await findAdresMatch(adres)
     }));
