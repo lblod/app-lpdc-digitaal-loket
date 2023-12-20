@@ -98,4 +98,4 @@ Same config as [acc](#acc).
 - URLS
   - ACM/IDM login url: https://lpdc.lokaalbestuur.vlaanderen.be
   - dashboard url : https://dashboard.lpdc.lpdc-prod.s.redhost.be, or https://dashboard.prod.lpdc.lblod.info
-  - controle url: https://controle.lpdc.lpdc-prod.s.redhost.be , or https://controle.prod.lpdc.lblod.info
+  - controle url: https://controle.lpdc.lpdc-prod.s.redhost.be/mock-login , or https://controle.prod.lpdc.lblod.info/mock-login
