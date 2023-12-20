@@ -55,12 +55,11 @@ export type ContactPoint = {
     order?: string
 }
 
-async function findInstancesWithPublicationStatusToRepublish(): Promise<Instance[]> {
+async function findInstances(): Promise<Instance[]> {
     const query = `
         SELECT ?instance ?graph WHERE {
             GRAPH ?graph {
-                ?instance a <http://purl.org/vocab/cpsv#PublicService> .
-                ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
+                ?instance a <http://purl.org/vocab/cpsv#PublicService>.
             }
         }
     `;
@@ -217,7 +216,7 @@ function createQuadsIfUndefined(arrayWithOrders: Orderable[], graph: string): st
 }
 
 export async function main() {
-    const instances = await findInstancesWithPublicationStatusToRepublish();
+    const instances = await findInstances();
     const quads = []
     for (const instance of instances) {
         instance.requirements = await findRequirementsFor(instance)
