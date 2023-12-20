@@ -158,8 +158,8 @@ Following containers should be at least in the list:
 Following command strips off all other containers, and counts. 
 ```shell
  docker ps | grep -v monitor | grep -v CREATED | grep -v app-http-logger | grep -v metrics-exporter | grep -v letsencrypt | wc -l
- >> 21 (as expected result)
 ```
+ >>> 21 (as expected result)
 
 #### ldes consumer stream from ipdc is still running
 
@@ -186,8 +186,8 @@ We see in the logs of login if the users can create new sessions. We verify if t
 
 ```shell
 drc logs --since 168h --timestamps | grep app-lpdc-digitaal-loket-login | grep "foaf:firstName" | wc -l
->> 25 (about this as expected result)
 ```
+>>> 25 (about this as expected result)
 
 #### Access logs reveal that users can use the application 
 
@@ -195,9 +195,9 @@ We see in the access logs of lpdc (the ui proxy) and grep for a business operati
 
 ```shell
 drc logs --since 24h --timestamps | grep app-lpdc-digitaal-loket-lpdc-1 | grep formal-informal-choices | grep "HTTP/1.1\" 200" | wc -l
->> 735 (at least several hundreds as expected result)
 ```
-
+>>> 735 (at least several hundreds as expected result)
+ 
 #### Http 404 errors
 
 We want to take a quick glance at the 404 errors. Mostly they are attempts to attack the system.
