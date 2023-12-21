@@ -24,6 +24,7 @@ import {TripleArray, Uri} from "../test-helpers/triple-array";
 import {bilzenId, pepingenId} from "../test-helpers/login";
 
 test.describe('Compare snapshots', () => {
+    //TODO LPDC-916: clean up test ... we have unit/collaboration tests for this now
 
     test('When comparing same snapshot then isChanged should be false', async ({request}) => {
         const aSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
@@ -151,11 +152,11 @@ test.describe('Compare snapshots', () => {
 
     test(`When startDate changed then isChanged should be true`, async ({request}) => {
         const currentSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
-            .withStartDate(new Date('10-10-2023'))
+            .withStartDate(new Date('2023-10-10'))
             .buildAndPersist(request);
 
         const newSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
-            .withStartDate(new Date('11-11-2023'))
+            .withStartDate(new Date('2023-11-10'))
             .buildAndPersist(request);
 
         expect(await compareSnapshots(currentSnapshot, newSnapshot, request)).toEqual({isChanged: true});
@@ -163,11 +164,11 @@ test.describe('Compare snapshots', () => {
 
     test(`When endDate changed then isChanged should be true`, async ({request}) => {
         const currentSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
-            .withEndDate(new Date('10-10-2023'))
+            .withEndDate(new Date('2023-10-10'))
             .buildAndPersist(request);
 
         const newSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
-            .withEndDate(new Date('11-11-2023'))
+            .withEndDate(new Date('2023-11-11'))
             .buildAndPersist(request);
 
         expect(await compareSnapshots(currentSnapshot, newSnapshot, request)).toEqual({isChanged: true});
