@@ -173,6 +173,7 @@ oss:ConceptualPublicServiceShape
           shacl:datatype rdf:langString;
           shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
           shacl:name "keyword"@nl;
+          shacl:languageIn ("en" "nl" "fr" "de" "nl-be-x-formal" "nl-be-x-informal" "nl-be-x-generated-formal" "nl-be-x-generated-informal");
           shacl:path dcat:keyword
       ], [
           shacl:datatype rdf:langString;
