@@ -24,7 +24,7 @@ import {TripleArray, Uri} from "../test-helpers/triple-array";
 import {bilzenId, pepingenId} from "../test-helpers/login";
 
 test.describe('Compare snapshots', () => {
-    //TODO LPDC-916: clean up test ... we have unit/collaboration tests for this now
+    //TODO LPDC-916: clean up test ... we have unit/collaboration tests for this now: only keep 3 test cases (same, same data, different data)
 
     test('When comparing same snapshot then isChanged should be false', async ({request}) => {
         const aSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
