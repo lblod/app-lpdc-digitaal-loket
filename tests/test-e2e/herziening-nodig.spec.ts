@@ -11,7 +11,6 @@ import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {IpdcStub} from "./components/ipdc-stub";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
-import {virtuosoUrl} from "../test-api/test-helpers/test-options";
 
 test.describe('Herziening nodig', () => {
 
