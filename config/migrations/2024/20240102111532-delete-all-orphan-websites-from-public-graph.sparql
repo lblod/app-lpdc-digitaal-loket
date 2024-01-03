@@ -1,0 +1,14 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <http://schema.org/WebSite>.
+        ?s ?p ?o.
+        FILTER NOT EXISTS {
+            ?anyS ?anyPredicate ?s
+        }
+    }
+}
