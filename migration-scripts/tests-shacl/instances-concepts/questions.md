@@ -155,7 +155,8 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - publicationMedium: also add RechtenVerkenner ? / and others ? currently only YourEurope is in 'official code list'
 - how to do / document these fields ?
 - locn:adminUnitL2 : no example in instance-published.ttl
-- eli:LegalResource 1/ our publish code does not add a type of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie) 
+- eli:LegalResource: we will change it for concepts and instances ... 
+  eli:LegalResource 1/ our publish code does not add a type of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie)
   eli:LegalResource 2/ our publish code does not add the order of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie)
   eli:LegalResource : should we add a title / description as well ? LPDC-781 , LPDC-786, 
 - hasRequirement: een of meerdere ?  want als slechts een, dan mag ook order weg ...
