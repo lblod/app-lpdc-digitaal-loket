@@ -25,7 +25,7 @@ test.describe('Compare snapshots', () => {
 
     test('When content changed then isChanged should be true', async ({request}) => {
         const currentSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
-            .withTitles([{value: 'title', language: Language.EN}])
+            .withTitles([{value: 'title', language: Language.EN}, {value: 'title', language: Language.NL}])
             .buildAndPersist(request);
 
         const newSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
