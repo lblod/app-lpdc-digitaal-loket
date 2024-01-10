@@ -35,8 +35,12 @@ test('Can get content form for concept', async ({request}) => {
     const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
     expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
-    const triplesWithoutUUID = new TripleArray(concept.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
-    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+    const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(
+        concept.getTriples()
+            .filter(triple => triple.predicate !== Predicates.uuid)
+            .filter(triple => triple.predicate !== Predicates.hasLatestFunctionalChange)
+    ).asStringArray();
+    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndhasLatestFunctionalChange.sort());
 });
 
 test('Can get characteristics form for concept', async ({request}) => {
@@ -54,8 +58,12 @@ test('Can get characteristics form for concept', async ({request}) => {
     const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
     expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
-    const triplesWithoutUUID = new TripleArray(concept.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
-    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+    const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(
+        concept.getTriples()
+            .filter(triple => triple.predicate !== Predicates.uuid)
+            .filter(triple => triple.predicate !== Predicates.hasLatestFunctionalChange)
+    ).asStringArray();
+    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndhasLatestFunctionalChange.sort());
 });
 
 test('Can get content form for public service', async ({request}) => {
@@ -127,8 +135,12 @@ test('Can get content form for full concept', async ({request}) => {
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const triplesWithoutUUID = new TripleArray(triples.filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
-    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+    const triplesWithoutUuidAndHasLatestFunctionalChange = new TripleArray(
+        triples
+            .filter(triple => triple.predicate !== Predicates.uuid)
+            .filter(triple => triple.predicate !== Predicates.hasLatestFunctionalChange)
+    ).asStringArray();
+    expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndHasLatestFunctionalChange.sort());
 });
 
 test('Can get content form for full public service', async ({request}) => {

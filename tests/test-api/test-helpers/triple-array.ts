@@ -188,7 +188,7 @@ export const Predicates = {
     spatial: new Uri('http://purl.org/dc/terms/spatial'),
     hasCompetentAuthority: new Uri('http://data.europa.eu/m8g/hasCompetentAuthority'),
     isVersionOf: new Uri('http://purl.org/dc/terms/isVersionOf'),
-    snapshotType: new Uri('https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create'),
+    snapshotType: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType'),
     hasVersionedSource: new Uri('http://mu.semte.ch/vocabularies/ext/hasVersionedSource'),
     hasLatestFunctionalChange: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasLatestFunctionalChange'),
     reviewStatus: new Uri('http://mu.semte.ch/vocabularies/ext/reviewStatus'),

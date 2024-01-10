@@ -66,6 +66,7 @@ export class ConceptTestBuilder {
             .withEndDate(new Date())
             .withProductID('1000')
             .withVersionedSource(new Uri(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${uuid()}`))
+            .withLatestFunctionalChange(new Uri(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${uuid()}`))
     }
 
     private withType() {
