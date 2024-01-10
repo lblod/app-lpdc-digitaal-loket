@@ -1,0 +1,11 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ext: <http://mu.semte.ch/vocabularies/ext/> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix dvcs: <http://data.vlaanderen.be/id/conceptscheme/> .
+
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/d90c511e-f827-488c-84ba-432c8f69561c>
+    a skos:Concept, ext:BestuurseenheidClassificatieCode ;
+    mu:uuid "d90c511e-f827-488c-84ba-432c8f69561c" ;
+    skos:prefLabel "Vlaamse gemeenschapscommissie" ;
+    skos:inScheme dvcs:BestuurseenheidClassificatieCode ;
+    skos:topConceptOf dvcs:BestuurseenheidClassificatieCode .
