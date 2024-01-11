@@ -208,7 +208,7 @@ services:
       retries: 50
 
   lpdc-publish:
-    image: lblod/lpdc-publish-service:0.12.0
+    image: lblod/lpdc-publish-service:0.13.0
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
