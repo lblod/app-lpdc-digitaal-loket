@@ -13,7 +13,7 @@ defmodule Dispatcher do
   # this file.
 
   match "/formal-informal-choices/*path" do
-    forward conn, path, "http://cache/formal-informal-choices/"
+    forward conn, path, "http://resource/formal-informal-choices/"
   end
 
   match "/bestuurseenheden/*path" do
@@ -122,7 +122,7 @@ defmodule Dispatcher do
   # Public Services - LPDC-IPDC
   #################################################################
   match "/conceptual-public-services/*path" do
-    forward conn, path, "http://cache/conceptual-public-services/"
+    forward conn, path, "http://resource/conceptual-public-services/"
   end
 
   match "/identifiers/*path" do
@@ -142,11 +142,11 @@ defmodule Dispatcher do
   end
 
   match "/public-services/*path" do
-    forward conn, path, "http://cache/public-services/"
+    forward conn, path, "http://resource/public-services/"
   end
 
   match "/concept-display-configurations/*path" do
-    forward conn, path, "http://cache/concept-display-configurations/"
+    forward conn, path, "http://resource/concept-display-configurations/"
   end
 
   match "/*_" do
