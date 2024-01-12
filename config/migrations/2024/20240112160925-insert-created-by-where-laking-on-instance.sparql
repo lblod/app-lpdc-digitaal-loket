@@ -1,0 +1,17 @@
+INSERT{
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://purl.org/pav/createdBy> ?bestuurseenheid
+    }
+}
+
+WHERE{
+    graph ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService>.
+        filter not exists{
+            ?instance <http://purl.org/pav/createdBy> ?createdBy
+        }
+        BIND(STRBEFORE(STRAFTER(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/"), "/LoketLB-LPDCGebruiker") as ?bestuurseenheidUUID)
+        BIND(IRI(CONCAT("http://data.lblod.info/id/bestuurseenheden/", STR(?bestuurseenheidUUID))) as ?bestuurseenheid)
+
+    }
+}
