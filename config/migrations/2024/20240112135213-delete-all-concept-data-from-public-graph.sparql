@@ -1,0 +1,83 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>.
+        ?s ?p ?o.
+    }
+};
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <http://purl.org/vocab/cpsv#Rule>.
+        ?s ?p ?o.
+    }
+};
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <http://schema.org/WebSite>.
+        ?s ?p ?o.
+    }
+};
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <http://data.europa.eu/m8g/Requirement>.
+        ?s ?p ?o.
+    }
+};
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <http://data.europa.eu/m8g/Cost>.
+        ?s ?p ?o.
+    }
+};
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <http://data.europa.eu/m8g/Evidence>.
+        ?s ?p ?o.
+    }
+};
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage>.
+        ?s ?p ?o.
+    }
+};
