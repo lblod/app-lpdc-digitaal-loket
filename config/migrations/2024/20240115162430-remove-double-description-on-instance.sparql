@@ -1,0 +1,11 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/organizations/28346950e285b8b816133fece5ac9408097c3f190c7f32573cf0c640d6c34b1a/LoketLB-LPDCGebruiker> {
+        <http://data.lblod.info/id/public-service/40dc93c4-d723-4f10-9198-d0a7baa0a25b> <http://purl.org/dc/terms/description> ?description
+    }
+}WHERE {
+    GRAPH <http://mu.semte.ch/graphs/organizations/28346950e285b8b816133fece5ac9408097c3f190c7f32573cf0c640d6c34b1a/LoketLB-LPDCGebruiker> {
+        <http://data.lblod.info/id/public-service/40dc93c4-d723-4f10-9198-d0a7baa0a25b> <http://purl.org/dc/terms/description> ?description
+
+    FILTER(CONTAINS(?description, "For large events, outdoors, where electronically amplified music is played (festival, gig, carnival, open-air event, dance party, special occasion) with a noise level higher than 85 dB(A)LAeq,15min and 92 dB(A)LAmax,slow, you must apply for a deviation from the noise standards with the college of mayor and aldermen. <br>Request your deviation using the online form: https://www.brugge.be/muziek-afwijking-aanvragen"))
+    }
+}
