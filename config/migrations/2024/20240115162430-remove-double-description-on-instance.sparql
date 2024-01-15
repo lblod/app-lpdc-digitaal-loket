@@ -8,4 +8,19 @@ DELETE {
 
     FILTER(CONTAINS(?description, "For large events, outdoors, where electronically amplified music is played (festival, gig, carnival, open-air event, dance party, special occasion) with a noise level higher than 85 dB(A)LAeq,15min and 92 dB(A)LAmax,slow, you must apply for a deviation from the noise standards with the college of mayor and aldermen. <br>Request your deviation using the online form: https://www.brugge.be/muziek-afwijking-aanvragen"))
     }
-}
+};
+
+
+DELETE {
+   GRAPH <http://mu.semte.ch/graphs/organizations/71e6c6f58d20f6db457245a70394f2d63f601a32f8ccbc7e443e98f8d06b0b0e/LoketLB-LPDCGebruiker>{
+        <http://data.lblod.info/id/public-service/7ab54e89-41c4-4acd-b08d-44eb6a207d1d> <http://purl.org/dc/terms/description> ?description
+    }
+}WHERE {
+    GRAPH <http://mu.semte.ch/graphs/organizations/71e6c6f58d20f6db457245a70394f2d63f601a32f8ccbc7e443e98f8d06b0b0e/LoketLB-LPDCGebruiker> {
+        <http://data.lblod.info/id/public-service/7ab54e89-41c4-4acd-b08d-44eb6a207d1d> <http://purl.org/dc/terms/description> ?description
+
+    FILTER(CONTAINS(?description, "The city shall levy a tax on displays, events and entertainments on the territory of the city with an exceptionally concentrated audience attendance within a short period of time. In order to be exceptional event, at least 10,000 paying visitors recorded per organization. Organizations spread over several days are considered one organization."))
+    }
+};
+
+
