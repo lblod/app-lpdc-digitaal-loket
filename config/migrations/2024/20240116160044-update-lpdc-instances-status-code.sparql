@@ -1,0 +1,77 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o .
+    }
+} WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        VALUES ?s {
+            <http://lblod.data.gift/concepts/79a52da4-f491-4e2f-9374-89a13cde8ecd>
+            <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c>
+        }
+         ?s ?p ?o
+    }
+};
+
+INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        <http://lblod.data.gift/concepts/instance-status/ontwerp>
+        a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://mu.semte.ch/vocabularies/core/uuid>         """aacad12a-5ecc-4663-9c5f-00c208a8eaea""" ;
+        <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/9cf6fa63-1f49-4d53-af06-e1c235ece10b> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>     "Ontwerp"@nl ;
+        <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/9cf6fa63-1f49-4d53-af06-e1c235ece10b> .
+
+        <http://lblod.data.gift/concepts/instance-status/verstuurd>
+        a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://mu.semte.ch/vocabularies/core/uuid>         """3fba04a6-c1e5-430e-bc3b-8775c895b487""" ;
+        <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/9cf6fa63-1f49-4d53-af06-e1c235ece10b> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>     "Verstuurd"@nl ;
+        <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/9cf6fa63-1f49-4d53-af06-e1c235ece10b> .
+    }
+};
+
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/79a52da4-f491-4e2f-9374-89a13cde8ecd> .
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/ontwerp> .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/79a52da4-f491-4e2f-9374-89a13cde8ecd> .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+};
+
+
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verstuurd> .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+};
+

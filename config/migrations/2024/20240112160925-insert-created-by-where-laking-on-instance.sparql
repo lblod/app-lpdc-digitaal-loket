@@ -3,7 +3,6 @@ INSERT{
         ?instance <http://purl.org/pav/createdBy> ?bestuurseenheid
     }
 }
-
 WHERE{
     graph ?bestuurseenheidGraph {
         ?instance a <http://purl.org/vocab/cpsv#PublicService>.

@@ -944,7 +944,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://www.w3.org/ns/adms#status']).toHaveLength(1);
         expect(publicService['http://www.w3.org/ns/adms#status'][0]).toEqual(
-            {"@id": 'http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c'}
+            {"@id": 'http://lblod.data.gift/concepts/instance-status/verstuurd'}
         );
 
         //TODO LPDC-709 This should not be send to IPDC

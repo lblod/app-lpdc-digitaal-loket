@@ -43,7 +43,7 @@ test('Create instance from concept includes base fields', async ({request}) => {
     expect(triples.findTriple(Predicates.source).getObjectValue()).toEqual(concept.findTriple(Predicates.type).getSubjectValue());
     expect(triples.findTriple(Predicates.createdBy).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
-    expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/79a52da4-f491-4e2f-9374-89a13cde8ecd');
+    expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/instance-status/ontwerp');
     expect(triples.findObject(Predicates.hasVersionedSource)).toEqual(concept.findObject(Predicates.hasVersionedSource));
 });
 

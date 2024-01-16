@@ -305,7 +305,7 @@ INSERT {
  WHERE {
   GRAPH ?bestuurseenheidGraph {
     ?instance a <http://purl.org/vocab/cpsv#PublicService> .
-    ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
+    ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verstuurd> .
     ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
   }
 
