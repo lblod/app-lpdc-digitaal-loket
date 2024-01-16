@@ -21,6 +21,10 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly instantieLoskoppelenAlert: Locator;
     readonly instantieLoskoppelenAlertLoskoppelenButton: Locator;
 
+    readonly aangemaaktOpHeader: Locator;
+    readonly bewerktOpHeader: Locator;
+    readonly statusDocumentHeader: Locator;
+
     readonly herzieningNodigAlert: Locator;
     readonly herzieningNodigAlertConceptBekijken: Locator;
     readonly herzieningNodigAlertGeenAanpassigenNodig: Locator;
@@ -177,6 +181,10 @@ export class InstantieDetailsPage extends AbstractPage {
         this.conceptGearchiveerdAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Concept gearchiveerd")');
         this.conceptGearchiveerdAlertConceptBekijken = page.locator('[role="alert"]:has-text("Concept gearchiveerd") a:has-text("Concept bekijken")');
         this.conceptGearchiveerdAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Concept gearchiveerd") button:has-text("Geen aanpassingen nodig")')
+
+        this.aangemaaktOpHeader = page.locator('dl div').filter({ hasText: 'Aangemaakt op' }).getByRole('definition');
+        this.bewerktOpHeader = page.locator('dl div').filter({ hasText: 'Bewerkt op' }).getByRole('definition');
+        this.statusDocumentHeader = page.locator('dl div').filter({ hasText: 'Status document' }).getByRole('definition');
 
         this.titelInput = this.inputBelow('Titel').first();
         this.titelEngelsInput = this.inputRightOf('Titel').first()
