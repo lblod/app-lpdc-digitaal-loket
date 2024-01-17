@@ -2,12 +2,22 @@ import {APIRequestContext, expect, test} from "@playwright/test";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
 import {ContactPointTestBuilder} from "../test-helpers/contact-point-test.builder";
-import {bilzen, bilzenId, login, loginAsPepingen, pepingen, pepingenId, UserAccount} from "../test-helpers/login";
+import {
+    bilzen,
+    bilzenId,
+    login,
+    loginAsPepingen,
+    loginAsPepingenButRemoveLPDCRightsFromSession,
+    pepingen,
+    pepingenId,
+    UserAccount
+} from "../test-helpers/login";
 import {deleteAll} from "../test-helpers/sparql";
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
 });
+
 test('When no instances then contact info options for Telephone should be empty', async ({request}) => {
     const result = await getContactInfoOptions(request, 'telephone');
 
@@ -108,6 +118,17 @@ test('When multiple instances of different local authorities, return only the co
     expect(resultPepingen).toEqual(['111111111']);
     expect(resultBilzen).toEqual(['222222222']);
 })
+
+test('When user not logged in, returns http 401 Unauthorized', async({request}) => {
+    const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/telephone`, {headers: {cookie: undefined}});
+    expect(apiResponse.status()).toEqual(401);
+});
+
+test('When user has no access rights, returns http 403 Forbidden', async({request}) => {
+    const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
+    const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/telephone`, {headers: {cookie: loginResponse.cookie}});
+    expect(apiResponse.status()).toEqual(403);
+});
 
 async function getContactInfoOptions(request: APIRequestContext, fieldName: string, userAccount: UserAccount = pepingen) {
     const loginResponse = await login(request, userAccount);

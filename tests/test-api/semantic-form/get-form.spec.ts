@@ -1,4 +1,4 @@
-import {expect, request, test} from '@playwright/test';
+import {expect, test} from '@playwright/test';
 import fs from 'fs';
 import {loginAsPepingen, pepingenId} from "../test-helpers/login";
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
