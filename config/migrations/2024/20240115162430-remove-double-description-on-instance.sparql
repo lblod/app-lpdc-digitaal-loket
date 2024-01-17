@@ -35,4 +35,11 @@ DELETE {
     }
 };
 
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/644341a5338a39472f7d096f3c1619ca0e8325a560f681f58896fa843cb17d2c/LoketLB-LPDCGebruiker>{
+<http://data.lblod.info/id/public-service/659de301-969f-4677-8065-c49cede3defb> <http://purl.org/dc/terms/description> "* If you want to operate one of the following commercial businesses in Mortsel, you must apply for an operating permit:\r<br>- massage parlour;\r<br>- shisha bar;\r<br>- CBD shop;\r<br>- sex establishment;\r<br>- night shop;\r<br>- private telecommunications agency;\r<br>- club-vzw."@en .
+
+<http://data.lblod.info/id/public-service/659de301-969f-4677-8065-c49cede3defb> <http://purl.org/dc/terms/description> "If you want to operate one of the following commercial businesses in Mortsel, you must apply for an operating permit:<br>- massage parlour;<br>- shisha bar;<br>- CBD shop;<br>- sex establishment;<br>- night shop;<br>- private telecommunications agency;<br>- club-vzw."@en .
+};
+
+
 
