@@ -38,13 +38,13 @@ test('Create new empty instance', async ({request}) => {
 });
 
 
-test('Creating a new instance without logging returns http 401 Unauthorized ', async ({request}) => {
+test('Creating a new instance without login returns http 401 Unauthorized ', async ({request}) => {
     const response = await createFormWithoutLoggingIn(undefined, request);
 
     expect(response.status()).toEqual(401);
 });
 
-test('Creating a new instance with a user that has no access rights on lpdc http 403 Forbidden ', async ({request}) => {
+test('Creating a new instance with a user that has no access rights on lpdc returns http 403 Forbidden ', async ({request}) => {
     const response = await createFormWithUserWithoutLPDCRights(undefined, request);
 
     expect(response.status()).toEqual(403);

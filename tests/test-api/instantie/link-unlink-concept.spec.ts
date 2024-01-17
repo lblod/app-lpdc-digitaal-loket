@@ -1,7 +1,12 @@
 import {expect, test} from "@playwright/test";
 import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/public-service.test-builder";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
-import {bilzenId, loginAsPepingen, pepingenId} from "../test-helpers/login";
+import {
+    bilzenId,
+    loginAsPepingen,
+    loginAsPepingenButRemoveLPDCRightsFromSession,
+    pepingenId
+} from "../test-helpers/login";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {fetchType} from "../test-helpers/sparql";
 import {Predicates, Uri} from "../test-helpers/triple-array";
@@ -96,7 +101,7 @@ test.describe('unlink', () => {
             .withIsVersionOf(conceptId)
             .buildAndPersist(request);
 
-        const concept = await ConceptTestBuilder.aConcept()
+        await ConceptTestBuilder.aConcept()
             .withId(conceptId)
             .withVersionedSource(conceptSnapshot1.getSubject())
             .buildAndPersist(request);
@@ -209,11 +214,11 @@ test.describe('unlink', () => {
             .withLinkedConcept(concept.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        const instanceFromPepingen2 = await PublicServiceTestBuilder.aPublicService()
+        await PublicServiceTestBuilder.aPublicService()
             .withLinkedConcept(concept.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        const instanceFromBilzen = await PublicServiceTestBuilder.aPublicService()
+        await PublicServiceTestBuilder.aPublicService()
             .withLinkedConcept(concept.getSubject())
             .buildAndPersist(request, bilzenId);
 
@@ -249,6 +254,37 @@ test.describe('unlink', () => {
         const updatedDisplayConfigurationPepingen2 = await fetchType(request, displayConfigurationPepingen.getSubject().getValue(), ConceptDisplayConfigurationType);
         expect(updatedDisplayConfigurationPepingen2.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('false')
 
+    });
+
+    test('unlink a concept without login returns http 401 Unauthorized', async ({request}) => {
+        const concept = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withLinkedConcept(concept.getSubject())
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/ontkoppelen`, {headers: {cookie: undefined}});
+        expect(response.status()).toEqual(401);
+
+        const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(notUpdatedInstance.findAllTriples(Predicates.source)).toHaveLength(1);
+    });
+
+    test('unlink a concept with a user that has no access rights on lpdc returns http 403 Forbidden', async ({request}) => {
+        const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
+        const concept = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withLinkedConcept(concept.getSubject())
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        expect(response.status()).toEqual(403);
+
+        const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(notUpdatedInstance.findAllTriples(Predicates.source)).toHaveLength(1);
     });
 });
 
@@ -379,6 +415,35 @@ test.describe('link', () => {
         expect(updatedInstance.findAllTriples(Predicates.source)).toHaveLength(1);
         expect(updatedInstance.findAllTriples(Predicates.source)[0].subject.getValue()).toBe(instance.getSubject().getValue())
         expect(updatedInstance.findAllTriples(Predicates.source)[0].object.getValue()).toBe(conceptNew.getSubject().getValue())
+    });
+
+    test('link a concept with an instance without login, returns http 401 Unauthorized', async ({request}) => {
+        const concept = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${concept.getUUID()}`, {headers: {cookie: undefined}});
+        expect(response.status()).toEqual(401);
+
+        const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(notUpdatedInstance.findAllTriples(Predicates.source)).toHaveLength(0);
+    });
+
+    test('link a concept with an instance with a user that has no access rights, returns http 403 Forbidden', async ({request}) => {
+        const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
+        const concept = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/koppelen/${concept.getUUID()}`, {headers: {cookie: loginResponse.cookie}});
+        expect(response.status()).toEqual(403);
+
+        const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        expect(notUpdatedInstance.findAllTriples(Predicates.source)).toHaveLength(0);
     });
 });
 

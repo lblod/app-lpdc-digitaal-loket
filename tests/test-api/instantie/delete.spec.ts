@@ -1,6 +1,6 @@
 import {expect, test} from "@playwright/test";
 import {PublicServiceTestBuilder, PublicServiceType, TombstoneType} from "../test-helpers/public-service.test-builder";
-import {loginAsPepingen, pepingenId} from "../test-helpers/login";
+import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {fetchType} from "../test-helpers/sparql";
 import {Predicates} from "../test-helpers/triple-array";
@@ -17,10 +17,11 @@ import {TestDataFactory} from "../test-helpers/test-data-factory";
 test.describe('delete instance', () => {
 
     test('should remove triples and create tombstone', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
         const {publicService} = await new TestDataFactory().createFullPublicService(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -33,12 +34,13 @@ test.describe('delete instance', () => {
     });
 
     test('should remove reviewStatus', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withReviewStatus(ReviewStatus.conceptUpdated)
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -47,7 +49,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove requirement', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const requirement = await RequirementTestBuilder.aRequirement()
             .buildAndPersist(request, pepingenId);
@@ -56,7 +58,8 @@ test.describe('delete instance', () => {
             .withRequirement(requirement.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -65,7 +68,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove requirement with supportingEvidence', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const evidence = await EvidenceTestBuilder.anEvidence()
             .buildAndPersist(request, pepingenId)
@@ -78,7 +81,8 @@ test.describe('delete instance', () => {
             .withRequirement(requirement.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -89,7 +93,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove procedure', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const procedure = await ProcedureTestBuilder.aProcedure()
             .buildAndPersist(request, pepingenId);
@@ -98,7 +102,8 @@ test.describe('delete instance', () => {
             .withProcedure(procedure.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -107,7 +112,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove procedure with Website', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const website = await WebsiteTestBuilder.aWebsite()
             .buildAndPersist(request, pepingenId)
@@ -120,7 +125,8 @@ test.describe('delete instance', () => {
             .withProcedure(procedure.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -131,7 +137,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove website', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const website = await WebsiteTestBuilder.aWebsite()
             .buildAndPersist(request, pepingenId);
@@ -140,7 +146,8 @@ test.describe('delete instance', () => {
             .withMoreInfo(website.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -149,7 +156,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove cost', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const cost = await CostTestBuilder.aCost()
             .buildAndPersist(request, pepingenId);
@@ -158,7 +165,8 @@ test.describe('delete instance', () => {
             .withCost(cost.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -167,7 +175,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove financialAdvantage', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
             .buildAndPersist(request, pepingenId);
@@ -176,7 +184,8 @@ test.describe('delete instance', () => {
             .withFinancialAdvantage(financialAdvantage.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
@@ -185,7 +194,7 @@ test.describe('delete instance', () => {
     });
 
     test('should remove contactPoint', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
 
         const contactPoint = await ContactPointTestBuilder.aContactPoint()
             .buildAndPersist(request, pepingenId);
@@ -194,12 +203,39 @@ test.describe('delete instance', () => {
             .withContactPoint(contactPoint.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: cookie}});
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
         const contactPointTriples = await fetchType(request, contactPoint.getSubject().getValue(), ContactpointType);
         expect(contactPointTriples.getTriples()).toHaveLength(0);
+    });
+
+    test('deleting an instance without login returns http 401 Unauthorized ', async ({request}) => {
+        const contactPoint = await ContactPointTestBuilder.aContactPoint()
+            .buildAndPersist(request, pepingenId);
+
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withContactPoint(contactPoint.getSubject())
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: undefined}});
+        expect(response.status()).toEqual(401);
+    });
+
+    test('Creating a new instance with a user that has no access rights on lpdc returns http 403 Forbidden ', async ({request}) => {
+        const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
+
+        const contactPoint = await ContactPointTestBuilder.aContactPoint()
+            .buildAndPersist(request, pepingenId);
+
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withContactPoint(contactPoint.getSubject())
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.delete(`${dispatcherUrl}/public-services/${publicService.getUUID()}`, {params: {cookie: loginResponse.cookie}});
+        expect(response.status()).toEqual(403);
     });
 
 })
