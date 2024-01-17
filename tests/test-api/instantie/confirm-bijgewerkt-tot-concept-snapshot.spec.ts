@@ -12,13 +12,13 @@ import {fetchType} from "../test-helpers/sparql";
 test.describe('confirm bijgewerkt to concept snapshot', () => {
 
     test('when confirm bijgewerkt tot then herziening nodig should be turned off and conceptSnapshot should be updated', async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
         const conceptId = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
 
         const snapshot1 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
         const snapshot2 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
 
-        const concept = await ConceptTestBuilder.aConcept()
+        await ConceptTestBuilder.aConcept()
             .withId(conceptId)
             .withVersionedSource(snapshot2.getSubject())
             .withLatestFunctionalChange(snapshot2.getSubject())
@@ -31,7 +31,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: cookie},
+            headers: {cookie: loginResponse.cookie},
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -42,7 +42,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
     });
 
     test('when concept has newer latestFunctionalChanged snapshot then herzieningNodig flag should not be removed',  async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
         const conceptId = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
 
         const snapshot1 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
@@ -62,7 +62,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: cookie},
+            headers: {cookie: loginResponse.cookie},
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -74,7 +74,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
     });
 
     test('when concept versionedSource is not equal to hasLatestFunctionalChange',  async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
         const conceptId = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
 
         const snapshot1 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
@@ -94,7 +94,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: cookie},
+            headers: {cookie: loginResponse.cookie},
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -106,7 +106,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
     });
 
     test('when trying to confirm bijgewerkt for other bestuurseenheid then no data is updated',  async ({request}) => {
-        const cookie = await loginAsBilzen(request);
+        const loginResponse = await loginAsBilzen(request);
         const conceptId = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
 
         const snapshot1 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
@@ -126,7 +126,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: cookie},
+            headers: {cookie: loginResponse.cookie},
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();

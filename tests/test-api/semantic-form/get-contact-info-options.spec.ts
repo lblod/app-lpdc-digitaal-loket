@@ -78,8 +78,8 @@ test('When instance contact point has an email, telephone, url and openingHours 
 })
 
 test('When request does not contain a valid field name, return an error message', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/lastName`, {headers: {cookie: cookie}});
+    const loginResponse = await loginAsPepingen(request);
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/lastName`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeFalsy();
     expect(response.status()).toEqual(400);
     expect(response.statusText()).toEqual('Bad Request');
@@ -110,8 +110,8 @@ test('When multiple instances of different local authorities, return only the co
 })
 
 async function getContactInfoOptions(request: APIRequestContext, fieldName: string, userAccount: UserAccount = pepingen) {
-    const cookie = await login(request, userAccount);
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/${fieldName}`, {headers: {cookie: cookie}});
+    const loginResponse = await login(request, userAccount);
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/${fieldName}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
     return await response.json();
 }

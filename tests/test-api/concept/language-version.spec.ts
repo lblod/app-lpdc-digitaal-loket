@@ -30,8 +30,8 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
 }
 
 async function getConceptLanguageVersion(request: APIRequestContext, conceptUUID: string) {
-    const cookie = await loginAsPepingen(request);
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${conceptUUID}/language-version`, {headers: {cookie: cookie}});
+    const loginResponse = await loginAsPepingen(request);
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${conceptUUID}/language-version`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
     return response.json();
 }

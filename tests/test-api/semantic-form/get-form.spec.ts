@@ -21,14 +21,14 @@ test.beforeEach(async ({request}) => {
 });
 
 test('Can get content form for concept', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
 
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('Concept title', Language.NL)
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -44,14 +44,14 @@ test('Can get content form for concept', async ({request}) => {
 });
 
 test('Can get characteristics form for concept', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
 
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('Concept title', Language.NL)
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -67,12 +67,12 @@ test('Can get characteristics form for concept', async ({request}) => {
 });
 
 test('Can get content form for public service', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withNoPublicationMedium()
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
@@ -84,12 +84,12 @@ test('Can get content form for public service', async ({request}) => {
 });
 
 test('Can get characteristics form for public service', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withNoPublicationMedium()
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
@@ -101,12 +101,12 @@ test('Can get characteristics form for public service', async ({request}) => {
 });
 
 test('English form is only added when publicationMedium is yourEurope and form is content', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withPublicationMedium(PublicationMedium.YourEurope)
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
@@ -116,10 +116,10 @@ test('English form is only added when publicationMedium is yourEurope and form i
 });
 
 test('When getting characteristics form then meta field contains codelist of all bestuurseenheden', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService().buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
     const responseBody = await response.json();
     const expectedMeta = fs.readFileSync(`${__dirname}/meta.txt`, 'utf8');
@@ -127,11 +127,11 @@ test('When getting characteristics form then meta field contains codelist of all
 });
 
 test('Can get content form for full concept', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
 
     const {concept, triples} = await new TestDataFactory().createFullConcept(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -144,11 +144,11 @@ test('Can get content form for full concept', async ({request}) => {
 });
 
 test('Can get content form for full public service', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
 
     const {publicService, triples} = await new TestDataFactory().createFullPublicService(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -157,14 +157,14 @@ test('Can get content form for full public service', async ({request}) => {
 });
 
 test('When getting content form for public service then form language is replaced to language of public service', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withTitle('Instance title', Language.FORMAL)
         .withDescription('Instance description', Language.FORMAL)
         .buildAndPersist(request, pepingenId);
 
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
@@ -174,7 +174,7 @@ test('When getting content form for public service then form language is replace
 
 for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
     test(`When getting content form for public service only has no language then chosenform(${chosenForm}) is used in form`, async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withNoTitle()
             .withNoDescription()
@@ -184,7 +184,7 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
             .withChosenForm(chosenForm)
             .buildAndPersist(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
@@ -193,7 +193,7 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
     });
 
     test(`When getting content form for public service only has english language then chosenform(${chosenForm}) is used in form`, async ({request}) => {
-        const cookie = await loginAsPepingen(request);
+        const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withTitle('english title', Language.EN)
             .withDescription('english description', Language.EN)
@@ -203,7 +203,7 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
             .withChosenForm(chosenForm)
             .buildAndPersist(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
@@ -213,7 +213,7 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
 }
 
 test('When getting instance with fields that can only contain NL language version then form should be loaded in chosenVersion', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
 
     const address = await AddressTestBuilder.anAddress()
         .withLand('Belgie')
@@ -232,7 +232,7 @@ test('When getting instance with fields that can only contain NL language versio
         .withContactPoint(contactPoint.getSubject())
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
@@ -241,7 +241,7 @@ test('When getting instance with fields that can only contain NL language versio
 });
 
 test('When retrieving an instance that has all types of Bevoegde Overheid filled in we want to see all these types', async ({request}) => {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
 
     const ocmwUri = new Uri('http://data.lblod.info/id/bestuurseenheden/d769b4b9411ad25f67c1d60b0a403178e24a800e1671fb3258280495011d8e18');
     const politieZoneUri = new Uri('http://data.lblod.info/id/bestuurseenheden/7cb2089a8c6746d514711908abfd38414a2b01f6ad9a83f28be2e835888b3da7');
@@ -273,7 +273,7 @@ test('When retrieving an instance that has all types of Bevoegde Overheid filled
         ])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();

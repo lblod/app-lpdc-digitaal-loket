@@ -1,5 +1,5 @@
-import {APIRequestContext, expect, test} from "@playwright/test";
-import {loginAsPepingen, pepingenId} from "../test-helpers/login";
+import {APIRequestContext, APIResponse, expect, test} from "@playwright/test";
+import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {deleteAll, fetchType} from "../test-helpers/sparql";
 import {PublicServiceType} from "../test-helpers/public-service.test-builder";
@@ -35,6 +35,19 @@ test('Create new empty instance', async ({request}) => {
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/instance-status/ontwerp');
     expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://vocab.belgif.be/auth/refnis2019/23064');
+});
+
+
+test('Creating a new instance without logging returns http 401 Unauthorized ', async ({request}) => {
+    const response = await createFormWithoutLoggingIn(undefined, request);
+
+    expect(response.status()).toEqual(401);
+});
+
+test('Creating a new instance with a user that has no access rights on lpdc http 403 Forbidden ', async ({request}) => {
+    const response = await createFormWithUserWithoutLPDCRights(undefined, request);
+
+    expect(response.status()).toEqual(403);
 });
 
 test('Create instance from concept includes base fields', async ({request}) => {
@@ -595,13 +608,30 @@ test('Create instance from concept: When concept contains english language then 
 });
 
 async function createForm(conceptUUID: string | undefined, request: APIRequestContext) {
-    const cookie = await loginAsPepingen(request);
+    const loginResponse = await loginAsPepingen(request);
+    const headers = {cookie: loginResponse.cookie};
     const response = await request.post(`${dispatcherUrl}/public-services`, {
         data: conceptUUID ? createPublicServiceFromConceptBody(conceptUUID) : {},
-        headers: {cookie: cookie}
+        headers: headers,
     });
     expect(response.ok(), await response.text()).toBeTruthy();
     return response.json();
+}
+
+async function createFormWithoutLoggingIn(conceptUUID: string | undefined, request: APIRequestContext): Promise<APIResponse> {
+    return await request.post(`${dispatcherUrl}/public-services`, {
+        data: conceptUUID ? createPublicServiceFromConceptBody(conceptUUID) : {},
+        headers: {cookie: undefined},
+    });
+}
+
+async function createFormWithUserWithoutLPDCRights(conceptUUID: string | undefined, request: APIRequestContext): Promise<APIResponse> {
+    const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
+    const headers = {cookie: loginResponse.cookie};
+    return await request.post(`${dispatcherUrl}/public-services`, {
+        data: conceptUUID ? createPublicServiceFromConceptBody(conceptUUID) : {},
+        headers: headers,
+    });
 }
 
 function createPublicServiceFromConceptBody(conceptUuid: string) {

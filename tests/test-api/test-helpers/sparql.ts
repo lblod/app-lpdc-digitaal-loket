@@ -39,6 +39,10 @@ async function executeInsertQuery(request: APIRequestContext, graph: string, tri
             }
         }
     `;
+    await executeUpdate(request, query);
+}
+
+async function executeUpdate(request: APIRequestContext, query: string) {
     const response = await request.get(`${virtuosoUrl}/sparql`, {params: {query: query}});
     expect(response.ok(), await response.text()).toBeTruthy();
 }
@@ -88,4 +92,5 @@ export {
     insertTriples,
     deleteAll,
     fetchType,
+    executeUpdate,
 }
