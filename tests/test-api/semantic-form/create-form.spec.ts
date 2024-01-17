@@ -22,6 +22,21 @@ test.beforeEach(async ({request}) => {
     await deleteAll(request);
 });
 
+test('Create new empty instance', async ({request}) => {
+    const response = await createForm(undefined, request);
+
+    const triples = await fetchType(request, response.data.uri, PublicServiceType);
+    expect(triples.findObject(Predicates.type).getValue()).toEqual(PublicServiceType);
+    expect(triples.findObject(Predicates.uuid)).toBeDefined();
+    expect(triples.findObject(Predicates.created)).toBeDefined();
+    expect(triples.findObject(Predicates.modified)).toBeDefined();
+    expect(triples.findTriple(Predicates.createdBy).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
+    expect(triples.findTriple(Predicates.hasCompetentAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
+    expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
+    expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/instance-status/ontwerp');
+    expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://vocab.belgif.be/auth/refnis2019/23064');
+});
+
 test('Create instance from concept includes base fields', async ({request}) => {
     const concept = await ConceptTestBuilder.aConcept()
         .withTitle('The title', Language.NL)
@@ -579,10 +594,10 @@ test('Create instance from concept: When concept contains english language then 
     expect(publicService.findObjects(Predicates.description)).toContainEqual(new Literal('description', Language.EN));
 });
 
-async function createForm(conceptUUID: string, request: APIRequestContext) {
+async function createForm(conceptUUID: string | undefined, request: APIRequestContext) {
     const cookie = await loginAsPepingen(request);
     const response = await request.post(`${dispatcherUrl}/public-services`, {
-        data: createPublicServiceFromConceptBody(conceptUUID),
+        data: conceptUUID ? createPublicServiceFromConceptBody(conceptUUID) : {},
         headers: {cookie: cookie}
     });
     expect(response.ok(), await response.text()).toBeTruthy();
