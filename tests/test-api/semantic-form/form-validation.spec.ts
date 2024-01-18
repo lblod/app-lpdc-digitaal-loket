@@ -1,7 +1,7 @@
 import {expect, test} from "@playwright/test";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
-import {loginAsPepingen, pepingenId} from "../test-helpers/login";
+import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {Uri} from "../test-helpers/triple-array";
 import {ContactPointTestBuilder} from "../test-helpers/contact-point-test.builder";
 import {AddressTestBuilder} from "../test-helpers/address.test-builder";
@@ -13,7 +13,7 @@ test(`Submit form: validate publicService valid form`, async ({request}) => {
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.ok(), `Error ${response.status()}, ${await response.text()}`).toBeTruthy();
 });
@@ -24,7 +24,7 @@ test(`Submit form: validate publicService invalid form - competentAutority is re
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.status()).toEqual(400);
     expect(await response.json()).toEqual({
@@ -60,7 +60,7 @@ test(`Submit form: validate publicService with valid address`, async ({request})
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.ok(), `Error ${response.status()}, ${await response.text()}`).toBeTruthy();
 });
@@ -84,7 +84,7 @@ test(`Submit form: validate publicService with invalid address`, async ({request
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.status()).toEqual(400);
     expect(await response.json()).toEqual({
@@ -114,7 +114,7 @@ test(`Submit form: validate publicService with address that has not enough field
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.status()).toEqual(400);
     expect(await response.json()).toEqual({
@@ -161,7 +161,7 @@ test(`Submit form: validate publicService with multiple address - both valid`, a
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.ok).toBeTruthy();
 });
@@ -194,7 +194,7 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(await response.json()).toEqual({
         data: {
@@ -235,7 +235,7 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(await response.json()).toEqual({
         data: {
@@ -270,7 +270,7 @@ test(`Submit form: validate publicService with several errors on inhoud tab`, as
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
 
     expect(await response.json()).toEqual({
         data: {
@@ -290,3 +290,25 @@ test(`Submit form: validate publicService with several errors on inhoud tab`, as
     });
 });
 
+test(`Submit form: validate publicService valid form when user is not logged in, returns http 401 Unauthenticated`, async ({request}) => {
+    const publicService = await PublicServiceTestBuilder.aPublicService()
+        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+        .buildAndPersist(request, pepingenId);
+
+    const apiResponse = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: undefined}});
+
+    expect(apiResponse.status()).toEqual(401);
+});
+
+test(`Submit form: validate publicService valid form when user has no rights on lpdc, returns http 403 Forbidden`, async ({request}) => {
+    const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
+    const publicService = await PublicServiceTestBuilder.aPublicService()
+        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+        .buildAndPersist(request, pepingenId);
+
+    const apiResponse = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/submit`, {headers: {cookie: loginResponse.cookie}});
+
+    expect(apiResponse.status()).toEqual(403);
+});
