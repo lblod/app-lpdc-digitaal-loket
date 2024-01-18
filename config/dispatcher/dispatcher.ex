@@ -73,18 +73,6 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/public-services/"
   end
 
-  get "/lpdc-management/*path" do
-    forward conn, path, "http://lpdc-management/semantic-forms/"
-  end
-
-  put "/lpdc-management/*path" do
-    forward conn, path, "http://lpdc-management/semantic-forms/"
-  end
-
-  post "/lpdc-management/*path" do
-    forward conn, path, "http://lpdc-management/semantic-forms/"
-  end
-
   #################################################################
   # Reports
   #################################################################
