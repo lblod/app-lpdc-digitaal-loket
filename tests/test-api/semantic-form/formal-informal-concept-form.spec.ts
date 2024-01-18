@@ -26,7 +26,7 @@ test('When chosenForm informal and concept in unknown version then language in f
             {value: 'Concept title', language: Language.GENERATED_INFORMAL},
         ]).buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -48,7 +48,7 @@ test('When chosenForm formal and concept in unknown versions then language in fo
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -67,7 +67,7 @@ test('When no chosenForm and concept in unknown versions then language in form s
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -89,7 +89,7 @@ test('When chosenForm informal and concept in informal version then language in 
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -111,7 +111,7 @@ test('When chosenForm formal and concept in informal version then language in fo
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -130,7 +130,7 @@ test('When no chosenForm and concept in informal version then language in form s
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -152,7 +152,7 @@ test('When chosenForm informal and concept in formal version then language in fo
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -174,7 +174,7 @@ test('When chosenForm formal and concept in formal version then language in form
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -193,7 +193,7 @@ test('When no chosenForm and concept in formal version then language in form sho
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -215,7 +215,7 @@ test('When chosenForm informal and concept in both version then language in form
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -237,7 +237,7 @@ test('When chosenForm formal and concept in both versions then language in form 
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -256,7 +256,7 @@ test('When no chosenForm and concept in both versions then language in form shou
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -275,7 +275,7 @@ test('When chosenForm informal and concept only in nl version then language in f
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -294,7 +294,7 @@ test('When chosenForm formal and concept only in nl then language in form should
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -310,7 +310,7 @@ test('When no chosenForm and concept only in nl then language in form should be 
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services//${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
