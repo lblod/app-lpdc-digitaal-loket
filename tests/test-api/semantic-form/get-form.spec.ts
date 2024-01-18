@@ -183,6 +183,7 @@ test.describe('Loading forms for instances', () => {
         const responseBody = await response.json();
         const triplesWithoutUUID = new TripleArray(triples.filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+        //TODO LPDC-917: this test fails if the date time in micros is exactly 000; then it gets stripped in the json output (we should verify if this then also fails in the application itself)
     });
 
     test('When getting content form for public service then form language is replaced to language of public service', async ({request}) => {

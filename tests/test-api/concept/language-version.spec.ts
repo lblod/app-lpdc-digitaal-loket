@@ -19,7 +19,7 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
             .buildAndPersist(request);
 
         const loginResponse = await loginAsPepingen(request);
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/language-version`, {headers: {cookie: loginResponse.cookie}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/dutch-language-version`, {headers: {cookie: loginResponse.cookie}});
         expect(apiResponse.ok()).toBeTruthy();
         const response = await apiResponse.json();
 
@@ -40,7 +40,7 @@ test(`Get Concept language version: Should return http 401 Unauthorized without 
     const concept = await ConceptTestBuilder.aConcept()
         .buildAndPersist(request);
 
-    const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/language-version`, {headers: {cookie: undefined}});
+    const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/dutch-language-version`, {headers: {cookie: undefined}});
     expect(apiResponse.status()).toEqual(401);
 });
 
@@ -53,7 +53,7 @@ test(`Get Concept language version: Should return http 403 Forbidden with a user
     const concept = await ConceptTestBuilder.aConcept()
         .buildAndPersist(request);
 
-    const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/language-version`, {headers: {cookie: loginResponse.cookie}});
+    const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/dutch-language-version`, {headers: {cookie: loginResponse.cookie}});
     expect(apiResponse.status()).toEqual(403);
 });
 
