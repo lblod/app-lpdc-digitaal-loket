@@ -30,7 +30,8 @@ export default class EvidenceTestBuilder {
                 {value: 'evidence description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'evidence description generated formal', language: Language.GENERATED_FORMAL},
             ])
-            .withOrder(1)
+        //TODO LPDC-917: is order needed on evidence?
+            //.withOrder(0)
     }
 
     private withType() {
@@ -68,8 +69,10 @@ export default class EvidenceTestBuilder {
         return this;
     }
 
+    //TODO LPDC-917: is order needed on evidence?
+
     withOrder(value: number) {
-        this.order = new Literal(value.toString());
+        this.order = new Literal(value.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#integer');
         return this;
     }
 
@@ -79,8 +82,8 @@ export default class EvidenceTestBuilder {
             new Triple(this.id, Predicates.uuid, this.uuid),
             ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
-            new Triple(this.id, Predicates.source, this.source),
-            new Triple(this.id, Predicates.order, this.order),
+            //TODO LPDC-917: is order needed on evidence?
+//            new Triple(this.id, Predicates.source, this.source),
         ];
         return new TripleArray(triples);
     }

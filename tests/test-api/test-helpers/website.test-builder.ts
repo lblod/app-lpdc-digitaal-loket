@@ -31,7 +31,7 @@ export class WebsiteTestBuilder {
                 {value: 'website description generated formal', language: Language.GENERATED_FORMAL},
             ])
             .withUrl('https://www.vlaio.be')
-            .withOrder(1)
+            .withOrder(0)
     }
 
     private withType() {
@@ -70,7 +70,7 @@ export class WebsiteTestBuilder {
     }
 
     withOrder(value: number) {
-        this.order = new Literal(value.toString());
+        this.order = new Literal(value.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#integer');
         return this;
     }
 

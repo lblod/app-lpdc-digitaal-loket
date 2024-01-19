@@ -38,11 +38,7 @@ test.describe('Loading forms for concepts', () => {
         const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
-        const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(
-            concept.getTriples()
-                .filter(triple => triple.predicate !== Predicates.uuid)
-                .filter(triple => triple.predicate !== Predicates.hasLatestFunctionalChange)
-        ).asStringArray();
+        const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(concept.getTriples()).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndhasLatestFunctionalChange.sort());
     });
 
@@ -61,11 +57,7 @@ test.describe('Loading forms for concepts', () => {
         const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
-        const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(
-            concept.getTriples()
-                .filter(triple => triple.predicate !== Predicates.uuid)
-                .filter(triple => triple.predicate !== Predicates.hasLatestFunctionalChange)
-        ).asStringArray();
+        const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(concept.getTriples()).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndhasLatestFunctionalChange.sort());
     });
 
@@ -78,11 +70,7 @@ test.describe('Loading forms for concepts', () => {
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
-        const triplesWithoutUuidAndHasLatestFunctionalChange = new TripleArray(
-            triples
-                .filter(triple => triple.predicate !== Predicates.uuid)
-                .filter(triple => triple.predicate !== Predicates.hasLatestFunctionalChange)
-        ).asStringArray();
+        const triplesWithoutUuidAndHasLatestFunctionalChange = new TripleArray(triples).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndHasLatestFunctionalChange.sort());
     });
 

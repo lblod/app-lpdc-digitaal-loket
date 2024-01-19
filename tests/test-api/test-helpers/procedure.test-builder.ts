@@ -31,6 +31,7 @@ export default class ProcedureTestBuilder {
                 {value: 'procedure description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'procedure description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(0);
     }
 
     private withType() {
@@ -68,6 +69,12 @@ export default class ProcedureTestBuilder {
         return this;
     }
 
+    withOrder(value: number) {
+        this.order = new Literal(value.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#integer');
+        return this;
+    }
+
+
     buildTripleArray() {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
@@ -75,6 +82,7 @@ export default class ProcedureTestBuilder {
             ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
             new Triple(this.id, Predicates.hasWebsite, this.website),
+            new Triple(this.id, Predicates.order, this.order),
         ];
         return new TripleArray(triples);
     }

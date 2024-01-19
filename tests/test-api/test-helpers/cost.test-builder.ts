@@ -29,7 +29,7 @@ export class CostTestBuilder {
                 {value: 'cost description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'cost description generated formal', language: Language.GENERATED_FORMAL},
             ])
-            .withOrder(1)
+            .withOrder(0)
     }
 
     private withType() {
@@ -64,7 +64,7 @@ export class CostTestBuilder {
     }
 
     withOrder(value: number) {
-        this.order = new Literal(value.toString());
+        this.order = new Literal(value.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#integer');
         return this;
     }
 
