@@ -19,7 +19,7 @@ for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
             .buildAndPersist(request);
 
         const loginResponse = await loginAsPepingen(request);
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/dutch-language-version`, {headers: {cookie: loginResponse.cookie}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/dutch-language-version`, {headers: {cookie: loginResponse.cookie}});
         expect(apiResponse.ok()).toBeTruthy();
         const response = await apiResponse.json();
 

@@ -16,6 +16,10 @@ export class TripleArray {
         return this.triples;
     }
 
+    getId(): Uri {
+        return this.triples[0].subject;
+    }
+
     getUUID(): string {
         return this.findTriple(Predicates.uuid).getObjectValue();
     }
