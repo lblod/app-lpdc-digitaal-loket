@@ -45,7 +45,7 @@ export default {
           }
 
           FILTER NOT EXISTS {
-            ?publicService schema:publication <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
+            ?publicService schema:publication <http://lblod.data.gift/concepts/publication-status/gepubliceerd> .
           }
         }
         UNION {
@@ -56,7 +56,7 @@ export default {
               dct:title           ?title ;
               pav:createdBy       ?bestuurseenheid ;
               adms:status         <http://lblod.data.gift/concepts/instance-status/verstuurd> ;
-              schema:publication  <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> .
+              schema:publication  <http://lblod.data.gift/concepts/publication-status/te-herpubliceren> .
 
               FILTER(LANG(?title) = "nl" || LANG(?title) = "nl-be-x-formal" || LANG(?title) = "nl-be-x-informal")
           }
@@ -74,7 +74,7 @@ export default {
               a                   as:Tombstone ;
               rdfs-ns:type        ?type ;
               as:formerType       cpsv:PublicService ;
-              schema:publication  <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> .
+              schema:publication  <http://lblod.data.gift/concepts/publication-status/te-herpubliceren> .
 
             # Graphs have a consistent structure.
             # Ex: http://mu.semte.ch/graphs/organizations/8620c62b9e51d2275c98cb724ce4b6784b432db8e1e0376ac70cbda098ea0d0a/LoketLB-LPDCGebruiker

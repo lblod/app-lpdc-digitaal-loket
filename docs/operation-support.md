@@ -292,13 +292,13 @@ docker restart app-lpdc-digitaal-loket-lpdc-ldes-consumer-1
 ```
 DELETE {
   GRAPH ?bestuurseenheidGraph {
-    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
+    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd> .
   }
 }
 
 INSERT {
   GRAPH ?bestuurseenheidGraph {
-    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> .
+    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/te-herpubliceren> .
   }
 }
 
@@ -306,7 +306,7 @@ INSERT {
   GRAPH ?bestuurseenheidGraph {
     ?instance a <http://purl.org/vocab/cpsv#PublicService> .
     ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verstuurd> .
-    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
+    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd> .
   }
 
   FILTER(
@@ -443,7 +443,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 
 INSERT {
     GRAPH ?bestuurseenheidsGraph {
-       ?instantie ext:reviewStatus <http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83>
+       ?instantie ext:reviewStatus <http://lblod.data.gift/concepts/review-status/concept-gewijzigd>
     }
 }
 WHERE {
@@ -484,7 +484,7 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 
 INSERT {
     GRAPH ?bestuurseenheidsGraph {
-       ?instantie ext:reviewStatus <http://lblod.data.gift/concepts/cf22e8d1-23c3-45da-89bc-00826eaf23c3>
+       ?instantie ext:reviewStatus <http://lblod.data.gift/concepts/review-status/concept-gearchiveerd>
     }
 }
 WHERE {

@@ -89,8 +89,8 @@ function reviewStatusVoorInstantieQuad(instantie: Instantie): string {
     const conceptIsGearchiveerd = instantie.conceptStatus !== undefined;
 
     const possibleReviewStatus = {
-        conceptUpdated: 'http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83',
-        conceptArchived: 'http://lblod.data.gift/concepts/cf22e8d1-23c3-45da-89bc-00826eaf23c3'
+        conceptUpdated: 'http://lblod.data.gift/concepts/review-status/concept-gewijzigd',
+        conceptArchived: 'http://lblod.data.gift/concepts/review-status/concept-gearchiveerd'
     };
     const reviewStatus = conceptIsGearchiveerd ? possibleReviewStatus.conceptArchived : possibleReviewStatus.conceptUpdated;
     return `<${instantie.instantie}> <http://mu.semte.ch/vocabularies/ext/reviewStatus> <${reviewStatus}> <${instantie.bestuurseenheidGraph}> .`;
