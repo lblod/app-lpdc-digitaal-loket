@@ -12,7 +12,7 @@ test('When publicService has title NL then getPublicServiceLanguageVersion shoul
         .withDescription('Instance description', Language.NL)
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/language-version`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/dutch-language-version`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok(), `ERROR: ${await response.text()}`).toBeTruthy();
     const actual = await response.json();
 
@@ -28,7 +28,7 @@ test('When publicService has title NL and EN then getPublicServiceLanguageVersio
         .withDescription('Instance description', Language.NL)
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/language-version`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/dutch-language-version`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok(), `ERROR: ${await response.text()}`).toBeTruthy();
     const actual = await response.json();
 
@@ -41,7 +41,7 @@ test('getPublicServiceLanguageVersion returns http 401 Unauthorized without logi
         .withDescription('Instance description', Language.NL)
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/language-version`, {headers: {cookie: undefined}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/dutch-language-version`, {headers: {cookie: undefined}});
     expect(response.status()).toEqual(401);
 });
 
@@ -52,6 +52,6 @@ test('getPublicServiceLanguageVersion returns http 403 Forbidden with a user tha
         .withDescription('Instance description', Language.NL)
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/language-version`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/dutch-language-version`, {headers: {cookie: loginResponse.cookie}});
     expect(response.status()).toEqual(403);
 });
