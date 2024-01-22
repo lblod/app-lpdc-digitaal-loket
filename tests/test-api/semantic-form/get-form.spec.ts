@@ -31,7 +31,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -50,7 +50,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -66,7 +66,7 @@ test.describe('Loading forms for concepts', () => {
 
         const {concept, triples} = await new TestDataFactory().createFullConcept(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -80,7 +80,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: undefined}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: undefined}});
         expect(apiResponse.status()).toEqual(401);
     });
 
@@ -92,7 +92,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${concept.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(apiResponse.status()).toEqual(403);
     });
 
