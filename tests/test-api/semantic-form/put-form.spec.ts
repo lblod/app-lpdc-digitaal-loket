@@ -22,7 +22,7 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -47,7 +47,7 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -72,7 +72,7 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();

@@ -4,7 +4,7 @@ import {APIRequestContext} from "@playwright/test";
 import {insertTriples} from "./sparql";
 import {Language} from "./language";
 
-export const AddressType = 'http://www.w3.org/ns/location#Address';
+export const AddressType = 'http://www.w3.org/ns/locn#Address';
 
 export class AddressTestBuilder {
 
@@ -50,8 +50,8 @@ export class AddressTestBuilder {
         return this;
     }
 
-    withOrder(value: number) {
-        this.order = new Literal(value.toString());
+    private withOrder(value: number) {
+        this.order = new Literal(value.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#integer');
         return this;
     }
 

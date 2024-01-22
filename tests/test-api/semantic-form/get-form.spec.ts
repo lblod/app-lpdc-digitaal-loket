@@ -106,14 +106,14 @@ test.describe('Loading forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
-        const triplesWithoutUUID = new TripleArray(publicService.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
+        const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
     });
 
@@ -121,16 +121,17 @@ test.describe('Loading forms for instances', () => {
         const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withNoPublicationMedium()
+            .withCreatedBy(pepingenId)
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
-        const triplesWithoutUUID = new TripleArray(publicService.getTriples().filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
+        const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
     });
 
@@ -140,7 +141,7 @@ test.describe('Loading forms for instances', () => {
             .withPublicationMedium(PublicationMedium.YourEurope)
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
@@ -153,7 +154,7 @@ test.describe('Loading forms for instances', () => {
         const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService().buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
         const responseBody = await response.json();
         const expectedMeta = fs.readFileSync(`${__dirname}/meta.txt`, 'utf8');
@@ -165,11 +166,11 @@ test.describe('Loading forms for instances', () => {
 
         const {publicService, triples} = await new TestDataFactory().createFullPublicService(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
-        const triplesWithoutUUID = new TripleArray(triples.filter(triple => triple.predicate !== Predicates.uuid)).asStringArray();
+        const triplesWithoutUUID = new TripleArray(triples).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
         //TODO LPDC-917: this test fails if the date time in micros is exactly 000; then it gets stripped in the json output (we should verify if this then also fails in the application itself)
     });
@@ -182,7 +183,7 @@ test.describe('Loading forms for instances', () => {
             .buildAndPersist(request, pepingenId);
 
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
@@ -202,7 +203,7 @@ test.describe('Loading forms for instances', () => {
                 .withChosenForm(chosenForm)
                 .buildAndPersist(request);
 
-            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
             expect(response.ok()).toBeTruthy();
 
             const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
@@ -221,7 +222,7 @@ test.describe('Loading forms for instances', () => {
                 .withChosenForm(chosenForm)
                 .buildAndPersist(request);
 
-            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
             expect(response.ok()).toBeTruthy();
 
             const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
@@ -250,7 +251,7 @@ test.describe('Loading forms for instances', () => {
             .withContactPoint(contactPoint.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
@@ -291,7 +292,7 @@ test.describe('Loading forms for instances', () => {
             ])
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -315,7 +316,7 @@ test.describe('Loading forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: undefined}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: undefined}});
         expect(apiResponse.status()).toEqual(401);
     });
 
@@ -325,7 +326,7 @@ test.describe('Loading forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(apiResponse.status()).toEqual(403);
     });
 

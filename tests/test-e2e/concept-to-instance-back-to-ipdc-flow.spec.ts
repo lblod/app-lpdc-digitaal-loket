@@ -764,7 +764,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Provincie Limburg']);
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Oud-Heverlee']);
 
-        await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'Nationaliteit - nl', 'een-nieuwe-tag']);
+        await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['Akte - nl', 'een-nieuwe-tag', 'Nationaliteit - nl']);
         await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText('Your Europe');
         await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(['Medische behandeling ondergaan', 'Rechten en verplichtingen tot preventieve openbare gezondheidsmaatregelen']);
 

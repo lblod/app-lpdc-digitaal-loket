@@ -25,7 +25,7 @@ export class ContactPointTestBuilder {
             .withTelephone('016123123')
             .withOpeningHours('Everyday')
             .withUrl('https://leuven.be')
-            .withOrder(1)
+            .withOrder(0)
     }
 
     private withType() {
@@ -39,7 +39,7 @@ export class ContactPointTestBuilder {
     }
 
     withOrder(value: number) {
-        this.order = new Literal(value.toString());
+        this.order = new Literal(value.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#integer');
         return this;
     }
 

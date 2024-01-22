@@ -5,6 +5,7 @@ import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import {
     CompetentAuthorityLevel,
     ExecutingAuthorityLevel,
+    InstanceStatus,
     ProductType,
     PublicationMedium,
     ResourceLanguage,
@@ -53,6 +54,7 @@ export class PublicServiceTestBuilder {
     private createdBy: Uri;
     private versionedSource: Uri;
     private reviewStatus: Uri;
+    private instanceStatus: Uri;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -64,6 +66,7 @@ export class PublicServiceTestBuilder {
             .withModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
+            .withInstanceStatus(InstanceStatus.ontwerp)
     }
 
     static aFullPublicService() {
@@ -92,6 +95,7 @@ export class PublicServiceTestBuilder {
             .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withInstanceStatus(InstanceStatus.ontwerp)
     }
 
     private withType() {
@@ -282,10 +286,18 @@ export class PublicServiceTestBuilder {
     withReviewStatus(reviewStatus: ReviewStatus) {
         this.reviewStatus = new Uri(reviewStatus);
         return this;
-}
+    }
+
+    withInstanceStatus(instanceStatus: InstanceStatus) {
+        this.instanceStatus = new Uri(instanceStatus);
+        return this;
+    }
 
 
-    buildTripleArray(): TripleArray {
+    private buildTripleArray(organisationId: string): TripleArray {
+        if(!this.createdBy) {
+            this.withCreatedBy(organisationId);
+        }
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
             new Triple(this.id, Predicates.uuid, this.uuid),
@@ -319,13 +331,14 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.source, this.concept),
             new Triple(this.id, Predicates.createdBy, this.createdBy),
             new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource),
-            new Triple(this.id, Predicates.reviewStatus, this.reviewStatus)
+            new Triple(this.id, Predicates.reviewStatus, this.reviewStatus),
+            new Triple(this.id, Predicates.instanceStatus, this.instanceStatus)
         ];
         return new TripleArray(triples);
     }
 
     async buildAndPersist(request, organisationId: string): Promise<TripleArray> {
-        const publicService = this.buildTripleArray();
+        const publicService = this.buildTripleArray(organisationId);
         await insertTriples(request, `http://mu.semte.ch/graphs/organizations/${organisationId}/LoketLB-LPDCGebruiker`, publicService.asStringArray());
         return publicService;
     }

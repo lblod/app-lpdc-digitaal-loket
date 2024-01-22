@@ -52,6 +52,11 @@ export enum ReviewStatus {
     conceptArchived = 'http://lblod.data.gift/concepts/cf22e8d1-23c3-45da-89bc-00826eaf23c3'
 }
 
+export enum InstanceStatus {
+    ontwerp = 'http://lblod.data.gift/concepts/instance-status/ontwerp',
+    verstuurd = 'http://lblod.data.gift/concepts/instance-status/verstuurd',
+}
+
 export enum YourEuropeCategory {
     Gezondheidszorg = 'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/Gezondheidszorg',
     GezondheidszorgWoonzorgcentrum = 'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgWoonzorgcentrum',
