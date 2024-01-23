@@ -4,7 +4,7 @@ import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {deleteAll, fetchType} from "../test-helpers/sparql";
 import {PublicServiceType} from "../test-helpers/public-service.test-builder";
 import {Language} from "../test-helpers/language";
-import {Literal, Predicates} from "../test-helpers/triple-array";
+import {Literal, Predicates, Uri} from "../test-helpers/triple-array";
 import {RequirementTestBuilder, RequirementType} from "../test-helpers/requirement.test-builder";
 import EvidenceTestBuilder, {EvidenceType} from "../test-helpers/evidence.test-builder";
 import ProcedureTestBuilder, {ProcedureType} from "../test-helpers/procedure.test-builder";
@@ -56,7 +56,7 @@ test('Create instance from concept includes base fields', async ({request}) => {
         .withDescription('The description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const triples = await fetchType(request, response.data.uri, PublicServiceType);
     expect(triples.findObject(Predicates.type).getValue()).toEqual(PublicServiceType);
@@ -65,7 +65,6 @@ test('Create instance from concept includes base fields', async ({request}) => {
     expect(triples.findObject(Predicates.description).getValue()).toEqual(concept.findObject(Predicates.description).getValue());
     expect(triples.findObject(Predicates.startDate)).toEqual(concept.findObject(Predicates.startDate));
     expect(triples.findObject(Predicates.endDate)).toEqual(concept.findObject(Predicates.endDate));
-    expect(triples.findObject(Predicates.productId)).toEqual(concept.findObject(Predicates.productId));
     expect(triples.findObject(Predicates.created)).toBeDefined();
     expect(triples.findObject(Predicates.modified)).toBeDefined();
     expect(triples.findTriple(Predicates.source).getObjectValue()).toEqual(concept.findTriple(Predicates.type).getSubjectValue());
@@ -83,7 +82,7 @@ test('Create instance from concept: When concept has requirement than instance h
         .withRequirement(requirement.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
     const requirementUri = publicServiceTriples.findObject(Predicates.hasRequirement).getValue();
@@ -109,7 +108,7 @@ test('Create instance from concept: When concept has requirement with evidence t
         .withRequirement(requirement.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
     const requirementUri = publicServiceTriples.findObject(Predicates.hasRequirement).getValue();
@@ -133,7 +132,7 @@ test('Create instance from concept: When concept has procedure then instance has
         .withProcedure(procedure.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getSubject(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
     const procedureUri = publicServiceTriples.findObject(Predicates.hasProcedure).getValue();
@@ -159,7 +158,7 @@ test('Create instance from concept: When concept has procedure with website then
         .withProcedure(procedure.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
     const procedureUri = publicServiceTriples.findObject(Predicates.hasProcedure).getValue();
@@ -184,7 +183,7 @@ test('Create instance from concept: When concept has website than instance has i
         .withMoreInfo(website.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
     const websiteUri = publicServiceTriples.findObject(Predicates.hasMoreInfo).getValue();
@@ -207,7 +206,7 @@ test('Create instance from concept: When concept has cost then instance has it t
         .withCost(cost.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
     const costUri = publicServiceTriples.findObject(Predicates.hasCost).getValue();
@@ -229,7 +228,7 @@ test('Create instance from concept: When concept has financialAdvantage then con
         .withFinancialAdvantage(financialAdvantage.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
     const financialAdvantageUri = publicServiceTriples.findObject(Predicates.hasFinancialAdvantage).getValue();
@@ -253,7 +252,7 @@ test('Create instance from concept: ConceptInstantiated flag of ConceptDisplayCo
         .withConceptDisplayConfiguration(conceptDisplayConfiguration.getSubject())
         .buildAndPersist(request);
 
-    await createForm(concept.getUUID(), request);
+    await createForm(concept.getId(), request);
 
     const displayConfiguration = await fetchType(request, conceptDisplayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
     expect(displayConfiguration.findObject(Predicates.conceptIsNew).getValue()).toEqual('true');
@@ -275,7 +274,7 @@ test('Create instance from concept: Instance should contain only one language ve
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect(publicService.findAllTriples(Predicates.title)).toHaveLength(1);
@@ -296,7 +295,7 @@ test('Create instance from concept: When no chosenForm then instance language ve
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect((publicService.findObject(Predicates.title) as Literal).getLanguage()).toEqual(Language.FORMAL);
@@ -321,7 +320,7 @@ test('Create instance from concept: When chosenForm is formal then instance lang
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect((publicService.findObject(Predicates.title) as Literal).getLanguage()).toEqual(Language.FORMAL);
@@ -346,7 +345,7 @@ test('Create instance from concept: When chosenForm is informal then instance la
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect((publicService.findObject(Predicates.title) as Literal).getLanguage()).toEqual(Language.INFORMAL);
@@ -371,7 +370,7 @@ test('Create instance from concept: When chosenForm is formal then language fiel
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect(publicService.findObject(Predicates.title).getValue()).toEqual('title nl');
@@ -396,7 +395,7 @@ test('Create instance from concept: When chosenForm is informal then language fi
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect(publicService.findObject(Predicates.title).getValue()).toEqual('title generated informal');
@@ -411,7 +410,7 @@ test('Create instance from concept: When concept with requirement then instance 
         .withRequirement(requirementConcept.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     const requirementUri = publicService.findObject(Predicates.hasRequirement).getValue();
@@ -434,7 +433,7 @@ test('Create instance from concept: When concept with requirement with evidence 
         .withRequirement(requirementConcept.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     const requirementUri = publicService.findObject(Predicates.hasRequirement).getValue();
@@ -455,7 +454,7 @@ test('Create instance from concept: When concept with procedure then instance ha
         .withProcedure(procedureConcept.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     const procedureUri = publicService.findObject(Predicates.hasProcedure).getValue();
@@ -478,7 +477,7 @@ test('Create instance from concept: When concept with procedure with website the
         .withProcedure(procedureConcept.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     const procedureUri = publicService.findObject(Predicates.hasProcedure).getValue();
@@ -499,7 +498,7 @@ test('Create instance from concept: When concept with website then instance has 
         .withMoreInfo(moreInfoWebsite.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     const moreInfoUri = publicService.findObject(Predicates.hasMoreInfo).getValue();
@@ -518,7 +517,7 @@ test('Create instance from concept: When concept with cost then instance has cos
         .withCost(costConcept.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     const costUri = publicService.findObject(Predicates.hasCost).getValue();
@@ -537,7 +536,7 @@ test('Create instance from concept: When concept with financial advantage then i
         .withFinancialAdvantage(financialAdvantageConcept.getSubject())
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     const financialAdvantageUri = publicService.findObject(Predicates.hasFinancialAdvantage).getValue();
@@ -567,7 +566,7 @@ test('Create instance from concept: all instance fields with language should hav
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
     expect(publicService.findAllTriples(Predicates.additionalDescription)).toHaveLength(1);
@@ -598,7 +597,7 @@ test('Create instance from concept: When concept contains english language then 
         ])
         .buildAndPersist(request);
 
-    const response = await createForm(concept.getUUID(), request);
+    const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
     expect(publicService.findAllTriples(Predicates.title)).toHaveLength(2);
@@ -607,20 +606,20 @@ test('Create instance from concept: When concept contains english language then 
     expect(publicService.findObjects(Predicates.description)).toContainEqual(new Literal('description', Language.EN));
 });
 
-async function createForm(conceptUUID: string | undefined, request: APIRequestContext) {
+async function createForm(conceptUri: Uri | undefined, request: APIRequestContext) {
     const loginResponse = await loginAsPepingen(request);
     const headers = {cookie: loginResponse.cookie};
     const response = await request.post(`${dispatcherUrl}/public-services`, {
-        data: conceptUUID ? createPublicServiceFromConceptBody(conceptUUID) : {},
+        data: conceptUri ? {conceptId: conceptUri.getValue()} : {},
         headers: headers,
     });
     expect(response.ok(), await response.text()).toBeTruthy();
     return response.json();
 }
 
-async function createFormWithoutLoggingIn(conceptUUID: string | undefined, request: APIRequestContext): Promise<APIResponse> {
+async function createFormWithoutLoggingIn(conceptUri: Uri | undefined, request: APIRequestContext): Promise<APIResponse> {
     return await request.post(`${dispatcherUrl}/public-services`, {
-        data: conceptUUID ? createPublicServiceFromConceptBody(conceptUUID) : {},
+        data: conceptUri ?  {conceptId: conceptUri.getValue()} : {},
         headers: {cookie: undefined},
     });
 }
