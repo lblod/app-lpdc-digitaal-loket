@@ -316,6 +316,28 @@ INSERT {
 }
 ```
 
+# Republish a single instance
+
+```
+    DELETE {
+      GRAPH <my-bestuurseenheidGraph> {
+        <my-instance-id> <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd> .
+      }
+    }
+    INSERT {
+      GRAPH <my-bestuurseenheidGraph> {
+        <my-instance-id> <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/te-herpubliceren> .
+      }
+    }
+     WHERE {
+      GRAPH <my-bestuurseenheidGraph> {
+        <my-instance-id> a <http://purl.org/vocab/cpsv#PublicService> .
+        <my-instance-id> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verstuurd> .
+        <my-instance-id> <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd> .
+      }
+    }
+```
+
 # Fully reload ipdc ldes stream, the concept data, and instance review statuses
 
 **A word of caution** 
