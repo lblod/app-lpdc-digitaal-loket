@@ -224,7 +224,7 @@ test.describe('delete instance', () => {
         expect(response.status()).toEqual(401);
     });
 
-    test('Creating a new instance with a user that has no access rights on lpdc returns http 403 Forbidden ', async ({request}) => {
+    test('deleting an instance with a user that has no access rights on lpdc returns http 403 Forbidden ', async ({request}) => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
 
         const contactPoint = await ContactPointTestBuilder.aContactPoint()
