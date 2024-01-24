@@ -56,6 +56,10 @@ test('Create instance from concept includes base fields', async ({request}) => {
         .withDescription('The description', Language.NL)
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const triples = await fetchType(request, response.data.uri, PublicServiceType);
@@ -80,6 +84,10 @@ test('Create instance from concept: When concept has requirement than instance h
 
     const concept = await ConceptTestBuilder.aConcept()
         .withRequirement(requirement.getSubject())
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -108,6 +116,10 @@ test('Create instance from concept: When concept has requirement with evidence t
         .withRequirement(requirement.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
@@ -130,6 +142,10 @@ test('Create instance from concept: When concept has procedure then instance has
 
     const concept = await ConceptTestBuilder.aConcept()
         .withProcedure(procedure.getSubject())
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getSubject(), request);
@@ -158,6 +174,10 @@ test('Create instance from concept: When concept has procedure with website then
         .withProcedure(procedure.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
@@ -183,6 +203,10 @@ test('Create instance from concept: When concept has website than instance has i
         .withMoreInfo(website.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
@@ -204,6 +228,10 @@ test('Create instance from concept: When concept has cost then instance has it t
 
     const concept = await ConceptTestBuilder.aConcept()
         .withCost(cost.getSubject())
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -228,6 +256,10 @@ test('Create instance from concept: When concept has financialAdvantage then con
         .withFinancialAdvantage(financialAdvantage.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const publicServiceTriples = await fetchType(request, response.data.uri, PublicServiceType);
@@ -243,20 +275,19 @@ test('Create instance from concept: When concept has financialAdvantage then con
 });
 
 test('Create instance from concept: ConceptInstantiated flag of ConceptDisplayConfiguration should be true', async ({request}) => {
+    const concept = await ConceptTestBuilder.aConcept().buildAndPersist(request);
+
     const conceptDisplayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .withConceptInstantiated(false)
         .withConceptIsNew(true)
-        .buildAndPersist(request);
-
-    const concept = await ConceptTestBuilder.aConcept()
-        .withConceptDisplayConfiguration(conceptDisplayConfiguration.getSubject())
         .buildAndPersist(request);
 
     await createForm(concept.getId(), request);
 
     const displayConfiguration = await fetchType(request, conceptDisplayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
-    expect(displayConfiguration.findObject(Predicates.conceptIsNew).getValue()).toEqual('true');
-    expect(displayConfiguration.findObject(Predicates.conceptInstantiated).getValue()).toEqual('false');
+    expect(displayConfiguration.findObject(Predicates.conceptIsNew).getValue()).toEqual('false');
+    expect(displayConfiguration.findObject(Predicates.conceptInstantiated).getValue()).toEqual('true');
 });
 
 test('Create instance from concept: Instance should contain only one language version', async ({request}) => {
@@ -272,6 +303,10 @@ test('Create instance from concept: Instance should contain only one language ve
             {value: 'description', language: Language.GENERATED_INFORMAL},
             {value: 'description', language: Language.GENERATED_FORMAL}
         ])
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -293,6 +328,10 @@ test('Create instance from concept: When no chosenForm then instance language ve
             {value: 'description generated informal', language: Language.GENERATED_INFORMAL},
             {value: 'description generated formal', language: Language.GENERATED_FORMAL}
         ])
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -320,6 +359,10 @@ test('Create instance from concept: When chosenForm is formal then instance lang
         ])
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
@@ -343,6 +386,10 @@ test('Create instance from concept: When chosenForm is informal then instance la
             {value: 'description generated informal', language: Language.GENERATED_INFORMAL},
             {value: 'description generated formal', language: Language.GENERATED_FORMAL}
         ])
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -370,6 +417,10 @@ test('Create instance from concept: When chosenForm is formal then language fiel
         ])
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
@@ -395,6 +446,10 @@ test('Create instance from concept: When chosenForm is informal then language fi
         ])
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
 
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
@@ -408,6 +463,10 @@ test('Create instance from concept: When concept with requirement then instance 
 
     const concept = await ConceptTestBuilder.aConcept()
         .withRequirement(requirementConcept.getSubject())
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -433,6 +492,10 @@ test('Create instance from concept: When concept with requirement with evidence 
         .withRequirement(requirementConcept.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
@@ -452,6 +515,10 @@ test('Create instance from concept: When concept with procedure then instance ha
 
     const concept = await ConceptTestBuilder.aConcept()
         .withProcedure(procedureConcept.getSubject())
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -477,6 +544,10 @@ test('Create instance from concept: When concept with procedure with website the
         .withProcedure(procedureConcept.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
@@ -498,6 +569,10 @@ test('Create instance from concept: When concept with website then instance has 
         .withMoreInfo(moreInfoWebsite.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
@@ -517,6 +592,10 @@ test('Create instance from concept: When concept with cost then instance has cos
         .withCost(costConcept.getSubject())
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
@@ -534,6 +613,10 @@ test('Create instance from concept: When concept with financial advantage then i
 
     const concept = await ConceptTestBuilder.aConcept()
         .withFinancialAdvantage(financialAdvantageConcept.getSubject())
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -564,6 +647,10 @@ test('Create instance from concept: all instance fields with language should hav
             {value: 'regulation generated informal', language: Language.GENERATED_INFORMAL},
             {value: 'regulation generated formal', language: Language.GENERATED_FORMAL}
         ])
+        .buildAndPersist(request);
+
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
         .buildAndPersist(request);
 
     const response = await createForm(concept.getId(), request);
@@ -597,6 +684,10 @@ test('Create instance from concept: When concept contains english language then 
         ])
         .buildAndPersist(request);
 
+    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+        .withConcept(concept.getId())
+        .buildAndPersist(request);
+
     const response = await createForm(concept.getId(), request);
     const publicService = await fetchType(request, response.data.uri, PublicServiceType);
 
@@ -624,30 +715,11 @@ async function createFormWithoutLoggingIn(conceptUri: Uri | undefined, request: 
     });
 }
 
-async function createFormWithUserWithoutLPDCRights(conceptUUID: string | undefined, request: APIRequestContext): Promise<APIResponse> {
+async function createFormWithUserWithoutLPDCRights(conceptUri: Uri | undefined, request: APIRequestContext): Promise<APIResponse> {
     const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
     const headers = {cookie: loginResponse.cookie};
     return await request.post(`${dispatcherUrl}/public-services`, {
-        data: conceptUUID ? createPublicServiceFromConceptBody(conceptUUID) : {},
+        data: conceptUri ? {conceptId: conceptUri.getValue()} : {},
         headers: headers,
     });
-}
-
-function createPublicServiceFromConceptBody(conceptUuid: string) {
-    return {
-        data: {
-            attributes: {
-                modified: null
-            },
-            relationships: {
-                concept: {
-                    data: {
-                        type: "conceptual-public-services",
-                        id: conceptUuid
-                    }
-                }
-            },
-            type: "public-services"
-        }
-    }
 }

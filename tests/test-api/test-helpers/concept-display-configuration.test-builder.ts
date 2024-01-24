@@ -15,6 +15,7 @@ export class ConceptDisplayConfigurationTestBuilder {
     private conceptIsNew: Literal;
     private bestuurseenheidId: string;
     private bestuurseenheid: Uri;
+    private concept: Uri;
 
 
     static aConceptDisplayConfiguration() {
@@ -23,6 +24,7 @@ export class ConceptDisplayConfigurationTestBuilder {
             .withUUID(uuid())
             .withConceptInstantiated(false)
             .withConceptIsNew(true)
+            .withConcept(new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`))
             .withBestuurseenheid(pepingenId)
     }
 
@@ -52,6 +54,11 @@ export class ConceptDisplayConfigurationTestBuilder {
         return this;
     }
 
+    withConcept(concept: Uri) {
+        this.concept = concept;
+        return this;
+    }
+
     buildTripleArray(): TripleArray {
         const triples = [
             new Triple(this.id, Predicates.type, this.type),
@@ -59,6 +66,7 @@ export class ConceptDisplayConfigurationTestBuilder {
             new Triple(this.id, Predicates.conceptInstantiated, this.conceptInstantiated),
             new Triple(this.id, Predicates.conceptIsNew, this.conceptIsNew),
             new Triple(this.id, Predicates.relation, this.bestuurseenheid),
+            new Triple(this.concept, Predicates.hasDisplayConfiguration, this.id)
         ];
         return new TripleArray(triples);
     }

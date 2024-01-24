@@ -43,7 +43,6 @@ export class ConceptTestBuilder {
     private moreInfo: Uri;
     private cost: Uri;
     private financialAdvantage: Uri;
-    private conceptDisplayConfigurations: Uri[] = [];
     private versionedSource: Uri;
     private latestFunctionalChange: Uri;
 
@@ -204,16 +203,6 @@ export class ConceptTestBuilder {
         return this;
     }
 
-    withConceptDisplayConfiguration(displayConfigUri: Uri) {
-        this.conceptDisplayConfigurations = [displayConfigUri];
-        return this;
-    }
-
-    withConceptDisplayConfigurations(displayConfigUris: Uri[]) {
-        this.conceptDisplayConfigurations = displayConfigUris;
-        return this;
-    }
-
     withVersionedSource(snapshotUri: Uri) {
         this.versionedSource = snapshotUri;
         return this;
@@ -250,7 +239,6 @@ export class ConceptTestBuilder {
             new Triple(this.id, Predicates.hasMoreInfo, this.moreInfo),
             new Triple(this.id, Predicates.hasCost, this.cost),
             new Triple(this.id, Predicates.hasFinancialAdvantage, this.financialAdvantage),
-            ...this.conceptDisplayConfigurations.map(conceptDisplayConfig => new Triple(this.id, Predicates.hasDisplayConfiguration, conceptDisplayConfig)),
             new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource),
             new Triple(this.id, Predicates.hasLatestFunctionalChange, this.latestFunctionalChange),
         ];

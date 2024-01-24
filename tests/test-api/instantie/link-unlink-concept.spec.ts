@@ -155,21 +155,19 @@ test.describe('unlink', () => {
 
     test('unlink a concept from an instance, should update the isInstantiated flag of displayConfiguration to false, if no other instance from the same bestuurseenheid is linked to this concept', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
+
+        const concept = await ConceptTestBuilder.aConcept().buildAndPersist(request);
+
         const displayConfigurationPepingen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
             .withConceptInstantiated(true)
             .withBestuurseenheid(pepingenId)
+            .withConcept(concept.getId())
             .buildAndPersist(request);
 
         const displayConfigurationBilzen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
             .withConceptInstantiated(true)
             .withBestuurseenheid(bilzenId)
-            .buildAndPersist(request);
-
-        const concept = await ConceptTestBuilder.aConcept()
-            .withConceptDisplayConfigurations([
-                displayConfigurationPepingen.getSubject(),
-                displayConfigurationBilzen.getSubject(),
-            ])
+            .withConcept(concept.getId())
             .buildAndPersist(request);
 
         const instanceFromPepingen = await PublicServiceTestBuilder.aPublicService()
@@ -193,21 +191,19 @@ test.describe('unlink', () => {
 
     test('unlink a concept from an instance, the isInstantiated flag of displayConfiguration should remain true, if one or more instances are linked to this concept', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
+
+        const concept = await ConceptTestBuilder.aConcept().buildAndPersist(request);
+
         const displayConfigurationPepingen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
             .withConceptInstantiated(true)
             .withBestuurseenheid(pepingenId)
+            .withConcept(concept.getId())
             .buildAndPersist(request);
 
         const displayConfigurationBilzen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
             .withConceptInstantiated(true)
             .withBestuurseenheid(bilzenId)
-            .buildAndPersist(request);
-
-        const concept = await ConceptTestBuilder.aConcept()
-            .withConceptDisplayConfigurations([
-                displayConfigurationPepingen.getSubject(),
-                displayConfigurationBilzen.getSubject()
-            ])
+            .withConcept(concept.getId())
             .buildAndPersist(request);
 
         const instanceFromPepingen = await PublicServiceTestBuilder.aPublicService()
@@ -253,7 +249,6 @@ test.describe('unlink', () => {
 
         const updatedDisplayConfigurationPepingen2 = await fetchType(request, displayConfigurationPepingen.getSubject().getValue(), ConceptDisplayConfigurationType);
         expect(updatedDisplayConfigurationPepingen2.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('false')
-
     });
 
     test('unlink a concept without login returns http 401 Unauthorized', async ({request}) => {
@@ -350,15 +345,13 @@ test.describe('link', () => {
 
     test('link a concept to an instance, should update the isInstantiated flag of displayConfiguration to true', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
+
+        const concept = await ConceptTestBuilder.aConcept().buildAndPersist(request);
+
         const displayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
             .withConceptInstantiated(false)
             .withBestuurseenheid(pepingenId)
-            .buildAndPersist(request);
-
-        const concept = await ConceptTestBuilder.aConcept()
-            .withConceptDisplayConfigurations([
-                displayConfiguration.getSubject(),
-            ])
+            .withConcept(concept.getId())
             .buildAndPersist(request);
 
         const instance = await PublicServiceTestBuilder.aPublicService()
@@ -374,15 +367,13 @@ test.describe('link', () => {
 
     test('link a concept to an instance, should update the isNewConcept flag of displayConfiguration to false', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
+
+        const concept = await ConceptTestBuilder.aConcept().buildAndPersist(request);
+
         const displayConfiguration = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
             .withConceptIsNew(true)
             .withBestuurseenheid(pepingenId)
-            .buildAndPersist(request);
-
-        const concept = await ConceptTestBuilder.aConcept()
-            .withConceptDisplayConfigurations([
-                displayConfiguration.getSubject(),
-            ])
+            .withConcept(concept.getId())
             .buildAndPersist(request);
 
         const instance = await PublicServiceTestBuilder.aPublicService()
