@@ -152,14 +152,14 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - the explanations in the shacl are sometimes in english, sometimes in nl; but the language string is always nl
 - keywords: moeten we de talen beperken ? nl / en ? 
 - verify all kardinaliteiten ... 
-- publicationMedium: also add RechtenVerkenner ? / and others ? currently only YourEurope is in 'official code list'
+- publicationMedium: also add RechtenVerkenner ? / and others ? currently only YourEurope is in 'official code list' - OK only YourEurope
 - how to do / document these fields ?
 - locn:adminUnitL2 : no example in instance-published.ttl
 - eli:LegalResource: we will change it for concepts and instances ... 
   eli:LegalResource 1/ our publish code does not add a type of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie)
   eli:LegalResource 2/ our publish code does not add the order of eli:LegalResource when publishing instantie to ipdc (or we don't inject it into our concept / instantie)
   eli:LegalResource : should we add a title / description as well ? LPDC-781 , LPDC-786, 
-- hasRequirement: een of meerdere ?  want als slechts een, dan mag ook order weg ...
+- hasRequirement: een of meerdere ?  een -> shacl: order behouden
 - instantieTag wordt niet gebruikt (er zijn gedefinieerde waarden in code lijst ) + lpdc stuurt concept tag op in de plaats
 - Fix this non meaningful validation error by reintroducing a list of all languages (then at least it prints the list in the message)?
 - maybe ?? split shapes into cardinaliteiten en structure/types : so we can use structure in domain saving, and cardinalities in publish (on top of extra publish validation e.g. in english: title / description)
@@ -168,7 +168,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
   is it possible to seperate the 1/ form structure 2/ the data structure + validation rules about it 3/ the rendering of the components (e.g. compare components or left nederlands, right engels + other labels)
 - Bring [ConceptJsonLdContext.jsonld](concept-data%2FConceptJsonLdContext.jsonld) up to date, and in sync with the concept shape.
 - Bring [InstantieJsonLdContext.jsonld](instance-data%2FInstantieJsonLdContext.jsonld) up to date, and in sync with the instance shape.
-- Your Europe Category -> engels required -> moet dit in shacl shape?
+- Your Europe Category -> engels required -> moet dit in shacl shape? Nee is geen requirement meer.
 - Other specific validations: e.g. when a title in english is created ; then also a description is required
 
 
