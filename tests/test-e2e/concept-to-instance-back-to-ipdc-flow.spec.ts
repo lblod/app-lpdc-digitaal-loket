@@ -947,12 +947,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             {"@id": 'http://lblod.data.gift/concepts/instance-status/verstuurd'}
         );
 
-        //TODO LPDC-709 This should not be send to IPDC
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag']).toHaveLength(1);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag'][0]).toEqual(
-            {"@id": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht"}
-        );
-
         //TODO LPDC-698 verify Language is send to IPDC
 
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium']).toHaveLength(1);
