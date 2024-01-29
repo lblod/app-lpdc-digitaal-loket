@@ -5,6 +5,7 @@ import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import {
     CompetentAuthorityLevel,
     ExecutingAuthorityLevel,
+    InstancePublicationStatusType,
     InstanceStatus,
     ProductType,
     PublicationMedium,
@@ -55,6 +56,7 @@ export class PublicServiceTestBuilder {
     private versionedSource: Uri;
     private reviewStatus: Uri;
     private instanceStatus: Uri;
+    private publicationStatus: Uri;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -96,6 +98,7 @@ export class PublicServiceTestBuilder {
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withInstanceStatus(InstanceStatus.ontwerp)
+            .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
     }
 
     private withType() {
@@ -292,6 +295,10 @@ export class PublicServiceTestBuilder {
         this.instanceStatus = new Uri(instanceStatus);
         return this;
     }
+    withPublicationStatus(publicationStatus: InstancePublicationStatusType){
+        this.publicationStatus = new Uri(publicationStatus)
+        return this;
+    }
 
 
     private buildTripleArray(organisationId: string): TripleArray {
@@ -332,7 +339,8 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.createdBy, this.createdBy),
             new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource),
             new Triple(this.id, Predicates.reviewStatus, this.reviewStatus),
-            new Triple(this.id, Predicates.instanceStatus, this.instanceStatus)
+            new Triple(this.id, Predicates.instanceStatus, this.instanceStatus),
+            new Triple(this.id, Predicates.publicationStatus, this.publicationStatus)
         ];
         return new TripleArray(triples);
     }

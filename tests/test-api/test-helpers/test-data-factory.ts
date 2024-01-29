@@ -11,9 +11,11 @@ import {
     CompetentAuthorityLevel,
     ConceptTag,
     ExecutingAuthorityLevel,
+    InstancePublicationStatusType,
+    InstanceStatus,
     ProductType,
     PublicationMedium,
-    ResourceLanguage, ReviewStatus,
+    ResourceLanguage,
     TargetAudience,
     Theme,
     YourEuropeCategory
@@ -157,6 +159,85 @@ export class TestDataFactory {
             .withEndDate(new Date())
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .buildAndPersist(request, organisatieId);
+
+        return {
+            publicService: publicService,
+            triples: [
+                ...publicService.getTriples(),
+                ...requirement.getTriples(),
+                ...procedure.getTriples(),
+                ...seeAlsoWebsite.getTriples(),
+                ...supportingEvidence.getTriples(),
+                ...websiteOfProcedure.getTriples(),
+                ...cost.getTriples(),
+                ...financialAdvantage.getTriples(),
+                ...contactPoint.getTriples(),
+                ...address.getTriples(),
+            ]
+        };
+    }
+    async createFullToRepublishPublicService(request: APIRequestContext, organisatieId: string) {
+        const supportingEvidence = await EvidenceTestBuilder.anEvidence()
+            .buildAndPersist(request, organisatieId);
+
+        const requirement = await RequirementTestBuilder.aRequirement()
+            .withSupportingEvidence(supportingEvidence.getSubject())
+            .buildAndPersist(request,organisatieId);
+
+        const websiteOfProcedure = await WebsiteTestBuilder.aWebsite()
+            .buildAndPersist(request, organisatieId);
+
+        const seeAlsoWebsite = await WebsiteTestBuilder.aWebsite()
+            .buildAndPersist(request, organisatieId);
+
+        const procedure = await ProcedureTestBuilder.aProcedure()
+            .withWebsite(websiteOfProcedure.getSubject())
+            .buildAndPersist(request, organisatieId);
+
+        const cost = await CostTestBuilder.aCost()
+            .buildAndPersist(request, organisatieId);
+
+        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
+            .buildAndPersist(request, organisatieId);
+
+        const address = await AddressTestBuilder.anAddress()
+            .buildAndPersist(request, organisatieId);
+
+        const contactPoint = await ContactPointTestBuilder.aContactPoint()
+            .withAddress(address.getSubject())
+            .buildAndPersist(request, organisatieId);
+
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withTitle('Instance title', Language.NL)
+            .withDescription('Instance description', Language.NL)
+            .withAdditionalDescriptions('additional description nl', Language.NL)
+            .withException('exception nl', Language.NL)
+            .withRegulation('regulation', Language.NL)
+            .withTheme(Theme.BouwenWonen)
+            .withTargetAudience(TargetAudience.LokaalBestuur)
+            .withLanguage(ResourceLanguage.NLD)
+            .withCompetentAuthorityLevel(CompetentAuthorityLevel.Lokaal)
+            .withExecutingAuthorityLevel(ExecutingAuthorityLevel.Lokaal)
+            .withKeywords(['keyword 1', 'keyword 2'])
+            .withPublicationMedium(PublicationMedium.YourEurope)
+            .withYourEuropeCategory(YourEuropeCategory.Bedrijf)
+            .withProductType(ProductType.Bewijs)
+            .withRequirement(requirement.getSubject())
+            .withProcedure(procedure.getSubject())
+            .withMoreInfo(seeAlsoWebsite.getSubject())
+            .withCost(cost.getSubject())
+            .withFinancialAdvantage(financialAdvantage.getSubject())
+            .withContactPoint(contactPoint.getSubject())
+            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/23064'))
+            .withCreated(new Date())
+            .withModified(new Date())
+            .withStartDate(new Date())
+            .withEndDate(new Date())
+            .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withInstanceStatus(InstanceStatus.ontwerp)
+            .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
             .buildAndPersist(request, organisatieId);
 
         return {
