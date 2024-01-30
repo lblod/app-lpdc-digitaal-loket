@@ -1,0 +1,37 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://schema.org/productID> ?o.
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://schema.org/productID> ?o .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+};
+
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://schema.org/productID> ?conceptProductID .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://purl.org/dc/terms/source> ?concept .
+    }
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?concept <http://schema.org/productID> ?conceptProductID .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+};
+
