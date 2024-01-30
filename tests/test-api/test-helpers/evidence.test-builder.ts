@@ -30,8 +30,7 @@ export default class EvidenceTestBuilder {
                 {value: 'evidence description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'evidence description generated formal', language: Language.GENERATED_FORMAL},
             ])
-        //TODO LPDC-917: is order needed on evidence?
-            //.withOrder(0)
+        .withOrder(1)
     }
 
     private withType() {
@@ -49,7 +48,7 @@ export default class EvidenceTestBuilder {
         return this;
     }
 
-    withTitles(titles: {value: string, language: Language}[]) {
+    withTitles(titles: { value: string, language: Language }[]) {
         this.titles = titles.map(item => new Literal(item.value, item.language));
         return this;
     }
@@ -59,7 +58,7 @@ export default class EvidenceTestBuilder {
         return this;
     }
 
-    withDescriptions(descriptions: {value: string, language: Language}[]) {
+    withDescriptions(descriptions: { value: string, language: Language }[]) {
         this.descriptions = descriptions.map(item => new Literal(item.value, item.language));
         return this;
     }
@@ -68,8 +67,6 @@ export default class EvidenceTestBuilder {
         this.source = new Uri(sourceEvidenceUri);
         return this;
     }
-
-    //TODO LPDC-917: is order needed on evidence?
 
     withOrder(value: number) {
         this.order = new Literal(value.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#integer');
@@ -82,7 +79,7 @@ export default class EvidenceTestBuilder {
             new Triple(this.id, Predicates.uuid, this.uuid),
             ...this.titles.map(title => new Triple(this.id, Predicates.title, title)),
             ...this.descriptions.map(description => new Triple(this.id, Predicates.description, description)),
-            //TODO LPDC-917: is order needed on evidence?
+            new Triple(this.id, Predicates.order, this.order),
 //            new Triple(this.id, Predicates.source, this.source),
         ];
         return new TripleArray(triples);
