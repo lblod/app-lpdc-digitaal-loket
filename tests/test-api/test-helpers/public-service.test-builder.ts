@@ -54,6 +54,7 @@ export class PublicServiceTestBuilder {
     private concept: Uri;
     private createdBy: Uri;
     private versionedSource: Uri;
+    private productId: Literal;
     private reviewStatus: Uri;
     private instanceStatus: Uri;
     private publicationStatus: Uri;
@@ -281,6 +282,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withProductId(productId: string) {
+        this.productId = new Literal(productId);
+        return this;
+    }
+
     withCreatedBy(bestuurseenheidId: string){
         this.createdBy = new Uri(`http://data.lblod.info/id/bestuurseenheden/${bestuurseenheidId}`);
         return this;
@@ -338,6 +344,7 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.source, this.concept),
             new Triple(this.id, Predicates.createdBy, this.createdBy),
             new Triple(this.id, Predicates.hasVersionedSource, this.versionedSource),
+            new Triple(this.id, Predicates.productId, this.productId),
             new Triple(this.id, Predicates.reviewStatus, this.reviewStatus),
             new Triple(this.id, Predicates.instanceStatus, this.instanceStatus),
             new Triple(this.id, Predicates.publicationStatus, this.publicationStatus)
