@@ -1,0 +1,10 @@
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/479540ea9de26a669c2c7e6cf5c98a2102c1771c48f63808e0e9b41db24dd575/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/851e0510-3a03-4795-8a80-9b6a75bf4428> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://mu.semte.ch/blank#4f51f91b-d0ca-46dd-98be-1be06679e6f4> .
+}
+
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/bab5de8f12aa24ded31c67cc00b626705d1336a63f5711c1c70a8438daa6da1b/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/4f36139f-5b24-43d2-a8f3-c014bbf19956> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://mu.semte.ch/blank#4f51f91b-d0ca-46dd-98be-1be06679e6f4> .
+    <http://data.lblod.info/id/public-service/4f36139f-5b24-43d2-a8f3-c014bbf19956> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://mu.semte.ch/blank#cb0437d3-2a92-42fc-9cd6-ceee2f79edb9> .
+    <http://data.lblod.info/id/public-service/4f36139f-5b24-43d2-a8f3-c014bbf19956> <http://purl.org/vocab/cpsv#follows> <http://mu.semte.ch/blank#9af16ba7-b241-4e6e-9796-c329229bcd5b> .
+}
+
