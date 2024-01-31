@@ -15,7 +15,7 @@ export class CostTestBuilder {
     private descriptions: Literal[] = [];
     private order: Literal;
 
-    static aCost() {
+    static aCostForConcept() {
         return new CostTestBuilder()
             .withType()
             .withUUID(uuid())
@@ -29,6 +29,14 @@ export class CostTestBuilder {
                 {value: 'cost description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'cost description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(0)
+    }
+    static aCostForInstance() {
+        return new CostTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withTitle('cost title',  Language.INFORMAL)
+            .withDescription('cost description',  Language.INFORMAL)
             .withOrder(0)
     }
 

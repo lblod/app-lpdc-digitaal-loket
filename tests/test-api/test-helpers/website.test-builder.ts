@@ -16,7 +16,7 @@ export class WebsiteTestBuilder {
     private url: Literal;
     private order: Literal;
 
-    static aWebsite() {
+    static aWebsiteForConcept() {
         return new WebsiteTestBuilder()
             .withType()
             .withUUID(uuid())
@@ -30,6 +30,15 @@ export class WebsiteTestBuilder {
                 {value: 'website description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'website description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withUrl('https://www.vlaio.be')
+            .withOrder(0)
+    }
+    static aWebsiteForInstance() {
+        return new WebsiteTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withTitle('website title',Language.INFORMAL)
+            .withDescription('website description',  Language.INFORMAL)
             .withUrl('https://www.vlaio.be')
             .withOrder(0)
     }

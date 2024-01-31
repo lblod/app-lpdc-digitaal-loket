@@ -15,7 +15,7 @@ export class FinancialAdvantageTestBuilder {
     private descriptions: Literal[] = [];
     private order: Literal;
 
-    static aFinancialAdvantage() {
+    static aFinancialAdvantageForConcept() {
         return new FinancialAdvantageTestBuilder()
             .withType()
             .withUUID(uuid())
@@ -29,6 +29,14 @@ export class FinancialAdvantageTestBuilder {
                 {value: 'financial advantage description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'financial advantage description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(0)
+    }
+    static aFinancialAdvantageForInstance() {
+        return new FinancialAdvantageTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withTitle('financial advantage title', Language.INFORMAL)
+            .withDescription('financial advantage description', Language.INFORMAL)
             .withOrder(0)
     }
 

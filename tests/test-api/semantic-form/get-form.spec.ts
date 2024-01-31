@@ -5,7 +5,7 @@ import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-buil
 import {deleteAll} from "../test-helpers/sparql";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
-import {Predicates, TripleArray, Uri} from "../test-helpers/triple-array";
+import { TripleArray, Uri} from "../test-helpers/triple-array";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {TestDataFactory} from "../test-helpers/test-data-factory";
@@ -109,7 +109,7 @@ test.describe('Loading forms for instances', () => {
         const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
-        const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
@@ -144,7 +144,7 @@ test.describe('Loading forms for instances', () => {
         const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
-        const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
         const expectedEnglishForm = fs.readFileSync(`${__dirname}/form-add-english-requirement.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm + expectedEnglishForm);

@@ -16,7 +16,7 @@ export default class EvidenceTestBuilder {
     private source: Uri;
     private order: Literal;
 
-    static anEvidence() {
+    static anEvidenceForConcept() {
         return new EvidenceTestBuilder()
             .withType()
             .withUUID(uuid())
@@ -30,6 +30,14 @@ export default class EvidenceTestBuilder {
                 {value: 'evidence description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'evidence description generated formal', language: Language.GENERATED_FORMAL},
             ])
+        .withOrder(1)
+    }
+    static anEvidenceForInstance() {
+        return new EvidenceTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withTitle('evidence title', Language.INFORMAL)
+            .withDescription('evidence description', Language.INFORMAL)
         .withOrder(1)
     }
 

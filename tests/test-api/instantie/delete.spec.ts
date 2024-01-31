@@ -31,7 +31,7 @@ test.describe('delete instance', () => {
         expect(tombstoneTriples.findTriple(Predicates.type).getObjectValue()).toEqual(TombstoneType);
         expect(tombstoneTriples.findTriple(Predicates.formerType).getObjectValue()).toEqual(PublicServiceType);
         expect(tombstoneTriples.findTriple(Predicates.deleteTime)).toBeDefined();
-        expect(tombstoneTriples.findTriple(Predicates.publicationStatus).getObjectValue()).toEqual(InstancePublicationStatusType.teHerpubliceren);;
+        expect(tombstoneTriples.findTriple(Predicates.publicationStatus).getObjectValue()).toEqual(InstancePublicationStatusType.teHerpubliceren);
     });
 
     test('should remove reviewStatus', async ({request}) => {
@@ -52,7 +52,7 @@ test.describe('delete instance', () => {
     test('should remove requirement', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
-        const requirement = await RequirementTestBuilder.aRequirement()
+        const requirement = await RequirementTestBuilder.aRequirementForInstance()
             .buildAndPersist(request, pepingenId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()
@@ -71,10 +71,10 @@ test.describe('delete instance', () => {
     test('should remove requirement with supportingEvidence', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
-        const evidence = await EvidenceTestBuilder.anEvidence()
+        const evidence = await EvidenceTestBuilder.anEvidenceForInstance()
             .buildAndPersist(request, pepingenId)
 
-        const requirement = await RequirementTestBuilder.aRequirement()
+        const requirement = await RequirementTestBuilder.aRequirementForInstance()
             .withSupportingEvidence(evidence.getSubject())
             .buildAndPersist(request, pepingenId);
 
@@ -96,7 +96,7 @@ test.describe('delete instance', () => {
     test('should remove procedure', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
-        const procedure = await ProcedureTestBuilder.aProcedure()
+        const procedure = await ProcedureTestBuilder.aProcedureForInstance()
             .buildAndPersist(request, pepingenId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()
@@ -115,10 +115,10 @@ test.describe('delete instance', () => {
     test('should remove procedure with Website', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
-        const website = await WebsiteTestBuilder.aWebsite()
+        const website = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request, pepingenId)
 
-        const procedure = await ProcedureTestBuilder.aProcedure()
+        const procedure = await ProcedureTestBuilder.aProcedureForInstance()
             .withWebsite(website.getSubject())
             .buildAndPersist(request, pepingenId);
 
@@ -140,7 +140,7 @@ test.describe('delete instance', () => {
     test('should remove website', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
-        const website = await WebsiteTestBuilder.aWebsite()
+        const website = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request, pepingenId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()
@@ -159,7 +159,7 @@ test.describe('delete instance', () => {
     test('should remove cost', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
-        const cost = await CostTestBuilder.aCost()
+        const cost = await CostTestBuilder.aCostForInstance()
             .buildAndPersist(request, pepingenId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()
@@ -178,7 +178,7 @@ test.describe('delete instance', () => {
     test('should remove financialAdvantage', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
-        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
+        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantageForInstance()
             .buildAndPersist(request, pepingenId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()

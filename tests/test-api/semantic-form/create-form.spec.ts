@@ -79,7 +79,7 @@ test('Create instance from concept includes base fields', async ({request}) => {
 });
 
 test('Create instance from concept: When concept has requirement than instance has it too', async ({request}) => {
-    const requirement = await RequirementTestBuilder.aRequirement()
+    const requirement = await RequirementTestBuilder.aRequirementForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -105,10 +105,10 @@ test('Create instance from concept: When concept has requirement than instance h
 });
 
 test('Create instance from concept: When concept has requirement with evidence then instance has it too', async ({request}) => {
-    const evidence = await EvidenceTestBuilder.anEvidence()
+    const evidence = await EvidenceTestBuilder.anEvidenceForConcept()
         .buildAndPersist(request);
 
-    const requirement = await RequirementTestBuilder.aRequirement()
+    const requirement = await RequirementTestBuilder.aRequirementForConcept()
         .withSupportingEvidence(evidence.getSubject())
         .buildAndPersist(request);
 
@@ -137,7 +137,7 @@ test('Create instance from concept: When concept has requirement with evidence t
 });
 
 test('Create instance from concept: When concept has procedure then instance has it too', async ({request}) => {
-    const procedure = await ProcedureTestBuilder.aProcedure()
+    const procedure = await ProcedureTestBuilder.aProcedureForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -163,10 +163,10 @@ test('Create instance from concept: When concept has procedure then instance has
 });
 
 test('Create instance from concept: When concept has procedure with website then instance has it too', async ({request}) => {
-    const website = await WebsiteTestBuilder.aWebsite()
+    const website = await WebsiteTestBuilder.aWebsiteForConcept()
         .buildAndPersist(request);
 
-    const procedure = await ProcedureTestBuilder.aProcedure()
+    const procedure = await ProcedureTestBuilder.aProcedureForConcept()
         .withWebsite(website.getSubject())
         .buildAndPersist(request);
 
@@ -196,7 +196,7 @@ test('Create instance from concept: When concept has procedure with website then
 });
 
 test('Create instance from concept: When concept has website than instance has it too', async ({request}) => {
-    const website = await WebsiteTestBuilder.aWebsite()
+    const website = await WebsiteTestBuilder.aWebsiteForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -223,7 +223,7 @@ test('Create instance from concept: When concept has website than instance has i
 });
 
 test('Create instance from concept: When concept has cost then instance has it too', async ({request}) => {
-    const cost = await CostTestBuilder.aCost()
+    const cost = await CostTestBuilder.aCostForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -249,7 +249,7 @@ test('Create instance from concept: When concept has cost then instance has it t
 });
 
 test('Create instance from concept: When concept has financialAdvantage then concept has it too', async ({request}) => {
-    const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
+    const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantageForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -458,7 +458,7 @@ test('Create instance from concept: When chosenForm is informal then language fi
 });
 
 test('Create instance from concept: When concept with requirement then instance has requirement with correct text and language version', async ({request}) => {
-    const requirementConcept = await RequirementTestBuilder.aRequirement()
+    const requirementConcept = await RequirementTestBuilder.aRequirementForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -481,10 +481,10 @@ test('Create instance from concept: When concept with requirement then instance 
 });
 
 test('Create instance from concept: When concept with requirement with evidence then instance has requirement with evidence with correct text and language version', async ({request}) => {
-    const evidenceConcept = await EvidenceTestBuilder.anEvidence()
+    const evidenceConcept = await EvidenceTestBuilder.anEvidenceForConcept()
         .buildAndPersist(request);
 
-    const requirementConcept = await RequirementTestBuilder.aRequirement()
+    const requirementConcept = await RequirementTestBuilder.aRequirementForConcept()
         .withSupportingEvidence(evidenceConcept.getSubject())
         .buildAndPersist(request);
 
@@ -510,7 +510,7 @@ test('Create instance from concept: When concept with requirement with evidence 
 });
 
 test('Create instance from concept: When concept with procedure then instance has procedure with correct text and language version', async ({request}) => {
-    const procedureConcept = await ProcedureTestBuilder.aProcedure()
+    const procedureConcept = await ProcedureTestBuilder.aProcedureForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -533,10 +533,10 @@ test('Create instance from concept: When concept with procedure then instance ha
 });
 
 test('Create instance from concept: When concept with procedure with website then instance has procedure with website with correct text and language version', async ({request}) => {
-    const websiteConcept = await WebsiteTestBuilder.aWebsite()
+    const websiteConcept = await WebsiteTestBuilder.aWebsiteForConcept()
         .buildAndPersist(request);
 
-    const procedureConcept = await ProcedureTestBuilder.aProcedure()
+    const procedureConcept = await ProcedureTestBuilder.aProcedureForConcept()
         .withWebsite(websiteConcept.getSubject())
         .buildAndPersist(request);
 
@@ -562,7 +562,7 @@ test('Create instance from concept: When concept with procedure with website the
 });
 
 test('Create instance from concept: When concept with website then instance has website with correct text and language version', async ({request}) => {
-    const moreInfoWebsite = await WebsiteTestBuilder.aWebsite()
+    const moreInfoWebsite = await WebsiteTestBuilder.aWebsiteForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -585,7 +585,7 @@ test('Create instance from concept: When concept with website then instance has 
 });
 
 test('Create instance from concept: When concept with cost then instance has cost with correct text and language version', async ({request}) => {
-    const costConcept = await CostTestBuilder.aCost()
+    const costConcept = await CostTestBuilder.aCostForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()
@@ -608,7 +608,7 @@ test('Create instance from concept: When concept with cost then instance has cos
 });
 
 test('Create instance from concept: When concept with financial advantage then instance has financial advantage with correct text and language version', async ({request}) => {
-    const financialAdvantageConcept = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
+    const financialAdvantageConcept = await FinancialAdvantageTestBuilder.aFinancialAdvantageForConcept()
         .buildAndPersist(request);
 
     const concept = await ConceptTestBuilder.aConcept()

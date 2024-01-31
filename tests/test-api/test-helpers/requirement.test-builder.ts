@@ -17,7 +17,7 @@ export class RequirementTestBuilder {
     private source: Uri;
     private order: Literal;
 
-    static aRequirement() {
+    static aRequirementForConcept() {
         return new RequirementTestBuilder()
             .withType()
             .withUUID(uuid())
@@ -31,6 +31,16 @@ export class RequirementTestBuilder {
                 {value: 'requirement description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'requirement description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(0)
+    }
+    static aRequirementForInstance() {
+        return new RequirementTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withTitle('requirement title',Language.INFORMAL)
+            .withDescription(
+             'requirement description',Language.INFORMAL,
+            )
             .withOrder(0)
     }
 

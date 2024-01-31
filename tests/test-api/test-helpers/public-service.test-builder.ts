@@ -63,8 +63,8 @@ export class PublicServiceTestBuilder {
         return new PublicServiceTestBuilder()
             .withType()
             .withUUID(uuid())
-            .withTitle('Instance title', Language.NL)
-            .withDescription('Instance description', Language.NL)
+            .withTitle('Instance title', Language.INFORMAL)
+            .withDescription('Instance description', Language.INFORMAL)
             .withCreated(new Date())
             .withModified(new Date())
             .withStartDate(new Date())
@@ -76,15 +76,15 @@ export class PublicServiceTestBuilder {
         return new PublicServiceTestBuilder()
             .withType()
             .withUUID(uuid())
-            .withTitle('Instance title', Language.NL)
-            .withDescription('Instance description', Language.NL)
+            .withTitle('Instance title', Language.INFORMAL)
+            .withDescription('Instance description', Language.INFORMAL)
             .withCreated(new Date())
             .withModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
-            .withAdditionalDescriptions('Additional description', Language.NL)
-            .withException('exception', Language.NL)
-            .withRegulation('regulation', Language.NL)
+            .withAdditionalDescriptions('Additional description', Language.INFORMAL)
+            .withException('exception', Language.INFORMAL)
+            .withRegulation('regulation', Language.INFORMAL)
             .withTheme(Theme.BurgerOverheid)
             .withTargetAudience(TargetAudience.Onderneming)
             .withCompetentAuthorityLevel(CompetentAuthorityLevel.Europees)
@@ -178,7 +178,7 @@ export class PublicServiceTestBuilder {
     }
 
     withKeywords(keywords: string[]) {
-        this.keywords = keywords.map(keyword => new Literal(keyword, Language.NL))
+        this.keywords = keywords.map(keyword => new Literal(keyword, Language.INFORMAL))
         return this;
     }
 

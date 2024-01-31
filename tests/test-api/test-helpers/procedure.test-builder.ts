@@ -17,7 +17,7 @@ export default class ProcedureTestBuilder {
     private source: Uri;
     private order: Literal
 
-    static aProcedure() {
+    static aProcedureForConcept() {
         return new ProcedureTestBuilder()
             .withType()
             .withUUID(uuid())
@@ -31,6 +31,14 @@ export default class ProcedureTestBuilder {
                 {value: 'procedure description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'procedure description generated formal', language: Language.GENERATED_FORMAL},
             ])
+            .withOrder(0);
+    }
+    static aProcedureForInstance() {
+        return new ProcedureTestBuilder()
+            .withType()
+            .withUUID(uuid())
+            .withTitle('procedure title', Language.INFORMAL)
+            .withDescription('procedure description', Language.INFORMAL)
             .withOrder(0);
     }
 

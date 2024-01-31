@@ -30,44 +30,38 @@ import {Uri} from "./triple-array";
 export class TestDataFactory {
 
     async createFullConcept(request: APIRequestContext) {
-        const supportingEvidence = await EvidenceTestBuilder.anEvidence()
+        const supportingEvidence = await EvidenceTestBuilder.anEvidenceForInstance()
             .buildAndPersist(request);
 
-        const requirement = await RequirementTestBuilder.aRequirement()
+        const requirement = await RequirementTestBuilder.aRequirementForInstance()
             .withSupportingEvidence(supportingEvidence.getSubject())
             .buildAndPersist(request);
 
-        const websiteOfProcedure = await WebsiteTestBuilder.aWebsite()
+        const websiteOfProcedure = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request);
 
-        const seeAlsoWebsite = await WebsiteTestBuilder.aWebsite()
+        const seeAlsoWebsite = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request);
 
-        const procedure = await ProcedureTestBuilder.aProcedure()
+        const procedure = await ProcedureTestBuilder.aProcedureForInstance()
             .withWebsite(websiteOfProcedure.getSubject())
             .buildAndPersist(request);
 
-        const cost = await CostTestBuilder.aCost()
+        const cost = await CostTestBuilder.aCostForInstance()
             .buildAndPersist(request);
 
-        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
+        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantageForInstance()
             .buildAndPersist(request);
 
         const concept = await ConceptTestBuilder.aConcept()
             .withAdditionalDescriptions([
-                {value: 'additional description nl', language: Language.NL},
-                {value: 'additional description informal', language: Language.GENERATED_INFORMAL},
-                {value: 'additional description formal', language: Language.GENERATED_FORMAL},
+                {value: 'additional description informal', language: Language.INFORMAL}
             ])
             .withException([
-                {value: 'exception nl', language: Language.NL},
-                {value: 'exception generated informal', language: Language.GENERATED_INFORMAL},
-                {value: 'exception generated formal', language: Language.GENERATED_FORMAL},
+                {value: 'exception informal', language: Language.INFORMAL}
             ])
             .withRegulations([
-                {value: 'regulation nl', language: Language.NL},
-                {value: 'regulation generated informal', language: Language.GENERATED_INFORMAL},
-                {value: 'regulation generated formal', language: Language.GENERATED_FORMAL},
+                {value: 'regulation informal', language: Language.INFORMAL}
             ])
             .withTheme(Theme.BouwenWonen)
             .withTargetAudience(TargetAudience.LokaalBestuur)
@@ -101,27 +95,27 @@ export class TestDataFactory {
     }
 
     async createFullPublicService(request: APIRequestContext, organisatieId: string) {
-        const supportingEvidence = await EvidenceTestBuilder.anEvidence()
+        const supportingEvidence = await EvidenceTestBuilder.anEvidenceForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const requirement = await RequirementTestBuilder.aRequirement()
+        const requirement = await RequirementTestBuilder.aRequirementForInstance()
             .withSupportingEvidence(supportingEvidence.getSubject())
             .buildAndPersist(request,organisatieId);
 
-        const websiteOfProcedure = await WebsiteTestBuilder.aWebsite()
+        const websiteOfProcedure = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const seeAlsoWebsite = await WebsiteTestBuilder.aWebsite()
+        const seeAlsoWebsite = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const procedure = await ProcedureTestBuilder.aProcedure()
+        const procedure = await ProcedureTestBuilder.aProcedureForInstance()
             .withWebsite(websiteOfProcedure.getSubject())
             .buildAndPersist(request, organisatieId);
 
-        const cost = await CostTestBuilder.aCost()
+        const cost = await CostTestBuilder.aCostForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
+        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantageForInstance()
             .buildAndPersist(request, organisatieId);
 
         const address = await AddressTestBuilder.anAddress()
@@ -132,11 +126,11 @@ export class TestDataFactory {
             .buildAndPersist(request, organisatieId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()
-            .withTitle('Instance title', Language.NL)
-            .withDescription('Instance description', Language.NL)
-            .withAdditionalDescriptions('additional description nl', Language.NL)
-            .withException('exception nl', Language.NL)
-            .withRegulation('regulation', Language.NL)
+            .withTitle('Instance title', Language.INFORMAL)
+            .withDescription('Instance description', Language.INFORMAL)
+            .withAdditionalDescriptions('additional description', Language.INFORMAL)
+            .withException('exception', Language.INFORMAL)
+            .withRegulation('regulation', Language.INFORMAL)
             .withTheme(Theme.BouwenWonen)
             .withTargetAudience(TargetAudience.LokaalBestuur)
             .withLanguage(ResourceLanguage.NLD)
@@ -178,27 +172,27 @@ export class TestDataFactory {
         };
     }
     async createFullToRepublishPublicService(request: APIRequestContext, organisatieId: string) {
-        const supportingEvidence = await EvidenceTestBuilder.anEvidence()
+        const supportingEvidence = await EvidenceTestBuilder.anEvidenceForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const requirement = await RequirementTestBuilder.aRequirement()
+        const requirement = await RequirementTestBuilder.aRequirementForInstance()
             .withSupportingEvidence(supportingEvidence.getSubject())
             .buildAndPersist(request,organisatieId);
 
-        const websiteOfProcedure = await WebsiteTestBuilder.aWebsite()
+        const websiteOfProcedure = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const seeAlsoWebsite = await WebsiteTestBuilder.aWebsite()
+        const seeAlsoWebsite = await WebsiteTestBuilder.aWebsiteForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const procedure = await ProcedureTestBuilder.aProcedure()
+        const procedure = await ProcedureTestBuilder.aProcedureForInstance()
             .withWebsite(websiteOfProcedure.getSubject())
             .buildAndPersist(request, organisatieId);
 
-        const cost = await CostTestBuilder.aCost()
+        const cost = await CostTestBuilder.aCostForInstance()
             .buildAndPersist(request, organisatieId);
 
-        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantage()
+        const financialAdvantage = await FinancialAdvantageTestBuilder.aFinancialAdvantageForInstance()
             .buildAndPersist(request, organisatieId);
 
         const address = await AddressTestBuilder.anAddress()
@@ -209,11 +203,11 @@ export class TestDataFactory {
             .buildAndPersist(request, organisatieId);
 
         const publicService = await PublicServiceTestBuilder.aPublicService()
-            .withTitle('Instance title', Language.NL)
-            .withDescription('Instance description', Language.NL)
-            .withAdditionalDescriptions('additional description nl', Language.NL)
-            .withException('exception nl', Language.NL)
-            .withRegulation('regulation', Language.NL)
+            .withTitle('Instance title', Language.INFORMAL)
+            .withDescription('Instance description', Language.INFORMAL)
+            .withAdditionalDescriptions('additional description', Language.INFORMAL)
+            .withException('exception', Language.INFORMAL)
+            .withRegulation('regulation', Language.INFORMAL)
             .withTheme(Theme.BouwenWonen)
             .withTargetAudience(TargetAudience.LokaalBestuur)
             .withLanguage(ResourceLanguage.NLD)
@@ -236,7 +230,7 @@ export class TestDataFactory {
             .withEndDate(new Date())
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withInstanceStatus(InstanceStatus.ontwerp)
+            .withInstanceStatus(InstanceStatus.verstuurd)
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
             .buildAndPersist(request, organisatieId);
 
