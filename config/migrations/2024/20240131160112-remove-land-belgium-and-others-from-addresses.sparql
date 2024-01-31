@@ -1,6 +1,6 @@
 DELETE {
     GRAPH ?bestuurseenheidGraph {
-        ?address <https://data.vlaanderen.be/ns/adres#land> "Belgium"@nl .
+        ?address <https://data.vlaanderen.be/ns/adres#land> ?existingBelgiumOrSomethingElse .
     }
 }
 INSERT {
@@ -13,7 +13,7 @@ WHERE {
         ?instance a <http://purl.org/vocab/cpsv#PublicService> .
         ?instance <http://data.europa.eu/m8g/hasContactPoint> ?contactPoint .
         ?contactPoint <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> ?address .
-        ?address <https://data.vlaanderen.be/ns/adres#land> "Belgium"@nl .
+        ?address <https://data.vlaanderen.be/ns/adres#land> ?existingBelgiumOrSomethingElse .
     }
 
     FILTER(
@@ -21,3 +21,4 @@ WHERE {
     STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
     )
 }
+
