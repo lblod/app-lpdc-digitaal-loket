@@ -1,0 +1,14 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/organizations/319016d52cb54b416721b0c5fc74f211fdd4dd576d13a34aa9210759401dc7f2/LoketLB-LPDCGebruiker> {
+        <http://data.lblod.info/form-data/nodes/754fabbb-9864-4d54-ac62-9df0ee66a983> ?p ?o .
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/organizations/319016d52cb54b416721b0c5fc74f211fdd4dd576d13a34aa9210759401dc7f2/LoketLB-LPDCGebruiker> {
+        <http://data.lblod.info/form-data/nodes/754fabbb-9864-4d54-ac62-9df0ee66a983> ?p ?o .
+    }
+};
+
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/319016d52cb54b416721b0c5fc74f211fdd4dd576d13a34aa9210759401dc7f2/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/form-data/nodes/e60d2c3c-ff32-4b80-9917-6afa9cf1fed5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> <http://data.lblod.info/form-data/nodes/754fabbb-9864-4d54-ac62-9df0ee66a983> .
+}
