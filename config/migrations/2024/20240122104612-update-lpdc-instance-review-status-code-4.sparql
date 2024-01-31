@@ -1,0 +1,15 @@
+# DELETE orphan triples
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?s <http://mu.semte.ch/vocabularies/ext/reviewStatus> <http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83> .
+    }
+} WHERE {
+     GRAPH ?bestuurseenheidGraph {
+        ?s <http://mu.semte.ch/vocabularies/ext/reviewStatus> <http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83> .
+     }
+
+      FILTER(
+         STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+         STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+      )
+}

@@ -9,3 +9,6 @@
 * [7. Playwright best practices](0007-playwright-best-practices.md)
 * [8. Frontend initiates state changes via backend operations](0008-frontend-initiates-state-changes-via-backend-operations.md)
 * [9. Technically Optimize Backend](0009-technically-optimize-backend.md)
+
+# To write
+### migrations: in .sparql files; only put one sparql query; and make sure that each file has a unique 'timestamp'

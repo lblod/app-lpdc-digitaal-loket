@@ -1,0 +1,40 @@
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/3499c07d07336622b8880bd8fd9bd49667f88d6998755cb1dc31f58012248b43/LoketLB-LPDCGebruiker>{
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://data.europa.eu/m8g/hasCompetentAuthority> <https://data.vlaanderen.be/id/organisatie/OVO027227> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://mu.semte.ch/vocabularies/core/uuid> "ec71997b-5e0f-489b-b531-620f05c0fa19" .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://purl.org/dc/terms/description> "<p>De akte van geboorte wordt opgemaakt na de aangifte van de geboorte en ingeschreven in de registers van de burgerlijke stand van de geboorteplaats.</p>"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://purl.org/dc/terms/description> "<p>The birth certificate is drawn up after the declaration of the birth and entered in the registers of the register office of the place of birth.</p>"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://purl.org/dc/terms/source> <https://ipdc.vlaanderen.be/id/concept/1f2bc2b3-326e-4cf4-a3e9-b2a45534893e> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://purl.org/dc/terms/title> "Akte van geboorte"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://purl.org/dc/terms/title> "Birth certificate"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://purl.org/vocab/cpsv#follows> <http://data.lblod.info/id/rule/ce3ecfb4-d6e6-4553-8819-923551c55c26> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/668a7a01-708d-4407-9001-650780c2fccb> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#PublicService> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "afschrift"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "afschrift"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "burgerlijke stand"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "burgerlijke stand"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboorte"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboorte"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboorteakte"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboorteakte"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboorteattest"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboorteattest"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboortebewijs"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "geboortebewijs"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "gemeente"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "gemeente"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "uittreksel"@en .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <http://www.w3.org/ns/dcat#keyword> "uittreksel"@nl .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag> <https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium> <https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/ccb2c092-6ed5-43ea-b65d-efd75e502447> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/BurgerEnFamilieRechtenKinderen> .
+<http://data.lblod.info/id/requirement/668a7a01-708d-4407-9001-650780c2fccb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/id/requirement/668a7a01-708d-4407-9001-650780c2fccb> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/rule/ce3ecfb4-d6e6-4553-8819-923551c55c26> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/rule/ce3ecfb4-d6e6-4553-8819-923551c55c26> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+}

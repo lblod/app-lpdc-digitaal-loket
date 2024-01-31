@@ -1,0 +1,21 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd> .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+}

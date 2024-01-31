@@ -1,0 +1,21 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://mu.semte.ch/vocabularies/ext/reviewStatus> <http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83> .
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://mu.semte.ch/vocabularies/ext/reviewStatus> <http://lblod.data.gift/concepts/review-status/concept-gewijzigd> .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://mu.semte.ch/vocabularies/ext/reviewStatus> <http://lblod.data.gift/concepts/5a3168e2-f39b-4b5d-8638-29f935023c83> .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+}

@@ -21,4 +21,4 @@ WHERE {
     )
 
     BIND(SHA512(CONCAT(STR(?contactPoint), STR(?address))) as ?newAddresUuid)
-};
+}

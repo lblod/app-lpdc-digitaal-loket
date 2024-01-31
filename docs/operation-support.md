@@ -484,12 +484,7 @@ WHERE {
        }
     }
 
-GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
-    ?instantieConceptSnapshot prov:generatedAtTime ?instantieConceptSnapshotGeneratedAtTime.
-    ?laatsteFunctioneelGewijzigdeConceptSnapshot prov:generatedAtTime ?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratedAtTime
-}
-
-FILTER (?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratedAtTime > ?instantieConceptSnapshotGeneratedAtTime)
+   FILTER (?instantieConceptSnapshot != ?laatsteFunctioneelGewijzigdeConceptSnapshot)
  
 }
 
@@ -525,13 +520,7 @@ WHERE {
        }
     }
 
-GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
-    ?instantieConceptSnapshot prov:generatedAtTime ?instantieConceptSnapshotGeneratedAtTime.
-    ?laatsteFunctioneelGewijzigdeConceptSnapshot prov:generatedAtTime ?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratedAtTime
-}
-
-FILTER (?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratedAtTime > ?instantieConceptSnapshotGeneratedAtTime)
- 
+   FILTER (?instantieConceptSnapshot != ?laatsteFunctioneelGewijzigdeConceptSnapshot)
 }
 
 ```

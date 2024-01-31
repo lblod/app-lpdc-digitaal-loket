@@ -19,4 +19,4 @@ WHERE {
     STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
     STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
     )
-};
+}
