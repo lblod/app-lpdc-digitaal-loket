@@ -13,6 +13,9 @@ import {FinancialAdvantageTestBuilder, FinancialAdvantageType} from "../test-hel
 import {ContactPointTestBuilder, ContactpointType} from "../test-helpers/contact-point-test.builder";
 import EvidenceTestBuilder, {EvidenceType} from "../test-helpers/evidence.test-builder";
 import {TestDataFactory} from "../test-helpers/test-data-factory";
+import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
+import {ConceptSnapshotTestBuilder} from "../test-helpers/concept-snapshot.test-builder";
+import {ConceptDisplayConfigurationTestBuilder} from "../test-helpers/concept-display-configuration.test-builder";
 
 test.describe('delete instance', () => {
 
@@ -36,16 +39,30 @@ test.describe('delete instance', () => {
 
     test('should remove reviewStatus', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
-        const publicService = await PublicServiceTestBuilder.aPublicService()
-            .withReviewStatus(ReviewStatus.conceptUpdated)
+        const productId ='100'
+        const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot().buildAndPersist(request);
+
+      const concept =  await ConceptTestBuilder.aConcept()
+            .withProductID(productId)
+            .withVersionedSource(conceptSnapshot.getSubject())
+            .buildAndPersist(request);
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withLinkedConcept(concept.getSubject())
+            .withVersionedSource(conceptSnapshot.getSubject())
+            .withProductId(productId)
+            .withReviewStatus(ReviewStatus.conceptArchived)
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.delete(`${dispatcherUrl}/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {params: {cookie: loginResponse.cookie}});
+        await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request)
+
+
+        const response = await request.delete(`${dispatcherUrl}/public-services/${encodeURIComponent(instance.getId().getValue())}`, {params: {cookie: loginResponse.cookie}});
         expect(response.ok(), await response.text()).toBeTruthy();
 
-        const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
+        const triples = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
-        const tombstoneTriples = await fetchType(request, publicService.getSubject().getValue(), TombstoneType);
+        const tombstoneTriples = await fetchType(request, instance.getSubject().getValue(), TombstoneType);
         expect(tombstoneTriples.findTriple(Predicates.reviewStatus)).not.toBeDefined();
     });
 

@@ -201,12 +201,14 @@ test.describe('unlink', () => {
         const concept = await ConceptTestBuilder.aConcept().buildAndPersist(request);
 
         const displayConfigurationPepingen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+            .withConceptIsNew(false)
             .withConceptInstantiated(true)
             .withBestuurseenheid(pepingenId)
             .withConcept(concept.getId())
             .buildAndPersist(request);
 
         const displayConfigurationBilzen = await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
+            .withConceptIsNew(false)
             .withConceptInstantiated(true)
             .withBestuurseenheid(bilzenId)
             .withConcept(concept.getId())
