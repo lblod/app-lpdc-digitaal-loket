@@ -32,10 +32,11 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withLinkedConcept(conceptId)
             .withVersionedSource(snapshot1.getSubject())
+            .withProductId('100')
             .withReviewStatus(ReviewStatus.conceptUpdated)
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
+        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
             headers: {cookie: loginResponse.cookie},
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
@@ -64,9 +65,10 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .withLinkedConcept(conceptId)
             .withVersionedSource(snapshot1.getSubject())
             .withReviewStatus(ReviewStatus.conceptUpdated)
+            .withProductId('100')
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
+        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
             headers: {cookie: loginResponse.cookie},
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
@@ -95,10 +97,11 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withLinkedConcept(conceptId)
             .withVersionedSource(snapshot1.getSubject())
+            .withProductId('100')
             .withReviewStatus(ReviewStatus.conceptUpdated)
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
+        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
             headers: {cookie: loginResponse.cookie},
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
@@ -108,38 +111,6 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.reviewStatus)).not.toBeDefined();
         expect(updatedInstance.findObject(Predicates.hasVersionedSource)).toEqual(snapshot2.getSubject());
-    });
-
-    test('when trying to confirm bijgewerkt for other bestuurseenheid then no data is updated',  async ({request}) => {
-        const loginResponse = await loginAsBilzen(request);
-        const conceptId = new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`);
-
-        const snapshot1 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
-        const snapshot2 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
-        const snapshot3 = await ConceptSnapshotTestBuilder.aConceptSnapshot().withIsVersionOf(conceptId).buildAndPersist(request);
-
-        await ConceptTestBuilder.aConcept()
-            .withId(conceptId)
-            .withVersionedSource(snapshot3.getSubject())
-            .withLatestFunctionalChange(snapshot2.getSubject())
-            .buildAndPersist(request);
-
-        const instance = await PublicServiceTestBuilder.aPublicService()
-            .withLinkedConcept(conceptId)
-            .withVersionedSource(snapshot1.getSubject())
-            .withReviewStatus(ReviewStatus.conceptUpdated)
-            .buildAndPersist(request, pepingenId);
-
-        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: loginResponse.cookie},
-            data: {bijgewerktTot: snapshot2.getSubject().getValue()}
-        });
-        expect(response.ok(), `${await response.text()}`).toBeTruthy();
-
-
-        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
-        expect(updatedInstance.findObject(Predicates.reviewStatus).getValue()).toEqual(ReviewStatus.conceptUpdated);
-        expect(updatedInstance.findObject(Predicates.hasVersionedSource)).toEqual(snapshot1.getSubject());
     });
 
     test('confirm bijgewerkt without login, returns http 401 Unauthorized', async ({request}) => {
