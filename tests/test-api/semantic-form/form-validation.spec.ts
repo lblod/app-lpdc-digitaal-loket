@@ -131,7 +131,7 @@ test(`Submit form: validate publicService with address that has not enough field
 test(`Submit form: validate publicService with multiple address - both valid`, async ({request}) => {
     const loginResponse = await loginAsPepingen(request);
 
-    const address1 = await AddressTestBuilder.anEmptyAddress()
+    const address1 = await AddressTestBuilder.anAddress()
         .withGemeente('Pepingen')
         .withStraat('Ninoofsesteenweg')
         .withHuisnummer('116')
@@ -139,19 +139,13 @@ test(`Submit form: validate publicService with multiple address - both valid`, a
         .withLand('België')
         .buildAndPersist(request, pepingenId);
 
-    await AddressTestBuilder.anEmptyAddress()
-        .withGemeente('Aarschot')
-        .withStraat('Kerkstraat')
-        .withHuisnummer('2')
-        .withPostcode('3200')
-        .withLand('België')
-        .buildAndPersist(request, pepingenId);
-
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
+        .withOrder(0)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
     const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
+        .withOrder(1)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
@@ -163,7 +157,7 @@ test(`Submit form: validate publicService with multiple address - both valid`, a
 
     const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(response.ok).toBeTruthy();
+    expect(response.ok()).toBeTruthy();
 });
 
 test(`Submit form: validate publicService with multiple address - one invalid`, async ({request}) => {
@@ -181,10 +175,12 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
         .buildAndPersist(request, pepingenId);
 
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
+        .withOrder(0)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
     const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
+        .withOrder(1)
         .withAddress(address2.getSubject())
         .buildAndPersist(request, pepingenId);
 
@@ -222,10 +218,12 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
         .buildAndPersist(request, pepingenId);
 
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
+        .withOrder(0)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
     const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
+        .withOrder(1)
         .withAddress(address2.getSubject())
         .buildAndPersist(request, pepingenId);
 
