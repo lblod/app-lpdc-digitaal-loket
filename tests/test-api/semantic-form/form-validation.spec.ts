@@ -140,12 +140,12 @@ test(`Submit form: validate publicService with multiple address - both valid`, a
         .buildAndPersist(request, pepingenId);
 
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
-        .withOrder(0)
+        .withOrder(1)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
     const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
-        .withOrder(1)
+        .withOrder(2)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
@@ -175,12 +175,12 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
         .buildAndPersist(request, pepingenId);
 
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
-        .withOrder(0)
+        .withOrder(1)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
     const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
-        .withOrder(1)
+        .withOrder(2)
         .withAddress(address2.getSubject())
         .buildAndPersist(request, pepingenId);
 
@@ -218,12 +218,12 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
         .buildAndPersist(request, pepingenId);
 
     const contactPoint1 = await ContactPointTestBuilder.aContactPoint()
-        .withOrder(0)
+        .withOrder(1)
         .withAddress(address1.getSubject())
         .buildAndPersist(request, pepingenId);
 
     const contactPoint2 = await ContactPointTestBuilder.aContactPoint()
-        .withOrder(1)
+        .withOrder(2)
         .withAddress(address2.getSubject())
         .buildAndPersist(request, pepingenId);
 

@@ -31,7 +31,7 @@ export class WebsiteTestBuilder {
                 {value: 'website description generated formal', language: Language.GENERATED_FORMAL},
             ])
             .withUrl('https://www.vlaio.be')
-            .withOrder(0)
+            .withOrder(1)
     }
     static aWebsiteForInstance() {
         return new WebsiteTestBuilder()
@@ -40,7 +40,7 @@ export class WebsiteTestBuilder {
             .withTitle('website title',Language.INFORMAL)
             .withDescription('website description',  Language.INFORMAL)
             .withUrl('https://www.vlaio.be')
-            .withOrder(0)
+            .withOrder(1)
     }
 
     private withType() {

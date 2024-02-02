@@ -29,7 +29,7 @@ export class CostTestBuilder {
                 {value: 'cost description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'cost description generated formal', language: Language.GENERATED_FORMAL},
             ])
-            .withOrder(0)
+            .withOrder(1)
     }
     static aCostForInstance() {
         return new CostTestBuilder()
@@ -37,7 +37,7 @@ export class CostTestBuilder {
             .withUUID(uuid())
             .withTitle('cost title',  Language.INFORMAL)
             .withDescription('cost description',  Language.INFORMAL)
-            .withOrder(0)
+            .withOrder(1)
     }
 
     private withType() {

@@ -25,7 +25,7 @@ export class ContactPointTestBuilder {
             .withTelephone('016123123')
             .withOpeningHours('Everyday')
             .withUrl('https://leuven.be')
-            .withOrder(0)
+            .withOrder(1)
     }
 
     private withType() {

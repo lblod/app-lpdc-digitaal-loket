@@ -31,7 +31,7 @@ export class RequirementTestBuilder {
                 {value: 'requirement description generated informal', language: Language.GENERATED_INFORMAL},
                 {value: 'requirement description generated formal', language: Language.GENERATED_FORMAL},
             ])
-            .withOrder(0)
+            .withOrder(1)
     }
     static aRequirementForInstance() {
         return new RequirementTestBuilder()
@@ -41,7 +41,7 @@ export class RequirementTestBuilder {
             .withDescription(
              'requirement description',Language.INFORMAL,
             )
-            .withOrder(0)
+            .withOrder(1)
     }
 
     private withType() {
