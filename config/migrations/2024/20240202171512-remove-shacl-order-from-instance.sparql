@@ -1,0 +1,11 @@
+DELETE {
+    GRAPH ?g {
+        ?instance <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+    }
+}
+WHERE {
+    GRAPH ?g {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+    }
+}
