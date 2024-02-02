@@ -1,0 +1,9 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/organizations/856cbc8af3fbe7390d43420e249c288596e87fbc069c601751d5c5fcd52c543b/LoketLB-LPDCGebruiker> {
+        <http://data.lblod.info/form-data/nodes/ef92c4fc-e63b-4163-aa09-e1e12b2c9365> ?p ?o .
+    }
+} WHERE {
+    GRAPH <http://mu.semte.ch/graphs/organizations/856cbc8af3fbe7390d43420e249c288596e87fbc069c601751d5c5fcd52c543b/LoketLB-LPDCGebruiker> {
+        <http://data.lblod.info/form-data/nodes/ef92c4fc-e63b-4163-aa09-e1e12b2c9365> ?p ?o
+    }
+}
