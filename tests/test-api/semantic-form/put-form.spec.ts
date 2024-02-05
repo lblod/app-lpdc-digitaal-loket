@@ -4,10 +4,8 @@ import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingen
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import fs from "fs";
-import {Predicates, TripleArray} from "../test-helpers/triple-array";
 
 const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
-const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
@@ -34,7 +32,7 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         }
 
-        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {
+        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {
             data: formUpdate,
             headers: {cookie: loginResponse.cookie}
         });
@@ -59,7 +57,7 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         };
 
-        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {
+        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {
             data: formUpdate,
             headers: {cookie: 'abc'}
         });
@@ -86,7 +84,7 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         };
 
-        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${publicService.getUUID()}/form/${CONTENT_FORM_ID}`, {
+        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {
             data: formUpdate,
             headers: {cookie: loginResponseNoRights.cookie}
         });
