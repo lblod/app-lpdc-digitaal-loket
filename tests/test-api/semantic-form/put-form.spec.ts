@@ -32,7 +32,7 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         }
 
-        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {
+        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
             headers: {cookie: loginResponse.cookie}
         });
@@ -57,7 +57,7 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         };
 
-        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {
+        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
             headers: {cookie: 'abc'}
         });
@@ -84,7 +84,7 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         };
 
-        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {
+        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
             headers: {cookie: loginResponseNoRights.cookie}
         });
