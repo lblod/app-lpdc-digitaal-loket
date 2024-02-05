@@ -81,6 +81,28 @@ test.describe('Concurrent Update', () => {
             }
         ]));
 
+    })
+
+    test('Two different updates in details page should not fail', async () => {
+        await login(page);
+
+        const instantieTitel = await createMinimalInstance(page);
+        let instantieDetailsPage = await openInstantie(page, instantieTitel);
+
+        await instantieDetailsPage.beschrijvingEditor.fill("first description");
+        await instantieDetailsPage.beschrijvingEditor.blur();
+        await instantieDetailsPage.wijzigingenBewarenButton.click()
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await instantieDetailsPage.beschrijvingEditor.fill("second description");
+        await instantieDetailsPage.beschrijvingEditor.blur();
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        const toaster = new Toaster(page);
+        await expect(toaster.message).not.toBeVisible()
+
+        instantieDetailsPage = await openInstantie(page, instantieTitel);
+        expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain("second description");
+
     });
 
 });
