@@ -50,20 +50,23 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly uitzonderingenReadonly: Locator;
     readonly uitzonderingenEngelsReadonly: Locator;
 
+    readonly voegVoorwaardeToeButton: Locator;
     readonly titelVoorwaardeInput: (order?: number) => Locator;
     readonly titelVoorwaardeEngelsInput: (order?: number) => Locator;
     readonly beschrijvingVoorwaardeEditor: (order?: number) => Locator;
     readonly beschrijvingVoorwaardeEngelsEditor: (order?: number) => Locator;
     readonly beschrijvingVoorwaardeReadonly: (order?: number) => Locator;
     readonly beschrijvingVoorwaardeEngelsReadonly: (order?: number) => Locator;
+    readonly verwijderVoorwaardeButton: (order?: number) => Locator;
 
+    readonly voegBewijsstukToeButton: (order?: number) => Locator;
     readonly titelBewijsstukInput: (order?: number) => Locator;
     readonly titelBewijsstukEngelsInput: (order?: number) => Locator;
-
     readonly beschrijvingBewijsstukEditor: (order?: number) => Locator;
     readonly beschrijvingBewijsstukEngelsEditor: (order?: number) => Locator;
     readonly beschrijvingBewijsstukReadonly: (order?: number) => Locator;
     readonly beschrijvingBewijsstukEngelsReadonly: (order?: number) => Locator;
+    readonly verwijderBewijsButton: (order?: number) => Locator;
 
     readonly titelProcedureInput: (order?: number) => Locator;
     readonly titelProcedureEngelsInput: (order?: number) => Locator;
@@ -203,19 +206,23 @@ export class InstantieDetailsPage extends AbstractPage {
         this.uitzonderingenReadonly = this.readonlyBelow('Uitzonderingen').first();
         this.uitzonderingenEngelsReadonly = this.readonlyRightOf('Uitzonderingen').first();
 
+        this.voegVoorwaardeToeButton = this.buttonFor("Voeg voorwaarde toe","Voorwaarden");
         this.titelVoorwaardeInput = (order: number = 0) => this.inputBelow('Titel voorwaarde').nth(order);
         this.titelVoorwaardeEngelsInput = (order: number = 0) => this.inputRightOf('Titel voorwaarde').nth(order);
         this.beschrijvingVoorwaardeEditor = (order: number = 0) => this.editorBelow('Beschrijving voorwaarde').nth(order);
         this.beschrijvingVoorwaardeEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving voorwaarde').nth(order);
         this.beschrijvingVoorwaardeReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving voorwaarde').nth(order);
         this.beschrijvingVoorwaardeEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving voorwaarde').nth(order);
+        this.verwijderVoorwaardeButton = (order: number = 0) => this.buttonFor('Verwijder voorwaarde','Voorwaarden').nth(order);
 
+        this.voegBewijsstukToeButton = (order: number = 0) => this.buttonFor('Voeg bewijsstuk toe', 'Voorwaarden').nth(order);
         this.titelBewijsstukInput = (order: number = 0) => this.inputBelow('Titel bewijsstuk').nth(order);
         this.titelBewijsstukEngelsInput = (order: number = 0) => this.inputRightOf('Titel bewijsstuk').nth(order);
         this.beschrijvingBewijsstukEditor = (order: number = 0) => this.editorBelow('Beschrijving bewijsstuk').nth(order);
         this.beschrijvingBewijsstukEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving bewijsstuk').nth(order);
         this.beschrijvingBewijsstukReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving bewijsstuk').nth(order);
         this.beschrijvingBewijsstukEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving bewijsstuk').nth(order);
+        this.verwijderBewijsButton = (order: number = 0) => this.buttonFor('Verwijder bewijsstuk', 'Voorwaarden').nth(order);
 
         this.titelProcedureInput = (order: number = 0) => this.inputBelow('Titel procedure').nth(order);
         this.titelProcedureEngelsInput = (order: number = 0) => this.inputRightOf('Titel procedure').nth(order);
