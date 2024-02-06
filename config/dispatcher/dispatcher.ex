@@ -53,7 +53,7 @@ defmodule Dispatcher do
   #################################################################
   # Public Services - LPDC-IPDC: custom API endpoints
   #################################################################
-  match "/lpdc-management/conceptual-public-services/*path" do
+  get "/lpdc-management/conceptual-public-services/*path" do
     forward conn, path, "http://lpdc-management/conceptual-public-services/"
   end
 
@@ -71,6 +71,10 @@ defmodule Dispatcher do
 
   match "/lpdc-management/public-services/*path" do
     forward conn, path, "http://lpdc-management/public-services/"
+  end
+
+  match "/lpdc-management/concept-display-configuration/*path" do
+    forward conn, path, "http://lpdc-management/concept-display-configuration/"
   end
 
   #################################################################

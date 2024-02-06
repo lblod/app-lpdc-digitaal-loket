@@ -148,7 +148,6 @@ test.describe('Link concept', () => {
 
         await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptId);
         await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Nieuw');
-
     });
 
 });
