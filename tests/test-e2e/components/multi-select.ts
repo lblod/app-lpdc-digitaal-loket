@@ -33,4 +33,8 @@ export class MultiSelect {
         return this.listContainer.locator(':is(li.ember-power-select-multiple-option, li:has(> span))');
     }
 
+    optionsDeleteButtons(): Locator {
+        return this.options().locator('span.ember-power-select-multiple-remove-btn');
+    }
+
 }

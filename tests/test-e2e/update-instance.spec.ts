@@ -669,4 +669,191 @@ test.describe('Update an instance and verify edits are working', () => {
 
     });
 
+    test('Update a new instance and do consecutive edits on more fields of properties tab to verify they can be saved and cleared', async () => {
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+
+        await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
+
+        await instantieDetailsPage.eigenschappenTab.click();
+
+        await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+        await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+        const newProductOfDienstGeldigVanaf = '13-04-2019';
+        await instantieDetailsPage.productOfDienstGeldigVanafInput.clear();
+        await page.keyboard.type(newProductOfDienstGeldigVanaf);
+
+        const newProductOfDienstGeldigTot = '27-11-2026';
+        await instantieDetailsPage.productOfDienstGeldigTotInput.clear();
+        await page.keyboard.type(newProductOfDienstGeldigTot);
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.productOfDienstGeldigVanafInput.inputValue()).toEqual('13-04-2019');
+        expect(await instantieDetailsPage.productOfDienstGeldigTotInput.inputValue()).toEqual('27-11-2026');
+
+        await instantieDetailsPage.productOfDienstGeldigVanafInput.clear();
+        await instantieDetailsPage.productOfDienstGeldigTotInput.clear();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.productOfDienstGeldigVanafInput.inputValue()).toEqual('');
+        expect(await instantieDetailsPage.productOfDienstGeldigTotInput.inputValue()).toEqual('');
+
+        await instantieDetailsPage.productTypeSelect.selectValue('Infrastructuur en materiaal');
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain('Infrastructuur en materiaal');
+
+        await instantieDetailsPage.productTypeSelect.clearButton.click();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.productTypeSelect.selectDiv.innerText()).toEqual('');
+
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Burger');
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Onderneming');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(['Burger', 'Onderneming']);
+
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Burger');
+        await instantieDetailsPage.doelgroepenMultiSelect.selectValue('Onderneming');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText([]);
+
+        await instantieDetailsPage.themasMultiSelect.selectValue('Economie en Werk');
+        await instantieDetailsPage.themasMultiSelect.selectValue('Milieu en Energie');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(['Economie en Werk', 'Milieu en Energie']);
+
+        await instantieDetailsPage.themasMultiSelect.selectValue('Economie en Werk');
+        await instantieDetailsPage.themasMultiSelect.selectValue('Milieu en Energie');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText([]);
+
+        await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Vlaamse overheid');
+        await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Lokale overheid');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(['Lokale overheid', 'Vlaamse overheid']);
+
+        await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Vlaamse overheid');
+        await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Lokale overheid');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText([]);
+
+        await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(['Pepingen (Gemeente)']);
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText([]);
+
+        await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Federale overheid');
+        await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Lokale overheid');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(['Federale overheid', 'Lokale overheid']);
+
+        await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Federale overheid');
+        await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Lokale overheid');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText([]);
+
+        await expect(instantieDetailsPage.uitvoerendeOverheidMultiSelect.options()).toContainText(['Pepingen (Gemeente)']);
+        await instantieDetailsPage.uitvoerendeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.uitvoerendeOverheidMultiSelect.options()).toContainText([]);
+
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Pepingen']);
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Provincie Limburg');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Provincie Limburg']);
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Pepingen']);
+
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Pepingen');
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Provincie Limburg');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText([]);
+
+        await instantieDetailsPage.tagsMultiSelect.insertNewValue('een-nieuwe-tag');
+        await instantieDetailsPage.tagsMultiSelect.insertNewValue('nog-een-nieuwe-tag');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(['een-nieuwe-tag', 'nog-een-nieuwe-tag']);
+
+        await instantieDetailsPage.tagsMultiSelect.optionsDeleteButtons().nth(0).click();
+        await instantieDetailsPage.tagsMultiSelect.optionsDeleteButtons().nth(0).click();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText([]);
+
+        await instantieDetailsPage.publicatieKanalenMultiSelect.selectValue('Your Europe');
+        await instantieDetailsPage.categorieenYourEuropeMultiSelect.selectValue('Medische behandeling ondergaan');
+        await instantieDetailsPage.categorieenYourEuropeMultiSelect.selectValue('Rechten en verplichtingen tot preventieve openbare gezondheidsmaatregelen');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText('Your Europe');
+        await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(['Medische behandeling ondergaan', 'Rechten en verplichtingen tot preventieve openbare gezondheidsmaatregelen']);
+
+        await instantieDetailsPage.publicatieKanalenMultiSelect.selectValue('Your Europe');
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText([]);
+        await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText([]);
+        
+    });
+
+
 });
