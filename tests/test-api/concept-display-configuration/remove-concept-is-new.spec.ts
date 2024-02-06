@@ -22,15 +22,15 @@ test('remove concept is new', async ({request}) => {
     expect(updatedConceptDisplayConfig.findTriple(Predicates.conceptIsNew).getObjectValue()).toEqual("false");
 });
 
-test('When user not logged in, returns http 401 Unauthorized', async({request}) => {
-    const conceptDisplayConfigurationId = new Uri(`"http://data.lblod.info/id/conceptual-display-configuration/${uuid()}`);
-    const apiResponse = await request.put(`${dispatcherUrl}/lpdc-management/concept-display-configuration/${conceptDisplayConfigurationId}/remove-is-new-flag`, {headers: {cookie: undefined}});
+test('When user not logged in, returns http 401 Unauthorized', async ({request}) => {
+    const conceptDisplayConfigurationId = new Uri(`http://data.lblod.info/id/conceptual-display-configuration/${uuid()}`);
+    const apiResponse = await request.put(`${dispatcherUrl}/lpdc-management/concept-display-configuration/${encodeURIComponent(conceptDisplayConfigurationId.getValue())}/remove-is-new-flag`, {headers: {cookie: undefined}});
     expect(apiResponse.status()).toEqual(401);
 });
 
-test('When user has no access rights, returns http 403 Forbidden', async({request}) => {
-    const conceptDisplayConfigurationId = new Uri(`"http://data.lblod.info/id/conceptual-display-configuration/${uuid()}`);
+test('When user has no access rights, returns http 403 Forbidden', async ({request}) => {
+    const conceptDisplayConfigurationId = new Uri(`http://data.lblod.info/id/conceptual-display-configuration/${uuid()}`);
     const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
-    const apiResponse = await request.put(`${dispatcherUrl}/lpdc-management/concept-display-configuration/${conceptDisplayConfigurationId}/remove-is-new-flag`, {headers: {cookie: loginResponse.cookie}});
+    const apiResponse = await request.put(`${dispatcherUrl}/lpdc-management/concept-display-configuration/${encodeURIComponent(conceptDisplayConfigurationId.getValue())}/remove-is-new-flag`, {headers: {cookie: loginResponse.cookie}});
     expect(apiResponse.status()).toEqual(403);
 });
