@@ -3,6 +3,7 @@ import {AbstractPage} from "./abstract-page";
 import {MultiSelect} from "../components/multi-select";
 import {Select} from "../components/select";
 import {SelectWithCreate} from "../components/select-with-create";
+import {Alert} from "../components/alert";
 
 export class InstantieDetailsPage extends AbstractPage {
 
@@ -18,18 +19,18 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly conceptLoskoppelenButton: Locator;
     readonly gekoppeldConceptLink: Locator;
 
-    readonly instantieLoskoppelenAlert: Locator;
+    readonly instantieLoskoppelenAlert: Alert;
     readonly instantieLoskoppelenAlertLoskoppelenButton: Locator;
 
     readonly aangemaaktOpHeader: Locator;
     readonly bewerktOpHeader: Locator;
     readonly statusDocumentHeader: Locator;
 
-    readonly herzieningNodigAlert: Locator;
+    readonly herzieningNodigAlert: Alert;
     readonly herzieningNodigAlertConceptBekijken: Locator;
     readonly herzieningNodigAlertGeenAanpassigenNodig: Locator;
 
-    readonly conceptGearchiveerdAlert: Locator; 
+    readonly conceptGearchiveerdAlert: Alert;
     readonly conceptGearchiveerdAlertConceptBekijken: Locator;
     readonly conceptGearchiveerdAlertGeenAanpassigenNodig: Locator;
 
@@ -180,16 +181,16 @@ export class InstantieDetailsPage extends AbstractPage {
         this.gekoppeldConceptLink = page.locator('a:left-of(button:has-text("Loskoppelen"))').first();
         this.conceptLoskoppelenButton = page.getByRole('button', {name: 'Loskoppelen'});
 
-        this.instantieLoskoppelenAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Instantie loskoppelen van het concept")');
-        this.instantieLoskoppelenAlertLoskoppelenButton = page.locator('[role="alert"]:has-text("Instantie loskoppelen van het concept") button:has-text("Loskoppelen")');
+        this.instantieLoskoppelenAlert = new Alert(page, 'Instantie loskoppelen van het concept');
+        this.instantieLoskoppelenAlertLoskoppelenButton = this.instantieLoskoppelenAlert.button('Loskoppelen');
 
-        this.herzieningNodigAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Herziening nodig")');
-        this.herzieningNodigAlertConceptBekijken = page.locator('[role="alert"]:has-text("Herziening nodig") a:has-text("Concept bekijken")');
-        this.herzieningNodigAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Herziening nodig") button:has-text("Geen aanpassingen nodig")');
+        this.herzieningNodigAlert = new Alert(page, 'Herziening nodig');
+        this.herzieningNodigAlertConceptBekijken = this.herzieningNodigAlert.link('Concept bekijken');
+        this.herzieningNodigAlertGeenAanpassigenNodig = this.herzieningNodigAlert.button('Geen aanpassingen nodig');
 
-        this.conceptGearchiveerdAlert = page.getByRole('alert').locator('.au-c-alert__title:has-text("Concept gearchiveerd")');
-        this.conceptGearchiveerdAlertConceptBekijken = page.locator('[role="alert"]:has-text("Concept gearchiveerd") a:has-text("Concept bekijken")');
-        this.conceptGearchiveerdAlertGeenAanpassigenNodig = page.locator('[role="alert"]:has-text("Concept gearchiveerd") button:has-text("Geen aanpassingen nodig")')
+        this.conceptGearchiveerdAlert = new Alert(page, 'Concept gearchiveerd');
+        this.conceptGearchiveerdAlertConceptBekijken = this.conceptGearchiveerdAlert.link('Concept bekijken');
+        this.conceptGearchiveerdAlertGeenAanpassigenNodig = this.conceptGearchiveerdAlert.button('Geen aanpassingen nodig');
 
         this.aangemaaktOpHeader = page.locator('dl div').filter({ hasText: 'Aangemaakt op' }).getByRole('definition');
         this.bewerktOpHeader = page.locator('dl div').filter({ hasText: 'Bewerkt op' }).getByRole('definition');

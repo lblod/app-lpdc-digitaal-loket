@@ -9,6 +9,7 @@ import {v4 as uuid} from "uuid";
 import {KoppelConceptPage} from "./pages/koppel-concept-page";
 import {IpdcStub} from "./components/ipdc-stub";
 import {first_row} from "./components/table";
+import {ConceptDetailsPage} from "./pages/concept-details-page";
 
 test.describe('Link concept', () => {
 
@@ -19,6 +20,7 @@ test.describe('Link concept', () => {
     let instantieDetailsPage: InstantieDetailsPage;
     let koppelConceptPage: KoppelConceptPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
+    let conceptDetailsPage: ConceptDetailsPage;
 
     test.beforeEach(async ({browser}) => {
         page = await browser.newPage();
@@ -29,6 +31,7 @@ test.describe('Link concept', () => {
         instantieDetailsPage = InstantieDetailsPage.create(page);
         koppelConceptPage = KoppelConceptPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
+        conceptDetailsPage = ConceptDetailsPage.create(page);
 
         await mockLoginPage.goto();
         await mockLoginPage.searchInput.fill('Pepingen');
@@ -102,9 +105,9 @@ test.describe('Link concept', () => {
 
         // Unlink concept
         await instantieDetailsPage.conceptLoskoppelenButton.click();
-        await expect(instantieDetailsPage.instantieLoskoppelenAlert).toBeVisible();
+        await instantieDetailsPage.instantieLoskoppelenAlert.expectToBeVisible();
         await instantieDetailsPage.instantieLoskoppelenAlertLoskoppelenButton.click();
-        await expect(instantieDetailsPage.instantieLoskoppelenAlert).not.toBeVisible();
+        await instantieDetailsPage.instantieLoskoppelenAlert.expectToBeInvisible();
 
         //verify concept has not 'Toegevoegd' label
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
@@ -115,6 +118,37 @@ test.describe('Link concept', () => {
             await toevoegenPage.searchConcept(conceptId);
             await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Toegevoegd');
         });
+    });
+
+    test('remove `nieuw` label on concept', async () => {
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+
+        // Create concept
+        const conceptId = uuid();
+        await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(conceptId)
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptId);
+        });
+
+        await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Nieuw');
+        await toevoegenPage.resultTable.row(first_row).link(`Concept created ${conceptId}`).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: Concept created ${conceptId}`);
+
+        await conceptDetailsPage.nieuwConceptAlert.expectToBeVisible();
+        await conceptDetailsPage.nieuwConceptAlertBerichtNietMeerTonenButton.click();
+        await conceptDetailsPage.nieuwConceptAlert.expectToBeInvisible();
+
+        await conceptDetailsPage.bekijkAndereConceptenButton.click();
+        await toevoegenPage.expectToBeVisible();
+
+        await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptId);
+        await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Nieuw');
+
     });
 
 });

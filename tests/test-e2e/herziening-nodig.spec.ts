@@ -96,14 +96,14 @@ test.describe('Herziening nodig', () => {
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
         // instantie moet alert 'herziening nodig' hebben
-        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         //check link concept bekijken
         let href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
         expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.id}&revisie2=${updateSnapshot.id}`);
 
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
-        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
         // concept moet updated tekst bevatten
@@ -130,7 +130,7 @@ test.describe('Herziening nodig', () => {
         href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
         expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshot.id}&revisie2=${updateSnapshotWithFunctionalChange.id}`);
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
-        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
         // archive concept
@@ -145,11 +145,11 @@ test.describe('Herziening nodig', () => {
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
         // instantie moet alert 'concept gearchiveerd' hebben
-        await expect(instantieDetailsPage.conceptGearchiveerdAlert).toBeVisible();
+        await instantieDetailsPage.conceptGearchiveerdAlert.expectToBeVisible();
         href = await instantieDetailsPage.conceptGearchiveerdAlertConceptBekijken.getAttribute('href');
         expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshotWithFunctionalChange.id}&revisie2=${archivedConcept.id}`);
         await instantieDetailsPage.conceptGearchiveerdAlertGeenAanpassigenNodig.click();
-        await expect(instantieDetailsPage.conceptGearchiveerdAlert).not.toBeVisible();
+        await instantieDetailsPage.conceptGearchiveerdAlert.expectToBeInvisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
         // gearchiveerde concepten mogen niet meer gevonden worden
@@ -195,11 +195,11 @@ test.describe('Herziening nodig', () => {
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
         // instantie moet alert 'herziening nodig' hebben
-        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         // click geen aanpassingen nodig
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
-        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
         await instantieDetailsPage.eigenschappenTab.click();
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
 
@@ -265,7 +265,7 @@ test.describe('Herziening nodig', () => {
         });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
-        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         // popup should show when saving
         await instantieDetailsPage.beschrijvingEditor.fill(uuid());
@@ -274,7 +274,7 @@ test.describe('Herziening nodig', () => {
         await bevestigHerzieningVerwerktModal.expectToBeVisible();
         await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click()
 
-        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
     });
 
     test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when navigating away with changes', async ({request}) => {
@@ -316,7 +316,7 @@ test.describe('Herziening nodig', () => {
         });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
-        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         // popup should show bij wegklikken
         await instantieDetailsPage.beschrijvingEditor.fill(uuid());
@@ -328,7 +328,7 @@ test.describe('Herziening nodig', () => {
         await bevestigHerzieningVerwerktModal.expectToBeVisible();
         await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click()
 
-        await expect(instantieDetailsPage.herzieningNodigAlert).not.toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
     });
 
     test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when verzend naar overheid', async ({request}) => {
@@ -370,7 +370,7 @@ test.describe('Herziening nodig', () => {
         });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
 
-        await expect(instantieDetailsPage.herzieningNodigAlert).toBeVisible();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         // popup should show bij verzend naar overheid
         await instantieDetailsPage.beschrijvingEditor.fill(uuid());
