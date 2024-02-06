@@ -3,13 +3,15 @@ import { Locator, Page } from "@playwright/test";
 export class SelectWithCreate {
 
     private readonly page: Page;
-    private readonly selectDiv: Locator;
+    readonly selectDiv: Locator;
+    readonly clearButton: Locator;
     readonly selectedItem: Locator;
 
     constructor(page: Page, forLabel: string, order:number =0) {
         this.page = page;
 
-        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).nth(order)
+        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).nth(order);
+        this.clearButton = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).locator(`span.ember-power-select-clear-btn`).nth(order);
         this.selectedItem = page.locator(`span.ember-power-select-selected-item:below(label:text-is('${forLabel}'))`).first();
     }
 

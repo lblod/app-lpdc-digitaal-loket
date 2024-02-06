@@ -68,6 +68,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingBewijsstukEngelsReadonly: (order?: number) => Locator;
     readonly verwijderBewijsButton: (order?: number) => Locator;
 
+    readonly voegProcedureToeButton: Locator;
     readonly titelProcedureInput: (order?: number) => Locator;
     readonly titelProcedureEngelsInput: (order?: number) => Locator;
     readonly beschrijvingProcedureEditor: (order?: number) => Locator;
@@ -76,6 +77,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingProcedureEngelsReadonly: (order?: number) => Locator;
     readonly verwijderProcedureButton: (order?: number) => Locator;
 
+    readonly voegWebsiteToeButtonVoorProcedure: (order?: number) => Locator;
     readonly titelWebsiteVoorProcedureInput: (childOrder?: number, parentOrder?: number) => Locator;
     readonly titelWebsiteVoorProcedureEngelsInput: (childOrder?: number, parentOrder?: number) => Locator;
     readonly beschrijvingWebsiteVoorProcedureEditor: (childOrder?: number, parentOrder?: number) => Locator;
@@ -84,7 +86,6 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingWebsiteVoorProcedureEngelsReadonly: (childOrder?: number, parentOrder?: number) => Locator;
     readonly websiteURLVoorProcedureInput: (childOrder?: number, parentOrder?: number) => Locator;
     readonly verwijderWebsiteButtonVoorProcedure: (order?: number) => Locator;
-    readonly voegWebsiteToeButtonVoorProcedure: (order?: number) => Locator;
 
     readonly voegKostToeButton: Locator;
     readonly verwijderKostButton:(order?: number) => Locator;
@@ -95,6 +96,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingKostEngelsEditor: (order?: number) => Locator;
     readonly beschrijvingKostEngelsReadonly: (order?: number) => Locator;
 
+    readonly voegFinancieelVoordeelToeButton: Locator;
+    readonly verwijderFinancieelVoordeelButton: (order?: number) => Locator;
     readonly titelFinancieelVoordeelInput: (order?: number) => Locator;
     readonly titelFinancieelVoordeelEngelsInput: (order?: number) => Locator;
     readonly beschrijvingFinancieelVoordeelEditor: (order?: number) => Locator;
@@ -119,12 +122,15 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly contactpuntOpeningsurenSelect: (order?: number) => SelectWithCreate;
     readonly contactpuntOpeningsurenReadonly: (order?: number) => Locator;
     readonly voegAdresToeButton: (order?: number) => Locator;
+    readonly verwijderAdresButton: (order?: number) => Locator;
     readonly contactpuntAdresGemeenteSelect: (order?: number) => Select;
     readonly contactpuntAdresStraatSelect: (order?: number) => Select;
     readonly contactpuntAdresHuisnummerInput: (order?: number) => Locator;
     readonly contactpuntAdresBusnummerInput: (order?: number) => Locator;
     readonly contactpuntAdresValidatie: (order?: number) => Locator;
 
+    readonly voegWebsiteToeButton: Locator;
+    readonly verwijderWebsiteButton: (order?: number) => Locator;
     readonly titelWebsiteInput: (childOrder?: number, parentOrder?: number) => Locator;
     readonly titelWebsiteEngelsInput: (childOrder?: number, parentOrder?: number) => Locator;
     readonly beschrijvingWebsiteEditor: (childOrder?: number, parentOrder?: number) => Locator;
@@ -224,6 +230,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingBewijsstukEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving bewijsstuk').nth(order);
         this.verwijderBewijsButton = (order: number = 0) => this.buttonFor('Verwijder bewijsstuk', 'Voorwaarden').nth(order);
 
+        this.voegProcedureToeButton = this.buttonFor('Voeg procedure toe', 'Procedure');
         this.titelProcedureInput = (order: number = 0) => this.inputBelow('Titel procedure').nth(order);
         this.titelProcedureEngelsInput = (order: number = 0) => this.inputRightOf('Titel procedure').nth(order);
         this.beschrijvingProcedureEditor = (order: number = 0) => this.editorBelow('Beschrijving procedure').nth(order);
@@ -232,6 +239,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingProcedureEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving procedure').nth(order);
         this.verwijderProcedureButton = (order: number = 0) => this.buttonFor('Verwijder procedure','Procedure').nth(order);
 
+        this.voegWebsiteToeButtonVoorProcedure = (order: number = 0) => this.buttonFor('Voeg website toe','Procedure').nth(order);
         this.titelWebsiteVoorProcedureInput = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputBelow('Titel website'), childOrder, 'Website procedure', parentOrder);
         this.titelWebsiteVoorProcedureEngelsInput = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputRightOf('Titel website'), childOrder, 'Website procedure', parentOrder);
         this.beschrijvingWebsiteVoorProcedureEditor = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.editorBelow('Beschrijving website'), childOrder, 'Website procedure', parentOrder);
@@ -240,7 +248,6 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingWebsiteVoorProcedureEngelsReadonly = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.readonlyRightOf('Beschrijving website'), childOrder, 'Website procedure', parentOrder);
         this.websiteURLVoorProcedureInput = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputBelow('Website URL'), childOrder, 'Website procedure', parentOrder);
         this.verwijderWebsiteButtonVoorProcedure = (order: number = 0) => this.buttonFor('Verwijder website','Procedure').nth(order);
-        this.voegWebsiteToeButtonVoorProcedure = (order: number = 0) => this.buttonFor('Voeg website toe','Procedure').nth(order);
 
         this.voegKostToeButton = this.buttonFor("Voeg kost toe","Kosten");
         this.verwijderKostButton = (order: number = 0) => this.buttonFor('Verwijder kost','Kosten').nth(order);
@@ -251,6 +258,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingKostEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving kost').nth(order);
         this.beschrijvingKostEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving kost').nth(order);
 
+        this.voegFinancieelVoordeelToeButton = this.buttonFor('Voeg financieel voordeel toe', 'Financiële Voordelen');
+        this.verwijderFinancieelVoordeelButton = (order: number = 0) => this.buttonFor('Verwijder financieel voordeel','Financiële Voordelen').nth(order);
         this.titelFinancieelVoordeelInput = (order: number = 0) => this.inputBelow('Titel financieel voordeel').nth(order);
         this.titelFinancieelVoordeelEngelsInput = (order: number = 0) => this.inputRightOf('Titel financieel voordeel').nth(order);
         this.beschrijvingFinancieelVoordeelEditor = (order: number = 0) => this.editorBelow('Beschrijving financieel voordeel').nth(order);
@@ -276,12 +285,15 @@ export class InstantieDetailsPage extends AbstractPage {
         this.contactpuntOpeningsurenReadonly = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputBelow('Openingsuren'), childOrder, 'Contactpunt', parentOrder);
 
         this.voegAdresToeButton = (order: number = 0) => page.getByRole('button', {name: 'Voeg adres toe'}).nth(order);
+        this.verwijderAdresButton = (order: number = 0) => this.buttonFor('Verwijder adres','Contactpunten').nth(order);
         this.contactpuntAdresGemeenteSelect = (order: number = 0) => new Select(page, 'Gemeente', 'Adres', order + 1);
         this.contactpuntAdresStraatSelect = (order: number = 0) => new Select(page, 'Straat', 'Adres', order + 1);
         this.contactpuntAdresHuisnummerInput = (order: number = 0) => this.inputBelow('Huisnummer').nth(order);
         this.contactpuntAdresBusnummerInput = (order: number = 0) => this.inputBelow('Bus').nth(order);
         this.contactpuntAdresValidatie = (order: number = 0) => page.getByRole('alert').nth(order);
 
+        this.voegWebsiteToeButton = this.buttonFor('Voeg website toe', 'Meer info');
+        this.verwijderWebsiteButton = (order: number = 0) => this.buttonFor('Verwijder website','Meer info').nth(order);
         this.titelWebsiteInput = (order: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order)
         this.titelWebsiteEngelsInput = (order: number = 0) => page.locator(`input:right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order)
         this.beschrijvingWebsiteEditor = (order: number = 0) => page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order)
