@@ -40,7 +40,7 @@ Component Diagram: The architecture is that each docker can in fact be seen as a
 
 ## 10. [Deployment](docs/deployment.md)
 
-## 11. [Operation and Support](docs/operation-support.md)
+## 11. [Operation and Support](docs/operation-support/operation-support.md)
 
 ## 12. [Development Environment](docs/development-environment.md)
 
