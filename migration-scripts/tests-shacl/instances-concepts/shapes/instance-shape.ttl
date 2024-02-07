@@ -34,9 +34,15 @@ oss:instanceShapes a rdf:Property;
 
 oss:InstancePublicServiceShape
     a shacl:NodeShape;
-    shacl:closed true;
+    shacl:closed false;
     shacl:ignoredProperties ( rdf:type ) ;
     shacl:property [
+           shacl:datatype xsd:boolean ;
+           shacl:description "This property represents if this public service snapshot was archived. This means that it should not be actively be used as an instance. Archival can be temporary. A public service can be unarchived. In this regard, archival should be viewed as a state of a public service. Optional property, if lacking means not archived."@nl;
+           shacl:maxCount 1;
+           shacl:name "isArchived"@nl;
+           shacl:path lpdcExt:isArchived
+       ], [
            shacl:datatype xsd:dateTime;
            shacl:description "This property represents the datetime of creation of an instance."@nl;
            shacl:minCount 1;
@@ -167,7 +173,7 @@ oss:InstancePublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
-          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/taal.ttl";
+          rdfs:seeAlso "vocabulary values found at: https://publications.europa.eu/resource/authority/language, we support 4 official languages in Belgium: (NLD, DEU, ENG, FRA)";
           shacl:name "language"@nl;
           shacl:path pera:language
       ], [
