@@ -32,15 +32,13 @@ The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-
 - `schema:productID` existing, add to docu, check
 - `dc:isVersionOf` : existing, add to docu, versioning (niet deel van model) (ch 4.1 ldes)
 - `prov:generatedAtTime`: existing, add to docu, versioning (niet deel van model) (ch 4.1 ldes)
-- `lpdcExt:isArchived`: new, to add, add to docu, check
 - `shacl:order`, on all entities where needed, add to docu.
 
 ## Concept Shape Removals
-- `lpdcExt:snapshot type` (CREATE,UPDATE,DELETE): check
 - pera:language verwijderen van concept
 
 ## Concept Shape Changes
-- `closed:true` is set during design phase
+- `lpdcExt:isArchived`: new, to add, add to docu,  is replacement of:  `lpdcExt:snapshot type` (CREATE,UPDATE,DELETE):
 - `rdf:type` is ignored
 - all properties having `rdf:langString`
   - `shacl:class` => `shacl:datatype`
@@ -54,17 +52,16 @@ The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-
 - Legal Resources: Add title, description, separate 'entity', shacl-order
 
 ## Instance Shape Additions
-- `schema:dateModified` exists as dcterms:created, should to changed, add to docu, check (instead of http://purl.org/dc/terms/created)
-- `schema:dateCreated` exists as dcterms:modified, should to changed, check (instead of http://purl.org/dc/terms/modified)
+- `schema:dateCreated` exists as dcterms:created, should to changed, add to docu, check (instead of http://purl.org/dc/terms/created)
+- `schema:dateModified` exists as dcterms:modified, should to changed, check (instead of http://purl.org/dc/terms/modified)
 - `dc:isVersionOf` : non existing, add to docu, versioning (niet deel van model) (ch 4.1 ldes)
 - `prov:generatedAtTime`: non existing, add to docu, versioning (niet deel van model) (ch 4.1 ldes)
-- `lpdcExt:isArchived`: new, to add, add to docu, check
 - `shacl:order`, on all entities where needed.
 - `<http://purl.org/pav/createdBy>`: non existing, add to docu (points to the bestuurseenheid)
 
 ## Instance Shape Changes
+- `lpdcExt:isArchived`: new, to add, add to docu,  is replacement of:  `lpdcExt:snapshot type` (CREATE,UPDATE,DELETE):
 - `pera:language` : https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/taal.ttl : verwijder lijst -> we gebruiken pera:language lijst pera.ttl (http://publications.europa.eu/resource/authority/language), we ondersteunen hiervan de 4 officiele belgische landstalen (NLD, DEU, ENG, FRA)
-- `closed:true` is set during design phase
 - `rdf:type` is ignored
 - all properties having `rdf:langString`
   - `shacl:class` => `shacl:datatype`
@@ -77,13 +74,9 @@ The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-
 - On all sub entities that represent a list (procedure, website, rule, etc), a `shacl:order` is added. This is to ensure an order on these sub entities.
 - Legal Resources: Add title, description, separate 'entity', shacl-order
 - 
-## Instance Shape removals
-- `addres>administrativeUnitLevel2` : will be removed, is not processed
-- `addres>fullAddress` : will be removed, is not processed
-
-## Instance Shape removals from actual code, not already in contract
-- product id - check (TODO LPDC-709)
-- status (ontwerp, verstuurd) (TODO LPDC-709)
+## Instance Shape not processed by LPDC
+- `addres>administrativeUnitLevel2` : is not processed
+- `addres>fullAddress`: is not processed
 
 # Other info
 
