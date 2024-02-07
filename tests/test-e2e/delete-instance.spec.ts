@@ -14,6 +14,7 @@ import { ProductOfDienstOpnieuwBewerkenModal } from "./modals/product-of-dienst-
 import { wait } from "./shared/shared";
 import { ProductOfDienstVerwijderenModal } from "./modals/product-of-dienst-verwijderen-modal";
 
+test.describe.configure({ mode: 'parallel'});
 test.describe('Delete an instance', () => {
 
     let page: Page;

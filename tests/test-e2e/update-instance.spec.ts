@@ -6,6 +6,7 @@ import {InstantieDetailsPage} from "./pages/instantie-details-page";
 import {UJeModal} from "./modals/u-je-modal";
 import {v4 as uuid} from 'uuid';
 
+test.describe.configure({ mode: 'parallel'});
 test.describe('Update an instance and verify edits are working', () => {
 
     let page: Page;

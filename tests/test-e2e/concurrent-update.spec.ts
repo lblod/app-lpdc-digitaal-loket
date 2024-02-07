@@ -12,7 +12,7 @@ import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-ove
 import {IpdcStub} from "./components/ipdc-stub";
 import {Toaster} from "./components/toaster";
 
-
+test.describe.configure({ mode: 'parallel'});
 test.describe('Concurrent Update', () => {
 
     let page: Page;

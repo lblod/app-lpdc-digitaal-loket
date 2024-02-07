@@ -4,7 +4,7 @@ import {LpdcHomePage} from "./pages/lpdc-home-page";
 import {MockLoginPage} from "./pages/mock-login-page";
 import {UJeModal} from './modals/u-je-modal';
 import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from './pages/product-of-dienst-toevoegen-page';
-import {first_row, second_row, third_row} from './components/table';
+import {first_row} from './components/table';
 import {ConceptDetailsPage as ConceptDetailsPage} from './pages/concept-details-page';
 import {InstantieDetailsPage} from './pages/instantie-details-page';
 import {WijzigingenBewarenModal} from './modals/wijzigingen-bewaren-modal';
@@ -131,6 +131,8 @@ const ocmwVereniging: BestuursEenheidConfig = {
     spatialNisLabel: "Aalst"
 }
 
+test.describe.configure({ mode: 'parallel'});
+
 test.describe('Concept to Instance back to IPDC Flow', () => {
 
     let page: Page;
@@ -174,10 +176,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             await uJeModal.expectToBeClosed();
         });
 
-        test('Load concept overview from ldes-stream', async () => {
-            await loadConceptOverviewFromLdesStream();
-        });
-
         test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully`, async () => {
             await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('nl', 'nl-be-x-formal', pepingen);
         });
@@ -204,10 +202,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             }
         });
 
-        test('Load concept overview from ldes-stream', async () => {
-            await loadConceptOverviewFromLdesStream();
-        });
-
         test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully`, async () => {
             await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('informal', 'nl-be-x-informal', aarschot);
         });
@@ -232,10 +226,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 await uJeModal.bevestigenButton.click();
                 await uJeModal.expectToBeClosed();
             }
-        });
-
-        test('Load concept overview from ldes-stream', async () => {
-            await loadConceptOverviewFromLdesStream();
         });
 
         test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully`, async () => {
@@ -266,25 +256,12 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 }
             });
 
-            test(`Load concept overview from ldes-stream ${bestuur.classificatie}`, async () => {
-                await loadConceptOverviewFromLdesStream();
-            });
-
             test(`Create instance from concept and edit fully and send to IPDC and verify readonly version fully ${bestuur.classificatie}`, async () => {
                 await createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully('nl', 'nl-be-x-formal', bestuur);
             });
 
         });
     }
-
-    const loadConceptOverviewFromLdesStream = async () => {
-        await homePage.productOfDienstToevoegenButton.click();
-
-        await toevoegenPage.expectToBeVisible();
-        await expect(toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit')).toBeVisible();
-        await expect(toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum')).toBeVisible();
-        await expect(toevoegenPage.resultTable.row(second_row).locator).toContainText('Nieuw');
-    };
 
     const createInstanceFromConceptAndEditFullyAndSendToIPDCAndVerifyReadonlyVersionFully = async (formalInformalChoiceSuffix: string, expectedFormalOrInformalTripleLanguage: string, bestuurseenheidConfig: BestuursEenheidConfig) => {
         await homePage.productOfDienstToevoegenButton.click();

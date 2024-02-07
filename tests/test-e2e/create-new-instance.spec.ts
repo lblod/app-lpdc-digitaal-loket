@@ -7,6 +7,7 @@ import {UJeModal} from "./modals/u-je-modal";
 // @ts-ignore
 import moment from 'moment';
 
+test.describe.configure({ mode: 'parallel'});
 test.describe('Create a new instance not based on a concept', () => {
 
     let page: Page;

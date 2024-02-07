@@ -11,6 +11,7 @@ import {IpdcStub} from "./components/ipdc-stub";
 import {first_row} from "./components/table";
 import {ConceptDetailsPage} from "./pages/concept-details-page";
 
+test.describe.configure({ mode: 'parallel'});
 test.describe('Link concept', () => {
 
     let page: Page;
@@ -61,10 +62,10 @@ test.describe('Link concept', () => {
         await instantieDetailsPage.titelInput.fill(titel);
         await instantieDetailsPage.titelEngelsInput.click();
 
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
         await instantieDetailsPage.koppelConceptLink.click()
-        await wijzigingenBewarenModal.expectToBeVisible();
-        await wijzigingenBewarenModal.bewaarButton.click();
-        await wijzigingenBewarenModal.expectToBeClosed();
 
         await koppelConceptPage.expectToBeVisible();
 

@@ -12,6 +12,7 @@ import {IpdcStub} from "./components/ipdc-stub";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
 
+test.describe.configure({ mode: 'serial'});
 test.describe('Herziening nodig', () => {
 
     let page: Page;

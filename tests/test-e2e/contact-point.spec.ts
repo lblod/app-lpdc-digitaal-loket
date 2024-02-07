@@ -9,6 +9,7 @@ import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
 import {first_row} from './components/table';
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 
+test.describe.configure({ mode: 'parallel'});
 test.describe('Contact point form fields', () => {
 
     let page: Page;

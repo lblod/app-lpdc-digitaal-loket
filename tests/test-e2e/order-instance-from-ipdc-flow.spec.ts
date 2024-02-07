@@ -11,6 +11,7 @@ import {VerzendNaarVlaamseOverheidModal} from './modals/verzend-naar-vlaamse-ove
 import {IpdcStub} from "./components/ipdc-stub";
 import {sortBy} from "lodash";
 
+test.describe.configure({ mode: 'parallel'});
 test.describe('Order instance from IPDC flow', () => {
 
     let page: Page;
