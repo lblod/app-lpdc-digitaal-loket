@@ -1,7 +1,7 @@
 # 10. Implementing Hexagonal Architecture
 
-- The application will be structured using [hexagonal architecture](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/), ensuring a clean separation of concerns:
-  - Packages will delineate the primary architectural components.
+- The application will be structured using [hexagonal architecture](https://herbertograca.com/2017/11/16/explicit-architecture-01-ddd-hexagonal-onion-clean-cqrs-how-i-put-it-all-together/)
+  - Directories will delineate the primary architectural components.
   - Dependency rules will be enforced through [ArchUnit](https://www.archunit.org) tests.
 - The core domain will adopt [Domain Driven Design](https://wikipedia.org/wiki/Domain-driven_design) principles.
 
