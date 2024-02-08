@@ -11,6 +11,7 @@ Accepted
 Previously, in the lpdc-management system, updates to aggregates in the database were performed through individual delete and insert operations.
 Each triple of the aggregate was deleted, then inserted one by one.
 This method lacks atomicity, posing a risk of data corruption in case of failures or interruptions during the process.
+We assume that reads are frequent, but updates do not occur often.  
 
 ## Decision
 
@@ -23,4 +24,4 @@ This ensures that only the most current data versions are updated, minimizing th
 
 ## Consequences
 
-This solution is limited as it does not let us preform read and write operations across multiple aggregates within a single transaction.
+This solution is limited as it does not let us perform read and write operations across multiple aggregates within a single transaction. Virtuoso does not support having a transaction in which you can do multiple insert and delete operations that combined behave in a ACID fashion.

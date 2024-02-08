@@ -14,3 +14,5 @@
 * [12. Use applicative tenant filtering in lpdc-management](0012-use-applicative-tenant-filtering-in-lpdc-management.md)
 * [13. Authorization and authentication in lpdc-management](0013-authorization-and-authentication-in-lpdc-management.md)
 * [14. Query data in lpdc-management using sparql query or recursive query tool](0014-query-data-in-lpdc-management-using-sparql-query-or-recursive-query-tool.md)
+* [15. Atomic update query](0015-atomic-update-query.md)
+* [16. Data integrity tests](0016-data-integrity-tests.md)
