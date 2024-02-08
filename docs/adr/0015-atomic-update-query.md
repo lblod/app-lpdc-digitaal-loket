@@ -8,16 +8,19 @@ Accepted
 
 ## Context
 
-In lpdc-management, update queries used to be a split into separate delete and insert queries. Each triple was inserted or removed in a separate DELETE or INSERT query.
-This is not atomic and can result in corrupted data when something goes wrong.
+Previously, in the lpdc-management system, updates to aggregates in the database were performed through individual delete and insert operations.
+Each triple of the aggregate was deleted, then inserted one by one.
+This method lacks atomicity, posing a risk of data corruption in case of failures or interruptions during the process.
 
 ## Decision
 
-Replace all update queries with a DELETE/INSERT query where the whole aggregate will be removed and inserted in the same transaction. 
+To enhance data integrity and consistency, we will transition to using atomic operations for updating aggregates.
+This approach involves executing a [DELETE/INSERT](https://www.w3.org/TR/sparql11-update/) query within a unified transaction.
+By encapsulating the whole update process in a transaction, we ensure that either all changes are committed or none, thereby maintaining the atomicity of updates.
 
-To prevent that concurrent transactions interfere with each other we check modifiedDate of aggregate in WHERE clause of the query.
+Furthermore, to manage concurrency and prevent conflicts between simultaneous transactions, we will include a check for the `modifiedDate` of the aggregate within the WHERE clause of our queries.
+This ensures that only the most current data versions are updated, minimizing the risk of overwriting recent changes made by concurrent transactions.
 
 ## Consequences
 
-
-
+This solution is limited as it does not let us preform read and write operations across multiple aggregates within a single transaction.
