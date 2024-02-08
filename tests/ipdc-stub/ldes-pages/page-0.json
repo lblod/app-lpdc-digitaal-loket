@@ -6,7 +6,7 @@
     "@type": "Node",
     "relation": []
   },
-  "@context": "https://ipdc.tni-vlaanderen.be/ConceptJsonLdContext.jsonld",
+  "@context": "http://ipdc-stub/ConceptJsonLdContext.jsonld",
   "@id": "http:localhost:3000/doc/conceptsnapshot?pageNumber=0",
   "@type": "EventStream",
   "member": [

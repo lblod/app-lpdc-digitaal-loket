@@ -47,7 +47,7 @@ if [ "$code" -eq 0 ]; then
   sleep 10
 
   echo "Running playwright e2e tests"
-  npx playwright test test-e2e --workers=2
+  npx playwright test test-e2e --workers=3
   code=$?
   echo "playwright e2e tests exit code = $code"
 

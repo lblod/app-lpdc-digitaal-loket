@@ -73,6 +73,16 @@ app.get('/instanties', (req, res, next) => {
     }
 });
 
+app.get('/ConceptJsonLdContext.jsonld', (req, res, next) => {
+    try {
+        const page = fs.readFileSync(`./ldes-pages/ConceptJsonLdContext.jsonld`, "utf8");
+        const jsonLd = JSON.parse(page);
+        res.status(200).type('application/ld+json').json(jsonLd);
+    } catch (e) {
+        next(e)
+    }
+});
+
 app.use(errorHandler);
 
 app.listen(80, () => {
