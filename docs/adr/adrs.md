@@ -10,4 +10,7 @@
 * [8. Frontend initiates state changes via backend operations](0008-frontend-initiates-state-changes-via-backend-operations.md)
 * [9. Technically Optimize Backend](0009-technically-optimize-backend.md)
 * [10. Hexagonal architecture](0010-hexagonal-architecture.md)
-* [12. Use applicative tenant filtering in lpdc-management-service](0012-use-applicative-tenant-filtering-in-lpdc-management-service.md)
+* [11. Invariant class](0011-invariant-class.md)
+* [12. Use applicative tenant filtering in lpdc-management](0012-use-applicative-tenant-filtering-in-lpdc-management.md)
+* [13. Authorization and authentication in lpdc-management](0013-authorization-and-authentication-in-lpdc-management.md)
+* [14. Query data in lpdc-management using sparql query or recursive query tool](0014-query-data-in-lpdc-management-using-sparql-query-or-recursive-query-tool.md)
