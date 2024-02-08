@@ -8,11 +8,9 @@ Accepted
 
 ## Context
 
-It is important to ensure that only authenticated and authorized users have the capability to make requests
-to the lpdc-management service.
-Historically, the authentication and authorization processes were managed by the mu-authorization service,
-which performed these checks at the database level.
-Due to previous adr [insert link] we needed an alternative solution.
+It is important to ensure that only authenticated and authorized users have the capability to make requests to the lpdc-management service.
+Historically, the authentication and authorization processes were managed by the mu-authorization service, which performed these checks at the database level.
+Due to [use applicative tenant filtering in lpdc managemnt service](0012-use-applicative-tenant-filtering-in-lpdc-management-service.md) we needed an alternative solution.
 
 ## Decision
 
@@ -24,7 +22,6 @@ This validation process involves the verification of the following criteria with
 3. **Role Verification**: The session must correctly represent the user's role, ensuring that the user has the appropriate permissions for their request.
 
 Given the use of the Express framework within the management-service, we have decided to leverage an [express middleware function](https://expressjs.com/en/guide/using-middleware.html) for the implementation of our session validation mechanism.
-
 
 ## Consequences
 

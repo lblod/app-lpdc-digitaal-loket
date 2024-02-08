@@ -10,6 +10,4 @@
 * [8. Frontend initiates state changes via backend operations](0008-frontend-initiates-state-changes-via-backend-operations.md)
 * [9. Technically Optimize Backend](0009-technically-optimize-backend.md)
 * [10. Hexagonal architecture](0010-hexagonal-architecture.md)
-
-# To write
-### migrations: in .sparql files; only put one sparql query; and make sure that each file has a unique 'timestamp'
+* [12. Use applicative tenant filtering in lpdc-management-service](0012-use-applicative-tenant-filtering-in-lpdc-management-service.md)
