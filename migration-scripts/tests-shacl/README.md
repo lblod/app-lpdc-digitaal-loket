@@ -50,6 +50,7 @@ The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-
   - `schemas:url` specified as `datatype:string`
 - On all sub entities that represent a list (procedure, website, rule, etc.), a `shacl:order` is added. This is to ensure an order on these sub entities.
 - Legal Resources: Add title, description, separate 'entity', shacl-order
+- Competent Authority Level: required (mincount=1)
 
 ## Instance Shape Additions
 - `schema:dateCreated` exists as dcterms:created, should to changed, add to docu, check (instead of http://purl.org/dc/terms/created)
@@ -73,7 +74,10 @@ The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-
   - `schemas:url` specified as `datatype:string`
 - On all sub entities that represent a list (procedure, website, rule, etc), a `shacl:order` is added. This is to ensure an order on these sub entities.
 - Legal Resources: Add title, description, separate 'entity', shacl-order
-- 
+- Executing Authority Level: required (mincount=1)
+- Competent Authority Level: required (mincount=1)
+
+ 
 ## Instance Shape not processed by LPDC
 - `addres>administrativeUnitLevel2` : is not processed
 - `addres>fullAddress`: is not processed

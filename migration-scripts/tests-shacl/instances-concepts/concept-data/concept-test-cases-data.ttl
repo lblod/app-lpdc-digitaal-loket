@@ -91,6 +91,7 @@ ex:a-minimal-valid-concept
     dc:description  """description-nl"""@nl ;
     schema:productID "678";
     dc:isVersionOf <some-iri> ;
+    lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
     prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
     lpdcExt:isArchived true.
 

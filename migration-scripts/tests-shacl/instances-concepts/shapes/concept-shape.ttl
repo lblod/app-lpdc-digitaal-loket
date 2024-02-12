@@ -92,6 +92,7 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "Bevoegd bestuursniveau van een publieke dienst"@nl;
+          shacl:minCount 1;
           shacl:name "competentAuthorityLevel"@nl;
           rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/bevoegd-bestuursniveau.ttl";
           shacl:path lpdcExt:competentAuthorityLevel

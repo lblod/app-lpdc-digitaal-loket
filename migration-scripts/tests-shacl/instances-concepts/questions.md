@@ -171,7 +171,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - Your Europe Category -> engels required -> moet dit in shacl shape? Nee is geen requirement meer.
 - Other specific validations: e.g. when a title in english is created ; then also a description is required
 
-
 # DONE
 - should we restrict all the concept types ? and not just be a concept ? but be one of the code lists we have -> and restrict it to that type ? Otherwise, how will we restrict the values ? I don't think that code lists are enough?
   => just reference a code list in rdfs:seeAlso
@@ -189,5 +188,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie die we naar ipdc sturen is lpdcExt:hasWebsites; we are not using a context object when generating the json-ld; so this seems incorrect ...
 - product id verwijderen van lpdc-publish - check (TODO LPDC-709)
 - status (ontwerp, verstuurd) verwijderen van lpdc-publish (TODO LPDC-709)
+- executing authority level: required for instance (not for concept)
+- competent authority level: required (both for concept and instance)
 
 
