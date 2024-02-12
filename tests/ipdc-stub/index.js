@@ -4,10 +4,11 @@ import {conceptArchive, conceptCreate, conceptUpdate} from "./ldes-pages/extra-c
 
 const app = express();
 
-app.use(express.json({type: 'application/ld+json'}));
+app.use(express.json({type:  ['application/json', 'application/ld+json']}));
 
 const instances = [];
 const extraConceptsnapshots = [];
+const instanceThatShouldFail = [];
 
 function errorHandler(err, req, res, next) {
     if (err) {
@@ -56,9 +57,15 @@ app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
 app.put('/instanties', (req, res, next) => {
     try {
         console.log('received new instances');
-        const newInstances = req.body;
-        instances.push(newInstances);
-        console.log(JSON.stringify(newInstances, null, 2));
+        const newInstance = req.body;
+        const instanceIri = newInstance.find(object => object['@type'][0] === 'http://purl.org/vocab/cpsv#PublicService')?.['@id'];
+        if (instanceThatShouldFail.some(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri)) {
+            const fail = instanceThatShouldFail.find(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri);
+            console.log('published instance is not valid');
+            return res.status(fail.statusCode ?? 400).send(fail.errorMessage);
+        }
+        instances.push(newInstance);
+        console.log(JSON.stringify(newInstance, null, 2));
         res.status(200).send();
     } catch (e) {
         next(e);
@@ -72,6 +79,21 @@ app.get('/instanties', (req, res, next) => {
         next(e);
     }
 });
+
+app.post('/instanties/fail', (req, res, next) => {
+    try {
+        instanceThatShouldFail.push({
+            instanceIri: req.body.instanceIri,
+            statusCode: req.body.statusCode,
+            errorMessage: req.body.errorMessage
+        });
+        console.log(instanceThatShouldFail);
+        return res.status(200).send();
+    } catch (e) {
+        next(e);
+    }
+});
+
 
 app.get('/ConceptJsonLdContext.jsonld', (req, res, next) => {
     try {

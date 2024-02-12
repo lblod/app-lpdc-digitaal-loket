@@ -99,6 +99,20 @@ export class IpdcStub {
 
         return snapshot;
     }
+
+    static async publishShouldFail(instanceIri: string, statusCode: number, errorMessage: any) {
+        const apiRequest = await request.newContext();
+        await apiRequest.post(`${ipdcStubUrl}/instanties/fail`, {
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            data: {
+                instanceIri: instanceIri,
+                statusCode: statusCode,
+                errorMessage: errorMessage
+            }
+        });
+    }
 }
 
 async function processSnapshot(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<void> {

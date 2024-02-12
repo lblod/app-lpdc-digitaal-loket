@@ -1,6 +1,6 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
-import { lpdcUrl } from "../../test-api/test-helpers/test-options";
+import {dashboardUrl, lpdcUrl} from "../../test-api/test-helpers/test-options";
 
 export class MockLoginPage extends AbstractPage {
 
@@ -11,11 +11,15 @@ export class MockLoginPage extends AbstractPage {
         super(page);
 
         this.baseURL = baseURL;
-        this.searchInput = page.getByPlaceholder('Aalst, Berchem,...');
+        this.searchInput = page.getByPlaceholder('Aalst, Berchem');
     }
 
     static createForLpdc(page: Page): MockLoginPage {
         return new MockLoginPage(page, lpdcUrl);
+    }
+
+    static createForDashboard(page: Page): MockLoginPage {
+        return new MockLoginPage(page, dashboardUrl);
     }
 
     async goto() {
