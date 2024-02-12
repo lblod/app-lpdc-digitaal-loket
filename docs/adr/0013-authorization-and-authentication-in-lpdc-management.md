@@ -10,7 +10,7 @@ Accepted
 
 It is important to ensure that only authenticated and authorized users have the capability to make requests to the lpdc-management service.
 Historically, the authentication and authorization processes were managed by the mu-authorization service, which performed these checks at the database level.
-Due to [use applicative tenant filtering in lpdc managemnt service](0012-use-applicative-tenant-filtering-in-lpdc-management) we needed an alternative solution.
+Due to [use applicative tenant filtering in lpdc management service](0012-use-applicative-tenant-filtering-in-lpdc-management) we needed an alternative solution.
 
 ## Decision
 

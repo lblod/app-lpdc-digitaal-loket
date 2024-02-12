@@ -15,7 +15,7 @@ The goal is to obtain insight into the quality of our data, enabling us to maint
 
 ## Decision
 
-- We wrote tests that generate a rapport detailing all the data inconsistencies. 
+- We wrote tests that generate a report detailing all the data inconsistencies. 
 - We also want to create a batch job to address and rectify inconsistencies between aggregates. 
 - This proactive approach not only highlights issues but also ensures they are corrected, thus enhancing the overall integrity of our data.
 

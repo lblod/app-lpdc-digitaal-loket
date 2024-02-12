@@ -8,7 +8,7 @@ Accepted
 
 ## Context
 
-For performance, stability and transactions reasons, we prefer to use the virtuoso database directly, instead of going through mu-authorization service.
+For performance, stability and transaction reasons, we prefer to use the virtuoso database directly, instead of going through mu-authorization service.
 
 This means that the applicative tenant filtering that mu-authorization provides cannot be relied on anymore.
 
