@@ -6,6 +6,8 @@ Date: 2023-07-31
 
 Accepted
 
+Amended (2024-02-09)
+
 ## Context
 
 Instanties (public-service resources) use a combination of mu-cl-resources and lpdc-management services to query and update its data.
@@ -23,6 +25,11 @@ Sample from dispatcher.ex
   get "/public-services/*path" do
     forward conn, path, "http://resource/public-services/"
   end
+```
+
+Secondly, we will not cache the model properties in resources by configuring in domain.lisp:
+```common lisp
+(setf *cache-model-properties-p* nil)
 ```
 
 ## Consequences
