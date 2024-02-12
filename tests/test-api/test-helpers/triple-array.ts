@@ -197,7 +197,9 @@ export const Predicates = {
     hasLatestFunctionalChange: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasLatestFunctionalChange'),
     reviewStatus: new Uri('http://mu.semte.ch/vocabularies/ext/reviewStatus'),
     instanceStatus: new Uri('http://www.w3.org/ns/adms#status'),
+    dateSent: new Uri('http://schema.org/dateSent'),
     publicationStatus: new Uri('http://schema.org/publication'),
+    datePublished: new Uri('http://schema.org/datePublished'),
     formerType: new Uri('https://www.w3.org/ns/activitystreams#formerType'),
     deleteTime: new Uri('https://www.w3.org/ns/activitystreams#deleted')
 }

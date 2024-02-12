@@ -231,7 +231,9 @@ export class TestDataFactory {
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withInstanceStatus(InstanceStatus.verstuurd)
+            .withDateSent(new Date())
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
+            .withDatePublished(new Date())
             .buildAndPersist(request, organisatieId);
 
         return {

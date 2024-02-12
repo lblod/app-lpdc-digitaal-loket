@@ -57,7 +57,9 @@ export class PublicServiceTestBuilder {
     private productId: Literal;
     private reviewStatus: Uri;
     private instanceStatus: Uri;
+    private dateSent: Literal;
     private publicationStatus: Uri;
+    private datePublished: Literal;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -100,6 +102,7 @@ export class PublicServiceTestBuilder {
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withInstanceStatus(InstanceStatus.ontwerp)
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
+            .withDatePublished(new Date())
     }
 
     private withType() {
@@ -301,11 +304,21 @@ export class PublicServiceTestBuilder {
         this.instanceStatus = new Uri(instanceStatus);
         return this;
     }
+
+    withDateSent(date: Date) {
+        this.dateSent = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
+        return this;
+    }
+
     withPublicationStatus(publicationStatus: InstancePublicationStatusType){
         this.publicationStatus = new Uri(publicationStatus)
         return this;
     }
 
+    withDatePublished(date: Date) {
+        this.datePublished = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
+        return this;
+    }
 
     private buildTripleArray(organisationId: string): TripleArray {
         if(!this.createdBy) {
@@ -347,7 +360,9 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.productId, this.productId),
             new Triple(this.id, Predicates.reviewStatus, this.reviewStatus),
             new Triple(this.id, Predicates.instanceStatus, this.instanceStatus),
-            new Triple(this.id, Predicates.publicationStatus, this.publicationStatus)
+            new Triple(this.id, Predicates.dateSent, this.dateSent),
+            new Triple(this.id, Predicates.publicationStatus, this.publicationStatus),
+            new Triple(this.id, Predicates.datePublished, this.datePublished),
         ];
         return new TripleArray(triples);
     }

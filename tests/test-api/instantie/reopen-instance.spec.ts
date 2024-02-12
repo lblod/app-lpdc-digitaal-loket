@@ -15,6 +15,7 @@ test.describe('Reopen instance', () =>  {
         const modified = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.verstuurd)
+            .withDateSent(new Date())
             .withModified(modified)
             .buildAndPersist(request, pepingenId)
 
