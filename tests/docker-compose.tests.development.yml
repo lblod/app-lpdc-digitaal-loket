@@ -43,4 +43,4 @@ services:
       LDES_ENDPOINT: "https://dev.lpdc.lblod.info"
       LDES_FOLDER: "dev-lpdc-stream"
       IPDC_JSON_ENDPOINT: "http://ipdc-stub/instanties"
-      CRON_PATTERN: "* * * * * *" # every second
+      CRON_PATTERN: "*/5 * * * * *" # every second

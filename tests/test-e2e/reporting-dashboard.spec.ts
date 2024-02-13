@@ -85,7 +85,7 @@ test.describe('Reporting dashboard', () => {
         // generate report
         const filePath = await generateReportManually(request, 'lpdcConceptsReport');
         const reportCsv = fs.readFileSync(filePath, "utf8");
-        const report = Papa.parse(reportCsv, { header: true });
+        const report = Papa.parse(reportCsv, {header: true});
 
         const row = report.data.find(instance => instance.uriPublicService === instanceIri)
         expect(row).toBeDefined();
@@ -143,7 +143,6 @@ test.describe('Reporting dashboard', () => {
         await wijzigingenBewarenModel.expectToBeVisible();
         await wijzigingenBewarenModel.bewaarButton.click();
         await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
-
         await IpdcStub.publishShouldFail(instanceIri, 400, {message: "something went wrong"});
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
@@ -153,17 +152,25 @@ test.describe('Reporting dashboard', () => {
         await homePage.expectToBeVisible();
 
         // generate report
-        const filePath = await generateReportManually(request, 'instancesStuckinPublishingForLPDCReport');
-        const reportCsv = fs.readFileSync(filePath, "utf8");
-        const report = Papa.parse(reportCsv, { header: true });
-        const row = report.data.find(instance => instance.publicService === instanceIri)
+        const row = await retry<Promise<any>>(
+            async () => {
+                const filePath = await generateReportManually(request, 'instancesStuckinPublishingForLPDCReport');
+                const reportCsv = fs.readFileSync(filePath, "utf8");
+                const report = Papa.parse(reportCsv, {header: true});
+                return report.data.find(instance => instance.publicService === instanceIri)
+            },
+            (row) => row !== undefined
+        );
         expect(row).toBeDefined();
         expect(row.publicService).toEqual(instanceIri);
         expect(row.type).toEqual('http://purl.org/vocab/cpsv#PublicService');
         expect(row.title).toEqual(newTitel);
         expect(row.bestuurseenheidLabel).toEqual('Pepingen');
         expect(row.classificatieLabel).toEqual('Gemeente');
-        // TODO: LPDC-909: verify new fields, errorMessage, dateSent, datePublished
+        expect(row.errorCode).toEqual("400");
+        expect(row.errorMessage).toEqual("{\"message\":\"something went wrong\"}");
+        expect(row.datum).toBeDefined();
+        // TODO: LPDC-909: verify new fields, dateSent, datePublished
         // TODO: LPDC-909: Add test for tombstone
     });
 
@@ -200,6 +207,18 @@ async function readFileWithRetry(fileDir: string): Promise<string> {
         if (files.length) {
             return files[0];
         }
+        await wait(1000);
+    }
+}
+
+async function retry<T>(action: () => Promise<T>, untilCondition: (actionResult: T) => boolean) {
+    const maxAttempts = 30;
+    for (let i = 0; i < maxAttempts; i++) {
+        const actionResult = await action();
+        if (untilCondition(actionResult)) {
+            return actionResult;
+        }
+        console.log('retry ' + i + ' times');
         await wait(1000);
     }
 }
