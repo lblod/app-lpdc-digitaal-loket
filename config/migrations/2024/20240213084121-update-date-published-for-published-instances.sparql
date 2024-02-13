@@ -7,7 +7,7 @@ WHERE {
     GRAPH ?bestuurseenheidGraph {
         ?instance a <http://purl.org/vocab/cpsv#PublicService> .
         ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verstuurd> .
-        ?instance <http://schema.org/publication> ?publicationStatus .
+        ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd> .
         ?instance <http://purl.org/dc/terms/modified> ?dateModified .
     }
 
