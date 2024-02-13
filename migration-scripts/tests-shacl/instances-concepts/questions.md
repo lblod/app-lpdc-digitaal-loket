@@ -14,6 +14,7 @@
 
 # Remarks
 
+
 #### Language Strings
 - when in an example for a rdf:langString, specifying it via:
 
@@ -190,5 +191,3 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - status (ontwerp, verstuurd) verwijderen van lpdc-publish (TODO LPDC-709)
 - executing authority level: required for instance (not for concept)
 - competent authority level: required (both for concept and instance)
-
-

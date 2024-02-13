@@ -94,3 +94,7 @@ The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-
 Using [rdf-validate-shacl](https://github.com/zazuko/rdf-validate-shacl), and [RDF-JS](https://rdf.js.org/), we've created some example code in typescript for instance validation, concept validation.
 
 Compile first using `tsc`, run concept examples: `npm run start-concepts`, run instance examples: `npm run start-instances`.
+
+# Lessons learned
+
+An overview of the lessons learned while experimenting with shacl can be found [here](lessons-learned.md).
