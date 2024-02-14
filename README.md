@@ -45,3 +45,5 @@ Component Diagram: The architecture is that each docker can in fact be seen as a
 ## 12. [Development Environment](docs/development-environment.md)
 
 ## 13. [Decision Log](docs/adr/adrs.md)
+
+## 14. [Integrerende gemeentes](docs/integrerende-gemeentes.md)
