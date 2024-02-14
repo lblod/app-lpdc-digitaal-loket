@@ -175,9 +175,9 @@ test.describe('Reporting dashboard', () => {
         expect(row.classificatieLabel).toEqual('Gemeente');
         expect(row.errorCode).toEqual("400");
         expect(row.errorMessage).toEqual("{\"message\":\"something went wrong\"}");
-        expect(row.datum).toBeDefined();
-        expect(row.lastSentDate).toBeDefined();
-        expect(row.lastPublishedDate).toEqual("");
+        expect(row.datePublishAttempt).not.toEqual("");
+        expect(row.lastSentDate).not.toEqual("");
+        expect(row.lastSuccessfulPublishedDate).toEqual("");
     });
 
     test('Generate and view instancesStuckinPublishingForLPDCReport for republished instance', async ({request}) => {
@@ -228,6 +228,10 @@ test.describe('Reporting dashboard', () => {
         await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
         await homePage.expectToBeVisible();
+        await IpdcStub.findPublishedInstance({
+            titel: newTitel,
+            expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
+        });
 
         await homePage.searchInput.fill(newTitel);
         await homePage.resultTable.row(first_row).link('Bekijk').click();
@@ -263,9 +267,9 @@ test.describe('Reporting dashboard', () => {
         expect(row.classificatieLabel).toEqual('Gemeente');
         expect(row.errorCode).toEqual("400");
         expect(row.errorMessage).toEqual("{\"message\":\"something went wrong when republishing\"}");
-        expect(row.datum).not.toEqual("");
+        expect(row.datePublishAttempt).not.toEqual("");
         expect(row.lastSentDate).not.toEqual("");
-        expect(row.lastPublishedDate).toEqual("");
+        expect(row.lastSuccessfulPublishedDate).not.toEqual("");
     });
 
     test('Generate and view instancesStuckinPublishingForLPDCReport for deleted instance', async ({request}) => {
@@ -316,6 +320,10 @@ test.describe('Reporting dashboard', () => {
         await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
         await homePage.expectToBeVisible();
+        await IpdcStub.findPublishedInstance({
+            titel: newTitel,
+            expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
+        });
 
         await homePage.searchInput.fill(newTitel);
         await homePage.resultTable.row(first_row).link('Bekijk').click();
@@ -348,9 +356,9 @@ test.describe('Reporting dashboard', () => {
         expect(row.classificatieLabel).toEqual('Gemeente');
         expect(row.errorCode).toEqual("400");
         expect(row.errorMessage).toEqual("{\"message\":\"something went wrong when deleting\"}");
-        expect(row.datum).not.toEqual("");
+        expect(row.datePublishAttempt).not.toEqual("");
         expect(row.lastSentDate).not.toEqual("");
-        expect(row.lastPublishedDate).toEqual("");
+        expect(row.lastSuccessfulPublishedDate).toEqual("");
     });
 });
 

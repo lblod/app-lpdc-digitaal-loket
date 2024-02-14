@@ -75,9 +75,9 @@ export default {
         classificatieLabel: getSafeValue(publicService, 'classificatieLabel'),
         errorCode: getSafeValue(publicService, 'errorCode'),
         errorMessage: getSafeValue(publicService, 'errorMessage'),
-        datum: getSafeValue(publicService, 'dateCreated'),
+        datePublishAttempt: getSafeValue(publicService, 'dateCreated'),
         lastSentDate: getSafeValue(publicService, 'dateSent'),
-        lastPublishedDate: getSafeValue(publicService, 'datePublished')
+        lastSuccessfulPublishedDate: getSafeValue(publicService, 'datePublished')
       };
     });
 
@@ -89,9 +89,9 @@ export default {
       'classificatieLabel',
       'errorCode',
       'errorMessage',
-      'datum',
+      'datePublishAttempt',
       'lastSentDate',
-      'lastPublishedDate',
+      'lastSuccessfulPublishedDate',
     ], reportData);
   }
 };
