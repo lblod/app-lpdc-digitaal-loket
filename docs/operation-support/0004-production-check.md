@@ -111,30 +111,16 @@ drc logs --since 168h --timestamps | grep app-lpdc-digitaal-loket-lpdc-1 | grep 
 
 #### lpdc publish to ipdc
 
-We want to verify if there are not too many errors in the logs ... and if the publish ran.
+We want to verify if there are not too many errors in the logs ... and if the publish ran. \
+A report will be generated once a day. This can be viewed and downloaded in `dashboard-service`.
+Login as 'Agentschap Binnenlands Bestuur'.
+
+To verify where not missing data in report we can look for failed creation of publicationError
+```shell
+docker compose logs --timestamps --since 70m | grep lpdc-publish-1 | grep "Could not save publicationError"
+```
+or
 
 ```shell
-docker compose logs --timestamps --since 70m | grep lpdc-publish-1 | grep "Response status code"
-```
-
-20 items seems reasonable:
-
-```
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:00.746075626Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:34.966504398Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:35.762599335Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:36.431217833Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:36.980860162Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:37.563557006Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:38.229948920Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:38.845901495Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:39.426254816Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:40.024528857Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:40.688958453Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:41.434440134Z Response status code: 400
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:42.256561855Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:42.987004518Z Response status code: 500
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:43.799075028Z Response status code: 400
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:44.779003857Z Response status code: 400
-app-lpdc-digitaal-loket-lpdc-publish-1  | 2023-11-14T14:00:45.532188679Z Response status code: 500
+docker compose logs --timestamps --since 70m | grep lpdc-publish-1 | grep "Could not publish"
 ```
