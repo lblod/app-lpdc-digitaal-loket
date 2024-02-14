@@ -26,20 +26,31 @@ export default {
       PREFIX http:    <http://www.w3.org/2011/http#>
       PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
       
-      SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated WHERE {
+      SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated ?dateSent ?datePublished WHERE {
             GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
                 ?publicationError a <http://data.lblod.info/vocabularies/lpdc/instance-publication-error> .
                 ?publicationError http:statusCode ?errorCode .
                 ?publicationError schema:error ?errorMessage .
                 ?publicationError dct:source ?instanceIri .
-                ?publicationError dct:title ?title .
+                OPTIONAL {
+                    ?publicationError dct:title ?title .
+                }
                 ?publicationError foaf:owner ?bestuurseenheidIri .
                 ?publicationError schema:dateCreated ?dateCreated .
+                OPTIONAL {
+                    ?publicationError schema:dateSent ?dateSent .
+                }
+                OPTIONAL {
+                    ?publicationError schema:datePublished ?datePublished .
+                }
             }
             
             GRAPH ?g {
-              ?instanceIri a cpsv:PublicService ;
-                rdfs-ns:type ?type .
+              VALUES ?type {
+                cpsv:PublicService
+                as:Tombstone
+              }
+                ?instanceIri a ?type .
             }
             
             GRAPH ?graph {
@@ -48,8 +59,6 @@ export default {
                 ?classificatie skos:prefLabel ?classificatieLabel .
             }
  
-            BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", STR(?bestuurId), "/LoketLB-LPDCGebruiker")) as ?bestuurseenheidGraph)
-            
             FILTER(
                 (STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/" ) && STRENDS(STR(?g), "/LoketLB-LPDCGebruiker"))
             )
@@ -66,7 +75,9 @@ export default {
         classificatieLabel: getSafeValue(publicService, 'classificatieLabel'),
         errorCode: getSafeValue(publicService, 'errorCode'),
         errorMessage: getSafeValue(publicService, 'errorMessage'),
-        datum: getSafeValue(publicService, 'dateCreated')
+        datum: getSafeValue(publicService, 'dateCreated'),
+        lastSentDate: getSafeValue(publicService, 'dateSent'),
+        lastPublishedDate: getSafeValue(publicService, 'datePublished')
       };
     });
 
@@ -78,7 +89,9 @@ export default {
       'classificatieLabel',
       'errorCode',
       'errorMessage',
-      'datum'
+      'datum',
+      'lastSentDate',
+      'lastPublishedDate',
     ], reportData);
   }
 };

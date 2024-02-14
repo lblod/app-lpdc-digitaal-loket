@@ -17,8 +17,10 @@ import {InstanceStatus} from "../test-api/test-helpers/codelists";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 import {IpdcStub} from "./components/ipdc-stub";
 import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
+import {ProductOfDienstOpnieuwBewerkenModal} from "./modals/product-of-dienst-opnieuw-bewerken-modal";
+import {ProductOfDienstVerwijderenModal} from "./modals/product-of-dienst-verwijderen-modal";
 
-test.describe.configure({mode: 'parallel'});
+test.describe.configure({mode: 'serial'});
 
 test.describe('Reporting dashboard', () => {
 
@@ -30,6 +32,8 @@ test.describe('Reporting dashboard', () => {
     let instantieDetailsPage: InstantieDetailsPage;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
     let wijzigingenBewarenModel: WijzigingenBewarenModal;
+    let productOfDienstOpnieuwBewerkenModal: ProductOfDienstOpnieuwBewerkenModal;
+    let productOfDienstVerwijderenModal: ProductOfDienstVerwijderenModal;
 
     test.beforeEach(async ({browser}) => {
         page = await browser.newPage();
@@ -40,6 +44,8 @@ test.describe('Reporting dashboard', () => {
         instantieDetailsPage = InstantieDetailsPage.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
         wijzigingenBewarenModel = WijzigingenBewarenModal.create(page);
+        productOfDienstOpnieuwBewerkenModal = ProductOfDienstOpnieuwBewerkenModal.create(page);
+        productOfDienstVerwijderenModal = ProductOfDienstVerwijderenModal.create(page);
     })
 
     test('Generate and view lpdcConceptsReport', async ({request}) => {
@@ -170,10 +176,182 @@ test.describe('Reporting dashboard', () => {
         expect(row.errorCode).toEqual("400");
         expect(row.errorMessage).toEqual("{\"message\":\"something went wrong\"}");
         expect(row.datum).toBeDefined();
-        // TODO: LPDC-909: verify new fields, dateSent, datePublished
-        // TODO: LPDC-909: Add test for tombstone
+        expect(row.lastSentDate).toBeDefined();
+        expect(row.lastPublishedDate).toEqual("");
     });
 
+    test('Generate and view instancesStuckinPublishingForLPDCReport for republished instance', async ({request}) => {
+        let instanceIri: string | undefined = undefined;
+        page.on('request', request => {
+            if (request.method() === 'GET'
+                && request.url().startsWith(`${lpdcUrl}/lpdc-management/public-services/`)
+                && request.url().includes(`/form/`)
+            ) {
+                instanceIri = extractIriFromURL(request.url());
+            }
+        });
+
+        await mockLoginPage.goto();
+        await mockLoginPage.searchInput.fill('Pepingen');
+        await mockLoginPage.login('Gemeente Pepingen');
+
+        await homePage.expectToBeVisible();
+
+        const uJeModal = UJeModal.create(page);
+        await uJeModal.expectToBeVisible();
+        await uJeModal.laterKiezenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+        await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        const newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+        await instantieDetailsPage.titelInput.blur();
+
+        await instantieDetailsPage.eigenschappenTab.click();
+        await wijzigingenBewarenModel.expectToBeVisible();
+        await wijzigingenBewarenModel.bewaarButton.click();
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+        await homePage.expectToBeVisible();
+
+        await homePage.searchInput.fill(newTitel);
+        await homePage.resultTable.row(first_row).link('Bekijk').click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(newTitel);
+
+        await instantieDetailsPage.productOpnieuwBewerkenButton.click();
+        await productOfDienstOpnieuwBewerkenModal.productOpnieuwBewerkenButton.click();
+        await IpdcStub.publishShouldFail(instanceIri, 400, {message: "something went wrong when republishing"});
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+        await homePage.expectToBeVisible();
+
+        // generate report
+        const row = await retry<Promise<any>>(
+            async () => {
+                const filePath = await generateReportManually(request, 'instancesStuckinPublishingForLPDCReport');
+                const reportCsv = fs.readFileSync(filePath, "utf8");
+                const report = Papa.parse(reportCsv, {header: true});
+                return report.data.find(instance => instance.publicService === instanceIri)
+            },
+            (row) => row !== undefined
+        );
+        expect(row).toBeDefined();
+        expect(row.publicService).toEqual(instanceIri);
+        expect(row.type).toEqual('http://purl.org/vocab/cpsv#PublicService');
+        expect(row.title).toEqual(newTitel);
+        expect(row.bestuurseenheidLabel).toEqual('Pepingen');
+        expect(row.classificatieLabel).toEqual('Gemeente');
+        expect(row.errorCode).toEqual("400");
+        expect(row.errorMessage).toEqual("{\"message\":\"something went wrong when republishing\"}");
+        expect(row.datum).not.toEqual("");
+        expect(row.lastSentDate).not.toEqual("");
+        expect(row.lastPublishedDate).toEqual("");
+    });
+
+    test('Generate and view instancesStuckinPublishingForLPDCReport for deleted instance', async ({request}) => {
+        let instanceIri: string | undefined = undefined;
+        page.on('request', request => {
+            if (request.method() === 'GET'
+                && request.url().startsWith(`${lpdcUrl}/lpdc-management/public-services/`)
+                && request.url().includes(`/form/`)
+            ) {
+                instanceIri = extractIriFromURL(request.url());
+            }
+        });
+
+        await mockLoginPage.goto();
+        await mockLoginPage.searchInput.fill('Pepingen');
+        await mockLoginPage.login('Gemeente Pepingen');
+
+        await homePage.expectToBeVisible();
+
+        const uJeModal = UJeModal.create(page);
+        await uJeModal.expectToBeVisible();
+        await uJeModal.laterKiezenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+        await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        const newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+        await instantieDetailsPage.titelInput.blur();
+
+        await instantieDetailsPage.eigenschappenTab.click();
+        await wijzigingenBewarenModel.expectToBeVisible();
+        await wijzigingenBewarenModel.bewaarButton.click();
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+        await homePage.expectToBeVisible();
+
+        await homePage.searchInput.fill(newTitel);
+        await homePage.resultTable.row(first_row).link('Bekijk').click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(newTitel);
+
+        await instantieDetailsPage.productOpnieuwBewerkenButton.click();
+        await productOfDienstOpnieuwBewerkenModal.productOpnieuwBewerkenButton.click();
+        await IpdcStub.publishShouldFail(instanceIri, 400, {message: "something went wrong when deleting"});
+        await instantieDetailsPage.productVerwijderenButton.click();
+
+        await productOfDienstVerwijderenModal.expectToBeVisible();
+        await productOfDienstVerwijderenModal.verwijderenButton.click();
+
+        const row = await retry<Promise<any>>(
+            async () => {
+                const filePath = await generateReportManually(request, 'instancesStuckinPublishingForLPDCReport');
+                const reportCsv = fs.readFileSync(filePath, "utf8");
+                const report = Papa.parse(reportCsv, {header: true});
+                return report.data.find(instance => instance.publicService === instanceIri)
+            },
+            (row) => row !== undefined
+        );
+        expect(row).toBeDefined();
+        expect(row.publicService).toEqual(instanceIri);
+        expect(row.type).toEqual('https://www.w3.org/ns/activitystreams#Tombstone');
+        expect(row.title).toEqual("");
+        expect(row.bestuurseenheidLabel).toEqual('Pepingen');
+        expect(row.classificatieLabel).toEqual('Gemeente');
+        expect(row.errorCode).toEqual("400");
+        expect(row.errorMessage).toEqual("{\"message\":\"something went wrong when deleting\"}");
+        expect(row.datum).not.toEqual("");
+        expect(row.lastSentDate).not.toEqual("");
+        expect(row.lastPublishedDate).toEqual("");
+    });
 });
 
 async function generateReportManually(request: APIRequestContext, reportName: string) {
