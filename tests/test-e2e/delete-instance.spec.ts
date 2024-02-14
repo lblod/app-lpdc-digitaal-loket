@@ -124,23 +124,23 @@ test.describe('Delete an instance', () => {
         await homePage.searchInput.fill(newTitel);
         await expect(homePage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
 
-        const instanceRepublishedInIpdc = await IpdcStub.findPublishedInstance({ thombstonedId: publicServiceUri });
+        const instanceRepublishedInIpdc = await IpdcStub.findPublishedInstance({ tombstonedId: publicServiceUri });
         expect(instanceRepublishedInIpdc).toBeTruthy();
 
-        const thombstonedPublicService = IpdcStub.getObjectByType(instanceRepublishedInIpdc, 'https://www.w3.org/ns/activitystreams#Tombstone');
+        const tombstonedPublicService = IpdcStub.getObjectByType(instanceRepublishedInIpdc, 'https://www.w3.org/ns/activitystreams#Tombstone');
 
-        expect(Object.keys(thombstonedPublicService)).toHaveLength(4);
+        expect(Object.keys(tombstonedPublicService)).toHaveLength(4);
 
-        expect(thombstonedPublicService['@id']).toEqual(publicServiceUri);
+        expect(tombstonedPublicService['@id']).toEqual(publicServiceUri);
         
-        expect(thombstonedPublicService['@type']).toHaveLength(1);
-        expect(thombstonedPublicService['@type']).toEqual(['https://www.w3.org/ns/activitystreams#Tombstone']);
+        expect(tombstonedPublicService['@type']).toHaveLength(1);
+        expect(tombstonedPublicService['@type']).toEqual(['https://www.w3.org/ns/activitystreams#Tombstone']);
 
-        const activityStreamDeleted = thombstonedPublicService['https://www.w3.org/ns/activitystreams#deleted'];
+        const activityStreamDeleted = tombstonedPublicService['https://www.w3.org/ns/activitystreams#deleted'];
         expect(activityStreamDeleted).toHaveLength(1);
         expect(activityStreamDeleted[0]['@type']).toEqual('http://www.w3.org/2001/XMLSchema#dateTime');
 
-        const activityStreamFormerType = thombstonedPublicService['https://www.w3.org/ns/activitystreams#formerType'];
+        const activityStreamFormerType = tombstonedPublicService['https://www.w3.org/ns/activitystreams#formerType'];
         expect(activityStreamFormerType).toHaveLength(1);
         expect(activityStreamFormerType).toEqual([{ '@id': 'http://purl.org/vocab/cpsv#PublicService' }]);
 

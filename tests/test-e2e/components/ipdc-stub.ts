@@ -7,8 +7,8 @@ export type PublicServiceFilter = {
     expectedFormalOrInformalTripleLanguage: string
 };
 
-export type ThombstonedPublicServiceFilter = {
-    thombstonedId: string
+export type TombstonedPublicServiceFilter = {
+    tombstonedId: string
 };
 
 export class IpdcStub {
@@ -16,7 +16,7 @@ export class IpdcStub {
     constructor() {
     }
 
-    static async findPublishedInstance(filter: PublicServiceFilter | ThombstonedPublicServiceFilter) {
+    static async findPublishedInstance(filter: PublicServiceFilter | TombstonedPublicServiceFilter) {
         const apiRequest = await request.newContext({
             extraHTTPHeaders: {
                 'Accept': 'application/ld+json',
@@ -38,9 +38,9 @@ export class IpdcStub {
                                     translatedValue['@language'] === publicServiceFilter.expectedFormalOrInformalTripleLanguage
                                     && translatedValue['@value'] === publicServiceFilter.titel);
                         } else {
-                            const thombstonedPublicServiceFilter = filter as ThombstonedPublicServiceFilter;
+                            const tombstonedPublicServiceFilter = filter as TombstonedPublicServiceFilter;
                             return element['@type'].includes('https://www.w3.org/ns/activitystreams#Tombstone')
-                                && element['@id'] === thombstonedPublicServiceFilter.thombstonedId;
+                                && element['@id'] === tombstonedPublicServiceFilter.tombstonedId;
                         }
                     })
                 });
