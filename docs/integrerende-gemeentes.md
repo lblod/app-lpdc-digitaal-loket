@@ -7,6 +7,9 @@ Dit document beschrijft het proces hoe integrerende gemeentes gepubliceerde prod
 Beschrijft op een hoog niveau de data stromen tussen a/ integrerende gemeente b/ lpdc c/ ipdc en de gebruikte technologieën.
 
 ## Technologie beschrijving
+
+Beschrijft relevantie secties van de gebruikte technologieën. Heeft niet als doel exhaustief te zijn. 
+
 ### Linked Data 
 
 **Linked Data** (LD) verwijst naar een methode om gestructureerde gegevens te publiceren zodat ze onderling verbonden en doorzoekbaar zijn op het internet. 
@@ -64,7 +67,7 @@ Elke triple in RDF graaf bestaat uit een subject (onderwerp), een predicaat (pre
 
 ![rdf-triple-graaf.png](img%2Frdf-triple-graaf.png)
 
-Merk op dat de relaties altijd bidirectioneel zijn in de graaf, maar in de triple omschrijving volstaat één richting te beschrijven.
+Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch moet je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is <Bob>?_ maar ook _Wie <is een> <persoon>_?     
 
 #### IRIs
 Een IRI is een International Resource Identifier. Een IRI definieert een bron (resource).  
@@ -208,7 +211,73 @@ JSON-LD [JSON-LD] biedt een JSON-syntax voor RDF-grafen en datasets.
 JSON-LD kan gebruikt worden om JSON-documenten met minimale wijzigingen naar RDF om te zetten en omgekeerd. 
 JSON-LD biedt universele identificatoren voor JSON-objecten, een mechanisme waarbij een JSON-document kan verwijzen naar een object dat in een ander JSON-document elders op het web wordt beschreven, evenals datatype- en taalafhandeling. 
 
-//TODO LPDC-910: voeg voorbeeld toe
+JSON Document van lopend voorbeeld:
+
+```json
+{
+  "@context": "example-context.json",
+  "@id": "http://example.org/bob#me",
+  "@type": "Person",
+  "isEenVriendVan": {
+    "@id": "http://example.org/alice#me",
+    "@type": "Person"
+  },
+  "isGeborenOp": "1990-07-04",
+  "isGeinteresseerdIn": {
+    "@id": "http://www.wikidata.org/entity/Q12418",
+    "titel": "Mona Lisa",
+    "onderwerp_van": "http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619",
+    "wasGecreerdDoor": {
+      "@id": "http://dbpedia.org/resource/Leonardo_da_Vinci",
+      "@type": "Person"
+    }
+  }
+}
+
+```
+
+De key `@context` wijst naar een JSON-document dat beschrijft hoe het document naar een RDF-graaf kan worden gemapt (zie hieronder). 
+
+Elk JSON-object komt overeen met een RDF-bron. Deze worden aangeduid met het trefwoord `@id `. 
+In het bovenstaande voorbeeld zijn er 4 JSON-objecten: `"@id": "http://example.org/bob#me"`, `"@id": "http://example.org/alice#me"`, ` "http://www.wikidata.org/entity/Q12418"` en `"@id": "http://dbpedia.org/resource/Leonardo_da_Vinci"`.
+Het trefwoord `@id`, wanneer gebruikt als een key in een JSON-LD document, wijst naar een IRI die de bron identificeert die overeenkomt met het huidige JSON-object.
+
+Het trefwoord `@type` beschrijft het type.
+
+Andere attributen beschrijven eigenschappen van een JSON-object. (bvb. `isEenVriendVan`, `isGeborenOp`, `titel`, enz).
+
+Deze context beschrijft hoe een JSON-LD document naar een RDF-graaf kan worden gemapt (ofwel embedded binnen de @context tag, of een beschikbaar via een URL).
+
+```json
+{
+  "@context": {
+    "foaf": "http://xmlns.com/foaf/0.1/", 
+    "Person": "foaf:Person",
+    "isGeinteresseerdIn": "foaf:topic_interest",
+    "isEenVriendVan": {
+      "@id": "foaf:knows",
+      "@type": "@id"
+    },
+    "isGeborenOp": {
+      "@id": "http://schema.org/birthDate",
+      "@type": "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "dcterms": "http://purl.org/dc/terms/",
+    "titel": "dcterms:title",
+    "wasGecreerdDoor": {
+      "@id": "dcterms:creator",
+      "@type": "@id"
+    },
+    "onderwerp_van": {
+      "@reverse": "dcterms:subject",
+      "@type": "@id"
+    }
+  }
+}
+```
+
+Merk op dat de combinatie van de twee documenten het semantisch model opbouwen. De keuze van de termen in de `@context` document en de json zijn op zich vrij te kiezen. 
+In bovenstaand voorbeeld werd in het context-document nederlands gebruikt (en de data die deze @context gebruikt ook). Dit is geen vereiste, andere talen of termen werken evengoed.  
 
 
 ###  SPARQL (SPARQL Protocol and RDF Query Language)
