@@ -167,8 +167,8 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - maybe create an official shacl shape for the form structure + expand with our own shacl semantic form shape stuff. Normally it should be possible to automatically merge it by loading both parts and then getting an official form tree.
   it would maybe then also be possible to in a strategy kind of mode, to load other components for each of the leaves ... 
   is it possible to seperate the 1/ form structure 2/ the data structure + validation rules about it 3/ the rendering of the components (e.g. compare components or left nederlands, right engels + other labels)
-- Bring [ConceptJsonLdContext.jsonld](concept-data%2FConceptJsonLdContext.jsonld) up to date, and in sync with the concept shape.
-- Bring [InstantieJsonLdContext.jsonld](instance-data%2FInstantieJsonLdContext.jsonld) up to date, and in sync with the instance shape.
+- Bring [ConceptJsonLdContext.jsonld](concept-data%2FConceptJsonLdContext.jsonld) up to date, and in sync with the concept shape. (hosted @  https://ipdc.vlaanderen.be/ConceptJsonLdContext.jsonld)
+- Bring [InstantieJsonLdContext.jsonld](instance-data%2FInstantieJsonLdContext.jsonld) up to date, and in sync with the instance shape. (hosted @ https://ipdc.vlaanderen.be/InstantieJsonLdContext.jsonld)
 - Your Europe Category -> engels required -> moet dit in shacl shape? Nee is geen requirement meer.
 - Other specific validations: e.g. when a title in english is created ; then also a description is required
 
