@@ -277,12 +277,15 @@ Deze context beschrijft hoe een JSON-LD document naar een RDF-graaf kan worden g
 ```
 
 Merk op dat de combinatie van de twee documenten het semantisch model opbouwen. De keuze van de termen in de `@context` document en de json zijn op zich vrij te kiezen. 
-In bovenstaand voorbeeld werd in het context-document nederlands gebruikt (en de data die deze @context gebruikt ook). Dit is geen vereiste, andere talen of termen werken evengoed.  
+In bovenstaand voorbeeld werd in het context-document nederlands gebruikt (en de data die deze @context gebruikt ook). Dit is geen vereiste, andere talen of termen werken evengoed.
+
+Een interactieve omzetting van dit voorbeeld op json-ld playground vind je [hier](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=%7B%22%40context%22%3A%7B%22foaf%22%3A%22http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%22%2C%22Person%22%3A%22foaf%3APerson%22%2C%22isGeinteresseerdIn%22%3A%22foaf%3Atopic_interest%22%2C%22isEenVriendVan%22%3A%7B%22%40id%22%3A%22foaf%3Aknows%22%2C%22%40type%22%3A%22%40id%22%7D%2C%22isGeborenOp%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fschema.org%2FbirthDate%22%2C%22%40type%22%3A%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23date%22%7D%2C%22dcterms%22%3A%22http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%22%2C%22titel%22%3A%22dcterms%3Atitle%22%2C%22wasGecreerdDoor%22%3A%7B%22%40id%22%3A%22dcterms%3Acreator%22%2C%22%40type%22%3A%22%40id%22%7D%2C%22onderwerp_van%22%3A%7B%22%40reverse%22%3A%22dcterms%3Asubject%22%2C%22%40type%22%3A%22%40id%22%7D%7D%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fbob%23me%22%2C%22%40type%22%3A%22Person%22%2C%22isEenVriendVan%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Falice%23me%22%2C%22%40type%22%3A%22Person%22%7D%2C%22isGeborenOp%22%3A%221990-07-04%22%2C%22isGeinteresseerdIn%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ12418%22%2C%22titel%22%3A%22Mona%20Lisa%22%2C%22onderwerp_van%22%3A%22http%3A%2F%2Fdata.europeana.eu%2Fitem%2F04802%2F243FA8618938F4117025F17A8B813C5F9AA4D619%22%2C%22wasGecreerdDoor%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fdbpedia.org%2Fresource%2FLeonardo_da_Vinci%22%2C%22%40type%22%3A%22Person%22%7D%7D%7D&frame=%7B%7D&context=%7B%22%40context%22%3A%22http%3A%2F%2Fschema.org%2F%22%7D).
 
 
 ###  SPARQL (SPARQL Protocol and RDF Query Language)
 
-Om gegevens te zoeken of te manipuleren in de graaf, kan je gebruik maken van **SPARQL**. 
+Om gegevens te zoeken of te manipuleren in de graaf, kan je gebruik maken van **SPARQL**.
+
 SPARQL kan gebruikt worden om queries uit te drukken over diverse gegevensbronnen, of de gegevens nu van nature als RDF opgeslagen zijn of als RDF bekeken worden via middleware. 
 SPARQL bevat mogelijkheden voor het opvragen van vereiste en optionele graafpatronen samen met hun conjuncties en disjuncties. 
 SPARQL ondersteunt ook aggregatie, subqueries, negatie, het creëren van waarden door expressies, uitbreidbare waardebeoordeling, en het beperken van queries door bron RDF-graaf. 
@@ -306,7 +309,10 @@ http://example.org/alice#me
 http://example.org/bob#me
 ```
 
-### SHACL
+### SHACL (Shapes Constraint Language)
+
+SHACL is een voor het beschrijven en valideren van RDF-grafen.
+
 
 ### LDES (Linked Data Event Stream)
 
@@ -325,14 +331,15 @@ http://example.org/bob#me
 - [IPDC - LPDC (Implementatiemodel)](https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/)
 - [URI (Uniform Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 - [RDF (Resource Description Framework)](https://www.w3.org/TR/rdf11-primer/)
+- [OWL (Web Ontology Language)](https://www.w3.org/TR/owl2-overview/)
 - [N-TRIPLES](https://www.w3.org/TR/n-triples/)
 - [Turtle](https://www.w3.org/TR/turtle/)
 - [JSON-LD specificatie](https://www.w3.org/TR/json-ld/)
 - [JSON-LD (JSON for Linking Data)](https://json-ld.org/)
 - [JSON-LD 1.1 Processing Algorithms and API](https://www.w3.org/TR/json-ld11-api/)
-- [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
-- [OWL (Web Ontology Language)](https://www.w3.org/TR/owl2-overview/)
+- [JSON-LD Playground](https://json-ld.org/playground/)
 - [SHACL (Shapes Constraint Language)](https://www.w3.org/TR/shacl)
+- [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
 - [LDES (Linked Data Event Streams)](https://semiceu.github.io/LinkedDataEventStreams/)
 - [TREE (The TREE hypermedia specification)](https://treecg.github.io/specification/)
 
