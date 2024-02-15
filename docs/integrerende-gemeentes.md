@@ -212,7 +212,8 @@ wd:Q12418
 ```
 
 _Noot_: de afkorting 'a' komt overeen met de menselijke intuïtie over rdf:type. 
-
+_Noot_: _PREFIX_ voorziet een afkorte vorm om iri's te specifieren, bvb `foaf:Person` is hetzelfde dan `<http://xmlns.com/foaf/0.1/Person>`; `xsd:date` is hetzelfde dan <http://www.w3.org/2001/XMLSchema#date>
+_Noot_: het scheidings teken `;` wijst erop dat de lijst van predicaten en objecten horen bij het eerder vermelde subject. 
 
 #### JSON-LD
 
@@ -337,6 +338,189 @@ Kan RDF-schema en OWL-ontologieën complementeren.
 SHACL's worden beschreven in RDF.
 
 ### LDES (Linked Data Event Stream)
+
+#### Inleiding
+
+Een Linked Data Event Stream (LDES) (ldes:EventStream) is een verzameling (rdfs:subClassOf tree:Collection) van onveranderlijke objecten, waarbij elk object wordt beschreven met behulp van een set RDF-triples.
+
+De focus van een LDES is om clients in staat te stellen de geschiedenis van een dataset te repliceren en efficiënt te synchroniseren met de nieuwste wijzigingen.
+
+LDES maakt gebruik van de [TREE specificatie](https://treecg.github.io/specification) om verzamelingen, fragmentering en/of paginering eigenschappen te beschrijven.
+
+_Noot_: Wanneer een client eenmaal een member heeft verwerkt, zou deze het nooit meer opnieuw moeten hoeven te verwerken. Een Linked Data Event Stream-client kan dus een lijst van (of cache voor) reeds verwerkte lid-IRI's bijhouden.
+
+Verdere LDES-voorbeelden in dit hoofdstuk illustreren concepten van een LDES stroom, met RDF-data in serialisatie-vorm Turtle. De data kan uiteraard ook geserialiseerd worden als JSON-LD. Op het einde van deze sectie is 1 voorbeeld ook gepresenteerd in json-ld formaat.
+
+Eenvoudig elementair voorbeeld duidt een 'observatie' aan:
+
+```turtle
+@prefix ex: <http://example.com/ns#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix tree: <https://w3id.org/tree#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:C1 a ldes:EventStream ;
+      ldes:timestampPath sosa:resultTime ;
+      tree:member ex:Observation1 .
+
+ex:Observation1 a sosa:Observation ;
+                sosa:resultTime "2021-01-01T00:00:00Z"^^xsd:dateTime ;
+                sosa:hasSimpleResult "..." .
+```
+- `tree:member` duidt op een member in de verzameling.
+- `ldes:timestampPath` verwijst naar de predicate in een member waar de _timestamp_ van de data te vinden is.
+- `ex:Observation1` wordt beschreven als RDF data.
+
+#### Fragmentering en paginering
+
+Linked Data Event Streams mogen gefragmenteerd worden wanneer hun grootte te groot wordt voor 1 HTTP-antwoord. 
+
+Fragmentaties moeten worden beschreven met behulp van de functies in de TREE-specificatie. Alle relatie types uit de TREE-specificatie mogen worden gebruikt.
+
+Voorbeeld:
+
+```turtle
+@prefix ex: <http://example.com/ns#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix tree: <https://w3id.org/tree#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:C1 a ldes:EventStream ;
+      ldes:timestampPath sosa:resultTime ;
+      tree:member ex:Observation1, ex:Observation2;
+      tree:view ex:page-1 .
+
+ex:page-1 a tree:Node ;
+          tree:relation [
+              a tree:GreaterThanOrEqualToRelation ;
+              tree:path sosa:resultTime ;
+              tree:node ex:page-2 ;
+              tree:value "2020-12-24T12:00:00Z"^^xsd:dateTime
+          ] .
+
+ex:Observation1 a sosa:Observation ;
+                sosa:resultTime "2021-01-01T00:00:00Z"^^xsd:dateTime ;
+                sosa:hasSimpleResult "..." .
+
+ex:Observation2 a sosa:Observation ;
+                sosa:resultTime "2021-01-01T01:00:00Z"^^xsd:dateTime ;
+                sosa:hasSimpleResult "..." .
+```
+- de ldes stream pagina bevat alle `tree:members` van deze pagina
+- `tree:view` specifieert welke subset van de `tree:collection` deze pagina toont, en via `tree:relation` kan je navigeren naar andere subsets. Typisch zijn de ex:page-1 en ex:page2 effectieve URL's die een gepagineerd endpoint aanduiden (zie verder).  
+
+#### Versionering
+
+Beschrijft hoe je een object kan veranderen waarbij je de historiek van rdf document bijhoudt. 
+Je stuurt met maw een serie van snapshots van data rdf document op. 
+Hierbij verwijs je telkens naar het origineel rdf document en het tijdstip van de snapshot. 
+Dit stelt de ldes afnemer in staat de historiek te reconstrueren en de laatste versie te bewaren. (en hierbij toch performant niet telkens de hele ldes stream te hoeven uitlezen).
+
+Technisch, wordt een versiebeheerde LDES gedefinieerd met twee eigenschappen: `ldes:versionOfPath` en `ldes:timestampPath`.
+- `ldes:versionOfPath`: verklaart de predicate die wordt gebruikt om te definiëren dat een `tree:member` van een `ldes:EventStream` een versie is van een rdf document.
+- `ldes:timestampPath`: verklaart de predicate die wordt gebruikt om de DateTime van een `tree:member` te definiëren.
+
+Volgend voorbeeldje illustreert geversioneerde LDES:
+
+```turtle
+@prefix ex: <http://example.com/ns#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix tree: <https://w3id.org/tree#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+
+ex:C2 a ldes:EventStream ;
+      ldes:timestampPath dcterms:created ;
+      ldes:versionOfPath dcterms:isVersionOf ;
+      tree:member ex:AddressRecord1-version1, ex:AddressRecord1-version2.
+
+ex:AddressRecord1-version1 dcterms:created "2021-01-01T00:00:00Z"^^xsd:dateTime ;
+                           adms:versionNotes "First version of this address" ;
+                           dcterms:isVersionOf ex:AddressRecord1 ;
+                           dcterms:title "Streetname X, ZIP Municipality, Country" .
+
+ex:AddressRecord1-version2 dcterms:created "2021-01-02T00:00:00Z"^^xsd:dateTime ;
+                           adms:versionNotes "Second version of this address" ;
+                           dcterms:isVersionOf ex:AddressRecord1 ;
+                           dcterms:title "Streetname X + Y, ZIP Municipality, Country" .
+```
+
+- Deze LDES stream bevat 2 elementen: zowel `ex:AddressRecord1-version1` en `ex:AddressRecord1-version2` worden verwezen door `tree:member`. 
+- Net als in vorige voorbeeld wijst `ldes:timestampPath` naar de predicate in een member waar de _timestamp_ te vinden is. Deze keer verwijst die naar `dcterms:created`.  
+- `ldes:versionOfPath` verwijst naar de predicate binnen de member dat het niet geversioneerde record aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies. Deze versie, ook wel snapshot genoemd, is een 'foto' van de volledige data.
+- Dit kan uiteraard gecombineerd worden met paginering en fragmentering
+
+Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
+```json
+{
+  "timestampPath": "created",
+  "versionOfPath": "isVersionOf",
+  "@id": "http://example.com/ns#C2",
+  "@type": "EventStream",
+  "@context": {
+    "schema": "http://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "ldes": "https://w3id.org/ldes#",
+    "tree": "https://w3id.org/tree#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "adms": "http://www.w3.org/ns/adms#",
+    "id": {
+      "@id": "schema:identifier"
+    },
+    "created": {
+      "@id": "dcterms:created",
+      "@type": "xsd:dateTime"
+    },
+    "isVersionOf": {
+      "@id": "dcterms:isVersionOf",
+      "@type": "@id"
+    },
+    "versionOfPath": {
+      "@id": "ldes:versionOfPath",
+      "@type": "@id"
+    },
+    "timestampPath": {
+      "@id": "ldes:timestampPath",
+      "@type": "@id"
+    },
+    "member": {
+      "@id": "tree:member",
+      "@container": "@set"
+    },
+    "versionNotes": {
+      "@id": "adms:versionNotes",
+      "@type": "xsd:string"
+    },
+    "title": {
+      "@id": "dcterms:title",
+      "@type": "xsd:string"
+    }
+  },
+  "member": [
+    {
+      "@id": "http://example.com/ns#AddressRecord1-version1",
+      "created": "2021-01-01T00:00:00Z",
+      "versionNotes": "First version of this address",
+      "isVersionOf": "http://example.com/ns#AddressRecord1",
+      "title": "Streetname X, ZIP Municipality, Country"
+    },
+    {
+      "@id": "http://example.com/ns#AddressRecord1-version2",
+      "created": "2021-01-02T00:00:00Z",
+      "versionNotes": "Second version of this address",
+      "isVersionOf": "http://example.com/ns#AddressRecord1",
+      "title": "Streetname X + Y, ZIP Municipality, Country"
+    }
+  ]
+}
+
+```
+
+
 
 
 ## Contract specificaties

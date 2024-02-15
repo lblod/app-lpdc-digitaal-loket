@@ -1,0 +1,119 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ldes: <https://w3id.org/ldes#> .
+@prefix tree: <https://w3id.org/tree#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
+@prefix xhtm: <http://www.w3.org/1999/xhtml> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+
+<https://pietercolpaert.be/#me>
+    foaf:mbox "pieter.colpaert@ugent.be" ;
+    foaf:name "Pieter Colpaert" .
+
+<https://w3id.org/ldes#>
+    cc:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:creator <https://pietercolpaert.be/#me> ;
+    a foaf:Document ;
+    foaf:primaryTopic ldes:Vocabulary .
+
+ldes:DurationAgoPolicy
+    rdfs:comment "Retention policy based on a member’s timestamp and a duration."@en ;
+    rdfs:label "Time-based Retention Policy"@en ;
+    rdfs:subClassOf ldes:RetentionPolicy .
+
+ldes:EventSource
+    rdfs:comment "A data service that provides the source other views should synchronize with"@en ;
+    rdfs:label "Event Source"@en ;
+    rdfs:subClassOf tree:ViewDescription .
+
+ldes:EventStream
+    a rdfs:Class ;
+    rdfs:comment "An Event Stream is a tree:Collection containing immutable members."@en ;
+    rdfs:label "Event Stream"@en ;
+    rdfs:subClassOf tree:Collection .
+
+ldes:LatestVersionSubset
+    rdfs:comment "The latest version of the element."@en ;
+    rdfs:label "Latest Version Subset Policy"@en ;
+    rdfs:subClassOf ldes:RetentionPolicy .
+
+ldes:PointInTimePolicy
+    rdfs:comment "Retention policy based on a member’s timestamp and a given point in time."@en ;
+    rdfs:label "Point in Time Retention Policy"@en ;
+    rdfs:subClassOf ldes:RetentionPolicy .
+
+ldes:RetentionPolicy
+    a rdf:Class ;
+    rdfs:comment "The abstract concept of a retention policy."@en ;
+    rdfs:label "Retention Policy"@en .
+
+ldes:Vocabulary
+    a owl:Ontology ;
+    rdfs:comment "A hypermedia specification for maintaining a collection with immutable members."@en ;
+    rdfs:label "The Linked Data Event Streams specification"@en .
+
+ldes:amount
+    a rdf:Property ;
+    rdfs:comment "Amount of versions to keep."@en ;
+    rdfs:domain ldes:LastVersionSubset ;
+    rdfs:label "amount"@en ;
+    rdfs:range xsd:nonNegativeInteger .
+
+ldes:pointInTime
+    a rdf:Property ;
+    rdfs:comment "After this point in time members are kept."@en ;
+    rdfs:domain ldes:PointInTimePolicy ;
+    rdfs:label "point in time"@en ;
+    rdfs:range xsd:dateTime .
+
+ldes:retentionPolicy
+    a rdf:Property ;
+    rdfs:comment "Links to a retention policy."@en ;
+    rdfs:domain tree:ViewDescription ;
+    rdfs:label "has retention policy"@en ;
+    rdfs:range ldes:RetentionPolicy .
+
+ldes:timestampPath
+    a rdf:Property ;
+    rdfs:comment "SHACL property path to the timestamp when the version object entered the event stream."@en ;
+    rdfs:label "Timestamp Path"@en .
+
+ldes:versionKey
+    a rdf:Property ;
+    rdfs:comment "A list of SHACL property paths to compose a version key."@en ;
+    rdfs:domain ldes:LastVersionSubset ;
+    rdfs:label "version key"@en ;
+    rdfs:range rdf:List .
+
+ldes:versionMaterializationOf
+    a rdf:Property ;
+    rdfs:comment "Links to the original LDES"@en ;
+    rdfs:domain tree:Collection ;
+    rdfs:label "Version Materialization Of"@en ;
+    rdfs:range ldes:EventStream .
+
+ldes:versionMaterializationUntil
+    a rdf:Property ;
+    rdfs:comment "Timestamp until versions were processed"@en ;
+    rdfs:domain tree:Collection ;
+    rdfs:label "Version Materialization Until"@en ;
+    rdfs:range xsd:dateTime .
+
+ldes:versionOfPath
+    a rdf:Property ;
+    rdfs:comment "SHACL property path to the non-versioned identifier of the entity."@en ;
+    rdfs:label "versionOf Path"@en .
+
