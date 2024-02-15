@@ -147,9 +147,9 @@ Hieronder geven we voorbeelden van verscheidene serialisatie formaten die het ps
 
 #### N-Triples
 
-N-Triples [N-TRIPLES] biedt een eenvoudige, regelgebaseerde, platte-tekst manier voor het serialiseren van RDF-grafen.
+N-Triples biedt een eenvoudige, regelgebaseerde, platte-tekst manier voor het serialiseren van RDF-grafen.
 
-```n-triples
+```turtle
 <http://example.org/bob#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <http://example.org/bob#me> <http://xmlns.com/foaf/0.1/knows> <http://example.org/alice#me> .
 <http://example.org/bob#me> <http://schema.org/birthDate> "1990-07-04"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -217,7 +217,7 @@ _Noot_: het scheidings teken `;` wijst erop dat de lijst van predicaten en objec
 
 #### JSON-LD
 
-JSON-LD [JSON-LD] biedt een JSON-syntax voor RDF-grafen en datasets. 
+JSON-LD biedt een JSON-syntax voor RDF-grafen en datasets. 
 
 JSON-LD kan gebruikt worden om JSON-documenten met minimale wijzigingen naar RDF om te zetten en omgekeerd.
 
@@ -341,7 +341,7 @@ SHACL's worden beschreven in RDF.
 
 #### Inleiding
 
-Een Linked Data Event Stream (LDES) (ldes:EventStream) is een verzameling (rdfs:subClassOf tree:Collection) van onveranderlijke objecten, waarbij elk object wordt beschreven met behulp van een set RDF-triples.
+Een Linked Data Event Stream (LDES) (`ldes:EventStream`) is een verzameling (`rdfs:subClassOf tree:Collection) van onveranderlijke objecten, waarbij elk object wordt beschreven met behulp van een set RDF-triples.
 
 De focus van een LDES is om clients in staat te stellen de geschiedenis van een dataset te repliceren en efficiënt te synchroniseren met de nieuwste wijzigingen.
 
@@ -349,9 +349,9 @@ LDES maakt gebruik van de [TREE specificatie](https://treecg.github.io/specifica
 
 _Noot_: Wanneer een client eenmaal een member heeft verwerkt, zou deze het nooit meer opnieuw moeten hoeven te verwerken. Een Linked Data Event Stream-client kan dus een lijst van (of cache voor) reeds verwerkte lid-IRI's bijhouden.
 
-Verdere LDES-voorbeelden in dit hoofdstuk illustreren concepten van een LDES stroom, met RDF-data in serialisatie-vorm Turtle. De data kan uiteraard ook geserialiseerd worden als JSON-LD. Op het einde van deze sectie is 1 voorbeeld ook gepresenteerd in json-ld formaat.
+Verdere LDES-voorbeelden in dit hoofdstuk illustreren concepten van een LDES stroom, met RDF-data in serialisatie-vorm _Turtle_. De data kan uiteraard ook geserialiseerd worden als JSON-LD. Op het einde van deze sectie is een voorbeeld ook gepresenteerd in json-ld formaat.
 
-Eenvoudig elementair voorbeeld duidt een 'observatie' aan:
+Volgend voorbeeld duidt een 'observatie' aan aangeboden in een LDES stream:
 
 ```turtle
 @prefix ex: <http://example.com/ns#> .
@@ -374,7 +374,7 @@ ex:Observation1 a sosa:Observation ;
 
 #### Fragmentering en paginering
 
-Linked Data Event Streams mogen gefragmenteerd worden wanneer hun grootte te groot wordt voor 1 HTTP-antwoord. 
+Linked Data Event Streams mogen gefragmenteerd worden wanneer hun grootte te groot wordt voor één HTTP-antwoord. 
 
 Fragmentaties moeten worden beschreven met behulp van de functies in de TREE-specificatie. Alle relatie types uit de TREE-specificatie mogen worden gebruikt.
 
@@ -408,13 +408,13 @@ ex:Observation2 a sosa:Observation ;
                 sosa:resultTime "2021-01-01T01:00:00Z"^^xsd:dateTime ;
                 sosa:hasSimpleResult "..." .
 ```
-- de ldes stream pagina bevat alle `tree:members` van deze pagina
-- `tree:view` specifieert welke subset van de `tree:collection` deze pagina toont, en via `tree:relation` kan je navigeren naar andere subsets. Typisch zijn de ex:page-1 en ex:page2 effectieve URL's die een gepagineerd endpoint aanduiden (zie verder).  
+- de ldes stream pagina bevat alle `tree:members` van deze pagina (`ex:Observation1` en `ex:Observation2`)
+- `tree:view` specifieert welke subset van de `tree:collection` deze pagina toont, en via `tree:relation` kan je navigeren naar andere subsets. Typisch zijn de `ex:page-1` en `ex:page2` effectieve URL's die een gepagineerd endpoint aanduiden (zie verder).  
 
 #### Versionering
 
-Beschrijft hoe je een object kan veranderen waarbij je de historiek van rdf document bijhoudt. 
-Je stuurt met maw een serie van snapshots van data rdf document op. 
+Beschrijft hoe je een object kan veranderen waarbij je de historiek van het rdf document bijhoudt. 
+Je stuurt met andere woorden een serie van snapshots van de data van het rdf document op. 
 Hierbij verwijs je telkens naar het origineel rdf document en het tijdstip van de snapshot. 
 Dit stelt de ldes afnemer in staat de historiek te reconstrueren en de laatste versie te bewaren. (en hierbij toch performant niet telkens de hele ldes stream te hoeven uitlezen).
 
@@ -451,7 +451,7 @@ ex:AddressRecord1-version2 dcterms:created "2021-01-02T00:00:00Z"^^xsd:dateTime 
 
 - Deze LDES stream bevat 2 elementen: zowel `ex:AddressRecord1-version1` en `ex:AddressRecord1-version2` worden verwezen door `tree:member`. 
 - Net als in vorige voorbeeld wijst `ldes:timestampPath` naar de predicate in een member waar de _timestamp_ te vinden is. Deze keer verwijst die naar `dcterms:created`.  
-- `ldes:versionOfPath` verwijst naar de predicate binnen de member dat het niet geversioneerde record aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies. Deze versie, ook wel snapshot genoemd, is een 'foto' van de volledige data.
+- `ldes:versionOfPath` verwijst naar de predicate binnen de member dat het niet geversioneerde record aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies.
 - Dit kan uiteraard gecombineerd worden met paginering en fragmentering
 
 Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
