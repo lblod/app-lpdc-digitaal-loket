@@ -16,7 +16,9 @@ Het doel is om data uit verschillende bronnen gemakkelijk toegankelijk en integr
 **LOD (Linked Open Data)** is een uitbreiding van het Linked Data-concept, waarbij de nadruk ligt op het openbaar en vrij beschikbaar maken van verbonden datasets. 
 LOD maakt het mogelijk om gegevenssets van verschillende domeinen (zoals overheid, cultuur, wetenschap) aan elkaar te koppelen, waardoor een rijk en onderling verbonden gegevensweb ontstaat dat voor iedereen toegankelijk is.
 
-### RDF (Resource Description Framework) - SPARQL (SPARQL Protocol and RDF Query Language)
+### RDF (Resource Description Framework)
+
+#### Inleiding
 
 (uit:[rdf primer](https://www.w3.org/TR/rdf11-primer/))
 
@@ -44,6 +46,7 @@ _Voorbeeld:_
 <Bob> <is geboren op> <4 juli 1990>. 
 <Bob> <is geïnteresseerd in> <de Mona Lisa>.
 <Alice> <is een> <persoon>. 
+<de Mona Lisa> <heeft als titel> <Mona Lisa>.
 <de Mona Lisa> <was gecreëerd door> <Leonardo da Vinci>.
 <de Mona Lisa> <is een> <schilderij>.
 <de video 'La Joconde à Washington'> <gaat over> <de Mona Lisa> .
@@ -63,7 +66,152 @@ Elke triple in RDF graaf bestaat uit een subject (onderwerp), een predicaat (pre
 
 Merk op dat de relaties altijd bidirectioneel zijn in de graaf, maar in de triple omschrijving volstaat één richting te beschrijven.
 
+#### IRIs
+Een IRI is een International Resource Identifier. Een IRI definieert een bron (resource).  
+De URL's (Uniform Resource Locators) die mensen gebruiken als webadressen zijn één vorm van IRI (Internationalized Resource Identifiers).
+Andere vormen van IRI bieden een identificatie voor een bron zonder de locatie of hoe deze te benaderen te impliceren. 
+Het concept van IRI is een generalisatie van URI (Uniform Resource Identifier), waardoor niet-ASCII tekens gebruikt kunnen worden in de IRI-tekenreeks. 
+IRI's zijn gespecificeerd in [RFC3987](https://www.ietf.org/rfc/rfc3987.txt).
+
+IRI's kunnen verschijnen **in alle drie de posities** van een triple.
+
+Zoals vermeld, worden IRI's gebruikt om bronnen te identificeren zoals documenten, personen, fysieke objecten en abstracte concepten. 
+
+Bijvoorbeeld, de IRI voor Leonardo da Vinci in DBpedia is (subject en objectd <Leonardo da Vinci>):
+
+```
+http://dbpedia.org/resource/Leonardo_da_Vinci
+```
+
+De IRI voor een INA-video over de Mona Lisa getiteld 'La Joconde à Washington' in Europeana is: (subject: <de video 'La Joconde à Washington'>)
+
+```
+http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619
+```
+
+IRI's zijn wereldwijde identificatoren, dus andere mensen kunnen deze IRI hergebruiken om hetzelfde te identificeren. 
+Bijvoorbeeld, de volgende IRI wordt door veel mensen gebruikt als een RDF-eigenschap om een kennissenrelatie tussen mensen aan te geven (<is een vriend van> in pseudo voorbeeld>):
+
+```
+http://xmlns.com/foaf/0.1/knows
+```
+
+RDF is neutraal over wat de IRI vertegenwoordigt. Echter, IRIs kunnen betekenis krijgen door specifieke vocabulaires of conventies.
+
+Bijvoorbeeld, DBpedia gebruikt IRIs in de vorm van http://dbpedia.org/resource/Naam om het ding aan te duiden dat beschreven wordt door het overeenkomstige Wikipedia-artikel.
+
+Het RDF-datamodel biedt een manier om uitspraken te doen over bronnen. Zoals we hebben vermeld, maakt dit datamodel geen aannames over waarvoor bron-IRI's staan. 
+In de praktijk wordt RDF doorgaans gebruikt in combinatie met vocabulaires of andere conventies die semantische informatie over deze bronnen verstrekken.
+
+Veel gebruikte voorbeelden zijn: [RDF Syntax](https://www.w3.org/1999/02/22-rdf-syntax-ns), [Dublin Core](http://dublincore.org/documents/dcmi-terms/), [schema.org](http://schema.org/), [SKOS](http://www.w3.org/2004/02/skos/), [FOAF](http://www.foaf-project.org/).
+
+The aanduiden van een type <is een> kan bvb. met
+```
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+```
+
+#### Literals
+
+Literals zijn basiswaarden die geen IRI's zijn. 
+Voorbeelden van literals omvatten strings zoals "La Joconde", datums zoals "de 4e juli, 1990" en getallen zoals "3.14159". 
+
+Literals worden geassocieerd met een datatype waardoor dergelijke waarden correct geparsed en geïnterpreteerd kunnen worden. 
+String literals kunnen optioneel geassocieerd worden met een language tag (taaltag).
+
+**Literals mogen alleen verschijnen in de objectpositie van een triple.**
+
+#### triple-store
+
 De set van triples worden bewaard in een **triple-store**. Dit is een database dit RDF van nature kan opslaan.
+
+Voorbeelden van triple stores zijn: [Virtuoso](https://github.com/openlink/virtuoso-opensource), [Apache Jena](https://jena.apache.org/), [GraphDB](https://graphdb.ontotext.com/).
+
+### Serialisatie formaten voor RDF Data
+
+Er bestaan verschillende serialisatieformaten voor het noteren van RDF-grafen. 
+Echter, verschillende manieren van het noteren van dezelfde graaf leiden tot precies dezelfde triples en zijn dus logisch equivalent.
+
+Hieronder geven we voorbeelden van verscheidene serialisatie formaten die het pseudo code voorbeeld map met een voorbeeld vocabulaires. Dezelfde data is 
+
+#### N-Triples
+
+N-Triples [N-TRIPLES] biedt een eenvoudige, regelgebaseerde, platte-tekst manier voor het serialiseren van RDF-grafen.
+
+```n-triples
+<http://example.org/bob#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://example.org/bob#me> <http://xmlns.com/foaf/0.1/knows> <http://example.org/alice#me> .
+<http://example.org/bob#me> <http://schema.org/birthDate> "1990-07-04"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://example.org/bob#me> <http://xmlns.com/foaf/0.1/topic_interest> <http://www.wikidata.org/entity/Q12418> .
+<http://example.org/alice#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<http://www.wikidata.org/entity/Q12418> <http://purl.org/dc/terms/title> "Mona Lisa" .
+<http://www.wikidata.org/entity/Q12418> <http://purl.org/dc/terms/creator> <http://dbpedia.org/resource/Leonardo_da_Vinci> .
+<http://www.wikidata.org/entity/Q12418> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>  <http://schema.org/Painting>.
+<http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619> <http://purl.org/dc/terms/subject> <http://www.wikidata.org/entity/Q12418> .
+<http://dbpedia.org/resource/Leonardo_da_Vinci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+```
+
+Elke regel vertegenwoordigt een triple. Volledige IRI's zijn omsloten in spitse haakjes (<>). 
+De punt aan het einde van de regel geeft het einde van de triple aan. 
+In regel 3 zien we een voorbeeld van een literal, in dit geval een datum. 
+Het datatype wordt aan de literal toegevoegd via een ^^ scheidingsteken. 
+De datumsrepresentatie volgt de conventies van het XML Schema datatype date.
+
+Omdat string literals zo alomtegenwoordig zijn, staat N-Triples de gebruiker toe om het datatype weg te laten bij het schrijven van een string literal. 
+Dus, "Mona Lisa" is equivalent aan "Mona Lisa"^^xsd:string. 
+In het geval van taal-getagde strings verschijnt de tag direct na de string, gescheiden door een @ symbool, bijvoorbeeld "La Joconde"@fr (de Franse naam van de Mona Lisa).
+
+Het aantal lijntjes N-Triples vertegenwoordigt het aantal links in de graaf.
+
+#### Turtle
+
+Turtle is een uitbreiding van N-Triples. 
+Naast de basis N-Triples syntax, introduceert Turtle een aantal syntactische verkortingen, zoals ondersteuning voor namespace prefixes, lijsten en afkortingen voor datatyped literals. 
+Turtle biedt een compromis tussen schrijfgemak, parsegemak en leesbaarheid.
+
+Het werkvoorbeeld uitgedrukt in TURTLE:
+
+```turtle
+BASE   <http://example.org/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <http://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX wd: <http://www.wikidata.org/entity/>
+
+<bob#me>
+    a foaf:Person ;
+    foaf:knows <alice#me> ;
+    schema:birthDate "1990-07-04"^^xsd:date ;
+    foaf:topic_interest wd:Q12418 .
+
+<alice#me>
+    a foaf:Person.
+
+<http://dbpedia.org/resource/Leonardo_da_Vinci>
+    a foaf:Person.
+
+wd:Q12418
+    dcterms:title "Mona Lisa" ;
+    dcterms:creator <http://dbpedia.org/resource/Leonardo_da_Vinci> ;
+    a schema:Painting .
+
+<http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619>
+    dcterms:subject wd:Q12418 .
+```
+
+_Noot_: de afkorting 'a' komt overeen met de menselijke intuïtie over rdf:type. 
+
+
+#### JSON-LD
+
+JSON-LD [JSON-LD] biedt een JSON-syntax voor RDF-grafen en datasets. 
+JSON-LD kan gebruikt worden om JSON-documenten met minimale wijzigingen naar RDF om te zetten en omgekeerd. 
+JSON-LD biedt universele identificatoren voor JSON-objecten, een mechanisme waarbij een JSON-document kan verwijzen naar een object dat in een ander JSON-document elders op het web wordt beschreven, evenals datatype- en taalafhandeling. 
+
+//TODO LPDC-910: voeg voorbeeld toe
+
+
+###  SPARQL (SPARQL Protocol and RDF Query Language)
 
 Om gegevens te zoeken of te manipuleren in de graaf, kan je gebruik maken van **SPARQL**. 
 SPARQL kan gebruikt worden om queries uit te drukken over diverse gegevensbronnen, of de gegevens nu van nature als RDF opgeslagen zijn of als RDF bekeken worden via middleware. 
@@ -71,10 +219,27 @@ SPARQL bevat mogelijkheden voor het opvragen van vereiste en optionele graafpatr
 SPARQL ondersteunt ook aggregatie, subqueries, negatie, het creëren van waarden door expressies, uitbreidbare waardebeoordeling, en het beperken van queries door bron RDF-graaf. 
 De resultaten van SPARQL-queries kunnen resultaatsets of RDF-grafen zijn.
 
-### LDES (Linked Data Event Stream)
+Een voorbeeld query: 
 
-### JSON-LD ()
+```sparql
+select ?subject WHERE {
+    GRAPH <test> {
+          ?subject <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>
+    }
+}
+```
+
+Geeft als resultaat:
+```
+subject
+http://dbpedia.org/resource/Leonardo_da_Vinci
+http://example.org/alice#me
+http://example.org/bob#me
+```
+
 ### SHACL
+
+### LDES (Linked Data Event Stream)
 
 ## Contract specificaties
 
@@ -91,13 +256,16 @@ De resultaten van SPARQL-queries kunnen resultaatsets of RDF-grafen zijn.
 - [IPDC - LPDC (Implementatiemodel)](https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/)
 - [URI (Uniform Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 - [RDF (Resource Description Framework)](https://www.w3.org/TR/rdf11-primer/)
+- [N-TRIPLES](https://www.w3.org/TR/n-triples/)
+- [Turtle](https://www.w3.org/TR/turtle/)
+- [JSON-LD specificatie](https://www.w3.org/TR/json-ld/)
+- [JSON-LD (JSON for Linking Data)](https://json-ld.org/)
+- [JSON-LD 1.1 Processing Algorithms and API](https://www.w3.org/TR/json-ld11-api/)
 - [SPARQL 1.1 Query Language](https://www.w3.org/TR/sparql11-query/)
 - [OWL (Web Ontology Language)](https://www.w3.org/TR/owl2-overview/)
 - [SHACL (Shapes Constraint Language)](https://www.w3.org/TR/shacl)
 - [LDES (Linked Data Event Streams)](https://semiceu.github.io/LinkedDataEventStreams/)
 - [TREE (The TREE hypermedia specification)](https://treecg.github.io/specification/)
-- [JSON-LD (JSON for Linking Data)](https://json-ld.org/)
-- [JSON-LD 1.1 Processing Algorithms and API](https://www.w3.org/TR/json-ld11-api/)
 
 ### Broncode (open source)
 
