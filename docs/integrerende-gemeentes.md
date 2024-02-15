@@ -26,13 +26,17 @@ LOD maakt het mogelijk om gegevenssets van verschillende domeinen (zoals overhei
 (uit:[rdf primer](https://www.w3.org/TR/rdf11-primer/))
 
 RDF is een framework om informatie uit te drukken over bronnen. Bronnen kunnen van alles zijn, inclusief documenten, mensen, fysieke objecten en abstracte concepten.
-RDF is bedoeld voor situaties waarin informatie op het web verwerkt moet worden door applicaties, in plaats van alleen weergegeven te worden aan mensen. 
-RDF biedt een gemeenschappelijk kader voor het uitdrukken van deze informatie zodat het tussen applicaties uitgewisseld kan worden zonder verlies van betekenis. 
-Aangezien het een gemeenschappelijk kader is, kunnen applicatieontwerpers gebruikmaken van de beschikbaarheid van gemeenschappelijke RDF-parsers en verwerkingstools. 
+
+RDF is bedoeld voor situaties waarin informatie op het web verwerkt moet worden door applicaties, in plaats van alleen weergegeven te worden aan mensen.
+
+RDF biedt een gemeenschappelijk kader voor het uitdrukken van deze informatie zodat het tussen applicaties uitgewisseld kan worden zonder verlies van betekenis.
+Aangezien het een gemeenschappelijk kader is, kunnen applicatieontwerpers gebruikmaken van de beschikbaarheid van gemeenschappelijke RDF-parsers en verwerkingstools.
+
 Het vermogen om informatie uit te wisselen tussen verschillende applicaties betekent dat de informatie beschikbaar kan worden gemaakt voor applicaties anders dan waarvoor het oorspronkelijk was gecreëerd.
 In het bijzonder kan RDF gebruikt worden om gegevens te publiceren en aan elkaar te koppelen op het web.
 
-RDF stelt ons in staat uitspraken (statements) te doen over bronnen. Het formaat van deze uitspraken (statements) is eenvoudig. 
+RDF stelt ons in staat uitspraken (statements) te doen over bronnen. Het formaat van deze uitspraken (statements) is eenvoudig.
+
 Een uitspraak (engels: Statement) heeft altijd de volgende structuur:
 
 **`<subject> <predicate> <object>`**
@@ -62,7 +66,9 @@ Het vermogen om dezelfde bron in de positie van subject (onderwerp) van de ene t
 maakt het mogelijk om verbindingen tussen triples te vinden, wat een belangrijk onderdeel is van de kracht van RDF.
 
 We kunnen triples visualiseren als een geconnecteerde **graaf**. Een graaf is een representatie van een set van objecten waar sommige paren van de objecten met elkaar verbonden zijn door links.
+
 RDF is een graaf in de zin dat het een verzameling van triples is die een netwerk van verbindingen tussen verschillende bronnen vormt. 
+
 Elke triple in RDF graaf bestaat uit een subject (onderwerp), een predicaat (predicate) en een object, waarbij deze triples de relaties tussen de bronnen beschrijven.
 
 ![rdf-triple-graaf.png](img%2Frdf-triple-graaf.png)
@@ -70,9 +76,12 @@ Elke triple in RDF graaf bestaat uit een subject (onderwerp), een predicaat (pre
 Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch moet je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is <Bob>?_ maar ook _Wie <is een> <persoon>_?     
 
 #### IRIs
-Een IRI is een International Resource Identifier. Een IRI definieert een bron (resource).  
+Een IRI is een International Resource Identifier. Een IRI definieert een bron (resource).
+
 De URL's (Uniform Resource Locators) die mensen gebruiken als webadressen zijn één vorm van IRI (Internationalized Resource Identifiers).
+
 Andere vormen van IRI bieden een identificatie voor een bron zonder de locatie of hoe deze te benaderen te impliceren. 
+
 Het concept van IRI is een generalisatie van URI (Uniform Resource Identifier), waardoor niet-ASCII tekens gebruikt kunnen worden in de IRI-tekenreeks. 
 IRI's zijn gespecificeerd in [RFC3987](https://www.ietf.org/rfc/rfc3987.txt).
 
@@ -153,13 +162,13 @@ N-Triples [N-TRIPLES] biedt een eenvoudige, regelgebaseerde, platte-tekst manier
 <http://dbpedia.org/resource/Leonardo_da_Vinci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 ```
 
-Elke regel vertegenwoordigt een triple. Volledige IRI's zijn omsloten in spitse haakjes (<>). 
+Elke regel vertegenwoordigt een triple. Volledige _IRI_'s zijn omsloten in spitse haakjes (<>). 
 De punt aan het einde van de regel geeft het einde van de triple aan. 
-In regel 3 zien we een voorbeeld van een literal, in dit geval een datum. 
+In regel 3 zien we een voorbeeld van een _literal_, in dit geval een datum. 
 Het datatype wordt aan de literal toegevoegd via een ^^ scheidingsteken. 
-De datumsrepresentatie volgt de conventies van het XML Schema datatype date.
+De datum representatie volgt de conventies van het XML Schema datatype date.
 
-Omdat string literals zo alomtegenwoordig zijn, staat N-Triples de gebruiker toe om het datatype weg te laten bij het schrijven van een string literal. 
+Omdat string _literals_ zo alomtegenwoordig zijn, staat N-Triples de gebruiker toe om het datatype weg te laten bij het schrijven van een string literal. 
 Dus, "Mona Lisa" is equivalent aan "Mona Lisa"^^xsd:string. 
 In het geval van taal-getagde strings verschijnt de tag direct na de string, gescheiden door een @ symbool, bijvoorbeeld "La Joconde"@fr (de Franse naam van de Mona Lisa).
 
@@ -208,7 +217,9 @@ _Noot_: de afkorting 'a' komt overeen met de menselijke intuïtie over rdf:type.
 #### JSON-LD
 
 JSON-LD [JSON-LD] biedt een JSON-syntax voor RDF-grafen en datasets. 
-JSON-LD kan gebruikt worden om JSON-documenten met minimale wijzigingen naar RDF om te zetten en omgekeerd. 
+
+JSON-LD kan gebruikt worden om JSON-documenten met minimale wijzigingen naar RDF om te zetten en omgekeerd.
+
 JSON-LD biedt universele identificatoren voor JSON-objecten, een mechanisme waarbij een JSON-document kan verwijzen naar een object dat in een ander JSON-document elders op het web wordt beschreven, evenals datatype- en taalafhandeling. 
 
 JSON Document van lopend voorbeeld:
@@ -276,7 +287,8 @@ Deze context beschrijft hoe een JSON-LD document naar een RDF-graaf kan worden g
 }
 ```
 
-Merk op dat de combinatie van de twee documenten het semantisch model opbouwen. De keuze van de termen in de `@context` document en de json zijn op zich vrij te kiezen. 
+Merk op dat de combinatie van de twee documenten het semantisch model opbouwen. De keuze van de termen in de `@context` document en de json zijn op zich vrij te kiezen.
+
 In bovenstaand voorbeeld werd in het context-document nederlands gebruikt (en de data die deze @context gebruikt ook). Dit is geen vereiste, andere talen of termen werken evengoed.
 
 Een interactieve omzetting van dit voorbeeld op json-ld playground vind je [hier](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=%7B%22%40context%22%3A%7B%22foaf%22%3A%22http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%22%2C%22Person%22%3A%22foaf%3APerson%22%2C%22isGeinteresseerdIn%22%3A%22foaf%3Atopic_interest%22%2C%22isEenVriendVan%22%3A%7B%22%40id%22%3A%22foaf%3Aknows%22%2C%22%40type%22%3A%22%40id%22%7D%2C%22isGeborenOp%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fschema.org%2FbirthDate%22%2C%22%40type%22%3A%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23date%22%7D%2C%22dcterms%22%3A%22http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%22%2C%22titel%22%3A%22dcterms%3Atitle%22%2C%22wasGecreerdDoor%22%3A%7B%22%40id%22%3A%22dcterms%3Acreator%22%2C%22%40type%22%3A%22%40id%22%7D%2C%22onderwerp_van%22%3A%7B%22%40reverse%22%3A%22dcterms%3Asubject%22%2C%22%40type%22%3A%22%40id%22%7D%7D%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fbob%23me%22%2C%22%40type%22%3A%22Person%22%2C%22isEenVriendVan%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Falice%23me%22%2C%22%40type%22%3A%22Person%22%7D%2C%22isGeborenOp%22%3A%221990-07-04%22%2C%22isGeinteresseerdIn%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ12418%22%2C%22titel%22%3A%22Mona%20Lisa%22%2C%22onderwerp_van%22%3A%22http%3A%2F%2Fdata.europeana.eu%2Fitem%2F04802%2F243FA8618938F4117025F17A8B813C5F9AA4D619%22%2C%22wasGecreerdDoor%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fdbpedia.org%2Fresource%2FLeonardo_da_Vinci%22%2C%22%40type%22%3A%22Person%22%7D%7D%7D&frame=%7B%7D&context=%7B%22%40context%22%3A%22http%3A%2F%2Fschema.org%2F%22%7D).
@@ -286,9 +298,12 @@ Een interactieve omzetting van dit voorbeeld op json-ld playground vind je [hier
 
 Om gegevens te zoeken of te manipuleren in de graaf, kan je gebruik maken van **SPARQL**.
 
-SPARQL kan gebruikt worden om queries uit te drukken over diverse gegevensbronnen, of de gegevens nu van nature als RDF opgeslagen zijn of als RDF bekeken worden via middleware. 
-SPARQL bevat mogelijkheden voor het opvragen van vereiste en optionele graafpatronen samen met hun conjuncties en disjuncties. 
-SPARQL ondersteunt ook aggregatie, subqueries, negatie, het creëren van waarden door expressies, uitbreidbare waardebeoordeling, en het beperken van queries door bron RDF-graaf. 
+SPARQL kan gebruikt worden om queries uit te drukken over diverse gegevensbronnen, of de gegevens nu van nature als RDF opgeslagen zijn of als RDF bekeken worden via middleware.
+
+SPARQL bevat mogelijkheden voor het opvragen van vereiste en optionele graafpatronen samen met hun conjuncties en disjuncties.
+
+SPARQL ondersteunt ook aggregatie, subqueries, negatie, het creëren van waarden door expressies, uitbreidbare waardebeoordeling, en het beperken van queries door bron RDF-graaf.
+
 De resultaten van SPARQL-queries kunnen resultaatsets of RDF-grafen zijn.
 
 Een voorbeeld query: 
@@ -311,10 +326,18 @@ http://example.org/bob#me
 
 ### SHACL (Shapes Constraint Language)
 
-SHACL is een voor het beschrijven en valideren van RDF-grafen.
+SHACL is een taal voor het beschrijven en valideren van RDF-grafen.
 
+SHACL beschrijft de structuur en de condities waaraan een dataset dient te voldoen.
+
+SHACL voorziet metadata over de data met als doel de data te valideren.
+
+Kan RDF-schema en OWL-ontologieën complementeren.
+
+SHACL's worden beschreven in RDF.
 
 ### LDES (Linked Data Event Stream)
+
 
 ## Contract specificaties
 
