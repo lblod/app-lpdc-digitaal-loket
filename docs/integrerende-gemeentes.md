@@ -1,10 +1,10 @@
 ## Inleiding 
 
-Dit document beschrijft het proces hoe integrerende gemeentes gepubliceerde product informatie kunnen synchroniseren met LPDC (Lokale Producten- en Dienstencatalogus). De producten worden zichtbaar voor de gemeente in LPDC. Ook synchroniseert LPDC de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
+Dit document beschrijft het proces hoe integrerende gemeentes gepubliceerde productinformatie kunnen synchroniseren met LPDC (Lokale Producten- en Dienstencatalogus). De producten worden zichtbaar voor de gemeente in LPDC. Ook synchroniseert LPDC de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
 
 ## Context diagramma / Stroomdiagramma
 
-Beschrijft op een hoog niveau de data stromen tussen a/ integrerende gemeente b/ lpdc c/ ipdc en de gebruikte technologieën.
+Beschrijft op een hoog niveau de datastromen tussen a/ integrerende gemeente b/ lpdc c/ ipdc en de gebruikte technologieën.
 
 ## Technologie beschrijving
 
@@ -35,7 +35,7 @@ Aangezien het een gemeenschappelijk kader is, kunnen applicatieontwerpers gebrui
 Het vermogen om informatie uit te wisselen tussen verschillende applicaties betekent dat de informatie beschikbaar kan worden gemaakt voor applicaties anders dan waarvoor het oorspronkelijk was gecreëerd.
 In het bijzonder kan RDF gebruikt worden om gegevens te publiceren en aan elkaar te koppelen op het web.
 
-RDF stelt ons in staat uitspraken (statements) te doen over bronnen. Het formaat van deze uitspraken (statements) is eenvoudig.
+RDF stelt ons in staat uitspraken te doen over bronnen. Het formaat van deze uitspraken (statements) is eenvoudig.
 
 Een uitspraak (engels: Statement) heeft altijd de volgende structuur:
 
@@ -43,7 +43,7 @@ Een uitspraak (engels: Statement) heeft altijd de volgende structuur:
 
 Een RDF-statement drukt een relatie uit tussen twee bronnen. 
 Het **<subject>** _(onderwerp)_ en het **object** vertegenwoordigen de twee aan elkaar gerelateerde bronnen; het **predicaat** _(predicate)_ representeert de **aard van hun relatie**. 
-De relatie wordt op een directionele wijze geformuleerd (van onderwerp naar object) en wordt in RDF een **property** _(eigenschap)_ genoemd. 
+De relatie wordt op een directionele wijze geformuleerd (van onderwerp naar object) en wordt in RDF-terminologie een **property** _(eigenschap)_ genoemd. 
 Omdat RDF-statements altijd uit **drie elementen bestaan**, worden ze **triples** genoemd.
 
 _Voorbeeld:_
@@ -60,12 +60,12 @@ _Voorbeeld:_
 <Leonardo da Vinci> <is een> <persoon>. 
 ```
 
-Dezelfde bron wordt vaak in meerdere triples genoemd. 
+Dezelfde bron wordt vaak in meerdere triples van een dataset genoemd. 
 In het bovenstaande voorbeeld is Bob het subject (onderwerp) van vier triples, en de Mona Lisa is het subject (onderwerp) en het object van elk twee triples. 
 Het vermogen om dezelfde bron in de positie van subject (onderwerp) van de ene triple en in de positie van object van een andere triple te hebben, 
 maakt het mogelijk om verbindingen tussen triples te vinden, wat een belangrijk onderdeel is van de kracht van RDF.
 
-We kunnen triples visualiseren als een geconnecteerde **graaf**. Een graaf is een representatie van een set van objecten waar sommige paren van de objecten met elkaar verbonden zijn door links.
+We kunnen triples visualiseren als een geconnecteerde **graaf**. Een graaf is een representatie van een objectenset waar sommige paren van de objecten met elkaar verbonden zijn door links.
 
 RDF is een graaf in de zin dat het een verzameling van triples is die een netwerk van verbindingen tussen verschillende bronnen vormt. 
 
@@ -73,7 +73,7 @@ Elke triple in RDF graaf bestaat uit een subject (onderwerp), een predicaat (pre
 
 ![rdf-triple-graaf.png](img%2Frdf-triple-graaf.png)
 
-Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch moet je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is <Bob>?_ maar ook _Wie <is een> <persoon>_?     
+Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch dien je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is <Bob>?_ maar ook _Wie <is een> <persoon>_?     
 
 #### IRIs
 Een IRI is een International Resource Identifier. Een IRI definieert een bron (resource).
@@ -89,13 +89,13 @@ IRI's kunnen verschijnen **in alle drie de posities** van een triple.
 
 Zoals vermeld, worden IRI's gebruikt om bronnen te identificeren zoals documenten, personen, fysieke objecten en abstracte concepten. 
 
-Bijvoorbeeld, de IRI voor Leonardo da Vinci in DBpedia is (subject en objectd <Leonardo da Vinci>):
+Bijvoorbeeld, de IRI voor Leonardo da Vinci in DBpedia is (subject en object `<Leonardo da Vinci>`):
 
 ```
 http://dbpedia.org/resource/Leonardo_da_Vinci
 ```
 
-De IRI voor een INA-video over de Mona Lisa getiteld 'La Joconde à Washington' in Europeana is: (subject: <de video 'La Joconde à Washington'>)
+De IRI voor een INA-video over de Mona Lisa getiteld 'La Joconde à Washington' in Europeana is: (subject: `<de video 'La Joconde à Washington'>`)
 
 ```
 http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619
@@ -108,16 +108,16 @@ Bijvoorbeeld, de volgende IRI wordt door veel mensen gebruikt als een RDF-eigens
 http://xmlns.com/foaf/0.1/knows
 ```
 
-RDF is neutraal over wat de IRI vertegenwoordigt. Echter, IRIs kunnen betekenis krijgen door specifieke vocabulaires of conventies.
+RDF is neutraal over wat de IRI vertegenwoordigt. Echter, IRI's kunnen betekenis krijgen door specifieke vocabulaires of conventies.
 
-Bijvoorbeeld, DBpedia gebruikt IRIs in de vorm van http://dbpedia.org/resource/Naam om het ding aan te duiden dat beschreven wordt door het overeenkomstige Wikipedia-artikel.
+Bijvoorbeeld, DBpedia gebruikt IRI's in de vorm van http://dbpedia.org/resource/Naam om het ding aan te duiden dat beschreven wordt door het overeenkomstige Wikipedia-artikel.
 
 Het RDF-datamodel biedt een manier om uitspraken te doen over bronnen. Zoals we hebben vermeld, maakt dit datamodel geen aannames over waarvoor bron-IRI's staan. 
 In de praktijk wordt RDF doorgaans gebruikt in combinatie met vocabulaires of andere conventies die semantische informatie over deze bronnen verstrekken.
 
 Veel gebruikte voorbeelden zijn: [RDF Syntax](https://www.w3.org/1999/02/22-rdf-syntax-ns), [Dublin Core](http://dublincore.org/documents/dcmi-terms/), [schema.org](http://schema.org/), [SKOS](http://www.w3.org/2004/02/skos/), [FOAF](http://www.foaf-project.org/).
 
-The aanduiden van een type <is een> kan bvb. met
+The aanduiden van een type `<is een>` kan bv. met
 ```
 http://www.w3.org/1999/02/22-rdf-syntax-ns#type
 ```
@@ -125,6 +125,7 @@ http://www.w3.org/1999/02/22-rdf-syntax-ns#type
 #### Literals
 
 Literals zijn basiswaarden die geen IRI's zijn. 
+
 Voorbeelden van literals omvatten strings zoals "La Joconde", datums zoals "de 4e juli, 1990" en getallen zoals "3.14159". 
 
 Literals worden geassocieerd met een datatype waardoor dergelijke waarden correct geparsed en geïnterpreteerd kunnen worden. 
@@ -138,12 +139,12 @@ De set van triples worden bewaard in een **triple-store**. Dit is een database d
 
 Voorbeelden van triple stores zijn: [Virtuoso](https://github.com/openlink/virtuoso-opensource), [Apache Jena](https://jena.apache.org/), [GraphDB](https://graphdb.ontotext.com/).
 
-### Serialisatie formaten voor RDF Data
+### Serialisatie formaten voor RDF-data
 
 Er bestaan verschillende serialisatieformaten voor het noteren van RDF-grafen. 
 Echter, verschillende manieren van het noteren van dezelfde graaf leiden tot precies dezelfde triples en zijn dus logisch equivalent.
 
-Hieronder geven we voorbeelden van verscheidene serialisatie formaten die het pseudo code voorbeeld map met een voorbeeld vocabulaires. Dezelfde data is 
+Hieronder geven we voorbeelden van verscheidene serialisatieformaten die het pseudocode voorbeeld mapt met een aantal vocabulaires. 
 
 #### N-Triples
 
@@ -162,15 +163,15 @@ N-Triples biedt een eenvoudige, regelgebaseerde, platte-tekst manier voor het se
 <http://dbpedia.org/resource/Leonardo_da_Vinci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 ```
 
-Elke regel vertegenwoordigt een triple. Volledige _IRI_'s zijn omsloten in spitse haakjes (<>). 
+Elke regel vertegenwoordigt een triple. Volledige _IRI_'s zijn omsloten in spitse haakjes (`<>`). 
 De punt aan het einde van de regel geeft het einde van de triple aan. 
 In regel 3 zien we een voorbeeld van een _literal_, in dit geval een datum. 
-Het datatype wordt aan de literal toegevoegd via een ^^ scheidingsteken. 
-De datum representatie volgt de conventies van het XML Schema datatype date.
+Het datatype wordt aan de literal toegevoegd via een `^^` scheidingsteken. 
+De datum representatie volgt de conventies van het `XML Schema datatype date`.
 
 Omdat string _literals_ zo alomtegenwoordig zijn, staat N-Triples de gebruiker toe om het datatype weg te laten bij het schrijven van een string literal. 
-Dus, "Mona Lisa" is equivalent aan "Mona Lisa"^^xsd:string. 
-In het geval van taal-getagde strings verschijnt de tag direct na de string, gescheiden door een @ symbool, bijvoorbeeld "La Joconde"@fr (de Franse naam van de Mona Lisa).
+Dus, `"Mona Lisa"` is equivalent aan  `"Mona Lisa"^^xsd:string`. 
+In het geval van taal-getagde strings verschijnt de tag direct na de string, gescheiden door een `@ symbool`, bijvoorbeeld `"La Joconde"@fr` (de Franse naam van de Mona Lisa).
 
 Het aantal lijntjes N-Triples vertegenwoordigt het aantal links in de graaf.
 
@@ -211,9 +212,9 @@ wd:Q12418
     dcterms:subject wd:Q12418 .
 ```
 
-_Noot_: de afkorting 'a' komt overeen met de menselijke intuïtie over rdf:type. 
-_Noot_: _PREFIX_ voorziet een afkorte vorm om iri's te specifieren, bvb `foaf:Person` is hetzelfde dan `<http://xmlns.com/foaf/0.1/Person>`; `xsd:date` is hetzelfde dan <http://www.w3.org/2001/XMLSchema#date>
-_Noot_: het scheidings teken `;` wijst erop dat de lijst van predicaten en objecten horen bij het eerder vermelde subject. 
+- de afkorting 'a' komt overeen met de menselijke intuïtie over `rdf:type`. 
+- _PREFIX_ voorziet een afgekorte vorm om IRI's te specifiëren, bv. `foaf:Person` is hetzelfde als `<http://xmlns.com/foaf/0.1/Person>`; `xsd:date` is hetzelfde als `<http://www.w3.org/2001/XMLSchema#date>`
+- het scheidingsteken `;` wijst erop dat de lijst van `predicaten` en `objecten` horen bij het eerder vermelde `subject`. 
 
 #### JSON-LD
 
@@ -258,7 +259,7 @@ Het trefwoord `@type` beschrijft het type.
 
 Andere attributen beschrijven eigenschappen van een JSON-object. (bvb. `isEenVriendVan`, `isGeborenOp`, `titel`, enz).
 
-Deze context beschrijft hoe een JSON-LD document naar een RDF-graaf kan worden gemapt (ofwel embedded binnen de @context tag, of een beschikbaar via een URL).
+Dit context-document beschrijft hoe een JSON-LD document naar een RDF-graaf kan worden gemapt (ofwel embedded binnen de @context tag, ofwel beschikbaar gesteld via een URL).
 
 ```json
 {
@@ -290,7 +291,7 @@ Deze context beschrijft hoe een JSON-LD document naar een RDF-graaf kan worden g
 
 Merk op dat de combinatie van de twee documenten het semantisch model opbouwen. De keuze van de termen in de `@context` document en de json zijn op zich vrij te kiezen.
 
-In bovenstaand voorbeeld werd in het context-document nederlands gebruikt (en de data die deze @context gebruikt ook). Dit is geen vereiste, andere talen of termen werken evengoed.
+In bovenstaand voorbeeld werd in het context-document nederlands gebruikt (en de data die deze @context gebruikt ook). Dit is geen vereiste, andere talen of eigen termen werken evengoed.
 
 Een interactieve omzetting van dit voorbeeld op json-ld playground vind je [hier](https://json-ld.org/playground/#startTab=tab-nquads&json-ld=%7B%22%40context%22%3A%7B%22foaf%22%3A%22http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F%22%2C%22Person%22%3A%22foaf%3APerson%22%2C%22isGeinteresseerdIn%22%3A%22foaf%3Atopic_interest%22%2C%22isEenVriendVan%22%3A%7B%22%40id%22%3A%22foaf%3Aknows%22%2C%22%40type%22%3A%22%40id%22%7D%2C%22isGeborenOp%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fschema.org%2FbirthDate%22%2C%22%40type%22%3A%22http%3A%2F%2Fwww.w3.org%2F2001%2FXMLSchema%23date%22%7D%2C%22dcterms%22%3A%22http%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%22%2C%22titel%22%3A%22dcterms%3Atitle%22%2C%22wasGecreerdDoor%22%3A%7B%22%40id%22%3A%22dcterms%3Acreator%22%2C%22%40type%22%3A%22%40id%22%7D%2C%22onderwerp_van%22%3A%7B%22%40reverse%22%3A%22dcterms%3Asubject%22%2C%22%40type%22%3A%22%40id%22%7D%7D%2C%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Fbob%23me%22%2C%22%40type%22%3A%22Person%22%2C%22isEenVriendVan%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fexample.org%2Falice%23me%22%2C%22%40type%22%3A%22Person%22%7D%2C%22isGeborenOp%22%3A%221990-07-04%22%2C%22isGeinteresseerdIn%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fwww.wikidata.org%2Fentity%2FQ12418%22%2C%22titel%22%3A%22Mona%20Lisa%22%2C%22onderwerp_van%22%3A%22http%3A%2F%2Fdata.europeana.eu%2Fitem%2F04802%2F243FA8618938F4117025F17A8B813C5F9AA4D619%22%2C%22wasGecreerdDoor%22%3A%7B%22%40id%22%3A%22http%3A%2F%2Fdbpedia.org%2Fresource%2FLeonardo_da_Vinci%22%2C%22%40type%22%3A%22Person%22%7D%7D%7D&frame=%7B%7D&context=%7B%22%40context%22%3A%22http%3A%2F%2Fschema.org%2F%22%7D).
 
@@ -331,7 +332,7 @@ SHACL is een taal voor het beschrijven en valideren van RDF-grafen.
 
 SHACL beschrijft de structuur en de condities waaraan een dataset dient te voldoen.
 
-SHACL voorziet metadata over de data met als doel de data te valideren.
+SHACL voorziet metadata over de data met als doel de data te kunnen valideren.
 
 Kan RDF-schema en OWL-ontologieën complementeren.
 
@@ -341,15 +342,15 @@ SHACL's worden beschreven in RDF.
 
 #### Inleiding
 
-Een Linked Data Event Stream (LDES) (`ldes:EventStream`) is een verzameling (`rdfs:subClassOf tree:Collection) van onveranderlijke objecten, waarbij elk object wordt beschreven met behulp van een set RDF-triples.
+Een Linked Data Event Stream (LDES) (`ldes:EventStream`) is een verzameling (`rdfs:subClassOf tree:Collection`) van onveranderlijke objecten, waarbij elk object wordt beschreven met behulp van een set RDF-triples.
 
 De focus van een LDES is om clients in staat te stellen de geschiedenis van een dataset te repliceren en efficiënt te synchroniseren met de nieuwste wijzigingen.
 
 LDES maakt gebruik van de [TREE specificatie](https://treecg.github.io/specification) om verzamelingen, fragmentering en/of paginering eigenschappen te beschrijven.
 
-_Noot_: Wanneer een client eenmaal een member heeft verwerkt, zou deze het nooit meer opnieuw moeten hoeven te verwerken. Een Linked Data Event Stream-client kan dus een lijst van (of cache voor) reeds verwerkte lid-IRI's bijhouden.
+_Noot_: Wanneer een client eenmaal een `member` heeft verwerkt, zou deze het nooit meer opnieuw moeten hoeven te verwerken. Een Linked Data Event Stream-client kan dus een lijst van (of cache voor) reeds verwerkte lid-IRI's bijhouden.
 
-Verdere LDES-voorbeelden in dit hoofdstuk illustreren concepten van een LDES stroom, met RDF-data in serialisatie-vorm _Turtle_. De data kan uiteraard ook geserialiseerd worden als JSON-LD. Op het einde van deze sectie is een voorbeeld ook gepresenteerd in json-ld formaat.
+Verdere LDES-voorbeelden in dit hoofdstuk illustreren concepten van een LDES-stroom, met RDF-data in serialisatievorm _Turtle_. De data kan uiteraard ook geserialiseerd worden als JSON-LD. Op het einde van deze sectie is een voorbeeld ook gepresenteerd in json-ld formaat.
 
 Volgend voorbeeld duidt een 'observatie' aan aangeboden in een LDES stream:
 
@@ -370,13 +371,13 @@ ex:Observation1 a sosa:Observation ;
 ```
 - `tree:member` duidt op een member in de verzameling.
 - `ldes:timestampPath` verwijst naar de predicate in een member waar de _timestamp_ van de data te vinden is.
-- `ex:Observation1` wordt beschreven als RDF data.
+- `ex:Observation1` wordt beschreven als RDF-data.
 
 #### Fragmentering en paginering
 
 Linked Data Event Streams mogen gefragmenteerd worden wanneer hun grootte te groot wordt voor één HTTP-antwoord. 
 
-Fragmentaties moeten worden beschreven met behulp van de functies in de TREE-specificatie. Alle relatie types uit de TREE-specificatie mogen worden gebruikt.
+Fragmenten moeten worden beschreven met behulp van de functies in de TREE-specificatie. Alle relatie-types uit de TREE-specificatie mogen worden gebruikt.
 
 Voorbeeld:
 
@@ -413,16 +414,16 @@ ex:Observation2 a sosa:Observation ;
 
 #### Versionering
 
-Beschrijft hoe je een object kan veranderen waarbij je de historiek van het rdf document bijhoudt. 
-Je stuurt met andere woorden een serie van snapshots van de data van het rdf document op. 
-Hierbij verwijs je telkens naar het origineel rdf document en het tijdstip van de snapshot. 
-Dit stelt de ldes afnemer in staat de historiek te reconstrueren en de laatste versie te bewaren. (en hierbij toch performant niet telkens de hele ldes stream te hoeven uitlezen).
+Beschrijft hoe je een object kan veranderen waarbij je de historiek van het rdf-document bijhoudt. 
+Je stuurt met andere woorden een serie van snapshots van de data van het rdf-document op. 
+Hierbij verwijs je telkens naar het origineel rdf-document en het tijdstip van de snapshot. 
+Dit stelt de LDES-afnemer in staat de historiek te reconstrueren en de laatste versie te bewaren. (en hierbij toch performant niet telkens de hele LDES te hoeven uitlezen).
 
-Technisch, wordt een versiebeheerde LDES gedefinieerd met twee eigenschappen: `ldes:versionOfPath` en `ldes:timestampPath`.
-- `ldes:versionOfPath`: verklaart de predicate die wordt gebruikt om te definiëren dat een `tree:member` van een `ldes:EventStream` een versie is van een rdf document.
+Technisch, wordt een versiebeheerde-LDES gedefinieerd met twee eigenschappen: `ldes:versionOfPath` en `ldes:timestampPath`.
+- `ldes:versionOfPath`: verklaart de predicate die wordt gebruikt om te definiëren dat een `tree:member` van een `ldes:EventStream` een versie is van een rdf-document.
 - `ldes:timestampPath`: verklaart de predicate die wordt gebruikt om de DateTime van een `tree:member` te definiëren.
 
-Volgend voorbeeldje illustreert geversioneerde LDES:
+Volgend voorbeeldje illustreert versiebeheerde-LDES:
 
 ```turtle
 @prefix ex: <http://example.com/ns#> .
@@ -449,10 +450,10 @@ ex:AddressRecord1-version2 dcterms:created "2021-01-02T00:00:00Z"^^xsd:dateTime 
                            dcterms:title "Streetname X + Y, ZIP Municipality, Country" .
 ```
 
-- Deze LDES stream bevat 2 elementen: zowel `ex:AddressRecord1-version1` en `ex:AddressRecord1-version2` worden verwezen door `tree:member`. 
-- Net als in vorige voorbeeld wijst `ldes:timestampPath` naar de predicate in een member waar de _timestamp_ te vinden is. Deze keer verwijst die naar `dcterms:created`.  
-- `ldes:versionOfPath` verwijst naar de predicate binnen de member dat het niet geversioneerde record aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies.
-- Dit kan uiteraard gecombineerd worden met paginering en fragmentering
+- Deze LDES bevat 2 elementen: zowel `ex:AddressRecord1-version1` en `ex:AddressRecord1-version2` worden verwezen door `tree:member`. 
+- Net als in vorige voorbeeld wijst `ldes:timestampPath` naar de `predicate` in een `member` waar de _timestamp_ te vinden is. Deze keer verwijst die naar `dcterms:created`.  
+- `ldes:versionOfPath` verwijst naar de `predicate` binnen de `member` dat het niet-versiebeheerde-record aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies.
+- Dit kan uiteraard gecombineerd worden met paginering en fragmentering.
 
 Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 ```json
