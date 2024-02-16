@@ -452,7 +452,7 @@ ex:AddressRecord1-version2 dcterms:created "2021-01-02T00:00:00Z"^^xsd:dateTime 
 
 - Deze LDES bevat 2 elementen: zowel `ex:AddressRecord1-version1` en `ex:AddressRecord1-version2` worden verwezen door `tree:member`. 
 - Net als in vorige voorbeeld wijst `ldes:timestampPath` naar de `predicate` in een `member` waar de _timestamp_ te vinden is. Deze keer verwijst die naar `dcterms:created`.  
-- `ldes:versionOfPath` verwijst naar de `predicate` binnen de `member` dat het niet-versiebeheerde-document aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies.
+- `ldes:versionOfPath` verwijst naar de `predicate` binnen de `member` dat het nietversiebeheerde-document aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies.
 - Dit kan uiteraard gecombineerd worden met paginering en fragmentering.
 
 Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
