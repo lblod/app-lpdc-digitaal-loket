@@ -38,3 +38,9 @@ services:
   lpdc-management:
     environment:
       ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
+
+  ipdc-ldes-consumer:
+    image: redpencil/ldes-consumer:0.7.1-arm64-build
+
+  instance-ldes-consumer:
+    image: redpencil/ldes-consumer:0.7.1-arm64-build
