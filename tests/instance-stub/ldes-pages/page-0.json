@@ -4,7 +4,13 @@
   "view": {
     "@id": "http://instance-stub/doc/instancesnapshot?pageNumber=0",
     "@type": "Node",
-    "relation": []
+    "relation": [
+      {
+        "node": "http://instance-stub/doc/instancesnapshot?pageNumber=1",
+        "path": "generatedAtTime",
+        "@type": "GreaterThanOrEqualToRelation"
+      }
+    ]
   },
   "@context": "http://instance-stub/InstanceJsonLdContext.jsonld",
   "@id": "http://instance-stub/doc/instancesnapshot?pageNumber=0",
@@ -15,21 +21,21 @@
       "@type": [
         "PublicService"
       ],
-      "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
-      ],
-      "created": "2024-02-14T13:42:12.357Z",
+      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "aangemaaktOp": "2024-02-14T13:42:12.357Z",
+      "bewerktOp": "2024-02-14T13:59:25.236Z",
+      "titel": {
+        "nl-BE-x-informal": "Minimalistische instantie"
+      },
       "beschrijving": {
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie</p>"
       },
-      "modified": "2024-02-14T13:59:25.236Z",
+      "bevoegdeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ],
       "geografischToepassingsgebieden": [
          "http://vocab.belgif.be/auth/refnis2019/24001"
       ],
-      "naam": {
-        "nl-BE-x-informal": "Minimalistische instantie"
-      },
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
       "uitvoerendeOverheden": [
        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ]

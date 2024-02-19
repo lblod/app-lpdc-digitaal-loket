@@ -17,6 +17,7 @@
     "InstancePublicService": "instantieNs:InstancePublicService",
     "dtv": "https://data.vlaanderen.be/ns/",
     "pav": "http://purl.org/pav/",
+    "ext": "http://mu.semte.ch/vocabularies/ext/",
     "PublicService": "purlCpsv:PublicService",
     "order": {
       "@id": "sh:order"
@@ -24,13 +25,73 @@
     "uuid":{
     "@id": "http://mu.semte.ch/vocabularies/core/uuid"
     },
-    "naam": {
+    "createdBy": {
+      "@id": "pav:createdBy",
+      "@type": "@id",
+      "@context":{
+        "@base": "http://data.lblod.info/id/bestuurseenheden/"
+      }
+    },
+    "concept":{
+     "@id": "dct:source",
+     "@type": "@id",
+     "@context":{
+       "@base": "https://ipdc.tni-vlaanderen.be/id/concept/"
+     }
+    },
+    "conceptSnapshot":{
+    "@id": "ext:hasVersionedSource",
+    "@type": "@id",
+    "@context":{
+      "@base": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/"
+    }
+    },
+    "aangemaaktOp": {
+      "@id": "dct:created",
+      "@type": "xsd:dateTime"
+    },
+    "bewerktOp": {
+      "@id": "dct:modified",
+      "@type": "xsd:dateTime"
+    },
+    "geldigVanaf": {
+      "@id": "sch:startDate",
+      "@type": "xsd:dateTime"
+    },
+    "geldigTot": {
+      "@id": "sch:endDate",
+      "@type": "xsd:dateTime"
+    },
+    "titel": {
       "@id": "dct:title",
       "@container": "@language"
     },
     "beschrijving": {
       "@id": "dct:description",
       "@container": "@language"
+    },
+    "aanvullendeBeschrijving":{
+      "@id": "instantieNs:additionalDescription",
+      "@container": "@language"
+    },
+    "uitzonderingen":{
+      "@id": "instantieNs:exception",
+      "@container": "@language"
+    },
+    "voorwaarden": {
+      "@id": "deu:hasRequirement",
+      "@type":"@id",
+      "@container": "@set",
+      "@context":{
+        "@base": "http://data.lblod.info/id/requirement/",
+        "bewijs": {
+            "@id": "deu:hasSupportingEvidence",
+            "@type": "@id",
+            "@context": {
+                "@base": "http://data.lblod.info/id/evidence/"
+            }
+        }
+      }
     },
     "bevoegdeOverheden": {
       "@id": "deu:hasCompetentAuthority",
@@ -40,27 +101,17 @@
         "@base": "http://data.lblod.info/id/bestuurseenheden/"
       }
     },
+    "geografischToepassingsgebieden": {
+      "@id": "dct:spatial",
+      "@container": "@set",
+      "@type": "@id"
+    },
     "uitvoerendeOverheden": {
       "@id": "instantieNs:hasExecutingAuthority",
       "@container": "@set",
       "@type" :"@id",
       "@context": {
         "@base": "http://data.lblod.info/id/bestuurseenheden/"
-      }
-    },
-    "talen": {
-      "@container": "@set",
-      "@id": "publicationsEu:language",
-      "@type": "@id",
-      "@context": {
-        "@base": "http://publications.europa.eu/resource/authority/language/"
-      }
-    },
-    "geografischToepassingsgebieden": {
-      "@id": "dct:spatial",
-      "@container": "@set",
-      "@context": {
-        "id": "@id"
       }
     },
     "type": {
@@ -70,21 +121,6 @@
         "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
       }
     },
-    "created": {
-      "@id": "dct:created",
-      "@type": "xsd:dateTime"
-    },
-    "modified": {
-      "@id": "dct:modified",
-      "@type": "xsd:dateTime"
-    },
-    "createdBy": {
-      "@id": "pav:createdBy",
-      "@type": "@id",
-      "@context":{
-        "@base": "http://data.lblod.info/id/bestuurseenheden/"
-      }
-    },
     "generatedAtTime": {
       "@id": "prov:generatedAtTime",
       "@type": "xsd:dateTime"
@@ -92,6 +128,14 @@
     "isVersionOf": {
           "@id": "dct:isVersionOf",
           "@type": "@id"
+    },
+    "talen": {
+      "@container": "@set",
+      "@id": "publicationsEu:language",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://publications.europa.eu/resource/authority/language/"
+       }
     },
     "EventStream": "ldes:EventStream",
     "Node": "tree:Node",

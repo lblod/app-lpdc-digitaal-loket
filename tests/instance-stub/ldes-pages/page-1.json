@@ -1,0 +1,87 @@
+{
+  "timestampPath": "generatedAtTime",
+  "versionOfPath": "isVersionOf",
+  "view": {
+    "@id": "http://instance-stub/doc/instancesnapshot?pageNumber=1",
+    "@type": "Node",
+    "relation": [
+      {
+        "node": "http://instance-stub/doc/instancesnapshot?pageNumber=0",
+        "path": "generatedAtTime",
+        "@type": "LessThanRelation"
+      }
+    ]
+  },
+  "@context": "http://instance-stub/InstanceJsonLdContext.jsonld",
+  "@id": "http://instance-stub/doc/instancesnapshot?pageNumber=1",
+  "@type": "EventStream",
+  "member": [
+    {
+      "@id": "http://data.lblod.info/id/public-service/6e9334cb-272c-443d-8b0a-1b02149a5127",
+      "@type": [
+        "PublicService"
+      ],
+      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "concept": "705d401c-1a41-4802-a863-b22499f71b84",
+      "conceptSnapshot": "50fd7f03-276f-403e-ad39-152dba4e39be",
+      "aangemaaktOp": "2024-02-14T13:42:12.357Z",
+      "bewerktOp": "2024-02-14T13:59:25.237Z",
+      "geldigVanaf": "2020-08-26T11:40:20.026205Z",
+      "geldigTot": "2025-07-12T11:40:20.026205Z",
+      "titel": {
+        "en": "Certificate of Belgian nationality",
+        "nl-BE-x-informal": "Akte van Belgische nationaliteit"
+      },
+      "beschrijving": {
+        "en": "<p>The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.</p>",
+        "nl-BE-x-informal": "<p>De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.</p>"
+      },
+      "aanvullendeBeschrijving": {
+        "en": "<p>The certificate states:</p><ul><li>the last name, first names, date and place of birth of the person to whom the certificate relates</li><li>the legal foundation of the declaration on the basis of which the certificate was drawn up</li><li>in the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.</li></ul><p>Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:</p><ul><li>A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.</li></ul><ul><li>An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.</li></ul>",
+        "nl-BE-x-informal": "Verdere beschrijving"
+      },
+      "uitzonderingen": {
+        "en": "Exceptions",
+        "nl-BE-x-informal": "uitzonderingen"
+      },
+      "voorwaarden": [
+        {
+          "@id": "08355585-f1ba-43af-8238-9180c94e1ceb",
+          "@type": "deu:Requirement",
+          "beschrijving": {
+            "en": "<p>The right to receive a copy of or an extract from certificates of Belgian nationality is limited to:</p><ul><li>yourself</li><li>your spouse, surviving spouse, or legal cohabitant</li><li>your legal representative (e.g. a parent, guardian, conservator)</li><li>blood relatives in the ascending or descending line (no relatives by affinity and side branches)</li><li>your heirs</li><li>special agents, such as notaries or lawyers.</li></ul><p>If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract.</p>",
+            "nl-BE-x-informal": "<p>De akte vermeldt:</p><ul><li>de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeft</li><li>de wettelijke basis van de verklaring op basis waarvan de akte werd opgesteld</li><li>in geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.</li></ul><p>Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:</p><ul><li>Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3><p>Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:</p><ul><li>uzelf</li><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>uw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>uw erfgenamen</li><li>bijzondere gemachtigden zoals een notaris of advocaat.</li></ul><p>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel.</p> - nl"
+          },
+          "titel": {
+            "en": "Requirements",
+            "nl-BE-x-informal": "Voorwaarden"
+          },
+          "order": 0.0,
+          "bewijs": {
+            "@id": "0c9096a4-6c1b-4ad6-ba30-949b8bfadd3f",
+            "@type": "deu:Evidence",
+            "titel": {
+              "en": "Evidence",
+              "nl-BE-x-informal": "Bewijs"
+            },
+            "beschrijving": {
+              "en": "<p>If you collect the document yourself:</p><ul><li>your own identity card.</li></ul><p>If you are requesting the document for someone else:</p><ul><li>a power of attorney from that person and a copy of their identity card</li></ul><ul><li>as well as your own identity card.</li></ul>",
+              "nl-BE-x-informal": "<p>Als u het document zelf ophaalt:</p><ul><li>uw eigen identiteitskaart.</li></ul><p>Als u het document voor iemand anders aanvraagt:</p><ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul>"
+            }
+          }
+
+        }
+      ],
+      "bevoegdeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+        "c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea"
+      ],
+      "geografischToepassingsgebieden": [
+         "http://vocab.belgif.be/auth/refnis2019/44021"
+      ],
+      "uitvoerendeOverheden": [
+       "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ]
+    }
+  ]
+}
