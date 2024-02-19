@@ -93,8 +93,137 @@
         }
       }
     },
+    "procedure":{
+      "@id": "purlCpsv:follows",
+      "@type": "@id",
+      "@container": "@set",
+      "@context":{
+        "@base": "http://data.lblod.info/id/rule/",
+        "websites":{
+            "@container":"@set",
+            "@id": "instantieNs:hasWebsites",
+            "@type":"@id",
+            "@context": {
+                "@base": "http://data.lblod.info/id/website/"
+            }
+        }
+      }
+    },
+    "url": {
+      "@id": "sch:url"
+    },
+    "kosten":{
+      "@id":"deu:hasCost",
+      "@type": "@id",
+      "@context":{
+        "@base": "http://data.lblod.info/id/cost/"
+      }
+    },
+    "fincieleVoordelen":{
+      "@id":"purlCpsv:produces",
+      "@type": "@id",
+      "@context":{
+        "@base": "http://data.lblod.info/id/financial-advantage/"
+      }
+    },
+    "regelgeving":{
+      "@id":"instantieNs:regulation",
+      "@container": "@language"
+    },
+    "contactPunten":{
+      "@id":"deu:hasContactPoint",
+      "@type":"@id",
+      "@context":{
+        "@base":"http://data.lblod.info/id/contact-punten/",
+        "adres":{
+          "@id":"instantieNs:address",
+          "@type":"@id",
+          "@context":{
+            "@base": "https://data.vlaanderen.be/id/adres/"
+          }
+        }
+      }
+    },
+    "email": {
+      "@id": "sch:email"
+    },
+    "openingsuren": {
+      "@id": "sch:openingHours"
+    },
+    "telefoon": {
+      "@id": "sch:telephone"
+    },
+    "straat": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Straatnaam"
+    },
+    "huisnummer": {
+      "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.Huisnummer"
+    },
+    "gemeente": {
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam"
+    },
+    "land": {
+      "@id": "https://data.vlaanderen.be/ns/adres#land"
+    },
+    "postcode": {
+      "@id": "https://data.vlaanderen.be/ns/adres#postcode"
+    },
+    "meerInfo":{
+      "@id":"http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type": "@id",
+      "@container": "@set",
+      "@context":{
+        "@base": "http://data.lblod.info/id/website/",
+        "website":{
+            "@id": "sch:WebSite"
+        }
+      }
+    },
+    "type":{
+      "@id":"dct:type",
+      "@container": "@set",
+      "@context":{
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
+      }
+    },
+    "doelgroepen":{
+      "@id": "instantieNs:targetAudience",
+      "@container": "@set",
+      "@context":{
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+      }
+    },
+    "themas":{
+      "@id":"deu:thematicArea",
+      "@container": "@set",
+      "@context":{
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+      }
+    },
+    "bevoegdBestuursniveau":{
+       "@id":"instantieNs:competentAuthorityLevel",
+       "@container":"@set",
+       "@context":{
+         "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+       }
+    },
     "bevoegdeOverheden": {
       "@id": "deu:hasCompetentAuthority",
+      "@container": "@set",
+      "@type" :"@id",
+      "@context": {
+        "@base": "http://data.lblod.info/id/bestuurseenheden/"
+      }
+    },
+    "UitvoerendBestuursniveau":{
+      "@id":"instantieNs:executingAuthorityLevel",
+      "@container": "@set",
+      "@context":{
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+      }
+    },
+    "uitvoerendeOverheden": {
+      "@id": "instantieNs:hasExecutingAuthority",
       "@container": "@set",
       "@type" :"@id",
       "@context": {
@@ -106,12 +235,23 @@
       "@container": "@set",
       "@type": "@id"
     },
-    "uitvoerendeOverheden": {
-      "@id": "instantieNs:hasExecutingAuthority",
-      "@container": "@set",
-      "@type" :"@id",
-      "@context": {
-        "@base": "http://data.lblod.info/id/bestuurseenheden/"
+    "tags":{
+      "@id":"http://www.w3.org/ns/dcat#keyword",
+      "@container": "@language"
+
+    },
+    "publicatieKanalen":{
+      "@id":"instantieNs:publicationMedium",
+      "@container":"@set",
+      "@context":{
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+      }
+    },
+    "yourEurope":{
+      "@id":"instantieNs:yourEuropeCategory",
+      "@container":"@set",
+      "@context":{
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
       }
     },
     "type": {
