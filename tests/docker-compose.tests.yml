@@ -124,7 +124,7 @@ services:
     ports:
       - "33000:80"
 
-  instance-ldes-consumer:
+  ldes-consumer-instancesnapshot-example:
     image: redpencil/ldes-consumer:0.7.1
     depends_on:
       lpdc-management:
@@ -132,8 +132,8 @@ services:
       migrations:
         condition: service_healthy
     environment:
-      LDES_STREAM: "http://instance-stub/doc/instancesnapshot"
-      LDES_ENDPOINT_VIEW: "http://instance-stub/doc/instancesnapshot?pageNumber=0" # first page of the stream
+      LDES_STREAM: "http://instancesnapshot-ldes-stub/doc/instancesnapshot"
+      LDES_ENDPOINT_VIEW: "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=0" # first page of the stream
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
       CRON_PATTERN: "*/5 * * * * *" # run the job every 5 seconds
       LDES_POLLING_INTERVAL: 5000 # every 5 seconds
@@ -142,10 +142,10 @@ services:
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
     restart: always
 
-  instance-stub:
-    build: instance-stub
+  instancesnapshot-ldes-stub:
+    build: instancesnapshot-ldes-stub
     volumes:
-      - ./instance-stub:/usr/app/src
+      - ./instancesnapshot-ldes-stub:/usr/app/src
     ports:
       - "34000:80"
 

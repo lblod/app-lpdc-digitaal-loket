@@ -12,7 +12,7 @@ function errorHandler(err, req, res, next) {
     }
 }
 
-app.get('/instances', (req, res, next) => {
+app.get('/instancesnapshots', (req, res, next) => {
     try {
         res.status(200).json(instances);
     } catch (e) {
@@ -20,12 +20,12 @@ app.get('/instances', (req, res, next) => {
     }
 });
 
-app.put('/instances', (req, res, next) => {
+app.put('/instancesnapshots', (req, res, next) => {
     try {
-        console.log('received new instances');
-        const newInstance = req.body;
-        instances.push(newInstance);
-        console.log(JSON.stringify(newInstance, null, 2));
+        console.log('received new instance snapshots');
+        const newInstanceSnapshot = req.body;
+        instances.push(newInstanceSnapshot);
+        console.log(JSON.stringify(newInstanceSnapshot, null, 2));
         res.status(200).send();
     } catch (e) {
         next(e);

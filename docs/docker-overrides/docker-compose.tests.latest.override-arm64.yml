@@ -42,5 +42,5 @@ services:
   ipdc-ldes-consumer:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
 
-  instance-ldes-consumer:
+  ldes-consumer-instancesnapshot-example:
     image: redpencil/ldes-consumer:0.7.1-arm64-build

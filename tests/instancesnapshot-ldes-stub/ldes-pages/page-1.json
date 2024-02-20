@@ -2,18 +2,18 @@
   "timestampPath": "generatedAtTime",
   "versionOfPath": "isVersionOf",
   "view": {
-    "@id": "http://instance-stub/doc/instancesnapshot?pageNumber=1",
+    "@id": "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=1",
     "@type": "Node",
     "relation": [
       {
-        "node": "http://instance-stub/doc/instancesnapshot?pageNumber=0",
+        "node": "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=0",
         "path": "generatedAtTime",
         "@type": "LessThanRelation"
       }
     ]
   },
-  "@context": "http://instance-stub/InstanceJsonLdContext.jsonld",
-  "@id": "http://instance-stub/doc/instancesnapshot?pageNumber=1",
+  "@context": "http://instancesnapshot-ldes-stub/InstanceJsonLdContext.jsonld",
+  "@id": "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=1",
   "@type": "EventStream",
   "member": [
     {
