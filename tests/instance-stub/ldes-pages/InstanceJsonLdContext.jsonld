@@ -148,16 +148,19 @@
       "@id": "schema:telephone"
     },
     "straat": {
-      "@id": "https://data.vlaanderen.be/ns/adres#Straatnaam"
+      "@id": "https://data.vlaanderen.be/ns/adres#Straatnaam",
+      "@container": "@language"
     },
     "huisnummer": {
       "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.Huisnummer"
     },
     "gemeente": {
-      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam"
+      "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+      "@container": "@language"
     },
     "land": {
-      "@id": "https://data.vlaanderen.be/ns/adres#land"
+      "@id": "https://data.vlaanderen.be/ns/adres#land",
+      "@container": "@language"
     },
     "postcode": {
       "@id": "https://data.vlaanderen.be/ns/adres#postcode"

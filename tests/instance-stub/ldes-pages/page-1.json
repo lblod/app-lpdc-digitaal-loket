@@ -142,10 +142,16 @@
           "adressen": [
             {
               "@type": "adres",
-              "straat": "Burggravenlaan",
+              "straat": {
+                "nl": "Burggravenlaan"
+              },
               "huisnummer": "1",
-              "gemeente": "Gent",
-              "land": "België",
+              "gemeente": {
+                "nl": "Gent"
+              },
+              "land": {
+                "nl": "België"
+              },
               "postcode": "9000"
             }
           ]
