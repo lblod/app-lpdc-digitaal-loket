@@ -102,7 +102,7 @@
          ]
         }
       ],
-      "kosten":{
+      "kosten":[{
         "@id": "07c4e686-df9d-4774-bf67-2215d3b6d9b0",
         "@type" : "deu:Cost",
         "titel": {
@@ -114,8 +114,8 @@
           "nl-BE-x-informal": "De aanvraag en het attest zijn gratis."
         },
         "order": 0.0
-      },
-      "financieleVoordelen": {
+      }],
+      "financieleVoordelen": [{
         "@id": "aa034272-cfd5-44d1-a29d-56270dff37fd",
         "@type": "instantieNs:FinancialAdvantage",
         "titel":{
@@ -127,12 +127,12 @@
           "nl-BE-x-informal": "Beschrijving financieel voordeel"
         },
         "order": 0.0
-      },
+      }],
       "regelgeving":{
         "en": "Regulation",
         "nl-BE-x-informal": " regelgeving"
       },
-      "contactPunten": {
+      "contactPunten": [{
         "@id":"89739fe1-66aa-41bc-b2a7-d8ee78bd8c4a",
         "@type": "sch:ContactPoint",
         "email":"info@gent.be",
@@ -140,7 +140,7 @@
         "url":"https://www.gent.be",
         "openingsuren": "24/24",
         "order": 0.0,
-        "adres":{
+        "adressen":[{
           "@id": "0b1f5fd0-2180-467d-8112-d3af91d54390",
           "@type": "locn:Address",
           "straat": "Burggravenlaan",
@@ -148,11 +148,11 @@
           "gemeente": "Gent",
           "land": "België",
           "postcode": "9000"
-        }
-      },
+        }]
+      }],
       "meerInfo": [{
         "@id": "06ed7682-7b36-4355-a599-e182e600bf7f",
-        "website": {
+        "websites": [{
           "@id": "http://data.lblod.info/id/website/06ed7682-7b36-4355-a599-e182e600bf7f",
           "@type": "sch:WebSite",
           "titel": {
@@ -165,11 +165,9 @@
           },
           "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
           "order": 0.0
-        }
+        }]
       }],
-      "type": [
-        "FinancieelVoordeel"
-      ],
+      "type": "FinancieelVoordeel",
       "doelgroepen": [
         "Burger",
         "Onderneming"

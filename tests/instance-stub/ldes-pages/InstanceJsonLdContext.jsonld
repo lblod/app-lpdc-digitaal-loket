@@ -114,6 +114,7 @@
     },
     "kosten":{
       "@id":"deu:hasCost",
+      "@container": "@set",
       "@type": "@id",
       "@context":{
         "@base": "http://data.lblod.info/id/cost/"
@@ -122,6 +123,7 @@
     "fincieleVoordelen":{
       "@id":"purlCpsv:produces",
       "@type": "@id",
+      "@container":"@set",
       "@context":{
         "@base": "http://data.lblod.info/id/financial-advantage/"
       }
@@ -133,11 +135,13 @@
     "contactPunten":{
       "@id":"deu:hasContactPoint",
       "@type":"@id",
+      "@container": "@set",
       "@context":{
         "@base":"http://data.lblod.info/id/contact-punten/",
-        "adres":{
+        "adressen":{
           "@id":"instantieNs:address",
           "@type":"@id",
+          "@container": "@set",
           "@context":{
             "@base": "https://data.vlaanderen.be/id/adres/"
           }
@@ -174,14 +178,14 @@
       "@container": "@set",
       "@context":{
         "@base": "http://data.lblod.info/id/website/",
-        "website":{
-            "@id": "sch:WebSite"
+        "websites":{
+            "@id": "sch:WebSite",
+            "@container":"@set"
         }
       }
     },
     "type":{
       "@id":"dct:type",
-      "@container": "@set",
       "@context":{
         "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
       }
