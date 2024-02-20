@@ -292,7 +292,8 @@ dcat:keyword a rdf:Property;
   rdfs:label "hasExecutingAuthority"@nl .
 
 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite> a rdf:Property;
-  rdfs:label "hasWebsite"@nl .
+  rdfs:label "hasWebsite"@nl;
+  rdfs:subPropertyOf rdfs:seeAlso.
 
 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#instanceTag> a rdf:Property;
   rdfs:label "instanceTag"@nl .
