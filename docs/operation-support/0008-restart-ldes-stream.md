@@ -18,7 +18,7 @@ WHERE {
 
 restart ldes docker container
 ```shell
-docker restart app-lpdc-digitaal-loket-test-lpdc-ldes-consumer-1
+docker restart app-lpdc-digitaal-loket-test-ldes-consumer-conceptsnapshot-ipdc-1
 ```
 
 ## PROD
@@ -38,5 +38,5 @@ DELETE {
 
 restart ldes docker container
 ```shell
-docker restart app-lpdc-digitaal-loket-lpdc-ldes-consumer-1
+docker restart app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1
 ```

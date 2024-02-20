@@ -99,7 +99,7 @@ services:
     restart: always
     logging: *default-logging
 
-  lpdc-ldes-consumer:
+  ldes-consumer-conceptsnapshot-ipdc:
     image: redpencil/ldes-consumer:0.7.1
     depends_on:
       lpdc-management:

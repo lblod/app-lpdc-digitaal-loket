@@ -108,7 +108,7 @@ services:
     entrypoint: ["echo", "Service-disabled since production data cannot be connected to test ipdc environment"]
     restart: "no"
 
-  lpdc-ldes-consumer:
+  ldes-consumer-conceptsnapshot-ipdc:
     entrypoint: ["echo", "Service-disabled since production data cannot be connected to test ipdc environment"]
     restart: "no"
 

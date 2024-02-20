@@ -7,7 +7,7 @@ services:
   resource:
     image: semtech/mu-cl-resources:feature-supply-info-on-empty-included-arm64-build
 
-  lpdc-ldes-consumer:
+  ldes-consumer-conceptsnapshot-ipdc:
     image: redpencil/ldes-consumer:0.7.1-arm64-build
     environment:
       LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC api key>"

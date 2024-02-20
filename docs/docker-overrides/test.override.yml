@@ -52,7 +52,7 @@ services:
       IPDC_JSON_ENDPOINT: "https://ipdc.tni-vlaanderen.be/api/abb/instanties"
       IPDC_X_API_KEY: "<IPDC_API_KEY>"
 
-  lpdc-ldes-consumer:
+  ldes-consumer-conceptsnapshot-ipdc:
     environment:
       LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC_API_KEY>"
 

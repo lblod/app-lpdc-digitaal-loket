@@ -48,7 +48,7 @@ Following containers should be at least in the list:
 - app-lpdc-digitaal-loket-deltanotifier-1
 - app-lpdc-digitaal-loket-lpdc-management-1
 - app-lpdc-digitaal-loket-lpdc-publish-1
-- app-lpdc-digitaal-loket-lpdc-ldes-consumer-1
+- app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1
 
 Following command strips off all other containers, and counts.
 ```shell
@@ -67,11 +67,11 @@ drc logs --timestamps --since 2h | grep ldes-consumer | grep EventStream -A 2
 We should find recent logs:
 ```shell
 ...
-app-lpdc-digitaal-loket-lpdc-ldes-consumer-1  | 2023-11-14T12:18:56.114834250Z 2023-11-14T12:18:56.114Z [EventStream] info: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=135
-app-lpdc-digitaal-loket-lpdc-ldes-consumer-1  | 2023-11-14T12:18:56.241465784Z 2023-11-14T12:18:56.241Z [EventStream] info: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=135 (127) ms
-app-lpdc-digitaal-loket-lpdc-ldes-consumer-1  | 2023-11-14T12:19:00.550893940Z 2023-11-14T12:19:00.550Z [EventStream] info: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=136
-app-lpdc-digitaal-loket-lpdc-ldes-consumer-1  | 2023-11-14T12:19:00.965331560Z 2023-11-14T12:19:00.965Z [EventStream] info: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=136 (415) ms
-app-lpdc-digitaal-loket-lpdc-ldes-consumer-1  | 2023-11-14T12:19:03.948704851Z CONSUMER DONE
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:18:56.114834250Z 2023-11-14T12:18:56.114Z [EventStream] info: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=135
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:18:56.241465784Z 2023-11-14T12:18:56.241Z [EventStream] info: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=135 (127) ms
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:19:00.550893940Z 2023-11-14T12:19:00.550Z [EventStream] info: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=136
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:19:00.965331560Z 2023-11-14T12:19:00.965Z [EventStream] info: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=136 (415) ms
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:19:03.948704851Z CONSUMER DONE
 ...
 ```
 

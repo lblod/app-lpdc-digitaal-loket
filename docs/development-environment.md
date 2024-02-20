@@ -76,7 +76,7 @@ This will take a while; you may choose to monitor the migrations service in a se
 [2023-04-07 20:13:15] INFO  WEBrick::HTTPServer#start: pid=13 port=80
 ```
 
-At this point, you should be able to access the `/mock-login` path and see the available `bestuurseenheden`. After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `lpdc-ldes-consumer` service, which is set to run at 00:00 UTC time on a daily basis. Do note that you need to be mindful of the `UTC vs Local Time` and `Summer vs Winter Time` differences:
+At this point, you should be able to access the `/mock-login` path and see the available `bestuurseenheden`. After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `ldes-consumer-conceptsnapshot-ipdc` service, which is set to run at 00:00 UTC time on a daily basis. Do note that you need to be mindful of the `UTC vs Local Time` and `Summer vs Winter Time` differences:
 
 * A cron pattern of **"20 17 * * *"** runs at 17:20 UTC time every day
     - During *Summer Time*: Runs at 19:20 Brussels Time (UTC+2)
@@ -84,7 +84,7 @@ At this point, you should be able to access the `/mock-login` path and see the a
 
 You can force-trigger the service to run by overriding the `CRON_PATTERN` in your `docker-compose.override.yml` file; [crontab guru](https://crontab.guru/) is a nice playground to explore changing the pattern, and it houses a dedicated [examples section](https://crontab.guru/examples.html) where you can view the different options.
 
-After changing the cron pattern, run `docker compose up -d` if the stack is offline or `docker compose up -d lpdc-ldes-consumer` if the stack is already running in order to let the consumer service pick up this new change. Once the cron pattern is triggered, you can see the consumer pulling in the concepts from the IPDC TNI environment:
+After changing the cron pattern, run `docker compose up -d` if the stack is offline or `docker compose up -d ldes-consumer-conceptsnapshot-ipdc` if the stack is already running in order to let the consumer service pick up this new change. Once the cron pattern is triggered, you can see the consumer pulling in the concepts from the IPDC TNI environment:
 
 ```
 [EventStream] info: GET https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?pageNumber=5
@@ -152,7 +152,7 @@ Once the migrations have run, you can go on with your current setup.
 
 ### Backing up your local database
 
-One helpful way to ease your development process is to back up your local database (the `/data/db/` folder) after migrations are completed, and concepts are pulled through the `lpdc-ldes-consumer` service.
+One helpful way to ease your development process is to back up your local database (the `/data/db/` folder) after migrations are completed, and concepts are pulled through the `ldes-consumer-conceptsnapshot-ipdc` service.
 
 If your local data reaches a stage you deem to be tainted and you want to start anew, you can do the following:
 
@@ -291,7 +291,6 @@ docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.ym
 This includes:
 - A virtuoso database is available on port 8896 (instead of standard port 8890), and has its data stored in the ./data-test folder
 - An identifier / dispatcher endpoint available on port 96 (instead of standard port 90)
-- Following containers have been disabled or are not included: lpdc, login, lpdc-publish and lpdc-ldes-consumer container (for now).
 
 Viewing logs :
 ```shell
