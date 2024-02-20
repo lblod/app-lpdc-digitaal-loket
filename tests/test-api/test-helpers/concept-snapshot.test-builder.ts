@@ -270,7 +270,7 @@ export class ConceptSnapshotTestBuilder {
 
     async buildAndPersist(request: APIRequestContext): Promise<TripleArray> {
         const conceptSnapshot = this.buildTripleArray();
-        await insertTriples(request, `http://mu.semte.ch/graphs/lpdc/ldes-data`, conceptSnapshot.asStringArray());
+        await insertTriples(request, `http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc`, conceptSnapshot.asStringArray());
         return conceptSnapshot;
     }
 

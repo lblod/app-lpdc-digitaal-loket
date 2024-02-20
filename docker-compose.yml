@@ -237,7 +237,7 @@ services:
       CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
       LDES_POLLING_INTERVAL: 3600000 # since ipdcs caching headers indicate no caching, this means the polling interval to initiate the request again (3 600 000 millis = 1 hour)
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
-      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/ldes-data"
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
       # The next variables are environment-specific.
       # These should be overriden in docker-compose.override.yml
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"

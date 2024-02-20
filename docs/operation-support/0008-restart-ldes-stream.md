@@ -5,12 +5,12 @@
 Query to clear state in database
 ```shell
 DELETE { 
-	GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> { 
+	GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> { 
 		<https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot> <http://mu.semte.ch/vocabularies/ext/state> ?state. 
 	} 
 } 
 WHERE { 
-	GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> { 
+	GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> { 
 		<https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot> <http://mu.semte.ch/vocabularies/ext/state> ?state. 
 	} 
 }
@@ -26,11 +26,11 @@ docker restart app-lpdc-digitaal-loket-test-lpdc-ldes-consumer-1
 Query to clear state in database
 ```shell
 DELETE {
-    GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> {
           <https://ipdc.vlaanderen.be/id/conceptsnapshot> <http://mu.semte.ch/vocabularies/ext/state> ?state.
     }
 } WHERE {
-    GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> {
         <https://ipdc.vlaanderen.be/id/conceptsnapshot> <http://mu.semte.ch/vocabularies/ext/state> ?state.
     }
 }

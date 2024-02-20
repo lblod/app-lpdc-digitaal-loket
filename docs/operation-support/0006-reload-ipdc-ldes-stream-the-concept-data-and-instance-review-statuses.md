@@ -93,7 +93,7 @@ WHERE {
 Then delete all the data from the ipdc ldes consumer graph:
 ```
 DELETE WHERE {
-    GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> {
         ?s ?p ?o
     }
 }

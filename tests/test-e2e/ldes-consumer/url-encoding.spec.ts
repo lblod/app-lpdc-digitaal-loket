@@ -11,7 +11,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
                 GRAPH ?g {
                     ?s <http://schema.org/url> ?o .
                 }
-                FILTER (?g = <http://mu.semte.ch/graphs/public> || ?g = <http://mu.semte.ch/graphs/lpdc/ldes-data>)
+                FILTER (?g = <http://mu.semte.ch/graphs/public> || ?g = <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc>)
             }
             }
             order by str(?o), ?g
@@ -21,7 +21,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
     const json = await response.json();
     expect(json.results.bindings).toMatchObject([
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
@@ -36,7 +36,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             }
         },
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
@@ -51,7 +51,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             }
         },
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
@@ -66,7 +66,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             }
         },
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
@@ -81,7 +81,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             }
         },
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
@@ -96,7 +96,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             }
         },
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
@@ -111,7 +111,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             }
         },
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
@@ -126,7 +126,7 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             }
         },
         {
-            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/ldes-data'},
+            g: {type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc'},
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
