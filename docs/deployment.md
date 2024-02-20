@@ -33,7 +33,7 @@ Following steps can be used if you want to manually deploy a new version on dev 
 
   git pull
 
-  drc down
+  drc down --remove-orphans
   
   drc pull
 
@@ -115,7 +115,7 @@ On test we always deploy a released version.
 
   git fetch --all --tags
   
-  drc down
+  drc down --remove-orphans
 
   git checkout tags/<my version>
   #e.g. of a version: v0.2.0 
@@ -149,7 +149,7 @@ Mention on rocket chat that we will perform a new release, so the operations tea
  
   cd /data/app-lpdc-digitaal-loket
   
-  drc down
+  drc down --remove-orphans
   
   cd /data
   
