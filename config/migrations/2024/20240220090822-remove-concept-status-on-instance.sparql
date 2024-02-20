@@ -1,0 +1,14 @@
+DELETE {
+    GRAPH ?g {
+        ?s <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/3f2666df-1dae-4cc2-a8dc-e8213e713081>
+    }
+} WHERE {
+    GRAPH ?g {
+        ?s a <http://purl.org/vocab/cpsv#PublicService> .
+        ?s <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/3f2666df-1dae-4cc2-a8dc-e8213e713081>
+    }
+    FILTER(
+        STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/") &&
+        STRENDS(STR(?g), "/LoketLB-LPDCGebruiker")
+    )
+}
