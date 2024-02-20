@@ -22,29 +22,26 @@
     "order": {
       "@id": "sh:order"
     },
-    "uuid":{
-    "@id": "http://mu.semte.ch/vocabularies/core/uuid"
-    },
     "createdBy": {
       "@id": "pav:createdBy",
       "@type": "@id",
-      "@context":{
+      "@context": {
         "@base": "http://data.lblod.info/id/bestuurseenheden/"
       }
     },
-    "concept":{
-     "@id": "dct:source",
-     "@type": "@id",
-     "@context":{
-       "@base": "https://ipdc.tni-vlaanderen.be/id/concept/"
-     }
+    "concept": {
+      "@id": "dct:source",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://ipdc.tni-vlaanderen.be/id/concept/"
+      }
     },
-    "conceptSnapshot":{
-    "@id": "ext:hasVersionedSource",
-    "@type": "@id",
-    "@context":{
-      "@base": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/"
-    }
+    "conceptSnapshot": {
+      "@id": "ext:hasVersionedSource",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/"
+      }
     },
     "aangemaaktOp": {
       "@id": "dct:created",
@@ -70,79 +67,79 @@
       "@id": "dct:description",
       "@container": "@language"
     },
-    "aanvullendeBeschrijving":{
+    "aanvullendeBeschrijving": {
       "@id": "instantieNs:additionalDescription",
       "@container": "@language"
     },
-    "uitzonderingen":{
+    "uitzonderingen": {
       "@id": "instantieNs:exception",
       "@container": "@language"
     },
     "voorwaarden": {
       "@id": "deu:hasRequirement",
-      "@type":"@id",
+      "@type": "@id",
       "@container": "@set",
-      "@context":{
+      "@context": {
         "@base": "http://data.lblod.info/id/requirement/",
         "bewijs": {
-            "@id": "deu:hasSupportingEvidence",
-            "@type": "@id",
-            "@context": {
-                "@base": "http://data.lblod.info/id/evidence/"
-            }
+          "@id": "deu:hasSupportingEvidence",
+          "@type": "@id",
+          "@context": {
+            "@base": "http://data.lblod.info/id/evidence/"
+          }
         }
       }
     },
-    "procedure":{
+    "procedure": {
       "@id": "purlCpsv:follows",
       "@type": "@id",
       "@container": "@set",
-      "@context":{
+      "@context": {
         "@base": "http://data.lblod.info/id/rule/",
-        "websites":{
-            "@container":"@set",
-            "@id": "instantieNs:hasWebsites",
-            "@type":"@id",
-            "@context": {
-                "@base": "http://data.lblod.info/id/website/"
-            }
+        "websites": {
+          "@container": "@set",
+          "@id": "instantieNs:hasWebsites",
+          "@type": "@id",
+          "@context": {
+            "@base": "http://data.lblod.info/id/website/"
+          }
         }
       }
     },
     "url": {
       "@id": "sch:url"
     },
-    "kosten":{
-      "@id":"deu:hasCost",
+    "kosten": {
+      "@id": "deu:hasCost",
       "@container": "@set",
       "@type": "@id",
-      "@context":{
+      "@context": {
         "@base": "http://data.lblod.info/id/cost/"
       }
     },
-    "fincieleVoordelen":{
-      "@id":"purlCpsv:produces",
+    "fincieleVoordelen": {
+      "@id": "purlCpsv:produces",
       "@type": "@id",
-      "@container":"@set",
-      "@context":{
+      "@container": "@set",
+      "@context": {
         "@base": "http://data.lblod.info/id/financial-advantage/"
       }
     },
-    "regelgeving":{
-      "@id":"instantieNs:regulation",
+    "regelgeving": {
+      "@id": "instantieNs:regulation",
       "@container": "@language"
     },
-    "contactPunten":{
-      "@id":"deu:hasContactPoint",
-      "@type":"@id",
+    "contactPunten": {
+      "@id": "deu:hasContactPoint",
+      "@type": "@id",
       "@container": "@set",
-      "@context":{
-        "@base":"http://data.lblod.info/id/contact-punten/",
-        "adressen":{
-          "@id":"instantieNs:address",
-          "@type":"@id",
+      "@context": {
+        "@base": "http://data.lblod.info/id/contact-punten/",
+        "adressen": {
+          "@id": "instantieNs:address",
+          "@type": "@id",
           "@container": "@set",
-          "@context":{
+          "@context": {
             "@base": "https://data.vlaanderen.be/id/adres/"
           }
         }
@@ -172,90 +169,16 @@
     "postcode": {
       "@id": "https://data.vlaanderen.be/ns/adres#postcode"
     },
-    "meerInfo":{
-      "@id":"http://www.w3.org/2000/01/rdf-schema#seeAlso",
+    "meerInfo": {
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type": "@id",
       "@container": "@set",
-      "@context":{
+      "@context": {
         "@base": "http://data.lblod.info/id/website/",
-        "websites":{
-            "@id": "sch:WebSite",
-            "@container":"@set"
+        "websites": {
+          "@id": "sch:WebSite",
+          "@container": "@set"
         }
-      }
-    },
-    "type":{
-      "@id":"dct:type",
-      "@context":{
-        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
-      }
-    },
-    "doelgroepen":{
-      "@id": "instantieNs:targetAudience",
-      "@container": "@set",
-      "@context":{
-        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
-      }
-    },
-    "themas":{
-      "@id":"deu:thematicArea",
-      "@container": "@set",
-      "@context":{
-        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
-      }
-    },
-    "bevoegdBestuursniveau":{
-       "@id":"instantieNs:competentAuthorityLevel",
-       "@container":"@set",
-       "@context":{
-         "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
-       }
-    },
-    "bevoegdeOverheden": {
-      "@id": "deu:hasCompetentAuthority",
-      "@container": "@set",
-      "@type" :"@id",
-      "@context": {
-        "@base": "http://data.lblod.info/id/bestuurseenheden/"
-      }
-    },
-    "UitvoerendBestuursniveau":{
-      "@id":"instantieNs:executingAuthorityLevel",
-      "@container": "@set",
-      "@context":{
-        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
-      }
-    },
-    "uitvoerendeOverheden": {
-      "@id": "instantieNs:hasExecutingAuthority",
-      "@container": "@set",
-      "@type" :"@id",
-      "@context": {
-        "@base": "http://data.lblod.info/id/bestuurseenheden/"
-      }
-    },
-    "geografischToepassingsgebieden": {
-      "@id": "dct:spatial",
-      "@container": "@set",
-      "@type": "@id"
-    },
-    "tags":{
-      "@id":"http://www.w3.org/ns/dcat#keyword",
-      "@container": "@language"
-
-    },
-    "publicatieKanalen":{
-      "@id":"instantieNs:publicationMedium",
-      "@container":"@set",
-      "@context":{
-        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
-      }
-    },
-    "yourEurope":{
-      "@id":"instantieNs:yourEuropeCategory",
-      "@container":"@set",
-      "@context":{
-        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
       }
     },
     "type": {
@@ -265,13 +188,80 @@
         "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
       }
     },
+    "doelgroepen": {
+      "@id": "instantieNs:targetAudience",
+      "@container": "@set",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+      }
+    },
+    "themas": {
+      "@id": "deu:thematicArea",
+      "@container": "@set",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+      }
+    },
+    "bevoegdBestuursniveau": {
+      "@id": "instantieNs:competentAuthorityLevel",
+      "@container": "@set",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+      }
+    },
+    "bevoegdeOverheden": {
+      "@id": "deu:hasCompetentAuthority",
+      "@container": "@set",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://data.lblod.info/id/bestuurseenheden/"
+      }
+    },
+    "UitvoerendBestuursniveau": {
+      "@id": "instantieNs:executingAuthorityLevel",
+      "@container": "@set",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+      }
+    },
+    "uitvoerendeOverheden": {
+      "@id": "instantieNs:hasExecutingAuthority",
+      "@container": "@set",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://data.lblod.info/id/bestuurseenheden/"
+      }
+    },
+    "geografischToepassingsgebieden": {
+      "@id": "dct:spatial",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "tags": {
+      "@id": "http://www.w3.org/ns/dcat#keyword",
+      "@container": "@language"
+    },
+    "publicatieKanalen": {
+      "@id": "instantieNs:publicationMedium",
+      "@container": "@set",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+      }
+    },
+    "yourEurope": {
+      "@id": "instantieNs:yourEuropeCategory",
+      "@container": "@set",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
+      }
+    },
     "generatedAtTime": {
       "@id": "prov:generatedAtTime",
       "@type": "xsd:dateTime"
     },
     "isVersionOf": {
-          "@id": "dct:isVersionOf",
-          "@type": "@id"
+      "@id": "dct:isVersionOf",
+      "@type": "@id"
     },
     "talen": {
       "@container": "@set",
@@ -279,7 +269,7 @@
       "@type": "@id",
       "@context": {
         "@base": "http://publications.europa.eu/resource/authority/language/"
-       }
+      }
     },
     "EventStream": "ldes:EventStream",
     "Node": "tree:Node",
@@ -293,7 +283,6 @@
       "@id": "tree:member",
       "@container": "@set"
     },
-
     "GreaterThanOrEqualToRelation": "tree:GreaterThanOrEqualToRelation",
     "LessThanOrEqualToRelation": "tree:LessThanOrEqualToRelation",
     "LessThanRelation": "tree:LessThanRelation",
