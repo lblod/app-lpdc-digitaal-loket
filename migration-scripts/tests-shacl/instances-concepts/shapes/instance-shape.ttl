@@ -505,14 +505,14 @@ oss:InstanceAddressShape
           shacl:path adres:land
       ], [
           shacl:datatype xsd:string;
-          shacl:description "houseNumber is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
+          shacl:description "houseNumber is defined as a subproperty of locatordesignator by defining parentURI http://www.w3.org/ns/locn#locatorDesignator."@nl;
           shacl:minCount 1;
           shacl:maxCount 1;
           shacl:name "houseNumber"@nl;
           shacl:path adres:Adresvoorstelling.huisnummer
       ], [
           shacl:datatype xsd:string;
-          shacl:description "mailbox is defined as a subproperty of locatordesignator by defining parentURI ttp://www.w3.org/ns/locn#locatorDesignator."@nl;
+          shacl:description "mailbox is defined as a subproperty of locatordesignator by defining parentURI http://www.w3.org/ns/locn#locatorDesignator."@nl;
           shacl:maxCount 1;
           shacl:name "mailbox"@nl;
           shacl:path adres:Adresvoorstelling.busnummer
