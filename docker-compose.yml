@@ -45,6 +45,9 @@ services:
 
   deltanotifier:
     image: cecemel/delta-notifier:0.2.0-beta.3
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./config/delta:/config
     labels:
@@ -54,6 +57,9 @@ services:
 
   database:
     image: semtech/mu-authorization:feature-service-roam-r1.1
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_OVERLOAD_RECOVERY: "true"
@@ -115,6 +121,9 @@ services:
 
   resource:
     image: semtech/mu-cl-resources:feature-supply-info-on-empty-included
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
     volumes:
@@ -154,6 +163,9 @@ services:
   ################################################################################
   report-generation:
     image: lblod/loket-report-generation-service:0.6.3
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./data/files:/share
       - ./config/reports/:/config/
@@ -177,6 +189,9 @@ services:
 
   file:
     image: cecemel/file-service:3.3.0
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./data/files:/share
     labels:
@@ -189,6 +204,9 @@ services:
   ################################################################################
   lpdc-management:
     image: lblod/lpdc-management-service:0.34.0
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
@@ -209,6 +227,9 @@ services:
 
   lpdc-publish:
     image: lblod/lpdc-publish-service:0.14.0
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
@@ -216,7 +237,7 @@ services:
       DEBUG_AUTH_HEADERS: "false"
       CRON_PATTERN: "0 * * * *" # every hour
       # The next variables are environment-specific.
-      # These should be overriden in docker-compose.override.yml
+      # Best to override in docker-compose.override.yml
       IPDC_JSON_ENDPOINT: "<IPDC endpoint url>"
       IPDC_X_API_KEY: "<IPDC api key>"
     labels:
@@ -240,7 +261,7 @@ services:
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
       # The next variables are environment-specific.
-      # These should be overriden in docker-compose.override.yml
+      # Best to override in docker-compose.override.yml
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
     labels:
       - "logging=true"

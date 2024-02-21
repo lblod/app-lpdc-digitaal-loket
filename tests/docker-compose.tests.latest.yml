@@ -4,6 +4,9 @@ services:
 
   lpdc-management:
     image: lblod/lpdc-management-service:latest
+    depends_on:
+      migrations:
+        condition: service_healthy
     ports:
       - "10996:80"
     environment:
@@ -25,6 +28,9 @@ services:
 
   lpdc-publish:
     image: lblod/lpdc-publish-service:latest
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"

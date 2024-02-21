@@ -29,6 +29,9 @@ services:
 
   database:
     image: semtech/mu-authorization:feature-service-roam-r1.1
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_OVERLOAD_RECOVERY: "true"
@@ -55,6 +58,9 @@ services:
 
   deltanotifier:
     image: cecemel/delta-notifier:0.2.0-beta.3
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ../config/delta:/config
     labels:
@@ -92,6 +98,9 @@ services:
 
   resource:
     image: semtech/mu-cl-resources:feature-supply-info-on-empty-included
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
     volumes:
@@ -151,6 +160,9 @@ services:
 
   report-generation:
     image: lblod/loket-report-generation-service:0.6.3
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./data-tests/files:/share
       - ../config/reports/:/config/
@@ -170,6 +182,9 @@ services:
 
   file:
     image: cecemel/file-service:3.3.0
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./data-tests/files:/share
 
