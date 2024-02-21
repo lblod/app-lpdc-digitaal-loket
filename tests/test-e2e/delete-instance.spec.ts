@@ -100,7 +100,7 @@ test.describe('Delete an instance', () => {
         await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ titel: newTitel, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: newTitel, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
         expect(instancePublishedInIpdc).toBeTruthy();
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
         const publicServiceUri = publicService['@id'];

@@ -217,7 +217,7 @@ test.describe('Herziening nodig', () => {
 
         // instance should be linked to latest functional changed concept snapshot
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({
-            titel: `Concept created ${conceptId}`,
+            title: `Concept created ${conceptId}`,
             expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
         });
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');

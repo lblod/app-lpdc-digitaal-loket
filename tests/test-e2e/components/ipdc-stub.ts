@@ -52,7 +52,7 @@ export class IpdcStub {
                 console.log('Error retrieving instances ', error);
                 throw error;
             }
-            console.log(`No response from IPDC Stub yet, retrying... number of tries (${waitTurn})`);
+            console.log(`No response from IPDC Stub yet, retrying... number of (re)tries (${waitTurn})`);
             await wait(1000);
             if (waitTurn > maxRetries) {
                 console.log(`No response form IPDC Stub after ${waitTurn} retries, stopped waiting.`);

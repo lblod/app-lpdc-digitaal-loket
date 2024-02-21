@@ -69,7 +69,7 @@ test.describe('Concurrent Update', () => {
         await expect(homePage.resultTable.row(first_row).locator).toContainText(instantieTitel);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({titel: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'});
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({title: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'});
         expect(instancePublishedInIpdc).toBeTruthy();
 
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');

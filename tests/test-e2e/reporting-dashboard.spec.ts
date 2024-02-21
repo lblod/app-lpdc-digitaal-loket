@@ -229,7 +229,7 @@ test.describe('Reporting dashboard', () => {
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
         await homePage.expectToBeVisible();
         await IpdcStub.findPublishedInstance({
-            titel: newTitel,
+            title: newTitel,
             expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
         });
 
@@ -321,7 +321,7 @@ test.describe('Reporting dashboard', () => {
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
         await homePage.expectToBeVisible();
         await IpdcStub.findPublishedInstance({
-            titel: newTitel,
+            title: newTitel,
             expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
         });
 

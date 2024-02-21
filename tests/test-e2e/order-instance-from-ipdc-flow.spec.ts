@@ -129,7 +129,7 @@ test.describe('Order instance from IPDC flow', () => {
 
             //check order in Ipdc
             const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
-            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({titel: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage});
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({title: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage});
             expect(instancePublishedInIpdc).toBeTruthy();
 
             verifyPublishedInstance(instancePublishedInIpdc, {
@@ -181,7 +181,7 @@ test.describe('Order instance from IPDC flow', () => {
 
             //check order in Ipdc
             const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
-            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({titel: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage});
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({title: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage});
             expect(instancePublishedInIpdc).toBeTruthy();
             const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
@@ -353,7 +353,7 @@ test.describe('Order instance from IPDC flow', () => {
 
             //check order in Ipdc
             const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
-            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({titel:titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage});
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({title:titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage});
             expect(instancePublishedInIpdc).toBeTruthy();
             const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
