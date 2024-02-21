@@ -74,9 +74,25 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
             description,
             expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": expect.stringContaining(description) }, { "@language": 'en', "@value": expect.stringContaining(descriptionInEnglish) }]),
             expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" },
-                                           { "@id": "http://data.lblod.info/id/bestuurseenheden/c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea" }]),
+            { "@id": "http://data.lblod.info/id/bestuurseenheden/c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea" }]),
             expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-14T13:42:12.357Z" }),
             expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-14T13:59:25.237Z" }));
+    });
+
+    test('Verify a minimal instance was created and updated from instance snapshot from ldes stream and verify its publishment to ipdc', async () => {
+
+        const title = 'Minimalistische instantie updatet';
+        const description = `Beschrijving van de minimalistische instantie updatet`;
+
+        await verifyInstanceInUI(title, undefined, description, undefined);
+        await verifyPublishmentInIPDC(
+            title,
+            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": title }]),
+            description,
+            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": expect.stringContaining(description) }]),
+            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }]),
+            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-14T13:42:12.357Z" }),
+            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-15T14:59:30.236Z" }));
     });
 
     async function verifyInstanceInUI(title: string, titleInEnglish: string | undefined, description: string, descriptionInEnglish: string | undefined) {
