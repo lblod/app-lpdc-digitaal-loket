@@ -15,6 +15,7 @@ services:
       ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
       MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
+      INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/5 * * * * *" # every 5 seconds
     healthcheck:
       test: [ "CMD", "wget", "--spider", "http://localhost" ]
       interval: 5s

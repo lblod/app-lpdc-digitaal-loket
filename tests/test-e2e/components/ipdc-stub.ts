@@ -3,7 +3,7 @@ import {ipdcStubUrl, virtuosoUrl} from "../../test-api/test-helpers/test-options
 import {wait} from "../shared/shared";
 
 export type PublicServiceFilter = {
-    titel: string,
+    title: string,
     expectedFormalOrInformalTripleLanguage: string
 };
 
@@ -31,12 +31,12 @@ export class IpdcStub {
                 const result = await response.json();
                 const publishedInstance = result.find((ipdcPublish) => {
                     return ipdcPublish.find((element) => {
-                        if ((filter as PublicServiceFilter).titel !== undefined) {
+                        if ((filter as PublicServiceFilter).title !== undefined) {
                             const publicServiceFilter = filter as PublicServiceFilter;
                             return element['@type'].includes('http://purl.org/vocab/cpsv#PublicService')
                                 && element['http://purl.org/dc/terms/title'].some((translatedValue) =>
                                     translatedValue['@language'] === publicServiceFilter.expectedFormalOrInformalTripleLanguage
-                                    && translatedValue['@value'] === publicServiceFilter.titel);
+                                    && translatedValue['@value'] === publicServiceFilter.title);
                         } else {
                             const tombstonedPublicServiceFilter = filter as TombstonedPublicServiceFilter;
                             return element['@type'].includes('https://www.w3.org/ns/activitystreams#Tombstone')
