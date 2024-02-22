@@ -26,7 +26,7 @@
       "concept": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84",
       "aangemaaktOp": "2024-02-14T13:42:12.357Z",
       "bewerktOp": "2024-02-14T13:59:25.237Z",
-      "generatedAtTime": "2024-02-21T02:16:39.134Z",
+      "generatedAtTime": "2024-02-28T02:16:39.134Z",
       "geldigVanaf": "2020-08-26T11:40:20.026205Z",
       "geldigTot": "2025-07-12T11:40:20.026205Z",
       "titel": {
@@ -212,6 +212,60 @@
         "VerblijfNaturalisatie",
         "VoertuigenVerkeersregels"
       ]
+    },
+    {
+      "@id": "http://data.lblod.info/id/public-service-snapshot/a62cee64-9086-4864-9be9-1f72798a8c72",
+      "@type": [
+        "PublicService"
+      ],
+      "isVersionOf": "http://data.lblod.info/id/public-service/2e018424-7af6-4798-8026-0e627a8694d8",
+      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "aangemaaktOp": "2024-02-24T11:42:12.357Z",
+      "bewerktOp": "2024-02-25T13:59:25.236Z",
+      "generatedAtTime": "2024-03-01T06:32:10.377Z",
+      "titel": {
+        "nl-BE-x-informal": "Instantie die gearchiveerd zal worden"
+      },
+      "beschrijving": {
+        "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de instantie die gearchiveerd zal worden</p>"
+      },
+      "bevoegdeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ],
+      "geografischToepassingsgebieden": [
+        "http://vocab.belgif.be/auth/refnis2019/44021"
+      ],
+      "uitvoerendeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ],
+      "gearchiveerd": "false"
+    },
+    {
+      "@id": "http://data.lblod.info/id/public-service-snapshot/f9aceb0a-5225-4b0c-be55-e14a2954347a",
+      "@type": [
+        "PublicService"
+      ],
+      "isVersionOf": "http://data.lblod.info/id/public-service/2e018424-7af6-4798-8026-0e627a8694d8",
+      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "aangemaaktOp": "2024-02-24T11:42:12.357Z",
+      "bewerktOp": "2024-02-27T13:59:25.236Z",
+      "generatedAtTime": "2024-03-02T06:32:10.377Z",
+      "titel": {
+        "nl-BE-x-informal": "Instantie die gearchiveerd is"
+      },
+      "beschrijving": {
+        "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de instantie die gearchiveerd is</p>"
+      },
+      "bevoegdeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ],
+      "geografischToepassingsgebieden": [
+        "http://vocab.belgif.be/auth/refnis2019/44021"
+      ],
+      "uitvoerendeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ],
+      "gearchiveerd": "true"
     }
   ]
 }

@@ -269,6 +269,10 @@
         "@base": "http://publications.europa.eu/resource/authority/language/"
       }
     },
+    "gearchiveerd": {
+      "@id": "instantieNs:isArchived",
+      "@type": "xsd:boolean"
+    },
     "EventStream": "ldes:EventStream",
     "Node": "tree:Node",
     "relation": {

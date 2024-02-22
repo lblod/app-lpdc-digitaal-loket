@@ -1,10 +1,12 @@
 import express from "express";
 import fs from "fs";
+import { instanceSnapshot } from "./extra-instancesnapshots.js";
 const app = express();
 
 app.use(express.json({type:  ['application/json', 'application/ld+json']}));
 
-const instances =[];
+const extraInstanceSnapshots = [];
+
 function errorHandler(err, req, res, next) {
     if (err) {
         console.log(err);
@@ -12,21 +14,24 @@ function errorHandler(err, req, res, next) {
     }
 }
 
-app.get('/instancesnapshots', (req, res, next) => {
+app.post('/instancesnapshot/:instanceId/:gearchiveerd', (req, res, next) => {
     try {
-        res.status(200).json(instances);
-    } catch (e) {
-        next(e);
-    }
-});
+        const instanceId = req.params.instanceId;
+        const gearchiveerd = req.params.gearchiveerd;
+        console.log(`creating new instancesnapshot for instance [${instanceId}] [${gearchiveerd}]`);
 
-app.put('/instancesnapshots', (req, res, next) => {
-    try {
-        console.log('received new instance snapshots');
-        const newInstanceSnapshot = req.body;
-        instances.push(newInstanceSnapshot);
-        console.log(JSON.stringify(newInstanceSnapshot, null, 2));
-        res.status(200).send();
+        const instanceSnapshotToAdd = instanceSnapshot(instanceId, gearchiveerd);
+        if (instanceSnapshotToAdd) {
+            extraInstanceSnapshots.push(instanceSnapshotToAdd);
+            return res.status(200).json({
+                id: instanceSnapshotToAdd["@id"],
+                isVersionOf: instanceSnapshotToAdd['isVersionOf'],
+                title: instanceSnapshotToAdd.titel["nl-BE-x-informal"],
+                description: instanceSnapshotToAdd.beschrijving["nl-BE-x-informal"],
+            });
+        } else {
+            return res.sendStatus(400);
+        }
     } catch (e) {
         next(e);
     }
@@ -38,6 +43,7 @@ app.get('/doc/instancesnapshot', (req, res, next) => {
         console.log(`page ${pageNumber} requested`);
         const page = fs.readFileSync(`./ldes-pages/page-${pageNumber}.json`, "utf8");
         const jsonLd = JSON.parse(page);
+        jsonLd.member = jsonLd.member.concat(extraInstanceSnapshots);
         res.status(200).type('application/ld+json').json(jsonLd);
     } catch (e) {
         next(e);

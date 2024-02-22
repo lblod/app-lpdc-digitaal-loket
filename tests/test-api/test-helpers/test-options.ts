@@ -7,3 +7,4 @@ export const dashboardUrl = 'http://localhost:11200';
 export const reportGenerationUrl = 'http://localhost:11300';
 export const lpdcUrl = 'http://localhost:4200';
 export const ipdcStubUrl = 'http://localhost:33000';
+export const instanceSnapshotLdesStubUrl = 'http://localhost:34000';

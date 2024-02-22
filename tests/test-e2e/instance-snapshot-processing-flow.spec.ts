@@ -5,6 +5,8 @@ import { UJeModal } from './modals/u-je-modal';
 import { first_row } from './components/table';
 import { InstantieDetailsPage } from './pages/instantie-details-page';
 import { IpdcStub } from './components/ipdc-stub';
+import {InstanceSnapshotLdesStub} from "./components/instance-snapshot-ldes-stub";
+import {v4 as uuid} from 'uuid';
 
 test.describe.configure({ mode: 'parallel' });
 
@@ -95,6 +97,25 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
             expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-15T14:59:30.236Z" }));
     });
 
+    test('Verify an instance can be archived and again unarchived', async () => {
+        const instanceId = uuid();
+        const {title, description, isVersionOf} = await InstanceSnapshotLdesStub.createSnapshot(instanceId, false);
+
+        await verifyInstanceInUI(title, undefined, description, undefined);
+
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
+        expect(instancePublishedInIpdc).toBeTruthy();
+
+        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
+
+        const {title: titleArchived} = await InstanceSnapshotLdesStub.createSnapshot(instanceId, true);    
+
+        const archivedInstancePublishedInIpdc = await IpdcStub.findPublishedInstance({ tombstonedId: isVersionOf });
+        expect(archivedInstancePublishedInIpdc).toBeTruthy();
+
+        //TODO LPDC-910: add unarchiving ... 
+    });
+
     async function verifyInstanceInUI(title: string, titleInEnglish: string | undefined, description: string, descriptionInEnglish: string | undefined) {
         await homePage.expectToBeVisible();
         await homePage.searchInput.fill(title);
@@ -126,7 +147,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();
     }
 
-    async function verifyPublishmentInIPDC(title: string, titleExpection, description: string, descriptionExpectation, competentAuthorityExpectation, dateCreateExpectation, dateModifiedExpectation) {
+    async function verifyPublishmentInIPDC(title: string, titleExpection, description: string, descriptionExpectation, competentAuthorityExpectation, dateCreateExpectation: any | undefined, dateModifiedExpectation: any | undefined) {
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
         expect(instancePublishedInIpdc).toBeTruthy();
 
@@ -139,11 +160,15 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
 
+        if(dateCreateExpectation) {
         expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(dateCreateExpectation);
+    }
 
+        if(dateModifiedExpectation) {
         expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(dateModifiedExpectation);
+        }
 
         expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
