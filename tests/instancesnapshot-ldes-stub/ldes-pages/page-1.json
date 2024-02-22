@@ -23,7 +23,7 @@
       ],
       "isVersionOf": "http://data.lblod.info/id/public-service/c31c343e-836c-4674-8efa-991cc2078493",
       "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-      "concept": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84",
+      "linkedConcept": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84",
       "aangemaaktOp": "2024-02-14T13:42:12.357Z",
       "bewerktOp": "2024-02-14T13:59:25.237Z",
       "generatedAtTime": "2024-02-28T02:16:39.134Z",
@@ -127,7 +127,7 @@
           "order": 0
         }
       ],
-      "regelgeving": {
+      "regelgevingTekst": {
         "en": "Regulation",
         "nl-BE-x-informal": " regelgeving"
       },
@@ -181,7 +181,7 @@
         "BurgerOverheid",
         "CultuurSportVrijeTijd"
       ],
-      "bevoegdBestuursniveau": [
+      "bevoegdeBestuursniveaus": [
         "Federaal",
         "Europees"
       ],
@@ -189,7 +189,7 @@
         "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
         "c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea"
       ],
-      "UitvoerendBestuursniveau": [
+      "uitvoerendeBestuursniveaus": [
         "Lokaal",
         "Derden"
       ],
@@ -199,7 +199,7 @@
       "geografischToepassingsgebieden": [
         "http://vocab.belgif.be/auth/refnis2019/44021"
       ],
-      "tags": {
+      "zoektermen": {
         "nl": [
           "Akte",
           "Nationaliteit"
