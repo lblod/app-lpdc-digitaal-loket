@@ -20,7 +20,7 @@ export class InstanceSnapshotLdesStub {
 }
 
 async function processSnapshot(request: APIRequestContext, instanceSnapshotId: string): Promise<void> {
-    console.log(`waiting for processessing instance snapshot <${instanceSnapshotId}>`);
+    console.log(`waiting for processing instance snapshot <${instanceSnapshotId}>`);
     const maxPollAttempts = 60;
     for (let i = 0; i < maxPollAttempts; i++) {
         await wait(1000);
