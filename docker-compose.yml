@@ -60,6 +60,8 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
+      virtuoso:
+        condition: service_started
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_OVERLOAD_RECOVERY: "true"
@@ -91,6 +93,9 @@ services:
 
   migrations:
     image: semtech/mu-migrations-service:0.8.0
+    depends_on:
+      virtuoso:
+        condition: service_started
     environment:
       MU_SPARQL_TIMEOUT: "300"
       BATCH_SIZE: "1000"
