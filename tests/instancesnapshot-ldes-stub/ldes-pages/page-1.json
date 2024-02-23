@@ -231,15 +231,15 @@
       ],
       "regelgevingTekst": {
         "en": "Regulation",
-        "nl-BE-x-informal": " regelgeving"
+        "nl-BE-x-informal": "Regelgeving"
       },
       "contactPunten": [
         {
           "@type": "contactPunt",
-          "email": "info@gent.be",
-          "telefoon": "0412345678",
-          "url": "https://www.gent.be",
-          "openingsuren": "24/24",
+          "email": "info@gent.be1",
+          "telefoon": "04123456781",
+          "url": "https://www.gent.be1",
+          "openingsuren": "24/24 - 1",
           "order": 0,
           "adressen": [
             {
@@ -248,6 +248,7 @@
                 "nl": "Burggravenlaan"
               },
               "huisnummer": "1",
+              "busnummer": "a",
               "gemeente": {
                 "nl": "Gent"
               },
@@ -257,21 +258,59 @@
               "postcode": "9000"
             }
           ]
+        },
+        {
+          "@type": "contactPunt",
+          "email": "info@gent.be2",
+          "telefoon": "04123456782",
+          "url": "https://www.gent.be2",
+          "openingsuren": "24/24 - 2",
+          "order": 1,
+          "adressen": [
+            {
+              "@type": "adres",
+              "straat": {
+                "nl": "Burggravenlaantje"
+              },
+              "huisnummer": "15",
+              "busnummer": "b",
+              "gemeente": {
+                "nl": "Gent-Sint-Pieter"
+              },
+              "land": {
+                "nl": "België"
+              },
+              "postcode": "8000"
+            }
+          ]
         }
       ],
       "meerInfo": [
         {
             "@type": "website",
             "titel": {
-              "en": "Belgian nationality and naturalization website",
-              "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving"
+              "en": "Belgian nationality and naturalization website - 1",
+              "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - 1"
             },
             "beschrijving": {
-              "en": "Belgian nationality and naturalization description website",
-              "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving"
+              "en": "Belgian nationality and naturalization description website - 1",
+              "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - 1"
             },
-            "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
+            "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit1",
             "order": 0
+          },
+          {
+            "@type": "website",
+            "titel": {
+              "en": "Belgian nationality and naturalization website - 2",
+              "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - 2"
+            },
+            "beschrijving": {
+              "en": "Belgian nationality and naturalization description website - 2",
+              "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - 2"
+            },
+            "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit2",
+            "order": 1
           }
       ],
       "type": "FinancieelVoordeel",

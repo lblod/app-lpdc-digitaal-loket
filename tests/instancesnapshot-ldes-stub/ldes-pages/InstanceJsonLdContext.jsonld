@@ -18,8 +18,7 @@
     "dtv": "https://data.vlaanderen.be/ns/",
     "pav": "http://purl.org/pav/",
     "ps": "http://vocab.belgif.be/ns/publicservice#",
-    "adresNs": "https://data.vlaanderen.be/ns/adres#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "dcat": "http://www.w3.org/ns/dcat#",
     "PublicService": "cpsv:PublicService",
     "order": {
@@ -145,31 +144,40 @@
       "@id": "locn:Address"
     },
     "email": {
-      "@id": "schema:email"
+      "@id": "schema:email",
+      "@type": "xsd:string"
     },
     "openingsuren": {
-      "@id": "schema:openingHours"
+      "@id": "schema:openingHours",
+      "@type": "xsd:string"
     },
     "telefoon": {
-      "@id": "schema:telephone"
+      "@id": "schema:telephone",
+      "@type": "xsd:string"
     },
     "straat": {
-      "@id": "adresNs:Straatnaam",
+      "@id": "dtv:adres#Straatnaam",
       "@container": "@language"
     },
     "huisnummer": {
-      "@id": "adresNs:Adresvoorstelling.huisnummer"
+      "@id": "dtv:adres#Adresvoorstelling.huisnummer",
+      "@type": "xsd:string"
+    },
+    "busnummer": {
+      "@id": "dtv:adres#Adresvoorstelling.busnummer",
+      "@type": "xsd:string"
     },
     "gemeente": {
-      "@id": "adresNs:gemeentenaam",
+      "@id": "dtv:adres#gemeentenaam",
       "@container": "@language"
     },
     "land": {
-      "@id": "adresNs:land",
+      "@id": "dtv:adres#land",
       "@container": "@language"
     },
     "postcode": {
-      "@id": "adresNs:postcode"
+      "@id": "dtv:adres#postcode",
+      "@type": "xsd:string"
     },
     "meerInfo": {
       "@id": "rdfs:seeAlso",

@@ -97,6 +97,28 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const financialAdvantageTitleInEnglish = 'Financial advantage';
         const financialAdvantageDescription = 'Beschrijving financieel voordeel';
         const financialAdvantageDescriptionInEnglish = 'Description financial advantage';
+        const regulationDescription = 'Regelgeving';
+        const regulationDescriptionInEnglish = 'Regulation';
+        const contactPointEmail = 'info@gent.be';
+        const contactPointTelephone = '0412345678';
+        const contactPointUrl = 'https://www.gent.be';
+        const contactPointOpeningsHours = '24/24';
+        const addressStraat1 = 'Burggravenlaan';
+        const addressHuisnummer1 = '1';
+        const addressBusnummer1 = 'a';
+        const addressGemeente1 = 'Gent';
+        const addressPostcode1 = '9000';
+        const addressStraat2 = 'Burggravenlaantje';
+        const addressHuisnummer2 = '15';
+        const addressBusnummer2 = 'b';
+        const addressGemeente2 = 'Gent-Sint-Pieter';
+        const addressPostcode2 = '8000';        
+        const addressLand = 'België';
+        const moreInfoWebsiteTitle = 'Website Belgische nationaliteit en naturalisatie beschrijving';
+        const moreInfoWebsiteTitleInEnglish = 'Belgian nationality and naturalization website';
+        const moreInfoWebsiteDescription = 'Website Belgische nationaliteit en naturalisatie beschrijving';
+        const moreInfoWebsiteDescriptionInEnglish = 'Belgian nationality and naturalization description website';
+        const moreInfoWebsiteUrl = 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit'
 
         await homePage.expectToBeVisible();
         await homePage.searchInput.fill(title);
@@ -283,6 +305,56 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.beschrijvingFinancieelVoordeelEngelsEditor(1)).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelEngelsReadonly(1).textContent()).toContain(financialAdvantageDescriptionInEnglish + ' - 2');
 
+        await expect(instantieDetailsPage.beschrijvingRegelgevingEditor()).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingRegelgevingReadonly().textContent()).toContain(regulationDescription);
+        await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor()).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly().textContent()).toContain(regulationDescriptionInEnglish);
+
+        await expect(instantieDetailsPage.contactpuntEmailReadonly(0, 0)).toHaveValue(contactPointEmail + '1');
+        await expect(instantieDetailsPage.contactpuntTelefoonReadonly(0, 0)).toHaveValue(contactPointTelephone + '1');
+        await expect(instantieDetailsPage.contactpuntWebsiteURLReadonly(0)).toHaveValue(contactPointUrl + '1');
+        await expect(instantieDetailsPage.contactpuntOpeningsurenReadonly(0)).toHaveValue(contactPointOpeningsHours + ' - 1');
+
+        await expect(instantieDetailsPage.contactpuntAdresGemeenteSelect(0).selectedItem).toContainText(addressGemeente1);
+        await expect(instantieDetailsPage.contactpuntAdresStraatSelect(0).selectedItem).toContainText(addressStraat1);
+        await expect(instantieDetailsPage.contactpuntAdresHuisnummerInput(0)).toHaveValue(addressHuisnummer1);
+        await expect(instantieDetailsPage.contactpuntAdresBusnummerInput(0)).toHaveValue(addressBusnummer1);
+
+        await expect(instantieDetailsPage.contactpuntEmailReadonly(0, 1)).toHaveValue(contactPointEmail + '2');
+        await expect(instantieDetailsPage.contactpuntTelefoonReadonly(0, 1)).toHaveValue(contactPointTelephone + '2');
+        await expect(instantieDetailsPage.contactpuntWebsiteURLReadonly(1)).toHaveValue(contactPointUrl + '2');
+        await expect(instantieDetailsPage.contactpuntOpeningsurenReadonly(1)).toHaveValue(contactPointOpeningsHours + ' - 2');
+
+        await expect(instantieDetailsPage.contactpuntAdresGemeenteSelect(1).selectedItem).toContainText(addressGemeente2);
+        await expect(instantieDetailsPage.contactpuntAdresStraatSelect(1).selectedItem).toContainText(addressStraat2);
+        await expect(instantieDetailsPage.contactpuntAdresHuisnummerInput(1)).toHaveValue(addressHuisnummer2);
+        await expect(instantieDetailsPage.contactpuntAdresBusnummerInput(1)).toHaveValue(addressBusnummer2);
+
+        await expect(instantieDetailsPage.titelWebsiteInput(0)).not.toBeEditable();
+        expect(await instantieDetailsPage.titelWebsiteInput(0)).toHaveValue(moreInfoWebsiteTitle + ' - 1');
+        await expect(instantieDetailsPage.titelWebsiteEngelsInput(0)).not.toBeEditable();
+        expect(await instantieDetailsPage.titelWebsiteEngelsInput(0)).toHaveValue(moreInfoWebsiteTitleInEnglish + ' - 1');
+
+        await expect(instantieDetailsPage.beschrijvingWebsiteEditor(0)).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteReadonly(0).textContent()).toContain(moreInfoWebsiteDescription + ' - 1');
+        await expect(instantieDetailsPage.beschrijvingWebsiteEngelsEditor(0)).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteEngelsReadonly(0).textContent()).toContain(moreInfoWebsiteDescriptionInEnglish + ' - 1');
+
+        await expect(instantieDetailsPage.websiteURLInput(0)).not.toBeEditable();
+        expect(await instantieDetailsPage.websiteURLInput(0)).toHaveValue(moreInfoWebsiteUrl + '1');
+
+        await expect(instantieDetailsPage.titelWebsiteInput(1)).not.toBeEditable();
+        expect(await instantieDetailsPage.titelWebsiteInput(1)).toHaveValue(moreInfoWebsiteTitle + ' - 2');
+        await expect(instantieDetailsPage.titelWebsiteEngelsInput(1)).not.toBeEditable();
+        expect(await instantieDetailsPage.titelWebsiteEngelsInput(1)).toHaveValue(moreInfoWebsiteTitleInEnglish + ' - 2');
+
+        await expect(instantieDetailsPage.beschrijvingWebsiteEditor(1)).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteReadonly(1).textContent()).toContain(moreInfoWebsiteDescription + ' - 2');
+        await expect(instantieDetailsPage.beschrijvingWebsiteEngelsEditor(1)).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingWebsiteEngelsReadonly(1).textContent()).toContain(moreInfoWebsiteDescriptionInEnglish + ' - 2');
+
+        await expect(instantieDetailsPage.websiteURLInput(1)).not.toBeEditable();
+        expect(await instantieDetailsPage.websiteURLInput(1)).toHaveValue(moreInfoWebsiteUrl + '2');
 
         await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();        
 
