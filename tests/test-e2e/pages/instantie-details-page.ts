@@ -22,8 +22,12 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly instantieLoskoppelenAlert: Alert;
     readonly instantieLoskoppelenAlertLoskoppelenButton: Locator;
 
+    readonly ipdcConceptIdHeader: Locator;
+    readonly productTypeHeader: Locator;
     readonly aangemaaktOpHeader: Locator;
     readonly bewerktOpHeader: Locator;
+    readonly geldigVanafHeader: Locator;
+    readonly geldigTotHeader: Locator;
     readonly statusDocumentHeader: Locator;
 
     readonly herzieningNodigAlert: Alert;
@@ -192,8 +196,12 @@ export class InstantieDetailsPage extends AbstractPage {
         this.conceptGearchiveerdAlertConceptBekijken = this.conceptGearchiveerdAlert.link('Concept bekijken');
         this.conceptGearchiveerdAlertGeenAanpassigenNodig = this.conceptGearchiveerdAlert.button('Geen aanpassingen nodig');
 
+        this.ipdcConceptIdHeader = page.locator('dl div').filter({ hasText: 'IPDC Concept ID' }).getByRole('definition');
+        this.productTypeHeader = page.locator('dl div').filter({ hasText: 'Product type' }).getByRole('definition');
         this.aangemaaktOpHeader = page.locator('dl div').filter({ hasText: 'Aangemaakt op' }).getByRole('definition');
         this.bewerktOpHeader = page.locator('dl div').filter({ hasText: 'Bewerkt op' }).getByRole('definition');
+        this.geldigVanafHeader = page.locator('dl div').filter({ hasText: 'Geldig vanaf' }).getByRole('definition');
+        this.geldigTotHeader = page.locator('dl div').filter({ hasText: 'Geldig tot' }).getByRole('definition');
         this.statusDocumentHeader = page.locator('dl div').filter({ hasText: 'Status document' }).getByRole('definition');
 
         this.titelInput = this.inputBelow('Titel').first();

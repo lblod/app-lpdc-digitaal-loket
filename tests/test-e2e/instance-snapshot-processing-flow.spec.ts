@@ -120,11 +120,20 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const moreInfoWebsiteDescriptionInEnglish = 'Belgian nationality and naturalization description website';
         const moreInfoWebsiteUrl = 'https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit'
 
+        const linkedConceptUrl = 'https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84';
+        const linkedConceptProductId = '1502';
+        const productType = 'Financieel voordeel';
+        const dateCreatedFormatted = '14-02-2024 - 14:42';
+        const dateModifiedFormatted = '14-02-2024 - 14:59';
+        const startDateFormatted = '26-08-2020';
+        const endDateFormatted = '12-07-2025';
+        const documentStatus = 'Verzonden';
+
         await homePage.expectToBeVisible();
         await homePage.searchInput.fill(title);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(documentStatus);
 
         await homePage.resultTable.row(first_row).link('Bekijk').click();
 
@@ -355,6 +364,14 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         await expect(instantieDetailsPage.websiteURLInput(1)).not.toBeEditable();
         expect(await instantieDetailsPage.websiteURLInput(1)).toHaveValue(moreInfoWebsiteUrl + '2');
+
+        await expect(instantieDetailsPage.ipdcConceptIdHeader).toContainText(linkedConceptProductId);
+        await expect(instantieDetailsPage.productTypeHeader).toContainText(productType);
+        await expect(instantieDetailsPage.aangemaaktOpHeader).toContainText(dateCreatedFormatted);
+        await expect(instantieDetailsPage.bewerktOpHeader).toContainText(dateModifiedFormatted);
+        await expect(instantieDetailsPage.geldigVanafHeader).toContainText(startDateFormatted);
+        await expect(instantieDetailsPage.geldigTotHeader).toContainText(endDateFormatted);
+        await expect(instantieDetailsPage.statusDocumentHeader).toContainText(documentStatus);
 
         await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();        
 
