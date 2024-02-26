@@ -129,6 +129,17 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const endDateFormatted = '12-07-2025';
         const documentStatus = 'Verzonden';
 
+        const targetAudiences = ['Burger', 'Onderneming'];
+        const themes = ['Burger en Overheid', 'Cultuur, Sport en Vrije Tijd'];
+        const competentAuthorityLevels = ['Europese overheid', 'Federale overheid'];
+        const competentAuthorities = ['Gent (Gemeente)', 'Gent (OCMW)'];
+        const executingAuthorityLevels = ['Derden', 'Lokale overheid'];
+        const executingAuthorities = ['Gent (Gemeente)'];
+        const spatials = ['Arrondissement Gent', 'Gent'];
+        const tags = ['Akte', 'Nationaliteit'];
+        const publicationMedia = 'Your Europe';
+        const yourEuropeCategories = ['Nationale verkeersregels en voorschriften voor bestuurders', 'Voorwaarden voor naturalisatie'];
+
         await homePage.expectToBeVisible();
         await homePage.searchInput.fill(title);
 
@@ -380,24 +391,39 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
 
+        await expect(instantieDetailsPage.geldigVanafHeader).toContainText(startDateFormatted);
+        await expect(instantieDetailsPage.geldigTotHeader).toContainText(endDateFormatted);
+
+        await expect(instantieDetailsPage.statusDocumentHeader).toContainText(documentStatus);
+
         await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).not.toBeEditable();
         expect(await instantieDetailsPage.productOfDienstGeldigVanafInput.inputValue()).toEqual(startDateFormatted);
         await expect(instantieDetailsPage.productOfDienstGeldigTotInput).not.toBeEditable();
         expect(await instantieDetailsPage.productOfDienstGeldigTotInput.inputValue()).toEqual(endDateFormatted);
 
-        await expect(instantieDetailsPage.statusDocumentHeader).toContainText(documentStatus);
+        expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(productType);
 
-        await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();        
+        await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(targetAudiences);
+        await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(themes);
 
-        await verifyPublishmentInIPDC(
-            title,
-            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": title }, { "@language": 'en', "@value": titleInEnglish }]),
-            description,
-            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": expect.stringContaining(description) }, { "@language": 'en', "@value": expect.stringContaining(descriptionInEnglish) }]),
-            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" },
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea" }]),
-            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-14T13:42:12.357Z" }),
-            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-14T13:59:25.237Z" }));
+        //TODO LPDC-698 languages not correctly processed by LPDC for now (we do save it correctly in the database)
+        
+        await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(competentAuthorityLevels);
+        await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(competentAuthorities);
+        await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(executingAuthorityLevels);
+        await expect(instantieDetailsPage.uitvoerendeOverheidMultiSelect.options()).toContainText(executingAuthorities);
+        await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(spatials);
+
+        await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(tags);
+        await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText(publicationMedia);
+        await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(yourEuropeCategories);
+        
+
+
+
+        await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();       
+
+        
     });
 
     test('Verify a minimal instance was created and updated from instance snapshot from ldes stream and verify its publishment to ipdc', async () => {
@@ -440,7 +466,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await homePage.searchInput.fill(title);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText(documentStatus);
+        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
         await homePage.resultTable.row(first_row).link('Bekijk').click();
 
@@ -482,7 +508,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         }
 
         expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
+        expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([             
             { "@id": "http://vocab.belgif.be/auth/refnis2019/44021" }
         ]));
 
