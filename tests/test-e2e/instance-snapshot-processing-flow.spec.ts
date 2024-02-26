@@ -373,6 +373,20 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.geldigTotHeader).toContainText(endDateFormatted);
         await expect(instantieDetailsPage.statusDocumentHeader).toContainText(documentStatus);
 
+        await instantieDetailsPage.eigenschappenTab.click();
+
+        await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+        await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+        await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).not.toBeEditable();
+        expect(await instantieDetailsPage.productOfDienstGeldigVanafInput.inputValue()).toEqual(startDateFormatted);
+        await expect(instantieDetailsPage.productOfDienstGeldigTotInput).not.toBeEditable();
+        expect(await instantieDetailsPage.productOfDienstGeldigTotInput.inputValue()).toEqual(endDateFormatted);
+
+        await expect(instantieDetailsPage.statusDocumentHeader).toContainText(documentStatus);
+
         await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();        
 
         await verifyPublishmentInIPDC(
@@ -426,7 +440,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await homePage.searchInput.fill(title);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(documentStatus);
 
         await homePage.resultTable.row(first_row).link('Bekijk').click();
 
