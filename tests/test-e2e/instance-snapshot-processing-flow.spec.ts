@@ -5,8 +5,9 @@ import { UJeModal } from './modals/u-je-modal';
 import { first_row } from './components/table';
 import { InstantieDetailsPage } from './pages/instantie-details-page';
 import { IpdcStub } from './components/ipdc-stub';
-import {InstanceSnapshotLdesStub} from "./components/instance-snapshot-ldes-stub";
-import {v4 as uuid} from 'uuid';
+import { InstanceSnapshotLdesStub } from "./components/instance-snapshot-ldes-stub";
+import { v4 as uuid } from 'uuid';
+import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
 
 test.describe.configure({ mode: 'parallel' });
 
@@ -52,6 +53,15 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const description = `Beschrijving van de essentiële instantie`;
 
         await verifyInstanceInUI(title, description);
+
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
+        verifyInstancePublishedOnIPDC(
+            instancePublishedInIpdc,
+            {
+                titel: { nl: title },
+                beschrijving: { nl: description },
+            },
+            'nl-be-x-informal');
         await verifyPublishmentInIPDC(
             title,
             expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": title }]),
@@ -69,7 +79,8 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const description = `De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.`;
         const descriptionInEnglish = `The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.`;
         const additionalDescription = `Verdere beschrijving`;
-        const additionalDescriptionInEnglish = `The certificate states:the last name, first names, date and place of birth of the person to whom the certificate relatesthe legal foundation of the declaration on the basis of which the certificate was drawn upin the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.`;
+        const additionalDescriptionInEnglishUnsanitized = `The certificate states:<ul><li>the last name, first names, date and place of birth of the person to whom the certificate relates</li><li>the legal foundation of the declaration on the basis of which the certificate was drawn up</li><li>in the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.</li></ul>Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:<ul><li>A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.</li></ul><ul><li>An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.</li></ul>`;
+        const additionalDescriptionInEnglish = additionalDescriptionInEnglishUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');
         const exceptions = `uitzonderingen`;
         const exceptionsInEnglish = `Exceptions`;
         const requirementsTitle = 'Voorwaarden';
@@ -82,8 +93,10 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const evidenceDescriptionInEnglish = 'If you collect the document yourself:your own identity card.If you are requesting the document for someone else:a power of attorney from that person and a copy of their identity cardas well as your own identity card.';
         const procedureTitle = 'Procedure - nl';
         const procedureTitleInEnglish = 'Procedure - en';
-        const procedureDescription = `U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:via het e-loket van uw gemeenteof via de attestenpagina van 'Mijn Burgerprofiel'.Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.`;
-        const procedureDescriptionInEnglish = `You can request a copy of or an extract from the certificate of nationality from your municipality.If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate onlinevia the e-desk of your municipalityor via the certificates page of ‘My Citizen Profile’ ‘Mijn Burgerprofiel’).Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.`;
+        const procedureDescriptionUnsanizited = `U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:<ul><li>via het e-loket van uw gemeente</li><li>of via de attestenpagina van 'Mijn Burgerprofiel'.</li></ul>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.`;
+        const procedureDescription = procedureDescriptionUnsanizited.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');
+        const procedureDescriptionInEnglishUnsanitized = `You can request a copy of or an extract from the certificate of nationality from your municipality.If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate online<ul><li>via the e-desk of your municipality</li><li>or via the certificates page of ‘My Citizen Profile’ ‘Mijn Burgerprofiel’).</li></ul>Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.`;
+        const procedureDescriptionInEnglish = procedureDescriptionInEnglishUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');;
         const procedureWebsiteTitle = 'Procedure website titel';
         const procedureWebsiteTitleInEnglish = 'Procedure website title';
         const procedureWebsiteDescription = 'Procedure website beschrijving';
@@ -112,7 +125,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const addressHuisnummer2 = '15';
         const addressBusnummer2 = 'b';
         const addressGemeente2 = 'Gent-Sint-Pieter';
-        const addressPostcode2 = '8000';        
+        const addressPostcode2 = '8000';
         const addressLand = 'België';
         const moreInfoWebsiteTitle = 'Website Belgische nationaliteit en naturalisatie beschrijving';
         const moreInfoWebsiteTitleInEnglish = 'Belgian nationality and naturalization website';
@@ -191,7 +204,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.beschrijvingBewijsstukEditor(0)).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingBewijsstukReadonly(0).textContent()).toContain(evidenceDescription + ' - 1');
         await expect(instantieDetailsPage.beschrijvingBewijsstukEngelsEditor(0)).not.toBeVisible();
-        expect(await instantieDetailsPage.beschrijvingBewijsstukEngelsReadonly(0).textContent()).toContain(evidenceDescriptionInEnglish + ' - 1');        
+        expect(await instantieDetailsPage.beschrijvingBewijsstukEngelsReadonly(0).textContent()).toContain(evidenceDescriptionInEnglish + ' - 1');
 
         await expect(instantieDetailsPage.titelVoorwaardeInput(1)).not.toBeEditable();
         expect(await instantieDetailsPage.titelVoorwaardeInput(1)).toHaveValue(requirementsTitle + ' - 2');
@@ -211,7 +224,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.beschrijvingBewijsstukEditor(1)).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingBewijsstukReadonly(1).textContent()).toContain(evidenceDescription + ' - 2');
         await expect(instantieDetailsPage.beschrijvingBewijsstukEngelsEditor(1)).not.toBeVisible();
-        expect(await instantieDetailsPage.beschrijvingBewijsstukEngelsReadonly(1).textContent()).toContain(evidenceDescriptionInEnglish + ' - 2');                
+        expect(await instantieDetailsPage.beschrijvingBewijsstukEngelsReadonly(1).textContent()).toContain(evidenceDescriptionInEnglish + ' - 2');
 
         await expect(instantieDetailsPage.titelProcedureInput(0)).not.toBeEditable();
         expect(await instantieDetailsPage.titelProcedureInput(0)).toHaveValue(procedureTitle + ' - 1');
@@ -407,7 +420,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(themes);
 
         //TODO LPDC-698 languages not correctly processed by LPDC for now (we do save it correctly in the database)
-        
+
         await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(competentAuthorityLevels);
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(competentAuthorities);
         await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(executingAuthorityLevels);
@@ -417,13 +430,48 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(tags);
         await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText(publicationMedia);
         await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(yourEuropeCategories);
-        
 
+        await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();
 
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
+        verifyInstancePublishedOnIPDC(
+            instancePublishedInIpdc,
+            {
+                titel: { nl: title, en: titleInEnglish },
+                beschrijving: { nl: description, en: descriptionInEnglish },
+                aanvullendeBeschrijving: { nl: additionalDescription, en: additionalDescriptionInEnglishUnsanitized },
+                uitzonderingen: { nl: exceptions, en: exceptionsInEnglish },
+                procedures: [1, 2].map(nmbr => {
+                    return {
+                        titel: { nl: procedureTitle + ` - ${nmbr}`, en: procedureTitleInEnglish + ` - ${nmbr}` },
+                        beschrijving: { nl: procedureDescriptionUnsanizited + ` - ${nmbr}`, en: procedureDescriptionInEnglishUnsanitized + ` - ${nmbr}` },
+                        order: nmbr - 1,
+                        nestedGroup: [1, 2].map(nmbrNstd => {
+                            return {
+                                titel: { nl: procedureWebsiteTitle + ` - ${nmbr} - ${nmbrNstd}`, en: procedureWebsiteTitleInEnglish + ` - ${nmbr} - ${nmbrNstd}` },
+                                beschrijving: { nl: procedureWebsiteDescription + ` - ${nmbr} - ${nmbrNstd}`, en: procedureWebsiteDescriptionInEnglish + ` - ${nmbr} - ${nmbrNstd}` },
+                                order: nmbrNstd - 1,
+                            }
+                        })
+                    };
+                }),
+                kosten: [1, 2].map(nmbr => {
+                    return {
+                        titel: { nl: costTitle + ` - ${nmbr}`, en: costTitleInEnglish + ` - ${nmbr}` },
+                        beschrijving: { nl: costDescription + ` - ${nmbr}`, en: costDescriptionInEnglish + ` - ${nmbr}` },
+                        order: nmbr - 1
+                    };
+                }),
+                financieleVoordelen: [1, 2].map(nmbr => {
+                    return {
+                        titel: { nl: financialAdvantageTitle + ` - ${nmbr}`, en: financialAdvantageTitleInEnglish + ` - ${nmbr}` },
+                        beschrijving: { nl: financialAdvantageDescription + ` - ${nmbr}`, en: financialAdvantageDescriptionInEnglish + ` - ${nmbr}` },
+                        order: nmbr - 1
+                    };
+                }),
+            },
+            'nl-be-x-informal');
 
-        await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();       
-
-        
     });
 
     test('Verify a minimal instance was created and updated from instance snapshot from ldes stream and verify its publishment to ipdc', async () => {
@@ -432,6 +480,16 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const description = `Beschrijving van de minimalistische instantie updatet`;
 
         await verifyInstanceInUI(title, description);
+
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
+        verifyInstancePublishedOnIPDC(
+            instancePublishedInIpdc,
+            {
+                titel: { nl: title },
+                beschrijving: { nl: description },
+            },
+            'nl-be-x-informal');
+
         await verifyPublishmentInIPDC(
             title,
             expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": title }]),
@@ -444,7 +502,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
     test('Verify an instance can be archived and again unarchived', async () => {
         const instanceId = uuid();
-        const {title, description, isVersionOf} = await InstanceSnapshotLdesStub.createSnapshot(instanceId, false);
+        const { title, description, isVersionOf } = await InstanceSnapshotLdesStub.createSnapshot(instanceId, false);
 
         await verifyInstanceInUI(title, description);
 
@@ -453,7 +511,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
-        const {title: titleArchived} = await InstanceSnapshotLdesStub.createSnapshot(instanceId, true);    
+        const { title: titleArchived } = await InstanceSnapshotLdesStub.createSnapshot(instanceId, true);
 
         const archivedInstancePublishedInIpdc = await IpdcStub.findPublishedInstance({ tombstonedId: isVersionOf });
         expect(archivedInstancePublishedInIpdc).toBeTruthy();
@@ -490,25 +548,22 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
-        expect(publicService['http://purl.org/dc/terms/title']).toEqual(titleExpection);
-        expect(publicService['http://purl.org/dc/terms/description']).toEqual(descriptionExpectation);
-
         expect(publicService['http://data.europa.eu/m8g/hasCompetentAuthority']).toEqual(competentAuthorityExpectation);
 
         expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
 
-        if(dateCreateExpectation) {
-        expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(dateCreateExpectation);
-    }
+        if (dateCreateExpectation) {
+            expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
+            expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(dateCreateExpectation);
+        }
 
-        if(dateModifiedExpectation) {
-        expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(dateModifiedExpectation);
+        if (dateModifiedExpectation) {
+            expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
+            expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(dateModifiedExpectation);
         }
 
         expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([             
+        expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
             { "@id": "http://vocab.belgif.be/auth/refnis2019/44021" }
         ]));
 

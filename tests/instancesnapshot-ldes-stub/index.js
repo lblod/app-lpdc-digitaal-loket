@@ -27,7 +27,7 @@ app.post('/instancesnapshot/:instanceId/:gearchiveerd', (req, res, next) => {
                 id: instanceSnapshotToAdd["@id"],
                 isVersionOf: instanceSnapshotToAdd['isVersionOf'],
                 title: instanceSnapshotToAdd.titel["nl-BE-x-informal"],
-                description: instanceSnapshotToAdd.beschrijving["nl-BE-x-informal"],
+                description: instanceSnapshotToAdd.beschrijving["nl-BE-x-informal"].replace(`<p data-indentation-level=\"0\">`, ``).replace(`</p>`, ``)
             });
         } else {
             return res.sendStatus(400);

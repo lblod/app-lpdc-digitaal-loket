@@ -16,7 +16,7 @@ export const instanceSnapshot = (instanceId, gearchiveerd = false) => {
             "nl-BE-x-informal": `Instantie ${instanceSnapshotId}`
         },
         "beschrijving": {
-            "nl-BE-x-informal": `Beschrijving van de instantie ${instanceSnapshotId}`
+            "nl-BE-x-informal": `<p data-indentation-level=\"0\">Beschrijving van de instantie ${instanceSnapshotId}</p>`
         },
         "bevoegdeOverheden": [
             "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
