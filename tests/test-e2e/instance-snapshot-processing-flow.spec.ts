@@ -5,7 +5,9 @@ import { UJeModal } from './modals/u-je-modal';
 import { first_row } from './components/table';
 import { InstantieDetailsPage } from './pages/instantie-details-page';
 import { IpdcStub } from './components/ipdc-stub';
-import { InstanceSnapshotLdesStub } from "./components/instance-snapshot-ldes-stub";
+import {InstanceSnapshotLdesStub, Snapshot} from "./components/instance-snapshot-ldes-stub";
+import {wait} from "./shared/shared";
+import {Language} from "../test-api/test-helpers/language";
 import { v4 as uuid } from 'uuid';
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
 
@@ -506,7 +508,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         await verifyInstanceInUI(title, description);
 
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: Language.INFORMAL });
         expect(instancePublishedInIpdc).toBeTruthy();
 
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
@@ -516,17 +518,24 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const archivedInstancePublishedInIpdc = await IpdcStub.findPublishedInstance({ tombstonedId: isVersionOf });
         expect(archivedInstancePublishedInIpdc).toBeTruthy();
 
-        //TODO LPDC-910: add unarchiving ... 
+        const unarchivedSnapshot:Snapshot = await InstanceSnapshotLdesStub.createSnapshot(instanceId, false);
+
+        await verifyInstanceInUI(unarchivedSnapshot.title, unarchivedSnapshot.description);
+
+        const unarchivedInstancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: unarchivedSnapshot.title, expectedFormalOrInformalTripleLanguage: Language.INFORMAL });
+        expect(unarchivedInstancePublishedInIpdc).toBeTruthy();
+
     });
 
     async function verifyInstanceInUI(title: string, description: string) {
-        await homePage.expectToBeVisible();
+        await homePage.goto();
         await homePage.searchInput.fill(title);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
         await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await wait(10000);
 
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
