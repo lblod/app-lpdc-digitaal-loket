@@ -802,6 +802,19 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 beschrijving: { nl: beschrijving, en: beschrijvingEngels },
                 aanvullendeBeschrijving: { nl: aanvullendeBeschrijving, en: aanvullendeBeschrijvingEngels },
                 uitzonderingen: { nl: uitzonderingen, en: uitzonderingenEngels },
+                voorwaarden: [
+                    {
+                        titel: { nl: voorwaardeTitel, en: voorwaardeTitelEngels },
+                        beschrijving: { nl: voorwaardeBeschrijving, en: voorwaardeBeschrijvingEngels },
+                        order: 0,
+                        nestedGroup: [
+                            {
+                                titel: { nl: bewijsTitel, en: bewijsTitelEngels },
+                                beschrijving: { nl: bewijsBeschrijving, en: bewijsBeschrijvingEngels }
+                            }
+                        ]
+                    }
+                ],
                 procedures: [
                     {
                         titel: { nl: procedureTitel, en: procedureTitelEngels },
@@ -829,8 +842,78 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                         beschrijving: { nl: financieelVoordeelBeschrijving, en: financieelVoordeelBeschrijvingEngels },
                         order: 0
                     }],
+                regelgeving: { nl: regelgeving, en: regelgevingEngels },
+                juridischeInfoUrls: ['https://ipdc.be/regelgeving'],
+                contactPunten: [
+                    {
+                        email: '1111@example.com',
+                        telephone: '111111111',
+                        url: 'https://www.example1.com',
+                        openingHours: 'https://www.example1.com/openinghours',
+                        order: 1,
+                        address: {
+                            land: 'België',
+                            gemeentenaam: 'Harelbeke',
+                            postcode: '8530',
+                            straatnaam: 'Generaal Deprezstraat',
+                            huisnummer: '2',
+                            busnummer: '50',
+                        }
+                    }
+                ],
+                meerInfos: [
+                    {
+                        titel: { nl: websiteTitel, en: websiteTitelEngels },
+                        beschrijving: { nl: websiteBeschrijving, en: websiteBeschrijvingEngels },
+                        url: websiteUrl,
+                        order: 0
+                    }],
             },
             expectedFormalOrInformalTripleLanguage);
+
+        expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
+
+        expect(publicService['http://purl.org/pav/createdBy']).toHaveLength(1);
+        expect(publicService['http://purl.org/pav/createdBy'][0]).toEqual(
+            { "@id": bestuurseenheidConfig.uri }
+        );
+
+        //TODO LPDC-709 product id should not be send to IPDC
+        expect(publicService['http://schema.org/productID']).toHaveLength(1);
+        expect(publicService['http://schema.org/productID']).toEqual(expect.arrayContaining([
+            { "@value": "1502" }
+        ]));
+
+        expect(publicService['http://purl.org/dc/terms/source']).toHaveLength(1);
+        expect(publicService['http://purl.org/dc/terms/source'][0]).toEqual(
+            { "@id": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84" }
+        );
+
+        expect(publicService['http://purl.org/dc/terms/type']).toHaveLength(1);
+        expect(publicService['http://purl.org/dc/terms/type']).toEqual(expect.arrayContaining([
+            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal" }
+        ]));
+
+        expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
+        expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(expect.objectContaining(
+            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+        ));
+
+        expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
+        expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(expect.objectContaining(
+            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
+        ));
+
+        expect(publicService['http://schema.org/startDate']).toHaveLength(1);
+        expect(publicService['http://schema.org/startDate']).toEqual(expect.arrayContaining([
+            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2019-04-13T00:00:00Z" }
+        ]));
+
+        expect(publicService['http://schema.org/endDate']).toHaveLength(1);
+        expect(publicService['http://schema.org/endDate']).toEqual(expect.arrayContaining([
+            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2026-11-27T00:00:00Z" }
+        ]));
+
 
         expect(publicService['http://data.europa.eu/m8g/thematicArea']).toHaveLength(2);
         expect(publicService['http://data.europa.eu/m8g/thematicArea']).toEqual(expect.arrayContaining([
@@ -849,21 +932,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             { "@id": "http://vocab.belgif.be/auth/refnis2019/24086" }]));
         expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
             { "@id": "http://vocab.belgif.be/auth/refnis2019/70000" }]));
-
-        expect(publicService['http://purl.org/dc/terms/type']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/type']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal" }
-        ]));
-
-        expect(publicService['http://schema.org/startDate']).toHaveLength(1);
-        expect(publicService['http://schema.org/startDate']).toEqual(expect.arrayContaining([
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2019-04-13T00:00:00Z" }
-        ]));
-
-        expect(publicService['http://schema.org/endDate']).toHaveLength(1);
-        expect(publicService['http://schema.org/endDate']).toEqual(expect.arrayContaining([
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2026-11-27T00:00:00Z" }
-        ]));
 
         expect(publicService['http://www.w3.org/ns/dcat#keyword']).toHaveLength(3);
         expect(publicService['http://www.w3.org/ns/dcat#keyword']).toEqual(expect.arrayContaining([
@@ -895,33 +963,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             { "@id": bestuurseenheidConfig.uri }
         ]));
 
-        expect(publicService['http://purl.org/dc/terms/source']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/source'][0]).toEqual(
-            { "@id": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84" }
-        );
-
-        //TODO LPDC-709 product id should not be send to IPDC
-        expect(publicService['http://schema.org/productID']).toHaveLength(1);
-        expect(publicService['http://schema.org/productID']).toEqual(expect.arrayContaining([
-            { "@value": "1502" }
-        ]));
-
-        expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
-
-        expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(expect.objectContaining(
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
-        ));
-
-        expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(expect.objectContaining(
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
-        ));
-
-        expect(publicService['http://purl.org/pav/createdBy']).toHaveLength(1);
-        expect(publicService['http://purl.org/pav/createdBy'][0]).toEqual(
-            { "@id": bestuurseenheidConfig.uri }
-        );
 
         //TODO LPDC-709 This should not be send to IPDC
         expect(publicService['http://www.w3.org/ns/adms#status']).toHaveLength(1);
@@ -936,15 +977,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope" }
         );
 
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation']).toHaveLength(2);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation']).toEqual(expect.arrayContaining([
-            {
-                "@language": expectedFormalOrInformalTripleLanguage,
-                "@value": `<p data-indentation-level="0">${regelgeving}</p>`
-            },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${regelgevingEngels}</p>` }
-        ]));
-
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience']).toHaveLength(2);
         expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience']).toEqual(expect.arrayContaining([
             { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging" },
@@ -957,144 +989,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen" }
         ]));
 
-        expect(publicService['http://vocab.belgif.be/ns/publicservice#hasRequirement']).toHaveLength(1);
-        const voorwaardeUri = publicService['http://vocab.belgif.be/ns/publicservice#hasRequirement'][0]['@id'];
-
-        expect(publicService['http://www.w3.org/2000/01/rdf-schema#seeAlso']).toHaveLength(1);
-        const websiteUri = publicService['http://www.w3.org/2000/01/rdf-schema#seeAlso'][0]['@id'];
-
-        expect(publicService['http://data.europa.eu/m8g/hasContactPoint']).toHaveLength(1);
-        const contactPuntUri = publicService['http://data.europa.eu/m8g/hasContactPoint'][0]['@id'];
-
-        expect(publicService['http://data.europa.eu/m8g/hasLegalResource']).toHaveLength(1);
-        const legalResourceUri = publicService['http://data.europa.eu/m8g/hasLegalResource'][0]['@id'];
-        expect(legalResourceUri).toEqual('https://ipdc.be/regelgeving');
 
 
 
-        // REQUIREMENT
-        const voorwaarde = IpdcStub.getObjectById(instance, voorwaardeUri);
-
-        expect(voorwaarde['http://purl.org/dc/terms/title']).toHaveLength(2);
-        expect(voorwaarde['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": voorwaardeTitel },
-            { "@language": "en", "@value": voorwaardeTitelEngels }
-        ]));
-
-        expect(voorwaarde['http://purl.org/dc/terms/description']).toHaveLength(2);
-        expect(voorwaarde['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            {
-                "@language": expectedFormalOrInformalTripleLanguage,
-                "@value": `<p data-indentation-level="0">${voorwaardeBeschrijving}</p>`
-            },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${voorwaardeBeschrijvingEngels}</p>` }
-        ]));
-
-        expect(voorwaarde['http://data.europa.eu/m8g/hasSupportingEvidence']).toHaveLength(1);
-        const evidenceUri = voorwaarde['http://data.europa.eu/m8g/hasSupportingEvidence'][0]['@id'];
-
-        expect(voorwaarde['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-        expect(voorwaarde['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" });
-
-        // REQUIREMENT EVIDENCE
-        const evidence = IpdcStub.getObjectById(instance, evidenceUri);
-
-        expect(evidence['http://purl.org/dc/terms/title']).toHaveLength(2);
-        expect(evidence['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": bewijsTitel },
-            { "@language": "en", "@value": bewijsTitelEngels }
-        ]));
-
-        expect(evidence['http://purl.org/dc/terms/description']).toHaveLength(2);
-        expect(evidence['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            {
-                "@language": expectedFormalOrInformalTripleLanguage,
-                "@value": `<p data-indentation-level="0">${bewijsBeschrijving}</p>`
-            },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${bewijsBeschrijvingEngels}</p>` }
-        ]));
-
-
-        // MORE INFO WEBSITE
-        const website = IpdcStub.getObjectById(instance, websiteUri);
-
-        expect(website['http://purl.org/dc/terms/title']).toHaveLength(2);
-        expect(website['http://purl.org/dc/terms/title']).toEqual(expect.arrayContaining([
-            { "@language": expectedFormalOrInformalTripleLanguage, "@value": websiteTitel },
-            { "@language": "en", "@value": websiteTitelEngels }
-        ]));
-
-        expect(website['http://purl.org/dc/terms/description']).toHaveLength(2);
-        expect(website['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
-            {
-                "@language": expectedFormalOrInformalTripleLanguage,
-                "@value": `<p data-indentation-level="0">${websiteBeschrijving}</p>`
-            },
-            { "@language": "en", "@value": `<p data-indentation-level="0">${websiteBeschrijvingEngels}</p>` }
-        ]));
-
-        expect(website['http://schema.org/url']).toHaveLength(1);
-        expect(website['http://schema.org/url'][0]).toEqual({ "@value": websiteUrl });
-
-        expect(website['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-        expect(website['http://www.w3.org/ns/shacl#order'][0])
-            .toEqual({ "@value": "0", "@type": "http://www.w3.org/2001/XMLSchema#integer" });
-
-        // CONTACT POINT
-        const contactPunt = IpdcStub.getObjectById(instance, contactPuntUri);
-
-        expect(contactPunt['http://schema.org/email']).toHaveLength(1);
-        expect(contactPunt['http://schema.org/email']).toEqual([{ "@value": '1111@example.com' }]);
-
-        expect(contactPunt['http://schema.org/telephone']).toHaveLength(1);
-        expect(contactPunt['http://schema.org/telephone']).toEqual([{ "@value": '111111111' }]);
-
-        expect(contactPunt['http://schema.org/url']).toHaveLength(1);
-        expect(contactPunt['http://schema.org/url']).toEqual([{ "@value": 'https://www.example1.com' }]);
-
-        expect(contactPunt['http://schema.org/openingHours']).toHaveLength(1);
-        expect(contactPunt['http://schema.org/openingHours']).toEqual([{ "@value": 'https://www.example1.com/openinghours' }]);
-
-        expect(contactPunt['http://www.w3.org/ns/shacl#order']).toHaveLength(1);
-        expect(contactPunt['http://www.w3.org/ns/shacl#order'][0]).toEqual(
-            { "@value": "1", "@type": "http://www.w3.org/2001/XMLSchema#integer" });
-
-        expect(contactPunt['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address']).toHaveLength(1);
-        const contactpuntAdresUri = contactPunt['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address'][0]['@id'];
-
-        // CONTACT POINT ADRES
-        const contactPuntAdres = IpdcStub.getObjectById(instance, contactpuntAdresUri);
-
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#land']).toHaveLength(1);
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#land']).toEqual([
-            { "@language": 'nl', "@value": 'België' },
-        ]);
-
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#gemeentenaam']).toHaveLength(1);
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#gemeentenaam']).toEqual([
-            { "@language": 'nl', "@value": 'Harelbeke' },
-        ]);
-
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#postcode']).toHaveLength(1);
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#postcode']).toEqual([
-            { "@value": '8530' },
-        ]);
-
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Straatnaam']).toHaveLength(1);
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Straatnaam']).toEqual([
-            { "@language": 'nl', "@value": 'Generaal Deprezstraat' },
-        ]);
-
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer']).toHaveLength(1);
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer']).toEqual([
-            { "@value": '2' },
-        ]);
-
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer']).toHaveLength(1);
-        expect(contactPuntAdres['https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer']).toEqual([
-            { "@value": '50' },
-        ]);
     }
 
 });

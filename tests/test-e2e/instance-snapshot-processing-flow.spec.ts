@@ -87,16 +87,20 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const exceptionsInEnglish = `Exceptions`;
         const requirementsTitle = 'Voorwaarden';
         const requirementsTitleInEnglish = 'Requirements';
-        const requirementsDescription = 'De akte vermeldt:de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeftde wettelijke basis van de verklaring op basis waarvan de akte werd opgesteldin geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.Wie kan een afschrift of uittreksel aanvragen?Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:uzelfde echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonendeuw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)uw erfgenamenbijzondere gemachtigden zoals een notaris of advocaat.Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel. - nl';
-        const requirementsDescriptionInEnglish = 'The right to receive a copy of or an extract from certificates of Belgian nationality is limited to:yourselfyour spouse, surviving spouse, or legal cohabitantyour legal representative (e.g. a parent, guardian, conservator)blood relatives in the ascending or descending line (no relatives by affinity and side branches)your heirsspecial agents, such as notaries or lawyers.If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract.';
+        const requirementsDescriptionUnsanitized = `De akte vermeldt:<ul><li>de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeft</li><li>de wettelijke basis van de verklaring op basis waarvan de akte werd opgesteld</li><li>in geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.</li></ul>Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:<ul><li>Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3>Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:<ul><li>uzelf</li><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>uw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>uw erfgenamen</li><li>bijzondere gemachtigden zoals een notaris of advocaat.</li></ul>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel. - nl`;
+        const requirementsDescription = requirementsDescriptionUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '').replace(/<\/h3>/g, '').replace(/<h3>/g, '');
+        const requirementsDescriptionInEnglishUnsanitized = `The right to receive a copy of or an extract from certificates of Belgian nationality is limited to:<ul><li>yourself</li><li>your spouse, surviving spouse, or legal cohabitant</li><li>your legal representative (e.g. a parent, guardian, conservator)</li><li>blood relatives in the ascending or descending line (no relatives by affinity and side branches)</li><li>your heirs</li><li>special agents, such as notaries or lawyers.</li></ul>If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract.`;
+        const requirementsDescriptionInEnglish = requirementsDescriptionInEnglishUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');
         const evidenceTitle = 'Bewijs';
         const evidenceTitleInEnglish = 'Evidence';
-        const evidenceDescription = 'Als u het document zelf ophaalt:uw eigen identiteitskaart.Als u het document voor iemand anders aanvraagt:een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaartuw eigen identiteitskaart. - nl';
-        const evidenceDescriptionInEnglish = 'If you collect the document yourself:your own identity card.If you are requesting the document for someone else:a power of attorney from that person and a copy of their identity cardas well as your own identity card.';
+        const evidenceDescriptionUnsanitized = `Als u het document zelf ophaalt:<ul><li>uw eigen identiteitskaart.</li></ul>Als u het document voor iemand anders aanvraagt:<ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - nl`;
+        const evidenceDescription = evidenceDescriptionUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');
+        const evidenceDescriptionInEnglishUnsanitized = `If you collect the document yourself:<ul><li>your own identity card.</li></ul>If you are requesting the document for someone else:<ul><li>a power of attorney from that person and a copy of their identity card</li></ul><ul><li>as well as your own identity card.</li></ul>`;
+        const evidenceDescriptionInEnglish = evidenceDescriptionInEnglishUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');
         const procedureTitle = 'Procedure - nl';
         const procedureTitleInEnglish = 'Procedure - en';
-        const procedureDescriptionUnsanizited = `U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:<ul><li>via het e-loket van uw gemeente</li><li>of via de attestenpagina van 'Mijn Burgerprofiel'.</li></ul>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.`;
-        const procedureDescription = procedureDescriptionUnsanizited.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');
+        const procedureDescriptionUnsanitized = `U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:<ul><li>via het e-loket van uw gemeente</li><li>of via de attestenpagina van 'Mijn Burgerprofiel'.</li></ul>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.`;
+        const procedureDescription = procedureDescriptionUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');
         const procedureDescriptionInEnglishUnsanitized = `You can request a copy of or an extract from the certificate of nationality from your municipality.If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate online<ul><li>via the e-desk of your municipality</li><li>or via the certificates page of ‘My Citizen Profile’ ‘Mijn Burgerprofiel’).</li></ul>Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.`;
         const procedureDescriptionInEnglish = procedureDescriptionInEnglishUnsanitized.replace(/<ul>/g, '').replace(/<\/ul>/g, '').replace(/<li>/g, '').replace(/<\/li>/g, '');;
         const procedureWebsiteTitle = 'Procedure website titel';
@@ -443,15 +447,29 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 beschrijving: { nl: description, en: descriptionInEnglish },
                 aanvullendeBeschrijving: { nl: additionalDescription, en: additionalDescriptionInEnglishUnsanitized },
                 uitzonderingen: { nl: exceptions, en: exceptionsInEnglish },
+                voorwaarden: [1, 2].map(nmbr => {
+                    return {
+                        titel: { nl: requirementsTitle + ` - ${nmbr}`, en: requirementsTitleInEnglish + ` - ${nmbr}` },
+                        beschrijving: { nl: requirementsDescriptionUnsanitized + ` - ${nmbr}`, en: requirementsDescriptionInEnglishUnsanitized + ` - ${nmbr}` },
+                        order: nmbr - 1,
+                        nestedGroup: [
+                            {
+                                titel: { nl: evidenceTitle + ` - ${nmbr}`, en: evidenceTitleInEnglish + ` - ${nmbr}` },
+                                beschrijving: { nl: evidenceDescriptionUnsanitized + ` - ${nmbr}`, en: evidenceDescriptionInEnglishUnsanitized + ` - ${nmbr}` }
+                            }
+                        ]
+                    };
+                }),
                 procedures: [1, 2].map(nmbr => {
                     return {
                         titel: { nl: procedureTitle + ` - ${nmbr}`, en: procedureTitleInEnglish + ` - ${nmbr}` },
-                        beschrijving: { nl: procedureDescriptionUnsanizited + ` - ${nmbr}`, en: procedureDescriptionInEnglishUnsanitized + ` - ${nmbr}` },
+                        beschrijving: { nl: procedureDescriptionUnsanitized + ` - ${nmbr}`, en: procedureDescriptionInEnglishUnsanitized + ` - ${nmbr}` },
                         order: nmbr - 1,
                         nestedGroup: [1, 2].map(nmbrNstd => {
                             return {
                                 titel: { nl: procedureWebsiteTitle + ` - ${nmbr} - ${nmbrNstd}`, en: procedureWebsiteTitleInEnglish + ` - ${nmbr} - ${nmbrNstd}` },
                                 beschrijving: { nl: procedureWebsiteDescription + ` - ${nmbr} - ${nmbrNstd}`, en: procedureWebsiteDescriptionInEnglish + ` - ${nmbr} - ${nmbrNstd}` },
+                                url: `${procedureWebsiteUrl}${nmbr}${nmbrNstd}`,
                                 order: nmbrNstd - 1,
                             }
                         })
@@ -468,6 +486,47 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                     return {
                         titel: { nl: financialAdvantageTitle + ` - ${nmbr}`, en: financialAdvantageTitleInEnglish + ` - ${nmbr}` },
                         beschrijving: { nl: financialAdvantageDescription + ` - ${nmbr}`, en: financialAdvantageDescriptionInEnglish + ` - ${nmbr}` },
+                        order: nmbr - 1
+                    };
+                }),
+                regelgeving: { nl: regulationDescription, en: regulationDescriptionInEnglish },
+                contactPunten: [
+                    {
+                        email: `${contactPointEmail}1`,
+                        telephone: `${contactPointTelephone}1`,
+                        url: `${contactPointUrl}1`,
+                        openingHours: `${contactPointOpeningsHours} - 1`,
+                        order: 0,
+                        address: {
+                            land: addressLand,
+                            gemeentenaam: addressGemeente1,
+                            straatnaam: addressStraat1,
+                            postcode: addressPostcode1,
+                            huisnummer: addressHuisnummer1,
+                            busnummer: addressBusnummer1,
+                        }
+                    },
+                    {
+                        email: `${contactPointEmail}2`,
+                        telephone: `${contactPointTelephone}2`,
+                        url: `${contactPointUrl}2`,
+                        openingHours: `${contactPointOpeningsHours} - 2`,
+                        order: 1,
+                        address: {
+                            land: addressLand,
+                            gemeentenaam: addressGemeente2,
+                            straatnaam: addressStraat2,
+                            postcode: addressPostcode2,
+                            huisnummer: addressHuisnummer2,
+                            busnummer: addressBusnummer2,
+                        }
+                    }
+                ],
+                meerInfos: [1, 2].map(nmbr => {
+                    return {
+                        titel: { nl: moreInfoWebsiteTitle + ` - ${nmbr}`, en: moreInfoWebsiteTitleInEnglish + ` - ${nmbr}` },
+                        beschrijving: { nl: moreInfoWebsiteDescription + ` - ${nmbr}`, en: moreInfoWebsiteDescriptionInEnglish + ` - ${nmbr}` },
+                        url: `${moreInfoWebsiteUrl}${nmbr}`,
                         order: nmbr - 1
                     };
                 }),
@@ -511,7 +570,13 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: Language.INFORMAL });
         expect(instancePublishedInIpdc).toBeTruthy();
 
-        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
+        verifyInstancePublishedOnIPDC(
+            instancePublishedInIpdc,
+            {
+                titel: { nl: title },
+                beschrijving: { nl: description },
+            },
+            'nl-be-x-informal');
 
         const { title: titleArchived } = await InstanceSnapshotLdesStub.createSnapshot(instanceId, true);
 
@@ -525,18 +590,24 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const unarchivedInstancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: unarchivedSnapshot.title, expectedFormalOrInformalTripleLanguage: Language.INFORMAL });
         expect(unarchivedInstancePublishedInIpdc).toBeTruthy();
 
+        verifyInstancePublishedOnIPDC(
+            unarchivedInstancePublishedInIpdc,
+            {
+                titel: { nl: unarchivedSnapshot.title },
+                beschrijving: { nl: unarchivedSnapshot.description },
+            },
+            'nl-be-x-informal');
     });
 
     async function verifyInstanceInUI(title: string, description: string) {
         await homePage.goto();
-        await homePage.searchInput.fill(title);
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(title);
 
-        await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
-
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+            });    
         await homePage.resultTable.row(first_row).link('Bekijk').click();
-        await wait(10000);
-
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
