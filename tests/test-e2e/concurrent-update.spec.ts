@@ -11,6 +11,7 @@ import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
 import {IpdcStub} from "./components/ipdc-stub";
 import {Toaster} from "./components/toaster";
+import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
 
 test.describe.configure({ mode: 'parallel'});
 test.describe('Concurrent Update', () => {
@@ -72,15 +73,13 @@ test.describe('Concurrent Update', () => {
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({title: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'});
         expect(instancePublishedInIpdc).toBeTruthy();
 
-        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
-        expect(publicService['http://purl.org/dc/terms/description']).toHaveLength(2);
-        expect(publicService['http://purl.org/dc/terms/description']).toEqual(expect.arrayContaining([
+        verifyInstancePublishedOnIPDC(
+            instancePublishedInIpdc,
             {
-                "@language": "nl-be-x-formal",
-                "@value": `<p data-indentation-level="0">first description</p>`
-            }
-        ]));
-
+                beschrijving: { nl: 'first description', en: false },
+            },
+            'nl-be-x-formal'
+        );
     })
 
     test('Two different updates in details page should not fail', async () => {

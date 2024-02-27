@@ -3,7 +3,8 @@ import { IpdcStub } from '../components/ipdc-stub';
 
 export interface Field {
     nl?: string;
-    en?: string;
+    en?: string | boolean;
+    notRich?: boolean;
 };
 
 export interface OrderedFieldGroup {
@@ -76,8 +77,8 @@ function validateNestedFieldGroup(publicService: any, instance: any, predikaat: 
     const actualDatas: any[] = extractActualDatas(publicService, instance, predikaat, fieldGroup);
 
     fieldGroup.forEach((field, index) => {
-        const actualData = extractActualData(actualDatas, index);
-        const msg = JSON.stringify({ field: field, index: index, actualData: actualData, predikaat: predikaat });
+        const actualData = extractActualData(actualDatas, field.order ?? 0);
+        const msg = JSON.stringify({ field: field, index: index, actualDatas: actualDatas, actualData: actualData, predikaat: predikaat });
         expect(actualData, msg).toBeDefined();
         expect(actualData['@type'], msg).toEqual(expect.arrayContaining([nestedType]));
         validateData(actualData, 'http://purl.org/dc/terms/title', arrayContainingText(field.titel, gekozenUOfJeVorm));
@@ -99,7 +100,7 @@ function validateContactPointFields(publicService: any, instance: any, contactPo
 
     const actualDatas: any[] = extractActualDatas(publicService, instance, 'http://data.europa.eu/m8g/hasContactPoint', contactPointFieldsGroup);
     contactPointFieldsGroup.forEach((field, index) => {
-        const actualData = extractActualData(actualDatas, index);
+        const actualData = extractActualData(actualDatas, field.order ?? 0);
         const msg = JSON.stringify({ actualData: actualData });
         expect(actualData, msg).toBeDefined();
         expect(actualData['@type'], msg).toEqual(expect.arrayContaining(['http://schema.org/ContactPoint']));
@@ -145,11 +146,14 @@ function arrayContainingText(field: Field | undefined, gekozenUOfJeVorm: string,
         (field?.nl === undefined && field?.nl === undefined)) {
         return undefined;
     }
-    const embedPrefix = contentEmbedded ? '<p data-indentation-level="0">' : '';
-    const embedSuffix = contentEmbedded ? '</p>' : '';
+    
+    const embedPrefix = (contentEmbedded && !field.notRich) ? '<p data-indentation-level="0">' : '';
+    const embedSuffix = (contentEmbedded && !field.notRich) ? '</p>' : '';
 
-    if (field.en !== undefined) {
+    if (field.en !== undefined && field.en !== false) {
         return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }, { "@language": "en", "@value": `${embedPrefix}${field.en}${embedSuffix}` }];
+    } else if (field.nl !== undefined && field.en === false) {
+        return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }, { "@language": "en", "@value": expect.anything() }];
     } else {
         return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }];
     }
@@ -180,7 +184,7 @@ function arrayContainingLanguageString(aString: string | undefined, language: st
 }
 
 function arrayContainingStringIds(strings: string[] | undefined) {
-    return strings?.map(str => { return {"@id": str};});
+    return strings?.map(str => { return { "@id": str }; });
 }
 
 function extractActualDatas(publicService: any, instance: any, predikaat: string, fieldGroup: any[]) {
