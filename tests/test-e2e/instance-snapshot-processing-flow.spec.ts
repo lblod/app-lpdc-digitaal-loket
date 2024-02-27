@@ -5,9 +5,9 @@ import { UJeModal } from './modals/u-je-modal';
 import { first_row } from './components/table';
 import { InstantieDetailsPage } from './pages/instantie-details-page';
 import { IpdcStub } from './components/ipdc-stub';
-import {InstanceSnapshotLdesStub, Snapshot} from "./components/instance-snapshot-ldes-stub";
-import {wait} from "./shared/shared";
-import {Language} from "../test-api/test-helpers/language";
+import { InstanceSnapshotLdesStub, Snapshot } from "./components/instance-snapshot-ldes-stub";
+import { wait } from "./shared/shared";
+import { Language } from "../test-api/test-helpers/language";
 import { v4 as uuid } from 'uuid';
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
 
@@ -64,14 +64,14 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 titel: { nl: title },
                 beschrijving: { nl: description },
                 uuid: `PRESENT`,
-                createdBy: bestuurseenheidUriGent,            
+                createdBy: bestuurseenheidUriGent,
                 aangemaaktOp: `2024-02-20T11:42:12.357Z`,
                 bewerktOp: `2024-02-21T13:59:25.236Z`,
+                bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
+                uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
+                geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`],
             },
             'nl-be-x-informal');
-        await verifyPublishmentInIPDC(
-            title,
-            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }]));
     });
 
     test('Verify a full instance was created from instance snapshot from ldes stream and verify its publishment to ipdc', async () => {
@@ -155,14 +155,22 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         const targetAudiences = ['Burger', 'Onderneming'];
         const themes = ['Burger en Overheid', 'Cultuur, Sport en Vrije Tijd'];
+        const themesAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid', 'https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd']
         const competentAuthorityLevels = ['Europese overheid', 'Federale overheid'];
+        const competentAuthorityLevelsAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Europees', 'https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal']
         const competentAuthorities = ['Gent (Gemeente)', 'Gent (OCMW)'];
+        const competentAuthoritiesAsIris = ['http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5', 'http://data.lblod.info/id/bestuurseenheden/c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea']
         const executingAuthorityLevels = ['Derden', 'Lokale overheid'];
+        const executingAuthorityLevelsAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Derden', 'https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal']
         const executingAuthorities = ['Gent (Gemeente)'];
+        const executingAuthoritiesAsIris = ['http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5'];
         const spatials = ['Arrondissement Gent', 'Gent'];
+        const spatialsAsIris = ['http://vocab.belgif.be/auth/refnis2019/44000', 'http://vocab.belgif.be/auth/refnis2019/44021'];
         const tags = ['Akte', 'Nationaliteit'];
         const publicationMedia = 'Your Europe';
+        const publicationMediaAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope'];
         const yourEuropeCategories = ['Nationale verkeersregels en voorschriften voor bestuurders', 'Voorwaarden voor naturalisatie'];
+        const yourEuropeCategoriesAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VerblijfNaturalisatie', 'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VoertuigenVerkeersregels'];
 
         await homePage.expectToBeVisible();
         await homePage.searchInput.fill(title);
@@ -544,6 +552,16 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 bewerktOp: dateModified,
                 geldigVanaf: startDate,
                 geldigTot: endDate,
+                doelgroepen: targetAudiences.map(ta => `https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/${ta}`),
+                themas: themesAsIris,
+                bevoegdeBestuursniveaus: competentAuthorityLevelsAsIris,
+                bevoegdeOverheden: competentAuthoritiesAsIris,
+                uitvoerendeBestuursniveaus: executingAuthorityLevelsAsIris,
+                uitvoerendeOverheden: executingAuthoritiesAsIris,
+                geografischeToepassingsgebieden: spatialsAsIris,
+                zoektermen: tags,
+                publicatieKanalen: publicationMediaAsIris,
+                yourEuropeCategorieen: yourEuropeCategoriesAsIris,
             },
             'nl-be-x-informal');
 
@@ -566,12 +584,11 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 createdBy: bestuurseenheidUriGent,
                 aangemaaktOp: `2024-02-14T13:42:12.357Z`,
                 bewerktOp: `2024-02-15T14:59:30.236Z`,
+                bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
+                uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
+                geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`]
             },
             'nl-be-x-informal');
-
-        await verifyPublishmentInIPDC(
-            title,
-            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }]));
     });
 
     test('Verify an instance can be archived and again unarchived', async () => {
@@ -598,7 +615,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const archivedInstancePublishedInIpdc = await IpdcStub.findPublishedInstance({ tombstonedId: isVersionOf });
         expect(archivedInstancePublishedInIpdc).toBeTruthy();
 
-        const unarchivedSnapshot:Snapshot = await InstanceSnapshotLdesStub.createSnapshot(instanceId, false);
+        const unarchivedSnapshot: Snapshot = await InstanceSnapshotLdesStub.createSnapshot(instanceId, false);
 
         await verifyInstanceInUI(unarchivedSnapshot.title, unarchivedSnapshot.description);
 
@@ -610,6 +627,9 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
             {
                 titel: { nl: unarchivedSnapshot.title },
                 beschrijving: { nl: unarchivedSnapshot.description },
+                bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
+                uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
+                geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`]
             },
             'nl-be-x-informal');
     });
@@ -634,31 +654,6 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();
     }
-
-    async function verifyPublishmentInIPDC(title: string, competentAuthorityExpectation) {
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
-        expect(instancePublishedInIpdc).toBeTruthy();
-
-        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
-
-        expect(publicService['http://data.europa.eu/m8g/hasCompetentAuthority']).toEqual(competentAuthorityExpectation);
-
-        expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
-            { "@id": "http://vocab.belgif.be/auth/refnis2019/44021" }
-        ]));
-
-        expect(publicService['http://purl.org/pav/createdBy']).toHaveLength(1);
-        expect(publicService['http://purl.org/pav/createdBy'][0]).toEqual(
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }
-        );
-
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority']).toHaveLength(1);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority']).toEqual(expect.arrayContaining([
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }
-        ]));
-    }
-
 
 });
 

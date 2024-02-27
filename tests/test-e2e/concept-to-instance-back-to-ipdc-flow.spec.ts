@@ -872,90 +872,50 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 createdBy: bestuurseenheidConfig.uri,
                 productId: '1502',
                 conceptSource: 'https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84',
+                conceptStatus: 'http://lblod.data.gift/concepts/instance-status/verstuurd',
                 type: 'https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal',
                 aangemaaktOp: `PRESENT`,
                 bewerktOp: `PRESENT`,
                 geldigVanaf: `2019-04-13T00:00:00Z`,
                 geldigTot: `2026-11-27T00:00:00Z`,
+                doelgroepen: [
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging',
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Organisatie',
+                ],
+                themas: [
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie',
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/Thema/EconomieWerk',
+                ],
+                bevoegdeBestuursniveaus: [
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams',
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal',
+                ],
+                bevoegdeOverheden: [
+                    'http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589',
+                    'http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4'
+                ],
+                uitvoerendeBestuursniveaus: [
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Federaal',
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal'
+                ],
+                uitvoerendeOverheden: [
+                    bestuurseenheidConfig.uri
+                ],
+                geografischeToepassingsgebieden: (bestuurseenheidConfig.spatialNisCode ? [
+                    bestuurseenheidConfig.spatialNisCode,
+                    'http://vocab.belgif.be/auth/refnis2019/24086',
+                    'http://vocab.belgif.be/auth/refnis2019/70000'
+                ] : [
+                    'http://vocab.belgif.be/auth/refnis2019/24086',
+                    'http://vocab.belgif.be/auth/refnis2019/70000'
+                ]),
+                zoektermen: ['Akte - nl', 'Nationaliteit - nl', 'een-nieuwe-tag'],
+                publicatieKanalen: ['https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope'],
+                yourEuropeCategorieen: [
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgMedischeBehandeling',
+                    'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen']
             },
             expectedFormalOrInformalTripleLanguage);
-
-        expect(publicService['http://data.europa.eu/m8g/thematicArea']).toHaveLength(2);
-        expect(publicService['http://data.europa.eu/m8g/thematicArea']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/EconomieWerk" }
-        ]));
-
-        if (bestuurseenheidConfig.spatialNisCode) {
-            expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(3);
-            expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
-                { "@id": bestuurseenheidConfig.spatialNisCode }]));
-        } else {
-            expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(2);
-        }
-        expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
-            { "@id": "http://vocab.belgif.be/auth/refnis2019/24086" }]));
-        expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([
-            { "@id": "http://vocab.belgif.be/auth/refnis2019/70000" }]));
-
-        expect(publicService['http://www.w3.org/ns/dcat#keyword']).toHaveLength(3);
-        expect(publicService['http://www.w3.org/ns/dcat#keyword']).toEqual(expect.arrayContaining([
-            { "@language": "nl", "@value": "Akte - nl" },
-            { "@language": "nl", "@value": "Nationaliteit - nl" },
-            { "@language": "nl", "@value": "een-nieuwe-tag" }
-        ]));
-
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel']).toHaveLength(2);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal" }
-        ]));
-
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel']).toHaveLength(2);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Federaal" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal" }
-        ]));
-
-        expect(publicService['http://data.europa.eu/m8g/hasCompetentAuthority']).toHaveLength(2);
-        expect(publicService['http://data.europa.eu/m8g/hasCompetentAuthority']).toEqual(expect.arrayContaining([
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589" },
-            { "@id": "http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4" }
-        ]));
-
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority']).toHaveLength(1);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority']).toEqual(expect.arrayContaining([
-            { "@id": bestuurseenheidConfig.uri }
-        ]));
-
-
-        //TODO LPDC-709 This should not be send to IPDC
-        expect(publicService['http://www.w3.org/ns/adms#status']).toHaveLength(1);
-        expect(publicService['http://www.w3.org/ns/adms#status'][0]).toEqual(
-            { "@id": 'http://lblod.data.gift/concepts/instance-status/verstuurd' }
-        );
-
-        //TODO LPDC-698 verify Language is send to IPDC
-
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium']).toHaveLength(1);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium'][0]).toEqual(
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope" }
-        );
-
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience']).toHaveLength(2);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Organisatie" }
-        ]));
-
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory']).toHaveLength(2);
-        expect(publicService['https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgMedischeBehandeling" },
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen" }
-        ]));
-
-
-
 
     }
 
