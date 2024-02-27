@@ -87,7 +87,7 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateNestedFieldGroup(publicService, instance, 'http://data.europa.eu/m8g/hasCost', 'http://data.europa.eu/m8g/Cost', instanceFields.kosten, gekozenUOfJeVorm);
     validateNestedFieldGroup(publicService, instance, 'http://purl.org/vocab/cpsv#produces', 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage', instanceFields.financieleVoordelen, gekozenUOfJeVorm);
     validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation', arrayContainingText(instanceFields.regelgeving, gekozenUOfJeVorm, true));
-    //TODO LPDC-1026: fix legal resources in lpdc-publish ... 
+    //TODO LPDC-1026: fix legal resources in lpdc-publish ... + create this a nested thing ...
     //validateData(publicService, 'http://data.europa.eu/m8g/hasLegalResource', arrayContainingStringIds(instanceFields.juridischeInfoUrls));
     validateNestedFieldGroup(publicService, instance, 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://schema.org/WebSite', instanceFields.meerInfos, gekozenUOfJeVorm);
     validateContactPointFields(publicService, instance, instanceFields.contactPunten);
