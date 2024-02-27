@@ -21,6 +21,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
     let mockLoginPage: MockLoginPage;
     let homePage: LpdcHomePage;
     let instantieDetailsPage: InstantieDetailsPage;
+    const bestuurseenheidUriGent = `http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`;
 
     test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
@@ -62,16 +63,15 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
             {
                 titel: { nl: title },
                 beschrijving: { nl: description },
+                uuid: `PRESENT`,
+                createdBy: bestuurseenheidUriGent,            
+                aangemaaktOp: `2024-02-20T11:42:12.357Z`,
+                bewerktOp: `2024-02-21T13:59:25.236Z`,
             },
             'nl-be-x-informal');
         await verifyPublishmentInIPDC(
             title,
-            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": title }]),
-            description,
-            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": expect.stringContaining(description) }]),
-            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }]),
-            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-20T11:42:12.357Z" }),
-            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-21T13:59:25.236Z" }));
+            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }]));
     });
 
     test('Verify a full instance was created from instance snapshot from ldes stream and verify its publishment to ipdc', async () => {
@@ -142,10 +142,15 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const linkedConceptUrl = 'https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84';
         const linkedConceptProductId = '1502';
         const productType = 'Financieel voordeel';
+        const productTypeAsIri = 'https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel';
         const dateCreatedFormatted = '14-02-2024 - 14:42';
+        const dateCreated = `2024-02-14T13:42:12.357Z`;
         const dateModifiedFormatted = '14-02-2024 - 14:59';
+        const dateModified = `2024-02-14T13:59:25.237Z`;
         const startDateFormatted = '26-08-2020';
+        const startDate = '2020-08-26T11:40:20.026205Z';
         const endDateFormatted = '12-07-2025';
+        const endDate = '2025-07-12T11:40:20.026205Z';
         const documentStatus = 'Verzonden';
 
         const targetAudiences = ['Burger', 'Onderneming'];
@@ -530,6 +535,15 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                         order: nmbr - 1
                     };
                 }),
+                uuid: 'PRESENT',
+                createdBy: bestuurseenheidUriGent,
+                productId: `1502`,
+                conceptSource: linkedConceptUrl,
+                type: productTypeAsIri,
+                aangemaaktOp: dateCreated,
+                bewerktOp: dateModified,
+                geldigVanaf: startDate,
+                geldigTot: endDate,
             },
             'nl-be-x-informal');
 
@@ -548,17 +562,16 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
             {
                 titel: { nl: title },
                 beschrijving: { nl: description },
+                uuid: 'PRESENT',
+                createdBy: bestuurseenheidUriGent,
+                aangemaaktOp: `2024-02-14T13:42:12.357Z`,
+                bewerktOp: `2024-02-15T14:59:30.236Z`,
             },
             'nl-be-x-informal');
 
         await verifyPublishmentInIPDC(
             title,
-            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": title }]),
-            description,
-            expect.arrayContaining([{ "@language": 'nl-be-x-informal', "@value": expect.stringContaining(description) }]),
-            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }]),
-            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-14T13:42:12.357Z" }),
-            expect.objectContaining({ "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2024-02-15T14:59:30.236Z" }));
+            expect.arrayContaining([{ "@id": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5" }]));
     });
 
     test('Verify an instance can be archived and again unarchived', async () => {
@@ -575,10 +588,12 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
             {
                 titel: { nl: title },
                 beschrijving: { nl: description },
+                uuid: `PRESENT`,
+                createdBy: bestuurseenheidUriGent,
             },
             'nl-be-x-informal');
 
-        const { title: titleArchived } = await InstanceSnapshotLdesStub.createSnapshot(instanceId, true);
+        await InstanceSnapshotLdesStub.createSnapshot(instanceId, true);
 
         const archivedInstancePublishedInIpdc = await IpdcStub.findPublishedInstance({ tombstonedId: isVersionOf });
         expect(archivedInstancePublishedInIpdc).toBeTruthy();
@@ -622,25 +637,13 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.productOpnieuwBewerkenButton).toBeVisible();
     }
 
-    async function verifyPublishmentInIPDC(title: string, titleExpection, description: string, descriptionExpectation, competentAuthorityExpectation, dateCreateExpectation: any | undefined, dateModifiedExpectation: any | undefined) {
+    async function verifyPublishmentInIPDC(title: string, competentAuthorityExpectation) {
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: 'nl-be-x-informal' });
         expect(instancePublishedInIpdc).toBeTruthy();
 
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
 
         expect(publicService['http://data.europa.eu/m8g/hasCompetentAuthority']).toEqual(competentAuthorityExpectation);
-
-        expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
-
-        if (dateCreateExpectation) {
-            expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
-            expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(dateCreateExpectation);
-        }
-
-        if (dateModifiedExpectation) {
-            expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
-            expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(dateModifiedExpectation);
-        }
 
         expect(publicService['http://purl.org/dc/terms/spatial']).toHaveLength(1);
         expect(publicService['http://purl.org/dc/terms/spatial']).toEqual(expect.arrayContaining([

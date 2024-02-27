@@ -792,7 +792,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
     },
         expectedFormalOrInformalTripleLanguage: string,
         bestuurseenheidConfig: BestuursEenheidConfig) {
-        // PUBLIC SERVICE
+
         const publicService = IpdcStub.getObjectByType(instance, 'http://purl.org/vocab/cpsv#PublicService');
 
         verifyInstancePublishedOnIPDC(
@@ -868,52 +868,17 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                         url: websiteUrl,
                         order: 0
                     }],
+                uuid: 'PRESENT',
+                createdBy: bestuurseenheidConfig.uri,
+                productId: '1502',
+                conceptSource: 'https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84',
+                type: 'https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal',
+                aangemaaktOp: `PRESENT`,
+                bewerktOp: `PRESENT`,
+                geldigVanaf: `2019-04-13T00:00:00Z`,
+                geldigTot: `2026-11-27T00:00:00Z`,
             },
             expectedFormalOrInformalTripleLanguage);
-
-        expect(publicService['http://mu.semte.ch/vocabularies/core/uuid']).toHaveLength(1);
-
-        expect(publicService['http://purl.org/pav/createdBy']).toHaveLength(1);
-        expect(publicService['http://purl.org/pav/createdBy'][0]).toEqual(
-            { "@id": bestuurseenheidConfig.uri }
-        );
-
-        //TODO LPDC-709 product id should not be send to IPDC
-        expect(publicService['http://schema.org/productID']).toHaveLength(1);
-        expect(publicService['http://schema.org/productID']).toEqual(expect.arrayContaining([
-            { "@value": "1502" }
-        ]));
-
-        expect(publicService['http://purl.org/dc/terms/source']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/source'][0]).toEqual(
-            { "@id": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84" }
-        );
-
-        expect(publicService['http://purl.org/dc/terms/type']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/type']).toEqual(expect.arrayContaining([
-            { "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal" }
-        ]));
-
-        expect(publicService['http://purl.org/dc/terms/created']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/created'][0]).toEqual(expect.objectContaining(
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
-        ));
-
-        expect(publicService['http://purl.org/dc/terms/modified']).toHaveLength(1);
-        expect(publicService['http://purl.org/dc/terms/modified'][0]).toEqual(expect.objectContaining(
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime" }
-        ));
-
-        expect(publicService['http://schema.org/startDate']).toHaveLength(1);
-        expect(publicService['http://schema.org/startDate']).toEqual(expect.arrayContaining([
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2019-04-13T00:00:00Z" }
-        ]));
-
-        expect(publicService['http://schema.org/endDate']).toHaveLength(1);
-        expect(publicService['http://schema.org/endDate']).toEqual(expect.arrayContaining([
-            { "@type": "http://www.w3.org/2001/XMLSchema#dateTime", "@value": "2026-11-27T00:00:00Z" }
-        ]));
-
 
         expect(publicService['http://data.europa.eu/m8g/thematicArea']).toHaveLength(2);
         expect(publicService['http://data.europa.eu/m8g/thematicArea']).toEqual(expect.arrayContaining([

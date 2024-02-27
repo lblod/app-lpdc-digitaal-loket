@@ -1,6 +1,8 @@
 import { expect } from '@playwright/test';
 import { IpdcStub } from '../components/ipdc-stub';
 
+export type Presence = 'PRESENT';
+
 export interface Field {
     nl?: string;
     en?: string | boolean;
@@ -48,6 +50,15 @@ export interface PublishedInstanceFields {
     juridischeInfoUrls?: string[],
     contactPunten?: ContactPointFields[],
     meerInfos?: NestedFieldGroup[],
+    uuid?: string | Presence,
+    createdBy?: string,
+    productId?: string,
+    conceptSource?: string,
+    type?: string,
+    aangemaaktOp?: string | Presence,
+    bewerktOp?: string | Presence,
+    geldigVanaf?: string,
+    geldigTot?: string,
 }
 
 export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: PublishedInstanceFields, gekozenUOfJeVorm: string) {
@@ -67,6 +78,16 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateData(publicService, 'http://data.europa.eu/m8g/hasLegalResource', arrayContainingStringIds(instanceFields.juridischeInfoUrls));
     validateNestedFieldGroup(publicService, instance, 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://schema.org/WebSite', instanceFields.meerInfos, gekozenUOfJeVorm);
     validateContactPointFields(publicService, instance, instanceFields.contactPunten);
+    validatePresentOrData(publicService, 'http://mu.semte.ch/vocabularies/core/uuid', instanceFields.uuid)
+    validateData(publicService, 'http://purl.org/pav/createdBy', arrayContainingStringIds(instanceFields.createdBy));
+        //TODO LPDC-709 product id should not be send to IPDC
+    validateData(publicService, 'http://schema.org/productID', arrayContainingString(instanceFields.productId));
+    validateData(publicService, 'http://purl.org/dc/terms/source', arrayContainingStringIds(instanceFields.conceptSource));
+    validateData(publicService, 'http://purl.org/dc/terms/type', arrayContainingStringIds(instanceFields.type));
+    validatePresentOrData(publicService, 'http://purl.org/dc/terms/created', instanceFields.aangemaaktOp, 'dateTime');
+    validatePresentOrData(publicService, 'http://purl.org/dc/terms/modified', instanceFields.bewerktOp, 'dateTime');
+    validateData(publicService, 'http://schema.org/startDate', arrayContainingString(instanceFields.geldigVanaf, 'dateTime'));
+    validateData(publicService, 'http://schema.org/endDate', arrayContainingString(instanceFields.geldigTot, 'dateTime'));
 };
 
 function validateNestedFieldGroup(publicService: any, instance: any, predikaat: string, nestedType: string, fieldGroup: NestedFieldGroup[] | undefined, gekozenUOfJeVorm: string, nestedPredikaat?: string, nestedNestedType?: string) {
@@ -83,7 +104,7 @@ function validateNestedFieldGroup(publicService: any, instance: any, predikaat: 
         expect(actualData['@type'], msg).toEqual(expect.arrayContaining([nestedType]));
         validateData(actualData, 'http://purl.org/dc/terms/title', arrayContainingText(field.titel, gekozenUOfJeVorm));
         validateData(actualData, 'http://purl.org/dc/terms/description', arrayContainingText(field.beschrijving, gekozenUOfJeVorm, true));
-        validateData(actualData, 'http://www.w3.org/ns/shacl#order', arrayContainingNumber(field.order));
+        validateData(actualData, 'http://www.w3.org/ns/shacl#order', arrayContainingString(field.order?.toString(), 'integer'));
         validateData(actualData, 'http://schema.org/url', arrayContainingString(field.url));
 
         if (nestedPredikaat !== undefined
@@ -108,7 +129,7 @@ function validateContactPointFields(publicService: any, instance: any, contactPo
         validateData(actualData, 'http://schema.org/telephone', arrayContainingString(field.telephone));
         validateData(actualData, 'http://schema.org/url', arrayContainingString(field.url));
         validateData(actualData, 'http://schema.org/openingHours', arrayContainingString(field.openingHours));
-        validateData(actualData, 'http://www.w3.org/ns/shacl#order', arrayContainingNumber(field.order));
+        validateData(actualData, 'http://www.w3.org/ns/shacl#order', arrayContainingString(field.order?.toString(), 'integer'));
 
         validateAddress(actualData, instance, field.address);
     });
@@ -132,12 +153,26 @@ function validateAddress(publicService: any, instance: any, field: AddressFields
     validateData(actualData, 'https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer', arrayContainingString(field.busnummer));
 }
 
+function validatePresentOrData(data: any, predicate: string, presentOrString: Presence | string | undefined, type?: string, times: number = 1) {
+    if('PRESENT' === presentOrString) {
+        validatePredicatePresent(data, predicate, true, times);
+    } else {
+        validateData(data, predicate, arrayContainingString(presentOrString, type));    
+    }
+}
+
 function validateData(data: any, predikaat: string, arrayContainingContent: any | undefined) {
     if (arrayContainingContent) {
         const msg = JSON.stringify({ data: data, predikaat: predikaat });
         expect(data[predikaat], msg).toBeDefined();
         expect(data[predikaat], msg).toHaveLength(arrayContainingContent.length);
         expect(data[predikaat], msg).toEqual(expect.arrayContaining(arrayContainingContent));
+    }
+}
+
+function validatePredicatePresent(publicService: any, predicate: string, present: boolean = true, times: number = 1) {
+    if(present) {
+        expect(publicService[predicate]).toHaveLength(times);
     }
 }
 
@@ -159,20 +194,15 @@ function arrayContainingText(field: Field | undefined, gekozenUOfJeVorm: string,
     }
 }
 
-function arrayContainingNumber(aNumber: number | undefined) {
-    if (aNumber === undefined) {
-        return undefined;
-    }
-
-    return [{ "@value": `${aNumber.toString()}`, "@type": "http://www.w3.org/2001/XMLSchema#integer" }];
-}
-
-function arrayContainingString(aString: string | undefined) {
+function arrayContainingString(aString: string | undefined, type?: string) {
     if (aString === undefined) {
         return undefined;
     }
+    if(type === undefined) {
+        return [{ "@value": aString }];
+    }
 
-    return [{ "@value": aString }];
+    return [{ "@value": aString, "@type": `http://www.w3.org/2001/XMLSchema#${type}` }];
 }
 
 function arrayContainingLanguageString(aString: string | undefined, language: string) {
@@ -183,7 +213,10 @@ function arrayContainingLanguageString(aString: string | undefined, language: st
     return [{ "@language": language, "@value": aString }];
 }
 
-function arrayContainingStringIds(strings: string[] | undefined) {
+function arrayContainingStringIds(strings: string[] | undefined | string) {
+    if(typeof(strings) === 'string') {
+        strings = [strings];
+    }
     return strings?.map(str => { return { "@id": str }; });
 }
 
