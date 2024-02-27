@@ -616,12 +616,10 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
     async function verifyInstanceInUI(title: string, description: string) {
         await homePage.goto();
-        await homePage.reloadUntil(async () => {
-            await homePage.searchInput.fill(title);
+        await homePage.searchInput.fill(title);
 
-            await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
-            });    
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
+        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
         await homePage.resultTable.row(first_row).link('Bekijk').click();
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
