@@ -21,6 +21,7 @@
 @prefix extEng: <http://mu.semte.ch/vocabularies/ext/form-fields/english/> .
 @prefix locn: <http://www.w3.org/ns/locn#> .
 @prefix adres: <https://data.vlaanderen.be/ns/adres#> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
 
 ##########################################################
 # form
@@ -40,6 +41,8 @@ ext:form a form:Form, form:TopLevelForm ;
     form:includes ext:finAdvL;
     form:includes ext:regulationitleF;
     form:includes extEng:regulationitleF;
+    form:includes ext:headerLegalResource ;
+    form:includes ext:legalResourceL;
     form:includes ext:contactpointsL;
     form:includes ext:websitesL.
 
@@ -900,6 +903,82 @@ ext:regulationsPg a form:PropertyGroup;
       sh:path lpdcExt:regulation;
       form:displayType displayTypes:richText ;
       sh:group ext:regulationsPg .
+
+  ##########################################################
+  #  Header LegalResource
+  ##########################################################
+  ext:headerLegalResource a form:Field;
+     sh:order 3;
+     sh:name "Juridische informatie";
+     form:help """Hier kan u websites die meer juridiche informatie bevatten over de lokale dienst aanbrengen/wijzigen. Bijvoorbeeld links naar de <a href="https://codex.vlaanderen.be/">Vlaamse codex</a>""";
+     form:options """{ "level": "1", "skin": "3"}""";
+     form:displayType displayTypes:heading ;
+     sh:group ext:regulationsPg.
+
+  ##########################################################
+  #  listing-scope: Juridische informatie
+  ##########################################################
+  ext:legalResourceS a form:Scope;
+    sh:path m8g:hasLegalResource.
+
+  ##########################################################
+  #  Listing: Juridische informatie
+  ##########################################################
+  ext:legalResourceL a form:Listing;
+    form:each ext:legalResourceSf;
+    form:scope ext:legalResourceS;
+    form:createGenerator ext:legalResourceG;
+    sh:group ext:regulationsPg;
+    form:addLabel "Voeg URL juridische informatie toe";
+    form:canAdd true;
+    form:canRemove true;
+    sh:order 4 .
+
+  ##########################################################
+  #  Generator: Juridische informatie
+  ##########################################################
+  ext:legalResourceG a form:Generator;
+    form:prototype [
+      form:shape [
+        a eli:LegalResource ;
+      ];
+    ];
+    form:dataGenerator form:addMuUuid.
+
+  ##########################################################
+  #  property-group: Juridische informatie-sub
+  ##########################################################
+  ext:legalResourcePg-sub a form:PropertyGroup;
+    sh:order 1 .
+
+  ##########################################################
+  #  Subform: Juridische informatie
+  ##########################################################
+  ext:legalResourceSf a form:SubForm;
+    form:removeLabel "Verwijder Juridische informatie";
+    form:includes ext:legalResourceUrlF .
+
+     ##########################################################
+     # Field: juridische informatie url
+     ##########################################################
+     ext:legalResourceUrlF a form:Field ;
+       sh:name "URL juridische informatie" ;
+       sh:order 1 ;
+       sh:path schema:url ;
+       form:validations [
+         a form:UriConstraint ;
+         form:grouping form:MatchEvery ;
+         sh:resultMessage "Gelieve een geldige URL op te geven. Zorg dat vooraan in de link altijd http://, https://, ftp:// of sftp:// staat."; # TODO: later custom validator
+         sh:path schema:url
+       ],
+       [
+         a form:RequiredConstraint ;
+         form:grouping form:Bag ;
+         sh:resultMessage "Dit veld is verplicht." ;
+         sh:path schema:url
+       ];
+       form:displayType displayTypes:defaultInput ;
+       sh:group ext:legalResourcePg-sub .
 
 ##########################################################
 #  property-group: Contactpunten
