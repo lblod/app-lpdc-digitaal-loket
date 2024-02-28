@@ -115,6 +115,9 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingRegelgevingEngelsEditor: (order?: number) => Locator;
     readonly beschrijvingRegelgevingEngelsReadonly: (order?: number) => Locator;
 
+    readonly juridischeInformatieUrlInput: (order?: number) => Locator;
+    readonly voegUrlJuridischeInformatieToeButton: Locator;
+
     readonly contactpuntHeading: Locator;
     readonly voegContactpuntToeButton: Locator;
     readonly verwijderContactpuntButton:(order?: number) => Locator;
@@ -280,6 +283,9 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevingReadonly = (order: number = 0) => this.readonlyBelow('Regelgeving').nth(order);
         this.beschrijvingRegelgevingEngelsEditor = (order: number = 0) => this.editorRightOf('Regelgeving').nth(order);
         this.beschrijvingRegelgevingEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Regelgeving').nth(order);
+
+        this.juridischeInformatieUrlInput = (order: number = 0) => this.inputBelow("URL juridische informatie").nth(order);
+        this.voegUrlJuridischeInformatieToeButton = page.getByRole('button', {name: 'Voeg URL juridische informatie toe'});
 
         this.voegContactpuntToeButton = page.getByRole('button', {name: 'Voeg contactpunt toe'});
         this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt','Contactpunten').nth(order);

@@ -430,6 +430,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingRegelgevingEngels = beschrijvingRegelgevingEngels + uuid();
         await instantieDetailsPage.beschrijvingRegelgevingEngelsEditor().fill(newBeschrijvingRegelgevingEngels);
 
+        const juridischeInformatieUrl = await instantieDetailsPage.juridischeInformatieUrlInput().inputValue();
+        expect(juridischeInformatieUrl).toEqual(`https://ipdc.be/regelgeving`);
+        await instantieDetailsPage.voegUrlJuridischeInformatieToeButton.click();
+        await instantieDetailsPage.juridischeInformatieUrlInput(1).fill('https://ipdc.be/codex-page');
+
         await instantieDetailsPage.voegContactpuntToeButton.click();
         await expect(instantieDetailsPage.contactpuntHeading).toBeVisible();
         await instantieDetailsPage.contactpuntEmailSelect().insertNewValue('1111@example.com');
@@ -698,6 +703,9 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor()).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly().textContent()).toContain(newBeschrijvingRegelgevingEngels);
 
+        expect(await instantieDetailsPage.juridischeInformatieUrlInput(0)).toHaveValue('https://ipdc.be/regelgeving');
+        expect(await instantieDetailsPage.juridischeInformatieUrlInput(1)).toHaveValue('https://ipdc.be/codex-page');
+
         await expect(instantieDetailsPage.contactpuntEmailReadonly()).toHaveValue('1111@example.com');
         await expect(instantieDetailsPage.contactpuntTelefoonReadonly()).toHaveValue('111111111');
         await expect(instantieDetailsPage.contactpuntWebsiteURLReadonly()).toHaveValue('https://www.example1.com');
@@ -843,7 +851,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                         order: 0
                     }],
                 regelgeving: { nl: regelgeving, en: regelgevingEngels },
-                juridischeInfoUrls: ['https://ipdc.be/regelgeving'],
+                juridischeInfoUrls: ['https://ipdc.be/regelgeving', 'https://ipdc.be/codex-page'],
                 contactPunten: [
                     {
                         email: '1111@example.com',
