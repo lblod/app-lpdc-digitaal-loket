@@ -24,7 +24,7 @@ async function main() {
     const deleteData = createDeleteData(groupByIds(instances));
 
     fs.writeFileSync(`./migration-results/deleteLegalResources.sparql`, deleteData);
-    fs.writeFileSync(`./migration-results/legalResources.ttl`, insertQuads.join('\n'));
+    fs.writeFileSync(`./migration-results/insertLegalResources.ttl`, insertQuads.join('\n'));
 }
 
 function toTriple(instanceUri: string, legalResource: string):string {
