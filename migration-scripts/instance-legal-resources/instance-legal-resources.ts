@@ -5,22 +5,63 @@ import fs from "fs";
 import { v4 as uuid } from "uuid";
 
 
-
 async function main() {
     const instances =await getAllInstancesWithLegalResources();
     console.log(`"${instances.length}" instanties te controleren`);
-    const quads=[]
+    const insertQuads=[]
 
-    let legalResources =0
+    let totalAmountOflegalResources =0
     for (const instance of instances){
         instance.legalResources = await getAllLegalResourcesForInstance(instance);
-        legalResources +=instance.legalResources.length
-        const instanceQuads :string[] = legalResourcesFromInstanceToQuad(instance);
-        quads.push(...instanceQuads)
-    }
-    console.log(`"${legalResources}" legalResources te controleren`);
+        totalAmountOflegalResources +=instance.legalResources.length
 
-    fs.writeFileSync(`./migration-results/legalResources.ttl`, quads.join('\n'));
+        const instanceQuads :string[] = legalResourcesFromInstanceToQuad(instance);
+        insertQuads.push(...instanceQuads)
+    }
+    console.log(`"${totalAmountOflegalResources}" legalResources te controleren`);
+
+
+    const deleteData = createDeleteData(groupByIds(instances));
+
+    fs.writeFileSync(`./migration-results/deleteLegalResources.sparql`, deleteData);
+    fs.writeFileSync(`./migration-results/legalResources.ttl`, insertQuads.join('\n'));
+}
+
+function toTriple(instanceUri: string, legalResource: string):string {
+    return `<${instanceUri}> <http://data.europa.eu/m8g/hasLegalResource> <${legalResource}> .`
+}
+
+function createDeleteData(groupByGraphs: GroupedByGraphs):string {
+let query =''
+    for(const graph in groupByGraphs ){
+        const deleteTriples=[];
+        for(const instance in groupByGraphs[graph]){
+            for(const legalResource in groupByGraphs[graph][instance]){
+                const triple = toTriple(instance,groupByGraphs[graph][instance][legalResource]);
+
+                deleteTriples.push(triple)
+            }
+        }
+     query +=`
+        DELETE DATA FROM <${graph}>{
+            ${deleteTriples.join('\n')}
+        }
+     `
+    }
+
+return query
+}
+function groupByIds (instances: Instance[]): GroupedByGraphs {
+   return  instances.reduce((acc: GroupedByGraphs, instance: Instance) => {
+        if (!acc[instance.graph]) {
+            acc[instance.graph] = {};
+        }
+        if (!acc[instance.graph][instance.instanceUri]) {
+            acc[instance.graph][instance.instanceUri] = [];
+        }
+           acc[instance.graph][instance.instanceUri].push(...instance.legalResources);
+       return acc;
+       },{});
 }
 function legalResourcesFromInstanceToQuad(instance: Instance): string[] {
     const quads =[]
@@ -93,5 +134,11 @@ type Instance = {
     legalResources: string[],
     graph: string,
 };
+type GroupedByGraphs = {
+    [graph: string]: {
+        [instanceUri: string]: string[];
+    };
+};
+
 
 main();
