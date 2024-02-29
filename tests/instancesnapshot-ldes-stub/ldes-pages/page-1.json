@@ -9,6 +9,11 @@
         "node": "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=0",
         "path": "generatedAtTime",
         "@type": "LessThanRelation"
+      },
+      {
+        "node": "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=2",
+        "path": "generatedAtTime",
+        "@type": "GreaterThanOrEqualToRelation"
       }
     ]
   },
