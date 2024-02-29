@@ -128,6 +128,7 @@ ex:another-output
 
 ex:a-legal-resource
     a eli:LegalResource;
+    schema:url "https://codex.vlaanderen.be/regelgeving" ;
     shacl:order 1.
 
 ex:a-minimal-valid-concept

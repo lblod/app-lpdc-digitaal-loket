@@ -17,5 +17,13 @@ oss:eli::LegalResourceShape
           shacl:minCount 1;
           shacl:maxCount 1;
           shacl:path shacl:order
+      ],
+      [
+        shacl:datatype xsd:string;
+        shacl:description "A url that that point to the related legal resource in for example the flemish codex."@nl;
+        shacl:minCount 1;
+        shacl:maxCount 1;
+        shacl:name "regelgevendeBron"@nl;
+        shacl:path schema:url
       ];
     shacl:targetClass eli:LegalResource .

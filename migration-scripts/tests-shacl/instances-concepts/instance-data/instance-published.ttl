@@ -20,10 +20,6 @@
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/dateCreated> "2023-11-30T12:25:18.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/dateModified> "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 
-#added to content, because missing ...
-<https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
-<https://ipdc.be/regelgeving> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
-
 #actual data by lpdc-publish
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#PublicService> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen. - nl2e47b4b4-80fe-416a-9c72-76a27d879e63</p>"@nl-be-x-formal .
@@ -62,7 +58,7 @@
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/vocab/cpsv#follows> <http://data.lblod.info/id/rule/e9c7e1ef-5574-41bf-b41d-bec733f88061> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://data.europa.eu/m8g/hasContactPoint> <http://data.lblod.info/form-data/nodes/023bafc7-06be-4d46-befa-a56d387b2e72> .
-<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://data.europa.eu/m8g/hasLegalResource> <https://ipdc.be/regelgeving> .
+<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://data.europa.eu/m8g/hasLegalResource> <http://data.lblod.info/id/legal-resource/54260255-2708-45ce-8405-a6f974c1613e> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/vocab/cpsv#produces> <http://data.lblod.info/id/financial-advantage/932620f3-ca52-4ba6-bc77-f64539c567da> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/bf411975-4ced-4c74-a746-555ed0fe1024> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> .
@@ -125,3 +121,8 @@
 <http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - nle57578ec-a196-4077-b86a-9a50e41c4d6e</p>"@nl-be-x-formal .
 <http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://schema.org/url> "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/new-nationaliteit" .
 <http://data.lblod.info/id/website/85689a79-a91f-418a-896f-1a7dc1b267b2> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/legal-resource/54260255-2708-45ce-8405-a6f974c1613e> a <http://data.europa.eu/eli/ontology#LegalResource> .
+<http://data.lblod.info/id/legal-resource/54260255-2708-45ce-8405-a6f974c1613e> <http://schema.org/url> """https://ipdc.be/regelgeving""" .
+<http://data.lblod.info/id/legal-resource/54260255-2708-45ce-8405-a6f974c1613e> <http://www.w3.org/ns/shacl#order> """0"""^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+
