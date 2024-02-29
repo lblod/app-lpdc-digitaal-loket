@@ -3,6 +3,8 @@ import fs from "fs";
 import { instanceSnapshot } from "./extra-instancesnapshots.js";
 const app = express();
 
+const HOSTNAME = process.env.HOSTNAME || 'localhost';
+
 app.use(express.json({type:  ['application/json', 'application/ld+json']}));
 
 const extraInstanceSnapshots = [];
@@ -41,7 +43,7 @@ app.get('/doc/instancesnapshot', (req, res, next) => {
     try {
         const pageNumber = Number(req.query.pageNumber) || 0;
         console.log(`page ${pageNumber} requested`);
-        const page = fs.readFileSync(`./ldes-pages/page-${pageNumber}.json`, "utf8");
+        const page = fs.readFileSync(`./ldes-pages/page-${pageNumber}.json`, "utf8").replaceAll('hostname', HOSTNAME);
         const jsonLd = JSON.parse(page);
         jsonLd.member = jsonLd.member.concat(extraInstanceSnapshots);
         res.status(200).type('application/ld+json').json(jsonLd);

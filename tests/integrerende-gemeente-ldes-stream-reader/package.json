@@ -1,0 +1,15 @@
+{
+  "name": "integrerende-gemeente-ldes-stream-reader",
+  "version": "1.0.0",
+  "description": "An example project to read an ldes stream of instance snapshots, by default reads the manually started 'instancesnapshot-ldes-stub' at 'localhost', port 80. You can output as json-ld or turtle",
+  "type": "module",
+  "scripts": {
+    "start-export-as-json-ld": "actor-init-ldes-client --mimeType application/ld+json --disablePolling true http://localhost/doc/instancesnapshot?pageNumber=0 ",
+    "start-export-as-turtle": "actor-init-ldes-client --mimeType text/turtle --disablePolling true http://localhost/doc/instancesnapshot?pageNumber=0 "
+  },
+  "author": "Kunlabora",
+  "license": "ISC",
+  "dependencies": {
+      "@treecg/actor-init-ldes-client": "^4.0.9"
+  }
+}

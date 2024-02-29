@@ -162,6 +162,8 @@ services:
     build: instancesnapshot-ldes-stub
     volumes:
       - ./instancesnapshot-ldes-stub:/usr/app/src
+    environment:
+      HOSTNAME: 'instancesnapshot-ldes-stub'
     healthcheck:
       test: [ "CMD", "wget", "--spider", "http://localhost:80/InstanceJsonLdContext.jsonld" ]
       interval: 5s
