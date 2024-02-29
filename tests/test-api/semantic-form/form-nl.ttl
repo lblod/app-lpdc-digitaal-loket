@@ -910,7 +910,7 @@ ext:regulationsPg a form:PropertyGroup;
   ext:headerLegalResource a form:Field;
      sh:order 3;
      sh:name "Juridische informatie";
-     form:help """Hier kan u websites die meer juridiche informatie bevatten over de lokale dienst aanbrengen/wijzigen. Bijvoorbeeld links naar de <a href="https://codex.vlaanderen.be/">Vlaamse codex</a>""";
+     form:help """Hier kan u websites die meer juridiche informatie bevatten over de lokale dienst aanbrengen/wijzigen. Bijvoorbeeld links naar de <a target="_blank" href="https://codex.vlaanderen.be/">Vlaamse codex</a>""";
      form:options """{ "level": "1", "skin": "3"}""";
      form:displayType displayTypes:heading ;
      sh:group ext:regulationsPg.
