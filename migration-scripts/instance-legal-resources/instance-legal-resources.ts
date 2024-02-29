@@ -32,7 +32,7 @@ function toTriple(instanceUri: string, legalResource: string):string {
 }
 
 function createDeleteData(groupByGraphs: GroupedByGraphs):string {
-let query =''
+let query ='DELETE DATA {'
     for(const graph in groupByGraphs ){
         const deleteTriples=[];
         for(const instance in groupByGraphs[graph]){
@@ -43,12 +43,14 @@ let query =''
             }
         }
      query +=`
-        DELETE DATA FROM <${graph}>{
+        GRAPH <${graph}>{
             ${deleteTriples.join('\n')}
         }
      `
     }
-
+    query +=`
+    }
+    `
 return query
 }
 function groupByIds (instances: Instance[]): GroupedByGraphs {
