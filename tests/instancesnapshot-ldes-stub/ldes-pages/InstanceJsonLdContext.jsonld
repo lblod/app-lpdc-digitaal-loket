@@ -125,12 +125,12 @@
       "@id": "instantieNs:regulation",
       "@container": "@language"
     },
-    "juridischeInformatie": {
+    "regelgevendeBron": {
       "@id": "deu:hasLegalResource",
       "@type": "@id",
       "@container": "@set"
     },
-    "juridischeInformatieUrl": {
+    "regelgevendeBronUrl": {
         "@id": "deuOntology:LegalResource"
     },
     "contactPunten": {

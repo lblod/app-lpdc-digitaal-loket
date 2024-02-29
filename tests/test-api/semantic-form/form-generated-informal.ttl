@@ -909,33 +909,33 @@ ext:regulationsPg a form:PropertyGroup;
   ##########################################################
   ext:headerLegalResource a form:Field;
      sh:order 3;
-     sh:name "Juridische informatie";
-     form:help """Hier kan u websites die meer juridiche informatie bevatten over de lokale dienst aanbrengen/wijzigen. Bijvoorbeeld links naar de <a target="_blank" href="https://codex.vlaanderen.be/">Vlaamse codex</a>""";
+     sh:name "Regelgevende bron";
+     form:help """Hier kan u de links naar relevante regelgevende bronnen aanbrengen/wijzigen (bijv. <a target="_blank" href="https://codex.vlaanderen.be/">Vlaamse codex</a>).""";
      form:options """{ "level": "1", "skin": "3"}""";
      form:displayType displayTypes:heading ;
      sh:group ext:regulationsPg.
 
   ##########################################################
-  #  listing-scope: Juridische informatie
+  #  listing-scope: regelgevende bron
   ##########################################################
   ext:legalResourceS a form:Scope;
     sh:path m8g:hasLegalResource.
 
   ##########################################################
-  #  Listing: Juridische informatie
+  #  Listing: regelgevende bron
   ##########################################################
   ext:legalResourceL a form:Listing;
     form:each ext:legalResourceSf;
     form:scope ext:legalResourceS;
     form:createGenerator ext:legalResourceG;
     sh:group ext:regulationsPg;
-    form:addLabel "Voeg URL juridische informatie toe";
+    form:addLabel "Voeg URL regelgevende bron toe";
     form:canAdd true;
     form:canRemove true;
     sh:order 4 .
 
   ##########################################################
-  #  Generator: Juridische informatie
+  #  Generator: regelgevende bron
   ##########################################################
   ext:legalResourceG a form:Generator;
     form:prototype [
@@ -946,23 +946,23 @@ ext:regulationsPg a form:PropertyGroup;
     form:dataGenerator form:addMuUuid.
 
   ##########################################################
-  #  property-group: Juridische informatie-sub
+  #  property-group: regelgevende bron-sub
   ##########################################################
   ext:legalResourcePg-sub a form:PropertyGroup;
     sh:order 1 .
 
   ##########################################################
-  #  Subform: Juridische informatie
+  #  Subform: regelgevende bron
   ##########################################################
   ext:legalResourceSf a form:SubForm;
-    form:removeLabel "Verwijder Juridische informatie";
+    form:removeLabel "Verwijder regelgevende bron";
     form:includes ext:legalResourceUrlF .
 
      ##########################################################
-     # Field: juridische informatie url
+     # Field: regelgevende bron url
      ##########################################################
      ext:legalResourceUrlF a form:Field ;
-       sh:name "URL juridische informatie" ;
+       sh:name "URL regelgevende bron" ;
        sh:order 1 ;
        sh:path schema:url ;
        form:validations [

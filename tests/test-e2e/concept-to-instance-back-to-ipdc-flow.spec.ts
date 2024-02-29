@@ -430,10 +430,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingRegelgevingEngels = beschrijvingRegelgevingEngels + uuid();
         await instantieDetailsPage.beschrijvingRegelgevingEngelsEditor().fill(newBeschrijvingRegelgevingEngels);
 
-        const juridischeInformatieUrl = await instantieDetailsPage.juridischeInformatieUrlInput().inputValue();
-        expect(juridischeInformatieUrl).toEqual(`https://ipdc.be/regelgeving`);
-        await instantieDetailsPage.voegUrlJuridischeInformatieToeButton.click();
-        await instantieDetailsPage.juridischeInformatieUrlInput(1).fill('https://ipdc.be/codex-page');
+        const regelgevendeBronUrl = await instantieDetailsPage.regelgevendeBronUrlInput().inputValue();
+        expect(regelgevendeBronUrl).toEqual(`https://ipdc.be/regelgeving`);
+        await instantieDetailsPage.voegUrlRegelgevendeBronToeButton.click();
+        await instantieDetailsPage.regelgevendeBronUrlInput(1).fill('https://ipdc.be/codex-page');
 
         await instantieDetailsPage.voegContactpuntToeButton.click();
         await expect(instantieDetailsPage.contactpuntHeading).toBeVisible();
@@ -703,8 +703,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor()).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly().textContent()).toContain(newBeschrijvingRegelgevingEngels);
 
-        expect(await instantieDetailsPage.juridischeInformatieUrlInput(0)).toHaveValue('https://ipdc.be/regelgeving');
-        expect(await instantieDetailsPage.juridischeInformatieUrlInput(1)).toHaveValue('https://ipdc.be/codex-page');
+        expect(await instantieDetailsPage.regelgevendeBronUrlInput(0)).toHaveValue('https://ipdc.be/regelgeving');
+        expect(await instantieDetailsPage.regelgevendeBronUrlInput(1)).toHaveValue('https://ipdc.be/codex-page');
 
         await expect(instantieDetailsPage.contactpuntEmailReadonly()).toHaveValue('1111@example.com');
         await expect(instantieDetailsPage.contactpuntTelefoonReadonly()).toHaveValue('111111111');

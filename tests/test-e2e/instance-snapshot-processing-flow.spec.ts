@@ -118,8 +118,8 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const financialAdvantageDescriptionInEnglish = 'Description financial advantage';
         const regulationDescription = 'Regelgeving';
         const regulationDescriptionInEnglish = 'Regulation';
-        const juridischeInformatieUrl1 = 'https://codex.vlaanderen.be/regelgeving'
-        const juridischeInformatieUrl2 = 'https://codex.vlaanderen.be/andere-regelgeving'
+        const regelgevendeBronUrl1 = 'https://codex.vlaanderen.be/regelgeving'
+        const regelgevendeBronUrl2 = 'https://codex.vlaanderen.be/andere-regelgeving'
         const contactPointEmail = 'info@gent.be';
         const contactPointTelephone = '0412345678';
         const contactPointUrl = 'https://www.gent.be';
@@ -363,10 +363,10 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         expect(await instantieDetailsPage.beschrijvingRegelgevingReadonly().textContent()).toContain(regulationDescription);
         await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor()).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly().textContent()).toContain(regulationDescriptionInEnglish);
-        await expect(instantieDetailsPage.juridischeInformatieUrlInput(0)).not.toBeEditable();
-        await expect(await instantieDetailsPage.juridischeInformatieUrlInput(0)).toHaveValue(juridischeInformatieUrl1);
-        await expect(instantieDetailsPage.juridischeInformatieUrlInput(1)).not.toBeEditable();
-        await expect(await instantieDetailsPage.juridischeInformatieUrlInput(1)).toHaveValue(juridischeInformatieUrl2);
+        await expect(instantieDetailsPage.regelgevendeBronUrlInput(0)).not.toBeEditable();
+        await expect(await instantieDetailsPage.regelgevendeBronUrlInput(0)).toHaveValue(regelgevendeBronUrl1);
+        await expect(instantieDetailsPage.regelgevendeBronUrlInput(1)).not.toBeEditable();
+        await expect(await instantieDetailsPage.regelgevendeBronUrlInput(1)).toHaveValue(regelgevendeBronUrl2);
 
         await expect(instantieDetailsPage.contactpuntEmailReadonly(0, 0)).toHaveValue(contactPointEmail + '1');
         await expect(instantieDetailsPage.contactpuntTelefoonReadonly(0, 0)).toHaveValue(contactPointTelephone + '1');
@@ -509,7 +509,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                     };
                 }),
                 regelgeving: { nl: regulationDescription, en: regulationDescriptionInEnglish },
-                juridischeInfoUrls: [juridischeInformatieUrl1, juridischeInformatieUrl2],
+                juridischeInfoUrls: [regelgevendeBronUrl1, regelgevendeBronUrl2],
                 contactPunten: [
                     {
                         email: `${contactPointEmail}1`,

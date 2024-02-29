@@ -115,8 +115,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingRegelgevingEngelsEditor: (order?: number) => Locator;
     readonly beschrijvingRegelgevingEngelsReadonly: (order?: number) => Locator;
 
-    readonly juridischeInformatieUrlInput: (order?: number) => Locator;
-    readonly voegUrlJuridischeInformatieToeButton: Locator;
+    readonly regelgevendeBronUrlInput: (order?: number) => Locator;
+    readonly voegUrlRegelgevendeBronToeButton: Locator;
 
     readonly contactpuntHeading: Locator;
     readonly voegContactpuntToeButton: Locator;
@@ -284,8 +284,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevingEngelsEditor = (order: number = 0) => this.editorRightOf('Regelgeving').nth(order);
         this.beschrijvingRegelgevingEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Regelgeving').nth(order);
 
-        this.juridischeInformatieUrlInput = (order: number = 0) => this.inputBelow("URL juridische informatie").nth(order);
-        this.voegUrlJuridischeInformatieToeButton = page.getByRole('button', {name: 'Voeg URL juridische informatie toe'});
+        this.regelgevendeBronUrlInput = (order: number = 0) => this.inputBelow("URL regelgevende bron").nth(order);
+        this.voegUrlRegelgevendeBronToeButton = page.getByRole('button', {name: 'Voeg URL regelgevende bron toe'});
 
         this.voegContactpuntToeButton = page.getByRole('button', {name: 'Voeg contactpunt toe'});
         this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt','Contactpunten').nth(order);
