@@ -2,13 +2,30 @@
 
 Dit document beschrijft het proces hoe integrerende gemeentes gepubliceerde productinformatie kunnen synchroniseren met LPDC (Lokale Producten- en Dienstencatalogus). De producten worden zichtbaar voor de gemeente in LPDC. Ook synchroniseert LPDC de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
 
-## Context diagramma / Stroomdiagramma
+Het geeft een overzicht onder de vorm van een [stroomdiagramma](#stroomdiagramma), [specifieert het contract](#contract-specificaties), geeft [(uitvoerbare) voorbeelden en implementatie tips](#voorbeelden--implementatie-tips), een [verklarende woordenlijst](#verklarende-woordenlijst) en een lijst van gebruikte [referenties](#referenties).
 
-Beschrijft op een hoog niveau de datastromen tussen a/ integrerende gemeente b/ lpdc c/ ipdc en de gebruikte technologieën.
+## Stroomdiagramma
+
+Beschrijft op een hoog niveau de relevante datastromen tussen integrerende gemeente, LPDC en IPDC.
+
+![integrerende-gemeentes-stroomdiagramma.png](img%2Fintegrerende-gemeentes-stroomdiagramma.png)
+
+1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) bevat producten en diensten van overheden in Vlaanderen. 
+Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed door de Lokale Producten en DienstenCatalogus (LPDC)). 
+IPDC tracht zo de centrale bron te zijn voor alle producten en diensten binnen Vlaanderen, en om dit te faciliteren is hij verdeeld in twee delen: concepten en instanties.
+2. **Ophalen concepten**: de toepassingen van integrerende gemeentes kunnen concepten ophalen bij IPDC. 
+Indien integrerende gemeentes kiezen dit via **LDES-stroom** te verwezenlijken, gebeurt dit via conceptsnapshots. 
+Hoe hierbij aan te sluiten, vind je [hier](https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc). 
+3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente dat instanties beheert optioneel op basis van concepten uit IPDC. 
+Deze toepassing biedt de te publiceren instanties en elke wijziging ervan aan onder de vorm van een stroom van instantiesnapshots in de vorm van een **LDES-stroom**.
+4. **Ophalen te publiceren instanties**: LPDC-module synchroniseert de instanties van de integrerende gemeente door de aangeboden instantiesnapshots uit te lezen met behulp van een **LDES-stroom**. 
+5. **LPDC**: laat je toe de producten en diensten van je lokaal bestuur te beheren. Reconstrueert ook uit iedere laatste instantiesnapshot de instantie uit de **LDES-stroom**. En synchroniseert deze instantie verder naar IPDC. 
+De laatst verwerkte versie van iedere instantie is voor de integrerende gemeente ook zichtbaar op LPDC (dit enkel in alleen-lezen-modus voor besturen die LPDC-module voeden met instanties uit eigen oplossing). 
+6. LPDC-module publiceert instanties naar IPDC.   
 
 ## Technologie beschrijving
 
-Beschrijft relevantie secties van de gebruikte technologieën. Heeft niet als doel exhaustief te zijn. 
+Beschrijft samenvattend de gebruikte technologieën voor de gegevensoverdracht. Heeft niet als doel exhaustief te zijn. We verwijzen graag onder de referenties naar de volledige technische duiding. 
 
 ### Linked Data 
 
@@ -521,12 +538,33 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 
 ```
 
-
-
-
 ## Contract specificaties
 
 ## Voorbeelden + implementatie tips
+
+## Verklarende woordenlijst
+
+Hieronder beschrijven we een aantal termen die een leidraad vormen doorheen het verhaal. Deze termen zijn toepasbaar op LPDC, IPDC, eventueel ook voor de toepassingen van lokale besturen.
+
+#### Concept
+Concepten kunnen gezien worden als sjablonen die redacteurs van de Vlaamse overheid klaarzetten voor lokale besturen.
+Met die aanzet kunnen de lokale besturen vlot hun eigen dienstverlening (instantie) aanmaken.
+Een goed voorbeeld van een concept is het huwelijk.
+Hoewel de beschrijving en voorwaarden van een huwelijk grotendeels hetzelfde zijn voor de verschillende gemeentes zijn er mogelijk toch lokale verschillen, zoals de locatie en prijs.
+
+#### ConceptSnapshot
+Een gegeventsmomentopname van een concept. Verder verwijzen hiernaar met de Engelse term. Dit wordt gebruikt om de staat van conceptgegevens op een specifiek tijdstip te beschrijven. Een serie van conceptsnapshots beschrijft verschillende versies doorheen de tijd van een concept.
+Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar de id van het concept, een (kopie van) alle gegevens van het concept op moment van opname, en optioneel een archiveringsstatus (dit om aan te duiden of een concept nog actief is of niet).
+
+#### Instantie
+Zijn de werkelijke invulling van een product of dienst.
+De bevoegde overheid kan variëren: federaal, Vlaams, provinciaal,… en de dienstverlening kan uitgevoerd worden door nog een andere overheid zoals een lokaal bestuur.
+Bevat optioneel een link naar een concept waarop het oorspronkelijk was gebaseerd.
+
+#### InstantieSnapshot
+Een gegeventsmomentopname van een instantie. Verder verwijzen hiernaar met de Engelse term. Dit wordt gebruikt om de staat van instantiegegevens op een specifiek tijdstip te beschrijven. Een serie van instantiesnapshots beschrijft verschillende versies doorheen de tijd van een instantie.
+Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar de id van de instantie, een (kopie van) alle gegevens van de instantie op moment van opname, en optioneel een archiveringsstatus (dit om aan te duiden of de instantie nog actief is of niet).
+
 
 ## Referenties
 
@@ -534,6 +572,7 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 
 - [LPDC](https://lpdc.lokaalbestuur.vlaanderen.be/)
 - [IPDC](https://productencatalogus-v3.vlaanderen.be/nl/producten)
+- [Hoe aansluiten op IPDC v3](https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc#Basisbegrippen-IPDC)
 
 ### Gebruikte standaarden
 - [IPDC - LPDC (Implementatiemodel)](https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/)
