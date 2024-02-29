@@ -141,6 +141,8 @@ services:
   ldes-consumer-instancesnapshot-example:
     image: redpencil/ldes-consumer:0.7.1
     depends_on:
+      instancesnapshot-ldes-stub:
+        condition: service_healthy
       lpdc-management:
         condition: service_healthy
       migrations:
@@ -160,6 +162,12 @@ services:
     build: instancesnapshot-ldes-stub
     volumes:
       - ./instancesnapshot-ldes-stub:/usr/app/src
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost:80/InstanceJsonLdContext.jsonld" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 10
     ports:
       - "34000:80"
 

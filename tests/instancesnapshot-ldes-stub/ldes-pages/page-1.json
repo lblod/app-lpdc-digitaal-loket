@@ -132,7 +132,6 @@
               "url": "https://procedure-website.com12",
               "order": 1
             }
-
           ]
         },
         {
@@ -173,7 +172,6 @@
               "url": "https://procedure-website.com22",
               "order": 1
             }
-
           ]
         }
       ],
@@ -233,6 +231,18 @@
         "en": "<p data-indentation-level=\"0\">Regulation</p>",
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Regelgeving</p>"
       },
+      "juridischeInformatie": [
+        {
+          "@type": "juridischeInformatieUrl",
+          "url": "https://codex.vlaanderen.be/regelgeving",
+          "order": 0
+        },
+        {
+          "@type": "juridischeInformatieUrl",
+          "url": "https://codex.vlaanderen.be/andere-regelgeving",
+          "order": 1
+        }
+      ],
       "contactPunten": [
         {
           "@type": "contactPunt",
