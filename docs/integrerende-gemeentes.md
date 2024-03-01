@@ -14,12 +14,12 @@ Beschrijft op een hoog niveau de relevante datastromen tussen integrerende gemee
 Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed door de Lokale Producten en DienstenCatalogus (LPDC)). 
 IPDC tracht zo de centrale bron te zijn voor alle producten en diensten binnen Vlaanderen, en om dit te faciliteren is hij verdeeld in twee delen: concepten en instanties.
 2. **Ophalen concepten**: de toepassingen van integrerende gemeentes kunnen concepten ophalen bij IPDC. 
-Indien integrerende gemeentes kiezen dit via **LDES-stroom** te verwezenlijken, gebeurt dit via conceptsnapshots. 
+Indien integrerende gemeentes kiezen dit via **LDES** te verwezenlijken, gebeurt dit via conceptsnapshots. 
 Hoe hierbij aan te sluiten, vind je [hier](https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc). 
 3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente dat instanties beheert optioneel op basis van concepten uit IPDC. 
-Deze toepassing biedt de te publiceren instanties en elke wijziging ervan aan onder de vorm van een stroom van instantiesnapshots in de vorm van een **LDES-stroom**.
-4. **Ophalen te publiceren instanties**: LPDC-module synchroniseert de instanties van de integrerende gemeente door de aangeboden instantiesnapshots uit te lezen met behulp van een **LDES-stroom**. 
-5. **LPDC**: laat je toe de producten en diensten van je lokaal bestuur te beheren. Reconstrueert ook uit iedere laatste instantiesnapshot de instantie uit de **LDES-stroom**. En synchroniseert deze instantie verder naar IPDC. 
+Deze toepassing biedt de te publiceren instanties en elke wijziging ervan aan onder de vorm van een stroom van instantiesnapshots in de vorm van een **LDES**.
+4. **Ophalen te publiceren instanties**: LPDC-module synchroniseert de instanties van de integrerende gemeente door de aangeboden instantiesnapshots uit te lezen met behulp van een **LDES**. 
+5. **LPDC**: laat je toe de producten en diensten van je lokaal bestuur te beheren. Reconstrueert ook uit iedere laatste instantiesnapshot de instantie uit de **LDES**. En synchroniseert deze instantie verder naar IPDC. 
 De laatst verwerkte versie van iedere instantie is voor de integrerende gemeente ook zichtbaar op LPDC (dit enkel in alleen-lezen-modus voor besturen die LPDC-module voeden met instanties uit eigen oplossing). 
 6. LPDC-module publiceert instanties naar IPDC.   
 
@@ -156,7 +156,7 @@ De set van triples worden bewaard in een **triple-store**. Dit is een database d
 
 Voorbeelden van triple stores zijn: [Virtuoso](https://github.com/openlink/virtuoso-opensource), [Apache Jena](https://jena.apache.org/), [GraphDB](https://graphdb.ontotext.com/).
 
-### Serialisatie formaten voor RDF-data
+### Serialisatie-formaten voor RDF-data
 
 Er bestaan verschillende serialisatieformaten voor het noteren van RDF-grafen. 
 Echter, verschillende manieren van het noteren van dezelfde graaf leiden tot precies dezelfde triples en zijn dus logisch equivalent.
@@ -367,7 +367,7 @@ LDES maakt gebruik van de [TREE specificatie](https://treecg.github.io/specifica
 
 _Noot_: Wanneer een client eenmaal een `member` heeft verwerkt, zou deze het nooit meer opnieuw moeten hoeven te verwerken. Een Linked Data Event Stream-client kan dus een lijst van (of cache voor) reeds verwerkte lid-IRI's bijhouden.
 
-Verdere LDES-voorbeelden in dit hoofdstuk illustreren concepten van een LDES-stroom, met RDF-data in serialisatievorm _Turtle_. De data kan uiteraard ook geserialiseerd worden als JSON-LD. Op het einde van deze sectie is een voorbeeld ook gepresenteerd in json-ld formaat.
+Verdere LDES-voorbeelden in dit hoofdstuk illustreren concepten van een LDES, met RDF-data in serialisatievorm _Turtle_. De data kan uiteraard ook geserialiseerd worden als JSON-LD. Op het einde van deze sectie is een voorbeeld ook gepresenteerd in json-ld formaat.
 
 Volgend voorbeeld duidt een 'observatie' aan aangeboden in een LDES stream:
 
@@ -540,7 +540,79 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 
 ## Contract specificaties
 
+//TODO LPDC-1031: verwijs naar alle contract specificaties
+
 ## Voorbeelden + implementatie tips
+
+### Uitvoerbare instantiesnapshot-LDES-stub
+
+Een uitvoerbare, **voorbeeld-implementatie van een instantiesnapshot-LDES-stub** is [hier](../tests/instancesnapshot-ldes-stub) te vinden.
+
+Dit is een **Typescript** project dat een **vaste lijst van 3 pagina's** teruggeeft. 
+
+Het bevat ook een endpoint voor de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
+
+Om het project effectief uit te voeren, is de recentste [LTS-versie van Node JS](https://nodejs.org/en) vereist.
+
+```shell
+  npm ci
+  npm run start
+```
+
+Je kan de pagina's uitlezen door http://localhost/doc/instancesnapshot?pageNumber=0 , 1, 2 uit te voeren.
+Dit geeft de data in json-ld formaat terug, daarbij verwijzend naar de json-ld context.
+
+Pagina's 0, 1, 2 zijn ook [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json), [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json) en [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json) te vinden.
+
+In hoofdstuk [Voorbeeld pagina in detail](#voorbeeld-pagina-in-detail) wordt verder ingegaan op elk element van de data.
+
+### integrerende-gemeente-LDES-reader
+
+Dit project illustreert uitvoerbare commando's voor **uitlezen en interpreteren van een LDES in [json-ld](#json-ld) en [turtle formaat](#turtle)**. 
+
+Het project maakt een connectie met de instantiesnapshot-LDES-stub. 
+
+Het project kan makkelijk aangepast worden om naar een andere URL te connecteren, en kan in die vorm dienen als test voor een LDES opgezet door de integrerende gemeente.
+
+Je kan het project [hier](../tests/integrerende-gemeente-ldes-reader) vinden.
+
+Om het project effectief uit te voeren, is de recentste [LTS-versie van Node JS](https://nodejs.org/en) vereist.
+```shell
+  npm ci
+```
+
+Uitlezen van volledige LDES en schrijven naar console-uitvoer als [json-ld formaat](#json-ld).
+```shell
+  npm run start-export-as-json-ld
+```
+
+Uitlezen van volledige LDES, interpreteren en samenvoegen met verwezen [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) en resultaat schrijven naar console-uitvoer als [turtle formaat](#turtle).
+```shell
+  npm run start-export-as-turtle
+```
+
+#### JSON-LD en context samenvoegen opmerkingen
+
+De [LDES-reader] kan [json-ld](#json-ld) en [Turtle](#turtle) produceren. 
+
+Beide formaten ([json-ld](#json-ld) en [Turtle](#turtle)) zijn serialisatie-formaten voor dezelfde data.
+
+Indien de [json-ld](#json-ld) data en de bijhorende [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) goed op elkaar afgestemd zijn, dan zal dit een correcte [Turtle](#turtle) genereren.
+
+Met 'correct' bedoelen, een waarin voor elk [json-ld](#json-ld) datum een overeenkomstig attribuut ter interpretatie gevonden wordt in de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
+
+Indien er in één van de twee een afwijking is, dan zal de [Turtle](#turtle) ofwel minder [triples](#rdf-resource-description-framework) bevatten, of [niet goed gevormde IRIs](#rdf-resource-description-framework), of mogelijk andere problemen.
+
+Het voorziene voorbeeld in [instantiesnapshot-LDES-stub](#uitvoerbare-instantiesnapshot-ldes-stub) is conform en met verscheidene voorbeelden bedoeld exhaustief te zijn.
+
+Nazicht van de gegenereerde Turtle door de integrerende gemeente is zeker aan te bevelen.
+
+### Voorbeeld pagina in detail
+
+Hierin zullen we een aantal elementen van de data belichten.
+
+//TODO LPDC-1031: beschrijf de elementen
+
 
 ## Verklarende woordenlijst
 
@@ -590,7 +662,7 @@ Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar
 - [LDES (Linked Data Event Streams)](https://semiceu.github.io/LinkedDataEventStreams/)
 - [TREE (The TREE hypermedia specification)](https://treecg.github.io/specification/)
 
-### Broncode (open source)
+### Broncode (open source) / Ondersteunende technologieën
 
 - [LBLOD (Local Decisions as Linked Open Data in Flanders) broncode](https://github.com/lblod/)
 - [app-lpdc-digitaal-loket](https://github.com/lblod/app-lpdc-digitaal-loket/tree/development)
@@ -599,4 +671,5 @@ Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar
 - [lpdc-publish-service](https://github.com/lblod/lpdc-publish-service/tree/development)
 - [ldes-consumer-service](https://github.com/redpencilio/ldes-consumer-service)
 - [TREEcg (TREE community group - Hypermedia controls for publishing collections of entities)](https://github.com/TREEcg), met oa. [Actor Init LDES client (Metadata harvester for a Linked Data Event Stream.)](https://github.com/TREEcg/event-stream-client/tree/main/packages/actor-init-ldes-client)
-- 
+- [Node JS](https://nodejs.org/en)
+
