@@ -88,6 +88,18 @@ WHERE {
         ?s ?p ?o.
     }
 };
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s a <http://data.europa.eu/eli/ontology#LegalResource>.
+        ?s ?p ?o.
+    }
+};
 ```
 
 Then delete all the data from the ipdc ldes consumer graph:
