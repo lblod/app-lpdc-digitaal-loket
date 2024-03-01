@@ -134,7 +134,7 @@ On acc we always deploy a released version.
 
 _Infrastructure notes_:  [acceptance currently has special configs we want to remove over time](infrastructure-architecture.md#acc).
 
-Deployment instructions: see [prod](#prod).
+Deployment instructions: similar to [prod](#prod).
 
 ## Prod
 
@@ -146,7 +146,13 @@ Mention on rocket chat that we will perform a new release, so the operations tea
 
 ```shell
   ssh root@lpdc-prod.s.redhost.be
+  
+  # bring the app-http-logger down
+  cd /data/app-http-logger
+  
+  drc down
  
+  # stop the app-lpdc-digitaal-loket down
   cd /data/app-lpdc-digitaal-loket
   
   drc down --remove-orphans
@@ -157,7 +163,7 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   tar -zcvf app-lpdc-digitaal-loket-prod.tar.gz app-lpdc-digitaal-loket/
   
   cd /data/app-lpdc-digitaal-loket
-
+ 
   git fetch --all --tags
   
   #some configs are only for prod, so stash them for now
@@ -199,6 +205,13 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   tar -zcvf app-lpdc-digitaal-loket-prod-2.tar.gz app-lpdc-digitaal-loket/
   
   #move backups to /backups/prod-data-backups/<releasename> folder (e.g. 2023-09)
+  
+  # bring the app-http-logger back up
+  cd /data/app-http-logger
+  drc up -d
+  
+  # clean up unused docker containers  
+  docker system prune -a
  
 ```
 
