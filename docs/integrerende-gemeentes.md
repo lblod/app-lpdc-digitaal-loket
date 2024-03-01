@@ -612,82 +612,73 @@ Nazicht van de gegenereerde Turtle door de integrerende gemeente is zeker aan te
 Hierin zullen we een aantal elementen van de data belichten. 
 
 Uit: [page-0](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json).
-```json
-{
-  "timestampPath": "generatedAtTime",
-  "versionOfPath": "isVersionOf",
-  "view": {
-    "@id": "http://hostname/doc/instancesnapshot?pageNumber=0",
-    "@type": "Node",
-    "relation": [
-      {
-        "node": "http://hostname/doc/instancesnapshot?pageNumber=1",
-        "path": "generatedAtTime",
-        "@type": "GreaterThanOrEqualToRelation"
-      }
-    ]
-  },
-  "@context": "http://hostname/InstanceJsonLdContext.jsonld",
-  "@id": "http://hostname/doc/instancesnapshot?pageNumber=0",
-  "@type": "EventStream",
-  "member": [
-    {
-      "@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126",
-      "@type": [
-        "PublicService"
-      ],
-      "isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-      "aangemaaktOp": "2024-02-14T13:42:12.357Z",
-      "bewerktOp": "2024-02-14T13:59:25.236Z",
-      "generatedAtTime": "2024-02-18T06:32:10.377Z",
-      "titel": {
-        "nl-BE-x-informal": "Minimalistische instantie"
-      },
-      "beschrijving": {
-        "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie</p>"
-      },
-      "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
-      ],
-      "geografischToepassingsgebieden": [
-        "http://vocab.belgif.be/auth/refnis2019/44021"
-      ],
-      "uitvoerendeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
-      ]
-    },
-    {
-      "@id": "http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09",
-      "@type": [
-        "PublicService"
-      ],
-      "isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-      "aangemaaktOp": "2024-02-14T13:42:12.357Z",
-      "bewerktOp": "2024-02-15T14:59:30.236Z",
-      "generatedAtTime": "2024-02-20T07:32:10.377Z",
-      "titel": {
-        "nl-BE-x-informal": "Minimalistische instantie updatet"
-      },
-      "beschrijving": {
-        "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie updatet</p>"
-      },
-      "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
-      ],
-      "geografischToepassingsgebieden": [
-        "http://vocab.belgif.be/auth/refnis2019/44021"
-      ],
-      "uitvoerendeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
-      ]
-    }
-  ]
-}
-```
 
-//TODO LPDC-1031: beschrijf de elementen
+_Merk op_ dat alle vermelde URL's die de [LDES](#ldes-linked-data-event-stream) vermelden, (andere pagina's (`http://hostname/doc/instancesnapshot?pageNumber=0`), of identificatie van de pagina (`http://hostname/doc/instancesnapshot?pageNumber=0`)), verwijzen naar de **'hostname'**. 
+
+Dit moet de **publiek toegankelijke internet-host zijn die de LDES aanbiedt**. 
+
+Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uitvoerbare-instantiesnapshot-ldes-stub) vervangen wordt door **'localhost'**.   
+
+![page-0.json.png](img%2Fpage-0.json.png)
+
+1. `"timestampPath": "generatedAtTime" `, `"versionOfPath": "isVersionOf"`: properties met values die aangeven welke properties in de members gebruikt worden voor de [versionering van LDES](#versionering). Zowel `generatedAtTime` en `isVersionOf` zal je terugvinden in elke member.
+2. Identificatie van deze pagina van de LDES.
+3. Relation wijst naar andere pagina's van LDES. In dit voorbeeld is er een volgende pagina met nummer 1. In [page-1](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json) vindt u navigatie terug naar [page-0](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json) en verder naar [page-2](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json). In [page-2](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json) vindt u navigatie terug naar [page-1](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json).
+4. Verwijst naar de gebruikte [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld). In dit voorbeeld wordt deze aparte gehosted. Kan eventueel ook ingesloten meegegeven worden.
+5. Identificatie van de LDES pagina, en aangeven dat het een LDES is.
+6. Onder member volgt een json array van alle members van deze pagina van de LDES.
+7. `"@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126"` identificeert hierbij de [instantiesnapshot](#instantiesnapshot). 
+Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service-snapshot/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
+8. `"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",` identificeert de [instantie](#instantie).
+Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
+9. `"createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"` : `<uuid>` van de integrerende gemeente.
+[InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5). 
+Dit is een uitvoerbare URL die wijst in dit voorbeeld naar Gemeente Gent.
+Kan ook als absolute URL opgegeven worden.
+10. `"aangemaaktOp": "2024-02-14T13:42:12.357Z",` `"bewerktOp": "2024-02-14T13:59:25.236Z",`: geeft het moment dat de [instantie](#instantie) aangemaakt en respectievelijk laatst bewerkt werd. Dit wordt door LPDC at verbatim overgenomen.
+11. `"generatedAtTime": "2024-02-18T06:32:10.377Z"`: geeft het moment dat de [instantiesnapshot](#instantiesnapshot) aangemaakt werd. Is een property die door LDES-verwerking wordt geïnterpreteerd.
+12. `"titel:"`, `"beschrijving:"`: een voorbeeld van 2 data velden die gelinked zijn vanuit [instantie](#instantie), beide string literals met een taal tag.
+13. `"bevoegdeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de bevoegde overheid.
+[InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5).
+Dit is een uitvoerbare URL die in dit voorbeeld wijst naar Gemeente Gent.
+Kan ook als absolute URL opgegeven worden.
+Meerdere `bevoegdeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
+14. `"geografischToepassingsgebieden": ["http://vocab.belgif.be/auth/refnis2019/44021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie). 
+Een code uit de http://vocab.belgif.be/auth/refnis2019 wordt verwacht.
+Meerdere `geografischToepassingsgebieden` kunnen opgegeven worden, dus is dit json-type een array.
+15. `"uitvoerendeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de uitvoerende overheid.
+[InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5).
+Dit is een uitvoerbare URL die wijst in dit voorbeeld naar Gemeente Gent.
+Kan ook als absolute URL opgegeven worden.
+Meerdere `uitvoerendeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
+16. Voorbeeld van een tweede, later gegenereerde (`"generatedAtTime": "2024-02-20T07:32:10.377Z"`), [instantie snapshot](#instantiesnapshot)(`"http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09"`) van dezelfde [instantie](#instantie) (`"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3"`). 
+Hier werd `titel` en `beschrijving` updatet.
+Merk op dat **telkens** de **volledige data van de instantie dient te worden meegegeven** bij elke nieuwe [instantie snapshot](#instantiesnapshot). Een nieuwe [instantie snapshot](#instantiesnapshot) geeft m.a.w. niet enkel de verandering ten opzicht van vorige weer.
+
+Ter illustratie de gegeneerde [turtle](#turtle) voor dit deel van LDES, merk op dat hierin de informatie uit de LDES is _verwijderd_ (behalve `generatedAtTime` en `isVersionOf`).
+Dit is de informatie die door LPDC zal verwerkt worden.
+
+```turtle
+<http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126> a <http://purl.org/vocab/cpsv#PublicService>;
+    <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3>;
+    <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+    <http://purl.org/dc/terms/created> "2024-02-14T13:42:12.357Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://purl.org/dc/terms/modified> "2024-02-14T13:59:25.236Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-18T06:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://purl.org/dc/terms/title> "Minimalistische instantie"@nl-be-x-informal;
+    <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie</p>"@nl-be-x-informal;
+    <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+
+<http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09> a <http://purl.org/vocab/cpsv#PublicService>;
+    <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3>;
+    <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+    <http://purl.org/dc/terms/created> "2024-02-14T13:42:12.357Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://purl.org/dc/terms/modified> "2024-02-15T14:59:30.236Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-20T07:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <http://purl.org/dc/terms/title> "Minimalistische instantie updatet"@nl-be-x-informal;
+    <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie updatet</p>"@nl-be-x-informal;
+    <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+```
 
 
 ## Verklarende woordenlijst
