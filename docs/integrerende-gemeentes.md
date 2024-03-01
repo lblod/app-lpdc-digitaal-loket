@@ -194,7 +194,7 @@ Het aantal lijntjes N-Triples vertegenwoordigt het aantal links in de graaf.
 
 #### Turtle
 
-Turtle is een uitbreiding van N-Triples. 
+Turtle is een uitbreiding van [N-Triples](#n-triples). 
 Naast de basis N-Triples syntax, introduceert Turtle een aantal syntactische verkortingen, zoals ondersteuning voor namespace prefixes, lijsten en afkortingen voor datatyped literals. 
 Turtle biedt een compromis tussen schrijfgemak, parsegemak en leesbaarheid.
 
@@ -624,7 +624,7 @@ Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uit
 1. `"timestampPath": "generatedAtTime" `, `"versionOfPath": "isVersionOf"`: properties met values die aangeven welke properties in de members gebruikt worden voor de [versionering van LDES](#versionering). Zowel `generatedAtTime` en `isVersionOf` zal je terugvinden in elke member.
 2. Identificatie van deze pagina van de LDES.
 3. Relation wijst naar andere pagina's van LDES. In dit voorbeeld is er een volgende pagina met nummer 1. In [page-1](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json) vindt u navigatie terug naar [page-0](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json) en verder naar [page-2](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json). In [page-2](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json) vindt u navigatie terug naar [page-1](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json).
-4. Verwijst naar de gebruikte [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld). In dit voorbeeld wordt deze aparte gehosted. Kan eventueel ook ingesloten meegegeven worden.
+4. Verwijst naar de gebruikte [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld). In dit voorbeeld wordt deze apart hosted. Kan eventueel ook ingesloten meegegeven worden.
 5. Identificatie van de LDES pagina, en aangeven dat het een LDES is.
 6. Onder member volgt een json array van alle members van deze pagina van de LDES.
 7. `"@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126"` identificeert hierbij de [instantiesnapshot](#instantiesnapshot). 
