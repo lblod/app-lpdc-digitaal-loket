@@ -2,7 +2,7 @@
 
 Dit document beschrijft het proces hoe integrerende gemeentes gepubliceerde productinformatie kunnen synchroniseren met LPDC (Lokale Producten- en Dienstencatalogus). De producten worden zichtbaar voor de gemeente in LPDC. Ook synchroniseert LPDC de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
 
-Het geeft een overzicht onder de vorm van een [stroomdiagramma](#stroomdiagramma), [specifieert het contract](#contract-specificaties), geeft [(uitvoerbare) voorbeelden en implementatie tips](#voorbeelden--implementatie-tips), een [verklarende woordenlijst](#verklarende-woordenlijst) en een lijst van gebruikte [referenties](#referenties).
+Dit document geeft een overzicht onder de vorm van een [stroomdiagramma](#stroomdiagramma), [specifieert het contract](#contract-specificaties), geeft [(uitvoerbare) voorbeelden en implementatie tips](#voorbeelden--implementatie-tips), een [verklarende woordenlijst](#verklarende-woordenlijst) en een lijst van gebruikte [referenties](#referenties).
 
 ## Stroomdiagramma
 
@@ -10,22 +10,21 @@ Beschrijft op een hoog niveau de relevante datastromen tussen integrerende gemee
 
 ![integrerende-gemeentes-stroomdiagramma.png](img%2Fintegrerende-gemeentes-stroomdiagramma.png)
 
-1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) bevat producten en diensten van overheden in Vlaanderen. 
+1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) beschrijft producten en diensten van overheden in Vlaanderen. 
 Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed door de Lokale Producten en DienstenCatalogus (LPDC)). 
 IPDC tracht zo de centrale bron te zijn voor alle producten en diensten binnen Vlaanderen, en om dit te faciliteren is hij verdeeld in twee delen: concepten en instanties.
 2. **Ophalen concepten**: de toepassingen van integrerende gemeentes kunnen concepten ophalen bij IPDC. 
-Indien integrerende gemeentes kiezen dit via **LDES** te verwezenlijken, gebeurt dit via conceptsnapshots. 
+Indien integrerende gemeentes kiezen dit via **LDES** (Linked Data Event Stream) te verwezenlijken, gebeurt dit via conceptsnapshots. 
 Hoe hierbij aan te sluiten, vind je [hier](https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc). 
-3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente dat instanties beheert optioneel op basis van concepten uit IPDC. 
-Deze toepassing biedt de te publiceren instanties en elke wijziging ervan aan onder de vorm van een stroom van instantiesnapshots in de vorm van een **LDES**.
+3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente dat instanties beheert, optioneel op basis van concepten uit IPDC. 
+Deze toepassing levert te publiceren instanties en eventuele wijzigingen in de vorm van een stroom van instantiesnapshots als een **LDES**.
 4. **Ophalen te publiceren instanties**: LPDC-module synchroniseert de instanties van de integrerende gemeente door de aangeboden instantiesnapshots uit te lezen met behulp van een **LDES**. 
-5. **LPDC**: laat je toe de producten en diensten van je lokaal bestuur te beheren. Reconstrueert ook uit iedere laatste instantiesnapshot de instantie uit de **LDES**. En synchroniseert deze instantie verder naar IPDC. 
-De laatst verwerkte versie van iedere instantie is voor de integrerende gemeente ook zichtbaar op LPDC (dit enkel in alleen-lezen-modus voor besturen die LPDC-module voeden met instanties uit eigen oplossing). 
+5. **LPDC**: stelt je in staat om de producten en diensten van je lokale bestuur te beheren. Het herbouwt ook elke instantie vanuit de laatste snapshot van de **LDES** en synchroniseert deze vervolgens met IPDC. De meest recent bijgewerkte versie van elke instantie is zichtbaar voor de integrerende gemeente op LPDC, maar alleen in een leesmodus. 
 6. LPDC-module publiceert instanties naar IPDC.   
 
 ## Technologie beschrijving
 
-Beschrijft samenvattend de gebruikte technologieën voor de gegevensoverdracht. Heeft niet als doel exhaustief te zijn. We verwijzen graag onder de referenties naar de volledige technische duiding. 
+Samenvatting van de gebruikte technologieën voor gegevensoverdracht. Niet bedoeld om allesomvattend te zijn. Verdere technische details zijn te vinden in de referenties.
 
 ### Linked Data 
 
@@ -54,16 +53,16 @@ In het bijzonder kan RDF gebruikt worden om gegevens te publiceren en aan elkaar
 
 RDF stelt ons in staat uitspraken te doen over bronnen. Het formaat van deze uitspraken (statements) is eenvoudig.
 
-Een uitspraak (engels: Statement) heeft altijd de volgende structuur:
+Een uitspraak (Engels: statement) heeft altijd de volgende structuur:
 
 **`<subject> <predicate> <object>`**
 
 Een RDF-statement drukt een relatie uit tussen twee bronnen. 
-Het **<subject>** _(onderwerp)_ en het **object** vertegenwoordigen de twee aan elkaar gerelateerde bronnen; het **predicaat** _(predicate)_ representeert de **aard van hun relatie**. 
+Het **subject** _(onderwerp)_ en het **object** vertegenwoordigen de twee aan elkaar gerelateerde bronnen; het **predicaat** _(predicate)_ representeert de **aard van hun relatie**. 
 De relatie wordt op een directionele wijze geformuleerd (van onderwerp naar object) en wordt in RDF-terminologie een **property** _(eigenschap)_ genoemd. 
 Omdat RDF-statements altijd uit **drie elementen bestaan**, worden ze **triples** genoemd.
 
-_Voorbeeld:_
+_Voorbeelden:_
 ```
 <Bob> <is een> <persoon>.
 <Bob> <is een vriend van> <Alice>.
@@ -73,7 +72,7 @@ _Voorbeeld:_
 <de Mona Lisa> <heeft als titel> <Mona Lisa>.
 <de Mona Lisa> <was gecreëerd door> <Leonardo da Vinci>.
 <de Mona Lisa> <is een> <schilderij>.
-<de video 'La Joconde à Washington'> <gaat over> <de Mona Lisa> .
+<de video 'La Joconde à Washington'> <gaat over> <de Mona Lisa>.
 <Leonardo da Vinci> <is een> <persoon>. 
 ```
 
@@ -86,11 +85,11 @@ We kunnen triples visualiseren als een geconnecteerde **graaf**. Een graaf is ee
 
 RDF is een graaf in de zin dat het een verzameling van triples is die een netwerk van verbindingen tussen verschillende bronnen vormt. 
 
-Elke triple in RDF graaf bestaat uit een subject (onderwerp), een predicaat (predicate) en een object, waarbij deze triples de relaties tussen de bronnen beschrijven.
+Elke triple in een RDF-graaf bestaat uit een subject (onderwerp), een predicaat (predicate) en een object. Deze triples beschrijven de relaties tussen de bronnen.
 
 ![rdf-triple-graaf.png](img%2Frdf-triple-graaf.png)
 
-Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch dien je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is <Bob>?_ maar ook _Wie <is een> <persoon>_?     
+Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch dien je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is \<Bob\>?_ maar ook _Wie \<is een\> \<persoon\>_?     
 
 #### IRIs
 Een IRI is een International Resource Identifier. Een IRI definieert een bron (resource).
@@ -112,14 +111,14 @@ Bijvoorbeeld, de IRI voor Leonardo da Vinci in DBpedia is (subject en object `<L
 http://dbpedia.org/resource/Leonardo_da_Vinci
 ```
 
-De IRI voor een INA-video over de Mona Lisa getiteld 'La Joconde à Washington' in Europeana is: (subject: `<de video 'La Joconde à Washington'>`)
+De IRI voor een video over de Mona Lisa getiteld 'La Joconde à Washington' in Europeana is: (subject: `<de video 'La Joconde à Washington'>`)
 
 ```
 http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619
 ```
 
 IRI's zijn wereldwijde identificatoren, dus andere mensen kunnen deze IRI hergebruiken om hetzelfde te identificeren. 
-Bijvoorbeeld, de volgende IRI wordt door veel mensen gebruikt als een RDF-eigenschap om een kennissenrelatie tussen mensen aan te geven (<is een vriend van> in pseudo voorbeeld>):
+Bijvoorbeeld, de volgende IRI wordt door veel mensen gebruikt als een RDF-eigenschap om een kennissenrelatie tussen mensen aan te geven (in ons voorbeeld `<is een vriend van>`):
 
 ```
 http://xmlns.com/foaf/0.1/knows
@@ -150,9 +149,9 @@ String literals kunnen optioneel geassocieerd worden met een language tag (taalt
 
 **Literals mogen alleen verschijnen in de objectpositie van een triple.**
 
-#### triple-store
+#### Triple-store
 
-De set van triples worden bewaard in een **triple-store**. Dit is een database dit RDF van nature kan opslaan.
+De set van triples worden bewaard in een **triple-store**. Dit is een database die RDF van nature kan opslaan.
 
 Voorbeelden van triple stores zijn: [Virtuoso](https://github.com/openlink/virtuoso-opensource), [Apache Jena](https://jena.apache.org/), [GraphDB](https://graphdb.ontotext.com/).
 
@@ -165,8 +164,7 @@ Hieronder geven we voorbeelden van verscheidene serialisatieformaten die het pse
 
 #### N-Triples
 
-N-Triples biedt een eenvoudige, regelgebaseerde, platte-tekst manier voor het serialiseren van RDF-grafen.
-
+N-Triples biedt een simpele, regelgebaseerde, platte-tekst manier om RDF-grafen te serialiseren.
 ```turtle
 <http://example.org/bob#me> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <http://example.org/bob#me> <http://xmlns.com/foaf/0.1/knows> <http://example.org/alice#me> .
