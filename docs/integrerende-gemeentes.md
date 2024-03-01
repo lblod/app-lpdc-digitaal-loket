@@ -560,7 +560,7 @@ Om het project effectief uit te voeren, is de recentste [LTS-versie van Node JS]
 ```
 
 Je kan de pagina's uitlezen door http://localhost/doc/instancesnapshot?pageNumber=0 , 1, 2 uit te voeren.
-Dit geeft de data in json-ld formaat terug, daarbij verwijzend naar de json-ld context.
+Dit geeft de data in [json-ld formaat](#json-ld) terug, daarbij verwijzend naar de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
 
 Pagina's 0, 1, 2 zijn ook [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json), [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json) en [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json) te vinden.
 
@@ -570,7 +570,7 @@ In hoofdstuk [Voorbeeld pagina in detail](#voorbeeld-pagina-in-detail) wordt ver
 
 Dit project illustreert uitvoerbare commando's voor **uitlezen en interpreteren van een LDES in [json-ld](#json-ld) en [turtle formaat](#turtle)**. 
 
-Het project maakt een connectie met de instantiesnapshot-LDES-stub. 
+Het project maakt een connectie met de [instantiesnapshot-LDES-stub](#uitvoerbare-instantiesnapshot-ldes-stub). 
 
 Het project kan makkelijk aangepast worden om naar een andere URL te connecteren, en kan in die vorm dienen als test voor een LDES opgezet door de integrerende gemeente.
 
@@ -593,15 +593,15 @@ Uitlezen van volledige LDES, interpreteren en samenvoegen met verwezen [Instance
 
 #### JSON-LD en context samenvoegen opmerkingen
 
-De [LDES-reader] kan [json-ld](#json-ld) en [Turtle](#turtle) produceren. 
+De [LDES-reader](#integrerende-gemeente-ldes-reader) kan [json-ld](#json-ld) en [turtle](#turtle) produceren. 
 
-Beide formaten ([json-ld](#json-ld) en [Turtle](#turtle)) zijn serialisatie-formaten voor dezelfde data.
+Beide formaten ([json-ld](#json-ld) en [turtle](#turtle)) zijn serialisatie-formaten voor dezelfde data.
 
-Indien de [json-ld](#json-ld) data en de bijhorende [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) goed op elkaar afgestemd zijn, dan zal dit een correcte [Turtle](#turtle) genereren.
+Indien de [json-ld](#json-ld) data en de bijhorende [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) goed op elkaar afgestemd zijn, dan zal dit een correcte [turtle](#turtle) genereren.
 
-Met 'correct' bedoelen, een waarin voor elk [json-ld](#json-ld) datum een overeenkomstig attribuut ter interpretatie gevonden wordt in de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
+Met 'correct' bedoelen we, een waarin voor elk [json-ld](#json-ld) datum een overeenkomstig attribuut ter interpretatie gevonden wordt in de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
 
-Indien er in één van de twee een afwijking is, dan zal de [Turtle](#turtle) ofwel minder [triples](#rdf-resource-description-framework) bevatten, of [niet goed gevormde IRIs](#rdf-resource-description-framework), of mogelijk andere problemen.
+Indien er in één van de twee een afwijking is, dan zal de [turtle](#turtle) ofwel minder [triples](#rdf-resource-description-framework) bevatten, of [niet goed gevormde IRIs](#rdf-resource-description-framework), of mogelijk andere problemen.
 
 Het voorziene voorbeeld in [instantiesnapshot-LDES-stub](#uitvoerbare-instantiesnapshot-ldes-stub) is conform en met verscheidene voorbeelden bedoeld exhaustief te zijn.
 
@@ -609,7 +609,83 @@ Nazicht van de gegenereerde Turtle door de integrerende gemeente is zeker aan te
 
 ### Voorbeeld pagina in detail
 
-Hierin zullen we een aantal elementen van de data belichten.
+Hierin zullen we een aantal elementen van de data belichten. 
+
+Uit: [page-0](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json).
+```json
+{
+  "timestampPath": "generatedAtTime",
+  "versionOfPath": "isVersionOf",
+  "view": {
+    "@id": "http://hostname/doc/instancesnapshot?pageNumber=0",
+    "@type": "Node",
+    "relation": [
+      {
+        "node": "http://hostname/doc/instancesnapshot?pageNumber=1",
+        "path": "generatedAtTime",
+        "@type": "GreaterThanOrEqualToRelation"
+      }
+    ]
+  },
+  "@context": "http://hostname/InstanceJsonLdContext.jsonld",
+  "@id": "http://hostname/doc/instancesnapshot?pageNumber=0",
+  "@type": "EventStream",
+  "member": [
+    {
+      "@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126",
+      "@type": [
+        "PublicService"
+      ],
+      "isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",
+      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "aangemaaktOp": "2024-02-14T13:42:12.357Z",
+      "bewerktOp": "2024-02-14T13:59:25.236Z",
+      "generatedAtTime": "2024-02-18T06:32:10.377Z",
+      "titel": {
+        "nl-BE-x-informal": "Minimalistische instantie"
+      },
+      "beschrijving": {
+        "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie</p>"
+      },
+      "bevoegdeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ],
+      "geografischToepassingsgebieden": [
+        "http://vocab.belgif.be/auth/refnis2019/44021"
+      ],
+      "uitvoerendeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ]
+    },
+    {
+      "@id": "http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09",
+      "@type": [
+        "PublicService"
+      ],
+      "isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",
+      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "aangemaaktOp": "2024-02-14T13:42:12.357Z",
+      "bewerktOp": "2024-02-15T14:59:30.236Z",
+      "generatedAtTime": "2024-02-20T07:32:10.377Z",
+      "titel": {
+        "nl-BE-x-informal": "Minimalistische instantie updatet"
+      },
+      "beschrijving": {
+        "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie updatet</p>"
+      },
+      "bevoegdeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ],
+      "geografischToepassingsgebieden": [
+        "http://vocab.belgif.be/auth/refnis2019/44021"
+      ],
+      "uitvoerendeOverheden": [
+        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      ]
+    }
+  ]
+}
+```
 
 //TODO LPDC-1031: beschrijf de elementen
 
@@ -652,7 +728,7 @@ Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar
 - [RDF (Resource Description Framework)](https://www.w3.org/TR/rdf11-primer/)
 - [OWL (Web Ontology Language)](https://www.w3.org/TR/owl2-overview/)
 - [N-TRIPLES](https://www.w3.org/TR/n-triples/)
-- [Turtle](https://www.w3.org/TR/turtle/)
+- [turtle](https://www.w3.org/TR/turtle/)
 - [JSON-LD specificatie](https://www.w3.org/TR/json-ld/)
 - [JSON-LD (JSON for Linking Data)](https://json-ld.org/)
 - [JSON-LD 1.1 Processing Algorithms and API](https://www.w3.org/TR/json-ld11-api/)
