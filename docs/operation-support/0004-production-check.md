@@ -93,6 +93,42 @@ drc logs --since 24h --timestamps | grep app-lpdc-digitaal-loket-lpdc-1 | grep f
 ```
 gives: 735 (at least several hundreds as expected result)
 
+#### Lpdc-management logs
+
+```shell
+drc logs --since 24h --timestamps | grep app-lpdc-digitaal-loket-lpdc-management-1
+```
+
+Following is an example of normal behaviour. 1/ server started 2/ optimistic locking check went of 3 times 3/ processing of new conceptsnapshots
+
+If we find any other type of **Error** or an **Invariant failure**, or anything else, we should we investigate.
+
+```text
+pp-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T11:45:18.451576632Z 
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T11:45:18.451659126Z > lpdc-management-service@0.34.1 start
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T11:45:18.451666821Z > ts-node app.ts
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T11:45:18.451672071Z 
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T11:45:23.195099287Z Starting server on 0.0.0.0:80 in development mode
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:48:09.697942295Z LPDCError {
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:48:09.697994793Z   status: 400,
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:48:09.698000574Z   message: 'De productfiche is gelijktijdig aangepast door een andere gebruiker. Herlaad de pagina en geef je aanpassingen opnieuw in.'
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:48:09.698004711Z }
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:58:55.066918687Z LPDCError {
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:58:55.066953783Z   status: 400,
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:58:55.066958992Z   message: 'De productfiche is gelijktijdig aangepast door een andere gebruiker. Herlaad de pagina en geef je aanpassingen opnieuw in.'
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T12:58:55.066963491Z }
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T15:12:48.922402945Z LPDCError {
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T15:12:48.922449453Z   status: 400,
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T15:12:48.922453881Z   message: 'De productfiche is gelijktijdig aangepast door een andere gebruiker. Herlaad de pagina en geef je aanpassingen opnieuw in.'
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T15:12:48.922457668Z }
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T15:20:23.546328785Z LdesPostProcessingQueue: Executing oldest task on queue
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T15:20:24.477814965Z New versioned resource found: https://ipdc.vlaanderen.be/id/conceptsnapshot/c9748c67-c913-4481-b99f-35a060653e17 of service https://ipdc.vlaanderen.be/id/concept/cf45ce1d-8a07-4c1a-81f0-9bc985192d68
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T15:20:24.907269461Z LdesPostProcessingQueue: Remaining number of tasks 0
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T18:35:25.790274488Z LdesPostProcessingQueue: Executing oldest task on queue
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T18:35:26.463021207Z New versioned resource found: https://ipdc.vlaanderen.be/id/conceptsnapshot/fdb8bc1d-145c-47ac-962c-737157399b06 of service https://ipdc.vlaanderen.be/id/concept/f5be8a28-9093-4826-b080-bf57cbb02e2d
+app-lpdc-digitaal-loket-lpdc-management-1  | 2024-02-29T18:35:26.846351568Z LdesPostProcessingQueue: Remaining number of tasks 0
+```
+
 #### Http 404 errors
 
 We want to take a quick glance at the 404 errors. Mostly they are attempts to attack the system.
