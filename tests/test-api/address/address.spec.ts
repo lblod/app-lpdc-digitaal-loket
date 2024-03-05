@@ -258,6 +258,25 @@ test.describe('validate', () => {
         });
     });
 
+    test(`validate address for address in sub-municipality`, async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Leuven', street: 'Eenmeilaan', houseNumber: 2 };
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
+            headers: {cookie: loginResponse.cookie},
+            params
+        });
+
+        expect(response.ok()).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Leuven',
+            postcode: '3010',
+            straat: 'Eénmeilaan',
+            huisnummer: '2',
+            busnummer: undefined,
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2272154'});
+    });
+
     test(`validate address for invalid address`, async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
         const params = {municipality: 'Aarschot', street: 'Ten Drossaarde', houseNumber: '1', busNumber: '1'};
@@ -345,6 +364,131 @@ test.describe('validate', () => {
             headers: {cookie: loginResponse.cookie},
             params});
         expect(response.status()).toEqual(403);
+    });
+
+    test('normal address: diestevest 32, Leuven', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Leuven', street: 'Diestsestraat', houseNumber: '32'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Leuven',
+            postcode: '3000',
+            straat: 'Diestsestraat',
+            huisnummer: '32',
+            busnummer: undefined,
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/1574017'
+        });
+
+    });
+
+    test('sub municipalities: Kerkstraat 12, Leuven (in 3010 Kessel-lo)', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Leuven', street: 'Kerkstraat', houseNumber: '12'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Leuven',
+            postcode: '3010',
+            straat: 'Kerkstraat',
+            huisnummer: '12',
+            busnummer: undefined,
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/1365372'
+        });
+
+    });
+
+    test('sub municipalities: Baalsebaan 289, Tremelo (in in 3128 Baal)', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Tremelo', street: 'Baalsebaan', houseNumber: '289'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Tremelo',
+            postcode: '3128',
+            straat: 'Baalsebaan',
+            huisnummer: '289',
+            busnummer: undefined,
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2526417'
+        });
+
+    });
+
+    test('a letter in the house number: Aartrijkestraat 11B, Torhout', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Torhout', street: 'Aartrijkestraat', houseNumber: '11B'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Torhout',
+            postcode: '8820',
+            straat: 'Aartrijkestraat',
+            huisnummer: '11B',
+            busnummer: undefined,
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/3654524'
+        });
+
+    });
+
+    test('address with box number: Sint-Katarinaplein 15 bus 28, Hasselt', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Hasselt', street: 'Sint-Katarinaplein', houseNumber: '15', busNumber: '28'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Hasselt',
+            postcode: '3500',
+            straat: 'Sint-Katarinaplein',
+            huisnummer: '15',
+            busnummer: '28',
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/5383221'
+        });
+
+    });
+
+    test('address with box number: Baalsebaan 1 bus 001, Tremelo', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Tremelo', street: 'Baalsebaan', houseNumber: '1', busNumber: '1'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Tremelo',
+            postcode: '3120',
+            straat: 'Baalsebaan',
+            huisnummer: '1',
+            busnummer: '001',
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/30277902'
+        });
+
+    });
+
+    test('antwerp districts match in 2 sub municipalities: Beekstraat 1', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Antwerpen', street: 'Beekstraat', houseNumber: '1'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({
+            gemeente: 'Antwerpen',
+            postcode: '2140', //Borgerhout because it has lower postcode then Ekeren
+            straat: 'Beekstraat',
+            huisnummer: '1',
+            busnummer: undefined,
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2514020'
+        });
     });
 
 });
