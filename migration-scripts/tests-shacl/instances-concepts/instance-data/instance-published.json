@@ -190,7 +190,19 @@
     ],
     "http://data.europa.eu/m8g/hasLegalResource": [
       {
-        "@id": "http://data.lblod.info/id/legal-resource/54260255-2708-45ce-8405-a6f974c1613e"
+        "@id": "http://data.lblod.info/id/legal-resource/54260255-2708-45ce-8405-a6f974c1613e",
+        "@type": "http://data.europa.eu/eli/ontology#LegalResource",
+        "http://schema.org/url": [
+          {
+            "@value": "https://ipdc.be/regelgeving"
+          }
+          ],
+        "http://www.w3.org/ns/shacl#order": [
+          {
+            "@type": "http://www.w3.org/2001/XMLSchema#integer",
+            "@value": "0"
+          }
+        ]
       }
     ],
     "http://data.europa.eu/m8g/thematicArea": [
