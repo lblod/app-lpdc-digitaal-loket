@@ -31,11 +31,18 @@ test.describe('publish instance', () => {
         const modified = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.verstuurd)
+            .withDateSent(new Date())
             .withModified(modified)
             .buildAndPersist(request, pepingenId)
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});
         expect(response.ok(), await response.text()).toBeFalsy();
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:400,
+            _message: "Instance status already has status verstuurd",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');

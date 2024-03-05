@@ -37,6 +37,12 @@ test.describe('Reopen instance', () =>  {
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {params: {cookie: loginResponse.cookie}});
         expect(response.ok(), await response.text()).toBeFalsy();
+        expect(await response.json()).toEqual(expect.objectContaining({
+            "_correlationId": expect.anything(),
+            "_message": "Instance status already in ontwerp",
+            "_level": "WARN",
+            "_status": 400
+        }));
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/ontwerp');

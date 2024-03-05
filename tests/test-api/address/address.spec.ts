@@ -83,8 +83,12 @@ test.describe('municipalities', () => {
             headers: {cookie: undefined},
             params});
 
-        expect(response.status()).toEqual(401);
-    });
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:401,
+            _message:"Not authenticated for this request",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))    });
 
     test(`find municipality returns http 403 when user has no rights`, async ({request}) => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
@@ -93,7 +97,12 @@ test.describe('municipalities', () => {
             headers: {cookie: loginResponse.cookie},
             params});
 
-        expect(response.status()).toEqual(403);
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:403,
+            _message:"Je hebt niet voldoende rechten om deze actie uit te voeren",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))
     });
 
 });
@@ -160,7 +169,7 @@ test.describe('streets', () => {
         expect(actual).toEqual([]);
     });
 
-    test(`find municipality returns http 401 when user not logged in`, async ({request}) => {
+    test(`find street returns http 401 when user not logged in`, async ({request}) => {
         const params = {municipality: 'Aarschot', search: 'kerk'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets`, {
             headers: {cookie: undefined},
@@ -169,7 +178,7 @@ test.describe('streets', () => {
         expect(response.status()).toEqual(401);
     });
 
-    test(`find municipality returns http 403 when user has no rights`, async ({request}) => {
+    test(`find street returns http 403 when user has no rights`, async ({request}) => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
         const params = {municipality: 'Aarschot', search: 'kerk'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets`, {
@@ -321,8 +330,12 @@ test.describe('validate', () => {
             params});
 
         expect(response.ok()).toBeFalsy();
-        const actual = await response.json();
-        expect(actual).toEqual({message: 'Invalid request: municipality, street and houseNumber are required'});
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:400,
+            _message:"municipality, street and houseNumber are required",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))
     });
 
     test(`validate address throws error when street is missing`, async ({request}) => {
@@ -333,8 +346,12 @@ test.describe('validate', () => {
             params});
 
         expect(response.ok()).toBeFalsy();
-        const actual = await response.json();
-        expect(actual).toEqual({message: 'Invalid request: municipality, street and houseNumber are required'});
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:400,
+            _message:"municipality, street and houseNumber are required",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))
     });
 
     test(`validate address throws error when houseNumber is missing`, async ({request}) => {
@@ -345,8 +362,12 @@ test.describe('validate', () => {
             params});
 
         expect(response.ok()).toBeFalsy();
-        const actual = await response.json();
-        expect(actual).toEqual({message: 'Invalid request: municipality, street and houseNumber are required'});
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:400,
+            _message:"municipality, street and houseNumber are required",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))
     });
 
     test('validate address returns http 401 when user not logged in', async({request}) => {
@@ -354,7 +375,12 @@ test.describe('validate', () => {
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: undefined},
             params});
-        expect(response.status()).toEqual(401);
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:401,
+            _message:"Not authenticated for this request",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))
     });
 
     test('validate address returns http 403 when user has no access rights', async({request}) => {
@@ -363,8 +389,12 @@ test.describe('validate', () => {
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
             params});
-        expect(response.status()).toEqual(403);
-    });
+        expect(await response.json()).toEqual(expect.objectContaining({
+            _status:403,
+            _message:"Je hebt niet voldoende rechten om deze actie uit te voeren",
+            _level: "WARN",
+            _correlationId: expect.anything()
+        }))    });
 
     test('normal address: diestevest 32, Leuven', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);

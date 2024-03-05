@@ -91,10 +91,12 @@ test('When request does not contain a valid field name, return an error message'
     const loginResponse = await loginAsPepingen(request);
     const response = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/lastName`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeFalsy();
-    expect(response.status()).toEqual(400);
-    expect(response.statusText()).toEqual('Bad Request');
-    const result = await response.text();
-    expect(result).toEqual('Invalid request: not a valid field name');
+    expect(await response.json()).toEqual(expect.objectContaining({
+        _status:400,
+        _message:"Not a valid field name",
+        _level: "WARN",
+        _correlationId: expect.anything()
+    }))
 })
 
 test('When multiple instances of different local authorities, return only the contact info of the local authority you are logged in with', async ({request}) => {
