@@ -7,7 +7,6 @@
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "deu": "http://data.europa.eu/m8g/",
     "deuOntology": "http://data.europa.eu/eli/ontology#",
-    "publicationsEu": "https://publications.europa.eu/resource/authority/",
     "locn": "http://www.w3.org/ns/locn#",
     "sch": "http://schema.org/",
     "ldes": "https://w3id.org/ldes#",
@@ -157,7 +156,7 @@
     },
     "talen": {
       "@container": "@set",
-      "@id": "publicationsEu:language",
+      "@id": "dct:language",
       "@type": "@id",
       "@context": {
         "@base": "http://publications.europa.eu/resource/authority/language/"

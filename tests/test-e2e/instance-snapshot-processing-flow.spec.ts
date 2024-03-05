@@ -158,6 +158,8 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const targetAudiences = ['Burger', 'Onderneming'];
         const themes = ['Burger en Overheid', 'Cultuur, Sport en Vrije Tijd'];
         const themesAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid', 'https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd']
+        const languages = ['Engels', 'Nederlands'];
+        const languagesAsIris = ['http://publications.europa.eu/resource/authority/language/ENG', 'http://publications.europa.eu/resource/authority/language/NLD']
         const competentAuthorityLevels = ['Europese overheid', 'Federale overheid'];
         const competentAuthorityLevelsAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Europees', 'https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal']
         const competentAuthorities = ['Gent (Gemeente)', 'Gent (OCMW)'];
@@ -443,8 +445,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(targetAudiences);
         await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(themes);
-
-        //TODO LPDC-698 languages not correctly processed by LPDC for now (we do save it correctly in the database)
+        await expect(instantieDetailsPage.talenMultiSelect.options()).toContainText(languages);
 
         await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(competentAuthorityLevels);
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(competentAuthorities);
@@ -561,6 +562,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 geldigTot: endDate,
                 doelgroepen: targetAudiences.map(ta => `https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/${ta}`),
                 themas: themesAsIris,
+                talen: languagesAsIris,
                 bevoegdeBestuursniveaus: competentAuthorityLevelsAsIris,
                 bevoegdeOverheden: competentAuthoritiesAsIris,
                 uitvoerendeBestuursniveaus: executingAuthorityLevelsAsIris,

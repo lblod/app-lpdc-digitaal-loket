@@ -6,7 +6,6 @@
 
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
-@prefix pera: <http://publications.europa.eu/resource/authority/> .
 @prefix mu:	<http://mu.semte.ch/vocabularies/core/> .
 @prefix cpsv:	<http://purl.org/vocab/cpsv#> .
 @prefix dct:	<http://purl.org/dc/terms/> .
@@ -14,7 +13,6 @@
 @prefix xkos:	<http://rdf-vocabulary.ddialliance.org/xkos#> .
 @prefix m8g:	<http://data.europa.eu/m8g/> .
 @prefix dcat:	<http://www.w3.org/ns/dcat#> .
-@prefix lang:	<http://publications.europa.eu/resource/authority/language/> .
 @prefix belgif:	<http://vocab.belgif.be/ns/publicservice#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix schema: <http://schema.org/>.
@@ -123,7 +121,7 @@ ext:generalPg a form:PropertyGroup;
                        "multiple": true
                      }
                     """ ;
-      sh:path pera:language ;
+      sh:path dct:language ;
       form:help "Meerdere talen kunnen worden toegewezen";
       form:displayType displayTypes:conceptSelector ;
       sh:group ext:generalPg .

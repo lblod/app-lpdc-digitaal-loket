@@ -55,12 +55,6 @@ oss:ConceptualPublicServiceShape
           shacl:name "isVersionOf"@nl;
           shacl:path dc:isVersionOf
       ],[
-          shacl:class skos:Concept;
-          shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
-          rdfs:seeAlso "vocabulary values found at: https://publications.europa.eu/resource/authority/language, we support 4 official languages in Belgium: (NLD, DEU, ENG, FRA)";
-          shacl:name "language"@nl;
-          shacl:path pera:language
-     ],[
           shacl:datatype xsd:string;
           shacl:description "This property represents the product id of the Public Service. This is human readable string to uniquely identify the concept."@nl;
           shacl:minCount 1;

@@ -162,7 +162,6 @@ schemas:WebSite a rdfs:Class;
     dc:spatial,
     dc:source,
     dc:description,
-    <http://publications.europa.eu/resource/authority/language>,
     <http://data.europa.eu/m8g/thematicArea>,
     <http://data.europa.eu/m8g/hasSupportingEvidence>,
     <http://data.europa.eu/m8g/hasLegalResource>,
@@ -213,7 +212,7 @@ schemas:WebSite a rdfs:Class;
 <http://data.europa.eu/m8g/thematicArea> a rdf:Property;
   rdfs:label "theme"@nl .
 
-<http://publications.europa.eu/resource/authority/language> a rdf:Property;
+dc:language a rdf:Property;
   rdfs:label "language"@nl .
 
 dc:description a rdf:Property;

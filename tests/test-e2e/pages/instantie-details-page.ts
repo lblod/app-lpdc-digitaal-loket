@@ -156,6 +156,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly productTypeSelect: Select;
     readonly doelgroepenMultiSelect: MultiSelect;
     readonly themasMultiSelect: MultiSelect;
+    readonly talenMultiSelect: MultiSelect;
 
     readonly bevoegdBestuursniveauMultiSelect: MultiSelect;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
@@ -324,6 +325,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.productTypeSelect = new Select(page, 'Product type');
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
         this.themasMultiSelect = new MultiSelect(page, `Thema\\\'s`);
+        this.talenMultiSelect = new MultiSelect(page, 'Talen');
 
         this.bevoegdBestuursniveauMultiSelect = new MultiSelect(page, 'Bevoegd bestuursniveau');
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');

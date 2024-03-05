@@ -525,7 +525,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.themasMultiSelect.selectValue('Economie en Werk');
         await instantieDetailsPage.themasMultiSelect.selectValue('Milieu en Energie');
 
-        //TODO LPDC-698: talen is not correctly processed from the ipdc ldes stream ... add test to unclick ENG and DEU and select FRA and NED (and verify in readonly view)
+        await expect(instantieDetailsPage.talenMultiSelect.options()).toContainText([]);
+        await instantieDetailsPage.talenMultiSelect.selectValue('Duits');
+        await instantieDetailsPage.talenMultiSelect.selectValue('Engels');
+        await instantieDetailsPage.talenMultiSelect.selectValue('Nederlands');
+        await instantieDetailsPage.talenMultiSelect.selectValue('Frans');
 
         await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(['Europese overheid', 'Federale overheid']);
         await instantieDetailsPage.bevoegdBestuursniveauMultiSelect.selectValue('Europese overheid');
@@ -739,6 +743,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(newProductType);
         await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(['Organisatie', 'Vereniging']);
         await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(['Economie en Werk', 'Milieu en Energie']);
+        await expect(instantieDetailsPage.talenMultiSelect.options()).toContainText(['Duits', 'Engels', 'Frans', 'Nederlands']);
 
         await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(['Lokale overheid', 'Vlaamse overheid']);
         await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(['Aalst (Gemeente)', 'Pepingen (Gemeente)']);
@@ -893,6 +898,12 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 themas: [
                     'https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie',
                     'https://productencatalogus.data.vlaanderen.be/id/concept/Thema/EconomieWerk',
+                ],
+                talen: [
+                    'http://publications.europa.eu/resource/authority/language/ENG',
+                    'http://publications.europa.eu/resource/authority/language/FRA',
+                    'http://publications.europa.eu/resource/authority/language/DEU',
+                    'http://publications.europa.eu/resource/authority/language/NLD',
                 ],
                 bevoegdeBestuursniveaus: [
                     'https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams',

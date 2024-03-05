@@ -63,6 +63,7 @@ export interface PublishedInstanceFields {
     geldigTot?: string,
     doelgroepen?: string[],
     themas?: string[],
+    talen?: string[],
     bevoegdeBestuursniveaus?: string[],
     bevoegdeOverheden?: string[],
     uitvoerendeBestuursniveaus?: string[],
@@ -103,7 +104,7 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateData(publicService, 'http://schema.org/endDate', arrayContainingString(instanceFields.geldigTot, 'dateTime'));
     validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience', arrayContainingStringIds(instanceFields.doelgroepen));
     validateData(publicService, 'http://data.europa.eu/m8g/thematicArea', arrayContainingStringIds(instanceFields.themas));
-    //TODO LPDC-698 verify Language is send to IPDC
+    validateData(publicService, 'http://purl.org/dc/terms/language', arrayContainingStringIds(instanceFields.talen));
     validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel', arrayContainingStringIds(instanceFields.bevoegdeBestuursniveaus));
     validateData(publicService, 'http://data.europa.eu/m8g/hasCompetentAuthority', arrayContainingStringIds(instanceFields.bevoegdeOverheden));
     validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel', arrayContainingStringIds(instanceFields.uitvoerendeBestuursniveaus));

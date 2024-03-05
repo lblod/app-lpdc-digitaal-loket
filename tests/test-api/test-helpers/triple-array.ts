@@ -170,7 +170,7 @@ export const Predicates = {
     hasDisplayConfiguration: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasConceptDisplayConfiguration'),
     thematicArea: new Uri('http://data.europa.eu/m8g/thematicArea'),
     targetAudience: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience'),
-    language: new Uri('http://publications.europa.eu/resource/authority/language'),
+    language: new Uri('http://purl.org/dc/terms/language'),
     competentAuthorityLevel: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel'),
     executingAuthorityLevel: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel'),
     keyword: new Uri('http://www.w3.org/ns/dcat#keyword'),

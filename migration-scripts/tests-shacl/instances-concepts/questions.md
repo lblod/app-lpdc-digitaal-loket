@@ -126,7 +126,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - REMOVED<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> op vocabularium, op het implementatie model ; en ook op shacl validatie; 
  <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> en andere ? geen code lijst gedefinieerd ?
  => of geen lijst toevoegen, vervangen door archived vlag ... (create / update : impliciet, archived kan aan en af gezet worden).
-- pera:language - <https://publications.europa.eu/resource/authority/language> op het implementatie model ? en ook op shacl validatie ; bij instantie wordt er dc:linguisticSystem gebruikt ?  
+- pera:language - <http://publications.europa.eu/resource/authority/language> op het implementatie model ? en ook op shacl validatie ; bij instantie wordt er dc:linguisticSystem gebruikt ?  
 - <http://publications.europa.eu/resource/authority/language/ENG> de vermelde waarden bestaan als concept in codelijst [20230627161047-taal-codelist.ttl]; wordt niet naar verwezen vanuit implementatie model documentatie
   ==> talen functioneel qua type: ok; maar moet dit wel op een concept staan ?
   ==> talen worden nu niet doorgestuurd naar IPDC
@@ -138,7 +138,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
    shacl:name "language"@nl;
    shacl:path pera:language
    ], => skos:Concept
-- 
+  - => pera:language verwijderd van concept; enkel relevant voor instantie
 - NIET NODIG - <http://schema.org/identifier> op het implementatie model ; en ook op shacl validatie
 
 

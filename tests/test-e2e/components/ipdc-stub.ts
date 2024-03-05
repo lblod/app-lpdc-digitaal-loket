@@ -68,7 +68,8 @@ export class IpdcStub {
 
     static getObjectById(instance: any[], id: string) {
         const object = instance.filter(object => object['@id'] === id);
-        expect(object).toHaveLength(1);
+        const msg = JSON.stringify([id, instance]);
+        expect(object, msg).toHaveLength(1);
         return object[0];
     }
 
