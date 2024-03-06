@@ -1,3 +1,14 @@
+## Inhoudsopgave
+<!-- TOC -->
+  * [Inleiding](#inleiding-)
+  * [Stroomdiagramma](#stroomdiagramma)
+  * [Technologie beschrijving](#technologie-beschrijving)
+  * [Contractspecificaties](#contractspecificaties)
+  * [Voorbeelden + implementatie tips](#voorbeelden--implementatie-tips)
+  * [Verklarende woordenlijst](#verklarende-woordenlijst)
+  * [Referenties](#referenties)
+<!-- TOC -->
+
 ## Inleiding 
 
 Dit document beschrijft het proces hoe integrerende gemeentes gepubliceerde productinformatie kunnen synchroniseren met LPDC (Lokale Producten- en Dienstencatalogus). De producten worden zichtbaar voor de gemeente in LPDC. Ook synchroniseert LPDC de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
