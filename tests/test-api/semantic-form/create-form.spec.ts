@@ -707,7 +707,7 @@ test('Create instance from un-existing concept, returns notFoundError',async ({r
     expect(response.ok(), await response.text()).toBeFalsy();
     expect(await response.json()).toEqual(expect.objectContaining({
         _status:404,
-        _message: "Could not find <http://unexisting_concept.be> for type <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> in graph <http://mu.semte.ch/graphs/public>",
+        _message: "Kan <http://unexisting_concept.be> niet vinden voor type <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> in graph <http://mu.semte.ch/graphs/public>",
         _level: "WARN",
         _correlationId: expect.anything()
     }))

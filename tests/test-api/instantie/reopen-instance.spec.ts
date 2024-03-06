@@ -39,7 +39,7 @@ test.describe('Reopen instance', () =>  {
         expect(response.ok(), await response.text()).toBeFalsy();
         expect(await response.json()).toEqual(expect.objectContaining({
             "_correlationId": expect.anything(),
-            "_message": "Instance status already in ontwerp",
+            "_message": "Instantie is al in status ontwerp",
             "_level": "WARN",
             "_status": 400
         }));

@@ -91,7 +91,7 @@ test.describe('municipalities', () => {
 
         expect(await response.json()).toEqual(expect.objectContaining({
             _status: 401,
-            _message: "Not authenticated for this request",
+            _message: "Niet geauthoriseerd",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -107,7 +107,7 @@ test.describe('municipalities', () => {
 
         expect(await response.json()).toEqual(expect.objectContaining({
             _status: 403,
-            _message: "Je hebt niet voldoende rechten om deze actie uit te voeren",
+            _message: "Verboden toegang",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -355,7 +355,7 @@ test.describe('validate', () => {
         expect(response.ok()).toBeFalsy();
         expect(await response.json()).toEqual(expect.objectContaining({
             _status: 400,
-            _message: "municipality, street and houseNumber are required",
+            _message: "Gemeente, straat and huisnummer zijn verplicht",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -372,7 +372,7 @@ test.describe('validate', () => {
         expect(response.ok()).toBeFalsy();
         expect(await response.json()).toEqual(expect.objectContaining({
             _status: 400,
-            _message: "municipality, street and houseNumber are required",
+            _message: "Gemeente, straat and huisnummer zijn verplicht",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -389,7 +389,7 @@ test.describe('validate', () => {
         expect(response.ok()).toBeFalsy();
         expect(await response.json()).toEqual(expect.objectContaining({
             _status: 400,
-            _message: "municipality, street and houseNumber are required",
+            _message: "Gemeente, straat and huisnummer zijn verplicht",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -403,7 +403,7 @@ test.describe('validate', () => {
         });
         expect(await response.json()).toEqual(expect.objectContaining({
             _status: 401,
-            _message: "Not authenticated for this request",
+            _message: "Niet geauthoriseerd",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -418,7 +418,7 @@ test.describe('validate', () => {
         });
         expect(await response.json()).toEqual(expect.objectContaining({
             _status: 403,
-            _message: "Je hebt niet voldoende rechten om deze actie uit te voeren",
+            _message: "Verboden toegang",
             _level: "WARN",
             _correlationId: expect.anything()
         }))

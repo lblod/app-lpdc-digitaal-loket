@@ -93,7 +93,7 @@ test('When request does not contain a valid field name, return an error message'
     expect(response.ok()).toBeFalsy();
     expect(await response.json()).toEqual(expect.objectContaining({
         _status:400,
-        _message:"Not a valid field name",
+        _message:"Geen geldig veldnaam",
         _level: "WARN",
         _correlationId: expect.anything()
     }))
