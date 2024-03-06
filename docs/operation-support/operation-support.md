@@ -10,3 +10,4 @@
 * [Restart ldes-stream](0008-restart-ldes-stream.md)
 * [Restore backup](0009-restore-backup-from-production-to-acceptance.md)
 * [Check refnis/2019](0010-check-refnis-2019.md)
+* [Remove formal informal choice for bestuur](0011-remove-formal-informal-choice-for-bestuur.md)
