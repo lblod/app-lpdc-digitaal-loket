@@ -537,9 +537,15 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 
 ## Contractspecificaties
 
-//TODO LPDC-1031: verwijs naar alle contract specificaties!
+Het [IPDC-LPDC implementatiemodel](https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/) beschrijft in detail (zoals kardinaliteiten, codelijsten, datatypes) de gewenste datastructuur.
+
+De huidige versie (2022-06-15) krijgt binnenkort een update. Een preview hiervan is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29/) te vinden.
+
+Het IPDC-LPDC implementatiemodel beschrijft de datastructuur voor ConceptSnapshots en InstantieSnapshots. Merk op dat deze gelijkaardig, maar niet identiek zijn.
 
 ## Voorbeelden + implementatie tips
+
+Dit zijn voorbeelden die het IPDC-LPDC implementatiemodel illusteren met uitvoerbare voorbeelden.
 
 ### Uitvoerbare instantiesnapshot-LDES-stub
 
@@ -712,6 +718,7 @@ Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar
 
 ### Gebruikte standaarden
 - [IPDC - LPDC (Implementatiemodel)](https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/)
+- [IPDC - LPDC (Implementatiemodel) - TEST](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29/)
 - [URI (Uniform Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 - [RDF (Resource Description Framework)](https://www.w3.org/TR/rdf11-primer/)
 - [OWL (Web Ontology Language)](https://www.w3.org/TR/owl2-overview/)
