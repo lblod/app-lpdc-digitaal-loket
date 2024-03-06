@@ -22,7 +22,8 @@ test.describe('municipalities', () => {
         const params = {search: 'Aarschot'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -34,7 +35,8 @@ test.describe('municipalities', () => {
         const params = {search: 'qsdccgyuj'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -46,7 +48,8 @@ test.describe('municipalities', () => {
         const params = {search: 'wilsele'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -58,7 +61,8 @@ test.describe('municipalities', () => {
         const params = {search: '3000'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -70,7 +74,8 @@ test.describe('municipalities', () => {
         const params = {search: '3001'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -81,25 +86,28 @@ test.describe('municipalities', () => {
         const params = {search: '3001'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {
             headers: {cookie: undefined},
-            params});
+            params
+        });
 
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:401,
-            _message:"Not authenticated for this request",
+            _status: 401,
+            _message: "Not authenticated for this request",
             _level: "WARN",
             _correlationId: expect.anything()
-        }))    });
+        }))
+    });
 
     test(`find municipality returns http 403 when user has no rights`, async ({request}) => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
         const params = {search: '3001'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/municipalities`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:403,
-            _message:"Je hebt niet voldoende rechten om deze actie uit te voeren",
+            _status: 403,
+            _message: "Je hebt niet voldoende rechten om deze actie uit te voeren",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -114,7 +122,8 @@ test.describe('streets', () => {
         const params = {municipality: 'Aarschot', search: 'kerk'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets/`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -126,7 +135,8 @@ test.describe('streets', () => {
         const params = {municipality: 'Aarschot', search: 'ke'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets/`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -138,7 +148,8 @@ test.describe('streets', () => {
         const params = {municipality: 'Aarschot', search: 'unknown street'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets/`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -150,7 +161,8 @@ test.describe('streets', () => {
         const params = {search: 'unknown street'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets/`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -162,7 +174,8 @@ test.describe('streets', () => {
         const params = {municipality: 'unknown municipality', search: 'Kerkstraat'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets/`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -173,7 +186,8 @@ test.describe('streets', () => {
         const params = {municipality: 'Aarschot', search: 'kerk'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets`, {
             headers: {cookie: undefined},
-            params});
+            params
+        });
 
         expect(response.status()).toEqual(401);
     });
@@ -183,7 +197,8 @@ test.describe('streets', () => {
         const params = {municipality: 'Aarschot', search: 'kerk'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/streets`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.status()).toEqual(403);
     });
@@ -215,7 +230,8 @@ test.describe('validate', () => {
         const params = {municipality: 'Torhout', street: 'Aartrijkestraat', houseNumber: '11B'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -234,7 +250,8 @@ test.describe('validate', () => {
         const params = {municipality: 'Harelbeke', street: 'Generaal Deprezstraat', houseNumber: '2', busNumber: '50'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -253,7 +270,8 @@ test.describe('validate', () => {
         const params = {municipality: 'Kruibeke', street: 'O.L. Vrouwplein', houseNumber: '18-20'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -269,7 +287,7 @@ test.describe('validate', () => {
 
     test(`validate address for address in sub-municipality`, async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
-        const params = {municipality: 'Leuven', street: 'Eenmeilaan', houseNumber: 2 };
+        const params = {municipality: 'Leuven', street: 'Eenmeilaan', houseNumber: 2};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
             params
@@ -283,7 +301,8 @@ test.describe('validate', () => {
             straat: 'Eénmeilaan',
             huisnummer: '2',
             busnummer: undefined,
-            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2272154'});
+            adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2272154'
+        });
     });
 
     test(`validate address for invalid address`, async ({request}) => {
@@ -291,7 +310,8 @@ test.describe('validate', () => {
         const params = {municipality: 'Aarschot', street: 'Ten Drossaarde', houseNumber: '1', busNumber: '1'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -303,7 +323,8 @@ test.describe('validate', () => {
         const params = {municipality: 'Torhout', street: 'Aartrijkestraat', houseNumber: '11', busNumber: 'B'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -315,7 +336,8 @@ test.describe('validate', () => {
         const params = {municipality: 'Torhout', street: 'Aartrijkestraat', houseNumber: '11/B'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
         const actual = await response.json();
@@ -327,12 +349,13 @@ test.describe('validate', () => {
         const params = {street: 'Aartrijkestraat', houseNumber: '11B'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok()).toBeFalsy();
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:400,
-            _message:"municipality, street and houseNumber are required",
+            _status: 400,
+            _message: "municipality, street and houseNumber are required",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -343,12 +366,13 @@ test.describe('validate', () => {
         const params = {municipality: 'Torhout', houseNumber: '11B'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok()).toBeFalsy();
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:400,
-            _message:"municipality, street and houseNumber are required",
+            _status: 400,
+            _message: "municipality, street and houseNumber are required",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
@@ -359,44 +383,48 @@ test.describe('validate', () => {
         const params = {municipality: 'Torhout', street: 'Aartrijkestraat'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
 
         expect(response.ok()).toBeFalsy();
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:400,
-            _message:"municipality, street and houseNumber are required",
+            _status: 400,
+            _message: "municipality, street and houseNumber are required",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
     });
 
-    test('validate address returns http 401 when user not logged in', async({request}) => {
+    test('validate address returns http 401 when user not logged in', async ({request}) => {
         const params = {municipality: 'Aarschot', street: 'Ten Drossaarde', houseNumber: '1'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: undefined},
-            params});
+            params
+        });
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:401,
-            _message:"Not authenticated for this request",
+            _status: 401,
+            _message: "Not authenticated for this request",
             _level: "WARN",
             _correlationId: expect.anything()
         }))
     });
 
-    test('validate address returns http 403 when user has no access rights', async({request}) => {
+    test('validate address returns http 403 when user has no access rights', async ({request}) => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
         const params = {municipality: 'Aarschot', street: 'Ten Drossaarde', houseNumber: '1'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
-            params});
+            params
+        });
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:403,
-            _message:"Je hebt niet voldoende rechten om deze actie uit te voeren",
+            _status: 403,
+            _message: "Je hebt niet voldoende rechten om deze actie uit te voeren",
             _level: "WARN",
             _correlationId: expect.anything()
-        }))    });
+        }))
+    });
 
-    test('normal address: diestevest 32, Leuven', async ({request}) => {
+    test('normal address: Diestsestraat 32, Leuven', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
         const params = {municipality: 'Leuven', street: 'Diestsestraat', houseNumber: '32'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
