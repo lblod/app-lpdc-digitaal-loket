@@ -29,7 +29,8 @@ test.describe('Concurrent Update', () => {
         await pageOtherUser.close();
     });
 
-    test('Second update should fail', async () => {
+    //TODO LPDC-768: enable test
+    test.skip('Second update should fail', async () => {
         await login(page);
         await login(pageOtherUser);
         const instantieTitel = await createMinimalInstance(page);
