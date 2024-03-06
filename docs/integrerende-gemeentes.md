@@ -315,11 +315,9 @@ Een interactieve omzetting van dit voorbeeld op json-ld playground vind je [hier
 
 Om gegevens te zoeken of te manipuleren in de graaf, kan je gebruik maken van **SPARQL**.
 
-SPARQL kan gebruikt worden om queries uit te drukken over diverse gegevensbronnen, of de gegevens nu van nature als RDF opgeslagen zijn of als RDF bekeken worden via middleware.
+Met SPARQL kun je vragen stellen (queries) over diverse gegevensbronnen. Dit werkt zelfs als deze gegevens oorspronkelijk niet in het RDF-formaat zijn opgeslagen, maar wel zo kunnen worden geïnterpreteerd met behulp van middleware.
 
-SPARQL bevat mogelijkheden voor het opvragen van vereiste en optionele graafpatronen samen met hun conjuncties en disjuncties.
-
-SPARQL ondersteunt ook aggregatie, subqueries, negatie, het creëren van waarden door expressies, uitbreidbare waardebeoordeling, en het beperken van queries door bron RDF-graaf.
+Met SPARQL kun je complexe vragen stellen die verschillende voorwaarden combineren (opvragen van vereiste en optionele graafpatronen samen met hun conjuncties en disjuncties). Je kunt ook informatie samenvoegen (aggregatie), gedetailleerde subvragen stellen (subqueries), bepaalde gegevens uitsluiten (negatie), nieuwe informatie berekenen uit bestaande gegevens, en de zoekopdrachten verfijnen door te bepalen uit welke gegevensbronnen je informatie wilt halen.
 
 De resultaten van SPARQL-queries kunnen resultaatsets of RDF-grafen zijn.
 
@@ -349,7 +347,8 @@ SHACL beschrijft de structuur en de condities waaraan een dataset dient te voldo
 
 SHACL voorziet metadata over de data met als doel de data te kunnen valideren.
 
-Kan RDF-schema en OWL-ontologieën complementeren.
+Kan de definities en structuren die zijn vastgelegd in RDF-schema's en OWL-ontologieën aanvullen.  
+Dit betekent dat SHACL gebruikt kan worden om extra regels en beperkingen toe te voegen aan de informatie die al gedefinieerd is in RDF-schema's (een manier om relaties en structuren in RDF-gegevens te beschrijven) en OWL-ontologieën (een taal voor het definiëren van complexe relaties tussen concepten). SHACL helpt bij het verfijnen en specificeren van de verwachtingen over de gegevensstructuur en integriteit, bovenop de bestaande definities in RDF en OWL.
 
 SHACL's worden beschreven in RDF.
 
@@ -432,7 +431,7 @@ ex:Observation2 a sosa:Observation ;
 Beschrijft hoe je een object kan veranderen waarbij je de historiek van het rdf-document bijhoudt. 
 Je stuurt met andere woorden een serie van snapshots van de data van het rdf-document op. 
 Hierbij verwijs je telkens naar het origineel rdf-document en het tijdstip van de snapshot. 
-Dit stelt de LDES-afnemer in staat de historiek te reconstrueren en de laatste versie te bewaren. (en hierbij toch performant niet telkens de hele LDES te hoeven uitlezen).
+Dit stelt de LDES-afnemer in staat de historiek te reconstrueren en de laatste versie te bewaren (en hierbij toch performant niet telkens de hele LDES te hoeven uitlezen).
 
 Technisch, wordt een versiebeheerde-LDES gedefinieerd met twee eigenschappen: `ldes:versionOfPath` en `ldes:timestampPath`.
 - `ldes:versionOfPath`: verklaart de predicate die wordt gebruikt om te definiëren dat een `tree:member` van een `ldes:EventStream` een versie is van een rdf-document.
@@ -536,9 +535,9 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 
 ```
 
-## Contract specificaties
+## Contractspecificaties
 
-//TODO LPDC-1031: verwijs naar alle contract specificaties
+//TODO LPDC-1031: verwijs naar alle contract specificaties!
 
 ## Voorbeelden + implementatie tips
 
@@ -597,9 +596,9 @@ Beide formaten ([json-ld](#json-ld) en [turtle](#turtle)) zijn serialisatie-form
 
 Indien de [json-ld](#json-ld) data en de bijhorende [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) goed op elkaar afgestemd zijn, dan zal dit een correcte [turtle](#turtle) genereren.
 
-Met 'correct' bedoelen we, een waarin voor elk [json-ld](#json-ld) datum een overeenkomstig attribuut ter interpretatie gevonden wordt in de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
+Met 'correct' bedoelen we, één waarin voor elk [json-ld](#json-ld) datum een overeenkomstig attribuut ter interpretatie gevonden wordt in de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
 
-Indien er in één van de twee een afwijking is, dan zal de [turtle](#turtle) ofwel minder [triples](#rdf-resource-description-framework) bevatten, of [niet goed gevormde IRIs](#rdf-resource-description-framework), of mogelijk andere problemen.
+Indien er in één van de twee een afwijking is, dan zal de turtle ofwel minder triples bevatten, niet goed gevormde IRIs hebben, of mogelijk andere problemen vertonen.
 
 Het voorziene voorbeeld in [instantiesnapshot-LDES-stub](#uitvoerbare-instantiesnapshot-ldes-stub) is conform en met verscheidene voorbeelden bedoeld exhaustief te zijn.
 
@@ -690,7 +689,7 @@ Een goed voorbeeld van een concept is het huwelijk.
 Hoewel de beschrijving en voorwaarden van een huwelijk grotendeels hetzelfde zijn voor de verschillende gemeentes zijn er mogelijk toch lokale verschillen, zoals de locatie en prijs.
 
 #### ConceptSnapshot
-Een gegeventsmomentopname van een concept. Verder verwijzen hiernaar met de Engelse term. Dit wordt gebruikt om de staat van conceptgegevens op een specifiek tijdstip te beschrijven. Een serie van conceptsnapshots beschrijft verschillende versies doorheen de tijd van een concept.
+Een gegeventsmomentopname van een concept. Dit wordt gebruikt om de staat van conceptgegevens op een specifiek tijdstip te beschrijven. Een serie van conceptsnapshots beschrijft verschillende versies doorheen de tijd van een concept.
 Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar de id van het concept, een (kopie van) alle gegevens van het concept op moment van opname, en optioneel een archiveringsstatus (dit om aan te duiden of een concept nog actief is of niet).
 
 #### Instantie
@@ -699,7 +698,7 @@ De bevoegde overheid kan variëren: federaal, Vlaams, provinciaal,… en de dien
 Bevat optioneel een link naar een concept waarop het oorspronkelijk was gebaseerd.
 
 #### InstantieSnapshot
-Een gegeventsmomentopname van een instantie. Verder verwijzen hiernaar met de Engelse term. Dit wordt gebruikt om de staat van instantiegegevens op een specifiek tijdstip te beschrijven. Een serie van instantiesnapshots beschrijft verschillende versies doorheen de tijd van een instantie.
+Een gegeventsmomentopname van een instantie. Dit wordt gebruikt om de staat van instantiegegevens op een specifiek tijdstip te beschrijven. Een serie van instantiesnapshots beschrijft verschillende versies doorheen de tijd van een instantie.
 Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar de id van de instantie, een (kopie van) alle gegevens van de instantie op moment van opname, en optioneel een archiveringsstatus (dit om aan te duiden of de instantie nog actief is of niet).
 
 
