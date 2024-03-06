@@ -3,7 +3,7 @@
   * [Inleiding](#inleiding-)
   * [Stroomdiagramma](#stroomdiagramma)
   * [Technologie beschrijving](#technologie-beschrijving)
-  * [Contractspecificaties](#contractspecificaties)
+  * [Contractspecificaties-semantisch model](#contractspecificaties)
   * [Voorbeelden + implementatie tips](#voorbeelden--implementatie-tips)
   * [Verklarende woordenlijst](#verklarende-woordenlijst)
   * [Referenties](#referenties)
@@ -11,9 +11,7 @@
 
 ## Inleiding 
 
-Dit document beschrijft het proces hoe integrerende gemeentes gepubliceerde productinformatie kunnen synchroniseren met LPDC (Lokale Producten- en Dienstencatalogus). De producten worden zichtbaar voor de gemeente in LPDC. Ook synchroniseert LPDC de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
-
-Dit document geeft een overzicht onder de vorm van een [stroomdiagramma](#stroomdiagramma), [specifieert het contract](#contract-specificaties), geeft [(uitvoerbare) voorbeelden en implementatie tips](#voorbeelden--implementatie-tips), een [verklarende woordenlijst](#verklarende-woordenlijst) en een lijst van gebruikte [referenties](#referenties).
+Dit document beschrijft hoe lokale besturen die een eigen oplossing hebben om producten en diensten te beheren, hun gepubliceerde productinformatie kunnen synchroniseren met de LPDC-module (Lokale Producten- en Dienstencatalogus) van de Vlaamse overheid. We noemen dat soort lokale overheden hieronder "integrerende gemeenten" (maar het kan evengoed een OCMW of nog een ander type bestuur zijn). De producten worden zichtbaar voor de gemeente in LPDC-module, maar zullen daar niet beheerd/aangepast kunnen worden (read-only). LPDC synchroniseert de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
 
 ## Stroomdiagramma
 
@@ -21,17 +19,17 @@ Beschrijft op een hoog niveau de relevante datastromen tussen integrerende gemee
 
 ![integrerende-gemeentes-stroomdiagramma.png](img%2Fintegrerende-gemeentes-stroomdiagramma.png)
 
-1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) beschrijft producten en diensten van overheden in Vlaanderen. 
-Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed door de Lokale Producten en DienstenCatalogus (LPDC)). 
-IPDC tracht zo de centrale bron te zijn voor alle producten en diensten binnen Vlaanderen, en om dit te faciliteren is hij verdeeld in twee delen: concepten en instanties.
+1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) bevat producten en diensten van overheden in Vlaanderen. 
+Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed vanuit de Lokale Producten en DienstenCatalogus (LPDC)).  
+IPDC tracht zo de centrale bron te zijn voor alle producten en diensten binnen Vlaanderen. Om dit te faciliteren is hij verdeeld in twee delen: concepten en instanties.
 2. **Ophalen concepten**: de toepassingen van integrerende gemeentes kunnen concepten ophalen bij IPDC. 
-Indien integrerende gemeentes kiezen dit via **LDES** (Linked Data Event Stream) te verwezenlijken, gebeurt dit via conceptsnapshots. 
+Via **LDES** (Linked Data Event Stream) gebeurt dit via conceptsnapshots. 
 Hoe hierbij aan te sluiten, vind je [hier](https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc). 
-3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente dat instanties beheert, optioneel op basis van concepten uit IPDC. 
+3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente waar instanties beheerd worden, idealiter op basis van beschikbare concepten uit IPDC, aangevuld met instanties voor producten waarvoor geen concept beschikbaar is. 
 Deze toepassing levert te publiceren instanties en eventuele wijzigingen in de vorm van een stroom van instantiesnapshots als een **LDES**.
 4. **Ophalen te publiceren instanties**: LPDC-module synchroniseert de instanties van de integrerende gemeente door de aangeboden instantiesnapshots uit te lezen met behulp van een **LDES**. 
-5. **LPDC**: stelt je in staat om de producten en diensten van je lokale bestuur te beheren. Het herbouwt ook elke instantie vanuit de laatste snapshot van de **LDES** en synchroniseert deze vervolgens met IPDC. De meest recent bijgewerkte versie van elke instantie is zichtbaar voor de integrerende gemeente op LPDC, maar alleen in een leesmodus. 
-6. LPDC-module publiceert instanties naar IPDC.   
+5. **LPDC**: neemt elke instantie vanuit de laatste snapshot van de **LDES** over en synchroniseert deze vervolgens met IPDC. De meest recent bijgewerkte versie van elke instantie is zichtbaar voor de integrerende gemeente op LPDC, maar alleen in een leesmodus. (Besturen zonder eigen oplossing, kunnen in de LPDC-module wel hun producten en diensten beheren).  
+6. LPDC-module publiceert instanties naar IPDC. Vanaf dat moment is het product beschikbaar in de API en LDES van IPDC voor hergebruik door anderen (of door het bestuur in andere toepassingen van het bestuur, mocht dat handiger zijn).   
 
 ## Technologie beschrijving
 
@@ -546,13 +544,17 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 
 ```
 
-## Contractspecificaties
 
-Het [IPDC-LPDC implementatiemodel](https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/) beschrijft in detail (zoals kardinaliteiten, codelijsten, datatypes) de gewenste datastructuur.
+## Contractspecificaties - semantisch model
 
-De huidige versie (2022-06-15) krijgt binnenkort een update. Een preview hiervan is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29/) te vinden.
+De contractspecificaties (het semantisch model / het IPDC-LPDC implementatiemodel) beschrijft in detail de gewenste datastructuur, zoals kardinaliteiten, codelijsten, datatypes, ... .
+Het IPDC-LPDC implementatiemodel beschrijft de datastructuur voor ConceptSnapshots en InstantieSnapshots. Merk op dat deze gelijkaardig, maar niet identiek zijn. Het is dus belangrijk om voor de instantie die aangeboden worden aan de LPDC-module gebaseerd wordt op de informatie bij Instanties. 
 
-Het IPDC-LPDC implementatiemodel beschrijft de datastructuur voor ConceptSnapshots en InstantieSnapshots. Merk op dat deze gelijkaardig, maar niet identiek zijn.
+!!!!!!!!! Op datum van 2024-03-06 staat een versie van het IPDC-LPDC implementatiemodel van 2022-06-15 op de productiepagina's van data.vlaanderen.be. Deze krijgt normaal eerstdaags een update. Een preview van die update is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29/) te vinden (op de testpagina's van data.vlaanderen.be). Tot wanneer de versie op productie is geupdate, kun je best naar de previewversie/versie op de testpagina's kijken. Deze versie zal niet meer wijzigen en zo naar productie worden gebracht. 
+
+De info op productie: [IPDC-LPDC implementatiemodel](https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/). Let op de datum "uitgegeven op" die moet later minstens 2024-03-06 of later zijn! 
+
+
 
 ## Voorbeelden + implementatie tips
 
