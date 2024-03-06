@@ -53,8 +53,7 @@ test.describe('Herziening nodig', () => {
         await page.close();
     });
 
-    //TODO LPDC-768: enable test
-    test.skip('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({request}) => {
+    test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({request}) => {
         // maak instantie van concept 
         await homePage.productOfDienstToevoegenButton.click();
 

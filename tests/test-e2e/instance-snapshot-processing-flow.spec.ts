@@ -74,8 +74,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
             'nl-be-x-informal');
     });
 
-    //TODO LPDC-768: enable test
-    test.skip('Verify a full instance was created from instance snapshot from ldes stream and verify its publishment to ipdc', async () => {
+    test('Verify a full instance was created from instance snapshot from ldes stream and verify its publishment to ipdc', async () => {
 
         const title = 'Akte van Belgische nationaliteit';
         const titleInEnglish = `Certificate of Belgian nationality`;
