@@ -609,7 +609,7 @@ Uitlezen van volledige LDES, interpreteren en samenvoegen met verwezen [Instance
 
 #### JSON-LD en context samenvoegen opmerkingen
 
-De [LDES-reader](#integrerende-gemeente-ldes-reader) kan [json-ld](#json-ld) en [turtle](#turtle) produceren. 
+De [LDES-reader](#integrerende-gemeente-ldes-reader) leest [json-ld](#json-ld) en kan [json-ld](#json-ld) en [turtle](#turtle) produceren. 
 
 Beide formaten ([json-ld](#json-ld) en [turtle](#turtle)) zijn serialisatie-formaten voor dezelfde data.
 
@@ -629,7 +629,7 @@ Hierin zullen we een aantal elementen van de data belichten.
 
 Uit: [page-0](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json).
 
-_Merk op_ dat alle vermelde URL's die de [LDES](#ldes-linked-data-event-stream) vermelden, (andere pagina's (`http://hostname/doc/instancesnapshot?pageNumber=0`), of identificatie van de pagina (`http://hostname/doc/instancesnapshot?pageNumber=0`)), verwijzen naar de **'hostname'**. 
+_Merk op_ dat alle URL's die de [LDES](#ldes-linked-data-event-stream) vermelden, (andere pagina's (`http://hostname/doc/instancesnapshot?pageNumber=0`), of identificatie van de pagina (`http://hostname/doc/instancesnapshot?pageNumber=0`)), verwijzen naar de **'hostname'**. 
 
 Dit moet de **publiek toegankelijke internet-host zijn die de LDES aanbiedt**. 
 
