@@ -651,7 +651,7 @@ Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service/
 [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5). 
 Dit is een uitvoerbare URL die wijst in dit voorbeeld naar Gemeente Gent.
 Kan ook als absolute URL opgegeven worden.
-10. `"aangemaaktOp": "2024-02-14T13:42:12.357Z",` `"bewerktOp": "2024-02-14T13:59:25.236Z",`: geeft het moment dat de [instantie](#instantie) aangemaakt en respectievelijk laatst bewerkt werd. Dit wordt door LPDC at verbatim overgenomen.
+10. `"aangemaaktOp": "2024-02-14T13:42:12.357Z",` `"bewerktOp": "2024-02-14T13:59:25.236Z",`: geeft het moment dat de [instantie](#instantie) aangemaakt en respectievelijk laatst bewerkt werd. Dit wordt door LPDC ad verbatim overgenomen.
 11. `"generatedAtTime": "2024-02-18T06:32:10.377Z"`: geeft het moment dat de [instantiesnapshot](#instantiesnapshot) aangemaakt werd. Is een property die door LDES-verwerking wordt geïnterpreteerd.
 12. `"titel:"`, `"beschrijving:"`: een voorbeeld van 2 data velden die gelinked zijn vanuit [instantie](#instantie), beide string literals met een taal tag.
 13. `"bevoegdeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de bevoegde overheid.
