@@ -10,6 +10,7 @@ test('invalid route in lpdc-management returns not found error response', async 
     expect(response.ok()).toBe(false);
     expect(response.status()).toEqual(404);
     expect(await response.json()).toEqual(expect.objectContaining({
-        _message: 'Niet gevonden'
-    }));
+        message: 'Pagina niet gevonden. Controleer de URL en probeer opnieuw.',
+        correlationId: expect.anything()
+    }))
 });

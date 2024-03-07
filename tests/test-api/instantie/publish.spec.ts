@@ -4,13 +4,30 @@ import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/publi
 import {InstanceStatus} from "../test-helpers/codelists";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {fetchType} from "../test-helpers/sparql";
-import {Predicates} from "../test-helpers/triple-array";
+import {Predicates, Uri} from "../test-helpers/triple-array";
 
 
 test.describe('publish instance', () => {
 
-
     test('publish instance', async ({request}) => {
+        const modified = new Date();
+        const loginResponse = await loginAsPepingen(request);
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withInstanceStatus(InstanceStatus.ontwerp)
+            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+            .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withModified(modified)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});
+        expect(response.ok(), await response.text()).toBeTruthy();
+
+        const updatedInstance = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
+        expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');
+        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
+    });
+
+    test('throw error when instance is not valid', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
         const modified = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
@@ -19,32 +36,34 @@ test.describe('publish instance', () => {
             .buildAndPersist(request, pepingenId)
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});
-        expect(response.ok(), await response.text()).toBeTruthy();
+        expect(response.status()).toEqual(400);
 
-        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
-        expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');
-        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
+        expect(await response.json()).toEqual(expect.objectContaining({
+            message:"Instantie niet geldig om te publiceren",
+            correlationId: expect.anything()
+        }))
     });
 
     test('publish already published instance', async ({request}) => {
-        const loginResponse = await loginAsPepingen(request);
         const modified = new Date();
-        const instance = await PublicServiceTestBuilder.aPublicService()
+        const loginResponse = await loginAsPepingen(request);
+        const publicService = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.verstuurd)
             .withDateSent(new Date())
+            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+            .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withModified(modified)
-            .buildAndPersist(request, pepingenId)
+            .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});
         expect(response.ok(), await response.text()).toBeFalsy();
+        expect(response.status()).toEqual(400);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status:400,
-            _message: "Instance status already has status verstuurd",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Instantie heeft reeds status verstuurd",
+            correlationId: expect.anything()
         }))
 
-        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
+        const updatedInstance = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');
         expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).toEqual(modified.toISOString());
     });

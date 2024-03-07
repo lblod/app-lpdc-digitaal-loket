@@ -37,11 +37,10 @@ test.describe('Reopen instance', () =>  {
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {params: {cookie: loginResponse.cookie}});
         expect(response.ok(), await response.text()).toBeFalsy();
+        expect(response.status()).toEqual(400);
         expect(await response.json()).toEqual(expect.objectContaining({
-            "_correlationId": expect.anything(),
-            "_message": "Instantie is al in status ontwerp",
-            "_level": "WARN",
-            "_status": 400
+            'correlationId': expect.anything(),
+            'message': "Instantie is al in status ontwerp"
         }));
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);

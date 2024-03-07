@@ -89,11 +89,10 @@ test.describe('municipalities', () => {
             params
         });
 
+        expect(response.status()).toEqual(401);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status: 401,
-            _message: "Niet geauthoriseerd",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Autorisatie vereist. Log alstublieft in om toegang te krijgen.",
+            correlationId: expect.anything()
         }))
     });
 
@@ -105,11 +104,10 @@ test.describe('municipalities', () => {
             params
         });
 
+        expect(response.status()).toEqual(403);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status: 403,
-            _message: "Verboden toegang",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Toegang geweigerd. U heeft geen rechten voor deze actie.",
+            correlationId: expect.anything()
         }))
     });
 
@@ -353,11 +351,10 @@ test.describe('validate', () => {
         });
 
         expect(response.ok()).toBeFalsy();
+        expect(response.status()).toEqual(400);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status: 400,
-            _message: "Gemeente, straat and huisnummer zijn verplicht",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Gemeente, straat and huisnummer zijn verplicht",
+            correlationId: expect.anything()
         }))
     });
 
@@ -370,11 +367,10 @@ test.describe('validate', () => {
         });
 
         expect(response.ok()).toBeFalsy();
+        expect(response.status()).toEqual(400);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status: 400,
-            _message: "Gemeente, straat and huisnummer zijn verplicht",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Gemeente, straat and huisnummer zijn verplicht",
+            correlationId: expect.anything()
         }))
     });
 
@@ -387,11 +383,10 @@ test.describe('validate', () => {
         });
 
         expect(response.ok()).toBeFalsy();
+        expect(response.status()).toEqual(400);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status: 400,
-            _message: "Gemeente, straat and huisnummer zijn verplicht",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Gemeente, straat and huisnummer zijn verplicht",
+            correlationId: expect.anything()
         }))
     });
 
@@ -401,11 +396,11 @@ test.describe('validate', () => {
             headers: {cookie: undefined},
             params
         });
+
+        expect(response.status()).toEqual(401);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status: 401,
-            _message: "Niet geauthoriseerd",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Autorisatie vereist. Log alstublieft in om toegang te krijgen.",
+            correlationId: expect.anything()
         }))
     });
 
@@ -416,11 +411,10 @@ test.describe('validate', () => {
             headers: {cookie: loginResponse.cookie},
             params
         });
+        expect(response.status()).toEqual(403);
         expect(await response.json()).toEqual(expect.objectContaining({
-            _status: 403,
-            _message: "Verboden toegang",
-            _level: "WARN",
-            _correlationId: expect.anything()
+            message: "Toegang geweigerd. U heeft geen rechten voor deze actie.",
+            correlationId: expect.anything()
         }))
     });
 

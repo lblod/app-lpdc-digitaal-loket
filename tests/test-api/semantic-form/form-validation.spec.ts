@@ -13,9 +13,10 @@ test(`Submit form: validate publicService valid form`, async ({request}) => {
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(response.ok(), `Error ${response.status()}, ${await response.text()}`).toBeTruthy();
+    expect(response.status()).toEqual(200);
+    expect(await response.json()).toEqual([]);
 });
 
 test(`Submit form: validate publicService invalid form - competentAutority is required`, async ({request}) => {
@@ -24,18 +25,14 @@ test(`Submit form: validate publicService invalid form - competentAutority is re
         .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(response.status()).toEqual(400);
-    expect(await response.json()).toEqual({
-        data: {
-            errors: [{
-                formId: "149a7247-0294-44a5-a281-0a4d3782b4fd",
-                formUri: "http://data.lblod.info/id/forms/149a7247-0294-44a5-a281-0a4d3782b4fd",
-                message: "Er zijn fouten opgetreden in de tab \"eigenschappen\". Gelieve deze te verbeteren!",
-            }]
-        }
-    });
+    expect(response.status()).toEqual(200);
+    expect(await response.json()).toEqual([{
+        formId: "149a7247-0294-44a5-a281-0a4d3782b4fd",
+        formUri: "http://data.lblod.info/id/forms/149a7247-0294-44a5-a281-0a4d3782b4fd",
+        message: "Er zijn fouten opgetreden in de tab \"eigenschappen\". Gelieve deze te verbeteren!",
+    }]);
 });
 
 test(`Submit form: validate publicService with valid address`, async ({request}) => {
@@ -60,7 +57,7 @@ test(`Submit form: validate publicService with valid address`, async ({request})
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.ok(), `Error ${response.status()}, ${await response.text()}`).toBeTruthy();
 });
@@ -84,18 +81,14 @@ test(`Submit form: validate publicService with invalid address`, async ({request
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(response.status()).toEqual(400);
-    expect(await response.json()).toEqual({
-        data: {
-            errors: [{
-                formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
-            }]
-        }
-    });
+    expect(response.status()).toEqual(200);
+    expect(await response.json()).toEqual([{
+        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
+    }]);
 });
 
 test(`Submit form: validate publicService with address that has not enough fields filled in to validate`, async ({request}) => {
@@ -114,18 +107,14 @@ test(`Submit form: validate publicService with address that has not enough field
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(response.status()).toEqual(400);
-    expect(await response.json()).toEqual({
-        data: {
-            errors: [{
-                formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
-            }]
-        }
-    });
+    expect(response.status()).toEqual(200);
+    expect(await response.json()).toEqual([{
+        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
+    }]);
 });
 
 test(`Submit form: validate publicService with multiple address - both valid`, async ({request}) => {
@@ -155,7 +144,7 @@ test(`Submit form: validate publicService with multiple address - both valid`, a
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
     expect(response.ok()).toBeTruthy();
 });
@@ -190,17 +179,14 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(await response.json()).toEqual({
-        data: {
-            errors: [{
-                formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
-            }]
-        }
-    });
+    expect(response.status()).toEqual(200);
+    expect(await response.json()).toEqual([{
+        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
+    }]);
 });
 
 test(`Submit form: validate publicService with multiple address - both invalid`, async ({request}) => {
@@ -233,17 +219,14 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(await response.json()).toEqual({
-        data: {
-            errors: [{
-                formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
-            }]
-        }
-    });
+    expect(response.status()).toEqual(200);
+    expect(await response.json()).toEqual([{
+        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
+    }]);
 });
 
 test(`Submit form: validate publicService with several errors on inhoud tab`, async ({request}) => {
@@ -268,24 +251,20 @@ test(`Submit form: validate publicService with several errors on inhoud tab`, as
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
-    expect(await response.json()).toEqual({
-        data: {
-            errors: [
-                {
-                    formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                    formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                    message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
-                },
-                {
-                    formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                    formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-                    message: `Er zijn fouten opgetreden in de tab "inhoud". Gelieve deze te verbeteren!`
-                }
-            ]
-        }
-    });
+    expect(response.status()).toEqual(200);
+    expect(await response.json()).toEqual([
+        {
+            formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+            formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+            message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
+        },
+        {
+            formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+            formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+            message: `Er zijn fouten opgetreden in de tab "inhoud". Gelieve deze te verbeteren!`
+        }]);
 });
 
 test(`Submit form: validate publicService valid form when user is not logged in, returns http 401 Unauthenticated`, async ({request}) => {
@@ -294,7 +273,7 @@ test(`Submit form: validate publicService valid form when user is not logged in,
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const apiResponse = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: undefined}});
+    const apiResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: undefined}});
 
     expect(apiResponse.status()).toEqual(401);
 });
@@ -306,7 +285,7 @@ test(`Submit form: validate publicService valid form when user has no rights on 
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
-    const apiResponse = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
+    const apiResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
 
     expect(apiResponse.status()).toEqual(403);
 });

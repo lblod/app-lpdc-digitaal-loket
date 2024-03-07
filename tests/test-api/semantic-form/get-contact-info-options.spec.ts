@@ -91,11 +91,10 @@ test('When request does not contain a valid field name, return an error message'
     const loginResponse = await loginAsPepingen(request);
     const response = await request.get(`${dispatcherUrl}/lpdc-management/contact-info-options/lastName`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeFalsy();
+    expect(response.status()).toEqual(400);
     expect(await response.json()).toEqual(expect.objectContaining({
-        _status:400,
-        _message:"Geen geldig veldnaam",
-        _level: "WARN",
-        _correlationId: expect.anything()
+        message:"Geen geldig veldnaam",
+        correlationId: expect.anything()
     }))
 })
 

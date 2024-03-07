@@ -3,7 +3,6 @@ import {deleteAll} from "../test-helpers/sparql";
 import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
-import fs from "fs";
 
 const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
 
@@ -13,7 +12,6 @@ test.beforeEach(async ({request}) => {
 
 test.describe('Saving forms for instances', () => {
 
-    //TODO LPDC-917: when updating the code for saving, finish this test ( have meaningful updates and removals)
     test('Can put content form for public service', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
@@ -27,7 +25,13 @@ test.describe('Saving forms for instances', () => {
         responseBody.toString();
 
         const formUpdate = {
-            additions: '',
+            additions:
+                `@prefix : <#>.
+                 @prefix dct: <http://purl.org/dc/terms/>.
+                 @prefix pub: <http://data.lblod.info/id/public-service/>.
+                 
+                 pub:${publicService.getUUID()} dct:title "dit is een titel"@nl-be-x-formal.
+             `,
             graph: responseBody.source,
             removals: ''
         }

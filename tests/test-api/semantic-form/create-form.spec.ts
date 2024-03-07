@@ -697,7 +697,7 @@ test('Create instance from concept: When concept contains english language then 
     expect(publicService.findObjects(Predicates.description)).toContainEqual(new Literal('description', Language.EN));
 });
 
-test('Create instance from un-existing concept, returns notFoundError',async ({request})=>{
+test('Create instance from un-existing concept, returns notFoundError', async ({request}) => {
     const loginResponse = await loginAsPepingen(request);
     const headers = {cookie: loginResponse.cookie};
     const response = await request.post(`${dispatcherUrl}/public-services`, {
@@ -705,14 +705,14 @@ test('Create instance from un-existing concept, returns notFoundError',async ({r
         headers: headers,
     });
     expect(response.ok(), await response.text()).toBeFalsy();
+    expect(response.status()).toEqual(404);
     expect(await response.json()).toEqual(expect.objectContaining({
-        _status:404,
-        _message: "Kan <http://unexisting_concept.be> niet vinden voor type <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> in graph <http://mu.semte.ch/graphs/public>",
-        _level: "WARN",
-        _correlationId: expect.anything()
+        message: "Kan <http://unexisting_concept.be> niet vinden voor type <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> in graph <http://mu.semte.ch/graphs/public>",
+        correlationId: expect.anything()
     }))
 
 })
+
 async function createForm(conceptUri: Uri | undefined, request: APIRequestContext) {
     const loginResponse = await loginAsPepingen(request);
     const headers = {cookie: loginResponse.cookie};
@@ -726,7 +726,7 @@ async function createForm(conceptUri: Uri | undefined, request: APIRequestContex
 
 async function createFormWithoutLoggingIn(conceptUri: Uri | undefined, request: APIRequestContext): Promise<APIResponse> {
     return await request.post(`${dispatcherUrl}/public-services`, {
-        data: conceptUri ?  {conceptId: conceptUri.getValue()} : {},
+        data: conceptUri ? {conceptId: conceptUri.getValue()} : {},
         headers: {cookie: undefined},
     });
 }
