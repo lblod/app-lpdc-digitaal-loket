@@ -12,7 +12,7 @@ ls
 exit
 
 # secure copy backup to tmp folder
-scp -P 23 -i /root/.ssh/backups_rsa -r <your storagebox host>:/home/data_backup_20231107T040001 .
+scp -P 23 -i /root/.ssh/backups_rsa -r <your storagebox host>:/home/data_backup_20231107T040001 /tmp
 exit
 
 ```
