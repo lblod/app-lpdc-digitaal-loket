@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.9.0
+    image: lblod/frontend-lpdc:0.10.0
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific.
@@ -208,7 +208,7 @@ services:
   # LPDC-specific Services
   ################################################################################
   lpdc-management:
-    image: lblod/lpdc-management-service:0.34.1
+    image: lblod/lpdc-management-service:0.35.0
     depends_on:
       migrations:
         condition: service_healthy
@@ -231,7 +231,7 @@ services:
       retries: 50
 
   lpdc-publish:
-    image: lblod/lpdc-publish-service:0.14.0
+    image: lblod/lpdc-publish-service:0.15.0
     depends_on:
       migrations:
         condition: service_healthy
