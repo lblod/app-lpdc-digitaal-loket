@@ -118,8 +118,18 @@ On test we always deploy a released version.
   drc down --remove-orphans
 
   git checkout tags/<my version>
-  #e.g. of a version: v0.2.0 
+  #e.g. of a version: v0.2.0
   
+  # Do necessary manual changes to docker-compose.override.yml files if required by release. 
+  
+  # enable maintenance frontend docker-compose.override.yml when migrations need to be executed
+  # lpdc:
+  #  image: lblod/frontend-generic-maintenance
+  #  environment:
+  #    EMBER_MAINTENANCE_MESSAGE: " We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikmaken van een verbeterde versie van LPDC voor een nog vlottere gebruikerservaring."
+  #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
+  #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
+    
   drc pull
 
   drc up -d
