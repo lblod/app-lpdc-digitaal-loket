@@ -1,6 +1,6 @@
 # Scripts to refresh the instance review statuses.
 
-You might need to run this after you [reloaded the entire concept snapshot ldes stream](0006-reload-ipdc-ldes-stream-the-concept-data.md) and the implementation of conceptsnapshot>isfunctionallychanged was updated significantly.
+You might need to run this after you [reloaded the entire concept snapshot ldes stream](0006-reload-ipdc-ldes-stream-and-concept-data.md) and the implementation of conceptsnapshot>isfunctionallychanged was updated significantly.
 
 It consists of three scripts to run.
 

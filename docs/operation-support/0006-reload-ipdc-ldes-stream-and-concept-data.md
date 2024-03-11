@@ -1,4 +1,4 @@
-# Fully reload ipdc ldes stream, the concept data
+# Fully reload ipdc ldes stream and concept data
 
 **A word of caution**
 
