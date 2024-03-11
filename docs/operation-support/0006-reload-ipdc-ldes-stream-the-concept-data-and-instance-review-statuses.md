@@ -141,23 +141,26 @@ INSERT {
     }
 }
 WHERE {
-  GRAPH ?bestuurseenheidsGraph {
-    ?instantie a cpsv:PublicService .
-    ?instantie ext:hasVersionedSource ?instantieConceptSnapshot .
-    ?instantie dcterms:source ?concept .
-    FILTER NOT EXISTS {
-          ?instantie ext:reviewStatus ?reviewStatus . 
+    GRAPH ?bestuurseenheidsGraph {
+      ?instantie a cpsv:PublicService .
+      ?instantie ext:hasVersionedSource ?instantieConceptSnapshot .
+      ?instantie dcterms:source ?concept .
+      FILTER NOT EXISTS {
+          ?instantie ext:reviewStatus ?reviewStatus .
+      }
     }
-  }
-   GRAPH <http://mu.semte.ch/graphs/public> {
+    GRAPH <http://mu.semte.ch/graphs/public> {
         ?concept lpdcExt:hasLatestFunctionalChange ?laatsteFunctioneelGewijzigdeConceptSnapshot .
         FILTER NOT EXISTS {
-          ?concept adms:status ?conceptStatus . 
-       }
+            ?concept adms:status ?conceptStatus .
+        }
+    }
+    GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> {
+        ?instantieConceptSnapshot prov:generatedAtTime ?instantieConceptSnapshotGeneratieTijdstip .
+        ?laatsteFunctioneelGewijzigdeConceptSnapshot prov:generatedAtTime ?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratieTijdstip .
     }
 
-   FILTER (?instantieConceptSnapshot != ?laatsteFunctioneelGewijzigdeConceptSnapshot)
- 
+    FILTER (?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratieTijdstip > ?instantieConceptSnapshotGeneratieTijdstip)
 }
 
 ```
@@ -177,22 +180,26 @@ INSERT {
     }
 }
 WHERE {
-  GRAPH ?bestuurseenheidsGraph {
-    ?instantie a cpsv:PublicService .
-    ?instantie ext:hasVersionedSource ?instantieConceptSnapshot .
-    ?instantie dcterms:source ?concept .
-    FILTER NOT EXISTS {
-          ?instantie ext:reviewStatus ?reviewStatus . 
+    GRAPH ?bestuurseenheidsGraph {
+      ?instantie a cpsv:PublicService .
+      ?instantie ext:hasVersionedSource ?instantieConceptSnapshot .
+      ?instantie dcterms:source ?concept .
+      FILTER NOT EXISTS {
+          ?instantie ext:reviewStatus ?reviewStatus .
+      }
     }
-  }
-   GRAPH <http://mu.semte.ch/graphs/public> {
+    GRAPH <http://mu.semte.ch/graphs/public> {
         ?concept lpdcExt:hasLatestFunctionalChange ?laatsteFunctioneelGewijzigdeConceptSnapshot .
         FILTER EXISTS {
-          ?concept adms:status ?conceptStatus . 
-       }
+            ?concept adms:status ?conceptStatus .
+        }
+    }
+    GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> {
+        ?instantieConceptSnapshot prov:generatedAtTime ?instantieConceptSnapshotGeneratieTijdstip .
+        ?laatsteFunctioneelGewijzigdeConceptSnapshot prov:generatedAtTime ?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratieTijdstip .
     }
 
-   FILTER (?instantieConceptSnapshot != ?laatsteFunctioneelGewijzigdeConceptSnapshot)
+    FILTER (?laatsteFunctioneelGewijzigdeConceptSnapshotGeneratieTijdstip > ?instantieConceptSnapshotGeneratieTijdstip)
 }
 
 ```
