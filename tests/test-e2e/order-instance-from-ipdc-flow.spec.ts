@@ -387,7 +387,7 @@ test.describe('Order instance from IPDC flow', () => {
         });
 
         test('Legal resources order gets saved and sent correctly', async() => {
-            const titel = `legal resources order test ${uuid()}`;
+            titel = `legal resources order test ${uuid()}`;
             
             const regelgevendeBronTitel = 'regelgevende bron titel';
             const regelgevendeBronBeschrijving = 'regelgevende bron beschrijving';
