@@ -462,6 +462,60 @@ test.describe('Update an instance and verify edits are working', () => {
 
     });
 
+    test('Update a new instance and do consecutive edits on legal resource fields of inhoud tab to verify they can be saved and cleared', async () => {
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+
+        await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
+
+        await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
+
+        await instantieDetailsPage.titelRegelgevendeBronInput().fill('een nieuwe titel voor regelgevende bron');
+        await instantieDetailsPage.titelRegelgevendeBronEngelsInput().fill('a new titel for regelgevende bron');
+        await instantieDetailsPage.titelRegelgevendeBronEngelsInput().blur();
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().fill('een nieuwe beschrijving voor regelgevende bron');
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().fill('a new description for regelgevende bron');
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().blur();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.titelRegelgevendeBronInput().inputValue()).toEqual('een nieuwe titel voor regelgevende bron');
+        expect(await instantieDetailsPage.titelRegelgevendeBronEngelsInput().inputValue()).toEqual('a new titel for regelgevende bron');
+        expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toEqual('een nieuwe beschrijving voor regelgevende bron');
+        expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().textContent()).toEqual('a new description for regelgevende bron');
+
+        await instantieDetailsPage.titelRegelgevendeBronInput().fill('');
+        await instantieDetailsPage.titelRegelgevendeBronEngelsInput().fill('');
+        await instantieDetailsPage.titelRegelgevendeBronEngelsInput().blur();
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().fill('');
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().fill('');
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().blur();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.titelRegelgevendeBronInput().inputValue()).toEqual('');
+        expect(await instantieDetailsPage.titelRegelgevendeBronInput().inputValue()).toEqual('');
+        expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toEqual('');
+        expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().textContent()).toEqual('');
+
+        await instantieDetailsPage.verwijderRegelgevendeBronButton().click();
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        await expect(instantieDetailsPage.verwijderRegelgevendeBronButton()).not.toBeVisible();
+        await expect(instantieDetailsPage.titelRegelgevendeBronInput()).not.toBeVisible();
+        await expect(instantieDetailsPage.titelRegelgevendeBronEngelsInput()).not.toBeVisible();
+        await expect(instantieDetailsPage.beschrijvingRegelgevendeBronEditor()).not.toBeVisible();
+        await expect(instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor()).not.toBeVisible();
+
+    });
+
     test('Update a new instance and do consecutive edits on financial advantages fields of inhoud tab to verify they can be saved and cleared', async () => {
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -610,8 +664,6 @@ test.describe('Update an instance and verify edits are working', () => {
         await expect(instantieDetailsPage.contactpuntAdresBusnummerInput()).not.toBeVisible();
 
     });
-
-    //TODO LPDC-1035: add a test for regelgevende bron fields
 
     test('Update a new instance and do consecutive edits on more info fields of inhoud tab to verify they can be saved and cleared', async () => {
         await homePage.productOfDienstToevoegenButton.click();

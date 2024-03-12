@@ -506,6 +506,59 @@
           "order": 1.0
         }
       ],
+      "regelgevendeBronnen": [
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 1",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie - nl 1",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 1",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 1"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 1",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - nl 1",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 1",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 1"
+          },
+          "url": "https://codex.be/regelgevende-bron-1",
+          "@type": "regelgevendeBron",
+          "order": 0.0
+        },
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 3",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 3",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 3",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 3"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 3",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 3",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 3",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 3"
+          },
+          "url": "https://codex.be/regelgevende-bron-3",
+          "@type": "regelgevendeBron",
+          "order": 2.0
+        },
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 2",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 2",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 2",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 2"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 2",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 2",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 2",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 2"
+          },
+          "url": "https://codex.be/regelgevende-bron-2",
+          "@type": "regelgevendeBron",
+          "order": 1.0
+        }
+      ],      
       "kosten": [
         {
           "beschrijving": {

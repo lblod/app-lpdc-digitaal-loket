@@ -10,6 +10,7 @@ import { WijzigingenBewarenModal } from './modals/wijzigingen-bewaren-modal';
 import { VerzendNaarVlaamseOverheidModal } from './modals/verzend-naar-vlaamse-overheid-modal';
 import { IpdcStub } from "./components/ipdc-stub";
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
+import {v4 as uuid} from 'uuid';
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('Order instance from IPDC flow', () => {
@@ -72,6 +73,7 @@ test.describe('Order instance from IPDC flow', () => {
             await kostOrderCheck();
             await financieelVoordeelOrderCheck();
             await websiteOrderCheck();
+            await regelgevendeBronCheck();
         });
 
         test('Adding and removing keeps orders correct', async () => {
@@ -161,7 +163,7 @@ test.describe('Order instance from IPDC flow', () => {
                 },
                 expectedFormalOrInformalTripleLanguage
             );
-        })
+        });
 
         test('Starting an instance from scratch and adding and removing items keeps the order', async () => {
             titel = 'Order test';
@@ -224,11 +226,9 @@ test.describe('Order instance from IPDC flow', () => {
                 },
                 expectedFormalOrInformalTripleLanguage
             );
-        })
+        });
 
-        //TODO LPDC-1035: add test voor het toevoegen van meerdere regelgevende bronnen en verifieer volgordes in ipdc
-        
-        test('Contactpunten order gets saved and send correctly', async () => {
+        test('Contactpunten order gets saved and sent correctly', async () => {
             titel = 'Contactpunten order test';
             const email = 'mail@example.com'
             const telefoon = '041234567'
@@ -327,7 +327,7 @@ test.describe('Order instance from IPDC flow', () => {
             await instantieDetailsPage.contactpuntAdresBusnummerInput(2).fill('50');
             await expect(instantieDetailsPage.contactpuntAdresValidatie(2)).toContainText('Adres gevonden');
 
-            await verzendNaarVlaamseOverheid()
+            await verzendNaarVlaamseOverheid();
 
             //check order in Ipdc
             const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
@@ -384,8 +384,74 @@ test.describe('Order instance from IPDC flow', () => {
                 },
                 expectedFormalOrInformalTripleLanguage
             );
-        })
+        });
+
+        test('Legal resources order gets saved and sent correctly', async() => {
+            const titel = `legal resources order test ${uuid()}`;
+            
+            const regelgevendeBronTitel = 'regelgevende bron titel';
+            const regelgevendeBronBeschrijving = 'regelgevende bron beschrijving';
+            const regelgevendeBronUrl = 'http://codex.vlaanderen.be/url';
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
+
+            await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
+            await instantieDetailsPage.titelRegelgevendeBronInput(0).fill(`${regelgevendeBronTitel} 1`);
+            await instantieDetailsPage.beschrijvingRegelgevendeBronEditor(0).fill(`${regelgevendeBronBeschrijving} 1`);
+            await instantieDetailsPage.regelgevendeBronUrlInput(0).fill(`${regelgevendeBronUrl}-1`);
+
+            await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
+            await instantieDetailsPage.titelRegelgevendeBronInput(1).fill(`${regelgevendeBronTitel} 2`);
+            await instantieDetailsPage.beschrijvingRegelgevendeBronEditor(1).fill(`${regelgevendeBronBeschrijving} 2`);
+            await instantieDetailsPage.regelgevendeBronUrlInput(1).fill(`${regelgevendeBronUrl}-2`);
+
+            await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
+            await instantieDetailsPage.titelRegelgevendeBronInput(2).fill(`${regelgevendeBronTitel} 3`);
+            await instantieDetailsPage.beschrijvingRegelgevendeBronEditor(2).fill(`${regelgevendeBronBeschrijving} 3`);
+            await instantieDetailsPage.regelgevendeBronUrlInput(2).fill(`${regelgevendeBronUrl}-3`);
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+            await instantieDetailsPage.verwijderRegelgevendeBronButton(1).click();
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+            await verzendNaarVlaamseOverheid();
+            const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage });
+            expect(instancePublishedInIpdc).toBeTruthy();
+
+            verifyInstancePublishedOnIPDC(
+                instancePublishedInIpdc,
+                {
+                    regelgevendeBronnen: [
+                        {
+                            titel: {nl: `${regelgevendeBronTitel} 1`},
+                            beschrijving: {nl: `${regelgevendeBronBeschrijving} 1`},
+                            url: `${regelgevendeBronUrl}-1`,
+                            order: 1,
+                        },
+                        {
+                            titel: {nl: `${regelgevendeBronTitel} 3`},
+                            beschrijving: {nl: `${regelgevendeBronBeschrijving} 3`},
+                            url: `${regelgevendeBronUrl}-3`,
+                            order: 3,
+                        }                    
+                    ]
+                },
+                expectedFormalOrInformalTripleLanguage
+            );
+
+        });
     });
+
+    
 
     async function startVanConcept() {
         await toevoegenPage.resultTable.row(second_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum').click();
@@ -517,6 +583,27 @@ test.describe('Order instance from IPDC flow', () => {
 
             const websiteURL = await instantieDetailsPage.websiteURLInput(order).inputValue();
             expect(websiteURL).toEqual(`https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_${i}`);
+        }
+
+    }
+
+    async function regelgevendeBronCheck() {
+
+        for (let i = 1; i < 4; i++) {
+            let order = i - 1
+
+            const titelRegelgevendeBron = await instantieDetailsPage.titelRegelgevendeBronInput(order).inputValue();
+            const titelRegelgevendeBronEngels = await instantieDetailsPage.titelRegelgevendeBronEngelsInput(order).inputValue();
+            expect(titelRegelgevendeBron).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie - ${formalInformalChoiceSuffix} ${i}`);
+            expect(titelRegelgevendeBronEngels).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie - en ${i}`);
+
+            const beschrijvingRegelgevendeBron = await instantieDetailsPage.beschrijvingRegelgevendeBronEditor(order).textContent();
+            const beschrijvingRegelgevendeBronEngels = await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor(order).textContent();
+            expect(beschrijvingRegelgevendeBron).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - ${formalInformalChoiceSuffix} ${i}`);
+            expect(beschrijvingRegelgevendeBronEngels).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en ${i}`);
+
+            const RegelgevendeBronURL = await instantieDetailsPage.regelgevendeBronUrlInput(order).inputValue();
+            expect(RegelgevendeBronURL).toEqual(`https://codex.be/regelgevende-bron-${i}`);
         }
 
     }
