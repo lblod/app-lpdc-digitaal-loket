@@ -1,6 +1,6 @@
-import {APIRequestContext, expect, request} from "@playwright/test";
-import {ipdcStubUrl, virtuosoUrl} from "../../test-api/test-helpers/test-options";
-import {wait} from "../shared/shared";
+import { APIRequestContext, expect, request } from "@playwright/test";
+import { ipdcStubUrl, virtuosoUrl } from "../../test-api/test-helpers/test-options";
+import { wait } from "../shared/shared";
 
 export type PublicServiceFilter = {
     title: string,
@@ -68,7 +68,7 @@ export class IpdcStub {
 
     static getObjectById(instance: any[], id: string) {
         const object = instance.filter(object => object['@id'] === id);
-        const msg = JSON.stringify([id, instance]);
+        const msg = JSON.stringify({ id: id, instance: instance });
         expect(object, msg).toHaveLength(1);
         return object[0];
     }
@@ -84,7 +84,7 @@ export class IpdcStub {
 
     static async createSnapshotOfTypeUpdate(conceptId: string, withRandomTitle: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, {params: {withRandomTitle: withRandomTitle}});
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomTitle: withRandomTitle } });
         const snapshot: Snapshot = await response.json();
         await processSnapshot(apiRequest, conceptId, snapshot.id);
 
@@ -104,7 +104,7 @@ export class IpdcStub {
         const apiRequest = await request.newContext();
         await apiRequest.post(`${ipdcStubUrl}/instanties/fail`, {
             headers: {
-              'Content-Type': 'application/json'
+                'Content-Type': 'application/json'
             },
             data: {
                 instanceIri: instanceIri,

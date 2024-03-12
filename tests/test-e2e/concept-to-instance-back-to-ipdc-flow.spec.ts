@@ -856,7 +856,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                         order: 0
                     }],
                 regelgeving: { nl: regelgeving, en: regelgevingEngels },
-                juridischeInfoUrls: ['https://ipdc.be/regelgeving', 'https://ipdc.be/codex-page'],
+                regelgevendeBronnen: [
+                    {
+                        url: 'https://ipdc.be/regelgeving',
+                        order: 0,
+                    },
+                    {
+                        url:'https://ipdc.be/codex-page',
+                        order: 1
+                    }],
                 contactPunten: [
                     {
                         email: '1111@example.com',

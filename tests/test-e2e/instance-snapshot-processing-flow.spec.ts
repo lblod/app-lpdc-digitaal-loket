@@ -510,7 +510,16 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                     };
                 }),
                 regelgeving: { nl: regulationDescription, en: regulationDescriptionInEnglish },
-                juridischeInfoUrls: [regelgevendeBronUrl1, regelgevendeBronUrl2],
+                regelgevendeBronnen: [
+                    {
+                        url: regelgevendeBronUrl1,
+                        order: 0
+                    },
+                    {
+                        url: regelgevendeBronUrl2,
+                        order: 1
+                    }
+                ],
                 contactPunten: [
                     {
                         email: `${contactPointEmail}1`,

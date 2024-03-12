@@ -195,10 +195,22 @@
           "order": 0.0
         }
       ],
-      "regelgeving": [
+      "regelgevendeBronnen": [
         {
-          "id": "https://ipdc.be/regelgeving",
-          "@type": "regel",
+          "beschrijving": {
+            "nl": "<p>Beschrijving regelgevende bron.</p> - nl",
+            "nl-BE-x-generated-informal": "<p>Beschrijving regelgevende bron.</p> - informal",
+            "nl-BE-x-generated-formal": "<p>Beschrijving regelgevende bron.</p> - formal",
+            "en": "<p>Beschrijving regelgevende bron.</p> - en"
+          },
+          "naam": {
+            "nl": "Titel regelgevende bron. - nl",
+            "nl-BE-x-generated-informal": "Titel regelgevende bron. - informal",
+            "nl-BE-x-generated-formal": "Titel regelgevende bron. - formal",
+            "en": "Titel regelgevende bron. - en"
+          },
+          "url": "https://ipdc.be/regelgeving",
+          "@type": "regelgevendeBron",
           "order": 0.0
         }
       ],

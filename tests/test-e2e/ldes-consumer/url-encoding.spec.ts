@@ -21,6 +21,14 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
     const json = await response.json();
     expect(json.results.bindings).toMatchObject([
         {
+            g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc' },
+            o: {
+                type: 'typed-literal',
+                datatype: 'http://www.w3.org/2001/XMLSchema#string',
+                value: 'https://ipdc.be/regelgeving'
+            }
+        },
+        {
             g: { type: 'uri', value: 'http://mu.semte.ch/graphs/public' },
             o: {
                 type: 'literal',

@@ -236,14 +236,14 @@
         "en": "<p data-indentation-level=\"0\">Regulation</p>",
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Regelgeving</p>"
       },
-      "regelgevendeBron": [
+      "regelgevendeBronnen": [
         {
-          "@type": "regelgevendeBronUrl",
+          "@type": "regelgevendeBron",
           "url": "https://codex.vlaanderen.be/regelgeving",
           "order": 0
         },
         {
-          "@type": "regelgevendeBronUrl",
+          "@type": "regelgevendeBron",
           "url": "https://codex.vlaanderen.be/andere-regelgeving",
           "order": 1
         }

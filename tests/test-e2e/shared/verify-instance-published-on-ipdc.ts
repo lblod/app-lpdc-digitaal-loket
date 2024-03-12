@@ -47,7 +47,7 @@ export interface PublishedInstanceFields {
     kosten?: NestedFieldGroup[],
     financieleVoordelen?: NestedFieldGroup[],
     regelgeving?: Field,
-    juridischeInfoUrls?: string[],
+    regelgevendeBronnen?: NestedFieldGroup[],
     contactPunten?: ContactPointFields[],
     meerInfos?: NestedFieldGroup[],
     uuid?: string | Presence,
@@ -88,7 +88,7 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateNestedFieldGroup(publicService, instance, 'http://data.europa.eu/m8g/hasCost', 'http://data.europa.eu/m8g/Cost', instanceFields.kosten, gekozenUOfJeVorm);
     validateNestedFieldGroup(publicService, instance, 'http://purl.org/vocab/cpsv#produces', 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage', instanceFields.financieleVoordelen, gekozenUOfJeVorm);
     validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation', arrayContainingText(instanceFields.regelgeving, gekozenUOfJeVorm, true));
-    validateData(publicService, 'http://data.europa.eu/m8g/hasLegalResource', arrayContainingStringIds(instanceFields.juridischeInfoUrls));
+    validateNestedFieldGroup(publicService, instance, 'http://data.europa.eu/m8g/hasLegalResource', 'http://data.europa.eu/eli/ontology#LegalResource', instanceFields.regelgevendeBronnen, gekozenUOfJeVorm);
     validateNestedFieldGroup(publicService, instance, 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://schema.org/WebSite', instanceFields.meerInfos, gekozenUOfJeVorm);
     validateContactPointFields(publicService, instance, instanceFields.contactPunten);
     validatePresentOrData(publicService, 'http://mu.semte.ch/vocabularies/core/uuid', instanceFields.uuid)
@@ -246,7 +246,8 @@ function arrayContainingStringIds(strings: string[] | string | undefined) {
 }
 
 function extractActualDatas(publicService: any, instance: any, predikaat: string, fieldGroup: any[]) {
-    expect(publicService[predikaat]).toHaveLength(fieldGroup.length);
+    const msg = JSON.stringify({ publicService: publicService, predikaat: predikaat, fieldGroup: fieldGroup });
+    expect(publicService[predikaat], msg).toHaveLength(fieldGroup.length);
 
     const actualDatas: any[] = [];
 
