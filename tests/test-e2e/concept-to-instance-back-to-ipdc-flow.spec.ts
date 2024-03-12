@@ -430,10 +430,26 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const newBeschrijvingRegelgevingEngels = beschrijvingRegelgevingEngels + uuid();
         await instantieDetailsPage.beschrijvingRegelgevingEngelsEditor().fill(newBeschrijvingRegelgevingEngels);
 
-        const regelgevendeBronUrl = await instantieDetailsPage.regelgevendeBronUrlInput().inputValue();
-        expect(regelgevendeBronUrl).toEqual(`https://ipdc.be/regelgeving`);
-        await instantieDetailsPage.voegUrlRegelgevendeBronToeButton.click();
-        await instantieDetailsPage.regelgevendeBronUrlInput(1).fill('https://ipdc.be/codex-page');
+        const titelRegelgevendeBron = await instantieDetailsPage.titelRegelgevendeBronInput().inputValue();
+        expect(titelRegelgevendeBron).toEqual(`Titel regelgevende bron. - ${formalInformalChoiceSuffix}`);
+        const newTitelRegelgevendeBron = titelRegelgevendeBron + uuid();
+        await instantieDetailsPage.titelRegelgevendeBronInput().fill(newTitelRegelgevendeBron);
+        const titelRegelgevendeBronEngels = await instantieDetailsPage.titelRegelgevendeBronEngelsInput().inputValue();
+        expect(titelRegelgevendeBronEngels).toEqual('Titel regelgevende bron. - en');
+        const newTitelRegelgevendeBronEngels = titelRegelgevendeBronEngels + uuid();
+        await instantieDetailsPage.titelRegelgevendeBronEngelsInput().fill(newTitelRegelgevendeBronEngels);
+        const beschrijvingRegelgevendeBron = await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent();
+        expect(beschrijvingRegelgevendeBron).toEqual(`Beschrijving regelgevende bron. - ${formalInformalChoiceSuffix}`);
+        const newBeschrijvingRegelgevendeBron = beschrijvingRegelgevendeBron + uuid();
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().fill(newBeschrijvingRegelgevendeBron);
+        const beschrijvingRegelgevendeBronEngels = await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().textContent();
+        expect(beschrijvingRegelgevendeBronEngels).toEqual('Beschrijving regelgevende bron. - en');
+        const newBeschrijvingRegelgevendeBronEngels = beschrijvingRegelgevendeBronEngels + uuid();
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor().fill(newBeschrijvingRegelgevendeBronEngels);
+        const urlRegelgevendeBron = await instantieDetailsPage.regelgevendeBronUrlInput().inputValue();
+        expect(urlRegelgevendeBron).toEqual(`https://ipdc.be/regelgeving`);
+        const newUrlRegelgevendeBron = 'https://ipdc.be/codex-page';
+        await instantieDetailsPage.regelgevendeBronUrlInput().fill(newUrlRegelgevendeBron);
 
         await instantieDetailsPage.voegContactpuntToeButton.click();
         await expect(instantieDetailsPage.contactpuntHeading).toBeVisible();
@@ -585,6 +601,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             uitzonderingenEngels: newUitzonderingenEngels,
             regelgeving: newBeschrijvingRegelgeving,
             regelgevingEngels: newBeschrijvingRegelgevingEngels,
+            regelgevendeBronTitel: newTitelRegelgevendeBron,
+            regelgevendeBronTitelEngels: newTitelRegelgevendeBronEngels,
+            regelgevendeBronBeschrijving: newBeschrijvingRegelgevendeBron,
+            regelgevendeBronBeschrijvingEngels: newBeschrijvingRegelgevendeBronEngels,
+            regelgevendeBronUrl: newUrlRegelgevendeBron,
             kostTitel: newTitelKost,
             kostTitelEngels: newTitelKostEngels,
             kostBeschrijving: newBeschrijvingKost,
@@ -707,8 +728,15 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.beschrijvingRegelgevingEngelsEditor()).not.toBeVisible();
         expect(await instantieDetailsPage.beschrijvingRegelgevingEngelsReadonly().textContent()).toContain(newBeschrijvingRegelgevingEngels);
 
-        expect(await instantieDetailsPage.regelgevendeBronUrlInput(0)).toHaveValue('https://ipdc.be/regelgeving');
-        expect(await instantieDetailsPage.regelgevendeBronUrlInput(1)).toHaveValue('https://ipdc.be/codex-page');
+        await expect(instantieDetailsPage.titelRegelgevendeBronInput()).not.toBeEditable();
+        await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(newTitelRegelgevendeBron);
+        await expect(instantieDetailsPage.titelRegelgevendeBronEngelsInput()).not.toBeEditable();
+        await expect(instantieDetailsPage.titelRegelgevendeBronEngelsInput()).toHaveValue(newTitelRegelgevendeBronEngels);
+        await expect(instantieDetailsPage.beschrijvingRegelgevendeBronEditor()).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingRegelgevendeBronReadonly().textContent()).toContain(newBeschrijvingRegelgevendeBron);
+        await expect(instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor()).not.toBeVisible();
+        expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsReadonly().textContent()).toContain(newBeschrijvingRegelgevendeBronEngels);        
+        expect(await instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue('https://ipdc.be/codex-page');
 
         await expect(instantieDetailsPage.contactpuntEmailReadonly()).toHaveValue('1111@example.com');
         await expect(instantieDetailsPage.contactpuntTelefoonReadonly()).toHaveValue('111111111');
@@ -772,6 +800,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         uitzonderingenEngels,
         regelgeving,
         regelgevingEngels,
+        regelgevendeBronTitel,
+        regelgevendeBronTitelEngels,
+        regelgevendeBronBeschrijving,
+        regelgevendeBronBeschrijvingEngels,
+        regelgevendeBronUrl,
         kostTitel,
         kostTitelEngels,
         kostBeschrijving,
@@ -858,12 +891,10 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 regelgeving: { nl: regelgeving, en: regelgevingEngels },
                 regelgevendeBronnen: [
                     {
-                        url: 'https://ipdc.be/regelgeving',
-                        order: 0,
-                    },
-                    {
-                        url:'https://ipdc.be/codex-page',
-                        order: 1
+                        titel: { nl: regelgevendeBronTitel, en: regelgevendeBronTitelEngels},
+                        beschrijving: { nl: regelgevendeBronBeschrijving, en: regelgevendeBronBeschrijvingEngels},
+                        url: regelgevendeBronUrl,
+                        order: 0
                     }],
                 contactPunten: [
                     {

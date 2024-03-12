@@ -115,8 +115,14 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingRegelgevingEngelsEditor: (order?: number) => Locator;
     readonly beschrijvingRegelgevingEngelsReadonly: (order?: number) => Locator;
 
+    readonly titelRegelgevendeBronInput: (order?: number) => Locator;
+    readonly titelRegelgevendeBronEngelsInput: (order?: number) => Locator;
+    readonly beschrijvingRegelgevendeBronEditor: (order?: number) => Locator;
+    readonly beschrijvingRegelgevendeBronReadonly: (order?: number) => Locator;
+    readonly beschrijvingRegelgevendeBronEngelsEditor: (order?: number) => Locator;
+    readonly beschrijvingRegelgevendeBronEngelsReadonly: (order?: number) => Locator;
     readonly regelgevendeBronUrlInput: (order?: number) => Locator;
-    readonly voegUrlRegelgevendeBronToeButton: Locator;
+    readonly voegRegelgevendeBronToeButton: Locator;
 
     readonly contactpuntHeading: Locator;
     readonly voegContactpuntToeButton: Locator;
@@ -285,8 +291,14 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevingEngelsEditor = (order: number = 0) => this.editorRightOf('Regelgeving').nth(order);
         this.beschrijvingRegelgevingEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Regelgeving').nth(order);
 
+        this.titelRegelgevendeBronInput = (order: number = 0) => this.inputBelow('Titel regelgevende bron').nth(order);
+        this.titelRegelgevendeBronEngelsInput = (order: number = 0) => this.inputRightOf('Titel regelgevende bron').nth(order);
+        this.beschrijvingRegelgevendeBronEditor = (order: number = 0) => this.editorBelow('Beschrijving regelgevende bron').nth(order);
+        this.beschrijvingRegelgevendeBronReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving regelgevende bron').nth(order);
+        this.beschrijvingRegelgevendeBronEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving regelgevende bron').nth(order);
+        this.beschrijvingRegelgevendeBronEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving regelgevende bron').nth(order);
         this.regelgevendeBronUrlInput = (order: number = 0) => this.inputBelow("URL regelgevende bron").nth(order);
-        this.voegUrlRegelgevendeBronToeButton = page.getByRole('button', {name: 'Voeg URL regelgevende bron toe'});
+        this.voegRegelgevendeBronToeButton = page.getByRole('button', {name: 'Voeg regelgevende bron toe'});
 
         this.voegContactpuntToeButton = page.getByRole('button', {name: 'Voeg contactpunt toe'});
         this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt','Contactpunten').nth(order);

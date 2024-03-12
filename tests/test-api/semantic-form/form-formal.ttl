@@ -928,7 +928,7 @@ ext:regulationsPg a form:PropertyGroup;
     form:scope ext:legalResourceS;
     form:createGenerator ext:legalResourceG;
     sh:group ext:regulationsPg;
-    form:addLabel "Voeg URL regelgevende bron toe";
+    form:addLabel "Voeg regelgevende bron toe";
     form:canAdd true;
     form:canRemove true;
     sh:order 4 .
@@ -955,14 +955,62 @@ ext:regulationsPg a form:PropertyGroup;
   ##########################################################
   ext:legalResourceSf a form:SubForm;
     form:removeLabel "Verwijder regelgevende bron";
+    form:includes ext:legalResourceTitleF;
+    form:includes extEng:legalResourceTitleF;
+    form:includes ext:legalResourceDescriptionF;
+    form:includes extEng:legalResourceDescriptionF;
     form:includes ext:legalResourceUrlF .
+
+    ##########################################################
+    # Field:  regelgevende bron title
+    ##########################################################
+    ext:legalResourceTitleF a form:Field ;
+        sh:name "Titel regelgevende bron" ;
+        sh:order 1 ;
+        form:language "nl-be-x-formal";
+        sh:path dct:title ;
+        form:displayType displayTypes:defaultInput ;
+        sh:group ext:legalResourcePg-sub .
+
+    ##########################################################
+    # Field (En.): regelgevende bron title
+    ##########################################################
+    extEng:legalResourceTitleF a form:Field ;
+        sh:name "Engelse vertaling van de titel" ;
+        sh:order 2 ;
+        form:language "en";
+        sh:path dct:title ;
+        form:displayType displayTypes:defaultInput ;
+        sh:group ext:legalResourcePg-sub .
+
+    ##########################################################
+    # Field: regelgevende bron description
+    ##########################################################
+    ext:legalResourceDescriptionF a form:Field ;
+        sh:name "Beschrijving regelgevende bron" ;
+        sh:order 3 ;
+        form:language "nl-be-x-formal";
+        sh:path dct:description ;
+        form:displayType displayTypes:richText ;
+        sh:group ext:legalResourcePg-sub .
+
+    ##########################################################
+    # Field (En.): regelgevende bron description
+    ##########################################################
+    extEng:legalResourceDescriptionF a form:Field ;
+        sh:name "Engelse vertaling van de beschrijving" ;
+        sh:order 4 ;
+        form:language "en";
+        sh:path dct:description ;
+        form:displayType displayTypes:richText ;
+        sh:group ext:legalResourcePg-sub .
 
      ##########################################################
      # Field: regelgevende bron url
      ##########################################################
      ext:legalResourceUrlF a form:Field ;
        sh:name "URL regelgevende bron" ;
-       sh:order 1 ;
+       sh:order 5 ;
        sh:path schema:url ;
        form:validations [
          a form:UriConstraint ;
@@ -1263,7 +1311,7 @@ ext:websitesPg a form:PropertyGroup;
         sh:group ext:websitesPg-sub .
 
     ##########################################################
-    # Field: ContactPunt website
+    # Field: Meer Info website
     ##########################################################
     ext:websiteUrlF a form:Field ;
         sh:name "Website URL" ;

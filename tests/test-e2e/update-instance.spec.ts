@@ -611,6 +611,8 @@ test.describe('Update an instance and verify edits are working', () => {
 
     });
 
+    //TODO LPDC-1035: add a test for regelgevende bron fields
+
     test('Update a new instance and do consecutive edits on more info fields of inhoud tab to verify they can be saved and cleared', async () => {
         await homePage.productOfDienstToevoegenButton.click();
 

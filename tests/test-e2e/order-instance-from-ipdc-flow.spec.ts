@@ -226,6 +226,8 @@ test.describe('Order instance from IPDC flow', () => {
             );
         })
 
+        //TODO LPDC-1035: add test voor het toevoegen van meerdere regelgevende bronnen en verifieer volgordes in ipdc
+        
         test('Contactpunten order gets saved and send correctly', async () => {
             titel = 'Contactpunten order test';
             const email = 'mail@example.com'

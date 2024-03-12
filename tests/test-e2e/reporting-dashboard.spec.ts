@@ -46,7 +46,11 @@ test.describe('Reporting dashboard', () => {
         wijzigingenBewarenModel = WijzigingenBewarenModal.create(page);
         productOfDienstOpnieuwBewerkenModal = ProductOfDienstOpnieuwBewerkenModal.create(page);
         productOfDienstVerwijderenModal = ProductOfDienstVerwijderenModal.create(page);
-    })
+    });
+
+    test.afterEach(async () => {
+        await page.close();
+    });
 
     test('Generate and view lpdcConceptsReport', async ({request}) => {
         let instanceIri: string | undefined = undefined;

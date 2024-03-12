@@ -239,12 +239,28 @@
       "regelgevendeBronnen": [
         {
           "@type": "regelgevendeBron",
-          "url": "https://codex.vlaanderen.be/regelgeving",
+          "titel": {
+            "en": "Title legal resource - 1",
+            "nl-BE-x-informal": "Titel regelgevende bron - 1"
+          },
+          "beschrijving": {
+            "en": "<p data-indentation-level=\"0\">Description legal resource - 1</p>",
+            "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving regelgevende bron - 1</p>"
+          },
+          "url": "https://codex.vlaanderen.be/regelgeving1",
           "order": 0
         },
         {
           "@type": "regelgevendeBron",
-          "url": "https://codex.vlaanderen.be/andere-regelgeving",
+          "titel": {
+            "en": "Title legal resource - 2",
+            "nl-BE-x-informal": "Titel regelgevende bron - 2"
+          },
+          "beschrijving": {
+            "en": "<p data-indentation-level=\"0\">Description legal resource - 2</p>",
+            "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving regelgevende bron - 2</p>"
+          },
+          "url": "https://codex.vlaanderen.be/regelgeving2",
           "order": 1
         }
       ],
