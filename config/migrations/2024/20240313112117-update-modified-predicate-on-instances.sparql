@@ -1,0 +1,21 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://purl.org/dc/terms/modified> ?modified .
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://schema.org/dateModified> ?modified .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://purl.org/dc/terms/modified> ?modified.
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+}
