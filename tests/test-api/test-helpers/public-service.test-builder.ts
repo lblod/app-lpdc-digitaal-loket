@@ -36,8 +36,8 @@ export class PublicServiceTestBuilder {
     private resourceLanguage: Uri;
     private keywords: Literal[] = [];
     private productType: Uri;
-    private created: Literal;
-    private modified: Literal;
+    private dateCreated: Literal;
+    private dateModified: Literal;
     private startDate: Literal;
     private endDate: Literal;
     private yourEuropeCategory: Uri;
@@ -67,8 +67,8 @@ export class PublicServiceTestBuilder {
             .withUUID(uuid())
             .withTitle('Instance title', Language.INFORMAL)
             .withDescription('Instance description', Language.INFORMAL)
-            .withCreated(new Date())
-            .withModified(new Date())
+            .withDateCreated(new Date())
+            .withDateModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
             .withInstanceStatus(InstanceStatus.ontwerp)
@@ -80,8 +80,8 @@ export class PublicServiceTestBuilder {
             .withUUID(uuid())
             .withTitle('Instance title', Language.INFORMAL)
             .withDescription('Instance description', Language.INFORMAL)
-            .withCreated(new Date())
-            .withModified(new Date())
+            .withDateCreated(new Date())
+            .withDateModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
             .withAdditionalDescriptions('Additional description', Language.INFORMAL)
@@ -190,13 +190,13 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
-    withCreated(date: Date) {
-        this.created = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
+    withDateCreated(date: Date) {
+        this.dateCreated = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
         return this;
     }
 
-    withModified(date: Date) {
-        this.modified = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
+    withDateModified(date: Date) {
+        this.dateModified = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
         return this;
     }
 
@@ -339,8 +339,8 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.language, this.resourceLanguage),
             ...this.keywords.map(keyword => new Triple(this.id, Predicates.keyword, keyword)),
             new Triple(this.id, Predicates.productType, this.productType),
-            new Triple(this.id, Predicates.dateCreated, this.created),
-            new Triple(this.id, Predicates.dateModified, this.modified),
+            new Triple(this.id, Predicates.dateCreated, this.dateCreated),
+            new Triple(this.id, Predicates.dateModified, this.dateModified),
             new Triple(this.id, Predicates.startDate, this.startDate),
             new Triple(this.id, Predicates.endDate, this.endDate),
             new Triple(this.id, Predicates.yourEuropeCategory, this.yourEuropeCategory),

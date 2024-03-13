@@ -265,7 +265,7 @@
         "@value": "e4886833-7078-46ed-8946-ed8de19d1bf5"
       }
     ],
-    "http://purl.org/dc/terms/created": [
+    "http://schema.org/dateCreated": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2023-04-18T07:17:09.534Z"
@@ -281,7 +281,7 @@
         "@value": "<p data-indentation-level=\"0\">The adoption certificate is drawn up by the registrar of births, deaths, and marriages based on an adoption ruling. Under certain conditions, you can request a copy or an extract of the certificate.</p>"
       }
     ],
-    "http://purl.org/dc/terms/modified": [
+    "http://schema.org/dateModified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2023-08-18T12:28:20.412Z"

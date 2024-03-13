@@ -16,7 +16,7 @@ test.describe('publish instance', () => {
             .withInstanceStatus(InstanceStatus.ontwerp)
             .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withModified(modified)
+            .withDateModified(modified)
             .buildAndPersist(request, pepingenId);
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});
@@ -32,7 +32,7 @@ test.describe('publish instance', () => {
         const modified = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.ontwerp)
-            .withModified(modified)
+            .withDateModified(modified)
             .buildAndPersist(request, pepingenId)
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});
@@ -52,7 +52,7 @@ test.describe('publish instance', () => {
             .withDateSent(new Date())
             .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withModified(modified)
+            .withDateModified(modified)
             .buildAndPersist(request, pepingenId);
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/publish`, {params: {cookie: loginResponse.cookie}});

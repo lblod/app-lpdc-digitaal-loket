@@ -9,18 +9,13 @@
 # should be removed in publish and probably also be removed from the instance itself
 #SHOULD BE REMOVED  ? #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/productID> "1502" .
 
-
-# functioneel te vragen, wordt nu nog bij ipdc niet gebruikt.
-<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589> .
-
 #voorlopig houden van uuid: probleem is ipdc -> hergebruik van hun data . je kan uuid's niet zomaar wijzigen.
 #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://mu.semte.ch/vocabularies/core/uuid> "4102816b-9cee-4698-8b7d-4bcb60f2dba9" .
 
-#add to contract
+#actual data by lpdc-publish
+<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/dateCreated> "2023-11-30T12:25:18.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/dateModified> "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-
-#actual data by lpdc-publish
 <http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://data.europa.eu/m8g/hasLegalResource> <http://data.lblod.info/id/legal-resource/f69d76ab-4358-4089-a50b-8d5c39971269> .
 <http://data.lblod.info/id/legal-resource/f69d76ab-4358-4089-a50b-8d5c39971269> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
 <http://data.lblod.info/id/legal-resource/f69d76ab-4358-4089-a50b-8d5c39971269> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .

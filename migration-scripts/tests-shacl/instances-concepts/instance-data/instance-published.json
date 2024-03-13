@@ -211,7 +211,7 @@
         "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be"
       }
     ],
-    "http://purl.org/dc/terms/created": [
+    "http://schema.org/dateCreated": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2023-11-30T12:25:18.623Z"
@@ -227,7 +227,7 @@
         "@value": "<p data-indentation-level=\"0\">The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.f16972a5-3a4e-4ef6-a016-3b78c3c60c3e</p>"
       }
     ],
-    "http://purl.org/dc/terms/modified": [
+    "http://schema.org/dateModified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2023-11-30T12:25:55.789Z"

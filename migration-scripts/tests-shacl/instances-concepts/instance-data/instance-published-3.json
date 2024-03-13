@@ -97,7 +97,7 @@
         "@value": "7e390478-c39c-4378-96c6-2eae89cb907a"
       }
     ],
-    "http://purl.org/dc/terms/created": [
+    "http://schema.org/dateCreated": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2023-12-05T10:03:31.069Z"
@@ -109,7 +109,7 @@
         "@value": "<p data-indentation-level=\"0\">Order test beschrijving</p>"
       }
     ],
-    "http://purl.org/dc/terms/modified": [
+    "http://schema.org/dateModified": [
       {
         "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
         "@value": "2023-12-05T10:03:35.897Z"

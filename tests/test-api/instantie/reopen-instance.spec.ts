@@ -16,7 +16,7 @@ test.describe('Reopen instance', () =>  {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.verstuurd)
             .withDateSent(new Date())
-            .withModified(modified)
+            .withDateModified(modified)
             .buildAndPersist(request, pepingenId)
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {params: {cookie: loginResponse.cookie}});
@@ -32,7 +32,7 @@ test.describe('Reopen instance', () =>  {
         const modified = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.ontwerp)
-            .withModified(modified)
+            .withDateModified(modified)
             .buildAndPersist(request, pepingenId)
 
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {params: {cookie: loginResponse.cookie}});

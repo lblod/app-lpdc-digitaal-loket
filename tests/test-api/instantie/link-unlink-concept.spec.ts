@@ -182,7 +182,7 @@ test.describe('unlink', () => {
             .withLinkedConcept(concept.getSubject())
             .withVersionedSource(conceptSnapshot.getSubject())
             .withProductId('100')
-            .withModified(modified)
+            .withDateModified(modified)
             .buildAndPersist(request, pepingenId);
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request);
@@ -392,7 +392,7 @@ test.describe('link', () => {
 
         const modified = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
-            .withModified(modified)
+            .withDateModified(modified)
             .buildAndPersist(request, pepingenId);
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request);
