@@ -186,7 +186,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - question: should conceptTag be present on an instance ? or should it be instance tag => INSTANCE TAG
 - dc:type ontbreekt bij concept ? = DONE 
 - concept: publicationMedium ontbreekt? = DONE
-- instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie die we naar ipdc sturen is lpdcExt:hasWebsites; we are not using a context object when generating the json-ld; so this seems incorrect ...
+- instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie die we naar ipdc sturen is lpdcExt:hasWebsites; we are not using a context object when generating the json-ld; so this seems incorrect ... => fixed ... 
 - product id verwijderen van lpdc-publish - check (TODO LPDC-709)
 - status (ontwerp, verstuurd) verwijderen van lpdc-publish (TODO LPDC-709)
 - executing authority level: required for instance (not for concept)
