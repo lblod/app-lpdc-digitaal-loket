@@ -39,11 +39,11 @@
       "@type": "@id"
     },
     "aangemaaktOp": {
-      "@id": "dct:created",
+      "@id": "schema:dateCreated",
       "@type": "xsd:dateTime"
     },
     "bewerktOp": {
-      "@id": "dct:modified",
+      "@id": "schema:dateModified",
       "@type": "xsd:dateTime"
     },
     "linkedConcept": {

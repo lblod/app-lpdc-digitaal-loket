@@ -24,7 +24,7 @@ test.describe('publish instance', () => {
 
         const updatedInstance = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');
-        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
+        expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).not.toEqual(modified.toISOString());
     });
 
     test('throw error when instance is not valid', async ({request}) => {
@@ -65,7 +65,7 @@ test.describe('publish instance', () => {
 
         const updatedInstance = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');
-        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).toEqual(modified.toISOString());
+        expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).toEqual(modified.toISOString());
     });
 
 });

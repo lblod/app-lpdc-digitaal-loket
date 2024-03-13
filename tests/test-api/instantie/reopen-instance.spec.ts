@@ -24,7 +24,7 @@ test.describe('Reopen instance', () =>  {
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/ontwerp');
-        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
+        expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).not.toEqual(modified.toISOString());
     });
 
     test('Reopen draft instance should throw error', async ({request}) => {
@@ -45,7 +45,7 @@ test.describe('Reopen instance', () =>  {
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/ontwerp');
-        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).toEqual(modified.toISOString());
+        expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).toEqual(modified.toISOString());
     });
 
 });

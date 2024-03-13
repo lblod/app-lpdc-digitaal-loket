@@ -98,8 +98,8 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateData(publicService, 'http://purl.org/dc/terms/source', arrayContainingStringIds(instanceFields.conceptSource));
     validateData(publicService, 'http://www.w3.org/ns/adms#status', arrayContainingStringIds(instanceFields.conceptStatus));
     validateData(publicService, 'http://purl.org/dc/terms/type', arrayContainingStringIds(instanceFields.type));
-    validatePresentOrData(publicService, 'http://purl.org/dc/terms/created', instanceFields.aangemaaktOp, 'dateTime');
-    validatePresentOrData(publicService, 'http://purl.org/dc/terms/modified', instanceFields.bewerktOp, 'dateTime');
+    validatePresentOrData(publicService, 'http://schema.org/dateCreated', instanceFields.aangemaaktOp, 'dateTime');
+    validatePresentOrData(publicService, 'http://schema.org/dateModified', instanceFields.bewerktOp, 'dateTime');
     validateData(publicService, 'http://schema.org/startDate', arrayContainingString(instanceFields.geldigVanaf, 'dateTime'));
     validateData(publicService, 'http://schema.org/endDate', arrayContainingString(instanceFields.geldigTot, 'dateTime'));
     validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience', arrayContainingStringIds(instanceFields.doelgroepen));

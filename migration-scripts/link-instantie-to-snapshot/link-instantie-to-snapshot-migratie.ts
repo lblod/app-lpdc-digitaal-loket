@@ -34,8 +34,8 @@ async function getInstancesWithConcept(): Promise<Instance[]> {
         SELECT ?instance ?concept ?graph ?created ?modified WHERE {
             GRAPH ?graph {
                 ?instance a <http://purl.org/vocab/cpsv#PublicService> .
-                ?instance <http://purl.org/dc/terms/created> ?created .
-                ?instance <http://purl.org/dc/terms/modified> ?modified .
+                ?instance <http://schema.org/dateCreated> ?created .
+                ?instance <http://schema.org/dateModified> ?modified .
                 ?instance <http://purl.org/dc/terms/source> ?concept .                
             }
             FILTER NOT EXISTS {

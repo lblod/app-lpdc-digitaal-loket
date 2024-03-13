@@ -20,20 +20,21 @@ export default {
       PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
       PREFIX adms:    <http://www.w3.org/ns/adms#>
       PREFIX dct:     <http://purl.org/dc/terms/>
+      PREFIX schema:  <http://schema.org/> 
       PREFIX pav:     <http://purl.org/pav/>
 
       SELECT DISTINCT ?uriBestuurseenheid ?naam ?typeUri ?type ?uriPublicService ?title ?modified ?status ?statusLabel WHERE {
         ?uriPublicService
-          a             cpsv:PublicService ;
-          adms:status   ?status ;
-          dct:modified  ?modified ;
-          dct:title     ?title ;
-          pav:createdBy ?uriBestuurseenheid .
+          a                     cpsv:PublicService ;
+            adms:status           ?status ;
+            schema:dateModified   ?modified ;
+            dct:title             ?title ;
+            pav:createdBy         ?uriBestuurseenheid .
 
         ?uriBestuurseenheid 
           a                     besluit:Bestuurseenheid ;
-          skos:prefLabel        ?naam ;
-          besluit:classificatie ?typeUri .
+            skos:prefLabel        ?naam ;
+            besluit:classificatie ?typeUri .
 
         ?typeUri skos:prefLabel ?type .
 

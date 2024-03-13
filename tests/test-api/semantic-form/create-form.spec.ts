@@ -28,8 +28,8 @@ test('Create new empty instance', async ({request}) => {
     const triples = await fetchType(request, response.data.uri, PublicServiceType);
     expect(triples.findObject(Predicates.type).getValue()).toEqual(PublicServiceType);
     expect(triples.findObject(Predicates.uuid)).toBeDefined();
-    expect(triples.findObject(Predicates.created)).toBeDefined();
-    expect(triples.findObject(Predicates.modified)).toBeDefined();
+    expect(triples.findObject(Predicates.dateCreated)).toBeDefined();
+    expect(triples.findObject(Predicates.dateModified)).toBeDefined();
     expect(triples.findTriple(Predicates.createdBy).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.hasCompetentAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
@@ -69,8 +69,8 @@ test('Create instance from concept includes base fields', async ({request}) => {
     expect(triples.findObject(Predicates.description).getValue()).toEqual(concept.findObject(Predicates.description).getValue());
     expect(triples.findObject(Predicates.startDate)).toEqual(concept.findObject(Predicates.startDate));
     expect(triples.findObject(Predicates.endDate)).toEqual(concept.findObject(Predicates.endDate));
-    expect(triples.findObject(Predicates.created)).toBeDefined();
-    expect(triples.findObject(Predicates.modified)).toBeDefined();
+    expect(triples.findObject(Predicates.dateCreated)).toBeDefined();
+    expect(triples.findObject(Predicates.dateModified)).toBeDefined();
     expect(triples.findTriple(Predicates.source).getObjectValue()).toEqual(concept.findTriple(Predicates.type).getSubjectValue());
     expect(triples.findTriple(Predicates.createdBy).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);

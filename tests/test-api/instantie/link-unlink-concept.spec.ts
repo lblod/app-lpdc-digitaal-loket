@@ -191,8 +191,8 @@ test.describe('unlink', () => {
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
-        expect(updatedInstance.findAllTriples(Predicates.modified)).toHaveLength(1);
-        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
+        expect(updatedInstance.findAllTriples(Predicates.dateModified)).toHaveLength(1);
+        expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).not.toEqual(modified.toISOString());
     });
 
     test('unlink a concept from an instance, should update the isInstantiated flag of displayConfiguration to false, if no other instance from the same bestuurseenheid is linked to this concept', async ({request}) => {
@@ -401,8 +401,8 @@ test.describe('link', () => {
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
-        expect(updatedInstance.findAllTriples(Predicates.modified)).toHaveLength(1);
-        expect(updatedInstance.findTriple(Predicates.modified).getObjectValue()).not.toEqual(modified.toISOString());
+        expect(updatedInstance.findAllTriples(Predicates.dateModified)).toHaveLength(1);
+        expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).not.toEqual(modified.toISOString());
     });
 
     test('link a concept to an instance, should update the isInstantiated flag of displayConfiguration to true', async ({request}) => {

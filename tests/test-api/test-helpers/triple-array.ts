@@ -144,8 +144,6 @@ export const Predicates = {
     startDate: new Uri('http://schema.org/startDate'),
     endDate: new Uri('http://schema.org/endDate'),
     productId: new Uri('http://schema.org/productID'),
-    created: new Uri('http://purl.org/dc/terms/created'),
-    modified: new Uri('http://purl.org/dc/terms/modified'),
     source: new Uri('http://purl.org/dc/terms/source'),
     createdBy: new Uri('http://purl.org/pav/createdBy'),
     hasExecutingAuthority: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority'),
