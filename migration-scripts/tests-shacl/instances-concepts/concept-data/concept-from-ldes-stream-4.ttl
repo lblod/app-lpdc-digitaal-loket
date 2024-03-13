@@ -6,7 +6,7 @@
 #REMOVE FROM CONTRACT #<https://ipdc.vlaanderen.be/id/conceptsnapshot/58c1a011-2240-403b-86f6-2397ae38f21c> <http://schema.org/identifier> """58c1a011-2240-403b-86f6-2397ae38f21c"""^^<http://www.w3.org/2001/XMLSchema#string>.
 #REMOVE FROM CONTRACT #<https://ipdc.vlaanderen.be/id/conceptsnapshot/58c1a011-2240-403b-86f6-2397ae38f21c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Update>.
 
-<https://ipdc.vlaanderen.be/id/conceptsnapshot/58c1a011-2240-403b-86f6-2397ae38f21c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>.
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/58c1a011-2240-403b-86f6-2397ae38f21c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/58c1a011-2240-403b-86f6-2397ae38f21c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/58c1a011-2240-403b-86f6-2397ae38f21c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/58c1a011-2240-403b-86f6-2397ae38f21c> <http://purl.org/dc/terms/title> """Akte van een levenloos kind"""@nl-BE-x-generated-informal.

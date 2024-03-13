@@ -6,7 +6,7 @@
 #REMOVE FROM CONTRACT #<https://ipdc.vlaanderen.be/id/conceptsnapshot/e52a455e-211d-4697-b7f6-1a5fbd6ec571> <http://schema.org/identifier> """e52a455e-211d-4697-b7f6-1a5fbd6ec571"""^^<http://www.w3.org/2001/XMLSchema#string>.
 #REMOVE FROM CONTRACT #<https://ipdc.vlaanderen.be/id/conceptsnapshot/e52a455e-211d-4697-b7f6-1a5fbd6ec571> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Update>.
 
-<https://ipdc.vlaanderen.be/id/conceptsnapshot/e52a455e-211d-4697-b7f6-1a5fbd6ec571> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>.
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/e52a455e-211d-4697-b7f6-1a5fbd6ec571> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/e52a455e-211d-4697-b7f6-1a5fbd6ec571> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/e52a455e-211d-4697-b7f6-1a5fbd6ec571> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/e52a455e-211d-4697-b7f6-1a5fbd6ec571> <http://purl.org/dc/terms/title> """Akte van geboorte"""@nl.

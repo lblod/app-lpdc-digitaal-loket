@@ -13,7 +13,10 @@ import {
     Theme, YourEuropeCategory
 } from "./codelists";
 
+export const ConceptSnapshotType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot';
+
 export class ConceptSnapshotTestBuilder {
+
     private id = new Uri(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${uuid()}`);
     private type: Uri;
     private titles: Literal[] = [];
@@ -73,7 +76,7 @@ export class ConceptSnapshotTestBuilder {
     }
 
     private withType() {
-        this.type = new Uri(ConceptType);
+        this.type = new Uri(ConceptSnapshotType);
         return this;
     }
 

@@ -90,7 +90,7 @@ ex:a-referenced-concept
 
 #a concept that has a minimal valid data filled in; expect no validation errors
 ex:a-minimal-valid-concept
-    a lpdcExt:ConceptualPublicService;
+    a lpdcExt:ConceptualPublicServiceSnapshot;
     schema:dateCreated "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
     schema:dateModified "2023-11-30T12:25:55.789Z"^^xsd:dateTime ;
     dc:title """title-nl"""@nl ;
@@ -103,7 +103,7 @@ ex:a-minimal-valid-concept
 
 #a concept that has full data filled in; expect no validation errors
 ex:a-full-valid-concept
-    a lpdcExt:ConceptualPublicService ;
+    a lpdcExt:ConceptualPublicServiceSnapshot ;
     schema:dateCreated "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
     schema:dateModified "2023-11-30T12:25:55.789Z"^^xsd:dateTime ;
     dc:title """title-nl"""@nl ;

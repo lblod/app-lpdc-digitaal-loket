@@ -35,6 +35,9 @@ skos:Concept a rdfs:Class .
 <http://www.w3.org/ns/locn#Address> a rdfs:Class;
   rdfs:label "Address"@nl .
 
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot> a rdfs:Class;
+  rdfs:label "ConceptualPublicServiceSnapshot"@nl .
+
 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> a rdfs:Class;
   rdfs:label "ConceptualPublicService"@nl .
 
@@ -122,6 +125,7 @@ schemas:WebSite a rdfs:Class;
     skos:Concept,
     <http://www.w3.org/ns/locn#Address>,
     <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>,
     <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>,
     schemas:ContactPoint,
     schemas:WebSite,

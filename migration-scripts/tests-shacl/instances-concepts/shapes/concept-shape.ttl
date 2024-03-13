@@ -229,7 +229,7 @@ oss:ConceptualPublicServiceShape
           shacl:name "yourEuropeCategory"@nl;
           shacl:path lpdcExt:yourEuropeCategory
       ];
-    shacl:targetClass lpdcExt:ConceptualPublicService .
+    shacl:targetClass lpdcExt:ConceptualPublicServiceSnapshot .
 
 oss:ConceptRuleShape
     a shacl:NodeShape;

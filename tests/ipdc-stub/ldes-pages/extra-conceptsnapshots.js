@@ -21,7 +21,7 @@ export const conceptCreate = (conceptId) => {
         "productnummer": "3000",
         "gearchiveerd": false,
         "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
-        "@type": "ConceptualPublicService",
+        "@type": "ConceptualPublicServiceSnapshot",
         "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
     };
 };
@@ -48,7 +48,7 @@ export const conceptUpdate = (conceptId, withRandomTitle) => {
         "productnummer": "3000",
         "gearchiveerd": false,
         "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
-        "@type": "ConceptualPublicService",
+        "@type": "ConceptualPublicServiceSnapshot",
         "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
     };
 };
@@ -74,7 +74,7 @@ export const conceptArchive = (conceptId) => {
         "productnummer": "3000",
         "gearchiveerd": true,
         "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
-        "@type": "ConceptualPublicService",
+        "@type": "ConceptualPublicServiceSnapshot",
         "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
     }
 };

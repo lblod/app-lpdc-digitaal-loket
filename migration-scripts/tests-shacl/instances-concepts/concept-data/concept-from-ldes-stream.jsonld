@@ -14,7 +14,7 @@
     "hydra": "http://www.w3.org/ns/hydra/core#",
     "dtv": "https://data.vlaanderen.be/ns/",
     "sh": "http://www.w3.org/ns/shacl#",
-    "ConceptualPublicService": "conceptNs:ConceptualPublicService",
+    "ConceptualPublicServiceSnapshot": "conceptNs:ConceptualPublicServiceSnapshot",
     "id": {
       "@id": "sch:identifier"
     },
@@ -530,6 +530,6 @@
     ]
   },
   "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be",
-  "@type": "ConceptualPublicService",
+  "@type": "ConceptualPublicServiceSnapshot",
   "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84"
 }

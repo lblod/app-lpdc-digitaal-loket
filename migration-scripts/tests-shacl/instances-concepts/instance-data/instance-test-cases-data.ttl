@@ -134,7 +134,7 @@ ex:a-legal-resource
     shacl:order 1.
 
 ex:a-minimal-valid-concept
-    a lpdcExt:ConceptualPublicService;
+    a lpdcExt:ConceptualPublicServiceSnapshot;
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl.
 
