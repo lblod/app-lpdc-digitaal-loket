@@ -546,8 +546,8 @@ test.describe('Verifies editing and publishing of value objects with optional fi
         test(`Meer Info Website > beschrijving is optioneel`, async () => {
             const titel = `Meer Info Website > beschrijving is optioneel ${uuid()}`;
 
-            const meerInfoTitel = `meer info website titel${nmbr}`;
-            const meerInfoUrl = `http://test${nmbr++}@test.com`;
+            const meerInfoTitel = `meer info website titel`;
+            const meerInfoUrl = `http://test@test.com`;
 
             await toevoegenPage.volledigNieuwProductToevoegenButton.click();
             await instantieDetailsPage.expectToBeVisible();
