@@ -5,7 +5,7 @@ export const instanceSnapshot = (instanceId, gearchiveerd = false) => {
     return {
         "@id": `http://data.lblod.info/id/public-service-snapshot/${instanceSnapshotId}`,
         "@type": [
-            "PublicService"
+            "InstancePublicServiceSnapshot"
         ],
         "isVersionOf": `http://data.lblod.info/id/public-service/${instanceId}`,
         "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",

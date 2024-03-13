@@ -41,6 +41,9 @@ skos:Concept a rdfs:Class .
 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> a rdfs:Class;
   rdfs:label "ConceptualPublicService"@nl .
 
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot> a rdfs:Class;
+  rdfs:label "InstancePublicServiceSnapshot"@nl .
+
 cpsv:PublicService a rdfs:Class;
   rdfs:label "InstancePublicService"@nl .
 

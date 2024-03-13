@@ -242,7 +242,7 @@ oss:InstancePublicServiceShape
           shacl:name "yourEuropeCategory"@nl;
           shacl:path lpdcExt:yourEuropeCategory
       ];
-    shacl:targetClass cpsv:PublicService .
+    shacl:targetClass lpdcExt:InstancePublicServiceSnapshot .
 
 oss:InstanceRuleShape
     a shacl:NodeShape;

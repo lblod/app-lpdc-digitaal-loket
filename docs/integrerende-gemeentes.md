@@ -675,7 +675,7 @@ Ter illustratie de gegeneerde [turtle](#turtle) voor dit deel van LDES, merk op 
 Dit is de informatie die door LPDC zal verwerkt worden.
 
 ```turtle
-<http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126> a <http://purl.org/vocab/cpsv#PublicService>;
+<http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
     <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3>;
     <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
     <http://schema.org/dateCreated> "2024-02-14T13:42:12.357Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
@@ -685,7 +685,7 @@ Dit is de informatie die door LPDC zal verwerkt worden.
     <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie</p>"@nl-be-x-informal;
     <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
 
-<http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09> a <http://purl.org/vocab/cpsv#PublicService>;
+<http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
     <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3>;
     <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
     <http://schema.org/dateCreated> "2024-02-14T13:42:12.357Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;

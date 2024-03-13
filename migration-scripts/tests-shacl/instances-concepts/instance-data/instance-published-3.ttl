@@ -12,7 +12,7 @@
 <http://data.lblod.info/form-data/nodes/91228c4e-9109-4e76-a5e1-106a14c0e7bb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Cost> .
 <http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Order test beschrijving</p>"@nl-be-x-informal .
 <http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://purl.org/dc/terms/title> "Order test"@nl-be-x-informal .
-<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#PublicService> .
+<http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot> .
 <http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522> .
 <http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://data.europa.eu/m8g/hasCost> <http://data.lblod.info/form-data/nodes/1deee469-f620-4219-8118-e7fd1e99b35b> .
 <http://data.lblod.info/id/public-service/7e390478-c39c-4378-96c6-2eae89cb907a> <http://data.europa.eu/m8g/hasCost> <http://data.lblod.info/form-data/nodes/2acb141e-9916-4e25-a805-26cdcc935523> .

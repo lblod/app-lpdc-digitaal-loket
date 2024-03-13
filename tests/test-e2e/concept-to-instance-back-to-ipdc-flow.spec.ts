@@ -839,8 +839,6 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         expectedFormalOrInformalTripleLanguage: string,
         bestuurseenheidConfig: BestuursEenheidConfig) {
 
-        const publicService = IpdcStub.getObjectByType(instance, 'http://purl.org/vocab/cpsv#PublicService');
-
         verifyInstancePublishedOnIPDC(
             instance,
             {

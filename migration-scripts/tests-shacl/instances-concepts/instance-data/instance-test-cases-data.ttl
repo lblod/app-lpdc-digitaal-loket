@@ -140,7 +140,7 @@ ex:a-minimal-valid-concept
 
 #an instance that has a minimal valid data filled in; expect no validation errors
 ex:a-minimal-valid-instance
-    a cpsv:PublicService ;
+    a lpdcExt:InstancePublicServiceSnapshot ;
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
     dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
@@ -152,7 +152,7 @@ ex:a-minimal-valid-instance
 
 #an instance that has full data filled in; expect no validation errors
 ex:a-full-valid-instance
-    a cpsv:PublicService ;
+    a lpdcExt:InstancePublicServiceSnapshot ;
     dc:title """title-nl"""@nl ;
     dc:title """title-en"""@en ;
     dc:description  """description-nl"""@nl ;
