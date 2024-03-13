@@ -25,6 +25,51 @@ test(`Urls from ipdc ldes stream are saved with datatype <http://www.w3.org/2001
             o: {
                 type: 'typed-literal',
                 datatype: 'http://www.w3.org/2001/XMLSchema#string',
+                value: 'https://codex.be/regelgevende-bron-1'
+            }
+        },
+        {
+            g: { type: 'uri', value: 'http://mu.semte.ch/graphs/public' },
+            o: {
+                type: 'literal',
+                value: 'https://codex.be/regelgevende-bron-1'
+            }
+        },        
+        {
+            g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc' },
+            o: {
+                type: 'typed-literal',
+                datatype: 'http://www.w3.org/2001/XMLSchema#string',
+                value: 'https://codex.be/regelgevende-bron-2'
+            }
+        },
+        {
+            g: { type: 'uri', value: 'http://mu.semte.ch/graphs/public' },
+            o: {
+                type: 'literal',
+                value: 'https://codex.be/regelgevende-bron-2'
+            }
+        },        
+        {
+            g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc' },
+            o: {
+                type: 'typed-literal',
+                datatype: 'http://www.w3.org/2001/XMLSchema#string',
+                value: 'https://codex.be/regelgevende-bron-3'
+            }
+        },
+        {
+            g: { type: 'uri', value: 'http://mu.semte.ch/graphs/public' },
+            o: {
+                type: 'literal',
+                value: 'https://codex.be/regelgevende-bron-3'
+            }
+        },        
+        {
+            g: { type: 'uri', value: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc' },
+            o: {
+                type: 'typed-literal',
+                datatype: 'http://www.w3.org/2001/XMLSchema#string',
                 value: 'https://ipdc.be/regelgeving'
             }
         },
