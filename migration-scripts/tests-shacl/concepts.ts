@@ -11,10 +11,8 @@ export async function main() {
 
 async function conceptTestData() {
     const conceptShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/concept-shape.ttl'));
-    const commonShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/common-shapes.ttl'));
     const shapes =
-        conceptShape
-            .merge(commonShape);
+        conceptShape;
 
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
@@ -30,10 +28,8 @@ async function conceptTestData() {
 
 async function conceptFromLdesStream() {
     const conceptShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/concept-shape.ttl'));
-    const commonShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/common-shapes.ttl'));
     const shapes =
-        conceptShape
-            .merge(commonShape);
+        conceptShape;
 
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const besluitOntology = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));

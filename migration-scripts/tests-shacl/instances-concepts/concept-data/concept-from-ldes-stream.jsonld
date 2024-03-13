@@ -115,14 +115,12 @@
         "@base": "https://data.vlaanderen.be/id/organisatie/"
       }
     },
-    "regelgeving": {
-      "@container": "@set",
+    "regelgevendeBronnen": {
       "@id": "deu:hasLegalResource",
-      "@context": {
-        "id": "@id"
-      }
+      "@type": "@id",
+      "@container": "@set"
     },
-    "regel": {
+    "regelgevendeBron": {
       "@id": "deuOntology:LegalResource"
     },
     "websites": {
@@ -493,10 +491,10 @@
       "order": 0.0
     }
   ],
-  "regelgeving": [
+  "regelgevendeBronnen": [
     {
-      "id": "https://ipdc.be/regelgeving",
-      "@type": "regel",
+      "url": "https://ipdc.be/regelgeving",
+      "@type": "regelgevendeBron",
       "order": 0.0
     }
   ],

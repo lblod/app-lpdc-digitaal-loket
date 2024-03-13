@@ -22,7 +22,6 @@ oss:instanceShapes a rdf:Property;
      rdfs:label "shacl shapes for instanties van implementatiemodel"@nl .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> oss:instanceShapes oss:InstancePublicServiceShape,
-                                                                                                   oss:eli::LegalResourceShape,
                                                                                                    oss:InstanceAddressShape,
                                                                                                    oss:InstanceContactPointShape,
                                                                                                    oss:InstanceRuleShape,
@@ -30,7 +29,8 @@ oss:instanceShapes a rdf:Property;
                                                                                                    oss:InstanceCostShape,
                                                                                                    oss:InstanceRequirementShape,
                                                                                                    oss:InstanceEvidenceShape,
-                                                                                                   oss:InstanceOutputShape.
+                                                                                                   oss:InstanceOutputShape,
+                                                                                                   oss:InstanceLegalResourceShape.
 
 oss:InstancePublicServiceShape
     a shacl:NodeShape;
@@ -75,7 +75,6 @@ oss:InstancePublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "Bevoegd bestuursniveau van een publieke dienst"@nl;
-          shacl:minCount 1;
           shacl:name "competentAuthorityLevel"@nl;
           rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/bevoegd-bestuursniveau.ttl";
           shacl:path lpdcExt:competentAuthorityLevel
@@ -105,7 +104,6 @@ oss:InstancePublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "Uitvoerend bestuursniveau van een publieke dienst"@nl;
-          shacl:minCount 1;
           shacl:name "executingAuthorityLevel"@nl;
           rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/uitvoerend-bestuursniveau.ttl";
           shacl:path lpdcExt:executingAuthorityLevel
@@ -543,3 +541,41 @@ oss:InstanceAddressShape
           shacl:path adres:Straatnaam
       ];
     shacl:targetClass locn:Address .
+
+oss:InstanceLegalResourceShape
+    a shacl:NodeShape;
+    shacl:property [
+       shacl:datatype rdf:langString;
+       shacl:description "This property represents the title of the Legal Resource."@nl;
+       shacl:minCount 0;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "title"@nl;
+       shacl:path dc:title
+   ], [
+       shacl:datatype rdf:langString;
+       shacl:description "This property represents the description of the Legal Resource."@nl;
+       shacl:minCount 0;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "description"@nl;
+       shacl:path dc:description
+   ], [
+       shacl:datatype xsd:string;
+       shacl:description "A url that that point to the related legal resource in for example the flemish codex."@nl;
+       shacl:minCount 1;
+       shacl:maxCount 1;
+       shacl:name "regelgevendeBron"@nl;
+       shacl:path schema:url
+    ], [
+       shacl:description "The order of this Legal Resource"@nl;
+       shacl:name "order"@nl;
+       shacl:datatype xsd:integer ;
+       shacl:minCount 1;
+       shacl:maxCount 1;
+       shacl:path shacl:order
+      ];
+    shacl:targetClass eli:LegalResource .
+

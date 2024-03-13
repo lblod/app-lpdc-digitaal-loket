@@ -80,7 +80,13 @@ ex:another-concept-output
 
 ex:a-concept-legal-resource
     a eli:LegalResource;
+    dc:title """a-legal-resource-title"""@nl;
+    dc:description """a-legal-resource-description"""@nl;
+    schema:url "https://codex.vlaanderen.be/regelgeving" ;
     shacl:order 1.
+
+ex:a-referenced-concept
+    dc:title """a valid concept""".
 
 #a concept that has a minimal valid data filled in; expect no validation errors
 ex:a-minimal-valid-concept
@@ -90,7 +96,7 @@ ex:a-minimal-valid-concept
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
     schema:productID "678";
-    dc:isVersionOf <some-iri> ;
+    dc:isVersionOf ex:a-referenced-concept ;
     lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
     prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
     lpdcExt:isArchived true.
@@ -130,7 +136,7 @@ ex:a-full-valid-concept
     m8g:thematicArea ex:a-thematic-area;
     lpdcExt:yourEuropeCategory ex:a-your-europe-category;
     schema:productID "1234";
-    dc:isVersionOf <some-other-iri>;
+    dc:isVersionOf ex:a-referenced-concept;
     prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
     pera:language lang:NLD.
 

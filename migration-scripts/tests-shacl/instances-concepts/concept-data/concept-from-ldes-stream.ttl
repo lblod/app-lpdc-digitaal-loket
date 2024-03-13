@@ -81,8 +81,9 @@ _:b447 <http://purl.org/dc/terms/title> "Titel financieel voordeel. - informal"@
 _:b447 <http://purl.org/dc/terms/title> "Titel financieel voordeel. - formal"@nl-BE-x-generated-formal .
 _:b447 <http://purl.org/dc/terms/title> "Titel financieel voordeel. - en"@en .
 _:b447 <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
-<https://ipdc.be/regelgeving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
-<https://ipdc.be/regelgeving> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:b449 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/eli/ontology#LegalResource> .
+_:b449 <http://schema.org/url> "https://ipdc.be/regelgeving>".
+_:b449 <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://purl.org/dc/terms/description> "<p>De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.</p> - nl"@nl .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://purl.org/dc/terms/description> "<p>The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.</p>"@en .
@@ -121,7 +122,7 @@ _:b447 <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://www.w3.org/2000/01/rdf-schema#seeAlso> _:b429 .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://data.europa.eu/m8g/hasCost> _:b438 .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://purl.org/vocab/cpsv#produces> _:b447 .
-<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://data.europa.eu/m8g/hasLegalResource> <https://ipdc.be/regelgeving> .
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://data.europa.eu/m8g/hasLegalResource> _:b449 .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/startDate> "2020-08-26T11:40:20.026205561Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/endDate> "2025-07-12T11:40:20.026205561Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel> .

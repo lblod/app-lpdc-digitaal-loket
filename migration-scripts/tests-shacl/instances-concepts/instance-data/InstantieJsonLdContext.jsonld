@@ -114,14 +114,12 @@
       "@id": "instantieNs:regulation",
       "@container": "@language"
     },
-    "regelgeving": {
-      "@container": "@set",
+    "regelgevendeBronnen": {
       "@id": "deu:hasLegalResource",
-      "@context": {
-        "id": "@id"
-      }
+      "@type": "@id",
+      "@container": "@set"
     },
-    "regel": {
+    "regelgevendeBron": {
       "@id": "deuOntology:LegalResource"
     },
     "contactgegevens": {

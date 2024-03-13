@@ -22,7 +22,7 @@ oss:conceptShapes a rdf:Property;
 
 
 <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> oss:conceptShapes oss:ConceptualPublicServiceShape,
-                                                                                                  oss:eli::LegalResourceShape,
+                                                                                                  oss:ConceptLegalResourceShape,
                                                                                                   oss:ConceptRuleShape,
                                                                                                   oss:ConceptWebsiteShape,
                                                                                                   oss:ConceptCostShape,
@@ -86,7 +86,6 @@ oss:ConceptualPublicServiceShape
       ], [
           shacl:class skos:Concept;
           shacl:description "Bevoegd bestuursniveau van een publieke dienst"@nl;
-          shacl:minCount 1;
           shacl:name "competentAuthorityLevel"@nl;
           rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/bevoegd-bestuursniveau.ttl";
           shacl:path lpdcExt:competentAuthorityLevel
@@ -422,3 +421,40 @@ oss:ConceptOutputShape
           shacl:path shacl:order
       ];
     shacl:targetClass m8g:Output.
+
+oss:ConceptLegalResourceShape
+    a shacl:NodeShape;
+    shacl:property [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents the title of the Legal Resource."@nl;
+          shacl:minCount 0;
+          shacl:maxCount 8; # one for each language allowed
+          shacl:languageIn ("en" "nl" "fr" "de" "nl-be-x-formal" "nl-be-x-informal" "nl-be-x-generated-formal" "nl-be-x-generated-informal");
+          shacl:uniqueLang true;
+          shacl:name "title"@nl;
+          shacl:path dc:title
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents the description of the Legal Resource."@nl;
+          shacl:minCount 0;
+          shacl:maxCount 8; # one for each language allowed
+          shacl:languageIn ("en" "nl" "fr" "de" "nl-be-x-formal" "nl-be-x-informal" "nl-be-x-generated-formal" "nl-be-x-generated-informal");
+          shacl:uniqueLang true;
+          shacl:name "description"@nl;
+          shacl:path dc:description
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A url that that point to the related legal resource in for example the flemish codex."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:name "regelgevendeBron"@nl;
+          shacl:path schema:url
+      ], [
+          shacl:description "The order of this Legal Resource"@nl;
+          shacl:name "order"@nl;
+          shacl:datatype xsd:integer ;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:path shacl:order
+      ];
+    shacl:targetClass eli:LegalResource .

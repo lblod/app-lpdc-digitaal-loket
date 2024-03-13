@@ -24,7 +24,6 @@ The shape for 2022-06-15 can be found [here](instances-concepts%2Fshapes%2F2022-
 ## Updated shapes
 - Updated [concept-shape.ttl](instances-concepts%2Fshapes%2Fconcept-shape.ttl).
 - Updated [instance-shape.ttl](instances-concepts%2Fshapes%2Finstance-shape.ttl).
-- Includes [common-shapes.ttl](instances-concepts%2Fshapes%2Fcommon-shapes.ttl).
 
 ## Concept Shape Additions
 - `schema:dateModified` existing, add to docu, check

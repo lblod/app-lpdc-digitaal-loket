@@ -33,10 +33,8 @@ async function readOntologies() {
 
 async function instanceTestData() {
     const instanceShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/instance-shape.ttl'));
-    const commonShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/common-shapes.ttl'));
     const shapes =
-        instanceShape
-            .merge(commonShape);
+        instanceShape;
 
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
@@ -49,10 +47,8 @@ async function instanceTestData() {
 
 async function publishedInstance() {
     const instanceShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/instance-shape.ttl'));
-    const commonShape = await rdf.dataset().import(rdf.fromFile('instances-concepts/shapes/common-shapes.ttl'));
     const shapes =
-        instanceShape
-            .merge(commonShape);
+        instanceShape;
 
     //FYI: how to serialize in another format ... and you can also add prefixes ...  / but it does not seem to produce compact results ... but it works
     //const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-published.json'));

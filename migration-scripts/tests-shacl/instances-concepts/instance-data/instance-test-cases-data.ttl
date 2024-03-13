@@ -128,6 +128,8 @@ ex:another-output
 
 ex:a-legal-resource
     a eli:LegalResource;
+    dc:title """a-legal-resource-title"""@nl;
+    dc:description """a-legal-resource-description"""@nl;
     schema:url "https://codex.vlaanderen.be/regelgeving" ;
     shacl:order 1.
 
