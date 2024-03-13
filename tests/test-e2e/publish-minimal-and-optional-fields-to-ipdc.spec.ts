@@ -275,6 +275,43 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             );
         });
 
+        test(`Regelgevende bron > titel en beschrijving zijn optioneel`, async () => {
+            const titel = `Regelgevende bron > titel en beschrijving zijn optioneel ${uuid()}`;
+
+            const regelgevendeBronUrl = 'http://codex.vlaanderen.be/url';
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
+
+            await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
+            await instantieDetailsPage.regelgevendeBronUrlInput().fill(regelgevendeBronUrl);
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+            await verzendNaarVlaamseOverheid();
+
+            const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage });
+            expect(instancePublishedInIpdc).toBeTruthy();
+
+            verifyInstancePublishedOnIPDC(
+                instancePublishedInIpdc,
+                {
+                    regelgevendeBronnen: [
+                        {
+                            url: regelgevendeBronUrl,
+                            order: 1,
+                        }
+                    ]
+                },
+                expectedFormalOrInformalTripleLanguage
+            );
+        });
+
     });
 
     test.describe('Contactpunt', () => {
@@ -457,33 +494,33 @@ test.describe('Verifies editing and publishing of value objects with optional fi
 
             test(`Contactpunt > Adres is optioneel`, async () => {
                 const titel = `Contactpunt > Adres is optioneel ${uuid()}`;
-    
+
                 const contactpuntEmail = `test${nmbr++}@me.com`;
                 const contactpuntTelefoon = `111111111`;
                 const contactpuntWebsiteUrl = `http://test${nmbr++}@test.com`;
                 const contactpuntOpeningsUren = `ma - vrij - ${nmbr++}`;
-    
+
                 await toevoegenPage.volledigNieuwProductToevoegenButton.click();
                 await instantieDetailsPage.expectToBeVisible();
-    
+
                 await instantieDetailsPage.titelInput.fill(titel);
                 await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
-    
+
                 await instantieDetailsPage.voegContactpuntToeButton.click();
                 await instantieDetailsPage.contactpuntEmailSelect().insertNewValue(contactpuntEmail);
                 await instantieDetailsPage.contactpuntTelefoonSelect().insertNewValue(contactpuntTelefoon);
                 await instantieDetailsPage.contactpuntWebsiteURLSelect().insertNewValue(contactpuntWebsiteUrl);
-                await instantieDetailsPage.contactpuntOpeningsurenSelect().insertNewValue(contactpuntOpeningsUren);                
-    
+                await instantieDetailsPage.contactpuntOpeningsurenSelect().insertNewValue(contactpuntOpeningsUren);
+
                 await instantieDetailsPage.wijzigingenBewarenButton.click();
                 await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
-    
+
                 await verzendNaarVlaamseOverheid();
-    
+
                 const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
                 const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage });
                 expect(instancePublishedInIpdc).toBeTruthy();
-    
+
                 verifyInstancePublishedOnIPDC(
                     instancePublishedInIpdc,
                     {
@@ -500,10 +537,50 @@ test.describe('Verifies editing and publishing of value objects with optional fi
                     expectedFormalOrInformalTripleLanguage
                 );
             });
+        });
 
-            //TODO LPDC-1035: add tests for other fields of Address
-            //TODO LPDC-1035: add test for Website > Description
+    });
 
+    test.describe('Meer Info Website', () => {
+
+        test(`Meer Info Website > beschrijving is optioneel`, async () => {
+            const titel = `Meer Info Website > beschrijving is optioneel ${uuid()}`;
+
+            const meerInfoTitel = `meer info website titel${nmbr}`;
+            const meerInfoUrl = `http://test${nmbr++}@test.com`;
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
+
+            await instantieDetailsPage.voegWebsiteToeButton.click();
+            await instantieDetailsPage.titelWebsiteInput().fill(meerInfoTitel)
+            await instantieDetailsPage.websiteURLInput().fill(meerInfoUrl)
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+            await verzendNaarVlaamseOverheid();
+
+            const expectedFormalOrInformalTripleLanguage = 'nl-be-x-informal';
+            const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: titel, expectedFormalOrInformalTripleLanguage: expectedFormalOrInformalTripleLanguage });
+            expect(instancePublishedInIpdc).toBeTruthy();
+
+            verifyInstancePublishedOnIPDC(
+                instancePublishedInIpdc,
+                {
+                    meerInfos: [
+                        {
+                            titel: { nl: meerInfoTitel },
+                            url: meerInfoUrl,
+                            order: 1
+                        }
+                    ]
+                },
+                expectedFormalOrInformalTripleLanguage
+            );
         });
 
     });
