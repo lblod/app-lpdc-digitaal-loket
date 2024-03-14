@@ -13,13 +13,13 @@ async function instantiesZonderReviewStatus(): Promise<Instantie[]> {
     const response = await executeQuery(`
 PREFIX ext:     <http://mu.semte.ch/vocabularies/ext/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
 PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 
 select distinct ?bestuurseenheidGraph ?instantie ?instantieConceptSnapshot ?concept ?recentsteConceptSnapshot ?conceptStatus where {
 
     GRAPH ?bestuurseenheidGraph {
-        ?instantie a cpsv:PublicService .
+        ?instantie a lpdcExt:InstancePublicService .
         ?instantie ext:hasVersionedSource ?instantieConceptSnapshot .
         ?instantie dcterms:source ?concept .
         OPTIONAL {

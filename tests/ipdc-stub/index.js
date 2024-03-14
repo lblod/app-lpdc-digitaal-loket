@@ -58,7 +58,7 @@ app.put('/instanties', (req, res, next) => {
     try {
         console.log('received new instances');
         const newInstance = req.body;
-        const instanceIri = newInstance.find(object => object['@type'][0] === 'http://purl.org/vocab/cpsv#PublicService' || object['@type'][0] === 'https://www.w3.org/ns/activitystreams#Tombstone')?.['@id'];
+        const instanceIri = newInstance.find(object => object['@type'][0] === 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService' || object['@type'][0] === 'https://www.w3.org/ns/activitystreams#Tombstone')?.['@id'];
         if (instanceThatShouldFail.some(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri)) {
             const fail = instanceThatShouldFail.find(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri);
             console.log('published instance is not valid');

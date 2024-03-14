@@ -102,7 +102,7 @@ test.describe('Delete an instance', () => {
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: newTitel, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
         expect(instancePublishedInIpdc).toBeTruthy();
-        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
+        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
         const publicServiceUri = publicService['@id'];
 
         await homePage.resultTable.row(first_row).link('Bekijk').click();
@@ -142,7 +142,7 @@ test.describe('Delete an instance', () => {
 
         const activityStreamFormerType = tombstonedPublicService['https://www.w3.org/ns/activitystreams#formerType'];
         expect(activityStreamFormerType).toHaveLength(1);
-        expect(activityStreamFormerType).toEqual([{ '@id': 'http://purl.org/vocab/cpsv#PublicService' }]);
+        expect(activityStreamFormerType).toEqual([{ '@id': 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService' }]);
 
     });
 

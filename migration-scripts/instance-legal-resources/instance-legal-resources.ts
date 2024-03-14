@@ -61,7 +61,7 @@ async function getAllInstancesWithLegalResources(): Promise<Instance[]> {
     const query = `
         SELECT DISTINCT ?instance ?graph WHERE {
             GRAPH ?graph {
-                ?instance a  <http://purl.org/vocab/cpsv#PublicService>.
+                ?instance a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>.
                 ?instance <http://purl.org/dc/terms/source> ?concept.
             }
             GRAPH <http://mu.semte.ch/graphs/public> {
@@ -86,7 +86,7 @@ async function getAllLegalResourcesForInstance(instance: Instance): Promise<stri
     const query = `
         SELECT DISTINCT ?legalResource WHERE {
             GRAPH <${instance.graph}> {
-                ?instance a  <http://purl.org/vocab/cpsv#PublicService>.
+                ?instance a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>.
                 ?instance <http://purl.org/dc/terms/source> ?concept.
                 FILTER(?instance = <${instance.instanceUri}> )
             }  

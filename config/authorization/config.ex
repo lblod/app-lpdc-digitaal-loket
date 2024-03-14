@@ -117,7 +117,7 @@ defmodule Acl.UserGroups.Config do
                         "http://xmlns.com/foaf/0.1/Document",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#AbstractPublicService",
-                        "http://purl.org/vocab/cpsv#PublicService",
+                        "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService",
                         "https://www.w3.org/ns/activitystreams#Tombstone",
                         "http://data.europa.eu/m8g/PublicOrganisation",
                         "http://data.europa.eu/m8g/Requirement",

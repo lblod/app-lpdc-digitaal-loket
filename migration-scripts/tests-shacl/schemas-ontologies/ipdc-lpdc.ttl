@@ -44,8 +44,9 @@ skos:Concept a rdfs:Class .
 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot> a rdfs:Class;
   rdfs:label "InstancePublicServiceSnapshot"@nl .
 
-cpsv:PublicService a rdfs:Class;
-  rdfs:label "InstancePublicService"@nl .
+<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> a rdfs:Class;
+  rdfs:label "InstancePublicService"@nl;
+  rdfs:subClassOf cpsv:PublicService.
 
 schemas:ContactPoint a rdfs:Class;
   rdfs:label "ContactPoint"@nl .
@@ -130,6 +131,7 @@ schemas:WebSite a rdfs:Class;
     <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>,
     <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>,
     <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>,
+    <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>,
     schemas:ContactPoint,
     schemas:WebSite,
     <http://www.w3.org/ns/locn#adminUnitL2>,

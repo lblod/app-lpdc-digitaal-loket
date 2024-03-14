@@ -220,7 +220,7 @@ test.describe('Herziening nodig', () => {
             title: `Concept created ${conceptId}`,
             expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
         });
-        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'http://purl.org/vocab/cpsv#PublicService');
+        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
 
         expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${updateSnapshot.id}`);
         expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).not.toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${createSnapshot.id}`);

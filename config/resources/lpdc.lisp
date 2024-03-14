@@ -49,7 +49,7 @@
 )
 
 (define-resource public-service (abstract-public-service)
-  :class (s-prefix "cpsv:PublicService")
+  :class (s-prefix "lpdcExt:InstancePublicService")
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")
              (conceptual-public-service :via ,(s-prefix "dct:source")

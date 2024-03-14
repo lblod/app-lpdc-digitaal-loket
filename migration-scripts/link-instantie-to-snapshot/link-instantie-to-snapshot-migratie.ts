@@ -33,7 +33,7 @@ async function getInstancesWithConcept(): Promise<Instance[]> {
     const query = `
         SELECT ?instance ?concept ?graph ?created ?modified WHERE {
             GRAPH ?graph {
-                ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+                ?instance a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 ?instance <http://schema.org/dateCreated> ?created .
                 ?instance <http://schema.org/dateModified> ?modified .
                 ?instance <http://purl.org/dc/terms/source> ?concept .                

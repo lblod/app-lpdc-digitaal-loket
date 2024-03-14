@@ -59,7 +59,7 @@ async function findInstances(): Promise<Instance[]> {
     const query = `
         SELECT ?instance ?graph WHERE {
             GRAPH ?graph {
-                ?instance a <http://purl.org/vocab/cpsv#PublicService>.
+                ?instance a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>.
             }
         }
     `;
@@ -79,7 +79,7 @@ async function findRequirementsFor(instance: Instance): Promise<Requirement[]> {
     const query = `
         SELECT ?requirementUri ?order WHERE {
             GRAPH ?graph {
-                <${instance.uri}> a <http://purl.org/vocab/cpsv#PublicService> .
+                <${instance.uri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 <${instance.uri}> <http://vocab.belgif.be/ns/publicservice#hasRequirement> ?requirementUri .
                 ?requirementUri a <http://data.europa.eu/m8g/Requirement> .
                 OPTIONAL { ?requirementUri <http://www.w3.org/ns/shacl#order> ?order . }
@@ -97,7 +97,7 @@ async function findProceduresFor(instance: Instance): Promise<Procedure[]> {
     const query = `
         SELECT ?procedureUri ?order WHERE {
             GRAPH ?graph {
-                <${instance.uri}> a <http://purl.org/vocab/cpsv#PublicService> .
+                <${instance.uri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 <${instance.uri}> <http://purl.org/vocab/cpsv#follows> ?procedureUri .
                 ?procedureUri a <http://purl.org/vocab/cpsv#Rule> .
                 OPTIONAL { ?procedureUri <http://www.w3.org/ns/shacl#order> ?order . }
@@ -133,7 +133,7 @@ async function findWebsites(instance: Instance): Promise<Website[]> {
     const query = `
         SELECT ?websiteUri ?order WHERE {
             GRAPH ?graph {
-                <${instance.uri}> a <http://purl.org/vocab/cpsv#PublicService> .
+                <${instance.uri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 <${instance.uri}> <http://www.w3.org/2000/01/rdf-schema#seeAlso> ?websiteUri .
                 ?websiteUri a <http://schema.org/WebSite> .
                 OPTIONAL { ?websiteUri <http://www.w3.org/ns/shacl#order> ?order . }
@@ -151,7 +151,7 @@ async function findCostsFor(instance: Instance): Promise<Cost[]> {
     const query = `
         SELECT ?costUri ?order WHERE {
             GRAPH ?graph {
-                <${instance.uri}> a <http://purl.org/vocab/cpsv#PublicService> .
+                <${instance.uri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 <${instance.uri}> <http://data.europa.eu/m8g/hasCost> ?costUri .
                 ?costUri a <http://data.europa.eu/m8g/Cost> .
                 OPTIONAL { ?costUri <http://www.w3.org/ns/shacl#order> ?order . }
@@ -169,7 +169,7 @@ async function findFinancialAdvantageFor(instance: Instance): Promise<FinancialA
     const query = `
         SELECT ?financialAdvantageUri ?order WHERE {
             GRAPH ?graph {
-                <${instance.uri}> a <http://purl.org/vocab/cpsv#PublicService> .
+                <${instance.uri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 <${instance.uri}> <http://purl.org/vocab/cpsv#produces> ?financialAdvantageUri .
                 ?financialAdvantageUri a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage> .
                 OPTIONAL { ?financialAdvantageUri <http://www.w3.org/ns/shacl#order> ?order . }
@@ -187,7 +187,7 @@ async function findContactPointsFor(instance: Instance): Promise<ContactPoint[]>
     const query = `
         SELECT ?contactPointUri ?order WHERE {
             GRAPH ?graph {
-                <${instance.uri}> a <http://purl.org/vocab/cpsv#PublicService> .
+                <${instance.uri}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 <${instance.uri}> <http://data.europa.eu/m8g/hasContactPoint> ?contactPointUri .
                 ?contactPointUri a <http://schema.org/ContactPoint> .
                 OPTIONAL { ?contactPointUri <http://www.w3.org/ns/shacl#order> ?order . }

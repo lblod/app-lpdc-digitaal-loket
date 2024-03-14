@@ -17,7 +17,7 @@ import {
 } from "./codelists";
 import {pepingenId} from "./login";
 
-export const PublicServiceType = 'http://purl.org/vocab/cpsv#PublicService';
+export const PublicServiceType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService';
 export const TombstoneType = 'https://www.w3.org/ns/activitystreams#Tombstone';
 export class PublicServiceTestBuilder {
 

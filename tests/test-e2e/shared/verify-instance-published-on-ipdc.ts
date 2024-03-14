@@ -77,7 +77,7 @@ export interface PublishedInstanceFields {
 export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: PublishedInstanceFields, gekozenUOfJeVorm: string) {
 
     // PUBLIC SERVICE
-    const publicService = IpdcStub.getObjectByType(instance, 'http://purl.org/vocab/cpsv#PublicService');
+    const publicService = IpdcStub.getObjectByType(instance, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
 
     validateData(publicService, 'http://purl.org/dc/terms/title', arrayContainingText(instanceFields.titel, gekozenUOfJeVorm));
     validateData(publicService, 'http://purl.org/dc/terms/description', arrayContainingText(instanceFields.beschrijving, gekozenUOfJeVorm, true));

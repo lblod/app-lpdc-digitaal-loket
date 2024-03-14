@@ -173,7 +173,7 @@ test.describe('Reporting dashboard', () => {
         );
         expect(row).toBeDefined();
         expect(row.publicService).toEqual(instanceIri);
-        expect(row.type).toEqual('http://purl.org/vocab/cpsv#PublicService');
+        expect(row.type).toEqual('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
         expect(row.title).toEqual(newTitel);
         expect(row.bestuurseenheidLabel).toEqual('Pepingen');
         expect(row.classificatieLabel).toEqual('Gemeente');
@@ -265,7 +265,7 @@ test.describe('Reporting dashboard', () => {
         );
         expect(row).toBeDefined();
         expect(row.publicService).toEqual(instanceIri);
-        expect(row.type).toEqual('http://purl.org/vocab/cpsv#PublicService');
+        expect(row.type).toEqual('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
         expect(row.title).toEqual(newTitel);
         expect(row.bestuurseenheidLabel).toEqual('Pepingen');
         expect(row.classificatieLabel).toEqual('Gemeente');

@@ -13,7 +13,7 @@ async function getAdressen(): Promise<Adres[]> {
     const response = await executeQuery(`
         select distinct ?graph ?s ?adres ?straat ?huisnummer ?bus ?gemeente ?postcode ?land where {
             GRAPH ?graph {
-                ?s a <http://purl.org/vocab/cpsv#PublicService> .
+                ?s a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
                 ?s <http://data.europa.eu/m8g/hasContactPoint> ?contactPoint .
                 ?contactPoint <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> ?adres .
                 ?adres <https://data.vlaanderen.be/ns/adres#Straatnaam> ?straat .

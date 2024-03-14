@@ -21,7 +21,6 @@ DELETE {
 Then run script to set the instance review statuses correct for non archived concepts
 ```
 PREFIX ext:     <http://mu.semte.ch/vocabularies/ext/>
-PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 PREFIX adms: <http://www.w3.org/ns/adms#>
@@ -34,7 +33,7 @@ INSERT {
 }
 WHERE {
     GRAPH ?bestuurseenheidsGraph {
-      ?instantie a cpsv:PublicService .
+      ?instantie a lpdcExt:InstancePublicService .
       ?instantie ext:hasVersionedSource ?instantieConceptSnapshot .
       ?instantie dcterms:source ?concept .
       FILTER NOT EXISTS {
@@ -60,7 +59,6 @@ WHERE {
 Lastly, run script to set the instance review statuses correct for archived concepts:
 ```
 PREFIX ext:     <http://mu.semte.ch/vocabularies/ext/>
-PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 PREFIX adms: <http://www.w3.org/ns/adms#>
@@ -73,7 +71,7 @@ INSERT {
 }
 WHERE {
     GRAPH ?bestuurseenheidsGraph {
-      ?instantie a cpsv:PublicService .
+      ?instantie a lpdcExt:InstancePublicService .
       ?instantie ext:hasVersionedSource ?instantieConceptSnapshot .
       ?instantie dcterms:source ?concept .
       FILTER NOT EXISTS {

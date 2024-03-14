@@ -33,7 +33,7 @@ export class IpdcStub {
                     return ipdcPublish.find((element) => {
                         if ((filter as PublicServiceFilter).title !== undefined) {
                             const publicServiceFilter = filter as PublicServiceFilter;
-                            return element['@type'].includes('http://purl.org/vocab/cpsv#PublicService')
+                            return element['@type'].includes('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService')
                                 && element['http://purl.org/dc/terms/title'].some((translatedValue) =>
                                     translatedValue['@language'] === publicServiceFilter.expectedFormalOrInformalTripleLanguage
                                     && translatedValue['@value'] === publicServiceFilter.title);

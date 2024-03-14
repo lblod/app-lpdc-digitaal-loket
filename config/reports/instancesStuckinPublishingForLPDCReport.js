@@ -14,7 +14,6 @@ export default {
     console.log('Generate list of stuck LPDC instances');
 
     const queryString = `
-      PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
       PREFIX schema:  <http://schema.org/>
       PREFIX adms:    <http://www.w3.org/ns/adms#>
       PREFIX as:      <https://www.w3.org/ns/activitystreams#>
@@ -25,6 +24,7 @@ export default {
       PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
       PREFIX http:    <http://www.w3.org/2011/http#>
       PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+      PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
       
       SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated ?dateSent ?datePublished WHERE {
             GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
@@ -47,7 +47,7 @@ export default {
             
             GRAPH ?g {
               VALUES ?type {
-                cpsv:PublicService
+                lpdcExt:InstancePublicService
                 as:Tombstone
               }
                 ?instanceIri a ?type .
