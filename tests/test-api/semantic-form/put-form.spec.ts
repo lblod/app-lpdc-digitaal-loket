@@ -4,8 +4,6 @@ import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingen
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
 
-const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
-
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
 });
@@ -18,7 +16,7 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -49,7 +47,7 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -74,7 +72,7 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();

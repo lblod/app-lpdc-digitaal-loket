@@ -13,9 +13,6 @@ import {PublicationMedium} from "../test-helpers/codelists";
 import {ContactPointTestBuilder} from "../test-helpers/contact-point-test.builder";
 import {AddressTestBuilder} from "../test-helpers/address.test-builder";
 
-const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
-const CHARACTERISTICS_FORM_ID = '149a7247-0294-44a5-a281-0a4d3782b4fd';
-
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
 });
@@ -31,7 +28,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -50,7 +47,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/eigenschappen`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -66,7 +63,7 @@ test.describe('Loading forms for concepts', () => {
 
         const {concept, triples} = await new TestDataFactory().createFullConcept(request);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -80,7 +77,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: undefined}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: undefined}});
         expect(apiResponse.status()).toEqual(401);
     });
 
@@ -92,7 +89,7 @@ test.describe('Loading forms for concepts', () => {
             .withDescription('Concept description', Language.NL)
             .buildAndPersist(request);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(apiResponse.status()).toEqual(403);
     });
 
@@ -106,7 +103,7 @@ test.describe('Loading forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
@@ -124,7 +121,7 @@ test.describe('Loading forms for instances', () => {
             .withCreatedBy(pepingenId)
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/eigenschappen`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
@@ -141,7 +138,7 @@ test.describe('Loading forms for instances', () => {
             .withPublicationMedium(PublicationMedium.YourEurope)
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
@@ -154,7 +151,7 @@ test.describe('Loading forms for instances', () => {
         const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService().buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CHARACTERISTICS_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/eigenschappen`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
         const responseBody = await response.json();
         const expectedMeta = fs.readFileSync(`${__dirname}/meta.txt`, 'utf8');
@@ -166,7 +163,7 @@ test.describe('Loading forms for instances', () => {
 
         const {publicService, triples} = await new TestDataFactory().createFullPublicService(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -183,7 +180,7 @@ test.describe('Loading forms for instances', () => {
             .buildAndPersist(request, pepingenId);
 
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
@@ -203,7 +200,7 @@ test.describe('Loading forms for instances', () => {
                 .withChosenForm(chosenForm)
                 .buildAndPersist(request);
 
-            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
             expect(response.ok()).toBeTruthy();
 
             const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
@@ -222,7 +219,7 @@ test.describe('Loading forms for instances', () => {
                 .withChosenForm(chosenForm)
                 .buildAndPersist(request);
 
-            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
             expect(response.ok()).toBeTruthy();
 
             const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
@@ -251,7 +248,7 @@ test.describe('Loading forms for instances', () => {
             .withContactPoint(contactPoint.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
@@ -292,7 +289,7 @@ test.describe('Loading forms for instances', () => {
             ])
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -316,7 +313,7 @@ test.describe('Loading forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: undefined}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: undefined}});
         expect(apiResponse.status()).toEqual(401);
     });
 
@@ -326,7 +323,7 @@ test.describe('Loading forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+        const apiResponse = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(apiResponse.status()).toEqual(403);
     });
 

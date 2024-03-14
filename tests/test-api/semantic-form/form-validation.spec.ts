@@ -29,8 +29,7 @@ test(`Submit form: validate publicService invalid form - competentAutority is re
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        formId: "149a7247-0294-44a5-a281-0a4d3782b4fd",
-        formUri: "http://data.lblod.info/id/forms/149a7247-0294-44a5-a281-0a4d3782b4fd",
+        formId: "eigenschappen",
         message: "Er zijn fouten opgetreden in de tab \"eigenschappen\". Gelieve deze te verbeteren!",
     }]);
 });
@@ -248,8 +247,7 @@ test(`Submit form: validate publicService with errors on inhoud tab and invalid 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([
         {
-            formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-            formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
+            formId: "inhoud",
             message: `Er zijn fouten opgetreden in de tab "inhoud". Gelieve deze te verbeteren!`
         }]);
 });

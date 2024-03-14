@@ -7,8 +7,6 @@ import {Language} from "../test-helpers/language";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import fs from "fs";
 
-const CONTENT_FORM_ID = 'cd0b5eba-33c1-45d9-aed9-75194c3728d3';
-
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
 });
@@ -26,7 +24,7 @@ test('When chosenForm informal and concept in unknown version then language in f
             {value: 'Concept title', language: Language.GENERATED_INFORMAL},
         ]).buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -48,7 +46,7 @@ test('When chosenForm formal and concept in unknown versions then language in fo
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -67,7 +65,7 @@ test('When no chosenForm and concept in unknown versions then language in form s
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -89,7 +87,7 @@ test('When chosenForm informal and concept in informal version then language in 
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -111,7 +109,7 @@ test('When chosenForm formal and concept in informal version then language in fo
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -130,7 +128,7 @@ test('When no chosenForm and concept in informal version then language in form s
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -152,7 +150,7 @@ test('When chosenForm informal and concept in formal version then language in fo
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -174,7 +172,7 @@ test('When chosenForm formal and concept in formal version then language in form
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -193,7 +191,7 @@ test('When no chosenForm and concept in formal version then language in form sho
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -215,7 +213,7 @@ test('When chosenForm informal and concept in both version then language in form
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -237,7 +235,7 @@ test('When chosenForm formal and concept in both versions then language in form 
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -256,7 +254,7 @@ test('When no chosenForm and concept in both versions then language in form shou
         ])
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -275,7 +273,7 @@ test('When chosenForm informal and concept only in nl version then language in f
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -294,7 +292,7 @@ test('When chosenForm formal and concept only in nl then language in form should
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
@@ -310,7 +308,7 @@ test('When no chosenForm and concept only in nl then language in form should be 
         .withDescription('Concept description', Language.NL)
         .buildAndPersist(request);
 
-    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/${CONTENT_FORM_ID}`, {headers: {cookie: loginResponse.cookie}});
+    const response = await request.get(`${dispatcherUrl}/lpdc-management/conceptual-public-services/${encodeURIComponent(concept.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
