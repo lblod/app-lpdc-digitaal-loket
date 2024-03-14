@@ -550,7 +550,7 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 De contractspecificaties (het semantisch model / het IPDC-LPDC implementatiemodel) beschrijft in detail de gewenste datastructuur, zoals kardinaliteiten, codelijsten, datatypes, ... .
 Het IPDC-LPDC implementatiemodel beschrijft de datastructuur voor ConceptSnapshots en InstantieSnapshots. Merk op dat deze gelijkaardig, maar niet identiek zijn. Het is dus belangrijk om voor de instantie die aangeboden worden aan de LPDC-module gebaseerd wordt op de informatie bij Instanties. 
 
-!!!!!!!!! Op datum van 2024-03-06 staat een versie van het IPDC-LPDC implementatiemodel van 2022-06-15 op de productiepagina's van data.vlaanderen.be. Deze krijgt normaal eerstdaags een update. Een preview van die update is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29/) te vinden (op de testpagina's van data.vlaanderen.be). Tot wanneer de versie op productie is geupdate, kun je best naar de previewversie/versie op de testpagina's kijken. Deze versie zal niet meer wijzigen en zo naar productie worden gebracht. 
+!!!!!!!!! Op datum van 2024-03-06 staat een versie van het IPDC-LPDC implementatiemodel van 2022-06-15 op de productiepagina's van data.vlaanderen.be. Deze krijgt normaal eerstdaags een update. Een preview van die update is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-03-08/) te vinden (op de testpagina's van data.vlaanderen.be). Tot wanneer de versie op productie is geupdate, kun je best naar de previewversie/versie op de testpagina's kijken. Deze versie zal niet meer wijzigen en zo naar productie worden gebracht. 
 
 De info op productie: [IPDC-LPDC implementatiemodel](https://productencatalogus.data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/). Let op de datum "uitgegeven op" die moet later minstens 2024-03-06 of later zijn! 
 
@@ -731,7 +731,7 @@ Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar
 
 ### Gebruikte standaarden
 - [IPDC - LPDC (Implementatiemodel)](https://productencatalogus.data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/)
-- [IPDC - LPDC (Implementatiemodel) - TEST](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-02-29/)
+- [IPDC - LPDC (Implementatiemodel) - TEST](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-03-08/)
 - [URI (Uniform Resource Identifier)](https://en.wikipedia.org/wiki/Uniform_Resource_Identifier)
 - [RDF (Resource Description Framework)](https://www.w3.org/TR/rdf11-primer/)
 - [OWL (Web Ontology Language)](https://www.w3.org/TR/owl2-overview/)
