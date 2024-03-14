@@ -149,7 +149,7 @@ export const Predicates = {
     hasExecutingAuthority: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority'),
     status: new Uri('http://www.w3.org/ns/adms#status'),
     hasRequirement: new Uri('http://vocab.belgif.be/ns/publicservice#hasRequirement'),
-    chosenForm: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#chosenForm'),
+    chosenForm: new Uri('http://data.lblod.info/vocabularies/lpdc/chosenForm'),
     dateCreated: new Uri('http://schema.org/dateCreated'),
     dateModified: new Uri('http://schema.org/dateModified'),
     generatedAtTime: new Uri('http://www.w3.org/ns/prov#generatedAtTime'),

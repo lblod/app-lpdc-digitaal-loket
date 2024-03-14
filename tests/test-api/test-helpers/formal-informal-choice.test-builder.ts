@@ -4,7 +4,7 @@ import {pepingenId} from "./login";
 import type {APIRequestContext} from "@playwright/test";
 import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 
-export const FormalInformalChoiceType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FormalInformalChoice';
+export const FormalInformalChoiceType = 'http://data.lblod.info/vocabularies/lpdc/FormalInformalChoice';
 
 export enum ChosenForm {
     FORMAL = 'formal',

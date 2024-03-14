@@ -1,4 +1,4 @@
-import {APIRequestContext, expect, test} from "@playwright/test";
+import {expect, test} from "@playwright/test";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession} from "../test-helpers/login";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";

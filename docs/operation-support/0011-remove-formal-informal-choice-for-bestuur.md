@@ -6,17 +6,17 @@ How?
 - Find the UUID of the bestuur
 - Query in the production database 
 ```sparql
-PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 PREFIX schema: <http://schema.org/>
 PREFIX dct: <http://purl.org/dc/terms/>
 
 SELECT ?formalInformalChoiceId ?uuid ?dateCreated ?chosenForm ?bestuurseenheidId WHERE {
     GRAPH <http://mu.semte.ch/graphs/organizations/<UUID GOES HERE>/LoketLB-LPDCGebruiker> {
-        ?formalInformalChoiceId a lpdcExt:FormalInformalChoice ;
+        ?formalInformalChoiceId a lpdc:FormalInformalChoice ;
             mu:uuid ?uuid ;
             schema:dateCreated ?dateCreated ;
-            lpdcExt:chosenForm ?chosenForm ;
+            lpdc:chosenForm ?chosenForm ;
             dct:relation ?bestuurseenheidId .
     }
 } ORDER BY ASC(?dateCreated) LIMIT 1
@@ -24,7 +24,7 @@ SELECT ?formalInformalChoiceId ?uuid ?dateCreated ?chosenForm ?bestuurseenheidId
 ```
 - Query to remove the choice for that bestuur:
 ```sparql
-PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
 DELETE {
     GRAPH <http://mu.semte.ch/graphs/organizations/<UUID GOES HERE>/LoketLB-LPDCGebruiker> {
         ?s ?p ?o.
@@ -32,7 +32,7 @@ DELETE {
 }
 WHERE {
     GRAPH <http://mu.semte.ch/graphs/organizations/<UUID GOES HERE>/LoketLB-LPDCGebruiker> {
-        ?s a lpdcExt:FormalInformalChoice.
+        ?s a lpdc:FormalInformalChoice.
         ?s ?p ?o.
 }
 }

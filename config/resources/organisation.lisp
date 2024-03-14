@@ -14,8 +14,8 @@
   :on-path "bestuurseenheid-classificatie-codes")
 
 (define-resource formal-informal-choice ()
-  :class (s-prefix "lpdcExt:FormalInformalChoice")
-  :properties `((:chosen-form :string ,(s-prefix "lpdcExt:chosenForm"))
+  :class (s-prefix "lpdc:FormalInformalChoice")
+  :properties `((:chosen-form :string ,(s-prefix "lpdc:chosenForm"))
                 (:date-created :string ,(s-prefix "schema:dateCreated")))
   :has-one `((bestuurseenheid :via ,(s-prefix "dct:relation")
                               :as "bestuurseenheid"))
