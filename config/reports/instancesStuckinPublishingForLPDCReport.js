@@ -25,10 +25,11 @@ export default {
       PREFIX http:    <http://www.w3.org/2011/http#>
       PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+      PREFIX lpdc:    <http://data.lblod.info/vocabularies/lpdc/>
       
       SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated ?dateSent ?datePublished WHERE {
             GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
-                ?publicationError a <http://data.lblod.info/vocabularies/lpdc/instance-publication-error> .
+                ?publicationError a lpdc:InstancePublicationError .
                 ?publicationError http:statusCode ?errorCode .
                 ?publicationError schema:error ?errorMessage .
                 ?publicationError dct:source ?instanceIri .

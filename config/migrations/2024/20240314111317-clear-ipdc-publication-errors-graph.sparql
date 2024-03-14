@@ -1,0 +1,9 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
+        ?s ?p ?o.
+    }
+} WHERE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
+        ?s ?p ?o.
+    }
+}
