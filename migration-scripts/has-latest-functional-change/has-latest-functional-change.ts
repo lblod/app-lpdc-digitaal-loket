@@ -69,7 +69,7 @@ async function zijnConceptSnapshotsFunctioneelVerschillend(ene: string, andere: 
 }
 
 function toQuad(concept: Concept): string {
-    return `<${concept.conceptUri}> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasLatestFunctionalChange> <${concept.latestFunctionalChange}> <http://mu.semte.ch/graphs/public> .`
+    return `<${concept.conceptUri}> <http://data.lblod.info/vocabularies/lpdc/hasLatestFunctionalChange> <${concept.latestFunctionalChange}> <http://mu.semte.ch/graphs/public> .`
 }
 
 async function main() {

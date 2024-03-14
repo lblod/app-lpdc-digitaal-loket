@@ -6,7 +6,7 @@ test(`Latest functional changes is added between concept and concept-snapshot `,
 
     const query = `
       SELECT ?s ?o WHERE {
-            ?s <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasLatestFunctionalChange> ?o .
+            ?s <http://data.lblod.info/vocabularies/lpdc/hasLatestFunctionalChange> ?o .
         }
     `;
 

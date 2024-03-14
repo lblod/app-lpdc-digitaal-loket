@@ -37,7 +37,7 @@
 
 (define-resource conceptual-public-service (abstract-public-service)
   :class (s-prefix "lpdcExt:ConceptualPublicService")
-  :properties `((:has-latest-functional-change :string ,(s-prefix "lpdcExt:hasLatestFunctionalChange")))
+  :properties `((:has-latest-functional-change :string ,(s-prefix "lpdc:hasLatestFunctionalChange")))
   :has-one `((concept-display-configuration :via ,(s-prefix "lpdc:hasConceptDisplayConfiguration")
                                             :as "display-configuration"))
   :has-many `((public-service :via ,(s-prefix "dct:source")

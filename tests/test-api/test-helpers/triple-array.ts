@@ -192,7 +192,7 @@ export const Predicates = {
     isVersionOf: new Uri('http://purl.org/dc/terms/isVersionOf'),
     snapshotType: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType'),
     hasVersionedSource: new Uri('http://mu.semte.ch/vocabularies/ext/hasVersionedSource'),
-    hasLatestFunctionalChange: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasLatestFunctionalChange'),
+    hasLatestFunctionalChange: new Uri('http://data.lblod.info/vocabularies/lpdc/hasLatestFunctionalChange'),
     reviewStatus: new Uri('http://mu.semte.ch/vocabularies/ext/reviewStatus'),
     instanceStatus: new Uri('http://www.w3.org/ns/adms#status'),
     dateSent: new Uri('http://schema.org/dateSent'),
