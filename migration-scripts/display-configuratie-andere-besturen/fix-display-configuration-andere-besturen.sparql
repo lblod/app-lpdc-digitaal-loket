@@ -1,23 +1,23 @@
 DELETE {
     GRAPH ?g {
-        ?displayConfig <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
-        ?displayConfig <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
+        ?displayConfig <http://data.lblod.info/vocabularies/lpdc/conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
+        ?displayConfig <http://data.lblod.info/vocabularies/lpdc/conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
     }
 }
 INSERT {
     GRAPH ?g {
-        ?displayConfig <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptIsNew> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
-        ?displayConfig <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptInstantiated> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
+        ?displayConfig <http://data.lblod.info/vocabularies/lpdc/conceptIsNew> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
+        ?displayConfig <http://data.lblod.info/vocabularies/lpdc/conceptInstantiated> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
     }
 }
 WHERE {
     ?instance <http://purl.org/pav/createdBy> ?bestuur .
     ?instance <http://purl.org/dc/terms/source> ?concept.
-    ?concept <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasConceptDisplayConfiguration> ?displayConfig.
+    ?concept <http://data.lblod.info/vocabularies/lpdc/hasConceptDisplayConfiguration> ?displayConfig.
     GRAPH ?g {
         ?displayConfig <http://purl.org/dc/terms/relation> ?bestuur .
-        ?displayConfig <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
-        ?displayConfig <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
+        ?displayConfig <http://data.lblod.info/vocabularies/lpdc/conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
+        ?displayConfig <http://data.lblod.info/vocabularies/lpdc/conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> .
     }
     ?bestuur <http://data.vlaanderen.be/ns/besluit#classificatie> ?classificatie .
     ?classificatie <http://www.w3.org/2004/02/skos/core#prefLabel> ?classificatieLabel .

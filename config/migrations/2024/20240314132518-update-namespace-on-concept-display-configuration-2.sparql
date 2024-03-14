@@ -1,0 +1,24 @@
+PREFIX lpdc:    <http://data.lblod.info/vocabularies/lpdc/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?conceptDisplayConfiguration lpdcExt:conceptIsNew ?conceptIsNew.
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?conceptDisplayConfiguration lpdc:conceptIsNew ?conceptIsNew.
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?conceptDisplayConfiguration rdf:type lpdc:ConceptDisplayConfiguration.
+        ?conceptDisplayConfiguration lpdcExt:conceptIsNew ?conceptIsNew.
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+}

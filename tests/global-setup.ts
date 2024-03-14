@@ -128,7 +128,7 @@ async function waitTillInitialDisplayConfigurationsAreLoaded(apiRequest: APIRequ
     const expectedNrOfDisplayConfigurations = concepts * bestuurseenheden;
     const query = `
         SELECT COUNT(?displayConfiguration) as ?count WHERE {
-            ?displayConfiguration a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration> .
+            ?displayConfiguration a <http://data.lblod.info/vocabularies/lpdc/ConceptDisplayConfiguration> .
         }`;
 
     while (true) {

@@ -1,10 +1,10 @@
 INSERT {
   GRAPH ?bestuurseenheidGraph {
-    ?concept <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasConceptDisplayConfiguration> ?displayConfig .
-    ?displayConfig a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration> ;
+    ?concept <http://data.lblod.info/vocabularies/lpdc/hasConceptDisplayConfiguration> ?displayConfig .
+    ?displayConfig a <http://data.lblod.info/vocabularies/lpdc/ConceptDisplayConfiguration> ;
       <http://mu.semte.ch/vocabularies/core/uuid> ?configId ;
-      <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
-      <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
+      <http://data.lblod.info/vocabularies/lpdc/conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
+      <http://data.lblod.info/vocabularies/lpdc/conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
       <http://purl.org/dc/terms/relation> ?bestuur .
   }
 } WHERE {
@@ -19,7 +19,7 @@ INSERT {
   BIND(IRI(CONCAT('http://data.lblod.info/id/conceptual-display-configuration/', STR(?configId))) as ?displayConfig)
 
   FILTER NOT EXISTS {
-    ?concept <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasConceptDisplayConfiguration> ?displayConfig .
+    ?concept <http://data.lblod.info/vocabularies/lpdc/hasConceptDisplayConfiguration> ?displayConfig .
     ?displayConfig <http://purl.org/dc/terms/relation> ?bestuur .
   }
 }

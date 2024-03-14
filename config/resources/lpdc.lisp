@@ -38,7 +38,7 @@
 (define-resource conceptual-public-service (abstract-public-service)
   :class (s-prefix "lpdcExt:ConceptualPublicService")
   :properties `((:has-latest-functional-change :string ,(s-prefix "lpdcExt:hasLatestFunctionalChange")))
-  :has-one `((concept-display-configuration :via ,(s-prefix "lpdcExt:hasConceptDisplayConfiguration")
+  :has-one `((concept-display-configuration :via ,(s-prefix "lpdc:hasConceptDisplayConfiguration")
                                             :as "display-configuration"))
   :has-many `((public-service :via ,(s-prefix "dct:source")
                               :inverse t
@@ -62,9 +62,9 @@
 )
 
 (define-resource concept-display-configuration ()
-  :class (s-prefix "lpdcExt:ConceptDisplayConfiguration")
-  :properties `((:is-new-concept :boolean ,(s-prefix "lpdcExt:conceptIsNew"))
-                (:is-instantiated :boolean ,(s-prefix "lpdcExt:conceptInstantiated")))
+  :class (s-prefix "lpdc:ConceptDisplayConfiguration")
+  :properties `((:is-new-concept :boolean ,(s-prefix "lpdc:conceptIsNew"))
+                (:is-instantiated :boolean ,(s-prefix "lpdc:conceptInstantiated")))
   :resource-base (s-url "http://data.lblod.info/id/conceptual-display-configuration/")
   :features '(include-uri)
   :on-path "concept-display-configurations"

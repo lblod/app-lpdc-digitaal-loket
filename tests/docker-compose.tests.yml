@@ -80,7 +80,7 @@ services:
     links:
       - virtuoso:database
     environment:
-      MU_SPARQL_TIMEOUT: "300"
+      MU_SPARQL_TIMEOUT: "500"
       BATCH_SIZE: "1000"
     volumes:
       - ../config/migrations:/data/migrations
@@ -92,7 +92,7 @@ services:
       interval: 5s
       timeout: 5s
       start_period: 30s
-      retries: 10
+      retries: 200
 
   cache:
     image: semtech/mu-cache:2.0.2
@@ -169,7 +169,7 @@ services:
       interval: 5s
       timeout: 5s
       start_period: 30s
-      retries: 10
+      retries: 200
     ports:
       - "34000:80"
 

@@ -4,7 +4,7 @@ import {APIRequestContext} from "@playwright/test";
 import {insertTriples} from "./sparql";
 import {pepingenId} from "./login";
 
-export const ConceptDisplayConfigurationType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration';
+export const ConceptDisplayConfigurationType = 'http://data.lblod.info/vocabularies/lpdc/ConceptDisplayConfiguration';
 
 export class ConceptDisplayConfigurationTestBuilder {
 
