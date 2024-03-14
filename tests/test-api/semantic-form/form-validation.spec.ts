@@ -85,8 +85,6 @@ test(`Submit form: validate publicService with invalid address`, async ({request
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
         message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
     }]);
 });
@@ -111,8 +109,6 @@ test(`Submit form: validate publicService with address that has not enough field
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
         message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
     }]);
 });
@@ -183,8 +179,6 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
         message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
     }]);
 });
@@ -223,13 +217,11 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-        formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
         message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
     }]);
 });
 
-test(`Submit form: validate publicService with several errors on inhoud tab`, async ({request}) => {
+test(`Submit form: validate publicService with errors on inhoud tab and invalid address show first only form error`, async ({request}) => {
     const loginResponse = await loginAsPepingen(request);
 
     const address = await AddressTestBuilder.anEmptyAddress()
@@ -255,11 +247,6 @@ test(`Submit form: validate publicService with several errors on inhoud tab`, as
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([
-        {
-            formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-            formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",
-            message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
-        },
         {
             formId: "cd0b5eba-33c1-45d9-aed9-75194c3728d3",
             formUri: "http://data.lblod.info/id/forms/cd0b5eba-33c1-45d9-aed9-75194c3728d3",

@@ -150,6 +150,17 @@ test.describe('Contact point form fields', () => {
         await instantieDetailsPage.contactpuntAdresHuisnummerInput(1).fill('120');
         await expect(instantieDetailsPage.contactpuntAdresValidatie(1)).toContainText('Adres niet gevonden');
 
+        await instantieDetailsPage.eigenschappenTab.click();
+
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
         await verzendNaarVlaamseOverheidModal.expectToBeVisible();
