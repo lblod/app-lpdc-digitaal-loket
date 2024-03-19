@@ -696,6 +696,8 @@ Dit is de informatie die door LPDC zal verwerkt worden.
     <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
 ```
 
+De volledige test dataset voor LDES instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden.
+
 
 ## Verklarende woordenlijst
 
