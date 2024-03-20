@@ -52,7 +52,7 @@ export class ConceptSnapshotTestBuilder {
     private dateCreated: Literal;
     private dateModified: Literal;
     private generatedAtTime: Literal;
-    private snapshotType: Uri;
+    private isArchived: Literal;
 
     static aConceptSnapshot() {
         return new ConceptSnapshotTestBuilder()
@@ -71,7 +71,7 @@ export class ConceptSnapshotTestBuilder {
             .withDateCreated(new Date())
             .withDateModified(new Date())
             .withGeneratedAtTime(new Date())
-            .withSnapshotType()
+            .withIsArchived()
             .withIsVersionOf(new Uri(`https://ipdc.tni-vlaanderen.be/id/concept/${uuid()}`))
     }
 
@@ -205,8 +205,8 @@ export class ConceptSnapshotTestBuilder {
         return this;
     }
 
-    withSnapshotType() {
-        this.snapshotType = new Uri('https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create');
+    withIsArchived(value:boolean =false) {
+        this.isArchived = new Literal(value.toString(), undefined, 'http://mu.semte.ch/vocabularies/typed-literals/boolean');
         return this;
     }
 
@@ -263,7 +263,7 @@ export class ConceptSnapshotTestBuilder {
             ...this.moreInfo.map(website => website.toTriples().getTriples()).flat(),
             ...this.keywords.map(keyword => new Triple(this.id, Predicates.keyword, keyword)),
             new Triple(this.id, Predicates.isVersionOf, this.isVersionOf),
-            new Triple(this.id, Predicates.snapshotType, this.snapshotType),
+            new Triple(this.id, Predicates.isArchived, this.isArchived),
             new Triple(this.id, Predicates.dateCreated, this.dateCreated),
             new Triple(this.id, Predicates.dateModified, this.dateModified),
             new Triple(this.id, Predicates.generatedAtTime, this.generatedAtTime),

@@ -199,6 +199,10 @@
         "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/"
       }
     },
+    "gearchiveerd": {
+      "@id": "conceptNs:isArchived",
+      "@type": "xsd:boolean"
+    },
     "doelgroepen": {
       "@container": "@set",
       "@id": "conceptNs:targetAudience",
