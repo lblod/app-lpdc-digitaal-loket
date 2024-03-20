@@ -2,6 +2,11 @@
 
 ## Test
 
+stop ldes docker container
+```shell
+docker stop app-lpdc-digitaal-loket-test-ldes-consumer-conceptsnapshot-ipdc-1
+```
+
 Query to clear state in database
 ```shell
 DELETE WHERE {
@@ -17,6 +22,11 @@ docker restart app-lpdc-digitaal-loket-test-ldes-consumer-conceptsnapshot-ipdc-1
 ```
 
 ## PROD
+
+stop ldes docker container
+```shell
+docker stop app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1
+```
 
 Query to clear state in database
 ```shell
