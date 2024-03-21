@@ -22,6 +22,13 @@ htop
 
 Load average is typically very low, 0.50 0.42 0.38; unless a batch is running , then you typically have 4 or 5 load average. If there is a high load average, there should be a reason.
 
+**But** please verify if the `app-lpdc-digitaal-loket-database-1 process` is not generating 100 pct cpu without any batches running. We've had occasions that it ran in a endless loop, thereby severely slowing down the entire application.
+If this happens, restart this process.
+
+```shell
+docker restart app-lpdc-digitaal-loket-database-1
+```
+
 #### All docker containers are running
 
 ```shell
@@ -160,3 +167,4 @@ or
 ```shell
 docker compose logs --timestamps --since 70m | grep lpdc-publish-1 | grep "Could not publish"
 ```
+
