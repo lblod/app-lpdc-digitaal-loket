@@ -93,7 +93,6 @@ defmodule Acl.UserGroups.Config do
                         "http://data.europa.eu/m8g/RequirementGroup",
                         "http://data.europa.eu/m8g/CriterionRequirement",
                         "http://data.europa.eu/m8g/Requirement",
-                        "http://xmlns.com/foaf/0.1/Document",
                         "http://www.w3.org/ns/org#Organization",
                         "http://lblod.data.gift/vocabularies/organisatie/TypeVestiging",
                         "http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode"
@@ -114,7 +113,6 @@ defmodule Acl.UserGroups.Config do
                     graph: "http://mu.semte.ch/graphs/organizations/",
                     constraint: %ResourceConstraint{
                       resource_types: [
-                        "http://xmlns.com/foaf/0.1/Document",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#AbstractPublicService",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService",
