@@ -208,7 +208,7 @@ services:
   # LPDC-specific Services
   ################################################################################
   lpdc-management:
-    image: lblod/lpdc-management-service:0.36.3
+    image: lblod/lpdc-management-service:0.37.0
     depends_on:
       migrations:
         condition: service_healthy
@@ -231,7 +231,7 @@ services:
       retries: 200
 
   lpdc-publish:
-    image: lblod/lpdc-publish-service:0.16.0
+    image: lblod/lpdc-publish-service:0.17.0
     depends_on:
       migrations:
         condition: service_healthy
