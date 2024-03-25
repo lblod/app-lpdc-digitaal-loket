@@ -208,7 +208,7 @@ services:
   # LPDC-specific Services
   ################################################################################
   lpdc-management:
-    image: lblod/lpdc-management-service:0.37.0
+    image: lblod/lpdc-management-service:0.37.1
     depends_on:
       migrations:
         condition: service_healthy
