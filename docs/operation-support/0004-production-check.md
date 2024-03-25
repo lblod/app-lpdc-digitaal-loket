@@ -96,14 +96,14 @@ gives: 25 (about this as expected result)
 We see in the access logs of lpdc (the ui proxy) and grep for a business operation
 
 ```shell
-drc logs --since 24h --timestamps | grep app-lpdc-digitaal-loket-lpdc-1 | grep formal-informal-choices | grep "HTTP/1.1\" 200" | wc -l
+drc logs --since 72h --timestamps | grep app-lpdc-digitaal-loket-lpdc-1 | grep formal-informal-choices | grep "HTTP/1.1\" 200" | wc -l
 ```
 gives: 735 (at least several hundreds as expected result)
 
 #### Lpdc-management logs
 
 ```shell
-drc logs --since 24h --timestamps | grep app-lpdc-digitaal-loket-lpdc-management-1
+drc logs --since 72h --timestamps | grep app-lpdc-digitaal-loket-lpdc-management-1
 ```
 
 Following is an example of normal behaviour. 1/ server started 2/ optimistic locking check went of 3 times 3/ processing of new conceptsnapshots
