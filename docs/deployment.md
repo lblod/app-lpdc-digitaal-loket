@@ -112,6 +112,16 @@ On test we always deploy a released version.
   ssh root@lpdc-dev.s.redhost.be
 
   cd /data/app-lpdc-digitaal-loket-test
+  
+  #take a backup of the existing logs
+  drc logs --timestamps > /backups/logs-test-backup/log-<your date - and followletter here>.txt
+  #example: drc logs --timestamps > /backups/logs-test-backup/log-2024-03-26-a.txt
+  
+  #zip the backup of the logs
+  tar -zcvf /backups/logs-test-backup/log-2024-03-26-a.txt.tar.gz /backups/logs-test-backup/log-2024-03-26-a.txt
+  
+  #remove the full file
+  rm /backups/logs-test-backup/log-2024-03-26-a.txt
 
   git fetch --all --tags
   
@@ -158,13 +168,22 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   ssh root@lpdc-prod.s.redhost.be
   
   # bring the app-http-logger down
-  cd /data/app-http-logger
-  
+  cd /data/app-http-logger  
   drc down
  
-  # stop the app-lpdc-digitaal-loket down
   cd /data/app-lpdc-digitaal-loket
   
+  #take a backup of the existing logs
+  drc logs --timestamps > /backups/prod-logs-backups/log-<your date - and followletter here>.txt
+  #as an example: drc logs --timestamps > /backups/prod-logs-backups/log-2024-03-26-a.txt
+  
+  #zip the backup of the logs
+  tar -zcvf /backups/prod-logs-backups/log-2024-03-26-a.txt.tar.gz /backups/prod-logs-backups/log-2024-03-26-a.txt
+  
+  #remove the full file
+  rm /backups/prod-logs-backups/log-2024-03-26-a.txt  
+  
+  # stop the app-lpdc-digitaal-loket down
   drc down --remove-orphans
   
   cd /data
