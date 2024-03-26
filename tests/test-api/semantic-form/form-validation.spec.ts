@@ -84,7 +84,7 @@ test(`Submit form: validate publicService with invalid address`, async ({request
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
+        message: "Minstens één van de adresgegevens is niet geldig",
     }]);
 });
 
@@ -108,7 +108,7 @@ test(`Submit form: validate publicService with address that has not enough field
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!",
+        message: "Minstens één van de adresgegevens is niet geldig",
     }]);
 });
 
@@ -178,7 +178,7 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
+        message: "Minstens één van de adresgegevens is niet geldig"
     }]);
 });
 
@@ -216,7 +216,7 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
 
     expect(response.status()).toEqual(200);
     expect(await response.json()).toEqual([{
-        message: "Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!"
+        message: "Minstens één van de adresgegevens is niet geldig"
     }]);
 });
 
