@@ -167,7 +167,7 @@ test.describe('Contact point form fields', () => {
         await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
 
-        await expect(page.locator('div.au-c-toaster')).toContainText("Minstens één van de adressen is niet geldig, Gelieve deze te verbeteren!");
+        await expect(page.locator('div.au-c-toaster')).toContainText("Minstens één van de adresgegevens is niet geldig");
 
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
