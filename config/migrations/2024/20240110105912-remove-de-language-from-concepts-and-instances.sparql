@@ -1,0 +1,10 @@
+DELETE {
+    GRAPH ?g {
+        ?s ?p ?o .
+    }
+} WHERE {
+    GRAPH ?g {
+        ?s ?p ?o.
+        FILTER(lang(?o) = "de" && ?g != <http://mu.semte.ch/graphs/lpdc/ldes-data>)
+    }
+}

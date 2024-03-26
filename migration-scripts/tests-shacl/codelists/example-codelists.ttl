@@ -1,0 +1,135 @@
+@prefix ex: <http://example.com/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+
+<http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>
+    a besluit:Bestuurseenheid.
+
+<http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589>
+    a besluit:Bestuurseenheid.
+
+<http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522>
+    a besluit:Bestuurseenheid.
+
+<https://data.vlaanderen.be/id/organisatie/OVO000001>
+    a besluit:Bestuurseenheid.
+
+<http://data.lblod.info/id/bestuurseenheden/764a0c6bbc866153ae70cf75d745b9477fa010567246cfe6683b7bb8aec541b4>
+    a besluit:Bestuurseenheid.
+
+<http://vocab.belgif.be/auth/refnis2019/41002>
+    a skos:Concept.
+
+<http://vocab.belgif.be/auth/refnis2019/23064>
+    a skos:Concept.
+
+<http://vocab.belgif.be/auth/refnis2019/70000>
+    a skos:Concept.
+
+<http://vocab.belgif.be/auth/refnis2019/24086>
+    a skos:Concept.
+
+<http://vocab.belgif.be/auth/refnis2019/24001>
+    a skos:Concept.
+
+<http://vocab.belgif.be/auth/refnis2019/35013>
+    a skos:Concept.
+
+ex:bevoegd-bestuursniveau-federaal
+    a skos:Concept.
+
+ex:uitvoerend-bestuursniveau-federaal
+    a skos:Concept.
+
+ex:a-target-audience
+    a skos:Concept.
+
+ex:a-thematic-area
+    a skos:Concept.
+
+ex:a-type
+    a skos:Concept.
+
+ex:a-your-europe-category
+    a skos:Concept.
+
+ex:a-publication-medium
+    a skos:Concept.
+
+ex:a-concept-tag
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VerblijfNaturalisatie>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VoertuigenVerkeersregels>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/BurgerEnFamilieRechtenKinderen>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VerblijfOverlijden>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Toelating>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Onderneming>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Europees>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Derden>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal>
+    a skos:Concept.
+
+<https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht>
+    a skos:Concept.
+
+<http://publications.europa.eu/resource/authority/language/FRA>
+    a skos:Concept.
+
+<http://publications.europa.eu/resource/authority/language/NLD>
+    a skos:Concept.
+
+<http://publications.europa.eu/resource/authority/language/ENG>
+    a skos:Concept.
+
+<http://publications.europa.eu/resource/authority/language/DEU>
+    a skos:Concept.

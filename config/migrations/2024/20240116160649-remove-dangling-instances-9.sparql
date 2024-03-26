@@ -1,0 +1,20 @@
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/17e71437ad9e1abbfd416b7bcb1485c0e6e21ac4f65f2a1584eb0985e246b1c9/LoketLB-LPDCGebruiker>{
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://mu.semte.ch/vocabularies/core/uuid> "95cd3a5e-0e2f-4f98-8f46-61721ca65e41" .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://purl.org/dc/terms/description> "<p>U kunt als burger een klacht indienen bij de gemeente of het openbaar centrum voor maatschappelijk welzijn.</p><p>Een klacht is een manifeste uiting waarbij een ontevreden burger bij de overheid klaagt over een door de overheid al dan niet verrichte handeling of prestatie. Het Decreet over het Lokaal Bestuur verplicht de gemeenteraad en de raad voor maatschappelijk welzijn om bij reglement een systeem van klachtenbehandeling te organiseren.</p>"@nl .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://purl.org/dc/terms/source> <https://ipdc.vlaanderen.be/id/concept/70afe309-edcf-44c9-b2ba-e0e8bc641259> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://purl.org/dc/terms/title> "Klacht aan uw stad of gemeente"@nl .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/AdviesBegeleiding> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://purl.org/vocab/cpsv#follows> <http://data.lblod.info/id/rule/bec06c45-509c-48eb-9ed5-1ad528cee32c> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://schema.org/productID> "1835" .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#PublicService> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Onderneming> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Organisatie> .
+<http://data.lblod.info/id/public-service/e239d70b-252c-4175-81ca-1c5ee30f89a9> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging> .
+<http://data.lblod.info/id/rule/bec06c45-509c-48eb-9ed5-1ad528cee32c> <http://purl.org/dc/terms/title> "Procedure"@nl .
+<http://data.lblod.info/id/rule/bec06c45-509c-48eb-9ed5-1ad528cee32c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/rule/bec06c45-509c-48eb-9ed5-1ad528cee32c> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+}

@@ -1,0 +1,51 @@
+version: "3.7"
+
+services:
+
+  lpdc-management:
+    image: lblod/lpdc-management-service:latest
+    depends_on:
+      migrations:
+        condition: service_healthy
+    ports:
+      - "10996:80"
+    environment:
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
+      QUEUE_POLL_INTERVAL: 1000
+      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
+      MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
+      INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/5 * * * * *" # every 5 seconds
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 50
+
+  lpdc-publish:
+    image: lblod/lpdc-publish-service:latest
+    depends_on:
+      migrations:
+        condition: service_healthy
+    environment:
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
+      LDES_ENDPOINT: "https://dev.lpdc.lblod.info"
+      LDES_FOLDER: "dev-lpdc-stream"
+      IPDC_JSON_ENDPOINT: "http://ipdc-stub/instanties"
+      CRON_PATTERN: "* * * * * *" # every second
+
+  lpdc:
+    image: lblod/frontend-lpdc:latest
+    environment:
+      EMBER_IPDC_URL: 'http://ipdc-stub'
+    ports:
+      - "4200:80"
+    links:
+      - identifier:backend

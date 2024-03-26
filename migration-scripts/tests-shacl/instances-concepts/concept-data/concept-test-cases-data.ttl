@@ -1,0 +1,143 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix m8g: <http://data.europa.eu/m8g/> .
+@prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix schema: <http://schema.org/> .
+@prefix cpsv:	<http://purl.org/vocab/cpsv#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix pera: <http://publications.europa.eu/resource/authority/> .
+@prefix lang: <http://publications.europa.eu/resource/authority/language/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix adres: <https://data.vlaanderen.be/ns/adres#> .
+@prefix eli: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+ex:a-concept-website-for-a-rule
+    a schema:WebSite ;
+    dc:title """a-website-for-a-rule-title"""@nl ;
+    dc:description """a-website-for-a-rule-description"""@nl ;
+    schema:url "https://a-website-for-a-rule.org";
+    shacl:order 1.
+
+ex:a-concept-website
+    a schema:WebSite ;
+    dc:title """a-website-for-an-instance-title"""@nl ;
+    dc:description """a-website-for-an-instance-description"""@nl ;
+    schema:url "https://a-website-for-an-instance.org";
+    shacl:order 1.
+
+ex:another-concept-website
+    a schema:WebSite ;
+    dc:title """another-website-for-an-instance-title"""@nl ;
+    dc:description """another-website-for-an-instance-description"""@nl ;
+    schema:url "https://another-website-for-an-instance.org";
+    shacl:order 2.
+
+ex:a-concept-rule
+    a cpsv:Rule;
+    dc:title """rule-title"""@nl ;
+    dc:description """rule-description"""@nl ;
+    lpdcExt:hasWebsite ex:a-concept-website-for-a-rule ;
+    shacl:order 1.
+
+ex:a-concept-cost
+    a m8g:Cost;
+    dc:title """cost-title"""@nl ;
+    dc:description """cost-description"""@nl;
+    shacl:order 1.
+
+ex:a-concept-supporting-evidence
+    a m8g:Evidence ;
+    dc:title """supporting-evidence-title"""@nl ;
+    dc:description """supporting-evidence-description"""@nl.
+
+ex:a-concept-requirement
+    a m8g:Requirement;
+    dc:description """requirement-description"""@nl ;
+    dc:title """requirement-preferred-label"""@nl ;
+    shacl:order 1;
+    m8g:hasSupportingEvidence ex:a-concept-supporting-evidence.
+
+ex:a-concept-output
+    a m8g:Output ;
+    dc:title """an-output-title"""@nl;
+    dc:title """an-output-title-en"""@en;
+    dc:description """an-output-description"""@nl;
+    shacl:order 1.
+
+ex:another-concept-output
+    a m8g:Output ;
+    dc:title """an-output-title"""@nl;
+    dc:description """an-output-description"""@nl;
+    shacl:order 2.
+
+ex:a-concept-legal-resource
+    a eli:LegalResource;
+    dc:title """a-legal-resource-title"""@nl;
+    dc:description """a-legal-resource-description"""@nl;
+    schema:url "https://codex.vlaanderen.be/regelgeving" ;
+    shacl:order 1.
+
+ex:a-referenced-concept
+    dc:title """a valid concept""".
+
+#a concept that has a minimal valid data filled in; expect no validation errors
+ex:a-minimal-valid-concept
+    a lpdcExt:ConceptualPublicServiceSnapshot;
+    schema:dateCreated "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
+    schema:dateModified "2023-11-30T12:25:55.789Z"^^xsd:dateTime ;
+    dc:title """title-nl"""@nl ;
+    dc:description  """description-nl"""@nl ;
+    schema:productID "678";
+    dc:isVersionOf ex:a-referenced-concept ;
+    lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
+    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
+    lpdcExt:isArchived true.
+
+#a concept that has full data filled in; expect no validation errors
+ex:a-full-valid-concept
+    a lpdcExt:ConceptualPublicServiceSnapshot ;
+    schema:dateCreated "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
+    schema:dateModified "2023-11-30T12:25:55.789Z"^^xsd:dateTime ;
+    dc:title """title-nl"""@nl ;
+    dc:title """title-en"""@en ;
+    dc:description  """description-nl"""@nl ;
+    dc:description  """description-en"""@en ;
+    lpdcExt:additionalDescription """additional-description-nl"""@nl ;
+    lpdcExt:conceptTag ex:a-concept-tag ;
+    lpdcExt:competentAuthorityLevel ex:bevoegd-bestuursniveau-federaal ;
+    schema:startDate  """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    schema:endDate """2023-11-28T20:15:42.007Z"""^^xsd:dateTime ;
+    lpdcExt:exception """exception-nl"""@nl ;
+    lpdcExt:exception """exception-en"""@en ;
+    lpdcExt:exception """exception-de"""@de ;
+    lpdcExt:exception """exception-fr"""@fr ;
+    lpdcExt:executingAuthorityLevel ex:uitvoerend-bestuursniveau-federaal ;
+    cpsv:follows ex:a-concept-rule ;
+    m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
+    m8g:hasCost ex:a-concept-cost;
+    lpdcExt:hasExecutingAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
+    m8g:hasLegalResource ex:a-concept-legal-resource ;
+    rdfs:seeAlso ex:a-concept-website;
+    rdfs:seeAlso ex:another-concept-website;
+    ps:hasRequirement ex:a-concept-requirement;
+    dcat:keyword """a-keyword"""@nl ;
+    cpsv:produces ex:a-concept-output;
+    cpsv:produces ex:another-concept-output;
+    lpdcExt:regulation """regulation-nl"""@nl ;
+    lpdcExt:targetAudience ex:a-target-audience ;
+    m8g:thematicArea ex:a-thematic-area;
+    lpdcExt:yourEuropeCategory ex:a-your-europe-category;
+    schema:productID "1234";
+    dc:isVersionOf ex:a-referenced-concept;
+    prov:generatedAtTime "2023-11-30T12:25:18.623Z"^^xsd:dateTime ;
+    pera:language lang:NLD.
+
+

@@ -8,9 +8,10 @@
                 (:exceptions :language-string-set ,(s-prefix "lpdcExt:exception"))
                 (:start-date :datetime ,(s-prefix "schema:startDate"))
                 (:end-date :datetime ,(s-prefix "schema:endDate"))
-                (:created :datetime ,(s-prefix "dct:created"))
-                (:modified :datetime ,(s-prefix "dct:modified"))
-                (:product-id :string ,(s-prefix "schema:productID")))
+                (:date-created :datetime ,(s-prefix "schema:dateCreated"))
+                (:date-modified :datetime ,(s-prefix "schema:dateModified"))
+                (:product-id :string ,(s-prefix "schema:productID"))
+                (:versioned-source :string ,(s-prefix "ext:hasVersionedSource")))
   :has-one `((concept :via ,(s-prefix "dct:type")
                       :as "type")
              (concept :via ,(s-prefix "adms:status")
@@ -36,7 +37,8 @@
 
 (define-resource conceptual-public-service (abstract-public-service)
   :class (s-prefix "lpdcExt:ConceptualPublicService")
-  :has-one `((concept-display-configuration :via ,(s-prefix "lpdcExt:hasConceptDisplayConfiguration")
+  :properties `((:has-latest-functional-change :string ,(s-prefix "lpdc:hasLatestFunctionalChange")))
+  :has-one `((concept-display-configuration :via ,(s-prefix "lpdc:hasConceptDisplayConfiguration")
                                             :as "display-configuration"))
   :has-many `((public-service :via ,(s-prefix "dct:source")
                               :inverse t
@@ -47,7 +49,7 @@
 )
 
 (define-resource public-service (abstract-public-service)
-  :class (s-prefix "cpsv:PublicService")
+  :class (s-prefix "lpdcExt:InstancePublicService")
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")
              (conceptual-public-service :via ,(s-prefix "dct:source")
@@ -60,9 +62,9 @@
 )
 
 (define-resource concept-display-configuration ()
-  :class (s-prefix "lpdcExt:ConceptDisplayConfiguration")
-  :properties `((:is-new-concept :boolean ,(s-prefix "lpdcExt:conceptIsNew"))
-                (:is-instantiated :boolean ,(s-prefix "lpdcExt:conceptInstantiated")))
+  :class (s-prefix "lpdc:ConceptDisplayConfiguration")
+  :properties `((:is-new-concept :boolean ,(s-prefix "lpdc:conceptIsNew"))
+                (:is-instantiated :boolean ,(s-prefix "lpdc:conceptInstantiated")))
   :resource-base (s-url "http://data.lblod.info/id/conceptual-display-configuration/")
   :features '(include-uri)
   :on-path "concept-display-configurations"

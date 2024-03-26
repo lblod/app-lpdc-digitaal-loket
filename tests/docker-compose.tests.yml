@@ -1,0 +1,208 @@
+version: "3.7"
+
+x-logging: &default-logging
+  driver: "json-file"
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0
+    ports:
+      - "11996:80"
+
+  identifier:
+    image: semtech/mu-identifier:1.10.0
+    ports:
+      - "96:80"
+    restart: always
+    logging: *default-logging
+
+  dispatcher:
+    image: semtech/mu-dispatcher:2.1.0-beta.2
+    volumes:
+      - ../config/dispatcher:/config
+    restart: always
+    logging: *default-logging
+
+  database:
+    image: semtech/mu-authorization:feature-service-roam-r1.1
+    depends_on:
+      migrations:
+        condition: service_healthy
+      virtuoso:
+        condition: service_started
+    environment:
+      MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
+      DATABASE_OVERLOAD_RECOVERY: "true"
+      QUERY_MAX_PROCESSING_TIME: 605000
+      QUERY_MAX_EXECUTION_TIME: 605000
+    volumes:
+      - ../config/authorization:/config
+    restart: always
+    logging: *default-logging
+
+  virtuoso:
+    image: redpencil/virtuoso:1.2.0-rc.1
+    ports:
+      - "8896:8890"
+    environment:
+      SPARQL_UPDATE: "true"
+      DEFAULT_GRAPH: "http://mu.semte.ch/application"
+    volumes:
+      - ./data-tests/db:/data
+      - ../config/virtuoso/virtuoso.ini:/data/virtuoso.ini # Note: Override this setting on production
+      - ../config/virtuoso/:/opt/virtuoso-scripts
+    restart: always
+    logging: *default-logging
+
+  deltanotifier:
+    image: cecemel/delta-notifier:0.2.0-beta.3
+    depends_on:
+      migrations:
+        condition: service_healthy
+    volumes:
+      - ../config/delta:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  migrations:
+    image: semtech/mu-migrations-service:0.8.0
+    depends_on:
+      virtuoso:
+        condition: service_started
+    ports:
+      - "9996:80"
+    links:
+      - virtuoso:database
+    environment:
+      MU_SPARQL_TIMEOUT: "500"
+      BATCH_SIZE: "1000"
+    volumes:
+      - ../config/migrations:/data/migrations
+      - ../health_checks:/tmp/health_checks
+    restart: always
+    logging: *default-logging
+    healthcheck:
+      test: [ "CMD-SHELL", "chmod +x /tmp/health_checks/migrations-healthcheck.sh; /tmp/health_checks/migrations-healthcheck.sh" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 200
+
+  cache:
+    image: semtech/mu-cache:2.0.2
+    links:
+      - resource:backend
+    restart: always
+    logging: *default-logging
+
+  resource:
+    image: semtech/mu-cl-resources:feature-supply-info-on-empty-included
+    depends_on:
+      migrations:
+        condition: service_healthy
+    environment:
+      CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
+    volumes:
+      - ../config/resources:/config
+    restart: always
+    logging: *default-logging
+
+  ldes-consumer-conceptsnapshot-ipdc:
+    image: redpencil/ldes-consumer:0.7.1
+    depends_on:
+      lpdc-management:
+        condition: service_healthy
+      migrations:
+        condition: service_healthy
+    environment:
+      LDES_STREAM: "http://ipdc-stub/doc/conceptsnapshot"
+      LDES_ENDPOINT_VIEW: "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0" # first page of the stream
+      LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
+      CRON_PATTERN: "* * * * * *" # run the job every second
+      LDES_POLLING_INTERVAL: 5000 # every 5 seconds
+      REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
+      LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
+    restart: always
+
+  ipdc-stub:
+    build: ./ipdc-stub
+    volumes:
+      - ./ipdc-stub:/usr/app/src
+    ports:
+      - "33000:80"
+
+  ldes-consumer-instancesnapshot-example:
+    image: redpencil/ldes-consumer:0.7.1
+    depends_on:
+      instancesnapshot-ldes-stub:
+        condition: service_healthy
+      lpdc-management:
+        condition: service_healthy
+      migrations:
+        condition: service_healthy
+    environment:
+      LDES_STREAM: "http://instancesnapshot-ldes-stub/doc/instancesnapshot"
+      LDES_ENDPOINT_VIEW: "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=0" # first page of the stream
+      LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
+      CRON_PATTERN: "* * * * * *" # run the job every second
+      LDES_POLLING_INTERVAL: 5000 # every 5 seconds
+      REPLACE_VERSIONS: "false"
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
+    restart: always
+    links:
+      - virtuoso:database # We want to go directly to virtuoso database
+
+  instancesnapshot-ldes-stub:
+    build: instancesnapshot-ldes-stub
+    volumes:
+      - ./instancesnapshot-ldes-stub:/usr/app/src
+    environment:
+      HOSTNAME: 'instancesnapshot-ldes-stub'
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost:80/InstanceJsonLdContext.jsonld" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 200
+    ports:
+      - "34000:80"
+
+  report-generation:
+    image: lblod/loket-report-generation-service:0.6.3
+    depends_on:
+      migrations:
+        condition: service_healthy
+    volumes:
+      - ./data-tests/files:/share
+      - ../config/reports/:/config/
+    ports:
+      - "11300:80"
+    links:
+      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
+
+  dashboard:
+    image: lblod/frontend-dashboard:1.6.0
+    environment:
+      EMBER_LOGIN_ROUTE: "mock-login"
+    ports:
+      - "11200:80"
+    links:
+      - identifier:backend
+
+  file:
+    image: cecemel/file-service:3.3.0
+    depends_on:
+      migrations:
+        condition: service_healthy
+    volumes:
+      - ./data-tests/files:/share
+
+

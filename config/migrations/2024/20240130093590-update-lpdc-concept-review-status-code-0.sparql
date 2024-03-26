@@ -1,0 +1,12 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?s ?p ?o .
+    }
+} WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        VALUES ?s {
+            <http://lblod.data.gift/concepts/3f2666df-1dae-4cc2-a8dc-e8213e713081>
+        }
+        ?s ?p ?o
+    }
+}

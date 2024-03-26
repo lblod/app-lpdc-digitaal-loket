@@ -4,33 +4,36 @@ x-logging: &default-logging
   driver: "json-file"
   options:
     max-size: "10m"
-    max-file: "3"
+    max-file: "50"
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.0.2
-    links:
-      - identifier:backend
-    labels:
-      - "logging=true"
+    image: lblod/frontend-lpdc:0.11.0
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific.
       # These should be overriden in docker-compose.override.yml
-      EMBER_LOKET_URL: "https://loket.lblod.info/"
-      EMBER_ACMIDM_CLIENT_ID: ""
-      EMBER_ACMIDM_AUTH_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
-      EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
-      EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/authorization/callback"
-      EMBER_ACMIDM_SWITCH_REDIRECT_URL: "https://dev.lpdc.lokaalbestuur.lblod.info/switch-login"
+      EMBER_LOKET_URL: "<LOKET_URL>"
+      EMBER_IPDC_URL: "<IPDC_URL>"
+      EMBER_ACMIDM_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
+      EMBER_ACMIDM_AUTH_URL: "<ACMIDM_AUTH_URL>"
+      EMBER_ACMIDM_LOGOUT_URL: "<ACMIDM_LOGOUT_URL>"
+      EMBER_ACMIDM_AUTH_REDIRECT_URL: "<ACMIDM_AUTH_REDIRECT_URL>"
+      EMBER_ACMIDM_SWITCH_REDIRECT_URL: "<ACMIDM_SWITCH_REDIRECT_URL>"
+    links:
+      - identifier:backend
+    labels:
+      - "logging=true"
     restart: always
     logging: *default-logging
+
   identifier:
     image: semtech/mu-identifier:1.10.0
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   dispatcher:
     image: semtech/mu-dispatcher:2.1.0-beta.2
     volumes:
@@ -39,16 +42,26 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   deltanotifier:
     image: cecemel/delta-notifier:0.2.0-beta.3
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./config/delta:/config
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   database:
     image: semtech/mu-authorization:feature-service-roam-r1.1
+    depends_on:
+      migrations:
+        condition: service_healthy
+      virtuoso:
+        condition: service_started
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
       DATABASE_OVERLOAD_RECOVERY: "true"
@@ -63,6 +76,7 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   virtuoso:
     image: redpencil/virtuoso:1.2.0-rc.1
     environment:
@@ -76,18 +90,31 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   migrations:
     image: semtech/mu-migrations-service:0.8.0
-    links:
-      - virtuoso:database
+    depends_on:
+      virtuoso:
+        condition: service_started
     environment:
-      MU_SPARQL_TIMEOUT: "300"
+      MU_SPARQL_TIMEOUT: "500"
+      BATCH_SIZE: "1000"
     volumes:
       - ./config/migrations:/data/migrations
+      - ./health_checks:/tmp/health_checks
+    links:
+      - virtuoso:database
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
+    healthcheck:
+      test: [ "CMD-SHELL", "chmod +x /tmp/health_checks/migrations-healthcheck.sh; /tmp/health_checks/migrations-healthcheck.sh" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 200
+
   cache:
     image: semtech/mu-cache:2.0.2
     links:
@@ -96,8 +123,12 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   resource:
-    image: semtech/mu-cl-resources:feature-optionally-accept-strange-resource-types
+    image: semtech/mu-cl-resources:feature-supply-info-on-empty-included
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
       CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
     volumes:
@@ -106,21 +137,23 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   login:
     image: lblod/acmidm-login-service:0.9.2
     environment:
-      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
       LOG_SINK_URL: "http://sink"
+      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
       # The next variables are environment-specific.
       # These should be overriden in docker-compose.override.yml
-      MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
-      MU_APPLICATION_AUTH_CLIENT_ID: "ce73422e-63ea-417d-9cee-7e85f2ee21b9"
-      MU_APPLICATION_AUTH_REDIRECT_URI: "https://dev.lpdc.lokaalbestuur.lblod.info/authorization/callback"
-      MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
+      MU_APPLICATION_AUTH_DISCOVERY_URL: "<ACM_IDM_AUTH_DISCOVERY_URL>"
+      MU_APPLICATION_AUTH_CLIENT_ID: "<ACM_IDM_AUTH_CLIENT_ID>"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "<ACMIDM_AUTH_REDIRECT_URI>"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "<ACMIDM_AUTH_CLIENT_SECRET>"
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   sink:
     image: nginx:1.25.1
     volumes:
@@ -129,20 +162,25 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################
   report-generation:
     image: lblod/loket-report-generation-service:0.6.3
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./data/files:/share
       - ./config/reports/:/config/
+    links:
+      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
     labels:
       - "logging=true"
     restart: always
-    links:
-      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
     logging: *default-logging
+
   dashboard:
     image: lblod/frontend-dashboard:1.6.0
     environment:
@@ -153,44 +191,83 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   file:
     image: cecemel/file-service:3.3.0
+    depends_on:
+      migrations:
+        condition: service_healthy
     volumes:
       - ./data/files:/share
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
+
   ################################################################################
   # LPDC-specific Services
   ################################################################################
   lpdc-management:
-    image: lblod/lpdc-management-service:0.24.4
-    volumes:
-      - ./config/lpdc-management:/config
-      - ./data/files/lpdc:/data
+    image: lblod/lpdc-management-service:0.37.1
+    depends_on:
+      migrations:
+        condition: service_healthy
+    environment:
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
+      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
+      MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
+      INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
     labels:
       - "logging=true"
+    healthcheck:
+      test: [ "CMD", "wget", "--spider", "http://localhost" ]
+      interval: 5s
+      timeout: 5s
+      start_period: 30s
+      retries: 200
+
   lpdc-publish:
-    image: lblod/lpdc-publish-service:0.8.0
+    image: lblod/lpdc-publish-service:0.17.0
+    depends_on:
+      migrations:
+        condition: service_healthy
     environment:
-      LDES_ENDPOINT: "https://dev.lpdc.lblod.info"
-      LDES_FOLDER: "dev-lpdc-stream"
-      CRON_PATTERN: "0 * * * *" # every hour
+      LOG_SPARQL_ALL: "false"
+      LOG_SPARQL_QUERIES: "false"
+      LOG_SPARQL_UPDATES: "false"
+      DEBUG_AUTH_HEADERS: "false"
+      CRON_PATTERN: "*/5 * * * *" # every 5 minutes
+      # The next variables are environment-specific.
+      # Best to override in docker-compose.override.yml
+      IPDC_JSON_ENDPOINT: "<IPDC endpoint url>"
+      IPDC_X_API_KEY: "<IPDC api key>"
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
-  lpdc-ldes-consumer:
-    image: redpencil/ldes-consumer:0.8.0-rc1
+
+  ldes-consumer-conceptsnapshot-ipdc:
+    image: redpencil/ldes-consumer:0.7.1
+    depends_on:
+      lpdc-management:
+        condition: service_healthy
+      migrations:
+        condition: service_healthy
     environment:
       LDES_STREAM: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot"
-      LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?pageNumber=0" # first page of the stream
+      LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=0" # first page of the stream
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
-      CRON_PATTERN: "0 0 * * *"
-      REPLACE_VERSIONS: "false"
-      LDES_POLLING_INTERVAL: 5000
-      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/ldes-data"
+      CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
+      LDES_POLLING_INTERVAL: 3600000 # since ipdcs caching headers indicate no caching, this means the polling interval to initiate the request again (3 600 000 millis = 1 hour)
+      REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
+      # The next variables are environment-specific.
+      # Best to override in docker-compose.override.yml
+      LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
     labels:
       - "logging=true"
     restart: always

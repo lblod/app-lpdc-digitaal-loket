@@ -1,0 +1,3 @@
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/479540ea9de26a669c2c7e6cf5c98a2102c1771c48f63808e0e9b41db24dd575/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/851e0510-3a03-4795-8a80-9b6a75bf4428> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://mu.semte.ch/blank#4f51f91b-d0ca-46dd-98be-1be06679e6f4> .
+}

@@ -1,0 +1,20 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <https://www.w3.org/ns/activitystreams#formerType> <http://purl.org/vocab/cpsv#PublicService> .
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance rdf:type <https://www.w3.org/ns/activitystreams#Tombstone> .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+}

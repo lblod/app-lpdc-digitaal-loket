@@ -1,0 +1,7 @@
+DELETE { GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> { ?s ?p ?o } }
+INSERT { GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> { ?s ?p ?o } }
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ldes-data> {
+        ?s ?p ?o .
+    }
+}

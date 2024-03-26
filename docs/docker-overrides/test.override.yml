@@ -1,0 +1,63 @@
+version: "3.7"
+
+services:
+
+  mocklogin:
+    image: lblod/mock-login-service:0.4.0
+  
+  dashboard:
+    environment:
+      VIRTUAL_HOST: "test.dashboard.lpdc.lpdc-dev.s.redhost.be"
+      LETSENCRYPT_HOST: "test.dashboard.lpdc.lpdc-dev.s.redhost.be"
+      LETSENCRYPT_EMAIL: "info@redpencil.io"
+    networks:
+      - proxy
+      - default
+
+  lpdc:
+    environment:
+      VIRTUAL_HOST: "test.lpdc-dev.s.redhost.be,test.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_HOST: "test.lpdc-dev.s.redhost.be,test.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_EMAIL: "info@redpencil.io"
+      EMBER_LOKET_URL: "https://loket.lblod.info/"
+      EMBER_IPDC_URL: "https://productcatalogus.ipdc.tni-vlaanderen.be"
+      EMBER_ACMIDM_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
+      EMBER_ACMIDM_AUTH_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
+      EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
+      EMBER_ACMIDM_AUTH_REDIRECT_URL: "https://test.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      EMBER_ACMIDM_SWITCH_REDIRECT_URL: "https://test.lpdc.lokaalbestuur.lblod.info/switch-login"
+    networks:
+      - proxy
+      - default
+
+  login:
+    environment:
+      MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
+      MU_APPLICATION_AUTH_CLIENT_ID: "<ACMIDM_CLIENT_ID>"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "https://test.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "<ACMIDM_AUTH_CLIENT_SECRET>"
+      DEBUG_LOG_TOKENSETS: "yes"
+      LOG_SINK_URL: "http://sink"
+
+  database:
+    environment:
+      LOG_OUTGOING_SPARQL_QUERIES : "true"
+
+  lpdc-management:
+    environment:
+      ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
+
+  lpdc-publish:
+    environment:
+      IPDC_JSON_ENDPOINT: "https://ipdc.tni-vlaanderen.be/api/abb/instanties"
+      IPDC_X_API_KEY: "<IPDC_API_KEY>"
+
+  ldes-consumer-conceptsnapshot-ipdc:
+    environment:
+      LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC_API_KEY>"
+
+networks:
+  proxy:
+    external:
+      name: letsencrypt_default
+

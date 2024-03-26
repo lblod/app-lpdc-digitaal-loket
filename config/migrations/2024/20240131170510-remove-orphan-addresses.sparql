@@ -1,0 +1,18 @@
+delete {
+    graph ?g {
+        ?orphanedAddress ?p ?o
+    }
+} WHERE {
+    GRAPH ?g {
+        VALUES (?orphanedAddress) {
+            (<http://data.lblod.info/form-data/nodes/139cc20c-3db7-4f11-bd7f-b36e36e99ebd>)
+            (<http://data.lblod.info/form-data/nodes/198042f8-d9a3-45f9-b4a7-d59cab2c8d02>)
+            (<http://data.lblod.info/form-data/nodes/4e6d0fd2-1737-473b-a46e-9fce5a3eb726>)
+            (<http://data.lblod.info/form-data/nodes/574e3ace-befe-496f-876a-aa8949fe9c52>)
+            (<http://data.lblod.info/form-data/nodes/747f9615-34e8-4d47-8697-4eec6ad1bf8b>)
+            (<http://data.lblod.info/form-data/nodes/95b1089c-1883-4d32-b013-e514787b03f9>)
+            (<http://data.lblod.info/form-data/nodes/99839fbf-e56a-4bb1-903e-5bef50892287>)
+        }
+        ?orphanedAddress  ?p ?o
+    }
+}

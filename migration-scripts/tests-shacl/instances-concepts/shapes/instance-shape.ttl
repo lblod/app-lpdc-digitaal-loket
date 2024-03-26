@@ -1,0 +1,581 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix shacl: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix oss: <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-01-11#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix adres: <https://data.vlaanderen.be/ns/adres#> .
+@prefix lpdcExt:  <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
+@prefix cpsv:	<http://purl.org/vocab/cpsv#> .
+@prefix m8g:	<http://data.europa.eu/m8g/> .
+@prefix eli:    <http://data.europa.eu/eli/ontology#> .
+@prefix ps: <http://vocab.belgif.be/ns/publicservice#> .
+@prefix pera: <http://publications.europa.eu/resource/authority/> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix pav: <http://purl.org/pav/> .
+
+oss:instanceShapes a rdf:Property;
+     rdfs:label "shacl shapes for instanties van implementatiemodel"@nl .
+
+<https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> oss:instanceShapes oss:InstancePublicServiceShape,
+                                                                                                   oss:InstanceAddressShape,
+                                                                                                   oss:InstanceContactPointShape,
+                                                                                                   oss:InstanceRuleShape,
+                                                                                                   oss:InstanceWebsiteShape,
+                                                                                                   oss:InstanceCostShape,
+                                                                                                   oss:InstanceRequirementShape,
+                                                                                                   oss:InstanceEvidenceShape,
+                                                                                                   oss:InstanceOutputShape,
+                                                                                                   oss:InstanceLegalResourceShape.
+
+oss:InstancePublicServiceShape
+    a shacl:NodeShape;
+    shacl:closed false;
+    shacl:ignoredProperties ( rdf:type ) ;
+    shacl:property [
+           shacl:datatype xsd:boolean ;
+           shacl:description "This property represents if this public service snapshot was archived. This means that it should not be actively be used as an instance. Archival can be temporary. A public service can be unarchived. In this regard, archival should be viewed as a state of a public service. Optional property, if lacking means not archived."@nl;
+           shacl:maxCount 1;
+           shacl:name "isArchived"@nl;
+           shacl:path lpdcExt:isArchived
+       ], [
+           shacl:datatype xsd:dateTime;
+           shacl:description "This property represents the datetime of creation of an instance."@nl;
+           shacl:minCount 1;
+           shacl:maxCount 1;
+           shacl:name "dateCreated"@nl;
+           shacl:path schema:dateCreated
+       ],[
+           shacl:datatype xsd:dateTime;
+           shacl:description "This property represents the datetime of modification of an instance."@nl;
+           shacl:minCount 1;
+           shacl:maxCount 1;
+           shacl:name "dateModified"@nl;
+           shacl:path schema:dateModified
+       ],[
+           shacl:class m8g:PublicOrganisation;
+           shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the creation of the Public Service."@nl;
+           shacl:minCount  1;
+           shacl:maxCount 1;
+           shacl:name "createdBy"@nl;
+           rdfs:seeAlso "We expect lblod iri's. Find possible values at: https://data.lblod.info/sparql#query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20ns2%3A%09%3Chttp%3A%2F%2Fdata.vlaanderen.be%2Fns%2Fbesluit%23%3E%0APREFIX%20skos%3A%09%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Fsub%20%3Flabel%20WHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%09ns2%3ABestuurseenheid%20.%0A%20%20%3Fsub%20skos%3AprefLabel%20%3Flabel%0A%7D%20%0AORDER%20BY%20%3Flabel&endpoint=%2Fsparql&requestMethod=POST&tabTitle=Query&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table";
+           shacl:path pav:createdBy
+       ],[
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents free text for additional information regarding the  Description of the Public Service."@nl;
+          shacl:maxCount 4; # one for each language allowed
+          shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+          shacl:uniqueLang true;
+          shacl:name "additionalDescription"@nl;
+          shacl:path lpdcExt:additionalDescription
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "Bevoegd bestuursniveau van een publieke dienst"@nl;
+          shacl:name "competentAuthorityLevel"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/bevoegd-bestuursniveau.ttl";
+          shacl:path lpdcExt:competentAuthorityLevel
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents a free text Description of the Public Service. The description is likely to be the text that potential users of the Public Service see in any public service catalogue. Public administrations are encouraged to include a reasonable level of detail in the description, for instance including basic eligibility requirements for the particular Public Service and contact information."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 4; # one for each language allowed
+          shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+          shacl:uniqueLang true;
+          shacl:name "description"@nl;
+          shacl:path dc:description
+      ], [
+          shacl:datatype xsd:dateTime;
+          shacl:description "Datum waarop de publieke dienstverlening stopgezet werd/wordt"@nl;
+          shacl:maxCount 1;
+          shacl:name "endDate"@nl;
+          shacl:path schema:endDate
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
+          shacl:maxCount 4; # one for each language allowed
+          shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+          shacl:uniqueLang true;
+          shacl:name "exception"@nl;
+          shacl:path lpdcExt:exception
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "Uitvoerend bestuursniveau van een publieke dienst"@nl;
+          shacl:name "executingAuthorityLevel"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/uitvoerend-bestuursniveau.ttl";
+          shacl:path lpdcExt:executingAuthorityLevel
+      ], [
+          shacl:class cpsv:Rule;
+          shacl:description "The Follows property links a Public Service to the Rule(s) under which it operates. The definition of the Rule class is very broad. In a typical case, the competent authority that provides the public service will also define the rules that will implement its own policies. This model is flexible to allow for significant variation in such a scenario."@nl;
+          shacl:maxCount 1;
+          shacl:name "follows"@nl;
+          shacl:path cpsv:follows
+      ], [
+          shacl:class m8g:PublicOrganisation;
+          shacl:description "This property links a Public Service to a Public Organization, which is the responsible Agent for the delivery of the Public Service. Whether the particular Public Organization provides the public service directly or outsources it is not relevant. The Public Organization that is the Competent Authority of the service is the one that is ultimately responsible for managing and providing the public service. The term Competent Authority is defined in the Services Directive (2006/123/EC) in the following way: \"Any body or authority which has a supervisory or regulatory role in a Member State in relation to service activities, including, in particular, administrative authorities, including courts acting as such, professional bodies, and those professional associations or other professional organizations which, in the exercise of their legal autonomy, regulate in a collective manner access to service activities or the exercise thereof\"."@nl;
+          shacl:minCount 1;
+          shacl:name "hasCompetentAuthority"@nl;
+          rdfs:seeAlso "We expect lblod iri's. Find possible values at: https://data.lblod.info/sparql#query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20ns2%3A%09%3Chttp%3A%2F%2Fdata.vlaanderen.be%2Fns%2Fbesluit%23%3E%0APREFIX%20skos%3A%09%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Fsub%20%3Flabel%20WHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%09ns2%3ABestuurseenheid%20.%0A%20%20%3Fsub%20skos%3AprefLabel%20%3Flabel%0A%7D%20%0AORDER%20BY%20%3Flabel&endpoint=%2Fsparql&requestMethod=POST&tabTitle=Query&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table";
+          shacl:path m8g:hasCompetentAuthority
+      ], [
+          shacl:class schema:ContactPoint;
+          shacl:description "A contact point for the service is almost always helpful. The value of this property, the contact information itself, should be provided using schema:ContactPoint. Note that the contact information should be relevant to the Public Service which may not be the same as contact information for the Competent Authority or any Participant."@nl;
+          shacl:name "hasContactPoint"@nl;
+          shacl:path m8g:hasContactPoint
+      ], [
+          shacl:class m8g:Cost;
+          shacl:description "The Has Cost property links a Public Service to one or more instances of the Cost class. It indicates the costs related to the execution of a Public Service for the citizen or business related to the execution of the particular Public Service. Where the cost varies depending on the channel through which the service is accessed, it can be linked to the channel using the If Accessed Through relationship."@nl;
+          shacl:name "hasCost"@nl;
+          shacl:path m8g:hasCost
+      ], [
+          shacl:class m8g:PublicOrganisation;
+          shacl:description "Uitvoerend bestuur van een publieke dienst"@nl;
+          shacl:name "hasExecutingAuthority"@nl;
+          rdfs:seeAlso "We expect lblod iri's. Find possible values at: https://data.lblod.info/sparql#query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20ns2%3A%09%3Chttp%3A%2F%2Fdata.vlaanderen.be%2Fns%2Fbesluit%23%3E%0APREFIX%20skos%3A%09%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23%3E%0ASELECT%20%3Fsub%20%3Flabel%20WHERE%20%7B%0A%20%20%3Fsub%20rdf%3Atype%09ns2%3ABestuurseenheid%20.%0A%20%20%3Fsub%20skos%3AprefLabel%20%3Flabel%0A%7D%20%0AORDER%20BY%20%3Flabel&endpoint=%2Fsparql&requestMethod=POST&tabTitle=Query&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table";
+          shacl:path lpdcExt:hasExecutingAuthority
+      ], [
+          shacl:class eli:LegalResource;
+          shacl:description "The Has Legal Resource property links a Public Service to a Legal Resource. It indicates the Legal Resource (e.g. legislation) to which the Public Service relates, operates or has its legal basis."@nl;
+          shacl:name "hasLegalResource"@nl;
+          shacl:path m8g:hasLegalResource
+      ], [
+          shacl:class schema:WebSite;
+          shacl:description "moreInfo verwijst naar online locaties waar extra info rond iets specifiek gerelateerd aan de publieke dienstverlening vermeld wordt"@nl;
+          shacl:name "hasMoreInfo"@nl;
+          shacl:path rdfs:seeAlso
+      ], [
+          shacl:class m8g:Requirement;
+          shacl:description "Tekstuele beschrijving van de voorwaarden om gebruik te maken van de dienstverlening."@nl;
+          shacl:maxCount 1;
+          shacl:name "hasRequirement"@nl;
+          shacl:path ps:hasRequirement
+      ], [
+          shacl:class lpdcExt:ConceptualPublicService;
+          shacl:description "De conceptuele publieke service waarop deze instantie gebaseerd werd"@nl;
+          shacl:maxCount 1;
+          shacl:name "hasSource"@nl;
+          shacl:path dc:source
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "De tags betreffen informatieve aanduidingen van de publieke dienstverlening."@nl;
+          shacl:name "instanceTag"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/instantie-tag.ttl";
+          shacl:path lpdcExt:instanceTag
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents a keyword, term or phrase to describe the Public Service."@nl;
+          shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+          shacl:name "keyword"@nl;
+          shacl:path dcat:keyword
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "This property represents the language(s) in which the Public Service is available. This could be one language or multiple languages, for instance in countries with more than one official language. The possible values for this property are described in a controlled vocabulary. The recommended controlled vocabularies are listed in section 4."@nl;
+          rdfs:seeAlso "vocabulary values found at: http://publications.europa.eu/resource/authority/language, we support 4 official languages in Belgium: (NLD, DEU, ENG, FRA)";
+          shacl:name "language"@nl;
+          shacl:path dc:language
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "This property represents the official Name of the Public Service."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 4; # one for each language allowed
+          shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+          shacl:uniqueLang true;
+          shacl:name "name"@nl;
+          shacl:path dc:title
+      ], [
+          shacl:class m8g:Output;
+          shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
+          shacl:name "produces"@nl;
+          shacl:path cpsv:produces
+    ], [
+          shacl:class skos:Concept;
+          shacl:description "De informatie van de publieke dienstverlening wordt ontsloten naar de gekozen publicatie mediums."@nl;
+          shacl:name "publicationMedium"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/publicatie-kanaal.ttl";
+          shacl:path lpdcExt:publicationMedium
+    ], [
+          shacl:datatype rdf:langString;
+          shacl:description "Tekstveld waarin de regelgeving waarop de public service gebaseerd is kan beschreven worden."@nl;
+          shacl:maxCount 4; # one for each language allowed
+          shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+          shacl:uniqueLang true;
+          shacl:name "regulation"@nl;
+          shacl:path lpdcExt:regulation
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "A Public Service is likely to be available only within a given area, typically the area covered by a particular public authority."@nl;
+          shacl:minCount 1;
+          shacl:name "spatial"@nl;
+          shacl:path dc:spatial
+      ], [
+          shacl:datatype xsd:dateTime;
+          shacl:description "Datum waarop de publieke dienstverlening actief aangeboden werd/wordt"@nl;
+          shacl:maxCount 1;
+          shacl:name "startDate"@nl;
+          shacl:path schema:startDate
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "doelgroep(en) waarop de public service gericht is"@nl;
+          shacl:name "targetAudience"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/doelgroep.ttl";
+          shacl:path lpdcExt:targetAudience
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "This property represents the theme of a Public Service as described in a controlled vocabulary."@nl;
+          shacl:name "theme"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/thema.ttl";
+          shacl:path m8g:thematicArea
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "Het type/soort van public service (bv advies, financieel voordeel, ...), in een gecontroleerde vocabularium."@nl;
+          shacl:maxCount 1;
+          shacl:name "type"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/type.ttl";
+          shacl:path dc:type
+      ], [
+          shacl:class skos:Concept;
+          shacl:description "SDG (Single digital gateway) domein waarbinnen de public service gecategoriseerd wordt"@nl;
+          rdfs:seeAlso "vocabulary values found at: https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/main/codelijsten/your-europe-categorie.ttl";
+          shacl:name "yourEuropeCategory"@nl;
+          shacl:path lpdcExt:yourEuropeCategory
+      ];
+    shacl:targetClass lpdcExt:InstancePublicServiceSnapshot .
+
+oss:InstanceRuleShape
+    a shacl:NodeShape;
+    shacl:property [
+           shacl:datatype rdf:langString;
+           shacl:description "The title of the rule"@nl;
+           shacl:minCount 1;
+           shacl:maxCount 4; # one for each language allowed
+           shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+           shacl:uniqueLang true;
+           shacl:name "title"@nl;
+           shacl:path dc:title
+       ], [
+           shacl:datatype rdf:langString;
+           shacl:description "The description of the rule"@nl;
+           shacl:minCount 1;
+           shacl:maxCount 4; # one for each language allowed
+           shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+           shacl:uniqueLang true;
+           shacl:name "description"@nl;
+           shacl:path dc:description
+       ], [
+           shacl:datatype xsd:integer ;
+           shacl:description "The order of the rule"@nl;
+           shacl:minCount 1;
+           shacl:maxCount 1;
+           shacl:name "order"@nl;
+           shacl:path shacl:order
+       ], [
+           shacl:class schema:WebSite;
+           shacl:description "Link naar online locatie waar de procedure opgestart kan worden."@nl;
+           shacl:name "hasWebsite"@nl;
+           shacl:path lpdcExt:hasWebsite
+       ];
+    shacl:targetClass cpsv:Rule.
+
+oss:InstanceWebsiteShape
+    a shacl:NodeShape;
+    shacl:property [
+           shacl:datatype rdf:langString;
+           shacl:description "This property represents the title of the Website."@nl;
+           shacl:minCount 1;
+           shacl:maxCount 4; # one for each language allowed
+           shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+           shacl:uniqueLang true;
+           shacl:name "title"@nl;
+           shacl:path dc:title
+       ], [
+           shacl:datatype rdf:langString;
+           shacl:description "This property represents the description of the Website."@nl;
+           shacl:minCount 0;
+           shacl:maxCount 4; # one for each language allowed
+           shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+           shacl:uniqueLang true;
+           shacl:name "description"@nl;
+           shacl:path dc:description
+       ], [
+           shacl:datatype xsd:string;
+           shacl:description "This property represents the url of the Website."@nl;
+           shacl:maxCount 1;
+           shacl:minCount 1;
+           shacl:name "location"@nl;
+           shacl:path schema:url
+       ], [
+           shacl:datatype xsd:integer ;
+           shacl:description "This property represents the order of the Website."@nl;
+           shacl:maxCount 1;
+           shacl:minCount 1;
+           shacl:name  "order"@nl;
+           shacl:path shacl:order
+       ];
+    shacl:targetClass schema:WebSite.
+
+oss:InstanceCostShape
+    a shacl:NodeShape;
+    shacl:property [
+       shacl:datatype rdf:langString;
+       shacl:description "The title of the Cost"@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "title"@nl;
+       shacl:path dc:title
+   ], [
+       shacl:datatype rdf:langString;
+       shacl:description "The description of the Cost"@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "description"@nl;
+       shacl:path dc:description
+   ], [
+       shacl:datatype xsd:integer ;
+       shacl:description "The order of the Cost"@nl;
+       shacl:minCount 1;
+       shacl:maxCount 1;
+       shacl:name "order"@nl;
+       shacl:path shacl:order
+   ];
+   shacl:targetClass m8g:Cost.
+
+oss:InstanceRequirementShape
+    a shacl:NodeShape;
+    shacl:property [
+       shacl:datatype rdf:langString;
+       shacl:description "This property represents the official Name of the Requirement."@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "name"@nl;
+       shacl:path dc:title
+   ], [
+       shacl:datatype rdf:langString;
+       shacl:description "A short explanation about the nature, attributes, uses or any other additional information that helps clarify the understanding of the Requirement being instantiated."@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "description"@nl;
+       shacl:path dc:description
+   ], [
+       shacl:datatype xsd:integer ;
+       shacl:description "The order of the Requirement"@nl;
+       shacl:minCount 1;
+       shacl:maxCount 1;
+       shacl:name "order"@nl;
+       shacl:path shacl:order
+   ], [
+       shacl:class m8g:Evidence;
+       shacl:description "The Evidence that supplies information (proof, support) for this Requirement."@nl;
+       shacl:maxCount 1;
+       shacl:name "hasSupportingEvidence"@nl;
+       shacl:path m8g:hasSupportingEvidence
+   ];
+   shacl:targetClass m8g:Requirement.
+
+oss:InstanceEvidenceShape
+    a shacl:NodeShape ;
+    shacl:property [
+       shacl:datatype rdf:langString;
+       shacl:description "This property represents the title of the supporting evidence."@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "title"@nl;
+       shacl:path dc:title
+   ], [
+       shacl:datatype rdf:langString;
+       shacl:description "This property represents the description of the supporting evidence."@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "description"@nl;
+       shacl:path dc:description
+   ];
+   shacl:targetClass m8g:Evidence.
+
+oss:InstanceOutputShape
+    a shacl:NodeShape;
+    shacl:property [
+       shacl:datatype rdf:langString;
+       shacl:description "The title of the Output"@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "title"@nl;
+       shacl:path dc:title
+   ], [
+       shacl:datatype rdf:langString;
+       shacl:description "The description of the Output"@nl;
+       shacl:minCount 1;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "description"@nl;
+       shacl:path dc:description
+   ],  [
+       shacl:datatype xsd:integer ;
+       shacl:description "The order of the Output"@nl;
+       shacl:minCount 1;
+       shacl:maxCount 1;
+       shacl:name "order"@nl;
+       shacl:path shacl:order
+   ];
+   shacl:targetClass m8g:Output.
+
+oss:InstanceContactPointShape
+    a shacl:NodeShape;
+    shacl:property [
+          shacl:class locn:Address;
+          shacl:description "Adres dat men kan aanschrijven of bezoeken."@nl;
+          shacl:maxCount 1;
+          shacl:name "address"@nl;
+          shacl:path lpdcExt:address
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A property through which an e-mail address for the Public Organization, or a representative of it, can be contacted."@nl;
+          shacl:maxCount 1;
+          shacl:name "hasEmail"@nl;
+          shacl:path schema:email
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A property through which an e-mail address for the Public Organization, or a representative of it, can be contacted."@nl;
+          shacl:pattern "^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$" ;
+          shacl:message "Invalid email format." ;
+          shacl:name "hasEmail"@nl;
+          shacl:path schema:email
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A property through which a phone number for the Public Organization, or a representative of it, can be contacted."@nl;
+          shacl:maxCount 1;
+          shacl:name "hasTelephone"@nl;
+          shacl:path schema:telephone
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "The value of this property is structured text that gives the hours at which the contact point is normally available."@nl;
+          shacl:maxCount 1;
+          shacl:name "openinghours"@nl;
+          shacl:path schema:openingHours
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs."@nl;
+          shacl:maxCount 1;
+          shacl:name "website"@nl;
+          shacl:path schema:url
+      ], [
+          shacl:description "The order of this contact point"@nl;
+          shacl:name "order"@nl;
+          shacl:datatype xsd:integer ;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:path shacl:order
+      ];
+    shacl:targetClass schema:ContactPoint .
+
+oss:InstanceAddressShape
+    a shacl:NodeShape;
+    shacl:property [
+          shacl:datatype rdf:langString;
+          shacl:description "The region of the address, usually a county, state or other such area that typically encompasses several localities. The domain of locn:adminUnitL2 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
+          shacl:maxCount 1;
+          shacl:name "administrativeUnitLevel2"@nl;
+          shacl:path locn:adminUnitL2
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "The uppermost administrative unit for the address, almost always a country. The domain of locn:adminUnitL1 is locn:Address and the range is a literal, conceptually defined by the INSPIRE Geographical Name data type."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 2;
+          shacl:languageIn ("en" "nl");
+          shacl:uniqueLang true;
+          shacl:name "country"@nl;
+          shacl:path adres:land
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "houseNumber is defined as a subproperty of locatordesignator by defining parentURI http://www.w3.org/ns/locn#locatorDesignator."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:name "houseNumber"@nl;
+          shacl:path adres:Adresvoorstelling.huisnummer
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "mailbox is defined as a subproperty of locatordesignator by defining parentURI http://www.w3.org/ns/locn#locatorDesignator."@nl;
+          shacl:maxCount 1;
+          shacl:name "mailbox"@nl;
+          shacl:path adres:Adresvoorstelling.busnummer
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\"). The domain of locn:postName is locn:Address."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 2;
+          shacl:languageIn ("en" "nl");
+          shacl:uniqueLang true;
+          shacl:name "municipality"@nl;
+          shacl:path adres:gemeentenaam
+      ], [
+          shacl:datatype xsd:string;
+          shacl:description "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems. The domain of locn:postCode is locn:Address."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 1;
+          shacl:name "postCode"@nl;
+          shacl:path adres:postcode
+      ], [
+          shacl:datatype rdf:langString;
+          shacl:description "An address component that represents the name of a passage or way through from one location to another. A thoroughfare is not necessarily a road, it might be a waterway or some other feature. The domain of locn:thoroughfare is locn:Address."@nl;
+          shacl:minCount 1;
+          shacl:maxCount 2;
+          shacl:languageIn ("en" "nl");
+          shacl:uniqueLang true;
+          shacl:name "thoroughfare"@nl;
+          shacl:path adres:Straatnaam
+      ];
+    shacl:targetClass locn:Address .
+
+oss:InstanceLegalResourceShape
+    a shacl:NodeShape;
+    shacl:property [
+       shacl:datatype rdf:langString;
+       shacl:description "This property represents the title of the Legal Resource."@nl;
+       shacl:minCount 0;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "title"@nl;
+       shacl:path dc:title
+   ], [
+       shacl:datatype rdf:langString;
+       shacl:description "This property represents the description of the Legal Resource."@nl;
+       shacl:minCount 0;
+       shacl:maxCount 4; # one for each language allowed
+       shacl:languageIn ("en" "nl" "nl-be-x-formal" "nl-be-x-informal");
+       shacl:uniqueLang true;
+       shacl:name "description"@nl;
+       shacl:path dc:description
+   ], [
+       shacl:datatype xsd:string;
+       shacl:description "A url that that point to the related legal resource in for example the flemish codex."@nl;
+       shacl:minCount 1;
+       shacl:maxCount 1;
+       shacl:name "regelgevendeBron"@nl;
+       shacl:path schema:url
+    ], [
+       shacl:description "The order of this Legal Resource"@nl;
+       shacl:name "order"@nl;
+       shacl:datatype xsd:integer ;
+       shacl:minCount 1;
+       shacl:maxCount 1;
+       shacl:path shacl:order
+      ];
+    shacl:targetClass eli:LegalResource .
+

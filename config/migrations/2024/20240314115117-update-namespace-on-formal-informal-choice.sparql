@@ -1,0 +1,26 @@
+PREFIX lpdc:    <http://data.lblod.info/vocabularies/lpdc/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?formalInformalChoice rdf:type lpdcExt:FormalInformalChoice .
+        ?formalInformalChoice lpdcExt:chosenForm ?chosenForm .
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?formalInformalChoice rdf:type lpdc:FormalInformalChoice .
+        ?formalInformalChoice lpdc:chosenForm ?chosenForm .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?formalInformalChoice rdf:type lpdcExt:FormalInformalChoice .
+        ?formalInformalChoice lpdcExt:chosenForm ?chosenForm .
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+}

@@ -1,0 +1,314 @@
+{
+  "@context": {
+    "conceptNs": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#",
+    "dct": "http://purl.org/dc/terms/",
+    "purlCpsv": "http://purl.org/vocab/cpsv#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "deu": "http://data.europa.eu/m8g/",
+    "deuOntology": "http://data.europa.eu/eli/ontology#",
+    "locn": "http://www.w3.org/ns/locn#",
+    "sch": "http://schema.org/",
+    "ldes": "https://w3id.org/ldes#",
+    "tree": "https://w3id.org/tree#",
+    "hydra": "http://www.w3.org/ns/hydra/core#",
+    "dtv": "https://data.vlaanderen.be/ns/",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "ConceptualPublicServiceSnapshot": "conceptNs:ConceptualPublicServiceSnapshot",
+    "id": {
+      "@id": "sch:identifier"
+    },
+    "order": {
+      "@id": "sh:order"
+    },
+    "productnummer": {
+      "@id": "sch:productID",
+      "@type": "xsd:string"
+    },
+    "generatedAtTime": {
+      "@id": "prov:generatedAtTime",
+      "@type": "xsd:dateTime"
+    },
+    "isVersionOf": {
+      "@id": "dct:isVersionOf",
+      "@type": "@id"
+    },
+    "snapshotType": {
+      "@id": "conceptNs:snapshotType",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/"
+      }
+    },
+    "bevoegdBestuursniveaus": {
+      "@id": "conceptNs:competentAuthorityLevel",
+      "@container": "@set",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+      }
+    },
+    "uitvoerendBestuursniveaus": {
+      "@id": "conceptNs:executingAuthorityLevel",
+      "@container": "@set",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+      }
+    },
+    "naam": {
+      "@id": "dct:title",
+      "@container": "@language"
+    },
+    "verdereBeschrijving": {
+      "@id": "conceptNs:additionalDescription",
+      "@container": "@language"
+    },
+    "beschrijving": {
+      "@id": "dct:description",
+      "@container": "@language"
+    },
+    "eindeDienstVerlening": {
+      "@id": "sch:endDate",
+      "@type": "xsd:dateTime"
+    },
+    "uitzonderingen": {
+      "@id": "conceptNs:exception",
+      "@container": "@language"
+    },
+    "url": {
+      "@id": "sch:url"
+    },
+    "procedures": {
+      "@id": "http://purl.org/vocab/cpsv#follows",
+      "@container": "@set",
+      "@context": {
+        "websites": {
+          "@id": "conceptNs:hasWebsite",
+          "@container": "@set"
+        }
+      }
+    },
+    "procedure": {
+      "@id": "purlCpsv:Rule"
+    },
+    "bevoegdeOverheden": {
+      "@id": "deu:hasCompetentAuthority",
+      "@container": "@set",
+      "@context": {
+        "id": "@id",
+        "@base": "https://data.vlaanderen.be/id/organisatie/"
+      }
+    },
+    "kosten": {
+      "@id": "deu:hasCost",
+      "@container": "@set"
+    },
+    "kost": {
+      "@id": "deu:Cost"
+    },
+    "uitvoerendeOverheden": {
+      "@id": "conceptNs:hasExecutingAuthority",
+      "@container": "@set",
+      "@context": {
+        "id": "@id",
+        "@base": "https://data.vlaanderen.be/id/organisatie/"
+      }
+    },
+    "regelgevendeBronnen": {
+      "@id": "deu:hasLegalResource",
+      "@type": "@id",
+      "@container": "@set"
+    },
+    "regelgevendeBron": {
+      "@id": "deuOntology:LegalResource"
+    },
+    "websites": {
+      "@container": "@set",
+      "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "website": {
+      "@id": "sch:WebSite"
+    },
+    "voorwaarden": {
+      "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+      "@container": "@set",
+      "@context": {
+        "bewijs": {
+          "@id": "deu:hasSupportingEvidence"
+        }
+      }
+    },
+    "voorwaarde": {
+      "@id": "deu:Requirement"
+    },
+    "bewijsType": {
+      "@id": "deu:Evidence"
+    },
+    "zoektermen": {
+      "@container": [
+        "@language",
+        "@set"
+      ],
+      "@id": "http://www.w3.org/ns/dcat#keyword"
+    },
+    "talen": {
+      "@container": "@set",
+      "@id": "dct:language",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://publications.europa.eu/resource/authority/language/"
+      }
+    },
+    "financieleVoordelen": {
+      "@container": "@set",
+      "@id": "http://purl.org/vocab/cpsv#produces"
+    },
+    "financieelVoordeel": {
+      "@id": "conceptNs:FinancialAdvantage"
+    },
+    "publicatiekanalen": {
+      "@container": "@set",
+      "@id": "conceptNs:publicationMedium",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+      }
+    },
+    "regelgevingTekst": {
+      "@id": "conceptNs:regulation",
+      "@container": "@language"
+    },
+    "geografischToepassingsgebieden": {
+      "@container": "@set",
+      "@id": "dct:spatial",
+      "@type": "@id",
+      "@context": {
+        "@base": "http://data.europa.eu/nuts/code/"
+      }
+    },
+    "startDienstVerlening": {
+      "@id": "sch:startDate",
+      "@type": "xsd:dateTime"
+    },
+    "tags": {
+      "@container": "@set",
+      "@id": "conceptNs:conceptTag",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/"
+      }
+    },
+    "gearchiveerd": {
+      "@id": "conceptNs:isArchived",
+      "@type": "xsd:boolean"
+    },
+    "doelgroepen": {
+      "@container": "@set",
+      "@id": "conceptNs:targetAudience",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+      }
+    },
+    "themas": {
+      "@container": "@set",
+      "@id": "deu:thematicArea",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+      }
+    },
+    "type": {
+      "@id": "dct:type",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
+      }
+    },
+    "yourEuropeCategorieen": {
+      "@container": "@set",
+      "@id": "conceptNs:yourEuropeCategory",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
+      }
+    },
+    "creatie": {
+      "@id": "sch:dateCreated",
+      "@type": "xsd:dateTime"
+    },
+    "laatstGewijzigd": {
+      "@id": "sch:dateModified",
+      "@type": "xsd:dateTime"
+    },
+    "EventStream": "ldes:EventStream",
+    "Node": "tree:Node",
+    "relation": {
+      "@container": "@set",
+      "@id": "tree:relation"
+    },
+    "view": "tree:view",
+    "shape": "tree:shape",
+    "member": {
+      "@id": "tree:member",
+      "@container": "@set"
+    },
+    "GreaterThanOrEqualToRelation": "tree:GreaterThanOrEqualToRelation",
+    "LessThanOrEqualToRelation": "tree:LessThanOrEqualToRelation",
+    "LessThanRelation": "tree:LessThanRelation",
+    "versionOfPath": {
+      "@id": "ldes:versionOfPath",
+      "@type": "@id"
+    },
+    "timestampPath": {
+      "@id": "ldes:timestampPath",
+      "@type": "@id"
+    },
+    "node": {
+      "@id": "tree:node",
+      "@type": "@id"
+    },
+    "path": {
+      "@id": "tree:path",
+      "@type": "@id"
+    },
+    "value": {
+      "@id": "tree:value",
+      "@type": "xsd:dateTime"
+    },
+    "hydraMember": {
+      "@id": "hydra:member",
+      "@type": "@id"
+    },
+    "hydraLimit": {
+      "@id": "hydra:limit",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "hydraPageIndex": {
+      "@id": "hydra:pageIndex",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "hydraView": {
+      "@id": "hydra:view",
+      "@type": "@id"
+    },
+    "hydraTotalItems": "hydra:totalItems",
+    "hydraFirst": {
+      "@id": "hydra:first",
+      "@type": "@id"
+    },
+    "hydraLast": {
+      "@id": "hydra:last",
+      "@type": "@id"
+    },
+    "hydraNext": {
+      "@id": "hydra:next",
+      "@type": "@id"
+    },
+    "hydraPrevious": {
+      "@id": "hydra:previous",
+      "@type": "@id"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        <http://lblod.data.gift/concepts/concept-status/gearchiveerd>
+        a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://mu.semte.ch/vocabularies/core/uuid>         """658b1835-29ec-4ea9-95ae-aaf1202ff9c8""" ;
+        <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/cb0a8d0d-450e-4506-b9bf-d704e045d905>;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>     "Conceptual service instance was archived"@nl ;
+        <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/cb0a8d0d-450e-4506-b9bf-d704e045d905> .
+    }
+}

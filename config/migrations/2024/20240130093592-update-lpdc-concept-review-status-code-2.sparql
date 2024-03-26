@@ -1,0 +1,16 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?concept <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/3f2666df-1dae-4cc2-a8dc-e8213e713081> .
+    }
+}
+INSERT {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?concept <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/concept-status/gearchiveerd> .
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?concept a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> .
+        ?concept <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/3f2666df-1dae-4cc2-a8dc-e8213e713081> .
+    }
+}

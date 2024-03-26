@@ -1,0 +1,22 @@
+@prefix lpdcExt:  <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix schema: <http://schema.org/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> lpdcExt:ConceptualPublicServiceSnapshot .
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> dc:title "concept-title"@nl.
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> dc:description  "concept-description"@nl.
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> schema:dateCreated "2023-11-30T12:25:18.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> schema:dateModified "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> schema:productID "1502".
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> dc:isVersionOf <some-iri>.
+<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/705d401c-1a41-4802-a863-b22499f71b84> prov:generatedAtTime "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> lpdcExt:ConceptualPublicServiceSnapshot .
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  dc:title "concept-title"@nl.
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  dc:description  "concept-description"@nl.
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  schema:dateCreated "2023-11-30T12:25:18.623Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  schema:dateModified "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  schema:productID "6545" .
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  dc:isVersionOf <some-other-iri>.
+<https://ipdc.vlaanderen.be/id/conceptsnapshot/9250faec-c65a-4f28-a343-e9b7028e6cdb>  prov:generatedAtTime "2023-11-30T12:25:55.789Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .

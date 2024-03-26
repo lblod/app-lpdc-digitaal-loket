@@ -1,0 +1,28 @@
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/6463c55877def582f642cb5b3b4a7eab60d8d8dd9779fc45d87e4c8aa5d9a07e/LoketLB-LPDCGebruiker>{
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://data.europa.eu/m8g/hasCompetentAuthority> <https://data.vlaanderen.be/id/organisatie/OVO027227> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://mu.semte.ch/vocabularies/core/uuid> "a3958489-decc-45bd-afed-d6a89367163b" .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://purl.org/dc/terms/description> "<p>A death registration is the registration of the death of a person with the register office of the place of death.</p>"@en .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://purl.org/dc/terms/description> "<p>Een overlijdensaangifte is de registratie van het overlijden van een persoon bij de ambtenaar van de burgerlijke stand van de plaats van overlijden.</p>"@nl .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://purl.org/dc/terms/source> <https://ipdc.vlaanderen.be/id/concept/cae5e6b4-0b6b-4b3c-8ec6-755313f7fe8a> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://purl.org/dc/terms/title> "Death registration"@en .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://purl.org/dc/terms/title> "Overlijdensaangifte"@nl .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://purl.org/vocab/cpsv#follows> <http://data.lblod.info/id/rule/7fd8ac33-d5bc-4308-9f7f-1d7534c4455b> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/6fb94334-b6d8-4d03-9c3d-5b24777a2fa9> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#PublicService> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://www.w3.org/ns/dcat#keyword> "aangifte van overlijden"@en .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://www.w3.org/ns/dcat#keyword> "aangifte van overlijden"@nl .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://www.w3.org/ns/dcat#keyword> "overlijdensaangifte"@en .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <http://www.w3.org/ns/dcat#keyword> "overlijdensaangifte"@nl .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag> <https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium> <https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/fd52b5ee-70c4-4d63-885d-18c32dfb454f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VerblijfOverlijden> .
+<http://data.lblod.info/id/requirement/6fb94334-b6d8-4d03-9c3d-5b24777a2fa9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/id/requirement/6fb94334-b6d8-4d03-9c3d-5b24777a2fa9> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/rule/7fd8ac33-d5bc-4308-9f7f-1d7534c4455b> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/rule/7fd8ac33-d5bc-4308-9f7f-1d7534c4455b> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+}

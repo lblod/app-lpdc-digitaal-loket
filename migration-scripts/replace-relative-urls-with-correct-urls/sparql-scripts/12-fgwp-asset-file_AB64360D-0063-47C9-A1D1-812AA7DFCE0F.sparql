@@ -1,0 +1,29 @@
+DELETE {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance ?p ?o.
+  }
+}
+INSERT {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance ?p ?newOLang.
+  }
+} WHERE {
+
+VALUES (?oldUrl ?newUrl) {
+('href="/fgwp-asset-file/AB64360D-0063-47C9-A1D1-812AA7DFCE0F"' 'href="https://assets.vlaanderen.be/raw/upload/v1650024609/Erewoordverklaring_taalkennis_2021-2_hvkwz9_rw0i9z.docx"')
+}
+
+  GRAPH ?bestuurseenheidGraph {
+    ?instance ?p ?o.
+  }
+  BIND(LANG(?o) AS ?oLang)
+  BIND(REPLACE(STR(?o), ?oldUrl, ?newUrl) as ?newO1)
+  BIND(STRLANG(?newO1, ?oLang) as ?newOLang)
+
+
+  FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker") &&
+    regex(str(?o), ?oldUrl)
+  )
+}

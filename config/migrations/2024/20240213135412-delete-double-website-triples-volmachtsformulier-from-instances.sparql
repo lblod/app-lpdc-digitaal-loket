@@ -1,0 +1,20 @@
+delete {
+    graph ?bestuurseenheidGraph {
+        ?s <http://purl.org/dc/terms/title> "Meer info over de bewijzen en attesten"@nl .
+        ?s <http://purl.org/dc/terms/title> "Meer info over de bewijzen en attesten"@en .
+    }
+}  where {
+    graph ?bestuurseenheidGraph {
+        ?s a <http://schema.org/WebSite> ;
+        <http://purl.org/dc/terms/title> "Meer info over de bewijzen en attesten"@nl ;
+        <http://purl.org/dc/terms/title> "Meer info over de bewijzen en attesten"@en ;
+        <http://purl.org/dc/terms/title> "Volmachtformulier"@nl ;
+        <http://purl.org/dc/terms/title> "Volmachtformulier"@en .
+    }
+
+    filter(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+
+}

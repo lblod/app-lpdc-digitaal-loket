@@ -1,0 +1,13 @@
+DELETE {
+    GRAPH ?g {
+        ?evidence ?p ?o .
+    }
+} WHERE {
+    GRAPH ?g {
+        ?publicService a <http://purl.org/vocab/cpsv#PublicService>.
+        ?publicService <http://vocab.belgif.be/ns/publicservice#hasRequirement> ?requirement .
+        ?requirement <http://data.europa.eu/m8g/hasSupportingEvidence> ?evidence.
+        ?evidence ?p ?o .
+        FILTER(lang(?o) = 'nl-be-x-generated-informal' || lang(?o) = 'nl-be-x-generated-formal')
+    }
+}

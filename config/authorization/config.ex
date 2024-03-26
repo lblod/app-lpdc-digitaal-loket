@@ -1,6 +1,5 @@
 alias Acl.Accessibility.Always, as: AlwaysAccessible
 alias Acl.Accessibility.ByQuery, as: AccessByQuery
-#alias Acl.GraphSpec.Constraint.Resource.AllPredicates, as: AllPredicates
 alias Acl.GraphSpec.Constraint.Resource.NoPredicates, as: NoPredicates
 alias Acl.GraphSpec.Constraint.ResourceFormat, as: ResourceFormatConstraint
 alias Acl.GraphSpec.Constraint.Resource, as: ResourceConstraint
@@ -94,7 +93,6 @@ defmodule Acl.UserGroups.Config do
                         "http://data.europa.eu/m8g/RequirementGroup",
                         "http://data.europa.eu/m8g/CriterionRequirement",
                         "http://data.europa.eu/m8g/Requirement",
-                        "http://xmlns.com/foaf/0.1/Document",
                         "http://www.w3.org/ns/org#Organization",
                         "http://lblod.data.gift/vocabularies/organisatie/TypeVestiging",
                         "http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode"
@@ -115,10 +113,9 @@ defmodule Acl.UserGroups.Config do
                     graph: "http://mu.semte.ch/graphs/organizations/",
                     constraint: %ResourceConstraint{
                       resource_types: [
-                        "http://xmlns.com/foaf/0.1/Document",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService",
                         "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#AbstractPublicService",
-                        "http://purl.org/vocab/cpsv#PublicService",
+                        "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService",
                         "https://www.w3.org/ns/activitystreams#Tombstone",
                         "http://data.europa.eu/m8g/PublicOrganisation",
                         "http://data.europa.eu/m8g/Requirement",
@@ -133,7 +130,8 @@ defmodule Acl.UserGroups.Config do
                         "http://purl.org/dc/terms/Location",
                         "http://schema.org/WebSite",
                         "http://www.w3.org/ns/locn#Address",
-                        "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptDisplayConfiguration"
+                        "http://data.lblod.info/vocabularies/lpdc/ConceptDisplayConfiguration",
+                        "http://data.lblod.info/vocabularies/lpdc/FormalInformalChoice",
                         ] } } ] },
 
       # // ORGANIZATION HAS POSSIBLY DUPLICATE USER DATA

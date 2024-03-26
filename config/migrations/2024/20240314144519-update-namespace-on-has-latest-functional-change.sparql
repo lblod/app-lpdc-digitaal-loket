@@ -1,0 +1,19 @@
+PREFIX lpdc:    <http://data.lblod.info/vocabularies/lpdc/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?concept lpdcExt:hasLatestFunctionalChange ?latestFunctionalChange.
+    }
+}
+INSERT {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?concept lpdc:hasLatestFunctionalChange ?latestFunctionalChange.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?concept rdf:type lpdcExt:ConceptualPublicService.
+        ?concept lpdcExt:hasLatestFunctionalChange ?latestFunctionalChange.
+    }
+}

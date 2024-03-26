@@ -1,0 +1,24 @@
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?address <http://mu.semte.ch/vocabularies/core/uuid> ?newAddresUuid .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <http://purl.org/vocab/cpsv#PublicService> .
+        ?instance <http://data.europa.eu/m8g/hasContactPoint> ?contactPoint.
+        ?contactPoint <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> ?address.
+        ?address <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/locn#Address>.
+
+        FILTER NOT EXISTS {
+            ?address <http://mu.semte.ch/vocabularies/core/uuid> ?addressUuid .
+        }
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+
+    BIND(SHA512(CONCAT(STR(?contactPoint), STR(?address))) as ?newAddresUuid)
+}

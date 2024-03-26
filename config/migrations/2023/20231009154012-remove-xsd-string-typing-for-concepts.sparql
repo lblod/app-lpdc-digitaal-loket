@@ -1,0 +1,12 @@
+DELETE { GRAPH ?g { ?s ?p ?o } }
+INSERT { GRAPH ?g { ?s ?p ?newO } }
+WHERE {
+    GRAPH ?g {
+        ?s ?p ?o .
+    }
+
+    BIND(str(?o) AS ?newO)
+    FILTER(
+    ?g = <http://mu.semte.ch/graphs/public>
+    && (?p = <http://schema.org/productID> || ?p = <http://schema.org/url>))
+}

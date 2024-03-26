@@ -14,7 +14,6 @@ export default {
     console.log('Generate list of stuck LPDC instances');
 
     const queryString = `
-      PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
       PREFIX schema:  <http://schema.org/>
       PREFIX adms:    <http://www.w3.org/ns/adms#>
       PREFIX as:      <https://www.w3.org/ns/activitystreams#>
@@ -23,84 +22,63 @@ export default {
       PREFIX rdfs-ns: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
       PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
       PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
-
-      SELECT DISTINCT ?publicService ?type ?title ?bestuurseenheidLabel ?classificatieLabel WHERE {
-        {
-          GRAPH ?graph {
-            ?publicService 
-              a             cpsv:PublicService ;
-              rdfs-ns:type  ?type ;
-              dct:title     ?title ;
-              pav:createdBy ?bestuurseenheid ;
-              adms:status   <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> .
-
-              FILTER(LANG(?title) = "nl")
-          }
-
-          GRAPH ?g {
-            ?bestuurseenheid skos:prefLabel ?bestuurseenheidLabel ;
-              besluit:classificatie ?classificatie .
-
-            ?classificatie skos:prefLabel ?classificatieLabel .
-          }
-
-          FILTER NOT EXISTS {
-            ?publicService schema:publication <http://lblod.data.gift/concepts/3369bb10-1962-11ed-b07c-132292303e92> .
-          }
+      PREFIX http:    <http://www.w3.org/2011/http#>
+      PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+      PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+      PREFIX lpdc:    <http://data.lblod.info/vocabularies/lpdc/>
+      
+      SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated ?dateSent ?datePublished WHERE {
+            GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
+                ?publicationError a lpdc:InstancePublicationError .
+                ?publicationError http:statusCode ?errorCode .
+                ?publicationError schema:error ?errorMessage .
+                ?publicationError dct:source ?instanceIri .
+                OPTIONAL {
+                    ?publicationError dct:title ?title .
+                }
+                ?publicationError foaf:owner ?bestuurseenheidIri .
+                ?publicationError schema:dateCreated ?dateCreated .
+                OPTIONAL {
+                    ?publicationError schema:dateSent ?dateSent .
+                }
+                OPTIONAL {
+                    ?publicationError schema:datePublished ?datePublished .
+                }
+            }
+            
+            GRAPH ?g {
+              VALUES ?type {
+                lpdcExt:InstancePublicService
+                as:Tombstone
+              }
+                ?instanceIri a ?type .
+            }
+            
+            GRAPH ?graph {
+                ?bestuurseenheidIri skos:prefLabel ?bestuurseenheidLabel ;
+                    besluit:classificatie ?classificatie . 
+                ?classificatie skos:prefLabel ?classificatieLabel .
+            }
+ 
+            FILTER(
+                (STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/" ) && STRENDS(STR(?g), "/LoketLB-LPDCGebruiker"))
+            )
         }
-        UNION {
-          GRAPH ?graph {
-            ?publicService 
-              a                   cpsv:PublicService ;
-              rdfs-ns:type        ?type ;
-              dct:title           ?title ;
-              pav:createdBy       ?bestuurseenheid ;
-              adms:status         <http://lblod.data.gift/concepts/9bd8d86d-bb10-4456-a84e-91e9507c374c> ;
-              schema:publication  <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> .
-
-              FILTER(LANG(?title) = "nl")
-          }
-
-          GRAPH ?g {
-            ?bestuurseenheid skos:prefLabel ?bestuurseenheidLabel ;
-              besluit:classificatie ?classificatie .
-
-            ?classificatie skos:prefLabel ?classificatieLabel .
-          }
-        }
-        UNION {
-          GRAPH ?graph {
-            ?publicService 
-              a                   as:Tombstone ;
-              rdfs-ns:type        ?type ;
-              as:formerType       cpsv:PublicService ;
-              schema:publication  <http://lblod.data.gift/concepts/a7d01120-6f93-11ed-bcb8-a144c50c46d7> .
-
-            # Graphs have a consistent structure.
-            # Ex: http://mu.semte.ch/graphs/organizations/8620c62b9e51d2275c98cb724ce4b6784b432db8e1e0376ac70cbda098ea0d0a/LoketLB-LPDCGebruiker
-            BIND(STRBEFORE(STRAFTER(STR(?graph), "http://mu.semte.ch/graphs/organizations/"), "/LoketLB-LPDCGebruiker") as ?bestuurseenheidUUID)
-
-          }
-
-          GRAPH ?g {
-            ?bestuurseenheid ?p ?bestuurseenheidUUID .
-            ?bestuurseenheid skos:prefLabel ?bestuurseenheidLabel ;
-              besluit:classificatie ?classificatie .
-
-            ?classificatie skos:prefLabel ?classificatieLabel .
-          }
-        }
-      }
     `;
 
     const queryResponse = await query(queryString);
     const data = queryResponse.results.bindings.map((publicService) => {
       return {
-        publicService: getSafeValue(publicService, 'publicService'),
+        publicService: getSafeValue(publicService, 'instanceIri'),
         type: getSafeValue(publicService, 'type'),
         title: getSafeValue(publicService, 'title'),
         bestuurseenheidLabel: getSafeValue(publicService, 'bestuurseenheidLabel'),
         classificatieLabel: getSafeValue(publicService, 'classificatieLabel'),
+        errorCode: getSafeValue(publicService, 'errorCode'),
+        errorMessage: getSafeValue(publicService, 'errorMessage'),
+        datePublishAttempt: getSafeValue(publicService, 'dateCreated'),
+        lastSentDate: getSafeValue(publicService, 'dateSent'),
+        lastSuccessfulPublishedDate: getSafeValue(publicService, 'datePublished')
       };
     });
 
@@ -110,6 +88,11 @@ export default {
       'title',
       'bestuurseenheidLabel',
       'classificatieLabel',
+      'errorCode',
+      'errorMessage',
+      'datePublishAttempt',
+      'lastSentDate',
+      'lastSuccessfulPublishedDate',
     ], reportData);
   }
 };

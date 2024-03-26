@@ -13,6 +13,16 @@
   :features '(include-uri)
   :on-path "bestuurseenheid-classificatie-codes")
 
+(define-resource formal-informal-choice ()
+  :class (s-prefix "lpdc:FormalInformalChoice")
+  :properties `((:chosen-form :string ,(s-prefix "lpdc:chosenForm"))
+                (:date-created :string ,(s-prefix "schema:dateCreated")))
+  :has-one `((bestuurseenheid :via ,(s-prefix "dct:relation")
+                              :as "bestuurseenheid"))
+  :resource-base (s-url "http://data.lblod.info/id/formalInformalChoice/")
+  :features '(include-uri)
+  :on-path "formal-informal-choices")
+
 (define-resource bestuurseenheid () ;; Subclass of m8g:PublicOrganisation, which is a subclass of dct:Agent
   :class (s-prefix "besluit:Bestuurseenheid")
   :properties `((:naam :string ,(s-prefix "skos:prefLabel"))
@@ -21,13 +31,6 @@
                 (:mail-adres :string ,(s-prefix "ext:mailAdresVoorNotificaties"))
                 (:is-trial-user :boolean ,(s-prefix "ext:isTrailUser"))
                 (:view-only-modules :string-set ,(s-prefix "ext:viewOnlyModules")))
-
-  :has-one `((werkingsgebied :via ,(s-prefix "besluit:werkingsgebied")
-                             :as "werkingsgebied")
-             (werkingsgebied :via ,(s-prefix "ext:inProvincie")
-                             :as "provincie")
-             (bestuurseenheid-classificatie-code :via ,(s-prefix "besluit:classificatie")
-                                                 :as "classificatie"))
 
   :has-many `((contact-punt :via ,(s-prefix "schema:contactPoint")
                             :as "contactinfo")
@@ -39,6 +42,13 @@
                               :as "vendors")
               (participation :via ,(s-prefix "m8g:playsRole")
                             :as "participations"))
+
+  :has-one `((werkingsgebied :via ,(s-prefix "besluit:werkingsgebied")
+                             :as "werkingsgebied")
+             (werkingsgebied :via ,(s-prefix "ext:inProvincie")
+                             :as "provincie")
+             (bestuurseenheid-classificatie-code :via ,(s-prefix "besluit:classificatie")
+                                                 :as "classificatie"))
 
   :resource-base (s-url "http://data.lblod.info/id/bestuurseenheden/")
   :features '(include-uri)

@@ -12,5 +12,17 @@
 !/tmp/
 
 docker-compose.override.yml
+
+/.idea
+/.idea/*
+
 .htpasswd
 .env
+data-backup
+/tests/docker-compose.tests.latest.override.yml
+/tests/docker-compose.tests.development.override.yml
+/tests/all-reports/
+
+node_modules
+migration-scripts/**/migration-results/
+/migration-scripts/tests-shacl/dist/

@@ -1,0 +1,489 @@
+[
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/1efb3f0f-0296-4dcc-bb4c-8d66c512aea8",
+    "@type": [
+      "http://schema.org/ContactPoint"
+    ],
+    "http://schema.org/email": [
+      {
+        "@value": "burgerzaken@oostende.be"
+      }
+    ],
+    "http://schema.org/openingHours": [
+      {
+        "@value": "Mo-We: 09:00-16:00; Th 09:00-12:30 & 16:30-20:00; Fr:09:00-13:00"
+      }
+    ],
+    "http://schema.org/telephone": [
+      {
+        "@value": "0800 1 8400"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://www.oostende.be/adoptie"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address": [
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/d872b7a9-c067-40f4-8c96-d0536a99a855"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/2bc4c103-a06c-4240-902d-d523481c0912",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl",
+        "@value": "-"
+      },
+      {
+        "@language": "en",
+        "@value": "-"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl",
+        "@value": "Attestenpagina van Mijn Burgerprofiel"
+      },
+      {
+        "@language": "en",
+        "@value": "Attestenpagina van Mijn Burgerprofiel"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/85793cfa-3287-48bd-a463-6a2dfcad3be3",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "-"
+      },
+      {
+        "@language": "nl",
+        "@value": "-"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Make an appointment to register a foreign adoption"
+      },
+      {
+        "@language": "nl",
+        "@value": "Maak een afspraak om een buitenlandse adoptie te registreren"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://afspraken.oostende.be/internetafspraken/Product=128"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/a36c9732-af38-4924-8966-36ce4b25cd7b",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl",
+        "@value": "<p data-indentation-level=\"0\">Sedert 01 september 2005 is de nieuwe adoptiewetgeving van kracht. Voor meer informatie over de voorwaarden en de te volgen procedure in België en in het buitenland kan je terecht op de website van FOD Justitie: <a href=\"http://justitie.belgium.be/nl/themas_en_dossiers/kinderen_en_jongeren/adoptie\" __rdfaid=\"1156f849-4adf-437a-a5fc-b66668cb4058\">www.just.fgov.be/adoptie</a> of de website van <a href=\"http://www.kindengezin.be/adoptie/\" __rdfaid=\"4c718f25-116d-42e0-9601-c910689fff8c\">Kind en Gezin</a></p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">Since 1<sup>st</sup> of September 2005, the new adoption legislation has been in force. For more information on the conditions and the procedure to be followed in Belgium and abroad, please visit the FPS Justice website: <a href=\"http://justitie.belgium.be/nl/themas_en_dossiers/kinderen_en_jongeren/adoptie\" __rdfaid=\"a1127780-6ba4-484c-b60c-32d36f9c4c14\">www.just.fgov.be/adoption</a> or the website of <a href=\"http://www.kindengezin.be/adoptie/\" __rdfaid=\"380195af-e142-4ad7-947c-69b2cb89ff92\">Kind en Gezin</a></p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Adoptiewetgeving"
+      },
+      {
+        "@language": "nl",
+        "@value": "Adoptiewetgeving"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://justitie.belgium.be/nl/themas_en_dossiers/kinderen_en_jongeren/adoptie"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/d872b7a9-c067-40f4-8c96-d0536a99a855",
+    "@type": [
+      "http://www.w3.org/ns/locn#Address"
+    ],
+    "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer": [
+      {
+        "@value": " "
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer": [
+      {
+        "@value": "1"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#Straatnaam": [
+      {
+        "@language": "nl",
+        "@value": "Vindictivelaan"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#gemeentenaam": [
+      {
+        "@language": "nl",
+        "@value": "Oostende"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#land": [
+      {
+        "@language": "nl",
+        "@value": "België"
+      }
+    ],
+    "https://data.vlaanderen.be/ns/adres#postcode": [
+      {
+        "@value": "8400"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/e76a23af-f736-43c6-a4c9-48b8021e3f3e",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Make an appointment for a copy or excerpt of the deed of adoption"
+      },
+      {
+        "@language": "nl",
+        "@value": "Maak een afspraak voor een afschrift of uitreksel van de akte van adoptie"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://afspraken.oostende.be/internetafspraken/Product=201"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/form-data/nodes/ed0f7c70-4a72-477a-9c86-8b1fe3bb1bef",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl",
+        "@value": "-"
+      },
+      {
+        "@language": "en",
+        "@value": "-"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Kind en Gezin (adoptie)"
+      },
+      {
+        "@language": "nl",
+        "@value": "Kind en Gezin (adoptie)"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://www.kindengezin.be/nl/thema/adoptie"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/evidence/b75add1a-33f6-4bf2-846c-c17c20bf7e5c",
+    "@type": [
+      "http://data.europa.eu/m8g/Evidence"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">If you <strong>collect</strong> the document <strong>yourself</strong>:</p><ul __rdfaid=\"089fe6a3-8b85-4007-b7ae-f6325efbad06\"><li __rdfaid=\"a1843cd0-dcb8-43a5-915f-b810f1193f38\"><p data-indentation-level=\"0\">your own identity card or residence permit.</p></li></ul><p data-indentation-level=\"0\">If you are requesting the document <strong>for someone else</strong>:</p><ul __rdfaid=\"a9bc921c-8a8c-4ae7-be99-1e2604e15125\"><li __rdfaid=\"192b5a51-7c22-40d8-ad26-d93a7469a4a2\"><p data-indentation-level=\"0\">a power of attorney from that person and a copy of their identity card</p></li><li __rdfaid=\"84fcdbdb-edf7-4ee2-8f7e-eaf4a6ac7b0e\"><p data-indentation-level=\"0\">as well as your own identity card.</p></li></ul>"
+      },
+      {
+        "@language": "nl",
+        "@value": "<p data-indentation-level=\"0\">Als je het document <strong>zelf ophaalt</strong>:</p><ul __rdfaid=\"7e83a748-12de-482f-9bcf-5f1ac6f19f74\"><li __rdfaid=\"e0add98f-5d8d-4979-9dfc-dac6714827bb\"><p data-indentation-level=\"0\">jouw eigen identiteitskaart of verblijfsvergunning.</p></li></ul><p data-indentation-level=\"0\">Als je het document <strong>voor iemand anders</strong> aanvraagt:</p><ul __rdfaid=\"e0366d99-c577-418c-a028-1c5edb732594\"><li __rdfaid=\"b4b75587-063b-459f-9a7c-38d5cf5493bf\"><p data-indentation-level=\"0\">een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</p></li><li __rdfaid=\"ea6d6f83-f676-4c66-80e9-d70f2b926896\"><p data-indentation-level=\"0\">jouw eigen identiteitskaart.</p></li></ul>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl",
+        "@value": "Bewijs"
+      },
+      {
+        "@language": "en",
+        "@value": "Evidence"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/public-service/3cf70fcb-45d5-4f3a-83c1-e69541195847",
+    "@type": [
+      "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot"
+    ],
+    "http://data.europa.eu/m8g/hasCompetentAuthority": [
+      {
+        "@id": "https://data.vlaanderen.be/id/organisatie/OVO000001"
+      }
+    ],
+    "http://data.europa.eu/m8g/hasContactPoint": [
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/1efb3f0f-0296-4dcc-bb4c-8d66c512aea8"
+      }
+    ],
+    "http://data.europa.eu/m8g/thematicArea": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid"
+      }
+    ],
+    "http://mu.semte.ch/vocabularies/core/uuid": [
+      {
+        "@value": "e4886833-7078-46ed-8946-ed8de19d1bf5"
+      }
+    ],
+    "http://schema.org/dateCreated": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-04-18T07:17:09.534Z"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl",
+        "@value": "<p data-indentation-level=\"0\">De akte van adoptie wordt opgesteld door de ambtenaar van de burgerlijke stand op basis van een adoptievonnis of arrest. Onder bepaalde voorwaarden kan je een afschrift of een uittreksel van de akte aanvragen.</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">The adoption certificate is drawn up by the registrar of births, deaths, and marriages based on an adoption ruling. Under certain conditions, you can request a copy or an extract of the certificate.</p>"
+      }
+    ],
+    "http://schema.org/dateModified": [
+      {
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "@value": "2023-08-18T12:28:20.412Z"
+      }
+    ],
+    "http://purl.org/dc/terms/source": [
+      {
+        "@id": "https://ipdc.vlaanderen.be/id/concept/9250faec-c65a-4f28-a343-e9b7028e6cdb"
+      }
+    ],
+    "http://purl.org/dc/terms/spatial": [
+      {
+        "@id": "http://vocab.belgif.be/auth/refnis2019/35013"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "en",
+        "@value": "Adoption certificate"
+      },
+      {
+        "@language": "nl",
+        "@value": "Akte van adoptie"
+      }
+    ],
+    "http://purl.org/dc/terms/type": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs"
+      }
+    ],
+    "http://purl.org/pav/createdBy": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/764a0c6bbc866153ae70cf75d745b9477fa010567246cfe6683b7bb8aec541b4"
+      }
+    ],
+    "http://purl.org/vocab/cpsv#follows": [
+      {
+        "@id": "http://data.lblod.info/id/rule/67a35662-f089-4db8-b588-1864f8348269"
+      }
+    ],
+    "http://schema.org/productID": [
+      {
+        "@value": "1496"
+      }
+    ],
+    "http://vocab.belgif.be/ns/publicservice#hasRequirement": [
+      {
+        "@id": "http://data.lblod.info/id/requirement/c1bb7015-d34b-43de-be3c-b104293731c9"
+      }
+    ],
+    "http://www.w3.org/2000/01/rdf-schema#seeAlso": [
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/a36c9732-af38-4924-8966-36ce4b25cd7b"
+      },
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/2bc4c103-a06c-4240-902d-d523481c0912"
+      },
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/ed0f7c70-4a72-477a-9c86-8b1fe3bb1bef"
+      }
+    ],
+    "http://www.w3.org/ns/adms#status": [
+      {
+        "@id": "http://lblod.data.gift/concepts/instance-status/verstuurd"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority": [
+      {
+        "@id": "http://data.lblod.info/id/bestuurseenheden/764a0c6bbc866153ae70cf75d745b9477fa010567246cfe6683b7bb8aec541b4"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory": [
+      {
+        "@id": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/BurgerEnFamilieRechtenKinderen"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/requirement/c1bb7015-d34b-43de-be3c-b104293731c9",
+    "@type": [
+      "http://data.europa.eu/m8g/Requirement"
+    ],
+    "http://data.europa.eu/m8g/hasSupportingEvidence": [
+      {
+        "@id": "http://data.lblod.info/id/evidence/b75add1a-33f6-4bf2-846c-c17c20bf7e5c"
+      }
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">The adoption certificate states</p><ul __rdfaid=\"7ec2b7f4-dd54-40a5-8143-36cbd3fe2987\"><li __rdfaid=\"465c6a92-94c4-421b-bd40-28b2bca09d60\"><p data-indentation-level=\"0\">the surname, first names, place and date of birth of the adopters as well as of the adoptee,</p></li><li __rdfaid=\"3546620d-19c1-4d81-927c-fd32e2e21a5f\"><p data-indentation-level=\"0\">the new surname and, where applicable, the new first name of the adoptee following the adoption,</p></li><li __rdfaid=\"0a0e4bbc-3518-4ef4-aa55-d01cc6877055\"><p data-indentation-level=\"0\">the type of adoption (simple or full adoption),</p></li><li __rdfaid=\"20704c4d-e010-42e7-aae3-77477b97394f\"><p data-indentation-level=\"0\">and the date of recognition of the foreign adoption by the Federal Central Authority, if applicable.</p></li></ul><p data-indentation-level=\"0\">Under certain conditions, you can request a copy of or an extract from the certificate:</p><ul __rdfaid=\"28a8133a-66a2-4c2f-9760-63abe02403b3\"><li __rdfaid=\"e951d641-22d4-44b0-ac22-dae91b85f0e5\"><p data-indentation-level=\"0\">A <strong>copy</strong> contains the original data of the certificate and the history of the status of the person to whom the certificate relates.</p></li><li __rdfaid=\"aafdd1ad-d3b2-4e41-83f8-5336cc343a10\"><p data-indentation-level=\"0\">An <strong>extract</strong>, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.</p></li></ul><h3 data-indentation-level=\"0\" __rdfaid=\"d410fde7-c3f9-41d6-9a40-d446d2db1cce\">Who can request a copy or an extract?</h3><p data-indentation-level=\"0\">The right to receive a copy of or an extract from adoption certificates is limited to</p><ul __rdfaid=\"ab0d7eff-df6b-4c7b-af69-6bee255adec6\"><li __rdfaid=\"a6fd3f4e-65b1-440a-8dbf-96f23453d013\"><p data-indentation-level=\"0\">the persons to whom the certificate relates (adoptive parents and adoptee),</p></li><li __rdfaid=\"44605523-55a0-4d39-92b7-4d46467f5ce9\"><p data-indentation-level=\"0\">the spouse, the surviving spouse or legal cohabitant,</p></li><li __rdfaid=\"f887fbc7-8d55-47e9-84ff-7ceeec22b905\"><p data-indentation-level=\"0\">the legal representative (e.g. parent, guardian, conservator),</p></li><li __rdfaid=\"98c7b8f1-8d65-404e-8069-df659cf7081f\"><p data-indentation-level=\"0\">blood relatives in the ascending or descending line (no relatives by affinity and side branches),</p></li><li __rdfaid=\"542daa53-eaab-4f55-86c2-8623d7222fb6\"><p data-indentation-level=\"0\">heirs,</p></li><li __rdfaid=\"fcafdd3c-47c9-46f8-b371-8dd57df6c1eb\"><p data-indentation-level=\"0\">and special agents such as notaries or lawyers.</p></li></ul><p data-indentation-level=\"0\">If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract.</p>"
+      },
+      {
+        "@language": "nl",
+        "@value": "<p data-indentation-level=\"0\">De akte van adoptie vermeldt:</p><ul __rdfaid=\"fabf11a9-d682-4be5-a76d-f2d4e2cb9de5\"><li __rdfaid=\"120ca4fe-2d3f-45ad-a572-092810f5095e\"><p data-indentation-level=\"0\">de naam, voornamen, geboorteplaats en -datum van de adoptanten alsook van de geadopteerde</p></li><li __rdfaid=\"5eadea7f-5e56-4d07-83ff-c2c9f30a4232\"><p data-indentation-level=\"0\">de nieuwe naam en, in voorkomend geval, de nieuwe voornaam van de geadopteerde na de adoptie</p></li><li __rdfaid=\"b404a6b9-b321-445a-8987-54114e83b23b\"><p data-indentation-level=\"0\">de soort van adoptie: gewone of volle adoptie</p></li><li __rdfaid=\"8971de77-88d1-45c9-8c61-f0101adb5b5c\"><p data-indentation-level=\"0\">in voorkomend geval, de datum van de erkenning van de buitenlandse adoptie door de federale centrale autoriteit.</p></li></ul><p data-indentation-level=\"0\">Onder bepaalde voorwaarden kan je een afschrift of een uittreksel van de akte aanvragen:</p><ul __rdfaid=\"7141bc77-78d6-48b5-b069-092411d0045a\"><li __rdfaid=\"89b883bd-feae-487e-a814-c57dc2ba6aeb\"><p data-indentation-level=\"0\">Een <strong>afschrift </strong>vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</p></li><li __rdfaid=\"ad395b9b-6a35-4053-a379-e612138e3c93\"><p data-indentation-level=\"0\">Een <strong>uittreksel </strong>vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</p></li></ul><h3 data-indentation-level=\"0\" __rdfaid=\"bdcecaf7-adcd-4988-b9c7-68a3217f8c04\">Wie kan een afschrift of uittreksel aanvragen?</h3><p data-indentation-level=\"0\">Voor akten van adoptie wordt het recht op een afschrift of uittreksel beperkt tot:</p><ul __rdfaid=\"6a6f44cf-874a-4d91-84b1-7d7bf01166a9\"><li __rdfaid=\"6131f820-f44f-4404-b41e-c0b1abfe6d5c\"><p data-indentation-level=\"0\">de personen op wie de akte betrekking heeft (adoptieouders en geadopteerde)</p></li><li __rdfaid=\"23d13a6b-051f-4ebc-9c61-8f6a54ad8376\"><p data-indentation-level=\"0\">de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</p></li><li __rdfaid=\"44f1b6a7-cce4-4ae1-9827-84bd05ac2d5f\"><p data-indentation2023-12-05T10:00:37.425528009Z -level=\"0\">de wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</p></li><li __rdfaid=\"092caa59-4636-46be-984d-ab781bef9828\"><p data-indentation-level=\"0\">bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</p></li><li __rdfaid=\"ae77a3e9-4b5b-4b8a-a3c2-1e87a553a25d\"><p data-indentation-level=\"0\">erfgenamen</p></li><li __rdfaid=\"1f95cd2b-c3fa-4b3d-9301-a5a2c9096a94\"><p data-indentation-level=\"0\">bijzondere gemachtigden zoals een notaris of advocaat.</p></li></ul><p data-indentation-level=\"0\">Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel.</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl",
+        "@value": "Voorwaarden"
+      },
+      {
+        "@language": "en",
+        "@value": "Requirements"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/rule/67a35662-f089-4db8-b588-1864f8348269",
+    "@type": [
+      "http://purl.org/vocab/cpsv#Rule"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">You can request a copy of or an extract from an adoption certificate in the <strong>municipality</strong> in which the certificate was transcribed in the registers of the register office.</p><p data-indentation-level=\"0\">If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate <strong>online</strong></p><ul __rdfaid=\"35d0013c-d535-4fdc-a902-4a501d08c872\"><li __rdfaid=\"a5a29ee8-b8cc-4908-a72c-d4d995a2fec7\"><p data-indentation-level=\"0\">via the e-desk of your municipality</p></li><li __rdfaid=\"4cc9d79d-a452-480b-b48d-2bea270c8fc5\"><p data-indentation-level=\"0\">or via the certificates page of My Citizen Profile (‘Mijn Burgerprofiel’).</p></li></ul><p data-indentation-level=\"0\">Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally.</p><p data-indentation-level=\"0\">Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made.</p>"
+      },
+      {
+        "@language": "nl",
+        "@value": "<p data-indentation-level=\"0\">je kan een afschrift of een uittreksel van een akte van adoptie aanvragen in de <strong>gemeente</strong> waar de erkenning werd overgeschreven in de registers van de burgerlijke stand.</p><p data-indentation-level=\"0\">Als je beschikt over een elektronische identiteitskaart (eID), kan je een afschrift of uittreksel van de akte <strong>online</strong> aanvragen:</p><ul __rdfaid=\"485b6acc-987e-4fe0-b38d-2eee6e9f6d70\"><li __rdfaid=\"35ac7434-259e-44fb-a81b-3a10cfb69037\"><p data-indentation-level=\"0\">via het e-loket van jouw gemeente</p></li><li __rdfaid=\"7e600070-a309-48f2-84f6-0ea1d04278ef\"><p data-indentation-level=\"0\">of via de attestenpagina van <a href=\"/node/21473\" __rdfaid=\"e876b2de-9134-43af-ba0c-d3c6d29df31d\">‘Mijn Burgerprofiel’</a>.</p></li></ul><p data-indentation-level=\"0\">Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert jouw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl",
+        "@value": "Procedure"
+      },
+      {
+        "@language": "en",
+        "@value": "Procedure"
+      }
+    ],
+    "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite": [
+      {
+        "@id": "http://data.lblod.info/id/website/0eed9196-86fb-4401-9680-cca9c50481f0"
+      },
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/e76a23af-f736-43c6-a4c9-48b8021e3f3e"
+      },
+      {
+        "@id": "http://data.lblod.info/form-data/nodes/85793cfa-3287-48bd-a463-6a2dfcad3be3"
+      }
+    ]
+  },
+  {
+    "@id": "http://data.lblod.info/id/website/0eed9196-86fb-4401-9680-cca9c50481f0",
+    "@type": [
+      "http://schema.org/WebSite"
+    ],
+    "http://purl.org/dc/terms/description": [
+      {
+        "@language": "nl",
+        "@value": "<p data-indentation-level=\"0\">Het afschrift ontvang je in de meeste gevallen onmiddellijk in je mailbox. Bij extra controle nodig van een ambtenaar ontvang je het afschrift binnen 2 tot 5 werkdagen in je mailbox</p>"
+      },
+      {
+        "@language": "en",
+        "@value": "<p data-indentation-level=\"0\">In most cases, you will receive the copy/excerpt immediately in your mailbox. If additional verification is required by a civil servant, you will receive the copy/excerpt in your mailbox within 2 to 5 working days.</p>"
+      }
+    ],
+    "http://purl.org/dc/terms/title": [
+      {
+        "@language": "nl",
+        "@value": "Vraag een kopie of een uittreksel van de akte van adoptie digitaal aan"
+      },
+      {
+        "@language": "en",
+        "@value": "Request a copy or an excerpt from the adoption certificate digitally"
+      }
+    ],
+    "http://schema.org/url": [
+      {
+        "@value": "https://oostende.egovflow.be/request/add/BS-100-A"
+      },
+      {
+        "@value": "https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel"
+      }
+    ]
+  }
+]

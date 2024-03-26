@@ -17,14 +17,13 @@ export default {
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
       PREFIX ext:     <http://mu.semte.ch/vocabularies/ext/>
       PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
-      PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
       PREFIX adms:    <http://www.w3.org/ns/adms#>
       PREFIX dct:     <http://purl.org/dc/terms/>
       PREFIX pav:     <http://purl.org/pav/>
 
       SELECT DISTINCT ?uriPublicService ?uriBestuurseenheid ?naam ?concept ?status ?statusLabel WHERE {
         ?uriPublicService 
-          a             cpsv:PublicService ;
+          a             lpdcExt:InstancePublicService ;
           adms:status   ?status ;
           dct:title     ?title ;
           pav:createdBy ?uriBestuurseenheid .

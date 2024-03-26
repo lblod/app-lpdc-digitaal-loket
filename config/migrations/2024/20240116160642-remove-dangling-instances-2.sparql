@@ -1,0 +1,33 @@
+DELETE DATA FROM <http://mu.semte.ch/graphs/organizations/0efaaec80a4ad0328aebadee1ad36a787adff5e31490795ea411fb3644be7f60/LoketLB-LPDCGebruiker>{
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://purl.org/dc/terms/description> "<p>Als u werken uitvoert in het Vlaamse Gewest, is de algemene regel dat u een vergunning aanvraagt. U hebt dus o.a. een vergunning nodig als u gaat</p>\n\n<ul>\n	<li>bouwen</li>\n	<li>verbouwen</li>\n	<li>slopen</li>\n	<li>graven</li>\n	<li>bomen vellen</li>\n	<li>reclameborden en afsluitingen plaatsen</li>\n	<li>...</li>\n</ul>\n\n<p>Op 23 februari 2017 werden de stedenbouwkundige vergunning, de verkavelingsvergunning en de milieuvergunning in Vlaanderen samengevoegd tot de <a data-entity-substitution=\"canonical\" data-entity-type=\"node\" data-entity-uuid=\"df454801-e161-4c15-8b9b-a217d7b3c149\" href=\"https://www.vlaanderen.be/omgevingsvergunning\">omgevingsvergunning</a>. Als u vragen hebt over uw bouwaanvraag volgens de oude procedure, kunt u bij uw gemeente terecht.</p>\n\n<ul>\n</ul>"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://purl.org/dc/terms/description> "<p>If you carry out works in the Flemish Region, the general rule is that you must apply for a permit. You are required to have a permit if you want to</p>\n\n<ul>\n	<li>Build</li>\n	<li>Renovate</li>\n	<li>Demolish</li>\n	<li>Dig</li>\n	<li>fell trees</li>\n	<li>install advertising signs and fences</li>\n	<li>etc.</li>\n</ul>\n\n<p>On 23 February 2017, the town planning permit, the subdivision permit, and the environmental permit in Flanders were merged into the integrated environment permit (‘Omgevingsvergunning’).</p>\n\n<p>Contact your municipality if you have any questions about your building application according to the old procedure.</p>\n\n<ul>\n</ul>"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://purl.org/dc/terms/title> "Integrated environment permit for town planning activities"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://purl.org/dc/terms/title> "Omgevingsvergunning voor stedenbouwkundige handelingen"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://purl.org/vocab/cpsv#follows> <http://data.lblod.info/id/rule/fc044e03-0a51-463f-89b8-f7e89b2e7321> .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/bacadb96-4487-4f9a-9c42-5be032a7de30> .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#PublicService> .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.lblod.info/id/website/3810d019-7fa9-4fda-ae6c-98ddae62e314> .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "attest"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "attest"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "bomen kappen"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "bomen kappen"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "bouwen"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "bouwen"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "bouwvergunning"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "bouwvergunning"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "melding"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "melding"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "meldingsplicht"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "meldingsplicht"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "omhakken"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "omhakken"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "ontbossen"@en .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "ontbossen"@nl .
+<http://data.lblod.info/id/public-service/ba87544b-9ca5-4388-9401-4b4cdc6d85db> <http://www.w3.org/ns/dcat#keyword> "reclame"@nl .
+<http://data.lblod.info/id/requirement/bacadb96-4487-4f9a-9c42-5be032a7de30> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/id/requirement/bacadb96-4487-4f9a-9c42-5be032a7de30> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/rule/fc044e03-0a51-463f-89b8-f7e89b2e7321> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/rule/fc044e03-0a51-463f-89b8-f7e89b2e7321> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/website/3810d019-7fa9-4fda-ae6c-98ddae62e314> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
+<http://data.lblod.info/id/website/3810d019-7fa9-4fda-ae6c-98ddae62e314> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+}

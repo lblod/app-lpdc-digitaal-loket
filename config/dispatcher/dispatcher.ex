@@ -12,6 +12,10 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
 
+  match "/formal-informal-choices/*path" do
+    forward conn, path, "http://resource/formal-informal-choices/"
+  end
+
   match "/bestuurseenheden/*path" do
     forward conn, path, "http://cache/bestuurseenheden/"
   end
@@ -49,16 +53,28 @@ defmodule Dispatcher do
   #################################################################
   # Public Services - LPDC-IPDC: custom API endpoints
   #################################################################
-  get "/lpdc-management/*path" do
-    forward conn, path, "http://lpdc-management/semantic-forms/"
+  get "/lpdc-management/conceptual-public-services/*path" do
+    forward conn, path, "http://lpdc-management/conceptual-public-services/"
   end
 
-  put "/lpdc-management/*path" do
-    forward conn, path, "http://lpdc-management/semantic-forms/"
+  get "/lpdc-management/contact-info-options/*path" do
+    forward conn, path, "http://lpdc-management/contact-info-options/"
   end
 
-  post "/lpdc-management/*path" do
-    forward conn, path, "http://lpdc-management/semantic-forms/"
+  match "/lpdc-management/address/*path" do
+    forward conn, path, "http://lpdc-management/address/"
+  end
+
+  get "/lpdc-management/concept-snapshot-compare/*path" do
+    forward conn, path, "http://lpdc-management/concept-snapshot-compare/"
+  end
+
+  match "/lpdc-management/public-services/*path" do
+    forward conn, path, "http://lpdc-management/public-services/"
+  end
+
+  match "/lpdc-management/concept-display-configuration/*path" do
+    forward conn, path, "http://lpdc-management/concept-display-configuration/"
   end
 
   #################################################################
@@ -98,7 +114,7 @@ defmodule Dispatcher do
   # Public Services - LPDC-IPDC
   #################################################################
   match "/conceptual-public-services/*path" do
-    forward conn, path, "http://cache/conceptual-public-services/"
+    forward conn, path, "http://resource/conceptual-public-services/"
   end
 
   match "/identifiers/*path" do
@@ -114,15 +130,15 @@ defmodule Dispatcher do
   end
 
   get "/public-services/*path" do
-    forward conn, path, "http://resource/public-services/"  ## TODO: solve cache issue in frontend
+    forward conn, path, "http://resource/public-services/"
   end
 
   match "/public-services/*path" do
-    forward conn, path, "http://cache/public-services/"
+    forward conn, path, "http://resource/public-services/"
   end
 
   match "/concept-display-configurations/*path" do
-    forward conn, path, "http://cache/concept-display-configurations/"
+    forward conn, path, "http://resource/concept-display-configurations/"
   end
 
   match "/*_" do

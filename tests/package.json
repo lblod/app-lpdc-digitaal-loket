@@ -1,0 +1,21 @@
+{
+  "name": "app-lpdc-digitaal-loket-tests",
+  "version": "1.0.0",
+  "description": "Contains end to end tests for lpdc",
+  "main": "index.js",
+  "scripts": {
+    "test:api": "npx playwright test test-api",
+    "test:e2e": "npx playwright test test-e2e --workers=5",
+    "test:e2e-ui": "npx playwright test --ui test-e2e"
+  },
+  "author": "Kunlabora",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/lodash": "^4.14.201",
+    "@playwright/test": "^1.36.1",
+    "uuid": "^9.0.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.30.1",
+    "papaparse": "^5.4.1"
+  }
+}

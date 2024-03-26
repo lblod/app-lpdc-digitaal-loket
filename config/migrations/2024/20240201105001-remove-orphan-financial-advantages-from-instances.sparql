@@ -1,0 +1,18 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?s ?p ?o.
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?s a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage>.
+        ?s ?p ?o.
+        FILTER NOT EXISTS {
+            ?anyS ?anyPredicate ?s
+        }
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker"))
+}

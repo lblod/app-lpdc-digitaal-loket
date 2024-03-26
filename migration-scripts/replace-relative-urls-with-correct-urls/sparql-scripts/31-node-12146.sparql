@@ -1,0 +1,29 @@
+DELETE {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance ?p ?o.
+  }
+}
+INSERT {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance ?p ?newOLang.
+  }
+} WHERE {
+
+VALUES (?oldUrl ?newUrl) {
+('href="/node/12146"' 'href="https://vlaremwegwijzer.navigator.emis.vito.be/"')
+}
+
+  GRAPH ?bestuurseenheidGraph {
+    ?instance ?p ?o.
+  }
+  BIND(LANG(?o) AS ?oLang)
+  BIND(REPLACE(STR(?o), ?oldUrl, ?newUrl) as ?newO1)
+  BIND(STRLANG(?newO1, ?oLang) as ?newOLang)
+
+
+  FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker") &&
+    regex(str(?o), ?oldUrl)
+  )
+}

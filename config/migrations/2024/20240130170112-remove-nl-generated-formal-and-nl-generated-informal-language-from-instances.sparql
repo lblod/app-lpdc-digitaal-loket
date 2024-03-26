@@ -1,0 +1,15 @@
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?s ?p ?o .
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?s ?p ?o.
+    }
+
+    FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker") &&
+    (lang(?o) = "nl-be-x-generated-formal" || lang(?o) = "nl-be-x-generated-informal"))
+}
