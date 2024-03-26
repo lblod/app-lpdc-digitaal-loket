@@ -1,25 +1,25 @@
-import {expect, Page, test} from "@playwright/test";
-import {UJeModal} from "./modals/u-je-modal";
-import {MockLoginPage} from "./pages/mock-login-page";
-import {LpdcHomePage} from "./pages/lpdc-home-page";
-import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from "./pages/product-of-dienst-toevoegen-page";
-import {first_row} from "./components/table";
-import {ConceptDetailsPage} from "./pages/concept-details-page";
-import {InstantieDetailsPage} from "./pages/instantie-details-page";
-import {v4 as uuid} from "uuid";
-import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
-import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
-import {IpdcStub} from "./components/ipdc-stub";
-import {Toaster} from "./components/toaster";
+import { expect, Page, test } from "@playwright/test";
+import { UJeModal } from "./modals/u-je-modal";
+import { MockLoginPage } from "./pages/mock-login-page";
+import { LpdcHomePage } from "./pages/lpdc-home-page";
+import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from "./pages/product-of-dienst-toevoegen-page";
+import { first_row } from "./components/table";
+import { ConceptDetailsPage } from "./pages/concept-details-page";
+import { InstantieDetailsPage } from "./pages/instantie-details-page";
+import { v4 as uuid } from "uuid";
+import { WijzigingenBewarenModal } from "./modals/wijzigingen-bewaren-modal";
+import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
+import { IpdcStub } from "./components/ipdc-stub";
+import { Toaster } from "./components/toaster";
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
 
-test.describe.configure({ mode: 'parallel'});
+test.describe.configure({ mode: 'parallel' });
 test.describe('Concurrent Update', () => {
 
     let page: Page;
     let pageOtherUser: Page;
 
-    test.beforeEach(async ({browser}) => {
+    test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
         pageOtherUser = await browser.newPage();
     });
@@ -70,7 +70,7 @@ test.describe('Concurrent Update', () => {
         await expect(homePage.resultTable.row(first_row).locator).toContainText(instantieTitel);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({title: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'});
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal' });
         expect(instancePublishedInIpdc).toBeTruthy();
 
         verifyInstancePublishedOnIPDC(
@@ -101,6 +101,64 @@ test.describe('Concurrent Update', () => {
 
         instantieDetailsPage = await openInstantie(page, instantieTitel);
         expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain("second description");
+
+    });
+
+    //TODO LPDC-1071: complete test
+    test('to be defined', async () => {
+        await login(page);
+
+        const homePage = LpdcHomePage.create(page);
+        const toevoegenPage = ProductOfDienstToevoegenPage.create(page);
+        const conceptDetailsPage = ConceptDetailsPage.create(page);
+        const instantieDetailsPage = InstantieDetailsPage.create(page);
+        const wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
+
+        // maak instantie van concept 
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        let newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        // update concept snapshot
+        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        // instantie moet vlagje 'herziening nodig' hebben
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        // instantie moet alert 'herziening nodig' hebben
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
 
     });
 
