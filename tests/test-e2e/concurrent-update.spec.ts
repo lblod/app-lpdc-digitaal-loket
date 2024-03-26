@@ -12,6 +12,7 @@ import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-o
 import { IpdcStub } from "./components/ipdc-stub";
 import { Toaster } from "./components/toaster";
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
+import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('Concurrent Update', () => {
@@ -104,8 +105,8 @@ test.describe('Concurrent Update', () => {
 
     });
 
-    //TODO LPDC-1071: complete test
-    test('to be defined', async () => {
+
+    test('No concurrent update shown, when not necessary', async () => {
         await login(page);
 
         const homePage = LpdcHomePage.create(page);
@@ -113,6 +114,9 @@ test.describe('Concurrent Update', () => {
         const conceptDetailsPage = ConceptDetailsPage.create(page);
         const instantieDetailsPage = InstantieDetailsPage.create(page);
         const wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
+        const bevestigHerzieningVerwerktModal= BevestigHerzieningVerwerktModal.create(page);
+        const verzendNaarVlaamseOverheidModal= VerzendNaarVlaamseOverheidModal.create(page);
+        const toaster = new Toaster(page);
 
         // maak instantie van concept 
         await homePage.productOfDienstToevoegenButton.click();
@@ -124,9 +128,9 @@ test.describe('Concurrent Update', () => {
             await toevoegenPage.searchConcept(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
+
         await toevoegenPage.searchConcept(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
-
         await conceptDetailsPage.expectToBeVisible();
         await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
         await conceptDetailsPage.voegToeButton.click();
@@ -134,32 +138,49 @@ test.describe('Concurrent Update', () => {
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
 
-        const titel = await instantieDetailsPage.titelInput.inputValue();
-        let newTitel = titel + uuid();
-        await instantieDetailsPage.titelInput.fill(newTitel);
-
-        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
-        await wijzigingenBewarenModal.expectToBeVisible();
-        await wijzigingenBewarenModal.bewaarButton.click();
-        await wijzigingenBewarenModal.expectToBeClosed();
-
-        // update concept snapshot
+        // instantie moet vlagje 'herziening nodig' hebben
         const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
-
         const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
-        // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
         await homePage.reloadUntil(async () => {
-            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(`${createSnapshot.title}`);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
-
-        // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
+        //Form contains errors
+        await instantieDetailsPage.titelInput.clear();
+        await instantieDetailsPage.beschrijvingEditor.clear();
+        await instantieDetailsPage.eigenschappenTab.click();
 
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.nee.click();
+
+        //Form still contains errors and remove 'herziening nodig'
+        await instantieDetailsPage.inhoudTab.click();
+        await instantieDetailsPage.beschrijvingEditor.fill("beschrijving nl");
+        await instantieDetailsPage.eigenschappenTab.click();
+        await wijzigingenBewarenModal.bewaarButton.click();
+
+        await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+        await instantieDetailsPage.inhoudTab.click();
+        await wijzigingenBewarenModal.bewaarButton.click();
+
+
+        //fix remaining errors and send
+        await instantieDetailsPage.titelInput.fill("titel nl");
+
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click()
+
+        //no errors should be present
+        await expect(toaster.message).not.toBeVisible();
     });
 
 });
