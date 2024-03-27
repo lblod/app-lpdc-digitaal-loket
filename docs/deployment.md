@@ -203,6 +203,12 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   
   drc pull
 
+  #partially bring the services up (use this when the ldes streams or publish to ipdc streams should not start right away)
+  drc up -d lpdc-management lpdc database deltanotifier identifier cache resource login dispatcher report-generation dashboard file sink 
+
+  drc logs --follow --timestamps --since 1m
+
+  # bring all services up
   drc up -d
 
   drc logs  --follow --timestamps --since 1m
@@ -225,6 +231,6 @@ Mention on rocket chat that we will perform a new release, so the operations tea
  
 ```
 
-Mention on rocket chat that we will a new release was performed, operations monitoring can continue.
+Mention on rocket chat that a new release was performed, operations monitoring can continue.
 
 
