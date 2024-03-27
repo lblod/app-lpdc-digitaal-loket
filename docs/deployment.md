@@ -170,6 +170,9 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   
   drc logs --timestamps --since 10m | grep lpdc-management-1
   
+  #stop all containers
+  drc stop 
+  
   #take a backup of the existing logs
   drc logs --timestamps > /backups/prod-logs-backups/log-<your date - and followletter here>.txt
   #as an example: drc logs --timestamps > /backups/prod-logs-backups/log-2024-03-26-a.txt
