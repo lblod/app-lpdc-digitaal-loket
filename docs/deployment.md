@@ -162,9 +162,15 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   
   drc down
  
-  # stop the app-lpdc-digitaal-loket down
   cd /data/app-lpdc-digitaal-loket
   
+  #verify that ldes consumers and its processing in lpdc-management have finished (via logs)
+  
+  drc logs --timestamps --since 10m | grep ldes-consumer
+  
+  drc logs --timestamps --since 10m | grep lpdc-management-1
+  
+  # bring the app-lpdc-digitaal-loket down
   drc down --remove-orphans
   
   cd /data
