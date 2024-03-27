@@ -162,7 +162,9 @@ test.describe('Concurrent Update', () => {
 
         //Form still contains errors and remove 'herziening nodig'
         await instantieDetailsPage.inhoudTab.click();
-        await instantieDetailsPage.beschrijvingEditor.fill("beschrijving nl");
+        const beschrijving = "description " + uuid();
+
+        await instantieDetailsPage.beschrijvingEditor.fill(beschrijving);
         await instantieDetailsPage.eigenschappenTab.click();
         await wijzigingenBewarenModal.bewaarButton.click();
 
@@ -174,14 +176,39 @@ test.describe('Concurrent Update', () => {
 
 
         //fix remaining errors and send
-        await instantieDetailsPage.titelInput.fill("titel nl");
+        const title = "title " + uuid()
+        await instantieDetailsPage.titelInput.fill(title);
 
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
         await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click()
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await homePage.expectToBeVisible();
+        await homePage.searchInput.fill(title);
+
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
+        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
         //no errors should be present
         await expect(toaster.message).not.toBeVisible();
-    });
+
+        //verify if published
+
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
+        const bestuurseenheidUriPepingen = "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
+        const refnisPepingen = "http://vocab.belgif.be/auth/refnis2019/23064"
+        verifyInstancePublishedOnIPDC(
+            instancePublishedInIpdc,
+            {
+                titel: { nl: title },
+                beschrijving: { nl: beschrijving },
+                uuid: `PRESENT`,
+                createdBy: bestuurseenheidUriPepingen,
+                bevoegdeOverheden: [bestuurseenheidUriPepingen],
+                uitvoerendeOverheden: [bestuurseenheidUriPepingen],
+                geografischeToepassingsgebieden: [refnisPepingen],
+            },
+            'nl-be-x-formal');
+});
 
 });
 
