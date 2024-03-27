@@ -62,6 +62,7 @@ Lastly, run script to set the instance review statuses correct for archived conc
 PREFIX ext:     <http://mu.semte.ch/vocabularies/ext/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
 PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 

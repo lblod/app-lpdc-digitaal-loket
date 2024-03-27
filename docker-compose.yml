@@ -8,7 +8,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.11.0
+    image: lblod/frontend-lpdc:0.11.1
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific.

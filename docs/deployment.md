@@ -168,10 +168,20 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   ssh root@lpdc-prod.s.redhost.be
   
   # bring the app-http-logger down
-  cd /data/app-http-logger  
+  cd /data/app-http-logger
+  
   drc down
  
   cd /data/app-lpdc-digitaal-loket
+  
+  #verify that ldes consumers and its processing in lpdc-management have finished (via logs)
+  
+  drc logs --timestamps --since 10m | grep ldes-consumer
+  
+  drc logs --timestamps --since 10m | grep lpdc-management-1
+  
+  #stop all containers
+  drc stop 
   
   #take a backup of the existing logs
   drc logs --timestamps > /backups/prod-logs-backups/log-<your date - and followletter here>.txt
@@ -182,8 +192,8 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   
   #remove the full file
   rm /backups/prod-logs-backups/log-2024-03-26-a.txt  
-  
-  # stop the app-lpdc-digitaal-loket down
+
+  # bring the app-lpdc-digitaal-loket down
   drc down --remove-orphans
   
   cd /data
@@ -244,6 +254,6 @@ Mention on rocket chat that we will perform a new release, so the operations tea
  
 ```
 
-Mention on rocket chat that we will a new release was performed, operations monitoring can continue.
+Mention on rocket chat that a new release was performed, operations monitoring can continue.
 
 

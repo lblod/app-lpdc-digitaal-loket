@@ -1,25 +1,26 @@
-import {expect, Page, test} from "@playwright/test";
-import {UJeModal} from "./modals/u-je-modal";
-import {MockLoginPage} from "./pages/mock-login-page";
-import {LpdcHomePage} from "./pages/lpdc-home-page";
-import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from "./pages/product-of-dienst-toevoegen-page";
-import {first_row} from "./components/table";
-import {ConceptDetailsPage} from "./pages/concept-details-page";
-import {InstantieDetailsPage} from "./pages/instantie-details-page";
-import {v4 as uuid} from "uuid";
-import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
-import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
-import {IpdcStub} from "./components/ipdc-stub";
-import {Toaster} from "./components/toaster";
+import { expect, Page, test } from "@playwright/test";
+import { UJeModal } from "./modals/u-je-modal";
+import { MockLoginPage } from "./pages/mock-login-page";
+import { LpdcHomePage } from "./pages/lpdc-home-page";
+import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from "./pages/product-of-dienst-toevoegen-page";
+import { first_row } from "./components/table";
+import { ConceptDetailsPage } from "./pages/concept-details-page";
+import { InstantieDetailsPage } from "./pages/instantie-details-page";
+import { v4 as uuid } from "uuid";
+import { WijzigingenBewarenModal } from "./modals/wijzigingen-bewaren-modal";
+import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
+import { IpdcStub } from "./components/ipdc-stub";
+import { Toaster } from "./components/toaster";
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
+import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
 
-test.describe.configure({ mode: 'parallel'});
+test.describe.configure({ mode: 'parallel' });
 test.describe('Concurrent Update', () => {
 
     let page: Page;
     let pageOtherUser: Page;
 
-    test.beforeEach(async ({browser}) => {
+    test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
         pageOtherUser = await browser.newPage();
     });
@@ -70,7 +71,7 @@ test.describe('Concurrent Update', () => {
         await expect(homePage.resultTable.row(first_row).locator).toContainText(instantieTitel);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
 
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({title: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'});
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal' });
         expect(instancePublishedInIpdc).toBeTruthy();
 
         verifyInstancePublishedOnIPDC(
@@ -103,6 +104,111 @@ test.describe('Concurrent Update', () => {
         expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain("second description");
 
     });
+
+
+    test('No concurrent update shown, when not necessary', async () => {
+        await login(page);
+
+        const homePage = LpdcHomePage.create(page);
+        const toevoegenPage = ProductOfDienstToevoegenPage.create(page);
+        const conceptDetailsPage = ConceptDetailsPage.create(page);
+        const instantieDetailsPage = InstantieDetailsPage.create(page);
+        const wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
+        const bevestigHerzieningVerwerktModal= BevestigHerzieningVerwerktModal.create(page);
+        const verzendNaarVlaamseOverheidModal= VerzendNaarVlaamseOverheidModal.create(page);
+        const toaster = new Toaster(page);
+
+        // maak instantie van concept 
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        // instantie moet vlagje 'herziening nodig' hebben
+        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+        const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(`${createSnapshot.title}`);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+        //Form contains errors
+        await instantieDetailsPage.titelInput.clear();
+        await instantieDetailsPage.beschrijvingEditor.clear();
+        await instantieDetailsPage.eigenschappenTab.click();
+
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.nee.click();
+
+        //Form still contains errors and remove 'herziening nodig'
+        await instantieDetailsPage.inhoudTab.click();
+        const beschrijving = "description " + uuid();
+
+        await instantieDetailsPage.beschrijvingEditor.fill(beschrijving);
+        await instantieDetailsPage.eigenschappenTab.click();
+        await wijzigingenBewarenModal.bewaarButton.click();
+
+        await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+        await instantieDetailsPage.inhoudTab.click();
+        await wijzigingenBewarenModal.bewaarButton.click();
+
+
+        //fix remaining errors and send
+        const title = "title " + uuid()
+        await instantieDetailsPage.titelInput.fill(title);
+
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click()
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await homePage.expectToBeVisible();
+        await homePage.searchInput.fill(title);
+
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
+        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+
+        //no errors should be present
+        await expect(toaster.message).not.toBeVisible();
+
+        //verify if published
+
+        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
+        const bestuurseenheidUriPepingen = "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
+        const refnisPepingen = "http://vocab.belgif.be/auth/refnis2019/23064"
+        verifyInstancePublishedOnIPDC(
+            instancePublishedInIpdc,
+            {
+                titel: { nl: title },
+                beschrijving: { nl: beschrijving },
+                uuid: `PRESENT`,
+                createdBy: bestuurseenheidUriPepingen,
+                bevoegdeOverheden: [bestuurseenheidUriPepingen],
+                uitvoerendeOverheden: [bestuurseenheidUriPepingen],
+                geografischeToepassingsgebieden: [refnisPepingen],
+            },
+            'nl-be-x-formal');
+});
 
 });
 

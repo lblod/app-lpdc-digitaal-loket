@@ -3,6 +3,7 @@ import {deleteAll} from "../test-helpers/sparql";
 import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
+import {Predicates} from "../test-helpers/triple-array";
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
@@ -34,9 +35,10 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         }
 
+        const dateModified = publicService.findObject(Predicates.dateModified).getValue();
         const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
-            headers: {cookie: loginResponse.cookie}
+            headers: {cookie: loginResponse.cookie, version: dateModified}
         });
         expect(updateResponse.ok()).toBeTruthy();
     });
