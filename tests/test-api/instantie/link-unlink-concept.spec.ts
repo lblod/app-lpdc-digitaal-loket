@@ -36,7 +36,12 @@ test.describe('unlink', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request)
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                        cookie: loginResponse.cookie,
+                        version: instance.findObject(Predicates.dateModified).getValue()
+                    }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -61,7 +66,13 @@ test.describe('unlink', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request)
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                        cookie: loginResponse.cookie,
+                        version: instance.findObject(Predicates.dateModified).getValue()
+                    }
+            }
+        );
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -88,7 +99,12 @@ test.describe('unlink', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request)
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                        cookie: loginResponse.cookie,
+                        version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -114,7 +130,12 @@ test.describe('unlink', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request)
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -144,7 +165,12 @@ test.describe('unlink', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request)
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -158,7 +184,12 @@ test.describe('unlink', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -187,7 +218,12 @@ test.describe('unlink', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                cookie: loginResponse.cookie,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            }
+        });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -226,7 +262,12 @@ test.describe('unlink', () => {
             .withProductId('100')
             .buildAndPersist(request, bilzenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedDisplayConfigurationPepingen = await fetchType(request, displayConfigurationPepingen.getSubject().getValue(), ConceptDisplayConfigurationType);
@@ -274,7 +315,12 @@ test.describe('unlink', () => {
             .withProductId('100')
             .buildAndPersist(request, bilzenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedDisplayConfigurationPepingen = await fetchType(request, displayConfigurationPepingen.getSubject().getValue(), ConceptDisplayConfigurationType);
@@ -294,13 +340,23 @@ test.describe('unlink', () => {
         const instanceFromPepingen = await PublicServiceTestBuilder.aPublicService()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedDisplayConfigurationPepingen = await fetchType(request, displayConfigurationPepingen.getSubject().getValue(), ConceptDisplayConfigurationType);
         expect(updatedDisplayConfigurationPepingen.findTriple(Predicates.conceptInstantiated).getObjectValue()).toEqual('false')
 
-        const response2 = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response2 = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response2.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedDisplayConfigurationPepingen2 = await fetchType(request, displayConfigurationPepingen.getSubject().getValue(), ConceptDisplayConfigurationType);
@@ -315,7 +371,12 @@ test.describe('unlink', () => {
             .withLinkedConcept(concept.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/encodeURIComponent(instance.getId().getValue())/ontkoppelen`, {headers: {cookie: undefined}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/encodeURIComponent(instance.getId().getValue())/ontkoppelen`,
+            {headers: {
+                cookie: undefined,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            }
+        });
         expect(response.status()).toEqual(401);
 
         const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -331,7 +392,12 @@ test.describe('unlink', () => {
             .withLinkedConcept(concept.getSubject())
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/encodeURIComponent(instance.getId().getValue())/ontkoppelen`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/encodeURIComponent(instance.getId().getValue())/ontkoppelen`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.status()).toEqual(403);
 
         const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -351,7 +417,12 @@ test.describe('link', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -377,7 +448,12 @@ test.describe('link', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -397,7 +473,12 @@ test.describe('link', () => {
 
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(concept.getId()).buildAndPersist(request);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
+            {headers: {
+                cookie: loginResponse.cookie,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            }
+        });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -419,7 +500,12 @@ test.describe('link', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedDisplayConfiguration = await fetchType(request, displayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
@@ -441,7 +527,12 @@ test.describe('link', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
         const updatedDisplayConfiguration = await fetchType(request, displayConfiguration.getSubject().getValue(), ConceptDisplayConfigurationType);
@@ -449,7 +540,7 @@ test.describe('link', () => {
 
     });
 
-    test('link a concept to an instance that is already linked to a concept, should update the source triple to the new concept', async ({request}) => {
+    test('link a concept to an instance that is already linked to a concept, should throw error', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
         const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot().buildAndPersist(request);
         const conceptOld = await ConceptTestBuilder.aConcept()
@@ -468,13 +559,19 @@ test.describe('link', () => {
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(conceptOld.getId()).buildAndPersist(request);
         await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration().withConcept(conceptNew.getId()).buildAndPersist(request);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(conceptNew.getId().getValue())}`, {headers: {cookie: loginResponse.cookie}});
-        expect(response.ok(), `${await response.text()}`).toBeTruthy();
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(conceptNew.getId().getValue())}`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
 
-        const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
-        expect(updatedInstance.findAllTriples(Predicates.source)).toHaveLength(1);
-        expect(updatedInstance.findAllTriples(Predicates.source)[0].subject.getValue()).toBe(instance.getSubject().getValue())
-        expect(updatedInstance.findAllTriples(Predicates.source)[0].object.getValue()).toBe(conceptNew.getSubject().getValue())
+        expect(response.ok()).toBeFalsy();
+        expect(response.status()).toEqual(400);
+        expect(await response.json()).toEqual(expect.objectContaining({
+            message: "Instantie is reeds gekoppeld aan een concept",
+            correlationId: expect.anything()
+        }))
     });
 
     test('link a concept with an instance without login, returns http 401 Unauthorized', async ({request}) => {
@@ -484,7 +581,12 @@ test.describe('link', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`, {headers: {cookie: undefined}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
+            {headers: {
+                    cookie: undefined,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.status()).toEqual(401);
 
         const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -499,7 +601,12 @@ test.describe('link', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
+            {headers: {
+                    cookie: loginResponse.cookie,
+                    version: instance.findObject(Predicates.dateModified).getValue()
+                }
+            });
         expect(response.status()).toEqual(403);
 
         const notUpdatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);

@@ -37,7 +37,10 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: loginResponse.cookie},
+            headers: {
+                cookie: loginResponse.cookie,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -69,7 +72,10 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: loginResponse.cookie},
+            headers: {
+                cookie: loginResponse.cookie,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -102,7 +108,10 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: loginResponse.cookie},
+            headers: {
+                cookie: loginResponse.cookie,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -132,7 +141,10 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: undefined},
+            headers: {
+                cookie: undefined,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.status()).toEqual(401);
@@ -162,7 +174,10 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
-            headers: {cookie: loginResponse.cookie},
+            headers: {
+                cookie: loginResponse.cookie,
+                version: instance.findObject(Predicates.dateModified).getValue()
+            },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
         expect(response.status()).toEqual(403);
