@@ -17,8 +17,6 @@
   :class (s-prefix "lpdc:FormalInformalChoice")
   :properties `((:chosen-form :string ,(s-prefix "lpdc:chosenForm"))
                 (:date-created :string ,(s-prefix "schema:dateCreated")))
-  :has-one `((bestuurseenheid :via ,(s-prefix "dct:relation")
-                              :as "bestuurseenheid"))
   :resource-base (s-url "http://data.lblod.info/id/formalInformalChoice/")
   :features '(include-uri)
   :on-path "formal-informal-choices")
