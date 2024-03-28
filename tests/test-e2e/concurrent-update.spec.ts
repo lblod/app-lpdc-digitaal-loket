@@ -142,7 +142,9 @@ test.describe('Concurrent Update', () => {
         const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
         const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
+
         await homePage.goto();
+        await homePage.expectToBeVisible();
         await homePage.reloadUntil(async () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(`${createSnapshot.title}`);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');

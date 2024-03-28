@@ -1,7 +1,6 @@
 import {expect, test} from "@playwright/test";
 import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/public-service.test-builder";
 import {
-    loginAsBilzen,
     loginAsPepingen,
     loginAsPepingenButRemoveLPDCRightsFromSession,
     pepingenId
