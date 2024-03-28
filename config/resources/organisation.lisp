@@ -13,14 +13,6 @@
   :features '(include-uri)
   :on-path "bestuurseenheid-classificatie-codes")
 
-(define-resource formal-informal-choice ()
-  :class (s-prefix "lpdc:FormalInformalChoice")
-  :properties `((:chosen-form :string ,(s-prefix "lpdc:chosenForm"))
-                (:date-created :string ,(s-prefix "schema:dateCreated")))
-  :resource-base (s-url "http://data.lblod.info/id/formalInformalChoice/")
-  :features '(include-uri)
-  :on-path "formal-informal-choices")
-
 (define-resource bestuurseenheid () ;; Subclass of m8g:PublicOrganisation, which is a subclass of dct:Agent
   :class (s-prefix "besluit:Bestuurseenheid")
   :properties `((:naam :string ,(s-prefix "skos:prefLabel"))

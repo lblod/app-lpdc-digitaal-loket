@@ -1,4 +1,4 @@
-# Operation suport
+# Operation support
 
 * [Add users](0001-add-user.md)
 * [Docker-compose vs drc](0002-docker-compose-vs-drc.md)

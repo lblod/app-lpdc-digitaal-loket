@@ -12,12 +12,12 @@ defmodule Dispatcher do
   # Run `docker-compose restart dispatcher` after updating
   # this file.
 
-  post "/formal-informal-choices/*path" do
+  get "/formal-informal-choices/*path" do
       forward conn, path, "http://lpdc-management/formal-informal-choices/"
   end
 
-  match "/formal-informal-choices/*path" do
-      forward conn, path, "http://resource/formal-informal-choices/"
+  post "/formal-informal-choices/*path" do
+      forward conn, path, "http://lpdc-management/formal-informal-choices/"
   end
 
   match "/bestuurseenheden/*path" do
