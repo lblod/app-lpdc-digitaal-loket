@@ -39,7 +39,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
             headers: {
                 cookie: loginResponse.cookie,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
@@ -74,7 +74,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
             headers: {
                 cookie: loginResponse.cookie,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
@@ -110,7 +110,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-bijgewerkt-tot`, {
             headers: {
                 cookie: loginResponse.cookie,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
@@ -143,7 +143,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
             headers: {
                 cookie: undefined,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });
@@ -176,7 +176,7 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${instance.getUUID()}/confirm-bijgewerkt-tot`, {
             headers: {
                 cookie: loginResponse.cookie,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
             data: {bijgewerktTot: snapshot2.getSubject().getValue()}
         });

@@ -17,7 +17,13 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -38,7 +44,7 @@ test.describe('Saving forms for instances', () => {
         const dateModified = publicService.findObject(Predicates.dateModified).getValue();
         const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
-            headers: {cookie: loginResponse.cookie, version: dateModified}
+            headers: {cookie: loginResponse.cookie, 'instance-version': dateModified}
         });
         expect(updateResponse.ok()).toBeTruthy();
     });
@@ -49,7 +55,13 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -74,7 +86,13 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -90,7 +108,11 @@ test.describe('Saving forms for instances', () => {
 
         const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
-            headers: {cookie: loginResponseNoRights.cookie}
+            headers:
+            {
+                cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+            }
         });
         expect(updateResponse.status()).toEqual(403);
     });

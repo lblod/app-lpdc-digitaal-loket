@@ -39,7 +39,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
             {headers: {
                         cookie: loginResponse.cookie,
-                        version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                     }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -69,7 +69,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
             {headers: {
                         cookie: loginResponse.cookie,
-                        version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                     }
             }
         );
@@ -102,7 +102,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
             {headers: {
                         cookie: loginResponse.cookie,
-                        version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -133,7 +133,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -168,7 +168,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -187,7 +187,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -221,7 +221,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/ontkoppelen`,
             {headers: {
                 cookie: loginResponse.cookie,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
             }
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -265,7 +265,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instanceFromPepingen.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -318,7 +318,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instanceFromPepingen.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -343,7 +343,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instanceFromPepingen.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -354,7 +354,7 @@ test.describe('unlink', () => {
         const response2 = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instanceFromPepingen.getId().getValue())}/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instanceFromPepingen.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instanceFromPepingen.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response2.ok(), `${await response.text()}`).toBeTruthy();
@@ -374,7 +374,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/encodeURIComponent(instance.getId().getValue())/ontkoppelen`,
             {headers: {
                 cookie: undefined,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
             }
         });
         expect(response.status()).toEqual(401);
@@ -395,7 +395,7 @@ test.describe('unlink', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/encodeURIComponent(instance.getId().getValue())/ontkoppelen`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.status()).toEqual(403);
@@ -420,7 +420,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -451,7 +451,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -476,7 +476,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
             {headers: {
                 cookie: loginResponse.cookie,
-                version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
             }
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -503,7 +503,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -530,7 +530,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
@@ -562,7 +562,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(conceptNew.getId().getValue())}`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
 
@@ -584,7 +584,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
             {headers: {
                     cookie: undefined,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.status()).toEqual(401);
@@ -604,7 +604,7 @@ test.describe('link', () => {
         const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/koppelen/${encodeURIComponent(concept.getId().getValue())}`,
             {headers: {
                     cookie: loginResponse.cookie,
-                    version: instance.findObject(Predicates.dateModified).getValue()
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
                 }
             });
         expect(response.status()).toEqual(403);

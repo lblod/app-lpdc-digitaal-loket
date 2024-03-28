@@ -19,7 +19,13 @@ test.describe('Reopen instance', () =>  {
             .withDateModified(modified)
             .buildAndPersist(request, pepingenId)
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {params: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok(), await response.text()).toBeTruthy();
 
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
@@ -35,7 +41,13 @@ test.describe('Reopen instance', () =>  {
             .withDateModified(modified)
             .buildAndPersist(request, pepingenId)
 
-        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {params: {cookie: loginResponse.cookie}});
+        const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/reopen`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': instance.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok(), await response.text()).toBeFalsy();
         expect(response.status()).toEqual(400);
         expect(await response.json()).toEqual(expect.objectContaining({
