@@ -6,7 +6,6 @@ import { first_row } from './components/table';
 import { InstantieDetailsPage } from './pages/instantie-details-page';
 import { IpdcStub } from './components/ipdc-stub';
 import { InstanceSnapshotLdesStub, Snapshot } from "./components/instance-snapshot-ldes-stub";
-import { wait } from "./shared/shared";
 import { Language } from "../test-api/test-helpers/language";
 import { v4 as uuid } from 'uuid';
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
@@ -66,7 +65,6 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 uuid: `PRESENT`,
                 createdBy: bestuurseenheidUriGent,
                 aangemaaktOp: `2024-02-20T11:42:12.357Z`,
-                bewerktOp: `2024-02-21T13:59:25.236Z`,
                 bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
                 uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
                 geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`],
@@ -620,7 +618,6 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 uuid: 'PRESENT',
                 createdBy: bestuurseenheidUriGent,
                 aangemaaktOp: `2024-02-14T13:42:12.357Z`,
-                bewerktOp: `2024-02-15T14:59:30.236Z`,
                 bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
                 uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
                 geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`]
