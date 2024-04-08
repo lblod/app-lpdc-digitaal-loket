@@ -60,6 +60,7 @@ export class PublicServiceTestBuilder {
     private dateSent: Literal;
     private publicationStatus: Uri;
     private datePublished: Literal;
+    private dutchLanguageVariant: Literal;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -72,6 +73,7 @@ export class PublicServiceTestBuilder {
             .withStartDate(new Date())
             .withEndDate(new Date())
             .withInstanceStatus(InstanceStatus.ontwerp)
+            .withDutchLanguageVariant(Language.INFORMAL)
     }
 
     static aFullPublicService() {
@@ -103,6 +105,7 @@ export class PublicServiceTestBuilder {
             .withInstanceStatus(InstanceStatus.ontwerp)
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
             .withDatePublished(new Date())
+            .withDutchLanguageVariant(Language.INFORMAL)
     }
 
     private withType() {
@@ -320,6 +323,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withDutchLanguageVariant(language: Language) {
+        this.dutchLanguageVariant = new Literal(language);
+        return this;
+    }
+
     private buildTripleArray(organisationId: string): TripleArray {
         if(!this.createdBy) {
             this.withCreatedBy(organisationId);
@@ -363,6 +371,7 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.dateSent, this.dateSent),
             new Triple(this.id, Predicates.publicationStatus, this.publicationStatus),
             new Triple(this.id, Predicates.datePublished, this.datePublished),
+            new Triple(this.id, Predicates.dutchLanguageVariant, this.dutchLanguageVariant),
         ];
         return new TripleArray(triples);
     }

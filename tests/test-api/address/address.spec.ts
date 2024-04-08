@@ -296,7 +296,7 @@ test.describe('validate', () => {
         expect(actual).toEqual({
             gemeente: 'Leuven',
             postcode: '3010',
-            straat: 'Eénmeilaan',
+            straat: 'Éénmeilaan',
             huisnummer: '2',
             busnummer: undefined,
             adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2272154'
