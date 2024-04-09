@@ -1,0 +1,2921 @@
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix nutss: <http://data.europa.eu/nuts/scheme/> .
+@prefix nuts:  <http://data.europa.eu/nuts/code/> .
+
+nutss:2021
+    a                  skos:ConceptScheme ;
+    skos:prefLabel     "NUTS en LAU classificatie"@nl ;
+    skos:definition    "NUTS en LAU classificatie voor een publieke dienst"@nl ;
+    skos:hasTopConcept nuts:BE .
+
+nuts:BE
+    a                 skos:Concept ;
+    skos:prefLabel    "België"@nl ;
+    skos:notation     "BE" ;
+    skos:inScheme     nutss:2021 ;
+    skos:topConceptOf nutss:2021 ;
+    skos:narrower     nuts:BE1 ;
+    skos:narrower     nuts:BE2 .
+
+nuts:BE1
+    a              skos:Concept ;
+    skos:prefLabel "Brussels Hoofdstedelijk Gewest"@nl ;
+    skos:notation  "BE1" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE ;
+    skos:narrower  nuts:BE10 .
+
+nuts:BE2
+    a              skos:Concept ;
+    skos:prefLabel "Vlaams Gewest"@nl ;
+    skos:notation  "BE2" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE ;
+    skos:narrower  nuts:BE21 ;
+    skos:narrower  nuts:BE22 ;
+    skos:narrower  nuts:BE23 ;
+    skos:narrower  nuts:BE24 ;
+    skos:narrower  nuts:BE25 .
+
+nuts:BE10
+    a              skos:Concept ;
+    skos:prefLabel "Brussels Hoofdstedelijk Gewest"@nl ;
+    skos:notation  "BE10" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE1 ;
+    skos:narrower  nuts:BE100 .
+
+nuts:BE21
+    a              skos:Concept ;
+    skos:prefLabel "Provincie Antwerpen"@nl ;
+    skos:notation  "BE21" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE2 ;
+    skos:narrower  nuts:BE211 ;
+    skos:narrower  nuts:BE212 ;
+    skos:narrower  nuts:BE213 .
+
+nuts:BE22
+    a              skos:Concept ;
+    skos:prefLabel "Provincie Limburg"@nl ;
+    skos:notation  "BE22" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE2 ;
+    skos:narrower  nuts:BE221 ;
+    skos:narrower  nuts:BE222 ;
+    skos:narrower  nuts:BE223 .
+
+nuts:BE23
+    a              skos:Concept ;
+    skos:prefLabel "Provincie Oost-Vlaanderen"@nl ;
+    skos:notation  "BE23" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE2 ;
+    skos:narrower  nuts:BE231 ;
+    skos:narrower  nuts:BE232 ;
+    skos:narrower  nuts:BE233 ;
+    skos:narrower  nuts:BE234 ;
+    skos:narrower  nuts:BE235 ;
+    skos:narrower  nuts:BE236 .
+
+nuts:BE24
+    a              skos:Concept ;
+    skos:prefLabel "Provincie Vlaams-Brabant"@nl ;
+    skos:notation  "BE24" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE2 ;
+    skos:narrower  nuts:BE241 ;
+    skos:narrower  nuts:BE242 .
+
+nuts:BE25
+    a              skos:Concept ;
+    skos:prefLabel "Provincie West-Vlaanderen"@nl ;
+    skos:notation  "BE25" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE2 ;
+    skos:narrower  nuts:BE251 ;
+    skos:narrower  nuts:BE252 ;
+    skos:narrower  nuts:BE253 ;
+    skos:narrower  nuts:BE254 ;
+    skos:narrower  nuts:BE255 ;
+    skos:narrower  nuts:BE256 ;
+    skos:narrower  nuts:BE257 ;
+    skos:narrower  nuts:BE258 .
+
+nuts:BE100
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Brussel-Hoofdstad"@nl ;
+    skos:notation  "BE100" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE10 ;
+    skos:narrower  nuts:BE10021001 ;
+    skos:narrower  nuts:BE10021002 ;
+    skos:narrower  nuts:BE10021003 ;
+    skos:narrower  nuts:BE10021004 ;
+    skos:narrower  nuts:BE10021005 ;
+    skos:narrower  nuts:BE10021006 ;
+    skos:narrower  nuts:BE10021007 ;
+    skos:narrower  nuts:BE10021008 ;
+    skos:narrower  nuts:BE10021009 ;
+    skos:narrower  nuts:BE10021010 ;
+    skos:narrower  nuts:BE10021011 ;
+    skos:narrower  nuts:BE10021012 ;
+    skos:narrower  nuts:BE10021013 ;
+    skos:narrower  nuts:BE10021014 ;
+    skos:narrower  nuts:BE10021015 ;
+    skos:narrower  nuts:BE10021016 ;
+    skos:narrower  nuts:BE10021017 ;
+    skos:narrower  nuts:BE10021018 ;
+    skos:narrower  nuts:BE10021019 .
+
+nuts:BE211
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Antwerpen"@nl ;
+    skos:notation  "BE211" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE21 ;
+    skos:narrower  nuts:BE21111001 ;
+    skos:narrower  nuts:BE21111002 ;
+    skos:narrower  nuts:BE21111004 ;
+    skos:narrower  nuts:BE21111005 ;
+    skos:narrower  nuts:BE21111007 ;
+    skos:narrower  nuts:BE21111008 ;
+    skos:narrower  nuts:BE21111009 ;
+    skos:narrower  nuts:BE21111013 ;
+    skos:narrower  nuts:BE21111016 ;
+    skos:narrower  nuts:BE21111018 ;
+    skos:narrower  nuts:BE21111021 ;
+    skos:narrower  nuts:BE21111022 ;
+    skos:narrower  nuts:BE21111023 ;
+    skos:narrower  nuts:BE21111024 ;
+    skos:narrower  nuts:BE21111025 ;
+    skos:narrower  nuts:BE21111029 ;
+    skos:narrower  nuts:BE21111030 ;
+    skos:narrower  nuts:BE21111035 ;
+    skos:narrower  nuts:BE21111037 ;
+    skos:narrower  nuts:BE21111038 ;
+    skos:narrower  nuts:BE21111039 ;
+    skos:narrower  nuts:BE21111040 ;
+    skos:narrower  nuts:BE21111044 ;
+    skos:narrower  nuts:BE21111050 ;
+    skos:narrower  nuts:BE21111052 ;
+    skos:narrower  nuts:BE21111053 ;
+    skos:narrower  nuts:BE21111054 ;
+    skos:narrower  nuts:BE21111055 ;
+    skos:narrower  nuts:BE21111056 ;
+    skos:narrower  nuts:BE21111057 .
+
+nuts:BE212
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Mechelen"@nl ;
+    skos:notation  "BE212" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE21 ;
+    skos:narrower  nuts:BE21212002 ;
+    skos:narrower  nuts:BE21212005 ;
+    skos:narrower  nuts:BE21212007 ;
+    skos:narrower  nuts:BE21212009 ;
+    skos:narrower  nuts:BE21212014 ;
+    skos:narrower  nuts:BE21212021 ;
+    skos:narrower  nuts:BE21212025 ;
+    skos:narrower  nuts:BE21212026 ;
+    skos:narrower  nuts:BE21212029 ;
+    skos:narrower  nuts:BE21212030 ;
+    skos:narrower  nuts:BE21212034 ;
+    skos:narrower  nuts:BE21212035 ;
+    skos:narrower  nuts:BE21212040 ;
+    skos:narrower  nuts:BE21212041 .
+
+nuts:BE213
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Turnhout"@nl ;
+    skos:notation  "BE213" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE21 ;
+    skos:narrower  nuts:BE21313001 ;
+    skos:narrower  nuts:BE21313002 ;
+    skos:narrower  nuts:BE21313003 ;
+    skos:narrower  nuts:BE21313004 ;
+    skos:narrower  nuts:BE21313006 ;
+    skos:narrower  nuts:BE21313008 ;
+    skos:narrower  nuts:BE21313010 ;
+    skos:narrower  nuts:BE21313011 ;
+    skos:narrower  nuts:BE21313012 ;
+    skos:narrower  nuts:BE21313013 ;
+    skos:narrower  nuts:BE21313014 ;
+    skos:narrower  nuts:BE21313016 ;
+    skos:narrower  nuts:BE21313017 ;
+    skos:narrower  nuts:BE21313019 ;
+    skos:narrower  nuts:BE21313021 ;
+    skos:narrower  nuts:BE21313023 ;
+    skos:narrower  nuts:BE21313025 ;
+    skos:narrower  nuts:BE21313029 ;
+    skos:narrower  nuts:BE21313031 ;
+    skos:narrower  nuts:BE21313035 ;
+    skos:narrower  nuts:BE21313036 ;
+    skos:narrower  nuts:BE21313037 ;
+    skos:narrower  nuts:BE21313040 ;
+    skos:narrower  nuts:BE21313044 ;
+    skos:narrower  nuts:BE21313046 ;
+    skos:narrower  nuts:BE21313049 ;
+    skos:narrower  nuts:BE21313053 .
+
+nuts:BE221
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Hasselt"@nl ;
+    skos:notation  "BE221" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE22 ;
+    skos:narrower  nuts:BE22171002 ;
+    skos:narrower  nuts:BE22171004 ;
+    skos:narrower  nuts:BE22171011 ;
+    skos:narrower  nuts:BE22171016 ;
+    skos:narrower  nuts:BE22171017 ;
+    skos:narrower  nuts:BE22171020 ;
+    skos:narrower  nuts:BE22171022 ;
+    skos:narrower  nuts:BE22171024 ;
+    skos:narrower  nuts:BE22171034 ;
+    skos:narrower  nuts:BE22171037 ;
+    skos:narrower  nuts:BE22171045 ;
+    skos:narrower  nuts:BE22171047 ;
+    skos:narrower  nuts:BE22171053 ;
+    skos:narrower  nuts:BE22171057 ;
+    skos:narrower  nuts:BE22171066 ;
+    skos:narrower  nuts:BE22171067 ;
+    skos:narrower  nuts:BE22171069 ;
+    skos:narrower  nuts:BE22171070 ;
+    skos:narrower  nuts:BE22572042 ;
+    skos:narrower  nuts:BE22572043 .
+
+nuts:BE222
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Maaseik"@nl ;
+    skos:notation  "BE222" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE22 ;
+    skos:narrower  nuts:BE22272003 ;
+    skos:narrower  nuts:BE22272004 ;
+    skos:narrower  nuts:BE22272018 ;
+    skos:narrower  nuts:BE22272020 ;
+    skos:narrower  nuts:BE22272021 ;
+    skos:narrower  nuts:BE22272025 ;
+    skos:narrower  nuts:BE22272029 ;
+    skos:narrower  nuts:BE22272030 ;
+    skos:narrower  nuts:BE22272037 ;
+    skos:narrower  nuts:BE22272038 ;
+    skos:narrower  nuts:BE22272039 ;
+    skos:narrower  nuts:BE22272040 ;
+    skos:narrower  nuts:BE22272041 .
+
+nuts:BE223
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Tongeren"@nl ;
+    skos:notation  "BE223" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE22 ;
+    skos:narrower  nuts:BE22373001 ;
+    skos:narrower  nuts:BE22373006 ;
+    skos:narrower  nuts:BE22373009 ;
+    skos:narrower  nuts:BE22373022 ;
+    skos:narrower  nuts:BE22373028 ;
+    skos:narrower  nuts:BE22373032 ;
+    skos:narrower  nuts:BE22373040 ;
+    skos:narrower  nuts:BE22373042 ;
+    skos:narrower  nuts:BE22373066 ;
+    skos:narrower  nuts:BE22373083 ;
+    skos:narrower  nuts:BE22373098 ;
+    skos:narrower  nuts:BE22373107 ;
+    skos:narrower  nuts:BE22373109 .
+
+nuts:BE231
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Aalst"@nl ;
+    skos:notation  "BE231" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE23 ;
+    skos:narrower  nuts:BE23141002 ;
+    skos:narrower  nuts:BE23141011 ;
+    skos:narrower  nuts:BE23141018 ;
+    skos:narrower  nuts:BE23141024 ;
+    skos:narrower  nuts:BE23141027 ;
+    skos:narrower  nuts:BE23141034 ;
+    skos:narrower  nuts:BE23141048 ;
+    skos:narrower  nuts:BE23141063 ;
+    skos:narrower  nuts:BE23141081 ;
+    skos:narrower  nuts:BE23141082 .
+
+nuts:BE232
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Dendermonde"@nl ;
+    skos:notation  "BE232" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE23 ;
+    skos:narrower  nuts:BE23242003 ;
+    skos:narrower  nuts:BE23242004 ;
+    skos:narrower  nuts:BE23242006 ;
+    skos:narrower  nuts:BE23242008 ;
+    skos:narrower  nuts:BE23242010 ;
+    skos:narrower  nuts:BE23242011 ;
+    skos:narrower  nuts:BE23242023 ;
+    skos:narrower  nuts:BE23242025 ;
+    skos:narrower  nuts:BE23242026 ;
+    skos:narrower  nuts:BE23242028 .
+
+nuts:BE233
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Eeklo"@nl ;
+    skos:notation  "BE233" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE23 ;
+    skos:narrower  nuts:BE23343002 ;
+    skos:narrower  nuts:BE23343005 ;
+    skos:narrower  nuts:BE23343007 ;
+    skos:narrower  nuts:BE23343010 ;
+    skos:narrower  nuts:BE23343014 ;
+    skos:narrower  nuts:BE23343018 .
+
+nuts:BE234
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Gent"@nl ;
+    skos:notation  "BE234" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE23 ;
+    skos:narrower  nuts:BE23444001 ;
+    skos:narrower  nuts:BE23444011 ;
+    skos:narrower  nuts:BE23444012 ;
+    skos:narrower  nuts:BE23444013 ;
+    skos:narrower  nuts:BE23444019 ;
+    skos:narrower  nuts:BE23444020 ;
+    skos:narrower  nuts:BE23444021 ;
+    skos:narrower  nuts:BE23444029 ;
+    skos:narrower  nuts:BE23444034 ;
+    skos:narrower  nuts:BE23444036 ;
+    skos:narrower  nuts:BE23444040 ;
+    skos:narrower  nuts:BE23444043 ;
+    skos:narrower  nuts:BE23444045 ;
+    skos:narrower  nuts:BE23444048 ;
+    skos:narrower  nuts:BE23444049 ;
+    skos:narrower  nuts:BE23444052 ;
+    skos:narrower  nuts:BE23444064 ;
+    skos:narrower  nuts:BE23444072 ;
+    skos:narrower  nuts:BE23444073 ;
+    skos:narrower  nuts:BE23444080 ;
+    skos:narrower  nuts:BE23444081 ;
+    skos:narrower  nuts:BE23444085 .
+
+nuts:BE235
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Oudenaarde"@nl ;
+    skos:notation  "BE235" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE23 ;
+    skos:narrower  nuts:BE23545017 ;
+    skos:narrower  nuts:BE23545035 ;
+    skos:narrower  nuts:BE23545041 ;
+    skos:narrower  nuts:BE23545057 ;
+    skos:narrower  nuts:BE23545059 ;
+    skos:narrower  nuts:BE23545060 ;
+    skos:narrower  nuts:BE23545061 ;
+    skos:narrower  nuts:BE23545062 ;
+    skos:narrower  nuts:BE23545063 ;
+    skos:narrower  nuts:BE23545064 ;
+    skos:narrower  nuts:BE23545065 ;
+    skos:narrower  nuts:BE23545068 .
+
+nuts:BE236
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Sint-Niklaas"@nl ;
+    skos:notation  "BE236" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE23 ;
+    skos:narrower  nuts:BE23646003 ;
+    skos:narrower  nuts:BE23646013 ;
+    skos:narrower  nuts:BE23646014 ;
+    skos:narrower  nuts:BE23646020 ;
+    skos:narrower  nuts:BE23646021 ;
+    skos:narrower  nuts:BE23646024 ;
+    skos:narrower  nuts:BE23646025 .
+
+nuts:BE241
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Halle-Vilvoorde"@nl ;
+    skos:notation  "BE241" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE24 ;
+    skos:narrower  nuts:BE24123002 ;
+    skos:narrower  nuts:BE24123003 ;
+    skos:narrower  nuts:BE24123009 ;
+    skos:narrower  nuts:BE24123016 ;
+    skos:narrower  nuts:BE24123023 ;
+    skos:narrower  nuts:BE24123024 ;
+    skos:narrower  nuts:BE24123025 ;
+    skos:narrower  nuts:BE24123027 ;
+    skos:narrower  nuts:BE24123032 ;
+    skos:narrower  nuts:BE24123033 ;
+    skos:narrower  nuts:BE24123038 ;
+    skos:narrower  nuts:BE24123039 ;
+    skos:narrower  nuts:BE24123044 ;
+    skos:narrower  nuts:BE24123045 ;
+    skos:narrower  nuts:BE24123047 ;
+    skos:narrower  nuts:BE24123050 ;
+    skos:narrower  nuts:BE24123052 ;
+    skos:narrower  nuts:BE24123060 ;
+    skos:narrower  nuts:BE24123062 ;
+    skos:narrower  nuts:BE24123064 ;
+    skos:narrower  nuts:BE24123077 ;
+    skos:narrower  nuts:BE24123081 ;
+    skos:narrower  nuts:BE24123086 ;
+    skos:narrower  nuts:BE24123088 ;
+    skos:narrower  nuts:BE24123094 ;
+    skos:narrower  nuts:BE24123096 ;
+    skos:narrower  nuts:BE24123097 ;
+    skos:narrower  nuts:BE24123098 ;
+    skos:narrower  nuts:BE24123099 ;
+    skos:narrower  nuts:BE24123100 ;
+    skos:narrower  nuts:BE24123101 ;
+    skos:narrower  nuts:BE24123102 ;
+    skos:narrower  nuts:BE24123103 ;
+    skos:narrower  nuts:BE24123104 ;
+    skos:narrower  nuts:BE24123105 .
+
+nuts:BE242
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Leuven"@nl ;
+    skos:notation  "BE242" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE24 ;
+    skos:narrower  nuts:BE24224001 ;
+    skos:narrower  nuts:BE24224007 ;
+    skos:narrower  nuts:BE24224008 ;
+    skos:narrower  nuts:BE24224009 ;
+    skos:narrower  nuts:BE24224011 ;
+    skos:narrower  nuts:BE24224014 ;
+    skos:narrower  nuts:BE24224016 ;
+    skos:narrower  nuts:BE24224020 ;
+    skos:narrower  nuts:BE24224028 ;
+    skos:narrower  nuts:BE24224033 ;
+    skos:narrower  nuts:BE24224038 ;
+    skos:narrower  nuts:BE24224041 ;
+    skos:narrower  nuts:BE24224043 ;
+    skos:narrower  nuts:BE24224045 ;
+    skos:narrower  nuts:BE24224048 ;
+    skos:narrower  nuts:BE24224054 ;
+    skos:narrower  nuts:BE24224055 ;
+    skos:narrower  nuts:BE24224059 ;
+    skos:narrower  nuts:BE24224062 ;
+    skos:narrower  nuts:BE24224066 ;
+    skos:narrower  nuts:BE24224086 ;
+    skos:narrower  nuts:BE24224094 ;
+    skos:narrower  nuts:BE24224104 ;
+    skos:narrower  nuts:BE24224107 ;
+    skos:narrower  nuts:BE24224109 ;
+    skos:narrower  nuts:BE24224130 ;
+    skos:narrower  nuts:BE24224133 ;
+    skos:narrower  nuts:BE24224134 ;
+    skos:narrower  nuts:BE24224135 ;
+    skos:narrower  nuts:BE24224137 .
+
+nuts:BE251
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Brugge"@nl ;
+    skos:notation  "BE251" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25131003 ;
+    skos:narrower  nuts:BE25131004 ;
+    skos:narrower  nuts:BE25131005 ;
+    skos:narrower  nuts:BE25131006 ;
+    skos:narrower  nuts:BE25131012 ;
+    skos:narrower  nuts:BE25131022 ;
+    skos:narrower  nuts:BE25131033 ;
+    skos:narrower  nuts:BE25131040 ;
+    skos:narrower  nuts:BE25131042 ;
+    skos:narrower  nuts:BE25131043 .
+
+nuts:BE252
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Diksmuide"@nl ;
+    skos:notation  "BE252" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25232003 ;
+    skos:narrower  nuts:BE25232006 ;
+    skos:narrower  nuts:BE25232010 ;
+    skos:narrower  nuts:BE25232011 ;
+    skos:narrower  nuts:BE25232030 .
+
+nuts:BE253
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Ieper"@nl ;
+    skos:notation  "BE253" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25333011 ;
+    skos:narrower  nuts:BE25333016 ;
+    skos:narrower  nuts:BE25333021 ;
+    skos:narrower  nuts:BE25333029 ;
+    skos:narrower  nuts:BE25333037 ;
+    skos:narrower  nuts:BE25333039 ;
+    skos:narrower  nuts:BE25333040 ;
+    skos:narrower  nuts:BE25333041 .
+
+nuts:BE254
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Kortrijk"@nl ;
+    skos:notation  "BE254" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25434002 ;
+    skos:narrower  nuts:BE25434003 ;
+    skos:narrower  nuts:BE25434009 ;
+    skos:narrower  nuts:BE25434013 ;
+    skos:narrower  nuts:BE25434022 ;
+    skos:narrower  nuts:BE25434023 ;
+    skos:narrower  nuts:BE25434025 ;
+    skos:narrower  nuts:BE25434027 ;
+    skos:narrower  nuts:BE25434040 ;
+    skos:narrower  nuts:BE25434041 ;
+    skos:narrower  nuts:BE25434042 ;
+    skos:narrower  nuts:BE25434043 .
+
+nuts:BE255
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Oostende"@nl ;
+    skos:notation  "BE255" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25535002 ;
+    skos:narrower  nuts:BE25535005 ;
+    skos:narrower  nuts:BE25535006 ;
+    skos:narrower  nuts:BE25535011 ;
+    skos:narrower  nuts:BE25535013 ;
+    skos:narrower  nuts:BE25535014 ;
+    skos:narrower  nuts:BE25535029 .
+
+nuts:BE256
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Roeselare"@nl ;
+    skos:notation  "BE256" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25636006 ;
+    skos:narrower  nuts:BE25636007 ;
+    skos:narrower  nuts:BE25636008 ;
+    skos:narrower  nuts:BE25636010 ;
+    skos:narrower  nuts:BE25636011 ;
+    skos:narrower  nuts:BE25636012 ;
+    skos:narrower  nuts:BE25636015 ;
+    skos:narrower  nuts:BE25636019 .
+
+nuts:BE257
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Tielt"@nl ;
+    skos:notation  "BE257" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25737002 ;
+    skos:narrower  nuts:BE25737007 ;
+    skos:narrower  nuts:BE25737010 ;
+    skos:narrower  nuts:BE25737011 ;
+    skos:narrower  nuts:BE25737012 ;
+    skos:narrower  nuts:BE25737015 ;
+    skos:narrower  nuts:BE25737017 ;
+    skos:narrower  nuts:BE25737018 ;
+    skos:narrower  nuts:BE25737020 .
+
+nuts:BE258
+    a              skos:Concept ;
+    skos:prefLabel "Arrondissement Veurne"@nl ;
+    skos:notation  "BE258" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE25 ;
+    skos:narrower  nuts:BE25838002 ;
+    skos:narrower  nuts:BE25838008 ;
+    skos:narrower  nuts:BE25838014 ;
+    skos:narrower  nuts:BE25838016 ;
+    skos:narrower  nuts:BE25838025 .
+
+
+nuts:BE10021001
+    a              skos:Concept ;
+    skos:prefLabel "Anderlecht"@nl ;
+    skos:notation  "21001" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021002
+    a              skos:Concept ;
+    skos:prefLabel "Oudergem"@nl ;
+    skos:notation  "21002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021003
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Agatha-Berchem"@nl ;
+    skos:notation  "21003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021004
+    a              skos:Concept ;
+    skos:prefLabel "Brussel"@nl ;
+    skos:notation  "21004" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021005
+    a              skos:Concept ;
+    skos:prefLabel "Etterbeek"@nl ;
+    skos:notation  "21005" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021006
+    a              skos:Concept ;
+    skos:prefLabel "Evere"@nl ;
+    skos:notation  "21006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021007
+    a              skos:Concept ;
+    skos:prefLabel "Vorst"@nl ;
+    skos:notation  "21007" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021008
+    a              skos:Concept ;
+    skos:prefLabel "Ganshoren"@nl ;
+    skos:notation  "21008" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021009
+    a              skos:Concept ;
+    skos:prefLabel "Elsene"@nl ;
+    skos:notation  "21009" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021010
+    a              skos:Concept ;
+    skos:prefLabel "Jette"@nl ;
+    skos:notation  "21010" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021011
+    a              skos:Concept ;
+    skos:prefLabel "Koekelberg"@nl ;
+    skos:notation  "21011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021012
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Jans-Molenbeek"@nl ;
+    skos:notation  "21012" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021013
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Gillis"@nl ;
+    skos:notation  "21013" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021014
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Joost-ten-Node"@nl ;
+    skos:notation  "21014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021015
+    a              skos:Concept ;
+    skos:prefLabel "Schaarbeek"@nl ;
+    skos:notation  "21015" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021016
+    a              skos:Concept ;
+    skos:prefLabel "Ukkel"@nl ;
+    skos:notation  "21016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021017
+    a              skos:Concept ;
+    skos:prefLabel "Watermaal-Bosvoorde"@nl ;
+    skos:notation  "21017" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021018
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Lambrechts-Woluwe"@nl ;
+    skos:notation  "21018" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE10021019
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Pieters-Woluwe"@nl ;
+    skos:notation  "21019" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE100 .
+
+nuts:BE21111001
+    a              skos:Concept ;
+    skos:prefLabel "Aartselaar"@nl ;
+    skos:notation  "11001" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111002
+    a              skos:Concept ;
+    skos:prefLabel "Antwerpen"@nl ;
+    skos:notation  "11002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111004
+    a              skos:Concept ;
+    skos:prefLabel "Boechout"@nl ;
+    skos:notation  "11004" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111005
+    a              skos:Concept ;
+    skos:prefLabel "Boom"@nl ;
+    skos:notation  "11005" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111007
+    a              skos:Concept ;
+    skos:prefLabel "Borsbeek"@nl ;
+    skos:notation  "11007" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111008
+    a              skos:Concept ;
+    skos:prefLabel "Brasschaat"@nl ;
+    skos:notation  "11008" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111009
+    a              skos:Concept ;
+    skos:prefLabel "Brecht"@nl ;
+    skos:notation  "11009" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111013
+    a              skos:Concept ;
+    skos:prefLabel "Edegem"@nl ;
+    skos:notation  "11013" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111016
+    a              skos:Concept ;
+    skos:prefLabel "Essen"@nl ;
+    skos:notation  "11016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111018
+    a              skos:Concept ;
+    skos:prefLabel "Hemiksem"@nl ;
+    skos:notation  "11018" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111021
+    a              skos:Concept ;
+    skos:prefLabel "Hove"@nl ;
+    skos:notation  "11021" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111022
+    a              skos:Concept ;
+    skos:prefLabel "Kalmthout"@nl ;
+    skos:notation  "11022" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111023
+    a              skos:Concept ;
+    skos:prefLabel "Kapellen"@nl ;
+    skos:notation  "11023" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111024
+    a              skos:Concept ;
+    skos:prefLabel "Kontich"@nl ;
+    skos:notation  "11024" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111025
+    a              skos:Concept ;
+    skos:prefLabel "Lint"@nl ;
+    skos:notation  "11025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111029
+    a              skos:Concept ;
+    skos:prefLabel "Mortsel"@nl ;
+    skos:notation  "11029" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111030
+    a              skos:Concept ;
+    skos:prefLabel "Niel"@nl ;
+    skos:notation  "11030" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111035
+    a              skos:Concept ;
+    skos:prefLabel "Ranst"@nl ;
+    skos:notation  "11035" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111037
+    a              skos:Concept ;
+    skos:prefLabel "Rumst"@nl ;
+    skos:notation  "11037" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111038
+    a              skos:Concept ;
+    skos:prefLabel "Schelle"@nl ;
+    skos:notation  "11038" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111039
+    a              skos:Concept ;
+    skos:prefLabel "Schilde"@nl ;
+    skos:notation  "11039" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111040
+    a              skos:Concept ;
+    skos:prefLabel "Schoten"@nl ;
+    skos:notation  "11040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111044
+    a              skos:Concept ;
+    skos:prefLabel "Stabroek"@nl ;
+    skos:notation  "11044" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111050
+    a              skos:Concept ;
+    skos:prefLabel "Wijnegem"@nl ;
+    skos:notation  "11050" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111052
+    a              skos:Concept ;
+    skos:prefLabel "Wommelgem"@nl ;
+    skos:notation  "11052" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111053
+    a              skos:Concept ;
+    skos:prefLabel "Wuustwezel"@nl ;
+    skos:notation  "11053" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111054
+    a              skos:Concept ;
+    skos:prefLabel "Zandhoven"@nl ;
+    skos:notation  "11054" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111055
+    a              skos:Concept ;
+    skos:prefLabel "Zoersel"@nl ;
+    skos:notation  "11055" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111056
+    a              skos:Concept ;
+    skos:prefLabel "Zwijndrecht"@nl ;
+    skos:notation  "11056" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21111057
+    a              skos:Concept ;
+    skos:prefLabel "Malle"@nl ;
+    skos:notation  "11057" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE211 .
+
+nuts:BE21212002
+    a              skos:Concept ;
+    skos:prefLabel "Berlaar"@nl ;
+    skos:notation  "12002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212005
+    a              skos:Concept ;
+    skos:prefLabel "Bonheiden"@nl ;
+    skos:notation  "12005" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212007
+    a              skos:Concept ;
+    skos:prefLabel "Bornem"@nl ;
+    skos:notation  "12007" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212009
+    a              skos:Concept ;
+    skos:prefLabel "Duffel"@nl ;
+    skos:notation  "12009" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212014
+    a              skos:Concept ;
+    skos:prefLabel "Heist-op-den-Berg"@nl ;
+    skos:notation  "12014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212021
+    a              skos:Concept ;
+    skos:prefLabel "Lier"@nl ;
+    skos:notation  "12021" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212025
+    a              skos:Concept ;
+    skos:prefLabel "Mechelen"@nl ;
+    skos:notation  "12025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212026
+    a              skos:Concept ;
+    skos:prefLabel "Nijlen"@nl ;
+    skos:notation  "12026" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212029
+    a              skos:Concept ;
+    skos:prefLabel "Putte"@nl ;
+    skos:notation  "12029" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212030
+    a              skos:Concept ;
+    skos:prefLabel "Puurs"@nl ;
+    skos:notation  "12030" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212034
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Amands"@nl ;
+    skos:notation  "12034" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212035
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Katelijne-Waver"@nl ;
+    skos:notation  "12035" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212040
+    a              skos:Concept ;
+    skos:prefLabel "Willebroek"@nl ;
+    skos:notation  "12040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21212041
+    a              skos:Concept ;
+    skos:prefLabel "Puurs-Sint-Amands"@nl ;
+    skos:notation  "12041" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE212 .
+
+nuts:BE21313001
+    a              skos:Concept ;
+    skos:prefLabel "Arendonk"@nl ;
+    skos:notation  "13001" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313002
+    a              skos:Concept ;
+    skos:prefLabel "Baarle-Hertog"@nl ;
+    skos:notation  "13002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313003
+    a              skos:Concept ;
+    skos:prefLabel "Balen"@nl ;
+    skos:notation  "13003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313004
+    a              skos:Concept ;
+    skos:prefLabel "Beerse"@nl ;
+    skos:notation  "13004" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313006
+    a              skos:Concept ;
+    skos:prefLabel "Dessel"@nl ;
+    skos:notation  "13006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313008
+    a              skos:Concept ;
+    skos:prefLabel "Geel"@nl ;
+    skos:notation  "13008" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313010
+    a              skos:Concept ;
+    skos:prefLabel "Grobbendonk"@nl ;
+    skos:notation  "13010" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313011
+    a              skos:Concept ;
+    skos:prefLabel "Herentals"@nl ;
+    skos:notation  "13011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313012
+    a              skos:Concept ;
+    skos:prefLabel "Herenthout"@nl ;
+    skos:notation  "13012" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313013
+    a              skos:Concept ;
+    skos:prefLabel "Herselt"@nl ;
+    skos:notation  "13013" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313014
+    a              skos:Concept ;
+    skos:prefLabel "Hoogstraten"@nl ;
+    skos:notation  "13014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313016
+    a              skos:Concept ;
+    skos:prefLabel "Hulshout"@nl ;
+    skos:notation  "13016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313017
+    a              skos:Concept ;
+    skos:prefLabel "Kasterlee"@nl ;
+    skos:notation  "13017" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313019
+    a              skos:Concept ;
+    skos:prefLabel "Lille"@nl ;
+    skos:notation  "13019" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313021
+    a              skos:Concept ;
+    skos:prefLabel "Meerhout"@nl ;
+    skos:notation  "13021" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313023
+    a              skos:Concept ;
+    skos:prefLabel "Merksplas"@nl ;
+    skos:notation  "13023" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313025
+    a              skos:Concept ;
+    skos:prefLabel "Mol"@nl ;
+    skos:notation  "13025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313029
+    a              skos:Concept ;
+    skos:prefLabel "Olen"@nl ;
+    skos:notation  "13029" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313031
+    a              skos:Concept ;
+    skos:prefLabel "Oud-Turnhout"@nl ;
+    skos:notation  "13031" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313035
+    a              skos:Concept ;
+    skos:prefLabel "Ravels"@nl ;
+    skos:notation  "13035" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313036
+    a              skos:Concept ;
+    skos:prefLabel "Retie"@nl ;
+    skos:notation  "13036" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313037
+    a              skos:Concept ;
+    skos:prefLabel "Rijkevorsel"@nl ;
+    skos:notation  "13037" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313040
+    a              skos:Concept ;
+    skos:prefLabel "Turnhout"@nl ;
+    skos:notation  "13040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313044
+    a              skos:Concept ;
+    skos:prefLabel "Vorselaar"@nl ;
+    skos:notation  "13044" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313046
+    a              skos:Concept ;
+    skos:prefLabel "Vosselaar"@nl ;
+    skos:notation  "13046" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313049
+    a              skos:Concept ;
+    skos:prefLabel "Westerlo"@nl ;
+    skos:notation  "13049" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE21313053
+    a              skos:Concept ;
+    skos:prefLabel "Laakdal"@nl ;
+    skos:notation  "13053" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE213 .
+
+nuts:BE22171002
+    a              skos:Concept ;
+    skos:prefLabel "As"@nl ;
+    skos:notation  "71002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171004
+    a              skos:Concept ;
+    skos:prefLabel "Beringen"@nl ;
+    skos:notation  "71004" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171011
+    a              skos:Concept ;
+    skos:prefLabel "Diepenbeek"@nl ;
+    skos:notation  "71011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171016
+    a              skos:Concept ;
+    skos:prefLabel "Genk"@nl ;
+    skos:notation  "71016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171017
+    a              skos:Concept ;
+    skos:prefLabel "Gingelom"@nl ;
+    skos:notation  "71017" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171020
+    a              skos:Concept ;
+    skos:prefLabel "Halen"@nl ;
+    skos:notation  "71020" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171022
+    a              skos:Concept ;
+    skos:prefLabel "Hasselt"@nl ;
+    skos:notation  "71022" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171024
+    a              skos:Concept ;
+    skos:prefLabel "Herk-de-Stad"@nl ;
+    skos:notation  "71024" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171034
+    a              skos:Concept ;
+    skos:prefLabel "Leopoldsburg"@nl ;
+    skos:notation  "71034" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171037
+    a              skos:Concept ;
+    skos:prefLabel "Lummen"@nl ;
+    skos:notation  "71037" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171045
+    a              skos:Concept ;
+    skos:prefLabel "Nieuwerkerken"@nl ;
+    skos:notation  "71045" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171047
+    a              skos:Concept ;
+    skos:prefLabel "Opglabbeek"@nl ;
+    skos:notation  "71047" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171053
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Truiden"@nl ;
+    skos:notation  "71053" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171057
+    a              skos:Concept ;
+    skos:prefLabel "Tessenderlo"@nl ;
+    skos:notation  "71057" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171066
+    a              skos:Concept ;
+    skos:prefLabel "Zonhoven"@nl ;
+    skos:notation  "71066" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171067
+    a              skos:Concept ;
+    skos:prefLabel "Zutendaal"@nl ;
+    skos:notation  "71067" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171069
+    a              skos:Concept ;
+    skos:prefLabel "Ham"@nl ;
+    skos:notation  "71069" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22171070
+    a              skos:Concept ;
+    skos:prefLabel "Heusden-Zolder"@nl ;
+    skos:notation  "71070" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22272003
+    a              skos:Concept ;
+    skos:prefLabel "Bocholt"@nl ;
+    skos:notation  "72003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272004
+    a              skos:Concept ;
+    skos:prefLabel "Bree"@nl ;
+    skos:notation  "72004" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272018
+    a              skos:Concept ;
+    skos:prefLabel "Kinrooi"@nl ;
+    skos:notation  "72018" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272020
+    a              skos:Concept ;
+    skos:prefLabel "Lommel"@nl ;
+    skos:notation  "72020" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272021
+    a              skos:Concept ;
+    skos:prefLabel "Maaseik"@nl ;
+    skos:notation  "72021" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272025
+    a              skos:Concept ;
+    skos:prefLabel "Neerpelt"@nl ;
+    skos:notation  "72025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272029
+    a              skos:Concept ;
+    skos:prefLabel "Overpelt"@nl ;
+    skos:notation  "72029" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272030
+    a              skos:Concept ;
+    skos:prefLabel "Peer"@nl ;
+    skos:notation  "72030" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272037
+    a              skos:Concept ;
+    skos:prefLabel "Hamont-Achel"@nl ;
+    skos:notation  "72037" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272038
+    a              skos:Concept ;
+    skos:prefLabel "Hechtel-Eksel"@nl ;
+    skos:notation  "72038" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272039
+    a              skos:Concept ;
+    skos:prefLabel "Houthalen-Helchteren"@nl ;
+    skos:notation  "72039" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272040
+    a              skos:Concept ;
+    skos:prefLabel "Meeuwen-Gruitrode"@nl ;
+    skos:notation  "72040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22272041
+    a              skos:Concept ;
+    skos:prefLabel "Dilsen-Stokkem"@nl ;
+    skos:notation  "72041" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE222 .
+
+nuts:BE22373001
+    a              skos:Concept ;
+    skos:prefLabel "Alken"@nl ;
+    skos:notation  "73001" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373006
+    a              skos:Concept ;
+    skos:prefLabel "Bilzen"@nl ;
+    skos:notation  "73006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373009
+    a              skos:Concept ;
+    skos:prefLabel "Borgloon"@nl ;
+    skos:notation  "73009" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373022
+    a              skos:Concept ;
+    skos:prefLabel "Heers"@nl ;
+    skos:notation  "73022" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373028
+    a              skos:Concept ;
+    skos:prefLabel "Herstappe"@nl ;
+    skos:notation  "73028" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373032
+    a              skos:Concept ;
+    skos:prefLabel "Hoeselt"@nl ;
+    skos:notation  "73032" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373040
+    a              skos:Concept ;
+    skos:prefLabel "Kortessem"@nl ;
+    skos:notation  "73040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373042
+    a              skos:Concept ;
+    skos:prefLabel "Lanaken"@nl ;
+    skos:notation  "73042" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373066
+    a              skos:Concept ;
+    skos:prefLabel "Riemst"@nl ;
+    skos:notation  "73066" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373083
+    a              skos:Concept ;
+    skos:prefLabel "Tongeren"@nl ;
+    skos:notation  "73083" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373098
+    a              skos:Concept ;
+    skos:prefLabel "Wellen"@nl ;
+    skos:notation  "73098" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373107
+    a              skos:Concept ;
+    skos:prefLabel "Maasmechelen"@nl ;
+    skos:notation  "73107" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22373109
+    a              skos:Concept ;
+    skos:prefLabel "Voeren"@nl ;
+    skos:notation  "73109" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE223 .
+
+nuts:BE22572042
+    a              skos:Concept ;
+    skos:prefLabel "Oudsbergen"@nl ;
+    skos:notation  "72042" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE22572043
+    a              skos:Concept ;
+    skos:prefLabel "Pelt"@nl ;
+    skos:notation  "72043" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE221 .
+
+nuts:BE23141002
+    a              skos:Concept ;
+    skos:prefLabel "Aalst"@nl ;
+    skos:notation  "41002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141011
+    a              skos:Concept ;
+    skos:prefLabel "Denderleeuw"@nl ;
+    skos:notation  "41011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141018
+    a              skos:Concept ;
+    skos:prefLabel "Geraardsbergen"@nl ;
+    skos:notation  "41018" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141024
+    a              skos:Concept ;
+    skos:prefLabel "Haaltert"@nl ;
+    skos:notation  "41024" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141027
+    a              skos:Concept ;
+    skos:prefLabel "Herzele"@nl ;
+    skos:notation  "41027" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141034
+    a              skos:Concept ;
+    skos:prefLabel "Lede"@nl ;
+    skos:notation  "41034" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141048
+    a              skos:Concept ;
+    skos:prefLabel "Ninove"@nl ;
+    skos:notation  "41048" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141063
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Lievens-Houtem"@nl ;
+    skos:notation  "41063" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141081
+    a              skos:Concept ;
+    skos:prefLabel "Zottegem"@nl ;
+    skos:notation  "41081" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23141082
+    a              skos:Concept ;
+    skos:prefLabel "Erpe-Mere"@nl ;
+    skos:notation  "41082" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE231 .
+
+nuts:BE23242003
+    a              skos:Concept ;
+    skos:prefLabel "Berlare"@nl ;
+    skos:notation  "42003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242004
+    a              skos:Concept ;
+    skos:prefLabel "Buggenhout"@nl ;
+    skos:notation  "42004" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242006
+    a              skos:Concept ;
+    skos:prefLabel "Dendermonde"@nl ;
+    skos:notation  "42006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242008
+    a              skos:Concept ;
+    skos:prefLabel "Hamme"@nl ;
+    skos:notation  "42008" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242010
+    a              skos:Concept ;
+    skos:prefLabel "Laarne"@nl ;
+    skos:notation  "42010" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242011
+    a              skos:Concept ;
+    skos:prefLabel "Lebbeke"@nl ;
+    skos:notation  "42011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242023
+    a              skos:Concept ;
+    skos:prefLabel "Waasmunster"@nl ;
+    skos:notation  "42023" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242025
+    a              skos:Concept ;
+    skos:prefLabel "Wetteren"@nl ;
+    skos:notation  "42025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242026
+    a              skos:Concept ;
+    skos:prefLabel "Wichelen"@nl ;
+    skos:notation  "42026" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23242028
+    a              skos:Concept ;
+    skos:prefLabel "Zele"@nl ;
+    skos:notation  "42028" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE232 .
+
+nuts:BE23343002
+    a              skos:Concept ;
+    skos:prefLabel "Assenede"@nl ;
+    skos:notation  "43002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE233 .
+
+nuts:BE23343005
+    a              skos:Concept ;
+    skos:prefLabel "Eeklo"@nl ;
+    skos:notation  "43005" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE233 .
+
+nuts:BE23343007
+    a              skos:Concept ;
+    skos:prefLabel "Kaprijke"@nl ;
+    skos:notation  "43007" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE233 .
+
+nuts:BE23343010
+    a              skos:Concept ;
+    skos:prefLabel "Maldegem"@nl ;
+    skos:notation  "43010" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE233 .
+
+nuts:BE23343014
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Laureins"@nl ;
+    skos:notation  "43014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE233 .
+
+nuts:BE23343018
+    a              skos:Concept ;
+    skos:prefLabel "Zelzate"@nl ;
+    skos:notation  "43018" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE233 .
+
+nuts:BE23444001
+    a              skos:Concept ;
+    skos:prefLabel "Aalter"@nl ;
+    skos:notation  "44001" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444011
+    a              skos:Concept ;
+    skos:prefLabel "Deinze"@nl ;
+    skos:notation  "44011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444012
+    a              skos:Concept ;
+    skos:prefLabel "De Pinte"@nl ;
+    skos:notation  "44012" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444013
+    a              skos:Concept ;
+    skos:prefLabel "Destelbergen"@nl ;
+    skos:notation  "44013" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444019
+    a              skos:Concept ;
+    skos:prefLabel "Evergem"@nl ;
+    skos:notation  "44019" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444020
+    a              skos:Concept ;
+    skos:prefLabel "Gavere"@nl ;
+    skos:notation  "44020" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444021
+    a              skos:Concept ;
+    skos:prefLabel "Gent"@nl ;
+    skos:notation  "44021" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444029
+    a              skos:Concept ;
+    skos:prefLabel "Knesselare"@nl ;
+    skos:notation  "44029" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444034
+    a              skos:Concept ;
+    skos:prefLabel "Lochristi"@nl ;
+    skos:notation  "44034" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444036
+    a              skos:Concept ;
+    skos:prefLabel "Lovendegem"@nl ;
+    skos:notation  "44036" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444040
+    a              skos:Concept ;
+    skos:prefLabel "Melle"@nl ;
+    skos:notation  "44040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444043
+    a              skos:Concept ;
+    skos:prefLabel "Merelbeke"@nl ;
+    skos:notation  "44043" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444045
+    a              skos:Concept ;
+    skos:prefLabel "Moerbeke"@nl ;
+    skos:notation  "44045" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444048
+    a              skos:Concept ;
+    skos:prefLabel "Nazareth"@nl ;
+    skos:notation  "44048" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444049
+    a              skos:Concept ;
+    skos:prefLabel "Nevele"@nl ;
+    skos:notation  "44049" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444052
+    a              skos:Concept ;
+    skos:prefLabel "Oosterzele"@nl ;
+    skos:notation  "44052" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444064
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Martens-Latem"@nl ;
+    skos:notation  "44064" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444072
+    a              skos:Concept ;
+    skos:prefLabel "Waarschoot"@nl ;
+    skos:notation  "44072" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444073
+    a              skos:Concept ;
+    skos:prefLabel "Wachtebeke"@nl ;
+    skos:notation  "44073" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444080
+    a              skos:Concept ;
+    skos:prefLabel "Zomergem"@nl ;
+    skos:notation  "44080" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444081
+    a              skos:Concept ;
+    skos:prefLabel "Zulte"@nl ;
+    skos:notation  "44081" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23444085
+    a              skos:Concept ;
+    skos:prefLabel "Lievegem"@nl ;
+    skos:notation  "44085" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE234 .
+
+nuts:BE23545017
+    a              skos:Concept ;
+    skos:prefLabel "Kruishoutem"@nl ;
+    skos:notation  "45017" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545035
+    a              skos:Concept ;
+    skos:prefLabel "Oudenaarde"@nl ;
+    skos:notation  "45035" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545041
+    a              skos:Concept ;
+    skos:prefLabel "Ronse"@nl ;
+    skos:notation  "45041" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545057
+    a              skos:Concept ;
+    skos:prefLabel "Zingem"@nl ;
+    skos:notation  "45057" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545059
+    a              skos:Concept ;
+    skos:prefLabel "Brakel"@nl ;
+    skos:notation  "45059" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545060
+    a              skos:Concept ;
+    skos:prefLabel "Kluisbergen"@nl ;
+    skos:notation  "45060" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545061
+    a              skos:Concept ;
+    skos:prefLabel "Wortegem-Petegem"@nl ;
+    skos:notation  "45061" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545062
+    a              skos:Concept ;
+    skos:prefLabel "Horebeke"@nl ;
+    skos:notation  "45062" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545063
+    a              skos:Concept ;
+    skos:prefLabel "Lierde"@nl ;
+    skos:notation  "45063" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545064
+    a              skos:Concept ;
+    skos:prefLabel "Maarkedal"@nl ;
+    skos:notation  "45064" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545065
+    a              skos:Concept ;
+    skos:prefLabel "Zwalm"@nl ;
+    skos:notation  "45065" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23545068
+    a              skos:Concept ;
+    skos:prefLabel "Kruisem"@nl ;
+    skos:notation  "45068" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE235 .
+
+nuts:BE23646003
+    a              skos:Concept ;
+    skos:prefLabel "Beveren"@nl ;
+    skos:notation  "46003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE236 .
+
+nuts:BE23646013
+    a              skos:Concept ;
+    skos:prefLabel "Kruibeke"@nl ;
+    skos:notation  "46013" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE236 .
+
+nuts:BE23646014
+    a              skos:Concept ;
+    skos:prefLabel "Lokeren"@nl ;
+    skos:notation  "46014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE236 .
+
+nuts:BE23646020
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Gillis-Waas"@nl ;
+    skos:notation  "46020" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE236 .
+
+nuts:BE23646021
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Niklaas"@nl ;
+    skos:notation  "46021" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE236 .
+
+nuts:BE23646024
+    a              skos:Concept ;
+    skos:prefLabel "Stekene"@nl ;
+    skos:notation  "46024" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE236 .
+
+nuts:BE23646025
+    a              skos:Concept ;
+    skos:prefLabel "Temse"@nl ;
+    skos:notation  "46025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE236 .
+
+nuts:BE24123002
+    a              skos:Concept ;
+    skos:prefLabel "Asse"@nl ;
+    skos:notation  "23002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123003
+    a              skos:Concept ;
+    skos:prefLabel "Beersel"@nl ;
+    skos:notation  "23003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123009
+    a              skos:Concept ;
+    skos:prefLabel "Bever"@nl ;
+    skos:notation  "23009" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123016
+    a              skos:Concept ;
+    skos:prefLabel "Dilbeek"@nl ;
+    skos:notation  "23016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123023
+    a              skos:Concept ;
+    skos:prefLabel "Galmaarden"@nl ;
+    skos:notation  "23023" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123024
+    a              skos:Concept ;
+    skos:prefLabel "Gooik"@nl ;
+    skos:notation  "23024" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123025
+    a              skos:Concept ;
+    skos:prefLabel "Grimbergen"@nl ;
+    skos:notation  "23025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123027
+    a              skos:Concept ;
+    skos:prefLabel "Halle"@nl ;
+    skos:notation  "23027" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123032
+    a              skos:Concept ;
+    skos:prefLabel "Herne"@nl ;
+    skos:notation  "23032" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123033
+    a              skos:Concept ;
+    skos:prefLabel "Hoeilaart"@nl ;
+    skos:notation  "23033" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123038
+    a              skos:Concept ;
+    skos:prefLabel "Kampenhout"@nl ;
+    skos:notation  "23038" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123039
+    a              skos:Concept ;
+    skos:prefLabel "Kapelle-op-den-Bos"@nl ;
+    skos:notation  "23039" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123044
+    a              skos:Concept ;
+    skos:prefLabel "Liedekerke"@nl ;
+    skos:notation  "23044" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123045
+    a              skos:Concept ;
+    skos:prefLabel "Londerzeel"@nl ;
+    skos:notation  "23045" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123047
+    a              skos:Concept ;
+    skos:prefLabel "Machelen"@nl ;
+    skos:notation  "23047" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123050
+    a              skos:Concept ;
+    skos:prefLabel "Meise"@nl ;
+    skos:notation  "23050" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123052
+    a              skos:Concept ;
+    skos:prefLabel "Merchtem"@nl ;
+    skos:notation  "23052" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123060
+    a              skos:Concept ;
+    skos:prefLabel "Opwijk"@nl ;
+    skos:notation  "23060" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123062
+    a              skos:Concept ;
+    skos:prefLabel "Overijse"@nl ;
+    skos:notation  "23062" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123064
+    a              skos:Concept ;
+    skos:prefLabel "Pepingen"@nl ;
+    skos:notation  "23064" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123077
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Pieters-Leeuw"@nl ;
+    skos:notation  "23077" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123081
+    a              skos:Concept ;
+    skos:prefLabel "Steenokkerzeel"@nl ;
+    skos:notation  "23081" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123086
+    a              skos:Concept ;
+    skos:prefLabel "Ternat"@nl ;
+    skos:notation  "23086" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123088
+    a              skos:Concept ;
+    skos:prefLabel "Vilvoorde"@nl ;
+    skos:notation  "23088" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123094
+    a              skos:Concept ;
+    skos:prefLabel "Zaventem"@nl ;
+    skos:notation  "23094" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123096
+    a              skos:Concept ;
+    skos:prefLabel "Zemst"@nl ;
+    skos:notation  "23096" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123097
+    a              skos:Concept ;
+    skos:prefLabel "Roosdaal"@nl ;
+    skos:notation  "23097" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123098
+    a              skos:Concept ;
+    skos:prefLabel "Drogenbos"@nl ;
+    skos:notation  "23098" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123099
+    a              skos:Concept ;
+    skos:prefLabel "Kraainem"@nl ;
+    skos:notation  "23099" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123100
+    a              skos:Concept ;
+    skos:prefLabel "Linkebeek"@nl ;
+    skos:notation  "23100" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123101
+    a              skos:Concept ;
+    skos:prefLabel "Sint-Genesius-Rode"@nl ;
+    skos:notation  "23101" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123102
+    a              skos:Concept ;
+    skos:prefLabel "Wemmel"@nl ;
+    skos:notation  "23102" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123103
+    a              skos:Concept ;
+    skos:prefLabel "Wezembeek-Oppem"@nl ;
+    skos:notation  "23103" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123104
+    a              skos:Concept ;
+    skos:prefLabel "Lennik"@nl ;
+    skos:notation  "23104" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24123105
+    a              skos:Concept ;
+    skos:prefLabel "Affligem"@nl ;
+    skos:notation  "23105" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE241 .
+
+nuts:BE24224001
+    a              skos:Concept ;
+    skos:prefLabel "Aarschot"@nl ;
+    skos:notation  "24001" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224007
+    a              skos:Concept ;
+    skos:prefLabel "Begijnendijk"@nl ;
+    skos:notation  "24007" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224008
+    a              skos:Concept ;
+    skos:prefLabel "Bekkevoort"@nl ;
+    skos:notation  "24008" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224009
+    a              skos:Concept ;
+    skos:prefLabel "Bertem"@nl ;
+    skos:notation  "24009" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224011
+    a              skos:Concept ;
+    skos:prefLabel "Bierbeek"@nl ;
+    skos:notation  "24011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224014
+    a              skos:Concept ;
+    skos:prefLabel "Boortmeerbeek"@nl ;
+    skos:notation  "24014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224016
+    a              skos:Concept ;
+    skos:prefLabel "Boutersem"@nl ;
+    skos:notation  "24016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224020
+    a              skos:Concept ;
+    skos:prefLabel "Diest"@nl ;
+    skos:notation  "24020" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224028
+    a              skos:Concept ;
+    skos:prefLabel "Geetbets"@nl ;
+    skos:notation  "24028" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224033
+    a              skos:Concept ;
+    skos:prefLabel "Haacht"@nl ;
+    skos:notation  "24033" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224038
+    a              skos:Concept ;
+    skos:prefLabel "Herent"@nl ;
+    skos:notation  "24038" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224041
+    a              skos:Concept ;
+    skos:prefLabel "Hoegaarden"@nl ;
+    skos:notation  "24041" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224043
+    a              skos:Concept ;
+    skos:prefLabel "Holsbeek"@nl ;
+    skos:notation  "24043" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224045
+    a              skos:Concept ;
+    skos:prefLabel "Huldenberg"@nl ;
+    skos:notation  "24045" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224048
+    a              skos:Concept ;
+    skos:prefLabel "Keerbergen"@nl ;
+    skos:notation  "24048" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224054
+    a              skos:Concept ;
+    skos:prefLabel "Kortenaken"@nl ;
+    skos:notation  "24054" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224055
+    a              skos:Concept ;
+    skos:prefLabel "Kortenberg"@nl ;
+    skos:notation  "24055" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224059
+    a              skos:Concept ;
+    skos:prefLabel "Landen"@nl ;
+    skos:notation  "24059" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224062
+    a              skos:Concept ;
+    skos:prefLabel "Leuven"@nl ;
+    skos:notation  "24062" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224066
+    a              skos:Concept ;
+    skos:prefLabel "Lubbeek"@nl ;
+    skos:notation  "24066" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224086
+    a              skos:Concept ;
+    skos:prefLabel "Oud-Heverlee"@nl ;
+    skos:notation  "24086" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224094
+    a              skos:Concept ;
+    skos:prefLabel "Rotselaar"@nl ;
+    skos:notation  "24094" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224104
+    a              skos:Concept ;
+    skos:prefLabel "Tervuren"@nl ;
+    skos:notation  "24104" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224107
+    a              skos:Concept ;
+    skos:prefLabel "Tienen"@nl ;
+    skos:notation  "24107" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224109
+    a              skos:Concept ;
+    skos:prefLabel "Tremelo"@nl ;
+    skos:notation  "24109" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224130
+    a              skos:Concept ;
+    skos:prefLabel "Zoutleeuw"@nl ;
+    skos:notation  "24130" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224133
+    a              skos:Concept ;
+    skos:prefLabel "Linter"@nl ;
+    skos:notation  "24133" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224134
+    a              skos:Concept ;
+    skos:prefLabel "Scherpenheuvel-Zichem"@nl ;
+    skos:notation  "24134" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224135
+    a              skos:Concept ;
+    skos:prefLabel "Tielt-Winge"@nl ;
+    skos:notation  "24135" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE24224137
+    a              skos:Concept ;
+    skos:prefLabel "Glabbeek"@nl ;
+    skos:notation  "24137" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE242 .
+
+nuts:BE25131003
+    a              skos:Concept ;
+    skos:prefLabel "Beernem"@nl ;
+    skos:notation  "31003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131004
+    a              skos:Concept ;
+    skos:prefLabel "Blankenberge"@nl ;
+    skos:notation  "31004" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131005
+    a              skos:Concept ;
+    skos:prefLabel "Brugge"@nl ;
+    skos:notation  "31005" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131006
+    a              skos:Concept ;
+    skos:prefLabel "Damme"@nl ;
+    skos:notation  "31006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131012
+    a              skos:Concept ;
+    skos:prefLabel "Jabbeke"@nl ;
+    skos:notation  "31012" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131022
+    a              skos:Concept ;
+    skos:prefLabel "Oostkamp"@nl ;
+    skos:notation  "31022" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131033
+    a              skos:Concept ;
+    skos:prefLabel "Torhout"@nl ;
+    skos:notation  "31033" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131040
+    a              skos:Concept ;
+    skos:prefLabel "Zedelgem"@nl ;
+    skos:notation  "31040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131042
+    a              skos:Concept ;
+    skos:prefLabel "Zuienkerke"@nl ;
+    skos:notation  "31042" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25131043
+    a              skos:Concept ;
+    skos:prefLabel "Knokke-Heist"@nl ;
+    skos:notation  "31043" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE251 .
+
+nuts:BE25232003
+    a              skos:Concept ;
+    skos:prefLabel "Diksmuide"@nl ;
+    skos:notation  "32003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE252 .
+
+nuts:BE25232006
+    a              skos:Concept ;
+    skos:prefLabel "Houthulst"@nl ;
+    skos:notation  "32006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE252 .
+
+nuts:BE25232010
+    a              skos:Concept ;
+    skos:prefLabel "Koekelare"@nl ;
+    skos:notation  "32010" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE252 .
+
+nuts:BE25232011
+    a              skos:Concept ;
+    skos:prefLabel "Kortemark"@nl ;
+    skos:notation  "32011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE252 .
+
+nuts:BE25232030
+    a              skos:Concept ;
+    skos:prefLabel "Lo-Reninge"@nl ;
+    skos:notation  "32030" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE252 .
+
+nuts:BE25333011
+    a              skos:Concept ;
+    skos:prefLabel "Ieper"@nl ;
+    skos:notation  "33011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25333016
+    a              skos:Concept ;
+    skos:prefLabel "Mesen"@nl ;
+    skos:notation  "33016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25333021
+    a              skos:Concept ;
+    skos:prefLabel "Poperinge"@nl ;
+    skos:notation  "33021" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25333029
+    a              skos:Concept ;
+    skos:prefLabel "Wervik"@nl ;
+    skos:notation  "33029" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25333037
+    a              skos:Concept ;
+    skos:prefLabel "Zonnebeke"@nl ;
+    skos:notation  "33037" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25333039
+    a              skos:Concept ;
+    skos:prefLabel "Heuvelland"@nl ;
+    skos:notation  "33039" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25333040
+    a              skos:Concept ;
+    skos:prefLabel "Langemark-Poelkapelle"@nl ;
+    skos:notation  "33040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25333041
+    a              skos:Concept ;
+    skos:prefLabel "Vleteren"@nl ;
+    skos:notation  "33041" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE253 .
+
+nuts:BE25434002
+    a              skos:Concept ;
+    skos:prefLabel "Anzegem"@nl ;
+    skos:notation  "34002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434003
+    a              skos:Concept ;
+    skos:prefLabel "Avelgem"@nl ;
+    skos:notation  "34003" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434009
+    a              skos:Concept ;
+    skos:prefLabel "Deerlijk"@nl ;
+    skos:notation  "34009" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434013
+    a              skos:Concept ;
+    skos:prefLabel "Harelbeke"@nl ;
+    skos:notation  "34013" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434022
+    a              skos:Concept ;
+    skos:prefLabel "Kortrijk"@nl ;
+    skos:notation  "34022" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434023
+    a              skos:Concept ;
+    skos:prefLabel "Kuurne"@nl ;
+    skos:notation  "34023" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434025
+    a              skos:Concept ;
+    skos:prefLabel "Lendelede"@nl ;
+    skos:notation  "34025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434027
+    a              skos:Concept ;
+    skos:prefLabel "Menen"@nl ;
+    skos:notation  "34027" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434040
+    a              skos:Concept ;
+    skos:prefLabel "Waregem"@nl ;
+    skos:notation  "34040" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434041
+    a              skos:Concept ;
+    skos:prefLabel "Wevelgem"@nl ;
+    skos:notation  "34041" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434042
+    a              skos:Concept ;
+    skos:prefLabel "Zwevegem"@nl ;
+    skos:notation  "34042" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25434043
+    a              skos:Concept ;
+    skos:prefLabel "Spiere-Helkijn"@nl ;
+    skos:notation  "34043" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE254 .
+
+nuts:BE25535002
+    a              skos:Concept ;
+    skos:prefLabel "Bredene"@nl ;
+    skos:notation  "35002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE255 .
+
+nuts:BE25535005
+    a              skos:Concept ;
+    skos:prefLabel "Gistel"@nl ;
+    skos:notation  "35005" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE255 .
+
+nuts:BE25535006
+    a              skos:Concept ;
+    skos:prefLabel "Ichtegem"@nl ;
+    skos:notation  "35006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE255 .
+
+nuts:BE25535011
+    a              skos:Concept ;
+    skos:prefLabel "Middelkerke"@nl ;
+    skos:notation  "35011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE255 .
+
+nuts:BE25535013
+    a              skos:Concept ;
+    skos:prefLabel "Oostende"@nl ;
+    skos:notation  "35013" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE255 .
+
+nuts:BE25535014
+    a              skos:Concept ;
+    skos:prefLabel "Oudenburg"@nl ;
+    skos:notation  "35014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE255 .
+
+nuts:BE25535029
+    a              skos:Concept ;
+    skos:prefLabel "De Haan"@nl ;
+    skos:notation  "35029" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE255 .
+
+nuts:BE25636006
+    a              skos:Concept ;
+    skos:prefLabel "Hooglede"@nl ;
+    skos:notation  "36006" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25636007
+    a              skos:Concept ;
+    skos:prefLabel "Ingelmunster"@nl ;
+    skos:notation  "36007" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25636008
+    a              skos:Concept ;
+    skos:prefLabel "Izegem"@nl ;
+    skos:notation  "36008" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25636010
+    a              skos:Concept ;
+    skos:prefLabel "Ledegem"@nl ;
+    skos:notation  "36010" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25636011
+    a              skos:Concept ;
+    skos:prefLabel "Lichtervelde"@nl ;
+    skos:notation  "36011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25636012
+    a              skos:Concept ;
+    skos:prefLabel "Moorslede"@nl ;
+    skos:notation  "36012" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25636015
+    a              skos:Concept ;
+    skos:prefLabel "Roeselare"@nl ;
+    skos:notation  "36015" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25636019
+    a              skos:Concept ;
+    skos:prefLabel "Staden"@nl ;
+    skos:notation  "36019" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE256 .
+
+nuts:BE25737002
+    a              skos:Concept ;
+    skos:prefLabel "Dentergem"@nl ;
+    skos:notation  "37002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737007
+    a              skos:Concept ;
+    skos:prefLabel "Meulebeke"@nl ;
+    skos:notation  "37007" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737010
+    a              skos:Concept ;
+    skos:prefLabel "Oostrozebeke"@nl ;
+    skos:notation  "37010" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737011
+    a              skos:Concept ;
+    skos:prefLabel "Pittem"@nl ;
+    skos:notation  "37011" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737012
+    a              skos:Concept ;
+    skos:prefLabel "Ruiselede"@nl ;
+    skos:notation  "37012" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737015
+    a              skos:Concept ;
+    skos:prefLabel "Tielt"@nl ;
+    skos:notation  "37015" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737017
+    a              skos:Concept ;
+    skos:prefLabel "Wielsbeke"@nl ;
+    skos:notation  "37017" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737018
+    a              skos:Concept ;
+    skos:prefLabel "Wingene"@nl ;
+    skos:notation  "37018" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25737020
+    a              skos:Concept ;
+    skos:prefLabel "Ardooie"@nl ;
+    skos:notation  "37020" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE257 .
+
+nuts:BE25838002
+    a              skos:Concept ;
+    skos:prefLabel "Alveringem"@nl ;
+    skos:notation  "38002" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE258 .
+
+nuts:BE25838008
+    a              skos:Concept ;
+    skos:prefLabel "De Panne"@nl ;
+    skos:notation  "38008" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE258 .
+
+nuts:BE25838014
+    a              skos:Concept ;
+    skos:prefLabel "Koksijde"@nl ;
+    skos:notation  "38014" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE258 .
+
+nuts:BE25838016
+    a              skos:Concept ;
+    skos:prefLabel "Nieuwpoort"@nl ;
+    skos:notation  "38016" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE258 .
+
+nuts:BE25838025
+    a              skos:Concept ;
+    skos:prefLabel "Veurne"@nl ;
+    skos:notation  "38025" ;
+    skos:inScheme  nutss:2021 ;
+    skos:broader   nuts:BE258 .
