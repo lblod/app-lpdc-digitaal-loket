@@ -9,7 +9,7 @@ import {AddressTestBuilder} from "../test-helpers/address.test-builder";
 test(`Submit form: validate publicService valid form`, async ({request}) => {
     const loginResponse = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -22,7 +22,7 @@ test(`Submit form: validate publicService valid form`, async ({request}) => {
 test(`Submit form: validate publicService invalid form - competentAutority is required`, async ({request}) => {
     const loginResponse = await loginAsPepingen(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .buildAndPersist(request, pepingenId);
 
     const response = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/validate-for-publish`, {headers: {cookie: loginResponse.cookie}});
@@ -52,7 +52,7 @@ test(`Submit form: validate publicService with valid address`, async ({request})
 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoint(contactPoint.getSubject())
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -76,7 +76,7 @@ test(`Submit form: validate publicService with invalid address`, async ({request
 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoint(contactPoint.getSubject())
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -100,7 +100,7 @@ test(`Submit form: validate publicService with address that has not enough field
 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoint(contactPoint.getSubject())
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -135,7 +135,7 @@ test(`Submit form: validate publicService with multiple address - both valid`, a
 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoints([contactPoint1.getSubject(), contactPoint2.getSubject()])
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -170,7 +170,7 @@ test(`Submit form: validate publicService with multiple address - one invalid`, 
 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoints([contactPoint1.getSubject(), contactPoint2.getSubject()])
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -208,7 +208,7 @@ test(`Submit form: validate publicService with multiple address - both invalid`,
 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withContactPoints([contactPoint1.getSubject(), contactPoint2.getSubject()])
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -238,7 +238,7 @@ test(`Submit form: validate publicService with errors on inhoud tab and invalid 
     const publicService = await PublicServiceTestBuilder.aPublicService()
         .withNoTitle()
         .withContactPoint(contactPoint.getSubject())
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -254,7 +254,7 @@ test(`Submit form: validate publicService with errors on inhoud tab and invalid 
 
 test(`Submit form: validate publicService valid form when user is not logged in, returns http 401 Unauthenticated`, async ({request}) => {
     const publicService = await PublicServiceTestBuilder.aPublicService()
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 
@@ -266,7 +266,7 @@ test(`Submit form: validate publicService valid form when user is not logged in,
 test(`Submit form: validate publicService valid form when user has no rights on lpdc, returns http 403 Forbidden`, async ({request}) => {
     const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
     const publicService = await PublicServiceTestBuilder.aPublicService()
-        .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+        .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
         .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
         .buildAndPersist(request, pepingenId);
 

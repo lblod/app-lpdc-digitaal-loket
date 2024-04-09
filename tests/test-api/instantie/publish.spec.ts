@@ -14,7 +14,7 @@ test.describe('publish instance', () => {
         const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.ontwerp)
-            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24123064'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withDateModified(modified)
             .buildAndPersist(request, pepingenId);
@@ -62,7 +62,7 @@ test.describe('publish instance', () => {
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withInstanceStatus(InstanceStatus.verstuurd)
             .withDateSent(new Date())
-            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24123064'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withDateModified(modified)
             .buildAndPersist(request, pepingenId);

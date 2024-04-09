@@ -99,7 +99,7 @@ export class PublicServiceTestBuilder {
             .withYourEuropeCategory(YourEuropeCategory.Bedrijf)
             .withPublicationMedium(PublicationMedium.YourEurope)
             .withReviewStatus(ReviewStatus.conceptUpdated)
-            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withInstanceStatus(InstanceStatus.ontwerp)

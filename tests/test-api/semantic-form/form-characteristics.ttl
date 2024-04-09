@@ -214,7 +214,7 @@ ext:authorityPg a form:PropertyGroup;
       sh:path dct:spatial ;
       form:options  """
                      {
-                       "conceptScheme":"http://lblod.data.gift/vocabularies/lpdc-ipdc/IPDCLocaties",
+                       "conceptScheme":"http://data.europa.eu/nuts/scheme/2021",
                        "multiple": true
                      }
                     """ ;

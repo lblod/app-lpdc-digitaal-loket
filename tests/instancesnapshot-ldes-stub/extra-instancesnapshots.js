@@ -22,7 +22,7 @@ export const instanceSnapshot = (instanceId, gearchiveerd = false) => {
             "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
         ],
         "geografischToepassingsgebieden": [
-            "http://vocab.belgif.be/auth/refnis2019/44021"
+            "http://data.europa.eu/nuts/code/BE23444021"
         ],
         "uitvoerendeOverheden": [
             "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"

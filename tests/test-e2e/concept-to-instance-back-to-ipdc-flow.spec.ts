@@ -24,7 +24,7 @@ const pepingen: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
     name: "Pepingen",
     classificatie: "Gemeente",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/23064",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE24123064",
     spatialNisLabel: "Pepingen"
 }
 
@@ -32,7 +32,7 @@ const aarschot: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522",
     name: "Aarschot",
     classificatie: "Gemeente",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/24001",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE24224001",
     spatialNisLabel: "Aarschot"
 }
 
@@ -40,7 +40,7 @@ const leuven: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77",
     name: "Leuven",
     classificatie: "Gemeente",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/24062",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE24224062",
     spatialNisLabel: "Leuven"
 }
 
@@ -48,7 +48,7 @@ const provincieVlaamsBrabant: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/8b7e7bf05ace5bb1a68f5bc0d870e20c20f147b00bd9a3dcce3a01733d4da744",
     name: "Vlaams-Brabant",
     classificatie: "Provincie",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/20001",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE24",
     spatialNisLabel: "Provincie Vlaams-Brabant"
 }
 
@@ -56,7 +56,7 @@ const ocmwLeuven: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/8a162fa437a54cb657b57514e4e0135ec106fce3206c29cd2f90b1859ed90dab",
     name: "Leuven",
     classificatie: "OCMW",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/24062",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE24224062",
     spatialNisLabel: "Leuven"
 }
 
@@ -72,7 +72,7 @@ const autonoomGemeentebedrijf: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/5b6b1771d90a683e65f3473ea76c0d37d80d08a8647fd96783eda9af179a8115",
     name: "AGB Pepingen",
     classificatie: "Autonoom gemeentebedrijf",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/23064",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE24123064",
     spatialNisLabel: "Pepingen"
 }
 
@@ -80,7 +80,7 @@ const autonoomProvinciebedrijf: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/ebc8589470b92ac994448573f072f7a0408e4ab893364ed118fd65537c3b9ed0",
     name: "APB Provinciaal Onderwijs Antwerpen",
     classificatie: "Autonoom provinciebedrijf",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/10000",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE21",
     spatialNisLabel: "Provincie Antwerpen"
 }
 
@@ -112,7 +112,7 @@ const politieZone: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/04e7a09c988feed3cf8df1c51aafe0f0a50811e325f5f5ab8e1b9750f48630fd",
     name: "Politiezone van Middelkerke",
     classificatie: "Politiezone",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/35011",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE25535011",
     spatialNisLabel: "Middelkerke"
 }
 
@@ -120,7 +120,7 @@ const projectvereniging: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/efe77fae-7ba7-4a62-873f-1f291b5a911f",
     name: "Brabantse Kouters Oost",
     classificatie: "Projectvereniging",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/23088",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE24123088",
     spatialNisLabel: "Vilvoorde"
 }
 
@@ -128,7 +128,7 @@ const ocmwVereniging: BestuursEenheidConfig = {
     uri: "http://data.lblod.info/id/bestuurseenheden/cce1926b-51ff-4b66-a702-ea985f1d250b",
     name: "A.S.Z. Autonome Verzorgingsinstelling",
     classificatie: "OCMW vereniging",
-    spatialNisCode: "http://vocab.belgif.be/auth/refnis2019/41002",
+    spatialNisCode: "http://data.europa.eu/nuts/code/BE23141002",
     spatialNisLabel: "Aalst"
 }
 
@@ -959,11 +959,11 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 ],
                 geografischeToepassingsgebieden: (bestuurseenheidConfig.spatialNisCode ? [
                     bestuurseenheidConfig.spatialNisCode,
-                    'http://vocab.belgif.be/auth/refnis2019/24086',
-                    'http://vocab.belgif.be/auth/refnis2019/70000'
+                    'http://data.europa.eu/nuts/code/BE24224086',
+                    'http://data.europa.eu/nuts/code/BE22'
                 ] : [
-                    'http://vocab.belgif.be/auth/refnis2019/24086',
-                    'http://vocab.belgif.be/auth/refnis2019/70000'
+                    'http://data.europa.eu/nuts/code/BE24224086',
+                    'http://data.europa.eu/nuts/code/BE22'
                 ]),
                 zoektermen: ['Akte - nl', 'Nationaliteit - nl', 'een-nieuwe-tag'],
                 publicatieKanalen: ['https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope'],

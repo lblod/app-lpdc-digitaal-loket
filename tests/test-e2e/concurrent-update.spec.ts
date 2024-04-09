@@ -198,7 +198,7 @@ test.describe('Concurrent Update', () => {
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
         const bestuurseenheidUriPepingen = "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
-        const refnisPepingen = "http://vocab.belgif.be/auth/refnis2019/23064"
+        const refnisPepingen = "http://data.europa.eu/nuts/code/BE24123064"
         verifyInstancePublishedOnIPDC(
             instancePublishedInIpdc,
             {

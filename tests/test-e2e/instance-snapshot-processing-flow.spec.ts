@@ -67,7 +67,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 aangemaaktOp: `2024-02-20T11:42:12.357Z`,
                 bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
                 uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
-                geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`],
+                geografischeToepassingsgebieden: [`http://data.europa.eu/nuts/code/BE23444021`],
             },
             'nl-be-x-informal');
     });
@@ -170,7 +170,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         const executingAuthorities = ['Gent (Gemeente)'];
         const executingAuthoritiesAsIris = ['http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5'];
         const spatials = ['Arrondissement Gent', 'Gent'];
-        const spatialsAsIris = ['http://vocab.belgif.be/auth/refnis2019/44000', 'http://vocab.belgif.be/auth/refnis2019/44021'];
+        const spatialsAsIris = ['http://data.europa.eu/nuts/code/BE234', 'http://data.europa.eu/nuts/code/BE23444021'];
         const tags = ['Akte', 'Nationaliteit'];
         const publicationMedia = 'Your Europe';
         const publicationMediaAsIris = ['https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope'];
@@ -620,7 +620,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 aangemaaktOp: `2024-02-14T13:42:12.357Z`,
                 bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
                 uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
-                geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`]
+                geografischeToepassingsgebieden: [`http://data.europa.eu/nuts/code/BE23444021`]
             },
             'nl-be-x-informal');
     });
@@ -663,7 +663,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 beschrijving: { nl: unarchivedSnapshot.description },
                 bevoegdeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
                 uitvoerendeOverheden: [`http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5`],
-                geografischeToepassingsgebieden: [`http://vocab.belgif.be/auth/refnis2019/44021`]
+                geografischeToepassingsgebieden: [`http://data.europa.eu/nuts/code/BE23444021`]
             },
             'nl-be-x-informal');
     });
