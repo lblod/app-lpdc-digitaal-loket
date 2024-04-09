@@ -190,6 +190,7 @@ test.describe('Herziening nodig', () => {
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(conceptId);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
