@@ -146,6 +146,7 @@ test.describe('Concurrent Update', () => {
         await homePage.goto();
         await homePage.expectToBeVisible();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(`${createSnapshot.title}`);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
