@@ -136,9 +136,10 @@ test.describe('Reporting dashboard', () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
-        await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
-
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+            await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
+        });
         await conceptDetailsPage.expectToBeVisible();
         await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
         await conceptDetailsPage.voegToeButton.click();
@@ -209,8 +210,10 @@ test.describe('Reporting dashboard', () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
-        await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+            await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
+        });
 
         await conceptDetailsPage.expectToBeVisible();
         await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
@@ -301,8 +304,10 @@ test.describe('Reporting dashboard', () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
-        await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+            await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
+        });
 
         await conceptDetailsPage.expectToBeVisible();
         await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
