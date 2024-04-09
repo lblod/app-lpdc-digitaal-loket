@@ -50,6 +50,7 @@
 
 (define-resource public-service (abstract-public-service)
   :class (s-prefix "lpdcExt:InstancePublicService")
+  :properties `((:dutch-language-variant :string ,(s-prefix "lpdcExt:dutchLanguageVariant")))
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")
              (conceptual-public-service :via ,(s-prefix "dct:source")
