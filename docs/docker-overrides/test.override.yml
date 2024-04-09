@@ -54,6 +54,8 @@ services:
 
   ldes-consumer-conceptsnapshot-ipdc:
     environment:
+      LDES_STREAM: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot"
+      LDES_ENDPOINT_VIEW: "https://ipdc.tni-vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=0" # first page of the stream
       LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC_API_KEY>"
 
 networks:
