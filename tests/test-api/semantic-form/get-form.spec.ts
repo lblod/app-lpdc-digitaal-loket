@@ -5,8 +5,7 @@ import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-buil
 import {deleteAll} from "../test-helpers/sparql";
 import {ConceptTestBuilder} from "../test-helpers/concept.test-builder";
 import {Language} from "../test-helpers/language";
-import { TripleArray, Uri} from "../test-helpers/triple-array";
-import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
+import {TripleArray, Uri} from "../test-helpers/triple-array";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {TestDataFactory} from "../test-helpers/test-data-factory";
 import {PublicationMedium} from "../test-helpers/codelists";
@@ -100,6 +99,7 @@ test.describe('Loading forms for instances', () => {
     test('Can get content form for public service', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withDutchLanguageVariant(Language.INFORMAL)
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
@@ -177,6 +177,7 @@ test.describe('Loading forms for instances', () => {
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withTitle('Instance title', Language.FORMAL)
             .withDescription('Instance description', Language.FORMAL)
+            .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
 
 
@@ -188,73 +189,6 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.form).toStrictEqual(expectedForm);
     });
 
-    for (const chosenForm of [ChosenForm.FORMAL, ChosenForm.INFORMAL]) {
-        test(`When getting content form for public service only has no language then chosenform(${chosenForm}) is used in form`, async ({request}) => {
-            const loginResponse = await loginAsPepingen(request);
-            const publicService = await PublicServiceTestBuilder.aPublicService()
-                .withNoTitle()
-                .withNoDescription()
-                .buildAndPersist(request, pepingenId);
-
-            await FormalInformalChoiceTestBuilder.aChoice()
-                .withChosenForm(chosenForm)
-                .buildAndPersist(request);
-
-            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
-            expect(response.ok()).toBeTruthy();
-
-            const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
-            const responseBody = await response.json();
-            expect(responseBody.form).toStrictEqual(expectedForm);
-        });
-
-        test(`When getting content form for public service only has english language then chosenform(${chosenForm}) is used in form`, async ({request}) => {
-            const loginResponse = await loginAsPepingen(request);
-            const publicService = await PublicServiceTestBuilder.aPublicService()
-                .withTitle('english title', Language.EN)
-                .withDescription('english description', Language.EN)
-                .buildAndPersist(request, pepingenId);
-
-            await FormalInformalChoiceTestBuilder.aChoice()
-                .withChosenForm(chosenForm)
-                .buildAndPersist(request);
-
-            const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
-            expect(response.ok()).toBeTruthy();
-
-            const expectedForm = fs.readFileSync(`${__dirname}/form-${chosenForm}.ttl`, 'utf8');
-            const responseBody = await response.json();
-            expect(responseBody.form).toStrictEqual(expectedForm);
-        });
-    }
-
-    test('When getting instance with fields that can only contain NL language version then form should be loaded in chosenVersion', async ({request}) => {
-        const loginResponse = await loginAsPepingen(request);
-
-        const address = await AddressTestBuilder.anAddress()
-            .withLand('Belgie')
-            .withGemeente('Pepingen')
-            .withStraat('dorpstraat')
-            .buildAndPersist(request, pepingenId);
-
-        const contactPoint = await ContactPointTestBuilder.aContactPoint()
-            .withAddress(address.getSubject())
-            .buildAndPersist(request, pepingenId);
-
-        const publicService = await PublicServiceTestBuilder.aPublicService()
-            .withNoTitle()
-            .withNoDescription()
-            .withKeywords(['test'])
-            .withContactPoint(contactPoint.getSubject())
-            .buildAndPersist(request, pepingenId);
-
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
-        expect(response.ok()).toBeTruthy();
-
-        const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
-        const responseBody = await response.json();
-        expect(responseBody.form).toStrictEqual(expectedForm);
-    });
 
     test('When retrieving an instance that has all types of Bevoegde Overheid filled in we want to see all these types', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
