@@ -91,6 +91,7 @@ test.describe('Herziening nodig', () => {
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
@@ -122,6 +123,7 @@ test.describe('Herziening nodig', () => {
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
@@ -140,6 +142,7 @@ test.describe('Herziening nodig', () => {
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
@@ -213,6 +216,7 @@ test.describe('Herziening nodig', () => {
 
         // herziening nodig label is moet verdwenen zijn
         await homePage.expectToBeVisible();
+        await homePage.searchInput.fill(conceptId);
         await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
         await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
 
@@ -262,6 +266,7 @@ test.describe('Herziening nodig', () => {
 
         await homePage.goto();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
@@ -313,6 +318,7 @@ test.describe('Herziening nodig', () => {
 
         await homePage.goto();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
@@ -367,6 +373,7 @@ test.describe('Herziening nodig', () => {
 
         await homePage.goto();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
@@ -392,6 +399,7 @@ test.describe('Herziening nodig', () => {
 
         await homePage.expectToBeVisible();
         await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
