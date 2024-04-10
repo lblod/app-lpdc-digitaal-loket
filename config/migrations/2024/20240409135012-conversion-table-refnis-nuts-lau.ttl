@@ -18363,7 +18363,7 @@ nuts-code:ATZZ a skos:Concept ;
 nuts-code:BE1 a skos:Concept ;
               nuts:level "1"^^xsd:int ;
               skos:broader nuts-code:BE ;
-              skos:exactMatch nis:04000 ;
+              skos:exactMatch nis:4000 ;
               skos:inScheme nuts-scheme:2010,
               nuts-scheme:2013,
               nuts-scheme:2016 ;
@@ -24209,6 +24209,7 @@ nuts-code:AT32 a skos:Concept ;
 
 nuts-code:BE a skos:Concept ;
              nuts:level "0"^^xsd:int ;
+             skos:exactMatch nis:1000 ;
              skos:inScheme nuts-scheme:2010,
              nuts-scheme:2013,
              nuts-scheme:2016 ;
@@ -25997,7 +25998,7 @@ nuts-code:AT33 a skos:Concept ;
 nuts-code:BE2 a skos:Concept ;
               nuts:level "1"^^xsd:int ;
               skos:broader nuts-code:BE ;
-              skos:exactMatch nis:02000 ;
+              skos:exactMatch nis:2000 ;
               skos:inScheme nuts-scheme:2010,
               nuts-scheme:2013,
               nuts-scheme:2016 ;
@@ -26043,7 +26044,7 @@ nuts-code:BE258 a skos:Concept ;
 nuts-code:BE3 a skos:Concept ;
               nuts:level "1"^^xsd:int ;
               skos:broader nuts-code:BE ;
-              skos:exactMatch nis:03000 ;
+              skos:exactMatch nis:3000 ;
               skos:inScheme nuts-scheme:2010,
               nuts-scheme:2013,
               nuts-scheme:2016 ;
