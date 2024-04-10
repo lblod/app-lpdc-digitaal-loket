@@ -1,0 +1,15 @@
+prefix lpcExt: <http://lblod.data.gift/vocabularies/lpdc-ipdc/>
+prefix skos:  <http://www.w3.org/2004/02/skos/core#>
+
+delete {
+    graph <http://mu.semte.ch/graphs/public> {
+        lpcExt:IPDCLocaties ?anyP ?anyObject.
+    }
+}
+where {
+    graph <http://mu.semte.ch/graphs/public> {
+        lpcExt:IPDCLocaties a skos:ConceptScheme ;
+             skos:prefLabel  "IPDCLocaties"@nl ;
+             ?anyP ?anyObject.
+    }
+}
