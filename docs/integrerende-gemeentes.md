@@ -659,8 +659,8 @@ Kan ook als absolute URL opgegeven worden.
 Dit is een uitvoerbare URL die in dit voorbeeld wijst naar Gemeente Gent.
 Kan ook als absolute URL opgegeven worden.
 Meerdere `bevoegdeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
-14. `"geografischToepassingsgebieden": ["http://vocab.belgif.be/auth/refnis2019/44021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie). 
-Een code uit de http://vocab.belgif.be/auth/refnis2019 wordt verwacht.
+14. `"geografischToepassingsgebieden": ["http://data.europa.eu/nuts/code/BE23444021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie). 
+Een code uit de [nuts - lau codes](https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-03-22/codelijsten/geografisch-toepassingsgebied.ttl) wordt verwacht.
 Meerdere `geografischToepassingsgebieden` kunnen opgegeven worden, dus is dit json-type een array.
 15. `"uitvoerendeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de uitvoerende overheid.
 [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5).
@@ -683,7 +683,7 @@ Dit is de informatie die door LPDC zal verwerkt worden.
     <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-18T06:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     <http://purl.org/dc/terms/title> "Minimalistische instantie"@nl-be-x-informal;
     <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie</p>"@nl-be-x-informal;
-    <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+    <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>.
 
 <http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
     <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3>;
@@ -693,7 +693,7 @@ Dit is de informatie die door LPDC zal verwerkt worden.
     <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-20T07:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
     <http://purl.org/dc/terms/title> "Minimalistische instantie updatet"@nl-be-x-informal;
     <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie updatet</p>"@nl-be-x-informal;
-    <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+    <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>.
 ```
 
 De volledige test dataset voor LDES instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden.

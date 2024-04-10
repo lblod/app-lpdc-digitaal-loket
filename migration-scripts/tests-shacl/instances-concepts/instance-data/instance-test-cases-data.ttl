@@ -143,7 +143,7 @@ ex:a-minimal-valid-instance
     a lpdcExt:InstancePublicServiceSnapshot ;
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
-    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
+    dc:spatial <http://data.europa.eu/nuts/code/BE23141002> ;
     m8g:hasCost ex:an-instance-cost-all-languages-valid;
     m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
     schema:dateCreated """2023-11-12T20:15:42.007Z"""^^xsd:dateTime ;
@@ -182,7 +182,7 @@ ex:a-full-valid-instance
     cpsv:produces ex:another-output;
     lpdcExt:publicationMedium ex:a-publication-medium;
     lpdcExt:regulation """regulation-nl"""@nl ;
-    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
+    dc:spatial <http://data.europa.eu/nuts/code/BE23141002> ;
     lpdcExt:targetAudience ex:a-target-audience ;
     m8g:thematicArea ex:a-thematic-area;
     dc:type ex:a-type;
