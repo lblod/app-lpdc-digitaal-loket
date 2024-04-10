@@ -61,6 +61,7 @@ export class PublicServiceTestBuilder {
     private publicationStatus: Uri;
     private datePublished: Literal;
     private dutchLanguageVariant: Literal;
+    private needsConversionFromFormalToInformal: Literal;
 
     static aPublicService() {
         return new PublicServiceTestBuilder()
@@ -74,6 +75,7 @@ export class PublicServiceTestBuilder {
             .withEndDate(new Date())
             .withInstanceStatus(InstanceStatus.ontwerp)
             .withDutchLanguageVariant(Language.INFORMAL)
+            .withNeedsConversionFromFormalToInformal(false)
     }
 
     static aFullPublicService() {
@@ -106,6 +108,7 @@ export class PublicServiceTestBuilder {
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
             .withDatePublished(new Date())
             .withDutchLanguageVariant(Language.INFORMAL)
+            .withNeedsConversionFromFormalToInformal(false)
     }
 
     private withType() {
@@ -328,6 +331,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withNeedsConversionFromFormalToInformal(needsConversionFromFormalToInformal: boolean) {
+        this.needsConversionFromFormalToInformal = new Literal(needsConversionFromFormalToInformal.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#boolean');
+        return this;
+    }
+
     private buildTripleArray(organisationId: string): TripleArray {
         if(!this.createdBy) {
             this.withCreatedBy(organisationId);
@@ -372,6 +380,7 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.publicationStatus, this.publicationStatus),
             new Triple(this.id, Predicates.datePublished, this.datePublished),
             new Triple(this.id, Predicates.dutchLanguageVariant, this.dutchLanguageVariant),
+            new Triple(this.id, Predicates.needsConversionFromFormalToInformal, this.needsConversionFromFormalToInformal),
         ];
         return new TripleArray(triples);
     }

@@ -200,5 +200,6 @@ export const Predicates = {
     datePublished: new Uri('http://schema.org/datePublished'),
     formerType: new Uri('https://www.w3.org/ns/activitystreams#formerType'),
     deleteTime: new Uri('https://www.w3.org/ns/activitystreams#deleted'),
-    dutchLanguageVariant: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant')
+    dutchLanguageVariant: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant'),
+    needsConversionFromFormalToInformal: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal')
 }
