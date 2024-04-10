@@ -124,7 +124,7 @@ services:
       LDES_STREAM: "http://ipdc-stub/doc/conceptsnapshot"
       LDES_ENDPOINT_VIEW: "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0" # first page of the stream
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
-      CRON_PATTERN: "* * * * * *" # run the job every second
+      CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
       LDES_POLLING_INTERVAL: 5000 # every 5 seconds
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
@@ -151,7 +151,7 @@ services:
       LDES_STREAM: "http://instancesnapshot-ldes-stub/doc/instancesnapshot"
       LDES_ENDPOINT_VIEW: "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=0" # first page of the stream
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
-      CRON_PATTERN: "* * * * * *" # run the job every second
+      CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
       LDES_POLLING_INTERVAL: 5000 # every 5 seconds
       REPLACE_VERSIONS: "false"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
