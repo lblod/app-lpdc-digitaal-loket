@@ -1,0 +1,31 @@
+prefix skos:  <http://www.w3.org/2004/02/skos/core#>
+prefix nuts-code: <http://data.europa.eu/nuts/code/>
+prefix nuts-scheme: <http://data.europa.eu/nuts/scheme/>
+
+delete {
+    graph ?bestuurseenheidsgraph {
+        ?publicService <http://purl.org/dc/terms/spatial> ?spatialrefniscode.
+    }
+}
+insert {
+    graph ?bestuurseenheidsgraph {
+        ?publicService <http://purl.org/dc/terms/spatial> ?nutscode.
+    }
+}
+where {
+    graph ?bestuurseenheidsgraph {
+        ?publicService a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>;
+                       <http://purl.org/dc/terms/spatial> ?spatialrefniscode.
+    }
+
+    graph <http://mu.semte.ch/graphs/public> {
+        ?spatialrefniscode a skos:Concept ;
+                           skos:inScheme <http://lblod.data.gift/vocabularies/lpdc-ipdc/IPDCLocaties>.
+    }
+
+    graph <http://mu.semte.ch/graphs/migrate-refnis-nuts-lau> {
+        ?nutscode  a skos:Concept ;
+                   skos:inScheme     nuts-scheme:2016 ;
+                   skos:exactMatch  ?spatialrefniscode.
+    }
+}
