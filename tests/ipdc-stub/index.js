@@ -8,7 +8,7 @@ app.use(express.json({type:  ['application/json', 'application/ld+json']}));
 
 const instances = [];
 const extraConceptsnapshots = [];
-const instanceThatShouldFail = [];
+let instancesThatShouldFail = [];
 
 function errorHandler(err, req, res, next) {
     if (err) {
@@ -59,10 +59,11 @@ app.put('/instanties', (req, res, next) => {
         console.log('received new instances');
         const newInstance = req.body;
         const instanceIri = newInstance.find(object => object['@type'][0] === 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService' || object['@type'][0] === 'https://www.w3.org/ns/activitystreams#Tombstone')?.['@id'];
-        if (instanceThatShouldFail.some(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri)) {
-            const fail = instanceThatShouldFail.find(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri);
-            console.log('published instance is not valid');
-            return res.status(fail.statusCode ?? 400).send(fail.errorMessage);
+        if (instancesThatShouldFail.some(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri)) {
+            const fail = instancesThatShouldFail.find(instanceThatShouldFail => instanceThatShouldFail.instanceIri === instanceIri);
+            const statusCode = fail.statusCode ?? 400;
+            console.log(`published instance returns specific http status code ${statusCode}`);
+            return res.status(statusCode).send(fail.errorMessage);
         }
         instances.push(newInstance);
         console.log(JSON.stringify(newInstance, null, 2));
@@ -82,12 +83,22 @@ app.get('/instanties', (req, res, next) => {
 
 app.post('/instanties/fail', (req, res, next) => {
     try {
-        instanceThatShouldFail.push({
+        instancesThatShouldFail.push({
             instanceIri: req.body.instanceIri,
             statusCode: req.body.statusCode,
             errorMessage: req.body.errorMessage
         });
-        console.log(instanceThatShouldFail);
+        console.log(`instance that should fail : ${req.body.instanceIri}`);
+        return res.status(200).send();
+    } catch (e) {
+        next(e);
+    }
+});
+
+app.post('/instanties/notfail', (req, res, next) => {
+    try {
+        instancesThatShouldFail = instancesThatShouldFail.filter(entry => entry.instanceIri !== req.body.instanceIri);
+        console.log(`instance that should not fail : ${req.body.instanceIri}`);
         return res.status(200).send();
     } catch (e) {
         next(e);

@@ -100,7 +100,10 @@ export class IpdcStub {
         return snapshot;
     }
 
-    static async publishShouldFail(instanceIri: string, statusCode: number, errorMessage: any) {
+    static async publishShouldFail(instanceIri: string | undefined, statusCode: number, errorMessage: any) {
+        if(!instanceIri) {
+            throw Error('Can not publish should fail if no instanceIri provided');
+        }
         const apiRequest = await request.newContext();
         await apiRequest.post(`${ipdcStubUrl}/instanties/fail`, {
             headers: {
@@ -110,6 +113,23 @@ export class IpdcStub {
                 instanceIri: instanceIri,
                 statusCode: statusCode,
                 errorMessage: errorMessage
+            }
+        });
+    }
+
+    static async publishShouldNotFail(instanceIri: string | undefined) {
+        if(!instanceIri) {
+            console.log(`Can not publish should not fail if no instanceIri provided, ignoring`);
+            return;
+        }
+
+        const apiRequest = await request.newContext();
+        await apiRequest.post(`${ipdcStubUrl}/instanties/notfail`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
+                instanceIri: instanceIri,
             }
         });
     }
