@@ -114,7 +114,7 @@ services:
     logging: *default-logging
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:0.7.1
+    image: redpencil/ldes-consumer:feature-stability-improvements
     depends_on:
       lpdc-management:
         condition: service_healthy
@@ -126,6 +126,7 @@ services:
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
       CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
       LDES_POLLING_INTERVAL: 5000 # every 5 seconds
+      LDES_LOGGING_LEVEL: "debug"
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
@@ -139,7 +140,7 @@ services:
       - "33000:80"
 
   ldes-consumer-instancesnapshot-example:
-    image: redpencil/ldes-consumer:0.7.1
+    image: redpencil/ldes-consumer:feature-stability-improvements
     depends_on:
       instancesnapshot-ldes-stub:
         condition: service_healthy
@@ -153,6 +154,7 @@ services:
       LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
       CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
       LDES_POLLING_INTERVAL: 5000 # every 5 seconds
+      LDES_LOGGING_LEVEL: "debug"
       REPLACE_VERSIONS: "false"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
