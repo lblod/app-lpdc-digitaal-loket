@@ -9,7 +9,7 @@ import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
 import {UJeModal} from "./modals/u-je-modal";
 import {first_row} from "./components/table";
 
-test.describe('U-je choice',()=>{
+test.describe('U-je conversie nodig', ()=>{
 
     let page: Page;
     let mockLoginPage: MockLoginPage;
@@ -35,25 +35,13 @@ test.describe('U-je choice',()=>{
         await uJeModal.expectToBeVisible();
         await uJeModal.laterKiezenButton.click();
         await uJeModal.expectToBeClosed();
-    })
-    test('when choosing informal, then formal instances should have u->je pill',async ()=>{
+    });
+
+    test('view and filter on u-je conversie nodig label',async ()=>{
         // maak instantie
         await homePage.productOfDienstToevoegenButton.click();
-
-        await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
-        await instantieDetailsPage.expectToBeVisible();
-
-        const titel = 'titel' + uuid();
-        await instantieDetailsPage.titelInput.fill(titel);
-
-        const beschrijving = 'beschrijving' + uuid();
-        await instantieDetailsPage.beschrijvingEditor.fill(beschrijving);
-        await instantieDetailsPage.beschrijvingEditor.blur();
-
-        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
-        await wijzigingenBewarenModal.expectToBeVisible();
-        await wijzigingenBewarenModal.bewaarButton.click();
+        
+        const titelInstantieWaarUJeConversieNodigIs = await createInstance('titel' + uuid());
 
         // make choice
         await logout();
@@ -65,11 +53,28 @@ test.describe('U-je choice',()=>{
         await uJeModal.expectToBeClosed();
 
         await homePage.reloadUntil(async () => {
-            await homePage.searchInput.fill(titel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            await homePage.searchInput.fill(titelInstantieWaarUJeConversieNodigIs);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNodigIs);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('u->je');
         });
-    })
+
+        const titelInstantieWaarUJeConversieNietNodigIs = await createInstance('titel' + uuid());
+
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(titelInstantieWaarUJeConversieNietNodigIs);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNietNodigIs);
+            await expect(homePage.resultTable.row(first_row).locator).not.toContainText('u->je');
+        });
+        
+        await homePage.searchInput.clear();
+        await homePage.uJeConversieNodigFilter.check();
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNodigIs);
+
+        await homePage.searchInput.fill(titelInstantieWaarUJeConversieNietNodigIs);
+        await homePage.resultTable.row(first_row).locator.isHidden();
+        await homePage.uJeConversieNodigFilter.uncheck();
+        await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNietNodigIs);
+    });
 
     async function loginAsDiest() {
         await mockLoginPage.searchInput.fill('Diest');
@@ -77,9 +82,31 @@ test.describe('U-je choice',()=>{
 
         await homePage.expectToBeVisible();
     }
+
     async function logout() {
        await page.getByText('Gemeente Diest - Gemeente Diest').click();
        await page.getByText('Afmelden').click();
 
+    }
+
+    async function createInstance(titel: string) {
+        await homePage.goto();
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+        await instantieDetailsPage.expectToBeVisible();
+
+        await instantieDetailsPage.titelInput.fill(titel);
+
+        const beschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.fill(beschrijving);
+        await instantieDetailsPage.beschrijvingEditor.blur();
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await homePage.goto();
+        return titel;
     }
 })
