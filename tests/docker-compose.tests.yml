@@ -129,7 +129,7 @@ services:
       LDES_LOGGING_LEVEL: "debug"
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
-      LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
+      LDES_ENDPOINT_HEADER_APIKEY: "X-API-KEY-HEADER:<your endpoint api key value here>"
     restart: always
 
   ipdc-stub:
@@ -157,7 +157,7 @@ services:
       LDES_LOGGING_LEVEL: "debug"
       REPLACE_VERSIONS: "false"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
-      LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
+      LDES_ENDPOINT_HEADER_APIKEY: "X-API-KEY-HEADER:<your endpoint api key value here>"
     restart: always
     links:
       - virtuoso:database # We want to go directly to virtuoso database
