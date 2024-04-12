@@ -38,6 +38,12 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly conceptGearchiveerdAlertConceptBekijken: Locator;
     readonly conceptGearchiveerdAlertGeenAanpassigenNodig: Locator;
 
+    readonly omzettenNaarDeJeVormAlert:Alert
+    readonly instantieInJeVormBekijkenButton: Locator
+    readonly omzettenNaarDeJeVormButton: Locator
+    readonly inhoudIsAlInDeJeVormButton: Locator
+    readonly draftInstanceConversionAlert: Alert
+
     readonly titelInput: Locator;
     readonly titelEngelsInput: Locator;
     readonly beschrijvingEditor: Locator;
@@ -207,6 +213,12 @@ export class InstantieDetailsPage extends AbstractPage {
         this.conceptGearchiveerdAlertConceptBekijken = this.conceptGearchiveerdAlert.link('Concept bekijken');
         this.conceptGearchiveerdAlertGeenAanpassigenNodig = this.conceptGearchiveerdAlert.button('Geen aanpassingen nodig');
 
+        this.omzettenNaarDeJeVormAlert = new Alert(page, 'Omzetting naar de je-vorm')
+        this.instantieInJeVormBekijkenButton = this.omzettenNaarDeJeVormAlert.button('Instantie in je-vorm bekijken');
+        this.omzettenNaarDeJeVormButton = this.omzettenNaarDeJeVormAlert.button('Omzetten naar de je-vorm');
+        this.inhoudIsAlInDeJeVormButton = this.omzettenNaarDeJeVormAlert.button('Inhoud is al in de je-vorm');
+        this.draftInstanceConversionAlert = new Alert(page,'')
+
         this.ipdcConceptIdHeader = page.locator('dl div').filter({ hasText: 'IPDC Concept ID' }).getByRole('definition');
         this.productTypeHeader = page.locator('dl div').filter({ hasText: 'Product type' }).getByRole('definition');
         this.aangemaaktOpHeader = page.locator('dl div').filter({ hasText: 'Aangemaakt op' }).getByRole('definition');
@@ -301,7 +313,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingRegelgevendeBronEngelsEditor = (order: number = 0) => this.editorRightOf('Beschrijving regelgevende bron').nth(order);
         this.beschrijvingRegelgevendeBronEngelsReadonly = (order: number = 0) => this.readonlyRightOf('Beschrijving regelgevende bron').nth(order);
         this.regelgevendeBronUrlInput = (order: number = 0) => this.inputBelow("URL regelgevende bron").nth(order);
-        
+
         this.voegContactpuntToeButton = page.getByRole('button', {name: 'Voeg contactpunt toe'});
         this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt','Contactpunten').nth(order);
         this.contactpuntHeading = page.getByRole('heading', {name: 'Contactpunt', exact: true});
