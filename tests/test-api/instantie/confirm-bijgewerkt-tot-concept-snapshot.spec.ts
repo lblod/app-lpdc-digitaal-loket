@@ -186,6 +186,4 @@ test.describe('confirm bijgewerkt to concept snapshot', () => {
         expect(notUpdatedInstance.findTriple(Predicates.reviewStatus)).toBeDefined();
     });
 
-
-
 });
