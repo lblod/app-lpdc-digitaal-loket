@@ -19,6 +19,8 @@ test.describe('confirm instance is already informal', () => {
             .buildAndPersist(request)
 
         const instance = await PublicServiceTestBuilder.aPublicService()
+            .withTitle('Instance title', Language.FORMAL)
+            .withDescription('Instance description', Language.FORMAL)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verstuurd)
             .withDatePublished(new Date())
