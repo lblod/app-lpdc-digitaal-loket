@@ -166,7 +166,82 @@ test.describe('U-je conversie nodig', ()=>{
         await homePage.resultTable.row(first_row).link('Bewerk').click();
         await instantieDetailsPage.draftInstanceConversionAlert.expectToBeVisible();
 
-    })
+    });
+
+    test('Confim instance is already informal',async ()=> {
+        const gemeentenaam = 'Grobbendonk'
+
+        await mockLoginPage.goto();
+        await loginAs(gemeentenaam);
+
+        await uJeModal.expectToBeVisible();
+        await uJeModal.laterKiezenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        // maak instanties
+        await homePage.productOfDienstToevoegenButton.click();
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+        await instantieDetailsPage.expectToBeVisible();
+
+        const draftInstanceTitle = 'titel' + uuid();
+        await instantieDetailsPage.titelInput.fill(draftInstanceTitle);
+
+        const draftInstanceBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.fill(draftInstanceBeschrijving);
+        await instantieDetailsPage.beschrijvingEditor.blur();
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+
+        await homePage.productOfDienstToevoegenButton.click();
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+        await instantieDetailsPage.expectToBeVisible();
+
+        const publishedInstanceTitle = 'titel' + uuid();
+        await instantieDetailsPage.titelInput.fill(publishedInstanceTitle);
+
+        const publishedInstanceBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.fill(publishedInstanceBeschrijving);
+
+        await instantieDetailsPage.eigenschappenTab.click();
+
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+        // make choice
+        await logout(gemeentenaam);
+        await loginAs(gemeentenaam);
+
+        await uJeModal.expectToBeVisible();
+        await uJeModal.mijnBestuurKiestVoorDeJeVormRadio.click();
+        await uJeModal.bevestigenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        //published instance alert
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(publishedInstanceTitle);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(publishedInstanceTitle);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('u->je');
+        });
+        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
+        await expect(instantieDetailsPage.uJeVersie).toContainText("u-versie");
+        await instantieDetailsPage.omzettenNaarDeJeVormAlert.button('Inhoud is al in de je-vorm').click();
+        await expect(instantieDetailsPage.uJeVersie).toContainText("je-versie");
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await homePage.expectToBeVisible();
+    });
+
     async function loginAs(gemeenteNaam: string) {
         await mockLoginPage.searchInput.fill(gemeenteNaam);
         await mockLoginPage.login(`Gemeente ${gemeenteNaam}`);

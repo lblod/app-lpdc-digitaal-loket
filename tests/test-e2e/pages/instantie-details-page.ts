@@ -19,6 +19,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly conceptLoskoppelenButton: Locator;
     readonly gekoppeldConceptLink: Locator;
 
+    readonly uJeVersie: Locator;
+
     readonly instantieLoskoppelenAlert: Alert;
     readonly instantieLoskoppelenAlertLoskoppelenButton: Locator;
 
@@ -201,6 +203,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.koppelConceptLink = page.getByRole('link', {name: 'Koppelen'});
         this.gekoppeldConceptLink = page.locator('a:left-of(button:has-text("Loskoppelen"))').first();
         this.conceptLoskoppelenButton = page.getByRole('button', {name: 'Loskoppelen'});
+
+        this.uJeVersie = page.locator('dd:below(dt:has-text("Versie"))').first();
 
         this.instantieLoskoppelenAlert = new Alert(page, 'Instantie loskoppelen van het concept');
         this.instantieLoskoppelenAlertLoskoppelenButton = this.instantieLoskoppelenAlert.button('Loskoppelen');
