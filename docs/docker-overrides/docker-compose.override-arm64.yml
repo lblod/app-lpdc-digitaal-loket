@@ -8,8 +8,10 @@ services:
     image: semtech/mu-cl-resources:feature-supply-info-on-empty-included-arm64-build
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:0.7.1-arm64-build
+    image: redpencil/ldes-consumer:feature-stability-improvements-arm64-build
     environment:
+      LDES_STREAM: "<endpoint ldes stream>"
+      LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC api key>"
 
   database:

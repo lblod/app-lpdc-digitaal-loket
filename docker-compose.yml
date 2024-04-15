@@ -251,7 +251,7 @@ services:
     logging: *default-logging
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:0.7.1
+    image: redpencil/ldes-consumer:feature-stability-improvements
     depends_on:
       lpdc-management:
         condition: service_healthy
@@ -260,14 +260,12 @@ services:
     environment:
       LDES_STREAM: "<endpoint ldes stream>"
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
-      LDES_RELATION_PATH: "http://www.w3.org/ns/prov#generatedAtTime"
-      CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
-      LDES_POLLING_INTERVAL: 3600000 # since ipdcs caching headers indicate no caching, this means the polling interval to initiate the request again (3 600 000 millis = 1 hour)
-      REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
+      LDES_ENDPOINT_HEADER_XAPIKEY: "X-API-KEY-HEADER:<your endpoint api key value here>"
+      LDES_LOGGING_LEVEL: "debug"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
-      # The next variables are environment-specific.
-      # Best to override in docker-compose.override.yml
-      LDES_ENDPOINT_HEADER_X-API-KEY: "<your endpoint api key here>"
+      SAVE_ALL_VERSIONS_IGNORING_TIMESTAMP_DATA: "true"
+      REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
+      CRON_PATTERN: "0,30 * * * *" # run the job every 30 minutes
     labels:
       - "logging=true"
     restart: always
