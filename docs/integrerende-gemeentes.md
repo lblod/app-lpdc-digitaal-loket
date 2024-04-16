@@ -3,10 +3,37 @@
   * [Inleiding](#inleiding-)
   * [Stroomdiagramma](#stroomdiagramma)
   * [Technologie beschrijving](#technologie-beschrijving)
-  * [Contractspecificaties-semantisch model](#contractspecificaties---semantisch-model)
+    * [Linked Data](#linked-data-)
+    * [RDF (Resource Description Framework)](#rdf-resource-description-framework)
+      * [Inleiding](#inleiding)
+      * [IRIs](#iris)
+      * [Literals](#literals)
+      * [Triple-store](#triple-store)
+    * [Serialisatie-formaten voor RDF-data](#serialisatie-formaten-voor-rdf-data)
+      * [N-Triples](#n-triples)
+      * [Turtle](#turtle)
+      * [JSON-LD](#json-ld)
+    * [SPARQL (SPARQL Protocol and RDF Query Language)](#sparql-sparql-protocol-and-rdf-query-language)
+    * [SHACL (Shapes Constraint Language)](#shacl-shapes-constraint-language)
+    * [LDES (Linked Data Event Stream)](#ldes-linked-data-event-stream)
+      * [Inleiding](#inleiding-1)
+      * [Fragmentering en paginering](#fragmentering-en-paginering)
+      * [Versionering](#versionering)
+  * [Contractspecificaties - semantisch model](#contractspecificaties---semantisch-model)
   * [Voorbeelden + implementatie tips](#voorbeelden--implementatie-tips)
+    * [Uitvoerbare instantiesnapshot-LDES-stub](#uitvoerbare-instantiesnapshot-ldes-stub)
+    * [integrerende-gemeente-LDES-reader](#integrerende-gemeente-ldes-reader)
+      * [JSON-LD en context samenvoegen opmerkingen](#json-ld-en-context-samenvoegen-opmerkingen)
+    * [Voorbeeld pagina in detail](#voorbeeld-pagina-in-detail)
   * [Verklarende woordenlijst](#verklarende-woordenlijst)
+      * [Concept](#concept)
+      * [ConceptSnapshot](#conceptsnapshot)
+      * [Instantie](#instantie)
+      * [InstantieSnapshot](#instantiesnapshot)
   * [Referenties](#referenties)
+    * [Algemeen](#algemeen)
+    * [Gebruikte standaarden](#gebruikte-standaarden)
+    * [Broncode (open source) / Ondersteunende technologieën](#broncode-open-source--ondersteunende-technologieën)
 <!-- TOC -->
 
 ## Inleiding 
@@ -696,7 +723,9 @@ Dit is de informatie die door LPDC zal verwerkt worden.
     <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>.
 ```
 
-De volledige test dataset voor LDES instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden.
+De volledige test dataset voor LDES instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden. 
+
+_Nota:_ Sommige turtle verwerking-programma's kunnen niet goed om met de [shorthand syntax van turtle](https://www.w3.org/TR/turtle/#literals) in de bestanden. (bvb https://github.com/Informatievlaanderen/VSDS-LDESServer4J). Indien u de bestanden probeert op te laden, krijg je een fout. Het volstaat om triples van de voorbeelden om te vormen tot zijn lexicografische vorm en bijhorend datatype. (bvb: `true` => `"true"^^xsd:boolean`). 
 
 
 ## Verklarende woordenlijst
