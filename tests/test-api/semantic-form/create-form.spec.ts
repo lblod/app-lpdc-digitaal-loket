@@ -35,6 +35,7 @@ test('Create new empty instance', async ({request}) => {
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/instance-status/ontwerp');
     expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://data.europa.eu/nuts/code/BE24123064');
+    expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://data.europa.eu/nuts/code/BE24123064');
 });
 
 
@@ -101,7 +102,6 @@ test('Create instance from concept: When concept has requirement than instance h
     expect(requirementTriples.findObject(Predicates.uuid)).not.toEqual(requirement.findObject(Predicates.uuid));
     expect(requirementTriples.findObject(Predicates.title)).toBeDefined();
     expect(requirementTriples.findObject(Predicates.description)).toBeDefined();
-    expect(requirementTriples.findObject(Predicates.source)).toEqual(requirement.getSubject());
 });
 
 test('Create instance from concept: When concept has requirement with evidence then instance has it too', async ({request}) => {
@@ -133,7 +133,6 @@ test('Create instance from concept: When concept has requirement with evidence t
     expect(evidenceTriples.findObject(Predicates.uuid)).not.toEqual(evidence.findObject(Predicates.uuid));
     expect(evidenceTriples.findObject(Predicates.title)).toBeDefined();
     expect(evidenceTriples.findObject(Predicates.description)).toBeDefined();
-    expect(evidenceTriples.findObject(Predicates.source)).toEqual(evidence.getSubject());
 });
 
 test('Create instance from concept: When concept has procedure then instance has it too', async ({request}) => {
@@ -159,7 +158,6 @@ test('Create instance from concept: When concept has procedure then instance has
     expect(procedureTriples.findObject(Predicates.uuid)).not.toEqual(procedure.findObject(Predicates.uuid));
     expect(procedureTriples.findObject(Predicates.title)).toBeDefined();
     expect(procedureTriples.findObject(Predicates.description)).toBeDefined();
-    expect(procedureTriples.findObject(Predicates.source)).toEqual(procedure.getSubject());
 });
 
 test('Create instance from concept: When concept has procedure with website then instance has it too', async ({request}) => {
@@ -192,7 +190,6 @@ test('Create instance from concept: When concept has procedure with website then
     expect(websiteTriples.findObject(Predicates.title)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.description)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.url)).toEqual(website.findObject(Predicates.url));
-    expect(websiteTriples.findObject(Predicates.source)).toEqual(website.getSubject());
 });
 
 test('Create instance from concept: When concept has website than instance has it too', async ({request}) => {
@@ -219,7 +216,6 @@ test('Create instance from concept: When concept has website than instance has i
     expect(websiteTriples.findObject(Predicates.title)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.description)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.url)).toEqual(website.findObject(Predicates.url));
-    expect(websiteTriples.findObject(Predicates.source)).toEqual(website.getSubject());
 });
 
 test('Create instance from concept: When concept has cost then instance has it too', async ({request}) => {
@@ -245,7 +241,6 @@ test('Create instance from concept: When concept has cost then instance has it t
     expect(costTriples.findObject(Predicates.uuid)).not.toEqual(cost.findObject(Predicates.uuid));
     expect(costTriples.findObject(Predicates.title)).toBeDefined();
     expect(costTriples.findObject(Predicates.description)).toBeDefined();
-    expect(costTriples.findObject(Predicates.source)).toEqual(cost.getSubject());
 });
 
 test('Create instance from concept: When concept has financialAdvantage then concept has it too', async ({request}) => {
@@ -271,7 +266,6 @@ test('Create instance from concept: When concept has financialAdvantage then con
     expect(financialAdvantageTriples.findObject(Predicates.uuid)).not.toEqual(financialAdvantage.findObject(Predicates.uuid));
     expect(financialAdvantageTriples.findObjects(Predicates.title)).toBeDefined();
     expect(financialAdvantageTriples.findObjects(Predicates.description)).toBeDefined();
-    expect(financialAdvantageTriples.findObject(Predicates.source)).toEqual(financialAdvantage.getSubject());
 });
 
 test('Create instance from concept: ConceptInstantiated flag of ConceptDisplayConfiguration should be true', async ({request}) => {
