@@ -54,6 +54,8 @@
                 (:needs-conversion-from-formal-to-informal :string ,(s-prefix "lpdcExt:needsConversionFromFormalToInformal")))
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")
+             (concept :via ,(s-prefix "schema:publication")
+                      :as "publication-status")
              (conceptual-public-service :via ,(s-prefix "dct:source")
                                         :as "concept")
              (bestuurseenheid :via ,(s-prefix "pav:createdBy")
