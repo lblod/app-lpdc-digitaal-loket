@@ -27,7 +27,7 @@ services:
     image: lblod/mock-login-service:0.4.0-arm64-build
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-stability-improvements-arm64-build
+    image: redpencil/ldes-consumer:feature-stability-improvements-r1.0-arm64-build
 
   file:
     image: cecemel/file-service:3.3.0-arm64-build
@@ -40,7 +40,7 @@ services:
       ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 
   ipdc-ldes-consumer:
-    image: redpencil/ldes-consumer:feature-stability-improvements-arm64-build
+    image: redpencil/ldes-consumer:feature-stability-improvements-r1.0-arm64-build
 
   ldes-consumer-instancesnapshot-example:
-    image: redpencil/ldes-consumer:feature-stability-improvements-arm64-build
+    image: redpencil/ldes-consumer:feature-stability-improvements-r1.0-arm64-build

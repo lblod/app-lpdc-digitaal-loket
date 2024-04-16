@@ -114,7 +114,7 @@ services:
     logging: *default-logging
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-stability-improvements
+    image: redpencil/ldes-consumer:feature-stability-improvements-r1.0
     depends_on:
       lpdc-management:
         condition: service_healthy
@@ -139,7 +139,7 @@ services:
       - "33000:80"
 
   ldes-consumer-instancesnapshot-example:
-    image: redpencil/ldes-consumer:feature-stability-improvements
+    image: redpencil/ldes-consumer:feature-stability-improvements-r1.0
     depends_on:
       instancesnapshot-ldes-stub:
         condition: service_healthy

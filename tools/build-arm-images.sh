@@ -152,9 +152,16 @@ rm -rf ldes-consumer-service
 git clone https://github.com/redpencilio/ldes-consumer-service
 cd ldes-consumer-service || exit
 git checkout feature/stability-improvements
-sed -i '' -e 's/mu-javascript-template:feature-node-18/mu-javascript-template:feature-node-18-arm64-build/g' Dockerfile
 docker build --no-cache -t redpencil/ldes-consumer:feature-stability-improvements-arm64-build .
 cd ..
+
+rm -rf ldes-consumer-service
+git clone https://github.com/redpencilio/ldes-consumer-service
+cd ldes-consumer-service || exit
+git checkout tags/vfeature-stability-improvements-r1.0
+docker build --no-cache -t redpencil/ldes-consumer:feature-stability-improvements-r1.0-arm64-build .
+cd ..
+
 
 git clone https://github.com/lblod/acmidm-login-service.git
 cd acmidm-login-service || exit
