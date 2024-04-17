@@ -35,7 +35,6 @@ test('Create new empty instance', async ({request}) => {
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/instance-status/ontwerp');
     expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://data.europa.eu/nuts/code/BE24123064');
-    expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://data.europa.eu/nuts/code/BE24123064');
 });
 
 
