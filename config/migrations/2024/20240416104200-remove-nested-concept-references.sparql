@@ -1,9 +1,9 @@
 DELETE {
-    GRAPH ?g {
+    GRAPH ?bestuurseenheidGraph {
         ?s <http://purl.org/dc/terms/source> ?o.
     }
 } WHERE {
-    GRAPH ?g {
+    GRAPH ?bestuurseenheidGraph {
         VALUES ?type {
            <http://data.europa.eu/m8g/Requirement>
             <http://data.europa.eu/m8g/Evidence>
@@ -14,5 +14,10 @@ DELETE {
         }
         ?s a ?type.
         ?s <http://purl.org/dc/terms/source> ?o.
+
+        FILTER(
+        STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+        STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+        )
    }
 }
