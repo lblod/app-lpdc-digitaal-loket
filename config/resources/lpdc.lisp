@@ -51,7 +51,7 @@
 (define-resource public-service (abstract-public-service)
   :class (s-prefix "lpdcExt:InstancePublicService")
   :properties `((:dutch-language-variant :string ,(s-prefix "lpdcExt:dutchLanguageVariant"))
-                (:needs-conversion-from-formal-to-informal :string ,(s-prefix "lpdcExt:needsConversionFromFormalToInformal")))
+                (:needs-conversion-from-formal-to-informal :boolean ,(s-prefix "lpdcExt:needsConversionFromFormalToInformal")))
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")
              (concept :via ,(s-prefix "schema:publication")
