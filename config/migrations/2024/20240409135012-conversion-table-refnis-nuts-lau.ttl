@@ -2492,28 +2492,6 @@ nuts-code:BE23343018 a skos:Concept ;
                      "Zelzate"@fr,
                      "Zelzate"@nl .
 
-nuts-code:BE23444001 a skos:Concept ;
-                     mu:uuid "0a2f4150eb4d99a409ae50a7df3bfac7" ;
-                     skos:broader nuts-code:BE234 ;
-                     skos:exactMatch nis:44001 ;
-                     skos:inScheme nuts-scheme:2016 ;
-                     skos:notation "44001" ;
-                     skos:prefLabel "Aalter"@de,
-                     "Aalter"@en,
-                     "Aalter"@fr,
-                     "Aalter"@nl .
-
-nuts-code:BE23444011 a skos:Concept ;
-                     mu:uuid "d135fffe5617f84a2c5a1d3dc122e45e" ;
-                     skos:broader nuts-code:BE234 ;
-                     skos:exactMatch nis:44011 ;
-                     skos:inScheme nuts-scheme:2016 ;
-                     skos:notation "44011" ;
-                     skos:prefLabel "Deinze"@de,
-                     "Deinze"@en,
-                     "Deinze"@fr,
-                     "Deinze"@nl .
-
 nuts-code:BE23444012 a skos:Concept ;
                      mu:uuid "08fabc2fdf48a0b8bfaea3b7191a2c52" ;
                      skos:broader nuts-code:BE234 ;
@@ -2723,7 +2701,7 @@ nuts-code:BE23444081 a skos:Concept ;
                      "Zulte"@fr,
                      "Zulte"@nl .
 
-nuts-code:BE23444083 a skos:Concept ;
+nuts-code:BE23444011 a skos:Concept ;
                      mu:uuid "dfd00d7002fd91eff390d9d40a816d71" ;
                      skos:broader nuts-code:BE234 ;
                      skos:exactMatch nis:44083 ;
@@ -2734,7 +2712,7 @@ nuts-code:BE23444083 a skos:Concept ;
                      "Deinze"@fr,
                      "Deinze"@nl .
 
-nuts-code:BE23444084 a skos:Concept ;
+nuts-code:BE23444001 a skos:Concept ;
                      mu:uuid "0c3280c624cf33b1bfeb42fb862ab21d" ;
                      skos:broader nuts-code:BE234 ;
                      skos:exactMatch nis:44084 ;
@@ -30160,8 +30138,6 @@ nuts-code:BE234 a skos:Concept ;
                 nuts-code:BE23444073,
                 nuts-code:BE23444080,
                 nuts-code:BE23444081,
-                nuts-code:BE23444083,
-                nuts-code:BE23444084,
                 nuts-code:BE23444085 ;
                 skos:notation "BE234" ;
                 skos:prefLabel "Arrondissement Gent" ;
