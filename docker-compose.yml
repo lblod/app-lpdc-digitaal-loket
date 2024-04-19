@@ -260,7 +260,7 @@ services:
     environment:
       LDES_STREAM: "<endpoint ldes stream>"
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
-      LDES_ENDPOINT_HEADER_XAPIKEY: "X-API-KEY-HEADER:<your endpoint api key value here>"
+      LDES_ENDPOINT_HEADER_XAPIKEY: "X-API-KEY;<your endpoint api key value here>"
       LDES_LOGGING_LEVEL: "debug"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
       SAVE_ALL_VERSIONS_IGNORING_TIMESTAMP_DATA: "true"

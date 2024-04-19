@@ -12,7 +12,7 @@ services:
     environment:
       LDES_STREAM: "<endpoint ldes stream>"
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
-      LDES_ENDPOINT_HEADER_X-API-KEY: "<IPDC api key>"
+      LDES_ENDPOINT_HEADER_XAPIKEY: "X-API-KEY;<IPDC api key>"
 
   database:
     image: semtech/mu-authorization:feature-service-roam-r1.1-arm64-build
