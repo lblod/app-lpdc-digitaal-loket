@@ -62,7 +62,7 @@ test.describe('U-je conversie nodig', ()=>{
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(titelInstantieWaarUJeConversieNodigIs);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNodigIs);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('u->je');
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
 
         const titelInstantieWaarUJeConversieNietNodigIs = await createInstance('titel' + uuid());
@@ -70,7 +70,7 @@ test.describe('U-je conversie nodig', ()=>{
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(titelInstantieWaarUJeConversieNietNodigIs);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNietNodigIs);
-            await expect(homePage.resultTable.row(first_row).locator).not.toContainText('u->je');
+            await expect(homePage.resultTable.row(first_row).locator).not.toContainText('u→je');
         });
 
         await homePage.searchInput.clear();
@@ -148,7 +148,7 @@ test.describe('U-je conversie nodig', ()=>{
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(publishedInstanceTitle);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(publishedInstanceTitle);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('u->je');
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
         await homePage.resultTable.row(first_row).link('Bekijk').click();
         await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
@@ -161,7 +161,7 @@ test.describe('U-je conversie nodig', ()=>{
             await expect(homePage.resultTable.row(first_row).locator).toContainText(draftInstanceTitle);
             await expect(homePage.resultTable.row
 
-            (first_row).locator).toContainText('u->je');
+            (first_row).locator).toContainText('u→je');
         });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
         await instantieDetailsPage.draftInstanceConversionAlert.expectToBeVisible();
@@ -231,7 +231,7 @@ test.describe('U-je conversie nodig', ()=>{
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(publishedInstanceTitle);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(publishedInstanceTitle);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('u->je');
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
         await homePage.resultTable.row(first_row).link('Bekijk').click();
         await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
