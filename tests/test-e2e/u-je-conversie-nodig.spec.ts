@@ -151,7 +151,10 @@ test.describe('U-je conversie nodig', ()=>{
             await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
         await homePage.resultTable.row(first_row).link('Bekijk').click();
-        await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
+        await instantieDetailsPage.expectToBeVisible();
+        await instantieDetailsPage.reloadUntil(async () => {
+            await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
+        });
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
         await homePage.expectToBeVisible();
 

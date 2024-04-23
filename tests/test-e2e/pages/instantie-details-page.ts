@@ -40,7 +40,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly conceptGearchiveerdAlertConceptBekijken: Locator;
     readonly conceptGearchiveerdAlertGeenAanpassigenNodig: Locator;
 
-    readonly omzettenNaarDeJeVormAlert:Alert
+    readonly omzettenNaarDeJeVormAlert: Alert
     readonly instantieInJeVormBekijkenButton: Locator
     readonly omzettenNaarDeJeVormButton: Locator
     readonly inhoudIsAlInDeJeVormButton: Locator
