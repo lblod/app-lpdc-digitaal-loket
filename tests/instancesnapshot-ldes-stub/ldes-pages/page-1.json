@@ -8,7 +8,7 @@
       {
         "node": "http://hostname/doc/instancesnapshot?pageNumber=0",
         "path": "generatedAtTime",
-        "@type": "LessThanRelation"
+        "@type": "LessThanRelationOrEqualToRelation"
       },
       {
         "node": "http://hostname/doc/instancesnapshot?pageNumber=2",

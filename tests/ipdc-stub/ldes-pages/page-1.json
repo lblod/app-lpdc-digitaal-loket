@@ -8,7 +8,7 @@
       {
         "node": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0",
         "path": "generatedAtTime",
-        "@type": "LessThanRelation"
+        "@type": "LessThanRelationOrEqualToRelation"
       }
     ]
   },
