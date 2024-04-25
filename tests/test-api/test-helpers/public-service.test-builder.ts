@@ -116,6 +116,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withId(id: Uri): PublicServiceTestBuilder {
+        this.id = id;
+        return this;
+    }
+
     withUUID(uuid: string): PublicServiceTestBuilder {
         this.uuid = new Literal(uuid);
         return this;

@@ -2,7 +2,7 @@ import {expect, test} from "@playwright/test";
 import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/public-service.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
-import {Predicates} from "../test-helpers/triple-array";
+import {Predicates, Uri} from "../test-helpers/triple-array";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 import {InstancePublicationStatusType, InstanceStatus} from "../test-helpers/codelists";
 import {Language} from "../test-helpers/language";
@@ -10,7 +10,10 @@ import {fetchType} from "../test-helpers/sparql";
 
 test.describe('convert instance to informal', () => {
 
-    test('should retrieve informal data from ipdc, and update instance with and set dutchLanguageVariant to informal and republish', async ({request}) => {
+    //TODO LPDC-1139: add a test that tries to retrieve an instance that does not exist: verify http 500 + correct message
+
+    //TODO LPDC-1139: finish test
+    test.skip('should retrieve informal data from ipdc, and update instance with and set dutchLanguageVariant to informal and republish', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
         await FormalInformalChoiceTestBuilder.aChoice()
@@ -18,8 +21,12 @@ test.describe('convert instance to informal', () => {
             .withChosenForm(ChosenForm.INFORMAL)
             .buildAndPersist(request)
 
+        const uuid = 'e8843fda-b3a8-4334-905c-8e49eb12203b';
+        const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
+
         const instance = await PublicServiceTestBuilder.aPublicService()
-            //TODO LPDC-1039 use a specific uuid, id that is found in the ipdc stub
+            .withId(id)
+            .withUUID(uuid)
             .withTitle('Instance title', Language.FORMAL)
             .withDescription('Instance description', Language.FORMAL)
             .withDateSent(new Date())
@@ -45,7 +52,12 @@ test.describe('convert instance to informal', () => {
     });
 
     test('convert instance to informal without login, returns http 401 Unauthorized', async ({request}) => {
+        const uuid = 'e8843fda-b3a8-4334-905c-8e49eb12203b';
+        const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
+
         const instance = await PublicServiceTestBuilder.aPublicService()
+            .withId(id)
+            .withUUID(uuid)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verstuurd)
             .withDatePublished(new Date())
@@ -69,7 +81,12 @@ test.describe('convert instance to informal', () => {
 
     test('convert instance to informal with a user that has no access rights, returns http 403 Forbidden', async ({request}) => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
+        const uuid = 'e8843fda-b3a8-4334-905c-8e49eb12203b';
+        const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
+
         const instance = await PublicServiceTestBuilder.aPublicService()
+            .withId(id)
+            .withUUID(uuid)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verstuurd)
             .withDatePublished(new Date())

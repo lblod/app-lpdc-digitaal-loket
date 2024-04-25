@@ -19,6 +19,7 @@ services:
       MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
       INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/2 * * * * *" # every 2 seconds
+      IPDC_ENDPOINT: "http://ipdc-stub"
     healthcheck:
       test: [ "CMD", "wget", "--spider", "http://localhost" ]
       interval: 5s

@@ -30,6 +30,26 @@ app.get('/doc/conceptsnapshot', (req, res, next) => {
     }
 });
 
+app.get('/doc/instantie/:instanceUuid', (req, res, next) => {
+    try {
+        const instanceUuid = req.params.instanceUuid;
+        console.log(`/doc/instantie/${instanceUuid} requested`);
+
+        if(fs.existsSync(`./instance-data/${instanceUuid}.jsonld`)) {
+            const page = fs.readFileSync(`./instance-data/${instanceUuid}.jsonld`, "utf8");
+            console.log(page);
+            const jsonLd = JSON.parse(page);
+            console.log(jsonLd);
+            res.status(200).type('application/ld+json').json(jsonLd);
+        } else {
+            //TODO LPDC-1139: take a look at the published instances, and manipulate a bit so to add a 'translated triple', and return.
+            res.status(404).send();
+        }
+    } catch(e) {
+        next(e);
+    }
+});
+
 app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
     try {
         const conceptId = req.params.conceptId;
@@ -109,6 +129,16 @@ app.post('/instanties/notfail', (req, res, next) => {
 app.get('/ConceptJsonLdContext.jsonld', (req, res, next) => {
     try {
         const page = fs.readFileSync(`./ldes-pages/ConceptJsonLdContext.jsonld`, "utf8");
+        const jsonLd = JSON.parse(page);
+        res.status(200).type('application/ld+json').json(jsonLd);
+    } catch (e) {
+        next(e)
+    }
+});
+
+app.get('/InstantieJsonLdContext.jsonld', (req, res, next) => {
+    try {
+        const page = fs.readFileSync(`./instance-data/InstantieJsonLdContext.jsonld`, "utf8");
         const jsonLd = JSON.parse(page);
         res.status(200).type('application/ld+json').json(jsonLd);
     } catch (e) {
