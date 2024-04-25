@@ -5,7 +5,6 @@ export type Presence = 'PRESENT';
 
 export interface Field {
     nl?: string;
-    en?: string | boolean;
     notRich?: boolean;
 };
 
@@ -210,13 +209,7 @@ function arrayContainingText(field: Field | undefined, gekozenUOfJeVorm: string,
     const embedPrefix = (contentEmbedded && !field.notRich) ? '<p data-indentation-level="0">' : '';
     const embedSuffix = (contentEmbedded && !field.notRich) ? '</p>' : '';
 
-    if (field.en !== undefined && field.en !== false) {
-        return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }, { "@language": "en", "@value": `${embedPrefix}${field.en}${embedSuffix}` }];
-    } else if (field.nl !== undefined && field.en === false) {
-        return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }, { "@language": "en", "@value": expect.anything() }];
-    } else {
-        return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }];
-    }
+    return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }];
 }
 
 function arrayContainingString(aString: string | undefined, type?: string) {

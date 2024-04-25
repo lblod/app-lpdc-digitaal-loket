@@ -77,7 +77,7 @@ test.describe('Concurrent Update', () => {
         verifyInstancePublishedOnIPDC(
             instancePublishedInIpdc,
             {
-                beschrijving: { nl: 'first description', en: false },
+                beschrijving: { nl: 'first description' },
             },
             'nl-be-x-formal'
         );
