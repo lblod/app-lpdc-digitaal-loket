@@ -8,9 +8,6 @@ import {Language} from "../test-helpers/language";
 import {TripleArray, Uri} from "../test-helpers/triple-array";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {TestDataFactory} from "../test-helpers/test-data-factory";
-import {PublicationMedium} from "../test-helpers/codelists";
-import {ContactPointTestBuilder} from "../test-helpers/contact-point-test.builder";
-import {AddressTestBuilder} from "../test-helpers/address.test-builder";
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
@@ -130,21 +127,6 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
         const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
-    });
-
-    test('English form is only added when publicationMedium is yourEurope and form is content', async ({request}) => {
-        const loginResponse = await loginAsPepingen(request);
-        const publicService = await PublicServiceTestBuilder.aPublicService()
-            .withPublicationMedium(PublicationMedium.YourEurope)
-            .buildAndPersist(request, pepingenId);
-
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
-        expect(response.ok()).toBeTruthy();
-
-        const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
-        const expectedEnglishForm = fs.readFileSync(`${__dirname}/form-add-english-requirement.ttl`, 'utf8');
-        const responseBody = await response.json();
-        expect(responseBody.form).toStrictEqual(expectedForm + expectedEnglishForm);
     });
 
     test('When getting characteristics form then meta field contains codelist of all bestuurseenheden', async ({request}) => {

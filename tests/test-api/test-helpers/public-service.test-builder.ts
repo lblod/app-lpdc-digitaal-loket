@@ -187,7 +187,7 @@ export class PublicServiceTestBuilder {
     }
 
     withKeywords(keywords: string[]) {
-        this.keywords = keywords.map(keyword => new Literal(keyword, Language.INFORMAL))
+        this.keywords = keywords.map(keyword => new Literal(keyword, Language.NL))
         return this;
     }
 
