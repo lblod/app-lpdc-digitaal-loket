@@ -7,10 +7,9 @@ import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/forma
 import {InstancePublicationStatusType, InstanceStatus} from "../test-helpers/codelists";
 import {Language} from "../test-helpers/language";
 import {fetchType} from "../test-helpers/sparql";
+import {v4 as uuid} from 'uuid';
 
 test.describe('convert instance to informal', () => {
-
-    //TODO LPDC-1139: add a test that tries to retrieve an instance that does not exist: verify http 500 + correct message
 
     //TODO LPDC-1139: finish test
     test.skip('should retrieve informal data from ipdc, and update instance with and set dutchLanguageVariant to informal and republish', async ({request}) => {
@@ -50,6 +49,42 @@ test.describe('convert instance to informal', () => {
         expect(updatedInstance.findObject(Predicates.needsConversionFromFormalToInformal).getValue()).toEqual("0");
         //TODO LPDC-1039 verify some fields (that come from the ipdc stub ...)
     });
+
+    test('convert instance to informal without found in ipdc, returns http 500 Service error ', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+
+        await FormalInformalChoiceTestBuilder.aChoice()
+            .withBestuurseenheid(pepingenId)
+            .withChosenForm(ChosenForm.INFORMAL)
+            .buildAndPersist(request)
+
+        const instanceUuid = uuid();
+        const id = new Uri(`http://data.lblod.info/id/public-service/${instanceUuid}`)
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withId(id)
+            .withUUID(instanceUuid)
+            .withTitle('Instance title', Language.FORMAL)
+            .withDescription('Instance description', Language.FORMAL)
+            .withDateSent(new Date())
+            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withDatePublished(new Date())
+            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withNeedsConversionFromFormalToInformal(true)
+            .withDutchLanguageVariant(Language.FORMAL)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/convert-instance-to-informal`, {
+            headers: {
+                cookie: loginResponse.cookie,
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
+            }
+        });
+
+        expect(response.status()).toEqual(404);
+    });
+
+
 
     test('convert instance to informal without login, returns http 401 Unauthorized', async ({request}) => {
         const uuid = 'e8843fda-b3a8-4334-905c-8e49eb12203b';

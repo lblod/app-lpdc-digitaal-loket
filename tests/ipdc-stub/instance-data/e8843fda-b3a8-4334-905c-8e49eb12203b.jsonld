@@ -1,7 +1,7 @@
 {
   "id": "e8843fda-b3a8-4334-905c-8e49eb12203b",
   "@context": "http://ipdc-stub/InstantieJsonLdContext.jsonld",
-  "@id": "https://ipdc.tni-vlaanderen.be/id/instantie/e8843fda-b3a8-4334-905c-8e49eb12203b",
+  "@id": "http://data.lblod.info/id/public-service/e8843fda-b3a8-4334-905c-8e49eb12203b",
   "@type": "InstancePublicService",
   "bevoegdBestuursniveaus": [
     "Federaal",
@@ -12,22 +12,22 @@
     "Provinciaal"
   ],
   "naam": {
-    "en": "titel en",
-    "nl-BE-x-generated-informal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
     "nl": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
-    "nl-BE-x-formal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen"
+    "nl-BE-x-formal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
+    "nl-BE-x-generated-informal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
+    "en": "titel en"
   },
   "beschrijving": {
-    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
     "en": "<p data-indentation-level=\"0\">beschrijving en</p>",
     "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
-    "nl": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
+    "nl": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
+    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
   },
   "verdereBeschrijving": {
-    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de verdere beschrijving voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-    "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de verdere beschrijving voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
     "nl": "<p data-indentation-level=\"0\">Dit is de verdere beschrijving voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-    "en": "<p data-indentation-level=\"0\">aanvullende beschrijving en</p>"
+    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de verdere beschrijving voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
+    "en": "<p data-indentation-level=\"0\">aanvullende beschrijving en</p>",
+    "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de verdere beschrijving voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>"
   },
   "startDienstVerlening": "2024-03-12T12:00:00Z",
   "eindeDienstVerlening": "2024-09-21T12:00:00Z",
@@ -44,15 +44,15 @@
     "BE24224020"
   ],
   "regelgevingTekst": {
-    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit zijn de regelgevingen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
     "nl": "<p data-indentation-level=\"0\">Dit zijn de regelgevingen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-    "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit zijn de regelgevingen voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>"
+    "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit zijn de regelgevingen voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
+    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit zijn de regelgevingen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
   },
   "uitzonderingen": {
-    "nl": "<p data-indentation-level=\"0\">Dit zijn de uitzonderingen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
+    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit zijn de uitzonderingen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
     "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit zijn de uitzonderingen voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
-    "en": "<p data-indentation-level=\"0\">uitzonderingen en</p>",
-    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit zijn de uitzonderingen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
+    "nl": "<p data-indentation-level=\"0\">Dit zijn de uitzonderingen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
+    "en": "<p data-indentation-level=\"0\">uitzonderingen en</p>"
   },
   "bevoegdeOverheden": [
     {
@@ -67,25 +67,25 @@
   "voorwaarden": [
     {
       "beschrijving": {
+        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit zijn de voorwaarden voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
         "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit zijn de voorwaarden voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-        "nl": "<p data-indentation-level=\"0\">Dit zijn de voorwaarden voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit zijn de voorwaarden voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>"
+        "nl": "<p data-indentation-level=\"0\">Dit zijn de voorwaarden voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
       },
       "naam": {
-        "nl-BE-x-formal": "Voorwaarden",
         "nl": "Voorwaarden",
-        "nl-BE-x-generated-informal": "Voorwaarden"
+        "nl-BE-x-generated-informal": "Voorwaarden",
+        "nl-BE-x-formal": "Voorwaarden"
       },
       "bewijs": {
         "beschrijving": {
-          "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit zijn de bewijsstukken een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
+          "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit zijn de bewijsstukken een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
           "nl": "<p data-indentation-level=\"0\">Dit zijn de bewijsstukken een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-          "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit zijn de bewijsstukken een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
+          "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit zijn de bewijsstukken een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>"
         },
         "naam": {
-          "nl-BE-x-generated-informal": "Bewijs",
+          "nl-BE-x-formal": "Bewijs",
           "nl": "Bewijs",
-          "nl-BE-x-formal": "Bewijs"
+          "nl-BE-x-generated-informal": "Bewijs"
         },
         "@type": "bewijsType"
       },
@@ -96,20 +96,20 @@
   "procedures": [
     {
       "naam": {
-        "nl": "Procedure",
         "nl-BE-x-formal": "Procedure",
-        "nl-BE-x-generated-informal": "Procedure"
+        "nl-BE-x-generated-informal": "Procedure",
+        "nl": "Procedure"
       },
       "beschrijving": {
+        "nl": "<p data-indentation-level=\"0\">Dit is de procedure voor een volledig ingevulde test om zodat u het contract tussen ipdc en lpdc kan testen</p>",
         "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de procedure voor een volledig ingevulde test om zodat u het contract tussen ipdc en lpdc kan testen</p>",
-        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de procedure voor een volledig ingevulde test om zodat je het contract tussen ipdc en lpdc kan testen</p>",
-        "nl": "<p data-indentation-level=\"0\">Dit is de procedure voor een volledig ingevulde test om zodat u het contract tussen ipdc en lpdc kan testen</p>"
+        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de procedure voor een volledig ingevulde test om zodat je het contract tussen ipdc en lpdc kan testen</p>"
       },
       "websites": [
         {
           "naam": {
-            "nl-BE-x-generated-informal": "Subsidiereglement Stad Gent voor de financiële ondersteuning van projecten in kunst, cultuur en cultureel erfgoed voor periode 2021-2025",
             "nl-BE-x-formal": "Subsidiereglement Stad Gent voor de financiële ondersteuning van projecten in kunst, cultuur en cultureel erfgoed voor periode 2021-2025",
+            "nl-BE-x-generated-informal": "Subsidiereglement Stad Gent voor de financiële ondersteuning van projecten in kunst, cultuur en cultureel erfgoed voor periode 2021-2025",
             "nl": "Subsidiereglement Stad Gent voor de financiële ondersteuning van projecten in kunst, cultuur en cultureel erfgoed voor periode 2021-2025"
           },
           "url": "https://stad.gent/nl/reglementen/subsidiereglement-voor-de-financiele-ondersteuning-van-projecten-kunst-cultuur-en-cultureel-erfgoed",
@@ -118,9 +118,9 @@
         },
         {
           "naam": {
+            "nl-BE-x-formal": "Subsidie verfraaing handelspanden",
             "nl": "Subsidie verfraaing handelspanden",
-            "nl-BE-x-generated-informal": "Subsidie verfraaing handelspanden",
-            "nl-BE-x-formal": "Subsidie verfraaing handelspanden"
+            "nl-BE-x-generated-informal": "Subsidie verfraaing handelspanden"
           },
           "url": "https://stad.gent/nl/ondernemen/ondersteuning-en-premies-voor-ondernemers/sectoroverschrijdend/subsidie-verfraaiing-handelspand/subsidie-verfraaiing-handelspanden",
           "@type": "website",
@@ -134,14 +134,14 @@
   "websites": [
     {
       "beschrijving": {
+        "nl-BE-x-formal": "<p data-indentation-level=\"0\">website 1 beschrijving</p>",
         "nl": "<p data-indentation-level=\"0\">website 1 beschrijving</p>",
-        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">website 1 beschrijving</p>",
-        "nl-BE-x-formal": "<p data-indentation-level=\"0\">website 1 beschrijving</p>"
+        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">website 1 beschrijving</p>"
       },
       "naam": {
-        "nl": "website 1",
         "nl-BE-x-formal": "website 1",
-        "nl-BE-x-generated-informal": "website 1"
+        "nl-BE-x-generated-informal": "website 1",
+        "nl": "website 1"
       },
       "url": "https://www.kunlabora.be",
       "@type": "website",
@@ -149,9 +149,9 @@
     },
     {
       "naam": {
-        "nl": "Starterscontract",
+        "nl-BE-x-generated-informal": "Starterscontract",
         "nl-BE-x-formal": "Starterscontract",
-        "nl-BE-x-generated-informal": "Starterscontract"
+        "nl": "Starterscontract"
       },
       "url": "https://stad.gent/nl/ondernemen/een-onderneming-starten-gent/starterscontract",
       "@type": "website",
@@ -161,28 +161,28 @@
   "kosten": [
     {
       "beschrijving": {
-        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de beschrijving van de eerste kost voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
+        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving van de eerste kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
         "nl": "<p data-indentation-level=\"0\">Dit is de beschrijving van de eerste kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving van de eerste kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
+        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de beschrijving van de eerste kost voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>"
       },
       "naam": {
-        "nl": "Dit is de eerste kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
+        "nl-BE-x-formal": "Dit is de eerste kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
         "nl-BE-x-generated-informal": "Dit is de eerste kost voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen",
-        "nl-BE-x-formal": "Dit is de eerste kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen"
+        "nl": "Dit is de eerste kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen"
       },
       "@type": "kost",
       "order": 0
     },
     {
       "beschrijving": {
-        "nl": "<p data-indentation-level=\"0\">Dit is de beschrijving van de tweede kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
         "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de beschrijving van de tweede kost voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
-        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving van de tweede kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
+        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving van de tweede kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
+        "nl": "<p data-indentation-level=\"0\">Dit is de beschrijving van de tweede kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
       },
       "naam": {
-        "nl": "Dit is de tweede kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
         "nl-BE-x-formal": "Dit is de tweede kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
-        "nl-BE-x-generated-informal": "Dit is de tweede kost voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen"
+        "nl-BE-x-generated-informal": "Dit is de tweede kost voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen",
+        "nl": "Dit is de tweede kost voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen"
       },
       "@type": "kost",
       "order": 1
@@ -191,28 +191,28 @@
   "financieleVoordelen": [
     {
       "beschrijving": {
-        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de eerste financiele voordelen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
         "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de eerste financiele voordelen voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
-        "nl": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de eerste financiele voordelen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
+        "nl": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de eerste financiele voordelen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
+        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de eerste financiele voordelen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
       },
       "naam": {
-        "nl": "Dit is het eerste financieel voordeel voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
+        "nl-BE-x-generated-informal": "Dit is het eerste financieel voordeel voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen",
         "nl-BE-x-formal": "Dit is het eerste financieel voordeel voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
-        "nl-BE-x-generated-informal": "Dit is het eerste financieel voordeel voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen"
+        "nl": "Dit is het eerste financieel voordeel voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen"
       },
       "@type": "financieelVoordeel",
       "order": 0
     },
     {
       "beschrijving": {
-        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de tweede financiele voordelen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
         "nl": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de tweede financiele voordelen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
-        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de tweede financiele voordelen voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>"
+        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de tweede financiele voordelen voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
+        "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de beschrijving voor de tweede financiele voordelen voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
       },
       "naam": {
-        "nl": "Dit is het tweede financieel voordeel voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
         "nl-BE-x-formal": "Dit is het tweede financieel voordeel voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen",
-        "nl-BE-x-generated-informal": "Dit is het tweede financieel voordeel voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen"
+        "nl-BE-x-generated-informal": "Dit is het tweede financieel voordeel voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen",
+        "nl": "Dit is het tweede financieel voordeel voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen"
       },
       "@type": "financieelVoordeel",
       "order": 1
@@ -221,14 +221,14 @@
   "regelgeving": [
     {
       "naam": {
-        "nl": "regelgeving titel",
         "nl-BE-x-formal": "regelgeving titel",
-        "nl-BE-x-generated-informal": "regelgeving titel"
+        "nl-BE-x-generated-informal": "regelgeving titel",
+        "nl": "regelgeving titel"
       },
       "beschrijving": {
-        "nl-BE-x-formal": "<p data-indentation-level=\"0\">regelgeving titel</p>",
         "nl": "<p data-indentation-level=\"0\">regelgeving titel</p>",
-        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">regelgeving titel</p>"
+        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">regelgeving titel</p>",
+        "nl-BE-x-formal": "<p data-indentation-level=\"0\">regelgeving titel</p>"
       },
       "id": "https://codex.vlaanderen.be/Zoeken/Document.aspx?DID=1026320&param=informatie&ref=search&AVIDS=1281445",
       "@type": "regel",
@@ -237,12 +237,12 @@
     {
       "naam": {
         "nl-BE-x-generated-informal": "regelgeving 2",
-        "nl-BE-x-formal": "regelgeving 2",
-        "nl": "regelgeving 2"
+        "nl": "regelgeving 2",
+        "nl-BE-x-formal": "regelgeving 2"
       },
       "beschrijving": {
-        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">regelgeving 2 bescrhijving</p>",
         "nl": "<p data-indentation-level=\"0\">regelgeving 2 bescrhijving</p>",
+        "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">regelgeving 2 bescrhijving</p>",
         "nl-BE-x-formal": "<p data-indentation-level=\"0\">regelgeving 2 bescrhijving</p>"
       },
       "id": "https://codex.vlaanderen.be/Zoeken/Document.aspx?DID=1039211&param=informatie&ref=search&AVIDS=",
@@ -254,8 +254,8 @@
     {
       "adres": {
         "land": {
-          "nl": "België",
-          "en": "België"
+          "en": "België",
+          "nl": "België"
         },
         "huisnummer": "12",
         "postcode": "3290",
