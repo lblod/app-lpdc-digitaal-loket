@@ -131,6 +131,7 @@ app.get('/ConceptJsonLdContext.jsonld', (req, res, next) => {
         const page = fs.readFileSync(`./ldes-pages/ConceptJsonLdContext.jsonld`, "utf8");
         const jsonLd = JSON.parse(page);
         res.status(200).type('application/ld+json').json(jsonLd);
+        console.log(`Streamed ConceptJsonLdContext.jsonld`);
     } catch (e) {
         next(e)
     }
@@ -141,6 +142,18 @@ app.get('/InstantieJsonLdContext.jsonld', (req, res, next) => {
         const page = fs.readFileSync(`./instance-data/InstantieJsonLdContext.jsonld`, "utf8");
         const jsonLd = JSON.parse(page);
         res.status(200).type('application/ld+json').json(jsonLd);
+        console.log(`Streamed InstantieJsonLdContext.jsonld`);
+    } catch (e) {
+        next(e)
+    }
+});
+
+app.get('/InstantieJsonLdContextThatIsInvalid.jsonld', (req, res, next) => {
+    try {
+        const page = fs.readFileSync(`./instance-data/InstantieJsonLdContextThatIsInvalid.jsonld`, "utf8");
+        const jsonLd = JSON.parse(page);
+        res.status(200).type('application/ld+json').json(jsonLd);
+        console.log(`Streamed InstantieJsonLdContextThatIsInvalid.jsonld`);
     } catch (e) {
         next(e)
     }

@@ -1,7 +1,7 @@
 {
-  "id": "e8843fda-b3a8-4334-905c-8e49eb12203b",
-  "@context": "http://ipdc-stub/InstantieJsonLdContext.jsonld",
-  "@id": "http://data.lblod.info/id/public-service/e8843fda-b3a8-4334-905c-8e49eb12203b",
+  "id": "aae82967-fd21-4a05-a870-7d2b43f4d443",
+  "@context": "http://ipdc-stub/InstantieJsonLdContextThatDoesNotExist.jsonld",
+  "@id": "http://data.lblod.info/id/public-service/aae82967-fd21-4a05-a870-7d2b43f4d443",
   "@type": "InstancePublicService",
   "bevoegdBestuursniveaus": [
     "Federaal",
@@ -14,12 +14,12 @@
   "naam": {
     "nl": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
     "nl-BE-x-formal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
-    "nl-BE-x-generated-informal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen - informal",
+    "nl-BE-x-generated-informal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
     "en": "titel en"
   },
   "beschrijving": {
     "en": "<p data-indentation-level=\"0\">beschrijving en</p>",
-    "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen - informal</p>",
+    "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen</p>",
     "nl": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
     "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
   },

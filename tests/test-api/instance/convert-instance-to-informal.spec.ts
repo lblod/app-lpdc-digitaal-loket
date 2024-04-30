@@ -6,13 +6,17 @@ import {Predicates, Uri} from "../test-helpers/triple-array";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
 import {InstancePublicationStatusType, InstanceStatus} from "../test-helpers/codelists";
 import {Language} from "../test-helpers/language";
-import {fetchType} from "../test-helpers/sparql";
+import {deleteAll, fetchType} from "../test-helpers/sparql";
 import {v4 as uuid} from 'uuid';
 
 test.describe('convert instance to informal', () => {
 
+    test.beforeEach(async ({request}) => {
+        await deleteAll(request);
+    });
+
     //TODO LPDC-1139: finish test
-    test.skip('should retrieve informal data from ipdc, and update instance with and set dutchLanguageVariant to informal and republish', async ({request}) => {
+    test('should retrieve informal data from ipdc, and update instance with and set dutchLanguageVariant to informal and republish', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 
         await FormalInformalChoiceTestBuilder.aChoice()
@@ -31,6 +35,7 @@ test.describe('convert instance to informal', () => {
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verstuurd)
             .withDatePublished(new Date())
+            .withDateModified(new Date("2024-04-24T14:09:32.778Z"))
             .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
@@ -47,7 +52,8 @@ test.describe('convert instance to informal', () => {
         const updatedInstance = await fetchType(request, instance.getSubject().getValue(), PublicServiceType);
         expect(updatedInstance.findObject(Predicates.dutchLanguageVariant).getValue()).toEqual(Language.INFORMAL);
         expect(updatedInstance.findObject(Predicates.needsConversionFromFormalToInformal).getValue()).toEqual("0");
-        //TODO LPDC-1039 verify some fields (that come from the ipdc stub ...)
+        expect(updatedInstance.findObject(Predicates.title).getValue()).toEqual('Volledig ingevulde test om contract tussen ipdc en lpdc te testen - informal');
+        expect(updatedInstance.findObject(Predicates.description).getValue()).toEqual(`<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen - informal</p>`);
     });
 
     test('convert instance to informal without found in ipdc, returns http 500 Service error ', async ({request}) => {
@@ -84,7 +90,73 @@ test.describe('convert instance to informal', () => {
         expect(response.status()).toEqual(404);
     });
 
+    test('convert instance to informal without being able to retrieve jsonld-context, returns http 500 Service error ', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
 
+        await FormalInformalChoiceTestBuilder.aChoice()
+            .withBestuurseenheid(pepingenId)
+            .withChosenForm(ChosenForm.INFORMAL)
+            .buildAndPersist(request)
+
+        const uuid = 'aae82967-fd21-4a05-a870-7d2b43f4d443';
+        const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withId(id)
+            .withUUID(uuid)
+            .withTitle('Instance title', Language.FORMAL)
+            .withDescription('Instance description', Language.FORMAL)
+            .withDateSent(new Date())
+            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withDatePublished(new Date())
+            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withNeedsConversionFromFormalToInformal(true)
+            .withDutchLanguageVariant(Language.FORMAL)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/convert-instance-to-informal`, {
+            headers: {
+                cookie: loginResponse.cookie,
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
+            }
+        });
+
+        expect(response.status()).toEqual(500);
+    });
+
+    test('convert instance to informal that points to an invalid jsonld-context, returns http 500 Service error ', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+
+        await FormalInformalChoiceTestBuilder.aChoice()
+            .withBestuurseenheid(pepingenId)
+            .withChosenForm(ChosenForm.INFORMAL)
+            .buildAndPersist(request)
+
+        const uuid = 'abf83bb4-82cf-46a3-9739-8f53ff5d306c';
+        const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
+
+        const instance = await PublicServiceTestBuilder.aPublicService()
+            .withId(id)
+            .withUUID(uuid)
+            .withTitle('Instance title', Language.FORMAL)
+            .withDescription('Instance description', Language.FORMAL)
+            .withDateSent(new Date())
+            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withDatePublished(new Date())
+            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withNeedsConversionFromFormalToInformal(true)
+            .withDutchLanguageVariant(Language.FORMAL)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/convert-instance-to-informal`, {
+            headers: {
+                cookie: loginResponse.cookie,
+                'instance-version': instance.findObject(Predicates.dateModified).getValue()
+            }
+        });
+
+        expect(response.status()).toEqual(500);
+    });
 
     test('convert instance to informal without login, returns http 401 Unauthorized', async ({request}) => {
         const uuid = 'e8843fda-b3a8-4334-905c-8e49eb12203b';
