@@ -15,7 +15,6 @@ test.describe('convert instance to informal', () => {
         await deleteAll(request);
     });
 
-    //TODO LPDC-1139: finish test
     test('should retrieve informal data from ipdc, and update instance with and set dutchLanguageVariant to informal and republish', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
 

@@ -1,10 +1,15 @@
 import express from "express";
 import fs from "fs";
-import {conceptArchive, conceptCreate, conceptUpdate} from "./ldes-pages/extra-conceptsnapshots.js";
+import { conceptArchive, conceptCreate, conceptUpdate } from "./ldes-pages/extra-conceptsnapshots.js";
+import { graph, isLiteral, literal, parse, quad } from "rdflib";
+
+let jsonld = undefined;
+import('jsonld/lib/index.js')
+    .then(jsonldloaded => jsonld = jsonldloaded.default());
 
 const app = express();
 
-app.use(express.json({type:  ['application/json', 'application/ld+json']}));
+app.use(express.json({type: ['application/json', 'application/ld+json']}));
 
 const instances = [];
 const extraConceptsnapshots = [];
@@ -30,22 +35,72 @@ app.get('/doc/conceptsnapshot', (req, res, next) => {
     }
 });
 
-app.get('/doc/instantie/:instanceUuid', (req, res, next) => {
+app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
     try {
         const instanceUuid = req.params.instanceUuid;
         console.log(`/doc/instantie/${instanceUuid} requested`);
 
-        if(fs.existsSync(`./instance-data/${instanceUuid}.jsonld`)) {
+        if (fs.existsSync(`./instance-data/${instanceUuid}.jsonld`)) {
             const page = fs.readFileSync(`./instance-data/${instanceUuid}.jsonld`, "utf8");
             console.log(page);
             const jsonLd = JSON.parse(page);
             console.log(jsonLd);
             res.status(200).type('application/ld+json').json(jsonLd);
         } else {
-            //TODO LPDC-1139: take a look at the published instances, and manipulate a bit so to add a 'translated triple', and return.
-            res.status(404).send();
+            const publishedInstanceForUuid = instances.find(instance =>
+                instance.find(object => object['@type'][0] === 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService'
+                    && object['http://mu.semte.ch/vocabularies/core/uuid'][0]['@value'] === instanceUuid));
+            if (!publishedInstanceForUuid) {
+                res.status(404).send();
+            } else {
+                const context = JSON.parse(fs.readFileSync(`./instance-data/InstantieJsonLdContext.jsonld`, "utf8"));
+                const store = graph();
+
+                const quads = await new Promise((resolve, reject) => {
+
+                    parse(JSON.stringify(publishedInstanceForUuid), store, 'http://example.me', 'application/ld+json', (error, kb) => {
+                        if (error) {
+                            reject(error);
+                            return;
+                        }
+
+                        const originalQuads = kb.statementsMatching();
+
+                        if (originalQuads.length < 5) {
+                            reject(new Error(`Er is een fout opgetreden bij het 'bevragen' van Ipdc voor instance ${initialInstance.id}`));
+                        }
+
+                        //'translate' all formal to informal (by adding the same keys again, with informal)
+
+                        const allInformalQuads =
+                            originalQuads.filter(
+                                q =>
+                                    isLiteral(q.object)
+                                    && q.object.language === 'nl-be-x-formal'
+                            ).map(q =>
+                                quad(q.subject, q.predicate, literal(`${q.object.value} - informal`, 'nl-be-x-generated-informal'), q.graph)
+                            );
+
+                        resolve([...originalQuads, ...allInformalQuads]);
+                    });
+                });
+
+                const jsonLdDocument = await jsonld.fromRDF(quads.map(q => quad(q.subject, q.predicate, q.object, null)));
+
+                //TODO LPDC-1139: compacting does not work properly when having a nested container with blank nodes ... it generates a grraph, which we don't want?
+                const compactedJsonLdDocument = await jsonld.compact(jsonLdDocument, context);
+
+                compactedJsonLdDocument[`@context`] = `http://ipdc-stub/InstantieJsonLdContext.jsonld`;
+
+                //TODO LPDC-1139: verify with ipdc ?  "https://ipdc.vlaanderen.be/id/instantie/f7d287bf-7adb-434e-a33e-7fe28818fd99",
+                compactedJsonLdDocument[`@id`] = `https://ipdc.vlaanderen.be/id/instantie/${instanceUuid}`;
+
+                console.log(compactedJsonLdDocument);
+
+                res.status(200).type('application/ld+json').json(compactedJsonLdDocument);
+            }
         }
-    } catch(e) {
+    } catch (e) {
         next(e);
     }
 });
@@ -128,8 +183,8 @@ app.post('/instanties/notfail', (req, res, next) => {
 
 app.get('/ConceptJsonLdContext.jsonld', (req, res, next) => {
     try {
-        const page = fs.readFileSync(`./ldes-pages/ConceptJsonLdContext.jsonld`, "utf8");
-        const jsonLd = JSON.parse(page);
+        const context = fs.readFileSync(`./ldes-pages/ConceptJsonLdContext.jsonld`, "utf8");
+        const jsonLd = JSON.parse(context);
         res.status(200).type('application/ld+json').json(jsonLd);
         console.log(`Streamed ConceptJsonLdContext.jsonld`);
     } catch (e) {
@@ -139,8 +194,8 @@ app.get('/ConceptJsonLdContext.jsonld', (req, res, next) => {
 
 app.get('/InstantieJsonLdContext.jsonld', (req, res, next) => {
     try {
-        const page = fs.readFileSync(`./instance-data/InstantieJsonLdContext.jsonld`, "utf8");
-        const jsonLd = JSON.parse(page);
+        const context = fs.readFileSync(`./instance-data/InstantieJsonLdContext.jsonld`, "utf8");
+        const jsonLd = JSON.parse(context);
         res.status(200).type('application/ld+json').json(jsonLd);
         console.log(`Streamed InstantieJsonLdContext.jsonld`);
     } catch (e) {
@@ -150,8 +205,8 @@ app.get('/InstantieJsonLdContext.jsonld', (req, res, next) => {
 
 app.get('/InstantieJsonLdContextThatIsInvalid.jsonld', (req, res, next) => {
     try {
-        const page = fs.readFileSync(`./instance-data/InstantieJsonLdContextThatIsInvalid.jsonld`, "utf8");
-        const jsonLd = JSON.parse(page);
+        const context = fs.readFileSync(`./instance-data/InstantieJsonLdContextThatIsInvalid.jsonld`, "utf8");
+        const jsonLd = JSON.parse(context);
         res.status(200).type('application/ld+json').json(jsonLd);
         console.log(`Streamed InstantieJsonLdContextThatIsInvalid.jsonld`);
     } catch (e) {

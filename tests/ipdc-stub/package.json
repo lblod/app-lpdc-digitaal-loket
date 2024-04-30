@@ -12,6 +12,8 @@
   "dependencies": {
     "express": "^4.18.2",
     "uuid": "^9.0.1",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "rdflib": "^2.2.33",
+    "jsonld": "8.3.2"
   }
 }
