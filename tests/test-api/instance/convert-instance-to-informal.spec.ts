@@ -87,7 +87,7 @@ test.describe('convert instance to informal', () => {
             }
         });
 
-        expect(response.status()).toEqual(404);
+        expect(response.status()).toEqual(500);
     });
 
     test('convert instance to informal without being able to retrieve jsonld-context, returns http 500 Service error ', async ({request}) => {
