@@ -218,7 +218,8 @@ services:
       LOG_SPARQL_UPDATES: "false"
       DEBUG_AUTH_HEADERS: "false"
       ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
-      IPDC_ENDPOINT: "<IPDC_ENDPOINT_URL>"
+      IPDC_API_ENDPOINT: "<IPDC_API_ENDPOINT_URL>"
+      IPDC_API_KEY: "<IPDC_API_KEY>"
       MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
       INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
