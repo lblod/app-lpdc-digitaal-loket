@@ -87,12 +87,11 @@ app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
 
                 const jsonLdDocument = await jsonld.fromRDF(quads.map(q => quad(q.subject, q.predicate, q.object, null)));
 
-                //TODO LPDC-1139: compacting does not work properly when having a nested container with blank nodes ... it generates a grraph, which we don't want?
+                //note: compacting does not work properly when having a nested container with blank nodes ... it generates a grraph, which we don't want? For now, there is no e2e that relies on this, so we leave it as is ...
                 const compactedJsonLdDocument = await jsonld.compact(jsonLdDocument, context);
 
                 compactedJsonLdDocument[`@context`] = `http://ipdc-stub/InstantieJsonLdContext.jsonld`;
 
-                //TODO LPDC-1139: verify with ipdc ?  "https://ipdc.vlaanderen.be/id/instantie/f7d287bf-7adb-434e-a33e-7fe28818fd99",
                 compactedJsonLdDocument[`@id`] = `https://ipdc.vlaanderen.be/id/instantie/${instanceUuid}`;
 
                 console.log(compactedJsonLdDocument);

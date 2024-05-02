@@ -1,16 +1,17 @@
-import {Browser, expect, Page, test} from "@playwright/test";
-import {MockLoginPage} from "./pages/mock-login-page";
-import {v4 as uuid} from 'uuid';
-import {LpdcHomePage} from "./pages/lpdc-home-page";
-import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from "./pages/product-of-dienst-toevoegen-page";
+import { Browser, expect, Page, test } from "@playwright/test";
+import { MockLoginPage } from "./pages/mock-login-page";
+import { v4 as uuid } from 'uuid';
+import { LpdcHomePage } from "./pages/lpdc-home-page";
+import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from "./pages/product-of-dienst-toevoegen-page";
 
-import {InstantieDetailsPage} from "./pages/instantie-details-page";
-import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
-import {UJeModal} from "./modals/u-je-modal";
-import {first_row} from "./components/table";
-import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
+import { InstantieDetailsPage } from "./pages/instantie-details-page";
+import { WijzigingenBewarenModal } from "./modals/wijzigingen-bewaren-modal";
+import { UJeModal } from "./modals/u-je-modal";
+import { first_row } from "./components/table";
+import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
+import { InstantieAutomatischOmzettenVanUNaarJeModal } from "./modals/instantie-automatisch-omzetten-van-u-naar-je-modal";
 
-test.describe('U-je conversie nodig', ()=>{
+test.describe('U-je conversie nodig', () => {
 
     let page: Page;
     let mockLoginPage: MockLoginPage;
@@ -18,9 +19,11 @@ test.describe('U-je conversie nodig', ()=>{
     let toevoegenPage: ProductOfDienstToevoegenPage;
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
-    let verzendNaarVlaamseOverheidModal :VerzendNaarVlaamseOverheidModal;
-    let uJeModal :UJeModal;
-    test.beforeEach(async ({browser}) => {
+    let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
+    let instantieAutomatischOmzettenVanUNaarJeModal: InstantieAutomatischOmzettenVanUNaarJeModal;
+    let uJeModal: UJeModal;
+
+    test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
 
         mockLoginPage = MockLoginPage.createForLpdc(page);
@@ -30,11 +33,15 @@ test.describe('U-je conversie nodig', ()=>{
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
-        uJeModal =UJeModal.create(page)
-
+        instantieAutomatischOmzettenVanUNaarJeModal = InstantieAutomatischOmzettenVanUNaarJeModal.create(page);
+        uJeModal = UJeModal.create(page)
     });
 
-    test('view and filter on u-je conversie nodig label',async ()=>{
+    test.afterEach(async () => {
+        await page.close();
+    });
+
+    test('view and filter on u-je conversie nodig label', async () => {
         const gemeenteNaam = 'Diest';
 
         await mockLoginPage.goto();
@@ -84,7 +91,7 @@ test.describe('U-je conversie nodig', ()=>{
         await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNietNodigIs);
     });
 
-    test('when choosing informal, then formal instances should have alerts depending status',async ()=>{
+    test('when choosing informal, then formal instances should have alerts depending status', async () => {
         const gemeentenaam = 'Holsbeek'
 
         await mockLoginPage.goto();
@@ -164,15 +171,15 @@ test.describe('U-je conversie nodig', ()=>{
             await expect(homePage.resultTable.row(first_row).locator).toContainText(draftInstanceTitle);
             await expect(homePage.resultTable.row
 
-            (first_row).locator).toContainText('u→je');
+                (first_row).locator).toContainText('u→je');
         });
         await homePage.resultTable.row(first_row).link('Bewerk').click();
         await instantieDetailsPage.draftInstanceConversionAlert.expectToBeVisible();
 
     });
 
-    test('Confim instance is already informal',async ()=> {
-        const gemeentenaam = 'Grobbendonk'
+    test('Confim instance is already informal', async () => {
+        const gemeentenaam = 'Grobbendonk';
 
         await mockLoginPage.goto();
         await loginAs(gemeentenaam);
@@ -243,6 +250,63 @@ test.describe('U-je conversie nodig', ()=>{
         await expect(instantieDetailsPage.uJeVersie).toContainText("je-versie");
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
         await homePage.expectToBeVisible();
+    });
+
+    test('Convert instance to informal', async () => {
+        const gemeentenaam = 'Brakel';
+
+        await mockLoginPage.goto();
+        await loginAs(gemeentenaam);
+
+        await uJeModal.expectToBeVisible();
+        await uJeModal.laterKiezenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        // maak instanties
+        await homePage.productOfDienstToevoegenButton.click();
+        await toevoegenPage.expectToBeVisible();
+        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+        await instantieDetailsPage.expectToBeVisible();
+
+        const instantieTitel = 'titel' + uuid();
+        await instantieDetailsPage.titelInput.fill(instantieTitel);
+
+        const instantieBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.fill(instantieBeschrijving);
+        await instantieDetailsPage.beschrijvingEditor.blur();
+
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+        // make choice
+        await logout(gemeentenaam);
+        await loginAs(gemeentenaam);
+
+        await uJeModal.expectToBeVisible();
+        await uJeModal.mijnBestuurKiestVoorDeJeVormRadio.click();
+        await uJeModal.bevestigenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        //published instance alert
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(instantieTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(instantieTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
+        });
+        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
+        await expect(instantieDetailsPage.uJeVersie).toContainText("u-versie");
+        await instantieDetailsPage.omzettenNaarDeJeVormAlert.button('Omzetten naar de je-vorm').click();
+
+        await instantieAutomatischOmzettenVanUNaarJeModal.expectToBeVisible();
+        await instantieAutomatischOmzettenVanUNaarJeModal.doorgaan.click();
+        
+        await expect(instantieDetailsPage.titelInput).toHaveValue(instantieTitel + ' - informal');
+        await expect(instantieDetailsPage.uJeVersie).toContainText("je-versie");
+        await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeInvisible();
+        await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
     });
 
     async function loginAs(gemeenteNaam: string) {
