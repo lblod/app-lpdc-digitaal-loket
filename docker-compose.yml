@@ -241,7 +241,7 @@ services:
       LOG_SPARQL_QUERIES: "false"
       LOG_SPARQL_UPDATES: "false"
       DEBUG_AUTH_HEADERS: "false"
-      CRON_PATTERN: "*/5 * * * *" # every 5 minutes
+      CRON_PATTERN: "* * * * *" # every minute
       # The next variables are environment-specific.
       # Best to override in docker-compose.override.yml
       IPDC_JSON_ENDPOINT: "<IPDC endpoint url>"
