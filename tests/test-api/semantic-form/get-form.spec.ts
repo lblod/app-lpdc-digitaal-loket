@@ -34,8 +34,8 @@ test.describe('Loading forms for concepts', () => {
         const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
-        const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(concept.getTriples()).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndhasLatestFunctionalChange.sort());
+        const triplesWithoutUuidAndHasLatestFunctionalChange = new TripleArray(concept.getTriples()).asStringArray();
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUuidAndHasLatestFunctionalChange.sort()));
     });
 
     test('Can get characteristics form for concept', async ({request}) => {
@@ -54,7 +54,7 @@ test.describe('Loading forms for concepts', () => {
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
         const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(concept.getTriples()).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndhasLatestFunctionalChange.sort());
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUuidAndhasLatestFunctionalChange.sort()));
     });
 
     test('Can get content form for full concept', async ({request}) => {
@@ -67,7 +67,7 @@ test.describe('Loading forms for concepts', () => {
 
         const responseBody = await response.json();
         const triplesWithoutUuidAndHasLatestFunctionalChange = new TripleArray(triples).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUuidAndHasLatestFunctionalChange.sort());
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUuidAndHasLatestFunctionalChange.sort()));
     });
 
     test('When trying to get content form for concept when user is not logged in, returns http 401 Unauthenticated', async ({request}) => {
@@ -111,7 +111,7 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
         const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
     });
 
     test('Can get characteristics form for public service', async ({request}) => {
@@ -129,7 +129,7 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
         const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
     });
 
     test('English form is only added when publicationMedium is yourEurope and form is content', async ({request}) => {
@@ -168,8 +168,7 @@ test.describe('Loading forms for instances', () => {
 
         const responseBody = await response.json();
         const triplesWithoutUUID = new TripleArray(triples).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(triplesWithoutUUID.sort());
-        //TODO LPDC-917: this test fails if the date time in micros is exactly 000; then it gets stripped in the json output (we should verify if this then also fails in the application itself)
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
     });
 
     test('When getting content form for public service then form language is replaced to language of public service', async ({request}) => {
@@ -270,4 +269,8 @@ function parseToSortedTripleArray(source: string, split = '\r\n') {
         .map(triple => triple.replaceAll(`"""`, `"`))
         .map(triple => triple.replaceAll(`\t`, ` `))
         .sort();
+}
+
+function stripOfTripleStrings(triples: string[]) {
+    return triples.map(triple => triple.replaceAll(`"""`, `"`));
 }

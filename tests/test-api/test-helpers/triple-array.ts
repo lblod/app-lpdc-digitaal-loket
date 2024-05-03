@@ -124,11 +124,11 @@ export class Literal {
 
     toString(): string {
         if (this.language) {
-            return `"${this.value}"@${this.language}`
+            return `"""${this.value}"""@${this.language}`
         } else if (this.dataType) {
-            return `"${this.value}"^^<${this.dataType}>`
+            return `"""${this.value}"""^^<${this.dataType}>`
         } else {
-            return `"${this.value}"`
+            return `"""${this.value}"""`
         }
     }
 }
