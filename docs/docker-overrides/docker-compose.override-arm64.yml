@@ -8,7 +8,7 @@ services:
     image: semtech/mu-cl-resources:feature-supply-info-on-empty-included-arm64-build
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-stability-improvements-r1.0-arm64-build
+    image: redpencil/ldes-consumer:feature-stability-improvements-r1.1-arm64-build
     environment:
       LDES_STREAM: "<endpoint ldes stream>"
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"

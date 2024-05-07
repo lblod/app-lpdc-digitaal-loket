@@ -158,8 +158,8 @@ cd ..
 rm -rf ldes-consumer-service
 git clone https://github.com/redpencilio/ldes-consumer-service
 cd ldes-consumer-service || exit
-git checkout tags/vfeature-stability-improvements-r1.0
-docker build --no-cache -t redpencil/ldes-consumer:feature-stability-improvements-r1.0-arm64-build .
+git checkout tags/vfeature-stability-improvements-r1.1
+docker build --no-cache -t redpencil/ldes-consumer:feature-stability-improvements-r1.1-arm64-build .
 cd ..
 
 
