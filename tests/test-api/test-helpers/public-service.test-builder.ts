@@ -64,9 +64,11 @@ export class PublicServiceTestBuilder {
     private needsConversionFromFormalToInformal: Literal;
 
     static aPublicService() {
+        const instanceUuid = uuid();
         return new PublicServiceTestBuilder()
+            .withId(new Uri(`http://data.lblod.info/id/public-service/${instanceUuid}`))
+            .withUUID(instanceUuid)
             .withType()
-            .withUUID(uuid())
             .withTitle('Instance title', Language.INFORMAL)
             .withDescription('Instance description', Language.INFORMAL)
             .withDateCreated(new Date())
@@ -79,15 +81,7 @@ export class PublicServiceTestBuilder {
     }
 
     static aFullPublicService() {
-        return new PublicServiceTestBuilder()
-            .withType()
-            .withUUID(uuid())
-            .withTitle('Instance title', Language.INFORMAL)
-            .withDescription('Instance description', Language.INFORMAL)
-            .withDateCreated(new Date())
-            .withDateModified(new Date())
-            .withStartDate(new Date())
-            .withEndDate(new Date())
+        return PublicServiceTestBuilder.aPublicService()
             .withAdditionalDescriptions('Additional description', Language.INFORMAL)
             .withException('exception', Language.INFORMAL)
             .withRegulation('regulation', Language.INFORMAL)
@@ -104,11 +98,8 @@ export class PublicServiceTestBuilder {
             .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withInstanceStatus(InstanceStatus.ontwerp)
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
             .withDatePublished(new Date())
-            .withDutchLanguageVariant(Language.INFORMAL)
-            .withNeedsConversionFromFormalToInformal(false)
     }
 
     private withType() {
