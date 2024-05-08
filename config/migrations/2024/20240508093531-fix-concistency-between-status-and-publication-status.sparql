@@ -1,16 +1,20 @@
 DELETE {
-    GRAPH ?g {
-     ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd>.
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd>.
     }
 }
 INSERT {
-    GRAPH ?g {
-    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/te-herpubliceren>.
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/te-herpubliceren>.
     }
 }
 WHERE {
-    GRAPH ?g {
-      ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/ontwerp>.
-      ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd>
-      }
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+        ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/ontwerp>.
+        ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd>
+    }
+    FILTER(
+        STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+        STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker"))
 }
