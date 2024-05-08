@@ -1,0 +1,16 @@
+DELETE {
+    GRAPH ?g {
+     ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd>.
+    }
+}
+INSERT {
+    GRAPH ?g {
+    ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/te-herpubliceren>.
+    }
+}
+WHERE {
+    GRAPH ?g {
+      ?instance <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/ontwerp>.
+      ?instance <http://schema.org/publication> <http://lblod.data.gift/concepts/publication-status/gepubliceerd>
+      }
+}
