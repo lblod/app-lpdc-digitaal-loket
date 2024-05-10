@@ -40,11 +40,10 @@ ext:form a form:Form, form:TopLevelForm ;
     form:includes ext:websitesL.
 
 ##########################################################
-#  property-group: title
+#  property-group: basisinformatie
 ##########################################################
-ext:titlePg a form:PropertyGroup;
-    sh:name "Titel" ;
-    form:help "Hier kan u de titel aanbrengen/wijzigen.";
+ext:basisinformatiePg a form:PropertyGroup;
+    sh:name "Basisinformatie" ;
     sh:order 1 .
 
   ##########################################################
@@ -63,15 +62,7 @@ ext:titlePg a form:PropertyGroup;
         sh:path dct:title
       ];
       form:displayType displayTypes:defaultInput;
-      sh:group ext:titlePg .
-
-##########################################################
-#  property-group: Beschrijving
-##########################################################
-ext:descriptionPg a form:PropertyGroup;
-    sh:name "Beschrijving" ;
-    form:help "Hier kan u de beschrijving aanbrengen/wijzigen.";
-    sh:order 2 .
+      sh:group ext:basisinformatiePg .
 
   ##########################################################
   #  field: description
@@ -89,15 +80,7 @@ ext:descriptionPg a form:PropertyGroup;
       ];
       sh:path dct:description ;
       form:displayType displayTypes:richText ;
-      sh:group ext:descriptionPg .
-
-##########################################################
-#  property-group: Aanvullende Beschrijving
-##########################################################
-ext:additionalDescriptionPg a form:PropertyGroup;
-    sh:name "Aanvullende Beschrijving" ;
-    form:help "Hier kan u de korte beschrijving aanbrengen/wijzigen.";
-    sh:order 3 .
+      sh:group ext:basisinformatiePg .
 
   ##########################################################
   #  field: additional description
@@ -108,15 +91,7 @@ ext:additionalDescriptionPg a form:PropertyGroup;
       form:language "nl-be-x-generated-formal";
       sh:path lpdcExt:additionalDescription ;
       form:displayType displayTypes:richText ;
-      sh:group ext:additionalDescriptionPg .
-
-##########################################################
-#  property-group: exception
-##########################################################
-ext:exceptionPg a form:PropertyGroup;
-    sh:name "Uitzonderingen" ;
-    form:help "Hier kan u de mogelijke uitzonderingen aanbrengen/wijzigen.";
-    sh:order 4 .
+      sh:group ext:basisinformatiePg .
 
   ##########################################################
   #  field: exception
@@ -127,14 +102,13 @@ ext:exceptionPg a form:PropertyGroup;
       form:language "nl-be-x-generated-formal";
       sh:path lpdcExt:exception ;
       form:displayType displayTypes:richText ;
-      sh:group ext:exceptionPg .
+      sh:group ext:basisinformatiePg .
 
 ##########################################################
 #  property-group: Voorwaarden
 ##########################################################
 ext:requirementsPg a form:PropertyGroup;
     sh:name "Voorwaarden" ;
-    form:help "Hier kan u de voorwaarden aanbrengen/wijzigen.";
     sh:order 5 .
 
   ##########################################################
@@ -224,7 +198,6 @@ ext:requirementsPg a form:PropertyGroup;
         ##########################################################
         ext:evidencesPg a form:PropertyGroup;
             sh:name "Bewijsstukken" ;
-            form:help "Hier kan u de gevraagde bewijsstukken aanbrengen/wijzigen.";
             sh:order 1 .
 
         ##########################################################
@@ -313,7 +286,6 @@ ext:requirementsPg a form:PropertyGroup;
 ##########################################################
 ext:rulesPg a form:PropertyGroup;
     sh:name "Procedure" ;
-    form:help "Hier kan u de procedure aanbrengen/wijzigen.";
     sh:order 6 .
 
   ##########################################################
@@ -507,7 +479,6 @@ ext:rulesPg a form:PropertyGroup;
 ##########################################################
 ext:costPg a form:PropertyGroup;
     sh:name "Kosten" ;
-    form:help "Hier kan u de bijbehorende kosten aanbrengen/wijzigen.";
     sh:order 6 .
 
   ##########################################################
@@ -594,8 +565,7 @@ ext:costPg a form:PropertyGroup;
 #  property-group: Financieel Voordeel
 ##########################################################
 ext:finAdvPg a form:PropertyGroup;
-    sh:name "Financiële Voordelen" ;
-    form:help "Hier kan u de bijbehorende financiële voordelen aanbrengen/wijzigen.";
+    sh:name "Financiële voordelen" ;
     sh:order 7 .
 
   ##########################################################
@@ -683,7 +653,6 @@ ext:finAdvPg a form:PropertyGroup;
 ##########################################################
 ext:regulationsPg a form:PropertyGroup;
     sh:name "Regelgeving" ;
-    form:help "Hier kan u de verwijzing naar relevante regelgeving aanbrengen/wijzigen.";
     sh:order 8 .
 
   ##########################################################
@@ -802,7 +771,6 @@ ext:regulationsPg a form:PropertyGroup;
 ##########################################################
 ext:contactpointsPg a form:PropertyGroup;
     sh:name "Contactpunten" ;
-    form:help "Hier kan u contactpunten aanbrengen/wijzigen.";
     sh:order 9 .
 
   ##########################################################
@@ -978,7 +946,6 @@ ext:contactpointsPg a form:PropertyGroup;
 ##########################################################
 ext:websitesPg a form:PropertyGroup;
     sh:name "Meer info" ;
-    form:help "Hier kan u websites die meer informatie bevatten over de lokale dienst aanbrengen/wijzigen.";
     sh:order 10 .
 
   ##########################################################
