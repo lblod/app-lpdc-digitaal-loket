@@ -1,0 +1,15 @@
+DELETE {
+  GRAPH ?g {
+    ?s ?p ?o
+  }
+}
+ WHERE {
+  GRAPH ?g {
+    ?s ?p ?o
+  }
+    FILTER(
+        STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/")
+         && STRENDS(STR(?g), "/LoketLB-LPDCGebruiker")
+         && lang(?o) = 'en'
+    )
+}

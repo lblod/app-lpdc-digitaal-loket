@@ -657,39 +657,6 @@ test('Create instance from concept: all instance fields with language should hav
     expect(publicService.findObject(Predicates.regulation)).toEqual(new Literal('regulation nl', Language.FORMAL));
 });
 
-test('Create instance from concept: When concept contains english language then this should not be removed, other languages but english/dutch should be removed', async ({request}) => {
-    const concept = await ConceptTestBuilder.aConcept()
-        .withTitles([
-            {value: 'title', language: Language.NL},
-            {value: 'title', language: Language.GENERATED_INFORMAL},
-            {value: 'title', language: Language.GENERATED_FORMAL},
-            {value: 'title', language: Language.EN},
-            {value: 'title', language: Language.DE},
-            {value: 'title', language: Language.FR},
-        ])
-        .withDescriptions([
-            {value: 'description', language: Language.NL},
-            {value: 'description', language: Language.GENERATED_INFORMAL},
-            {value: 'description', language: Language.GENERATED_FORMAL},
-            {value: 'description', language: Language.EN},
-            {value: 'description', language: Language.DE},
-            {value: 'description', language: Language.FR},
-        ])
-        .buildAndPersist(request);
-
-    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
-        .withConcept(concept.getId())
-        .buildAndPersist(request);
-
-    const response = await createForm(concept.getId(), request);
-    const publicService = await fetchType(request, response.data.uri, PublicServiceType);
-
-    expect(publicService.findAllTriples(Predicates.title)).toHaveLength(2);
-    expect(publicService.findObjects(Predicates.title)).toContainEqual(new Literal('title', Language.EN));
-    expect(publicService.findAllTriples(Predicates.description)).toHaveLength(2);
-    expect(publicService.findObjects(Predicates.description)).toContainEqual(new Literal('description', Language.EN));
-});
-
 test('Create instance from un-existing concept, returns notFoundError', async ({request}) => {
     const loginResponse = await loginAsPepingen(request);
     const headers = {cookie: loginResponse.cookie};

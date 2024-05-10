@@ -78,9 +78,7 @@ test.describe('Order instance from IPDC flow', () => {
 
         test('Adding and removing keeps orders correct', async () => {
             const titelWebsiteVoorProcedure = 'Procedure website naam - informal';
-            const titelWebsiteVoorProcedureEngels = 'Procedure website naam - en';
             const beschrijvingWebsiteVoorProcedure = 'procedure website beschrijving - informal';
-            const beschrijvingWebsiteVoorProcedureEngels = 'procedure website beschrijving - en';
             const websiteURLVoorProcedure1 = 'https://procedure-website1.com';
             const websiteURLVoorProcedure3 = 'https://procedure-website3.com';
             const websiteURLVoorProcedureNew = 'https://procedure-websiteNew.com';
@@ -92,9 +90,7 @@ test.describe('Order instance from IPDC flow', () => {
             await instantieDetailsPage.voegWebsiteToeButtonVoorProcedure().click();
 
             await instantieDetailsPage.titelWebsiteVoorProcedureInput(2).fill(`${titelWebsiteVoorProcedure} new`);
-            await instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(2).fill(`${titelWebsiteVoorProcedureEngels} new`);
             await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor(2).fill(`${beschrijvingWebsiteVoorProcedure} new`);
-            await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor(2).fill(`${beschrijvingWebsiteVoorProcedureEngels} new`);
             await instantieDetailsPage.websiteURLVoorProcedureInput(2).fill(websiteURLVoorProcedureNew);
 
             await instantieDetailsPage.eigenschappenTab.click();
@@ -111,21 +107,15 @@ test.describe('Order instance from IPDC flow', () => {
             await homePage.resultTable.row(first_row).link('Bekijk').click();
 
             await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput(0)).toHaveValue(`${titelWebsiteVoorProcedure} 1`);
-            await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(0)).toHaveValue(`${titelWebsiteVoorProcedureEngels} 1`);
             expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly(0).textContent()).toContain(`${beschrijvingWebsiteVoorProcedure} 1`);
-            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly(0).textContent()).toContain(`${beschrijvingWebsiteVoorProcedureEngels} 1`);
             await expect(instantieDetailsPage.websiteURLVoorProcedureInput(0)).toHaveValue(websiteURLVoorProcedure1);
 
             await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput(1)).toHaveValue(`${titelWebsiteVoorProcedure} 3`);
-            await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(1)).toHaveValue(`${titelWebsiteVoorProcedureEngels} 3`);
             expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly(1).textContent()).toContain(`${beschrijvingWebsiteVoorProcedure} 3`);
-            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly(1).textContent()).toContain(`${beschrijvingWebsiteVoorProcedureEngels} 3`);
             await expect(instantieDetailsPage.websiteURLVoorProcedureInput(1)).toHaveValue(websiteURLVoorProcedure3);
 
             await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput(2)).toHaveValue(`${titelWebsiteVoorProcedure} new`);
-            await expect(instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(2)).toHaveValue(`${titelWebsiteVoorProcedureEngels} new`);
             expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly(2).textContent()).toContain(`${beschrijvingWebsiteVoorProcedure} new`);
-            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsReadonly(2).textContent()).toContain(`${beschrijvingWebsiteVoorProcedureEngels} new`);
             await expect(instantieDetailsPage.websiteURLVoorProcedureInput(2)).toHaveValue(websiteURLVoorProcedureNew);
 
             //check order in Ipdc
@@ -140,20 +130,20 @@ test.describe('Order instance from IPDC flow', () => {
                         {
                             nestedGroup: [
                                 {
-                                    titel: {nl: `${titelWebsiteVoorProcedure} 1`, en: `${titelWebsiteVoorProcedureEngels} 1`},
-                                    beschrijving: {nl: `${beschrijvingWebsiteVoorProcedure} 1`, en: `${beschrijvingWebsiteVoorProcedureEngels} 1`, notRich: true},
+                                    titel: {nl: `${titelWebsiteVoorProcedure} 1` },
+                                    beschrijving: {nl: `${beschrijvingWebsiteVoorProcedure} 1`, notRich: true},
                                     url: websiteURLVoorProcedure1,
                                     order: 0,
                                 },
                                 {
-                                    titel: {nl: `${titelWebsiteVoorProcedure} 3`, en: `${titelWebsiteVoorProcedureEngels} 3`},
-                                    beschrijving: {nl: `${beschrijvingWebsiteVoorProcedure} 3`, en: `${beschrijvingWebsiteVoorProcedureEngels} 3`, notRich: true},
+                                    titel: {nl: `${titelWebsiteVoorProcedure} 3` },
+                                    beschrijving: {nl: `${beschrijvingWebsiteVoorProcedure} 3`, notRich: true},
                                     url: websiteURLVoorProcedure3,
                                     order: 2,
                                 },
                                 {
-                                    titel: {nl: `${titelWebsiteVoorProcedure} new`, en: `${titelWebsiteVoorProcedureEngels} new`},
-                                    beschrijving: {nl: `${beschrijvingWebsiteVoorProcedure} new`, en: `${beschrijvingWebsiteVoorProcedureEngels} new`},
+                                    titel: {nl: `${titelWebsiteVoorProcedure} new` },
+                                    beschrijving: {nl: `${beschrijvingWebsiteVoorProcedure} new` },
                                     url: websiteURLVoorProcedureNew,
                                     order: 3,
                                 },
@@ -479,24 +469,16 @@ test.describe('Order instance from IPDC flow', () => {
             let order = i - 1;
 
             const titelVoorwaarde = await instantieDetailsPage.titelVoorwaardeInput(order).inputValue();
-            const titelVoorwaardeEngels = await instantieDetailsPage.titelVoorwaardeEngelsInput(order).inputValue();
             expect(titelVoorwaarde).toEqual(`Wat meebrengen - ${formalInformalChoiceSuffix} ${i}`);
-            expect(titelVoorwaardeEngels).toEqual(`Bring something ${i}`);
 
             const beschrijvingVoorwaarde = await instantieDetailsPage.beschrijvingVoorwaardeEditor(order).textContent();
-            const beschrijvingVoorwaardeEngels = await instantieDetailsPage.beschrijvingVoorwaardeEngelsEditor(order).textContent();
             expect(beschrijvingVoorwaarde).toEqual(`Wat meebrengen - ${formalInformalChoiceSuffix} ${i}`);
-            expect(beschrijvingVoorwaardeEngels).toEqual(`Bring something ${i}`);
 
             const titelBewijsstuk = await instantieDetailsPage.titelBewijsstukInput(order).inputValue();
-            const titelBewijsstukEngels = await instantieDetailsPage.titelBewijsstukEngelsInput(order).inputValue();
             expect(titelBewijsstuk).toEqual(`Bewijs om mee te brengen - ${formalInformalChoiceSuffix} ${i}`);
-            expect(titelBewijsstukEngels).toEqual(`Evidence to bring with you ${i}`);
 
             const beschrijvingBewijsstuk = await instantieDetailsPage.beschrijvingBewijsstukEditor(order).textContent();
-            const beschrijvingBewijsstukEngels = await instantieDetailsPage.beschrijvingBewijsstukEngelsEditor(order).textContent();
             expect(beschrijvingBewijsstuk).toEqual(`Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - ${formalInformalChoiceSuffix} ${i}`);
-            expect(beschrijvingBewijsstukEngels).toEqual(`An overview of the complete family income, an overview of savings, a copy of your identity card ${i}`);
         }
 
     }
@@ -504,26 +486,18 @@ test.describe('Order instance from IPDC flow', () => {
     async function procedureOrderCheck() {
 
         const titelProcedure = await instantieDetailsPage.titelProcedureInput().inputValue();
-        const titelProcedureEngels = await instantieDetailsPage.titelProcedureEngelsInput().inputValue();
         expect(titelProcedure).toEqual(`Procedure titel. - ${formalInformalChoiceSuffix}`);
-        expect(titelProcedureEngels).toEqual(`Procedure titel. - en`);
 
         const beschrijvingProcedure = await instantieDetailsPage.beschrijvingProcedureEditor().textContent();
-        const beschrijvingProcedureEngels = await instantieDetailsPage.beschrijvingProcedureEngelsEditor().textContent();
         expect(beschrijvingProcedure).toEqual(`Procedure beschrijving. - ${formalInformalChoiceSuffix}`);
-        expect(beschrijvingProcedureEngels).toEqual(`Procedure beschrijving. - en`);
 
         for (let i = 1; i < 4; i++) {
             let order = i - 1
             const titelWebsiteVoorProcedure = await instantieDetailsPage.titelWebsiteVoorProcedureInput(order).inputValue();
-            const titelWebsiteVoorProcedureEngels = await instantieDetailsPage.titelWebsiteVoorProcedureEngelsInput(order).inputValue();
             expect(titelWebsiteVoorProcedure).toEqual(`Procedure website naam - ${formalInformalChoiceSuffix} ${i}`);
-            expect(titelWebsiteVoorProcedureEngels).toEqual(`Procedure website naam - en ${i}`);
 
             const beschrijvingWebsiteVoorProcedure = await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor(order).textContent();
-            const beschrijvingWebsiteVoorProcedureEngels = await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEngelsEditor(order).textContent();
             expect(beschrijvingWebsiteVoorProcedure).toEqual(`procedure website beschrijving - ${formalInformalChoiceSuffix} ${i}`);
-            expect(beschrijvingWebsiteVoorProcedureEngels).toEqual(`procedure website beschrijving - en ${i}`);
 
             const websiteURLVoorProcedure = await instantieDetailsPage.websiteURLVoorProcedureInput(order).inputValue();
             expect(websiteURLVoorProcedure).toEqual(`https://procedure-website${i}.com`);
@@ -537,14 +511,10 @@ test.describe('Order instance from IPDC flow', () => {
             let order = i - 1
 
             const titelKost = await instantieDetailsPage.titelKostInput(order).inputValue();
-            const titelKostEngels = await instantieDetailsPage.titelKostEngelsInput(order).inputValue();
             expect(titelKost).toEqual(`Bedrag kost - ${formalInformalChoiceSuffix} ${i}`);
-            expect(titelKostEngels).toEqual(`Bedrag kost - en ${i}`);
 
             const beschrijvingKost = await instantieDetailsPage.beschrijvingKostEditor(order).textContent();
-            const beschrijvingKostEngels = await instantieDetailsPage.beschrijvingKostEngelsEditor(order).textContent();
             expect(beschrijvingKost).toEqual(`De aanvraag en het attest zijn gratis. - ${formalInformalChoiceSuffix} ${i}`);
-            expect(beschrijvingKostEngels).toEqual(`De aanvraag en het attest zijn gratis. - en ${i}`);
         }
 
     }
@@ -555,14 +525,10 @@ test.describe('Order instance from IPDC flow', () => {
             let order = i - 1
 
             const titelFinancieelVoordeel = await instantieDetailsPage.titelFinancieelVoordeelInput(order).inputValue();
-            const titelFinancieelVoordeelEngels = await instantieDetailsPage.titelFinancieelVoordeelEngelsInput(order).inputValue();
             expect(titelFinancieelVoordeel).toEqual(`Titel financieel voordeel. - ${formalInformalChoiceSuffix} ${i}`);
-            expect(titelFinancieelVoordeelEngels).toEqual(`Titel financieel voordeel. - en ${i}`);
 
             const beschrijvingFinancieelVoordeel = await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor(order).textContent();
-            const beschrijvingFinancieelVoordeelEngels = await instantieDetailsPage.beschrijvingFinancieelVoordeelEngelsEditor(order).textContent();
             expect(beschrijvingFinancieelVoordeel).toEqual(`Beschrijving financieel voordeel. - ${formalInformalChoiceSuffix} ${i}`);
-            expect(beschrijvingFinancieelVoordeelEngels).toEqual(`Beschrijving financieel voordeel. - en ${i}`);
         }
     }
 
@@ -572,14 +538,10 @@ test.describe('Order instance from IPDC flow', () => {
             let order = i - 1
 
             const titelWebsite = await instantieDetailsPage.titelWebsiteInput(order).inputValue();
-            const titelWebsiteEngels = await instantieDetailsPage.titelWebsiteEngelsInput(order).inputValue();
             expect(titelWebsite).toEqual(`Website Belgische nationaliteit en naturalisatie - ${formalInformalChoiceSuffix} ${i}`);
-            expect(titelWebsiteEngels).toEqual(`Website Belgische nationaliteit en naturalisatie - en ${i}`);
 
             const beschrijvingWebsite = await instantieDetailsPage.beschrijvingWebsiteEditor(order).textContent();
-            const beschrijvingWebsiteEngels = await instantieDetailsPage.beschrijvingWebsiteEngelsEditor(order).textContent();
             expect(beschrijvingWebsite).toEqual(`Website Belgische nationaliteit en naturalisatie beschrijving - ${formalInformalChoiceSuffix} ${i}`);
-            expect(beschrijvingWebsiteEngels).toEqual(`Website Belgische nationaliteit en naturalisatie beschrijving - en ${i}`);
 
             const websiteURL = await instantieDetailsPage.websiteURLInput(order).inputValue();
             expect(websiteURL).toEqual(`https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_${i}`);
@@ -593,14 +555,10 @@ test.describe('Order instance from IPDC flow', () => {
             let order = i - 1
 
             const titelRegelgevendeBron = await instantieDetailsPage.titelRegelgevendeBronInput(order).inputValue();
-            const titelRegelgevendeBronEngels = await instantieDetailsPage.titelRegelgevendeBronEngelsInput(order).inputValue();
             expect(titelRegelgevendeBron).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie - ${formalInformalChoiceSuffix} ${i}`);
-            expect(titelRegelgevendeBronEngels).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie - en ${i}`);
 
             const beschrijvingRegelgevendeBron = await instantieDetailsPage.beschrijvingRegelgevendeBronEditor(order).textContent();
-            const beschrijvingRegelgevendeBronEngels = await instantieDetailsPage.beschrijvingRegelgevendeBronEngelsEditor(order).textContent();
             expect(beschrijvingRegelgevendeBron).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - ${formalInformalChoiceSuffix} ${i}`);
-            expect(beschrijvingRegelgevendeBronEngels).toEqual(`Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en ${i}`);
 
             const RegelgevendeBronURL = await instantieDetailsPage.regelgevendeBronUrlInput(order).inputValue();
             expect(RegelgevendeBronURL).toEqual(`https://codex.be/regelgevende-bron-${i}`);

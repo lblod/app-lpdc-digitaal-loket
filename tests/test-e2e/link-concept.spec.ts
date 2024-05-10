@@ -60,7 +60,7 @@ test.describe('Link concept', () => {
 
         const titel = uuid();
         await instantieDetailsPage.titelInput.fill(titel);
-        await instantieDetailsPage.titelEngelsInput.click();
+        await instantieDetailsPage.titelInput.blur();
 
         await instantieDetailsPage.wijzigingenBewarenButton.click();
         await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
