@@ -272,3 +272,23 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
+  ldes-consumer-instancesnapshot-gent:
+    image: redpencil/ldes-consumer:feature-stability-improvements-r1.1
+    depends_on:
+      lpdc-management:
+        condition: service_healthy
+      migrations:
+        condition: service_healthy
+    environment:
+      LDES_STREAM: "<endpoint ldes stream>"
+      LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
+      LDES_LOGGING_LEVEL: "debug"
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent"
+      SAVE_ALL_VERSIONS_IGNORING_TIMESTAMP_DATA: "true"
+      REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
+      CRON_PATTERN: "*/15 * * * *" # run the job every 15 minutes
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
