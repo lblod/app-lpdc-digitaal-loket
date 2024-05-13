@@ -3,6 +3,8 @@ import SparqlClient from "sparql-client-2";
 // @ts-ignore
 import fs from "fs";
 
+//TODO LPDC-1166: remove
+
 async function executeQuery(query: any) {
     const sparqlClient = new SparqlClient(process.env.SPARQL_URL);
     const response = await sparqlClient.query(query).executeRaw();
