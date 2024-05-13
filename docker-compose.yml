@@ -205,7 +205,7 @@ services:
     logging: *default-logging
 
   ################################################################################
-  # LPDC-specific Service
+  # LPDC-specific Services
   ################################################################################
   lpdc-management:
     image: lblod/lpdc-management-service:0.39.0
