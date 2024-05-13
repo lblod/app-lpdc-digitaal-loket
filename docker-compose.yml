@@ -205,7 +205,7 @@ services:
     logging: *default-logging
 
   ################################################################################
-  # LPDC-specific Service
+  # LPDC-specific Services
   ################################################################################
   lpdc-management:
     image: lblod/lpdc-management-service:0.39.0
@@ -242,7 +242,7 @@ services:
       LOG_SPARQL_QUERIES: "false"
       LOG_SPARQL_UPDATES: "false"
       DEBUG_AUTH_HEADERS: "false"
-      CRON_PATTERN: "* * * * *" # every minute
+      CRON_PATTERN: "* 4-20 * * *" # every minute, from 4 -> 20 UTC
       # The next variables are environment-specific.
       # Best to override in docker-compose.override.yml
       IPDC_JSON_ENDPOINT: "<IPDC endpoint url>"
