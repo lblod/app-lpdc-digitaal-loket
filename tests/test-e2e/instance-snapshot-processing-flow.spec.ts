@@ -163,7 +163,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
-        await expect(instantieDetailsPage.titelHeading).toBeVisible();
+        await expect(instantieDetailsPage.basisinformatieHeading).toBeVisible();
 
         await expect(instantieDetailsPage.titelInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelInput).toHaveValue(title);
@@ -571,7 +571,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
-        await expect(instantieDetailsPage.titelHeading).toBeVisible();
+        await expect(instantieDetailsPage.basisinformatieHeading).toBeVisible();
 
         await expect(instantieDetailsPage.titelInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelInput).toHaveValue(title);

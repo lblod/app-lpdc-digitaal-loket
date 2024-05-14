@@ -540,7 +540,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
-        await expect(instantieDetailsPage.titelHeading).toBeVisible();
+        await expect(instantieDetailsPage.basisinformatieHeading).toBeVisible();
 
         await expect(instantieDetailsPage.titelInput).not.toBeEditable();
         await expect(instantieDetailsPage.titelInput).toHaveValue(newTitel);

@@ -13,7 +13,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly inhoudTab: Locator;
     readonly eigenschappenTab: Locator;
 
-    readonly titelHeading: Locator;
+    readonly basisinformatieHeading: Locator;
 
     readonly koppelConceptLink: Locator;
     readonly conceptLoskoppelenButton: Locator;
@@ -165,7 +165,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.inhoudTab = page.getByRole('link', {name: 'Inhoud', exact: true})
         this.eigenschappenTab = page.getByRole('link', {name: 'Eigenschappen', exact: true});
 
-        this.titelHeading = page.getByRole('heading', {name: 'Titel', exact: true});
+        this.basisinformatieHeading = page.getByRole('heading', {name: 'Basisinformatie', exact: true});
 
         this.koppelConceptLink = page.getByRole('link', {name: 'Koppelen'});
         this.gekoppeldConceptLink = page.locator('a:left-of(button:has-text("Loskoppelen"))').first();
@@ -239,8 +239,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.beschrijvingKostEditor = (order: number = 0) => this.editorBelow('Beschrijving kost').nth(order);
         this.beschrijvingKostReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving kost').nth(order);
 
-        this.voegFinancieelVoordeelToeButton = this.buttonFor('Voeg financieel voordeel toe', 'Financiële Voordelen');
-        this.verwijderFinancieelVoordeelButton = (order: number = 0) => this.buttonFor('Verwijder financieel voordeel','Financiële Voordelen').nth(order);
+        this.voegFinancieelVoordeelToeButton = this.buttonFor('Voeg financieel voordeel toe', 'Financiële voordelen');
+        this.verwijderFinancieelVoordeelButton = (order: number = 0) => this.buttonFor('Verwijder financieel voordeel','Financiële voordelen').nth(order);
         this.titelFinancieelVoordeelInput = (order: number = 0) => this.inputBelow('Titel financieel voordeel').nth(order);
         this.beschrijvingFinancieelVoordeelEditor = (order: number = 0) => this.editorBelow('Beschrijving financieel voordeel').nth(order);
         this.beschrijvingFinancieelVoordeelReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving financieel voordeel').nth(order);
