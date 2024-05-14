@@ -54,7 +54,7 @@ test.describe('Herziening nodig', () => {
     });
 
     test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({request}) => {
-        // maak instantie van concept 
+        // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
@@ -164,6 +164,54 @@ test.describe('Herziening nodig', () => {
             await toevoegenPage.searchConcept(archivedConcept.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText(archivedConcept.title);
         });
+    });
+
+    test('Updating concept snapshot after instance is created should display the changed fields', async ({request}) => {
+        // maak instantie van concept
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        const titel = await instantieDetailsPage.titelInput.inputValue();
+        let newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        // update concept snapshot
+        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        // instantie moet vlagje 'herziening nodig' hebben
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        // instantie moet alert 'herziening nodig' hebben
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+        await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('Het concept waarop dit product is gebaseerd, werd aangepast voor de volgende velden: basisinformatie');
+
     });
 
     test('Geen aanpassingen nodig, updates link to latest functional concept snapshot', async ({request}) => {
