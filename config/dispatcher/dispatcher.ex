@@ -69,8 +69,8 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/address/"
   end
 
-  get "/lpdc-management/concept-snapshot-compare/*path" do
-    forward conn, path, "http://lpdc-management/concept-snapshot-compare/"
+  get "/lpdc-management/concept-snapshot/*path" do
+    forward conn, path, "http://lpdc-management/concept-snapshot/"
   end
 
   match "/lpdc-management/public-services/*path" do
@@ -91,15 +91,15 @@ defmodule Dispatcher do
   get "/files/:id/download" do
     forward conn, [], "http://file/files/" <> id <> "/download"
   end
-  
+
   get "/files/*path" do
     forward conn, path, "http://resource/files/"
   end
-  
+
   patch "/files/*path" do
     forward conn, path, "http://resource/files/"
   end
-  
+
   post "/files/*path" do
     forward conn, path, "http://file/files/"
   end
