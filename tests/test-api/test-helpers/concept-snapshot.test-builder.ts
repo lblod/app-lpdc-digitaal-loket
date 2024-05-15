@@ -54,7 +54,7 @@ export class ConceptSnapshotTestBuilder {
     private generatedAtTime: Literal;
     private isArchived: Literal;
 
-    static aConceptSnapshot() {
+    static aConceptSnapshot():ConceptSnapshotTestBuilder {
         return new ConceptSnapshotTestBuilder()
             .withType()
             .withProductID('1000')

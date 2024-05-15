@@ -40,7 +40,7 @@ test.describe('confirm up to date till concept snapshot', () => {
                 cookie: loginResponse.cookie,
                 'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
-            data: {upToDateTillConceptSnapshot: snapshot2.getSubject().getValue()}
+            data: {upToDateTillConceptSnapshotId: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
@@ -75,7 +75,7 @@ test.describe('confirm up to date till concept snapshot', () => {
                 cookie: loginResponse.cookie,
                 'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
-            data: {upToDateTillConceptSnapshot: snapshot2.getSubject().getValue()}
+            data: {upToDateTillConceptSnapshotId: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
@@ -111,7 +111,7 @@ test.describe('confirm up to date till concept snapshot', () => {
                 cookie: loginResponse.cookie,
                 'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
-            data: {upToDateTillConceptSnapshot: snapshot2.getSubject().getValue()}
+            data: {upToDateTillConceptSnapshotId: snapshot2.getSubject().getValue()}
         });
         expect(response.ok(), `${await response.text()}`).toBeTruthy();
 
@@ -144,7 +144,7 @@ test.describe('confirm up to date till concept snapshot', () => {
                 cookie: undefined,
                 'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
-            data: {upToDateTillConceptSnapshot: snapshot2.getSubject().getValue()}
+            data: {upToDateTillConceptSnapshotId: snapshot2.getSubject().getValue()}
         });
         expect(response.status()).toEqual(401);
 
@@ -177,7 +177,7 @@ test.describe('confirm up to date till concept snapshot', () => {
                 cookie: loginResponse.cookie,
                 'instance-version': instance.findObject(Predicates.dateModified).getValue()
             },
-            data: {upToDateTillConceptSnapshot: snapshot2.getSubject().getValue()}
+            data: {upToDateTillConceptSnapshotId: snapshot2.getSubject().getValue()}
         });
         expect(response.status()).toEqual(403);
 
