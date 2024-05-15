@@ -1,5 +1,23 @@
 import {v4 as uuid} from 'uuid';
 
+const kost = {
+    "kosten": [
+        {
+            "beschrijving": {
+                "nl": "Kost beschrijving",
+                "nl-BE-x-generated-formal": "Kost beschrijving",
+                "nl-BE-x-generated-informal": "Kost beschrijving"
+            },
+            "naam": {
+                "nl": "Kost",
+                "nl-BE-x-generated-formal": "Kost",
+                "nl-BE-x-generated-informal": "Kost"
+            },
+            "@type": "kost",
+            "order": 0.0
+        }
+    ]
+}
 export const conceptCreate = (conceptId) => {
     const id = uuid();
     return {
@@ -26,9 +44,10 @@ export const conceptCreate = (conceptId) => {
     };
 };
 
-export const conceptUpdate = (conceptId, withRandomTitle) => {
+export const conceptUpdate = (conceptId, withRandomTitle, withAdditionalCost) => {
     const id = uuid();
     const titel = withRandomTitle? uuid(): '';
+
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
@@ -43,6 +62,7 @@ export const conceptUpdate = (conceptId, withRandomTitle) => {
             "nl-BE-x-generated-formal": "<p>Concept</p>",
             "nl-BE-x-generated-informal": "<p>Concept</p>"
         },
+        ...(withAdditionalCost ? kost : {}),
         "creatie": "2023-10-10T15:25:09.822193785Z",
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
@@ -53,7 +73,7 @@ export const conceptUpdate = (conceptId, withRandomTitle) => {
     };
 };
 
-export const conceptArchive = (conceptId) => {
+export const conceptArchive = (conceptId, withAdditionalCost) => {
     const id = uuid();
     return {
         "id": id,
@@ -69,6 +89,7 @@ export const conceptArchive = (conceptId) => {
             "nl-BE-x-generated-formal": "<p>Concept</p>",
             "nl-BE-x-generated-informal": "<p>Concept</p>"
         },
+        ...(withAdditionalCost ? kost : {}),
         "creatie": "2023-10-10T15:25:09.822193785Z",
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
