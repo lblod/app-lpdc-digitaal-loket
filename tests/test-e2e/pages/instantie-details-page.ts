@@ -34,6 +34,7 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly herzieningNodigAlert: Alert;
     readonly herzieningNodigAlertConceptBekijken: Locator;
+    readonly herzieningNodigAlertConceptOvernemen: Locator;
     readonly herzieningNodigAlertGeenAanpassigenNodig: Locator;
 
     readonly conceptGearchiveerdAlert: Alert;
@@ -178,6 +179,7 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.herzieningNodigAlert = new Alert(page, 'Herziening nodig');
         this.herzieningNodigAlertConceptBekijken = this.herzieningNodigAlert.link('Concept bekijken');
+        this.herzieningNodigAlertConceptOvernemen = this.herzieningNodigAlert.button('Concept volledig overnemen');
         this.herzieningNodigAlertGeenAanpassigenNodig = this.herzieningNodigAlert.button('Geen aanpassingen nodig');
 
         this.conceptGearchiveerdAlert = new Alert(page, 'Concept gearchiveerd');
