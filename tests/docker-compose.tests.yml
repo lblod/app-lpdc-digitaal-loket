@@ -152,7 +152,7 @@ services:
       LDES_ENDPOINT_VIEW: "http://instancesnapshot-ldes-stub/doc/instancesnapshot?pageNumber=0" # first page of the stream
       LDES_ENDPOINT_HEADER_XAPIKEY: "X-API-KEY;<your endpoint api key value here>"
       LDES_LOGGING_LEVEL: "debug"
-      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/example"
       SAVE_ALL_VERSIONS_IGNORING_TIMESTAMP_DATA: "true"
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
