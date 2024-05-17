@@ -48,8 +48,11 @@ test.describe('fully take concept snapshot over',()=> {
         await uJeModal.expectToBeVisible();
         await uJeModal.laterKiezenButton.click();
         await uJeModal.expectToBeClosed();
-    })
+    });
 
+    test.afterEach(async () => {
+        await page.close();
+    });
 
     test('given updated title and cost in concept snapshot after instance is created then fields gets overriden', async ({request}) => {
         await homePage.productOfDienstToevoegenButton.click();
@@ -98,7 +101,7 @@ test.describe('fully take concept snapshot over',()=> {
 
         await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
         await conceptOvernemenModal.expectToBeVisible();
-        await conceptOvernemenModal.volledigOvernemen.click()
+        await conceptOvernemenModal.wijzigingenOvernemen.click()
         await conceptOvernemenModal.expectToBeClosed()
 
         const titelKost = await instantieDetailsPage.titelKostInput().inputValue();
@@ -169,7 +172,7 @@ test.describe('fully take concept snapshot over',()=> {
 
         await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
         await conceptOvernemenModal.expectToBeVisible();
-        await conceptOvernemenModal.volledigOvernemen.click()
+        await conceptOvernemenModal.wijzigingenOvernemen.click()
         await conceptOvernemenModal.expectToBeClosed()
         await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
         await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible()
