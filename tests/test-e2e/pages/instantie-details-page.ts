@@ -179,7 +179,7 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.herzieningNodigAlert = new Alert(page, 'In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast:');
         this.herzieningNodigAlertConceptBekijken = this.herzieningNodigAlert.link('Concept bekijken');
-        this.herzieningNodigAlertConceptOvernemen = this.herzieningNodigAlert.button('Concept volledig overnemen');
+        this.herzieningNodigAlertConceptOvernemen = this.herzieningNodigAlert.button('Wijzigingen overnemen');
         this.herzieningNodigAlertGeenAanpassigenNodig = this.herzieningNodigAlert.button('Geen aanpassingen nodig');
 
         this.conceptGearchiveerdAlert = new Alert(page, 'Het concept waarop dit product is gebaseerd, werd gearchiveerd.');

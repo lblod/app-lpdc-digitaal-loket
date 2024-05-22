@@ -101,7 +101,7 @@ test.describe('fully take concept snapshot over',()=> {
 
         await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
         await conceptOvernemenModal.expectToBeVisible();
-        await conceptOvernemenModal.wijzigingenOvernemen.click()
+        await conceptOvernemenModal.conceptVolledigOvernemen.click()
         await conceptOvernemenModal.expectToBeClosed()
 
         const titelKost = await instantieDetailsPage.titelKostInput().inputValue();
@@ -172,7 +172,7 @@ test.describe('fully take concept snapshot over',()=> {
 
         await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
         await conceptOvernemenModal.expectToBeVisible();
-        await conceptOvernemenModal.wijzigingenOvernemen.click()
+        await conceptOvernemenModal.conceptVolledigOvernemen.click()
         await conceptOvernemenModal.expectToBeClosed()
         await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
         await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible()
