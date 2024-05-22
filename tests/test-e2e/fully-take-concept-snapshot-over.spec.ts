@@ -97,7 +97,7 @@ test.describe('fully take concept snapshot over',()=> {
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
-        await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('Het concept waarop dit product is gebaseerd, werd aangepast voor de volgende velden: basisinformatie, kosten');
+        await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, kosten');
 
         await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
         await conceptOvernemenModal.expectToBeVisible();
@@ -168,7 +168,7 @@ test.describe('fully take concept snapshot over',()=> {
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
-        await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('Het concept waarop dit product is gebaseerd, werd aangepast voor de volgende velden: basisinformatie, kosten');
+        await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, kosten');
 
         await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
         await conceptOvernemenModal.expectToBeVisible();

@@ -177,7 +177,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.instantieLoskoppelenAlert = new Alert(page, 'Instantie loskoppelen van het concept');
         this.instantieLoskoppelenAlertLoskoppelenButton = this.instantieLoskoppelenAlert.button('Loskoppelen');
 
-        this.herzieningNodigAlert = new Alert(page, 'Het concept waarop dit product is gebaseerd, werd aangepast voor de volgende velden');
+        this.herzieningNodigAlert = new Alert(page, 'In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast:');
         this.herzieningNodigAlertConceptBekijken = this.herzieningNodigAlert.link('Concept bekijken');
         this.herzieningNodigAlertConceptOvernemen = this.herzieningNodigAlert.button('Concept volledig overnemen');
         this.herzieningNodigAlertGeenAanpassigenNodig = this.herzieningNodigAlert.button('Geen aanpassingen nodig');

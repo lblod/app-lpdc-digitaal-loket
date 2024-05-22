@@ -28,6 +28,6 @@ export class Alert {
     }
 
     getMessage(){
-        return this.alert.locator('.au-c-alert__message p')
+        return this.alert.locator('.au-c-alert__message')
     }
 }
