@@ -51,7 +51,7 @@ ext:generalPg a form:PropertyGroup;
       sh:name "Product of dienst geldig vanaf" ;
       sh:order 2 ;
       sh:path schema:startDate ;
-      form:displayType displayTypes:dateTime ;
+      form:displayType displayTypes:lpdcDateTime ;
       sh:group ext:generalPg .
 
    ##########################################################
@@ -61,7 +61,7 @@ ext:generalPg a form:PropertyGroup;
       sh:name "Product of dienst geldig tot" ;
       sh:order 3 ;
       sh:path schema:endDate ;
-      form:displayType displayTypes:dateTime ;
+      form:displayType displayTypes:lpdcDateTime ;
       sh:group ext:generalPg .
 
   ##########################################################
