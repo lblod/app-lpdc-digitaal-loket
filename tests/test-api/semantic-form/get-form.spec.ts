@@ -8,6 +8,8 @@ import {Language} from "../test-helpers/language";
 import {TripleArray, Uri} from "../test-helpers/triple-array";
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {TestDataFactory} from "../test-helpers/test-data-factory";
+import {ConceptSnapshotTestBuilder} from "../test-helpers/concept-snapshot.test-builder";
+import {ReviewStatus} from "../test-helpers/codelists";
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
@@ -109,6 +111,45 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
         const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
         expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
+    });
+
+    test('Can get content form for public service and have concept snapshots included when in review', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const concept = await ConceptTestBuilder.aConcept()
+            .buildAndPersist(request);
+
+        const conceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .withIsVersionOf(concept.getId())
+            .buildAndPersist(request);
+
+        const latestConceptSnapshot = await ConceptSnapshotTestBuilder.aConceptSnapshot()
+            .withIsVersionOf(concept.getId())
+            .buildAndPersist(request);
+
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withDutchLanguageVariant(Language.INFORMAL)
+            .withNoPublicationMedium()
+            .withLinkedConcept(concept.getId())
+            .withVersionedSource(conceptSnapshot.getId())
+            .withProductId('123')
+            .withReviewStatus(ReviewStatus.conceptUpdated)
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud?latestConceptSnapshotId=${encodeURIComponent(latestConceptSnapshot.getId().getValue())}`,
+            {
+                headers: {cookie: loginResponse.cookie}
+            }
+        );
+        expect(response.ok()).toBeTruthy();
+
+        const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
+        const responseBody = await response.json();
+        expect(responseBody.form).toStrictEqual(expectedForm);
+        expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
+        const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
+        expect(responseBody.meta).toContain(`<${conceptSnapshot.getId().getValue()}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>`);
+        expect(responseBody.meta).toContain(`<${latestConceptSnapshot.getId().getValue()}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>`);
     });
 
     test('Can get characteristics form for public service', async ({request}) => {
