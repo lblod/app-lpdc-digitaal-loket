@@ -61,7 +61,7 @@ ext:basisinformatiePg a form:PropertyGroup;
         sh:resultMessage "Dit veld is verplicht." ;
         sh:path dct:title
       ];
-      form:displayType displayTypes:defaultInput;
+      form:displayType displayTypes:lpdcInput;
       sh:group ext:basisinformatiePg .
 
   ##########################################################
@@ -172,7 +172,7 @@ ext:requirementsPg a form:PropertyGroup;
           sh:path dct:title
         ];
         sh:path dct:title ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:lpdcInput ;
         sh:group ext:requirementsPg-sub .
 
     ##########################################################
@@ -260,7 +260,7 @@ ext:requirementsPg a form:PropertyGroup;
                 sh:path dct:title
               ];
               sh:path dct:title ;
-              form:displayType displayTypes:defaultInput ;
+              form:displayType displayTypes:lpdcInput ;
               sh:group ext:evidencesPg-sub .
 
           ##########################################################
@@ -349,7 +349,7 @@ ext:rulesPg a form:PropertyGroup;
           sh:path dct:title
         ];
         sh:path dct:title ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:lpdcInput ;
         sh:group ext:rulesPg-sub .
 
     ##########################################################
@@ -438,7 +438,7 @@ ext:rulesPg a form:PropertyGroup;
                 sh:path dct:title
               ];
               sh:path dct:title ;
-              form:displayType displayTypes:defaultInput ;
+              form:displayType displayTypes:lpdcInput ;
               sh:group ext:procedureWebsitesPg-sub .
 
           ##########################################################
@@ -471,7 +471,7 @@ ext:rulesPg a form:PropertyGroup;
                 sh:path schema:url
               ];
               sh:path schema:url ;
-              form:displayType displayTypes:defaultInput ;
+              form:displayType displayTypes:lpdcInput ;
               sh:group ext:procedureWebsitesPg-sub .
 
 ##########################################################
@@ -540,7 +540,7 @@ ext:costPg a form:PropertyGroup;
         ];
         sh:order 1 ;
         sh:path dct:title ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:lpdcInput ;
         sh:group ext:costsPg-sub .
 
     ##########################################################
@@ -627,7 +627,7 @@ ext:finAdvPg a form:PropertyGroup;
         ];
         sh:order 1 ;
         sh:path dct:title ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:lpdcInput ;
         sh:group ext:finAdvPg-sub .
 
     ##########################################################
@@ -730,7 +730,7 @@ ext:regulationsPg a form:PropertyGroup;
         sh:order 1 ;
         form:language "nl-be-x-generated-formal";
         sh:path dct:title ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:lpdcInput ;
         sh:group ext:legalResourcePg-sub .
 
     ##########################################################
@@ -763,7 +763,7 @@ ext:regulationsPg a form:PropertyGroup;
          sh:resultMessage "Dit veld is verplicht." ;
          sh:path schema:url
        ];
-       form:displayType displayTypes:defaultInput ;
+       form:displayType displayTypes:lpdcInput ;
        sh:group ext:legalResourcePg-sub .
 
 ##########################################################
@@ -1009,7 +1009,7 @@ ext:websitesPg a form:PropertyGroup;
           sh:path dct:title
         ];
         sh:path dct:title ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:lpdcInput ;
         sh:group ext:websitesPg-sub .
 
     ##########################################################
@@ -1042,5 +1042,5 @@ ext:websitesPg a form:PropertyGroup;
           sh:path schema:url
         ];
         sh:path schema:url ;
-        form:displayType displayTypes:defaultInput ;
+        form:displayType displayTypes:lpdcInput ;
         sh:group ext:websitesPg-sub .
