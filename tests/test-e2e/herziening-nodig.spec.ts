@@ -211,8 +211,8 @@ test.describe('Herziening nodig', () => {
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
         await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie.');
-
     });
+
     test('Updating cost in concept snapshot after instance is created should display cost as changed field', async ({ request }) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
@@ -257,7 +257,7 @@ test.describe('Herziening nodig', () => {
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
-        await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info.');
+        await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen).');
 
     });
 

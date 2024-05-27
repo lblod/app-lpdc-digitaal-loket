@@ -112,13 +112,14 @@ app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
             update: conceptUpdate(conceptId, req.query.withRandomNewData === 'true'),
             archive: conceptArchive(conceptId, req.query.withRandomNewData ==='true')
         }
-        const conceptToAdd = concepts[req.params.conceptStatus];
-        if (conceptToAdd) {
-            extraConceptsnapshots.push(conceptToAdd);
+        const concept = concepts[req.params.conceptStatus];
+        if (concept) {
+            extraConceptsnapshots.push(concept);
             return res.status(200).json({
-                id: conceptToAdd.id,
-                productId: conceptToAdd.productnummer,
-                title: conceptToAdd?.naam?.nl
+                id: concept.id,
+                productId: concept.productnummer,
+                title: concept?.naam?.nl,
+                jsonlddata: concept,
             });
         } else {
             return res.sendStatus(400);

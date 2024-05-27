@@ -1,5 +1,11 @@
 import { v4 as uuid } from 'uuid';
 
+const productTypes = ['FinancieleVerplichting', 'Toelating', 'Bewijs', 'Voorwerp', 'AdviesBegeleiding', 'InfrastructuurMateriaal', 'FinancieelVoordeel'];
+
+const doelgroepen = ['Burger', 'Onderneming', 'Organisatie', 'VlaamseOverheid', 'LokaalBestuur', 'Vereniging'];
+
+const themas = ['BurgerOverheid', 'CultuurSportVrijeTijd', 'EconomieWerk', 'MilieuEnergie', 'MobiliteitOpenbareWerken', 'OnderwijsWetenschap', 'WelzijnGezondheid', 'BouwenWonen'];
+
 const voorwaarden = (randomStr) => {
     return {
         "voorwaarden": [
@@ -154,11 +160,11 @@ const meerInfo = (randomStr) => {
                     "nl-BE-x-generated-formal": `Website beschrijving - generated-formal${randomStr}`,
                     "nl-BE-x-generated-informal": `Website beschrijving - generated-informal${randomStr}`,
                 },
-              "url": `https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit${randomStr.replace(/\s+/g, '')}`,
-              "@type": "website",
-              "order": 0.0
+                "url": `https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit${randomStr.replace(/\s+/g, '')}`,
+                "@type": "website",
+                "order": 0.0
             }
-          ],        
+        ],
     }
 };
 
@@ -170,7 +176,6 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
-        "snapshotType": "Create",
         "naam": {
             "nl": `Concept created${randomData}`,
             "nl-BE-x-generated-formal": `Concept created - generated-formal${randomData}`,
@@ -198,6 +203,14 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
         ...(withRandomNewData ? financieleVoordelen(randomData) : {}),
         ...(withRandomNewData ? regelgeving(randomData) : {}),
         ...(withRandomNewData ? meerInfo(randomData) : {}),
+        ...(withRandomNewData ?
+            {
+                "startDienstVerlening": getRandomFutureDate().toISOString(),
+                "eindeDienstVerlening": getRandomFutureDate().toISOString(),
+                "type": getRandomElement(productTypes),
+                "doelgroepen": [getRandomElement(doelgroepen), getRandomElement(doelgroepen), getRandomElement(doelgroepen)],
+                "themas": [getRandomElement(themas), getRandomElement(themas), getRandomElement(themas)]
+            } : {}),
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
         "gearchiveerd": false,
@@ -215,7 +228,6 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
-        "snapshotType": "Update",
         "naam": {
             "nl": `Concept updated${randomData}`,
             "nl-BE-x-generated-formal": `Concept updated${randomData}`,
@@ -242,6 +254,14 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
         ...(withRandomNewData ? financieleVoordelen(randomData) : {}),
         ...(withRandomNewData ? regelgeving(randomData) : {}),
         ...(withRandomNewData ? meerInfo(randomData) : {}),
+        ...(withRandomNewData ?
+            {
+                "startDienstVerlening": getRandomFutureDate().toISOString(),
+                "eindeDienstVerlening": getRandomFutureDate().toISOString(),
+                "type": getRandomElement(productTypes),
+                "doelgroepen": [getRandomElement(doelgroepen), getRandomElement(doelgroepen), getRandomElement(doelgroepen)],
+                "themas": [getRandomElement(themas), getRandomElement(themas), getRandomElement(themas)]
+            } : {}),
         "creatie": "2023-10-10T15:25:09.822193785Z",
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
@@ -258,7 +278,6 @@ export const conceptArchive = (conceptId, withRandomNewData) => {
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
-        "snapshotType": "Delete",
         "naam": {
             "nl": `Concept archived${randomData}`,
             "nl-BE-x-generated-formal": `Concept archived${randomData}`,
@@ -278,3 +297,17 @@ export const conceptArchive = (conceptId, withRandomNewData) => {
         "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
     }
 };
+
+function getRandomFutureDate() {
+    const today = new Date();
+    const futureDate = new Date();
+    const daysToAdd = Math.floor(Math.random() * 365) + 1; // Generate a number between 1 and 365
+    futureDate.setDate(today.getDate() + daysToAdd);
+    return futureDate;
+}
+
+function getRandomElement(array) {
+    return array[Math.floor(Math.random() * array.length)];
+}
+
+
