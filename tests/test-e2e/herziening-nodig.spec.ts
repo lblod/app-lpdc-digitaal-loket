@@ -1,18 +1,18 @@
-import {APIRequestContext, expect, Page, test} from "@playwright/test";
-import {v4 as uuid} from 'uuid';
-import {MockLoginPage} from "./pages/mock-login-page";
-import {LpdcHomePage} from "./pages/lpdc-home-page";
-import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from "./pages/product-of-dienst-toevoegen-page";
-import {InstantieDetailsPage} from "./pages/instantie-details-page";
-import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
-import {UJeModal} from "./modals/u-je-modal";
-import {first_row} from "./components/table";
-import {ConceptDetailsPage} from "./pages/concept-details-page";
-import {IpdcStub} from "./components/ipdc-stub";
-import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
-import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
+import { APIRequestContext, expect, Page, test } from "@playwright/test";
+import { v4 as uuid } from 'uuid';
+import { MockLoginPage } from "./pages/mock-login-page";
+import { LpdcHomePage } from "./pages/lpdc-home-page";
+import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from "./pages/product-of-dienst-toevoegen-page";
+import { InstantieDetailsPage } from "./pages/instantie-details-page";
+import { WijzigingenBewarenModal } from "./modals/wijzigingen-bewaren-modal";
+import { UJeModal } from "./modals/u-je-modal";
+import { first_row } from "./components/table";
+import { ConceptDetailsPage } from "./pages/concept-details-page";
+import { IpdcStub } from "./components/ipdc-stub";
+import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
+import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-verwerkt-modal";
 
-test.describe.configure({ mode: 'serial'});
+test.describe.configure({ mode: 'serial' });
 test.describe('Herziening nodig', () => {
 
     let page: Page;
@@ -25,7 +25,7 @@ test.describe('Herziening nodig', () => {
     let bevestigHerzieningVerwerktModal: BevestigHerzieningVerwerktModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
 
-    test.beforeEach(async ({browser}) => {
+    test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
         mockLoginPage = MockLoginPage.createForLpdc(page);
         homePage = LpdcHomePage.create(page);
@@ -53,7 +53,7 @@ test.describe('Herziening nodig', () => {
         await page.close();
     });
 
-    test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({request}) => {
+    test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({ request }) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -166,7 +166,7 @@ test.describe('Herziening nodig', () => {
         });
     });
 
-    test('Updating concept snapshot after instance is created should display the changed fields', async ({request}) => {
+    test('Updating concept snapshot after instance is created should display the changed fields', async ({ request }) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -213,7 +213,7 @@ test.describe('Herziening nodig', () => {
         await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie.');
 
     });
-    test('Updating cost in concept snapshot after instance is created should display cost as changed field', async ({request}) => {
+    test('Updating cost in concept snapshot after instance is created should display cost as changed field', async ({ request }) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -244,7 +244,7 @@ test.describe('Herziening nodig', () => {
         await wijzigingenBewarenModal.expectToBeClosed();
 
         // update concept snapshot
-        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId,false,true);
+        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
 
         // instantie moet vlagje 'herziening nodig' hebben
         await homePage.goto();
@@ -261,7 +261,7 @@ test.describe('Herziening nodig', () => {
 
     });
 
-    test('Geen aanpassingen nodig, updates link to latest functional concept snapshot', async ({request}) => {
+    test('Geen aanpassingen nodig, updates link to latest functional concept snapshot', async ({ request }) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -317,7 +317,7 @@ test.describe('Herziening nodig', () => {
 
         // instance should be linked to latest functional changed concept snapshot
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({
-            title: `Concept created ${conceptId}`,
+            title: `Concept created - ${conceptId}`,
             expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
         });
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
@@ -327,7 +327,7 @@ test.describe('Herziening nodig', () => {
 
     });
 
-    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when saving form', async ({request}) => {
+    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when saving form', async ({ request }) => {
         //create instance with herziening nodig label
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -379,7 +379,7 @@ test.describe('Herziening nodig', () => {
         await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
     });
 
-    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when navigating away with changes', async ({request}) => {
+    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when navigating away with changes', async ({ request }) => {
         //create instance with herziening nodig label
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -434,7 +434,7 @@ test.describe('Herziening nodig', () => {
         await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
     });
 
-    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when verzend naar overheid', async ({request}) => {
+    test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when verzend naar overheid', async ({ request }) => {
         //create instance with herziening nodig label
         await homePage.productOfDienstToevoegenButton.click();
 

@@ -109,8 +109,8 @@ app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
         const conceptId = req.params.conceptId;
         const concepts = {
             create: conceptCreate(conceptId),
-            update: conceptUpdate(conceptId, req.query.withRandomTitle === 'true', req.query.withAdditionalCost ==='true'),
-            archive: conceptArchive(conceptId, req.query.withAdditionalCost ==='true')
+            update: conceptUpdate(conceptId, req.query.withRandomNewData === 'true'),
+            archive: conceptArchive(conceptId, req.query.withRandomNewData ==='true')
         }
         const conceptToAdd = concepts[req.params.conceptStatus];
         if (conceptToAdd) {

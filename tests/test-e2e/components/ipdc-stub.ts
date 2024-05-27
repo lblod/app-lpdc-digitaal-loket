@@ -82,18 +82,18 @@ export class IpdcStub {
         return snapshot
     }
 
-    static async createSnapshotOfTypeUpdate(conceptId: string, withRandomTitle: boolean = false, withAdditionalCost: boolean = false): Promise<Snapshot> {
+    static async createSnapshotOfTypeUpdate(conceptId: string, withRandomNewData: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomTitle: withRandomTitle, withAdditionalCost: withAdditionalCost} });
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomNewData: withRandomNewData} });
         const snapshot: Snapshot = await response.json();
         await processSnapshot(apiRequest, conceptId, snapshot.id);
 
         return snapshot;
     }
 
-    static async createSnapshotOfTypeArchive(conceptId: string, withAdditionalCost: boolean = false): Promise<Snapshot> {
+    static async createSnapshotOfTypeArchive(conceptId: string, withRandomNewData: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`,{ params: { withAdditionalCost: withAdditionalCost} });
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`,{ params: { withRandomNewData: withRandomNewData} });
         const snapshot: Snapshot = await response.json();
         await processSnapshot(apiRequest, conceptId, snapshot.id);
 

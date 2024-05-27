@@ -135,10 +135,10 @@ test.describe('Link concept', () => {
         });
 
         await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Nieuw');
-        await toevoegenPage.resultTable.row(first_row).link(`Concept created ${conceptId}`).click();
+        await toevoegenPage.resultTable.row(first_row).link(`Concept created - ${conceptId}`).click();
 
         await conceptDetailsPage.expectToBeVisible();
-        await expect(conceptDetailsPage.heading).toHaveText(`Concept: Concept created ${conceptId}`);
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: Concept created - ${conceptId}`);
 
         await conceptDetailsPage.nieuwConceptAlert.expectToBeVisible();
         await conceptDetailsPage.nieuwConceptAlertBerichtNietMeerTonenButton.click();
