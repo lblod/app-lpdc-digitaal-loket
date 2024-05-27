@@ -73,18 +73,18 @@ export class IpdcStub {
         return object[0];
     }
 
-    static async createSnapshotOfTypeCreate(conceptId: string): Promise<Snapshot> {
+    static async createSnapshotOfTypeCreate(conceptId: string, withRandomNewData: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/create`);
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/create`, { params: { withRandomNewData: withRandomNewData } });
         const snapshot: Snapshot = await response.json();
         await processSnapshot(apiRequest, conceptId, snapshot.id);
 
-        return snapshot
+        return snapshot;
     }
 
     static async createSnapshotOfTypeUpdate(conceptId: string, withRandomNewData: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomNewData: withRandomNewData} });
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomNewData: withRandomNewData } });
         const snapshot: Snapshot = await response.json();
         await processSnapshot(apiRequest, conceptId, snapshot.id);
 
@@ -93,7 +93,7 @@ export class IpdcStub {
 
     static async createSnapshotOfTypeArchive(conceptId: string, withRandomNewData: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`,{ params: { withRandomNewData: withRandomNewData} });
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`, { params: { withRandomNewData: withRandomNewData } });
         const snapshot: Snapshot = await response.json();
         await processSnapshot(apiRequest, conceptId, snapshot.id);
 
@@ -101,7 +101,7 @@ export class IpdcStub {
     }
 
     static async publishShouldFail(instanceIri: string | undefined, statusCode: number, errorMessage: any) {
-        if(!instanceIri) {
+        if (!instanceIri) {
             throw Error('Can not publish should fail if no instanceIri provided');
         }
         const apiRequest = await request.newContext();
@@ -118,7 +118,7 @@ export class IpdcStub {
     }
 
     static async publishShouldNotFail(instanceIri: string | undefined) {
-        if(!instanceIri) {
+        if (!instanceIri) {
             console.log(`Can not publish should not fail if no instanceIri provided, ignoring`);
             return;
         }
