@@ -128,7 +128,7 @@ services:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
       SAVE_ALL_VERSIONS_IGNORING_TIMESTAMP_DATA: "true"
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
-      CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
+      CRON_PATTERN: "* * * * * *" # run the job every second
     restart: always
 
   ipdc-stub:

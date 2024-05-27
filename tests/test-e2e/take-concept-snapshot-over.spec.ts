@@ -171,8 +171,8 @@ test.describe('take concept snapshot over', () => {
 
             await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
             await conceptOvernemenModal.expectToBeVisible();
-            await conceptOvernemenModal.conceptVolledigOvernemen.click()
-            await conceptOvernemenModal.expectToBeClosed()
+            await conceptOvernemenModal.conceptVolledigOvernemen.click();
+            await conceptOvernemenModal.expectToBeClosed();
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible()
         });
@@ -181,12 +181,16 @@ test.describe('take concept snapshot over', () => {
 
     test.describe('Take concept snapshot over field by field', () => {
 
-        test('given fields updated in concept snapshot can field by field update them', async ({ request }) => {
+        const conceptId = uuid();
+        let createSnapshot;
+        let updateSnapshot;
+
+        test.beforeEach(async ({ request }) => {
             await homePage.productOfDienstToevoegenButton.click();
 
             await toevoegenPage.expectToBeVisible();
-            const conceptId = uuid();
-            const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId, true);
+
+            createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId, true);
             await toevoegenPage.reloadUntil(async () => {
                 await toevoegenPage.searchConcept(createSnapshot.title);
                 await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
@@ -204,12 +208,12 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
             // update concept snapshot
-            const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
+            updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
 
             // instantie moet vlagje 'herziening nodig' hebben
             await homePage.goto();
-            await homePage.searchInput.fill(createSnapshot.title);
             await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
@@ -218,7 +222,51 @@ test.describe('take concept snapshot over', () => {
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
+        });
 
+        test('when taking over wijzigingen per veld on a verstuurde instance, first it is reopened', async () => {
+            await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.nee.click();
+
+            await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+            await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bekijk').click();
+
+            await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
+            await conceptOvernemenModal.expectToBeVisible();
+            await conceptOvernemenModal.perVeldBekijken.click();
+            await conceptOvernemenModal.expectToBeClosed();
+
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
+            await expect(instantieDetailsPage.productOpnieuwBewerkenButton).not.toBeVisible();
+
+        });
+
+        test('when taking over wijzigingen per veld on an instance in ontwerp, it remains in ontwerp', async () => {
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+
+            await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
+            await conceptOvernemenModal.expectToBeVisible();
+            await conceptOvernemenModal.perVeldBekijken.click();
+            await conceptOvernemenModal.expectToBeClosed();
+
+            await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
+            await expect(instantieDetailsPage.productOpnieuwBewerkenButton).not.toBeVisible();
+        });
+
+        test('given fields updated in concept snapshot can field by field update them', async ({ request }) => {
+            //TODO LPDC-1171: implement updating all fields
 
         });
 
