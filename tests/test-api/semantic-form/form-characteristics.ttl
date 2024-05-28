@@ -163,7 +163,7 @@ ext:authorityPg a form:PropertyGroup;
                        "conceptScheme":"https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties/tailored"
                      }
                     """ ;
-      form:displayType displayTypes:conceptSchemeMultiSelector ;
+      form:displayType displayTypes:lpdcConceptSchemeMultiSelector ;
       form:validations [
           a form:RequiredConstraint ;
           form:grouping form:Bag ;
@@ -202,7 +202,7 @@ ext:authorityPg a form:PropertyGroup;
                        "conceptScheme":"https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties/tailored"
                      }
                     """ ;
-      form:displayType displayTypes:conceptSchemeMultiSelector ;
+      form:displayType displayTypes:lpdcConceptSchemeMultiSelector ;
       sh:group ext:authorityPg .
 
   ##########################################################
