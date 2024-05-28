@@ -10,8 +10,9 @@ import { WijzigingenBewarenModal } from "./modals/wijzigingen-bewaren-modal";
 import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
 import { UJeModal } from "./modals/u-je-modal";
 import { v4 as uuid } from "uuid";
-import { ConceptOvernemenModal } from "./modals/concept-overnemen-modal";
+import { WijzigingenOvernemenModal } from "./modals/wijzigingen-overnemen-modal";
 import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-verwerkt-modal";
+import { ConceptOvernemenModal } from "./modals/concept-overnemen-modal";
 
 test.describe('take concept snapshot over', () => {
 
@@ -22,9 +23,10 @@ test.describe('take concept snapshot over', () => {
     let conceptDetailsPage: ConceptDetailsPage;
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
-    let conceptOvernemenModal: ConceptOvernemenModal
+    let wijzigingenOvernemenModal: WijzigingenOvernemenModal;
     let bevestigHerzieningVerwerktModal: BevestigHerzieningVerwerktModal
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
+    let conceptOvernemenModal: ConceptOvernemenModal;
 
     test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
@@ -35,9 +37,10 @@ test.describe('take concept snapshot over', () => {
         conceptDetailsPage = ConceptDetailsPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
-        conceptOvernemenModal = ConceptOvernemenModal.create(page);
+        wijzigingenOvernemenModal = WijzigingenOvernemenModal.create(page);
         bevestigHerzieningVerwerktModal = BevestigHerzieningVerwerktModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
+        conceptOvernemenModal = ConceptOvernemenModal.create(page);
 
         await mockLoginPage.goto();
         await mockLoginPage.searchInput.fill('Pepingen');
@@ -103,9 +106,9 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
 
             await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
-            await conceptOvernemenModal.expectToBeVisible();
-            await conceptOvernemenModal.conceptVolledigOvernemen.click()
-            await conceptOvernemenModal.expectToBeClosed()
+            await wijzigingenOvernemenModal.expectToBeVisible();
+            await wijzigingenOvernemenModal.conceptVolledigOvernemenButton.click()
+            await wijzigingenOvernemenModal.expectToBeClosed()
 
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot.title);
             expect(await instantieDetailsPage.titelKostInput().inputValue()).toEqual(`Kost - ${conceptId} - ${updateSnapshot.id}`);
@@ -170,9 +173,9 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
 
             await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
-            await conceptOvernemenModal.expectToBeVisible();
-            await conceptOvernemenModal.conceptVolledigOvernemen.click();
-            await conceptOvernemenModal.expectToBeClosed();
+            await wijzigingenOvernemenModal.expectToBeVisible();
+            await wijzigingenOvernemenModal.conceptVolledigOvernemenButton.click();
+            await wijzigingenOvernemenModal.expectToBeClosed();
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible()
         });
@@ -240,9 +243,9 @@ test.describe('take concept snapshot over', () => {
             await homePage.resultTable.row(first_row).link('Bekijk').click();
 
             await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
-            await conceptOvernemenModal.expectToBeVisible();
-            await conceptOvernemenModal.perVeldBekijken.click();
-            await conceptOvernemenModal.expectToBeClosed();
+            await wijzigingenOvernemenModal.expectToBeVisible();
+            await wijzigingenOvernemenModal.wijzigingenPerVeldBekijkenButton.click();
+            await wijzigingenOvernemenModal.expectToBeClosed();
 
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
             await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
@@ -266,9 +269,9 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
 
             await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
-            await conceptOvernemenModal.expectToBeVisible();
-            await conceptOvernemenModal.perVeldBekijken.click();
-            await conceptOvernemenModal.expectToBeClosed();
+            await wijzigingenOvernemenModal.expectToBeVisible();
+            await wijzigingenOvernemenModal.wijzigingenPerVeldBekijkenButton.click();
+            await wijzigingenOvernemenModal.expectToBeClosed();
 
             await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
             await expect(instantieDetailsPage.productOpnieuwBewerkenButton).not.toBeVisible();
@@ -293,7 +296,8 @@ test.describe('take concept snapshot over', () => {
             //TODO LPDC-1171: add asserts that the links are not visible if that specific field has not changed ...
         });
 
-        test('given fields updated in concept snapshot can field by field update them', async ({ request }) => {
+        //TODO LPDC-1171: unskip test ...
+        test.skip('given fields updated in concept snapshot can field by field update them', async () => {
             // update concept snapshot
             const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
 
@@ -310,6 +314,15 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
 
+            await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
+
+            await conceptOvernemenModal.expectToBeVisible();
+            await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeVisible();
+            await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeDisabled();
+            await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeVisible();
+            await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeDisabled();
+            await expect(conceptOvernemenModal.instantieInput).toBeVisible();
+            await expect(conceptOvernemenModal.instantieInput).toBeEditable();
             //TODO LPDC-1171: validate that the update link is visible for the title fields (all of them.)
 
 

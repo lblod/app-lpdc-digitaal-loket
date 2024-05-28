@@ -48,6 +48,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly draftInstanceConversionAlert: Alert
 
     readonly titelInput: Locator;
+    readonly titelConceptWijzigingenOvernemenLink: Locator;
     readonly beschrijvingEditor: Locator;
     readonly beschrijvingReadonly: Locator;
 
@@ -201,6 +202,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.statusDocumentHeader = page.locator('dl div').filter({ hasText: 'Status document' }).getByRole('definition');
 
         this.titelInput = this.inputBelow('Titel').first();
+        this.titelConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Titel').first();
         this.beschrijvingEditor = this.editorBelow('Beschrijving').first();
         this.beschrijvingReadonly = this.readonlyBelow('Beschrijving').first();
 
@@ -320,6 +322,10 @@ export class InstantieDetailsPage extends AbstractPage {
 
     private inputBelow(label: string): Locator {
         return this.page.locator(`input:below(label:text-is('${label}'))`)
+    }
+
+    private conceptWijzigingenOvernemenLinkNextTo(label: string): Locator {
+        return this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('${label}'))`);
     }
 
     private inputRightOf(label: string): Locator {
