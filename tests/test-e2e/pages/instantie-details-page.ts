@@ -61,8 +61,10 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly voegVoorwaardeToeButton: Locator;
     readonly titelVoorwaardeInput: (order?: number) => Locator;
+    readonly titelVoorwaardeConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingVoorwaardeEditor: (order?: number) => Locator;
-    readonly beschrijvingVoorwaardeReadonly: (order?: number) => Locator;
+    readonly beschrijvingVoorwaardeReadonly: (order?: number) => Locator
+    readonly beschrijvingVoorwaardeConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly verwijderVoorwaardeButton: (order?: number) => Locator;
 
     readonly voegBewijsstukToeButton: (order?: number) => Locator;
@@ -216,8 +218,10 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.voegVoorwaardeToeButton = this.buttonFor("Voeg voorwaarde toe","Voorwaarden");
         this.titelVoorwaardeInput = (order: number = 0) => this.inputBelow('Titel voorwaarde').nth(order);
+        this.titelVoorwaardeConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Titel voorwaarde').nth(order);
         this.beschrijvingVoorwaardeEditor = (order: number = 0) => this.editorBelow('Beschrijving voorwaarde').nth(order);
         this.beschrijvingVoorwaardeReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving voorwaarde').nth(order);
+        this.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving voorwaarde').nth(order);
         this.verwijderVoorwaardeButton = (order: number = 0) => this.buttonFor('Verwijder voorwaarde','Voorwaarden').nth(order);
 
         this.voegBewijsstukToeButton = (order: number = 0) => this.buttonFor('Voeg bewijsstuk toe', 'Voorwaarden').nth(order);

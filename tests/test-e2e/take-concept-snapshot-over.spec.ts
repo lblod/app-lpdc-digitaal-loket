@@ -324,6 +324,15 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink.click();
             await checkOvernemenRichTextModal();
 
+            //voorwaarden
+            await instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink().click()
+            await checkOvernemenInputModal()
+            await instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink().click();
+            await checkOvernemenRichTextModal();
+
+
+
+
 
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
         });
@@ -344,6 +353,7 @@ test.describe('take concept snapshot over', () => {
     async function checkOvernemenRichTextModal() {
         await conceptOvernemenModal.expectToBeVisible();
         await expect(conceptOvernemenModal.meestRecenteConceptRichText).toBeVisible();
+        //check if disabled
         await expect(conceptOvernemenModal.meestRecenteConceptRichText.locator('..')).toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
         await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsRichText).toBeVisible();
         await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsRichText.locator('..')).toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
