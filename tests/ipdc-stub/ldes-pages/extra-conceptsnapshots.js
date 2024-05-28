@@ -190,9 +190,9 @@ const voorwaarden = (randomStr) => {
                     "nl-BE-x-generated-informal": `Voorwaarde - generated-informal${randomStr}`,
                 },
                 "beschrijving": {
-                    "nl": `Voorwaarde beschrijving${randomStr}`,
-                    "nl-BE-x-generated-formal": `Voorwaarde beschrijving - generated-formal${randomStr}`,
-                    "nl-BE-x-generated-informal": `Voorwaarde beschrijving - generated-informal${randomStr}`,
+                    "nl": `<p>Voorwaarde beschrijving${randomStr}</p>`,
+                    "nl-BE-x-generated-formal": `<p>Voorwaarde beschrijving - generated-formal${randomStr}</p>`,
+                    "nl-BE-x-generated-informal": `<p>Voorwaarde beschrijving - generated-informal${randomStr}</p>`,
                 },
                 "bewijs": {
                     "naam": {
@@ -200,9 +200,9 @@ const voorwaarden = (randomStr) => {
                         "nl-BE-x-generated-formal": `Bewijs - generated-formal${randomStr}`,
                     },
                     "beschrijving": {
-                        "nl": `Bewijs beschrijving${randomStr}`,
-                        "nl-BE-x-generated-formal": `Bewijs beschrijving - generated-formal${randomStr}`,
-                        "nl-BE-x-generated-informal": `Bewijs beschrijving - generated-informal${randomStr}`,
+                        "nl": `<p>Bewijs beschrijving${randomStr}</p>`,
+                        "nl-BE-x-generated-formal": `<p>Bewijs beschrijving - generated-formal${randomStr}</p>`,
+                        "nl-BE-x-generated-informal": `<p>Bewijs beschrijving - generated-informal${randomStr}</p>`,
                     },
                     "@type": "bewijsType"
                 },
@@ -361,14 +361,14 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-informal": `<p>Concept created beschrijving - generated-informal${randomData}</p>`
         },
         "verdereBeschrijving": {
-            "nl": `Verdere beschrijving created${randomData}`,
-            "nl-BE-x-generated-informal": `Verdere beschrijving created - generated-informal${randomData}`,
-            "nl-BE-x-generated-formal": `Verdere beschrijving created - generated-formal${randomData}`
+            "nl": `<p>Verdere beschrijving created${randomData}</p>`,
+            "nl-BE-x-generated-informal": `<p>Verdere beschrijving created - generated-informal${randomData}</p>`,
+            "nl-BE-x-generated-formal": `<p>Verdere beschrijving created - generated-formal${randomData}</p>`
         },
         "uitzonderingen": {
-            "nl": `Uitzonderingen created${randomData}`,
-            "nl-BE-x-generated-formal": `Uitzonderingen created - generated-formal${randomData}`,
-            "nl-BE-x-generated-informal": `Uitzonderingen created - generated-informal${randomData}`
+            "nl": `<p>Uitzonderingen created${randomData}</p>`,
+            "nl-BE-x-generated-formal": `<p>Uitzonderingen created - generated-formal${randomData}</p>`,
+            "nl-BE-x-generated-informal": `<p>Uitzonderingen created - generated-informal${randomData}</p>`
         },
         "creatie": "2023-10-10T15:25:09.822193785Z",
         ...(withRandomNewData ? voorwaarden(randomData) : {}),
@@ -418,14 +418,14 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-informal": `<p>Concept beschrijving updated - generated-informal${randomData}</p>`
         },
         "verdereBeschrijving": {
-            "nl": `Verdere beschrijving updated${randomData}`,
-            "nl-BE-x-generated-informal": `Verdere beschrijving updated - generated-informal${randomData}`,
-            "nl-BE-x-generated-formal": `Verdere beschrijving updated - generated-formal${randomData}`
+            "nl": `<p>Verdere beschrijving updated${randomData}</p>`,
+            "nl-BE-x-generated-informal": `<p>Verdere beschrijving updated - generated-informal${randomData}</p>`,
+            "nl-BE-x-generated-formal": `<p>Verdere beschrijving updated - generated-formal${randomData}</p>`
         },
         "uitzonderingen": {
-            "nl": `Uitzonderingen updated${randomData}`,
-            "nl-BE-x-generated-formal": `Uitzonderingen updated - generated-formal${randomData}`,
-            "nl-BE-x-generated-informal": `Uitzonderingen updated - generated-informal${randomData}`
+            "nl": `<p>Uitzonderingen updated${randomData}</p>`,
+            "nl-BE-x-generated-formal": `<p>Uitzonderingen updated - generated-formal${randomData}</p>`,
+            "nl-BE-x-generated-informal": `<p>Uitzonderingen updated - generated-informal${randomData}</p>`
         },
         ...(withRandomNewData ? voorwaarden(randomData) : {}),
         ...(withRandomNewData ? procedures(randomData) : {}),

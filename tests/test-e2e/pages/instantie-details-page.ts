@@ -51,12 +51,13 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly titelConceptWijzigingenOvernemenLink: Locator;
     readonly beschrijvingEditor: Locator;
     readonly beschrijvingReadonly: Locator;
-
+    readonly beschrijvingConceptWijzigingenOvernemenLink: Locator
     readonly aanvullendeBeschrijvingEditor: Locator;
     readonly aanvullendeBeschrijvingReadonly: Locator;
-
+    readonly aanvullendeBeschrijvingConceptWijzigingenOvernemenLink: Locator
     readonly uitzonderingenEditor: Locator;
     readonly uitzonderingenReadonly: Locator;
+    readonly uitzonderingenConceptWijzigingenOvernemenLink: Locator
 
     readonly voegVoorwaardeToeButton: Locator;
     readonly titelVoorwaardeInput: (order?: number) => Locator;
@@ -205,12 +206,13 @@ export class InstantieDetailsPage extends AbstractPage {
         this.titelConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Titel').first();
         this.beschrijvingEditor = this.editorBelow('Beschrijving').first();
         this.beschrijvingReadonly = this.readonlyBelow('Beschrijving').first();
-
+        this.beschrijvingConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving').first();
         this.aanvullendeBeschrijvingEditor = this.editorBelow('Aanvullende Beschrijving').first();
         this.aanvullendeBeschrijvingReadonly = this.readonlyBelow('Aanvullende Beschrijving').first();
-
+        this.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Aanvullende Beschrijving').first();
         this.uitzonderingenEditor = this.editorBelow('Uitzonderingen').first();
         this.uitzonderingenReadonly = this.readonlyBelow('Uitzonderingen').first();
+        this.uitzonderingenConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Uitzonderingen').first();
 
         this.voegVoorwaardeToeButton = this.buttonFor("Voeg voorwaarde toe","Voorwaarden");
         this.titelVoorwaardeInput = (order: number = 0) => this.inputBelow('Titel voorwaarde').nth(order);

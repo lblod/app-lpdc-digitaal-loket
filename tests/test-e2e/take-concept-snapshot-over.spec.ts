@@ -296,8 +296,7 @@ test.describe('take concept snapshot over', () => {
             //TODO LPDC-1171: add asserts that the links are not visible if that specific field has not changed ...
         });
 
-        //TODO LPDC-1171: unskip test ...
-        test.skip('given fields updated in concept snapshot can field by field update them', async () => {
+        test('given fields updated in concept snapshot can field by field update them', async () => {
             // update concept snapshot
             const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
 
@@ -314,21 +313,42 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
 
+
+            //basisinformatie
             await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
-
-            await conceptOvernemenModal.expectToBeVisible();
-            await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeVisible();
-            await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeDisabled();
-            await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeVisible();
-            await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeDisabled();
-            await expect(conceptOvernemenModal.instantieInput).toBeVisible();
-            await expect(conceptOvernemenModal.instantieInput).toBeEditable();
-            //TODO LPDC-1171: validate that the update link is visible for the title fields (all of them.)
+            await checkOvernemenInputModal();
+            await instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink.click();
+            await checkOvernemenRichTextModal();
+            await instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink.click();
+            await checkOvernemenRichTextModal();
+            await instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink.click();
+            await checkOvernemenRichTextModal();
 
 
+            //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
         });
+
 
     });
 
-
+    async function checkOvernemenInputModal() {
+        await conceptOvernemenModal.expectToBeVisible();
+        await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeVisible();
+        await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeDisabled();
+        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeVisible();
+        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeDisabled();
+        await expect(conceptOvernemenModal.instantieInput).toBeVisible();
+        await expect(conceptOvernemenModal.instantieInput).toBeEditable();
+        await conceptOvernemenModal.annuleerButton.click();
+    }
+    async function checkOvernemenRichTextModal() {
+        await conceptOvernemenModal.expectToBeVisible();
+        await expect(conceptOvernemenModal.meestRecenteConceptRichText).toBeVisible();
+        await expect(conceptOvernemenModal.meestRecenteConceptRichText.locator('..')).toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
+        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsRichText).toBeVisible();
+        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsRichText.locator('..')).toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
+        await expect(conceptOvernemenModal.instantieRichText).toBeVisible();
+        await expect(conceptOvernemenModal.instantieRichText.locator('..')).not.toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
+        await conceptOvernemenModal.annuleerButton.click();
+    }
 });

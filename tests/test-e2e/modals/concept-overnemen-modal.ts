@@ -7,14 +7,22 @@ export class ConceptOvernemenModal extends AbstractModal {
     readonly conceptWaaropInstantieGebaseerdIsInput: Locator;
     readonly instantieInput: Locator;
 
+    readonly meestRecenteConceptRichText: Locator;
+    readonly conceptWaaropInstantieGebaseerdIsRichText: Locator;
+    readonly instantieRichText: Locator;
+
     readonly annuleerButton: Locator;
 
-    private constructor(page: Page) {
+    private constructor(page: Page ) {
         super(page, 'Concept overnemen');
 
-        this.meestRecenteConceptInput = this.inputBelow('Meest recente concept');
-        this.conceptWaaropInstantieGebaseerdIsInput = this.inputBelow('Concept waarop instantie is gebaseerd');
+        this.meestRecenteConceptInput = this.inputBelow('Concept meest recente revisie');
+        this.conceptWaaropInstantieGebaseerdIsInput = this.inputBelow('Concept waarop instantie gebaseerd is');
         this.instantieInput = this.inputBelow('Instantie');
+
+        this.meestRecenteConceptRichText = this.richTextBelow('Concept meest recente revisie');
+        this.conceptWaaropInstantieGebaseerdIsRichText = this.richTextBelow('Concept waarop instantie gebaseerd is');
+        this.instantieRichText = this.richTextBelow('Instantie');
 
         this.annuleerButton = page.locator("div.au-c-modal__footer button").last();
 
@@ -25,7 +33,9 @@ export class ConceptOvernemenModal extends AbstractModal {
     }
 
     private inputBelow(label: string): Locator {
-        return this.page.locator(`input:below(label:text-is('${label}'))`)
+        return this.page.getByLabel(label, { exact: true }).locator('input');
     }
-
+    private richTextBelow(label: string): Locator {
+        return this.page.getByLabel(label, { exact: true }).locator('p');
+    }
 }
