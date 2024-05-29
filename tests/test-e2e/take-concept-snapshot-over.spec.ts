@@ -408,7 +408,20 @@ test.describe('take concept snapshot over', () => {
              await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url'], updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
              await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
 
-            //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
+             //meer info
+             await instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink().click()
+             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['websites'][0]['naam']['nl'], updateSnapshot['jsonlddata']['websites'][0]['naam']['nl']);
+             await expect(instantieDetailsPage.titelWebsiteInput()).toHaveValue(updateSnapshot['jsonlddata']['websites'][0]['naam']['nl']);
+
+             await instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink().click();
+             await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl']);
+             expect(await instantieDetailsPage.beschrijvingWebsiteEditor().textContent()).toContain(updateSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl']);
+
+             await instantieDetailsPage.websiteURLConceptWijzigingenOvernemenLink().click()
+             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['websites'][0]['url'], updateSnapshot['jsonlddata']['websites'][0]['url']);
+             await expect(instantieDetailsPage.websiteURLInput()).toHaveValue(updateSnapshot['jsonlddata']['websites'][0]['url']);
+
+             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
 
 
 

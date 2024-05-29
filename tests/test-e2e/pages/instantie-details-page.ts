@@ -144,10 +144,13 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly voegWebsiteToeButton: Locator;
     readonly verwijderWebsiteButton: (order?: number) => Locator;
-    readonly titelWebsiteInput: (childOrder?: number, parentOrder?: number) => Locator;
-    readonly beschrijvingWebsiteEditor: (childOrder?: number, parentOrder?: number) => Locator;
-    readonly beschrijvingWebsiteReadonly: (childOrder?: number, parentOrder?: number) => Locator;
-    readonly websiteURLInput: (childOrder?: number, parentOrder?: number) => Locator;
+    readonly titelWebsiteInput: (order?: number) => Locator;
+    readonly titelWebsiteConceptWijzigingenOvernemenLink: (order?: number) => Locator;
+    readonly beschrijvingWebsiteEditor: (order?: number) => Locator;
+    readonly beschrijvingWebsiteReadonly: (order?: number) => Locator;
+    readonly beschrijvingWebsiteConceptWijzigingenOvernemenLink: (order?: number) => Locator;
+    readonly websiteURLInput: (order?: number) => Locator;
+    readonly websiteURLConceptWijzigingenOvernemenLink: (order?: number) => Locator;
 
     //Eigenschappen
     readonly algemeneInfoHeading: Locator;
@@ -316,10 +319,13 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.voegWebsiteToeButton = this.buttonFor('Voeg website toe', 'Meer info');
         this.verwijderWebsiteButton = (order: number = 0) => this.buttonFor('Verwijder website','Meer info').nth(order);
-        this.titelWebsiteInput = (order: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order)
-        this.beschrijvingWebsiteEditor = (order: number = 0) => page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order)
-        this.beschrijvingWebsiteReadonly = (order: number = 0) => page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order)
-        this.websiteURLInput = (order: number = 0) => page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(order)
+        this.titelWebsiteInput = (order: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.titelWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.beschrijvingWebsiteEditor = (order: number = 0) => page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.beschrijvingWebsiteReadonly = (order: number = 0) => page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.beschrijvingWebsiteConceptWijzigingenOvernemenLink =  (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.websiteURLInput = (order: number = 0) => page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.websiteURLConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(order);
 
         this.algemeneInfoHeading = page.getByRole('heading', {name: 'Algemene info'});
 
