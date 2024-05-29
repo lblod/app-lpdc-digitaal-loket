@@ -104,8 +104,10 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly voegFinancieelVoordeelToeButton: Locator;
     readonly verwijderFinancieelVoordeelButton: (order?: number) => Locator;
     readonly titelFinancieelVoordeelInput: (order?: number) => Locator;
+    readonly titelFinancieelVoordeelConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingFinancieelVoordeelEditor: (order?: number) => Locator;
     readonly beschrijvingFinancieelVoordeelReadonly: (order?: number) => Locator;
+    readonly beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink: (order?: number) => Locator;
 
     readonly beschrijvingRegelgevingEditor: (order?: number) => Locator;
     readonly beschrijvingRegelgevingReadonly: (order?: number) => Locator;
@@ -269,8 +271,10 @@ export class InstantieDetailsPage extends AbstractPage {
         this.voegFinancieelVoordeelToeButton = this.buttonFor('Voeg financieel voordeel toe', 'Financiële voordelen');
         this.verwijderFinancieelVoordeelButton = (order: number = 0) => this.buttonFor('Verwijder financieel voordeel','Financiële voordelen').nth(order);
         this.titelFinancieelVoordeelInput = (order: number = 0) => this.inputBelow('Titel financieel voordeel').nth(order);
+        this.titelFinancieelVoordeelConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Titel financieel voordeel').nth(order);
         this.beschrijvingFinancieelVoordeelEditor = (order: number = 0) => this.editorBelow('Beschrijving financieel voordeel').nth(order);
         this.beschrijvingFinancieelVoordeelReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving financieel voordeel').nth(order);
+        this.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving financieel voordeel').nth(order);
 
         this.beschrijvingRegelgevingEditor = (order: number = 0) => this.editorBelow('Regelgeving').nth(order);
         this.beschrijvingRegelgevingReadonly = (order: number = 0) => this.readonlyBelow('Regelgeving').nth(order);

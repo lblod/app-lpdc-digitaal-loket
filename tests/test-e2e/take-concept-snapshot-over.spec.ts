@@ -382,6 +382,15 @@ test.describe('take concept snapshot over', () => {
             await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
             expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
 
+             //financiele voordelen
+             await instantieDetailsPage.titelFinancieelVoordeelConceptWijzigingenOvernemenLink().click()
+             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl'], updateSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl']);
+             await expect(instantieDetailsPage.titelFinancieelVoordeelInput()).toHaveValue(updateSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl']);
+ 
+             await instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink().click();
+             await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl']);
+             expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().textContent()).toContain(updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl']);
+
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
 
 
