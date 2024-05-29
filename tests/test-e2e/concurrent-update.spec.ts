@@ -289,7 +289,7 @@ async function openInstantie(page: Page, title: string): Promise<InstantieDetail
     await homePage.resultTable.row(first_row).link('Bewerk').click();
 
     await expect(instantieDetailsPage.heading).toHaveText(title);
-    await expect(instantieDetailsPage.titelInput).toHaveValue(title)
+    await expect(instantieDetailsPage.titelInput).toHaveValue(title);
 
     return instantieDetailsPage;
 }

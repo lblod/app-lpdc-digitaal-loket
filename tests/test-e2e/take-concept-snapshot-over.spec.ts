@@ -296,6 +296,8 @@ test.describe('take concept snapshot over', () => {
             //TODO LPDC-1171: add asserts that the links are not visible if that specific field has not changed ...
         });
 
+        //TODO LPDC-1171: also verify if when using the three way compare modal, we can edit the value in the input field and that value is saved in the main form, not just the 'overnemen' link
+
         test('given fields updated in concept snapshot can field by field update them', async () => {
             // update concept snapshot
             const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
@@ -313,52 +315,85 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
 
+            await expect(instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig).toBeEnabled();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
 
             //basisinformatie
             await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
-            await checkOvernemenInputModal();
-            await instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink.click();
-            await checkOvernemenRichTextModal();
-            await instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink.click();
-            await checkOvernemenRichTextModal();
-            await instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink.click();
-            await checkOvernemenRichTextModal();
+            await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['naam']['nl'], updateSnapshot['jsonlddata']['naam']['nl']);
+            await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot['jsonlddata']['naam']['nl']);
 
-            //voorwaarden
+            await instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink.click();
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['beschrijving']['nl'], updateSnapshot['jsonlddata']['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['beschrijving']['nl']);
+            
+            await instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink.click();
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['verdereBeschrijving']['nl'], updateSnapshot['jsonlddata']['verdereBeschrijving']['nl']);
+            expect(await instantieDetailsPage.aanvullendeBeschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['verdereBeschrijving']['nl']);
+            
+            await instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink.click();
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['uitzonderingen']['nl'], updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
+            expect(await instantieDetailsPage.uitzonderingenEditor.textContent()).toContain(updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
+
+/*            //voorwaarden
             await instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink().click()
             await checkOvernemenInputModal()
             await instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink().click();
-            await checkOvernemenRichTextModal();
-
-
-
-
+            await checkOvernemenRichTextModal();*/
 
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
+
+
+
+            await expect(instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig).toBeDisabled();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeEnabled();
+
         });
 
 
     });
 
-    async function checkOvernemenInputModal() {
+    async function verifyDataInModalAndAndTakeOverForInput(conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string) {
         await conceptOvernemenModal.expectToBeVisible();
+
         await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeVisible();
         await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeDisabled();
-        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeVisible();
-        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsInput).toBeDisabled();
+        await expect(conceptOvernemenModal.meestRecenteConceptInput).toHaveValue(meestRecenteConceptText);
+
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toBeVisible();
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toBeDisabled();
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toHaveValue(conceptWaaropInstantieIsGebaseerdInput);
+
         await expect(conceptOvernemenModal.instantieInput).toBeVisible();
         await expect(conceptOvernemenModal.instantieInput).toBeEditable();
-        await conceptOvernemenModal.annuleerButton.click();
+        await expect(conceptOvernemenModal.instantieInput).toHaveValue(conceptWaaropInstantieIsGebaseerdInput);
+
+        await conceptOvernemenModal.overnemenLink.click();
+
+        await expect(conceptOvernemenModal.instantieInput).toHaveValue(meestRecenteConceptText);
+
+        await conceptOvernemenModal.bewaarButton.click();
+        await conceptOvernemenModal.expectToBeClosed();
     }
-    async function checkOvernemenRichTextModal() {
+
+    async function verifyDataInModalAndAndTakeOverForRichText(conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string) {
         await conceptOvernemenModal.expectToBeVisible();
-        await expect(conceptOvernemenModal.meestRecenteConceptRichText).toBeVisible();
-        //check if disabled
-        await expect(conceptOvernemenModal.meestRecenteConceptRichText.locator('..')).toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
-        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsRichText).toBeVisible();
-        await expect(conceptOvernemenModal.conceptWaaropInstantieGebaseerdIsRichText.locator('..')).toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
+
+        await expect(conceptOvernemenModal.meestRecenteConceptRichTextReadonly).toBeVisible();
+        expect(await conceptOvernemenModal.meestRecenteConceptRichTextReadonly.textContent()).toContain(meestRecenteConceptText);
+
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdRichTextReadonly).toBeVisible();
+        expect(await conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdRichTextReadonly.textContent()).toContain(conceptWaaropInstantieIsGebaseerdInput);
+
         await expect(conceptOvernemenModal.instantieRichText).toBeVisible();
-        await expect(conceptOvernemenModal.instantieRichText.locator('..')).not.toHaveClass('au-c-content au-c-content--tiny rich-text-editor-content');
-        await conceptOvernemenModal.annuleerButton.click();
+        expect(await conceptOvernemenModal.instantieRichText.textContent()).toContain(conceptWaaropInstantieIsGebaseerdInput);
+
+        await conceptOvernemenModal.overnemenLink.click();
+
+        expect(await conceptOvernemenModal.instantieRichText.textContent()).toContain(meestRecenteConceptText);
+
+        await conceptOvernemenModal.bewaarButton.click();
+        await conceptOvernemenModal.expectToBeClosed();   
     }
+
 });
