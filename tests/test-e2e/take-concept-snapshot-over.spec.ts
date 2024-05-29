@@ -373,6 +373,15 @@ test.describe('take concept snapshot over', () => {
             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url'], updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
             await expect(instantieDetailsPage.websiteURLVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
 
+            //kosten
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click()
+            await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput()).toHaveValue(updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
 
 

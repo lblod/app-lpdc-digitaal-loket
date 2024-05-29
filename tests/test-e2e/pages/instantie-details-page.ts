@@ -96,8 +96,10 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly voegKostToeButton: Locator;
     readonly verwijderKostButton:(order?: number) => Locator;
     readonly titelKostInput: (order?: number) => Locator;
+    readonly titelKostConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingKostEditor: (order?: number) => Locator;
     readonly beschrijvingKostReadonly: (order?: number) => Locator;
+    readonly beschrijvingKostConceptWijzigingenOvernemenLink: (order?: number) => Locator;
 
     readonly voegFinancieelVoordeelToeButton: Locator;
     readonly verwijderFinancieelVoordeelButton: (order?: number) => Locator;
@@ -259,8 +261,10 @@ export class InstantieDetailsPage extends AbstractPage {
         this.voegKostToeButton = this.buttonFor("Voeg kost toe","Kosten");
         this.verwijderKostButton = (order: number = 0) => this.buttonFor('Verwijder kost','Kosten').nth(order);
         this.titelKostInput = (order: number = 0) => this.inputBelow('Titel kost').nth(order);
+        this.titelKostConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Titel kost').nth(order);
         this.beschrijvingKostEditor = (order: number = 0) => this.editorBelow('Beschrijving kost').nth(order);
         this.beschrijvingKostReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving kost').nth(order);
+        this.beschrijvingKostConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving kost').nth(order);
 
         this.voegFinancieelVoordeelToeButton = this.buttonFor('Voeg financieel voordeel toe', 'Financiële voordelen');
         this.verwijderFinancieelVoordeelButton = (order: number = 0) => this.buttonFor('Verwijder financieel voordeel','Financiële voordelen').nth(order);
