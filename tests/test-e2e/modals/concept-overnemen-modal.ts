@@ -1,3 +1,5 @@
+import { MultiSelect } from "../components/multi-select";
+import { Select } from "../components/select";
 import { AbstractModal } from "./abstract-modal";
 import { Locator, Page } from '@playwright/test';
 
@@ -10,6 +12,14 @@ export class ConceptOvernemenModal extends AbstractModal {
     readonly meestRecenteConceptRichTextReadonly: Locator;
     readonly conceptWaaropInstantieIsGebaseerdRichTextReadonly: Locator;
     readonly instantieRichText: Locator;
+
+    readonly meestRecenteConceptSelect: Select;
+    readonly conceptWaaropInstantieIsGebaseerdSelect: Select;
+    readonly instantieSelect: Select;
+
+    readonly meestRecenteConceptMultiSelect: MultiSelect;
+    readonly conceptWaaropInstantieIsGebaseerdMultiSelect: MultiSelect;
+    readonly instantieMultiSelect: MultiSelect;
 
     readonly overnemenLink: Locator;
 
@@ -26,6 +36,14 @@ export class ConceptOvernemenModal extends AbstractModal {
         this.meestRecenteConceptRichTextReadonly = this.readonlyRichTextBelow('Meest recente concept');
         this.conceptWaaropInstantieIsGebaseerdRichTextReadonly = this.readonlyRichTextBelow('Concept waarop instantie is gebaseerd');
         this.instantieRichText = this.richTextBelow('Instantie');
+
+        this.meestRecenteConceptSelect = new Select(page, 'Meest recente concept', undefined, undefined, 'div.au-c-modal__body');
+        this.conceptWaaropInstantieIsGebaseerdSelect = new Select(page, 'Concept waarop instantie is gebaseerd', undefined, undefined, 'div.au-c-modal__body');
+        this.instantieSelect = new Select(page, 'Instantie', undefined, undefined, 'div.au-c-modal__body');
+
+        this.meestRecenteConceptMultiSelect = new MultiSelect(page, 'Meest recente concept', 'div.au-c-modal__body');
+        this.conceptWaaropInstantieIsGebaseerdMultiSelect = new MultiSelect(page, 'Concept waarop instantie is gebaseerd', 'div.au-c-modal__body');
+        this.instantieMultiSelect = new MultiSelect(page, 'Instantie', 'div.au-c-modal__body span.instantie-form');
 
         this.overnemenLink = this.page.getByRole('link', { name: 'Overnemen', exact: true });
 

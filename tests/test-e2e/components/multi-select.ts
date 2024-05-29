@@ -6,11 +6,11 @@ export class MultiSelect {
     private readonly selectDiv: Locator;
     private readonly listContainer: Locator;
 
-    constructor(page: Page, forLabel: string) {
+    constructor(page: Page, forLabel: string, withinContainer: string = '') {
         this.page = page;
 
-        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).first();
-        this.listContainer = page.locator(`ul:below(label:text-is('${forLabel}'))`).first();
+        this.selectDiv = page.locator(`${withinContainer} div.ember-basic-dropdown-trigger:below(label:has-text('${forLabel}'))`).first();
+        this.listContainer = page.locator(`${withinContainer} ul:below(label:has-text('${forLabel}'))`).first();
     }
 
     async selectValue(text: string) {

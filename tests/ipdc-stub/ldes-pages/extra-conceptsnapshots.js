@@ -1,4 +1,6 @@
 import { v4 as uuid } from 'uuid';
+import pkg from "lodash";
+const {uniq} = pkg;
 
 const pepingen = {
     uri: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
@@ -112,11 +114,11 @@ const ocmwVereniging = {
     spatialNisLabel: "Aalst"
 }
 
-const productTypes = ['FinancieleVerplichting', 'Toelating', 'Bewijs', 'Voorwerp', 'AdviesBegeleiding', 'InfrastructuurMateriaal', 'FinancieelVoordeel'];
+const productTypes = ['Toelating', 'Bewijs', 'Voorwerp'];
 
-const doelgroepen = ['Burger', 'Onderneming', 'Organisatie', 'VlaamseOverheid', 'LokaalBestuur', 'Vereniging'];
+const doelgroepen = ['Burger', 'Onderneming', 'Organisatie', 'Vereniging'];
 
-const themas = ['BurgerOverheid', 'CultuurSportVrijeTijd', 'EconomieWerk', 'MilieuEnergie', 'MobiliteitOpenbareWerken', 'OnderwijsWetenschap', 'WelzijnGezondheid', 'BouwenWonen'];
+const themas = ['BurgerOverheid', 'CultuurSportVrijeTijd', 'EconomieWerk', 'MilieuEnergie', 'BouwenWonen', 'WelzijnGezondheid'];
 
 const bevoegdeBestuursniveaus = ['Europees', 'Federaal', 'Vlaams', 'Provinciaal', 'Lokaal'];
 
@@ -132,50 +134,16 @@ const yourEuropeCategorieën = [
     'BedrijfFusieVerkoop',
     'BedrijfInsolventieLiquidatie',
     'BedrijfIntellectueleEigendomsrechten',
-    'BedrijfKredietVerzekering',
-    'BedrijfOnlineBetaalFuncties',
-    'BedrijfOvereenkomstenrecht',
-    'BedrijfPersoonsgegevens',
-    'BedrijfRegistratieproceduresRechtsvormen',
-    'BedrijfTransparantie',
-    'BedrijfVerplaatsing',
-    'Bedrijfsfinanciering',
-    'BedrijfsfinancieringFinancieringNationaal',
-    'BedrijfsfinancieringFinancieringUnie',
-    'BedrijfsfinancieringOndernemersInitiatieven',
     'Belastingen',
     'BelastingenAccijnzen',
-    'BelastingenBTW',
-    'BelastingenDouaneprocedures',
-    'BelastingenDouanerechten',
     'BelastingenOverigeBelastingen',
     'BeschermingPersoonsgegevens',
     'BeschermingPersoonsgegevensUitoefeningRechten',
     'BurgerEnFamilieRechten',
-    'BurgerEnFamilieRechtenErfrechtenEnPlichten',
-    'BurgerEnFamilieRechtenGenderIdentiteit',
-    'BurgerEnFamilieRechtenKinderen',
-    'BurgerEnFamilieRechtenOntvoeringKinderen',
     'BurgerEnFamilieRechtenPartners',
-    'Consumentenrechten',
-    'ConsumentenrechtenAankoop',
-    'ConsumentenrechtenBankrekening',
-    'ConsumentenrechtenBetalingen',
-    'ConsumentenrechtenConsumentenrechten',
-    'ConsumentenrechtenHuurMotorvoertuigen',
-    'ConsumentenrechtenNutsvoorzieningen',
     'ConsumentenrechtenVeiligheid',
     'Diensten',
     'DienstenErkenningBeroepskwalificaties',
-    'DienstenKennisgevingGrensoverschrijdendeActiviteiten',
-    'DienstenLicentiesVergunningen',
-    'GezondheidVeiligheidWerk',
-    'GezondheidVeiligheidWerkVerplichtingen',
-    'Gezondheidszorg',
-    'GezondheidszorgGeneesmiddelenKopen',
-    'GezondheidszorgMedischeBehandeling',
-    'GezondheidszorgNoodnummers',
-    'GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen',
     'GezondheidszorgWoonzorgcentrum',
     'GezondheidszorgZiekteverzekering',
 ];
@@ -382,13 +350,13 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
                 "eindeDienstVerlening": getRandomFutureDate().toISOString(),
                 "type": getRandomElement(productTypes),
-                "doelgroepen": [getRandomElement(doelgroepen), getRandomElement(doelgroepen), getRandomElement(doelgroepen)],
-                "themas": [getRandomElement(themas), getRandomElement(themas), getRandomElement(themas)],
-                "bevoegdBestuursniveaus": [getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus)],
-                "bevoegdeOverheden": [getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden)].map(elem => ({ "@id": elem })),
-                "uitvoerendBestuursniveaus": [getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)],
-                "uitvoerendeOverheden": [getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden)].map(elem => ({ "@id": elem })),
-                "zoektermen": { "nl": [random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`) },
+                "doelgroepen": uniq([getRandomElement(doelgroepen), getRandomElement(doelgroepen), getRandomElement(doelgroepen)]),
+                "themas": uniq([getRandomElement(themas), getRandomElement(themas), getRandomElement(themas)]),
+                "bevoegdBestuursniveaus": uniq([getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus)]),
+                "bevoegdeOverheden": uniq([getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden)]).map(elem => ({ "@id": elem })),
+                "uitvoerendBestuursniveaus": uniq([getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)]),
+                "uitvoerendeOverheden": uniq([getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden)]).map(elem => ({ "@id": elem })),
+                "zoektermen": { "nl": uniq([random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`)) },
             } : {}),
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
@@ -438,15 +406,15 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
                 "eindeDienstVerlening": getRandomFutureDate().toISOString(),
                 "type": getRandomElement(productTypes),
-                "doelgroepen": [getRandomElement(doelgroepen), getRandomElement(doelgroepen), getRandomElement(doelgroepen)],
-                "themas": [getRandomElement(themas), getRandomElement(themas), getRandomElement(themas)],
-                "bevoegdBestuursniveaus": [getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus)],
-                "bevoegdeOverheden": [getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden)].map(elem => ({ "@id": elem })),
-                "uitvoerendBestuursniveaus": [getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)],
-                "uitvoerendeOverheden": [getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden)].map(elem => ({ "@id": elem })),
-                "zoektermen": { "nl": [random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`) },
+                "doelgroepen": uniq([getRandomElement(doelgroepen), getRandomElement(doelgroepen), getRandomElement(doelgroepen)]),
+                "themas": uniq([getRandomElement(themas), getRandomElement(themas), getRandomElement(themas)]),
+                "bevoegdBestuursniveaus": uniq([getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus)]),
+                "bevoegdeOverheden": uniq([getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden)]).map(elem => ({ "@id": elem })),
+                "uitvoerendBestuursniveaus": uniq([getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)]),
+                "uitvoerendeOverheden": uniq([getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden)]).map(elem => ({ "@id": elem })),
+                "zoektermen": { "nl": uniq([random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`)) },
                 "publicatiekanalen": ["YourEurope"],
-                "yourEuropeCategorieen": [getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën)],
+                "yourEuropeCategorieen": uniq([getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën)]),
             } : {}),
         "creatie": "2023-10-10T15:25:09.822193785Z",
         "laatstGewijzigd": new Date().toISOString(),

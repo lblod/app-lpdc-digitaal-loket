@@ -156,10 +156,15 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly algemeneInfoHeading: Locator;
 
     readonly productOfDienstGeldigVanafInput: Locator;
+    readonly productOfDienstGeldigVanafConceptWijzigingenOvernemenLink: Locator;
     readonly productOfDienstGeldigTotInput: Locator;
+    readonly productOfDienstGeldigTotConceptWijzigingenOvernemenLink: Locator;
     readonly productTypeSelect: Select;
+    readonly productTypeConceptWijzigingenOvernemenLink: Locator;
     readonly doelgroepenMultiSelect: MultiSelect;
+    readonly doelgroepenConceptWijzigingenOvernemenLink: Locator;
     readonly themasMultiSelect: MultiSelect;
+    readonly themasConceptWijzigingenOvernemenLink: Locator;
     readonly talenMultiSelect: MultiSelect;
 
     readonly bevoegdBestuursniveauMultiSelect: MultiSelect;
@@ -330,10 +335,15 @@ export class InstantieDetailsPage extends AbstractPage {
         this.algemeneInfoHeading = page.getByRole('heading', {name: 'Algemene info'});
 
         this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf').first();
+        this.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Product of dienst geldig vanaf').first();
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot').first();
+        this.productOfDienstGeldigTotConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Product of dienst geldig tot').first();
         this.productTypeSelect = new Select(page, 'Product type');
+        this.productTypeConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Product type').first();
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
+        this.doelgroepenConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Doelgroepen').first();
         this.themasMultiSelect = new MultiSelect(page, `Thema\\\'s`);
+        this.themasConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo(`Thema\\\'s`).first();
         this.talenMultiSelect = new MultiSelect(page, 'Talen');
 
         this.bevoegdBestuursniveauMultiSelect = new MultiSelect(page, 'Bevoegd bestuursniveau');
