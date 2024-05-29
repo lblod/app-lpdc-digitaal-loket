@@ -111,13 +111,17 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly beschrijvingRegelgevingEditor: (order?: number) => Locator;
     readonly beschrijvingRegelgevingReadonly: (order?: number) => Locator;
+    readonly beschrijvingRegelgevingConceptWijzigingenOvernemenLink: (order?: number) => Locator;
 
     readonly voegRegelgevendeBronToeButton: Locator;
     readonly verwijderRegelgevendeBronButton: (order?: number) => Locator;
     readonly titelRegelgevendeBronInput: (order?: number) => Locator;
+    readonly titelRegelgevendeBronConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingRegelgevendeBronEditor: (order?: number) => Locator;
     readonly beschrijvingRegelgevendeBronReadonly: (order?: number) => Locator;
+    readonly beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly regelgevendeBronUrlInput: (order?: number) => Locator;
+    readonly regelgevendeBronUrlConceptWijzigingenOvernemenLink: (order?: number) => Locator;
 
     readonly contactpuntHeading: Locator;
     readonly voegContactpuntToeButton: Locator;
@@ -278,13 +282,17 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.beschrijvingRegelgevingEditor = (order: number = 0) => this.editorBelow('Regelgeving').nth(order);
         this.beschrijvingRegelgevingReadonly = (order: number = 0) => this.readonlyBelow('Regelgeving').nth(order);
+        this.beschrijvingRegelgevingConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Regelgeving').nth(order);
 
         this.voegRegelgevendeBronToeButton = page.getByRole('button', {name: 'Voeg regelgevende bron toe'});
         this.verwijderRegelgevendeBronButton = (order: number = 0) => this.buttonFor('Verwijder regelgevende bron','Regelgeving').nth(order);
         this.titelRegelgevendeBronInput = (order: number = 0) => this.inputBelow('Titel regelgevende bron').nth(order);
+        this.titelRegelgevendeBronConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Titel regelgevende bron').nth(order);
         this.beschrijvingRegelgevendeBronEditor = (order: number = 0) => this.editorBelow('Beschrijving regelgevende bron').nth(order);
         this.beschrijvingRegelgevendeBronReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving regelgevende bron').nth(order);
-        this.regelgevendeBronUrlInput = (order: number = 0) => this.inputBelow("URL regelgevende bron").nth(order);
+        this.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving regelgevende bron').nth(order);
+        this.regelgevendeBronUrlInput = (order: number = 0) => this.inputBelow('URL regelgevende bron').nth(order);
+        this.regelgevendeBronUrlConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('URL regelgevende bron').nth(order);
 
         this.voegContactpuntToeButton = page.getByRole('button', {name: 'Voeg contactpunt toe'});
         this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt','Contactpunten').nth(order);

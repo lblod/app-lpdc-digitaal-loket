@@ -390,6 +390,23 @@ test.describe('take concept snapshot over', () => {
              await instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink().click();
              await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl']);
              expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().textContent()).toContain(updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl']);
+            
+             //regelgeving
+             await instantieDetailsPage.beschrijvingRegelgevingConceptWijzigingenOvernemenLink().click();
+             await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['regelgevingTekst']['nl'], updateSnapshot['jsonlddata']['regelgevingTekst']['nl']);
+             expect(await instantieDetailsPage.beschrijvingRegelgevingEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevingTekst']['nl']);
+
+             await instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink().click()
+             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl'], updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl']);
+             await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl']);
+
+             await instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink().click();
+             await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl']);
+             expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl']);
+
+             await instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink().click()
+             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url'], updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
+             await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
 
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
 
