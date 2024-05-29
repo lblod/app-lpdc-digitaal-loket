@@ -112,8 +112,8 @@ test.describe('take concept snapshot over', () => {
             await wijzigingenOvernemenModal.expectToBeClosed()
 
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot.title);
-            expect(await instantieDetailsPage.titelKostInput().inputValue()).toEqual(`Kost - ${conceptId} - ${updateSnapshot.id}`);
-            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toEqual(`Kost beschrijving - ${conceptId} - ${updateSnapshot.id}`);
+            expect(await instantieDetailsPage.titelKostInput().inputValue()).toEqual(`Kost - updated - ${conceptId} - ${updateSnapshot.id}`);
+            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toEqual(`Kost beschrijving - updated - ${conceptId} - ${updateSnapshot.id}`);
         })
 
         test('given published instance when updated title and cost in concept snapshot after instance is created then is back in draft mode and modal does not show', async ({ request }) => {
