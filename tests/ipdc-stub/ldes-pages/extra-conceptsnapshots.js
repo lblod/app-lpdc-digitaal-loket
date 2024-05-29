@@ -371,12 +371,12 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-informal": `Uitzonderingen created - generated-informal${randomData}`
         },
         "creatie": "2023-10-10T15:25:09.822193785Z",
-        ...(withRandomNewData ? voorwaarden(randomData) : {}),
-        ...(withRandomNewData ? procedures(randomData) : {}),
-        ...(withRandomNewData ? kost(randomData) : {}),
-        ...(withRandomNewData ? financieleVoordelen(randomData) : {}),
-        ...(withRandomNewData ? regelgeving(randomData) : {}),
-        ...(withRandomNewData ? meerInfo(randomData) : {}),
+        ...(withRandomNewData ? voorwaarden(` - created${randomData}`) : {}),
+        ...(withRandomNewData ? procedures(` - created${randomData}`) : {}),
+        ...(withRandomNewData ? kost(` - created${randomData}`) : {}),
+        ...(withRandomNewData ? financieleVoordelen(` - created${randomData}`) : {}),
+        ...(withRandomNewData ? regelgeving(` - created${randomData}`) : {}),
+        ...(withRandomNewData ? meerInfo(` - created${randomData}`) : {}),
         ...(withRandomNewData ?
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
@@ -427,12 +427,12 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-formal": `Uitzonderingen updated - generated-formal${randomData}`,
             "nl-BE-x-generated-informal": `Uitzonderingen updated - generated-informal${randomData}`
         },
-        ...(withRandomNewData ? voorwaarden(randomData) : {}),
-        ...(withRandomNewData ? procedures(randomData) : {}),
-        ...(withRandomNewData ? kost(randomData) : {}),
-        ...(withRandomNewData ? financieleVoordelen(randomData) : {}),
-        ...(withRandomNewData ? regelgeving(randomData) : {}),
-        ...(withRandomNewData ? meerInfo(randomData) : {}),
+        ...(withRandomNewData ? voorwaarden(` - updated${randomData}`) : {}),
+        ...(withRandomNewData ? procedures(` - updated${randomData}`) : {}),
+        ...(withRandomNewData ? kost(` - updated${randomData}`) : {}),
+        ...(withRandomNewData ? financieleVoordelen(` - updated${randomData}`) : {}),
+        ...(withRandomNewData ? regelgeving(` - updated${randomData}`) : {}),
+        ...(withRandomNewData ? meerInfo(` - updated${randomData}`) : {}),
         ...(withRandomNewData ?
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),

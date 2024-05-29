@@ -69,8 +69,10 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly voegBewijsstukToeButton: (order?: number) => Locator;
     readonly titelBewijsstukInput: (order?: number) => Locator;
+    readonly titelBewijsstukConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingBewijsstukEditor: (order?: number) => Locator;
     readonly beschrijvingBewijsstukReadonly: (order?: number) => Locator;
+    readonly beschrijvingBewijsstukConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly verwijderBewijsButton: (order?: number) => Locator;
 
     readonly voegProcedureToeButton: Locator;
@@ -226,8 +228,10 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.voegBewijsstukToeButton = (order: number = 0) => this.buttonFor('Voeg bewijsstuk toe', 'Voorwaarden').nth(order);
         this.titelBewijsstukInput = (order: number = 0) => this.inputBelow('Titel bewijsstuk').nth(order);
+        this.titelBewijsstukConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Titel bewijsstuk').nth(order);
         this.beschrijvingBewijsstukEditor = (order: number = 0) => this.editorBelow('Beschrijving bewijsstuk').nth(order);
         this.beschrijvingBewijsstukReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving bewijsstuk').nth(order);
+        this.beschrijvingBewijsstukConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving bewijsstuk').nth(order);
         this.verwijderBewijsButton = (order: number = 0) => this.buttonFor('Verwijder bewijsstuk', 'Voorwaarden').nth(order);
 
         this.voegProcedureToeButton = this.buttonFor('Voeg procedure toe', 'Procedure');

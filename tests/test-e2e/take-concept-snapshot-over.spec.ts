@@ -335,11 +335,22 @@ test.describe('take concept snapshot over', () => {
             await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['uitzonderingen']['nl'], updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
             expect(await instantieDetailsPage.uitzonderingenEditor.textContent()).toContain(updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
 
-/*            //voorwaarden
+            //voorwaarden
             await instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink().click()
-            await checkOvernemenInputModal()
+            await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelVoorwaardeInput()).toHaveValue(updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl']);
+
             await instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink().click();
-            await checkOvernemenRichTextModal();*/
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingVoorwaardeEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl']);
+
+            await instantieDetailsPage.titelBewijsstukConceptWijzigingenOvernemenLink().click()
+            await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl']);
+            await expect(instantieDetailsPage.titelBewijsstukInput()).toHaveValue(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingBewijsstukConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingBewijsstukEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
 
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
 
