@@ -77,15 +77,20 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly voegProcedureToeButton: Locator;
     readonly titelProcedureInput: (order?: number) => Locator;
+    readonly titelProcedureConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingProcedureEditor: (order?: number) => Locator;
     readonly beschrijvingProcedureReadonly: (order?: number) => Locator;
+    readonly beschrijvingProcedureConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly verwijderProcedureButton: (order?: number) => Locator;
 
     readonly voegWebsiteToeButtonVoorProcedure: (order?: number) => Locator;
     readonly titelWebsiteVoorProcedureInput: (childOrder?: number, parentOrder?: number) => Locator;
+    readonly titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink: (childOrder?: number, parentOrder?: number) => Locator;
     readonly beschrijvingWebsiteVoorProcedureEditor: (childOrder?: number, parentOrder?: number) => Locator;
     readonly beschrijvingWebsiteVoorProcedureReadonly: (childOrder?: number, parentOrder?: number) => Locator;
+    readonly beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink: (childOrder?: number, parentOrder?: number) => Locator;
     readonly websiteURLVoorProcedureInput: (childOrder?: number, parentOrder?: number) => Locator;
+    readonly websiteURLVoorProcedureConceptWijzigingenOvernemenLink: (childOrder?: number, parentOrder?: number) => Locator;
     readonly verwijderWebsiteButtonVoorProcedure: (order?: number) => Locator;
 
     readonly voegKostToeButton: Locator;
@@ -135,7 +140,6 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly beschrijvingWebsiteEditor: (childOrder?: number, parentOrder?: number) => Locator;
     readonly beschrijvingWebsiteReadonly: (childOrder?: number, parentOrder?: number) => Locator;
     readonly websiteURLInput: (childOrder?: number, parentOrder?: number) => Locator;
-
 
     //Eigenschappen
     readonly algemeneInfoHeading: Locator;
@@ -236,15 +240,20 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.voegProcedureToeButton = this.buttonFor('Voeg procedure toe', 'Procedure');
         this.titelProcedureInput = (order: number = 0) => this.inputBelow('Titel procedure').nth(order);
+        this.titelProcedureConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Titel procedure').nth(order);
         this.beschrijvingProcedureEditor = (order: number = 0) => this.editorBelow('Beschrijving procedure').nth(order);
         this.beschrijvingProcedureReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving procedure').nth(order);
+        this.beschrijvingProcedureConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving procedure').nth(order);
         this.verwijderProcedureButton = (order: number = 0) => this.buttonFor('Verwijder procedure','Procedure').nth(order);
 
         this.voegWebsiteToeButtonVoorProcedure = (order: number = 0) => this.buttonFor('Voeg website toe','Procedure').nth(order);
         this.titelWebsiteVoorProcedureInput = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputBelow('Titel website'), childOrder, 'Website procedure', parentOrder);
+        this.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.conceptWijzigingenOvernemenLinkNextTo('Titel website'), childOrder, 'Website procedure', parentOrder);
         this.beschrijvingWebsiteVoorProcedureEditor = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.editorBelow('Beschrijving website'), childOrder, 'Website procedure', parentOrder);
         this.beschrijvingWebsiteVoorProcedureReadonly = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.readonlyBelow('Beschrijving website'), childOrder, 'Website procedure', parentOrder);
+        this.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.conceptWijzigingenOvernemenLinkNextTo('Beschrijving website'), childOrder, 'Website procedure', parentOrder);
         this.websiteURLVoorProcedureInput = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputBelow('Website URL'), childOrder, 'Website procedure', parentOrder);
+        this.websiteURLVoorProcedureConceptWijzigingenOvernemenLink = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.conceptWijzigingenOvernemenLinkNextTo('Website URL'), childOrder, 'Website procedure', parentOrder);
         this.verwijderWebsiteButtonVoorProcedure = (order: number = 0) => this.buttonFor('Verwijder website','Procedure').nth(order);
 
         this.voegKostToeButton = this.buttonFor("Voeg kost toe","Kosten");

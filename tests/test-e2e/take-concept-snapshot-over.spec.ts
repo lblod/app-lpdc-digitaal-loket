@@ -352,6 +352,27 @@ test.describe('take concept snapshot over', () => {
             await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
             expect(await instantieDetailsPage.beschrijvingBewijsstukEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
 
+            //procedures
+            await instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink().click()
+            await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['procedures'][0]['naam']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingProcedureConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingProcedureEditor().textContent()).toContain(updateSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl']);
+
+            await instantieDetailsPage.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink().click()
+            await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForRichText(createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().textContent()).toContain(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl']);
+
+            await instantieDetailsPage.websiteURLVoorProcedureConceptWijzigingenOvernemenLink().click()
+            await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url'], updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
+            await expect(instantieDetailsPage.websiteURLVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
+
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
 
 
