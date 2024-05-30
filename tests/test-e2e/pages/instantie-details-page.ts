@@ -168,9 +168,13 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly talenMultiSelect: MultiSelect;
 
     readonly bevoegdBestuursniveauMultiSelect: MultiSelect;
+    readonly bevoegdBestuursniveauConceptWijzigingenOvernemenLink: Locator;
     readonly bevoegdeOverheidMultiSelect: MultiSelect;
+    readonly bevoegdeOverheidConceptWijzigingenOvernemenLink: Locator;
     readonly uitvoerendBestuursniveauMultiSelect: MultiSelect;
+    readonly uitvoerendBestuursniveauConceptWijzigingenOvernemenLink: Locator;
     readonly uitvoerendeOverheidMultiSelect: MultiSelect;
+    readonly uitvoerendeOverheidConceptWijzigingenOvernemenLink: Locator;
     readonly geografischToepassingsgebiedMultiSelect: MultiSelect;
 
     readonly tagsMultiSelect: MultiSelect;
@@ -347,9 +351,13 @@ export class InstantieDetailsPage extends AbstractPage {
         this.talenMultiSelect = new MultiSelect(page, 'Talen');
 
         this.bevoegdBestuursniveauMultiSelect = new MultiSelect(page, 'Bevoegd bestuursniveau');
+        this.bevoegdBestuursniveauConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Bevoegd bestuursniveau').first();
         this.bevoegdeOverheidMultiSelect = new MultiSelect(page, 'Bevoegde overheid');
+        this.bevoegdeOverheidConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Bevoegde overheid').first();
         this.uitvoerendBestuursniveauMultiSelect = new MultiSelect(page, 'Uitvoerend bestuursniveau');
+        this.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Uitvoerend bestuursniveau').first();
         this.uitvoerendeOverheidMultiSelect = new MultiSelect(page, 'Uitvoerende overheid');
+        this.uitvoerendeOverheidConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkNextTo('Uitvoerende overheid').first();
         this.geografischToepassingsgebiedMultiSelect = new MultiSelect(page, 'Geografisch toepassingsgebied');
 
         this.tagsMultiSelect = new MultiSelect(page, "Tags");

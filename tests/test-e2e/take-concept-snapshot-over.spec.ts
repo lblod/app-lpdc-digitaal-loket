@@ -14,6 +14,7 @@ import { WijzigingenOvernemenModal } from "./modals/wijzigingen-overnemen-modal"
 import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-verwerkt-modal";
 import { ConceptOvernemenModal } from "./modals/concept-overnemen-modal";
 import moment from 'moment';
+import { BestuursEenheidConfig, aarschot, autonoomGemeentebedrijf, autonoomProvinciebedrijf, dienstverlenendeVereniging, districtWilrijk, hulpverleningszone, leuven, ocmwLeuven, ocmwVereniging, opdrachthoudendeVereniging, pepingen, politieZone, projectvereniging, provincieVlaamsBrabant } from './shared/bestuurseenheid-config';
 
 test.describe('take concept snapshot over', () => {
 
@@ -194,6 +195,42 @@ test.describe('take concept snapshot over', () => {
             'MilieuEnergie': 'Milieu en Energie',
             'BouwenWonen': 'Bouwen en Wonen',
             'WelzijnGezondheid': 'Welzijn en Gezondheid',
+        };
+
+        const bevoegdeBestuursniveausMap = {
+            'Europees': 'Europese overheid',
+            'Federaal': 'Federale overheid',
+            'Vlaams': 'Vlaamse overheid',
+            'Provinciaal': 'Provinciale overheid',
+            'Lokaal': 'Lokale overheid',
+        }
+
+        const bevoegdeOverhedenMap = {
+            [pepingen.uri]: `${pepingen.name} (${pepingen.classificatie})`,
+            [aarschot.uri]: `${aarschot.name} (${aarschot.classificatie})`,
+            [leuven.uri]: `${leuven.name} (${leuven.classificatie})`,
+            [provincieVlaamsBrabant.uri]: `${provincieVlaamsBrabant.name} (${provincieVlaamsBrabant.classificatie})`,
+            [ocmwLeuven.uri]: `${ocmwLeuven.name} (${ocmwLeuven.classificatie})`,
+            [autonoomGemeentebedrijf.uri]: `${autonoomGemeentebedrijf.name} (${autonoomGemeentebedrijf.classificatie})`,
+            [autonoomProvinciebedrijf.uri]: `${autonoomProvinciebedrijf.name} (${autonoomProvinciebedrijf.classificatie})`,
+        };
+
+        const uitvoerendeBestuursniveausMap = {
+            'Europees': 'Europese overheid',
+            'Federaal': 'Federale overheid',
+            'Vlaams': 'Vlaamse overheid',
+            'Provinciaal': 'Provinciale overheid',
+            'Lokaal': 'Lokale overheid',
+            'Derden': 'Derden'
+        };
+
+        const uitvoerendeOverhedenMap = {
+            [ocmwVereniging.uri]: `${ocmwVereniging.name} (${ocmwVereniging.classificatie})`, 
+            [projectvereniging.uri]: `${projectvereniging.name} (${projectvereniging.classificatie})`,
+            [politieZone.uri]: `${politieZone.name} (${politieZone.classificatie})`,
+            [opdrachthoudendeVereniging.uri]: `${opdrachthoudendeVereniging.name} (${opdrachthoudendeVereniging.classificatie})`,
+            [hulpverleningszone.uri]: `${hulpverleningszone.name} (${hulpverleningszone.classificatie})`,
+            [dienstverlenendeVereniging.uri]: `${dienstverlenendeVereniging.name} (${dienstverlenendeVereniging.classificatie})`,
         };
 
         test.beforeEach(async ({ request }) => {
@@ -459,29 +496,55 @@ test.describe('take concept snapshot over', () => {
             //TODO LPDC-1171: uncomment
 
             // algemene info (eigenschappen)            
-           /* await instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForInput(moment(createSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'), moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
-            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
-
-            await instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForInput(moment(createSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'), moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
-            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
-
-            await instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForSelect(createSnapshot['jsonlddata']['type'], updateSnapshot['jsonlddata']['type']);
-            expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(updateSnapshot['jsonlddata']['type']);        
-
-            await instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['doelgroepen'].sort(), updateSnapshot['jsonlddata']['doelgroepen'].sort());
-            await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['doelgroepen'].sort());
+            /* await instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink.click();
+             await verifyDataInModalAndAndTakeOverForInput(moment(createSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'), moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
+             await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
  
-            await instantieDetailsPage.themasConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort(), updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
-            await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
+             await instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink.click();
+             await verifyDataInModalAndAndTakeOverForInput(moment(createSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'), moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
+             await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
+ 
+             await instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink.click();
+             await verifyDataInModalAndAndTakeOverForSelect(createSnapshot['jsonlddata']['type'], updateSnapshot['jsonlddata']['type']);
+             expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(updateSnapshot['jsonlddata']['type']);        
+ 
+             await instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink.click();
+             await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['doelgroepen'].sort(), updateSnapshot['jsonlddata']['doelgroepen'].sort());
+             await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['doelgroepen'].sort());
+  
+             await instantieDetailsPage.themasConceptWijzigingenOvernemenLink.click();
+             await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort(), updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
+             await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
+ 
+            await instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink.click();
+            await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort(), updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort());
+            await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort());
+
+            await instantieDetailsPage.bevoegdeOverheidConceptWijzigingenOvernemenLink.click();
+            await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => bevoegdeOverhedenMap[b]).sort(), updateSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => bevoegdeOverhedenMap[b]).sort());
+            await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => bevoegdeOverhedenMap[b]).sort());
+
+            await instantieDetailsPage.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink.click();
+            await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort(), updateSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort());
+            await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort());
+
+
+            await instantieDetailsPage.uitvoerendeOverheidConceptWijzigingenOvernemenLink.click();
+            await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => uitvoerendeOverhedenMap[b]).sort(), updateSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => uitvoerendeOverhedenMap[b]).sort());
+            await expect(instantieDetailsPage.uitvoerendeOverheidMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => uitvoerendeOverhedenMap[b]).sort());
 */
 
+
             //TODO LPDC-1171: validate that the update link is visible for all the fields and update them
+            //TODO LPDC-1171: save changes on eigenschappen tab, confirm that all changes are taken over
+            //TODO LPDC-1171: navigate back to overview 
+            //TODO LPDC-1171: navigate back to detail
+            //TODO LPDC-1171: verify that all data was still update
+            //TODO LPDC-1171: verify that all conceptwijzigingen overnemen links are not visible
+            //TODO LPDC-1171: verify that herziening nodig has disappeared
+            //TODO LPDC-1171: validate the titles of the three way compare dialog (add a param ... )
         });
+
 
 
     });
