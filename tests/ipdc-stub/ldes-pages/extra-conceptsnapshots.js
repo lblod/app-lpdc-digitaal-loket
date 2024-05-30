@@ -278,7 +278,7 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
                 "bevoegdeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
                 "uitvoerendBestuursniveaus": uniq([getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)]),
                 "uitvoerendeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
-                "zoektermen": { "nl": uniq([random(), random(), random()].map(i => `zoekterm - ${i}`)) },
+                "zoektermen": { "nl": uniq([random(), random()].map(i => `zoekterm - ${i}`)) },
                 "publicatiekanalen": [],
                 "yourEuropeCategorieen": [],
             } : {}),
@@ -336,7 +336,7 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
                 "bevoegdeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
                 "uitvoerendBestuursniveaus": uniq([getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)]),
                 "uitvoerendeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
-                "zoektermen": { "nl": uniq([random(), random(), random(), random(), random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`)) },
+                "zoektermen": { "nl": uniq([random(), random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`)) },
                 "publicatiekanalen": ["YourEurope"],
                 "yourEuropeCategorieen": uniq([getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën)]),
             } : {}),
@@ -388,7 +388,7 @@ function getRandomElement(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
 
-function random(highmark = 1000) {
+function random(highmark = 10000) {
     return Math.floor(Math.random() * highmark) + 1; // Generate a number between 1 and highmark
 }
 

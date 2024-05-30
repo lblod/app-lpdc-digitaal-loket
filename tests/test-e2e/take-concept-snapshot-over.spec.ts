@@ -193,7 +193,7 @@ test.describe('take concept snapshot over', () => {
         const productTypesMap = {
             'Toelating': 'Toelating',
             'FinancieelVoordeel': 'Financieel voordeel',
-            'InfrastructuurMateriaal': 'Infrastructuur en materiaal', 
+            'InfrastructuurMateriaal': 'Infrastructuur en materiaal',
             'Bewijs': 'Bewijs',
             'AdviesBegeleiding': 'Advies en begeleiding',
             'Voorwerp': 'Voorwerp',
@@ -230,52 +230,52 @@ test.describe('take concept snapshot over', () => {
             uri: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
             name: 'Pepingen',
         }
-        
+
         const aarschot = {
             uri: "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522",
             name: 'Aarschot',
         }
-        
+
         const leuven = {
             uri: "http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77",
             name: 'Leuven',
         }
-        
+
         const gent = {
             uri: "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
             name: 'Gent',
         }
-        
+
         const holsbeek = {
             uri: "http://data.lblod.info/id/bestuurseenheden/8a7354b76f3d258f9596fa454ec2b75b55be47234366c8f8d7d60eea96dfbebf",
             name: 'Holsbeek',
         }
-        
+
         const westerlo = {
             uri: "http://data.lblod.info/id/bestuurseenheden/8cd07007fee51d55760f7d3d14944b548d98061a9eca4eafe825c89a1145aaf3",
             name: 'Westerlo',
         }
-        
+
         const zoutleeuw = {
             uri: "http://data.lblod.info/id/bestuurseenheden/8da71bf3f06102d4c2e45daa597622ffd1c13ca150ddd12f6258e02855cdaeb5",
             name: 'Zoutleeuw',
         }
-        
+
         const ranst = {
             uri: "http://data.lblod.info/id/bestuurseenheden/93746445b8e49813e27e0d07459a2dac0d8d4aafb85d87662addecb3644c6c02",
             name: 'Ranst',
         }
-        
+
         const lennik = {
             uri: "http://data.lblod.info/id/bestuurseenheden/92f38467d9467707d91ba9cb3c5c165cd58447078d985b25a651b3f01e8695cd",
             name: 'Lennik',
         }
-        
+
         const mol = {
             uri: "http://data.lblod.info/id/bestuurseenheden/904ebf5719a5a4e125a3f9fdcd25b08e336f822ca786dc2b30dfca927033e4e4",
             name: 'Mol',
         }
-        
+
         const oosterzele = {
             uri: "http://data.lblod.info/id/bestuurseenheden/8df96cc548c53410332620ec1adae4591bd5340127b1332c4b902c5c3afe260d",
             name: 'Oosterzele',
@@ -429,6 +429,7 @@ test.describe('take concept snapshot over', () => {
         });
 
         //TODO LPDC-1171: also verify if when using the three way compare modal, we can edit the value in the input field and that value is saved in the main form, not just the 'overnemen' link
+        //TODO LPDC-1171: validate the titles of the three way compare dialog (add a param ... )
 
         test('given fields updated in concept snapshot can field by field update them', async () => {
             // update concept snapshot
@@ -468,7 +469,7 @@ test.describe('take concept snapshot over', () => {
             expect(await instantieDetailsPage.uitzonderingenEditor.textContent()).toContain(updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
 
             //voorwaarden
-            await instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink().click()
+            await instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink().click();
             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl']);
             await expect(instantieDetailsPage.titelVoorwaardeInput()).toHaveValue(updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl']);
 
@@ -485,7 +486,7 @@ test.describe('take concept snapshot over', () => {
             expect(await instantieDetailsPage.beschrijvingBewijsstukEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
 
             //procedures
-            await instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink().click()
+            await instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink().click();
             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['procedures'][0]['naam']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl']);
             await expect(instantieDetailsPage.titelProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl']);
 
@@ -553,7 +554,6 @@ test.describe('take concept snapshot over', () => {
             await verifyDataInModalAndAndTakeOverForInput(createSnapshot['jsonlddata']['websites'][0]['url'], updateSnapshot['jsonlddata']['websites'][0]['url']);
             await expect(instantieDetailsPage.websiteURLInput()).toHaveValue(updateSnapshot['jsonlddata']['websites'][0]['url']);
 
-
             await expect(instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig).toBeDisabled();
             await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeEnabled();
 
@@ -597,6 +597,7 @@ test.describe('take concept snapshot over', () => {
             await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort(), updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
             await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
 
+            //Bevoegdheid
             await instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink.click();
             await verifyDataInModalAndAndTakeOverForMultiSelect(createSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort(), updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort());
             await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort());
@@ -656,27 +657,134 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
 
             //basisinformatie
-            //await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).not.toBeVisible();
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot['jsonlddata']['naam']['nl']);
 
-            //await expect(instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
             expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['beschrijving']['nl']);
 
-            //await expect(instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
             expect(await instantieDetailsPage.aanvullendeBeschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['verdereBeschrijving']['nl']);
 
-            //await expect(instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink).not.toBeVisible();
             expect(await instantieDetailsPage.uitzonderingenEditor.textContent()).toContain(updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
 
+            //voorwaarden
+            await expect(instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelVoorwaardeInput()).toHaveValue(updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl']);
 
-            //TODO LPDC-1171: verify that all data was still update
-            //TODO LPDC-1171: verify that all conceptwijzigingen overnemen links are not visible anymore
+            await expect(instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingVoorwaardeEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl']);
 
-            //TODO LPDC-1171: validate the titles of the three way compare dialog (add a param ... )
+            await expect(instantieDetailsPage.titelBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelBewijsstukInput()).toHaveValue(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl']);
+
+            await expect(instantieDetailsPage.beschrijvingBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingBewijsstukEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
+
+            //procedures
+            await expect(instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl']);
+
+            await expect(instantieDetailsPage.beschrijvingProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingProcedureEditor().textContent()).toContain(updateSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl']);
+
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl']);
+
+            await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().textContent()).toContain(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl']);
+
+            await expect(instantieDetailsPage.websiteURLVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
+
+            //kosten
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelKostInput()).toHaveValue(updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
+            //financiele voordelen
+            await expect(instantieDetailsPage.titelFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelFinancieelVoordeelInput()).toHaveValue(updateSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl']);
+
+            await expect(instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().textContent()).toContain(updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl']);
+
+            //regelgeving
+            await expect(instantieDetailsPage.beschrijvingRegelgevingConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingRegelgevingEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevingTekst']['nl']);
+
+            await expect(instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl']);
+
+            await expect(instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl']);
+
+            await expect(instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
+
+            //meer info
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteInput()).toHaveValue(updateSnapshot['jsonlddata']['websites'][0]['naam']['nl']);
+
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingWebsiteEditor().textContent()).toContain(updateSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl']);
+
+            await expect(instantieDetailsPage.websiteURLConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLInput()).toHaveValue(updateSnapshot['jsonlddata']['websites'][0]['url']);
+
+            await instantieDetailsPage.eigenschappenTab.click();
+
+            await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+            await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+            await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+             // algemene info (eigenschappen)           
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).not.toBeVisible();;
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
+
+            await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
+
+            await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).not.toBeVisible();
+            expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(productTypesMap[updateSnapshot['jsonlddata']['type']]);
+
+            await expect(instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['doelgroepen'].map(dg => doelgroepenMap[dg]).sort());
+
+            await expect(instantieDetailsPage.themasConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
+
+            //Bevoegdheid
+            await expect(instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort());
+
+            await expect(instantieDetailsPage.bevoegdeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort());
+
+            await expect(instantieDetailsPage.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort());
+
+            await expect(instantieDetailsPage.uitvoerendeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendeOverheidMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort());
+
+            //Gerelateerd
+            await expect(instantieDetailsPage.tagsConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['zoektermen']['nl'].sort());
+
+            await expect(instantieDetailsPage.publicatieKanalenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['publicatiekanalen']?.map(pk => publicatieKanalenMap[pk])?.sort());
+
+            await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['yourEuropeCategorieen']?.map(cat => yourEuropeCategorieënMap[cat])?.sort());
 
         });
-
-
 
     });
 
