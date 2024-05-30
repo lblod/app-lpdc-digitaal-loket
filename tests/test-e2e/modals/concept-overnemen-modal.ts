@@ -27,8 +27,8 @@ export class ConceptOvernemenModal extends AbstractModal {
     readonly bewaarButton: Locator;
     readonly annuleerButton: Locator;
 
-    private constructor(page: Page) {
-        super(page, 'Concept overnemen');
+    private constructor(page: Page, title: string) {
+        super(page, title);
 
         const meestRecenteRevisieFormSelector = `div.au-c-modal__body form[aria-label="Concept meest recente revisie"]`;
         const conceptWaaropInstantieIsGebaseerdFormSelector = `div.au-c-modal__body form[aria-label="Concept waarop instantie gebaseerd is"]`;
@@ -56,8 +56,8 @@ export class ConceptOvernemenModal extends AbstractModal {
         this.annuleerButton = page.locator("div.au-c-modal__footer button").last();
     }
 
-    public static create(page: Page): ConceptOvernemenModal {
-        return new ConceptOvernemenModal(page);
+    public static create(page: Page, titel: string): ConceptOvernemenModal {
+        return new ConceptOvernemenModal(page, titel);
     }
 
     private inputBelow(formSelector: string, formLabel: string): Locator {
