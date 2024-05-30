@@ -118,7 +118,7 @@ ext:requirementsPg a form:PropertyGroup;
 ext:requirementHeading a form:Field;
     sh:order 1;
     sh:name "Voorwaarden";
-    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal voorwaarden is gewijzigd", "path": "http://vocab.belgif.be/ns/publicservice#hasRequirement"}""";
+    form:options """{ "level": "2", "skin": "2", "pillText": "Het aantal voorwaarden is gewijzigd", "path": "http://vocab.belgif.be/ns/publicservice#hasRequirement"}""";
     form:displayType displayTypes:lpdcHeading ;
     sh:group ext:requirementsPg.
 
@@ -214,7 +214,7 @@ ext:requirementHeading a form:Field;
         ext:evidencesHeading a form:Field;
            sh:order 1;
            sh:name "Bewijsstukken";
-           form:options """{ "level": "1", "skin": "3", "pillText": "Het aantal bewijsstukken is gewijzigd", "path": "http://data.europa.eu/m8g/hasSupportingEvidence"}""";
+           form:options """{ "level": "3", "skin": "3", "pillText": "Het aantal bewijsstukken is gewijzigd", "path": "http://data.europa.eu/m8g/hasSupportingEvidence"}""";
            form:displayType displayTypes:lpdcHeading ;
            sh:group ext:evidencesPg.
 
@@ -308,7 +308,7 @@ ext:rulesPg a form:PropertyGroup;
 ext:rulesHeading a form:Field;
     sh:order 1;
     sh:name "Procedure";
-    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal procedures is gewijzigd", "path": "http://purl.org/vocab/cpsv#follows"}""";
+    form:options """{ "level": "2", "skin": "2", "pillText": "Het aantal procedures is gewijzigd", "path": "http://purl.org/vocab/cpsv#follows"}""";
     form:displayType displayTypes:lpdcHeading ;
     sh:group ext:rulesPg.
 
@@ -404,7 +404,7 @@ ext:rulesHeading a form:Field;
         ext:procedureWebsitesHeading a form:Field;
             sh:order 1;
             sh:name "Website procedure";
-            form:options """{ "level": "1", "skin": "3", "pillText": "Het aantal website procedures is gewijzigd", "path": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite"}""";
+            form:options """{ "level": "3", "skin": "3", "pillText": "Het aantal website procedures is gewijzigd", "path": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite"}""";
             form:help "Hier kan u de relevante websites om een of meerdere procedurestappen online uit te voeren, aanbrengen/wijzigen.";
             form:displayType displayTypes:lpdcHeading ;
             sh:group ext:procedureWebsitesPg.
@@ -514,7 +514,7 @@ ext:costPg a form:PropertyGroup;
 ext:costsHeading a form:Field;
     sh:order 1;
     sh:name "Kosten";
-    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal kosten is gewijzigd", "path": "http://data.europa.eu/m8g/hasCost"}""";
+    form:options """{ "level": "2", "skin": "2", "pillText": "Het aantal kosten is gewijzigd", "path": "http://data.europa.eu/m8g/hasCost"}""";
     form:displayType displayTypes:lpdcHeading ;
     sh:group ext:costPg.
 
@@ -607,7 +607,7 @@ ext:finAdvPg a form:PropertyGroup;
 ext:finAdvHeading a form:Field;
     sh:order 1;
     sh:name "Financiële voordelen";
-    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal financiële voordelen is gewijzigd", "path": "http://purl.org/vocab/cpsv#produces"}""";
+    form:options """{ "level": "2", "skin": "2", "pillText": "Het aantal financiële voordelen is gewijzigd", "path": "http://purl.org/vocab/cpsv#produces"}""";
     form:displayType displayTypes:lpdcHeading ;
     sh:group ext:finAdvPg.
 
@@ -716,7 +716,7 @@ ext:regulationsPg a form:PropertyGroup;
      sh:order 3;
      sh:name "Regelgevende bron";
      form:help """Hier kan u de links naar relevante regelgevende bronnen aanbrengen/wijzigen (bijv. <a target="_blank" href="https://codex.vlaanderen.be/">Vlaamse codex</a>).""";
-     form:options """{ "level": "1", "skin": "3", "pillText": "Het aantal regelgevende bronnen is gewijzigd", "path": "http://data.europa.eu/m8g/hasLegalResource"}""";
+     form:options """{ "level": "3", "skin": "3", "pillText": "Het aantal regelgevende bronnen is gewijzigd", "path": "http://data.europa.eu/m8g/hasLegalResource"}""";
      form:displayType displayTypes:lpdcHeading ;
      sh:group ext:regulationsPg.
 
@@ -993,7 +993,7 @@ ext:websitesPg a form:PropertyGroup;
 ext:websitesHeading a form:Field;
     sh:order 1;
     sh:name "Meer info";
-    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal websites is gewijzigd", "path": "http://www.w3.org/2000/01/rdf-schema#seeAlso"}""";
+    form:options """{ "level": "2", "skin": "2", "pillText": "Het aantal websites is gewijzigd", "path": "http://www.w3.org/2000/01/rdf-schema#seeAlso"}""";
     form:displayType displayTypes:lpdcHeading ;
     sh:group ext:websitesPg.
 
