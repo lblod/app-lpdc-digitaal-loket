@@ -11,6 +11,7 @@ import { first_row } from "./components/table";
 import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
 import { InstantieAutomatischOmzettenVanUNaarJeModal } from "./modals/instantie-automatisch-omzetten-van-u-naar-je-modal";
 
+test.describe.configure({ mode: 'parallel' });
 test.describe('U-je conversie nodig', () => {
 
     let page: Page;

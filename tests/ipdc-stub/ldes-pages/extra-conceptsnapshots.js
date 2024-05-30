@@ -4,148 +4,70 @@ const {uniq} = pkg;
 
 const pepingen = {
     uri: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
-    name: "Pepingen",
-    classificatie: "Gemeente",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE24123064",
-    spatialNisLabel: "Pepingen"
 }
 
 const aarschot = {
     uri: "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522",
-    name: "Aarschot",
-    classificatie: "Gemeente",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE24224001",
-    spatialNisLabel: "Aarschot"
 }
 
 const leuven = {
     uri: "http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77",
-    name: "Leuven",
-    classificatie: "Gemeente",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE24224062",
-    spatialNisLabel: "Leuven"
 }
 
-const provincieVlaamsBrabant = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/8b7e7bf05ace5bb1a68f5bc0d870e20c20f147b00bd9a3dcce3a01733d4da744",
-    name: "Vlaams-Brabant",
-    classificatie: "Provincie",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE24",
-    spatialNisLabel: "Provincie Vlaams-Brabant"
+const gent = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
 }
 
-const ocmwLeuven = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/8a162fa437a54cb657b57514e4e0135ec106fce3206c29cd2f90b1859ed90dab",
-    name: "Leuven",
-    classificatie: "OCMW",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE24224062",
-    spatialNisLabel: "Leuven"
+const holsbeek = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/8a7354b76f3d258f9596fa454ec2b75b55be47234366c8f8d7d60eea96dfbebf",
 }
 
-const districtWilrijk = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/73e8904d83f7324e39abc0adf639b0e48bc52533c4c243b6419cac8fb70784cf",
-    name: "Wilrijk",
-    classificatie: "District",
-    spatialNisCode: undefined,
-    spatialNisLabel: undefined
+const westerlo = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/8cd07007fee51d55760f7d3d14944b548d98061a9eca4eafe825c89a1145aaf3",
 }
 
-const autonoomGemeentebedrijf = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/5b6b1771d90a683e65f3473ea76c0d37d80d08a8647fd96783eda9af179a8115",
-    name: "AGB Pepingen",
-    classificatie: "Autonoom gemeentebedrijf",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE24123064",
-    spatialNisLabel: "Pepingen"
+const zoutleeuw = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/8da71bf3f06102d4c2e45daa597622ffd1c13ca150ddd12f6258e02855cdaeb5",
 }
 
-const autonoomProvinciebedrijf = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/ebc8589470b92ac994448573f072f7a0408e4ab893364ed118fd65537c3b9ed0",
-    name: "APB Provinciaal Onderwijs Antwerpen",
-    classificatie: "Autonoom provinciebedrijf",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE21",
-    spatialNisLabel: "Provincie Antwerpen"
+const ranst = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/93746445b8e49813e27e0d07459a2dac0d8d4aafb85d87662addecb3644c6c02",
 }
 
-const dienstverlenendeVereniging = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/11410c82b479306316ccaa6d18f695bf276b71e3dcdb95af5df9530b3125aecd",
-    name: "Intergemeentelijk samenwerkingsverband Scheldelandschapspark",
-    classificatie: "Dienstverlenende vereniging",
-    spatialNisCode: undefined,
-    spatialNisLabel: undefined
+const lennik = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/92f38467d9467707d91ba9cb3c5c165cd58447078d985b25a651b3f01e8695cd",
 }
 
-const hulpverleningszone = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/0e951dd15341d38413bf809f16ef5f1bd163092001ac04ce78a4de5b5e9cdd37",
-    name: "HULPVERLENINGSZONE MEETJESLAND",
-    classificatie: "Hulpverleningszone",
-    spatialNisCode: undefined,
-    spatialNisLabel: undefined
+const mol = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/904ebf5719a5a4e125a3f9fdcd25b08e336f822ca786dc2b30dfca927033e4e4",
 }
 
-const opdrachthoudendeVereniging = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/09ba2fe670a607d3351a0e60cbd79f9e1a04992d576ccf33e842c80e669da996",
-    name: "Intergemeentelijke Maatschappij voor Openbare Gezondheid in Zuid-West-Vlaanderen",
-    classificatie: "Opdrachthoudende vereniging",
-    spatialNisCode: undefined,
-    spatialNisLabel: undefined
-};
-
-const politieZone = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/04e7a09c988feed3cf8df1c51aafe0f0a50811e325f5f5ab8e1b9750f48630fd",
-    name: "Politiezone van Middelkerke",
-    classificatie: "Politiezone",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE25535011",
-    spatialNisLabel: "Middelkerke"
+const oosterzele = {
+    uri: "http://data.lblod.info/id/bestuurseenheden/8df96cc548c53410332620ec1adae4591bd5340127b1332c4b902c5c3afe260d",
 }
 
-const projectvereniging = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/efe77fae-7ba7-4a62-873f-1f291b5a911f",
-    name: "Brabantse Kouters Oost",
-    classificatie: "Projectvereniging",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE24123088",
-    spatialNisLabel: "Vilvoorde"
-}
+const productTypes = ['Toelating', 'FinancieelVoordeel', 'InfrastructuurMateriaal', 'Bewijs', 'AdviesBegeleiding', 'Voorwerp', 'FinancieleVerplichting'];
+let productTypeIndexCounter = 0;
 
-const ocmwVereniging = {
-    uri: "http://data.lblod.info/id/bestuurseenheden/cce1926b-51ff-4b66-a702-ea985f1d250b",
-    name: "A.S.Z. Autonome Verzorgingsinstelling",
-    classificatie: "OCMW vereniging",
-    spatialNisCode: "http://data.europa.eu/nuts/code/BE23141002",
-    spatialNisLabel: "Aalst"
-}
-
-const productTypes = ['Toelating', 'Bewijs', 'Voorwerp'];
-
-const doelgroepen = ['Burger', 'Onderneming', 'Organisatie', 'Vereniging'];
+const doelgroepen = ['Burger', 'Onderneming', 'Organisatie', 'Vereniging', 'LokaalBestuur', 'VlaamseOverheid'];
 
 const themas = ['BurgerOverheid', 'CultuurSportVrijeTijd', 'EconomieWerk', 'MilieuEnergie', 'BouwenWonen', 'WelzijnGezondheid'];
 
 const bevoegdeBestuursniveaus = ['Europees', 'Federaal', 'Vlaams', 'Provinciaal', 'Lokaal'];
 
-const bevoegdeOverheden = [pepingen.uri, aarschot.uri, leuven.uri, provincieVlaamsBrabant.uri, ocmwLeuven.uri, autonoomGemeentebedrijf.uri, autonoomProvinciebedrijf.uri];
+const overheden = [pepingen.uri, aarschot.uri, leuven.uri, gent.uri, holsbeek.uri, westerlo.uri, zoutleeuw.uri, ranst.uri, lennik.uri, mol.uri, oosterzele.uri];
 
 const uitvoerendeBestuursniveaus = ['Europees', 'Federaal', 'Vlaams', 'Provinciaal', 'Lokaal', 'Derden'];
 
-const uitvoerendeOverheden = [ocmwVereniging.uri, projectvereniging.uri, politieZone.uri, opdrachthoudendeVereniging.uri, hulpverleningszone.uri, dienstverlenendeVereniging.uri];
-
 const yourEuropeCategorieën = [
-    'Bedrijf',
-    'BedrijfAansprakelijkheidBestuurders',
-    'BedrijfFusieVerkoop',
-    'BedrijfInsolventieLiquidatie',
     'BedrijfIntellectueleEigendomsrechten',
-    'Belastingen',
-    'BelastingenAccijnzen',
     'BelastingenOverigeBelastingen',
     'BeschermingPersoonsgegevens',
     'BeschermingPersoonsgegevensUitoefeningRechten',
     'BurgerEnFamilieRechten',
     'BurgerEnFamilieRechtenPartners',
     'ConsumentenrechtenVeiligheid',
-    'Diensten',
     'DienstenErkenningBeroepskwalificaties',
-    'GezondheidszorgWoonzorgcentrum',
-    'GezondheidszorgZiekteverzekering',
 ];
 
 const voorwaarden = (randomStr) => {
@@ -349,14 +271,16 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
                 "eindeDienstVerlening": getRandomFutureDate().toISOString(),
-                "type": getRandomElement(productTypes),
+                "type": productTypes[nextProductTypeIndex()],
                 "doelgroepen": uniq([getRandomElement(doelgroepen), getRandomElement(doelgroepen)]),
                 "themas": uniq([getRandomElement(themas), getRandomElement(themas)]),
                 "bevoegdBestuursniveaus": uniq([getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus)]),
-                "bevoegdeOverheden": uniq([getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden)]).map(elem => ({ "@id": elem })),
+                "bevoegdeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
                 "uitvoerendBestuursniveaus": uniq([getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)]),
-                "uitvoerendeOverheden": uniq([getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden)]).map(elem => ({ "@id": elem })),
+                "uitvoerendeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
                 "zoektermen": { "nl": uniq([random(), random(), random()].map(i => `zoekterm - ${i}`)) },
+                "publicatiekanalen": [],
+                "yourEuropeCategorieen": [],
             } : {}),
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
@@ -405,16 +329,16 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
                 "eindeDienstVerlening": getRandomFutureDate().toISOString(),
-                "type": getRandomElement(productTypes),
+                "type": productTypes[nextProductTypeIndex()],
                 "doelgroepen": uniq([getRandomElement(doelgroepen), getRandomElement(doelgroepen), getRandomElement(doelgroepen)]),
                 "themas": uniq([getRandomElement(themas), getRandomElement(themas), getRandomElement(themas)]),
-                "bevoegdBestuursniveaus": uniq([getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus)]),
-                "bevoegdeOverheden": uniq([getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden), getRandomElement(bevoegdeOverheden)]).map(elem => ({ "@id": elem })),
-                "uitvoerendBestuursniveaus": uniq([getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)]),
-                "uitvoerendeOverheden": uniq([getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden), getRandomElement(uitvoerendeOverheden)]).map(elem => ({ "@id": elem })),
-                "zoektermen": { "nl": uniq([random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`)) },
+                "bevoegdBestuursniveaus": uniq([getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus), getRandomElement(bevoegdeBestuursniveaus)]),
+                "bevoegdeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
+                "uitvoerendBestuursniveaus": uniq([getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus), getRandomElement(uitvoerendeBestuursniveaus)]),
+                "uitvoerendeOverheden": uniq([getRandomElement(overheden), getRandomElement(overheden), getRandomElement(overheden)]).map(elem => ({ "@id": elem })),
+                "zoektermen": { "nl": uniq([random(), random(), random(), random(), random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`)) },
                 "publicatiekanalen": ["YourEurope"],
-                "yourEuropeCategorieen": uniq([getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën)]),
+                "yourEuropeCategorieen": uniq([getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën)]),
             } : {}),
         "creatie": "2023-10-10T15:25:09.822193785Z",
         "laatstGewijzigd": new Date().toISOString(),
@@ -466,6 +390,16 @@ function getRandomElement(array) {
 
 function random(highmark = 1000) {
     return Math.floor(Math.random() * highmark) + 1; // Generate a number between 1 and highmark
+}
+
+function nextProductTypeIndex() {
+    const result = productTypeIndexCounter;
+    productTypeIndexCounter = productTypeIndexCounter + 1;
+    if(productTypeIndexCounter >= productTypes.length) {
+        productTypeIndexCounter = 0;
+    }
+
+    return result;
 }
 
 
