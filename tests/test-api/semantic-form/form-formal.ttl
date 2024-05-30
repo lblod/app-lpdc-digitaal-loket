@@ -29,14 +29,19 @@ ext:form a form:Form, form:TopLevelForm ;
     form:includes ext:descriptionF;
     form:includes ext:additionalDescriptionF;
     form:includes ext:exceptionF;
+    form:includes ext:requirementHeading;
     form:includes ext:requirementsL;
+    form:includes ext:rulesHeading;
     form:includes ext:rulesL;
+    form:includes ext:costsHeading;
     form:includes ext:costsL;
+    form:includes ext:finAdvHeading;
     form:includes ext:finAdvL;
     form:includes ext:regulationitleF;
     form:includes ext:headerLegalResource ;
     form:includes ext:legalResourceL;
     form:includes ext:contactpointsL;
+    form:includes ext:websitesHeading;
     form:includes ext:websitesL.
 
 ##########################################################
@@ -108,8 +113,14 @@ ext:basisinformatiePg a form:PropertyGroup;
 #  property-group: Voorwaarden
 ##########################################################
 ext:requirementsPg a form:PropertyGroup;
-    sh:name "Voorwaarden" ;
     sh:order 5 .
+
+ext:requirementHeading a form:Field;
+    sh:order 1;
+    sh:name "Voorwaarden";
+    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal voorwaarden is gewijzigd", "path": "http://vocab.belgif.be/ns/publicservice#hasRequirement"}""";
+    form:displayType displayTypes:lpdcHeading ;
+    sh:group ext:requirementsPg.
 
   ##########################################################
   #  listing-scope: Voorwaarden
@@ -129,7 +140,7 @@ ext:requirementsPg a form:PropertyGroup;
     form:canAdd true;
     form:canRemove true;
     sh:maxCount 1;
-    sh:order 1 .
+    sh:order 2 .
 
  ##########################################################
   #  Generator: Voorwaarden
@@ -155,6 +166,7 @@ ext:requirementsPg a form:PropertyGroup;
      form:removeLabel "Verwijder voorwaarde";
      form:includes ext:requirementTitleF;
      form:includes ext:requirementDescriptionF;
+     form:includes ext:evidencesHeading;
      form:includes ext:evidencesL.
 
     ##########################################################
@@ -197,8 +209,14 @@ ext:requirementsPg a form:PropertyGroup;
         #  property-group: evidence
         ##########################################################
         ext:evidencesPg a form:PropertyGroup;
-            sh:name "Bewijsstukken" ;
             sh:order 1 .
+
+        ext:evidencesHeading a form:Field;
+           sh:order 1;
+           sh:name "Bewijsstukken";
+           form:options """{ "level": "1", "skin": "3", "pillText": "Het aantal bewijsstukken is gewijzigd", "path": "http://data.europa.eu/m8g/hasSupportingEvidence"}""";
+           form:displayType displayTypes:lpdcHeading ;
+           sh:group ext:evidencesPg.
 
         ##########################################################
         #  listing-scope: Evidence
@@ -218,7 +236,7 @@ ext:requirementsPg a form:PropertyGroup;
           form:canAdd true;
           form:canRemove true;
           sh:maxCount 1;
-          sh:order 1 .
+          sh:order 2 .
 
        ##########################################################
         #  Generator: Evidence
@@ -285,8 +303,14 @@ ext:requirementsPg a form:PropertyGroup;
 #  property-group: Procedure
 ##########################################################
 ext:rulesPg a form:PropertyGroup;
-    sh:name "Procedure" ;
     sh:order 6 .
+
+ext:rulesHeading a form:Field;
+    sh:order 1;
+    sh:name "Procedure";
+    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal procedures is gewijzigd", "path": "http://purl.org/vocab/cpsv#follows"}""";
+    form:displayType displayTypes:lpdcHeading ;
+    sh:group ext:rulesPg.
 
   ##########################################################
   #  listing-scope: Proceduren
@@ -306,7 +330,7 @@ ext:rulesPg a form:PropertyGroup;
     form:canAdd true;
     form:canRemove true;
     sh:maxCount 1;
-    sh:order 1 .
+    sh:order 2 .
 
  ##########################################################
   #  Generator: Proceduren
@@ -332,6 +356,7 @@ ext:rulesPg a form:PropertyGroup;
      form:removeLabel "Verwijder procedure";
      form:includes ext:ruleTitleF;
      form:includes ext:ruleDescriptionF;
+     form:includes ext:procedureWebsitesHeading;
      form:includes ext:procedureWebsitesL.
 
     ##########################################################
@@ -374,9 +399,15 @@ ext:rulesPg a form:PropertyGroup;
         #  property-group: procedureWebsite
         ##########################################################
         ext:procedureWebsitesPg a form:PropertyGroup;
-            sh:name "Website procedure" ;
-            form:help "Hier kan u de relevante websites om een of meerdere procedurestappen online uit te voeren, aanbrengen/wijzigen.";
             sh:order 1 .
+
+        ext:procedureWebsitesHeading a form:Field;
+            sh:order 1;
+            sh:name "Website procedure";
+            form:options """{ "level": "1", "skin": "3", "pillText": "Het aantal website procedures is gewijzigd", "path": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite"}""";
+            form:help "Hier kan u de relevante websites om een of meerdere procedurestappen online uit te voeren, aanbrengen/wijzigen.";
+            form:displayType displayTypes:lpdcHeading ;
+            sh:group ext:procedureWebsitesPg.
 
         ##########################################################
         #  listing-scope: ProcedureWebsite
@@ -395,7 +426,7 @@ ext:rulesPg a form:PropertyGroup;
           form:addLabel "Voeg website toe";
           form:canAdd true;
           form:canRemove true;
-          sh:order 1 .
+          sh:order 2 .
 
        ##########################################################
         #  Generator: ProcedureWebsite
@@ -478,8 +509,14 @@ ext:rulesPg a form:PropertyGroup;
 #  property-group: Kost
 ##########################################################
 ext:costPg a form:PropertyGroup;
-    sh:name "Kosten" ;
     sh:order 6 .
+
+ext:costsHeading a form:Field;
+    sh:order 1;
+    sh:name "Kosten";
+    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal kosten is gewijzigd", "path": "http://data.europa.eu/m8g/hasCost"}""";
+    form:displayType displayTypes:lpdcHeading ;
+    sh:group ext:costPg.
 
   ##########################################################
   #  listing-scope: Kostn
@@ -498,7 +535,7 @@ ext:costPg a form:PropertyGroup;
     form:addLabel "Voeg kost toe";
     form:canAdd true;
     form:canRemove true;
-    sh:order 1 .
+    sh:order 2 .
 
  ##########################################################
   #  Generator: Kost
@@ -565,8 +602,14 @@ ext:costPg a form:PropertyGroup;
 #  property-group: Financieel Voordeel
 ##########################################################
 ext:finAdvPg a form:PropertyGroup;
-    sh:name "Financiële voordelen" ;
     sh:order 7 .
+
+ext:finAdvHeading a form:Field;
+    sh:order 1;
+    sh:name "Financiële voordelen";
+    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal financiële voordelen is gewijzigd", "path": "http://purl.org/vocab/cpsv#produces"}""";
+    form:displayType displayTypes:lpdcHeading ;
+    sh:group ext:finAdvPg.
 
   ##########################################################
   #  listing-scope: Financieel Voordeel
@@ -585,7 +628,7 @@ ext:finAdvPg a form:PropertyGroup;
     form:addLabel "Voeg financieel voordeel toe";
     form:canAdd true;
     form:canRemove true;
-    sh:order 1 .
+    sh:order 2 .
 
  ##########################################################
   #  Generator: Financieel Voordeel
@@ -673,8 +716,8 @@ ext:regulationsPg a form:PropertyGroup;
      sh:order 3;
      sh:name "Regelgevende bron";
      form:help """Hier kan u de links naar relevante regelgevende bronnen aanbrengen/wijzigen (bijv. <a target="_blank" href="https://codex.vlaanderen.be/">Vlaamse codex</a>).""";
-     form:options """{ "level": "1", "skin": "3"}""";
-     form:displayType displayTypes:heading ;
+     form:options """{ "level": "1", "skin": "3", "pillText": "Het aantal regelgevende bronnen is gewijzigd", "path": "http://data.europa.eu/m8g/hasLegalResource"}""";
+     form:displayType displayTypes:lpdcHeading ;
      sh:group ext:regulationsPg.
 
   ##########################################################
@@ -945,8 +988,14 @@ ext:contactpointsPg a form:PropertyGroup;
 #  property-group: meer info
 ##########################################################
 ext:websitesPg a form:PropertyGroup;
-    sh:name "Meer info" ;
     sh:order 10 .
+
+ext:websitesHeading a form:Field;
+    sh:order 1;
+    sh:name "Meer info";
+    form:options """{ "level": "1", "skin": "2", "pillText": "Het aantal websites is gewijzigd", "path": "http://www.w3.org/2000/01/rdf-schema#seeAlso"}""";
+    form:displayType displayTypes:lpdcHeading ;
+    sh:group ext:websitesPg.
 
   ##########################################################
   #  listing-scope: Meer Info
@@ -965,7 +1014,7 @@ ext:websitesPg a form:PropertyGroup;
     form:addLabel "Voeg website toe";
     form:canAdd true;
     form:canRemove true;
-    sh:order 1 .
+    sh:order 2 .
 
   ##########################################################
   #  Generator: Meer Info
