@@ -112,8 +112,8 @@ test.describe('take concept snapshot over', () => {
             await wijzigingenOvernemenModal.expectToBeClosed()
 
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot.title);
-            expect(await instantieDetailsPage.titelKostInput().inputValue()).toEqual(`Kost - updated - ${conceptId} - ${updateSnapshot.id}`);
-            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toEqual(`Kost beschrijving - updated - ${conceptId} - ${updateSnapshot.id}`);
+            expect(await instantieDetailsPage.titelKostInput().inputValue()).toEqual(`Kost - updated - ${conceptId} - ${updateSnapshot.id}-1`);
+            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toEqual(`Kost beschrijving - updated - ${conceptId} - ${updateSnapshot.id}-1`);
         })
 
         test('given published instance when updated title and cost in concept snapshot after instance is created then is back in draft mode and modal does not show', async ({ request }) => {
@@ -820,7 +820,256 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).not.toBeVisible();
         });
 
-        //TODO LPDC-1171: test pills + different lengths in various cases
+        test('when taking over wijzigingen per veld for a container on an instance for which only the kost containers was updated but with different orders, pills are shown', async () => {
+            const initiallyUpdatedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+            // instantie moet vlagje 'herziening nodig' hebben
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            // instantie moet alert 'herziening nodig' hebben
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+            await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+
+            await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+
+            const firstCostUpdatedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.1');
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', initiallyUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], createSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput()).toHaveValue(firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', initiallyUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], createSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            const firstCostUpdatedSnapshotAgain = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.1');
+
+            await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput()).toHaveValue(firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink().click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            const firstCostUpdatedAndSecondCostAddedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.2');
+
+            await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).toBeVisible();
+
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0).click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0).click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+
+            await instantieDetailsPage.voegKostToeButton.click();
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.nee.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).toBeVisible();
+
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0)).toBeVisible();
+            await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0)).toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1)).toBeVisible();
+            await expect(instantieDetailsPage.titelKostInput(1)).toHaveValue('');
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1)).toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain('');
+
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1).click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', '', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput(1)).toHaveValue(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1).click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', '', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0)).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0)).not.toBeVisible();
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+
+            const firstAndSecondCostUpdatedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.2');
+
+            await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
+
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0).click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0).click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1).click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput(1)).toHaveValue(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1).click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            const firstCostUpdatedSecondCostRemovedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.1');
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).toBeVisible();
+
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0).click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0).click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1).click();
+            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'], '');
+            await expect(instantieDetailsPage.titelKostInput(1)).toHaveValue('');
+
+            await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1).click();
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'], '');
+            expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain('');
+
+            await instantieDetailsPage.verwijderKostButton(1).click();
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+
+            await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0)).not.toBeVisible();
+            await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0)).not.toBeVisible();
+            expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+
+        });
 
         test('given fields updated in concept snapshot can field by field update them with latest concept snapshot data', async () => {
             // update concept snapshot
@@ -898,7 +1147,7 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.websiteURLVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
 
             //kosten
-            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click()
+            await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click();
             await verifyDataInModalAndAndTakeOverForInput('Titel kost', createSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
             await expect(instantieDetailsPage.titelKostInput()).toHaveValue(updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
 
@@ -1199,11 +1448,11 @@ test.describe('take concept snapshot over', () => {
 
             //basisinformatie
             await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel', createSnapshot['jsonlddata']['naam']['nl'], updateSnapshot['jsonlddata']['naam']['nl'], 'additional text in titel');
+            await verifyDataInModalAndAndTakeOverForInput('Titel', createSnapshot['jsonlddata']['naam']['nl'], updateSnapshot['jsonlddata']['naam']['nl'], createSnapshot['jsonlddata']['naam']['nl'], 'additional text in titel');
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot['jsonlddata']['naam']['nl'] + ' - additional text in titel');
 
             await instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving', createSnapshot['jsonlddata']['beschrijving']['nl'], updateSnapshot['jsonlddata']['beschrijving']['nl'], 'additional text in omschrijving');
+            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving', createSnapshot['jsonlddata']['beschrijving']['nl'], updateSnapshot['jsonlddata']['beschrijving']['nl'], createSnapshot['jsonlddata']['beschrijving']['nl'], 'additional text in omschrijving');
             expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['beschrijving']['nl'] + ' - additional text in omschrijving');
 
             await expect(instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig).toBeDisabled();
@@ -1246,7 +1495,7 @@ test.describe('take concept snapshot over', () => {
 
     });
 
-    async function verifyDataInModalAndAndTakeOverForInput(titel: string, conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string, additionalText?: string) {
+    async function verifyDataInModalAndAndTakeOverForInput(titel: string, conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string, currentInstantieText?: string, additionalText?: string) {
         const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel);
 
         await conceptOvernemenModal.expectToBeVisible();
@@ -1261,7 +1510,7 @@ test.describe('take concept snapshot over', () => {
 
         await expect(conceptOvernemenModal.instantieInput).toBeVisible();
         await expect(conceptOvernemenModal.instantieInput).toBeEditable();
-        await expect(conceptOvernemenModal.instantieInput).toHaveValue(conceptWaaropInstantieIsGebaseerdInput);
+        await expect(conceptOvernemenModal.instantieInput).toHaveValue(currentInstantieText ?? conceptWaaropInstantieIsGebaseerdInput);    
 
         await conceptOvernemenModal.overnemenLink.click();
 
@@ -1275,7 +1524,7 @@ test.describe('take concept snapshot over', () => {
         await conceptOvernemenModal.expectToBeClosed();
     }
 
-    async function verifyDataInModalAndAndTakeOverForRichText(titel: string, conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string, additionalText?: string) {
+    async function verifyDataInModalAndAndTakeOverForRichText(titel: string, conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string, currentInstantieText?: string, additionalText?: string) {
         const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel);
 
         await conceptOvernemenModal.expectToBeVisible();
@@ -1287,7 +1536,7 @@ test.describe('take concept snapshot over', () => {
         expect(await conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdRichTextReadonly.textContent()).toContain(conceptWaaropInstantieIsGebaseerdInput);
 
         await expect(conceptOvernemenModal.instantieRichText).toBeVisible();
-        expect(await conceptOvernemenModal.instantieRichText.textContent()).toContain(conceptWaaropInstantieIsGebaseerdInput);
+        expect(await conceptOvernemenModal.instantieRichText.textContent()).toContain(currentInstantieText ?? conceptWaaropInstantieIsGebaseerdInput);
 
         await conceptOvernemenModal.overnemenLink.click();
 

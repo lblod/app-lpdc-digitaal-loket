@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 import pkg from "lodash";
-const {uniq} = pkg;
+const { uniq } = pkg;
 
 const pepingen = {
     uri: "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589",
@@ -141,24 +141,23 @@ const procedures = (randomStr) => {
     }
 };
 
-const kost = (randomStr) => {
+const kost = (randomStr, nmbr) => {
     return {
-        "kosten": [
-            {
-                "naam": {
-                    "nl": `Kost${randomStr}`,
-                    "nl-BE-x-generated-formal": `Kost - generated-formal${randomStr}`,
-                    "nl-BE-x-generated-informal": `Kost - generated-informal${randomStr}`,
-                },
-                "beschrijving": {
-                    "nl": `Kost beschrijving${randomStr}`,
-                    "nl-BE-x-generated-formal": `Kost beschrijving - generated-formal${randomStr}`,
-                    "nl-BE-x-generated-informal": `Kost beschrijving - generated-informal${randomStr}`,
-                },
-                "@type": "kost",
-                "order": 0.0
-            }
-        ]
+        "kosten": Array.from({ length: nmbr }, (v, k) => k + 1)
+                .map(n => ({
+                    "naam": {
+                        "nl": `Kost${randomStr}-${n}`,
+                        "nl-BE-x-generated-formal": `Kost - generated-formal${randomStr}-${n}`,
+                        "nl-BE-x-generated-informal": `Kost - generated-informal${randomStr}-${n}`,
+                    },
+                    "beschrijving": {
+                        "nl": `Kost beschrijving${randomStr}-${n}`,
+                        "nl-BE-x-generated-formal": `Kost beschrijving - generated-formal${randomStr}-${n}`,
+                        "nl-BE-x-generated-informal": `Kost beschrijving - generated-informal${randomStr}-${n}`,
+                    },
+                    "@type": "kost",
+                    "order": n - 1
+                }))
     }
 };
 
@@ -263,7 +262,7 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
         "creatie": "2023-10-10T15:25:09.822193785Z",
         ...voorwaarden(` - created${randomData}`),
         ...procedures(` - created${randomData}`),
-        ...kost(` - created${randomData}`),
+        ...kost(` - created${randomData}`, 1),
         ...financieleVoordelen(` - created${randomData}`),
         ...regelgeving(` - created${randomData}`),
         ...meerInfo(` - created${randomData}`),
@@ -311,17 +310,18 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
 
     const specificElementUpdated = ` - ${uuid()}`;
 
-    const naamElementUpdated = elementToUpdate === 'naam' ? specificElementUpdated : ''; 
+    const naamElementTextUpdated = elementToUpdate === 'naam' ? specificElementUpdated : '';
 
-    const kostElementUpdated = elementToUpdate === 'kosten' ? specificElementUpdated : '';
+    const kostElementTextUpdated = elementToUpdate?.startsWith("kosten") ? specificElementUpdated : '';
+    const kostElementNumberOfElementsUpdated = elementToUpdate?.startsWith("kosten") ? Number.parseInt(elementToUpdate.slice(7)) : 1;
 
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
         "naam": {
-            "nl": `Concept updated${randomData}${naamElementUpdated}`,
-            "nl-BE-x-generated-formal": `Concept updated${randomData}${naamElementUpdated}`,
-            "nl-BE-x-generated-informal": `Concept updated${randomData}${naamElementUpdated}`
+            "nl": `Concept updated${randomData}${naamElementTextUpdated}`,
+            "nl-BE-x-generated-formal": `Concept updated${randomData}${naamElementTextUpdated}`,
+            "nl-BE-x-generated-informal": `Concept updated${randomData}${naamElementTextUpdated}`
         },
         "beschrijving": {
             "nl": `Concept beschrijving updated${randomData}`,
@@ -340,7 +340,7 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
         },
         ...voorwaarden(` - updated${randomData}`),
         ...procedures(` - updated${randomData}`),
-        ...kost(` - updated${randomData}${kostElementUpdated}`),
+        ...kost(` - updated${randomData}${kostElementTextUpdated}`, kostElementNumberOfElementsUpdated),
         ...financieleVoordelen(` - updated${randomData}`),
         ...regelgeving(` - updated${randomData}`),
         ...meerInfo(` - updated${randomData}`),
@@ -427,7 +427,7 @@ function random(highmark = 10000) {
 function nextProductTypeIndex() {
     const result = productTypeIndexCounter;
     productTypeIndexCounter = productTypeIndexCounter + 1;
-    if(productTypeIndexCounter >= productTypes.length) {
+    if (productTypeIndexCounter >= productTypes.length) {
         productTypeIndexCounter = 0;
     }
 

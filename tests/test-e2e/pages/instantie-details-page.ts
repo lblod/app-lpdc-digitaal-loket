@@ -95,6 +95,7 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly voegKostToeButton: Locator;
     readonly verwijderKostButton: (order?: number) => Locator;
+    readonly hetAantalKostenIsGewijzigdPill: Locator;
     readonly titelKostInput: (order?: number) => Locator;
     readonly titelKostConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingKostEditor: (order?: number) => Locator;
@@ -247,26 +248,26 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.voegVoorwaardeToeButton = this.buttonFor("Voeg voorwaarde toe", "Voorwaarden", "h2");
         this.titelVoorwaardeInput = (order: number = 0) => this.inputBelow('Titel voorwaarde').nth(order);
-        this.titelVoorwaardeConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel voorwaarde')).nth(order);
+        this.titelVoorwaardeConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel voorwaarde'), order);
         this.beschrijvingVoorwaardeEditor = (order: number = 0) => this.editorBelow('Beschrijving voorwaarde').nth(order);
         this.beschrijvingVoorwaardeReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving voorwaarde').nth(order);
-        this.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving voorwaarde')).nth(order);
+        this.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving voorwaarde'), order);
         this.verwijderVoorwaardeButton = (order: number = 0) => this.buttonFor('Verwijder voorwaarde', 'Voorwaarden', "h2").nth(order);
 
         this.voegBewijsstukToeButton = (order: number = 0) => this.buttonFor('Voeg bewijsstuk toe', 'Voorwaarden', "h2").nth(order);
         this.titelBewijsstukInput = (order: number = 0) => this.inputBelow('Titel bewijsstuk').nth(order);
-        this.titelBewijsstukConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel bewijsstuk')).nth(order);
+        this.titelBewijsstukConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel bewijsstuk'), order);
         this.beschrijvingBewijsstukEditor = (order: number = 0) => this.editorBelow('Beschrijving bewijsstuk').nth(order);
         this.beschrijvingBewijsstukReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving bewijsstuk').nth(order);
-        this.beschrijvingBewijsstukConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving bewijsstuk')).nth(order);
+        this.beschrijvingBewijsstukConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving bewijsstuk'), order);
         this.verwijderBewijsButton = (order: number = 0) => this.buttonFor('Verwijder bewijsstuk', 'Voorwaarden', "h2").nth(order);
 
         this.voegProcedureToeButton = this.buttonFor('Voeg procedure toe', 'Procedure', "h2");
         this.titelProcedureInput = (order: number = 0) => this.inputBelow('Titel procedure').nth(order);
-        this.titelProcedureConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel procedure')).nth(order);
+        this.titelProcedureConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel procedure'), order);
         this.beschrijvingProcedureEditor = (order: number = 0) => this.editorBelow('Beschrijving procedure').nth(order);
         this.beschrijvingProcedureReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving procedure').nth(order);
-        this.beschrijvingProcedureConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving procedure')).nth(order);
+        this.beschrijvingProcedureConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving procedure'), order);
         this.verwijderProcedureButton = (order: number = 0) => this.buttonFor('Verwijder procedure', 'Procedure', "h2").nth(order);
 
         this.voegWebsiteToeButtonVoorProcedure = (order: number = 0) => this.buttonFor('Voeg website toe', 'Procedure', "h2").nth(order);
@@ -279,35 +280,36 @@ export class InstantieDetailsPage extends AbstractPage {
         this.websiteURLVoorProcedureConceptWijzigingenOvernemenLink = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.conceptWijzigingenOvernemenLinkNextTo('Website URL'), childOrder, 'Website procedure', 'h3', parentOrder);
         this.verwijderWebsiteButtonVoorProcedure = (order: number = 0) => this.buttonFor('Verwijder website', 'Procedure', "h2").nth(order);
 
-        this.voegKostToeButton = this.buttonFor("Voeg kost toe", "Kosten", "h2");
+        this.voegKostToeButton = this.buttonFor("Voeg kost toe", "Kosten", "h2");    
         this.verwijderKostButton = (order: number = 0) => this.buttonFor('Verwijder kost', 'Kosten', "h2").nth(order);
+        this.hetAantalKostenIsGewijzigdPill = this.page.getByText('Het aantal kosten is gewijzigd');
         this.titelKostInput = (order: number = 0) => this.inputBelow('Titel kost').nth(order);
-        this.titelKostConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel kost')).nth(order);
+        this.titelKostConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel kost'), order);
         this.beschrijvingKostEditor = (order: number = 0) => this.editorBelow('Beschrijving kost').nth(order);
         this.beschrijvingKostReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving kost').nth(order);
-        this.beschrijvingKostConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving kost')).nth(order);
+        this.beschrijvingKostConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving kost'), order);
 
         this.voegFinancieelVoordeelToeButton = this.buttonFor('Voeg financieel voordeel toe', 'Financiële voordelen', "h2");
         this.verwijderFinancieelVoordeelButton = (order: number = 0) => this.buttonFor('Verwijder financieel voordeel', 'Financiële voordelen', "h2").nth(order);
         this.titelFinancieelVoordeelInput = (order: number = 0) => this.inputBelow('Titel financieel voordeel').nth(order);
-        this.titelFinancieelVoordeelConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel financieel voordeel')).nth(order);
+        this.titelFinancieelVoordeelConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel financieel voordeel'), order);
         this.beschrijvingFinancieelVoordeelEditor = (order: number = 0) => this.editorBelow('Beschrijving financieel voordeel').nth(order);
         this.beschrijvingFinancieelVoordeelReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving financieel voordeel').nth(order);
-        this.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving financieel voordeel')).nth(order);
+        this.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving financieel voordeel'), order);
 
         this.beschrijvingRegelgevingEditor = (order: number = 0) => this.editorBelow('Regelgeving').nth(order);
         this.beschrijvingRegelgevingReadonly = (order: number = 0) => this.readonlyBelow('Regelgeving').nth(order);
-        this.beschrijvingRegelgevingConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Regelgeving')).nth(order);
+        this.beschrijvingRegelgevingConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Regelgeving'), order);
 
         this.voegRegelgevendeBronToeButton = page.getByRole('button', { name: 'Voeg regelgevende bron toe' });
         this.verwijderRegelgevendeBronButton = (order: number = 0) => this.buttonFor('Verwijder regelgevende bron', 'Regelgeving', "h1").nth(order);
         this.titelRegelgevendeBronInput = (order: number = 0) => this.inputBelow('Titel regelgevende bron').nth(order);
-        this.titelRegelgevendeBronConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel regelgevende bron')).nth(order);
+        this.titelRegelgevendeBronConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel regelgevende bron'), order);
         this.beschrijvingRegelgevendeBronEditor = (order: number = 0) => this.editorBelow('Beschrijving regelgevende bron').nth(order);
         this.beschrijvingRegelgevendeBronReadonly = (order: number = 0) => this.readonlyBelow('Beschrijving regelgevende bron').nth(order);
-        this.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving regelgevende bron')).nth(order);
+        this.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.editorBelowLocator('Beschrijving regelgevende bron'), order);
         this.regelgevendeBronUrlInput = (order: number = 0) => this.inputBelow('URL regelgevende bron').nth(order);
-        this.regelgevendeBronUrlConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('URL regelgevende bron')).nth(order);
+        this.regelgevendeBronUrlConceptWijzigingenOvernemenLink = (order: number = 0) => this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('URL regelgevende bron'), order);
 
         this.voegContactpuntToeButton = page.getByRole('button', { name: 'Voeg contactpunt toe' });
         this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt', 'Contactpunten', "h1").nth(order);
@@ -397,8 +399,8 @@ export class InstantieDetailsPage extends AbstractPage {
         return this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('${label}'))`);
     }
 
-    private conceptWijzigingenOvernemenLinkAbove(locatorString: string): Locator {
-        return this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(${locatorString}, 1), 75)`).first();
+    private conceptWijzigingenOvernemenLinkAbove(locatorString: string, order: number = 0): Locator {
+        return this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(${locatorString}, ${order + 1}), 75)`).first();
     }
 
     private editorBelow(label: string): Locator {
