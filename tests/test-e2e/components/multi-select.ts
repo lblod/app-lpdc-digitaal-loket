@@ -4,12 +4,14 @@ export class MultiSelect {
 
     private readonly page: Page;
     private readonly selectDiv: Locator;
+    readonly selectDivLocatorString: string;
     private readonly listContainer: Locator;
 
     constructor(page: Page, forLabel: string, withinContainer: string = '') {
         this.page = page;
 
-        this.selectDiv = page.locator(`${withinContainer} div.ember-basic-dropdown-trigger:below(label:has-text('${forLabel}'))`).first();
+        this.selectDivLocatorString = `${withinContainer} div.ember-basic-dropdown-trigger:below(label:has-text('${forLabel}'))`;
+        this.selectDiv = page.locator(this.selectDivLocatorString).first();
         this.listContainer = page.locator(`${withinContainer} ul:below(label:has-text('${forLabel}'))`).first();
     }
 

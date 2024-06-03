@@ -142,7 +142,6 @@ test.describe('Concurrent Update', () => {
         const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
         const updateSnapshotNoFunctionalChangeIgnored = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
-
         await homePage.goto();
         await homePage.expectToBeVisible();
         await homePage.reloadUntil(async () => {
@@ -197,8 +196,13 @@ test.describe('Concurrent Update', () => {
         //verify if published
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: title, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
-        const bestuurseenheidUriPepingen = "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589"
+        const bestuurseenheidUriAarschot = "http://data.lblod.info/id/bestuurseenheden/ba4d960fe3e01984e15fd0b141028bab8f2b9b240bf1e5ab639ba0d7fe4dc522"
+        const bestuurseenheidUriLeuven = "http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77";
+        const bestuurseenheidUriPepingen = "http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589";
+        const bestuurseenheidUriHolsbeek = "http://data.lblod.info/id/bestuurseenheden/8a7354b76f3d258f9596fa454ec2b75b55be47234366c8f8d7d60eea96dfbebf";
+        const bestuurseenheidUriWesterlo = "http://data.lblod.info/id/bestuurseenheden/8cd07007fee51d55760f7d3d14944b548d98061a9eca4eafe825c89a1145aaf3";
         const refnisPepingen = "http://data.europa.eu/nuts/code/BE24123064"
+        
         verifyInstancePublishedOnIPDC(
             instancePublishedInIpdc,
             {
@@ -206,8 +210,8 @@ test.describe('Concurrent Update', () => {
                 beschrijving: { nl: beschrijving },
                 uuid: `PRESENT`,
                 createdBy: bestuurseenheidUriPepingen,
-                bevoegdeOverheden: [bestuurseenheidUriPepingen],
-                uitvoerendeOverheden: [bestuurseenheidUriPepingen],
+                bevoegdeOverheden: [bestuurseenheidUriPepingen, bestuurseenheidUriAarschot, bestuurseenheidUriLeuven],
+                uitvoerendeOverheden: [bestuurseenheidUriPepingen, bestuurseenheidUriHolsbeek, bestuurseenheidUriWesterlo],
                 geografischeToepassingsgebieden: [refnisPepingen],
             },
             'nl-be-x-formal');

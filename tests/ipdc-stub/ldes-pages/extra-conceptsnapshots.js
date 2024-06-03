@@ -261,12 +261,12 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-informal": `Uitzonderingen created - generated-informal${randomData}`
         },
         "creatie": "2023-10-10T15:25:09.822193785Z",
-        ...(withRandomNewData ? voorwaarden(` - created${randomData}`) : {}),
-        ...(withRandomNewData ? procedures(` - created${randomData}`) : {}),
-        ...(withRandomNewData ? kost(` - created${randomData}`) : {}),
-        ...(withRandomNewData ? financieleVoordelen(` - created${randomData}`) : {}),
-        ...(withRandomNewData ? regelgeving(` - created${randomData}`) : {}),
-        ...(withRandomNewData ? meerInfo(` - created${randomData}`) : {}),
+        ...voorwaarden(` - created${randomData}`),
+        ...procedures(` - created${randomData}`),
+        ...kost(` - created${randomData}`),
+        ...financieleVoordelen(` - created${randomData}`),
+        ...regelgeving(` - created${randomData}`),
+        ...meerInfo(` - created${randomData}`),
         ...(withRandomNewData ?
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
@@ -281,7 +281,20 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
                 "zoektermen": { "nl": uniq([random(), random()].map(i => `zoekterm - ${i}`)) },
                 "publicatiekanalen": [],
                 "yourEuropeCategorieen": [],
-            } : {}),
+            } : {
+                "startDienstVerlening": "2020-01-01T00:00:00Z",
+                "eindeDienstVerlening": "2028-01-05T00:00:00Z",
+                "type": 'FinancieelVoordeel',
+                "doelgroepen": ['Vereniging', 'LokaalBestuur'],
+                "themas": ['CultuurSportVrijeTijd', 'EconomieWerk'],
+                "bevoegdBestuursniveaus": ['Europees', 'Federaal'],
+                "bevoegdeOverheden": [aarschot.uri, leuven.uri].map(elem => ({ "@id": elem })),
+                "uitvoerendBestuursniveaus": ['Vlaams', 'Provinciaal'],
+                "uitvoerendeOverheden": [holsbeek.uri, westerlo.uri].map(elem => ({ "@id": elem })),
+                "zoektermen": { "nl": [`zoekterm - 100000`, `zoekterm - 100001`, `zoekterm - 100002`] },
+                "publicatiekanalen": [],
+                "yourEuropeCategorieen": [],
+            }),
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
         "gearchiveerd": false,
@@ -291,18 +304,22 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
     };
 };
 
-export const conceptUpdate = (conceptId, withRandomNewData) => {
+export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => {
     const id = uuid();
 
     const randomData = ` - ${conceptId}${withRandomNewData ? ` - ${id}` : ''}`;
+
+    const specificElementUpdated = ` - ${uuid()}`;
+
+    const naamElementUpdated = elementToUpdate === 'naam' ? specificElementUpdated : ''; 
 
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
         "naam": {
-            "nl": `Concept updated${randomData}`,
-            "nl-BE-x-generated-formal": `Concept updated${randomData}`,
-            "nl-BE-x-generated-informal": `Concept updated${randomData}`
+            "nl": `Concept updated${randomData}${naamElementUpdated}`,
+            "nl-BE-x-generated-formal": `Concept updated${randomData}${naamElementUpdated}`,
+            "nl-BE-x-generated-informal": `Concept updated${randomData}${naamElementUpdated}`
         },
         "beschrijving": {
             "nl": `Concept beschrijving updated${randomData}`,
@@ -319,12 +336,12 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-formal": `Uitzonderingen updated - generated-formal${randomData}`,
             "nl-BE-x-generated-informal": `Uitzonderingen updated - generated-informal${randomData}`
         },
-        ...(withRandomNewData ? voorwaarden(` - updated${randomData}`) : {}),
-        ...(withRandomNewData ? procedures(` - updated${randomData}`) : {}),
-        ...(withRandomNewData ? kost(` - updated${randomData}`) : {}),
-        ...(withRandomNewData ? financieleVoordelen(` - updated${randomData}`) : {}),
-        ...(withRandomNewData ? regelgeving(` - updated${randomData}`) : {}),
-        ...(withRandomNewData ? meerInfo(` - updated${randomData}`) : {}),
+        ...voorwaarden(` - updated${randomData}`),
+        ...procedures(` - updated${randomData}`),
+        ...kost(` - updated${randomData}`),
+        ...financieleVoordelen(` - updated${randomData}`),
+        ...regelgeving(` - updated${randomData}`),
+        ...meerInfo(` - updated${randomData}`),
         ...(withRandomNewData ?
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
@@ -339,7 +356,20 @@ export const conceptUpdate = (conceptId, withRandomNewData) => {
                 "zoektermen": { "nl": uniq([random(), random(), random(), random(), random(), random()].map(i => `zoekterm - ${i}`)) },
                 "publicatiekanalen": ["YourEurope"],
                 "yourEuropeCategorieen": uniq([getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën), getRandomElement(yourEuropeCategorieën)]),
-            } : {}),
+            } : {
+                "startDienstVerlening": "2027-01-01T00:00:00Z",
+                "eindeDienstVerlening": "2030-01-05T00:00:00Z",
+                "type": 'Toelating',
+                "doelgroepen": ['Burger', 'Onderneming'],
+                "themas": ['MilieuEnergie', 'BouwenWonen'],
+                "bevoegdBestuursniveaus": ['Provinciaal', 'Lokaal'],
+                "bevoegdeOverheden": [ranst.uri, lennik.uri].map(elem => ({ "@id": elem })),
+                "uitvoerendBestuursniveaus": ['Lokaal', 'Derden'],
+                "uitvoerendeOverheden": [gent.uri, holsbeek.uri, westerlo.uri].map(elem => ({ "@id": elem })),
+                "zoektermen": { "nl": [`zoekterm - 200000`, `zoekterm - 300001`, `zoekterm - 400002`] },
+                "publicatiekanalen": [],
+                "yourEuropeCategorieen": [],
+            }),
         "creatie": "2023-10-10T15:25:09.822193785Z",
         "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
