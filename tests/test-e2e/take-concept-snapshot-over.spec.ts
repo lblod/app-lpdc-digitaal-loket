@@ -407,7 +407,7 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.productOpnieuwBewerkenButton).not.toBeVisible();
         });
 
-        test('when taking over wijzigingen per veld on an instance for which only the title and description was updated, for all other fields no wijzigingen overnemen links appear', async () => {
+        test('when taking over wijzigingen per veld on an instance for which only the title was updated, for all other fields no wijzigingen overnemen links appear', async () => {
             const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
 
             // instantie moet vlagje 'herziening nodig' hebben
@@ -471,7 +471,7 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
 
             // algemene info (eigenschappen)           
-            await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).toBeVisible();;
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).toBeVisible();
             await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).toBeVisible();
             await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).toBeVisible();
             await expect(instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink).toBeVisible();
@@ -577,70 +577,247 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
 
-             //basisinformatie
-             await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink).not.toBeVisible();
- 
-             //voorwaarden
-             await expect(instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.titelBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
- 
-             //procedures
-             await expect(instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.websiteURLVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
- 
-             //kosten
-             await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
- 
-             //financiele voordelen
-             await expect(instantieDetailsPage.titelFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
- 
-             //regelgeving
-             await expect(instantieDetailsPage.beschrijvingRegelgevingConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink()).not.toBeVisible();
- 
-             //meer info
-             await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
-             await expect(instantieDetailsPage.websiteURLConceptWijzigingenOvernemenLink()).not.toBeVisible();
- 
-             await instantieDetailsPage.eigenschappenTab.click();
- 
-             await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
-             await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
- 
-             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
-             await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
- 
-             // algemene info (eigenschappen)           
-             await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.themasConceptWijzigingenOvernemenLink).not.toBeVisible();
- 
-             //Bevoegdheid
-             await expect(instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.bevoegdeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.uitvoerendeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
- 
-             //Gerelateerd
-             await expect(instantieDetailsPage.tagsConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.publicatieKanalenConceptWijzigingenOvernemenLink).not.toBeVisible();
-             await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).not.toBeVisible();
-             
+            //basisinformatie
+            await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //voorwaarden
+            await expect(instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //procedures
+            await expect(instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //kosten
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //financiele voordelen
+            await expect(instantieDetailsPage.titelFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //regelgeving
+            await expect(instantieDetailsPage.beschrijvingRegelgevingConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //meer info
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            await instantieDetailsPage.eigenschappenTab.click();
+
+            await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+            await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+            await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+            // algemene info (eigenschappen)           
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.themasConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //Bevoegdheid
+            await expect(instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.bevoegdeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //Gerelateerd
+            await expect(instantieDetailsPage.tagsConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.publicatieKanalenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+
+            //basisinformatie
+            await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //voorwaarden
+            await expect(instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //procedures
+            await expect(instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //kosten
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //financiele voordelen
+            await expect(instantieDetailsPage.titelFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //regelgeving
+            await expect(instantieDetailsPage.beschrijvingRegelgevingConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //meer info
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            await instantieDetailsPage.eigenschappenTab.click();
+
+            await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+            await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+            await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+            // algemene info (eigenschappen)           
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.themasConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //Bevoegdheid
+            await expect(instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.bevoegdeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //Gerelateerd
+            await expect(instantieDetailsPage.tagsConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.publicatieKanalenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+        });
+
+        test('when taking over wijzigingen per veld for a container on an instance for which only the kost container was updated, for all other fields no wijzigingen overnemen links appear', async () => {
+            const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+            // instantie moet vlagje 'herziening nodig' hebben
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            // instantie moet alert 'herziening nodig' hebben
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+            await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+
+            await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+
+            const updateSnapshotOverAgain = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten');
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+
+            //basisinformatie
+            await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //voorwaarden
+            await expect(instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingBewijsstukConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //procedures
+            await expect(instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLVoorProcedureConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //kosten
+            await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink()).toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink()).toBeVisible();
+
+            //financiele voordelen
+            await expect(instantieDetailsPage.titelFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //regelgeving
+            await expect(instantieDetailsPage.beschrijvingRegelgevingConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            //meer info
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();
+            await expect(instantieDetailsPage.websiteURLConceptWijzigingenOvernemenLink()).not.toBeVisible();
+
+            await instantieDetailsPage.eigenschappenTab.click();
+
+            await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+            await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+            await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+            // algemene info (eigenschappen)           
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.themasConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //Bevoegdheid
+            await expect(instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.bevoegdeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.uitvoerendeOverheidConceptWijzigingenOvernemenLink).not.toBeVisible();
+
+            //Gerelateerd
+            await expect(instantieDetailsPage.tagsConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.publicatieKanalenConceptWijzigingenOvernemenLink).not.toBeVisible();
+            await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).not.toBeVisible();
         });
 
         //TODO LPDC-1171: test pills + different lengths in various cases

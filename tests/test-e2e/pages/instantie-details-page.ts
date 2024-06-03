@@ -332,12 +332,12 @@ export class InstantieDetailsPage extends AbstractPage {
         this.voegWebsiteToeButton = this.buttonFor('Voeg website toe', 'Meer info', "h2");
         this.verwijderWebsiteButton = (order: number = 0) => this.buttonFor('Verwijder website', 'Meer info', "h2").nth(order);
         this.titelWebsiteInput = (order: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order);
-        this.titelWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.titelWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website'))), 1), 75)`).nth(order);
         this.beschrijvingWebsiteEditor = (order: number = 0) => page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
         this.beschrijvingWebsiteReadonly = (order: number = 0) => page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
-        this.beschrijvingWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.beschrijvingWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website'))), 1), 75)`).nth(order);
         this.websiteURLInput = (order: number = 0) => page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(order);
-        this.websiteURLConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(order);
+        this.websiteURLConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website'))), 1), 75)`).nth(order);
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
 
@@ -397,15 +397,15 @@ export class InstantieDetailsPage extends AbstractPage {
         return this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):right-of(label:text-is('${label}'))`);
     }
 
-    private conceptWijzigingenOvernemenLinkAbove(locatorString : string): Locator {
-        return this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(${locatorString}, 1), 50)`);
+    private conceptWijzigingenOvernemenLinkAbove(locatorString: string): Locator {
+        return this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(${locatorString}, 1), 75)`).first();
     }
 
     private editorBelow(label: string): Locator {
         return this.page.locator(this.editorBelowLocator(label));
     }
 
-    private editorBelowLocator(label:string): string {
+    private editorBelowLocator(label: string): string {
         return `div.ProseMirror:below(label:text-is('${label}'))`;
     }
 

@@ -313,6 +313,8 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
 
     const naamElementUpdated = elementToUpdate === 'naam' ? specificElementUpdated : ''; 
 
+    const kostElementUpdated = elementToUpdate === 'kosten' ? specificElementUpdated : '';
+
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
@@ -338,7 +340,7 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
         },
         ...voorwaarden(` - updated${randomData}`),
         ...procedures(` - updated${randomData}`),
-        ...kost(` - updated${randomData}`),
+        ...kost(` - updated${randomData}${kostElementUpdated}`),
         ...financieleVoordelen(` - updated${randomData}`),
         ...regelgeving(` - updated${randomData}`),
         ...meerInfo(` - updated${randomData}`),
