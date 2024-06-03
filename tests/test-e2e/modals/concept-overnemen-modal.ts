@@ -1,10 +1,13 @@
-import { fromPairs } from "lodash";
 import { MultiSelect } from "../components/multi-select";
 import { Select } from "../components/select";
 import { AbstractModal } from "./abstract-modal";
 import { Locator, Page } from '@playwright/test';
+import moment from "moment";
 
 export class ConceptOvernemenModal extends AbstractModal {
+
+    readonly meestRecenteRevisieLabel: Locator;
+    readonly conceptWaaropInstantieIsGebaseerdLabel: Locator;
 
     readonly meestRecenteConceptInput: Locator;
     readonly conceptWaaropInstantieIsGebaseerdInput: Locator;
@@ -27,12 +30,15 @@ export class ConceptOvernemenModal extends AbstractModal {
     readonly bewaarButton: Locator;
     readonly annuleerButton: Locator;
 
-    private constructor(page: Page, title: string) {
+    private constructor(page: Page, title: string, conceptWaaropInstantieIsGebaseerdGeneratedAt: string, meestRecenteRevisieGeneratedAt: string) {
         super(page, title);
-
+        
         const meestRecenteRevisieFormSelector = `div.au-c-modal__body form[aria-label="Concept meest recente revisie"]`;
         const conceptWaaropInstantieIsGebaseerdFormSelector = `div.au-c-modal__body form[aria-label="Concept waarop instantie gebaseerd is"]`;
         const instantieFormSelector = `div.au-c-modal__body form[aria-label="Instantie"]`;
+
+        this.meestRecenteRevisieLabel = this.page.getByText(`Meest recente concept (${moment(meestRecenteRevisieGeneratedAt).local().format('DD-MM-YYYY - HH:mm')})`);
+        this.conceptWaaropInstantieIsGebaseerdLabel = this.page.getByText(`Concept waarop instantie is gebaseerd (${moment(conceptWaaropInstantieIsGebaseerdGeneratedAt).local().format('DD-MM-YYYY - HH:mm')})`);
 
         this.meestRecenteConceptInput = this.inputBelow(meestRecenteRevisieFormSelector, 'Meest recente concept');
         this.conceptWaaropInstantieIsGebaseerdInput = this.inputBelow(conceptWaaropInstantieIsGebaseerdFormSelector, 'Concept waarop instantie is gebaseerd');
@@ -56,8 +62,8 @@ export class ConceptOvernemenModal extends AbstractModal {
         this.annuleerButton = page.locator("div.au-c-modal__footer button").last();
     }
 
-    public static create(page: Page, titel: string): ConceptOvernemenModal {
-        return new ConceptOvernemenModal(page, titel);
+    public static create(page: Page, titel: string, conceptWaaropInstantieIsGebaseerdGeneratedAt: string, meestRecenteRevisieGeneratedAt: string): ConceptOvernemenModal {
+        return new ConceptOvernemenModal(page, titel, conceptWaaropInstantieIsGebaseerdGeneratedAt, meestRecenteRevisieGeneratedAt);
     }
 
     private inputBelow(formSelector: string, formLabel: string): Locator {

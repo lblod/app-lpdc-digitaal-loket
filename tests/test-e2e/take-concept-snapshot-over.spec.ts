@@ -853,11 +853,23 @@ test.describe('take concept snapshot over', () => {
 
             await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', initiallyUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], createSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                initiallyUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                initiallyUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                createSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
             await expect(instantieDetailsPage.titelKostInput()).toHaveValue(firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', initiallyUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], createSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                initiallyUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                initiallyUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                createSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
             expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -882,11 +894,23 @@ test.describe('take concept snapshot over', () => {
 
             await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstCostUpdatedSnapshotAgain['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput()).toHaveValue(firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                firstCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstCostUpdatedSnapshotAgain['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -895,7 +919,7 @@ test.describe('take concept snapshot over', () => {
             await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
             await bevestigHerzieningVerwerktModal.expectToBeClosed();
 
-            const firstCostUpdatedAndSecondCostAddedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.2');
+            const firstCostUpdatedAndSecondCostAddedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.2'); //TODO LPDC-1171: leave description out for a website: from 1 -> 2; without description; link for description not shown
 
             await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
@@ -912,11 +936,23 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).toBeVisible();
 
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0).click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstCostUpdatedSnapshotAgain['jsonlddata'].generatedAtTime,
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0).click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                firstCostUpdatedSnapshotAgain['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstCostUpdatedSnapshotAgain['jsonlddata'].generatedAtTime,
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
 
             await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
@@ -947,11 +983,23 @@ test.describe('take concept snapshot over', () => {
             expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain('');
 
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1).click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', '', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                '',
+                firstCostUpdatedSnapshotAgain['jsonlddata'].generatedAtTime,
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput(1)).toHaveValue(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1).click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', '', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                '',
+                firstCostUpdatedSnapshotAgain['jsonlddata'].generatedAtTime,
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain(firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
 
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -993,19 +1041,43 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
 
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0).click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0).click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1).click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput(1)).toHaveValue(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1).click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'], firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'],
+                firstCostUpdatedAndSecondCostAddedSnapshot['jsonlddata'].generatedAtTime,
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain(firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl']);
 
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -1029,19 +1101,43 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).toBeVisible();
 
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0).click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput(0)).toHaveValue(firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0).click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1).click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'], '');
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['naam']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                '',
+                firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput(1)).toHaveValue('');
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(1).click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'], '');
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                firstAndSecondCostUpdatedSnapshot['jsonlddata']['kosten'][1]['beschrijving']['nl'],
+                firstAndSecondCostUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                '',
+                firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor(1).textContent()).toContain('');
 
             await instantieDetailsPage.verwijderKostButton(1).click();
@@ -1093,105 +1189,249 @@ test.describe('take concept snapshot over', () => {
 
             //basisinformatie
             await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel', createSnapshot['jsonlddata']['naam']['nl'], updateSnapshot['jsonlddata']['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel',
+                createSnapshot['jsonlddata']['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot['jsonlddata']['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving', createSnapshot['jsonlddata']['beschrijving']['nl'], updateSnapshot['jsonlddata']['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving',
+                createSnapshot['jsonlddata']['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['beschrijving']['nl']);
 
             await instantieDetailsPage.aanvullendeBeschrijvingConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForRichText('Aanvullende Beschrijving', createSnapshot['jsonlddata']['verdereBeschrijving']['nl'], updateSnapshot['jsonlddata']['verdereBeschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Aanvullende Beschrijving',
+                createSnapshot['jsonlddata']['verdereBeschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['verdereBeschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.aanvullendeBeschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['verdereBeschrijving']['nl']);
 
             await instantieDetailsPage.uitzonderingenConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForRichText('Uitzonderingen', createSnapshot['jsonlddata']['uitzonderingen']['nl'], updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Uitzonderingen',
+                createSnapshot['jsonlddata']['uitzonderingen']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['uitzonderingen']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.uitzonderingenEditor.textContent()).toContain(updateSnapshot['jsonlddata']['uitzonderingen']['nl']);
 
             //voorwaarden
             await instantieDetailsPage.titelVoorwaardeConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel voorwaarde', createSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel voorwaarde',
+                createSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelVoorwaardeInput()).toHaveValue(updateSnapshot['jsonlddata']['voorwaarden'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingVoorwaardeConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving voorwaarde', createSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving voorwaarde',
+                createSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingVoorwaardeEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.titelBewijsstukConceptWijzigingenOvernemenLink().click()
-            await verifyDataInModalAndAndTakeOverForInput('Titel bewijsstuk', createSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel bewijsstuk',
+                createSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelBewijsstukInput()).toHaveValue(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingBewijsstukConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving bewijsstuk', createSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl'], updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving bewijsstuk',
+                createSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingBewijsstukEditor().textContent()).toContain(updateSnapshot['jsonlddata']['voorwaarden'][0]['bewijs']['beschrijving']['nl']);
 
             //procedures
             await instantieDetailsPage.titelProcedureConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel procedure', createSnapshot['jsonlddata']['procedures'][0]['naam']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel procedure',
+                createSnapshot['jsonlddata']['procedures'][0]['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingProcedureConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving procedure', createSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving procedure',
+                createSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingProcedureEditor().textContent()).toContain(updateSnapshot['jsonlddata']['procedures'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.titelWebsiteVoorProcedureConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel website', createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel website',
+                createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingWebsiteVoorProcedureConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving website', createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving website',
+                createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().textContent()).toContain(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.websiteURLVoorProcedureConceptWijzigingenOvernemenLink().click()
-            await verifyDataInModalAndAndTakeOverForInput('Website URL', createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url'], updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Website URL',
+                createSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.websiteURLVoorProcedureInput()).toHaveValue(updateSnapshot['jsonlddata']['procedures'][0]['websites'][0]['url']);
 
             //kosten
             await instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel kost', createSnapshot['jsonlddata']['kosten'][0]['naam']['nl'], updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel kost',
+                createSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelKostInput()).toHaveValue(updateSnapshot['jsonlddata']['kosten'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving kost', createSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving kost',
+                createSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toContain(updateSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
 
             //financiele voordelen
             await instantieDetailsPage.titelFinancieelVoordeelConceptWijzigingenOvernemenLink().click()
-            await verifyDataInModalAndAndTakeOverForInput('Titel financieel voordeel', createSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl'], updateSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel financieel voordeel',
+                createSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelFinancieelVoordeelInput()).toHaveValue(updateSnapshot['jsonlddata']['financieleVoordelen'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingFinancieelVoordeelConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving financieel voordeel', createSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving financieel voordeel',
+                createSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().textContent()).toContain(updateSnapshot['jsonlddata']['financieleVoordelen'][0]['beschrijving']['nl']);
 
             //regelgeving
             await instantieDetailsPage.beschrijvingRegelgevingConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Regelgeving', createSnapshot['jsonlddata']['regelgevingTekst']['nl'], updateSnapshot['jsonlddata']['regelgevingTekst']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Regelgeving',
+                createSnapshot['jsonlddata']['regelgevingTekst']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['regelgevingTekst']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingRegelgevingEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevingTekst']['nl']);
 
             await instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink().click()
-            await verifyDataInModalAndAndTakeOverForInput('Titel regelgevende bron', createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl'], updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel regelgevende bron',
+                createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving regelgevende bron', createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving regelgevende bron',
+                createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink().click()
-            await verifyDataInModalAndAndTakeOverForInput('URL regelgevende bron', createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url'], updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'URL regelgevende bron',
+                createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
 
             //meer info
             await instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink().click()
-            await verifyDataInModalAndAndTakeOverForInput('Titel website', createSnapshot['jsonlddata']['websites'][0]['naam']['nl'], updateSnapshot['jsonlddata']['websites'][0]['naam']['nl']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel website',
+                createSnapshot['jsonlddata']['websites'][0]['naam']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['websites'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.titelWebsiteInput()).toHaveValue(updateSnapshot['jsonlddata']['websites'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving website', createSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl'], updateSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl']);
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving website',
+                createSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.beschrijvingWebsiteEditor().textContent()).toContain(updateSnapshot['jsonlddata']['websites'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.websiteURLConceptWijzigingenOvernemenLink().click();
-            await verifyDataInModalAndAndTakeOverForInput('Website URL', createSnapshot['jsonlddata']['websites'][0]['url'], updateSnapshot['jsonlddata']['websites'][0]['url']);
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Website URL',
+                createSnapshot['jsonlddata']['websites'][0]['url'],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['websites'][0]['url'],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.websiteURLInput()).toHaveValue(updateSnapshot['jsonlddata']['websites'][0]['url']);
 
             await expect(instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig).toBeDisabled();
@@ -1218,55 +1458,127 @@ test.describe('take concept snapshot over', () => {
 
             // algemene info (eigenschappen)            
             await instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForInput('Product of dienst geldig vanaf', moment(createSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'), moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
-            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Product of dienst geldig vanaf',
+                moment(createSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                moment(updateSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'));
 
             await instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForInput('Product of dienst geldig tot', moment(createSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'), moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
-            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Product of dienst geldig tot',
+                moment(createSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
+            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'));
 
             await instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForSelect('Product type', productTypesMap[createSnapshot['jsonlddata']['type']], productTypesMap[updateSnapshot['jsonlddata']['type']]);
+            await verifyDataInModalAndAndTakeOverForSelect(
+                'Product type',
+                productTypesMap[createSnapshot['jsonlddata']['type']],
+                createSnapshot['jsonlddata'].generatedAtTime,
+                productTypesMap[updateSnapshot['jsonlddata']['type']],
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(productTypesMap[updateSnapshot['jsonlddata']['type']]);
 
             await instantieDetailsPage.doelgroepenConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Doelgroepen', createSnapshot['jsonlddata']['doelgroepen'].map(dg => doelgroepenMap[dg]).sort(), updateSnapshot['jsonlddata']['doelgroepen'].map(dg => doelgroepenMap[dg]).sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Doelgroepen',
+                createSnapshot['jsonlddata']['doelgroepen'].map(dg => doelgroepenMap[dg]).sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['doelgroepen'].map(dg => doelgroepenMap[dg]).sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.doelgroepenMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['doelgroepen'].map(dg => doelgroepenMap[dg]).sort());
 
             await instantieDetailsPage.themasConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect(`Thema\\\'s`, createSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort(), updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                `Thema\\\'s`,
+                createSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.themasMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['themas'].map(t => themasMap[t]).sort());
 
             //Bevoegdheid
             await instantieDetailsPage.bevoegdBestuursniveauConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Bevoegd bestuursniveau', createSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort(), updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Bevoegd bestuursniveau',
+                createSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.bevoegdBestuursniveauMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['bevoegdBestuursniveaus'].map(b => bevoegdeBestuursniveausMap[b]).sort());
 
             await instantieDetailsPage.bevoegdeOverheidConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Bevoegde overheid', createSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort(), updateSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Bevoegde overheid',
+                createSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.bevoegdeOverheidMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['bevoegdeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort());
 
             await instantieDetailsPage.uitvoerendBestuursniveauConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Uitvoerend bestuursniveau', createSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort(), updateSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Uitvoerend bestuursniveau',
+                createSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['uitvoerendBestuursniveaus'].map(b => uitvoerendeBestuursniveausMap[b]).sort());
 
             await instantieDetailsPage.uitvoerendeOverheidConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Uitvoerende overheid', createSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort(), updateSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Uitvoerende overheid',
+                createSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.uitvoerendeOverheidMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['uitvoerendeOverheden'].map(b => b['@id']).map(b => overhedenMap[b]).sort());
 
             //Gerelateerd
             await instantieDetailsPage.tagsConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Tags', createSnapshot['jsonlddata']['zoektermen']['nl'].sort(), updateSnapshot['jsonlddata']['zoektermen']['nl'].sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Tags',
+                createSnapshot['jsonlddata']['zoektermen']['nl'].sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['zoektermen']['nl'].sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.tagsMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['zoektermen']['nl'].sort());
 
             await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).not.toBeVisible();
             await instantieDetailsPage.publicatieKanalenConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Publicatiekanalen', createSnapshot['jsonlddata']['publicatiekanalen']?.map(pk => publicatieKanalenMap[pk])?.sort(), updateSnapshot['jsonlddata']['publicatiekanalen']?.map(pk => publicatieKanalenMap[pk])?.sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Publicatiekanalen',
+                createSnapshot['jsonlddata']['publicatiekanalen']?.map(pk => publicatieKanalenMap[pk])?.sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['publicatiekanalen']?.map(pk => publicatieKanalenMap[pk])?.sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.publicatieKanalenMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['publicatiekanalen']?.map(pk => publicatieKanalenMap[pk])?.sort());
 
             await expect(instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink).toBeVisible();
             await instantieDetailsPage.categorieenYourEuropeConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForMultiSelect('Categorieën Your Europe', createSnapshot['jsonlddata']['yourEuropeCategorieen']?.map(cat => yourEuropeCategorieënMap[cat])?.sort(), updateSnapshot['jsonlddata']['yourEuropeCategorieen']?.map(cat => yourEuropeCategorieënMap[cat])?.sort());
+            await verifyDataInModalAndAndTakeOverForMultiSelect(
+                'Categorieën Your Europe',
+                createSnapshot['jsonlddata']['yourEuropeCategorieen']?.map(cat => yourEuropeCategorieënMap[cat])?.sort(),
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['yourEuropeCategorieen']?.map(cat => yourEuropeCategorieënMap[cat])?.sort(),
+                updateSnapshot['jsonlddata'].generatedAtTime,
+            );
             await expect(instantieDetailsPage.categorieenYourEuropeMultiSelect.options()).toContainText(updateSnapshot['jsonlddata']['yourEuropeCategorieen']?.map(cat => yourEuropeCategorieënMap[cat])?.sort());
 
             await expect(instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig).toBeDisabled();
@@ -1387,10 +1699,10 @@ test.describe('take concept snapshot over', () => {
 
             // algemene info (eigenschappen)           
             await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).not.toBeVisible();;
-            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).format('DD-MM-YYYY'));
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'));
 
             await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).not.toBeVisible();
-            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).format('DD-MM-YYYY'));
+            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'));
 
             await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).not.toBeVisible();
             expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(productTypesMap[updateSnapshot['jsonlddata']['type']]);
@@ -1448,11 +1760,25 @@ test.describe('take concept snapshot over', () => {
 
             //basisinformatie
             await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForInput('Titel', createSnapshot['jsonlddata']['naam']['nl'], updateSnapshot['jsonlddata']['naam']['nl'], createSnapshot['jsonlddata']['naam']['nl'], 'additional text in titel');
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel', 
+                createSnapshot['jsonlddata']['naam']['nl'], 
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['naam']['nl'], 
+                updateSnapshot['jsonlddata'].generatedAtTime,
+                createSnapshot['jsonlddata']['naam']['nl'], 
+                'additional text in titel');
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot['jsonlddata']['naam']['nl'] + ' - additional text in titel');
 
             await instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink.click();
-            await verifyDataInModalAndAndTakeOverForRichText('Beschrijving', createSnapshot['jsonlddata']['beschrijving']['nl'], updateSnapshot['jsonlddata']['beschrijving']['nl'], createSnapshot['jsonlddata']['beschrijving']['nl'], 'additional text in omschrijving');
+            await verifyDataInModalAndAndTakeOverForRichText(
+                'Beschrijving', 
+                createSnapshot['jsonlddata']['beschrijving']['nl'], 
+                createSnapshot['jsonlddata'].generatedAtTime,
+                updateSnapshot['jsonlddata']['beschrijving']['nl'], 
+                updateSnapshot['jsonlddata'].generatedAtTime,
+                createSnapshot['jsonlddata']['beschrijving']['nl'], 
+                'additional text in omschrijving');
             expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['beschrijving']['nl'] + ' - additional text in omschrijving');
 
             await expect(instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig).toBeDisabled();
@@ -1495,8 +1821,16 @@ test.describe('take concept snapshot over', () => {
 
     });
 
-    async function verifyDataInModalAndAndTakeOverForInput(titel: string, conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string, currentInstantieText?: string, additionalText?: string) {
-        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel);
+    async function verifyDataInModalAndAndTakeOverForInput(
+        titel: string,
+        conceptWaaropInstantieIsGebaseerdText: string,
+        conceptWaaropInstantieIsGebaseerdGeneratedAt: string,
+        meestRecenteConceptText: string,
+        meestRecenteRevisieGeneratedAt: string,
+        currentInstantieText?: string,
+        additionalText?: string) {
+
+        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel, conceptWaaropInstantieIsGebaseerdGeneratedAt, meestRecenteRevisieGeneratedAt);
 
         await conceptOvernemenModal.expectToBeVisible();
 
@@ -1504,13 +1838,19 @@ test.describe('take concept snapshot over', () => {
         await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeDisabled();
         await expect(conceptOvernemenModal.meestRecenteConceptInput).toHaveValue(meestRecenteConceptText);
 
+        if (conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel) {
+            await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel).toBeVisible();
+        }
+        if (conceptOvernemenModal.meestRecenteRevisieLabel) {
+            await expect(conceptOvernemenModal.meestRecenteRevisieLabel).toBeVisible();
+        }
         await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toBeVisible();
         await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toBeDisabled();
-        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toHaveValue(conceptWaaropInstantieIsGebaseerdInput);
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toHaveValue(conceptWaaropInstantieIsGebaseerdText);
 
         await expect(conceptOvernemenModal.instantieInput).toBeVisible();
         await expect(conceptOvernemenModal.instantieInput).toBeEditable();
-        await expect(conceptOvernemenModal.instantieInput).toHaveValue(currentInstantieText ?? conceptWaaropInstantieIsGebaseerdInput);    
+        await expect(conceptOvernemenModal.instantieInput).toHaveValue(currentInstantieText ?? conceptWaaropInstantieIsGebaseerdText);
 
         await conceptOvernemenModal.overnemenLink.click();
 
@@ -1524,11 +1864,25 @@ test.describe('take concept snapshot over', () => {
         await conceptOvernemenModal.expectToBeClosed();
     }
 
-    async function verifyDataInModalAndAndTakeOverForRichText(titel: string, conceptWaaropInstantieIsGebaseerdInput: string, meestRecenteConceptText: string, currentInstantieText?: string, additionalText?: string) {
-        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel);
+    async function verifyDataInModalAndAndTakeOverForRichText(
+        titel: string,
+        conceptWaaropInstantieIsGebaseerdInput: string,
+        conceptWaaropInstantieIsGebaseerdGeneratedAt: string,
+        meestRecenteConceptText: string,
+        meestRecenteRevisieGeneratedAt: string,
+        currentInstantieText?: string,
+        additionalText?: string) {
+
+        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel, conceptWaaropInstantieIsGebaseerdGeneratedAt, meestRecenteRevisieGeneratedAt);
 
         await conceptOvernemenModal.expectToBeVisible();
 
+        if (conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel) {
+            await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel).toBeVisible();
+        }
+        if (conceptOvernemenModal.meestRecenteRevisieLabel) {
+            await expect(conceptOvernemenModal.meestRecenteRevisieLabel).toBeVisible();
+        }
         await expect(conceptOvernemenModal.meestRecenteConceptRichTextReadonly).toBeVisible();
         expect(await conceptOvernemenModal.meestRecenteConceptRichTextReadonly.textContent()).toContain(meestRecenteConceptText);
 
@@ -1551,11 +1905,24 @@ test.describe('take concept snapshot over', () => {
         await conceptOvernemenModal.expectToBeClosed();
     }
 
-    async function verifyDataInModalAndAndTakeOverForSelect(titel: string, conceptWaaropInstantieIsGebaseerdValue: string, meestRecenteConceptValue: string) {
-        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel);
+    async function verifyDataInModalAndAndTakeOverForSelect(
+        titel: string,
+        conceptWaaropInstantieIsGebaseerdValue: string,
+        conceptWaaropInstantieIsGebaseerdGeneratedAt: string,
+        meestRecenteConceptValue: string,
+        meestRecenteRevisieGeneratedAt: string,
+    ) {
+
+        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel, conceptWaaropInstantieIsGebaseerdGeneratedAt, meestRecenteRevisieGeneratedAt);
 
         await conceptOvernemenModal.expectToBeVisible();
 
+        if (conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel) {
+            await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel).toBeVisible();
+        }
+        if (conceptOvernemenModal.meestRecenteRevisieLabel) {
+            await expect(conceptOvernemenModal.meestRecenteRevisieLabel).toBeVisible();
+        }
         expect(await conceptOvernemenModal.meestRecenteConceptSelect.selectedItem.textContent()).toContain(meestRecenteConceptValue);
         expect(await conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdSelect.selectedItem.textContent()).toContain(conceptWaaropInstantieIsGebaseerdValue);
         expect(await conceptOvernemenModal.instantieSelect.selectedItem.textContent()).toContain(conceptWaaropInstantieIsGebaseerdValue);
@@ -1570,11 +1937,23 @@ test.describe('take concept snapshot over', () => {
         await conceptOvernemenModal.expectToBeClosed();
     }
 
-    async function verifyDataInModalAndAndTakeOverForMultiSelect(titel: string, conceptWaaropInstantieIsGebaseerdValues: string[] | undefined, meestRecenteConceptValues: string[] | undefined) {
-        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel);
+    async function verifyDataInModalAndAndTakeOverForMultiSelect(
+        titel: string,
+        conceptWaaropInstantieIsGebaseerdValues: string[] | undefined,
+        conceptWaaropInstantieIsGebaseerdGeneratedAt: string,
+        meestRecenteConceptValues: string[],
+        meestRecenteRevisieGeneratedAt: string | undefined) {
+
+        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel, conceptWaaropInstantieIsGebaseerdGeneratedAt, meestRecenteRevisieGeneratedAt);
 
         await conceptOvernemenModal.expectToBeVisible();
 
+        if (conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel) {
+            await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel).toBeVisible();
+        }
+        if (conceptOvernemenModal.meestRecenteRevisieLabel) {
+            await expect(conceptOvernemenModal.meestRecenteRevisieLabel).toBeVisible();
+        }
         await expect(conceptOvernemenModal.meestRecenteConceptMultiSelect.options()).toContainText(meestRecenteConceptValues || []);
         await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdMultiSelect.options()).toContainText(conceptWaaropInstantieIsGebaseerdValues || []);
         await expect(conceptOvernemenModal.instantieMultiSelect.options()).toContainText(conceptWaaropInstantieIsGebaseerdValues || []);
