@@ -145,6 +145,7 @@ export class InstantieDetailsPage extends AbstractPage {
 
     readonly voegWebsiteToeButton: Locator;
     readonly verwijderWebsiteButton: (order?: number) => Locator;
+    readonly hetAantalWebsitesIsGewijzigdPill: Locator;
     readonly titelWebsiteInput: (order?: number) => Locator;
     readonly titelWebsiteConceptWijzigingenOvernemenLink: (order?: number) => Locator;
     readonly beschrijvingWebsiteEditor: (order?: number) => Locator;
@@ -333,11 +334,12 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.voegWebsiteToeButton = this.buttonFor('Voeg website toe', 'Meer info', "h2");
         this.verwijderWebsiteButton = (order: number = 0) => this.buttonFor('Verwijder website', 'Meer info', "h2").nth(order);
+        this.hetAantalWebsitesIsGewijzigdPill = this.page.getByText('Het aantal websites is gewijzigd');
         this.titelWebsiteInput = (order: number = 0) => page.locator(`input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website')))`).nth(order);
-        this.titelWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website'))), 1), 75)`).nth(order);
+        this.titelWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(input:below(label:text-is('Titel website'):below(h2:text-is('Gegevens website'))), ${order + 1}), 75)`).first();
         this.beschrijvingWebsiteEditor = (order: number = 0) => page.locator(`div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
         this.beschrijvingWebsiteReadonly = (order: number = 0) => page.locator(`div.rich-text-editor-content:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website')))`).nth(order);
-        this.beschrijvingWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website'))), 1), 75)`).nth(order);
+        this.beschrijvingWebsiteConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(div.ProseMirror:below(label:text-is('Beschrijving website'):below(h2:text-is('Gegevens website'))), ${order + 1}), 75)`).first();
         this.websiteURLInput = (order: number = 0) => page.locator(`input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website')))`).nth(order);
         this.websiteURLConceptWijzigingenOvernemenLink = (order: number = 0) => this.page.locator(`a:has-text('ConceptWijzigingen overnemen'):above(:nth-match(input:below(label:text-is('Website URL'):below(h2:text-is('Gegevens website'))), 1), 75)`).nth(order);
 

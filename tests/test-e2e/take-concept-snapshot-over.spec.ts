@@ -919,7 +919,7 @@ test.describe('take concept snapshot over', () => {
             await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
             await bevestigHerzieningVerwerktModal.expectToBeClosed();
 
-            const firstCostUpdatedAndSecondCostAddedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.2'); //TODO LPDC-1171: leave description out for a website: from 1 -> 2; without description; link for description not shown
+            const firstCostUpdatedAndSecondCostAddedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'kosten.2');
 
             await instantieDetailsPage.terugNaarHetOverzichtButton.click();
 
@@ -1164,6 +1164,98 @@ test.describe('take concept snapshot over', () => {
             await expect(instantieDetailsPage.beschrijvingKostConceptWijzigingenOvernemenLink(0)).not.toBeVisible();
             expect(await instantieDetailsPage.beschrijvingKostEditor(0).textContent()).toContain(firstCostUpdatedSecondCostRemovedSnapshot['jsonlddata']['kosten'][0]['beschrijving']['nl']);
             await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+
+        });
+
+        test('when taking over wijzigingen per veld for a container on an instance for which a new item was created but without a description, no compare link is shown ', async () => {
+            const initiallyUpdatedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+            // instantie moet vlagje 'herziening nodig' hebben
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            // instantie moet alert 'herziening nodig' hebben
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+            await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
+            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+
+            await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
+
+            const firstWebsiteUpdatedSecondWebsiteAddedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'websites.2');
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+            await expect(instantieDetailsPage.hetAantalWebsitesIsGewijzigdPill).toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
+
+            await instantieDetailsPage.voegWebsiteToeButton.click();
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.nee.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await expect(instantieDetailsPage.hetAantalWebsitesIsGewijzigdPill).toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
+
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(1)).toBeVisible();
+            await instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(1).click();
+            await verifyDataInModalAndAndTakeOverForInput(
+                'Titel website',
+                '',
+                initiallyUpdatedSnapshot['jsonlddata'].generatedAtTime,
+                firstWebsiteUpdatedSecondWebsiteAddedSnapshot['jsonlddata']['websites'][1]['naam']['nl'],
+                firstWebsiteUpdatedSecondWebsiteAddedSnapshot['jsonlddata'].generatedAtTime,
+            );
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
+
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+            await bevestigHerzieningVerwerktModal.expectToBeVisible();
+            await bevestigHerzieningVerwerktModal.jaVerwijderHerzieningNodigLabel.click();
+            await bevestigHerzieningVerwerktModal.expectToBeClosed();
+
+            const firstWebsiteUpdatedSecondWebsiteRemovedSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false, 'websites.1');
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+            await expect(instantieDetailsPage.hetAantalWebsitesIsGewijzigdPill).toBeVisible();
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
+
+            await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(1)).toBeVisible();
+            await expect(instantieDetailsPage.beschrijvingWebsiteConceptWijzigingenOvernemenLink(1)).not.toBeVisible();
 
         });
 
@@ -1818,6 +1910,8 @@ test.describe('take concept snapshot over', () => {
             expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['beschrijving']['nl'] + ' - additional text in omschrijving');
 
         });
+
+        //TODO LPDC-1171: test a combination with u / je conversion (take data from ipdc) + then see if the correct snapshot appears ... and that the comparison with the previous snapshot is in the new language ...
 
     });
 

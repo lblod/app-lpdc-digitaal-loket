@@ -144,20 +144,20 @@ const procedures = (randomStr) => {
 const kost = (randomStr, nmbr) => {
     return {
         "kosten": Array.from({ length: nmbr }, (v, k) => k + 1)
-                .map(n => ({
-                    "naam": {
-                        "nl": `Kost${randomStr}-${n}`,
-                        "nl-BE-x-generated-formal": `Kost - generated-formal${randomStr}-${n}`,
-                        "nl-BE-x-generated-informal": `Kost - generated-informal${randomStr}-${n}`,
-                    },
-                    "beschrijving": {
-                        "nl": `Kost beschrijving${randomStr}-${n}`,
-                        "nl-BE-x-generated-formal": `Kost beschrijving - generated-formal${randomStr}-${n}`,
-                        "nl-BE-x-generated-informal": `Kost beschrijving - generated-informal${randomStr}-${n}`,
-                    },
-                    "@type": "kost",
-                    "order": n - 1
-                }))
+            .map(n => ({
+                "naam": {
+                    "nl": `Kost${randomStr}-${n}`,
+                    "nl-BE-x-generated-formal": `Kost - generated-formal${randomStr}-${n}`,
+                    "nl-BE-x-generated-informal": `Kost - generated-informal${randomStr}-${n}`,
+                },
+                "beschrijving": {
+                    "nl": `Kost beschrijving${randomStr}-${n}`,
+                    "nl-BE-x-generated-formal": `Kost beschrijving - generated-formal${randomStr}-${n}`,
+                    "nl-BE-x-generated-informal": `Kost beschrijving - generated-informal${randomStr}-${n}`,
+                },
+                "@type": "kost",
+                "order": n - 1
+            }))
     }
 };
 
@@ -209,25 +209,30 @@ const regelgeving = (randomStr) => {
     }
 };
 
-const meerInfo = (randomStr) => {
+const meerInfo = (randomStr, nmbr) => {
     return {
-        "websites": [
-            {
+        "websites": Array.from({ length: nmbr }, (v, k) => k + 1)
+            .map(n => ({
                 "naam": {
-                    "nl": `Website${randomStr}`,
-                    "nl-BE-x-generated-formal": `Website - generated-formal${randomStr}`,
-                    "nl-BE-x-generated-informal": `Website - generated-informal${randomStr}`,
+                    "nl": `Website${randomStr}-${n}`,
+                    "nl-BE-x-generated-formal": `Website - generated-formal${randomStr}-${n}`,
+                    "nl-BE-x-generated-informal": `Website - generated-informal${randomStr}-${n}`,
                 },
-                "beschrijving": {
-                    "nl": `Website beschrijving${randomStr}`,
-                    "nl-BE-x-generated-formal": `Website beschrijving - generated-formal${randomStr}`,
-                    "nl-BE-x-generated-informal": `Website beschrijving - generated-informal${randomStr}`,
-                },
-                "url": `https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit${randomStr.replace(/\s+/g, '')}`,
+                ...(n === nmbr && nmbr % 2 === 0) ?
+                    {} :
+                    {
+                        "beschrijving":
+                        {
+                            "nl": `Website beschrijving${randomStr}-${n}`,
+                            "nl-BE-x-generated-formal": `Website beschrijving - generated-formal${randomStr}-${n}`,
+                            "nl-BE-x-generated-informal": `Website beschrijving - generated-informal${randomStr}-${n}`,
+                        }
+                    }
+                ,
+                "url": `https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit${randomStr.replace(/\s+/g, '')}-${n}`,
                 "@type": "website",
-                "order": 0.0
-            }
-        ],
+                "order": n - 1
+            }))
     }
 };
 
@@ -265,7 +270,7 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
         ...kost(` - created${randomData}`, 1),
         ...financieleVoordelen(` - created${randomData}`),
         ...regelgeving(` - created${randomData}`),
-        ...meerInfo(` - created${randomData}`),
+        ...meerInfo(` - created${randomData}`, 1),
         ...(withRandomNewData ?
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
@@ -315,6 +320,9 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
     const kostElementTextUpdated = elementToUpdate?.startsWith("kosten") ? specificElementUpdated : '';
     const kostElementNumberOfElementsUpdated = elementToUpdate?.startsWith("kosten") ? Number.parseInt(elementToUpdate.slice(7)) : 1;
 
+    const websitesElementTextUpdated = elementToUpdate?.startsWith("websites") ? specificElementUpdated : '';
+    const websitesElementNumberOfElementsUpdated = elementToUpdate?.startsWith("websites") ? Number.parseInt(elementToUpdate.slice(9)) : 1;
+
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
@@ -343,7 +351,7 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
         ...kost(` - updated${randomData}${kostElementTextUpdated}`, kostElementNumberOfElementsUpdated),
         ...financieleVoordelen(` - updated${randomData}`),
         ...regelgeving(` - updated${randomData}`),
-        ...meerInfo(` - updated${randomData}`),
+        ...meerInfo(` - updated${randomData}${websitesElementTextUpdated}`, websitesElementNumberOfElementsUpdated),
         ...(withRandomNewData ?
             {
                 "startDienstVerlening": getRandomFutureDate().toISOString(),
