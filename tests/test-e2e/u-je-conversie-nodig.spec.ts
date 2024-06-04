@@ -59,7 +59,7 @@ test.describe('U-je conversie nodig', () => {
         await expect(homePage.uJeConversieNodigFilter).not.toBeVisible();
 
         // make choice
-        await logout(gemeenteNaam);
+        await homePage.logout(gemeenteNaam);
         await loginAs(gemeenteNaam);
 
         await uJeModal.expectToBeVisible();
@@ -144,7 +144,7 @@ test.describe('U-je conversie nodig', () => {
 
 
         // make choice
-        await logout(gemeentenaam);
+        await homePage.logout(gemeentenaam);
         await loginAs(gemeentenaam);
 
         await uJeModal.expectToBeVisible();
@@ -230,7 +230,7 @@ test.describe('U-je conversie nodig', () => {
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
 
         // make choice
-        await logout(gemeentenaam);
+        await homePage.logout(gemeentenaam);
         await loginAs(gemeentenaam);
 
         await uJeModal.expectToBeVisible();
@@ -282,7 +282,7 @@ test.describe('U-je conversie nodig', () => {
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
 
         // make choice
-        await logout(gemeentenaam);
+        await homePage.logout(gemeentenaam);
         await loginAs(gemeentenaam);
 
         await uJeModal.expectToBeVisible();
@@ -317,11 +317,6 @@ test.describe('U-je conversie nodig', () => {
         await homePage.expectToBeVisible();
     }
 
-    async function logout(gemeente: string) {
-        await page.getByText(`Gemeente ${gemeente} - Gemeente ${gemeente}`).click();
-        await page.getByText('Afmelden').click();
-
-    }
     async function createInstance(titel: string) {
         await homePage.goto();
         await homePage.productOfDienstToevoegenButton.click();

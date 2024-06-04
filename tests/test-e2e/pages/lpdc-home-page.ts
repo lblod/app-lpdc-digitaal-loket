@@ -34,4 +34,9 @@ export class LpdcHomePage extends AbstractPage {
         await this.expectToBeVisible();
     }
 
+    async logout(gemeente: string) {
+        await this.page.getByText(`Gemeente ${gemeente} - Gemeente ${gemeente}`).click();
+        await this.page.getByText('Afmelden').click();
+    }    
+
 }

@@ -328,8 +328,8 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
         "generatedAtTime": new Date().toISOString(),
         "naam": {
             "nl": `Concept updated${randomData}${naamElementTextUpdated}`,
-            "nl-BE-x-generated-formal": `Concept updated${randomData}${naamElementTextUpdated}`,
-            "nl-BE-x-generated-informal": `Concept updated${randomData}${naamElementTextUpdated}`
+            "nl-BE-x-generated-formal": `Concept updated - generated-formal${randomData}${naamElementTextUpdated}`,
+            "nl-BE-x-generated-informal": `Concept updated - generated-informal${randomData}${naamElementTextUpdated}`
         },
         "beschrijving": {
             "nl": `Concept beschrijving updated${randomData}`,
@@ -398,8 +398,8 @@ export const conceptArchive = (conceptId, withRandomNewData) => {
         "generatedAtTime": new Date().toISOString(),
         "naam": {
             "nl": `Concept archived${randomData}`,
-            "nl-BE-x-generated-formal": `Concept archived${randomData}`,
-            "nl-BE-x-generated-informal": `Concept archived${randomData}`
+            "nl-BE-x-generated-formal": `Concept archived - generated-formal${randomData}`,
+            "nl-BE-x-generated-informal": `Concept archived - generated-informal${randomData}`
         },
         "beschrijving": {
             "nl": `Concept beschrijving archived${randomData}`,

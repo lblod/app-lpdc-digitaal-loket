@@ -7,6 +7,7 @@ export class AddProductOrServicePage extends AbstractPage {
     private readonly searchInput: Locator;
     readonly resultTable: Table;
     readonly volledigNieuwProductToevoegenButton: Locator;
+    readonly nuKeuzeMakenLink: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -15,6 +16,7 @@ export class AddProductOrServicePage extends AbstractPage {
         this.resultTable = new Table(page);
         this.volledigNieuwProductToevoegenButton = page.getByRole('link', { name: 'Volledig nieuw product toevoegen' });
         this.searchInput = page.locator('input:below(label:text-is("Zoeken"))').first();
+        this.nuKeuzeMakenLink = page.getByRole('button', { name: 'Nu keuze maken' });
     }
 
     static create(page: Page): AddProductOrServicePage {

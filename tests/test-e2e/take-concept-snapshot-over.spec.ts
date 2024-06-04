@@ -15,6 +15,7 @@ import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-ve
 import { ConceptOvernemenModal } from "./modals/concept-overnemen-modal";
 import moment from 'moment';
 import { wait } from "./shared/shared";
+import { InstantieAutomatischOmzettenVanUNaarJeModal } from "./modals/instantie-automatisch-omzetten-van-u-naar-je-modal";
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('take concept snapshot over', () => {
@@ -29,6 +30,7 @@ test.describe('take concept snapshot over', () => {
     let wijzigingenOvernemenModal: WijzigingenOvernemenModal;
     let bevestigHerzieningVerwerktModal: BevestigHerzieningVerwerktModal
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
+    let instantieAutomatischOmzettenVanUNaarJeModal: InstantieAutomatischOmzettenVanUNaarJeModal;
 
     test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
@@ -42,17 +44,8 @@ test.describe('take concept snapshot over', () => {
         wijzigingenOvernemenModal = WijzigingenOvernemenModal.create(page);
         bevestigHerzieningVerwerktModal = BevestigHerzieningVerwerktModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
-
-        await mockLoginPage.goto();
-        await mockLoginPage.searchInput.fill('Pepingen');
-        await mockLoginPage.login('Gemeente Pepingen');
-
-        await homePage.expectToBeVisible();
-
-        const uJeModal = UJeModal.create(page);
-        await uJeModal.expectToBeVisible();
-        await uJeModal.laterKiezenButton.click();
-        await uJeModal.expectToBeClosed();
+        instantieAutomatischOmzettenVanUNaarJeModal = InstantieAutomatischOmzettenVanUNaarJeModal.create(page);
+        
     });
 
     test.afterEach(async () => {
@@ -60,6 +53,20 @@ test.describe('take concept snapshot over', () => {
     });
 
     test.describe('Fully take concept snapshot over', () => {
+
+        test.beforeEach(async () => {
+
+            await mockLoginPage.goto();
+            await mockLoginPage.searchInput.fill('Pepingen');
+            await mockLoginPage.login('Gemeente Pepingen');
+
+            await homePage.expectToBeVisible();
+
+            const uJeModal = UJeModal.create(page);
+            await uJeModal.expectToBeVisible();
+            await uJeModal.laterKiezenButton.click();
+            await uJeModal.expectToBeClosed();
+        });
 
         test('given updated title and cost in concept snapshot after instance is created then fields gets overriden', async ({ request }) => {
             await homePage.productOfDienstToevoegenButton.click();
@@ -317,7 +324,19 @@ test.describe('take concept snapshot over', () => {
             'DienstenErkenningBeroepskwalificaties': 'Erkenning van beroepskwalificaties',
         };
 
-        test.beforeEach(async ({ request }) => {
+        test.beforeEach(async () => {
+
+            await mockLoginPage.goto();
+            await mockLoginPage.searchInput.fill('Pepingen');
+            await mockLoginPage.login('Gemeente Pepingen');
+
+            await homePage.expectToBeVisible();
+
+            const uJeModal = UJeModal.create(page);
+            await uJeModal.expectToBeVisible();
+            await uJeModal.laterKiezenButton.click();
+            await uJeModal.expectToBeClosed();
+
             await homePage.productOfDienstToevoegenButton.click();
 
             await toevoegenPage.expectToBeVisible();
@@ -1853,23 +1872,23 @@ test.describe('take concept snapshot over', () => {
             //basisinformatie
             await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
             await verifyDataInModalAndAndTakeOverForInput(
-                'Titel', 
-                createSnapshot['jsonlddata']['naam']['nl'], 
+                'Titel',
+                createSnapshot['jsonlddata']['naam']['nl'],
                 createSnapshot['jsonlddata'].generatedAtTime,
-                updateSnapshot['jsonlddata']['naam']['nl'], 
+                updateSnapshot['jsonlddata']['naam']['nl'],
                 updateSnapshot['jsonlddata'].generatedAtTime,
-                createSnapshot['jsonlddata']['naam']['nl'], 
+                createSnapshot['jsonlddata']['naam']['nl'],
                 'additional text in titel');
             await expect(instantieDetailsPage.titelInput).toHaveValue(updateSnapshot['jsonlddata']['naam']['nl'] + ' - additional text in titel');
 
             await instantieDetailsPage.beschrijvingConceptWijzigingenOvernemenLink.click();
             await verifyDataInModalAndAndTakeOverForRichText(
-                'Beschrijving', 
-                createSnapshot['jsonlddata']['beschrijving']['nl'], 
+                'Beschrijving',
+                createSnapshot['jsonlddata']['beschrijving']['nl'],
                 createSnapshot['jsonlddata'].generatedAtTime,
-                updateSnapshot['jsonlddata']['beschrijving']['nl'], 
+                updateSnapshot['jsonlddata']['beschrijving']['nl'],
                 updateSnapshot['jsonlddata'].generatedAtTime,
-                createSnapshot['jsonlddata']['beschrijving']['nl'], 
+                createSnapshot['jsonlddata']['beschrijving']['nl'],
                 'additional text in omschrijving');
             expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toContain(updateSnapshot['jsonlddata']['beschrijving']['nl'] + ' - additional text in omschrijving');
 
@@ -1911,7 +1930,155 @@ test.describe('take concept snapshot over', () => {
 
         });
 
-        //TODO LPDC-1171: test a combination with u / je conversion (take data from ipdc) + then see if the correct snapshot appears ... and that the comparison with the previous snapshot is in the new language ...
+    });
+
+    test('Take concept snapshot over field by field combined with u/je conversion', async () => {
+        const gemeentenaam = 'Beersel';
+
+        await loginAs(gemeentenaam);
+
+        const uJeModal = UJeModal.create(page);
+        await uJeModal.expectToBeVisible();
+        await uJeModal.laterKiezenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId, true);
+
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+        const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false);
+
+        // instantie moet vlagje 'herziening nodig' hebben
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        // instantie moet alert 'herziening nodig' hebben
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+        await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
+        await verifyDataInModalForInput(
+            'Titel',
+            createSnapshot['jsonlddata']['naam']['nl'],
+            createSnapshot['jsonlddata'].generatedAtTime,
+            updateSnapshot['jsonlddata']['naam']['nl'],
+            updateSnapshot['jsonlddata'].generatedAtTime,
+        );
+
+        await wait(1000);
+
+        await homePage.logout(gemeentenaam);
+
+        await loginAs(gemeentenaam);
+        await homePage.productOfDienstToevoegenButton.click();
+        await toevoegenPage.nuKeuzeMakenLink.click();
+
+        await uJeModal.expectToBeVisible();
+        await uJeModal.mijnBestuurKiestVoorDeJeVormRadio.click();
+        await uJeModal.bevestigenButton.click();
+        await uJeModal.expectToBeClosed();
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        // instantie moet alert 'herziening nodig' hebben
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+        await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
+        await verifyDataInModalForInput(
+            'Titel',
+            createSnapshot['jsonlddata']['naam']['nl'],
+            createSnapshot['jsonlddata'].generatedAtTime,
+            updateSnapshot['jsonlddata']['naam']['nl'],
+            updateSnapshot['jsonlddata'].generatedAtTime,
+        );
+
+        await instantieDetailsPage.eigenschappenTab.click();
+
+        await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+        await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Provincie Vlaams-Brabant');
+
+
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.nee.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bekijk').click();
+
+        // instantie moet alert 'herziening nodig' hebben
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+        await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
+        await expect(instantieDetailsPage.uJeVersie).toContainText("u-versie");
+        await instantieDetailsPage.omzettenNaarDeJeVormAlert.button('Inhoud is al in de je-vorm').click();
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bekijk').click();
+
+        await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
+        await wijzigingenOvernemenModal.expectToBeVisible();
+        await wijzigingenOvernemenModal.wijzigingenPerVeldBekijkenButton.click();
+        await wijzigingenOvernemenModal.expectToBeClosed();
+
+        await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+        await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
+        await expect(instantieDetailsPage.productOpnieuwBewerkenButton).not.toBeVisible();
+
+        await instantieDetailsPage.titelConceptWijzigingenOvernemenLink.click();
+        await verifyDataInModalForInput(
+            'Titel',
+            createSnapshot['jsonlddata']['naam']['nl-BE-x-generated-informal'],
+            createSnapshot['jsonlddata'].generatedAtTime,
+            updateSnapshot['jsonlddata']['naam']['nl-BE-x-generated-informal'],
+            updateSnapshot['jsonlddata'].generatedAtTime,
+            createSnapshot['jsonlddata']['naam']['nl'],
+        );
 
     });
 
@@ -1955,6 +2122,40 @@ test.describe('take concept snapshot over', () => {
         }
 
         await conceptOvernemenModal.bewaarButton.click();
+        await conceptOvernemenModal.expectToBeClosed();
+    }
+
+    async function verifyDataInModalForInput(
+        titel: string,
+        conceptWaaropInstantieIsGebaseerdText: string,
+        conceptWaaropInstantieIsGebaseerdGeneratedAt: string,
+        meestRecenteConceptText: string,
+        meestRecenteRevisieGeneratedAt: string,
+        currentInstantieText?: string) {
+
+        const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel, conceptWaaropInstantieIsGebaseerdGeneratedAt, meestRecenteRevisieGeneratedAt);
+
+        await conceptOvernemenModal.expectToBeVisible();
+
+        await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeVisible();
+        await expect(conceptOvernemenModal.meestRecenteConceptInput).toBeDisabled();
+        await expect(conceptOvernemenModal.meestRecenteConceptInput).toHaveValue(meestRecenteConceptText);
+
+        if (conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel) {
+            await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdLabel).toBeVisible();
+        }
+        if (conceptOvernemenModal.meestRecenteRevisieLabel) {
+            await expect(conceptOvernemenModal.meestRecenteRevisieLabel).toBeVisible();
+        }
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toBeVisible();
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toBeDisabled();
+        await expect(conceptOvernemenModal.conceptWaaropInstantieIsGebaseerdInput).toHaveValue(conceptWaaropInstantieIsGebaseerdText);
+
+        await expect(conceptOvernemenModal.instantieInput).toBeVisible();
+        await expect(conceptOvernemenModal.instantieInput).toBeEditable();
+        await expect(conceptOvernemenModal.instantieInput).toHaveValue(currentInstantieText ?? conceptWaaropInstantieIsGebaseerdText);
+
+        await conceptOvernemenModal.annuleerButton.click();
         await conceptOvernemenModal.expectToBeClosed();
     }
 
@@ -2036,7 +2237,7 @@ test.describe('take concept snapshot over', () => {
         conceptWaaropInstantieIsGebaseerdValues: string[] | undefined,
         conceptWaaropInstantieIsGebaseerdGeneratedAt: string,
         meestRecenteConceptValues: string[],
-        meestRecenteRevisieGeneratedAt: string | undefined) {
+        meestRecenteRevisieGeneratedAt: string) {
 
         const conceptOvernemenModal = ConceptOvernemenModal.create(page, titel, conceptWaaropInstantieIsGebaseerdGeneratedAt, meestRecenteRevisieGeneratedAt);
 
@@ -2060,6 +2261,14 @@ test.describe('take concept snapshot over', () => {
 
         await conceptOvernemenModal.bewaarButton.click();
         await conceptOvernemenModal.expectToBeClosed();
+    }
+
+    async function loginAs(gemeentenaam: string) {
+        await mockLoginPage.goto();
+        await mockLoginPage.searchInput.fill(gemeentenaam);
+        await mockLoginPage.login(`Gemeente ${gemeentenaam}`);
+
+        await homePage.expectToBeVisible();
     }
 
 });
