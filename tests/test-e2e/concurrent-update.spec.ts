@@ -12,7 +12,7 @@ import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-o
 import { IpdcStub } from "./components/ipdc-stub";
 import { Toaster } from "./components/toaster";
 import { verifyInstancePublishedOnIPDC } from './shared/verify-instance-published-on-ipdc';
-import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
+import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-verwerkt-modal";
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('Concurrent Update', () => {
@@ -114,8 +114,8 @@ test.describe('Concurrent Update', () => {
         const conceptDetailsPage = ConceptDetailsPage.create(page);
         const instantieDetailsPage = InstantieDetailsPage.create(page);
         const wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
-        const bevestigHerzieningVerwerktModal= BevestigHerzieningVerwerktModal.create(page);
-        const verzendNaarVlaamseOverheidModal= VerzendNaarVlaamseOverheidModal.create(page);
+        const bevestigHerzieningVerwerktModal = BevestigHerzieningVerwerktModal.create(page);
+        const verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
         const toaster = new Toaster(page);
 
         // maak instantie van concept 
@@ -202,7 +202,7 @@ test.describe('Concurrent Update', () => {
         const bestuurseenheidUriHolsbeek = "http://data.lblod.info/id/bestuurseenheden/8a7354b76f3d258f9596fa454ec2b75b55be47234366c8f8d7d60eea96dfbebf";
         const bestuurseenheidUriWesterlo = "http://data.lblod.info/id/bestuurseenheden/8cd07007fee51d55760f7d3d14944b548d98061a9eca4eafe825c89a1145aaf3";
         const refnisPepingen = "http://data.europa.eu/nuts/code/BE24123064"
-        
+
         verifyInstancePublishedOnIPDC(
             instancePublishedInIpdc,
             {
@@ -215,7 +215,7 @@ test.describe('Concurrent Update', () => {
                 geografischeToepassingsgebieden: [refnisPepingen],
             },
             'nl-be-x-formal');
-});
+    });
 
 });
 

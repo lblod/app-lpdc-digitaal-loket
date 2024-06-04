@@ -11,6 +11,7 @@ import { ConceptDetailsPage } from "./pages/concept-details-page";
 import { IpdcStub } from "./components/ipdc-stub";
 import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
 import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-verwerkt-modal";
+import { Toaster } from "./components/toaster";
 
 test.describe.configure({ mode: 'serial' });
 test.describe('Herziening nodig', () => {
@@ -500,6 +501,62 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
         });
 
+    });
+
+    test('Updating the review status should trigger a concurrent update warning to the user', async ({ request }) => {
+        // maak instantie van concept
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.expectToBeVisible();
+        const conceptId = uuid();
+        const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        await toevoegenPage.reloadUntil(async () => {
+            await toevoegenPage.searchConcept(createSnapshot.title);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+        });
+        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+        await conceptDetailsPage.voegToeButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+        let titel = await instantieDetailsPage.titelInput.inputValue();
+        let newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+        await instantieDetailsPage.beschrijvingEditor.click();
+        await instantieDetailsPage.titelInput.click();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+        await IpdcStub.createSnapshotOfTypeUpdate(conceptId);
+
+        titel = await instantieDetailsPage.titelInput.inputValue();
+        newTitel = titel + uuid();
+        await instantieDetailsPage.titelInput.fill(newTitel);
+        await instantieDetailsPage.beschrijvingEditor.click();
+        await instantieDetailsPage.titelInput.click();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+
+        const toaster = new Toaster(page);
+        await expect(toaster.message).toContainText("De productfiche is gelijktijdig aangepast door een andere gebruiker. Herlaad de pagina en geef je aanpassingen opnieuw in");
+        await toaster.closeButton.click();
+
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(titel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+        });
+        await homePage.resultTable.row(first_row).link('Bewerk').click();
+
+        await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+
+        await expect(instantieDetailsPage.titelInput).toHaveValue(titel);
     });
 
 
