@@ -121,6 +121,28 @@ test.describe('Link concept', () => {
             await toevoegenPage.searchConcept(conceptId);
             await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Toegevoegd');
         });
+
+        //Link using preview
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(titel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+        });
+
+        await homePage.resultTable.row(first_row).link(titel).click();
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(titel);
+        await instantieDetailsPage.koppelConceptLink.click();
+        await koppelConceptPage.expectToBeVisible();
+        await koppelConceptPage.searchInput.fill(conceptId);
+        await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(conceptId);
+        await koppelConceptPage.resultTable.row(first_row).link(conceptId).click();
+        await conceptDetailsPage.expectToBeVisible()
+        await conceptDetailsPage.koppelenButton.click();
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(titel);
+        await expect(instantieDetailsPage.gekoppeldConceptLink).toContainText("3000");
+
     });
 
     test('remove `nieuw` label on concept', async () => {

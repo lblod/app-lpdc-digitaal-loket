@@ -7,6 +7,7 @@ export class ConceptDetailsPage extends AbstractPage {
     private readonly menuHeader: Locator;
     readonly heading: Locator; 
     readonly voegToeButton: Locator;
+    readonly koppelenButton: Locator;
     readonly nieuwConceptAlert: Alert;
     readonly nieuwConceptAlertBerichtNietMeerTonenButton: Locator;
     readonly bekijkAndereConceptenButton: Locator;
@@ -17,6 +18,7 @@ export class ConceptDetailsPage extends AbstractPage {
         this.menuHeader = page.getByRole('menuitem', { name: 'Concept details' });
         this.heading = page.getByRole('heading').first();
         this.voegToeButton = page.getByRole('link', { name: 'Voeg toe' });
+        this.koppelenButton = page.getByRole('link', { name: 'Koppelen' });
         this.nieuwConceptAlert = new Alert(page, 'Dit is een nieuw product of dienst toegevoegd door IPDC');
         this.nieuwConceptAlertBerichtNietMeerTonenButton = this.nieuwConceptAlert.button('Dit bericht niet meer tonen');
         this.bekijkAndereConceptenButton = page.getByRole('link', { name: 'Bekijk andere concepten'});
