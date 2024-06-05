@@ -10,6 +10,7 @@ import { UJeModal } from "./modals/u-je-modal";
 import { first_row } from "./components/table";
 import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
 import { InstantieAutomatischOmzettenVanUNaarJeModal } from "./modals/instantie-automatisch-omzetten-van-u-naar-je-modal";
+import { randomGemeenteZonderFormeleInformeleKeuze } from "./shared/bestuurseenheid-config";
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('U-je conversie nodig', () => {
@@ -43,7 +44,7 @@ test.describe('U-je conversie nodig', () => {
     });
 
     test('view and filter on u-je conversie nodig label', async () => {
-        const gemeenteNaam = 'Diest';
+        const gemeenteNaam = randomGemeenteZonderFormeleInformeleKeuze();
 
         await mockLoginPage.goto();
         await loginAs(gemeenteNaam);
@@ -93,7 +94,7 @@ test.describe('U-je conversie nodig', () => {
     });
 
     test('when choosing informal, then formal instances should have alerts depending status', async () => {
-        const gemeentenaam = 'Holsbeek'
+        const gemeentenaam = randomGemeenteZonderFormeleInformeleKeuze();
 
         await mockLoginPage.goto();
         await loginAs(gemeentenaam);
@@ -180,7 +181,7 @@ test.describe('U-je conversie nodig', () => {
     });
 
     test('Confim instance is already informal', async () => {
-        const gemeentenaam = 'Grobbendonk';
+        const gemeentenaam = randomGemeenteZonderFormeleInformeleKeuze();
 
         await mockLoginPage.goto();
         await loginAs(gemeentenaam);
@@ -254,7 +255,7 @@ test.describe('U-je conversie nodig', () => {
     });
 
     test('Convert instance to informal', async () => {
-        const gemeentenaam = 'Brakel';
+        const gemeentenaam = randomGemeenteZonderFormeleInformeleKeuze();
 
         await mockLoginPage.goto();
         await loginAs(gemeentenaam);

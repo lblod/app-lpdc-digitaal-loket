@@ -16,6 +16,7 @@ import { ConceptOvernemenModal } from "./modals/concept-overnemen-modal";
 import moment from 'moment';
 import { wait } from "./shared/shared";
 import { InstantieAutomatischOmzettenVanUNaarJeModal } from "./modals/instantie-automatisch-omzetten-van-u-naar-je-modal";
+import { randomGemeenteZonderFormeleInformeleKeuze } from "./shared/bestuurseenheid-config";
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('take concept snapshot over', () => {
@@ -1933,7 +1934,7 @@ test.describe('take concept snapshot over', () => {
     });
 
     test('Take concept snapshot over field by field combined with u/je conversion', async () => {
-        const gemeentenaam = 'Beersel';
+        const gemeentenaam = randomGemeenteZonderFormeleInformeleKeuze();
 
         await loginAs(gemeentenaam);
 
