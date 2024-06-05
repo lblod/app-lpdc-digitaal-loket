@@ -64,7 +64,7 @@ test.describe('Create a new instance not based on a concept', () => {
         await expect(instantieDetailsPage.koppelConceptLink).toBeVisible();
         await expect(instantieDetailsPage.aangemaaktOpHeader).toContainText(formattedToday);
         await expect(instantieDetailsPage.bewerktOpHeader).toContainText(formattedToday);
-        await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+        await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
         await instantieDetailsPage.eigenschappenTab.click();
 

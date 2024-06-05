@@ -334,7 +334,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.bewerktOpHeader).toContainText(dateModifiedFormatted);
         await expect(instantieDetailsPage.geldigVanafHeader).toContainText(startDateFormatted);
         await expect(instantieDetailsPage.geldigTotHeader).toContainText(endDateFormatted);
-        await expect(instantieDetailsPage.statusDocumentHeader).toContainText(documentStatus);
+        await expect(instantieDetailsPage.statusHeader).toContainText(documentStatus);
 
         await instantieDetailsPage.eigenschappenTab.click();
 
@@ -346,7 +346,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(instantieDetailsPage.geldigVanafHeader).toContainText(startDateFormatted);
         await expect(instantieDetailsPage.geldigTotHeader).toContainText(endDateFormatted);
 
-        await expect(instantieDetailsPage.statusDocumentHeader).toContainText(documentStatus);
+        await expect(instantieDetailsPage.statusHeader).toContainText(documentStatus);
 
         await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).not.toBeEditable();
         expect(await instantieDetailsPage.productOfDienstGeldigVanafInput.inputValue()).toEqual(startDateFormatted);

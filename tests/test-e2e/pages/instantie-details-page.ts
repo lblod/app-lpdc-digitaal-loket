@@ -30,7 +30,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly bewerktOpHeader: Locator;
     readonly geldigVanafHeader: Locator;
     readonly geldigTotHeader: Locator;
-    readonly statusDocumentHeader: Locator;
+    readonly statusHeader: Locator;
 
     readonly herzieningNodigAlert: Alert;
     readonly herzieningNodigAlertConceptBekijken: Locator;
@@ -233,7 +233,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.bewerktOpHeader = page.locator('dl div').filter({ hasText: 'Bewerkt op' }).getByRole('definition');
         this.geldigVanafHeader = page.locator('dl div').filter({ hasText: 'Geldig vanaf' }).getByRole('definition');
         this.geldigTotHeader = page.locator('dl div').filter({ hasText: 'Geldig tot' }).getByRole('definition');
-        this.statusDocumentHeader = page.locator('dl div').filter({ hasText: 'Status document' }).getByRole('definition');
+        this.statusHeader = page.locator('dl div').filter({ hasText: 'Status' }).getByRole('definition');
 
         this.titelInput = this.inputBelow('Titel').first();
         this.titelConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Titel'));

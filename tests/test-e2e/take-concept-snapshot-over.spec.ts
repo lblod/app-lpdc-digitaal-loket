@@ -185,7 +185,7 @@ test.describe('take concept snapshot over', () => {
             await wijzigingenOvernemenModal.expectToBeVisible();
             await wijzigingenOvernemenModal.conceptVolledigOvernemenButton.click();
             await wijzigingenOvernemenModal.expectToBeClosed();
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible()
         });
 
@@ -396,7 +396,7 @@ test.describe('take concept snapshot over', () => {
             await wijzigingenOvernemenModal.wijzigingenPerVeldBekijkenButton.click();
             await wijzigingenOvernemenModal.expectToBeClosed();
 
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
             await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
             await expect(instantieDetailsPage.productOpnieuwBewerkenButton).not.toBeVisible();
         });
@@ -415,7 +415,7 @@ test.describe('take concept snapshot over', () => {
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
             await wijzigingenOvernemenModal.expectToBeVisible();
@@ -441,7 +441,7 @@ test.describe('take concept snapshot over', () => {
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             //basisinformatie
             await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).toBeVisible();
@@ -518,7 +518,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             //basisinformatie
             await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).not.toBeVisible();
@@ -594,7 +594,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             //basisinformatie
             await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).toBeVisible();
@@ -671,10 +671,10 @@ test.describe('take concept snapshot over', () => {
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             //basisinformatie
             await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).not.toBeVisible();
@@ -757,7 +757,7 @@ test.describe('take concept snapshot over', () => {
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
@@ -772,7 +772,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             //basisinformatie
             await expect(instantieDetailsPage.titelConceptWijzigingenOvernemenLink).not.toBeVisible();
@@ -854,7 +854,7 @@ test.describe('take concept snapshot over', () => {
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
@@ -1201,7 +1201,7 @@ test.describe('take concept snapshot over', () => {
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
-            await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+            await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
             await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
@@ -2066,7 +2066,7 @@ test.describe('take concept snapshot over', () => {
         await wijzigingenOvernemenModal.wijzigingenPerVeldBekijkenButton.click();
         await wijzigingenOvernemenModal.expectToBeClosed();
 
-        await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+        await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
         await expect(instantieDetailsPage.verzendNaarVlaamseOverheidButton).toBeVisible();
         await expect(instantieDetailsPage.productOpnieuwBewerkenButton).not.toBeVisible();
 
