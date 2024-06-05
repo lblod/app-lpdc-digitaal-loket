@@ -104,7 +104,7 @@ test.describe('Order instance from IPDC flow', () => {
             await verzendNaarVlaamseOverheid();
 
             //check order after send
-            await homePage.resultTable.row(first_row).link('Bekijk').click();
+            await homePage.resultTable.row(first_row).link('Financiële tussenkomst voor een verblijf in een woonzorgcentrum').click();
 
             await expect(instantieDetailsPage.titelWebsiteVoorProcedureInput(0)).toHaveValue(`${titelWebsiteVoorProcedure} 1`);
             expect(await instantieDetailsPage.beschrijvingWebsiteVoorProcedureReadonly(0).textContent()).toContain(`${beschrijvingWebsiteVoorProcedure} 1`);

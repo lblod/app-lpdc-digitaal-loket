@@ -159,7 +159,7 @@ test.describe('U-je conversie nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(publishedInstanceTitle);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(publishedInstanceTitle).click();
         await instantieDetailsPage.expectToBeVisible();
         await instantieDetailsPage.reloadUntil(async () => {
             await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
@@ -171,11 +171,9 @@ test.describe('U-je conversie nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(draftInstanceTitle);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(draftInstanceTitle);
-            await expect(homePage.resultTable.row
-
-                (first_row).locator).toContainText('u→je');
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(draftInstanceTitle).click();
         await instantieDetailsPage.draftInstanceConversionAlert.expectToBeVisible();
 
     });
@@ -245,7 +243,7 @@ test.describe('U-je conversie nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(publishedInstanceTitle);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(publishedInstanceTitle).click();
         await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
         await expect(instantieDetailsPage.uJeVersie).toContainText("u-versie");
         await instantieDetailsPage.omzettenNaarDeJeVormAlert.button('Inhoud is al in de je-vorm').click();
@@ -297,7 +295,7 @@ test.describe('U-je conversie nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(instantieTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('u→je');
         });
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(instantieTitel).click();
         await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
         await expect(instantieDetailsPage.uJeVersie).toContainText("u-versie");
         await instantieDetailsPage.omzettenNaarDeJeVormAlert.button('Omzetten naar de je-vorm').click();

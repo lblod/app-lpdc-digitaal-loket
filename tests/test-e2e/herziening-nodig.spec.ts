@@ -96,7 +96,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -128,7 +128,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         //check link concept bekijken
         href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
@@ -147,7 +147,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         // instantie moet alert 'concept gearchiveerd' hebben
         await instantieDetailsPage.conceptGearchiveerdAlert.expectToBeVisible();
@@ -207,7 +207,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -254,7 +254,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -293,7 +293,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -366,7 +366,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -418,7 +418,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -473,7 +473,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -552,7 +552,7 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(titel).click();
 
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 

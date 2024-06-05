@@ -249,7 +249,7 @@ test.describe('Reporting dashboard', () => {
             });
 
             await homePage.searchInput.fill(newTitel);
-            await homePage.resultTable.row(first_row).link('Bekijk').click();
+            await homePage.resultTable.row(first_row).link(newTitel).click();
 
             await instantieDetailsPage.expectToBeVisible();
             await expect(instantieDetailsPage.heading).toHaveText(newTitel);
@@ -349,7 +349,7 @@ test.describe('Reporting dashboard', () => {
             });
 
             await homePage.searchInput.fill(newTitel);
-            await homePage.resultTable.row(first_row).link('Bekijk').click();
+            await homePage.resultTable.row(first_row).link(newTitel).click();
 
             await instantieDetailsPage.expectToBeVisible();
             await expect(instantieDetailsPage.heading).toHaveText(newTitel);

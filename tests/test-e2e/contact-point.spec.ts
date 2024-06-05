@@ -8,6 +8,7 @@ import {v4 as uuid} from 'uuid';
 import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
 import {first_row} from './components/table';
 import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
+import { ConceptDetailsPage } from "./pages/concept-details-page";
 
 test.describe.configure({ mode: 'parallel'});
 test.describe('Contact point form fields', () => {
@@ -19,6 +20,7 @@ test.describe('Contact point form fields', () => {
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal : WijzigingenBewarenModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
+    let conceptDetailsPage: ConceptDetailsPage;
 
     test.beforeEach(async ({browser}) => {
         page = await browser.newPage();
@@ -29,6 +31,7 @@ test.describe('Contact point form fields', () => {
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
+        conceptDetailsPage = ConceptDetailsPage.create(page);
 
         await mockLoginPage.goto();
         await mockLoginPage.searchInput.fill('Pepingen');
@@ -124,8 +127,12 @@ test.describe('Contact point form fields', () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
-        await toevoegenPage.resultTable.row(first_row).link('Voeg toe').click();
+        await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
 
+        await conceptDetailsPage.expectToBeVisible();
+        await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
+        await conceptDetailsPage.voegToeButton.click();
+    
         await instantieDetailsPage.expectToBeVisible();
 
         const titel = await instantieDetailsPage.titelInput.inputValue();
@@ -175,8 +182,9 @@ test.describe('Contact point form fields', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
         });
+
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         await expect(instantieDetailsPage.contactpuntAdresGemeenteSelect(0).selectedItem).toContainText('Harelbeke');
         await expect(instantieDetailsPage.contactpuntAdresStraatSelect(0).selectedItem).toContainText('Generaal Deprezstraat');

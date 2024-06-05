@@ -149,7 +149,7 @@ test.describe('Concurrent Update', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(`${createSnapshot.title}`);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(`${createSnapshot.title}`).click();
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         //Form contains errors
@@ -290,7 +290,7 @@ async function openInstantie(page: Page, title: string): Promise<InstantieDetail
     await homePage.expectToBeVisible();
     await homePage.searchInput.fill(title);
     await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-    await homePage.resultTable.row(first_row).link('Bewerk').click();
+    await homePage.resultTable.row(first_row).link(title).click();
 
     await expect(instantieDetailsPage.heading).toHaveText(title);
     await expect(instantieDetailsPage.titelInput).toHaveValue(title);

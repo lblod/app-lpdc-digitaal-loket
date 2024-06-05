@@ -108,7 +108,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(newTitel).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -175,7 +175,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bekijk').click();
+            await homePage.resultTable.row(first_row).link(newTitel).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -347,7 +347,6 @@ test.describe('take concept snapshot over', () => {
                 await toevoegenPage.searchConcept(createSnapshot.title);
                 await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             });
-            await toevoegenPage.searchConcept(createSnapshot.title);
             await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await conceptDetailsPage.expectToBeVisible();
@@ -370,7 +369,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -390,7 +389,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bekijk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
             await wijzigingenOvernemenModal.expectToBeVisible();
@@ -412,7 +411,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -437,7 +436,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -516,7 +515,7 @@ test.describe('take concept snapshot over', () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
@@ -592,7 +591,7 @@ test.describe('take concept snapshot over', () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
@@ -669,7 +668,7 @@ test.describe('take concept snapshot over', () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
@@ -753,7 +752,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -770,7 +769,7 @@ test.describe('take concept snapshot over', () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
             await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
@@ -850,7 +849,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -867,7 +866,7 @@ test.describe('take concept snapshot over', () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -908,7 +907,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -949,7 +948,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -1036,7 +1035,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await expect(instantieDetailsPage.hetAantalKostenIsGewijzigdPill).not.toBeVisible();
             await expect(instantieDetailsPage.titelKostConceptWijzigingenOvernemenLink(0)).not.toBeVisible();
@@ -1054,7 +1053,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -1114,7 +1113,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -1174,7 +1173,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
 
@@ -1197,7 +1196,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -1215,7 +1214,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -1237,7 +1236,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await expect(instantieDetailsPage.hetAantalWebsitesIsGewijzigdPill).toBeVisible();
             await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
@@ -1268,7 +1267,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             await expect(instantieDetailsPage.hetAantalWebsitesIsGewijzigdPill).toBeVisible();
             await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink(0)).toBeVisible();
@@ -1290,7 +1289,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -1716,7 +1715,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(updateSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
 
@@ -1861,7 +1860,7 @@ test.describe('take concept snapshot over', () => {
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
             // instantie moet alert 'herziening nodig' hebben
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -1916,9 +1915,9 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(updateSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
             });
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await homePage.resultTable.row(first_row).link(updateSnapshot.title).click();
 
             await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
@@ -1975,7 +1974,7 @@ test.describe('take concept snapshot over', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -2008,7 +2007,7 @@ test.describe('take concept snapshot over', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bewerk').click();
+        await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -2045,7 +2044,7 @@ test.describe('take concept snapshot over', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         // instantie moet alert 'herziening nodig' hebben
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -2060,7 +2059,7 @@ test.describe('take concept snapshot over', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
         await wijzigingenOvernemenModal.expectToBeVisible();

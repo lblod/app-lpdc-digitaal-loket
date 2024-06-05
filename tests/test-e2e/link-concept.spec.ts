@@ -98,8 +98,10 @@ test.describe('Link concept', () => {
         await homePage.goto();
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(titel);
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
         });
+
+        await homePage.resultTable.row(first_row).link(titel).click();
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.heading).toHaveText(titel);
         await expect(instantieDetailsPage.gekoppeldConceptLink).toContainText("3000");

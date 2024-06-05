@@ -105,7 +105,7 @@ test.describe('Delete an instance', () => {
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
         const publicServiceUri = publicService['@id'];
 
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
         await instantieDetailsPage.expectToBeVisible();
         await instantieDetailsPage.productOpnieuwBewerkenButton.click();
 

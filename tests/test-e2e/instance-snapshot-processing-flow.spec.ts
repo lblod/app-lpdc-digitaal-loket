@@ -158,7 +158,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
         await expect(homePage.resultTable.row(first_row).locator).toContainText(documentStatus);
 
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(title).click();
 
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
@@ -567,7 +567,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
         await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(title).click();
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
         await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
