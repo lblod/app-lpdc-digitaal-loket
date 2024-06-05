@@ -376,7 +376,7 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.verzendNaarVlaamseOverheidButton = page.getByRole('button', { name: 'Verzend naar Vlaamse overheid' });
         this.wijzigingenBewarenButton = page.getByRole('button', { name: 'Wijzigingen bewaren' });
-        this.terugNaarHetOverzichtButton = page.getByRole('link', { name: 'Terug naar het overzicht' });
+        this.terugNaarHetOverzichtButton = page.getByRole('link', { name: 'Lokale Producten- en Dienstencatalogus' });
         this.productOpnieuwBewerkenButton = page.getByRole('button', { name: 'Product opnieuw bewerken' });
         this.productVerwijderenButton = page.getByRole('button', { name: 'Product verwijderen' });
     }
