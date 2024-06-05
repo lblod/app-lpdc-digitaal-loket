@@ -230,6 +230,13 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
   #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
   
+  # Remove all user sessions to avoid that users can keep working on cached version
+  # DELETE WHERE  {
+  #   GRAPH <http://mu.semte.ch/graphs/sessions> {
+  #     ?s ?p ?o.
+  #   }
+  # }
+
   drc pull
 
   drc up -d
