@@ -1,4 +1,5 @@
 import { Locator, Page } from "@playwright/test";
+import { wait } from "../shared/shared";
 
 export class Select {
 
@@ -21,6 +22,7 @@ export class Select {
     async selectValue(text: string) {
         await this.selectDiv.click();
         await this.page.keyboard.type(text);
+        await wait(500);
         await this.option(text).click();
     }
 

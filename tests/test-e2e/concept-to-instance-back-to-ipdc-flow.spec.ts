@@ -359,7 +359,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.selectValue('Federale overheid');
         await expect(instantieDetailsPage.uitvoerendeOverheidMultiSelect.options()).toContainText([`${bestuurseenheidConfig.name} (${bestuurseenheidConfig.classificatie})`]);
         if (bestuurseenheidConfig.spatialNisCode) {
-            await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText([bestuurseenheidConfig.spatialNisLabel]);
+            await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText([bestuurseenheidConfig.spatialNisLabel || '']);
         }
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Provincie Limburg');
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Oud-Heverlee');
@@ -512,7 +512,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         await expect(instantieDetailsPage.uitvoerendBestuursniveauMultiSelect.options()).toContainText(['Federale overheid', 'Provinciale overheid']);
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Oud-Heverlee']); // order is alphabetically thus multiple asserts
         if (bestuurseenheidConfig.spatialNisCode) {
-            await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText([bestuurseenheidConfig.spatialNisLabel]);
+            await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText([bestuurseenheidConfig.spatialNisLabel || '']);
         }
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Provincie Limburg']);
         await expect(instantieDetailsPage.geografischToepassingsgebiedMultiSelect.options()).toContainText(['Oud-Heverlee']);
