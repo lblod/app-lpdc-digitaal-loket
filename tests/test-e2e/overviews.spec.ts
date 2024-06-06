@@ -11,6 +11,7 @@ import { v4 as uuid } from 'uuid';
 import { eighth_column, fifth_column, first_column, first_row, fourth_column, second_column, second_row, seventh_column, sixth_column, third_column } from './components/table';
 import { ConceptDetailsPage } from './pages/concept-details-page';
 import { wait } from './shared/shared';
+import { KoppelConceptPage } from './pages/koppel-concept-page';
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('Verifies column contents, sorting, and filtering of overview screens', () => {
@@ -22,6 +23,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
     let instantieDetailsPage: InstantieDetailsPage;
     let conceptDetailsPage: ConceptDetailsPage;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
+    let koppelConceptPage: KoppelConceptPage;
 
     test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
@@ -32,6 +34,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
         instantieDetailsPage = InstantieDetailsPage.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
         conceptDetailsPage = ConceptDetailsPage.create(page);
+        koppelConceptPage = KoppelConceptPage.create(page);
 
         await mockLoginPage.goto();
         await mockLoginPage.searchInput.fill('Aarschot');
@@ -91,7 +94,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
                 await expect(homePage.resultTable.header().cell(second_column).locator).toContainText('IPDC Concept ID');
                 await expect(homePage.resultTable.row(first_row).cell(second_column)).toContainText(`1502`);
 
-                await expect(homePage.resultTable.header().cell(third_column).locator).toContainText('Product type');
+                await expect(homePage.resultTable.header().cell(third_column).locator).toContainText('Producttype');
                 await expect(homePage.resultTable.row(first_row).cell(third_column)).toContainText(`Financieel voordeel`);
 
                 await expect(homePage.resultTable.header().cell(fourth_column).locator).toContainText('Doelgroepen');
@@ -247,5 +250,83 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
         });
     });
 
+    test.describe('overview concepts', () => {
+
+        test('columns and values are visible', async () => {
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.expectToBeVisible();
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+                
+                await expect(toevoegenPage.resultTable.header().cell(first_column).locator).toContainText('Productnaam');
+                await expect(toevoegenPage.resultTable.row(first_row).cell(first_column)).toContainText('Akte van Belgische nationaliteit - nl');
+
+                await expect(toevoegenPage.resultTable.header().cell(second_column).locator).toContainText('IPDC Concept ID');
+                await expect(toevoegenPage.resultTable.row(first_row).cell(second_column)).toContainText('1502');
+
+                await expect(toevoegenPage.resultTable.header().cell(third_column).locator).toContainText('Producttype');
+                await expect(toevoegenPage.resultTable.row(first_row).cell(third_column)).toContainText('Financieel voordeel');
+
+                await expect(toevoegenPage.resultTable.header().cell(fourth_column).locator).toContainText('Doelgroepen');
+                await expect(toevoegenPage.resultTable.row(first_row).cell(fourth_column)).toContainText('Burger Onderneming');
+
+                await expect(toevoegenPage.resultTable.header().cell(fifth_column).locator).toContainText(`Thema\'s`);
+                await expect(toevoegenPage.resultTable.row(first_row).cell(fifth_column)).toContainText(`Burger en Overheid Cultuur, Sport en Vrije Tijd`);
+
+                await expect(toevoegenPage.resultTable.header().cell(sixth_column).locator).toContainText(`Publicatiekanaal`);
+                await expect(toevoegenPage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
+
+            });
+        });
+    });
+
+    test.describe('link concept to instance', () => {
+
+        test('columns and values are visible', async () => {
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+        
+            await instantieDetailsPage.expectToBeVisible();
+            const titel = 'Instance te koppelen aan concept - ' + uuid();
+
+            await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
+            await instantieDetailsPage.titelInput.click();
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+            await instantieDetailsPage.koppelConceptLink.click()
+
+            await koppelConceptPage.expectToBeVisible();
+
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill('Akte van Belgische nationaliteit');
+                
+                await expect(koppelConceptPage.resultTable.header().cell(first_column).locator).toContainText('Productnaam');
+                await expect(koppelConceptPage.resultTable.row(first_row).cell(first_column)).toContainText('Akte van Belgische nationaliteit - nl');
+
+                await expect(koppelConceptPage.resultTable.header().cell(second_column).locator).toContainText('IPDC Concept ID');
+                await expect(koppelConceptPage.resultTable.row(first_row).cell(second_column)).toContainText('1502');
+
+                await expect(koppelConceptPage.resultTable.header().cell(third_column).locator).toContainText('Producttype');
+                await expect(koppelConceptPage.resultTable.row(first_row).cell(third_column)).toContainText('Financieel voordeel');
+
+                await expect(koppelConceptPage.resultTable.header().cell(fourth_column).locator).toContainText('Doelgroepen');
+                await expect(koppelConceptPage.resultTable.row(first_row).cell(fourth_column)).toContainText('Burger Onderneming');
+
+                await expect(koppelConceptPage.resultTable.header().cell(fifth_column).locator).toContainText(`Thema\'s`);
+                await expect(koppelConceptPage.resultTable.row(first_row).cell(fifth_column)).toContainText(`Burger en Overheid Cultuur, Sport en Vrije Tijd`);
+
+                await expect(koppelConceptPage.resultTable.header().cell(sixth_column).locator).toContainText(`Publicatiekanaal`);
+                await expect(koppelConceptPage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
+
+            });
+
+        });
+    });
 
 });

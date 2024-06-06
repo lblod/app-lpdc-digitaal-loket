@@ -1590,7 +1590,7 @@ test.describe('take concept snapshot over', () => {
 
             await instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink.click();
             await verifyDataInModalAndAndTakeOverForSelect(
-                'Product type',
+                'Producttype',
                 productTypesMap[createSnapshot['jsonlddata']['type']],
                 createSnapshot['jsonlddata'].generatedAtTime,
                 productTypesMap[updateSnapshot['jsonlddata']['type']],

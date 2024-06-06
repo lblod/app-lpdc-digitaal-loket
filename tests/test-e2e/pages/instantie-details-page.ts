@@ -229,7 +229,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.draftInstanceConversionAlert = new Alert(page, '')
 
         this.ipdcConceptIdHeader = page.locator('dl div').filter({ hasText: 'IPDC Concept ID' }).getByRole('definition');
-        this.productTypeHeader = page.locator('dl div').filter({ hasText: 'Product type' }).getByRole('definition');
+        this.productTypeHeader = page.locator('dl div').filter({ hasText: 'Producttype' }).getByRole('definition');
         this.aangemaaktOpHeader = page.locator('dl div').filter({ hasText: 'Aangemaakt op' }).getByRole('definition');
         this.bewerktOpHeader = page.locator('dl div').filter({ hasText: 'Bewerkt op' }).getByRole('definition');
         this.geldigVanafHeader = page.locator('dl div').filter({ hasText: 'Geldig vanaf' }).getByRole('definition');
@@ -350,7 +350,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Product of dienst geldig vanaf'));
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot').first();
         this.productOfDienstGeldigTotConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Product of dienst geldig tot'));
-        this.productTypeSelect = new Select(page, 'Product type');
+        this.productTypeSelect = new Select(page, 'Producttype');
         this.productTypeConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.productTypeSelect.selectDivLocatorString);
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
         this.doelgroepenConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.doelgroepenMultiSelect.selectDivLocatorString);

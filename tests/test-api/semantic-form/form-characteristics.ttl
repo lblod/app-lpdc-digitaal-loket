@@ -65,10 +65,10 @@ ext:generalPg a form:PropertyGroup;
       sh:group ext:generalPg .
 
   ##########################################################
-  #  field: product type
+  #  field: producttype
   ##########################################################
   ext:productTypeF a form:Field ;
-      sh:name "Product type" ;
+      sh:name "Producttype" ;
       sh:order 20 ;
       form:options  """{"conceptScheme":"https://productencatalogus.data.vlaanderen.be/id/conceptscheme/Type"}""" ;
       sh:path dct:type ;
