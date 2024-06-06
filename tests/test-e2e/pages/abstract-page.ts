@@ -20,7 +20,7 @@ export abstract class AbstractPage {
         await assertion();
         return;
       } catch (e) {
-        console.error(`reload until: assertion not met, retrying ... ${assertion.toString()}`);
+        console.error(`reload until: assertion not met, retrying ... ${assertion.toString()}`, e);
       }
     }
     throw Error(`reload until: assertion not met after ${maxReloadAttempts} attempts. ${assertion.toString()}`);
