@@ -1571,22 +1571,22 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink.click();
             await verifyDataInModalAndAndTakeOverForInput(
                 'Product of dienst geldig vanaf',
-                moment(createSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'),
+                moment(createSnapshot['jsonlddata']['startDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'),
                 createSnapshot['jsonlddata'].generatedAtTime,
-                moment(updateSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'),
+                moment(updateSnapshot['jsonlddata']['startDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'),
                 updateSnapshot['jsonlddata'].generatedAtTime,
             );
-            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'));
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'));
 
             await instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink.click();
             await verifyDataInModalAndAndTakeOverForInput(
                 'Product of dienst geldig tot',
-                moment(createSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'),
+                moment(createSnapshot['jsonlddata']['eindeDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'),
                 createSnapshot['jsonlddata'].generatedAtTime,
-                moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'),
+                moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'),
                 updateSnapshot['jsonlddata'].generatedAtTime,
             );
-            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'));
+            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'));
 
             await instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink.click();
             await verifyDataInModalAndAndTakeOverForSelect(
@@ -1810,10 +1810,10 @@ test.describe('take concept snapshot over', () => {
 
             // algemene info (eigenschappen)           
             await expect(instantieDetailsPage.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink).not.toBeVisible();;
-            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).local().format('DD-MM-YYYY'));
+            await expect(instantieDetailsPage.productOfDienstGeldigVanafInput).toHaveValue(moment(updateSnapshot['jsonlddata']['startDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'));
 
             await expect(instantieDetailsPage.productOfDienstGeldigTotConceptWijzigingenOvernemenLink).not.toBeVisible();
-            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).local().format('DD-MM-YYYY'));
+            await expect(instantieDetailsPage.productOfDienstGeldigTotInput).toHaveValue(moment(updateSnapshot['jsonlddata']['eindeDienstVerlening']).utcOffset(2).format('DD-MM-YYYY'));
 
             await expect(instantieDetailsPage.productTypeConceptWijzigingenOvernemenLink).not.toBeVisible();
             expect(await instantieDetailsPage.productTypeSelect.selectedItem.textContent()).toContain(productTypesMap[updateSnapshot['jsonlddata']['type']]);

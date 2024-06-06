@@ -67,14 +67,14 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
                 await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
                 await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
             });
-    
+
             await conceptDetailsPage.expectToBeVisible();
             await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
 
             const now = new Date();
 
             await conceptDetailsPage.voegToeButton.click();
-    
+
             await instantieDetailsPage.expectToBeVisible();
             const titel = await instantieDetailsPage.titelInput.inputValue();
             const newTitel = titel + uuid();
@@ -87,31 +87,31 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await homePage.goto();
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(newTitel);
-                
+
                 await expect(homePage.resultTable.header().cell(first_column).locator).toContainText('Productnaam');
                 await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(newTitel);
-
-                await expect(homePage.resultTable.header().cell(second_column).locator).toContainText('IPDC Concept ID');
-                await expect(homePage.resultTable.row(first_row).cell(second_column)).toContainText(`1502`);
-
-                await expect(homePage.resultTable.header().cell(third_column).locator).toContainText('Producttype');
-                await expect(homePage.resultTable.row(first_row).cell(third_column)).toContainText(`Financieel voordeel`);
-
-                await expect(homePage.resultTable.header().cell(fourth_column).locator).toContainText('Doelgroepen');
-                await expect(homePage.resultTable.row(first_row).cell(fourth_column)).toContainText(`Burger Onderneming`);
-
-                await expect(homePage.resultTable.header().cell(fifth_column).locator).toContainText(`Thema\'s`);
-                await expect(homePage.resultTable.row(first_row).cell(fifth_column)).toContainText(`Burger en Overheid Cultuur, Sport en Vrije Tijd`);
-
-                await expect(homePage.resultTable.header().cell(sixth_column).locator).toContainText(`Publicatiekanaal`);
-                await expect(homePage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
-
-                await expect(homePage.resultTable.header().cell(seventh_column).locator).toContainText(`Laatst bewerkt`);
-                await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(now).local().format('DD-MM-YYYY - HH:mm')}`);
-                
-                await expect(homePage.resultTable.header().cell(eighth_column).locator).toContainText(`Status`);
-                await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
             });
+
+            await expect(homePage.resultTable.header().cell(second_column).locator).toContainText('IPDC Concept ID');
+            await expect(homePage.resultTable.row(first_row).cell(second_column)).toContainText(`1502`);
+
+            await expect(homePage.resultTable.header().cell(third_column).locator).toContainText('Producttype');
+            await expect(homePage.resultTable.row(first_row).cell(third_column)).toContainText(`Financieel voordeel`);
+
+            await expect(homePage.resultTable.header().cell(fourth_column).locator).toContainText('Doelgroepen');
+            await expect(homePage.resultTable.row(first_row).cell(fourth_column)).toContainText(`Burger Onderneming`);
+
+            await expect(homePage.resultTable.header().cell(fifth_column).locator).toContainText(`Thema\'s`);
+            await expect(homePage.resultTable.row(first_row).cell(fifth_column)).toContainText(`Burger en Overheid Cultuur, Sport en Vrije Tijd`);
+
+            await expect(homePage.resultTable.header().cell(sixth_column).locator).toContainText(`Publicatiekanaal`);
+            await expect(homePage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
+
+            await expect(homePage.resultTable.header().cell(seventh_column).locator).toContainText(`Laatst bewerkt`);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(now).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
+
+            await expect(homePage.resultTable.header().cell(eighth_column).locator).toContainText(`Status`);
+            await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
         });
 
         test('laatst gewijzigd and status columns are sortable', async () => {
@@ -121,7 +121,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await toevoegenPage.expectToBeVisible();
 
             await toevoegenPage.volledigNieuwProductToevoegenButton.click();
-        
+
             const creationTimeOldest = new Date();
 
             await instantieDetailsPage.expectToBeVisible();
@@ -137,14 +137,14 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await verzendNaarVlaamseOverheidModal.expectToBeVisible();
             await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
             await verzendNaarVlaamseOverheidModal.expectToBeClosed();
-    
-            await homePage.expectToBeVisible();    
+
+            await homePage.expectToBeVisible();
 
             await homePage.productOfDienstToevoegenButton.click();
             await toevoegenPage.expectToBeVisible();
 
             await toevoegenPage.volledigNieuwProductToevoegenButton.click();
-        
+
             const creationTimeMostRecent = new Date();
 
             await instantieDetailsPage.expectToBeVisible();
@@ -161,13 +161,13 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             //first clear the screen 
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(uuid());
-                
+
                 await expect(homePage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
             });
-            
+
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(titelPrefix + ' - instance voor sorteren');
-                
+
                 await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
             });
 
@@ -176,11 +176,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Verzonden`);
 
             //remove sorting on laatst bewerkt
@@ -200,11 +200,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             //sort on status, verzonden -> ontwerp
@@ -216,11 +216,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortDownIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             //sort on status, verzonden -> ontwerp
@@ -232,21 +232,21 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Verzonden`);
 
-             //remove all sorting again
-             await homePage.resultTable.header().cell(eighth_column).sortUpIcon.click();
-             //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
-             await wait(5000);
- 
-             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
-             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible(); 
-            
+            //remove all sorting again
+            await homePage.resultTable.header().cell(eighth_column).sortUpIcon.click();
+            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
+            await wait(5000);
+
+            await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
+            await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
+
         });
     });
 
@@ -259,7 +259,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await toevoegenPage.expectToBeVisible();
             await toevoegenPage.reloadUntil(async () => {
                 await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
-                
+
                 await expect(toevoegenPage.resultTable.header().cell(first_column).locator).toContainText('Productnaam');
                 await expect(toevoegenPage.resultTable.row(first_row).cell(first_column)).toContainText('Akte van Belgische nationaliteit - nl');
 
@@ -289,7 +289,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await toevoegenPage.expectToBeVisible();
 
             await toevoegenPage.volledigNieuwProductToevoegenButton.click();
-        
+
             await instantieDetailsPage.expectToBeVisible();
             const titel = 'Instance te koppelen aan concept - ' + uuid();
 
@@ -305,7 +305,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             await koppelConceptPage.reloadUntil(async () => {
                 await koppelConceptPage.searchInput.fill('Akte van Belgische nationaliteit');
-                
+
                 await expect(koppelConceptPage.resultTable.header().cell(first_column).locator).toContainText('Productnaam');
                 await expect(koppelConceptPage.resultTable.row(first_row).cell(first_column)).toContainText('Akte van Belgische nationaliteit - nl');
 

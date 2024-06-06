@@ -37,8 +37,8 @@ export class ConceptOvernemenModal extends AbstractModal {
         const conceptWaaropInstantieIsGebaseerdFormSelector = `div.au-c-modal__body form[aria-label="Concept waarop instantie gebaseerd is"]`;
         const instantieFormSelector = `div.au-c-modal__body form[aria-label="Instantie"]`;
 
-        this.meestRecenteRevisieLabel = this.page.getByText(`Meest recente concept (${moment(meestRecenteRevisieGeneratedAt).local().format('DD-MM-YYYY - HH:mm')})`);
-        this.conceptWaaropInstantieIsGebaseerdLabel = this.page.getByText(`Concept waarop instantie is gebaseerd (${moment(conceptWaaropInstantieIsGebaseerdGeneratedAt).local().format('DD-MM-YYYY - HH:mm')})`);
+        this.meestRecenteRevisieLabel = this.page.getByText(`Meest recente concept (${moment(meestRecenteRevisieGeneratedAt).utcOffset(2).format('DD-MM-YYYY - HH:mm')})`);
+        this.conceptWaaropInstantieIsGebaseerdLabel = this.page.getByText(`Concept waarop instantie is gebaseerd (${moment(conceptWaaropInstantieIsGebaseerdGeneratedAt).utcOffset(2).format('DD-MM-YYYY - HH:mm')})`);
 
         this.meestRecenteConceptInput = this.inputBelow(meestRecenteRevisieFormSelector, 'Meest recente concept');
         this.conceptWaaropInstantieIsGebaseerdInput = this.inputBelow(conceptWaaropInstantieIsGebaseerdFormSelector, 'Concept waarop instantie is gebaseerd');
