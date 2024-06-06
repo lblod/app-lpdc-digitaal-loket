@@ -116,7 +116,9 @@ test.describe('Delete an instance', () => {
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.titelInput).toHaveValue(newTitel);
 
-        await instantieDetailsPage.productVerwijderenButton.click();
+        await instantieDetailsPage.actiesMenu.expectToBeVisible();
+        await instantieDetailsPage.actiesMenu.open();
+        await instantieDetailsPage.actiesMenu.productVerwijderenButton.click();
         await productOfDienstVerwijderenModal.expectToBeVisible();
         await productOfDienstVerwijderenModal.verwijderenButton.click();
 

@@ -4,6 +4,7 @@ import { MultiSelect } from "../components/multi-select";
 import { Select } from "../components/select";
 import { SelectWithCreate } from "../components/select-with-create";
 import { Alert } from "../components/alert";
+import {ActionMenu} from "../action-menu";
 
 export class InstantieDetailsPage extends AbstractPage {
 
@@ -190,7 +191,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly wijzigingenBewarenButton: Locator;
     readonly terugNaarHetOverzichtButton: Locator;
     readonly productOpnieuwBewerkenButton: Locator;
-    readonly productVerwijderenButton: Locator;
+    readonly actiesMenu: ActionMenu;
 
     private constructor(page: Page) {
         super(page);
@@ -378,7 +379,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.wijzigingenBewarenButton = page.getByRole('button', { name: 'Wijzigingen bewaren' });
         this.terugNaarHetOverzichtButton = page.getByRole('link', { name: 'Lokale Producten- en Dienstencatalogus' });
         this.productOpnieuwBewerkenButton = page.getByRole('button', { name: 'Product opnieuw bewerken' });
-        this.productVerwijderenButton = page.getByRole('button', { name: 'Product verwijderen' });
+        this.actiesMenu = new ActionMenu(page);
     }
 
     static create(page: Page): InstantieDetailsPage {
