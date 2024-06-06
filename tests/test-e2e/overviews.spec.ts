@@ -107,7 +107,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
                 await expect(homePage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
 
                 await expect(homePage.resultTable.header().cell(seventh_column).locator).toContainText(`Laatst bewerkt`);
-                await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(now).format('DD-MM-YYYY - HH:mm')}`);
+                await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(now).local().format('DD-MM-YYYY - HH:mm')}`);
                 
                 await expect(homePage.resultTable.header().cell(eighth_column).locator).toContainText(`Status`);
                 await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
@@ -176,11 +176,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Verzonden`);
 
             //remove sorting on laatst bewerkt
@@ -200,11 +200,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             //sort on status, verzonden -> ontwerp
@@ -216,11 +216,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortDownIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             //sort on status, verzonden -> ontwerp
@@ -232,11 +232,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpIcon).toBeVisible();
 
             await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).local().format('DD-MM-YYYY - HH:mm')}`);                
             await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
             await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).local().format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Verzonden`);
 
              //remove all sorting again
