@@ -54,7 +54,7 @@ test.describe('Herziening nodig', () => {
         await page.close();
     });
 
-    test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({ request }) => {
+    test('Updating concept snapshot after instance is created should set reviewStatus on instance to updated; when concept snapshot deleted, the reviewstatus on instance to archived', async ({ request, browser }) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -104,6 +104,9 @@ test.describe('Herziening nodig', () => {
         //check link concept bekijken
         let href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
         expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.id}&revisie2=${updateSnapshot.id}`);
+
+        let target = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('target');
+        expect(target).toEqual(`blank`);
 
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
         await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
