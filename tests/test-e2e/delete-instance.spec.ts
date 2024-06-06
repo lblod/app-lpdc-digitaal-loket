@@ -106,6 +106,10 @@ test.describe('Delete an instance', () => {
         const publicServiceUri = publicService['@id'];
 
         await homePage.resultTable.row(first_row).link(newTitel).click();
+
+        await instantieDetailsPage.actiesMenu.open();
+        await instantieDetailsPage.actiesMenu.productVerwijderenButton.isDisabled();
+
         await instantieDetailsPage.expectToBeVisible();
         await instantieDetailsPage.productOpnieuwBewerkenButton.click();
 
