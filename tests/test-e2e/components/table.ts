@@ -1,4 +1,4 @@
-import { Locator, Page } from "@playwright/test";
+import { Locator, Page, expect } from "@playwright/test";
 
 export class Table {
 
@@ -30,10 +30,24 @@ export class Header {
         this.locator = locator;
     }
 
-    cell(column: number): Locator {
-        return this.locator.locator('th').nth(column);
+    cell(column: number): HeaderCell {
+        return new HeaderCell(this.locator.locator('th').nth(column));
     }
+}
 
+export class HeaderCell {
+    
+    readonly locator: Locator;
+    readonly sortUpIcon: Locator;
+    readonly sortDownIcon: Locator;
+    readonly sortUpDownIcon: Locator;
+
+    constructor(locator: Locator) {
+        this.locator = locator;
+        this.sortUpIcon = this.locator.locator('svg.au-c-icon--nav-up');
+        this.sortDownIcon = this.locator.locator('svg.au-c-icon--nav-down');
+        this.sortUpDownIcon = this.locator.locator('svg.au-c-icon--nav-up-down');
+    }
 }
 
 export class Row {

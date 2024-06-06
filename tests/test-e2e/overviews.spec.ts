@@ -10,6 +10,7 @@ import moment from 'moment';
 import { v4 as uuid } from 'uuid';
 import { eighth_column, fifth_column, first_column, first_row, fourth_column, second_column, second_row, seventh_column, sixth_column, third_column } from './components/table';
 import { ConceptDetailsPage } from './pages/concept-details-page';
+import { wait } from './shared/shared';
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('Verifies column contents, sorting, and filtering of overview screens', () => {
@@ -67,7 +68,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await conceptDetailsPage.expectToBeVisible();
             await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
 
-            const today = new Date();
+            const now = new Date();
 
             await conceptDetailsPage.voegToeButton.click();
     
@@ -84,34 +85,165 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(newTitel);
                 
-                await expect(homePage.resultTable.header().cell(first_column)).toContainText('Productnaam');
+                await expect(homePage.resultTable.header().cell(first_column).locator).toContainText('Productnaam');
                 await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(newTitel);
 
-                await expect(homePage.resultTable.header().cell(second_column)).toContainText('IPDC Concept ID');
+                await expect(homePage.resultTable.header().cell(second_column).locator).toContainText('IPDC Concept ID');
                 await expect(homePage.resultTable.row(first_row).cell(second_column)).toContainText(`1502`);
 
-                await expect(homePage.resultTable.header().cell(third_column)).toContainText('Product type');
+                await expect(homePage.resultTable.header().cell(third_column).locator).toContainText('Product type');
                 await expect(homePage.resultTable.row(first_row).cell(third_column)).toContainText(`Financieel voordeel`);
 
-                await expect(homePage.resultTable.header().cell(fourth_column)).toContainText('Doelgroepen');
+                await expect(homePage.resultTable.header().cell(fourth_column).locator).toContainText('Doelgroepen');
                 await expect(homePage.resultTable.row(first_row).cell(fourth_column)).toContainText(`Burger Onderneming`);
 
-                await expect(homePage.resultTable.header().cell(fifth_column)).toContainText(`Thema\'s`);
+                await expect(homePage.resultTable.header().cell(fifth_column).locator).toContainText(`Thema\'s`);
                 await expect(homePage.resultTable.row(first_row).cell(fifth_column)).toContainText(`Burger en Overheid Cultuur, Sport en Vrije Tijd`);
 
-                await expect(homePage.resultTable.header().cell(sixth_column)).toContainText(`Publicatiekanaal`);
+                await expect(homePage.resultTable.header().cell(sixth_column).locator).toContainText(`Publicatiekanaal`);
                 await expect(homePage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
 
-                await expect(homePage.resultTable.header().cell(seventh_column)).toContainText(`Laatst bewerkt`);
-                await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(today).format('DD-MM-YYYY - HH:mm')}`);
+                await expect(homePage.resultTable.header().cell(seventh_column).locator).toContainText(`Laatst bewerkt`);
+                await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(now).format('DD-MM-YYYY - HH:mm')}`);
                 
-                await expect(homePage.resultTable.header().cell(eighth_column)).toContainText(`Status`);
+                await expect(homePage.resultTable.header().cell(eighth_column).locator).toContainText(`Status`);
                 await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
             });
+        });
 
-            
+        test('laatst gewijzigd and status columns are sortable', async () => {
+            const titelPrefix = uuid();
 
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+        
+            const creationTimeOldest = new Date();
+
+            await instantieDetailsPage.expectToBeVisible();
+            const titelOldest = titelPrefix + ' - instance voor sorteren - ' + uuid();
+
+            await instantieDetailsPage.titelInput.fill(titelOldest);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titelOldest} beschrijving`);
+            await instantieDetailsPage.titelInput.click();
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+            await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+            await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeClosed();
     
+            await homePage.expectToBeVisible();    
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+        
+            const creationTimeMostRecent = new Date();
+
+            await instantieDetailsPage.expectToBeVisible();
+            const titelMostRecent = titelPrefix + ' - instance voor sorteren - ' + uuid();
+
+            await instantieDetailsPage.titelInput.fill(titelMostRecent);
+            await instantieDetailsPage.beschrijvingEditor.fill(`${titelMostRecent} beschrijving`);
+            await instantieDetailsPage.titelInput.click();
+            await instantieDetailsPage.wijzigingenBewarenButton.click();
+            await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+            await homePage.goto();
+
+            //first clear the screen 
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(uuid());
+                
+                await expect(homePage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+            });
+            
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(titelPrefix + ' - instance voor sorteren');
+                
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
+            });
+
+            //default sorting is most recent laatst bewerkt first
+            await expect(homePage.resultTable.header().cell(seventh_column).sortDownIcon).toBeVisible();
+            await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
+
+            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
+
+            await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelOldest);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Verzonden`);
+
+            //remove sorting on laatst bewerkt
+            await homePage.resultTable.header().cell(seventh_column).sortDownIcon.click();
+            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
+            await wait(5000);
+
+            await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
+            await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
+
+            //sort on oldest laatst bewerkt first
+            await homePage.resultTable.header().cell(seventh_column).sortUpDownIcon.click();
+            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
+            await wait(5000);
+
+            await expect(homePage.resultTable.header().cell(seventh_column).sortUpIcon).toBeVisible();
+            await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
+
+            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
+
+            await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
+
+            //sort on status, verzonden -> ontwerp
+            await homePage.resultTable.header().cell(eighth_column).sortUpDownIcon.click();
+            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
+            await wait(5000);
+
+            await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
+            await expect(homePage.resultTable.header().cell(eighth_column).sortDownIcon).toBeVisible();
+
+            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
+
+            await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
+
+            //sort on status, verzonden -> ontwerp
+            await homePage.resultTable.header().cell(eighth_column).sortDownIcon.click();
+            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
+            await wait(5000);
+
+            await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
+            await expect(homePage.resultTable.header().cell(eighth_column).sortUpIcon).toBeVisible();
+
+            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelMostRecent);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).format('DD-MM-YYYY - HH:mm')}`);                
+            await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Ontwerp`);
+
+            await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelOldest);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Verzonden`);
+
+             //remove all sorting again
+             await homePage.resultTable.header().cell(eighth_column).sortUpIcon.click();
+             //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
+             await wait(5000);
+ 
+             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
+             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible(); 
+            
         });
     });
 
