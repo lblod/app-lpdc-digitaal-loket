@@ -1,0 +1,10 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/authorization> {
+        ?s ?p ?o .
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/authorization> {
+        ?s ?p ?o .
+    }
+}

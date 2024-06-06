@@ -13,7 +13,7 @@ Add a migration script similar to:
 ```sparql
 INSERT DATA {
     GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/authorization> {
-        <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5> <http://data.lblod.info/vocabularies/lpdc/canPublishInstancesToGraph> <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent>.
+        <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5> <http://data.lblod.info/vocabularies/lpdc/canPublishInstanceToGraph> <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent>.
     }
 }
 ```
