@@ -180,6 +180,13 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   
   drc logs --timestamps --since 10m | grep lpdc-management-1
   
+  # Remove all user sessions to avoid that users can keep working on cached version
+  # DELETE WHERE  {
+  #   GRAPH <http://mu.semte.ch/graphs/sessions> {
+  #     ?s ?p ?o.
+  #   }
+  # }
+  
   #stop all containers
   drc stop 
   
@@ -229,13 +236,6 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   #    EMBER_MAINTENANCE_MESSAGE: " We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikmaken van een verbeterde versie van LPDC voor een nog vlottere gebruikerservaring."
   #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
   #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
-  
-  # Remove all user sessions to avoid that users can keep working on cached version
-  # DELETE WHERE  {
-  #   GRAPH <http://mu.semte.ch/graphs/sessions> {
-  #     ?s ?p ?o.
-  #   }
-  # }
 
   drc pull
 
