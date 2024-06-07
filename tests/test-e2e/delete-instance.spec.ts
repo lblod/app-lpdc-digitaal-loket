@@ -107,7 +107,7 @@ test.describe('Delete an instance', () => {
 
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
-        await instantieDetailsPage.actiesMenu.open();
+        await instantieDetailsPage.actiesMenu.locator.click();
         await instantieDetailsPage.actiesMenu.productVerwijderenButton.isDisabled();
 
         await instantieDetailsPage.expectToBeVisible();
@@ -121,7 +121,7 @@ test.describe('Delete an instance', () => {
         await expect(instantieDetailsPage.titelInput).toHaveValue(newTitel);
 
         await instantieDetailsPage.actiesMenu.expectToBeVisible();
-        await instantieDetailsPage.actiesMenu.open();
+        await instantieDetailsPage.actiesMenu.locator.click();
         await instantieDetailsPage.actiesMenu.productVerwijderenButton.click();
         await productOfDienstVerwijderenModal.expectToBeVisible();
         await productOfDienstVerwijderenModal.verwijderenButton.click();

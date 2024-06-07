@@ -358,7 +358,7 @@ test.describe('Reporting dashboard', () => {
             await productOfDienstOpnieuwBewerkenModal.productOpnieuwBewerkenButton.click();
             await IpdcStub.publishShouldFail(instanceIri, 400, { message: "something went wrong when deleting" });
             await instantieDetailsPage.actiesMenu.expectToBeVisible();
-            await instantieDetailsPage.actiesMenu.open();
+            await instantieDetailsPage.actiesMenu.locator.click();
             await instantieDetailsPage.actiesMenu.productVerwijderenButton.click();
 
             await productOfDienstVerwijderenModal.expectToBeVisible();
