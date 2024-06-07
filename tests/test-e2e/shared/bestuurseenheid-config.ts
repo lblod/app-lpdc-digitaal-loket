@@ -316,7 +316,6 @@ const gemeentenZonderFormeleInformeleKeuze =
         "Waregem",
         "Vosselaar",
         "Londerzeel",
-        "Herent",
         "Boortmeerbeek",
         "Grimbergen",
         "Geetbets",
