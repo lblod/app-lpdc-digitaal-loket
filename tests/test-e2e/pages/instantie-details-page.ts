@@ -350,7 +350,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Product of dienst geldig vanaf'));
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot').first();
         this.productOfDienstGeldigTotConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Product of dienst geldig tot'));
-        this.productTypeSelect = new Select(page, 'Producttype');
+        this.productTypeSelect = new Select(page, 'Producttype', undefined, undefined, 'div.au-c-main-container__content');
         this.productTypeConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.productTypeSelect.selectDivLocatorString);
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
         this.doelgroepenConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.doelgroepenMultiSelect.selectDivLocatorString);
