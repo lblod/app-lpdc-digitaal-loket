@@ -168,16 +168,19 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijving = await instantieDetailsPage.beschrijvingEditor.textContent();
         expect(beschrijving).toEqual(`De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen. - ${formalInformalChoiceSuffix}`);
         const newBeschrijving = beschrijving + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(newBeschrijving);
 
         const aanvullendeBeschrijving = await instantieDetailsPage.aanvullendeBeschrijvingEditor.textContent();
         expect(aanvullendeBeschrijving).toEqual(`Verdere beschrijving - ${formalInformalChoiceSuffix}`);
         const newAanvullendeBeschrijving = aanvullendeBeschrijving + uuid();
+        await instantieDetailsPage.aanvullendeBeschrijvingEditor.click();
         await instantieDetailsPage.aanvullendeBeschrijvingEditor.fill(newAanvullendeBeschrijving);
 
         const uitzonderingen = await instantieDetailsPage.uitzonderingenEditor.textContent();
         expect(uitzonderingen).toEqual(`Uitzonderingen - ${formalInformalChoiceSuffix}`);
         const newUitzonderingen = uitzonderingen + uuid();
+        await instantieDetailsPage.uitzonderingenEditor.click();
         await instantieDetailsPage.uitzonderingenEditor.fill(newUitzonderingen);
 
         const titelVoorwaarde = await instantieDetailsPage.titelVoorwaardeInput().inputValue();
@@ -187,6 +190,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingVoorwaarde = await instantieDetailsPage.beschrijvingVoorwaardeEditor().textContent();
         expect(beschrijvingVoorwaarde).toEqual(`De akte vermeldt:de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeftde wettelijke basis van de verklaring op basis waarvan de akte werd opgesteldin geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.Wie kan een afschrift of uittreksel aanvragen?Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:uzelfde echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonendeuw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)uw erfgenamenbijzondere gemachtigden zoals een notaris of advocaat.Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel. - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingVoorwaarde = beschrijvingVoorwaarde + uuid();
+        await instantieDetailsPage.beschrijvingVoorwaardeEditor().click();
         await instantieDetailsPage.beschrijvingVoorwaardeEditor().fill(newBeschrijvingVoorwaarde);
 
         const titelBewijsstuk = await instantieDetailsPage.titelBewijsstukInput().inputValue();
@@ -196,6 +200,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingBewijsstuk = await instantieDetailsPage.beschrijvingBewijsstukEditor().textContent();
         expect(beschrijvingBewijsstuk).toEqual(`Als u het document zelf ophaalt:uw eigen identiteitskaart.Als u het document voor iemand anders aanvraagt:een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaartuw eigen identiteitskaart. - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingBewijsstuk = beschrijvingBewijsstuk + uuid();
+        await instantieDetailsPage.beschrijvingBewijsstukEditor().click();
         await instantieDetailsPage.beschrijvingBewijsstukEditor().fill(newBeschrijvingBewijsstuk);
 
         const titelProcedure = await instantieDetailsPage.titelProcedureInput().inputValue();
@@ -205,6 +210,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingProcedure = await instantieDetailsPage.beschrijvingProcedureEditor().textContent();
         expect(beschrijvingProcedure).toEqual(`U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:via het e-loket van uw gemeenteof via de attestenpagina van 'Mijn Burgerprofiel'.Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht. - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingProcedure = beschrijvingProcedure + uuid();
+        await instantieDetailsPage.beschrijvingProcedureEditor().click();
         await instantieDetailsPage.beschrijvingProcedureEditor().fill(newBeschrijvingProcedure);
 
         const titelWebsiteVoorProcedure = await instantieDetailsPage.titelWebsiteVoorProcedureInput().inputValue();
@@ -214,6 +220,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingWebsiteVoorProcedure = await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().textContent();
         expect(beschrijvingWebsiteVoorProcedure).toEqual(`procedure website beschrijving - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingWebsiteVoorProcedure = beschrijvingWebsiteVoorProcedure + uuid();
+        await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().click();
         await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().fill(newBeschrijvingWebsiteVoorProcedure);
         const websiteURLVoorProcedure = await instantieDetailsPage.websiteURLVoorProcedureInput().inputValue();
         expect(websiteURLVoorProcedure).toEqual('https://procedure-website.com');
@@ -227,6 +234,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingKost = await instantieDetailsPage.beschrijvingKostEditor().textContent();
         expect(beschrijvingKost).toEqual(`De aanvraag en het attest zijn gratis. - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingKost = beschrijvingKost + uuid();
+        await instantieDetailsPage.beschrijvingKostEditor().click();
         await instantieDetailsPage.beschrijvingKostEditor().fill(newBeschrijvingKost);
 
         const titelFinancieelVoordeel = await instantieDetailsPage.titelFinancieelVoordeelInput().inputValue();
@@ -236,6 +244,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingFinancieelVoordeel = await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().textContent();
         expect(beschrijvingFinancieelVoordeel).toEqual(`Beschrijving financieel voordeel. - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingFinancieelVoordeel = beschrijvingFinancieelVoordeel + uuid();
+        await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().click();
         await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().fill(newBeschrijvingFinancieelVoordeel);
 
         const beschrijvingRegelgeving = await instantieDetailsPage.beschrijvingRegelgevingEditor().textContent();
@@ -250,6 +259,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingRegelgevendeBron = await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent();
         expect(beschrijvingRegelgevendeBron).toEqual(`Beschrijving regelgevende bron. - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingRegelgevendeBron = beschrijvingRegelgevendeBron + uuid();
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().click();
         await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().fill(newBeschrijvingRegelgevendeBron);
         const urlRegelgevendeBron = await instantieDetailsPage.regelgevendeBronUrlInput().inputValue();
         expect(urlRegelgevendeBron).toEqual(`https://ipdc.be/regelgeving`);
@@ -293,6 +303,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         const beschrijvingWebsite = await instantieDetailsPage.beschrijvingWebsiteEditor().textContent();
         expect(beschrijvingWebsite).toEqual(`Website Belgische nationaliteit en naturalisatie beschrijving - ${formalInformalChoiceSuffix}`);
         const newBeschrijvingWebsite = beschrijvingWebsite + uuid();
+        await instantieDetailsPage.beschrijvingWebsiteEditor().click();
         await instantieDetailsPage.beschrijvingWebsiteEditor().fill(newBeschrijvingWebsite);
         const websiteURL = await instantieDetailsPage.websiteURLInput().inputValue();
         expect(websiteURL).toEqual('https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit');

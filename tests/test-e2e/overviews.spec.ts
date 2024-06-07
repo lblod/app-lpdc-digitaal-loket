@@ -128,6 +128,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             const titelOldest = titelPrefix + ' - instance voor sorteren - ' + uuid();
 
             await instantieDetailsPage.titelInput.fill(titelOldest);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titelOldest} beschrijving`);
             await instantieDetailsPage.titelInput.click();
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -151,6 +152,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             const titelMostRecent = titelPrefix + ' - instance voor sorteren - ' + uuid();
 
             await instantieDetailsPage.titelInput.fill(titelMostRecent);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titelMostRecent} beschrijving`);
             await instantieDetailsPage.titelInput.click();
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -293,6 +295,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             const titel = 'Instance te koppelen aan concept - ' + uuid();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
             await instantieDetailsPage.titelInput.click();
             await instantieDetailsPage.wijzigingenBewarenButton.click();

@@ -374,6 +374,7 @@ test.describe('Herziening nodig', () => {
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         // popup should show when saving
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(uuid());
         await instantieDetailsPage.beschrijvingEditor.blur();
         await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -426,6 +427,7 @@ test.describe('Herziening nodig', () => {
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         // popup should show bij wegklikken
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(uuid());
         await instantieDetailsPage.beschrijvingEditor.blur();
 
@@ -481,6 +483,7 @@ test.describe('Herziening nodig', () => {
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
         // popup should show bij verzend naar overheid
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(uuid());
         await instantieDetailsPage.beschrijvingEditor.blur();
 

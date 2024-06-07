@@ -162,21 +162,25 @@ test.describe('Order instance from IPDC flow', () => {
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`)
 
             //KOST 1
             await instantieDetailsPage.voegKostToeButton.click();
             await instantieDetailsPage.titelKostInput().fill('Kost 1');
+            await instantieDetailsPage.beschrijvingKostEditor().click();
             await instantieDetailsPage.beschrijvingKostEditor().fill('Kost beschrijving 1');
 
             //KOST 2
             await instantieDetailsPage.voegKostToeButton.click();
             await instantieDetailsPage.titelKostInput(1).fill('Kost 2');
+            await instantieDetailsPage.beschrijvingKostEditor(1).click();
             await instantieDetailsPage.beschrijvingKostEditor(1).fill('Kost beschrijving 2');
 
             //KOST 3
             await instantieDetailsPage.voegKostToeButton.click();
             await instantieDetailsPage.titelKostInput(2).fill('Kost 3');
+            await instantieDetailsPage.beschrijvingKostEditor(2).click();
             await instantieDetailsPage.beschrijvingKostEditor(2).fill('Kost beschrijving 3');
 
             //DELETE KOST 2
@@ -185,6 +189,7 @@ test.describe('Order instance from IPDC flow', () => {
             //KOST 4
             await instantieDetailsPage.voegKostToeButton.click();
             await instantieDetailsPage.titelKostInput(2).fill('Kost 4');
+            await instantieDetailsPage.beschrijvingKostEditor(2).click();
             await instantieDetailsPage.beschrijvingKostEditor(2).fill('Kost beschrijving 4');
 
             await verzendNaarVlaamseOverheid();
@@ -228,6 +233,7 @@ test.describe('Order instance from IPDC flow', () => {
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`)
 
             //CONTACTPUNT 1
@@ -387,6 +393,7 @@ test.describe('Order instance from IPDC flow', () => {
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegRegelgevendeBronToeButton.click();

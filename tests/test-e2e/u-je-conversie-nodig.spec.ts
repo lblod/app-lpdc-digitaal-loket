@@ -113,6 +113,7 @@ test.describe('U-je conversie nodig', () => {
         await instantieDetailsPage.titelInput.fill(draftInstanceTitle);
 
         const draftInstanceBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(draftInstanceBeschrijving);
         await instantieDetailsPage.beschrijvingEditor.blur();
 
@@ -129,6 +130,7 @@ test.describe('U-je conversie nodig', () => {
         await instantieDetailsPage.titelInput.fill(publishedInstanceTitle);
 
         const publishedInstanceBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(publishedInstanceBeschrijving);
 
         await instantieDetailsPage.eigenschappenTab.click();
@@ -198,6 +200,7 @@ test.describe('U-je conversie nodig', () => {
         await instantieDetailsPage.titelInput.fill(draftInstanceTitle);
 
         const draftInstanceBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(draftInstanceBeschrijving);
         await instantieDetailsPage.beschrijvingEditor.blur();
 
@@ -214,6 +217,7 @@ test.describe('U-je conversie nodig', () => {
         await instantieDetailsPage.titelInput.fill(publishedInstanceTitle);
 
         const publishedInstanceBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(publishedInstanceBeschrijving);
 
         await instantieDetailsPage.eigenschappenTab.click();
@@ -272,6 +276,7 @@ test.describe('U-je conversie nodig', () => {
         await instantieDetailsPage.titelInput.fill(instantieTitel);
 
         const instantieBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(instantieBeschrijving);
         await instantieDetailsPage.beschrijvingEditor.blur();
 
@@ -327,6 +332,7 @@ test.describe('U-je conversie nodig', () => {
         await instantieDetailsPage.titelInput.fill(titel);
 
         const beschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(beschrijving);
         await instantieDetailsPage.beschrijvingEditor.blur();
 

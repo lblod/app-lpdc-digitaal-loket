@@ -90,6 +90,7 @@ test.describe('Create a new instance not based on a concept', () => {
         await instantieDetailsPage.titelInput.fill(newTitel);
 
         const newBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(newBeschrijving);
 
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();

@@ -42,6 +42,7 @@ test.describe('Concurrent Update', () => {
         const verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
         const homePage = LpdcHomePage.create(page);
 
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill("first description");
         await instantieDetailsPage.beschrijvingEditor.blur();
         await instantieDetailsPage.wijzigingenBewarenButton.click()
@@ -89,11 +90,13 @@ test.describe('Concurrent Update', () => {
         const instantieTitel = await createMinimalInstance(page);
         let instantieDetailsPage = await openInstantie(page, instantieTitel);
 
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill("first description");
         await instantieDetailsPage.beschrijvingEditor.blur();
         await instantieDetailsPage.wijzigingenBewarenButton.click()
         await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
 
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill("second description");
         await instantieDetailsPage.beschrijvingEditor.blur();
         await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -166,6 +169,7 @@ test.describe('Concurrent Update', () => {
         await instantieDetailsPage.inhoudTab.click();
         const beschrijving = "description " + uuid();
 
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(beschrijving);
         await instantieDetailsPage.eigenschappenTab.click();
         await wijzigingenBewarenModal.bewaarButton.click();

@@ -67,6 +67,7 @@ test.describe('Update an instance and verify edits are working', () => {
 
         expect(await instantieDetailsPage.titelInput.inputValue()).toEqual('');
 
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill('een nieuwe beschrijving');
         await instantieDetailsPage.beschrijvingEditor.blur();
 
@@ -75,6 +76,7 @@ test.describe('Update an instance and verify edits are working', () => {
 
         expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toEqual('een nieuwe beschrijving');
 
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill('');
         await instantieDetailsPage.beschrijvingEditor.blur();
 
@@ -82,7 +84,8 @@ test.describe('Update an instance and verify edits are working', () => {
         await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
 
         expect(await instantieDetailsPage.beschrijvingEditor.textContent()).toEqual('');
-
+        
+        await instantieDetailsPage.aanvullendeBeschrijvingEditor.click();
         await instantieDetailsPage.aanvullendeBeschrijvingEditor.fill('een nieuwe aanvullende beschrijving');
         await instantieDetailsPage.aanvullendeBeschrijvingEditor.blur();
 
@@ -90,7 +93,8 @@ test.describe('Update an instance and verify edits are working', () => {
         await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
 
         expect(await instantieDetailsPage.aanvullendeBeschrijvingEditor.textContent()).toEqual('een nieuwe aanvullende beschrijving');
-
+        
+        await instantieDetailsPage.aanvullendeBeschrijvingEditor.click();
         await instantieDetailsPage.aanvullendeBeschrijvingEditor.fill('');
         await instantieDetailsPage.aanvullendeBeschrijvingEditor.blur();
 
@@ -98,7 +102,8 @@ test.describe('Update an instance and verify edits are working', () => {
         await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
 
         expect(await instantieDetailsPage.aanvullendeBeschrijvingEditor.textContent()).toEqual('');
-
+        
+        await instantieDetailsPage.uitzonderingenEditor.click();
         await instantieDetailsPage.uitzonderingenEditor.fill('een nieuwe uitzondering');
         await instantieDetailsPage.uitzonderingenEditor.blur();
 
@@ -107,6 +112,7 @@ test.describe('Update an instance and verify edits are working', () => {
 
         expect(await instantieDetailsPage.uitzonderingenEditor.textContent()).toEqual('een nieuwe uitzondering');
 
+        await instantieDetailsPage.uitzonderingenEditor.click();
         await instantieDetailsPage.uitzonderingenEditor.fill('');
         await instantieDetailsPage.uitzonderingenEditor.blur();
 
@@ -146,6 +152,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegVoorwaardeToeButton.click();
 
         await instantieDetailsPage.titelVoorwaardeInput().fill('een nieuwe titel voor voorwaarde');
+        await instantieDetailsPage.beschrijvingVoorwaardeEditor().click();
         await instantieDetailsPage.beschrijvingVoorwaardeEditor().fill('een nieuwe beschrijving voor voorwaarde');
         await instantieDetailsPage.beschrijvingVoorwaardeEditor().blur();
 
@@ -156,6 +163,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.beschrijvingVoorwaardeEditor().textContent()).toEqual('een nieuwe beschrijving voor voorwaarde');
 
         await instantieDetailsPage.titelVoorwaardeInput().fill('');
+        await instantieDetailsPage.beschrijvingVoorwaardeEditor().click();
         await instantieDetailsPage.beschrijvingVoorwaardeEditor().fill('');
         await instantieDetailsPage.beschrijvingVoorwaardeEditor().blur();
 
@@ -177,6 +185,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegBewijsstukToeButton().click();
 
         await instantieDetailsPage.titelBewijsstukInput().fill('een nieuwe titel bewijsstuk');
+        await instantieDetailsPage.beschrijvingBewijsstukEditor().click();
         await instantieDetailsPage.beschrijvingBewijsstukEditor().fill('een nieuwe beschrijving bewijsstuk');
         await instantieDetailsPage.beschrijvingBewijsstukEditor().blur();
 
@@ -190,6 +199,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.beschrijvingBewijsstukEditor().textContent()).toEqual('een nieuwe beschrijving bewijsstuk');
 
         await instantieDetailsPage.titelBewijsstukInput().fill('');
+        await instantieDetailsPage.beschrijvingBewijsstukEditor().click();
         await instantieDetailsPage.beschrijvingBewijsstukEditor().fill('');
         await instantieDetailsPage.beschrijvingBewijsstukEditor().blur();
 
@@ -239,6 +249,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegProcedureToeButton.click();
 
         await instantieDetailsPage.titelProcedureInput().fill('een nieuwe titel voor procedure');
+        await instantieDetailsPage.beschrijvingProcedureEditor().click();
         await instantieDetailsPage.beschrijvingProcedureEditor().fill('een nieuwe beschrijving voor procedure');
         await instantieDetailsPage.beschrijvingProcedureEditor().blur();
 
@@ -249,6 +260,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.beschrijvingProcedureEditor().textContent()).toEqual('een nieuwe beschrijving voor procedure');
 
         await instantieDetailsPage.titelProcedureInput().fill('');
+        await instantieDetailsPage.beschrijvingProcedureEditor().click();
         await instantieDetailsPage.beschrijvingProcedureEditor().fill('');
         await instantieDetailsPage.beschrijvingProcedureEditor().blur();
 
@@ -270,6 +282,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegWebsiteToeButtonVoorProcedure().click();
 
         await instantieDetailsPage.titelWebsiteVoorProcedureInput().fill('een nieuwe titel voor procedure website');
+        await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().click();
         await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().fill('een nieuwe beschrijving voor procedure website');
         await instantieDetailsPage.websiteURLVoorProcedureInput().fill('http://website-for-procedure.be');
         await instantieDetailsPage.websiteURLVoorProcedureInput().blur();
@@ -282,6 +295,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.websiteURLVoorProcedureInput().inputValue()).toEqual('http://website-for-procedure.be');
 
         await instantieDetailsPage.titelWebsiteVoorProcedureInput().fill('');
+        await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().click();
         await instantieDetailsPage.beschrijvingWebsiteVoorProcedureEditor().fill('');
         await instantieDetailsPage.websiteURLVoorProcedureInput().fill('');
         await instantieDetailsPage.websiteURLVoorProcedureInput().blur();
@@ -334,6 +348,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegKostToeButton.click();
 
         await instantieDetailsPage.titelKostInput().fill('een nieuwe titel voor kost');
+        await instantieDetailsPage.beschrijvingKostEditor().click();
         await instantieDetailsPage.beschrijvingKostEditor().fill('een nieuwe beschrijving voor kost');
         await instantieDetailsPage.beschrijvingKostEditor().blur();
 
@@ -344,6 +359,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.beschrijvingKostEditor().textContent()).toEqual('een nieuwe beschrijving voor kost');
 
         await instantieDetailsPage.titelKostInput().fill('');
+        await instantieDetailsPage.beschrijvingKostEditor().click();
         await instantieDetailsPage.beschrijvingKostEditor().fill('');
         await instantieDetailsPage.beschrijvingKostEditor().blur();
 
@@ -377,6 +393,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
 
         await instantieDetailsPage.titelRegelgevendeBronInput().fill('een nieuwe titel voor regelgevende bron');
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().click();
         await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().fill('een nieuwe beschrijving voor regelgevende bron');
         await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().blur();
 
@@ -387,6 +404,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toEqual('een nieuwe beschrijving voor regelgevende bron');
 
         await instantieDetailsPage.titelRegelgevendeBronInput().fill('');
+        await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().click();
         await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().fill('');
         await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().blur();
 
@@ -420,6 +438,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegFinancieelVoordeelToeButton.click();
 
         await instantieDetailsPage.titelFinancieelVoordeelInput().fill('een nieuwe titel voor financieel voordeel');
+        await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().click();
         await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().fill('een nieuwe beschrijving voor financieel voordeel');
         await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().blur();
 
@@ -430,6 +449,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().textContent()).toEqual('een nieuwe beschrijving voor financieel voordeel');
 
         await instantieDetailsPage.titelFinancieelVoordeelInput().fill('');
+        await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().click();
         await instantieDetailsPage.beschrijvingFinancieelVoordeelEditor().fill('');
 
         await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -557,6 +577,7 @@ test.describe('Update an instance and verify edits are working', () => {
         await instantieDetailsPage.voegWebsiteToeButton.click();
 
         await instantieDetailsPage.titelWebsiteInput().fill('een nieuwe titel voor website');
+        await instantieDetailsPage.beschrijvingWebsiteEditor().click();
         await instantieDetailsPage.beschrijvingWebsiteEditor().fill('een nieuwe beschrijving voor website');
         await instantieDetailsPage.websiteURLInput().fill('http://www.website.com');
 
@@ -568,6 +589,7 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.websiteURLInput().inputValue()).toEqual('http://www.website.com');
 
         await instantieDetailsPage.titelWebsiteInput().fill('');
+        await instantieDetailsPage.beschrijvingWebsiteEditor().click();
         await instantieDetailsPage.beschrijvingWebsiteEditor().fill('');
         await instantieDetailsPage.websiteURLInput().fill('');
 

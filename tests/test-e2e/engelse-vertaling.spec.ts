@@ -1,19 +1,18 @@
-import {expect, Page, test} from "@playwright/test";
-import {MockLoginPage} from "./pages/mock-login-page";
-import {LpdcHomePage} from "./pages/lpdc-home-page";
-import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from "./pages/product-of-dienst-toevoegen-page";
-import {InstantieDetailsPage} from "./pages/instantie-details-page";
-import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
-import {BevestigHerzieningVerwerktModal} from "./modals/bevestig-herziening-verwerkt-modal";
-import {VerzendNaarVlaamseOverheidModal} from "./modals/verzend-naar-vlaamse-overheid-modal";
-import {UJeModal} from "./modals/u-je-modal";
-import {IpdcStub} from "./components/ipdc-stub";
-import {v4 as uuid} from 'uuid';
-import {first_row} from "./components/table";
-import {ConceptDetailsPage} from "./pages/concept-details-page";
+import { expect, Page, test } from "@playwright/test";
+import { MockLoginPage } from "./pages/mock-login-page";
+import { LpdcHomePage } from "./pages/lpdc-home-page";
+import { AddProductOrServicePage as ProductOfDienstToevoegenPage } from "./pages/product-of-dienst-toevoegen-page";
+import { InstantieDetailsPage } from "./pages/instantie-details-page";
+import { WijzigingenBewarenModal } from "./modals/wijzigingen-bewaren-modal";
+import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-verwerkt-modal";
+import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
+import { UJeModal } from "./modals/u-je-modal";
+import { v4 as uuid } from 'uuid';
+import { first_column, first_row } from "./components/table";
+import { ConceptDetailsPage } from "./pages/concept-details-page";
 
 
-test.describe.configure({mode: 'serial'});
+test.describe.configure({ mode: 'parallel' });
 test.describe('Engelse vertaling', () => {
 
     let page: Page;
@@ -26,7 +25,7 @@ test.describe('Engelse vertaling', () => {
     let bevestigHerzieningVerwerktModal: BevestigHerzieningVerwerktModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
 
-    test.beforeEach(async ({browser}) => {
+    test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
         mockLoginPage = MockLoginPage.createForLpdc(page);
         homePage = LpdcHomePage.create(page);
@@ -53,41 +52,127 @@ test.describe('Engelse vertaling', () => {
         await page.close();
     });
 
-    //TODO LPDC-1152: Fix e2e test
-    test.skip('When instance is YourEurope shows correct buttons when published and in read only', async () => {
-        // maak instantie van concept
+    test('When instance has publication medium YourEurope shows correct action menu items buttons when published and in read only', async () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         await toevoegenPage.expectToBeVisible();
-        const instanceTitle = "Akte van Belgische nationaliteit - nl"
+        const conceptTitel = "Akte van Belgische nationaliteit - nl"
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(instanceTitle);
-            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(instanceTitle);
+            await toevoegenPage.searchConcept(conceptTitel);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptTitel);
         });
-        await toevoegenPage.searchConcept(instanceTitle);
-        await toevoegenPage.resultTable.row(first_row).link(instanceTitle).click();
+        await toevoegenPage.resultTable.row(first_row).link(conceptTitel).click();
 
         await conceptDetailsPage.expectToBeVisible();
-        await expect(conceptDetailsPage.heading).toHaveText(instanceTitle);
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${conceptTitel}`);
         await conceptDetailsPage.voegToeButton.click();
-        await instantieDetailsPage.expectToBeVisible();
-        await expect(instantieDetailsPage.heading).toHaveText(instanceTitle);
 
-        await instantieDetailsPage.actiesMenu.open();
-        await instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton.isDisabled();
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(conceptTitel);
+
+        await instantieDetailsPage.actiesMenu.locator.click();        
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton).not.toBeVisible();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton).toBeDisabled();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton).toBeVisible();
+
+        let instanceTitel = conceptTitel + uuid();
+        await instantieDetailsPage.titelInput.fill(instanceTitel);
+        await instantieDetailsPage.beschrijvingEditor.click();
+        await instantieDetailsPage.titelInput.click();
+
+        await instantieDetailsPage.eigenschappenTab.click();
+
+        await wijzigingenBewarenModal.expectToBeVisible();
+        await wijzigingenBewarenModal.bewaarButton.click();
+        await wijzigingenBewarenModal.expectToBeClosed();
+
+        await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+        await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+
+        await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+        await instantieDetailsPage.bevoegdeOverheidMultiSelect.selectValue('Pepingen (Gemeente)');
+
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click()
 
         await verzendNaarVlaamseOverheidModal.expectToBeVisible();
         await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
         await verzendNaarVlaamseOverheidModal.expectToBeClosed();
 
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(instanceTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(instanceTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText('Your Europe');
+        });
+
+        await homePage.resultTable.row(first_row).cell(first_column).click();
+
+        await instantieDetailsPage.actiesMenu.locator.click();        
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton).toBeVisible();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton).toBeEnabled();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton).not.toBeVisible();
+
+        const instanceUuid = page.url().replace('/inhoud', '').replace('http://localhost:4200/', '');
+
+        let href = await instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton.getAttribute('href');
+        expect(href).toContain(`en/instantie/${instanceUuid}`);
+
+        let target = await instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton.getAttribute('target');
+        expect(target).toEqual(`blank`);
+
+    });
+
+    test('When instance does not have publication medium YourEurope does not show correct action menu items buttons when published and in read only', async () => {
+        await homePage.productOfDienstToevoegenButton.click();
+
+        await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+
+        await instantieDetailsPage.expectToBeVisible();
+
+        await instantieDetailsPage.actiesMenu.locator.click();        
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton).not.toBeVisible();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton).not.toBeVisible();
+
+        let instanceTitel = 'Instance without YourEurope' + uuid();
+        await instantieDetailsPage.titelInput.fill(instanceTitel);
+        await instantieDetailsPage.beschrijvingEditor.click();
+        await instantieDetailsPage.beschrijvingEditor.fill(`${instanceTitel} - beschrijving`);
+        await instantieDetailsPage.beschrijvingEditor.blur();
+        await instantieDetailsPage.aanvullendeBeschrijvingEditor.click();
+        await instantieDetailsPage.aanvullendeBeschrijvingEditor.fill(`${instanceTitel} - aanvullende beschrijving`);
+        await instantieDetailsPage.aanvullendeBeschrijvingEditor.blur();
+        await instantieDetailsPage.uitzonderingenEditor.click();
+        await instantieDetailsPage.uitzonderingenEditor.fill(`${instanceTitel} - uitzonderingen`);
+        await instantieDetailsPage.uitzonderingenEditor.blur();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+        
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(instanceTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(instanceTitel);
+        });
+
+        await homePage.resultTable.row(first_row).cell(first_column).click();
+        await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+
+        await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+        await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+        await verzendNaarVlaamseOverheidModal.expectToBeClosed();
 
         await homePage.goto();
         await homePage.reloadUntil(async () => {
-            await homePage.searchInput.fill(instanceTitle);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText(instanceTitle);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Your europe');
+            await homePage.searchInput.fill(instanceTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(instanceTitel);
         });
 
-    })
+        await homePage.resultTable.row(first_row).cell(first_column).click();
+
+        await instantieDetailsPage.actiesMenu.locator.click();        
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton).not.toBeVisible();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton).not.toBeVisible();
+    });
+
 });
