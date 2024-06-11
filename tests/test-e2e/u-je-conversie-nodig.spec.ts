@@ -57,7 +57,7 @@ test.describe('U-je conversie nodig', () => {
         await homePage.productOfDienstToevoegenButton.click();
 
         const titelInstantieWaarUJeConversieNodigIs = await createInstance('titel' + uuid());
-        await expect(homePage.uJeConversieNodigFilter).not.toBeVisible();
+        await expect(homePage.uJeConversieNodigCheckbox).not.toBeVisible();
 
         // make choice
         await homePage.logout(gemeenteNaam);
@@ -83,13 +83,13 @@ test.describe('U-je conversie nodig', () => {
         });
 
         await homePage.searchInput.clear();
-        await expect(homePage.uJeConversieNodigFilter).toBeVisible();
-        await homePage.uJeConversieNodigFilter.check();
+        await expect(homePage.uJeConversieNodigCheckbox).toBeVisible();
+        await homePage.uJeConversieNodigCheckbox.check();
         await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNodigIs);
 
         await homePage.searchInput.fill(titelInstantieWaarUJeConversieNietNodigIs);
         await expect(homePage.resultTable.row(first_row).locator).not.toBeVisible();
-        await homePage.uJeConversieNodigFilter.uncheck();
+        await homePage.uJeConversieNodigCheckbox.uncheck();
         await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNietNodigIs);
     });
 

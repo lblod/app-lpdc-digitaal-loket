@@ -93,6 +93,7 @@ test.describe('Herziening nodig', () => {
         await homePage.goto();
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
+            await homePage.herzieningNodigCheckbox.click();
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
@@ -505,6 +506,14 @@ test.describe('Herziening nodig', () => {
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        });
+
+        await homePage.reloadUntil(async () => {
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.searchInput.fill(newTitel);
+            await homePage.herzieningNodigCheckbox.click();
+            await expect(homePage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
         });
 
     });

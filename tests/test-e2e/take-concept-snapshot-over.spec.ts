@@ -2028,7 +2028,6 @@ test.describe('take concept snapshot over', () => {
 
         await instantieDetailsPage.geografischToepassingsgebiedMultiSelect.selectValue('Provincie Vlaams-Brabant');
 
-
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
 
         await bevestigHerzieningVerwerktModal.expectToBeVisible();

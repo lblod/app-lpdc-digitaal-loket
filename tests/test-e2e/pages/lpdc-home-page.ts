@@ -9,7 +9,8 @@ export class LpdcHomePage extends AbstractPage {
     readonly productOfDienstToevoegenButton: Locator;
     readonly resultTable: Table;
     readonly searchInput: Locator;
-    readonly uJeConversieNodigFilter: Locator;
+    readonly herzieningNodigCheckbox: Locator;
+    readonly uJeConversieNodigCheckbox: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -17,8 +18,9 @@ export class LpdcHomePage extends AbstractPage {
         this.header = page.getByRole('heading', { name: 'Lokale Producten- en Dienstencatalogus' });
         this.productOfDienstToevoegenButton = page.getByRole('link', { name: 'Product of dienst toevoegen' });
         this.resultTable = new Table(page);
-        this.searchInput = page.getByPlaceholder('Vul uw zoekterm in');
-        this.uJeConversieNodigFilter = page.locator('label').filter({ hasText: 'u→je omzetting nodig' }).locator('span');
+        this.searchInput = page.locator('input:below(label:text-is("Zoeken"))').first();
+        this.herzieningNodigCheckbox = page.locator('label').filter({ hasText: 'Herziening nodig' }).locator('span');
+        this.uJeConversieNodigCheckbox = page.locator('label').filter({ hasText: 'u→je omzetting nodig' }).locator('span');
     }
 
     static create(page: Page): LpdcHomePage {
