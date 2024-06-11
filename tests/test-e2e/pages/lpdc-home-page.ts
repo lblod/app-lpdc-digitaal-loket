@@ -13,6 +13,7 @@ export class LpdcHomePage extends AbstractPage {
     readonly herzieningNodigCheckbox: Locator;
     readonly uJeConversieNodigCheckbox: Locator;
     readonly yourEuropeCheckbox: Locator;
+    readonly statusMultiSelect: MultiSelect;
     readonly producttypeMultiSelect: MultiSelect;
     readonly doelgroepenMultiSelect: MultiSelect;
     readonly themasMultiSelect: MultiSelect;
@@ -27,6 +28,7 @@ export class LpdcHomePage extends AbstractPage {
         this.herzieningNodigCheckbox = page.locator('label').filter({ hasText: 'Herziening nodig' }).locator('span');
         this.uJeConversieNodigCheckbox = page.locator('label').filter({ hasText: 'u→je omzetting nodig' }).locator('span');
         this.yourEuropeCheckbox = page.locator('label').filter({ hasText: 'Your Europe' });
+        this.statusMultiSelect = new MultiSelect(page, 'Status');
         this.producttypeMultiSelect = new MultiSelect(page, 'Producttype');
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
         this.themasMultiSelect = new MultiSelect(page, 'Thema\\\'s');

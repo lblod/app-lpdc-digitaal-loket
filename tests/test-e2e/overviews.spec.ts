@@ -321,6 +321,46 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
         });
 
+        test('Can filter on status', async () => {
+            const instantieTitel = 'Instantie om te filteren op status - ' + uuid();
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(instantieTitel);
+            await instantieDetailsPage.beschrijvingEditor.click();
+            await instantieDetailsPage.beschrijvingEditor.fill(`${instantieTitel} beschrijving`);
+            await instantieDetailsPage.titelInput.click();
+
+            await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeVisible();
+            await verzendNaarVlaamseOverheidModal.verzendNaarVlaamseOverheidButton.click();
+            await verzendNaarVlaamseOverheidModal.expectToBeClosed();
+
+            await homePage.expectToBeVisible();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(instantieTitel);
+
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+            });
+
+            await homePage.statusMultiSelect.selectValue('Ontwerp');
+            await expect(homePage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
+            await homePage.statusMultiSelect.optionsDeleteButtons().nth(0).click();
+            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+
+            await homePage.statusMultiSelect.selectValue('Verzonden', false);
+            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+
+        });
+
         test('Can filter on type, doelgroepen, thema\'s', async () => {
             await homePage.productOfDienstToevoegenButton.click();
             await toevoegenPage.expectToBeVisible();
