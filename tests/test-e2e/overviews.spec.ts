@@ -10,9 +10,9 @@ import moment from 'moment';
 import { v4 as uuid } from 'uuid';
 import { eighth_column, fifth_column, first_column, first_row, fourth_column, second_column, second_row, seventh_column, sixth_column, third_column } from './components/table';
 import { ConceptDetailsPage } from './pages/concept-details-page';
-import { wait } from './shared/shared';
 import { KoppelConceptPage } from './pages/koppel-concept-page';
 import { IpdcStub } from './components/ipdc-stub';
+import { WijzigingenBewarenModal } from './modals/wijzigingen-bewaren-modal';
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('Verifies column contents, sorting, and filtering of overview screens', () => {
@@ -25,6 +25,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
     let conceptDetailsPage: ConceptDetailsPage;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
     let koppelConceptPage: KoppelConceptPage;
+    let wijzigingenBewarenModal: WijzigingenBewarenModal;
 
     test.beforeEach(async ({ browser }) => {
         page = await browser.newPage();
@@ -36,6 +37,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
         conceptDetailsPage = ConceptDetailsPage.create(page);
         koppelConceptPage = KoppelConceptPage.create(page);
+        wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
 
         await mockLoginPage.goto();
         await mockLoginPage.searchInput.fill('Aarschot');
@@ -189,16 +191,12 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             //remove sorting on laatst bewerkt
             await homePage.resultTable.header().cell(seventh_column).sortDownIcon.click();
-            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
-            await wait(5000);
 
             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
 
             //sort on oldest laatst bewerkt first
             await homePage.resultTable.header().cell(seventh_column).sortUpDownIcon.click();
-            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
-            await wait(5000);
 
             await expect(homePage.resultTable.header().cell(seventh_column).sortUpIcon).toBeVisible();
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
@@ -213,8 +211,6 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             //sort on status, verzonden -> ontwerp
             await homePage.resultTable.header().cell(eighth_column).sortUpDownIcon.click();
-            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
-            await wait(5000);
 
             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
             await expect(homePage.resultTable.header().cell(eighth_column).sortDownIcon).toBeVisible();
@@ -229,8 +225,6 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             //sort on status, verzonden -> ontwerp
             await homePage.resultTable.header().cell(eighth_column).sortDownIcon.click();
-            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
-            await wait(5000);
 
             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpIcon).toBeVisible();
@@ -245,13 +239,88 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             //remove all sorting again
             await homePage.resultTable.header().cell(eighth_column).sortUpIcon.click();
-            //TODO LPDC-711: click while results are not yet processed gives an error, and an empty screen... 
-            await wait(5000);
 
             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();
 
         });
+
+        test('Can filter on YourEurope', async () => {
+            const instantieTitelMetYourEurope = 'Instantie met your europe - ' + uuid();
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(instantieTitelMetYourEurope);
+            await instantieDetailsPage.beschrijvingEditor.click();
+            await instantieDetailsPage.beschrijvingEditor.fill(`${instantieTitelMetYourEurope} beschrijving`);
+            await instantieDetailsPage.titelInput.click();
+
+            await instantieDetailsPage.eigenschappenTab.click();
+
+            await wijzigingenBewarenModal.expectToBeVisible();
+            await wijzigingenBewarenModal.bewaarButton.click();
+            await wijzigingenBewarenModal.expectToBeClosed();
+            await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+            await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+            await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+            await instantieDetailsPage.publicatieKanalenMultiSelect.selectValue('Your Europe');
+
+            await instantieDetailsPage.inhoudTab.click();
+
+            await wijzigingenBewarenModal.expectToBeVisible();
+            await wijzigingenBewarenModal.bewaarButton.click();
+            await wijzigingenBewarenModal.expectToBeClosed();
+            await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);
+            await expect(instantieDetailsPage.eigenschappenTab).not.toHaveClass(/active/);
+
+            await homePage.reloadUntil(async () => {
+                await homePage.goto();
+                await homePage.searchInput.fill(instantieTitelMetYourEurope);
+                await homePage.yourEuropeCheckbox.click();
+                
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitelMetYourEurope);
+            });
+
+            const instantieTitelZonderYourEurope = 'Instantie zonder your europe - ' + uuid();
+            await homePage.goto();
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.volledigNieuwProductToevoegenButton.click();
+
+            await instantieDetailsPage.expectToBeVisible();
+
+            await instantieDetailsPage.titelInput.fill(instantieTitelZonderYourEurope);
+            await instantieDetailsPage.beschrijvingEditor.click();
+            await instantieDetailsPage.beschrijvingEditor.fill(`${instantieTitelZonderYourEurope} beschrijving`);
+            await instantieDetailsPage.titelInput.click();
+
+            await instantieDetailsPage.eigenschappenTab.click();
+
+            await wijzigingenBewarenModal.expectToBeVisible();
+            await wijzigingenBewarenModal.bewaarButton.click();
+            await wijzigingenBewarenModal.expectToBeClosed();
+            await expect(instantieDetailsPage.inhoudTab).not.toHaveClass(/active/);
+            await expect(instantieDetailsPage.eigenschappenTab).toHaveClass(/active/);
+            await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
+
+            await homePage.reloadUntil(async () => {
+                await homePage.goto();
+                await homePage.searchInput.fill(instantieTitelZonderYourEurope);
+                
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitelZonderYourEurope);
+            });
+
+            await homePage.yourEuropeCheckbox.click();
+            await expect(homePage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+        });
+
     });
 
     test.describe('overview concepts: toevoegen en koppelen', () => {

@@ -11,6 +11,7 @@ export class LpdcHomePage extends AbstractPage {
     readonly searchInput: Locator;
     readonly herzieningNodigCheckbox: Locator;
     readonly uJeConversieNodigCheckbox: Locator;
+    readonly yourEuropeCheckbox: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -21,6 +22,7 @@ export class LpdcHomePage extends AbstractPage {
         this.searchInput = page.locator('input:below(label:text-is("Zoeken"))').first();
         this.herzieningNodigCheckbox = page.locator('label').filter({ hasText: 'Herziening nodig' }).locator('span');
         this.uJeConversieNodigCheckbox = page.locator('label').filter({ hasText: 'u→je omzetting nodig' }).locator('span');
+        this.yourEuropeCheckbox = page.locator('label').filter({ hasText: 'Your Europe' });
     }
 
     static create(page: Page): LpdcHomePage {
