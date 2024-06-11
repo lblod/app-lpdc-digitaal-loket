@@ -13,7 +13,7 @@ export class KoppelConceptPage extends AbstractPage {
 
         this.header = page.getByRole('heading', { name: 'Koppel een instantie aan een concept' });
         this.resultTable = new Table(page);
-        this.searchInput = page.getByPlaceholder('Vul uw zoekterm in');
+        this.searchInput = page.getByLabel('Zoeken');
     }
 
     static create(page: Page): KoppelConceptPage {
