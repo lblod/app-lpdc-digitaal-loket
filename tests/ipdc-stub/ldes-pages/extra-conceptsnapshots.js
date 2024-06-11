@@ -325,6 +325,10 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
 
     const productTypeElementUpdated = elementToUpdate?.startsWith("type") ? elementToUpdate.slice(5) : undefined;
 
+    const doelgroepenElementUpdated = elementToUpdate?.startsWith("doelgroepen") ? [elementToUpdate.slice(12)] : undefined;
+
+    const themasElementUpdated = elementToUpdate?.startsWith("themas") ? [elementToUpdate.slice(7)] : undefined;
+
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
@@ -372,8 +376,8 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
                 "startDienstVerlening": "2027-01-01T00:00:00Z",
                 "eindeDienstVerlening": "2030-01-05T00:00:00Z",
                 "type": productTypeElementUpdated ?? 'Toelating',
-                "doelgroepen": ['Burger', 'Onderneming'],
-                "themas": ['MilieuEnergie', 'BouwenWonen'],
+                "doelgroepen": doelgroepenElementUpdated ?? ['Burger', 'Onderneming'],
+                "themas": themasElementUpdated ?? ['MilieuEnergie', 'BouwenWonen'],
                 "bevoegdBestuursniveaus": ['Provinciaal', 'Lokaal'],
                 "bevoegdeOverheden": [ranst.uri, lennik.uri].map(elem => ({ "@id": elem })),
                 "uitvoerendBestuursniveaus": ['Lokaal', 'Derden'],

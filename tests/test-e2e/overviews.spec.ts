@@ -395,6 +395,46 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
         });
 
+        test('Can filter on doelgroepen', async() => {
+            const conceptIdOnderneming = uuid();
+            let createSnapshotOnderneming = await IpdcStub.createSnapshotOfTypeCreate(conceptIdOnderneming, false);
+            let updateSnapshotOnderneming = await IpdcStub.createSnapshotOfTypeUpdate(conceptIdOnderneming, false, "doelgroepen.Onderneming");
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(updateSnapshotOnderneming.title);
+                await toevoegenPage.doelgroepenMultiSelect.selectValue('Onderneming');
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshotOnderneming.title);
+            });
+
+            await toevoegenPage.doelgroepenMultiSelect.optionsDeleteButtons().nth(0).click();
+
+            await toevoegenPage.doelgroepenMultiSelect.selectValue('Burger');
+            await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+        });
+
+        test('Can filter on themas', async() => {
+            const conceptIdEconomieEnWerk = uuid();
+            let createSnapshotEconomieEnWerk = await IpdcStub.createSnapshotOfTypeCreate(conceptIdEconomieEnWerk, false);
+            let updateSnapshotEconomieEnWerk = await IpdcStub.createSnapshotOfTypeUpdate(conceptIdEconomieEnWerk, false, "themas.EconomieWerk");
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(updateSnapshotEconomieEnWerk.title);
+                await toevoegenPage.themasMultiSelect.selectValue('Economie en Werk', false);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshotEconomieEnWerk.title);
+            });
+
+            await toevoegenPage.themasMultiSelect.optionsDeleteButtons().nth(0).click();
+
+            await toevoegenPage.themasMultiSelect.selectValue('Milieu en Energie', false);
+            await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+        });
+
     });
 
     test.describe('link concept to instance', () => {

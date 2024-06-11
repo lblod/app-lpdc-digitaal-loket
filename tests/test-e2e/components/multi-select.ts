@@ -16,11 +16,13 @@ export class MultiSelect {
         this.listContainer = page.locator(`${withinContainer} ul:below(label:has-text('${forLabel}'))`).first();
     }
 
-    async selectValue(text: string) {
+    async selectValue(text: string, clickOption: boolean = true) {
         await this.selectDiv.click();
         await this.page.keyboard.type(text);
         await wait(500);
-        await this.option(text).click();
+        if (clickOption) {
+            await this.option(text).click();
+        }
     }
 
     async insertNewValue(text: string) {

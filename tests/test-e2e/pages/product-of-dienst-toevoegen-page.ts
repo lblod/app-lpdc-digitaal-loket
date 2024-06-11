@@ -13,6 +13,8 @@ export class AddProductOrServicePage extends AbstractPage {
     readonly nietToegevoegdeProductenCheckbox: Locator;
     readonly yourEuropeCheckbox: Locator;
     readonly producttypeMultiSelect: MultiSelect;
+    readonly doelgroepenMultiSelect: MultiSelect;
+    readonly themasMultiSelect: MultiSelect;
 
     private constructor(page: Page) {
         super(page);
@@ -26,6 +28,8 @@ export class AddProductOrServicePage extends AbstractPage {
         this.nietToegevoegdeProductenCheckbox = page.getByText('Niet toegevoegde producten');
         this.yourEuropeCheckbox = page.locator('label').filter({ hasText: 'Your Europe' });
         this.producttypeMultiSelect = new MultiSelect(page, 'Producttype');
+        this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
+        this.themasMultiSelect = new MultiSelect(page, 'Thema\\\'s');
     }
 
     static create(page: Page): AddProductOrServicePage {
