@@ -2,6 +2,7 @@ import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
 import { Table } from "../components/table";
 import { lpdcUrl } from "../../test-api/test-helpers/test-options";
+import { MultiSelect } from "../components/multi-select";
 
 export class LpdcHomePage extends AbstractPage {
 
@@ -12,6 +13,9 @@ export class LpdcHomePage extends AbstractPage {
     readonly herzieningNodigCheckbox: Locator;
     readonly uJeConversieNodigCheckbox: Locator;
     readonly yourEuropeCheckbox: Locator;
+    readonly producttypeMultiSelect: MultiSelect;
+    readonly doelgroepenMultiSelect: MultiSelect;
+    readonly themasMultiSelect: MultiSelect;
 
     private constructor(page: Page) {
         super(page);
@@ -23,6 +27,9 @@ export class LpdcHomePage extends AbstractPage {
         this.herzieningNodigCheckbox = page.locator('label').filter({ hasText: 'Herziening nodig' }).locator('span');
         this.uJeConversieNodigCheckbox = page.locator('label').filter({ hasText: 'u→je omzetting nodig' }).locator('span');
         this.yourEuropeCheckbox = page.locator('label').filter({ hasText: 'Your Europe' });
+        this.producttypeMultiSelect = new MultiSelect(page, 'Producttype');
+        this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
+        this.themasMultiSelect = new MultiSelect(page, 'Thema\\\'s');
     }
 
     static create(page: Page): LpdcHomePage {
