@@ -12,6 +12,7 @@ import { eighth_column, fifth_column, first_column, first_row, fourth_column, se
 import { ConceptDetailsPage } from './pages/concept-details-page';
 import { wait } from './shared/shared';
 import { KoppelConceptPage } from './pages/koppel-concept-page';
+import { IpdcStub } from './components/ipdc-stub';
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('Verifies column contents, sorting, and filtering of overview screens', () => {
@@ -56,6 +57,7 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
         await page.close();
     });
 
+    test.describe.configure({ mode: 'parallel' });
     test.describe('overview instances', () => {
 
         test('columns and values are visible', async () => {
@@ -281,6 +283,118 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(toevoegenPage.resultTable.header().cell(sixth_column).locator).toContainText(`Publicatiekanaal`);
             await expect(toevoegenPage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
         });
+
+        test('Can filter on nieuwe producten', async () => {
+            const conceptId = uuid();
+            let createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId, false);
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(createSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+            await conceptDetailsPage.expectToBeVisible();
+            await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+            await conceptDetailsPage.nieuwConceptAlertBerichtNietMeerTonenButton.click();
+
+            await conceptDetailsPage.bekijkAndereConceptenButton.click();
+
+            await toevoegenPage.nieuweProductenCheckbox.click();
+
+            await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+        });
+
+        test('Can filter on toegevoegde producten', async () => {
+            const conceptId = uuid();
+            let createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId, false);
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(createSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+            await conceptDetailsPage.expectToBeVisible();
+            await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+            await conceptDetailsPage.voegToeButton.click();
+
+            await instantieDetailsPage.expectToBeVisible();
+            await expect(instantieDetailsPage.heading).toHaveText(createSnapshot['jsonlddata']['naam']['nl-BE-x-generated-informal']);
+
+            await homePage.goto();
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(createSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            
+            await toevoegenPage.nietToegevoegdeProductenCheckbox.click();
+
+            await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
+        });
+
+        test('Can filter on YourEurope', async () => {
+            const conceptId = uuid();
+            let createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId, false);
+            let updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(updateSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
+            });
+
+            const otherConceptId = uuid();
+            let otherCreateSnapshot = await IpdcStub.createSnapshotOfTypeCreate(otherConceptId, false);
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(otherCreateSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(otherCreateSnapshot.title);
+            });
+
+            await toevoegenPage.yourEuropeCheckbox.click();
+            await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(updateSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
+            });
+            
+        });
+
+        test('Can filter on producttype', async() => {
+            const conceptIdVoorwerp = uuid();
+            let createSnapshotVoorwerp = await IpdcStub.createSnapshotOfTypeCreate(conceptIdVoorwerp, false);
+            let updateSnapshotVoorwerp = await IpdcStub.createSnapshotOfTypeUpdate(conceptIdVoorwerp, false, "type.Voorwerp");
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchConcept(updateSnapshotVoorwerp.title);
+                await toevoegenPage.producttypeMultiSelect.selectValue('Voorwerp');
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshotVoorwerp.title);
+            });
+
+            await toevoegenPage.producttypeMultiSelect.optionsDeleteButtons().nth(0).click();
+
+            await toevoegenPage.producttypeMultiSelect.selectValue('Bewijs');
+            await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+        });
+
     });
 
     test.describe('link concept to instance', () => {
@@ -326,6 +440,11 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             await expect(koppelConceptPage.resultTable.header().cell(sixth_column).locator).toContainText(`Publicatiekanaal`);
             await expect(koppelConceptPage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
+
+        });
+
+        //TODO LPDC-1186: finish test
+        test('Can filter', async () => {
 
         });
     });

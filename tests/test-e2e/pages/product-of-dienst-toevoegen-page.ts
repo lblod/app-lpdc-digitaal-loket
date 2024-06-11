@@ -1,6 +1,7 @@
 import { Locator, Page, expect } from "@playwright/test";
 import { AbstractPage } from "./abstract-page";
 import { Table } from "../components/table";
+import { MultiSelect } from "../components/multi-select";
 
 export class AddProductOrServicePage extends AbstractPage {
     private readonly header: Locator;
@@ -8,6 +9,10 @@ export class AddProductOrServicePage extends AbstractPage {
     readonly resultTable: Table;
     readonly volledigNieuwProductToevoegenButton: Locator;
     readonly nuKeuzeMakenLink: Locator;
+    readonly nieuweProductenCheckbox: Locator;
+    readonly nietToegevoegdeProductenCheckbox: Locator;
+    readonly yourEuropeCheckbox: Locator;
+    readonly producttypeMultiSelect: MultiSelect;
 
     private constructor(page: Page) {
         super(page);
@@ -17,6 +22,10 @@ export class AddProductOrServicePage extends AbstractPage {
         this.volledigNieuwProductToevoegenButton = page.getByRole('link', { name: 'Volledig nieuw product toevoegen' });
         this.searchInput = page.locator('input:below(label:text-is("Zoeken"))').first();
         this.nuKeuzeMakenLink = page.getByRole('button', { name: 'Nu keuze maken' });
+        this.nieuweProductenCheckbox = page.getByText('Nieuwe producten');
+        this.nietToegevoegdeProductenCheckbox = page.getByText('Niet toegevoegde producten');
+        this.yourEuropeCheckbox = page.locator('label').filter({ hasText: 'Your Europe' });
+        this.producttypeMultiSelect = new MultiSelect(page, 'Producttype');
     }
 
     static create(page: Page): AddProductOrServicePage {

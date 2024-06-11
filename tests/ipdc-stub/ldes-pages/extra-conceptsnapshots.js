@@ -323,6 +323,8 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
     const websitesElementTextUpdated = elementToUpdate?.startsWith("websites") ? specificElementUpdated : '';
     const websitesElementNumberOfElementsUpdated = elementToUpdate?.startsWith("websites") ? Number.parseInt(elementToUpdate.slice(9)) : 1;
 
+    const productTypeElementUpdated = elementToUpdate?.startsWith("type") ? elementToUpdate.slice(5) : undefined;
+
     return {
         "id": id,
         "generatedAtTime": new Date().toISOString(),
@@ -369,7 +371,7 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
             } : {
                 "startDienstVerlening": "2027-01-01T00:00:00Z",
                 "eindeDienstVerlening": "2030-01-05T00:00:00Z",
-                "type": 'Toelating',
+                "type": productTypeElementUpdated ?? 'Toelating',
                 "doelgroepen": ['Burger', 'Onderneming'],
                 "themas": ['MilieuEnergie', 'BouwenWonen'],
                 "bevoegdBestuursniveaus": ['Provinciaal', 'Lokaal'],
