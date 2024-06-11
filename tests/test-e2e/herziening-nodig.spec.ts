@@ -62,10 +62,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -117,7 +117,7 @@ test.describe('Herziening nodig', () => {
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(updateSnapshot.title);
+            await toevoegenPage.searchInput.fill(updateSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
         });
 
@@ -165,7 +165,7 @@ test.describe('Herziening nodig', () => {
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(archivedConcept.title);
+            await toevoegenPage.searchInput.fill(archivedConcept.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText(archivedConcept.title);
         });
     });
@@ -178,10 +178,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -225,10 +225,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -273,10 +273,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -339,10 +339,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -392,10 +392,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -448,10 +448,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();
@@ -517,10 +517,10 @@ test.describe('Herziening nodig', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
         await conceptDetailsPage.expectToBeVisible();

@@ -90,7 +90,7 @@ test.describe('Link concept', () => {
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptId);
+            await toevoegenPage.searchInput.fill(conceptId);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Toegevoegd');
         });
 
@@ -118,7 +118,7 @@ test.describe('Link concept', () => {
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptId);
+            await toevoegenPage.searchInput.fill(conceptId);
             await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Toegevoegd');
         });
 
@@ -154,7 +154,7 @@ test.describe('Link concept', () => {
         const conceptId = uuid();
         await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptId)
+            await toevoegenPage.searchInput.fill(conceptId)
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptId);
         });
 

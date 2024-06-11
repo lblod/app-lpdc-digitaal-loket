@@ -5,7 +5,7 @@ import { MultiSelect } from "../components/multi-select";
 
 export class AddProductOrServicePage extends AbstractPage {
     private readonly header: Locator;
-    private readonly searchInput: Locator;
+    readonly searchInput: Locator;
     readonly resultTable: Table;
     readonly volledigNieuwProductToevoegenButton: Locator;
     readonly nuKeuzeMakenLink: Locator;
@@ -34,10 +34,6 @@ export class AddProductOrServicePage extends AbstractPage {
 
     static create(page: Page): AddProductOrServicePage {
         return new AddProductOrServicePage(page);
-    }
-
-    async searchConcept(name: string) {
-        await this.searchInput.fill(name);
     }
 
     async expectToBeVisible() {

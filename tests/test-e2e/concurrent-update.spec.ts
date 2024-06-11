@@ -128,11 +128,11 @@ test.describe('Concurrent Update', () => {
         const conceptId = uuid();
         const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(createSnapshot.title);
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
         });
 
-        await toevoegenPage.searchConcept(createSnapshot.title);
+        await toevoegenPage.searchInput.fill(createSnapshot.title);
         await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
         await conceptDetailsPage.expectToBeVisible();
         await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);

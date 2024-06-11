@@ -78,7 +78,7 @@ test.describe('Reporting dashboard', () => {
 
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+            await toevoegenPage.searchInput.fill('Akte van Belgische nationaliteit');
             await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
         });
 
@@ -140,7 +140,7 @@ test.describe('Reporting dashboard', () => {
 
             await toevoegenPage.expectToBeVisible();
             await toevoegenPage.reloadUntil(async () => {
-                await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+                await toevoegenPage.searchInput.fill('Akte van Belgische nationaliteit');
                 await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
             });
             await conceptDetailsPage.expectToBeVisible();
@@ -219,7 +219,7 @@ test.describe('Reporting dashboard', () => {
 
             await toevoegenPage.expectToBeVisible();
             await toevoegenPage.reloadUntil(async () => {
-                await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+                await toevoegenPage.searchInput.fill('Akte van Belgische nationaliteit');
                 await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
             });
 
@@ -319,7 +319,7 @@ test.describe('Reporting dashboard', () => {
 
             await toevoegenPage.expectToBeVisible();
             await toevoegenPage.reloadUntil(async () => {
-                await toevoegenPage.searchConcept('Akte van Belgische nationaliteit');
+                await toevoegenPage.searchInput.fill('Akte van Belgische nationaliteit');
                 await toevoegenPage.resultTable.row(first_row).link('Akte van Belgische nationaliteit').click();
             });
 

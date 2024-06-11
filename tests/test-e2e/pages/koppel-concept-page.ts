@@ -5,15 +5,17 @@ import {Table} from "../components/table";
 export class KoppelConceptPage extends AbstractPage {
 
     private readonly header: Locator;
-    readonly resultTable: Table;
     readonly searchInput: Locator;
+    readonly resultTable: Table;
+    readonly nieuweProductenCheckbox: Locator;
 
     private constructor(page: Page) {
         super(page);
 
         this.header = page.getByRole('heading', { name: 'Koppel een instantie aan een concept' });
         this.resultTable = new Table(page);
-        this.searchInput = page.getByLabel('Zoeken');
+        this.searchInput = page.locator('input:below(label:text-is("Zoeken"))').first();
+        this.nieuweProductenCheckbox = page.getByText('Nieuwe producten');
     }
 
     static create(page: Page): KoppelConceptPage {

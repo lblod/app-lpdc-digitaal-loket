@@ -58,7 +58,7 @@ test.describe('Engelse vertaling', () => {
         await toevoegenPage.expectToBeVisible();
         const conceptTitel = "Akte van Belgische nationaliteit - nl"
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptTitel);
+            await toevoegenPage.searchInput.fill(conceptTitel);
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptTitel);
         });
         await toevoegenPage.resultTable.row(first_row).link(conceptTitel).click();
