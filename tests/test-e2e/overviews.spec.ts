@@ -421,15 +421,37 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             });
             await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
 
-            await conceptDetailsPage.expectToBeVisible();
-            await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(instantieTitel);
+
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+            });
+            await homePage.resultTable.row(first_row).cell(first_column).click();
+            await instantieDetailsPage.koppelConceptLink.click();
+            await koppelConceptPage.expectToBeVisible();
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(createSnapshot.title);
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchInput.fill(createSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
             await conceptDetailsPage.voegToeButton.click();
 
             await instantieDetailsPage.expectToBeVisible();
             await expect(instantieDetailsPage.heading).toHaveText(createSnapshot['jsonlddata']['naam']['nl-BE-x-generated-informal']);
 
             await homePage.goto();
-
             await homePage.productOfDienstToevoegenButton.click();
             await toevoegenPage.expectToBeVisible();
 
@@ -439,9 +461,25 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             });
             
             await toevoegenPage.nietToegevoegdeProductenCheckbox.click();
-
             await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
 
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(instantieTitel);
+
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+            });
+            await homePage.resultTable.row(first_row).cell(first_column).click();
+            await instantieDetailsPage.koppelConceptLink.click();
+            await koppelConceptPage.expectToBeVisible();
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(createSnapshot.title);
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+
+            await koppelConceptPage.nietToegevoegdeProductenCheckbox.click();
+            await expect(koppelConceptPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
         });
 
         test('Can filter on YourEurope', async () => {

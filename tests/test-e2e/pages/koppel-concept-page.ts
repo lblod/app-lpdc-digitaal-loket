@@ -8,6 +8,7 @@ export class KoppelConceptPage extends AbstractPage {
     readonly searchInput: Locator;
     readonly resultTable: Table;
     readonly nieuweProductenCheckbox: Locator;
+    readonly nietToegevoegdeProductenCheckbox: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -16,6 +17,7 @@ export class KoppelConceptPage extends AbstractPage {
         this.resultTable = new Table(page);
         this.searchInput = page.locator('input:below(label:text-is("Zoeken"))').first();
         this.nieuweProductenCheckbox = page.getByText('Nieuwe producten');
+        this.nietToegevoegdeProductenCheckbox = page.getByText('Niet toegevoegde producten');
     }
 
     static create(page: Page): KoppelConceptPage {
