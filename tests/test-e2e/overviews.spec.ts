@@ -487,6 +487,9 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             let createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId, false);
             let updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
 
+            const otherConceptId = uuid();
+            let otherCreateSnapshot = await IpdcStub.createSnapshotOfTypeCreate(otherConceptId, false);
+
             await homePage.productOfDienstToevoegenButton.click();
             await toevoegenPage.expectToBeVisible();
 
@@ -496,8 +499,6 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
                 await expect(toevoegenPage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
             });
 
-            const otherConceptId = uuid();
-            let otherCreateSnapshot = await IpdcStub.createSnapshotOfTypeCreate(otherConceptId, false);
             await toevoegenPage.reloadUntil(async () => {
                 await toevoegenPage.searchInput.fill(otherCreateSnapshot.title);
                 await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(otherCreateSnapshot.title);
@@ -509,6 +510,36 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await toevoegenPage.reloadUntil(async () => {
                 await toevoegenPage.searchInput.fill(updateSnapshot.title);
                 await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
+            });
+
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(instantieTitel);
+
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+            });
+            await homePage.resultTable.row(first_row).cell(first_column).click();
+            await instantieDetailsPage.koppelConceptLink.click();
+            await koppelConceptPage.expectToBeVisible();
+
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(updateSnapshot.title);
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
+                await expect(koppelConceptPage.resultTable.row(first_row).cell(sixth_column)).toContainText(`Your Europe`);
+            });
+
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(otherCreateSnapshot.title);
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(otherCreateSnapshot.title);
+            });
+
+            await koppelConceptPage.yourEuropeCheckbox.click();
+            await expect(koppelConceptPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(updateSnapshot.title);
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
             });
             
         });
@@ -531,6 +562,29 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             await toevoegenPage.producttypeMultiSelect.selectValue('Bewijs');
             await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(instantieTitel);
+
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+            });
+            await homePage.resultTable.row(first_row).cell(first_column).click();
+            await instantieDetailsPage.koppelConceptLink.click();
+            await koppelConceptPage.expectToBeVisible();
+
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(updateSnapshotVoorwerp.title);
+                await koppelConceptPage.producttypeMultiSelect.selectValue('Voorwerp');
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(updateSnapshotVoorwerp.title);
+            });
+
+            await koppelConceptPage.producttypeMultiSelect.optionsDeleteButtons().nth(0).click();
+
+            await koppelConceptPage.producttypeMultiSelect.selectValue('Bewijs');
+            await expect(koppelConceptPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
         });
 
         test('Can filter on doelgroepen', async() => {
@@ -551,6 +605,28 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             await toevoegenPage.doelgroepenMultiSelect.selectValue('Burger');
             await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(instantieTitel);
+
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+            });
+            await homePage.resultTable.row(first_row).cell(first_column).click();
+            await instantieDetailsPage.koppelConceptLink.click();
+            await koppelConceptPage.expectToBeVisible();
+
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(updateSnapshotOnderneming.title);
+                await koppelConceptPage.doelgroepenMultiSelect.selectValue('Onderneming');
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(updateSnapshotOnderneming.title);
+            });
+
+            await koppelConceptPage.doelgroepenMultiSelect.optionsDeleteButtons().nth(0).click();
+
+            await koppelConceptPage.doelgroepenMultiSelect.selectValue('Burger');
+            await expect(koppelConceptPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
         });
 
         test('Can filter on themas', async() => {
@@ -571,6 +647,28 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
             await toevoegenPage.themasMultiSelect.selectValue('Milieu en Energie', false);
             await expect(toevoegenPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
+
+            await homePage.goto();
+            await homePage.expectToBeVisible();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(instantieTitel);
+
+                await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(instantieTitel);
+            });
+            await homePage.resultTable.row(first_row).cell(first_column).click();
+            await instantieDetailsPage.koppelConceptLink.click();
+            await koppelConceptPage.expectToBeVisible();
+
+            await koppelConceptPage.reloadUntil(async () => {
+                await koppelConceptPage.searchInput.fill(updateSnapshotEconomieEnWerk.title);
+                await koppelConceptPage.themasMultiSelect.selectValue('Economie en Werk', false);
+                await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(updateSnapshotEconomieEnWerk.title);
+            });
+
+            await koppelConceptPage.themasMultiSelect.optionsDeleteButtons().nth(0).click();
+
+            await koppelConceptPage.themasMultiSelect.selectValue('Milieu en Energie', false);
+            await expect(koppelConceptPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
         });
 
     });
