@@ -291,6 +291,6 @@ services:
     labels:
       - "logging=true"
     links:
-      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
+      - virtuoso:database
     restart: always
     logging: *default-logging
