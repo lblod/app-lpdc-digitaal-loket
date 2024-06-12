@@ -290,5 +290,7 @@ services:
       CRON_PATTERN: "*/15 * * * *" # run the job every 15 minutes
     labels:
       - "logging=true"
+    links:
+      - virtuoso:database # for heavy reporting queries; we prefer going directly to virtuoso
     restart: always
     logging: *default-logging
