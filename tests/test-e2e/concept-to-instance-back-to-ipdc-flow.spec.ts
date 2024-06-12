@@ -646,7 +646,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                 createdBy: bestuurseenheidConfig.uri,
                 productId: '1502',
                 conceptSource: 'https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84',
-                conceptStatus: 'http://lblod.data.gift/concepts/instance-status/verstuurd',
+                conceptStatus: 'http://lblod.data.gift/concepts/instance-status/verzonden',
                 type: 'https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal',
                 aangemaaktOp: `PRESENT`,
                 bewerktOp: `PRESENT`,

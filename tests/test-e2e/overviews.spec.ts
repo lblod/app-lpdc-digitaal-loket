@@ -209,22 +209,8 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
 
-            //sort on status, verzonden -> ontwerp
+            //sort on status, ontwerp -> verzonden
             await homePage.resultTable.header().cell(eighth_column).sortUpDownIcon.click();
-
-            await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
-            await expect(homePage.resultTable.header().cell(eighth_column).sortDownIcon).toBeVisible();
-
-            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
-            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
-            await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
-
-            await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
-            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
-            await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
-
-            //sort on status, verzonden -> ontwerp
-            await homePage.resultTable.header().cell(eighth_column).sortDownIcon.click();
 
             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpIcon).toBeVisible();
@@ -237,8 +223,22 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
             await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Verzonden`);
 
-            //remove all sorting again
+            //sort on status, verzonden -> ontwerp
             await homePage.resultTable.header().cell(eighth_column).sortUpIcon.click();
+
+            await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
+            await expect(homePage.resultTable.header().cell(eighth_column).sortDownIcon).toBeVisible();
+
+            await expect(homePage.resultTable.row(first_row).cell(first_column)).toContainText(titelOldest);
+            await expect(homePage.resultTable.row(first_row).cell(seventh_column)).toContainText(`${moment(creationTimeOldest).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(first_row).cell(eighth_column)).toContainText(`Verzonden`);
+
+            await expect(homePage.resultTable.row(second_row).cell(first_column)).toContainText(titelMostRecent);
+            await expect(homePage.resultTable.row(second_row).cell(seventh_column)).toContainText(`${moment(creationTimeMostRecent).utcOffset(2).format('DD-MM-YYYY - HH:mm')}`);
+            await expect(homePage.resultTable.row(second_row).cell(eighth_column)).toContainText(`Ontwerp`);
+
+            //remove all sorting again
+            await homePage.resultTable.header().cell(eighth_column).sortDownIcon.click();
 
             await expect(homePage.resultTable.header().cell(seventh_column).sortUpDownIcon).toBeVisible();
             await expect(homePage.resultTable.header().cell(eighth_column).sortUpDownIcon).toBeVisible();

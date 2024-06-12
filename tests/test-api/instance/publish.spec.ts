@@ -29,7 +29,7 @@ test.describe('publish instance', () => {
         expect(response.ok(), await response.text()).toBeTruthy();
 
         const updatedInstance = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
-        expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');
+        expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verzonden');
         expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).not.toEqual(modified.toISOString());
     });
 
@@ -60,7 +60,7 @@ test.describe('publish instance', () => {
         const modified = new Date();
         const loginResponse = await loginAsPepingen(request);
         const publicService = await PublicServiceTestBuilder.aPublicService()
-            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withInstanceStatus(InstanceStatus.verzonden)
             .withDateSent(new Date())
             .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24123064'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
@@ -77,12 +77,12 @@ test.describe('publish instance', () => {
         expect(response.ok(), await response.text()).toBeFalsy();
         expect(response.status()).toEqual(400);
         expect(await response.json()).toEqual(expect.objectContaining({
-            message: "Instantie heeft reeds status verstuurd",
+            message: "Instantie heeft reeds status verzonden",
             correlationId: expect.anything()
         }))
 
         const updatedInstance = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
-        expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verstuurd');
+        expect(updatedInstance.findTriple(Predicates.instanceStatus).getObjectValue()).toBe('http://lblod.data.gift/concepts/instance-status/verzonden');
         expect(updatedInstance.findTriple(Predicates.dateModified).getObjectValue()).toEqual(modified.toISOString());
     });
 

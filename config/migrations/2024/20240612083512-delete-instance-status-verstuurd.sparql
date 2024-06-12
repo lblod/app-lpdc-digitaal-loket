@@ -1,0 +1,10 @@
+DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        <http://lblod.data.gift/concepts/instance-status/verstuurd>
+        a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+        <http://mu.semte.ch/vocabularies/core/uuid>         """3fba04a6-c1e5-430e-bc3b-8775c895b487""" ;
+        <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/9cf6fa63-1f49-4d53-af06-e1c235ece10b> ;
+        <http://www.w3.org/2004/02/skos/core#prefLabel>     "Verstuurd"@nl ;
+        <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/9cf6fa63-1f49-4d53-af06-e1c235ece10b> .
+    }
+}

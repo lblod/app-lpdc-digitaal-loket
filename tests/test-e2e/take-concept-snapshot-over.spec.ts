@@ -359,7 +359,7 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.terugNaarHetOverzichtButton.click();
         });
 
-        test('when taking over wijzigingen per veld on a verstuurde instance, first it is reopened', async () => {
+        test('when taking over wijzigingen per veld on a verzonden instance, first it is reopened', async () => {
             await IpdcStub.createSnapshotOfTypeUpdate(conceptId, false);
 
             // instantie moet vlagje 'herziening nodig' hebben

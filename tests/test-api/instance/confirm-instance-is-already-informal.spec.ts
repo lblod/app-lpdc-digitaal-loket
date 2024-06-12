@@ -22,7 +22,7 @@ test.describe('confirm instance is already informal', () => {
             .withTitle('Instance title', Language.FORMAL)
             .withDescription('Instance description', Language.FORMAL)
             .withDateSent(new Date())
-            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withInstanceStatus(InstanceStatus.verzonden)
             .withDatePublished(new Date())
             .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
             .withNeedsConversionFromFormalToInformal(true)
@@ -45,7 +45,7 @@ test.describe('confirm instance is already informal', () => {
     test('confirm instance is already inform without login, returns http 401 Unauthorized', async ({request}) => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withDateSent(new Date())
-            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withInstanceStatus(InstanceStatus.verzonden)
             .withDatePublished(new Date())
             .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
             .withNeedsConversionFromFormalToInformal(true)
@@ -69,7 +69,7 @@ test.describe('confirm instance is already informal', () => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withDateSent(new Date())
-            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withInstanceStatus(InstanceStatus.verzonden)
             .withDatePublished(new Date())
             .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
             .withNeedsConversionFromFormalToInformal(true)

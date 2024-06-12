@@ -14,7 +14,7 @@ test.describe('Reopen instance', () =>  {
         const loginResponse = await loginAsPepingen(request);
         const modified = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
-            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withInstanceStatus(InstanceStatus.verzonden)
             .withDateSent(new Date())
             .withDateModified(modified)
             .buildAndPersist(request, pepingenId)

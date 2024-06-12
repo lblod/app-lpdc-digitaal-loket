@@ -230,7 +230,7 @@ export class TestDataFactory {
             .withEndDate(new Date())
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withInstanceStatus(InstanceStatus.verstuurd)
+            .withInstanceStatus(InstanceStatus.verzonden)
             .withDateSent(new Date())
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
             .withDatePublished(new Date())

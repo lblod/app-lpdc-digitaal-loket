@@ -54,7 +54,7 @@ export enum ReviewStatus {
 
 export enum InstanceStatus {
     ontwerp = 'http://lblod.data.gift/concepts/instance-status/ontwerp',
-    verstuurd = 'http://lblod.data.gift/concepts/instance-status/verstuurd',
+    verzonden = 'http://lblod.data.gift/concepts/instance-status/verzonden',
 }
 
 export enum InstancePublicationStatusType {
