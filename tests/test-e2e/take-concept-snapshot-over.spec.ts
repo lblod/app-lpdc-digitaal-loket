@@ -189,6 +189,79 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible()
         });
 
+        test('given herziening nodig, when taking concept over after first editing the form, a save dialog is shown', async ({ request }) => {
+            await homePage.productOfDienstToevoegenButton.click();
+
+            await toevoegenPage.expectToBeVisible();
+            const conceptId = uuid();
+            const createSnapshot = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchInput.fill(createSnapshot.title);
+                await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
+            });
+            await toevoegenPage.searchInput.fill(createSnapshot.title);
+            await toevoegenPage.resultTable.row(first_row).link(createSnapshot.title).click();
+
+            await conceptDetailsPage.expectToBeVisible();
+            await expect(conceptDetailsPage.heading).toHaveText(`Concept: ${createSnapshot.title}`);
+            await conceptDetailsPage.voegToeButton.click();
+
+            await instantieDetailsPage.expectToBeVisible();
+            await expect(instantieDetailsPage.heading).toHaveText(createSnapshot.title);
+
+            let titel = await instantieDetailsPage.titelInput.inputValue();
+            let newTitel = titel + uuid();
+            await instantieDetailsPage.titelInput.fill(newTitel);
+            await instantieDetailsPage.titelInput.blur();
+
+            await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+            await wijzigingenBewarenModal.expectToBeVisible();
+            await wijzigingenBewarenModal.bewaarButton.click();
+            await wijzigingenBewarenModal.expectToBeClosed();
+
+            // update concept snapshot
+            const updateSnapshot = await IpdcStub.createSnapshotOfTypeUpdate(conceptId, true);
+
+            // instantie moet vlagje 'herziening nodig' hebben
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(newTitel);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            });
+            await homePage.resultTable.row(first_row).link(newTitel).click();
+
+            // instantie moet alert 'herziening nodig' hebben
+            await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
+            await expect(instantieDetailsPage.herzieningNodigAlert.getMessage()).toContainText('In het concept waarop dit product is gebaseerd, zijn de volgende velden aangepast: basisinformatie, voorwaarden, procedure, kosten, financiële voordelen, regelgeving, meer info, algemene info (eigenschappen), bevoegdheid (eigenschappen), gerelateerd (eigenschappen).');
+
+            titel = await instantieDetailsPage.titelInput.inputValue();
+            let titelUpdatedAgain = titel + uuid();
+            
+            await instantieDetailsPage.titelInput.fill(titelUpdatedAgain);
+            await instantieDetailsPage.titelInput.blur();
+            await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
+
+            await wijzigingenBewarenModal.expectToBeVisible();
+            await wijzigingenBewarenModal.nietBewarenButton.click();
+            await wijzigingenOvernemenModal.expectToBeVisible();
+            await wijzigingenOvernemenModal.wijzigingenPerVeldBekijkenButton.click();
+            await wijzigingenOvernemenModal.expectToBeClosed();
+            await expect(instantieDetailsPage.titelInput).toHaveValue(newTitel);
+
+            await instantieDetailsPage.titelInput.fill(titelUpdatedAgain);
+            await instantieDetailsPage.titelInput.blur();
+            await instantieDetailsPage.herzieningNodigAlertConceptOvernemen.click();
+
+            await wijzigingenBewarenModal.expectToBeVisible();
+            await wijzigingenBewarenModal.bewaarButton.click();
+            await wijzigingenOvernemenModal.expectToBeVisible();
+            await wijzigingenOvernemenModal.wijzigingenPerVeldBekijkenButton.click();
+            await wijzigingenOvernemenModal.expectToBeClosed();
+            await expect(instantieDetailsPage.titelInput).toHaveValue(titelUpdatedAgain);
+
+        });
+
     });
 
     test.describe('Take concept snapshot over field by field', () => {
