@@ -388,6 +388,8 @@ Dit betekent dat SHACL gebruikt kan worden om extra regels en beperkingen toe te
 
 SHACL's worden beschreven in RDF.
 
+SHACL implementaties gaan uit van de zogenaamde 'Closed World Assumption'. Dit betekent dat alle data waarnaar wordt verwezen, dit zowel typeringen als de data waarden zelf in de validatie context beschikbaar moeten zijn. Indien je bvb. verwijst naar een element van het type Concept, dan dient ook de data van het concept waarnaar verwezen aanwezig zijn in de validatie context.
+
 ### LDES (Linked Data Event Stream)
 
 #### Inleiding
@@ -577,10 +579,9 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 De contractspecificaties (het semantisch model / het IPDC-LPDC implementatiemodel) beschrijft in detail de gewenste datastructuur, zoals kardinaliteiten, codelijsten, datatypes, ... .
 Het IPDC-LPDC implementatiemodel beschrijft de datastructuur voor ConceptSnapshots en InstantieSnapshots. Merk op dat deze gelijkaardig, maar niet identiek zijn. Het is dus belangrijk om voor de instantie die aangeboden worden aan de LPDC-module gebaseerd wordt op de informatie bij Instanties. 
 
-!!!!!!!!! Op datum van 2024-03-06 staat een versie van het IPDC-LPDC implementatiemodel van 2022-06-15 op de productiepagina's van data.vlaanderen.be. Deze krijgt normaal eerstdaags een update. Een preview van die update is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-03-08/) te vinden (op de testpagina's van data.vlaanderen.be). Tot wanneer de versie op productie is geupdate, kun je best naar de previewversie/versie op de testpagina's kijken. Deze versie zal niet meer wijzigen en zo naar productie worden gebracht. 
+!!!!!!!!! Op datum van 2024-04-25 staat een versie van het IPDC-LPDC implementatiemodel van 2022-06-15 op de productiepagina's van data.vlaanderen.be. Deze krijgt normaal eerstdaags een update. Een preview van die update is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-04-25/) te vinden (op de testpagina's van data.vlaanderen.be). Tot wanneer de versie op productie is updated, kun je best naar de previewversie/versie op de testpagina's kijken. Deze versie zal niet meer wijzigen en zo naar productie worden gebracht. 
 
-De info op productie: [IPDC-LPDC implementatiemodel](https://productencatalogus.data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/). Let op de datum "uitgegeven op" die moet later minstens 2024-03-06 of later zijn! 
-
+De info op productie: [IPDC-LPDC implementatiemodel](https://productencatalogus.data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/). Let op de datum "uitgegeven op" die moet later minstens 2024-04-25 of later zijn! 
 
 
 ## Voorbeelden + implementatie tips
@@ -723,10 +724,19 @@ Dit is de informatie die door LPDC zal verwerkt worden.
     <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>.
 ```
 
-De volledige test dataset voor LDES instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden. 
+De volledige test dataset voor LDES-instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden. 
 
 _Nota:_ Sommige turtle verwerking-programma's kunnen niet goed om met de [shorthand syntax van turtle](https://www.w3.org/TR/turtle/#literals) in de bestanden. (bvb https://github.com/Informatievlaanderen/VSDS-LDESServer4J). Indien u de bestanden probeert op te laden, krijg je een fout. Het volstaat om triples van de voorbeelden om te vormen tot zijn lexicografische vorm en bijhorend datatype. (bvb: `true` => `"true"^^xsd:boolean`). 
 
+### SHACL voorbeeld validaties
+
+SHACL voorbeeld programma's zijn [hier](../migration-scripts/tests-shacl) te vinden.
+
+### Zoektermen (https://www.w3.org/ns/dcat#keyword)
+
+Het implementatie model vermeldt correct dat er meerdere zoektermen mogen zijn per taal.
+
+LPDC ondersteunt enkel als taal @nl. Zoektermen in andere talen worden niet verwerkt.
 
 ## Verklarende woordenlijst
 
