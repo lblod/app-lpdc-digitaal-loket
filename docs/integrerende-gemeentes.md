@@ -388,7 +388,7 @@ Dit betekent dat SHACL gebruikt kan worden om extra regels en beperkingen toe te
 
 SHACL's worden beschreven in RDF.
 
-SHACL implementaties gaan uit van de zogenaamde 'Closed World Assumption'. Dit betekent dat alle data waarnaar wordt verwezen, dit zowel typeringen als de data waarden zelf in de validatie context beschikbaar moeten zijn. Indien je bvb. verwijst naar een element van het type Concept, dan dient ook de data van het concept waarnaar verwezen aanwezig zijn in de validatie context.
+SHACL implementaties gaan uit van de zogenaamde 'Closed World Assumption'. Dit betekent dat alle data waarnaar wordt verwezen, dit zowel typeringen als de data waarden zelf, in de validatie context beschikbaar moeten zijn. Indien je bijvoorbeeld verwijst naar een element van het type Concept, dan dient ook de data van het concept waarnaar verwezen aanwezig te zijn in de validatie context.
 
 ### LDES (Linked Data Event Stream)
 
@@ -736,7 +736,7 @@ SHACL voorbeeld programma's zijn [hier](../migration-scripts/tests-shacl) te vin
 
 Het implementatie model vermeldt correct dat er meerdere zoektermen mogen zijn per taal.
 
-LPDC ondersteunt enkel als taal @nl. Zoektermen in andere talen worden niet verwerkt.
+LPDC ondersteunt enkel @nl als taal. Zoektermen in andere talen zijn toegestaan, maar worden niet verwerkt.
 
 ## Verklarende woordenlijst
 
