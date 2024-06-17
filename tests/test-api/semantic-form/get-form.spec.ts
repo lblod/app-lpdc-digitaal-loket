@@ -110,7 +110,7 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
         const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(mapBooleans(stripOfTripleStrings(triplesWithoutUUID.sort())));
     });
 
     test('Can get content form for public service and have concept snapshots included when in review', async ({request}) => {
@@ -147,7 +147,7 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
         const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(mapBooleans(stripOfTripleStrings(triplesWithoutUUID.sort())));
         expect(responseBody.meta).toContain(`<${conceptSnapshot.getId().getValue()}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>`);
         expect(responseBody.meta).toContain(`<${latestConceptSnapshot.getId().getValue()}> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>`);
     });
@@ -167,7 +167,7 @@ test.describe('Loading forms for instances', () => {
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
         const triplesWithoutUUID = new TripleArray(publicService.getTriples()).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(mapBooleans(stripOfTripleStrings(triplesWithoutUUID.sort())));
     });
 
     test('When getting characteristics form then meta field contains codelist of all bestuurseenheden', async ({request}) => {
@@ -191,7 +191,7 @@ test.describe('Loading forms for instances', () => {
 
         const responseBody = await response.json();
         const triplesWithoutUUID = new TripleArray(triples).asStringArray();
-        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(stripOfTripleStrings(triplesWithoutUUID.sort()));
+        expect(parseToSortedTripleArray(responseBody.source)).toStrictEqual(mapBooleans(stripOfTripleStrings(triplesWithoutUUID.sort())));
     });
 
     test('When getting content form for public service then form language is replaced to language of public service', async ({request}) => {
@@ -296,4 +296,10 @@ function parseToSortedTripleArray(source: string, split = '\r\n') {
 
 function stripOfTripleStrings(triples: string[]) {
     return triples.map(triple => triple.replaceAll(`"""`, `"`));
+}
+
+function mapBooleans(triples: string[]) {
+    return triples
+        .map(triple => triple.replaceAll(`"false"^^<http://www.w3.org/2001/XMLSchema#boolean>`, `"0"^^<http://www.w3.org/2001/XMLSchema#boolean>`))
+        .map(triple => triple.replaceAll(`"true"^^<http://www.w3.org/2001/XMLSchema#boolean>`, `"1"^^<http://www.w3.org/2001/XMLSchema#boolean>`));
 }
