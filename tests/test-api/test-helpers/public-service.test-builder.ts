@@ -62,6 +62,7 @@ export class PublicServiceTestBuilder {
     private datePublished: Literal;
     private dutchLanguageVariant: Literal;
     private needsConversionFromFormalToInformal: Literal;
+    private forMunicipalityMerger: Literal;
 
     static aPublicService() {
         const instanceUuid = uuid();
@@ -78,6 +79,7 @@ export class PublicServiceTestBuilder {
             .withInstanceStatus(InstanceStatus.ontwerp)
             .withDutchLanguageVariant(Language.INFORMAL)
             .withNeedsConversionFromFormalToInformal(false)
+            .withForMunicipalityMerger(false);
     }
 
     static aFullPublicService() {
@@ -100,6 +102,7 @@ export class PublicServiceTestBuilder {
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
             .withDatePublished(new Date())
+            .withForMunicipalityMerger(false)
     }
 
     private withType() {
@@ -332,6 +335,11 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
+    withForMunicipalityMerger(forMunicipalityMerger: boolean) {
+        this.forMunicipalityMerger = new Literal(forMunicipalityMerger.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#boolean');
+        return this;
+    }
+
     private buildTripleArray(organisationId: string): TripleArray {
         if(!this.createdBy) {
             this.withCreatedBy(organisationId);
@@ -377,6 +385,7 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.datePublished, this.datePublished),
             new Triple(this.id, Predicates.dutchLanguageVariant, this.dutchLanguageVariant),
             new Triple(this.id, Predicates.needsConversionFromFormalToInformal, this.needsConversionFromFormalToInformal),
+            new Triple(this.id, Predicates.forMunicipalityMerger, this.forMunicipalityMerger),
         ];
         return new TripleArray(triples);
     }
