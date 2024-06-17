@@ -158,6 +158,7 @@ export class InstantieDetailsPage extends AbstractPage {
     //Eigenschappen
     readonly algemeneInfoHeading: Locator;
 
+    readonly bestemdVoorFusieGemeenteSwitch: Locator;
     readonly productOfDienstGeldigVanafInput: Locator;
     readonly productOfDienstGeldigVanafConceptWijzigingenOvernemenLink: Locator;
     readonly productOfDienstGeldigTotInput: Locator;
@@ -346,6 +347,7 @@ export class InstantieDetailsPage extends AbstractPage {
 
         this.algemeneInfoHeading = page.getByRole('heading', { name: 'Algemene info' });
 
+        this.bestemdVoorFusieGemeenteSwitch = this.page.locator(`label:has-text('Product of dienst bestemd voor fusiegemeente')`);
         this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf').first();
         this.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Product of dienst geldig vanaf'));
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot').first();

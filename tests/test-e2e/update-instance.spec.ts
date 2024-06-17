@@ -628,6 +628,16 @@ test.describe('Update an instance and verify edits are working', () => {
 
         await expect(instantieDetailsPage.algemeneInfoHeading).toBeVisible();
 
+        await instantieDetailsPage.bestemdVoorFusieGemeenteSwitch.check();
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+        await expect(instantieDetailsPage.bestemdVoorFusieGemeenteSwitch).toBeChecked();
+
+        await instantieDetailsPage.bestemdVoorFusieGemeenteSwitch.uncheck();
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+        await expect(instantieDetailsPage.bestemdVoorFusieGemeenteSwitch).not.toBeChecked();
+
         const newProductOfDienstGeldigVanaf = '13-04-2019';
         await instantieDetailsPage.productOfDienstGeldigVanafInput.clear();
         await page.keyboard.type(newProductOfDienstGeldigVanaf);
