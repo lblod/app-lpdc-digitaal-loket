@@ -13,10 +13,12 @@ export class LpdcHomePage extends AbstractPage {
     readonly herzieningNodigCheckbox: Locator;
     readonly uJeConversieNodigCheckbox: Locator;
     readonly yourEuropeCheckbox: Locator;
+    readonly bestemdVoorFusieCheckbox: Locator;
     readonly statusMultiSelect: MultiSelect;
     readonly producttypeMultiSelect: MultiSelect;
     readonly doelgroepenMultiSelect: MultiSelect;
     readonly themasMultiSelect: MultiSelect;
+    readonly wisFiltersButton: Locator;
 
     private constructor(page: Page) {
         super(page);
@@ -28,10 +30,12 @@ export class LpdcHomePage extends AbstractPage {
         this.herzieningNodigCheckbox = page.locator('label').filter({ hasText: 'Herziening nodig' }).locator('span');
         this.uJeConversieNodigCheckbox = page.locator('label').filter({ hasText: 'u→je omzetting nodig' }).locator('span');
         this.yourEuropeCheckbox = page.locator('label').filter({ hasText: 'Your Europe' });
+        this.bestemdVoorFusieCheckbox = page.locator('label').filter({ hasText: 'Bestemd voor fusie' });
         this.statusMultiSelect = new MultiSelect(page, 'Status');
         this.producttypeMultiSelect = new MultiSelect(page, 'Producttype');
         this.doelgroepenMultiSelect = new MultiSelect(page, 'Doelgroepen');
         this.themasMultiSelect = new MultiSelect(page, 'Thema\\\'s');
+        this.wisFiltersButton = page.getByRole('button', { name: 'Wis filters' });
     }
 
     static create(page: Page): LpdcHomePage {

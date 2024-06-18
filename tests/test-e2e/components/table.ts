@@ -66,6 +66,10 @@ export class Row {
         return this.locator.locator('td').nth(column);
     }
 
+    pill(label: string): Locator {
+        return this.locator.locator(`.au-c-pill:has-text('${label}')`)
+    }
+
 }
 
 const first_row = 0;
