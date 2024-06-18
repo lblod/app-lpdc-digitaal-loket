@@ -12,8 +12,10 @@ test.describe('copy instance', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .buildAndPersist(request, pepingenId);
 
-        //TODO LPDC-1057: expand with is for municipality merger
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/copy`, {
+            data: {
+              forMunicipalityMerger: false,
+            },
             headers: {
                 cookie: loginResponse.cookie
             }
@@ -35,6 +37,9 @@ test.describe('copy instance', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/copy`, {
+            data: {
+                forMunicipalityMerger: false,
+            },
             headers: {
                 cookie: undefined,
                 'instance-version': instance.findObject(Predicates.dateModified).getValue()
@@ -49,6 +54,9 @@ test.describe('copy instance', () => {
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/copy`, {
+            data: {
+                forMunicipalityMerger: false,
+            },
             headers: {
                 cookie: loginResponse.cookie,
                 'instance-version': instance.findObject(Predicates.dateModified).getValue()
