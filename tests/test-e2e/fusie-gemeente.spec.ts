@@ -1,7 +1,6 @@
 import {expect, Page, test} from "@playwright/test";
 import {MockLoginPage} from "./pages/mock-login-page";
 import {LpdcHomePage} from "./pages/lpdc-home-page";
-import {ConceptDetailsPage} from "./pages/concept-details-page";
 import {AddProductOrServicePage as ProductOfDienstToevoegenPage} from "./pages/product-of-dienst-toevoegen-page";
 import {InstantieDetailsPage} from "./pages/instantie-details-page";
 import {WijzigingenBewarenModal} from "./modals/wijzigingen-bewaren-modal";
