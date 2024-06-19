@@ -79,7 +79,7 @@ test.describe('U-je conversie nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(titelInstantieWaarUJeConversieNietNodigIs);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(titelInstantieWaarUJeConversieNietNodigIs);
-            await expect(homePage.resultTable.row(first_row).pill('u→je')).toBeVisible();
+            await expect(homePage.resultTable.row(first_row).pill('u→je')).not.toBeVisible();
         });
 
         await homePage.searchInput.clear();
