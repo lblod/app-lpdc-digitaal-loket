@@ -11,7 +11,7 @@ services:
     image: lblod/frontend-lpdc:0.16.2
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
-      # The next variables are environment-specific.
+      # The next variables are environment-specific
       # These should be overriden in docker-compose.override.yml
       EMBER_LOKET_URL: "<LOKET_URL>"
       EMBER_IPDC_URL: "<IPDC_URL>"
