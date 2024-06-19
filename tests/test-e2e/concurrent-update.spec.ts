@@ -70,7 +70,7 @@ test.describe('Concurrent Update', () => {
         await homePage.searchInput.fill(instantieTitel);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(instantieTitel);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).pill('Verzonden')).toBeVisible();
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: instantieTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal' });
         expect(instancePublishedInIpdc).toBeTruthy();
@@ -150,7 +150,7 @@ test.describe('Concurrent Update', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(`${createSnapshot.title}`);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(`${createSnapshot.title}`).click();
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
@@ -192,7 +192,7 @@ test.describe('Concurrent Update', () => {
         await homePage.searchInput.fill(title);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).pill('Verzonden')).toBeVisible();
 
         //no errors should be present
         await expect(toaster.message).not.toBeVisible();

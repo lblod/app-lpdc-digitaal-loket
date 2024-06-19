@@ -95,7 +95,7 @@ test.describe('Herziening nodig', () => {
             await homePage.searchInput.fill(newTitel);
             await homePage.herzieningNodigCheckbox.click();
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -130,7 +130,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -149,7 +149,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -209,7 +209,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -256,7 +256,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -295,7 +295,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(conceptId);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -318,7 +318,7 @@ test.describe('Herziening nodig', () => {
         await homePage.expectToBeVisible();
         await homePage.searchInput.fill(conceptId);
         await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
-        await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+        await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).not.toBeVisible();
 
         // instance should be linked to latest functional changed concept snapshot
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({
@@ -368,7 +368,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -421,7 +421,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -477,7 +477,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -504,8 +504,8 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-            await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).not.toBeVisible();
+            await expect(homePage.resultTable.row(first_row).pill('Verzonden')).toBeVisible();
         });
 
         await homePage.reloadUntil(async () => {
@@ -565,7 +565,7 @@ test.describe('Herziening nodig', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(titel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(titel).click();
 

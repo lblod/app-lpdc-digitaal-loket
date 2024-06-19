@@ -98,7 +98,7 @@ test.describe('Delete an instance', () => {
         await homePage.searchInput.fill(newTitel);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).pill('Verzonden')).toBeVisible();
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: newTitel, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
         expect(instancePublishedInIpdc).toBeTruthy();

@@ -106,7 +106,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(newTitel);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -173,7 +173,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(newTitel);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -227,7 +227,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(newTitel);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(newTitel).click();
 
@@ -440,7 +440,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -460,7 +460,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -482,7 +482,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -507,7 +507,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -823,7 +823,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -920,7 +920,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -978,7 +978,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1019,7 +1019,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1106,7 +1106,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).not.toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1124,7 +1124,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1184,7 +1184,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1244,7 +1244,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).not.toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1267,7 +1267,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1285,7 +1285,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1307,7 +1307,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1338,7 +1338,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1360,7 +1360,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1786,7 +1786,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(updateSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).not.toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).not.toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(updateSnapshot.title).click();
 
@@ -1931,7 +1931,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(createSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -1988,7 +1988,7 @@ test.describe('take concept snapshot over', () => {
             await homePage.reloadUntil(async () => {
                 await homePage.searchInput.fill(updateSnapshot.title);
                 await expect(homePage.resultTable.row(first_row).locator).toContainText(updateSnapshot.title);
-                await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+                await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
             });
             await homePage.resultTable.row(first_row).link(updateSnapshot.title).click();
 
@@ -2045,7 +2045,7 @@ test.describe('take concept snapshot over', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -2078,7 +2078,7 @@ test.describe('take concept snapshot over', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -2114,7 +2114,7 @@ test.describe('take concept snapshot over', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 
@@ -2129,7 +2129,7 @@ test.describe('take concept snapshot over', () => {
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(createSnapshot.title);
             await expect(homePage.resultTable.row(first_row).locator).toContainText(createSnapshot.title);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
+            await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).toBeVisible();
         });
         await homePage.resultTable.row(first_row).link(createSnapshot.title).click();
 

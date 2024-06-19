@@ -566,7 +566,7 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
         await homePage.searchInput.fill(title);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(title);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).pill('Verzonden')).toBeVisible();
         await homePage.resultTable.row(first_row).link(title).click();
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.inhoudTab).toHaveClass(/active/);

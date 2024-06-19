@@ -91,7 +91,7 @@ test.describe('Link concept', () => {
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
             await toevoegenPage.searchInput.fill(conceptId);
-            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Toegevoegd');
+            await expect(toevoegenPage.resultTable.row(first_row).pill('Toegevoegd')).toBeVisible();
         });
 
         // unlink concept
@@ -119,7 +119,7 @@ test.describe('Link concept', () => {
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
             await toevoegenPage.searchInput.fill(conceptId);
-            await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Toegevoegd');
+            await expect(toevoegenPage.resultTable.row(first_row).pill('Toegevoegd')).not.toBeVisible();
         });
 
         //Link using preview
