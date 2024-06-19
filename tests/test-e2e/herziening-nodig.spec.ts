@@ -1,4 +1,4 @@
-import { APIRequestContext, expect, Page, test } from "@playwright/test";
+import { expect, Page, test } from "@playwright/test";
 import { v4 as uuid } from 'uuid';
 import { MockLoginPage } from "./pages/mock-login-page";
 import { LpdcHomePage } from "./pages/lpdc-home-page";
@@ -11,7 +11,6 @@ import { ConceptDetailsPage } from "./pages/concept-details-page";
 import { IpdcStub } from "./components/ipdc-stub";
 import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
 import { BevestigHerzieningVerwerktModal } from "./modals/bevestig-herziening-verwerkt-modal";
-import { Toaster } from "./components/toaster";
 
 test.describe.configure({ mode: 'serial' });
 test.describe('Herziening nodig', () => {
@@ -518,7 +517,7 @@ test.describe('Herziening nodig', () => {
 
     });
 
-    test('Updating the review status should trigger a concurrent update warning to the user', async ({ request }) => {
+    test('Updating the review status should not trigger a concurrent update warning to the user', async ({ request }) => {
         // maak instantie van concept
         await homePage.productOfDienstToevoegenButton.click();
 
@@ -556,22 +555,22 @@ test.describe('Herziening nodig', () => {
         await instantieDetailsPage.titelInput.click();
 
         await instantieDetailsPage.wijzigingenBewarenButton.click();
-
-        const toaster = new Toaster(page);
-        await expect(toaster.message).toContainText("De productfiche is gelijktijdig aangepast door een andere gebruiker. Herlaad de pagina en geef je aanpassingen opnieuw in");
-        await toaster.closeButton.click();
+        await bevestigHerzieningVerwerktModal.expectToBeVisible();
+        await bevestigHerzieningVerwerktModal.nee.click();
+        await bevestigHerzieningVerwerktModal.expectToBeClosed();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
 
         await homePage.goto();
         await homePage.reloadUntil(async () => {
-            await homePage.searchInput.fill(titel);
-            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            await homePage.searchInput.fill(newTitel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
             await expect(homePage.resultTable.row(first_row).locator).toContainText('Herziening nodig');
         });
-        await homePage.resultTable.row(first_row).link(titel).click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
 
         await instantieDetailsPage.herzieningNodigAlert.expectToBeVisible();
 
-        await expect(instantieDetailsPage.titelInput).toHaveValue(titel);
+        await expect(instantieDetailsPage.titelInput).toHaveValue(newTitel);
     });
 
 
