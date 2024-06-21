@@ -21,6 +21,7 @@ services:
       MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
       INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
+      CONCEPT_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
       IPDC_API_ENDPOINT: "http://ipdc-stub"
       IPDC_API_KEY: "<IPDC_API_KEY>"
     volumes:
