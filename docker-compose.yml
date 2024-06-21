@@ -222,7 +222,8 @@ services:
       IPDC_API_KEY: "<IPDC_API_KEY>"
       MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
-      INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/5 * * * *" # run the job every 5 minutes
+      INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
+      CONCEPT_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
     labels:
       - "logging=true"
     healthcheck:
