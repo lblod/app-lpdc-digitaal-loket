@@ -2,7 +2,7 @@ import { generateReportFromData } from '../helpers.js';
 import { querySudo as query } from '@lblod/mu-auth-sudo';
 
 export default {
-    cronPattern: '0 55 23 * * *',
+    cronPattern: '0 56 23 * * *',
     name: 'conceptSnapshotsNotProcessedReport',
 
     execute: async () => {
@@ -23,6 +23,7 @@ export default {
             
                     OPTIONAL {
                         ?snapshotId <http://purl.org/dc/terms/title> ?snapshotTitle.
+                        FILTER(lang(?snapshotTitle) = "nl")
                     }
             
                     FILTER NOT EXISTS {

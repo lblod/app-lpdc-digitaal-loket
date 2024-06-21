@@ -26,7 +26,7 @@ export default {
                 }
         
                 OPTIONAL {
-                    ?snapshotId <http://purl.org/dc/terms/title> ?snapshotTitle.
+                    ?snapshotId <http://purl.org/dc/terms/title> ?snapshotTitle.                    
                 }
         
                 FILTER NOT EXISTS {
@@ -44,7 +44,7 @@ export default {
                 }
             }
         }
-        order by DESC(?snapshotGeneratedAtTime) ?ldesGraph ?bestuurseenheidLabel ?classificatieLabel ?snapshotVersionOfInstanceId
+        order by DESC(?snapshotGeneratedAtTime)
         `;
 
         const queryResponse = await query(queryString);

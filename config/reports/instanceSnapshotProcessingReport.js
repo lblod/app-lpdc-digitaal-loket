@@ -15,7 +15,7 @@ export default {
         console.log('Generate instance snapshot processing report');
 
         const queryString = `
-            select distinct ?dateProcessed ?ldesGraph ?bestuurseenheidLabel ?classificatieLabel ?snapshotVersionOfInstanceId ?snapshotId ?snapshotTitle ?processedId ?processedStatus ?processedError ?snapshotGeneratedAtTime ?bestuurseenheidId ?instanceTitle {
+            select distinct ?dateProcessed ?ldesGraph ?bestuurseenheidLabel ?classificatieLabel ?snapshotVersionOfInstanceId ?snapshotId ?snapshotTitle ?processedId ?processedStatus ?processedError ?snapshotGeneratedAtTime ?bestuurseenheidId {
             graph ?ldesGraph {
                 ?processedId a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#VersionedLdesSnapshotProcessedMarker> ;
                     <http://mu.semte.ch/vocabularies/ext/processedSnapshot> ?snapshotId;
@@ -34,12 +34,6 @@ export default {
                     ?processedId <http://schema.org/error> ?processedError.
                 }
             }
-            graph ?instanceGraph {
-                OPTIONAL {
-                    ?snapshotVersionOfInstanceId a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> ;
-                        <http://purl.org/dc/terms/title> ?instanceTitle.
-                }
-            }
             graph <http://mu.semte.ch/graphs/public> {
                 ?bestuurseenheidId a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>;
                     <http://www.w3.org/2004/02/skos/core#prefLabel> ?bestuurseenheidLabel;
@@ -47,7 +41,7 @@ export default {
                 ?classificatie <http://www.w3.org/2004/02/skos/core#prefLabel> ?classificatieLabel .
             }
         }
-        order by DESC(?dateProcessed) ?ldesGraph ?bestuurseenheidLabel ?classificatieLabel ?snapshotVersionOfInstanceId
+        order by DESC(?dateProcessed)
         `;
 
         const queryResponse = await query(queryString);
@@ -65,7 +59,6 @@ export default {
                 processedError: getSafeValue(row, 'processedError'),
                 snapshotGeneratedAtTime: getSafeValue(row, 'snapshotGeneratedAtTime'),
                 bestuurseenheidId: getSafeValue(row, 'bestuurseenheidId'),
-                instanceTitle: getSafeValue(row, 'instanceTitle'),
             };
         });
 
