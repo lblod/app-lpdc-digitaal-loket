@@ -4,6 +4,7 @@ import instancesStuckinPublishingForLPDCReport from './instancesStuckinPublishin
 import formalInformalChoiceLPDCReport from "./formalInformalChoiceLPDCReport";
 import instanceSnapshotProcessingReport from "./instanceSnapshotProcessingReport";
 import instanceSnapshotsNotProcessedReport from "./instanceSnapshotsNotProcessedReport";
+import conceptSnapshotsNotProcessedReport from "./conceptSnapshotsNotProcessedReport";
 
 export default [
     lpdcBestuurseenheidReport,
@@ -12,4 +13,5 @@ export default [
     formalInformalChoiceLPDCReport,
     instanceSnapshotProcessingReport,
     instanceSnapshotsNotProcessedReport,
+    conceptSnapshotsNotProcessedReport,
 ];
