@@ -270,6 +270,8 @@ services:
       CRON_PATTERN: "*/15 * * * *" # run the job every 15 minutes
     labels:
       - "logging=true"
+    links:
+      - virtuoso:database # We want to go directly to virtuoso database
     restart: always
     logging: *default-logging
 

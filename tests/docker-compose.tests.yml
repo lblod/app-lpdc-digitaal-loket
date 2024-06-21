@@ -130,6 +130,8 @@ services:
       REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
       CRON_PATTERN: "*/5 * * * * *" # run the job every five seconds
     restart: always
+    links:
+      - virtuoso:database # We want to go directly to virtuoso database
 
   ipdc-stub:
     build: ./ipdc-stub
