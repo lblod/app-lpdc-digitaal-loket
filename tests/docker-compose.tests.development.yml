@@ -54,3 +54,5 @@ services:
       LDES_FOLDER: "dev-lpdc-stream"
       IPDC_JSON_ENDPOINT: "http://ipdc-stub/instanties"
       CRON_PATTERN: "*/2 * * * * *" # run the job every two seconds
+    links:
+      - virtuoso:database # We want to go directly to virtuoso database
