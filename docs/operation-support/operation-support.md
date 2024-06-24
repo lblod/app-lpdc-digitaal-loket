@@ -13,3 +13,4 @@
 * [Remove formal informal choice for bestuur](0011-remove-formal-informal-choice-for-bestuur.md)
 * [Refresh instance review statuses](0012-refresh-instance-review-statuses.md)
 * [Authorize a bestuurseenheid to an instance snapshot graph](0013-authorize-a-bestuurseenheid-to-an-instance-snapshot-graph.md)
+* [reset instance snapshot processing](0014-reset-instance-snapshot-processing.md)
