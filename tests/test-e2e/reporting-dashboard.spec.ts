@@ -451,8 +451,8 @@ test.describe('Reporting dashboard', () => {
                 const reportCsv = fs.readFileSync(filePath, "utf8");
                 const report = Papa.parse(reportCsv, { header: true });
                 return {
-                    rowSnapshot1: report.data.find(reportRow => reportRow.snapshotId === snapshot1.jsonlddata[ '@id']),
-                    rowSnapshot2: report.data.find(reportRow => reportRow.snapshotId === snapshot2.jsonlddata[ '@id']),
+                    rowSnapshot1: report.data.find(reportRow => reportRow.snapshotId === snapshot1.id),
+                    rowSnapshot2: report.data.find(reportRow => reportRow.snapshotId === snapshot2.id),
                 };
             },
             (row) => row !== undefined
@@ -465,7 +465,7 @@ test.describe('Reporting dashboard', () => {
             processedId: expect.anything(),
             processedStatus: 'success',
             snapshotGeneratedAtTime: expect.anything(),
-            snapshotId: snapshot1.jsonlddata[ '@id'],
+            snapshotId: snapshot1.id,
             snapshotTitle: snapshot1.title,
             snapshotVersionOfConceptId: snapshot1.jsonlddata.isVersionOf,
         });
@@ -477,7 +477,7 @@ test.describe('Reporting dashboard', () => {
             processedId: expect.anything(),
             processedStatus: 'failed',
             snapshotGeneratedAtTime: expect.anything(),
-            snapshotId: snapshot2.jsonlddata[ '@id'],
+            snapshotId: snapshot2.id,
             snapshotTitle: "",
             snapshotVersionOfConceptId: snapshot2.jsonlddata.isVersionOf,
         });

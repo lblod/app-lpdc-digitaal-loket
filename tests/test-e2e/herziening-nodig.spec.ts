@@ -103,7 +103,7 @@ test.describe('Herziening nodig', () => {
 
         //check link concept bekijken
         let href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
-        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.id}&revisie2=${updateSnapshot.id}`);
+        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${createSnapshot.uuid}&revisie2=${updateSnapshot.uuid}`);
 
         let target = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('target');
         expect(target).toEqual(`blank`);
@@ -135,7 +135,7 @@ test.describe('Herziening nodig', () => {
 
         //check link concept bekijken
         href = await instantieDetailsPage.herzieningNodigAlertConceptBekijken.getAttribute('href');
-        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshot.id}&revisie2=${updateSnapshotWithFunctionalChange.id}`);
+        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshot.uuid}&revisie2=${updateSnapshotWithFunctionalChange.uuid}`);
         await instantieDetailsPage.herzieningNodigAlertGeenAanpassigenNodig.click();
         await instantieDetailsPage.herzieningNodigAlert.expectToBeInvisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
@@ -155,7 +155,7 @@ test.describe('Herziening nodig', () => {
         // instantie moet alert 'concept gearchiveerd' hebben
         await instantieDetailsPage.conceptGearchiveerdAlert.expectToBeVisible();
         href = await instantieDetailsPage.conceptGearchiveerdAlertConceptBekijken.getAttribute('href');
-        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshotWithFunctionalChange.id}&revisie2=${archivedConcept.id}`);
+        expect(href).toContain(`/nl/concept/${createSnapshot.productId}/revisie/vergelijk?revisie1=${updateSnapshotWithFunctionalChange.uuid}&revisie2=${archivedConcept.uuid}`);
         await instantieDetailsPage.conceptGearchiveerdAlertGeenAanpassigenNodig.click();
         await instantieDetailsPage.conceptGearchiveerdAlert.expectToBeInvisible();
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
@@ -326,8 +326,8 @@ test.describe('Herziening nodig', () => {
         });
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
 
-        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${updateSnapshot.id}`);
-        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).not.toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${createSnapshot.id}`);
+        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${updateSnapshot.uuid}`);
+        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).not.toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${createSnapshot.uuid}`);
 
     });
 

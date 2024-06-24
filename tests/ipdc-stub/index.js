@@ -111,7 +111,8 @@ app.post('/conceptsnapshot/:conceptId/invalid', (req, res, next) => {
         extraConceptsnapshots.push(conceptSnapshot);
         return res.status(200).json({
             //TODO LPDC-1002 add uuid and id iri
-            id: conceptSnapshot.id,
+            id: conceptSnapshot['@id'],
+            uuid: conceptSnapshot.id,
             productId: conceptSnapshot.productnummer,
             title: conceptSnapshot?.naam?.nl,
             jsonlddata: conceptSnapshot,
@@ -134,8 +135,8 @@ app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
         if (concept) {
             extraConceptsnapshots.push(concept);
             return res.status(200).json({
-                //TODO LPDC-1002 add uuid and id iri
-                id: concept.id,
+                id: concept['@id'],
+                uuid: concept.id,
                 productId: concept.productnummer,
                 title: concept?.naam?.nl,
                 jsonlddata: concept,

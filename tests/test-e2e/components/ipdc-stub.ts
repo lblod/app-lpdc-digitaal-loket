@@ -77,7 +77,7 @@ export class IpdcStub {
         const apiRequest = await request.newContext();
         const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/create`, { params: { withRandomNewData: withRandomNewData } });
         const snapshot: Snapshot = await response.json();
-        await processSnapshot(apiRequest, conceptId, snapshot.id);
+        await processSnapshot(apiRequest, snapshot.id);
 
         return snapshot;
     }
@@ -86,7 +86,7 @@ export class IpdcStub {
         const apiRequest = await request.newContext();
         const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomNewData: withRandomNewData, elementToUpdate: elementToUpdate} });
         const snapshot: Snapshot = await response.json();
-        await processSnapshot(apiRequest, conceptId, snapshot.id);
+        await processSnapshot(apiRequest, snapshot.id);
 
         return snapshot;
     }
@@ -95,7 +95,7 @@ export class IpdcStub {
         const apiRequest = await request.newContext();
         const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`, { params: { withRandomNewData: withRandomNewData } });
         const snapshot: Snapshot = await response.json();
-        await processSnapshot(apiRequest, conceptId, snapshot.id);
+        await processSnapshot(apiRequest, snapshot.id);
 
         return snapshot;
     }
@@ -104,7 +104,7 @@ export class IpdcStub {
         const apiRequest = await request.newContext();
         const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/invalid`);
         const snapshot = await response.json();
-        await processSnapshot(apiRequest, conceptId, snapshot.id);
+        await processSnapshot(apiRequest, snapshot.id);
 
         return snapshot;
     }
@@ -144,11 +144,11 @@ export class IpdcStub {
     }
 }
 
-async function processSnapshot(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<void> {
+async function processSnapshot(request: APIRequestContext, snapshotId: string): Promise<void> {
     const maxPollAttempts = 60;
     for (let i = 0; i < maxPollAttempts; i++) {
         await wait(1000);
-        if (await isConceptSnapshotProcessed(request, conceptId, snapshotId)) {
+        if (await isConceptSnapshotProcessed(request, snapshotId)) {
             console.log(`Concept Snapshot processed after ${i + 1} seconds`);
             return;
         }
@@ -156,10 +156,10 @@ async function processSnapshot(request: APIRequestContext, conceptId: string, sn
     throw new Error(`conceptSnapshot <${snapshotId}> not processed after ${maxPollAttempts} seconds`);
 }
 
-async function isConceptSnapshotProcessed(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<boolean> {
+async function isConceptSnapshotProcessed(request: APIRequestContext, snapshotId: string): Promise<boolean> {
     const query = `
     ASK WHERE {
-        ?markerId <http://mu.semte.ch/vocabularies/ext/processedSnapshot> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${snapshotId}> .
+        ?markerId <http://mu.semte.ch/vocabularies/ext/processedSnapshot> <${snapshotId}> .
     }
     `;
     const response = await request.get(`${virtuosoUrl}/sparql`, {
@@ -174,6 +174,7 @@ async function isConceptSnapshotProcessed(request: APIRequestContext, conceptId:
 
 type Snapshot = {
     id: string,
+    uuid: string,
     productId: string,
     title: string
 }
