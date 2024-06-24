@@ -75,7 +75,6 @@ export default {
             'processedError',
             'snapshotGeneratedAtTime',
             'bestuurseenheidId',
-            'instanceTitle',
         ], reportData);
     }
 

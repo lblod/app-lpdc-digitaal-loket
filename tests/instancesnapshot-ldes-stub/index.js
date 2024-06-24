@@ -1,6 +1,6 @@
 import express from "express";
 import fs from "fs";
-import { instanceSnapshot } from "./extra-instancesnapshots.js";
+import {instanceSnapshot, invalidInstanceSnapshot} from "./extra-instancesnapshots.js";
 const app = express();
 
 const HOSTNAME = process.env.HOSTNAME || 'localhost';
@@ -15,6 +15,29 @@ function errorHandler(err, req, res, next) {
         res.status(404).send();
     }
 }
+
+app.post('/instancesnapshot/:instanceId/invalid', (req, res, next) => {
+    try {
+        const instanceId = req.params.instanceId;
+        console.log(`creating new instancesnapshot for instance [${instanceId}] [invalid]`);
+
+        const instanceSnapshotToAdd = invalidInstanceSnapshot(instanceId);
+        if (instanceSnapshotToAdd) {
+            extraInstanceSnapshots.push(instanceSnapshotToAdd);
+            return res.status(200).json({
+                id: instanceSnapshotToAdd["@id"],
+                isVersionOf: instanceSnapshotToAdd['isVersionOf'],
+                title: instanceSnapshotToAdd.titel["en"],
+                description: instanceSnapshotToAdd.beschrijving["nl-BE-x-informal"].replace(`<p data-indentation-level=\"0\">`, ``).replace(`</p>`, ``)
+            });
+        } else {
+            return res.sendStatus(400);
+        }
+    } catch (e) {
+        next(e);
+    }
+});
+
 
 app.post('/instancesnapshot/:instanceId/:gearchiveerd', (req, res, next) => {
     try {
