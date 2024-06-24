@@ -100,6 +100,15 @@ export class IpdcStub {
         return snapshot;
     }
 
+    static async createInvalidSnapshot(conceptId: string): Promise<Snapshot> {
+        const apiRequest = await request.newContext();
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/invalid`);
+        const snapshot = await response.json();
+        await processSnapshot(apiRequest, conceptId, snapshot.id);
+
+        return snapshot;
+    }
+
     static async publishShouldFail(instanceIri: string | undefined, statusCode: number, errorMessage: any) {
         if (!instanceIri) {
             throw Error('Can not publish should fail if no instanceIri provided');
@@ -144,15 +153,14 @@ async function processSnapshot(request: APIRequestContext, conceptId: string, sn
             return;
         }
     }
-    console.log(`Concept Snapshot not processed after ${maxPollAttempts} seconds`);
+    throw new Error(`conceptSnapshot <${snapshotId}> not processed after ${maxPollAttempts} seconds`);
 }
 
 async function isConceptSnapshotProcessed(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<boolean> {
     const query = `
     ASK WHERE {
-        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>.
-        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${snapshotId}>.
-    }       
+        ?markerId <http://mu.semte.ch/vocabularies/ext/processedSnapshot> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${snapshotId}> .
+    }
     `;
     const response = await request.get(`${virtuosoUrl}/sparql`, {
         params: {

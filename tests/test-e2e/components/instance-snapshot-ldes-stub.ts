@@ -17,6 +17,15 @@ export class InstanceSnapshotLdesStub {
         return snapshot;
     }
 
+    static async createInvalidSnapshot(instanceId: string): Promise<Snapshot> {
+        const apiRequest = await request.newContext();
+        const response = await apiRequest.post(`${instanceSnapshotLdesStubUrl}/instancesnapshot/${instanceId}/invalid`);
+        const snapshot: Snapshot = await response.json();
+        await processSnapshot(apiRequest, snapshot.id);
+
+        return snapshot;
+    }
+
 }
 
 async function processSnapshot(request: APIRequestContext, instanceSnapshotId: string): Promise<void> {

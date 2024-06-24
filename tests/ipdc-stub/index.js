@@ -1,6 +1,6 @@
 import express from "express";
 import fs from "fs";
-import { conceptArchive, conceptCreate, conceptUpdate } from "./ldes-pages/extra-conceptsnapshots.js";
+import {conceptArchive, conceptCreate, conceptInvalid, conceptUpdate} from "./ldes-pages/extra-conceptsnapshots.js";
 import { graph, isLiteral, literal, parse, quad } from "rdflib";
 
 let jsonld = undefined;
@@ -104,6 +104,24 @@ app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
     }
 });
 
+app.post('/conceptsnapshot/:conceptId/invalid', (req, res, next) => {
+    try {
+        const conceptId = req.params.conceptId;
+        const conceptSnapshot = conceptInvalid(conceptId);
+        extraConceptsnapshots.push(conceptSnapshot);
+        return res.status(200).json({
+            //TODO LPDC-1002 add uuid and id iri
+            id: conceptSnapshot.id,
+            productId: conceptSnapshot.productnummer,
+            title: conceptSnapshot?.naam?.nl,
+            jsonlddata: conceptSnapshot,
+        });
+    } catch (e) {
+        next(e)
+    }
+
+});
+
 app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
     try {
         const conceptId = req.params.conceptId;
@@ -116,6 +134,7 @@ app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
         if (concept) {
             extraConceptsnapshots.push(concept);
             return res.status(200).json({
+                //TODO LPDC-1002 add uuid and id iri
                 id: concept.id,
                 productId: concept.productnummer,
                 title: concept?.naam?.nl,

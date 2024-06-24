@@ -422,6 +422,27 @@ export const conceptArchive = (conceptId, withRandomNewData) => {
     }
 };
 
+export const conceptInvalid = (conceptId) => {
+    const id = uuid();
+    return {
+        "id": id,
+        "generatedAtTime": new Date().toISOString(),
+        "naam": {
+            "en": `Concept`
+        },
+        "beschrijving": {
+            "nl": `Concept beschrijving`
+        },
+        "creatie": "2023-10-10T15:25:09.822193785Z",
+        "laatstGewijzigd": new Date().toISOString(),
+        "productnummer": "3000",
+        "gearchiveerd": false,
+        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
+        "@type": "ConceptualPublicServiceSnapshot",
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
+    }
+};
+
 function getRandomFutureDate() {
     const today = new Date();
     const futureDate = new Date();

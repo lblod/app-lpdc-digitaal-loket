@@ -19,6 +19,7 @@ import { IpdcStub } from "./components/ipdc-stub";
 import { WijzigingenBewarenModal } from "./modals/wijzigingen-bewaren-modal";
 import { ProductOfDienstOpnieuwBewerkenModal } from "./modals/product-of-dienst-opnieuw-bewerken-modal";
 import { ProductOfDienstVerwijderenModal } from "./modals/product-of-dienst-verwijderen-modal";
+import {InstanceSnapshotLdesStub} from "./components/instance-snapshot-ldes-stub";
 
 test.describe.configure({ mode: 'serial' });
 
@@ -389,13 +390,105 @@ test.describe('Reporting dashboard', () => {
             await IpdcStub.publishShouldNotFail(instanceIri);
         }
     });
+
+    test('Generate and view instanceSnapshotProcessingReport', async ({ request }) => {
+        const instanceId = uuid();
+        const snapshot1 = await InstanceSnapshotLdesStub.createSnapshot(instanceId, false);
+        const snapshot2 = await InstanceSnapshotLdesStub.createInvalidSnapshot(instanceId);
+
+        const {rowSnapshot1, rowSnapshot2} = await retry<Promise<any>>(
+            async () => {
+                const filePath = await generateReportManually(request, 'instanceSnapshotProcessingReport');
+                const reportCsv = fs.readFileSync(filePath, "utf8");
+                const report = Papa.parse(reportCsv, { header: true });
+                return {
+                    rowSnapshot1: report.data.find(reportRow => reportRow.snapshotId === snapshot1.id),
+                    rowSnapshot2: report.data.find(reportRow => reportRow.snapshotId === snapshot2.id),
+                };
+            },
+            (row) => row !== undefined
+        );
+
+        expect(rowSnapshot1).toEqual({
+            bestuurseenheidId: 'http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5',
+            bestuurseenheidLabel: 'Gent',
+            classificatieLabel: 'Gemeente',
+            dateProcessed: expect.anything(),
+            ldesGraph: 'http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent',
+            processedError: '',
+            processedId: expect.anything(),
+            processedStatus: 'success',
+            snapshotGeneratedAtTime: expect.anything(),
+            snapshotId: snapshot1.id,
+            snapshotTitle: snapshot1.title,
+            snapshotVersionOfInstanceId: snapshot1.isVersionOf,
+        });
+
+        expect(rowSnapshot2).toEqual({
+            bestuurseenheidId: 'http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5',
+            bestuurseenheidLabel: 'Gent',
+            classificatieLabel: 'Gemeente',
+            dateProcessed: expect.anything(),
+            ldesGraph: 'http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent',
+            processedError: 'All retries failed. Last error: Error: title mag niet ontbreken',
+            processedId: expect.anything(),
+            processedStatus: 'failed',
+            snapshotGeneratedAtTime: expect.anything(),
+            snapshotId: snapshot2.id,
+            snapshotTitle: snapshot2.title,
+            snapshotVersionOfInstanceId: snapshot2.isVersionOf,
+        });
+    })
+
+    test('Generate and view conceptSnapshotProcessingReport', async ({ request }) => {
+        const conceptId = uuid();
+        const snapshot1 = await IpdcStub.createSnapshotOfTypeCreate(conceptId);
+        const snapshot2 = await IpdcStub.createInvalidSnapshot(conceptId);
+
+        const {rowSnapshot1, rowSnapshot2} = await retry<Promise<any>>(
+            async () => {
+                const filePath = await generateReportManually(request, 'conceptSnapshotProcessingReport');
+                const reportCsv = fs.readFileSync(filePath, "utf8");
+                const report = Papa.parse(reportCsv, { header: true });
+                return {
+                    rowSnapshot1: report.data.find(reportRow => reportRow.snapshotId === snapshot1.jsonlddata[ '@id']),
+                    rowSnapshot2: report.data.find(reportRow => reportRow.snapshotId === snapshot2.jsonlddata[ '@id']),
+                };
+            },
+            (row) => row !== undefined
+        );
+
+        expect(rowSnapshot1).toEqual({
+            dateProcessed: expect.anything(),
+            ldesGraph: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc',
+            processedError: '',
+            processedId: expect.anything(),
+            processedStatus: 'success',
+            snapshotGeneratedAtTime: expect.anything(),
+            snapshotId: snapshot1.jsonlddata[ '@id'],
+            snapshotTitle: snapshot1.title,
+            snapshotVersionOfConceptId: snapshot1.jsonlddata.isVersionOf,
+        });
+
+        expect(rowSnapshot2).toEqual({
+            dateProcessed: expect.anything(),
+            ldesGraph: 'http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc',
+            processedError: 'All retries failed. Last error: Error: title mag niet ontbreken',
+            processedId: expect.anything(),
+            processedStatus: 'failed',
+            snapshotGeneratedAtTime: expect.anything(),
+            snapshotId: snapshot2.jsonlddata[ '@id'],
+            snapshotTitle: "",
+            snapshotVersionOfConceptId: snapshot2.jsonlddata.isVersionOf,
+        });
+    })
 });
 
 async function generateReportManually(request: APIRequestContext, reportName: string) {
     const fileDir = './data-tests/files/';
     const filesToRemove = fs.readdirSync(fileDir);
     filesToRemove.forEach(file => fs.unlinkSync(path.join(fileDir, file)));
-    await request.post(`${reportGenerationUrl}/reports`, {
+    const response = await request.post(`${reportGenerationUrl}/reports`, {
         data: {
             data: {
                 attributes: {
@@ -404,6 +497,7 @@ async function generateReportManually(request: APIRequestContext, reportName: st
             }
         }
     });
+    const responseText = await response.text();
     const fileName = await readFileWithRetry(fileDir);
     return path.join(fileDir, fileName)
 }
