@@ -277,7 +277,7 @@ ext:relatedPg a form:PropertyGroup;
       form:displayType displayTypes:conceptSelector ;
       sh:group ext:relatedPg ;
       form:hasConditionalFieldGroup ext:pubChannelCFG .
-  
+
   ##########################################################
   # Conditionally show the YourEurope category field if the publication channel is selected
   ##########################################################
@@ -294,7 +294,7 @@ ext:relatedPg a form:PropertyGroup;
           ) ;
         ] ;
       form:hasFieldGroup ext:yourEuropeCatFG .
-  
+
   ext:yourEuropeCatFG form:hasField ext:yourEuropeCatF .
 
   ##########################################################

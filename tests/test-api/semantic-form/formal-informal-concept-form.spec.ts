@@ -28,7 +28,7 @@ test('When chosenForm informal and concept in unknown version then language in f
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-generated-informal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-generated-informal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -50,7 +50,7 @@ test('When chosenForm formal and concept in unknown versions then language in fo
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -69,7 +69,7 @@ test('When no chosenForm and concept in unknown versions then language in form s
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -91,7 +91,7 @@ test('When chosenForm informal and concept in informal version then language in 
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-informal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -113,7 +113,7 @@ test('When chosenForm formal and concept in informal version then language in fo
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-generated-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-generated-formal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -132,7 +132,7 @@ test('When no chosenForm and concept in informal version then language in form s
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-generated-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-generated-formal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -154,7 +154,7 @@ test('When chosenForm informal and concept in formal version then language in fo
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-generated-informal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-generated-informal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -176,7 +176,7 @@ test('When chosenForm formal and concept in formal version then language in form
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-formal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -195,7 +195,7 @@ test('When no chosenForm and concept in formal version then language in form sho
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-formal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -217,7 +217,7 @@ test('When chosenForm informal and concept in both version then language in form
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-informal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -239,7 +239,7 @@ test('When chosenForm formal and concept in both versions then language in form 
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-formal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -258,7 +258,7 @@ test('When no chosenForm and concept in both versions then language in form shou
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-formal.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -277,7 +277,7 @@ test('When chosenForm informal and concept only in nl version then language in f
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -296,7 +296,7 @@ test('When chosenForm formal and concept only in nl then language in form should
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
 
@@ -312,6 +312,6 @@ test('When no chosenForm and concept only in nl then language in form should be 
     expect(response.ok()).toBeTruthy();
 
     const responseBody = await response.json();
-    const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+    const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-nl.ttl`, 'utf8');
     expect(responseBody.form).toStrictEqual(expectedForm);
 });
