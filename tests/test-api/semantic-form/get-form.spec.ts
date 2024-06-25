@@ -30,7 +30,7 @@ test.describe('Loading forms for concepts', () => {
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
-        const expectedForm = fs.readFileSync(`${__dirname}/form-nl.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-nl.ttl`, 'utf8');
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
         const triplesWithoutUuidAndHasLatestFunctionalChange = new TripleArray(concept.getTriples()).asStringArray();
@@ -49,7 +49,7 @@ test.describe('Loading forms for concepts', () => {
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
-        const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/concept/concept-form-characteristics.ttl`, 'utf8');
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(concept.getSubject().getValue());
         const triplesWithoutUuidAndhasLatestFunctionalChange = new TripleArray(concept.getTriples()).asStringArray();
@@ -105,7 +105,7 @@ test.describe('Loading forms for instances', () => {
         const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
-        const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/instance/instance-form-informal.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
@@ -142,7 +142,7 @@ test.describe('Loading forms for instances', () => {
         );
         expect(response.ok()).toBeTruthy();
 
-        const expectedForm = fs.readFileSync(`${__dirname}/form-informal.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/instance/instance-form-informal.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
@@ -162,7 +162,7 @@ test.describe('Loading forms for instances', () => {
         const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/eigenschappen`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
-        const expectedForm = fs.readFileSync(`${__dirname}/form-characteristics.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/instance/instance-form-characteristics.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm);
         expect(responseBody.serviceUri).toStrictEqual(publicService.getSubject().getValue());
@@ -206,7 +206,7 @@ test.describe('Loading forms for instances', () => {
         const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
         expect(response.ok()).toBeTruthy();
 
-        const expectedForm = fs.readFileSync(`${__dirname}/form-formal.ttl`, 'utf8');
+        const expectedForm = fs.readFileSync(`${__dirname}/instance/instance-form-formal.ttl`, 'utf8');
         const responseBody = await response.json();
         expect(responseBody.form).toStrictEqual(expectedForm);
     });
