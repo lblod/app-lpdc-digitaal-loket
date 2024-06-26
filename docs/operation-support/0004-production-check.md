@@ -74,11 +74,24 @@ drc logs --timestamps --since 2h | grep ldes-consumer | grep EventStream -A 2
 We should find recent logs:
 ```shell
 ...
-app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:18:56.114834250Z 2023-11-14T12:18:56.114Z [EventStream] info: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=135
-app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:18:56.241465784Z 2023-11-14T12:18:56.241Z [EventStream] info: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=135 (127) ms
-app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:19:00.550893940Z 2023-11-14T12:19:00.550Z [EventStream] info: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=136
-app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:19:00.965331560Z 2023-11-14T12:19:00.965Z [EventStream] info: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=136 (415) ms
-app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2023-11-14T12:19:03.948704851Z CONSUMER DONE
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:30.161826792Z drain event received
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:30.161879342Z 2024-06-26T07:51:30.161Z [EventStream] debug: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=208
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:30.249812336Z 2024-06-26T07:51:30.249Z [EventStream] debug: status code [200]
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:30.249931843Z 2024-06-26T07:51:30.249Z [EventStream] debug: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=208 (88) ms
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:31.162968418Z 2024-06-26T07:51:31.162Z [EventStream] debug: Scheduled TREE node (https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=209) for retrieval
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:31.199814437Z 2024-06-26T07:51:31.199Z [EventStream] debug: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=209
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:31.231003550Z 2024-06-26T07:51:31.230Z [EventStream] debug: status code [200]
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:31.231148345Z 2024-06-26T07:51:31.231Z [EventStream] debug: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=209 (32) ms
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.065972867Z 2024-06-26T07:51:32.065Z [EventStream] debug: Scheduled TREE node (https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=210) for retrieval
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.094438496Z 2024-06-26T07:51:32.094Z [EventStream] debug: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=210
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.125437297Z 2024-06-26T07:51:32.125Z [EventStream] debug: status code [200]
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.125540503Z 2024-06-26T07:51:32.125Z [EventStream] debug: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=210 (31) ms
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.796802014Z 2024-06-26T07:51:32.796Z [EventStream] debug: Scheduled TREE node (https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=211) for retrieval
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.814571405Z 2024-06-26T07:51:32.814Z [EventStream] debug: GET https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=211
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.897777913Z 2024-06-26T07:51:32.896Z [EventStream] debug: status code [200]
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:32.897813430Z 2024-06-26T07:51:32.897Z [EventStream] debug: 200 https://ipdc.vlaanderen.be/doc/conceptsnapshot?limit=25&pageNumber=211 (83) ms
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:33.031888637Z unpipe event received
+app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1  | 2024-06-26T07:51:37.230689070Z finish event received
 ...
 ```
 
