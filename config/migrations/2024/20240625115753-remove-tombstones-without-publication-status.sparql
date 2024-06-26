@@ -1,0 +1,9 @@
+DELETE WHERE {
+    GRAPH ?g {
+        ?s a <https://www.w3.org/ns/activitystreams#Tombstone> .
+        ?s ?p ?o .
+        FILTER NOT EXISTS {
+            ?s <http://schema.org/publication> ?publicationStatus .
+        }
+    }
+}
