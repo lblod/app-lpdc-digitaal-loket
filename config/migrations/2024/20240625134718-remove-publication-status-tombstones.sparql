@@ -1,0 +1,12 @@
+DELETE {
+    GRAPH ?g {
+        ?s <http://schema.org/publication> ?publicationStatus .
+    }
+}
+WHERE {
+    GRAPH ?g {
+        ?s a <https://www.w3.org/ns/activitystreams#Tombstone> .
+        ?s <http://schema.org/publication> ?publicationStatus .
+        ?s <http://schema.org/datePublished> ?datePublished .
+    }
+}

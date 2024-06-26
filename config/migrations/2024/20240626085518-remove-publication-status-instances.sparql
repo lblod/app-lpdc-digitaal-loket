@@ -1,0 +1,12 @@
+DELETE {
+    GRAPH ?g {
+        ?s <http://schema.org/publication> ?publicationStatus .
+    }
+}
+WHERE {
+    GRAPH ?g {
+        ?s a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+        ?s <http://schema.org/publication> ?publicationStatus .
+        ?s <http://schema.org/datePublished> ?datePublished .
+    }
+}
