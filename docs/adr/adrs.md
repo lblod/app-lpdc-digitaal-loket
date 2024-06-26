@@ -18,3 +18,4 @@
 * [16. Data integrity tests](0016-data-integrity-tests.md)
 * [17. Error handling](0017-error-handling.md)
 * [18. Boolean logic in ember submission](0018-boolean-logic-in-ember-submission.md)
+* [19. Copy ember submission components](0019-copy-ember-submission-components.md)
