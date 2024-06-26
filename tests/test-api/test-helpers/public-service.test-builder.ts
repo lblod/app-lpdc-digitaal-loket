@@ -100,8 +100,6 @@ export class PublicServiceTestBuilder {
             .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
-            .withDatePublished(new Date())
             .withForMunicipalityMerger(false)
     }
 
@@ -312,11 +310,6 @@ export class PublicServiceTestBuilder {
 
     withDateSent(date: Date) {
         this.dateSent = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
-        return this;
-    }
-
-    withPublicationStatus(publicationStatus: InstancePublicationStatusType){
-        this.publicationStatus = new Uri(publicationStatus)
         return this;
     }
 

@@ -25,6 +25,7 @@ import {ContactPointTestBuilder} from "./contact-point-test.builder";
 import {pepingenId} from "./login";
 import {AddressTestBuilder} from "./address.test-builder";
 import {Uri} from "./triple-array";
+import moment from "moment/moment";
 
 
 export class TestDataFactory {
@@ -232,8 +233,7 @@ export class TestDataFactory {
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withInstanceStatus(InstanceStatus.verzonden)
             .withDateSent(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
-            .withDatePublished(new Date())
+            .withDatePublished(moment().subtract(1, 'minute'))
             .buildAndPersist(request, organisatieId);
 
         return {

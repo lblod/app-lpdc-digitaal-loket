@@ -34,7 +34,6 @@ test.describe('delete instance', () => {
         expect(tombstoneTriples.findTriple(Predicates.type).getObjectValue()).toEqual(TombstoneType);
         expect(tombstoneTriples.findTriple(Predicates.formerType).getObjectValue()).toEqual(PublicServiceType);
         expect(tombstoneTriples.findTriple(Predicates.deleteTime)).toBeDefined();
-        expect(tombstoneTriples.findTriple(Predicates.publicationStatus).getObjectValue()).toEqual(InstancePublicationStatusType.teHerpubliceren);
     });
 
     test('should remove reviewStatus', async ({request}) => {
