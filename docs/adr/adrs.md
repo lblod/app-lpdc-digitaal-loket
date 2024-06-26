@@ -16,3 +16,5 @@
 * [14. Query data in lpdc-management using sparql query or recursive query tool](0014-query-data-in-lpdc-management-using-sparql-query-or-recursive-query-tool.md)
 * [15. Atomic update query](0015-atomic-update-query.md)
 * [16. Data integrity tests](0016-data-integrity-tests.md)
+* [17. Error handling](0017-error-handling.md)
+* [18. Boolean logic in ember submission](0018-boolean-logic-in-ember-submission.md)
