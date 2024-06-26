@@ -8,6 +8,7 @@ import {InstancePublicationStatusType, InstanceStatus} from "../test-helpers/cod
 import {Language} from "../test-helpers/language";
 import {deleteAll, fetchType} from "../test-helpers/sparql";
 import {v4 as uuid} from 'uuid';
+import moment from "moment";
 
 test.describe('convert instance to informal', () => {
 
@@ -33,9 +34,8 @@ test.describe('convert instance to informal', () => {
             .withDescription('<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>', Language.FORMAL)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
+            .withDatePublished(moment().add(1, 'minute'))
             .withDateModified(new Date("2024-04-24T14:09:32.778Z"))
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -73,8 +73,7 @@ test.describe('convert instance to informal', () => {
             .withDescription('Instance description', Language.FORMAL)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -107,8 +106,7 @@ test.describe('convert instance to informal', () => {
             .withDescription('Instance description', Language.FORMAL)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -141,8 +139,7 @@ test.describe('convert instance to informal', () => {
             .withDescription('Instance description', Language.FORMAL)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -166,8 +163,7 @@ test.describe('convert instance to informal', () => {
             .withUUID(uuid)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -195,8 +191,7 @@ test.describe('convert instance to informal', () => {
             .withUUID(uuid)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);

@@ -7,6 +7,7 @@ import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/forma
 import {InstancePublicationStatusType, InstanceStatus} from "../test-helpers/codelists";
 import {Language} from "../test-helpers/language";
 import {fetchType} from "../test-helpers/sparql";
+import moment from "moment";
 
 test.describe('confirm instance is already informal', () => {
 
@@ -23,8 +24,7 @@ test.describe('confirm instance is already informal', () => {
             .withDescription('Instance description', Language.FORMAL)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
+            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -42,12 +42,11 @@ test.describe('confirm instance is already informal', () => {
         expect(updatedInstance.findObject(Predicates.needsConversionFromFormalToInformal).getValue()).toEqual("0");
     });
 
-    test('confirm instance is already inform without login, returns http 401 Unauthorized', async ({request}) => {
+    test('confirm instance is already informal without login, returns http 401 Unauthorized', async ({request}) => {
         const instance = await PublicServiceTestBuilder.aPublicService()
-            .withDateSent(new Date())
+            .withDateSent(moment().subtract(1, 'minute'))
             .withInstanceStatus(InstanceStatus.verzonden)
             .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -68,10 +67,9 @@ test.describe('confirm instance is already informal', () => {
     test('confirm instance with a user that has no access rights, returns http 403 Forbidden', async ({request}) => {
         const loginResponse = await loginAsPepingenButRemoveLPDCRightsFromSession(request);
         const instance = await PublicServiceTestBuilder.aPublicService()
-            .withDateSent(new Date())
+            .withDateSent(moment().subtract(1, 'minute'))
             .withInstanceStatus(InstanceStatus.verzonden)
             .withDatePublished(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.gepubliceerd)
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
