@@ -416,6 +416,59 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
 
         });
 
+        test('Can search on title, description, additional description, keyword, regulation, exceptions', async () => {
+            const titel = 'Akte van Belgische nationaliteit';
+            const beschrijving = 'De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.'
+            const aanvullendeBeschrijving = "Verdere beschrijving"
+            const regelgeving ="Regelgeving"
+            const uitzonderingen ="Uitzonderingen"
+            const tags = "Akte - nl"
+            
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+            
+            await toevoegenPage.reloadUntil(async () => {
+                await toevoegenPage.searchInput.fill(titel);
+                await toevoegenPage.resultTable.row(first_row).link(titel).click();
+            });
+
+            await conceptDetailsPage.expectToBeVisible();
+            await expect(conceptDetailsPage.heading).toHaveText('Concept: Akte van Belgische nationaliteit - nl');
+
+            await conceptDetailsPage.voegToeButton.click();
+
+            await instantieDetailsPage.expectToBeVisible();
+            await expect(instantieDetailsPage.heading).toContainText(titel);
+            await instantieDetailsPage.terugNaarHetOverzichtButton.click();
+
+            await homePage.goto();
+            await homePage.reloadUntil(async () => {
+                await homePage.searchInput.fill(titel);
+                await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            });
+            
+            await homePage.searchInput.clear();
+            await homePage.searchInput.fill(beschrijving)
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+           
+            await homePage.searchInput.clear();
+            await homePage.searchInput.fill(aanvullendeBeschrijving)
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            
+            await homePage.searchInput.clear();
+            await homePage.searchInput.fill(tags)
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            
+            await homePage.searchInput.clear();
+            await homePage.searchInput.fill(regelgeving)
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            
+            await homePage.searchInput.clear();
+            await homePage.searchInput.fill(uitzonderingen)
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+            
+        });
+        
     });
 
     test.describe('overview concepts: toevoegen en koppelen', () => {
@@ -834,6 +887,42 @@ test.describe('Verifies column contents, sorting, and filtering of overview scre
             await koppelConceptPage.themasMultiSelect.selectValue('Milieu en Energie', false);
             await expect(koppelConceptPage.resultTable.alertMessage).toContainText('Er werden geen producten of diensten gevonden');
         });
+
+        test('Can search on title, description, additional description, keyword, regulation, exceptions', async () => {
+            const titel = 'Akte van Belgische nationaliteit';
+            const beschrijving = 'De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.'
+            const aanvullendeBeschrijving = "Verdere beschrijving"
+            const regelgeving ="Regelgeving"
+            const uitzonderingen ="Uitzonderingen"
+            const tags = "Akte - nl"
+
+            await homePage.productOfDienstToevoegenButton.click();
+            await toevoegenPage.expectToBeVisible();
+
+            await toevoegenPage.searchInput.fill(titel);
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(titel);
+
+            await toevoegenPage.searchInput.clear();
+            await toevoegenPage.searchInput.fill(beschrijving)
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(titel);
+
+            await toevoegenPage.searchInput.clear();
+            await toevoegenPage.searchInput.fill(aanvullendeBeschrijving)
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(titel);
+
+            await toevoegenPage.searchInput.clear();
+            await toevoegenPage.searchInput.fill(tags)
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(titel);
+
+            await toevoegenPage.searchInput.clear();
+            await toevoegenPage.searchInput.fill(regelgeving)
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(titel);
+
+            await toevoegenPage.searchInput.clear();
+            await toevoegenPage.searchInput.fill(uitzonderingen)
+            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(titel);
+
+        })
 
     });
 
