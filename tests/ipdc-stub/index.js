@@ -110,7 +110,6 @@ app.post('/conceptsnapshot/:conceptId/invalid', (req, res, next) => {
         const conceptSnapshot = conceptInvalid(conceptId);
         extraConceptsnapshots.push(conceptSnapshot);
         return res.status(200).json({
-            //TODO LPDC-1002 add uuid and id iri
             id: conceptSnapshot['@id'],
             uuid: conceptSnapshot.id,
             productId: conceptSnapshot.productnummer,

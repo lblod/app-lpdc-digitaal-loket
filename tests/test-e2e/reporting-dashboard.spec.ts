@@ -488,7 +488,7 @@ async function generateReportManually(request: APIRequestContext, reportName: st
     const fileDir = './data-tests/files/';
     const filesToRemove = fs.readdirSync(fileDir);
     filesToRemove.forEach(file => fs.unlinkSync(path.join(fileDir, file)));
-    const response = await request.post(`${reportGenerationUrl}/reports`, {
+    await request.post(`${reportGenerationUrl}/reports`, {
         data: {
             data: {
                 attributes: {
@@ -497,7 +497,6 @@ async function generateReportManually(request: APIRequestContext, reportName: st
             }
         }
     });
-    const responseText = await response.text();
     const fileName = await readFileWithRetry(fileDir);
     return path.join(fileDir, fileName)
 }
