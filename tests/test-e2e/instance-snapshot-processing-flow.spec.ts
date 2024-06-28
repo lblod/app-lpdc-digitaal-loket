@@ -472,7 +472,6 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                 }),
                 uuid: 'PRESENT',
                 createdBy: bestuurseenheidUriGent,
-                productId: `1502`,
                 conceptSource: linkedConceptUrl,
                 type: productTypeAsIri,
                 aangemaaktOp: dateCreated,
