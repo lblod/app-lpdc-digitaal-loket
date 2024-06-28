@@ -51,10 +51,7 @@ export interface PublishedInstanceFields {
     meerInfos?: NestedFieldGroup[],
     uuid?: string | Presence,
     createdBy?: string,
-    productId?: string,
     conceptSource?: string,
-    //TODO LPDC-709 This should not be send to IPDC
-    conceptStatus?: string;
     type?: string,
     aangemaaktOp?: string | Presence,
     bewerktOp?: string | Presence,
@@ -92,10 +89,7 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateContactPointFields(publicService, instance, instanceFields.contactPunten);
     validatePresentOrData(publicService, 'http://mu.semte.ch/vocabularies/core/uuid', instanceFields.uuid)
     validateData(publicService, 'http://purl.org/pav/createdBy', arrayContainingStringIds(instanceFields.createdBy));
-    //TODO LPDC-709 product id should not be send to IPDC
-    validateData(publicService, 'http://schema.org/productID', arrayContainingString(instanceFields.productId));
     validateData(publicService, 'http://purl.org/dc/terms/source', arrayContainingStringIds(instanceFields.conceptSource));
-    validateData(publicService, 'http://www.w3.org/ns/adms#status', arrayContainingStringIds(instanceFields.conceptStatus));
     validateData(publicService, 'http://purl.org/dc/terms/type', arrayContainingStringIds(instanceFields.type));
     validatePresentOrData(publicService, 'http://schema.org/dateCreated', instanceFields.aangemaaktOp, 'dateTime');
     validatePresentOrData(publicService, 'http://schema.org/dateModified', instanceFields.bewerktOp, 'dateTime');
