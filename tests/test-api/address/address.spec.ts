@@ -265,7 +265,7 @@ test.describe('validate', () => {
 
     test(`validate address for address range`, async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
-        const params = {municipality: 'Kruibeke', street: 'O.L. Vrouwplein', houseNumber: '18-20'};
+        const params = {municipality: 'Kruibeke', street: 'O.L.Vrouwplein', houseNumber: '18-20'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
             params
@@ -285,7 +285,7 @@ test.describe('validate', () => {
 
     test(`validate address for address in sub-municipality`, async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
-        const params = {municipality: 'Leuven', street: 'Eenmeilaan', houseNumber: 2};
+        const params = {municipality: 'Leuven', street: 'Éénmeilaan', houseNumber: 2};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
             params
@@ -542,6 +542,15 @@ test.describe('validate', () => {
             adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2514020'
         });
     });
+    
+    test('validate address throws error when street is incorrect but containing a correct street', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const params = {municipality: 'Leuven', street: 'Martelarenpleinabcdefg', houseNumber: '20'};
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
+
+        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
+        const actual = await response.json();
+        expect(actual).toEqual({});
+    });
 
 });
-
