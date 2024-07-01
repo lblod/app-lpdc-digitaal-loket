@@ -61,7 +61,7 @@ Following command strips off all other containers, and counts.
 ```shell
  docker ps | grep -v monitor | grep -v CREATED | grep -v app-http-logger | grep -v metrics-exporter | grep -v letsencrypt | wc -l
 ```
-gives: 21 (as expected result)
+gives: 22 (as expected result)
 
 #### ldes consumer stream from ipdc is still running
 
