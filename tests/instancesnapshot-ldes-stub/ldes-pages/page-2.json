@@ -8,64 +8,64 @@
       {
         "node": "http://hostname/doc/instancesnapshot?pageNumber=1",
         "path": "generatedAtTime",
-        "@type": "LessThanRelationOrEqualToRelation"
+        "@type": "LessThanOrEqualToRelation"
       }
     ]
   },
-  "@context": "http://hostname/InstanceJsonLdContext.jsonld",
+  "@context": ["http://hostname/ipdc-lpdc-im.jsonld", "http://hostname/ldes.jsonld"],
   "@id": "http://hostname/doc/instancesnapshot?pageNumber=2",
   "@type": "EventStream",
   "member": [
     {
       "@id": "http://data.lblod.info/id/public-service-snapshot/1e9d08b6-c298-4884-a201-bf5f17f30bb3",
       "@type": [
-        "InstancePublicServiceSnapshot"
+        "InstantieSnapshot"
       ],
       "isVersionOf": "http://data.lblod.info/id/public-service/ad3abd4f-d4aa-4e92-99e4-ef2dc2376bf6",
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-      "aangemaaktOp": "2024-02-29T08:42:12.357Z",
-      "bewerktOp": "2024-02-29T13:25:25.236Z",
+      "aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "creatie": "2024-02-29T08:42:12.357Z",
+      "laatstGewijzigd": "2024-02-29T13:25:25.236Z",
       "generatedAtTime": "2024-02-29T14:32:10.377Z",
-      "titel": {
+      "naam": {
         "nl-BE-x-informal": "Toelating voor losse standplaats op een openbare markt"
       },
       "beschrijving": {
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Een losse standplaats op een openbare markt is een standplaats voor de marktdag zelf en onderscheidt zich van een standplaats per abonnement. De gemeente bepaalt autonoom de werkwijze voor de toewijzing van de losse standplaatsen en legt de bepalingen vast in haar gemeentelijk reglement.</p>"
       },
       "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ],
       "geografischToepassingsgebieden": [
-        "http://data.europa.eu/nuts/code/BE23444021"
+        "BE23444021"
       ],
       "uitvoerendeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ]
     },
     {
       "@id": "http://data.lblod.info/id/public-service-snapshot/24daf042-bdca-408d-80aa-caf724114103",
       "@type": [
-        "InstancePublicServiceSnapshot"
+        "InstantieSnapshot"
       ],
       "isVersionOf": "http://data.lblod.info/id/public-service/645dcaec-7f27-44b7-85ba-b3ffe58c6328",
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-      "aangemaaktOp": "2024-03-19T10:42:12.357Z",
-      "bewerktOp": "2024-03-19T10:25:25.236Z",
+      "aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "creatie": "2024-03-19T10:42:12.357Z",
+      "laatstGewijzigd": "2024-03-19T10:25:25.236Z",
       "generatedAtTime": "2024-03-19T10:50:10.377Z",
-      "titel": {
+      "naam": {
         "nl-BE-x-informal": "Registerplicht"
       },
       "beschrijving": {
         "nl-BE-x-informal": "<h3><strong>Registerplicht</strong></h3><p>Bijhouden van register waarin per nacht het aantal personen en het aantal bezette kamers wordt vermeld. Wie dergelijk register niet ontvangt moet dit spontaan vragen.&nbsp;</p><p>Uitbatingen die niet over de nodige permanentie beschikken om aan de registerplicht te voldoen, worden forfaitair berekend. (Zie &quot;Hoeveel kost het?&quot;)</p><h3><strong>Aangifte</strong></h3><p>Ten laatste veertien dagen na elk semester&nbsp;van het aanslagjaar moeten de ingevulde, ondertekende en gedateerde registerbladen (zie artikel 5 &sect; 1) teruggestuurd worden naar de bevoegde administratie (Stadsbelastingen). Deze registerbladen gelden als aangifte.</p><p>Het indienen van een aangifte kan enkel via het <a target=\"_blank\" href=https://formulieren.stad.gent/productie4.2/formulier/nl-NL/DefaultEnvironment/scBelastingLogies.aspx/frmLogiesInleiding>digitale aangifteformulier</a> of&nbsp;schriftelijk. Er zijn 3&nbsp;mogelijkheden:</p><ul>   <li>Je krijgt een voorstel van aangifte per semester. Je moet dit niet terug sturen indien er geen wijzigingen zijn. Dit is enkel voor de logies die een forfait bedrag betalen per bed.&nbsp;</li> <li>Je krijgt een aangifte of register. Dit stuur je terug per semester. Op 15 juli voor semester 1 en op 15 januari voor semester 2.</li>     <li>Indien je&nbsp;geen aangifte ontvangt, <a target=\"_blank\" href=https://stad.gent/nl/openingsuren-adressen/stadsbelastingen-stad-gent>contacteer</a> dan de Stadsbelastingen.&nbsp;</li></ul><h3><strong>Bezwaarschrift</strong></h3><p>Ben je niet akkoord met de aanslag, een belastingverhoging of een administratieve geldboete?</p><p>Als belastingplichtige, belastingschuldige of hun vertegenwoordiger kan je een schriftelijk bezwaarschrift indienen. Hoe en onder welke voorwaarden je dit kan doen, lees je op <a target=\"_blank\" href=https://stad.gent/nl/over-gent-stadsbestuur/stadsbelastingen-gent/bezwaarschrift-stedelijke-belastingen>deze pagina</a>.</p>"
       },
       "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ],
       "geografischToepassingsgebieden": [
-        "http://data.europa.eu/nuts/code/BE23444021"
+        "BE23444021"
       ],
       "uitvoerendeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ]
     }
   ]

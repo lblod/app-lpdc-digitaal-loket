@@ -1,0 +1,99 @@
+{
+  "@context": {
+    "EventStream": {
+      "@context": {
+        "member": {
+          "@id": "https://w3id.org/tree#member",
+          "@container": "@set"
+        },
+        "versionOfPath": {
+          "@id": "https://w3id.org/ldes#versionOfPath",
+          "@type": "@id"
+        },
+        "timestampPath": {
+          "@id": "https://w3id.org/ldes#timestampPath",
+          "@type": "@id"
+        },
+        "view": "https://w3id.org/tree#view"
+      },
+      "@id": "https://w3id.org/ldes#EventStream"
+    },
+    "Node": {
+      "@context": {
+        "relation": {
+          "@id": "https://w3id.org/tree#relation",
+          "@container": "@set"
+        }
+      },
+      "@id": "https://w3id.org/tree#Node"
+    },
+    "GreaterThanRelation": {
+      "@context": {
+        "node": {
+          "@id": "https://w3id.org/tree#node",
+          "@type": "@id"
+        },
+        "path": {
+          "@id": "https://w3id.org/tree#path",
+          "@type": "@id"
+        },
+        "value": {
+          "@id": "https://w3id.org/tree#value",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "https://w3id.org/tree#GreaterThanRelation"
+    },
+    "GreaterThanOrEqualToRelation": {
+      "@context": {
+        "node": {
+          "@id": "https://w3id.org/tree#node",
+          "@type": "@id"
+        },
+        "path": {
+          "@id": "https://w3id.org/tree#path",
+          "@type": "@id"
+        },
+        "value": {
+          "@id": "https://w3id.org/tree#value",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "https://w3id.org/tree#GreaterThanOrEqualToRelation"
+    },
+    "LessThanRelation": {
+      "@context": {
+        "node": {
+          "@id": "https://w3id.org/tree#node",
+          "@type": "@id"
+        },
+        "path": {
+          "@id": "https://w3id.org/tree#path",
+          "@type": "@id"
+        },
+        "value": {
+          "@id": "https://w3id.org/tree#value",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "https://w3id.org/tree#LessThanRelation"
+    },
+    "LessThanOrEqualToRelation": {
+      "@context": {
+        "node": {
+          "@id": "https://w3id.org/tree#node",
+          "@type": "@id"
+        },
+        "path": {
+          "@id": "https://w3id.org/tree#path",
+          "@type": "@id"
+        },
+        "value": {
+          "@id": "https://w3id.org/tree#value",
+          "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+        }
+      },
+      "@id": "https://w3id.org/tree#LessThanOrEqualToRelation"
+    }
+  }
+}

@@ -169,7 +169,7 @@ services:
     environment:
       HOSTNAME: 'instancesnapshot-ldes-stub'
     healthcheck:
-      test: [ "CMD", "wget", "--spider", "http://localhost:80/InstanceJsonLdContext.jsonld" ]
+      test: [ "CMD", "wget", "--spider", "http://localhost:80/ipdc-lpdc-im.jsonld" ]
       interval: 5s
       timeout: 5s
       start_period: 30s

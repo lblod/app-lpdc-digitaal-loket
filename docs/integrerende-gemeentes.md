@@ -594,7 +594,7 @@ Een uitvoerbare, **voorbeeld-implementatie van een instantiesnapshot-LDES-stub**
 
 Dit is een **Typescript** project dat een **vaste lijst van 3 pagina's** teruggeeft. 
 
-Het bevat ook een endpoint voor de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
+Het bevat ook een endpoint voor de [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld).
 
 Om het project effectief uit te voeren, is de recentste [LTS-versie van Node JS](https://nodejs.org/en) vereist.
 
@@ -604,7 +604,7 @@ Om het project effectief uit te voeren, is de recentste [LTS-versie van Node JS]
 ```
 
 Je kan de pagina's uitlezen door http://localhost/doc/instancesnapshot?pageNumber=0 , 1, 2 uit te voeren.
-Dit geeft de data in [json-ld formaat](#json-ld) terug, daarbij verwijzend naar de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
+Dit geeft de data in [json-ld formaat](#json-ld) terug, daarbij verwijzend naar de [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld).
 
 Pagina's 0, 1, 2 zijn ook [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json), [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json) en [hier](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json) te vinden.
 
@@ -630,7 +630,7 @@ Uitlezen van volledige LDES en schrijven naar console-uitvoer als [json-ld forma
   npm run start-export-as-json-ld
 ```
 
-Uitlezen van volledige LDES, interpreteren en samenvoegen met verwezen [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) en resultaat schrijven naar console-uitvoer als [turtle formaat](#turtle).
+Uitlezen van volledige LDES, interpreteren en samenvoegen met verwezen [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld) en resultaat schrijven naar console-uitvoer als [turtle formaat](#turtle).
 ```shell
   npm run start-export-as-turtle
 ```
@@ -641,9 +641,9 @@ De [LDES-reader](#integrerende-gemeente-ldes-reader) leest [json-ld](#json-ld) e
 
 Beide formaten ([json-ld](#json-ld) en [turtle](#turtle)) zijn serialisatie-formaten voor dezelfde data.
 
-Indien de [json-ld](#json-ld) data en de bijhorende [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) goed op elkaar afgestemd zijn, dan zal dit een correcte [turtle](#turtle) genereren.
+Indien de [json-ld](#json-ld) data en de bijhorende [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld) goed op elkaar afgestemd zijn, dan zal dit een correcte [turtle](#turtle) genereren.
 
-Met 'correct' bedoelen we, één waarin voor elk [json-ld](#json-ld) datum een overeenkomstig attribuut ter interpretatie gevonden wordt in de [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld).
+Met 'correct' bedoelen we, één waarin voor elk [json-ld](#json-ld) datum een overeenkomstig attribuut ter interpretatie gevonden wordt in de [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld).
 
 Indien er in één van de twee een afwijking is, dan zal de turtle ofwel minder triples bevatten, niet goed gevormde IRIs hebben, of mogelijk andere problemen vertonen.
 
@@ -668,32 +668,23 @@ Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uit
 1. `"timestampPath": "generatedAtTime" `, `"versionOfPath": "isVersionOf"`: properties met values die aangeven welke properties in de members gebruikt worden voor de [versionering van LDES](#versionering). Zowel `generatedAtTime` en `isVersionOf` zal je terugvinden in elke member.
 2. Identificatie van deze pagina van de LDES.
 3. Relation wijst naar andere pagina's van LDES. In dit voorbeeld is er een volgende pagina met nummer 1. In [page-1](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json) vindt u navigatie terug naar [page-0](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json) en verder naar [page-2](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json). In [page-2](../tests/instancesnapshot-ldes-stub/ldes-pages/page-2.json) vindt u navigatie terug naar [page-1](../tests/instancesnapshot-ldes-stub/ldes-pages/page-1.json).
-4. Verwijst naar de gebruikte [InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld). In dit voorbeeld wordt deze apart hosted. Kan eventueel ook ingesloten meegegeven worden.
+4. Verwijst naar de gebruikte [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld). In dit voorbeeld wordt deze apart hosted. Kan eventueel ook ingesloten meegegeven worden.
 5. Identificatie van de LDES pagina, en aangeven dat het een LDES is.
 6. Onder member volgt een json array van alle members van deze pagina van de LDES.
 7. `"@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126"` identificeert hierbij de [instantiesnapshot](#instantiesnapshot). 
 Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service-snapshot/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
 8. `"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",` identificeert de [instantie](#instantie).
 Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
-9. `"createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"` : `<uuid>` van de integrerende gemeente.
-[InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5). 
-Dit is een uitvoerbare URL die wijst in dit voorbeeld naar Gemeente Gent.
-Kan ook als absolute URL opgegeven worden.
+9. `"createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"` : `<uuid>` van de integrerende gemeente. Wordt als absolute URL opgegeven.  //TODO LPDC-1206: enkel absolute url?
 10. `"aangemaaktOp": "2024-02-14T13:42:12.357Z",` `"bewerktOp": "2024-02-14T13:59:25.236Z",`: geeft het moment dat de [instantie](#instantie) aangemaakt en respectievelijk laatst bewerkt werd. Dit wordt door LPDC ad verbatim overgenomen.
 11. `"generatedAtTime": "2024-02-18T06:32:10.377Z"`: geeft het moment dat de [instantiesnapshot](#instantiesnapshot) aangemaakt werd. Is een property die door LDES-verwerking wordt geïnterpreteerd.
 12. `"titel:"`, `"beschrijving:"`: een voorbeeld van 2 data velden die gelinked zijn vanuit [instantie](#instantie), beide string literals met een taal tag.
-13. `"bevoegdeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de bevoegde overheid.
-[InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5).
-Dit is een uitvoerbare URL die in dit voorbeeld wijst naar Gemeente Gent.
-Kan ook als absolute URL opgegeven worden.
+13. `"bevoegdeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de bevoegde overheid. Wordt als absolute URL opgegeven worden. //TODO LPDC-1206: enkel absolute url?
 Meerdere `bevoegdeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
 14. `"geografischToepassingsgebieden": ["http://data.europa.eu/nuts/code/BE23444021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie). 
 Een code uit de [nuts - lau codes](https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-03-22/codelijsten/geografisch-toepassingsgebied.ttl) wordt verwacht.
 Meerdere `geografischToepassingsgebieden` kunnen opgegeven worden, dus is dit json-type een array.
-15. `"uitvoerendeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de uitvoerende overheid.
-[InstanceJsonLdContext.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/InstanceJsonLdContext.jsonld) definieert een basis url waardoor in [turtle formaat](#turtle) de [iri](#iris) wordt [http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5](http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5).
-Dit is een uitvoerbare URL die wijst in dit voorbeeld naar Gemeente Gent.
-Kan ook als absolute URL opgegeven worden.
+15. `"uitvoerendeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de uitvoerende overheid. //TODO LPDC-1206: enkel absolute url?
 Meerdere `uitvoerendeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
 16. Voorbeeld van een tweede, later gegenereerde (`"generatedAtTime": "2024-02-20T07:32:10.377Z"`), [instantie snapshot](#instantiesnapshot)(`"http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09"`) van dezelfde [instantie](#instantie) (`"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3"`). 
 Hier werd `titel` en `beschrijving` updatet.
