@@ -21,6 +21,10 @@
 oss:instanceShapes a rdf:Property;
      rdfs:label "shacl shapes for instanties van implementatiemodel"@nl .
 
+lpdcExt:FinancialAdvantage a rdfs:Class;
+    rdfs:label "FinancialAdvantage"@nl;
+    rdfs:subClassOf m8g:Output .
+
 <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> oss:instanceShapes oss:InstancePublicServiceShape,
                                                                                                    oss:InstanceAddressShape,
                                                                                                    oss:InstanceContactPointShape,
@@ -29,7 +33,7 @@ oss:instanceShapes a rdf:Property;
                                                                                                    oss:InstanceCostShape,
                                                                                                    oss:InstanceRequirementShape,
                                                                                                    oss:InstanceEvidenceShape,
-                                                                                                   oss:InstanceOutputShape,
+                                                                                                   oss:InstanceFinancialAdvantageShape,
                                                                                                    oss:InstanceLegalResourceShape.
 
 oss:InstancePublicServiceShape
@@ -186,7 +190,7 @@ oss:InstancePublicServiceShape
           shacl:name "name"@nl;
           shacl:path dc:title
       ], [
-          shacl:class m8g:Output;
+          shacl:class lpdcExt:FinancialAdvantage;
           shacl:description "The Produces property links a Public Service to one or more instances of the FinancialAdvantage class, describing the actual financial advantages of executing a given Public Service."@nl;
           shacl:name "produces"@nl;
           shacl:path cpsv:produces
@@ -405,7 +409,7 @@ oss:InstanceEvidenceShape
    ];
    shacl:targetClass m8g:Evidence.
 
-oss:InstanceOutputShape
+oss:InstanceFinancialAdvantageShape
     a shacl:NodeShape;
     shacl:property [
        shacl:datatype rdf:langString;
@@ -433,7 +437,7 @@ oss:InstanceOutputShape
        shacl:name "order"@nl;
        shacl:path shacl:order
    ];
-   shacl:targetClass m8g:Output.
+   shacl:targetClass lpdcExt:FinancialAdvantage.
 
 oss:InstanceContactPointShape
     a shacl:NodeShape;

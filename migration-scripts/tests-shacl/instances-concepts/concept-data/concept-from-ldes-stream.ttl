@@ -1,13 +1,8 @@
-#CONCEPT FIELDS ADDED To Contract
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/dateCreated> "2023-07-12T11:40:20.026205561Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/dateModified> "2023-07-12T11:40:20.026209604Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/productID> "1502" .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://purl.org/dc/terms/isVersionOf> <https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84> .
 <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://www.w3.org/ns/prov#generatedAtTime> "2023-07-12T11:40:20.441775Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-
-#REMOVE FROM CONTRACT  #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <http://schema.org/identifier> "50fd7f03-276f-403e-ad39-152dba4e39be" .
-#REMOVE FROM CONTRACT  #<https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Create> .
-
 _:b401 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Evidence> .
 _:b401 <http://purl.org/dc/terms/description> "<p>Als u het document zelf ophaalt:</p><ul><li>uw eigen identiteitskaart.</li></ul><p>Als u het document voor iemand anders aanvraagt:</p><ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - informal"@nl-BE-x-generated-informal .
 _:b401 <http://purl.org/dc/terms/description> "<p>Als u het document zelf ophaalt:</p><ul><li>uw eigen identiteitskaart.</li></ul><p>Als u het document voor iemand anders aanvraagt:</p><ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - formal"@nl-BE-x-generated-formal .

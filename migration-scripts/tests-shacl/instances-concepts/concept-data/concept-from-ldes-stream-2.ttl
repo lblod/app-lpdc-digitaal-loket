@@ -3,9 +3,6 @@
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <http://schema.org/productID> """186"""^^<http://www.w3.org/2001/XMLSchema#string>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <http://purl.org/dc/terms/isVersionOf> <https://ipdc.vlaanderen.be/id/concept/16a1187f-f0b8-42ce-a1b1-23f051f9d135>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <http://www.w3.org/ns/prov#generatedAtTime> """2023-11-28T09:20:36.044284Z"""^^<http://www.w3.org/2001/XMLSchema#dateTime>.
-#REMOVE FROM CONTRACT  #<https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <http://schema.org/identifier> """5362e55b-c6f1-46c8-941a-906224d34bd0"""^^<http://www.w3.org/2001/XMLSchema#string>.
-#REMOVE FROM CONTRACT  #<https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#snapshotType> <https://productencatalogus.data.vlaanderen.be/id/concept/SnapshotType/Update>.
-
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams>.
 <https://ipdc.vlaanderen.be/id/conceptsnapshot/5362e55b-c6f1-46c8-941a-906224d34bd0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Provinciaal>.

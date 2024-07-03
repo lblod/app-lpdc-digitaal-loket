@@ -113,15 +113,15 @@ ex:a-requirement
 ex:a-tag
     a skos:Concept.
 
-ex:an-output
-    a m8g:Output ;
+ex:a-financial-advantage
+    a lpdcExt:FinancialAdvantage ;
     dc:title """an-output-title"""@nl;
     dc:title """an-output-title-en"""@en;
     dc:description """an-output-description"""@nl;
     shacl:order 1.
 
-ex:another-output
-    a m8g:Output ;
+ex:another-financial-advantage
+    a lpdcExt:FinancialAdvantage ;
     dc:title """an-output-title"""@nl;
     dc:description """an-output-description"""@nl;
     shacl:order 2.
@@ -178,8 +178,8 @@ ex:a-full-valid-instance
     lpdcExt:instanceTag ex:a-tag;
     dcat:keyword """a-keyword"""@nl ;
     pera:language lang:NLD ;
-    cpsv:produces ex:an-output;
-    cpsv:produces ex:another-output;
+    cpsv:produces ex:a-financial-advantage;
+    cpsv:produces ex:another-financial-advantage;
     lpdcExt:publicationMedium ex:a-publication-medium;
     lpdcExt:regulation """regulation-nl"""@nl ;
     dc:spatial <http://data.europa.eu/nuts/code/BE23141002> ;
