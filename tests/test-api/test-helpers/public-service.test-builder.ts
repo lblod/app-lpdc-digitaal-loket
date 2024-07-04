@@ -58,8 +58,8 @@ export class PublicServiceTestBuilder {
     private reviewStatus: Uri;
     private instanceStatus: Uri;
     private dateSent: Literal;
-    private publicationStatus: Uri;
-    private datePublished: Literal;
+    private publicationStatus: Uri; //TODO LPDC-1236 remove
+    private datePublished: Literal; //TODO LPDC-1236 remove
     private dutchLanguageVariant: Literal;
     private needsConversionFromFormalToInformal: Literal;
     private forMunicipalityMerger: Literal;

@@ -203,4 +203,5 @@ export const Predicates = {
     dutchLanguageVariant: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant'),
     needsConversionFromFormalToInformal: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal'),
     forMunicipalityMerger: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger'),
+    isPublishedVersionOf: new Uri('https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf')
 }
