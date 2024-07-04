@@ -27,7 +27,7 @@ app.post('/instancesnapshot/:instanceId/invalid', (req, res, next) => {
             return res.status(200).json({
                 id: instanceSnapshotToAdd["@id"],
                 isVersionOf: instanceSnapshotToAdd['isVersionOf'],
-                title: instanceSnapshotToAdd.titel["en"],
+                title: instanceSnapshotToAdd.naam["en"],
                 description: instanceSnapshotToAdd.beschrijving["nl-BE-x-informal"].replace(`<p data-indentation-level=\"0\">`, ``).replace(`</p>`, ``)
             });
         } else {
