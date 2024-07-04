@@ -421,8 +421,8 @@ test.describe('Instance Snapshot to Instance and published to IPDC Flow', () => 
                         order: nmbr - 1
                     };
                 }),
-                regelgeving: { nl: regulationDescription },
-                regelgevendeBronnen: [1, 2].map(nmbr => {
+                regelgevingTekst: { nl: regulationDescription },
+                regelgeving: [1, 2].map(nmbr => {
                     return {
                         titel: {nl: legalResourceTitle + ` - ${nmbr}` },
                         beschrijving: {nl: legalResourceDescription + ` - ${nmbr}` },

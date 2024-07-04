@@ -1560,32 +1560,32 @@ test.describe('take concept snapshot over', () => {
             await instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink().click()
             await verifyDataInModalAndAndTakeOverForInput(
                 'Titel regelgevende bron',
-                createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl'],
+                createSnapshot['jsonlddata']['regelgeving'][0]['naam']['nl'],
                 createSnapshot['jsonlddata'].generatedAtTime,
-                updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl'],
+                updateSnapshot['jsonlddata']['regelgeving'][0]['naam']['nl'],
                 updateSnapshot['jsonlddata'].generatedAtTime,
             );
-            await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgeving'][0]['naam']['nl']);
 
             await instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink().click();
             await verifyDataInModalAndAndTakeOverForRichText(
                 'Beschrijving regelgevende bron',
-                createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl'],
+                createSnapshot['jsonlddata']['regelgeving'][0]['beschrijving']['nl'],
                 createSnapshot['jsonlddata'].generatedAtTime,
-                updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl'],
+                updateSnapshot['jsonlddata']['regelgeving'][0]['beschrijving']['nl'],
                 updateSnapshot['jsonlddata'].generatedAtTime,
             );
-            expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgeving'][0]['beschrijving']['nl']);
 
             await instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink().click()
             await verifyDataInModalAndAndTakeOverForInput(
                 'URL regelgevende bron',
-                createSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url'],
+                createSnapshot['jsonlddata']['regelgeving'][0]['url'],
                 createSnapshot['jsonlddata'].generatedAtTime,
-                updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url'],
+                updateSnapshot['jsonlddata']['regelgeving'][0]['url'],
                 updateSnapshot['jsonlddata'].generatedAtTime,
             );
-            await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
+            await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgeving'][0]['url']);
 
             //meer info
             await instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink().click()
@@ -1853,13 +1853,13 @@ test.describe('take concept snapshot over', () => {
             expect(await instantieDetailsPage.beschrijvingRegelgevingEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevingTekst']['nl']);
 
             await expect(instantieDetailsPage.titelRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
-            await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['naam']['nl']);
+            await expect(instantieDetailsPage.titelRegelgevendeBronInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgeving'][0]['naam']['nl']);
 
             await expect(instantieDetailsPage.beschrijvingRegelgevendeBronConceptWijzigingenOvernemenLink()).not.toBeVisible();
-            expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['beschrijving']['nl']);
+            expect(await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().textContent()).toContain(updateSnapshot['jsonlddata']['regelgeving'][0]['beschrijving']['nl']);
 
             await expect(instantieDetailsPage.regelgevendeBronUrlConceptWijzigingenOvernemenLink()).not.toBeVisible();
-            await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgevendeBronnen'][0]['url']);
+            await expect(instantieDetailsPage.regelgevendeBronUrlInput()).toHaveValue(updateSnapshot['jsonlddata']['regelgeving'][0]['url']);
 
             //meer info
             await expect(instantieDetailsPage.titelWebsiteConceptWijzigingenOvernemenLink()).not.toBeVisible();

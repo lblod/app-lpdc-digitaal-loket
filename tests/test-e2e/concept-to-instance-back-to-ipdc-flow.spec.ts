@@ -403,7 +403,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
             beschrijving: newBeschrijving,
             aanvullendeBeschrijving: newAanvullendeBeschrijving,
             uitzonderingen: newUitzonderingen,
-            regelgeving: newBeschrijvingRegelgeving,
+            regelgevingTekst: newBeschrijvingRegelgeving,
             regelgevendeBronTitel: newTitelRegelgevendeBron,
             regelgevendeBronBeschrijving: newBeschrijvingRegelgevendeBron,
             regelgevendeBronUrl: newUrlRegelgevendeBron,
@@ -539,7 +539,7 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
         beschrijving,
         aanvullendeBeschrijving,
         uitzonderingen,
-        regelgeving,
+        regelgevingTekst,
         regelgevendeBronTitel,
         regelgevendeBronBeschrijving,
         regelgevendeBronUrl,
@@ -610,8 +610,8 @@ test.describe('Concept to Instance back to IPDC Flow', () => {
                         beschrijving: { nl: financieelVoordeelBeschrijving },
                         order: 0
                     }],
-                regelgeving: { nl: regelgeving },
-                regelgevendeBronnen: [
+                regelgevingTekst: { nl: regelgevingTekst },
+                regelgeving: [
                     {
                         titel: { nl: regelgevendeBronTitel },
                         beschrijving: { nl: regelgevendeBronBeschrijving },

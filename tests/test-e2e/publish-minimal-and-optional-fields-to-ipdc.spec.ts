@@ -231,7 +231,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             verifyInstancePublishedOnIPDC(
                 instancePublishedInIpdc,
                 {
-                    regelgevendeBronnen: [
+                    regelgeving: [
                         {
                             beschrijving: { nl: regelgevendeBronBeschrijving },
                             url: regelgevendeBronUrl,
@@ -272,7 +272,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             verifyInstancePublishedOnIPDC(
                 instancePublishedInIpdc,
                 {
-                    regelgevendeBronnen: [
+                    regelgeving: [
                         {
                             titel: { nl: regelgevendeBronTitel },
                             url: regelgevendeBronUrl,
@@ -311,7 +311,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             verifyInstancePublishedOnIPDC(
                 instancePublishedInIpdc,
                 {
-                    regelgevendeBronnen: [
+                    regelgeving: [
                         {
                             url: regelgevendeBronUrl,
                             order: 1,

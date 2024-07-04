@@ -427,7 +427,7 @@ test.describe('Order instance from IPDC flow', () => {
             verifyInstancePublishedOnIPDC(
                 instancePublishedInIpdc,
                 {
-                    regelgevendeBronnen: [
+                    regelgeving: [
                         {
                             titel: {nl: `${regelgevendeBronTitel} 1`},
                             beschrijving: {nl: `${regelgevendeBronBeschrijving} 1`},
