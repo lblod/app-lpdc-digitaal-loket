@@ -675,19 +675,19 @@ Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uit
 Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service-snapshot/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
 8. `"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",` identificeert de [instantie](#instantie).
 Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
-9. `"createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"` : `<uuid>` van de integrerende gemeente. Wordt als absolute URL opgegeven.  //TODO LPDC-1206: enkel absolute url?
-10. `"aangemaaktOp": "2024-02-14T13:42:12.357Z",` `"bewerktOp": "2024-02-14T13:59:25.236Z",`: geeft het moment dat de [instantie](#instantie) aangemaakt en respectievelijk laatst bewerkt werd. Dit wordt door LPDC ad verbatim overgenomen.
+9. `"aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"` : Iri van de integrerende gemeente. Wordt als absolute URL opgegeven.
+10. `"creatie": "2024-02-14T13:42:12.357Z",` `"laatstGewijzigd": "2024-02-14T13:59:25.236Z",`: geeft het moment dat de [instantie](#instantie) aangemaakt en respectievelijk laatst bewerkt werd. Dit wordt door LPDC ad verbatim overgenomen.
 11. `"generatedAtTime": "2024-02-18T06:32:10.377Z"`: geeft het moment dat de [instantiesnapshot](#instantiesnapshot) aangemaakt werd. Is een property die door LDES-verwerking wordt geïnterpreteerd.
-12. `"titel:"`, `"beschrijving:"`: een voorbeeld van 2 data velden die gelinked zijn vanuit [instantie](#instantie), beide string literals met een taal tag.
-13. `"bevoegdeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de bevoegde overheid. Wordt als absolute URL opgegeven worden. //TODO LPDC-1206: enkel absolute url?
+12. `"naam:"`, `"beschrijving:"`: een voorbeeld van 2 data velden die gelinked zijn vanuit [instantie](#instantie), beide string literals met een taal tag.
+13. `"bevoegdeOverheden": ["http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: Iri's van de bevoegde overheid. Wordt als absolute URL opgegeven.
 Meerdere `bevoegdeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
-14. `"geografischToepassingsgebieden": ["http://data.europa.eu/nuts/code/BE23444021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie). 
-Een code uit de [nuts - lau codes](https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-03-22/codelijsten/geografisch-toepassingsgebied.ttl) wordt verwacht.
+14. `"geografischToepassingsgebieden": ["BE23444021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie). 
+Een code uit de [nuts - lau codes](https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-04-25/codelijsten/geografisch-toepassingsgebied.ttl) wordt verwacht. Een basis url (http://data.europa.eu/nuts/code/) wordt automatisch vooraan toegevoegd indien u een relatieve opgeeft. Een absolute url kan ook opgegeven worden. 
 Meerdere `geografischToepassingsgebieden` kunnen opgegeven worden, dus is dit json-type een array.
-15. `"uitvoerendeOverheden": ["353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: `<uuid>` van de uitvoerende overheid. //TODO LPDC-1206: enkel absolute url?
+15. `"uitvoerendeOverheden": ["http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: Iri's van de uitvoerende overheid. Wordt als absolute URL opgegeven
 Meerdere `uitvoerendeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
 16. Voorbeeld van een tweede, later gegenereerde (`"generatedAtTime": "2024-02-20T07:32:10.377Z"`), [instantie snapshot](#instantiesnapshot)(`"http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09"`) van dezelfde [instantie](#instantie) (`"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3"`). 
-Hier werd `titel` en `beschrijving` updatet.
+Hier werd `naam` en `beschrijving` updatet.
 Merk op dat **telkens** de **volledige data van de instantie dient te worden meegegeven** bij elke nieuwe [instantie snapshot](#instantiesnapshot). Een nieuwe [instantie snapshot](#instantiesnapshot) geeft m.a.w. niet enkel de verandering ten opzicht van vorige weer.
 
 Ter illustratie de gegeneerde [turtle](#turtle) voor dit deel van LDES, merk op dat hierin de informatie uit de LDES is _verwijderd_ (behalve `generatedAtTime` en `isVersionOf`).
@@ -727,7 +727,7 @@ SHACL voorbeeld programma's zijn [hier](../migration-scripts/tests-shacl) te vin
 
 Het implementatie model vermeldt correct dat er meerdere zoektermen mogen zijn per taal.
 
-LPDC ondersteunt enkel @nl als taal. Zoektermen in andere talen zijn toegestaan, maar worden niet verwerkt.
+LPDC ondersteunt enkel @nl als taal voor zoektermen. Zoektermen in andere talen zijn toegestaan, maar worden niet verwerkt.
 
 ## Verklarende woordenlijst
 
