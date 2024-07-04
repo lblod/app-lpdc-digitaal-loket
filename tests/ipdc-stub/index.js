@@ -49,11 +49,11 @@ app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
         } else {
             const publishedInstanceForUuid = instances.find(instance =>
                 instance.find(object => object['@type'][0] === 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService'
-                    && object['http://mu.semte.ch/vocabularies/core/uuid'][0]['@value'] === instanceUuid));
+                    && object['@id'].endsWith(instanceUuid)));
             if (!publishedInstanceForUuid) {
                 res.status(404).send();
             } else {
-                const context = JSON.parse(fs.readFileSync(`./instance-data/InstantieJsonLdContext.jsonld`, "utf8"));
+                const context = JSON.parse(fs.readFileSync(`./jsonld/ipdc-lpdc-im.jsonld`, "utf8"));
                 const store = graph();
 
                 const quads = await new Promise((resolve, reject) => {
@@ -90,7 +90,7 @@ app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
                 //note: compacting does not work properly when having a nested container with blank nodes ... it generates a graph, which we don't want? For now, there is no e2e that relies on this, so we leave it as is ...
                 const compactedJsonLdDocument = await jsonld.compact(jsonLdDocument, context);
 
-                compactedJsonLdDocument[`@context`] = `http://ipdc-stub/InstantieJsonLdContext.jsonld`;
+                compactedJsonLdDocument[`@context`] = `http://ipdc-stub/ipdc-lpdc-im.jsonld`;
 
                 compactedJsonLdDocument[`@id`] = `https://ipdc.vlaanderen.be/id/instantie/${instanceUuid}`;
 
@@ -202,7 +202,7 @@ app.post('/instanties/notfail', (req, res, next) => {
 
 app.get('/ipdc-lpdc-im.jsonld', (req, res, next) => {
     try {
-        const context = fs.readFileSync(`./ldes-pages/ipdc-lpdc-im.jsonld`, "utf8");
+        const context = fs.readFileSync(`./jsonld/ipdc-lpdc-im.jsonld`, "utf8");
         const jsonLd = JSON.parse(context);
         res.status(200).type('application/ld+json').json(jsonLd);
         console.log(`Streamed ipdc-lpdc-im.jsonld`);
@@ -211,9 +211,20 @@ app.get('/ipdc-lpdc-im.jsonld', (req, res, next) => {
     }
 });
 
+app.get('/ipdc-lpdc-im-that-is-invalid.jsonld', (req, res, next) => {
+    try {
+        const context = fs.readFileSync(`./jsonld/ipdc-lpdc-im-that-is-invalid.jsonld`, "utf8");
+        const jsonLd = JSON.parse(context);
+        res.status(200).type('application/ld+json').json(jsonLd);
+        console.log(`Streamed ipdc-lpdc-im-that-is-invalid.jsonld`);
+    } catch (e) {
+        next(e)
+    }
+});
+
 app.get('/ldes.jsonld', (req, res, next) => {
     try {
-        const context = fs.readFileSync(`./ldes-pages/ldes.jsonld`, "utf8");
+        const context = fs.readFileSync(`./jsonld/ldes.jsonld`, "utf8");
         const jsonLd = JSON.parse(context);
         res.status(200).type('application/ld+json').json(jsonLd);
         console.log(`Streamed ldes.jsonld`);
@@ -222,27 +233,6 @@ app.get('/ldes.jsonld', (req, res, next) => {
     }
 });
 
-app.get('/InstantieJsonLdContext.jsonld', (req, res, next) => {
-    try {
-        const context = fs.readFileSync(`./instance-data/InstantieJsonLdContext.jsonld`, "utf8");
-        const jsonLd = JSON.parse(context);
-        res.status(200).type('application/ld+json').json(jsonLd);
-        console.log(`Streamed InstantieJsonLdContext.jsonld`);
-    } catch (e) {
-        next(e)
-    }
-});
-
-app.get('/InstantieJsonLdContextThatIsInvalid.jsonld', (req, res, next) => {
-    try {
-        const context = fs.readFileSync(`./instance-data/InstantieJsonLdContextThatIsInvalid.jsonld`, "utf8");
-        const jsonLd = JSON.parse(context);
-        res.status(200).type('application/ld+json').json(jsonLd);
-        console.log(`Streamed InstantieJsonLdContextThatIsInvalid.jsonld`);
-    } catch (e) {
-        next(e)
-    }
-});
 
 app.use(errorHandler);
 

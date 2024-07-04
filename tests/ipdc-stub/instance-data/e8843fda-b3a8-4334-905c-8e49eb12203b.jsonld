@@ -1,16 +1,7 @@
 {
-  "id": "e8843fda-b3a8-4334-905c-8e49eb12203b",
-  "@context": "http://ipdc-stub/InstantieJsonLdContext.jsonld",
+  "@context": "http://ipdc-stub/ipdc-lpdc-im.jsonld",
   "@id": "http://data.lblod.info/id/public-service/e8843fda-b3a8-4334-905c-8e49eb12203b",
-  "@type": "InstancePublicService",
-  "bevoegdBestuursniveaus": [
-    "Federaal",
-    "Provinciaal"
-  ],
-  "uitvoerendBestuursniveaus": [
-    "Europees",
-    "Provinciaal"
-  ],
+  "@type": "Instantie",
   "naam": {
     "nl": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
     "nl-BE-x-formal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
@@ -23,6 +14,14 @@
     "nl": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
     "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
   },
+  "bevoegdBestuursniveaus": [
+    "Federaal",
+    "Provinciaal"
+  ],
+  "uitvoerendBestuursniveaus": [
+    "Europees",
+    "Provinciaal"
+  ],
   "startDienstVerlening": "2024-03-12T12:00:00Z",
   "eindeDienstVerlening": "2024-09-21T12:00:00Z",
   "type": "AdviesBegeleiding",

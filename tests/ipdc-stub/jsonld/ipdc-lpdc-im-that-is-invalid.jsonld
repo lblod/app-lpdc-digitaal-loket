@@ -1,0 +1,925 @@
+{
+  "Adres": {
+    "@context": {
+      "busnummer": {
+        "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "gemeentenaam": {
+        "@id": "https://data.vlaanderen.be/ns/adres#gemeentenaam",
+        "@container": "@language"
+      },
+      "huisnummer": {
+        "@id": "https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "land": {
+        "@id": "https://data.vlaanderen.be/ns/adres#land",
+        "@container": "@language"
+      },
+      "postcode": {
+        "@id": "https://data.vlaanderen.be/ns/adres#postcode",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "straatnaam": {
+        "@id": "https://data.vlaanderen.be/ns/adres#Straatnaam",
+        "@container": "@language"
+      }
+    },
+    "@id": "http://www.w3.org/ns/locn#Address"
+  },
+  "Bewijs": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      }
+    },
+    "@id": "http://data.europa.eu/m8g/Evidence"
+  },
+  "Concept": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "bevoegdBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+        }
+      },
+      "bevoegdeOverheden": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "creatie": {
+        "@id": "http://schema.org/dateCreated",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "doelgroepen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+        }
+      },
+      "eindeDienstVerlening": {
+        "@id": "http://schema.org/endDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "financieleVoordelen": {
+        "@container": "@set",
+        "@id": "http://purl.org/vocab/cpsv#produces",
+        "@type": "@id"
+      },
+      "gearchiveerd": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived",
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+      },
+      "kosten": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCost",
+        "@type": "@id"
+      },
+      "laatstGewijzigd": {
+        "@id": "http://schema.org/dateModified",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "procedures": {
+        "@id": "http://purl.org/vocab/cpsv#follows",
+        "@type": "@id"
+      },
+      "productnummer": {
+        "@id": "http://schema.org/productID",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "publicatiekanalen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+        }
+      },
+      "regelgeving": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasLegalResource",
+        "@type": "@id"
+      },
+      "regelgevingTekst": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation",
+        "@container": "@language"
+      },
+      "startDienstVerlening": {
+        "@id": "http://schema.org/startDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "tags": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/"
+        }
+      },
+      "themas": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/thematicArea",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+        }
+      },
+      "type": {
+        "@id": "http://purl.org/dc/terms/type",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
+        }
+      },
+      "uitvoerendBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+        }
+      },
+      "uitvoerendeOverheden": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "uitzonderingen": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception",
+        "@container": "@language"
+      },
+      "verdereBeschrijving": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription",
+        "@container": "@language"
+      },
+      "voorwaarden": {
+        "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+        "@type": "@id"
+      },
+      "websites": {
+        "@container": "@set",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+        "@type": "@id"
+      },
+      "yourEuropeCategorieen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
+        }
+      },
+      "zoektermen": {
+        "@container": [
+          "@language",
+          "@set"
+        ],
+        "@id": "http://www.w3.org/ns/dcat#keyword"
+      }
+    },
+    "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService"
+  },
+  "ConceptSnapshot": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "bevoegdBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+        }
+      },
+      "bevoegdeOverheden": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "creatie": {
+        "@id": "http://schema.org/dateCreated",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "doelgroepen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+        }
+      },
+      "eindeDienstVerlening": {
+        "@id": "http://schema.org/endDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "financieleVoordelen": {
+        "@container": "@set",
+        "@id": "http://purl.org/vocab/cpsv#produces",
+        "@type": "@id"
+      },
+      "gearchiveerd": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived",
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+      },
+      "generatedAtTime": {
+        "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "isVersionOf": {
+        "@id": "http://purl.org/dc/terms/isVersionOf",
+        "@type": "@id"
+      },
+      "kosten": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCost",
+        "@type": "@id"
+      },
+      "laatstGewijzigd": {
+        "@id": "http://schema.org/dateModified",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "procedures": {
+        "@id": "http://purl.org/vocab/cpsv#follows",
+        "@type": "@id"
+      },
+      "productnummer": {
+        "@id": "http://schema.org/productID",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "publicatiekanalen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+        }
+      },
+      "regelgeving": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasLegalResource",
+        "@type": "@id"
+      },
+      "regelgevingTekst": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation",
+        "@container": "@language"
+      },
+      "startDienstVerlening": {
+        "@id": "http://schema.org/startDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "tags": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/"
+        }
+      },
+      "themas": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/thematicArea",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+        }
+      },
+      "type": {
+        "@id": "http://purl.org/dc/terms/type",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
+        }
+      },
+      "uitvoerendBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+        }
+      },
+      "uitvoerendeOverheden": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "uitzonderingen": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception",
+        "@container": "@language"
+      },
+      "verdereBeschrijving": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription",
+        "@container": "@language"
+      },
+      "voorwaarden": {
+        "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+        "@type": "@id"
+      },
+      "websites": {
+        "@container": "@set",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+        "@type": "@id"
+      },
+      "yourEuropeCategorieen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
+        }
+      },
+      "zoektermen": {
+        "@container": [
+          "@language",
+          "@set"
+        ],
+        "@id": "http://www.w3.org/ns/dcat#keyword"
+      }
+    },
+    "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicServiceSnapshot"
+  },
+  "Contactgegevens": {
+    "@context": {
+      "adres": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address",
+        "@type": "@id"
+      },
+      "email": {
+        "@id": "http://schema.org/email",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "openingsuren": {
+        "@id": "http://schema.org/openingHours",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "order": {
+        "@id": "http://www.w3.org/ns/shacl#order",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "telefoonnummer": {
+        "@id": "http://schema.org/telephone",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "url": {
+        "@id": "http://schema.org/url",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    "@id": "http://schema.org/ContactPoint"
+  },
+  "FinancieelVoordeel": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "order": {
+        "@id": "http://www.w3.org/ns/shacl#order",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    },
+    "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage"
+  },
+  "Instantie": {
+    "@context": {
+      "aangemaaktDoor": {
+        "@id": "http://purl.org/pav/createdBy",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "bevoegdBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+        }
+      },
+      "bevoegdeOverheden": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "contactgegevens": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasContactPoint",
+        "@type": "@id"
+      },
+      "creatie": {
+        "@id": "http://schema.org/dateCreated",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "doelgroepen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+        }
+      },
+      "eindeDienstVerlening": {
+        "@id": "http://schema.org/endDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "financieleVoordelen": {
+        "@container": "@set",
+        "@id": "http://purl.org/vocab/cpsv#produces",
+        "@type": "@id"
+      },
+      "gearchiveerd": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived",
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+      },
+      "geografischToepassingsgebieden": {
+        "@container": "@set",
+        "@id": "http://purl.org/dc/terms/spatial",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://data.europa.eu/nuts/code/"
+        }
+      },
+      "kosten": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCost",
+        "@type": "@id"
+      },
+      "laatstGewijzigd": {
+        "@id": "http://schema.org/dateModified",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "linkedConcept": {
+        "@id": "http://purl.org/dc/terms/source",
+        "@type": "@id"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "procedures": {
+        "@id": "http://purl.org/vocab/cpsv#follows",
+        "@type": "@id"
+      },
+      "productnummer": {
+        "@id": "http://schema.org/productID",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "publicatiekanalen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+        }
+      },
+      "regelgeving": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasLegalResource",
+        "@type": "@id"
+      },
+      "regelgevingTekst": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation",
+        "@container": "@language"
+      },
+      "startDienstVerlening": {
+        "@id": "http://schema.org/startDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "tags": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#instanceTag",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/InstantieTag/"
+        }
+      },
+      "talen": {
+        "@container": "@set",
+        "@id": "http://purl.org/dc/terms/language",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://publications.europa.eu/resource/authority/language/"
+        }
+      },
+      "themas": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/thematicArea",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+        }
+      },
+      "type": {
+        "@id": "http://purl.org/dc/terms/type",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
+        }
+      },
+      "uitvoerendBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+        }
+      },
+      "uitvoerendeOverheden": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "uitzonderingen": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception",
+        "@container": "@language"
+      },
+      "verdereBeschrijving": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription",
+        "@container": "@language"
+      },
+      "voorwaarden": {
+        "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+        "@type": "@id"
+      },
+      "websites": {
+        "@container": "@set",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+        "@type": "@id"
+      },
+      "yourEuropeCategorieen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
+        }
+      },
+      "zoektermen": {
+        "@container": [
+          "@language",
+          "@set"
+        ],
+        "@id": "http://www.w3.org/ns/dcat#keyword"
+      }
+    },
+    "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService"
+  },
+  "InstantieSnapshot": {
+    "@context": {
+      "aangemaaktDoor": {
+        "@id": "http://purl.org/pav/createdBy",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "bevoegdBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/"
+        }
+      },
+      "bevoegdeOverheden": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCompetentAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "contactgegevens": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasContactPoint",
+        "@type": "@id"
+      },
+      "creatie": {
+        "@id": "http://schema.org/dateCreated",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "doelgroepen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/"
+        }
+      },
+      "eindeDienstVerlening": {
+        "@id": "http://schema.org/endDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "financieleVoordelen": {
+        "@container": "@set",
+        "@id": "http://purl.org/vocab/cpsv#produces",
+        "@type": "@id"
+      },
+      "gearchiveerd": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived",
+        "@type": "http://www.w3.org/2001/XMLSchema#boolean"
+      },
+      "generatedAtTime": {
+        "@id": "http://www.w3.org/ns/prov#generatedAtTime",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "geografischToepassingsgebieden": {
+        "@container": "@set",
+        "@id": "http://purl.org/dc/terms/spatial",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://data.europa.eu/nuts/code/"
+        }
+      },
+      "isVersionOf": {
+        "@id": "http://purl.org/dc/terms/isVersionOf",
+        "@type": "@id"
+      },
+      "kosten": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasCost",
+        "@type": "@id"
+      },
+      "laatstGewijzigd": {
+        "@id": "http://schema.org/dateModified",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "linkedConcept": {
+        "@id": "http://purl.org/dc/terms/source",
+        "@type": "@id"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "procedures": {
+        "@id": "http://purl.org/vocab/cpsv#follows",
+        "@type": "@id"
+      },
+      "productnummer": {
+        "@id": "http://schema.org/productID",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      },
+      "publicatiekanalen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/"
+        }
+      },
+      "regelgeving": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/hasLegalResource",
+        "@type": "@id"
+      },
+      "regelgevingTekst": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation",
+        "@container": "@language"
+      },
+      "startDienstVerlening": {
+        "@id": "http://schema.org/startDate",
+        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
+      },
+      "tags": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#instanceTag",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/InstantieTag/"
+        }
+      },
+      "talen": {
+        "@container": "@set",
+        "@id": "http://purl.org/dc/terms/language",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://publications.europa.eu/resource/authority/language/"
+        }
+      },
+      "themas": {
+        "@container": "@set",
+        "@id": "http://data.europa.eu/m8g/thematicArea",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Thema/"
+        }
+      },
+      "type": {
+        "@id": "http://purl.org/dc/terms/type",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/Type/"
+        }
+      },
+      "uitvoerendBestuursniveaus": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/"
+        }
+      },
+      "uitvoerendeOverheden": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://data.vlaanderen.be/id/organisatie/"
+        }
+      },
+      "uitzonderingen": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception",
+        "@container": "@language"
+      },
+      "verdereBeschrijving": {
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription",
+        "@container": "@language"
+      },
+      "voorwaarden": {
+        "@id": "http://vocab.belgif.be/ns/publicservice#hasRequirement",
+        "@type": "@id"
+      },
+      "websites": {
+        "@container": "@set",
+        "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+        "@type": "@id"
+      },
+      "yourEuropeCategorieen": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory",
+        "@type": "@id",
+        "@context": {
+          "@base": "https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/"
+        }
+      },
+      "zoektermen": {
+        "@container": [
+          "@language",
+          "@set"
+        ],
+        "@id": "http://www.w3.org/ns/dcat#keyword"
+      }
+    },
+    "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot"
+  },
+  "Kost": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "order": {
+        "@id": "http://www.w3.org/ns/shacl#order",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    },
+    "@id": "http://data.europa.eu/m8g/Cost"
+  },
+  "Procedure": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "order": {
+        "@id": "http://www.w3.org/ns/shacl#order",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "websites": {
+        "@container": "@set",
+        "@id": "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite",
+        "@type": "@id"
+      }
+    },
+    "@id": "http://purl.org/vocab/cpsv#Rule"
+  },
+  "PubliekeOrganisatie": "http://data.europa.eu/m8g/PublicOrganisation",
+  "Regelgeving": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "order": {
+        "@id": "http://www.w3.org/ns/shacl#order",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "url": {
+        "@id": "http://schema.org/url",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    "@id": "http://data.europa.eu/eli/ontology#LegalResource"
+  },
+  "Voorwaarde": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "bewijs": {
+        "@id": "http://data.europa.eu/m8g/hasSupportingEvidence",
+        "@type": "@id"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "order": {
+        "@id": "http://www.w3.org/ns/shacl#order",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      }
+    },
+    "@id": "http://data.europa.eu/m8g/Requirement"
+  },
+  "Website": {
+    "@context": {
+      "beschrijving": {
+        "@id": "http://purl.org/dc/terms/description",
+        "@container": "@language"
+      },
+      "naam": {
+        "@id": "http://purl.org/dc/terms/title",
+        "@container": "@language"
+      },
+      "order": {
+        "@id": "http://www.w3.org/ns/shacl#order",
+        "@type": "http://www.w3.org/2001/XMLSchema#integer"
+      },
+      "url": {
+        "@id": "http://schema.org/url",
+        "@type": "http://www.w3.org/2001/XMLSchema#string"
+      }
+    },
+    "@id": "http://schema.org/WebSite"
+  }
+}
