@@ -8,23 +8,24 @@
       {
         "node": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0",
         "path": "generatedAtTime",
-        "@type": "LessThanRelationOrEqualToRelation"
+        "@type": "LessThanOrEqualToRelation"
       }
     ]
   },
-  "@context": "http://ipdc-stub/ConceptJsonLdContext.jsonld",
+  "@context": [
+    "http://ipdc-stub/ipdc-lpdc-im.jsonld",
+    "http://ipdc-stub/ldes.jsonld"
+  ],
   "@id": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=1",
   "@type": "EventStream",
   "member": [
     {
-      "id": "f23a4afa-5d92-4331-8f1d-a2b17382b6e9",
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/f23a4afa-5d92-4331-8f1d-a2b17382b6e9",
+      "@type": "ConceptSnapshot",
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/9adcd3db-3acc-4707-867f-e82a8b6429f8",
+      "creatie": "2023-03-07T15:14:30.875550568Z",
+      "laatstGewijzigd": "2023-03-07T15:14:30.875551378Z",
       "generatedAtTime": "2023-03-07T15:14:53.754173Z",
-      "bevoegdBestuursniveaus": [
-        "Vlaams"
-      ],
-      "uitvoerendBestuursniveaus": [
-        "Lokaal"
-      ],
       "naam": {
         "nl-BE-x-generated-informal": "Financiële tussenkomst voor een verblijf in een woonzorgcentrum - informal",
         "nl-BE-x-generated-formal": "Financiële tussenkomst voor een verblijf in een woonzorgcentrum - formal",
@@ -37,22 +38,6 @@
         "nl-BE-x-generated-informal": "<p>Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - informal</p>",
         "nl-BE-x-generated-formal": "<p>Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - formal</p>"
       },
-      "publicatiekanalen": [
-        "YourEurope"
-      ],
-      "tags": [
-        "YourEuropeVerplicht"
-      ],
-      "themas": [
-        "BouwenWonen",
-        "WelzijnGezondheid"
-      ],
-      "doelgroepen": [
-        "Burger"
-      ],
-      "yourEuropeCategorieen": [
-        "GezondheidszorgWoonzorgcentrum"
-      ],
       "voorwaarden": [
         {
           "beschrijving": {
@@ -80,9 +65,9 @@
               "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal 1",
               "en": "Evidence to bring with you 1"
             },
-            "@type": "bewijsType"
+            "@type": "Bewijs"
           },
-          "@type": "voorwaarde",
+          "@type": "Voorwaarde",
           "order": 0.0
         },
         {
@@ -111,9 +96,9 @@
               "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal 2",
               "en": "Evidence to bring with you 2"
             },
-            "@type": "bewijsType"
+            "@type": "Bewijs"
           },
-          "@type": "voorwaarde",
+          "@type": "Voorwaarde",
           "order": 1.0
         },
         {
@@ -142,9 +127,9 @@
               "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal 3",
               "en": "Evidence to bring with you 3"
             },
-            "@type": "bewijsType"
+            "@type": "Bewijs"
           },
-          "@type": "voorwaarde",
+          "@type": "Voorwaarde",
           "order": 2.0
         }
       ],
@@ -177,7 +162,7 @@
                 "nl-BE-x-generated-informal": "procedure website beschrijving - informal 2"
               },
               "url": "https://procedure-website2.com",
-              "@type": "website",
+              "@type": "Website",
               "order": 1.0
             },
             {
@@ -194,7 +179,7 @@
                 "nl-BE-x-generated-informal": "procedure website beschrijving - informal 1"
               },
               "url": "https://procedure-website1.com",
-              "@type": "website",
+              "@type": "Website",
               "order": 0.0
             },
             {
@@ -211,118 +196,12 @@
                 "nl-BE-x-generated-informal": "procedure website beschrijving - informal 3"
               },
               "url": "https://procedure-website3.com",
-              "@type": "website",
+              "@type": "Website",
               "order": 2.0
             }
           ],
-          "@type": "procedure",
+          "@type": "Procedure",
           "order": 0.0
-        }
-      ],
-      "websites": [
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 1",
-            "nl": "Website Belgische nationaliteit en naturalisatie - nl 1",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 1",
-            "en": "Website Belgische nationaliteit en naturalisatie - en 1"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 1",
-            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl 1",
-            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 1",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 1"
-          },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_1",
-          "@type": "website",
-          "order": 0.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 3",
-            "nl": "Website Belgische nationaliteit en naturalisatie 3",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 3",
-            "en": "Website Belgische nationaliteit en naturalisatie - en 3"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 3",
-            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 3",
-            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 3",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 3"
-          },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_3",
-          "@type": "website",
-          "order": 2.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 2",
-            "nl": "Website Belgische nationaliteit en naturalisatie 2",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 2",
-            "en": "Website Belgische nationaliteit en naturalisatie - en 2"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 2",
-            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 2",
-            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 2",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 2"
-          },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_2",
-          "@type": "website",
-          "order": 1.0
-        }
-      ],
-      "regelgevendeBronnen": [
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 1",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie - nl 1",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 1",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 1"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 1",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - nl 1",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 1",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 1"
-          },
-          "url": "https://codex.be/regelgevende-bron-1",
-          "@type": "regelgevendeBron",
-          "order": 0.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 3",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 3",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 3",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 3"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 3",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 3",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 3",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 3"
-          },
-          "url": "https://codex.be/regelgevende-bron-3",
-          "@type": "regelgevendeBron",
-          "order": 2.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 2",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 2",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 2",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 2"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 2",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 2",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 2",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 2"
-          },
-          "url": "https://codex.be/regelgevende-bron-2",
-          "@type": "regelgevendeBron",
-          "order": 1.0
         }
       ],
       "kosten": [
@@ -339,7 +218,7 @@
             "nl-BE-x-generated-formal": "Bedrag kost - formal 3",
             "en": "Bedrag kost - en 3"
           },
-          "@type": "kost",
+          "@type": "Kost",
           "order": 2.0
         },
         {
@@ -355,7 +234,7 @@
             "nl-BE-x-generated-formal": "Bedrag kost - formal 1",
             "en": "Bedrag kost - en 1"
           },
-          "@type": "kost",
+          "@type": "Kost",
           "order": 0.0
         },
         {
@@ -371,7 +250,7 @@
             "nl-BE-x-generated-formal": "Bedrag kost - formal 2",
             "en": "Bedrag kost - en 2"
           },
-          "@type": "kost",
+          "@type": "Kost",
           "order": 1.0
         }
       ],
@@ -389,7 +268,7 @@
             "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 1",
             "en": "Titel financieel voordeel. - en 1"
           },
-          "@type": "financieelVoordeel",
+          "@type": "FinancieelVoordeel",
           "order": 0.0
         },
         {
@@ -405,7 +284,7 @@
             "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 2",
             "en": "Titel financieel voordeel. - en 2"
           },
-          "@type": "financieelVoordeel",
+          "@type": "FinancieelVoordeel",
           "order": 1.0
         },
         {
@@ -421,24 +300,143 @@
             "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 3",
             "en": "Titel financieel voordeel. - en 3"
           },
-          "@type": "financieelVoordeel",
+          "@type": "FinancieelVoordeel",
           "order": 2.0
         }
       ],
+      "regelgeving": [
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 1",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie - nl 1",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 1",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 1"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 1",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - nl 1",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 1",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 1"
+          },
+          "url": "https://codex.be/regelgevende-bron-1",
+          "@type": "Regelgeving",
+          "order": 0.0
+        },
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 3",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 3",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 3",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 3"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 3",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 3",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 3",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 3"
+          },
+          "url": "https://codex.be/regelgevende-bron-3",
+          "@type": "Regelgeving",
+          "order": 2.0
+        },
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 2",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 2",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 2",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 2"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 2",
+            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 2",
+            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 2",
+            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 2"
+          },
+          "url": "https://codex.be/regelgevende-bron-2",
+          "@type": "Regelgeving",
+          "order": 1.0
+        }
+      ],
+      "websites": [
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 1",
+            "nl": "Website Belgische nationaliteit en naturalisatie - nl 1",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 1",
+            "en": "Website Belgische nationaliteit en naturalisatie - en 1"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 1",
+            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl 1",
+            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 1",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 1"
+          },
+          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_1",
+          "@type": "Website",
+          "order": 0.0
+        },
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 3",
+            "nl": "Website Belgische nationaliteit en naturalisatie 3",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 3",
+            "en": "Website Belgische nationaliteit en naturalisatie - en 3"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 3",
+            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 3",
+            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 3",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 3"
+          },
+          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_3",
+          "@type": "Website",
+          "order": 2.0
+        },
+        {
+          "naam": {
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 2",
+            "nl": "Website Belgische nationaliteit en naturalisatie 2",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 2",
+            "en": "Website Belgische nationaliteit en naturalisatie - en 2"
+          },
+          "beschrijving": {
+            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 2",
+            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 2",
+            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 2",
+            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 2"
+          },
+          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_2",
+          "@type": "Website",
+          "order": 1.0
+        }
+      ],
+      "type": "FinancieelVoordeel",
+      "doelgroepen": [
+        "Burger"
+      ],
+      "themas": [
+        "BouwenWonen",
+        "WelzijnGezondheid"
+      ],
+      "bevoegdBestuursniveaus": [
+        "Vlaams"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal"
+      ],
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "yourEuropeCategorieen": [
+        "GezondheidszorgWoonzorgcentrum"
+      ],
       "startDienstVerlening": "2020-01-01T00:00:00Z",
       "eindeDienstVerlening": "2030-12-31T00:00:00Z",
-      "type": "FinancieelVoordeel",
-      "talen": [
-        "ENG",
-        "DEU"
-      ],
-      "creatie": "2023-03-07T15:14:30.875550568Z",
-      "laatstGewijzigd": "2023-03-07T15:14:30.875551378Z",
       "productnummer": "10092",
-      "gearchiveerd": false,
-      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/f23a4afa-5d92-4331-8f1d-a2b17382b6e9",
-      "@type": "ConceptualPublicServiceSnapshot",
-      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/9adcd3db-3acc-4707-867f-e82a8b6429f8"
+      "gearchiveerd": false
     }
   ]
 }

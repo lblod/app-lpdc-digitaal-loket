@@ -200,12 +200,23 @@ app.post('/instanties/notfail', (req, res, next) => {
 });
 
 
-app.get('/ConceptJsonLdContext.jsonld', (req, res, next) => {
+app.get('/ipdc-lpdc-im.jsonld', (req, res, next) => {
     try {
-        const context = fs.readFileSync(`./ldes-pages/ConceptJsonLdContext.jsonld`, "utf8");
+        const context = fs.readFileSync(`./ldes-pages/ipdc-lpdc-im.jsonld`, "utf8");
         const jsonLd = JSON.parse(context);
         res.status(200).type('application/ld+json').json(jsonLd);
-        console.log(`Streamed ConceptJsonLdContext.jsonld`);
+        console.log(`Streamed ipdc-lpdc-im.jsonld`);
+    } catch (e) {
+        next(e)
+    }
+});
+
+app.get('/ldes.jsonld', (req, res, next) => {
+    try {
+        const context = fs.readFileSync(`./ldes-pages/ldes.jsonld`, "utf8");
+        const jsonLd = JSON.parse(context);
+        res.status(200).type('application/ld+json').json(jsonLd);
+        console.log(`Streamed ldes.jsonld`);
     } catch (e) {
         next(e)
     }

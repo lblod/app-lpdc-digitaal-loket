@@ -865,16 +865,12 @@
       "@id": "https://w3id.org/tree#LessThanOrEqualToRelation"
     }
   },
-  "id": "50fd7f03-276f-403e-ad39-152dba4e39be",
+  "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be",
+  "@type": "ConceptSnapshot",
+  "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84",
+  "creatie": "2023-07-12T11:40:20.026205561Z",
+  "laatstGewijzigd": "2023-07-12T11:40:20.026209604Z",
   "generatedAtTime": "2023-07-12T11:40:20.441775Z",
-  "bevoegdBestuursniveaus": [
-    "Federaal",
-    "Europees"
-  ],
-  "uitvoerendBestuursniveaus": [
-    "Lokaal",
-    "Derden"
-  ],
   "naam": {
     "nl-BE-x-generated-informal": "Akte van Belgische nationaliteit - informal",
     "nl-BE-x-generated-formal": "Akte van Belgische nationaliteit - formal",
@@ -893,35 +889,11 @@
     "nl-BE-x-generated-formal": "Verdere beschrijving - formal",
     "en": "<p>The certificate states:</p><ul><li>the last name, first names, date and place of birth of the person to whom the certificate relates</li><li>the legal foundation of the declaration on the basis of which the certificate was drawn up</li><li>in the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.</li></ul><p>Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:</p><ul><li>A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.</li></ul><ul><li>An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.</li></ul>"
   },
-  "publicatiekanalen": [
-    "YourEurope"
-  ],
-  "tags": [
-    "YourEuropeVerplicht"
-  ],
-  "themas": [
-    "BurgerOverheid",
-    "CultuurSportVrijeTijd"
-  ],
-  "doelgroepen": [
-    "Burger",
-    "Onderneming"
-  ],
-  "yourEuropeCategorieen": [
-    "VerblijfNaturalisatie",
-    "VoertuigenVerkeersregels"
-  ],
   "uitzonderingen": {
     "nl": "Uitzonderingen - nl",
     "nl-BE-x-generated-formal": "Uitzonderingen - formal",
     "nl-BE-x-generated-informal": "Uitzonderingen - informal",
     "en": "Uitzonderingen - en"
-  },
-  "regelgevingTekst": {
-    "nl-BE-x-generated-informal": "Regelgeving - informal",
-    "nl-BE-x-generated-formal": "Regelgeving - formal",
-    "nl": "Regelgeving - nl",
-    "en": "Regelgeving - en"
   },
   "voorwaarden": [
     {
@@ -950,9 +922,9 @@
           "nl-BE-x-generated-formal": "Bewijs - formal",
           "en": "Evidence"
         },
-        "@type": "bewijsType"
+        "@type": "Bewijs"
       },
-      "@type": "voorwaarde",
+      "@type": "Voorwaarde",
       "order": 0.0
     }
   ],
@@ -985,11 +957,60 @@
             "nl-BE-x-generated-informal": "procedure website beschrijving - informal"
           },
           "url": "https://procedure-website.com",
-          "@type": "website",
+          "@type": "Website",
           "order": 0.0
         }
       ],
-      "@type": "procedure",
+      "@type": "Procedure",
+      "order": 0.0
+    }
+  ],
+  "kosten": [
+    {
+      "beschrijving": {
+        "nl": "<p>De aanvraag en het attest zijn gratis.</p> - nl",
+        "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis.</p> - informal",
+        "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis.</p> - formal",
+        "en": "<p>De aanvraag en het attest zijn gratis.</p> - en"
+      },
+      "naam": {
+        "nl": "Bedrag kost - nl",
+        "nl-BE-x-generated-informal": "Bedrag kost - informal",
+        "nl-BE-x-generated-formal": "Bedrag kost - formal",
+        "en": "bedrag kost - en"
+      },
+      "@type": "Kost",
+      "order": 0.0
+    }
+  ],
+  "financieleVoordelen": [
+    {
+      "beschrijving": {
+        "nl": "<p>Beschrijving financieel voordeel.</p> - nl",
+        "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel.</p> - informal",
+        "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel.</p> - formal",
+        "en": "<p>Beschrijving financieel voordeel.</p> - en"
+      },
+      "naam": {
+        "nl": "Titel financieel voordeel. - nl",
+        "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal",
+        "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
+        "en": "Titel financieel voordeel. - en"
+      },
+      "@type": "FinancieelVoordeel",
+      "order": 0.0
+    }
+  ],
+  "regelgevingTekst": {
+    "nl-BE-x-generated-informal": "Regelgeving - informal",
+    "nl-BE-x-generated-formal": "Regelgeving - formal",
+    "nl": "Regelgeving - nl",
+    "en": "Regelgeving - en"
+  },
+  "regelgeving": [
+    {
+      "url": "https://ipdc.be/regelgeving",
+      "@type": "Regelgeving",
       "order": 0.0
     }
   ],
@@ -1008,62 +1029,45 @@
         "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal"
       },
       "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
-      "@type": "website",
+      "@type": "Website",
       "order": 0.0
     }
   ],
-  "kosten": [
-    {
-      "beschrijving": {
-        "nl": "<p>De aanvraag en het attest zijn gratis.</p> - nl",
-        "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis.</p> - informal",
-        "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis.</p> - formal",
-        "en": "<p>De aanvraag en het attest zijn gratis.</p> - en"
-      },
-      "naam": {
-        "nl": "Bedrag kost - nl",
-        "nl-BE-x-generated-informal": "Bedrag kost - informal",
-        "nl-BE-x-generated-formal": "Bedrag kost - formal",
-        "en": "bedrag kost - en"
-      },
-      "@type": "kost",
-      "order": 0.0
-    }
+  "type": "FinancieelVoordeel",
+  "doelgroepen": [
+    "Burger",
+    "Onderneming"
   ],
-  "financieleVoordelen": [
-    {
-      "beschrijving": {
-        "nl": "<p>Beschrijving financieel voordeel.</p> - nl",
-        "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel.</p> - informal",
-        "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel.</p> - formal",
-        "en": "<p>Beschrijving financieel voordeel.</p> - en"
-      },
-      "naam": {
-        "nl": "Titel financieel voordeel. - nl",
-        "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal",
-        "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
-        "en": "Titel financieel voordeel. - en"
-      },
-      "@type": "financieelVoordeel",
-      "order": 0.0
-    }
+  "themas": [
+    "BurgerOverheid",
+    "CultuurSportVrijeTijd"
   ],
-  "regelgevendeBronnen": [
-    {
-      "url": "https://ipdc.be/regelgeving",
-      "@type": "regelgevendeBron",
-      "order": 0.0
-    }
+  "bevoegdBestuursniveaus": [
+    "Federaal",
+    "Europees"
+  ],
+  "uitvoerendBestuursniveaus": [
+    "Lokaal",
+    "Derden"
+  ],
+  "zoektermen": {
+    "nl": [
+      "Akte - nl",
+      "Nationaliteit - nl"
+    ]
+  },
+  "publicatiekanalen": [
+    "YourEurope"
+  ],
+  "tags": [
+    "YourEuropeVerplicht"
+  ],
+  "yourEuropeCategorieen": [
+    "VerblijfNaturalisatie",
+    "VoertuigenVerkeersregels"
   ],
   "startDienstVerlening": "2020-08-26T11:40:20.026205561Z",
   "eindeDienstVerlening": "2025-07-12T11:40:20.026205561Z",
-  "type": "FinancieelVoordeel",
-  "talen": [
-    "ENG",
-    "DEU"
-  ],
-  "creatie": "2023-07-12T11:40:20.026205561Z",
-  "laatstGewijzigd": "2023-07-12T11:40:20.026209604Z",
   "productnummer": "1502",
   "gearchiveerd": false,
   "publicatieLink": {
@@ -1079,14 +1083,5 @@
     "uJeVersie": "31.3.0",
     "generatedFormeleFields": true,
     "generatedInformeleFields": true
-  },
-  "zoektermen": {
-    "nl": [
-      "Akte - nl",
-      "Nationaliteit - nl"
-    ]
-  },
-  "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be",
-  "@type": "ConceptualPublicServiceSnapshot",
-  "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84"
+  }
 }

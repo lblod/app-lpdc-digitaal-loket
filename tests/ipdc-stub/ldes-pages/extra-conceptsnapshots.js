@@ -94,9 +94,9 @@ const voorwaarden = (randomStr) => {
                         "nl-BE-x-generated-formal": `Bewijs beschrijving - generated-formal${randomStr}`,
                         "nl-BE-x-generated-informal": `Bewijs beschrijving - generated-informal${randomStr}`,
                     },
-                    "@type": "bewijsType"
+                    "@type": "Bewijs"
                 },
-                "@type": "voorwaarde",
+                "@type": "Voorwaarde",
                 "order": 0.0
             }
         ],
@@ -130,11 +130,11 @@ const procedures = (randomStr) => {
                             "nl-BE-x-generated-informal": `Procedure Website beschrijving - generated-informal${randomStr}`,
                         },
                         "url": `https://procedure-website${randomStr.replace(/\s+/g, '')}.com`,
-                        "@type": "website",
+                        "@type": "Website",
                         "order": 0.0
                     }
                 ],
-                "@type": "procedure",
+                "@type": "Procedure",
                 "order": 0.0
             }
         ],
@@ -155,7 +155,7 @@ const kost = (randomStr, nmbr) => {
                     "nl-BE-x-generated-formal": `Kost beschrijving - generated-formal${randomStr}-${n}`,
                     "nl-BE-x-generated-informal": `Kost beschrijving - generated-informal${randomStr}-${n}`,
                 },
-                "@type": "kost",
+                "@type": "Kost",
                 "order": n - 1
             }))
     }
@@ -175,7 +175,7 @@ const financieleVoordelen = (randomStr) => {
                     "nl-BE-x-generated-formal": `Financieel Voordeel beschrijving - generated-formal${randomStr}`,
                     "nl-BE-x-generated-informal": `Financieel Voordeel beschrijving - generated-informal${randomStr}`,
                 },
-                "@type": "financieelVoordeel",
+                "@type": "FinancieelVoordeel",
                 "order": 0.0
             }
         ],
@@ -189,7 +189,7 @@ const regelgeving = (randomStr) => {
             "nl-BE-x-generated-formal": "Regelgeving - generated-formal${randomStr}",
             "nl-BE-x-generated-informal": `Regelgeving - generated-informal${randomStr}`,
         },
-        "regelgevendeBronnen": [
+        "regelgeving": [
             {
                 "naam": {
                     "nl": `Regelgevende bron${randomStr}`,
@@ -202,7 +202,7 @@ const regelgeving = (randomStr) => {
                     "nl-BE-x-generated-informal": `Regelgevende bron beschrijving - generated-informal${randomStr}`,
                 },
                 "url": `https://ipdc.be/regelgeving${randomStr.replace(/\s+/g, '')}`,
-                "@type": "regelgevendeBron",
+                "@type": "Regelgeving",
                 "order": 0.0
             }
         ],
@@ -230,7 +230,7 @@ const meerInfo = (randomStr, nmbr) => {
                     }
                 ,
                 "url": `https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit${randomStr.replace(/\s+/g, '')}-${n}`,
-                "@type": "website",
+                "@type": "Website",
                 "order": n - 1
             }))
     }
@@ -242,7 +242,11 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
     const randomData = ` - ${conceptId}`;
 
     return {
-        "id": id,
+        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
+        "@type": "ConceptSnapshot",
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`,
+        "creatie": "2023-10-10T15:25:09.822193785Z",
+        "laatstGewijzigd": new Date().toISOString(),
         "generatedAtTime": new Date().toISOString(),
         "naam": {
             "nl": `Concept created${randomData}`,
@@ -264,7 +268,6 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-formal": `Uitzonderingen created - generated-formal${randomData}`,
             "nl-BE-x-generated-informal": `Uitzonderingen created - generated-informal${randomData}`
         },
-        "creatie": "2023-10-10T15:25:09.822193785Z",
         ...voorwaarden(` - created${randomData}`),
         ...procedures(` - created${randomData}`),
         ...kost(` - created${randomData}`, 1),
@@ -299,12 +302,8 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
                 "publicatiekanalen": [],
                 "yourEuropeCategorieen": [],
             }),
-        "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
-        "gearchiveerd": false,
-        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
-        "@type": "ConceptualPublicServiceSnapshot",
-        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
+        "gearchiveerd": false
     };
 };
 
@@ -330,7 +329,11 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
     const themasElementUpdated = elementToUpdate?.startsWith("themas") ? [elementToUpdate.slice(7)] : undefined;
 
     return {
-        "id": id,
+        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
+        "@type": "ConceptSnapshot",
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`,
+        "creatie": "2023-10-10T15:25:09.822193785Z",
+        "laatstGewijzigd": new Date().toISOString(),
         "generatedAtTime": new Date().toISOString(),
         "naam": {
             "nl": `Concept updated${randomData}${naamElementTextUpdated}`,
@@ -386,13 +389,8 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
                 "publicatiekanalen": [],
                 "yourEuropeCategorieen": [],
             }),
-        "creatie": "2023-10-10T15:25:09.822193785Z",
-        "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
-        "gearchiveerd": false,
-        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
-        "@type": "ConceptualPublicServiceSnapshot",
-        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
+        "gearchiveerd": false
     };
 };
 
@@ -400,7 +398,11 @@ export const conceptArchive = (conceptId, withRandomNewData) => {
     const id = uuid();
     const randomData = ` - ${conceptId}${withRandomNewData ? ` - ${id}` : ''}`;
     return {
-        "id": id,
+        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
+        "@type": "ConceptSnapshot",
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`,
+        "creatie": "2023-10-10T15:25:09.822193785Z",
+        "laatstGewijzigd": new Date().toISOString(),
         "generatedAtTime": new Date().toISOString(),
         "naam": {
             "nl": `Concept archived${randomData}`,
@@ -412,20 +414,19 @@ export const conceptArchive = (conceptId, withRandomNewData) => {
             "nl-BE-x-generated-formal": `Concept beschrijving archived - generated-formal${randomData}`,
             "nl-BE-x-generated-informal": `Concept beschrijving archived - generated-informal${randomData}`,
         },
-        "creatie": "2023-10-10T15:25:09.822193785Z",
-        "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
-        "gearchiveerd": true,
-        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
-        "@type": "ConceptualPublicServiceSnapshot",
-        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
+        "gearchiveerd": true
     }
 };
 
 export const conceptInvalid = (conceptId) => {
     const id = uuid();
     return {
-        "id": id,
+        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
+        "@type": "ConceptSnapshot",
+        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`,
+        "creatie": "2023-10-10T15:25:09.822193785Z",
+        "laatstGewijzigd": new Date().toISOString(),
         "generatedAtTime": new Date().toISOString(),
         "naam": {
             "en": `Concept`
@@ -433,13 +434,8 @@ export const conceptInvalid = (conceptId) => {
         "beschrijving": {
             "nl": `Concept beschrijving`
         },
-        "creatie": "2023-10-10T15:25:09.822193785Z",
-        "laatstGewijzigd": new Date().toISOString(),
         "productnummer": "3000",
         "gearchiveerd": false,
-        "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,
-        "@type": "ConceptualPublicServiceSnapshot",
-        "isVersionOf": `https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}`
     }
 };
 
