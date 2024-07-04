@@ -2,6 +2,7 @@ import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import {v4 as uuid} from 'uuid';
 import {Language} from "./language";
 import {insertTriples} from "./sparql";
+import {pepingenId} from "./login";
 
 export const PublishedPublicServiceType = 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#PublishedInstancePublicServiceSnapshot';
 
@@ -17,7 +18,9 @@ export class PublishedPublicServiceTestBuilder {
     private generatedAtTime: Literal;
     private isPublishedVersionOf: Uri;
     private datePublished: Literal;
-    private createdBy: Uri
+    private createdBy: Uri;
+    private competentAuthority: Uri[] = [];
+    private spatial: Uri;
 
     static aMinimalPublishedService() {
         const instanceUuid = uuid();
@@ -32,6 +35,8 @@ export class PublishedPublicServiceTestBuilder {
             .withEndDate(new Date())
             .withGeneratedAtTime(new Date())
             .withIsPublishedVersionOf(new Uri(`http://data.lblod.info/id/public-service/${instanceUuid}`))
+            .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
     }
 
     private withType(): PublishedPublicServiceTestBuilder {
@@ -89,8 +94,18 @@ export class PublishedPublicServiceTestBuilder {
         return this;
     }
 
-    withCreatedBy(bestuurseenheidId: string){
+    withCreatedBy(bestuurseenheidId: string): PublishedPublicServiceTestBuilder {
         this.createdBy = new Uri(`http://data.lblod.info/id/bestuurseenheden/${bestuurseenheidId}`);
+        return this;
+    }
+
+    withCompetentAuthority(competentAuthority: Uri[]): PublishedPublicServiceTestBuilder {
+        this.competentAuthority = competentAuthority;
+        return this;
+    }
+
+    withSpatial(geografischToepassingsGebied: Uri) {
+        this.spatial = geografischToepassingsGebied;
         return this;
     }
 
@@ -111,6 +126,8 @@ export class PublishedPublicServiceTestBuilder {
             new Triple(this.id, Predicates.datePublished, this.datePublished),
             new Triple(this.id, Predicates.isPublishedVersionOf, this.isPublishedVersionOf),
             new Triple(this.id, Predicates.generatedAtTime, this.generatedAtTime),
+            ...this.competentAuthority.map(aCompetentAuthority => new Triple(this.id, Predicates.hasCompetentAuthority, aCompetentAuthority)),
+            new Triple(this.id, Predicates.spatial, this.spatial),
         ];
         return new TripleArray(triples);
     }

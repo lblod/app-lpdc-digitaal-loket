@@ -4,11 +4,12 @@ import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/publi
 import {dispatcherUrl} from "../test-helpers/test-options";
 import {Predicates, Uri} from "../test-helpers/triple-array";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
-import {InstancePublicationStatusType, InstanceStatus} from "../test-helpers/codelists";
+import {InstanceStatus} from "../test-helpers/codelists";
 import {Language} from "../test-helpers/language";
 import {deleteAll, fetchType} from "../test-helpers/sparql";
 import {v4 as uuid} from 'uuid';
 import moment from "moment";
+import {PublishedPublicServiceTestBuilder} from "../test-helpers/published-public-service.test-builder";
 
 test.describe('convert instance to informal', () => {
 
@@ -27,17 +28,23 @@ test.describe('convert instance to informal', () => {
         const uuid = 'e8843fda-b3a8-4334-905c-8e49eb12203b';
         const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
 
+        const sendDate = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withId(id)
             .withUUID(uuid)
             .withTitle('Volledig ingevulde test om contract tussen ipdc en lpdc te testen', Language.FORMAL)
             .withDescription('<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>', Language.FORMAL)
-            .withDateSent(new Date())
+            .withDateSent(sendDate)
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(moment().add(1, 'minute'))
             .withDateModified(new Date("2024-04-24T14:09:32.778Z"))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
+            .buildAndPersist(request, pepingenId);
+
+        await PublishedPublicServiceTestBuilder.aMinimalPublishedService()
+            .withGeneratedAtTime(sendDate)
+            .withIsPublishedVersionOf(instance.getId())
+            .withDatePublished(new Date())
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/convert-instance-to-informal`, {
@@ -66,16 +73,22 @@ test.describe('convert instance to informal', () => {
         const instanceUuid = uuid();
         const id = new Uri(`http://data.lblod.info/id/public-service/${instanceUuid}`)
 
+        const sendDate = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withId(id)
             .withUUID(instanceUuid)
             .withTitle('Instance title', Language.FORMAL)
             .withDescription('Instance description', Language.FORMAL)
-            .withDateSent(new Date())
+            .withDateSent(sendDate)
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
+            .buildAndPersist(request, pepingenId);
+
+        await PublishedPublicServiceTestBuilder.aMinimalPublishedService()
+            .withGeneratedAtTime(sendDate)
+            .withIsPublishedVersionOf(instance.getId())
+            .withDatePublished(new Date())
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/convert-instance-to-informal`, {
@@ -99,17 +112,24 @@ test.describe('convert instance to informal', () => {
         const uuid = 'aae82967-fd21-4a05-a870-7d2b43f4d443';
         const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
 
+        const sendDate = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withId(id)
             .withUUID(uuid)
             .withTitle('Instance title', Language.FORMAL)
             .withDescription('Instance description', Language.FORMAL)
-            .withDateSent(new Date())
+            .withDateSent(sendDate)
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
+
+        await PublishedPublicServiceTestBuilder.aMinimalPublishedService()
+            .withGeneratedAtTime(sendDate)
+            .withIsPublishedVersionOf(instance.getId())
+            .withDatePublished(new Date())
+            .buildAndPersist(request, pepingenId);
+
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/convert-instance-to-informal`, {
             headers: {
@@ -132,17 +152,24 @@ test.describe('convert instance to informal', () => {
         const uuid = 'abf83bb4-82cf-46a3-9739-8f53ff5d306c';
         const id = new Uri(`http://data.lblod.info/id/public-service/${uuid}`)
 
+        const sendDate = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withId(id)
             .withUUID(uuid)
             .withTitle('Instance title', Language.FORMAL)
             .withDescription('Instance description', Language.FORMAL)
-            .withDateSent(new Date())
+            .withDateSent(sendDate)
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
+
+        await PublishedPublicServiceTestBuilder.aMinimalPublishedService()
+            .withGeneratedAtTime(sendDate)
+            .withIsPublishedVersionOf(instance.getId())
+            .withDatePublished(new Date())
+            .buildAndPersist(request, pepingenId);
+
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/convert-instance-to-informal`, {
             headers: {
@@ -163,7 +190,6 @@ test.describe('convert instance to informal', () => {
             .withUUID(uuid)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -191,7 +217,6 @@ test.describe('convert instance to informal', () => {
             .withUUID(uuid)
             .withDateSent(new Date())
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);

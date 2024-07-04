@@ -88,9 +88,24 @@ async function fetchType(request: APIRequestContext, uri: string, type: string):
     return TripleArray.fromSparqlJsonResponse(await response.json());
 }
 
+async function fetchTombstone(request: APIRequestContext, instanceId: string): Promise<TripleArray> {
+    const query = `
+    SELECT ?s ?p ?o WHERE {
+        ?s a <https://www.w3.org/ns/activitystreams#Tombstone>;
+            <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>;
+            <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <${instanceId}>.
+        ?s ?p ?o .
+    } 
+    `;
+    const response = await request.get(`${virtuosoUrl}/sparql`, {params: {query: query, format: 'application/sparql-results+json'}});
+    expect(response.ok(), await response.text()).toBeTruthy();
+    return TripleArray.fromSparqlJsonResponse(await response.json());
+}
+
 export {
     insertTriples,
     deleteAll,
     fetchType,
     executeUpdate,
+    fetchTombstone
 }

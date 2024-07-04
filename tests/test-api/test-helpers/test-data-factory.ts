@@ -11,7 +11,6 @@ import {
     CompetentAuthorityLevel,
     ConceptTag,
     ExecutingAuthorityLevel,
-    InstancePublicationStatusType,
     InstanceStatus,
     ProductType,
     PublicationMedium,
@@ -25,7 +24,7 @@ import {ContactPointTestBuilder} from "./contact-point-test.builder";
 import {pepingenId} from "./login";
 import {AddressTestBuilder} from "./address.test-builder";
 import {Uri} from "./triple-array";
-import moment from "moment/moment";
+import {PublishedPublicServiceTestBuilder} from "./published-public-service.test-builder";
 
 
 export class TestDataFactory {
@@ -172,7 +171,7 @@ export class TestDataFactory {
             ]
         };
     }
-    async createFullToRepublishPublicService(request: APIRequestContext, organisatieId: string) {
+    async createFullPublicServiceThatIsPublished(request: APIRequestContext, organisatieId: string) {
         const supportingEvidence = await EvidenceTestBuilder.anEvidenceForInstance()
             .buildAndPersist(request, organisatieId);
 
@@ -203,6 +202,7 @@ export class TestDataFactory {
             .withAddress(address.getSubject())
             .buildAndPersist(request, organisatieId);
 
+        const sendDate = new Date();
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withTitle('Instance title', Language.INFORMAL)
             .withDescription('Instance description', Language.INFORMAL)
@@ -232,9 +232,14 @@ export class TestDataFactory {
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDateSent(new Date())
-            .withDatePublished(moment().subtract(1, 'minute'))
+            .withDateSent(sendDate)
             .buildAndPersist(request, organisatieId);
+
+        await PublishedPublicServiceTestBuilder.aMinimalPublishedService()
+            .withGeneratedAtTime(sendDate)
+            .withIsPublishedVersionOf(publicService.getId())
+            .withDatePublished(new Date())
+            .buildAndPersist(request, pepingenId);
 
         return {
             publicService: publicService,

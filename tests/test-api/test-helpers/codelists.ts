@@ -57,10 +57,6 @@ export enum InstanceStatus {
     verzonden = 'http://lblod.data.gift/concepts/instance-status/verzonden',
 }
 
-export enum InstancePublicationStatusType {
-    gepubliceerd = 'http://lblod.data.gift/concepts/publication-status/gepubliceerd',
-    teHerpubliceren = 'http://lblod.data.gift/concepts/publication-status/te-herpubliceren'
-}
 export enum YourEuropeCategory {
     Gezondheidszorg = 'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/Gezondheidszorg',
     GezondheidszorgWoonzorgcentrum = 'https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/GezondheidszorgWoonzorgcentrum',

@@ -2,9 +2,9 @@ import {expect, test} from "@playwright/test";
 import {PublicServiceTestBuilder, PublicServiceType, TombstoneType} from "../test-helpers/public-service.test-builder";
 import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {dispatcherUrl} from "../test-helpers/test-options";
-import {fetchType} from "../test-helpers/sparql";
+import {fetchTombstone, fetchType} from "../test-helpers/sparql";
 import {Predicates} from "../test-helpers/triple-array";
-import {InstancePublicationStatusType, ReviewStatus} from "../test-helpers/codelists";
+import {ReviewStatus} from "../test-helpers/codelists";
 import {RequirementTestBuilder, RequirementType} from "../test-helpers/requirement.test-builder";
 import ProcedureTestBuilder, {ProcedureType} from "../test-helpers/procedure.test-builder";
 import {WebsiteTestBuilder, WebsiteType} from "../test-helpers/website.test-builder";
@@ -21,18 +21,18 @@ test.describe('delete instance', () => {
 
     test('should remove triples and create tombstone', async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
-        const {publicService} = await new TestDataFactory().createFullToRepublishPublicService(request, pepingenId);
+        const {publicService} = await new TestDataFactory().createFullPublicServiceThatIsPublished(request, pepingenId);
 
         const response = await request.delete(`${dispatcherUrl}/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {params: {cookie: loginResponse.cookie}});
         expect(response.ok(), await response.text()).toBeTruthy();
 
         const triples = await fetchType(request, publicService.getSubject().getValue(), PublicServiceType);
         expect(triples.getTriples()).toHaveLength(0);
-        const tombstoneTriples = await fetchType(request, publicService.getSubject().getValue(), TombstoneType);
-        expect(tombstoneTriples.getTriples()).toHaveLength(4);
-        expect(tombstoneTriples.getSubject()).toEqual(publicService.getSubject());
+        const tombstoneTriples = await fetchTombstone(request, publicService.getSubject().getValue());
+        expect(tombstoneTriples.getTriples()).toHaveLength(5);
         expect(tombstoneTriples.findTriple(Predicates.type).getObjectValue()).toEqual(TombstoneType);
         expect(tombstoneTriples.findTriple(Predicates.formerType).getObjectValue()).toEqual(PublicServiceType);
+        expect(tombstoneTriples.findTriple(Predicates.isPublishedVersionOf).getObjectValue()).toEqual(publicService.getSubject().getValue())
         expect(tombstoneTriples.findTriple(Predicates.deleteTime)).toBeDefined();
     });
 

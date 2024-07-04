@@ -2,12 +2,13 @@ import {expect, test} from "@playwright/test";
 import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {PublicServiceTestBuilder, PublicServiceType} from "../test-helpers/public-service.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
-import {Predicates} from "../test-helpers/triple-array";
+import {Predicates, Uri} from "../test-helpers/triple-array";
 import {ChosenForm, FormalInformalChoiceTestBuilder} from "../test-helpers/formal-informal-choice.test-builder";
-import {InstancePublicationStatusType, InstanceStatus} from "../test-helpers/codelists";
+import {InstanceStatus} from "../test-helpers/codelists";
 import {Language} from "../test-helpers/language";
 import {fetchType} from "../test-helpers/sparql";
 import moment from "moment";
+import {PublishedPublicServiceTestBuilder} from "../test-helpers/published-public-service.test-builder";
 
 test.describe('confirm instance is already informal', () => {
 
@@ -19,14 +20,22 @@ test.describe('confirm instance is already informal', () => {
             .withChosenForm(ChosenForm.INFORMAL)
             .buildAndPersist(request)
 
+        const sendDate = new Date();
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withTitle('Instance title', Language.FORMAL)
             .withDescription('Instance description', Language.FORMAL)
-            .withDateSent(new Date())
+            .withDateSent(sendDate)
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(moment().add(1, 'minute'))
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
+            .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
+            .buildAndPersist(request, pepingenId);
+
+        await PublishedPublicServiceTestBuilder.aMinimalPublishedService()
+            .withGeneratedAtTime(sendDate)
+            .withIsPublishedVersionOf(instance.getId())
+            .withDatePublished(new Date())
             .buildAndPersist(request, pepingenId);
 
         const response = await request.post(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(instance.getId().getValue())}/confirm-instance-is-already-informal`, {
@@ -46,7 +55,6 @@ test.describe('confirm instance is already informal', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withDateSent(moment().subtract(1, 'minute'))
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);
@@ -69,7 +77,6 @@ test.describe('confirm instance is already informal', () => {
         const instance = await PublicServiceTestBuilder.aPublicService()
             .withDateSent(moment().subtract(1, 'minute'))
             .withInstanceStatus(InstanceStatus.verzonden)
-            .withDatePublished(new Date())
             .withNeedsConversionFromFormalToInformal(true)
             .withDutchLanguageVariant(Language.FORMAL)
             .buildAndPersist(request, pepingenId);

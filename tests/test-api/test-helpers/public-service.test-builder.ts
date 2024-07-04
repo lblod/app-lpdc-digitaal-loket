@@ -5,7 +5,6 @@ import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import {
     CompetentAuthorityLevel,
     ExecutingAuthorityLevel,
-    InstancePublicationStatusType,
     InstanceStatus,
     ProductType,
     PublicationMedium,
@@ -58,8 +57,6 @@ export class PublicServiceTestBuilder {
     private reviewStatus: Uri;
     private instanceStatus: Uri;
     private dateSent: Literal;
-    private publicationStatus: Uri; //TODO LPDC-1236 remove
-    private datePublished: Literal; //TODO LPDC-1236 remove
     private dutchLanguageVariant: Literal;
     private needsConversionFromFormalToInformal: Literal;
     private forMunicipalityMerger: Literal;
@@ -313,11 +310,6 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
-    withDatePublished(date: Date) {
-        this.datePublished = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
-        return this;
-    }
-
     withDutchLanguageVariant(language: Language) {
         this.dutchLanguageVariant = new Literal(language);
         return this;
@@ -374,8 +366,6 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.reviewStatus, this.reviewStatus),
             new Triple(this.id, Predicates.instanceStatus, this.instanceStatus),
             new Triple(this.id, Predicates.dateSent, this.dateSent),
-            new Triple(this.id, Predicates.publicationStatus, this.publicationStatus),
-            new Triple(this.id, Predicates.datePublished, this.datePublished),
             new Triple(this.id, Predicates.dutchLanguageVariant, this.dutchLanguageVariant),
             new Triple(this.id, Predicates.needsConversionFromFormalToInformal, this.needsConversionFromFormalToInformal),
             new Triple(this.id, Predicates.forMunicipalityMerger, this.forMunicipalityMerger),
