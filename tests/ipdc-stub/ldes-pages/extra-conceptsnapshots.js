@@ -236,7 +236,7 @@ const meerInfo = (randomStr, nmbr) => {
     }
 };
 
-export const conceptCreate = (conceptId, withRandomNewData) => {
+export const conceptSnapshotCreate = (conceptId, withRandomNewData) => {
     const id = uuid();
 
     const randomData = ` - ${conceptId}`;
@@ -307,7 +307,7 @@ export const conceptCreate = (conceptId, withRandomNewData) => {
     };
 };
 
-export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => {
+export const conceptSnapshotUpdate = (conceptId, withRandomNewData, elementToUpdate) => {
     const id = uuid();
 
     const randomData = ` - ${conceptId}${withRandomNewData ? ` - ${id}` : ''}`;
@@ -394,7 +394,7 @@ export const conceptUpdate = (conceptId, withRandomNewData, elementToUpdate) => 
     };
 };
 
-export const conceptArchive = (conceptId, withRandomNewData) => {
+export const conceptSnapshotArchive = (conceptId, withRandomNewData) => {
     const id = uuid();
     const randomData = ` - ${conceptId}${withRandomNewData ? ` - ${id}` : ''}`;
     return {
@@ -419,7 +419,7 @@ export const conceptArchive = (conceptId, withRandomNewData) => {
     }
 };
 
-export const conceptInvalid = (conceptId) => {
+export const conceptSnapshotInvalid = (conceptId) => {
     const id = uuid();
     return {
         "@id": `https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${id}`,

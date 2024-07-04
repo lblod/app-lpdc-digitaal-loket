@@ -1,6 +1,6 @@
 import express from "express";
 import fs from "fs";
-import {conceptArchive, conceptCreate, conceptInvalid, conceptUpdate} from "./ldes-pages/extra-conceptsnapshots.js";
+import {conceptSnapshotArchive, conceptSnapshotCreate, conceptSnapshotInvalid, conceptSnapshotUpdate} from "./ldes-pages/extra-conceptsnapshots.js";
 import { graph, isLiteral, literal, parse, quad } from "rdflib";
 
 let jsonld = undefined;
@@ -87,7 +87,7 @@ app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
 
                 const jsonLdDocument = await jsonld.fromRDF(quads.map(q => quad(q.subject, q.predicate, q.object, null)));
 
-                //note: compacting does not work properly when having a nested container with blank nodes ... it generates a grraph, which we don't want? For now, there is no e2e that relies on this, so we leave it as is ...
+                //note: compacting does not work properly when having a nested container with blank nodes ... it generates a graph, which we don't want? For now, there is no e2e that relies on this, so we leave it as is ...
                 const compactedJsonLdDocument = await jsonld.compact(jsonLdDocument, context);
 
                 compactedJsonLdDocument[`@context`] = `http://ipdc-stub/InstantieJsonLdContext.jsonld`;
@@ -107,11 +107,11 @@ app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
 app.post('/conceptsnapshot/:conceptId/invalid', (req, res, next) => {
     try {
         const conceptId = req.params.conceptId;
-        const conceptSnapshot = conceptInvalid(conceptId);
+        const conceptSnapshot = conceptSnapshotInvalid(conceptId);
         extraConceptsnapshots.push(conceptSnapshot);
         return res.status(200).json({
             id: conceptSnapshot['@id'],
-            uuid: conceptSnapshot.id,
+            uuid: getUUIDFromUri(conceptSnapshot['@id']),
             productId: conceptSnapshot.productnummer,
             title: conceptSnapshot?.naam?.nl,
             jsonlddata: conceptSnapshot,
@@ -125,20 +125,20 @@ app.post('/conceptsnapshot/:conceptId/invalid', (req, res, next) => {
 app.post('/conceptsnapshot/:conceptId/:conceptStatus', (req, res, next) => {
     try {
         const conceptId = req.params.conceptId;
-        const concepts = {
-            create: conceptCreate(conceptId, req.query.withRandomNewData === 'true'),
-            update: conceptUpdate(conceptId, req.query.withRandomNewData === 'true', req.query.elementToUpdate),
-            archive: conceptArchive(conceptId, req.query.withRandomNewData ==='true')
+        const conceptSnapshots = {
+            create: conceptSnapshotCreate(conceptId, req.query.withRandomNewData === 'true'),
+            update: conceptSnapshotUpdate(conceptId, req.query.withRandomNewData === 'true', req.query.elementToUpdate),
+            archive: conceptSnapshotArchive(conceptId, req.query.withRandomNewData ==='true')
         }
-        const concept = concepts[req.params.conceptStatus];
-        if (concept) {
-            extraConceptsnapshots.push(concept);
+        const conceptSnapshot = conceptSnapshots[req.params.conceptStatus];
+        if (conceptSnapshot) {
+            extraConceptsnapshots.push(conceptSnapshot);
             return res.status(200).json({
-                id: concept['@id'],
-                uuid: concept.id,
-                productId: concept.productnummer,
-                title: concept?.naam?.nl,
-                jsonlddata: concept,
+                id: conceptSnapshot['@id'],
+                uuid: getUUIDFromUri(conceptSnapshot['@id']),
+                productId: conceptSnapshot.productnummer,
+                title: conceptSnapshot?.naam?.nl,
+                jsonlddata: conceptSnapshot,
             });
         } else {
             return res.sendStatus(400);
@@ -249,4 +249,9 @@ app.use(errorHandler);
 app.listen(80, () => {
     console.log(`IPDC stub listening on port 80`)
 });
+
+export default function getUUIDFromUri(uri) {
+    const segmentedUri = uri.split('/');
+    return segmentedUri[segmentedUri.length - 1];
+}
 
