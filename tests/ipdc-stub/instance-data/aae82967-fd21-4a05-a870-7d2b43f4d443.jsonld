@@ -1,5 +1,5 @@
 {
-  "@context": "http://ipdc-stub/ipdc-lpdc-im-that-does-not-exist.jsonld",
+  "@context": ["http://ipdc-stub/ipdc-lpdc-im-that-does-not-exist.jsonld"],
   "@id": "http://data.lblod.info/id/public-service/aae82967-fd21-4a05-a870-7d2b43f4d443",
   "@type": "Instantie",
   "bevoegdBestuursniveaus": [

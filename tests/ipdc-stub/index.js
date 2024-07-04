@@ -90,7 +90,7 @@ app.get('/doc/instantie/:instanceUuid', async (req, res, next) => {
                 //note: compacting does not work properly when having a nested container with blank nodes ... it generates a graph, which we don't want? For now, there is no e2e that relies on this, so we leave it as is ...
                 const compactedJsonLdDocument = await jsonld.compact(jsonLdDocument, context);
 
-                compactedJsonLdDocument[`@context`] = `http://ipdc-stub/ipdc-lpdc-im.jsonld`;
+                compactedJsonLdDocument[`@context`] = [`http://ipdc-stub/ipdc-lpdc-im.jsonld`];
 
                 compactedJsonLdDocument[`@id`] = `https://ipdc.vlaanderen.be/id/instantie/${instanceUuid}`;
 

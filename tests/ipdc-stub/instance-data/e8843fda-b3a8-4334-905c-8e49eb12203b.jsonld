@@ -1,5 +1,5 @@
 {
-  "@context": "http://ipdc-stub/ipdc-lpdc-im.jsonld",
+  "@context": ["http://ipdc-stub/ipdc-lpdc-im.jsonld"],
   "@id": "http://data.lblod.info/id/public-service/e8843fda-b3a8-4334-905c-8e49eb12203b",
   "@type": "Instantie",
   "naam": {

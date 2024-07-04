@@ -1,5 +1,5 @@
 {
-  "@context": "http://ipdc-stub/ipdc-lpdc-im-that-is-invalid.jsonld",
+  "@context": ["http://ipdc-stub/ipdc-lpdc-im-that-is-invalid.jsonld"],
   "@id": "http://data.lblod.info/id/public-service/abf83bb4-82cf-46a3-9739-8f53ff5d306c",
   "@type": "Instantie",
   "naam": {
