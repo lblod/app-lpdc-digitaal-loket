@@ -186,7 +186,6 @@ test.describe('Reporting dashboard', () => {
             expect(row.errorMessage).toEqual("{\"message\":\"something went wrong\"}");
             expect(row.datePublishAttempt).not.toEqual("");
             expect(row.lastSentDate).not.toEqual("");
-            expect(row.lastSuccessfulPublishedDate).toEqual("");
         } finally {
             await IpdcStub.publishShouldNotFail(instanceIri);
         }
@@ -285,7 +284,6 @@ test.describe('Reporting dashboard', () => {
             expect(row.errorMessage).toEqual("{\"message\":\"something went wrong when republishing\"}");
             expect(row.datePublishAttempt).not.toEqual("");
             expect(row.lastSentDate).not.toEqual("");
-            expect(row.lastSuccessfulPublishedDate).not.toEqual("");
         }
         finally {
             await IpdcStub.publishShouldNotFail(instanceIri);
@@ -384,7 +382,6 @@ test.describe('Reporting dashboard', () => {
             expect(row.errorMessage).toEqual("{\"message\":\"something went wrong when deleting\"}");
             expect(row.datePublishAttempt).not.toEqual("");
             expect(row.lastSentDate).not.toEqual("");
-            expect(row.lastSuccessfulPublishedDate).toEqual("");
         }
         finally {
             await IpdcStub.publishShouldNotFail(instanceIri);

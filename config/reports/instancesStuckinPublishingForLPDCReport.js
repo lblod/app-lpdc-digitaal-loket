@@ -27,7 +27,7 @@ export default {
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
       PREFIX lpdc:    <http://data.lblod.info/vocabularies/lpdc/>
       
-      SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated ?dateSent ?datePublished WHERE {
+      SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated ?dateSent WHERE {
             GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
                 ?publicationError a lpdc:InstancePublicationError .
                 ?publicationError http:statusCode ?errorCode .
@@ -38,20 +38,10 @@ export default {
                 }
                 ?publicationError foaf:owner ?bestuurseenheidIri .
                 ?publicationError schema:dateCreated ?dateCreated .
+                ?publicationError as:formerType ?type .
                 OPTIONAL {
                     ?publicationError schema:dateSent ?dateSent .
                 }
-                OPTIONAL {
-                    ?publicationError schema:datePublished ?datePublished .
-                }
-            }
-            
-            GRAPH ?g {
-              VALUES ?type {
-                lpdcExt:InstancePublicService
-                as:Tombstone
-              }
-                ?instanceIri a ?type .
             }
             
             GRAPH ?graph {
@@ -59,10 +49,6 @@ export default {
                     besluit:classificatie ?classificatie . 
                 ?classificatie skos:prefLabel ?classificatieLabel .
             }
- 
-            FILTER(
-                (STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/" ) && STRENDS(STR(?g), "/LoketLB-LPDCGebruiker"))
-            )
         }
     `;
 
@@ -78,7 +64,6 @@ export default {
         errorMessage: getSafeValue(publicService, 'errorMessage'),
         datePublishAttempt: getSafeValue(publicService, 'dateCreated'),
         lastSentDate: getSafeValue(publicService, 'dateSent'),
-        lastSuccessfulPublishedDate: getSafeValue(publicService, 'datePublished')
       };
     });
 
@@ -92,7 +77,6 @@ export default {
       'errorMessage',
       'datePublishAttempt',
       'lastSentDate',
-      'lastSuccessfulPublishedDate',
     ], reportData);
   }
 };

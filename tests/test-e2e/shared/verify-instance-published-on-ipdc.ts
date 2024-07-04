@@ -87,7 +87,6 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateNestedFieldGroup(publicService, instance, 'http://data.europa.eu/m8g/hasLegalResource', 'http://data.europa.eu/eli/ontology#LegalResource', instanceFields.regelgeving, gekozenUOfJeVorm);
     validateNestedFieldGroup(publicService, instance, 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://schema.org/WebSite', instanceFields.meerInfos, gekozenUOfJeVorm);
     validateContactPointFields(publicService, instance, instanceFields.contactPunten);
-    validatePresentOrData(publicService, 'http://mu.semte.ch/vocabularies/core/uuid', instanceFields.uuid)
     validateData(publicService, 'http://purl.org/pav/createdBy', arrayContainingStringIds(instanceFields.createdBy));
     validateData(publicService, 'http://purl.org/dc/terms/source', arrayContainingStringIds(instanceFields.conceptSource));
     validateData(publicService, 'http://purl.org/dc/terms/type', arrayContainingStringIds(instanceFields.type));

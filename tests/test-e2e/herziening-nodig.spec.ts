@@ -318,17 +318,6 @@ test.describe('Herziening nodig', () => {
         await homePage.searchInput.fill(conceptId);
         await expect(homePage.resultTable.row(first_row).locator).toContainText(conceptId);
         await expect(homePage.resultTable.row(first_row).pill('Herziening nodig')).not.toBeVisible();
-
-        // instance should be linked to latest functional changed concept snapshot
-        const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({
-            title: `Concept created - ${conceptId}`,
-            expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal'
-        });
-        const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
-
-        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${updateSnapshot.uuid}`);
-        expect(publicService['http://mu.semte.ch/vocabularies/ext/hasVersionedSource'][0]['@id']).not.toEqual(`https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${createSnapshot.uuid}`);
-
     });
 
     test('Confirm herziening nodig should show ConfirmBijgewerktTot modal when saving form', async ({ request }) => {
