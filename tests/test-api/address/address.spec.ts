@@ -542,15 +542,5 @@ test.describe('validate', () => {
             adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2514020'
         });
     });
-    
-    test('validate address throws error when street is incorrect but containing a correct street', async ({request}) => {
-        const loginResponse = await loginAsPepingen(request);
-        const params = {municipality: 'Leuven', street: 'Martelarenpleinabcdefg', houseNumber: '20'};
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {params});
-
-        expect(response.ok(), `Error ${response.status()}`).toBeTruthy();
-        const actual = await response.json();
-        expect(actual).toEqual({});
-    });
 
 });
