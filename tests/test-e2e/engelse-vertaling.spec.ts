@@ -10,6 +10,7 @@ import { UJeModal } from "./modals/u-je-modal";
 import { v4 as uuid } from 'uuid';
 import { first_column, first_row } from "./components/table";
 import { ConceptDetailsPage } from "./pages/concept-details-page";
+import {ProductOfDienstOpnieuwBewerkenModal} from "./modals/product-of-dienst-opnieuw-bewerken-modal";
 
 
 test.describe.configure({ mode: 'parallel' });
@@ -22,7 +23,7 @@ test.describe('Engelse vertaling', () => {
     let conceptDetailsPage: ConceptDetailsPage;
     let instantieDetailsPage: InstantieDetailsPage;
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
-    let bevestigHerzieningVerwerktModal: BevestigHerzieningVerwerktModal;
+    let productOfDienstOpnieuwBewerkenModal: ProductOfDienstOpnieuwBewerkenModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
 
     test.beforeEach(async ({ browser }) => {
@@ -33,7 +34,7 @@ test.describe('Engelse vertaling', () => {
         toevoegenPage = ProductOfDienstToevoegenPage.create(page);
         instantieDetailsPage = InstantieDetailsPage.create(page);
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
-        bevestigHerzieningVerwerktModal = BevestigHerzieningVerwerktModal.create(page);
+        productOfDienstOpnieuwBewerkenModal = ProductOfDienstOpnieuwBewerkenModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
 
         await mockLoginPage.goto();
@@ -121,6 +122,11 @@ test.describe('Engelse vertaling', () => {
         let target = await instantieDetailsPage.actiesMenu.bekijkEngelseVertalingButton.getAttribute('target');
         expect(target).toEqual(`blank`);
 
+        await instantieDetailsPage.productOpnieuwBewerkenButton.click();
+        await productOfDienstOpnieuwBewerkenModal.productOpnieuwBewerkenButton.click();
+        await instantieDetailsPage.actiesMenu.locator.click();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton).toBeVisible();
+        await expect(instantieDetailsPage.actiesMenu.bekijkEngelseVertalingNaPublicatieButton).toBeDisabled();
     });
 
     test('When instance does not have publication medium YourEurope does not show correct action menu items buttons when published and in read only', async () => {

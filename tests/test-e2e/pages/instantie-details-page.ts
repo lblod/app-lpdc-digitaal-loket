@@ -227,7 +227,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.instantieInJeVormBekijkenButton = this.omzettenNaarDeJeVormAlert.button('Instantie in je-vorm bekijken');
         this.omzettenNaarDeJeVormButton = this.omzettenNaarDeJeVormAlert.button('Omzetten naar de je-vorm');
         this.inhoudIsAlInDeJeVormButton = this.omzettenNaarDeJeVormAlert.button('Inhoud is al in de je-vorm');
-        this.draftInstanceConversionAlert = new Alert(page, '')
+        this.draftInstanceConversionAlert = new Alert(page, 'Deze instantie kan na verzending naar de Vlaamse overheid automatisch worden omgezet naar de je-vorm (de publicatie duurt enkele minuten).');
 
         this.ipdcConceptIdHeader = page.locator('dl div').filter({ hasText: 'IPDC Concept ID' }).getByRole('definition');
         this.productTypeHeader = page.locator('dl div').filter({ hasText: 'Producttype' }).getByRole('definition');

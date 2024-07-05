@@ -11,6 +11,7 @@ import { first_row } from "./components/table";
 import { VerzendNaarVlaamseOverheidModal } from "./modals/verzend-naar-vlaamse-overheid-modal";
 import { InstantieAutomatischOmzettenVanUNaarJeModal } from "./modals/instantie-automatisch-omzetten-van-u-naar-je-modal";
 import { randomGemeenteZonderFormeleInformeleKeuze } from "./shared/bestuurseenheid-config";
+import {ProductOfDienstOpnieuwBewerkenModal} from "./modals/product-of-dienst-opnieuw-bewerken-modal";
 
 test.describe.configure({ mode: 'parallel' });
 test.describe('U-je conversie nodig', () => {
@@ -23,6 +24,7 @@ test.describe('U-je conversie nodig', () => {
     let wijzigingenBewarenModal: WijzigingenBewarenModal;
     let verzendNaarVlaamseOverheidModal: VerzendNaarVlaamseOverheidModal;
     let instantieAutomatischOmzettenVanUNaarJeModal: InstantieAutomatischOmzettenVanUNaarJeModal;
+    let productOfDienstOpnieuwBewerkenModal: ProductOfDienstOpnieuwBewerkenModal;
     let uJeModal: UJeModal;
 
     test.beforeEach(async ({ browser }) => {
@@ -36,6 +38,7 @@ test.describe('U-je conversie nodig', () => {
         wijzigingenBewarenModal = WijzigingenBewarenModal.create(page);
         verzendNaarVlaamseOverheidModal = VerzendNaarVlaamseOverheidModal.create(page);
         instantieAutomatischOmzettenVanUNaarJeModal = InstantieAutomatischOmzettenVanUNaarJeModal.create(page);
+        productOfDienstOpnieuwBewerkenModal = ProductOfDienstOpnieuwBewerkenModal.create(page);
         uJeModal = UJeModal.create(page)
     });
 
@@ -166,6 +169,11 @@ test.describe('U-je conversie nodig', () => {
         await instantieDetailsPage.reloadUntil(async () => {
             await instantieDetailsPage.omzettenNaarDeJeVormAlert.expectToBeVisible();
         });
+
+        await instantieDetailsPage.productOpnieuwBewerkenButton.click();
+        await productOfDienstOpnieuwBewerkenModal.productOpnieuwBewerkenButton.click();
+        await instantieDetailsPage.draftInstanceConversionAlert.expectToBeVisible();
+
         await instantieDetailsPage.terugNaarHetOverzichtButton.click();
         await homePage.expectToBeVisible();
 
