@@ -44,7 +44,7 @@ Dit document beschrijft hoe lokale besturen die een eigen oplossing hebben om pr
 
 Beschrijft op een hoog niveau de relevante datastromen tussen integrerende gemeente, LPDC en IPDC.
 
-![integrerende-gemeentes-stroomdiagramma.png](img%2Fintegrerende-gemeentes-stroomdiagramma.png)
+![integrerende-gemeentes-stroomdiagramma.png](img/integrerende-gemeentes-stroomdiagramma.png)
 
 1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) bevat producten en diensten van overheden in Vlaanderen. 
 Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed vanuit de Lokale Producten en DienstenCatalogus (LPDC)).  
@@ -123,7 +123,7 @@ RDF is een graaf in de zin dat het een verzameling van triples is die een netwer
 
 Elke triple in een RDF-graaf bestaat uit een subject (onderwerp), een predicaat (predicate) en een object. Deze triples beschrijven de relaties tussen de bronnen.
 
-![rdf-triple-graaf.png](img%2Frdf-triple-graaf.png)
+![rdf-triple-graaf.png](img/rdf-triple-graaf.png)
 
 Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch dien je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is \<Bob\>?_ maar ook _Wie \<is een\> \<persoon\>_?     
 
@@ -663,7 +663,7 @@ Dit moet de **publiek toegankelijke internet-host zijn die de LDES aanbiedt**.
 
 Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uitvoerbare-instantiesnapshot-ldes-stub) vervangen wordt door **'localhost'**.   
 
-![page-0.json.png](img%2Fpage-0.json.png)
+![page-0.json.png](img/page-0.json.png)
 
 1. `"timestampPath": "generatedAtTime" `, `"versionOfPath": "isVersionOf"`: properties met values die aangeven welke properties in de members gebruikt worden voor de [versionering van LDES](#versionering). Zowel `generatedAtTime` en `isVersionOf` zal je terugvinden in elke member.
 2. Identificatie van deze pagina van de LDES.
@@ -788,4 +788,3 @@ Het bevat een unieke id per opname, een tijdstip van opname, een verwijzing naar
 - [ldes-consumer-service](https://github.com/redpencilio/ldes-consumer-service)
 - [TREEcg (TREE community group - Hypermedia controls for publishing collections of entities)](https://github.com/TREEcg), met oa. [Actor Init LDES client (Metadata harvester for a Linked Data Event Stream.)](https://github.com/TREEcg/event-stream-client/tree/main/packages/actor-init-ldes-client)
 - [Node JS](https://nodejs.org/en)
-
