@@ -125,6 +125,11 @@ On test we always deploy a released version.
 
   git fetch --all --tags
   
+  #before stopping virtuoso make sure all db changes are saved to disk
+  docker exec -it my-virtuoso bash
+  isql-v -U dba -P $DBA_PASSWORD
+  SQL> checkpoint;
+  
   drc down --remove-orphans
 
   git checkout tags/<my version>
@@ -186,6 +191,11 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   #     ?s ?p ?o.
   #   }
   # }
+  
+  #before stopping virtuoso make sure all db changes are saved to disk
+  docker exec -it my-virtuoso bash
+  isql-v -U dba -P $DBA_PASSWORD
+  SQL> checkpoint;
   
   #stop all containers
   drc stop 
