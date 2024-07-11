@@ -47,7 +47,7 @@
     }
     
     GRAPH ?graph {
-        ?publishedPublicService a ?type;
+        ?publishedPublicService a lpdcExt:PublishedInstancePublicServiceSnapshot;
             prov:generatedAtTime ?generatedAt;
             schema:datePublished ?datePublished.
         FILTER(?generatedAt = ?maxGeneratedAt)
