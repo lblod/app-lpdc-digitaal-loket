@@ -110,10 +110,6 @@ test.describe('Reporting dashboard', () => {
         expect(row.concept).toEqual("https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84");
     });
 
-    test('Generate and view lpdcBestuurseenheidReport', async ({ request }) => {
-        //TODO LPDC-671: 1/ navigate to pepingen, and use a concept (create instance) 2/ manually trigger report generation for this report 3/ navigate to dashboard, and download latest report for this type 4/ validate contents
-    });
-
     test('Generate and view instancesStuckinPublishingForLPDCReport', async ({ request }) => {
         let instanceIri: string | undefined = undefined;
         try {
