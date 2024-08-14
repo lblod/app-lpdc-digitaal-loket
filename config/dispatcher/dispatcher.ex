@@ -85,7 +85,7 @@ defmodule Dispatcher do
   # Reports
   #################################################################
   match "/reports/*path" do
-    forward conn, path, "http://resource/reports/"
+    forward conn, path, "http://cache/reports/"
   end
 
   get "/files/:id/download" do
@@ -93,11 +93,11 @@ defmodule Dispatcher do
   end
 
   get "/files/*path" do
-    forward conn, path, "http://resource/files/"
+    forward conn, path, "http://cache/files/"
   end
 
   patch "/files/*path" do
-    forward conn, path, "http://resource/files/"
+    forward conn, path, "http://cache/files/"
   end
 
   post "/files/*path" do
@@ -118,7 +118,7 @@ defmodule Dispatcher do
   # Public Services - LPDC-IPDC
   #################################################################
   match "/conceptual-public-services/*path" do
-    forward conn, path, "http://resource/conceptual-public-services/"
+    forward conn, path, "http://cache/conceptual-public-services/"
   end
 
   match "/identifiers/*path" do
@@ -134,15 +134,15 @@ defmodule Dispatcher do
   end
 
   get "/public-services/*path" do
-    forward conn, path, "http://resource/public-services/"
+    forward conn, path, "http://cache/public-services/"
   end
 
   match "/public-services/*path" do
-    forward conn, path, "http://resource/public-services/"
+    forward conn, path, "http://cache/public-services/"
   end
 
   match "/concept-display-configurations/*path" do
-    forward conn, path, "http://resource/concept-display-configurations/"
+    forward conn, path, "http://cache/concept-display-configurations/"
   end
 
   match "/*_" do
