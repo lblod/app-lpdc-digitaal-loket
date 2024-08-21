@@ -3,7 +3,7 @@ version: "3.7"
 services:
 
   lpdc-management:
-    image: node:20-alpine
+    image: semtech/mu-javascript-template:1.8.0
     depends_on:
       migrations:
         condition: service_healthy
