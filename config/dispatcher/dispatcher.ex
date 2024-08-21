@@ -134,15 +134,15 @@ defmodule Dispatcher do
   end
 
   get "/public-services/*path" do
-    forward conn, path, "http://cache/public-services/"
+    forward conn, path, "http://resource/public-services/"
   end
 
   match "/public-services/*path" do
-    forward conn, path, "http://cache/public-services/"
+    forward conn, path, "http://resource/public-services/"
   end
 
   match "/concept-display-configurations/*path" do
-    forward conn, path, "http://cache/concept-display-configurations/"
+    forward conn, path, "http://resource/concept-display-configurations/"
   end
 
   match "/*_" do
