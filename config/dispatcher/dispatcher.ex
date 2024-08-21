@@ -133,6 +133,9 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/public-services/"
   end
 
+  # Don't use cache in the following rules.
+  # See https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/docs/adr/0005-do-not-cache-instantie-overview.md
+
   get "/public-services/*path" do
     forward conn, path, "http://resource/public-services/"
   end
