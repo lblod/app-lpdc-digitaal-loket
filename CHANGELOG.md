@@ -1,5 +1,14 @@
 # Changelog
 
+## v0.21.5 (2024-08-24)
+
+### Backend
+- `lpcd-management-service` bumped to v0.44.2 to prevent overriding competent authorities when that field is empty in the concept (LPDC-1255)
+
+## Deploy instructions
+### Docker commands
+- `drc up -d lpdc-management`
+
 ## v0.21.3 (2024-08-08)
 ### Frontend 
 - [v0.18.4](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0184-2024-08-08) (LPDC-1282)
