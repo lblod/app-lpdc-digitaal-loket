@@ -208,10 +208,10 @@ services:
   # LPDC-specific Services
   ################################################################################
   lpdc-management:
-    image: lblod/lpdc-management-service:0.44.1
     depends_on:
       migrations:
         condition: service_healthy
+    image: lblod/lpdc-management-service:0.44.2
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
