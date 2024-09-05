@@ -125,7 +125,7 @@ services:
     logging: *default-logging
 
   resource:
-    image: semtech/mu-cl-resources:feature-supply-info-on-empty-included
+    image: semtech/mu-cl-resources:1.24.0
     depends_on:
       migrations:
         condition: service_healthy
