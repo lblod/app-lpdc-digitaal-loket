@@ -36,7 +36,7 @@
     * [Broncode (open source) / Ondersteunende technologieën](#broncode-open-source--ondersteunende-technologieën)
 <!-- TOC -->
 
-## Inleiding 
+## Inleiding
 
 Dit document beschrijft hoe lokale besturen die een eigen oplossing hebben om producten en diensten te beheren, hun gepubliceerde productinformatie kunnen synchroniseren met de LPDC-module (Lokale Producten- en Dienstencatalogus) van de Vlaamse overheid. We noemen dat soort lokale overheden hieronder "integrerende gemeenten" (maar het kan evengoed een OCMW of nog een ander type bestuur zijn). De producten worden zichtbaar voor de gemeente in LPDC-module, maar zullen daar niet beheerd/aangepast kunnen worden (read-only). LPDC synchroniseert de producten automatisch naar IPDC (Interbestuurlijke Producten- en Dienstencatalogus).
 
@@ -46,29 +46,29 @@ Beschrijft op een hoog niveau de relevante datastromen tussen integrerende gemee
 
 ![integrerende-gemeentes-stroomdiagramma.png](img/integrerende-gemeentes-stroomdiagramma.png)
 
-1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) bevat producten en diensten van overheden in Vlaanderen. 
-Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed vanuit de Lokale Producten en DienstenCatalogus (LPDC)).  
+1. **IPDCv3**: De interbestuurlijke producten en dienstencatalogus (IPDC) bevat producten en diensten van overheden in Vlaanderen.
+Dit zijn producten van zowel bovenlokale als lokale besturen (gevoed vanuit de Lokale Producten en DienstenCatalogus (LPDC)).
 IPDC tracht zo de centrale bron te zijn voor alle producten en diensten binnen Vlaanderen. Om dit te faciliteren is hij verdeeld in twee delen: concepten en instanties.
-2. **Ophalen concepten**: de toepassingen van integrerende gemeentes kunnen concepten ophalen bij IPDC. 
-Via **LDES** (Linked Data Event Stream) gebeurt dit via conceptsnapshots. 
-Hoe hierbij aan te sluiten, vind je [hier](https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc). 
-3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente waar instanties beheerd worden, idealiter op basis van beschikbare concepten uit IPDC, aangevuld met instanties voor producten waarvoor geen concept beschikbaar is. 
+2. **Ophalen concepten**: de toepassingen van integrerende gemeentes kunnen concepten ophalen bij IPDC.
+Via **LDES** (Linked Data Event Stream) gebeurt dit via conceptsnapshots.
+Hoe hierbij aan te sluiten, vind je [hier](https://vlaamseoverheid.atlassian.net/wiki/external/6317081715/ZGU4MGNlODM2N2U1NDU5MGFlY2NlYzcxYmQyYWUwMTc).
+3. **Toepassing van lokaal bestuur**: toepassing van integrerende gemeente waar instanties beheerd worden, idealiter op basis van beschikbare concepten uit IPDC, aangevuld met instanties voor producten waarvoor geen concept beschikbaar is.
 Deze toepassing levert te publiceren instanties en eventuele wijzigingen in de vorm van een stroom van instantiesnapshots als een **LDES**.
-4. **Ophalen te publiceren instanties**: LPDC-module synchroniseert de instanties van de integrerende gemeente door de aangeboden instantiesnapshots uit te lezen met behulp van een **LDES**. 
-5. **LPDC**: neemt elke instantie vanuit de laatste snapshot van de **LDES** over en synchroniseert deze vervolgens met IPDC. De meest recent bijgewerkte versie van elke instantie is zichtbaar voor de integrerende gemeente op LPDC, maar alleen in een leesmodus. (Besturen zonder eigen oplossing, kunnen in de LPDC-module wel hun producten en diensten beheren).  
-6. LPDC-module publiceert instanties naar IPDC. Vanaf dat moment is het product beschikbaar in de API en LDES van IPDC voor hergebruik door anderen (of door het bestuur in andere toepassingen van het bestuur, mocht dat handiger zijn).   
+4. **Ophalen te publiceren instanties**: LPDC-module synchroniseert de instanties van de integrerende gemeente door de aangeboden instantiesnapshots uit te lezen met behulp van een **LDES**.
+5. **LPDC**: neemt elke instantie vanuit de laatste snapshot van de **LDES** over en synchroniseert deze vervolgens met IPDC. De meest recent bijgewerkte versie van elke instantie is zichtbaar voor de integrerende gemeente op LPDC, maar alleen in een leesmodus. (Besturen zonder eigen oplossing, kunnen in de LPDC-module wel hun producten en diensten beheren).
+6. LPDC-module publiceert instanties naar IPDC. Vanaf dat moment is het product beschikbaar in de API en LDES van IPDC voor hergebruik door anderen (of door het bestuur in andere toepassingen van het bestuur, mocht dat handiger zijn).
 
 ## Technologie beschrijving
 
 Samenvatting van de gebruikte technologieën voor gegevensoverdracht. Niet bedoeld om allesomvattend te zijn. Verdere technische details zijn te vinden in de referenties.
 
-### Linked Data 
+### Linked Data
 
-**Linked Data** (LD) verwijst naar een methode om gestructureerde gegevens te publiceren zodat ze onderling verbonden en doorzoekbaar zijn op het internet. 
-Deze aanpak maakt gebruik van standaarden zoals de **Resource Description Framework (RDF)**, **SPARQL (een RDF-querytaal)**, en **URI's (Uniform Resource Identifiers)** om gegevens te beschrijven en te linken. 
+**Linked Data** (LD) verwijst naar een methode om gestructureerde gegevens te publiceren zodat ze onderling verbonden en doorzoekbaar zijn op het internet.
+Deze aanpak maakt gebruik van standaarden zoals de **Resource Description Framework (RDF)**, **SPARQL (een RDF-querytaal)**, en **URI's (Uniform Resource Identifiers)** om gegevens te beschrijven en te linken.
 Het doel is om data uit verschillende bronnen gemakkelijk toegankelijk en integreerbaar te maken, zodat gebruikers en computersystemen deze kunnen vinden en gebruiken voor diverse doeleinden.
 
-**LOD (Linked Open Data)** is een uitbreiding van het Linked Data-concept, waarbij de nadruk ligt op het openbaar en vrij beschikbaar maken van verbonden datasets. 
+**LOD (Linked Open Data)** is een uitbreiding van het Linked Data-concept, waarbij de nadruk ligt op het openbaar en vrij beschikbaar maken van verbonden datasets.
 LOD maakt het mogelijk om gegevenssets van verschillende domeinen (zoals overheid, cultuur, wetenschap) aan elkaar te koppelen, waardoor een rijk en onderling verbonden gegevensweb ontstaat dat voor iedereen toegankelijk is.
 
 ### RDF (Resource Description Framework)
@@ -93,53 +93,53 @@ Een uitspraak (Engels: statement) heeft altijd de volgende structuur:
 
 **`<subject> <predicate> <object>`**
 
-Een RDF-statement drukt een relatie uit tussen twee bronnen. 
-Het **subject** _(onderwerp)_ en het **object** vertegenwoordigen de twee aan elkaar gerelateerde bronnen; het **predicaat** _(predicate)_ representeert de **aard van hun relatie**. 
-De relatie wordt op een directionele wijze geformuleerd (van onderwerp naar object) en wordt in RDF-terminologie een **property** _(eigenschap)_ genoemd. 
+Een RDF-statement drukt een relatie uit tussen twee bronnen.
+Het **subject** _(onderwerp)_ en het **object** vertegenwoordigen de twee aan elkaar gerelateerde bronnen; het **predicaat** _(predicate)_ representeert de **aard van hun relatie**.
+De relatie wordt op een directionele wijze geformuleerd (van onderwerp naar object) en wordt in RDF-terminologie een **property** _(eigenschap)_ genoemd.
 Omdat RDF-statements altijd uit **drie elementen bestaan**, worden ze **triples** genoemd.
 
 _Voorbeelden:_
 ```
 <Bob> <is een> <persoon>.
 <Bob> <is een vriend van> <Alice>.
-<Bob> <is geboren op> <4 juli 1990>. 
+<Bob> <is geboren op> <4 juli 1990>.
 <Bob> <is geïnteresseerd in> <de Mona Lisa>.
-<Alice> <is een> <persoon>. 
+<Alice> <is een> <persoon>.
 <de Mona Lisa> <heeft als titel> <Mona Lisa>.
 <de Mona Lisa> <was gecreëerd door> <Leonardo da Vinci>.
 <de Mona Lisa> <is een> <schilderij>.
 <de video 'La Joconde à Washington'> <gaat over> <de Mona Lisa>.
-<Leonardo da Vinci> <is een> <persoon>. 
+<Leonardo da Vinci> <is een> <persoon>.
 ```
 
-Dezelfde bron wordt vaak in meerdere triples van een dataset genoemd. 
-In het bovenstaande voorbeeld is Bob het subject (onderwerp) van vier triples, en de Mona Lisa is het subject (onderwerp) en het object van elk twee triples. 
-Het vermogen om dezelfde bron in de positie van subject (onderwerp) van de ene triple en in de positie van object van een andere triple te hebben, 
+Dezelfde bron wordt vaak in meerdere triples van een dataset genoemd.
+In het bovenstaande voorbeeld is Bob het subject (onderwerp) van vier triples, en de Mona Lisa is het subject (onderwerp) en het object van elk twee triples.
+Het vermogen om dezelfde bron in de positie van subject (onderwerp) van de ene triple en in de positie van object van een andere triple te hebben,
 maakt het mogelijk om verbindingen tussen triples te vinden, wat een belangrijk onderdeel is van de kracht van RDF.
 
 We kunnen triples visualiseren als een geconnecteerde **graaf**. Een graaf is een representatie van een objectenset waar sommige paren van de objecten met elkaar verbonden zijn door links.
 
-RDF is een graaf in de zin dat het een verzameling van triples is die een netwerk van verbindingen tussen verschillende bronnen vormt. 
+RDF is een graaf in de zin dat het een verzameling van triples is die een netwerk van verbindingen tussen verschillende bronnen vormt.
 
 Elke triple in een RDF-graaf bestaat uit een subject (onderwerp), een predicaat (predicate) en een object. Deze triples beschrijven de relaties tussen de bronnen.
 
 ![rdf-triple-graaf.png](img/rdf-triple-graaf.png)
 
-Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch dien je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is \<Bob\>?_ maar ook _Wie \<is een\> \<persoon\>_?     
+Merk op dat we rdf relaties unidirectioneel voorstellen in de graaf, in de richting van de triple beschrijving. Echter, semantisch dien je de relatie in beide richting te begrijpen. Je kan bv. vragen via SPARQL: _Wat is \<Bob\>?_ maar ook _Wie \<is een\> \<persoon\>_?
 
 #### IRIs
 Een IRI is een International Resource Identifier. Een IRI definieert een bron (resource).
 
 De URL's (Uniform Resource Locators) die mensen gebruiken als webadressen zijn één vorm van IRI (Internationalized Resource Identifiers).
 
-Andere vormen van IRI bieden een identificatie voor een bron zonder de locatie of hoe deze te benaderen te impliceren. 
+Andere vormen van IRI bieden een identificatie voor een bron zonder de locatie of hoe deze te benaderen te impliceren.
 
-Het concept van IRI is een generalisatie van URI (Uniform Resource Identifier), waardoor niet-ASCII tekens gebruikt kunnen worden in de IRI-tekenreeks. 
+Het concept van IRI is een generalisatie van URI (Uniform Resource Identifier), waardoor niet-ASCII tekens gebruikt kunnen worden in de IRI-tekenreeks.
 IRI's zijn gespecificeerd in [RFC3987](https://www.ietf.org/rfc/rfc3987.txt).
 
 IRI's kunnen verschijnen **in alle drie de posities** van een triple.
 
-Zoals vermeld, worden IRI's gebruikt om bronnen te identificeren zoals documenten, personen, fysieke objecten en abstracte concepten. 
+Zoals vermeld, worden IRI's gebruikt om bronnen te identificeren zoals documenten, personen, fysieke objecten en abstracte concepten.
 
 Bijvoorbeeld, de IRI voor Leonardo da Vinci in DBpedia is (subject en object `<Leonardo da Vinci>`):
 
@@ -153,7 +153,7 @@ De IRI voor een video over de Mona Lisa getiteld 'La Joconde à Washington' in E
 http://data.europeana.eu/item/04802/243FA8618938F4117025F17A8B813C5F9AA4D619
 ```
 
-IRI's zijn wereldwijde identificatoren, dus andere mensen kunnen deze IRI hergebruiken om hetzelfde te identificeren. 
+IRI's zijn wereldwijde identificatoren, dus andere mensen kunnen deze IRI hergebruiken om hetzelfde te identificeren.
 Bijvoorbeeld, de volgende IRI wordt door veel mensen gebruikt als een RDF-eigenschap om een kennissenrelatie tussen mensen aan te geven (in ons voorbeeld `<is een vriend van>`):
 
 ```
@@ -164,7 +164,7 @@ RDF is neutraal over wat de IRI vertegenwoordigt. Echter, IRI's kunnen betekenis
 
 Bijvoorbeeld, DBpedia gebruikt IRI's in de vorm van http://dbpedia.org/resource/Naam om het ding aan te duiden dat beschreven wordt door het overeenkomstige Wikipedia-artikel.
 
-Het RDF-datamodel biedt een manier om uitspraken te doen over bronnen. Zoals we hebben vermeld, maakt dit datamodel geen aannames over waarvoor bron-IRI's staan. 
+Het RDF-datamodel biedt een manier om uitspraken te doen over bronnen. Zoals we hebben vermeld, maakt dit datamodel geen aannames over waarvoor bron-IRI's staan.
 In de praktijk wordt RDF doorgaans gebruikt in combinatie met vocabulaires of andere conventies die semantische informatie over deze bronnen verstrekken.
 
 Veel gebruikte voorbeelden zijn: [RDF Syntax](https://www.w3.org/1999/02/22-rdf-syntax-ns), [Dublin Core](http://dublincore.org/documents/dcmi-terms/), [schema.org](http://schema.org/), [SKOS](http://www.w3.org/2004/02/skos/), [FOAF](http://www.foaf-project.org/).
@@ -176,11 +176,11 @@ http://www.w3.org/1999/02/22-rdf-syntax-ns#type
 
 #### Literals
 
-Literals zijn basiswaarden die geen IRI's zijn. 
+Literals zijn basiswaarden die geen IRI's zijn.
 
-Voorbeelden van literals omvatten strings zoals "La Joconde", datums zoals "de 4e juli, 1990" en getallen zoals "3.14159". 
+Voorbeelden van literals omvatten strings zoals "La Joconde", datums zoals "de 4e juli, 1990" en getallen zoals "3.14159".
 
-Literals worden geassocieerd met een datatype waardoor dergelijke waarden correct geparsed en geïnterpreteerd kunnen worden. 
+Literals worden geassocieerd met een datatype waardoor dergelijke waarden correct geparsed en geïnterpreteerd kunnen worden.
 String literals kunnen optioneel geassocieerd worden met een language tag (taaltag).
 
 **Literals mogen alleen verschijnen in de objectpositie van een triple.**
@@ -193,10 +193,10 @@ Voorbeelden van triple stores zijn: [Virtuoso](https://github.com/openlink/virtu
 
 ### Serialisatie-formaten voor RDF-data
 
-Er bestaan verschillende serialisatieformaten voor het noteren van RDF-grafen. 
+Er bestaan verschillende serialisatieformaten voor het noteren van RDF-grafen.
 Echter, verschillende manieren van het noteren van dezelfde graaf leiden tot precies dezelfde triples en zijn dus logisch equivalent.
 
-Hieronder geven we voorbeelden van verscheidene serialisatieformaten die het pseudocode voorbeeld mapt met een aantal vocabulaires. 
+Hieronder geven we voorbeelden van verscheidene serialisatieformaten die het pseudocode voorbeeld mapt met een aantal vocabulaires.
 
 #### N-Triples
 
@@ -214,22 +214,22 @@ N-Triples biedt een simpele, regelgebaseerde, platte-tekst manier om RDF-grafen 
 <http://dbpedia.org/resource/Leonardo_da_Vinci> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 ```
 
-Elke regel vertegenwoordigt een triple. Volledige _IRI_'s zijn omsloten in spitse haakjes (`<>`). 
-De punt aan het einde van de regel geeft het einde van de triple aan. 
-In regel 3 zien we een voorbeeld van een _literal_, in dit geval een datum. 
-Het datatype wordt aan de literal toegevoegd via een `^^` scheidingsteken. 
+Elke regel vertegenwoordigt een triple. Volledige _IRI_'s zijn omsloten in spitse haakjes (`<>`).
+De punt aan het einde van de regel geeft het einde van de triple aan.
+In regel 3 zien we een voorbeeld van een _literal_, in dit geval een datum.
+Het datatype wordt aan de literal toegevoegd via een `^^` scheidingsteken.
 De datum representatie volgt de conventies van het `XML Schema datatype date`.
 
-Omdat string _literals_ zo alomtegenwoordig zijn, staat N-Triples de gebruiker toe om het datatype weg te laten bij het schrijven van een string literal. 
-Dus, `"Mona Lisa"` is equivalent aan  `"Mona Lisa"^^xsd:string`. 
+Omdat string _literals_ zo alomtegenwoordig zijn, staat N-Triples de gebruiker toe om het datatype weg te laten bij het schrijven van een string literal.
+Dus, `"Mona Lisa"` is equivalent aan  `"Mona Lisa"^^xsd:string`.
 In het geval van taal-getagde strings verschijnt de tag direct na de string, gescheiden door een `@ symbool`, bijvoorbeeld `"La Joconde"@fr` (de Franse naam van de Mona Lisa).
 
 Het aantal lijntjes N-Triples vertegenwoordigt het aantal links in de graaf.
 
 #### Turtle
 
-Turtle is een uitbreiding van [N-Triples](#n-triples). 
-Naast de basis N-Triples syntax, introduceert Turtle een aantal syntactische verkortingen, zoals ondersteuning voor namespace prefixes, lijsten en afkortingen voor datatyped literals. 
+Turtle is een uitbreiding van [N-Triples](#n-triples).
+Naast de basis N-Triples syntax, introduceert Turtle een aantal syntactische verkortingen, zoals ondersteuning voor namespace prefixes, lijsten en afkortingen voor datatyped literals.
 Turtle biedt een compromis tussen schrijfgemak, parsegemak en leesbaarheid.
 
 Het werkvoorbeeld uitgedrukt in TURTLE:
@@ -263,17 +263,17 @@ wd:Q12418
     dcterms:subject wd:Q12418 .
 ```
 
-- de afkorting 'a' komt overeen met de menselijke intuïtie over `rdf:type`. 
+- de afkorting 'a' komt overeen met de menselijke intuïtie over `rdf:type`.
 - _PREFIX_ voorziet een afgekorte vorm om IRI's te specifiëren, bv. `foaf:Person` is hetzelfde als `<http://xmlns.com/foaf/0.1/Person>`; `xsd:date` is hetzelfde als `<http://www.w3.org/2001/XMLSchema#date>`
-- het scheidingsteken `;` wijst erop dat de lijst van `predicaten` en `objecten` horen bij het eerder vermelde `subject`. 
+- het scheidingsteken `;` wijst erop dat de lijst van `predicaten` en `objecten` horen bij het eerder vermelde `subject`.
 
 #### JSON-LD
 
-JSON-LD biedt een JSON-syntax voor RDF-grafen en datasets. 
+JSON-LD biedt een JSON-syntax voor RDF-grafen en datasets.
 
 JSON-LD kan gebruikt worden om JSON-documenten met minimale wijzigingen naar RDF om te zetten en omgekeerd.
 
-JSON-LD biedt universele identificatoren voor JSON-objecten, een mechanisme waarbij een JSON-document kan verwijzen naar een object dat in een ander JSON-document elders op het web wordt beschreven, evenals datatype- en taalafhandeling. 
+JSON-LD biedt universele identificatoren voor JSON-objecten, een mechanisme waarbij een JSON-document kan verwijzen naar een object dat in een ander JSON-document elders op het web wordt beschreven, evenals datatype- en taalafhandeling.
 
 JSON Document van lopend voorbeeld:
 
@@ -300,9 +300,9 @@ JSON Document van lopend voorbeeld:
 
 ```
 
-De key `@context` wijst naar een JSON-document dat beschrijft hoe het document naar een RDF-graaf kan worden gemapt (zie hieronder). 
+De key `@context` wijst naar een JSON-document dat beschrijft hoe het document naar een RDF-graaf kan worden gemapt (zie hieronder).
 
-Elk JSON-object komt overeen met een RDF-bron. Deze worden aangeduid met het trefwoord `@id `. 
+Elk JSON-object komt overeen met een RDF-bron. Deze worden aangeduid met het trefwoord `@id `.
 In het bovenstaande voorbeeld zijn er 4 JSON-objecten: `"@id": "http://example.org/bob#me"`, `"@id": "http://example.org/alice#me"`, ` "http://www.wikidata.org/entity/Q12418"` en `"@id": "http://dbpedia.org/resource/Leonardo_da_Vinci"`.
 Het trefwoord `@id`, wanneer gebruikt als een key in een JSON-LD document, wijst naar een IRI die de bron identificeert die overeenkomt met het huidige JSON-object.
 
@@ -315,7 +315,7 @@ Dit context-document beschrijft hoe een JSON-LD document naar een RDF-graaf kan 
 ```json
 {
   "@context": {
-    "foaf": "http://xmlns.com/foaf/0.1/", 
+    "foaf": "http://xmlns.com/foaf/0.1/",
     "Person": "foaf:Person",
     "isGeinteresseerdIn": "foaf:topic_interest",
     "isEenVriendVan": {
@@ -357,10 +357,10 @@ Met SPARQL kun je complexe vragen stellen die verschillende voorwaarden combiner
 
 De resultaten van SPARQL-queries kunnen resultaatsets of RDF-grafen zijn.
 
-Een voorbeeld query: 
+Een voorbeeld query:
 
 ```sparql
-select ?subject WHERE {
+SELECT ?subject WHERE {
     GRAPH <test> {
           ?subject <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person>
     }
@@ -383,7 +383,7 @@ SHACL beschrijft de structuur en de condities waaraan een dataset dient te voldo
 
 SHACL voorziet metadata over de data met als doel de data te kunnen valideren.
 
-Kan de definities en structuren die zijn vastgelegd in RDF-schema's en OWL-ontologieën aanvullen.  
+Kan de definities en structuren die zijn vastgelegd in RDF-schema's en OWL-ontologieën aanvullen.
 Dit betekent dat SHACL gebruikt kan worden om extra regels en beperkingen toe te voegen aan de informatie die al gedefinieerd is in RDF-schema's (een manier om relaties en structuren in RDF-gegevens te beschrijven) en OWL-ontologieën (een taal voor het definiëren van complexe relaties tussen concepten). SHACL helpt bij het verfijnen en specificeren van de verwachtingen over de gegevensstructuur en integriteit, bovenop de bestaande definities in RDF en OWL.
 
 SHACL's worden beschreven in RDF.
@@ -427,7 +427,7 @@ ex:Observation1 a sosa:Observation ;
 
 #### Fragmentering en paginering
 
-Linked Data Event Streams mogen gefragmenteerd worden wanneer hun grootte te groot wordt voor één HTTP-antwoord. 
+Linked Data Event Streams mogen gefragmenteerd worden wanneer hun grootte te groot wordt voor één HTTP-antwoord.
 
 Fragmenten moeten worden beschreven met behulp van de functies in de TREE-specificatie. Alle relatie-types uit de TREE-specificatie mogen worden gebruikt.
 
@@ -462,13 +462,13 @@ ex:Observation2 a sosa:Observation ;
                 sosa:hasSimpleResult "..." .
 ```
 - de ldes stream pagina bevat alle `tree:members` van deze pagina (`ex:Observation1` en `ex:Observation2`)
-- `tree:view` specifieert welke subset van de `tree:collection` deze pagina toont, en via `tree:relation` kan je navigeren naar andere subsets. Typisch zijn de `ex:page-1` en `ex:page2` effectieve URL's die een gepagineerd endpoint aanduiden (zie verder).  
+- `tree:view` specificeert welke subset van de `tree:collection` deze pagina toont, en via `tree:relation` kan je navigeren naar andere subsets. Typisch zijn de `ex:page-1` en `ex:page2` effectieve URL's die een gepagineerd endpoint aanduiden (zie verder).
 
 #### Versionering
 
-Beschrijft hoe je een object kan veranderen waarbij je de historiek van het rdf-document bijhoudt. 
-Je stuurt met andere woorden een serie van snapshots van de data van het rdf-document op. 
-Hierbij verwijs je telkens naar het origineel rdf-document en het tijdstip van de snapshot. 
+Beschrijft hoe je een object kan veranderen waarbij je de historiek van het rdf-document bijhoudt.
+Je stuurt met andere woorden een serie van snapshots van de data van het rdf-document op.
+Hierbij verwijs je telkens naar het origineel rdf-document en het tijdstip van de snapshot.
 Dit stelt de LDES-afnemer in staat de historiek te reconstrueren en de laatste versie te bewaren (en hierbij toch performant niet telkens de hele LDES te hoeven uitlezen).
 
 Technisch, wordt een versiebeheerde-LDES gedefinieerd met twee eigenschappen: `ldes:versionOfPath` en `ldes:timestampPath`.
@@ -502,8 +502,8 @@ ex:AddressRecord1-version2 dcterms:created "2021-01-02T00:00:00Z"^^xsd:dateTime 
                            dcterms:title "Streetname X + Y, ZIP Municipality, Country" .
 ```
 
-- Deze LDES bevat 2 elementen: zowel `ex:AddressRecord1-version1` en `ex:AddressRecord1-version2` worden verwezen door `tree:member`. 
-- Net als in vorige voorbeeld wijst `ldes:timestampPath` naar de `predicate` in een `member` waar de _timestamp_ te vinden is. Deze keer verwijst die naar `dcterms:created`.  
+- Deze LDES bevat 2 elementen: zowel `ex:AddressRecord1-version1` en `ex:AddressRecord1-version2` worden verwezen door `tree:member`.
+- Net als in vorige voorbeeld wijst `ldes:timestampPath` naar de `predicate` in een `member` waar de _timestamp_ te vinden is. Deze keer verwijst die naar `dcterms:created`.
 - `ldes:versionOfPath` verwijst naar de `predicate` binnen de `member` dat het nietversiebeheerde-document aanduidt: `dcterms:isVersionOf`. In beide gevallen in het voorbeeld wordt verwezen naar `ex:AddressRecord1`. Merk op dat `ex:AddressRecord1` niet in de data zit. De data wordt enkel beschikbaar gesteld via versies.
 - Dit kan uiteraard gecombineerd worden met paginering en fragmentering.
 
@@ -577,11 +577,11 @@ Ter illustratie, het vorige voorbeeld in json-ld formaat (met context ingebed):
 ## Contractspecificaties - semantisch model
 
 De contractspecificaties (het semantisch model / het IPDC-LPDC implementatiemodel) beschrijft in detail de gewenste datastructuur, zoals kardinaliteiten, codelijsten, datatypes, ... .
-Het IPDC-LPDC implementatiemodel beschrijft de datastructuur voor ConceptSnapshots en InstantieSnapshots. Merk op dat deze gelijkaardig, maar niet identiek zijn. Het is dus belangrijk om voor de instantie die aangeboden worden aan de LPDC-module gebaseerd wordt op de informatie bij Instanties. 
+Het IPDC-LPDC implementatiemodel beschrijft de datastructuur voor ConceptSnapshots en InstantieSnapshots. Merk op dat deze gelijkaardig, maar niet identiek zijn. Het is dus belangrijk om voor de instantie die aangeboden worden aan de LPDC-module gebaseerd wordt op de informatie bij Instanties.
 
-!!!!!!!!! Op datum van 2024-04-25 staat een versie van het IPDC-LPDC implementatiemodel van 2022-06-15 op de productiepagina's van data.vlaanderen.be. Deze krijgt normaal eerstdaags een update. Een preview van die update is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-04-25/) te vinden (op de testpagina's van data.vlaanderen.be). Tot wanneer de versie op productie is updated, kun je best naar de previewversie/versie op de testpagina's kijken. Deze versie zal niet meer wijzigen en zo naar productie worden gebracht. 
+!!!!!!!!! Op datum van 2024-04-25 staat een versie van het IPDC-LPDC implementatiemodel van 2022-06-15 op de productiepagina's van data.vlaanderen.be. Deze krijgt normaal eerstdaags een update. Een preview van die update is [hier](https://productencatalogus.data.test-vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/2024-04-25/) te vinden (op de testpagina's van data.vlaanderen.be). Tot wanneer de versie op productie is updated, kun je best naar de previewversie/versie op de testpagina's kijken. Deze versie zal niet meer wijzigen en zo naar productie worden gebracht.
 
-De info op productie: [IPDC-LPDC implementatiemodel](https://productencatalogus.data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/). Let op de datum "uitgegeven op" die moet later minstens 2024-04-25 of later zijn! 
+De info op productie: [IPDC-LPDC implementatiemodel](https://productencatalogus.data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/). Let op de datum "uitgegeven op" die moet later minstens 2024-04-25 of later zijn!
 
 
 ## Voorbeelden + implementatie tips
@@ -592,7 +592,7 @@ Dit zijn voorbeelden die het IPDC-LPDC implementatiemodel illusteren met uitvoer
 
 Een uitvoerbare, **voorbeeld-implementatie van een instantiesnapshot-LDES-stub** is [hier](../tests/instancesnapshot-ldes-stub) te vinden.
 
-Dit is een **Typescript** project dat een **vaste lijst van 3 pagina's** teruggeeft. 
+Dit is een **Typescript** project dat een **vaste lijst van 3 pagina's** teruggeeft.
 
 Het bevat ook een endpoint voor de [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld).
 
@@ -612,9 +612,9 @@ In hoofdstuk [Voorbeeld pagina in detail](#voorbeeld-pagina-in-detail) wordt ver
 
 ### integrerende-gemeente-LDES-reader
 
-Dit project illustreert uitvoerbare commando's voor **uitlezen en interpreteren van een LDES in [json-ld](#json-ld) en [turtle formaat](#turtle)**. 
+Dit project illustreert uitvoerbare commando's voor **uitlezen en interpreteren van een LDES in [json-ld](#json-ld) en [turtle formaat](#turtle)**.
 
-Het project maakt een connectie met de [instantiesnapshot-LDES-stub](#uitvoerbare-instantiesnapshot-ldes-stub). 
+Het project maakt een connectie met de [instantiesnapshot-LDES-stub](#uitvoerbare-instantiesnapshot-ldes-stub).
 
 Het project kan makkelijk aangepast worden om naar een andere URL te connecteren, en kan in die vorm dienen als test voor een LDES opgezet door de integrerende gemeente.
 
@@ -637,7 +637,7 @@ Uitlezen van volledige LDES, interpreteren en samenvoegen met verwezen [ipdc-lpd
 
 #### JSON-LD en context samenvoegen opmerkingen
 
-De [LDES-reader](#integrerende-gemeente-ldes-reader) leest [json-ld](#json-ld) en kan [json-ld](#json-ld) en [turtle](#turtle) produceren. 
+De [LDES-reader](#integrerende-gemeente-ldes-reader) leest [json-ld](#json-ld) en kan [json-ld](#json-ld) en [turtle](#turtle) produceren.
 
 Beide formaten ([json-ld](#json-ld) en [turtle](#turtle)) zijn serialisatie-formaten voor dezelfde data.
 
@@ -653,15 +653,15 @@ Nazicht van de gegenereerde Turtle door de integrerende gemeente is zeker aan te
 
 ### Voorbeeld pagina in detail
 
-Hierin zullen we een aantal elementen van de data belichten. 
+Hierin zullen we een aantal elementen van de data belichten.
 
 Uit: [page-0](../tests/instancesnapshot-ldes-stub/ldes-pages/page-0.json).
 
-_Merk op_ dat alle URL's die de [LDES](#ldes-linked-data-event-stream) vermelden, (andere pagina's (`http://hostname/doc/instancesnapshot?pageNumber=0`), of identificatie van de pagina (`http://hostname/doc/instancesnapshot?pageNumber=0`)), verwijzen naar de **'hostname'**. 
+_Merk op_ dat alle URL's die de [LDES](#ldes-linked-data-event-stream) vermelden, (andere pagina's (`http://hostname/doc/instancesnapshot?pageNumber=0`), of identificatie van de pagina (`http://hostname/doc/instancesnapshot?pageNumber=0`)), verwijzen naar de **'hostname'**.
 
-Dit moet de **publiek toegankelijke internet-host zijn die de LDES aanbiedt**. 
+Dit moet de **publiek toegankelijke internet-host zijn die de LDES aanbiedt**.
 
-Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uitvoerbare-instantiesnapshot-ldes-stub) vervangen wordt door **'localhost'**.   
+Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uitvoerbare-instantiesnapshot-ldes-stub) vervangen wordt door **'localhost'**.
 
 ![page-0.json.png](img/page-0.json.png)
 
@@ -671,7 +671,7 @@ Merk op dat deze door de [uitvoerbare instantiesnapshot-LDES-stub voorheen](#uit
 4. Verwijst naar de gebruikte [ipdc-lpdc-im.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ipdc-lpdc-im.jsonld) en [ldes.jsonld](../tests/instancesnapshot-ldes-stub/ldes-pages/ldes.jsonld). In dit voorbeeld wordt deze apart hosted. Kan eventueel ook ingesloten meegegeven worden.
 5. Identificatie van de LDES pagina, en aangeven dat het een LDES is.
 6. Onder member volgt een json array van alle members van deze pagina van de LDES.
-7. `"@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126"` identificeert hierbij de [instantiesnapshot](#instantiesnapshot). 
+7. `"@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5126"` identificeert hierbij de [instantiesnapshot](#instantiesnapshot).
 Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service-snapshot/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
 8. `"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3",` identificeert de [instantie](#instantie).
 Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service/<genereerde-uuid>', en dient door de integrerende gemeente gegenereerd te worden.
@@ -681,12 +681,12 @@ Deze [IRI](#iris) voldoet aan formaat 'http://data.lblod.info/id/public-service/
 12. `"naam:"`, `"beschrijving:"`: een voorbeeld van 2 data velden die gelinked zijn vanuit [instantie](#instantie), beide string literals met een taal tag.
 13. `"bevoegdeOverheden": ["http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: Iri's van de bevoegde overheid. Wordt als absolute URL opgegeven.
 Meerdere `bevoegdeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
-14. `"geografischToepassingsgebieden": ["BE23444021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie). 
-Een code uit de [nuts - lau codes](https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-04-25/codelijsten/geografisch-toepassingsgebied.ttl) wordt verwacht. Een basis url (http://data.europa.eu/nuts/code/) wordt automatisch vooraan toegevoegd indien u een relatieve opgeeft. Een absolute url kan ook opgegeven worden. 
+14. `"geografischToepassingsgebieden": ["BE23444021"]`: de geografische toepassingsgebieden relevant voor deze [instantie](#instantie).
+Een code uit de [nuts - lau codes](https://raw.githubusercontent.com/Informatievlaanderen/ipdc-lpdc/ontwerp-2024-04-25/codelijsten/geografisch-toepassingsgebied.ttl) wordt verwacht. Een basis url (http://data.europa.eu/nuts/code/) wordt automatisch vooraan toegevoegd indien u een relatieve opgeeft. Een absolute url kan ook opgegeven worden.
 Meerdere `geografischToepassingsgebieden` kunnen opgegeven worden, dus is dit json-type een array.
 15. `"uitvoerendeOverheden": ["http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"]`: Iri's van de uitvoerende overheid. Wordt als absolute URL opgegeven
 Meerdere `uitvoerendeOverheden` kunnen opgegeven worden, dus is dit json-type een array.
-16. Voorbeeld van een tweede, later gegenereerde (`"generatedAtTime": "2024-02-20T07:32:10.377Z"`), [instantie snapshot](#instantiesnapshot)(`"http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09"`) van dezelfde [instantie](#instantie) (`"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3"`). 
+16. Voorbeeld van een tweede, later gegenereerde (`"generatedAtTime": "2024-02-20T07:32:10.377Z"`), [instantie snapshot](#instantiesnapshot)(`"http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09"`) van dezelfde [instantie](#instantie) (`"isVersionOf": "http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3"`).
 Hier werd `naam` en `beschrijving` updatet.
 Merk op dat **telkens** de **volledige data van de instantie dient te worden meegegeven** bij elke nieuwe [instantie snapshot](#instantiesnapshot). Een nieuwe [instantie snapshot](#instantiesnapshot) geeft m.a.w. niet enkel de verandering ten opzicht van vorige weer.
 
@@ -715,9 +715,9 @@ Dit is de informatie die door LPDC zal verwerkt worden.
     <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>.
 ```
 
-De volledige test dataset voor LDES-instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden. 
+De volledige test dataset voor LDES-instanties kan je [hier](..%2Ftests%2Fintegrerende-gemeente-ldes-reader%2Fldes%20instantie%20test%20voorbeelden.ttl) in ttl formaat vinden.
 
-_Nota:_ Sommige turtle verwerking-programma's kunnen niet goed om met de [shorthand syntax van turtle](https://www.w3.org/TR/turtle/#literals) in de bestanden. (bvb https://github.com/Informatievlaanderen/VSDS-LDESServer4J). Indien u de bestanden probeert op te laden, krijg je een fout. Het volstaat om triples van de voorbeelden om te vormen tot zijn lexicografische vorm en bijhorend datatype. (bvb: `true` => `"true"^^xsd:boolean`). 
+_Nota:_ Sommige turtle verwerking-programma's kunnen niet goed om met de [shorthand syntax van turtle](https://www.w3.org/TR/turtle/#literals) in de bestanden. (bvb https://github.com/Informatievlaanderen/VSDS-LDESServer4J). Indien u de bestanden probeert op te laden, krijg je een fout. Het volstaat om triples van de voorbeelden om te vormen tot zijn lexicografische vorm en bijhorend datatype. (bvb: `true` => `"true"^^xsd:boolean`).
 
 ### SHACL voorbeeld validaties
 
