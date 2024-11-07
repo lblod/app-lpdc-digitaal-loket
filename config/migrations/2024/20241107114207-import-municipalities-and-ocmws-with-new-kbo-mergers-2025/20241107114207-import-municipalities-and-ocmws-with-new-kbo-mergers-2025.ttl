@@ -1,0 +1,172 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ext: <http://mu.semte.ch/vocabularies/ext/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+#
+# Municipalities
+#
+<http://data.lblod.info/id/bestuurseenheden/19483103-318e-435a-aa37-45e485406ee9>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Beveren-Kruibeke-Zwijndrecht" ;
+    mu:uuid "19483103-318e-435a-aa37-45e485406ee9" ;
+    dcterms:identifier "OVO053390" , "1010783451" ;
+    ext:kbonummer "1010783451" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> ;
+    besluit:werkingsgebied <http://data.lblod.info/id/werkingsgebieden/b97c1b58-6431-4509-ab94-3300d27759a8> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:inScheme <http://lblod.data.gift/concept-schemes/dcfb437e-1219-4d1e-891d-057f262da9d6> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Oost-Vlaanderen
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/a9a0cabd376a2b3a8eb838f15f6aeb1b63ffe49d527598994962e0d15ad2081c> ;
+    # Link to municipalities that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/4f0eb4436c88cf831c35f84e7c34ce32f9ee4e99c5139aff62990e5e531aa1e7>, # Beveren
+        <http://data.lblod.info/id/bestuurseenheden/6af55cecaea3621f53bb32417a36ed6e3d41b2aa5b9f6d62ab3d80cc8ec11539>, # Kruibeke
+        <http://data.lblod.info/id/bestuurseenheden/c362abc58ac4579ff417824ce620962ac57bc344b34fe8f51d21b35ef54da36d> . # Zwijndrecht
+# Add as sub organisation of province Oost-Vlaanderen
+<http://data.lblod.info/id/bestuurseenheden/298b13541e1e85de4b71535197aa1f3bbc4bdb67f0fe0f58ab4a7dc207af61fa> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/19483103-318e-435a-aa37-45e485406ee9> .
+
+
+<http://data.lblod.info/id/bestuurseenheden/b8bb293d-aa22-4b43-bda4-0b6af76e9493>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Merelbeke-Melle" ;
+    mu:uuid "b8bb293d-aa22-4b43-bda4-0b6af76e9493" ;
+    dcterms:identifier "1010775830" , "OVO053387" ;
+    ext:kbonummer "1010775830" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> ;
+    besluit:werkingsgebied <http://data.lblod.info/id/werkingsgebieden/62fef519-b1de-4a0f-911a-c63a5365c17b> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:inScheme <http://lblod.data.gift/concept-schemes/dcfb437e-1219-4d1e-891d-057f262da9d6> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Oost-Vlaanderen
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/a9a0cabd376a2b3a8eb838f15f6aeb1b63ffe49d527598994962e0d15ad2081c> ;
+    # Link to municipalities that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/c0b6b5cf198cd939251dff8ed052177cfff245074c6b8d43394c8c97f7b6e945>, # Melle
+        <http://data.lblod.info/id/bestuurseenheden/8ef1e4a43efd913e6b09b0ddea344b7b5d723a344ad559389a55ae1ff0bebc8f> . # Merelbeke
+# Add as sub organisation of province Oost-Vlaanderen
+<http://data.lblod.info/id/bestuurseenheden/298b13541e1e85de4b71535197aa1f3bbc4bdb67f0fe0f58ab4a7dc207af61fa> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/b8bb293d-aa22-4b43-bda4-0b6af76e9493> .
+
+<http://data.lblod.info/id/bestuurseenheden/1ca65d65-54ff-4b44-b750-bd70c91191af>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Nazareth-De Pinte" ;
+    mu:uuid "1ca65d65-54ff-4b44-b750-bd70c91191af" ;
+    dcterms:identifier "1010781867" , "OVO053388" ;
+    ext:kbonummer "1010781867" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> ;
+    besluit:werkingsgebied <http://data.lblod.info/id/werkingsgebieden/41362ab2-5130-4160-b76b-4bfa5d9a1f59> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:inScheme <http://lblod.data.gift/concept-schemes/dcfb437e-1219-4d1e-891d-057f262da9d6> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Oost-Vlaanderen
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/a9a0cabd376a2b3a8eb838f15f6aeb1b63ffe49d527598994962e0d15ad2081c> ;
+    # Link to municipalities that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/e39bc997aa6dd9f240277735efd745b6a0422614d2b36cf01825c86b1b91a9ee>, # De Pinte
+        <http://data.lblod.info/id/bestuurseenheden/0327a51548f73607f8a5ec11b36711a3c96703686ad93a3d632718c135c295db> . # Nazareth
+# Add as sub organisation of the province Oost-Vlaanderen
+<http://data.lblod.info/id/bestuurseenheden/298b13541e1e85de4b71535197aa1f3bbc4bdb67f0fe0f58ab4a7dc207af61fa> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/1ca65d65-54ff-4b44-b750-bd70c91191af> .
+
+<http://data.lblod.info/id/bestuurseenheden/add1e4eb-9ec7-4ea6-af82-335aa76b7d48>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Pajottegem" ;
+    mu:uuid "add1e4eb-9ec7-4ea6-af82-335aa76b7d48" ;
+    dcterms:identifier "1010784540" , "OVO053389" ;
+    ext:kbonummer "1010784540" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> ;
+    besluit:werkingsgebied <http://data.lblod.info/id/werkingsgebieden/92398c49-30d5-46b2-af90-37f135c89e47> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:inScheme <http://lblod.data.gift/concept-schemes/dcfb437e-1219-4d1e-891d-057f262da9d6> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Vlaams-Brabant
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/9c503a712d448bc8b89c1f8802c207e30bd192bc8da3bf22509a547949a45301> ;
+    # Link to municipalities that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/00eb231f51bd6b4f5dcc6536b2d09a174ea8583f5bf28b10bc4fc769a07e511d>, # Galmaarden
+        <http://data.lblod.info/id/bestuurseenheden/c69192b973a3ca11531b9657b3ee20aa6688fa33ea1ef1392310fec751980ab2>, # Gooik
+        <http://data.lblod.info/id/bestuurseenheden/3eb8c9fae32d02359dcd7b22e2a74e67a5b48388df31ad819c27c688fedd10b0> . # Herne
+# Add as sub organisation of the province Vlaams-Brabant
+<http://data.lblod.info/id/bestuurseenheden/8b7e7bf05ace5bb1a68f5bc0d870e20c20f147b00bd9a3dcce3a01733d4da744> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/add1e4eb-9ec7-4ea6-af82-335aa76b7d48> .
+
+#
+# OCMWs
+#
+<http://data.lblod.info/id/bestuurseenheden/fd41f573-7d9a-4d9f-b7d0-d5b6114d1622>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Beveren-Kruibeke-Zwijndrecht" ;
+    mu:uuid "fd41f573-7d9a-4d9f-b7d0-d5b6114d1622" ;
+    dcterms:identifier "1010783748" , "OVO053710" ;
+    ext:kbonummer "1010783748" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Oost-Vlaanderen
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/a9a0cabd376a2b3a8eb838f15f6aeb1b63ffe49d527598994962e0d15ad2081c> ;
+    # Link to OCMWs that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/72bc672ceb6894d8dd31dc2dff2faad2fd93f4b9f5347d556d092516eaa30aa3>, # Beveren
+        <http://data.lblod.info/id/bestuurseenheden/d3c76fd84794dad5e12c9eed6d6332dc5e5c99daf0e4ddd7ceebf13d5d6c0ccd>, # Kruibeke
+        <http://data.lblod.info/id/bestuurseenheden/bbc23313f4c8585a0c51f15f920d77123356535cd1cad9af38f5707892c7088d> . # Zwijndrecht
+# Add as sub organisation of East-Flanders province
+<http://data.lblod.info/id/bestuurseenheden/298b13541e1e85de4b71535197aa1f3bbc4bdb67f0fe0f58ab4a7dc207af61fa> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/fd41f573-7d9a-4d9f-b7d0-d5b6114d1622> .
+
+<http://data.lblod.info/id/bestuurseenheden/5d94b2fd-60ee-4e56-a1f0-a586d596adf6>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Merelbeke-Melle" ;
+    mu:uuid "5d94b2fd-60ee-4e56-a1f0-a586d596adf6" ;
+    dcterms:identifier "OVO053711" , "1010776127" ;
+    ext:kbonummer "1010776127" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Oost-Vlaanderen
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/a9a0cabd376a2b3a8eb838f15f6aeb1b63ffe49d527598994962e0d15ad2081c> ;
+    # Link to OCMWs that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e>, # Melle
+        <http://data.lblod.info/id/bestuurseenheden/f56f068943a99059f5bfc3b905fe8848a25a47cfa30fb3ed3d294b47815b2255> . # Merelbeke
+# Add as sub organisation of province Oost-Vlaanderen
+<http://data.lblod.info/id/bestuurseenheden/298b13541e1e85de4b71535197aa1f3bbc4bdb67f0fe0f58ab4a7dc207af61fa> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/5d94b2fd-60ee-4e56-a1f0-a586d596adf6> .
+
+<http://data.lblod.info/id/bestuurseenheden/7d53f659-3a3b-44b1-9e77-3ea067678c0e>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Nazareth-De Pinte" ;
+    mu:uuid "7d53f659-3a3b-44b1-9e77-3ea067678c0e" ;
+    dcterms:identifier "1010782461" , "OVO053712" ;
+    ext:kbonummer "1010782461" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Oost-Vlaanderen
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/a9a0cabd376a2b3a8eb838f15f6aeb1b63ffe49d527598994962e0d15ad2081c> ;
+    # Link to OCMWs that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/144c75e403c5084af57f5c0c86252b8759b56baf9694326abbcb5ea40ab69f1a>, # De Pinte
+    <http://data.lblod.info/id/bestuurseenheden/0a2d980559eb9f3e0820386541274a72692f495204cd6d951ea1907ecc65829b> . # Nazareth
+# Add as sub organisation of province Oost-Vlaanderen
+<http://data.lblod.info/id/bestuurseenheden/298b13541e1e85de4b71535197aa1f3bbc4bdb67f0fe0f58ab4a7dc207af61fa> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/7d53f659-3a3b-44b1-9e77-3ea067678c0e> .
+
+<http://data.lblod.info/id/bestuurseenheden/650378e7-1bee-4737-91ff-5b20ac4623cf>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Pajottegem" ;
+    mu:uuid "650378e7-1bee-4737-91ff-5b20ac4623cf" ;
+    dcterms:identifier "1010784738" , "OVO053708" ;
+    ext:kbonummer "1010784738" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    # Werkgebied for province Vlaams-Brabant
+    ext:inProvincie <http://data.lblod.info/id/werkingsgebieden/9c503a712d448bc8b89c1f8802c207e30bd192bc8da3bf22509a547949a45301> ;
+    # Link to OCMWs that merged together
+    prov:wasDerivedFrom <http://data.lblod.info/id/bestuurseenheden/ba8a253d98ea7d2ab1afc43e5e2cd145a12ccd86b68e71d023e3c13a83d7498f>, # Galmaarden
+        <http://data.lblod.info/id/bestuurseenheden/76c45d60f05bf8afc8c71859342b69cac6a57ee2b320b900a60afd6ba9b8eb9d>, # Gooik
+        <http://data.lblod.info/id/bestuurseenheden/5d21ccef2f5aa3ccbf3a74c6f25ebe9f0b1ef5a97b87f3d79c86ae9d6d857df8> . # Herne
+# Add as sub organisation of the province Vlaams-Brabant
+<http://data.lblod.info/id/bestuurseenheden/8b7e7bf05ace5bb1a68f5bc0d870e20c20f147b00bd9a3dcce3a01733d4da744> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/650378e7-1bee-4737-91ff-5b20ac4623cf> .
