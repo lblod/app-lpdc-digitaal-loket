@@ -1,0 +1,75 @@
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX schema: <http://schema.org/>
+
+DELETE {
+  GRAPH ?graph {
+    ?publishedPublicService schema:datePublished ?datePublished.
+  }
+}
+WHERE {
+  {
+    SELECT ?publicService (MAX(?generatedAt) AS ?maxGeneratedAt) ?graph
+    WHERE {
+      GRAPH ?graph {
+        ?publishedPublicService a lpdcExt:PublishedInstancePublicServiceSnapshot;
+                                lpdcExt:isPublishedVersionOf ?publicService;
+                                prov:generatedAtTime ?generatedAt.
+      }
+    } GROUP BY ?publicService ?graph
+  }
+
+  GRAPH ?graph {
+    ?publishedPublicService a lpdcExt:PublishedInstancePublicServiceSnapshot;
+                            prov:generatedAtTime ?generatedAt;
+                            schema:datePublished ?datePublished.
+    FILTER(?generatedAt = ?maxGeneratedAt)
+  }
+
+  VALUES (?graph ?publicService) {
+    (<http://mu.semte.ch/graphs/organizations/aa368412c2a6d17d41b78030f2914211a77e5cda29c673afc49bf4ac655bc913/LoketLB-LPDCGebruiker> <http://data.lblod.info/id/public-service/4cc1d236-dd2b-4296-be0f-54390b406ff4>)
+
+    (<http://mu.semte.ch/graphs/organizations/d9267014daa2764a9edd3b176678b56f57474ffe162363795690e5c684c6eab1/LoketLB-LPDCGebruiker> <http://data.lblod.info/id/public-service/64740497-7620-444b-bb06-61947f40c58d>)
+
+    (<http://mu.semte.ch/graphs/organizations/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc/LoketLB-LPDCGebruiker> <http://data.lblod.info/id/public-service/86e62479-f8a9-45b9-9a09-778d6db275fc>)
+    (<http://mu.semte.ch/graphs/organizations/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc/LoketLB-LPDCGebruiker> <http://data.lblod.info/id/public-service/9787e547-3b06-470a-9cd7-3ee29b8bd548>)
+
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/007c0cd4-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/18d16576-03ba-eb11-a863-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/2865f896-10b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/327a6e0b-9a34-ef11-8409-000d3abd52e8>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/3a2b78df-c2fb-ee11-a1ff-000d3aacaaa5>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/425eeec7-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/4565f896-10b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/5070ea1d-e6f3-ed11-a882-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/517d34f4-e2b9-ea11-a850-005056a8478c>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/62f8dfc1-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/6e2a9b9c-25c7-ed11-a881-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/7284d759-e9ab-ea11-a850-005056a8478c>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/73910975-12b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/7406f506-14b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/7f1fde3d-e9ab-ea11-a850-005056a8478c>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/7f4c1bda-2bc7-ed11-a881-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/80f8dfc1-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/82b3db4c-10b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/845eeec7-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/848b05bd-190d-ef11-9f8a-000d3aacaaa5>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/86bd0783-f9f7-ee11-a1fd-6045bd94beff>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/87a210ce-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/911a85c2-9734-ef11-8409-000d3abd52e8>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/9346dcbb-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/99993758-bdbe-eb11-a85e-005056a8478c>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/9b98f85c-9833-ef11-8409-000d3abf6f74>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/a4aa05da-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/a4d5e910-72d4-ed11-a87a-005056a8478c>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/a5f8dfc1-13b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/ac6e625f-10b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/b47fbb39-2bc7-ed11-a881-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/bd708f8e-26c7-ed11-a881-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/c9af1e22-24c7-ed11-a881-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/da6eadeb-24c7-ed11-a881-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/e1451da6-d9f7-ee11-a1fd-6045bd94beff>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/e8706e1f-12b2-ea11-a853-005056a8c14b>)
+    (<http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> <https://stad.gent/id/product/f1493e83-22c7-ed11-a881-005056a8c14b>)
+  }
+}
