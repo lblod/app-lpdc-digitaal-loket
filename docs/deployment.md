@@ -20,7 +20,7 @@ services:
     image: lblod/lpdc-publish-service:latest
 ```
 
-## Dev
+## Dev and Test
 
 The dev environment is configured to run the latest of the development branch, and to also use the 'latest' dependents for frontend, management, publish.
 
@@ -29,7 +29,7 @@ Following steps can be used if you want to manually deploy a new version on dev 
 ```shell
   ssh root@lpdc-dev.s.redhost.be
 
-  cd /data/app-lpdc-digitaal-loket-dev
+  cd /data/app-lpdc-digitaal-loket-dev # or `cd /data/app-lpdc-digitaal-loket-test` for Test
 
   git pull
 
@@ -103,55 +103,6 @@ After the demo after each sprint, we want to make a release of app-lpdc-digitaal
 If needed, we first make a new release of these containers (instructions to be found in these repos). Then we can update the versions in the docker-compose file. And make a release of app-lpdc-digitaal-loket, by making a release version in git (which also tags).
 
 # Deploying a release
-
-## Test
-
-On test we always deploy a released version.
-
-```shell
-  ssh root@lpdc-dev.s.redhost.be
-
-  cd /data/app-lpdc-digitaal-loket-test
-  
-  #take a backup of the existing logs
-  drc logs --timestamps > /backups/logs-test-backup/log-<your date - and followletter here>.txt
-  #example: drc logs --timestamps > /backups/logs-test-backup/log-2024-03-26-a.txt
-  
-  #zip the backup of the logs
-  tar -zcvf /backups/logs-test-backup/log-2024-03-26-a.txt.tar.gz /backups/logs-test-backup/log-2024-03-26-a.txt
-  
-  #remove the full file
-  rm /backups/logs-test-backup/log-2024-03-26-a.txt
-
-  git fetch --all --tags
-  
-  #before stopping virtuoso make sure all db changes are saved to disk
-  docker exec -it my-virtuoso bash
-  isql-v -U dba -P $DBA_PASSWORD
-  SQL> checkpoint;
-  
-  drc down --remove-orphans
-
-  git checkout tags/<my version>
-  #e.g. of a version: v0.2.0
-  
-  # Do necessary manual changes to docker-compose.override.yml files if required by release. 
-  
-  # enable maintenance frontend docker-compose.override.yml when migrations need to be executed
-  # lpdc:
-  #  image: lblod/frontend-generic-maintenance
-  #  environment:
-  #    EMBER_MAINTENANCE_MESSAGE: " We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikmaken van een verbeterde versie van LPDC voor een nog vlottere gebruikerservaring."
-  #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
-  #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
-    
-  drc pull
-
-  drc up -d
-
-  drc logs  --follow --timestamps --since 1m
- 
-```
 
 ## Acc
 
