@@ -8,9 +8,7 @@
 nutss:2024
     a                  skos:ConceptScheme ;
     skos:prefLabel     "NUTS/LAU classificatie"@nl ;
-    skos:prefLabel     "NUTS/LAU classification"@en ;
     skos:definition    "NUTS/LAU classificatie van een publieke dienst"@nl ;
-    skos:definition    "NUTS/LAU classification of a public service"@en ;
     skos:hasTopConcept nuts:BE21 ;
     skos:hasTopConcept nuts:BE22 ;
     skos:hasTopConcept nuts:BE23 ;
@@ -347,9 +345,7 @@ nutss:2024
 nuts:BE21
     a                 skos:Concept ;
     skos:prefLabel    "Provincie Antwerpen"@nl ;
-    skos:prefLabel    "Province Antwerp"@en ;
     skos:definition   "NUTS/LAU classificatie: Provincie Antwerpen"@nl ;
-    skos:definition   "NUTS/LAU classification: Province Antwerp"@en ;
     skos:notation     "BE21" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -357,9 +353,7 @@ nuts:BE21
 nuts:BE22
     a                 skos:Concept ;
     skos:prefLabel    "Provincie Limburg"@nl ;
-    skos:prefLabel    "Province Limburg"@en ;
     skos:definition   "NUTS/LAU classificatie: Provincie Limburg"@nl ;
-    skos:definition   "NUTS/LAU classification: Province Limburg"@en ;
     skos:notation     "BE22" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -367,9 +361,7 @@ nuts:BE22
 nuts:BE23
     a                 skos:Concept ;
     skos:prefLabel    "Provincie Oost-Vlaanderen"@nl ;
-    skos:prefLabel    "Province East Flanders"@en ;
     skos:definition   "NUTS/LAU classificatie: Provincie Oost-Vlaanderen"@nl ;
-    skos:definition   "NUTS/LAU classification: Province East Flanders"@en ;
     skos:notation     "BE23" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -377,9 +369,7 @@ nuts:BE23
 nuts:BE24
     a                 skos:Concept ;
     skos:prefLabel    "Provincie Vlaams-Brabant"@nl ;
-    skos:prefLabel    "Province Flemmish Brabant"@en ;
     skos:definition   "NUTS/LAU classificatie: Provincie Vlaams-Brabant"@nl ;
-    skos:definition   "NUTS/LAU classification: Province Flemmish Brabant"@en ;
     skos:notation     "BE24" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -387,9 +377,7 @@ nuts:BE24
 nuts:BE25
     a                 skos:Concept ;
     skos:prefLabel    "Provincie West-Vlaanderen"@nl ;
-    skos:prefLabel    "Province West Flanders"@en ;
     skos:definition   "NUTS/LAU classificatie: Provincie West-Vlaanderen"@nl ;
-    skos:definition   "NUTS/LAU classification: Province West Flanders"@en ;
     skos:notation     "BE25" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -397,9 +385,7 @@ nuts:BE25
 nuts:BE21111001
     a                 skos:Concept ;
     skos:prefLabel    "Aartselaar"@nl ;
-    skos:prefLabel    "Aartselaar"@en ;
     skos:definition   "NUTS/LAU classificatie: Aartselaar"@nl ;
-    skos:definition   "NUTS/LAU classification: Aartselaar"@en ;
     skos:notation     "11001" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -407,9 +393,7 @@ nuts:BE21111001
 nuts:BE21111002
     a                 skos:Concept ;
     skos:prefLabel    "Antwerpen"@nl ;
-    skos:prefLabel    "Antwerpen"@en ;
     skos:definition   "NUTS/LAU classificatie: Antwerpen"@nl ;
-    skos:definition   "NUTS/LAU classification: Antwerpen"@en ;
     skos:notation     "11002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -417,9 +401,7 @@ nuts:BE21111002
 nuts:BE21111004
     a                 skos:Concept ;
     skos:prefLabel    "Boechout"@nl ;
-    skos:prefLabel    "Boechout"@en ;
     skos:definition   "NUTS/LAU classificatie: Boechout"@nl ;
-    skos:definition   "NUTS/LAU classification: Boechout"@en ;
     skos:notation     "11004" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -427,9 +409,7 @@ nuts:BE21111004
 nuts:BE21111005
     a                 skos:Concept ;
     skos:prefLabel    "Boom"@nl ;
-    skos:prefLabel    "Boom"@en ;
     skos:definition   "NUTS/LAU classificatie: Boom"@nl ;
-    skos:definition   "NUTS/LAU classification: Boom"@en ;
     skos:notation     "11005" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -437,9 +417,7 @@ nuts:BE21111005
 nuts:BE21111007
     a                 skos:Concept ;
     skos:prefLabel    "Borsbeek"@nl ;
-    skos:prefLabel    "Borsbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Borsbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Borsbeek"@en ;
     skos:notation     "11007" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -448,9 +426,7 @@ nuts:BE21111007
 nuts:BE21111008
     a                 skos:Concept ;
     skos:prefLabel    "Brasschaat"@nl ;
-    skos:prefLabel    "Brasschaat"@en ;
     skos:definition   "NUTS/LAU classificatie: Brasschaat"@nl ;
-    skos:definition   "NUTS/LAU classification: Brasschaat"@en ;
     skos:notation     "11008" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -458,9 +434,7 @@ nuts:BE21111008
 nuts:BE21111009
     a                 skos:Concept ;
     skos:prefLabel    "Brecht"@nl ;
-    skos:prefLabel    "Brecht"@en ;
     skos:definition   "NUTS/LAU classificatie: Brecht"@nl ;
-    skos:definition   "NUTS/LAU classification: Brecht"@en ;
     skos:notation     "11009" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -468,9 +442,7 @@ nuts:BE21111009
 nuts:BE21111013
     a                 skos:Concept ;
     skos:prefLabel    "Edegem"@nl ;
-    skos:prefLabel    "Edegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Edegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Edegem"@en ;
     skos:notation     "11013" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -478,9 +450,7 @@ nuts:BE21111013
 nuts:BE21111016
     a                 skos:Concept ;
     skos:prefLabel    "Essen"@nl ;
-    skos:prefLabel    "Essen"@en ;
     skos:definition   "NUTS/LAU classificatie: Essen"@nl ;
-    skos:definition   "NUTS/LAU classification: Essen"@en ;
     skos:notation     "11016" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -488,9 +458,7 @@ nuts:BE21111016
 nuts:BE21111018
     a                 skos:Concept ;
     skos:prefLabel    "Hemiksem"@nl ;
-    skos:prefLabel    "Hemiksem"@en ;
     skos:definition   "NUTS/LAU classificatie: Hemiksem"@nl ;
-    skos:definition   "NUTS/LAU classification: Hemiksem"@en ;
     skos:notation     "11018" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -498,9 +466,7 @@ nuts:BE21111018
 nuts:BE21111021
     a                 skos:Concept ;
     skos:prefLabel    "Hove"@nl ;
-    skos:prefLabel    "Hove"@en ;
     skos:definition   "NUTS/LAU classificatie: Hove"@nl ;
-    skos:definition   "NUTS/LAU classification: Hove"@en ;
     skos:notation     "11021" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -508,9 +474,7 @@ nuts:BE21111021
 nuts:BE21111022
     a                 skos:Concept ;
     skos:prefLabel    "Kalmthout"@nl ;
-    skos:prefLabel    "Kalmthout"@en ;
     skos:definition   "NUTS/LAU classificatie: Kalmthout"@nl ;
-    skos:definition   "NUTS/LAU classification: Kalmthout"@en ;
     skos:notation     "11022" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -518,9 +482,7 @@ nuts:BE21111022
 nuts:BE21111023
     a                 skos:Concept ;
     skos:prefLabel    "Kapellen"@nl ;
-    skos:prefLabel    "Kapellen"@en ;
     skos:definition   "NUTS/LAU classificatie: Kapellen"@nl ;
-    skos:definition   "NUTS/LAU classification: Kapellen"@en ;
     skos:notation     "11023" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -528,9 +490,7 @@ nuts:BE21111023
 nuts:BE21111024
     a                 skos:Concept ;
     skos:prefLabel    "Kontich"@nl ;
-    skos:prefLabel    "Kontich"@en ;
     skos:definition   "NUTS/LAU classificatie: Kontich"@nl ;
-    skos:definition   "NUTS/LAU classification: Kontich"@en ;
     skos:notation     "11024" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -538,9 +498,7 @@ nuts:BE21111024
 nuts:BE21111025
     a                 skos:Concept ;
     skos:prefLabel    "Lint"@nl ;
-    skos:prefLabel    "Lint"@en ;
     skos:definition   "NUTS/LAU classificatie: Lint"@nl ;
-    skos:definition   "NUTS/LAU classification: Lint"@en ;
     skos:notation     "11025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -548,9 +506,7 @@ nuts:BE21111025
 nuts:BE21111029
     a                 skos:Concept ;
     skos:prefLabel    "Mortsel"@nl ;
-    skos:prefLabel    "Mortsel"@en ;
     skos:definition   "NUTS/LAU classificatie: Mortsel"@nl ;
-    skos:definition   "NUTS/LAU classification: Mortsel"@en ;
     skos:notation     "11029" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -558,9 +514,7 @@ nuts:BE21111029
 nuts:BE21111030
     a                 skos:Concept ;
     skos:prefLabel    "Niel"@nl ;
-    skos:prefLabel    "Niel"@en ;
     skos:definition   "NUTS/LAU classificatie: Niel"@nl ;
-    skos:definition   "NUTS/LAU classification: Niel"@en ;
     skos:notation     "11030" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -568,9 +522,7 @@ nuts:BE21111030
 nuts:BE21111035
     a                 skos:Concept ;
     skos:prefLabel    "Ranst"@nl ;
-    skos:prefLabel    "Ranst"@en ;
     skos:definition   "NUTS/LAU classificatie: Ranst"@nl ;
-    skos:definition   "NUTS/LAU classification: Ranst"@en ;
     skos:notation     "11035" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -578,9 +530,7 @@ nuts:BE21111035
 nuts:BE21111037
     a                 skos:Concept ;
     skos:prefLabel    "Rumst"@nl ;
-    skos:prefLabel    "Rumst"@en ;
     skos:definition   "NUTS/LAU classificatie: Rumst"@nl ;
-    skos:definition   "NUTS/LAU classification: Rumst"@en ;
     skos:notation     "11037" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -588,9 +538,7 @@ nuts:BE21111037
 nuts:BE21111038
     a                 skos:Concept ;
     skos:prefLabel    "Schelle"@nl ;
-    skos:prefLabel    "Schelle"@en ;
     skos:definition   "NUTS/LAU classificatie: Schelle"@nl ;
-    skos:definition   "NUTS/LAU classification: Schelle"@en ;
     skos:notation     "11038" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -598,9 +546,7 @@ nuts:BE21111038
 nuts:BE21111039
     a                 skos:Concept ;
     skos:prefLabel    "Schilde"@nl ;
-    skos:prefLabel    "Schilde"@en ;
     skos:definition   "NUTS/LAU classificatie: Schilde"@nl ;
-    skos:definition   "NUTS/LAU classification: Schilde"@en ;
     skos:notation     "11039" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -608,9 +554,7 @@ nuts:BE21111039
 nuts:BE21111040
     a                 skos:Concept ;
     skos:prefLabel    "Schoten"@nl ;
-    skos:prefLabel    "Schoten"@en ;
     skos:definition   "NUTS/LAU classificatie: Schoten"@nl ;
-    skos:definition   "NUTS/LAU classification: Schoten"@en ;
     skos:notation     "11040" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -618,9 +562,7 @@ nuts:BE21111040
 nuts:BE21111044
     a                 skos:Concept ;
     skos:prefLabel    "Stabroek"@nl ;
-    skos:prefLabel    "Stabroek"@en ;
     skos:definition   "NUTS/LAU classificatie: Stabroek"@nl ;
-    skos:definition   "NUTS/LAU classification: Stabroek"@en ;
     skos:notation     "11044" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -628,9 +570,7 @@ nuts:BE21111044
 nuts:BE21111050
     a                 skos:Concept ;
     skos:prefLabel    "Wijnegem"@nl ;
-    skos:prefLabel    "Wijnegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Wijnegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Wijnegem"@en ;
     skos:notation     "11050" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -638,9 +578,7 @@ nuts:BE21111050
 nuts:BE21111052
     a                 skos:Concept ;
     skos:prefLabel    "Wommelgem"@nl ;
-    skos:prefLabel    "Wommelgem"@en ;
     skos:definition   "NUTS/LAU classificatie: Wommelgem"@nl ;
-    skos:definition   "NUTS/LAU classification: Wommelgem"@en ;
     skos:notation     "11052" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -648,9 +586,7 @@ nuts:BE21111052
 nuts:BE21111053
     a                 skos:Concept ;
     skos:prefLabel    "Wuustwezel"@nl ;
-    skos:prefLabel    "Wuustwezel"@en ;
     skos:definition   "NUTS/LAU classificatie: Wuustwezel"@nl ;
-    skos:definition   "NUTS/LAU classification: Wuustwezel"@en ;
     skos:notation     "11053" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -658,9 +594,7 @@ nuts:BE21111053
 nuts:BE21111054
     a                 skos:Concept ;
     skos:prefLabel    "Zandhoven"@nl ;
-    skos:prefLabel    "Zandhoven"@en ;
     skos:definition   "NUTS/LAU classificatie: Zandhoven"@nl ;
-    skos:definition   "NUTS/LAU classification: Zandhoven"@en ;
     skos:notation     "11054" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -668,9 +602,7 @@ nuts:BE21111054
 nuts:BE21111055
     a                 skos:Concept ;
     skos:prefLabel    "Zoersel"@nl ;
-    skos:prefLabel    "Zoersel"@en ;
     skos:definition   "NUTS/LAU classificatie: Zoersel"@nl ;
-    skos:definition   "NUTS/LAU classification: Zoersel"@en ;
     skos:notation     "11055" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -678,9 +610,7 @@ nuts:BE21111055
 nuts:BE21111056
     a                 skos:Concept ;
     skos:prefLabel    "Zwijndrecht"@nl ;
-    skos:prefLabel    "Zwijndrecht"@en ;
     skos:definition   "NUTS/LAU classificatie: Zwijndrecht"@nl ;
-    skos:definition   "NUTS/LAU classification: Zwijndrecht"@en ;
     skos:notation     "11056" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -689,9 +619,7 @@ nuts:BE21111056
 nuts:BE21111057
     a                 skos:Concept ;
     skos:prefLabel    "Malle"@nl ;
-    skos:prefLabel    "Malle"@en ;
     skos:definition   "NUTS/LAU classificatie: Malle"@nl ;
-    skos:definition   "NUTS/LAU classification: Malle"@en ;
     skos:notation     "11057" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -699,9 +627,7 @@ nuts:BE21111057
 nuts:BE21212002
     a                 skos:Concept ;
     skos:prefLabel    "Berlaar"@nl ;
-    skos:prefLabel    "Berlaar"@en ;
     skos:definition   "NUTS/LAU classificatie: Berlaar"@nl ;
-    skos:definition   "NUTS/LAU classification: Berlaar"@en ;
     skos:notation     "12002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -709,9 +635,7 @@ nuts:BE21212002
 nuts:BE21212005
     a                 skos:Concept ;
     skos:prefLabel    "Bonheiden"@nl ;
-    skos:prefLabel    "Bonheiden"@en ;
     skos:definition   "NUTS/LAU classificatie: Bonheiden"@nl ;
-    skos:definition   "NUTS/LAU classification: Bonheiden"@en ;
     skos:notation     "12005" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -719,9 +643,7 @@ nuts:BE21212005
 nuts:BE21212007
     a                 skos:Concept ;
     skos:prefLabel    "Bornem"@nl ;
-    skos:prefLabel    "Bornem"@en ;
     skos:definition   "NUTS/LAU classificatie: Bornem"@nl ;
-    skos:definition   "NUTS/LAU classification: Bornem"@en ;
     skos:notation     "12007" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -729,9 +651,7 @@ nuts:BE21212007
 nuts:BE21212009
     a                 skos:Concept ;
     skos:prefLabel    "Duffel"@nl ;
-    skos:prefLabel    "Duffel"@en ;
     skos:definition   "NUTS/LAU classificatie: Duffel"@nl ;
-    skos:definition   "NUTS/LAU classification: Duffel"@en ;
     skos:notation     "12009" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -739,9 +659,7 @@ nuts:BE21212009
 nuts:BE21212014
     a                 skos:Concept ;
     skos:prefLabel    "Heist-op-den-Berg"@nl ;
-    skos:prefLabel    "Heist-op-den-Berg"@en ;
     skos:definition   "NUTS/LAU classificatie: Heist-op-den-Berg"@nl ;
-    skos:definition   "NUTS/LAU classification: Heist-op-den-Berg"@en ;
     skos:notation     "12014" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -749,9 +667,7 @@ nuts:BE21212014
 nuts:BE21212021
     a                 skos:Concept ;
     skos:prefLabel    "Lier"@nl ;
-    skos:prefLabel    "Lier"@en ;
     skos:definition   "NUTS/LAU classificatie: Lier"@nl ;
-    skos:definition   "NUTS/LAU classification: Lier"@en ;
     skos:notation     "12021" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -759,9 +675,7 @@ nuts:BE21212021
 nuts:BE21212025
     a                 skos:Concept ;
     skos:prefLabel    "Mechelen"@nl ;
-    skos:prefLabel    "Mechelen"@en ;
     skos:definition   "NUTS/LAU classificatie: Mechelen"@nl ;
-    skos:definition   "NUTS/LAU classification: Mechelen"@en ;
     skos:notation     "12025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -769,9 +683,7 @@ nuts:BE21212025
 nuts:BE21212026
     a                 skos:Concept ;
     skos:prefLabel    "Nijlen"@nl ;
-    skos:prefLabel    "Nijlen"@en ;
     skos:definition   "NUTS/LAU classificatie: Nijlen"@nl ;
-    skos:definition   "NUTS/LAU classification: Nijlen"@en ;
     skos:notation     "12026" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -779,9 +691,7 @@ nuts:BE21212026
 nuts:BE21212029
     a                 skos:Concept ;
     skos:prefLabel    "Putte"@nl ;
-    skos:prefLabel    "Putte"@en ;
     skos:definition   "NUTS/LAU classificatie: Putte"@nl ;
-    skos:definition   "NUTS/LAU classification: Putte"@en ;
     skos:notation     "12029" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -789,9 +699,7 @@ nuts:BE21212029
 nuts:BE21212041
     a                 skos:Concept ;
     skos:prefLabel    "Puurs-Sint-Amands"@nl ;
-    skos:prefLabel    "Puurs-Sint-Amands"@en ;
     skos:definition   "NUTS/LAU classificatie: Puurs-Sint-Amands"@nl ;
-    skos:definition   "NUTS/LAU classification: Puurs-Sint-Amands"@en ;
     skos:notation     "12041" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -800,9 +708,7 @@ nuts:BE21212041
 nuts:BE21212030
     a                 skos:Concept ;
     skos:prefLabel    "Puurs"@nl ;
-    skos:prefLabel    "Puurs"@en ;
     skos:definition   "NUTS/LAU classificatie: Puurs"@nl ;
-    skos:definition   "NUTS/LAU classification: Puurs"@en ;
     skos:notation     "12030" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -811,9 +717,7 @@ nuts:BE21212030
 nuts:BE21212034
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Amands"@nl ;
-    skos:prefLabel    "Sint-Amands"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Amands"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Amands"@en ;
     skos:notation     "12034" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -822,9 +726,7 @@ nuts:BE21212034
 nuts:BE21212035
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Katelijne-Waver"@nl ;
-    skos:prefLabel    "Sint-Katelijne-Waver"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Katelijne-Waver"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Katelijne-Waver"@en ;
     skos:notation     "12035" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -832,9 +734,7 @@ nuts:BE21212035
 nuts:BE21212040
     a                 skos:Concept ;
     skos:prefLabel    "Willebroek"@nl ;
-    skos:prefLabel    "Willebroek"@en ;
     skos:definition   "NUTS/LAU classificatie: Willebroek"@nl ;
-    skos:definition   "NUTS/LAU classification: Willebroek"@en ;
     skos:notation     "12040" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -842,9 +742,7 @@ nuts:BE21212040
 nuts:BE21313001
     a                 skos:Concept ;
     skos:prefLabel    "Arendonk"@nl ;
-    skos:prefLabel    "Arendonk"@en ;
     skos:definition   "NUTS/LAU classificatie: Arendonk"@nl ;
-    skos:definition   "NUTS/LAU classification: Arendonk"@en ;
     skos:notation     "13001" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -852,9 +750,7 @@ nuts:BE21313001
 nuts:BE21313002
     a                 skos:Concept ;
     skos:prefLabel    "Baarle-Hertog"@nl ;
-    skos:prefLabel    "Baarle-Hertog"@en ;
     skos:definition   "NUTS/LAU classificatie: Baarle-Hertog"@nl ;
-    skos:definition   "NUTS/LAU classification: Baarle-Hertog"@en ;
     skos:notation     "13002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -862,9 +758,7 @@ nuts:BE21313002
 nuts:BE21313003
     a                 skos:Concept ;
     skos:prefLabel    "Balen"@nl ;
-    skos:prefLabel    "Balen"@en ;
     skos:definition   "NUTS/LAU classificatie: Balen"@nl ;
-    skos:definition   "NUTS/LAU classification: Balen"@en ;
     skos:notation     "13003" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -872,9 +766,7 @@ nuts:BE21313003
 nuts:BE21313004
     a                 skos:Concept ;
     skos:prefLabel    "Beerse"@nl ;
-    skos:prefLabel    "Beerse"@en ;
     skos:definition   "NUTS/LAU classificatie: Beerse"@nl ;
-    skos:definition   "NUTS/LAU classification: Beerse"@en ;
     skos:notation     "13004" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -882,9 +774,7 @@ nuts:BE21313004
 nuts:BE21313006
     a                 skos:Concept ;
     skos:prefLabel    "Dessel"@nl ;
-    skos:prefLabel    "Dessel"@en ;
     skos:definition   "NUTS/LAU classificatie: Dessel"@nl ;
-    skos:definition   "NUTS/LAU classification: Dessel"@en ;
     skos:notation     "13006" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -892,9 +782,7 @@ nuts:BE21313006
 nuts:BE21313008
     a                 skos:Concept ;
     skos:prefLabel    "Geel"@nl ;
-    skos:prefLabel    "Geel"@en ;
     skos:definition   "NUTS/LAU classificatie: Geel"@nl ;
-    skos:definition   "NUTS/LAU classification: Geel"@en ;
     skos:notation     "13008" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -902,9 +790,7 @@ nuts:BE21313008
 nuts:BE21313010
     a                 skos:Concept ;
     skos:prefLabel    "Grobbendonk"@nl ;
-    skos:prefLabel    "Grobbendonk"@en ;
     skos:definition   "NUTS/LAU classificatie: Grobbendonk"@nl ;
-    skos:definition   "NUTS/LAU classification: Grobbendonk"@en ;
     skos:notation     "13010" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -912,9 +798,7 @@ nuts:BE21313010
 nuts:BE21313011
     a                 skos:Concept ;
     skos:prefLabel    "Herentals"@nl ;
-    skos:prefLabel    "Herentals"@en ;
     skos:definition   "NUTS/LAU classificatie: Herentals"@nl ;
-    skos:definition   "NUTS/LAU classification: Herentals"@en ;
     skos:notation     "13011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -922,9 +806,7 @@ nuts:BE21313011
 nuts:BE21313012
     a                 skos:Concept ;
     skos:prefLabel    "Herenthout"@nl ;
-    skos:prefLabel    "Herenthout"@en ;
     skos:definition   "NUTS/LAU classificatie: Herenthout"@nl ;
-    skos:definition   "NUTS/LAU classification: Herenthout"@en ;
     skos:notation     "13012" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -932,9 +814,7 @@ nuts:BE21313012
 nuts:BE21313013
     a                 skos:Concept ;
     skos:prefLabel    "Herselt"@nl ;
-    skos:prefLabel    "Herselt"@en ;
     skos:definition   "NUTS/LAU classificatie: Herselt"@nl ;
-    skos:definition   "NUTS/LAU classification: Herselt"@en ;
     skos:notation     "13013" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -942,9 +822,7 @@ nuts:BE21313013
 nuts:BE21313014
     a                 skos:Concept ;
     skos:prefLabel    "Hoogstraten"@nl ;
-    skos:prefLabel    "Hoogstraten"@en ;
     skos:definition   "NUTS/LAU classificatie: Hoogstraten"@nl ;
-    skos:definition   "NUTS/LAU classification: Hoogstraten"@en ;
     skos:notation     "13014" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -952,9 +830,7 @@ nuts:BE21313014
 nuts:BE21313016
     a                 skos:Concept ;
     skos:prefLabel    "Hulshout"@nl ;
-    skos:prefLabel    "Hulshout"@en ;
     skos:definition   "NUTS/LAU classificatie: Hulshout"@nl ;
-    skos:definition   "NUTS/LAU classification: Hulshout"@en ;
     skos:notation     "13016" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -962,9 +838,7 @@ nuts:BE21313016
 nuts:BE21313017
     a                 skos:Concept ;
     skos:prefLabel    "Kasterlee"@nl ;
-    skos:prefLabel    "Kasterlee"@en ;
     skos:definition   "NUTS/LAU classificatie: Kasterlee"@nl ;
-    skos:definition   "NUTS/LAU classification: Kasterlee"@en ;
     skos:notation     "13017" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -972,9 +846,7 @@ nuts:BE21313017
 nuts:BE21313019
     a                 skos:Concept ;
     skos:prefLabel    "Lille"@nl ;
-    skos:prefLabel    "Lille"@en ;
     skos:definition   "NUTS/LAU classificatie: Lille"@nl ;
-    skos:definition   "NUTS/LAU classification: Lille"@en ;
     skos:notation     "13019" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -982,9 +854,7 @@ nuts:BE21313019
 nuts:BE21313021
     a                 skos:Concept ;
     skos:prefLabel    "Meerhout"@nl ;
-    skos:prefLabel    "Meerhout"@en ;
     skos:definition   "NUTS/LAU classificatie: Meerhout"@nl ;
-    skos:definition   "NUTS/LAU classification: Meerhout"@en ;
     skos:notation     "13021" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -992,9 +862,7 @@ nuts:BE21313021
 nuts:BE21313023
     a                 skos:Concept ;
     skos:prefLabel    "Merksplas"@nl ;
-    skos:prefLabel    "Merksplas"@en ;
     skos:definition   "NUTS/LAU classificatie: Merksplas"@nl ;
-    skos:definition   "NUTS/LAU classification: Merksplas"@en ;
     skos:notation     "13023" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1002,9 +870,7 @@ nuts:BE21313023
 nuts:BE21313025
     a                 skos:Concept ;
     skos:prefLabel    "Mol"@nl ;
-    skos:prefLabel    "Mol"@en ;
     skos:definition   "NUTS/LAU classificatie: Mol"@nl ;
-    skos:definition   "NUTS/LAU classification: Mol"@en ;
     skos:notation     "13025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1012,9 +878,7 @@ nuts:BE21313025
 nuts:BE21313029
     a                 skos:Concept ;
     skos:prefLabel    "Olen"@nl ;
-    skos:prefLabel    "Olen"@en ;
     skos:definition   "NUTS/LAU classificatie: Olen"@nl ;
-    skos:definition   "NUTS/LAU classification: Olen"@en ;
     skos:notation     "13029" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1022,9 +886,7 @@ nuts:BE21313029
 nuts:BE21313031
     a                 skos:Concept ;
     skos:prefLabel    "Oud-Turnhout"@nl ;
-    skos:prefLabel    "Oud-Turnhout"@en ;
     skos:definition   "NUTS/LAU classificatie: Oud-Turnhout"@nl ;
-    skos:definition   "NUTS/LAU classification: Oud-Turnhout"@en ;
     skos:notation     "13031" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1032,9 +894,7 @@ nuts:BE21313031
 nuts:BE21313035
     a                 skos:Concept ;
     skos:prefLabel    "Ravels"@nl ;
-    skos:prefLabel    "Ravels"@en ;
     skos:definition   "NUTS/LAU classificatie: Ravels"@nl ;
-    skos:definition   "NUTS/LAU classification: Ravels"@en ;
     skos:notation     "13035" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1042,9 +902,7 @@ nuts:BE21313035
 nuts:BE21313036
     a                 skos:Concept ;
     skos:prefLabel    "Retie"@nl ;
-    skos:prefLabel    "Retie"@en ;
     skos:definition   "NUTS/LAU classificatie: Retie"@nl ;
-    skos:definition   "NUTS/LAU classification: Retie"@en ;
     skos:notation     "13036" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1052,9 +910,7 @@ nuts:BE21313036
 nuts:BE21313037
     a                 skos:Concept ;
     skos:prefLabel    "Rijkevorsel"@nl ;
-    skos:prefLabel    "Rijkevorsel"@en ;
     skos:definition   "NUTS/LAU classificatie: Rijkevorsel"@nl ;
-    skos:definition   "NUTS/LAU classification: Rijkevorsel"@en ;
     skos:notation     "13037" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1062,9 +918,7 @@ nuts:BE21313037
 nuts:BE21313040
     a                 skos:Concept ;
     skos:prefLabel    "Turnhout"@nl ;
-    skos:prefLabel    "Turnhout"@en ;
     skos:definition   "NUTS/LAU classificatie: Turnhout"@nl ;
-    skos:definition   "NUTS/LAU classification: Turnhout"@en ;
     skos:notation     "13040" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1072,9 +926,7 @@ nuts:BE21313040
 nuts:BE21313044
     a                 skos:Concept ;
     skos:prefLabel    "Vorselaar"@nl ;
-    skos:prefLabel    "Vorselaar"@en ;
     skos:definition   "NUTS/LAU classificatie: Vorselaar"@nl ;
-    skos:definition   "NUTS/LAU classification: Vorselaar"@en ;
     skos:notation     "13044" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1082,9 +934,7 @@ nuts:BE21313044
 nuts:BE21313046
     a                 skos:Concept ;
     skos:prefLabel    "Vosselaar"@nl ;
-    skos:prefLabel    "Vosselaar"@en ;
     skos:definition   "NUTS/LAU classificatie: Vosselaar"@nl ;
-    skos:definition   "NUTS/LAU classification: Vosselaar"@en ;
     skos:notation     "13046" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1092,9 +942,7 @@ nuts:BE21313046
 nuts:BE21313049
     a                 skos:Concept ;
     skos:prefLabel    "Westerlo"@nl ;
-    skos:prefLabel    "Westerlo"@en ;
     skos:definition   "NUTS/LAU classificatie: Westerlo"@nl ;
-    skos:definition   "NUTS/LAU classification: Westerlo"@en ;
     skos:notation     "13049" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1102,9 +950,7 @@ nuts:BE21313049
 nuts:BE21313053
     a                 skos:Concept ;
     skos:prefLabel    "Laakdal"@nl ;
-    skos:prefLabel    "Laakdal"@en ;
     skos:definition   "NUTS/LAU classificatie: Laakdal"@nl ;
-    skos:definition   "NUTS/LAU classification: Laakdal"@en ;
     skos:notation     "13053" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1112,9 +958,7 @@ nuts:BE21313053
 nuts:BE22171002
     a                 skos:Concept ;
     skos:prefLabel    "As"@nl ;
-    skos:prefLabel    "As"@en ;
     skos:definition   "NUTS/LAU classificatie: As"@nl ;
-    skos:definition   "NUTS/LAU classification: As"@en ;
     skos:notation     "71002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1122,9 +966,7 @@ nuts:BE22171002
 nuts:BE22171004
     a                 skos:Concept ;
     skos:prefLabel    "Beringen"@nl ;
-    skos:prefLabel    "Beringen"@en ;
     skos:definition   "NUTS/LAU classificatie: Beringen"@nl ;
-    skos:definition   "NUTS/LAU classification: Beringen"@en ;
     skos:notation     "71004" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1132,9 +974,7 @@ nuts:BE22171004
 nuts:BE22171011
     a                 skos:Concept ;
     skos:prefLabel    "Diepenbeek"@nl ;
-    skos:prefLabel    "Diepenbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Diepenbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Diepenbeek"@en ;
     skos:notation     "71011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1142,9 +982,7 @@ nuts:BE22171011
 nuts:BE22171016
     a                 skos:Concept ;
     skos:prefLabel    "Genk"@nl ;
-    skos:prefLabel    "Genk"@en ;
     skos:definition   "NUTS/LAU classificatie: Genk"@nl ;
-    skos:definition   "NUTS/LAU classification: Genk"@en ;
     skos:notation     "71016" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1152,9 +990,7 @@ nuts:BE22171016
 nuts:BE22171017
     a                 skos:Concept ;
     skos:prefLabel    "Gingelom"@nl ;
-    skos:prefLabel    "Gingelom"@en ;
     skos:definition   "NUTS/LAU classificatie: Gingelom"@nl ;
-    skos:definition   "NUTS/LAU classification: Gingelom"@en ;
     skos:notation     "71017" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1162,9 +998,7 @@ nuts:BE22171017
 nuts:BE22171020
     a                 skos:Concept ;
     skos:prefLabel    "Halen"@nl ;
-    skos:prefLabel    "Halen"@en ;
     skos:definition   "NUTS/LAU classificatie: Halen"@nl ;
-    skos:definition   "NUTS/LAU classification: Halen"@en ;
     skos:notation     "71020" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1172,9 +1006,7 @@ nuts:BE22171020
 nuts:BE22171072
     a                 skos:Concept ;
     skos:prefLabel    "Hasselt"@nl ;
-    skos:prefLabel    "Hasselt"@en ;
     skos:definition   "NUTS/LAU classificatie: Hasselt"@nl ;
-    skos:definition   "NUTS/LAU classification: Hasselt"@en ;
     skos:notation     "71072" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1183,9 +1015,7 @@ nuts:BE22171072
 nuts:BE22171022
     a                 skos:Concept ;
     skos:prefLabel    "Hasselt"@nl ;
-    skos:prefLabel    "Hasselt"@en ;
     skos:definition   "NUTS/LAU classificatie: Hasselt"@nl ;
-    skos:definition   "NUTS/LAU classification: Hasselt"@en ;
     skos:notation     "71022" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1194,9 +1024,7 @@ nuts:BE22171022
 nuts:BE22171024
     a                 skos:Concept ;
     skos:prefLabel    "Herk-de-Stad"@nl ;
-    skos:prefLabel    "Herk-de-Stad"@en ;
     skos:definition   "NUTS/LAU classificatie: Herk-de-Stad"@nl ;
-    skos:definition   "NUTS/LAU classification: Herk-de-Stad"@en ;
     skos:notation     "71024" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1204,9 +1032,7 @@ nuts:BE22171024
 nuts:BE22171034
     a                 skos:Concept ;
     skos:prefLabel    "Leopoldsburg"@nl ;
-    skos:prefLabel    "Leopoldsburg"@en ;
     skos:definition   "NUTS/LAU classificatie: Leopoldsburg"@nl ;
-    skos:definition   "NUTS/LAU classification: Leopoldsburg"@en ;
     skos:notation     "71034" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1214,9 +1040,7 @@ nuts:BE22171034
 nuts:BE22171037
     a                 skos:Concept ;
     skos:prefLabel    "Lummen"@nl ;
-    skos:prefLabel    "Lummen"@en ;
     skos:definition   "NUTS/LAU classificatie: Lummen"@nl ;
-    skos:definition   "NUTS/LAU classification: Lummen"@en ;
     skos:notation     "71037" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1224,9 +1048,7 @@ nuts:BE22171037
 nuts:BE22171045
     a                 skos:Concept ;
     skos:prefLabel    "Nieuwerkerken"@nl ;
-    skos:prefLabel    "Nieuwerkerken"@en ;
     skos:definition   "NUTS/LAU classificatie: Nieuwerkerken"@nl ;
-    skos:definition   "NUTS/LAU classification: Nieuwerkerken"@en ;
     skos:notation     "71045" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1234,9 +1056,7 @@ nuts:BE22171045
 nuts:BE22171047
     a                 skos:Concept ;
     skos:prefLabel    "Opglabbeek"@nl ;
-    skos:prefLabel    "Opglabbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Opglabbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Opglabbeek"@en ;
     skos:notation     "71047" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1245,9 +1065,7 @@ nuts:BE22171047
 nuts:BE22171053
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Truiden"@nl ;
-    skos:prefLabel    "Sint-Truiden"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Truiden"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Truiden"@en ;
     skos:notation     "71053" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1255,9 +1073,7 @@ nuts:BE22171053
 nuts:BE22171071
     a                 skos:Concept ;
     skos:prefLabel    "Tessenderlo-Ham"@nl ;
-    skos:prefLabel    "Tessenderlo-Ham"@en ;
     skos:definition   "NUTS/LAU classificatie: Tessenderlo-Ham"@nl ;
-    skos:definition   "NUTS/LAU classification: Tessenderlo-Ham"@en ;
     skos:notation     "71071" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1266,9 +1082,7 @@ nuts:BE22171071
 nuts:BE22171057
     a                 skos:Concept ;
     skos:prefLabel    "Tessenderlo"@nl ;
-    skos:prefLabel    "Tessenderlo"@en ;
     skos:definition   "NUTS/LAU classificatie: Tessenderlo"@nl ;
-    skos:definition   "NUTS/LAU classification: Tessenderlo"@en ;
     skos:notation     "71057" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1277,9 +1091,7 @@ nuts:BE22171057
 nuts:BE22171066
     a                 skos:Concept ;
     skos:prefLabel    "Zonhoven"@nl ;
-    skos:prefLabel    "Zonhoven"@en ;
     skos:definition   "NUTS/LAU classificatie: Zonhoven"@nl ;
-    skos:definition   "NUTS/LAU classification: Zonhoven"@en ;
     skos:notation     "71066" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1287,9 +1099,7 @@ nuts:BE22171066
 nuts:BE22171067
     a                 skos:Concept ;
     skos:prefLabel    "Zutendaal"@nl ;
-    skos:prefLabel    "Zutendaal"@en ;
     skos:definition   "NUTS/LAU classificatie: Zutendaal"@nl ;
-    skos:definition   "NUTS/LAU classification: Zutendaal"@en ;
     skos:notation     "71067" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1297,9 +1107,7 @@ nuts:BE22171067
 nuts:BE22171069
     a                 skos:Concept ;
     skos:prefLabel    "Ham"@nl ;
-    skos:prefLabel    "Ham"@en ;
     skos:definition   "NUTS/LAU classificatie: Ham"@nl ;
-    skos:definition   "NUTS/LAU classification: Ham"@en ;
     skos:notation     "71069" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1308,9 +1116,7 @@ nuts:BE22171069
 nuts:BE22171070
     a                 skos:Concept ;
     skos:prefLabel    "Heusden-Zolder"@nl ;
-    skos:prefLabel    "Heusden-Zolder"@en ;
     skos:definition   "NUTS/LAU classificatie: Heusden-Zolder"@nl ;
-    skos:definition   "NUTS/LAU classification: Heusden-Zolder"@en ;
     skos:notation     "71070" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1318,9 +1124,7 @@ nuts:BE22171070
 nuts:BE22572042
     a                 skos:Concept ;
     skos:prefLabel    "Oudsbergen"@nl ;
-    skos:prefLabel    "Oudsbergen"@en ;
     skos:definition   "NUTS/LAU classificatie: Oudsbergen"@nl ;
-    skos:definition   "NUTS/LAU classification: Oudsbergen"@en ;
     skos:notation     "72042" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1329,9 +1133,7 @@ nuts:BE22572042
 nuts:BE22272003
     a                 skos:Concept ;
     skos:prefLabel    "Bocholt"@nl ;
-    skos:prefLabel    "Bocholt"@en ;
     skos:definition   "NUTS/LAU classificatie: Bocholt"@nl ;
-    skos:definition   "NUTS/LAU classification: Bocholt"@en ;
     skos:notation     "72003" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1339,9 +1141,7 @@ nuts:BE22272003
 nuts:BE22272004
     a                 skos:Concept ;
     skos:prefLabel    "Bree"@nl ;
-    skos:prefLabel    "Bree"@en ;
     skos:definition   "NUTS/LAU classificatie: Bree"@nl ;
-    skos:definition   "NUTS/LAU classification: Bree"@en ;
     skos:notation     "72004" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1349,9 +1149,7 @@ nuts:BE22272004
 nuts:BE22272018
     a                 skos:Concept ;
     skos:prefLabel    "Kinrooi"@nl ;
-    skos:prefLabel    "Kinrooi"@en ;
     skos:definition   "NUTS/LAU classificatie: Kinrooi"@nl ;
-    skos:definition   "NUTS/LAU classification: Kinrooi"@en ;
     skos:notation     "72018" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1359,9 +1157,7 @@ nuts:BE22272018
 nuts:BE22272020
     a                 skos:Concept ;
     skos:prefLabel    "Lommel"@nl ;
-    skos:prefLabel    "Lommel"@en ;
     skos:definition   "NUTS/LAU classificatie: Lommel"@nl ;
-    skos:definition   "NUTS/LAU classification: Lommel"@en ;
     skos:notation     "72020" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1369,9 +1165,7 @@ nuts:BE22272020
 nuts:BE22272021
     a                 skos:Concept ;
     skos:prefLabel    "Maaseik"@nl ;
-    skos:prefLabel    "Maaseik"@en ;
     skos:definition   "NUTS/LAU classificatie: Maaseik"@nl ;
-    skos:definition   "NUTS/LAU classification: Maaseik"@en ;
     skos:notation     "72021" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1379,9 +1173,7 @@ nuts:BE22272021
 nuts:BE22572043
     a                 skos:Concept ;
     skos:prefLabel    "Pelt"@nl ;
-    skos:prefLabel    "Pelt"@en ;
     skos:definition   "NUTS/LAU classificatie: Pelt"@nl ;
-    skos:definition   "NUTS/LAU classification: Pelt"@en ;
     skos:notation     "72043" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1390,9 +1182,7 @@ nuts:BE22572043
 nuts:BE22272025
     a                 skos:Concept ;
     skos:prefLabel    "Neerpelt"@nl ;
-    skos:prefLabel    "Neerpelt"@en ;
     skos:definition   "NUTS/LAU classificatie: Neerpelt"@nl ;
-    skos:definition   "NUTS/LAU classification: Neerpelt"@en ;
     skos:notation     "72025" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1401,9 +1191,7 @@ nuts:BE22272025
 nuts:BE22272029
     a                 skos:Concept ;
     skos:prefLabel    "Overpelt"@nl ;
-    skos:prefLabel    "Overpelt"@en ;
     skos:definition   "NUTS/LAU classificatie: Overpelt"@nl ;
-    skos:definition   "NUTS/LAU classification: Overpelt"@en ;
     skos:notation     "72029" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1412,9 +1200,7 @@ nuts:BE22272029
 nuts:BE22272030
     a                 skos:Concept ;
     skos:prefLabel    "Peer"@nl ;
-    skos:prefLabel    "Peer"@en ;
     skos:definition   "NUTS/LAU classificatie: Peer"@nl ;
-    skos:definition   "NUTS/LAU classification: Peer"@en ;
     skos:notation     "72030" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1422,9 +1208,7 @@ nuts:BE22272030
 nuts:BE22272037
     a                 skos:Concept ;
     skos:prefLabel    "Hamont-Achel"@nl ;
-    skos:prefLabel    "Hamont-Achel"@en ;
     skos:definition   "NUTS/LAU classificatie: Hamont-Achel"@nl ;
-    skos:definition   "NUTS/LAU classification: Hamont-Achel"@en ;
     skos:notation     "72037" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1432,9 +1216,7 @@ nuts:BE22272037
 nuts:BE22272038
     a                 skos:Concept ;
     skos:prefLabel    "Hechtel-Eksel"@nl ;
-    skos:prefLabel    "Hechtel-Eksel"@en ;
     skos:definition   "NUTS/LAU classificatie: Hechtel-Eksel"@nl ;
-    skos:definition   "NUTS/LAU classification: Hechtel-Eksel"@en ;
     skos:notation     "72038" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1442,9 +1224,7 @@ nuts:BE22272038
 nuts:BE22272039
     a                 skos:Concept ;
     skos:prefLabel    "Houthalen-Helchteren"@nl ;
-    skos:prefLabel    "Houthalen-Helchteren"@en ;
     skos:definition   "NUTS/LAU classificatie: Houthalen-Helchteren"@nl ;
-    skos:definition   "NUTS/LAU classification: Houthalen-Helchteren"@en ;
     skos:notation     "72039" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1452,9 +1232,7 @@ nuts:BE22272039
 nuts:BE22272040
     a                 skos:Concept ;
     skos:prefLabel    "Meeuwen-Gruitrode"@nl ;
-    skos:prefLabel    "Meeuwen-Gruitrode"@en ;
     skos:definition   "NUTS/LAU classificatie: Meeuwen-Gruitrode"@nl ;
-    skos:definition   "NUTS/LAU classification: Meeuwen-Gruitrode"@en ;
     skos:notation     "72040" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1463,9 +1241,7 @@ nuts:BE22272040
 nuts:BE22272041
     a                 skos:Concept ;
     skos:prefLabel    "Dilsen-Stokkem"@nl ;
-    skos:prefLabel    "Dilsen-Stokkem"@en ;
     skos:definition   "NUTS/LAU classificatie: Dilsen-Stokkem"@nl ;
-    skos:definition   "NUTS/LAU classification: Dilsen-Stokkem"@en ;
     skos:notation     "72041" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1473,9 +1249,7 @@ nuts:BE22272041
 nuts:BE22373001
     a                 skos:Concept ;
     skos:prefLabel    "Alken"@nl ;
-    skos:prefLabel    "Alken"@en ;
     skos:definition   "NUTS/LAU classificatie: Alken"@nl ;
-    skos:definition   "NUTS/LAU classification: Alken"@en ;
     skos:notation     "73001" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1483,9 +1257,7 @@ nuts:BE22373001
 nuts:BE22373110
     a                 skos:Concept ;
     skos:prefLabel    "Bilzen-Hoeselt"@nl ;
-    skos:prefLabel    "Bilzen-Hoeselt"@en ;
     skos:definition   "NUTS/LAU classificatie: Bilzen-Hoeselt"@nl ;
-    skos:definition   "NUTS/LAU classification: Bilzen-Hoeselt"@en ;
     skos:notation     "73110" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1494,9 +1266,7 @@ nuts:BE22373110
 nuts:BE22373006
     a                 skos:Concept ;
     skos:prefLabel    "Bilzen"@nl ;
-    skos:prefLabel    "Bilzen"@en ;
     skos:definition   "NUTS/LAU classificatie: Bilzen"@nl ;
-    skos:definition   "NUTS/LAU classification: Bilzen"@en ;
     skos:notation     "73006" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1505,9 +1275,7 @@ nuts:BE22373006
 nuts:BE22373111
     a                 skos:Concept ;
     skos:prefLabel    "Tongeren-Borgloon"@nl ;
-    skos:prefLabel    "Tongeren-Borgloon"@en ;
     skos:definition   "NUTS/LAU classificatie: Tongeren-Borgloon"@nl ;
-    skos:definition   "NUTS/LAU classification: Tongeren-Borgloon"@en ;
     skos:notation     "73111" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1516,9 +1284,7 @@ nuts:BE22373111
 nuts:BE22373009
     a                 skos:Concept ;
     skos:prefLabel    "Borgloon"@nl ;
-    skos:prefLabel    "Borgloon"@en ;
     skos:definition   "NUTS/LAU classificatie: Borgloon"@nl ;
-    skos:definition   "NUTS/LAU classification: Borgloon"@en ;
     skos:notation     "73009" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1527,9 +1293,7 @@ nuts:BE22373009
 nuts:BE22373022
     a                 skos:Concept ;
     skos:prefLabel    "Heers"@nl ;
-    skos:prefLabel    "Heers"@en ;
     skos:definition   "NUTS/LAU classificatie: Heers"@nl ;
-    skos:definition   "NUTS/LAU classification: Heers"@en ;
     skos:notation     "73022" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1537,9 +1301,7 @@ nuts:BE22373022
 nuts:BE22373028
     a                 skos:Concept ;
     skos:prefLabel    "Herstappe"@nl ;
-    skos:prefLabel    "Herstappe"@en ;
     skos:definition   "NUTS/LAU classificatie: Herstappe"@nl ;
-    skos:definition   "NUTS/LAU classification: Herstappe"@en ;
     skos:notation     "73028" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1547,9 +1309,7 @@ nuts:BE22373028
 nuts:BE22373032
     a                 skos:Concept ;
     skos:prefLabel    "Hoeselt"@nl ;
-    skos:prefLabel    "Hoeselt"@en ;
     skos:definition   "NUTS/LAU classificatie: Hoeselt"@nl ;
-    skos:definition   "NUTS/LAU classification: Hoeselt"@en ;
     skos:notation     "73032" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1558,9 +1318,7 @@ nuts:BE22373032
 nuts:BE22373040
     a                 skos:Concept ;
     skos:prefLabel    "Kortessem"@nl ;
-    skos:prefLabel    "Kortessem"@en ;
     skos:definition   "NUTS/LAU classificatie: Kortessem"@nl ;
-    skos:definition   "NUTS/LAU classification: Kortessem"@en ;
     skos:notation     "73040" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1569,9 +1327,7 @@ nuts:BE22373040
 nuts:BE22373042
     a                 skos:Concept ;
     skos:prefLabel    "Lanaken"@nl ;
-    skos:prefLabel    "Lanaken"@en ;
     skos:definition   "NUTS/LAU classificatie: Lanaken"@nl ;
-    skos:definition   "NUTS/LAU classification: Lanaken"@en ;
     skos:notation     "73042" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1579,9 +1335,7 @@ nuts:BE22373042
 nuts:BE22373066
     a                 skos:Concept ;
     skos:prefLabel    "Riemst"@nl ;
-    skos:prefLabel    "Riemst"@en ;
     skos:definition   "NUTS/LAU classificatie: Riemst"@nl ;
-    skos:definition   "NUTS/LAU classification: Riemst"@en ;
     skos:notation     "73066" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1589,9 +1343,7 @@ nuts:BE22373066
 nuts:BE22373083
     a                 skos:Concept ;
     skos:prefLabel    "Tongeren"@nl ;
-    skos:prefLabel    "Tongeren"@en ;
     skos:definition   "NUTS/LAU classificatie: Tongeren"@nl ;
-    skos:definition   "NUTS/LAU classification: Tongeren"@en ;
     skos:notation     "73083" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1600,9 +1352,7 @@ nuts:BE22373083
 nuts:BE22373098
     a                 skos:Concept ;
     skos:prefLabel    "Wellen"@nl ;
-    skos:prefLabel    "Wellen"@en ;
     skos:definition   "NUTS/LAU classificatie: Wellen"@nl ;
-    skos:definition   "NUTS/LAU classification: Wellen"@en ;
     skos:notation     "73098" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1610,9 +1360,7 @@ nuts:BE22373098
 nuts:BE22373107
     a                 skos:Concept ;
     skos:prefLabel    "Maasmechelen"@nl ;
-    skos:prefLabel    "Maasmechelen"@en ;
     skos:definition   "NUTS/LAU classificatie: Maasmechelen"@nl ;
-    skos:definition   "NUTS/LAU classification: Maasmechelen"@en ;
     skos:notation     "73107" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1620,9 +1368,7 @@ nuts:BE22373107
 nuts:BE22373109
     a                 skos:Concept ;
     skos:prefLabel    "Voeren"@nl ;
-    skos:prefLabel    "Voeren"@en ;
     skos:definition   "NUTS/LAU classificatie: Voeren"@nl ;
-    skos:definition   "NUTS/LAU classification: Voeren"@en ;
     skos:notation     "73109" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1630,9 +1376,7 @@ nuts:BE22373109
 nuts:BE23141002
     a                 skos:Concept ;
     skos:prefLabel    "Aalst"@nl ;
-    skos:prefLabel    "Aalst"@en ;
     skos:definition   "NUTS/LAU classificatie: Aalst"@nl ;
-    skos:definition   "NUTS/LAU classification: Aalst"@en ;
     skos:notation     "41002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1640,9 +1384,7 @@ nuts:BE23141002
 nuts:BE23141011
     a                 skos:Concept ;
     skos:prefLabel    "Denderleeuw"@nl ;
-    skos:prefLabel    "Denderleeuw"@en ;
     skos:definition   "NUTS/LAU classificatie: Denderleeuw"@nl ;
-    skos:definition   "NUTS/LAU classification: Denderleeuw"@en ;
     skos:notation     "41011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1650,9 +1392,7 @@ nuts:BE23141011
 nuts:BE23141018
     a                 skos:Concept ;
     skos:prefLabel    "Geraardsbergen"@nl ;
-    skos:prefLabel    "Geraardsbergen"@en ;
     skos:definition   "NUTS/LAU classificatie: Geraardsbergen"@nl ;
-    skos:definition   "NUTS/LAU classification: Geraardsbergen"@en ;
     skos:notation     "41018" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1660,9 +1400,7 @@ nuts:BE23141018
 nuts:BE23141024
     a                 skos:Concept ;
     skos:prefLabel    "Haaltert"@nl ;
-    skos:prefLabel    "Haaltert"@en ;
     skos:definition   "NUTS/LAU classificatie: Haaltert"@nl ;
-    skos:definition   "NUTS/LAU classification: Haaltert"@en ;
     skos:notation     "41024" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1670,9 +1408,7 @@ nuts:BE23141024
 nuts:BE23141027
     a                 skos:Concept ;
     skos:prefLabel    "Herzele"@nl ;
-    skos:prefLabel    "Herzele"@en ;
     skos:definition   "NUTS/LAU classificatie: Herzele"@nl ;
-    skos:definition   "NUTS/LAU classification: Herzele"@en ;
     skos:notation     "41027" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1680,9 +1416,7 @@ nuts:BE23141027
 nuts:BE23141034
     a                 skos:Concept ;
     skos:prefLabel    "Lede"@nl ;
-    skos:prefLabel    "Lede"@en ;
     skos:definition   "NUTS/LAU classificatie: Lede"@nl ;
-    skos:definition   "NUTS/LAU classification: Lede"@en ;
     skos:notation     "41034" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1690,9 +1424,7 @@ nuts:BE23141034
 nuts:BE23141048
     a                 skos:Concept ;
     skos:prefLabel    "Ninove"@nl ;
-    skos:prefLabel    "Ninove"@en ;
     skos:definition   "NUTS/LAU classificatie: Ninove"@nl ;
-    skos:definition   "NUTS/LAU classification: Ninove"@en ;
     skos:notation     "41048" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1700,9 +1432,7 @@ nuts:BE23141048
 nuts:BE23141063
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Lievens-Houtem"@nl ;
-    skos:prefLabel    "Sint-Lievens-Houtem"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Lievens-Houtem"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Lievens-Houtem"@en ;
     skos:notation     "41063" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1710,9 +1440,7 @@ nuts:BE23141063
 nuts:BE23141081
     a                 skos:Concept ;
     skos:prefLabel    "Zottegem"@nl ;
-    skos:prefLabel    "Zottegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Zottegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Zottegem"@en ;
     skos:notation     "41081" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1720,9 +1448,7 @@ nuts:BE23141081
 nuts:BE23141082
     a                 skos:Concept ;
     skos:prefLabel    "Erpe-Mere"@nl ;
-    skos:prefLabel    "Erpe-Mere"@en ;
     skos:definition   "NUTS/LAU classificatie: Erpe-Mere"@nl ;
-    skos:definition   "NUTS/LAU classification: Erpe-Mere"@en ;
     skos:notation     "41082" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1730,9 +1456,7 @@ nuts:BE23141082
 nuts:BE23242003
     a                 skos:Concept ;
     skos:prefLabel    "Berlare"@nl ;
-    skos:prefLabel    "Berlare"@en ;
     skos:definition   "NUTS/LAU classificatie: Berlare"@nl ;
-    skos:definition   "NUTS/LAU classification: Berlare"@en ;
     skos:notation     "42003" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1740,9 +1464,7 @@ nuts:BE23242003
 nuts:BE23242004
     a                 skos:Concept ;
     skos:prefLabel    "Buggenhout"@nl ;
-    skos:prefLabel    "Buggenhout"@en ;
     skos:definition   "NUTS/LAU classificatie: Buggenhout"@nl ;
-    skos:definition   "NUTS/LAU classification: Buggenhout"@en ;
     skos:notation     "42004" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1750,9 +1472,7 @@ nuts:BE23242004
 nuts:BE23242006
     a                 skos:Concept ;
     skos:prefLabel    "Dendermonde"@nl ;
-    skos:prefLabel    "Dendermonde"@en ;
     skos:definition   "NUTS/LAU classificatie: Dendermonde"@nl ;
-    skos:definition   "NUTS/LAU classification: Dendermonde"@en ;
     skos:notation     "42006" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1760,9 +1480,7 @@ nuts:BE23242006
 nuts:BE23242008
     a                 skos:Concept ;
     skos:prefLabel    "Hamme"@nl ;
-    skos:prefLabel    "Hamme"@en ;
     skos:definition   "NUTS/LAU classificatie: Hamme"@nl ;
-    skos:definition   "NUTS/LAU classification: Hamme"@en ;
     skos:notation     "42008" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1770,9 +1488,7 @@ nuts:BE23242008
 nuts:BE23242010
     a                 skos:Concept ;
     skos:prefLabel    "Laarne"@nl ;
-    skos:prefLabel    "Laarne"@en ;
     skos:definition   "NUTS/LAU classificatie: Laarne"@nl ;
-    skos:definition   "NUTS/LAU classification: Laarne"@en ;
     skos:notation     "42010" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1780,9 +1496,7 @@ nuts:BE23242010
 nuts:BE23242011
     a                 skos:Concept ;
     skos:prefLabel    "Lebbeke"@nl ;
-    skos:prefLabel    "Lebbeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Lebbeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Lebbeke"@en ;
     skos:notation     "42011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1790,9 +1504,7 @@ nuts:BE23242011
 nuts:BE23242023
     a                 skos:Concept ;
     skos:prefLabel    "Waasmunster"@nl ;
-    skos:prefLabel    "Waasmunster"@en ;
     skos:definition   "NUTS/LAU classificatie: Waasmunster"@nl ;
-    skos:definition   "NUTS/LAU classification: Waasmunster"@en ;
     skos:notation     "42023" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1800,9 +1512,7 @@ nuts:BE23242023
 nuts:BE23242025
     a                 skos:Concept ;
     skos:prefLabel    "Wetteren"@nl ;
-    skos:prefLabel    "Wetteren"@en ;
     skos:definition   "NUTS/LAU classificatie: Wetteren"@nl ;
-    skos:definition   "NUTS/LAU classification: Wetteren"@en ;
     skos:notation     "42025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1810,9 +1520,7 @@ nuts:BE23242025
 nuts:BE23242026
     a                 skos:Concept ;
     skos:prefLabel    "Wichelen"@nl ;
-    skos:prefLabel    "Wichelen"@en ;
     skos:definition   "NUTS/LAU classificatie: Wichelen"@nl ;
-    skos:definition   "NUTS/LAU classification: Wichelen"@en ;
     skos:notation     "42026" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1820,9 +1528,7 @@ nuts:BE23242026
 nuts:BE23242028
     a                 skos:Concept ;
     skos:prefLabel    "Zele"@nl ;
-    skos:prefLabel    "Zele"@en ;
     skos:definition   "NUTS/LAU classificatie: Zele"@nl ;
-    skos:definition   "NUTS/LAU classification: Zele"@en ;
     skos:notation     "42028" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1830,9 +1536,7 @@ nuts:BE23242028
 nuts:BE23343002
     a                 skos:Concept ;
     skos:prefLabel    "Assenede"@nl ;
-    skos:prefLabel    "Assenede"@en ;
     skos:definition   "NUTS/LAU classificatie: Assenede"@nl ;
-    skos:definition   "NUTS/LAU classification: Assenede"@en ;
     skos:notation     "43002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1840,9 +1544,7 @@ nuts:BE23343002
 nuts:BE23343005
     a                 skos:Concept ;
     skos:prefLabel    "Eeklo"@nl ;
-    skos:prefLabel    "Eeklo"@en ;
     skos:definition   "NUTS/LAU classificatie: Eeklo"@nl ;
-    skos:definition   "NUTS/LAU classification: Eeklo"@en ;
     skos:notation     "43005" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1850,9 +1552,7 @@ nuts:BE23343005
 nuts:BE23343007
     a                 skos:Concept ;
     skos:prefLabel    "Kaprijke"@nl ;
-    skos:prefLabel    "Kaprijke"@en ;
     skos:definition   "NUTS/LAU classificatie: Kaprijke"@nl ;
-    skos:definition   "NUTS/LAU classification: Kaprijke"@en ;
     skos:notation     "43007" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1860,9 +1560,7 @@ nuts:BE23343007
 nuts:BE23343010
     a                 skos:Concept ;
     skos:prefLabel    "Maldegem"@nl ;
-    skos:prefLabel    "Maldegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Maldegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Maldegem"@en ;
     skos:notation     "43010" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1870,9 +1568,7 @@ nuts:BE23343010
 nuts:BE23343014
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Laureins"@nl ;
-    skos:prefLabel    "Sint-Laureins"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Laureins"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Laureins"@en ;
     skos:notation     "43014" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1880,9 +1576,7 @@ nuts:BE23343014
 nuts:BE23343018
     a                 skos:Concept ;
     skos:prefLabel    "Zelzate"@nl ;
-    skos:prefLabel    "Zelzate"@en ;
     skos:definition   "NUTS/LAU classificatie: Zelzate"@nl ;
-    skos:definition   "NUTS/LAU classification: Zelzate"@en ;
     skos:notation     "43018" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1890,9 +1584,7 @@ nuts:BE23343018
 nuts:BE23444001
     a                 skos:Concept ;
     skos:prefLabel    "Aalter"@nl ;
-    skos:prefLabel    "Aalter"@en ;
     skos:definition   "NUTS/LAU classificatie: Aalter"@nl ;
-    skos:definition   "NUTS/LAU classification: Aalter"@en ;
     skos:notation     "44084" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1901,9 +1593,7 @@ nuts:BE23444001
 nuts:BE23444001_VOOR_FUSIE_2019
     a                 skos:Concept ;
     skos:prefLabel    "Aalter"@nl ;
-    skos:prefLabel    "Aalter"@en ;
     skos:definition   "NUTS/LAU classificatie: Aalter"@nl ;
-    skos:definition   "NUTS/LAU classification: Aalter"@en ;
     skos:notation     "44001" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1912,9 +1602,7 @@ nuts:BE23444001_VOOR_FUSIE_2019
 nuts:BE23444029
     a                 skos:Concept ;
     skos:prefLabel    "Knesselare"@nl ;
-    skos:prefLabel    "Knesselare"@en ;
     skos:definition   "NUTS/LAU classificatie: Knesselare"@nl ;
-    skos:definition   "NUTS/LAU classification: Knesselare"@en ;
     skos:notation     "44029" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1923,9 +1611,7 @@ nuts:BE23444029
 nuts:BE23444011
     a                 skos:Concept ;
     skos:prefLabel    "Deinze"@nl ;
-    skos:prefLabel    "Deinze"@en ;
     skos:definition   "NUTS/LAU classificatie: Deinze"@nl ;
-    skos:definition   "NUTS/LAU classification: Deinze"@en ;
     skos:notation     "44083" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1934,9 +1620,7 @@ nuts:BE23444011
 nuts:BE23444011_VOOR_FUSIE_2019
     a                 skos:Concept ;
     skos:prefLabel    "Deinze"@nl ;
-    skos:prefLabel    "Deinze"@en ;
     skos:definition   "NUTS/LAU classificatie: Deinze"@nl ;
-    skos:definition   "NUTS/LAU classification: Deinze"@en ;
     skos:notation     "44011" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1945,9 +1629,7 @@ nuts:BE23444011_VOOR_FUSIE_2019
 nuts:BE23444049
     a                 skos:Concept ;
     skos:prefLabel    "Nevele"@nl ;
-    skos:prefLabel    "Nevele"@en ;
     skos:definition   "NUTS/LAU classificatie: Nevele"@nl ;
-    skos:definition   "NUTS/LAU classification: Nevele"@en ;
     skos:notation     "44049" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1956,9 +1638,7 @@ nuts:BE23444049
 nuts:BE23444086
     a                 skos:Concept ;
     skos:prefLabel    "Nazareth-De Pinte"@nl ;
-    skos:prefLabel    "Nazareth-De Pinte"@en ;
     skos:definition   "NUTS/LAU classificatie: Nazareth-De Pinte"@nl ;
-    skos:definition   "NUTS/LAU classification: Nazareth-De Pinte"@en ;
     skos:notation     "44086" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1967,9 +1647,7 @@ nuts:BE23444086
 nuts:BE23444012
     a                 skos:Concept ;
     skos:prefLabel    "De Pinte"@nl ;
-    skos:prefLabel    "De Pinte"@en ;
     skos:definition   "NUTS/LAU classificatie: De Pinte"@nl ;
-    skos:definition   "NUTS/LAU classification: De Pinte"@en ;
     skos:notation     "44012" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -1978,9 +1656,7 @@ nuts:BE23444012
 nuts:BE23444013
     a                 skos:Concept ;
     skos:prefLabel    "Destelbergen"@nl ;
-    skos:prefLabel    "Destelbergen"@en ;
     skos:definition   "NUTS/LAU classificatie: Destelbergen"@nl ;
-    skos:definition   "NUTS/LAU classification: Destelbergen"@en ;
     skos:notation     "44013" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1988,9 +1664,7 @@ nuts:BE23444013
 nuts:BE23444019
     a                 skos:Concept ;
     skos:prefLabel    "Evergem"@nl ;
-    skos:prefLabel    "Evergem"@en ;
     skos:definition   "NUTS/LAU classificatie: Evergem"@nl ;
-    skos:definition   "NUTS/LAU classification: Evergem"@en ;
     skos:notation     "44019" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -1998,9 +1672,7 @@ nuts:BE23444019
 nuts:BE23444020
     a                 skos:Concept ;
     skos:prefLabel    "Gavere"@nl ;
-    skos:prefLabel    "Gavere"@en ;
     skos:definition   "NUTS/LAU classificatie: Gavere"@nl ;
-    skos:definition   "NUTS/LAU classification: Gavere"@en ;
     skos:notation     "44020" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2008,9 +1680,7 @@ nuts:BE23444020
 nuts:BE23444021
     a                 skos:Concept ;
     skos:prefLabel    "Gent"@nl ;
-    skos:prefLabel    "Gent"@en ;
     skos:definition   "NUTS/LAU classificatie: Gent"@nl ;
-    skos:definition   "NUTS/LAU classification: Gent"@en ;
     skos:notation     "44021" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2018,9 +1688,7 @@ nuts:BE23444021
 nuts:BE23444087
     a                 skos:Concept ;
     skos:prefLabel    "Lochristi"@nl ;
-    skos:prefLabel    "Lochristi"@en ;
     skos:definition   "NUTS/LAU classificatie: Lochristi"@nl ;
-    skos:definition   "NUTS/LAU classification: Lochristi"@en ;
     skos:notation     "44087" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2029,9 +1697,7 @@ nuts:BE23444087
 nuts:BE23444034
     a                 skos:Concept ;
     skos:prefLabel    "Lochristi"@nl ;
-    skos:prefLabel    "Lochristi"@en ;
     skos:definition   "NUTS/LAU classificatie: Lochristi"@nl ;
-    skos:definition   "NUTS/LAU classification: Lochristi"@en ;
     skos:notation     "44034" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2040,9 +1706,7 @@ nuts:BE23444034
 nuts:BE23444085
     a                 skos:Concept ;
     skos:prefLabel    "Lievegem"@nl ;
-    skos:prefLabel    "Lievegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Lievegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Lievegem"@en ;
     skos:notation     "44085" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2051,9 +1715,7 @@ nuts:BE23444085
 nuts:BE23444036
     a                 skos:Concept ;
     skos:prefLabel    "Lovendegem"@nl ;
-    skos:prefLabel    "Lovendegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Lovendegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Lovendegem"@en ;
     skos:notation     "44036" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2062,9 +1724,7 @@ nuts:BE23444036
 nuts:BE23444088
     a                 skos:Concept ;
     skos:prefLabel    "Merelbeke-Melle"@nl ;
-    skos:prefLabel    "Merelbeke-Melle"@en ;
     skos:definition   "NUTS/LAU classificatie: Merelbeke-Melle"@nl ;
-    skos:definition   "NUTS/LAU classification: Merelbeke-Melle"@en ;
     skos:notation     "44088" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2073,9 +1733,7 @@ nuts:BE23444088
 nuts:BE23444040
     a                 skos:Concept ;
     skos:prefLabel    "Melle"@nl ;
-    skos:prefLabel    "Melle"@en ;
     skos:definition   "NUTS/LAU classificatie: Melle"@nl ;
-    skos:definition   "NUTS/LAU classification: Melle"@en ;
     skos:notation     "44040" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2084,9 +1742,7 @@ nuts:BE23444040
 nuts:BE23444043
     a                 skos:Concept ;
     skos:prefLabel    "Merelbeke"@nl ;
-    skos:prefLabel    "Merelbeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Merelbeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Merelbeke"@en ;
     skos:notation     "44043" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2095,9 +1751,7 @@ nuts:BE23444043
 nuts:BE23444045
     a                 skos:Concept ;
     skos:prefLabel    "Moerbeke"@nl ;
-    skos:prefLabel    "Moerbeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Moerbeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Moerbeke"@en ;
     skos:notation     "44045" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2106,9 +1760,7 @@ nuts:BE23444045
 nuts:BE23444048
     a                 skos:Concept ;
     skos:prefLabel    "Nazareth"@nl ;
-    skos:prefLabel    "Nazareth"@en ;
     skos:definition   "NUTS/LAU classificatie: Nazareth"@nl ;
-    skos:definition   "NUTS/LAU classification: Nazareth"@en ;
     skos:notation     "44048" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2117,9 +1769,7 @@ nuts:BE23444048
 nuts:BE23444052
     a                 skos:Concept ;
     skos:prefLabel    "Oosterzele"@nl ;
-    skos:prefLabel    "Oosterzele"@en ;
     skos:definition   "NUTS/LAU classificatie: Oosterzele"@nl ;
-    skos:definition   "NUTS/LAU classification: Oosterzele"@en ;
     skos:notation     "44052" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2127,9 +1777,7 @@ nuts:BE23444052
 nuts:BE23444064
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Martens-Latem"@nl ;
-    skos:prefLabel    "Sint-Martens-Latem"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Martens-Latem"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Martens-Latem"@en ;
     skos:notation     "44064" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2137,9 +1785,7 @@ nuts:BE23444064
 nuts:BE23444072
     a                 skos:Concept ;
     skos:prefLabel    "Waarschoot"@nl ;
-    skos:prefLabel    "Waarschoot"@en ;
     skos:definition   "NUTS/LAU classificatie: Waarschoot"@nl ;
-    skos:definition   "NUTS/LAU classification: Waarschoot"@en ;
     skos:notation     "44072" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2148,9 +1794,7 @@ nuts:BE23444072
 nuts:BE23444073
     a                 skos:Concept ;
     skos:prefLabel    "Wachtebeke"@nl ;
-    skos:prefLabel    "Wachtebeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Wachtebeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Wachtebeke"@en ;
     skos:notation     "44073" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2159,9 +1803,7 @@ nuts:BE23444073
 nuts:BE23444080
     a                 skos:Concept ;
     skos:prefLabel    "Zomergem"@nl ;
-    skos:prefLabel    "Zomergem"@en ;
     skos:definition   "NUTS/LAU classificatie: Zomergem"@nl ;
-    skos:definition   "NUTS/LAU classification: Zomergem"@en ;
     skos:notation     "44080" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2170,9 +1812,7 @@ nuts:BE23444080
 nuts:BE23444081
     a                 skos:Concept ;
     skos:prefLabel    "Zulte"@nl ;
-    skos:prefLabel    "Zulte"@en ;
     skos:definition   "NUTS/LAU classificatie: Zulte"@nl ;
-    skos:definition   "NUTS/LAU classification: Zulte"@en ;
     skos:notation     "44081" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2180,9 +1820,7 @@ nuts:BE23444081
 nuts:BE23545068
     a                 skos:Concept ;
     skos:prefLabel    "Kruisem"@nl ;
-    skos:prefLabel    "Kruisem"@en ;
     skos:definition   "NUTS/LAU classificatie: Kruisem"@nl ;
-    skos:definition   "NUTS/LAU classification: Kruisem"@en ;
     skos:notation     "45068" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2191,9 +1829,7 @@ nuts:BE23545068
 nuts:BE23545017
     a                 skos:Concept ;
     skos:prefLabel    "Kruishoutem"@nl ;
-    skos:prefLabel    "Kruishoutem"@en ;
     skos:definition   "NUTS/LAU classificatie: Kruishoutem"@nl ;
-    skos:definition   "NUTS/LAU classification: Kruishoutem"@en ;
     skos:notation     "45017" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2202,9 +1838,7 @@ nuts:BE23545017
 nuts:BE23545035
     a                 skos:Concept ;
     skos:prefLabel    "Oudenaarde"@nl ;
-    skos:prefLabel    "Oudenaarde"@en ;
     skos:definition   "NUTS/LAU classificatie: Oudenaarde"@nl ;
-    skos:definition   "NUTS/LAU classification: Oudenaarde"@en ;
     skos:notation     "45035" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2212,9 +1846,7 @@ nuts:BE23545035
 nuts:BE23545041
     a                 skos:Concept ;
     skos:prefLabel    "Ronse"@nl ;
-    skos:prefLabel    "Ronse"@en ;
     skos:definition   "NUTS/LAU classificatie: Ronse"@nl ;
-    skos:definition   "NUTS/LAU classification: Ronse"@en ;
     skos:notation     "45041" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2222,9 +1854,7 @@ nuts:BE23545041
 nuts:BE23545057
     a                 skos:Concept ;
     skos:prefLabel    "Zingem"@nl ;
-    skos:prefLabel    "Zingem"@en ;
     skos:definition   "NUTS/LAU classificatie: Zingem"@nl ;
-    skos:definition   "NUTS/LAU classification: Zingem"@en ;
     skos:notation     "45057" ;
     time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2233,9 +1863,7 @@ nuts:BE23545057
 nuts:BE23545059
     a                 skos:Concept ;
     skos:prefLabel    "Brakel"@nl ;
-    skos:prefLabel    "Brakel"@en ;
     skos:definition   "NUTS/LAU classificatie: Brakel"@nl ;
-    skos:definition   "NUTS/LAU classification: Brakel"@en ;
     skos:notation     "45059" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2243,9 +1871,7 @@ nuts:BE23545059
 nuts:BE23545060
     a                 skos:Concept ;
     skos:prefLabel    "Kluisbergen"@nl ;
-    skos:prefLabel    "Kluisbergen"@en ;
     skos:definition   "NUTS/LAU classificatie: Kluisbergen"@nl ;
-    skos:definition   "NUTS/LAU classification: Kluisbergen"@en ;
     skos:notation     "45060" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2253,9 +1879,7 @@ nuts:BE23545060
 nuts:BE23545061
     a                 skos:Concept ;
     skos:prefLabel    "Wortegem-Petegem"@nl ;
-    skos:prefLabel    "Wortegem-Petegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Wortegem-Petegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Wortegem-Petegem"@en ;
     skos:notation     "45061" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2263,9 +1887,7 @@ nuts:BE23545061
 nuts:BE23545062
     a                 skos:Concept ;
     skos:prefLabel    "Horebeke"@nl ;
-    skos:prefLabel    "Horebeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Horebeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Horebeke"@en ;
     skos:notation     "45062" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2273,9 +1895,7 @@ nuts:BE23545062
 nuts:BE23545063
     a                 skos:Concept ;
     skos:prefLabel    "Lierde"@nl ;
-    skos:prefLabel    "Lierde"@en ;
     skos:definition   "NUTS/LAU classificatie: Lierde"@nl ;
-    skos:definition   "NUTS/LAU classification: Lierde"@en ;
     skos:notation     "45063" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2283,9 +1903,7 @@ nuts:BE23545063
 nuts:BE23545064
     a                 skos:Concept ;
     skos:prefLabel    "Maarkedal"@nl ;
-    skos:prefLabel    "Maarkedal"@en ;
     skos:definition   "NUTS/LAU classificatie: Maarkedal"@nl ;
-    skos:definition   "NUTS/LAU classification: Maarkedal"@en ;
     skos:notation     "45064" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2293,9 +1911,7 @@ nuts:BE23545064
 nuts:BE23545065
     a                 skos:Concept ;
     skos:prefLabel    "Zwalm"@nl ;
-    skos:prefLabel    "Zwalm"@en ;
     skos:definition   "NUTS/LAU classificatie: Zwalm"@nl ;
-    skos:definition   "NUTS/LAU classification: Zwalm"@en ;
     skos:notation     "45065" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2303,9 +1919,7 @@ nuts:BE23545065
 nuts:BE23646030
     a                 skos:Concept ;
     skos:prefLabel    "Beveren-Kruibeke-Zwijndrecht"@nl ;
-    skos:prefLabel    "Beveren-Kruibeke-Zwijndrecht"@en ;
     skos:definition   "NUTS/LAU classificatie: Beveren-Kruibeke-Zwijndrecht"@nl ;
-    skos:definition   "NUTS/LAU classification: Beveren-Kruibeke-Zwijndrecht"@en ;
     skos:notation     "46030" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2314,9 +1928,7 @@ nuts:BE23646030
 nuts:BE23646029
     a                 skos:Concept ;
     skos:prefLabel    "Lokeren"@nl ;
-    skos:prefLabel    "Lokeren"@en ;
     skos:definition   "NUTS/LAU classificatie: Lokeren"@nl ;
-    skos:definition   "NUTS/LAU classification: Lokeren"@en ;
     skos:notation     "46029" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2325,9 +1937,7 @@ nuts:BE23646029
 nuts:BE23646003
     a                 skos:Concept ;
     skos:prefLabel    "Beveren"@nl ;
-    skos:prefLabel    "Beveren"@en ;
     skos:definition   "NUTS/LAU classificatie: Beveren"@nl ;
-    skos:definition   "NUTS/LAU classification: Beveren"@en ;
     skos:notation     "46003" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2336,9 +1946,7 @@ nuts:BE23646003
 nuts:BE23646013
     a                 skos:Concept ;
     skos:prefLabel    "Kruibeke"@nl ;
-    skos:prefLabel    "Kruibeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Kruibeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Kruibeke"@en ;
     skos:notation     "46013" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2347,9 +1955,7 @@ nuts:BE23646013
 nuts:BE23646014
     a                 skos:Concept ;
     skos:prefLabel    "Lokeren"@nl ;
-    skos:prefLabel    "Lokeren"@en ;
     skos:definition   "NUTS/LAU classificatie: Lokeren"@nl ;
-    skos:definition   "NUTS/LAU classification: Lokeren"@en ;
     skos:notation     "46014" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2358,9 +1964,7 @@ nuts:BE23646014
 nuts:BE23646020
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Gillis-Waas"@nl ;
-    skos:prefLabel    "Sint-Gillis-Waas"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Gillis-Waas"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Gillis-Waas"@en ;
     skos:notation     "46020" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2368,9 +1972,7 @@ nuts:BE23646020
 nuts:BE23646021
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Niklaas"@nl ;
-    skos:prefLabel    "Sint-Niklaas"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Niklaas"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Niklaas"@en ;
     skos:notation     "46021" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2378,9 +1980,7 @@ nuts:BE23646021
 nuts:BE23646024
     a                 skos:Concept ;
     skos:prefLabel    "Stekene"@nl ;
-    skos:prefLabel    "Stekene"@en ;
     skos:definition   "NUTS/LAU classificatie: Stekene"@nl ;
-    skos:definition   "NUTS/LAU classification: Stekene"@en ;
     skos:notation     "46024" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2388,9 +1988,7 @@ nuts:BE23646024
 nuts:BE23646025
     a                 skos:Concept ;
     skos:prefLabel    "Temse"@nl ;
-    skos:prefLabel    "Temse"@en ;
     skos:definition   "NUTS/LAU classificatie: Temse"@nl ;
-    skos:definition   "NUTS/LAU classification: Temse"@en ;
     skos:notation     "46025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2398,9 +1996,7 @@ nuts:BE23646025
 nuts:BE24123002
     a                 skos:Concept ;
     skos:prefLabel    "Asse"@nl ;
-    skos:prefLabel    "Asse"@en ;
     skos:definition   "NUTS/LAU classificatie: Asse"@nl ;
-    skos:definition   "NUTS/LAU classification: Asse"@en ;
     skos:notation     "23002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2408,9 +2004,7 @@ nuts:BE24123002
 nuts:BE24123003
     a                 skos:Concept ;
     skos:prefLabel    "Beersel"@nl ;
-    skos:prefLabel    "Beersel"@en ;
     skos:definition   "NUTS/LAU classificatie: Beersel"@nl ;
-    skos:definition   "NUTS/LAU classification: Beersel"@en ;
     skos:notation     "23003" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2418,9 +2012,7 @@ nuts:BE24123003
 nuts:BE24123009
     a                 skos:Concept ;
     skos:prefLabel    "Bever"@nl ;
-    skos:prefLabel    "Bever"@en ;
     skos:definition   "NUTS/LAU classificatie: Bever"@nl ;
-    skos:definition   "NUTS/LAU classification: Bever"@en ;
     skos:notation     "23009" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2428,9 +2020,7 @@ nuts:BE24123009
 nuts:BE24123016
     a                 skos:Concept ;
     skos:prefLabel    "Dilbeek"@nl ;
-    skos:prefLabel    "Dilbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Dilbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Dilbeek"@en ;
     skos:notation     "23016" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2438,9 +2028,7 @@ nuts:BE24123016
 nuts:BE24123106
     a                 skos:Concept ;
     skos:prefLabel    "Pajottegem"@nl ;
-    skos:prefLabel    "Pajottegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Pajottegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Pajottegem"@en ;
     skos:notation     "23106" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2449,9 +2037,7 @@ nuts:BE24123106
 nuts:BE24123023
     a                 skos:Concept ;
     skos:prefLabel    "Galmaarden"@nl ;
-    skos:prefLabel    "Galmaarden"@en ;
     skos:definition   "NUTS/LAU classificatie: Galmaarden"@nl ;
-    skos:definition   "NUTS/LAU classification: Galmaarden"@en ;
     skos:notation     "23023" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2460,9 +2046,7 @@ nuts:BE24123023
 nuts:BE24123024
     a                 skos:Concept ;
     skos:prefLabel    "Gooik"@nl ;
-    skos:prefLabel    "Gooik"@en ;
     skos:definition   "NUTS/LAU classificatie: Gooik"@nl ;
-    skos:definition   "NUTS/LAU classification: Gooik"@en ;
     skos:notation     "23024" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2471,9 +2055,7 @@ nuts:BE24123024
 nuts:BE24123025
     a                 skos:Concept ;
     skos:prefLabel    "Grimbergen"@nl ;
-    skos:prefLabel    "Grimbergen"@en ;
     skos:definition   "NUTS/LAU classificatie: Grimbergen"@nl ;
-    skos:definition   "NUTS/LAU classification: Grimbergen"@en ;
     skos:notation     "23025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2481,9 +2063,7 @@ nuts:BE24123025
 nuts:BE24123027
     a                 skos:Concept ;
     skos:prefLabel    "Halle"@nl ;
-    skos:prefLabel    "Halle"@en ;
     skos:definition   "NUTS/LAU classificatie: Halle"@nl ;
-    skos:definition   "NUTS/LAU classification: Halle"@en ;
     skos:notation     "23027" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2491,9 +2071,7 @@ nuts:BE24123027
 nuts:BE24123032
     a                 skos:Concept ;
     skos:prefLabel    "Herne"@nl ;
-    skos:prefLabel    "Herne"@en ;
     skos:definition   "NUTS/LAU classificatie: Herne"@nl ;
-    skos:definition   "NUTS/LAU classification: Herne"@en ;
     skos:notation     "23032" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -2502,9 +2080,7 @@ nuts:BE24123032
 nuts:BE24123033
     a                 skos:Concept ;
     skos:prefLabel    "Hoeilaart"@nl ;
-    skos:prefLabel    "Hoeilaart"@en ;
     skos:definition   "NUTS/LAU classificatie: Hoeilaart"@nl ;
-    skos:definition   "NUTS/LAU classification: Hoeilaart"@en ;
     skos:notation     "23033" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2512,9 +2088,7 @@ nuts:BE24123033
 nuts:BE24123038
     a                 skos:Concept ;
     skos:prefLabel    "Kampenhout"@nl ;
-    skos:prefLabel    "Kampenhout"@en ;
     skos:definition   "NUTS/LAU classificatie: Kampenhout"@nl ;
-    skos:definition   "NUTS/LAU classification: Kampenhout"@en ;
     skos:notation     "23038" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2522,9 +2096,7 @@ nuts:BE24123038
 nuts:BE24123039
     a                 skos:Concept ;
     skos:prefLabel    "Kapelle-op-den-Bos"@nl ;
-    skos:prefLabel    "Kapelle-op-den-Bos"@en ;
     skos:definition   "NUTS/LAU classificatie: Kapelle-op-den-Bos"@nl ;
-    skos:definition   "NUTS/LAU classification: Kapelle-op-den-Bos"@en ;
     skos:notation     "23039" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2532,9 +2104,7 @@ nuts:BE24123039
 nuts:BE24123044
     a                 skos:Concept ;
     skos:prefLabel    "Liedekerke"@nl ;
-    skos:prefLabel    "Liedekerke"@en ;
     skos:definition   "NUTS/LAU classificatie: Liedekerke"@nl ;
-    skos:definition   "NUTS/LAU classification: Liedekerke"@en ;
     skos:notation     "23044" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2542,9 +2112,7 @@ nuts:BE24123044
 nuts:BE24123045
     a                 skos:Concept ;
     skos:prefLabel    "Londerzeel"@nl ;
-    skos:prefLabel    "Londerzeel"@en ;
     skos:definition   "NUTS/LAU classificatie: Londerzeel"@nl ;
-    skos:definition   "NUTS/LAU classification: Londerzeel"@en ;
     skos:notation     "23045" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2552,9 +2120,7 @@ nuts:BE24123045
 nuts:BE24123047
     a                 skos:Concept ;
     skos:prefLabel    "Machelen"@nl ;
-    skos:prefLabel    "Machelen"@en ;
     skos:definition   "NUTS/LAU classificatie: Machelen"@nl ;
-    skos:definition   "NUTS/LAU classification: Machelen"@en ;
     skos:notation     "23047" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2562,9 +2128,7 @@ nuts:BE24123047
 nuts:BE24123050
     a                 skos:Concept ;
     skos:prefLabel    "Meise"@nl ;
-    skos:prefLabel    "Meise"@en ;
     skos:definition   "NUTS/LAU classificatie: Meise"@nl ;
-    skos:definition   "NUTS/LAU classification: Meise"@en ;
     skos:notation     "23050" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2572,9 +2136,7 @@ nuts:BE24123050
 nuts:BE24123052
     a                 skos:Concept ;
     skos:prefLabel    "Merchtem"@nl ;
-    skos:prefLabel    "Merchtem"@en ;
     skos:definition   "NUTS/LAU classificatie: Merchtem"@nl ;
-    skos:definition   "NUTS/LAU classification: Merchtem"@en ;
     skos:notation     "23052" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2582,9 +2144,7 @@ nuts:BE24123052
 nuts:BE24123060
     a                 skos:Concept ;
     skos:prefLabel    "Opwijk"@nl ;
-    skos:prefLabel    "Opwijk"@en ;
     skos:definition   "NUTS/LAU classificatie: Opwijk"@nl ;
-    skos:definition   "NUTS/LAU classification: Opwijk"@en ;
     skos:notation     "23060" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2592,9 +2152,7 @@ nuts:BE24123060
 nuts:BE24123062
     a                 skos:Concept ;
     skos:prefLabel    "Overijse"@nl ;
-    skos:prefLabel    "Overijse"@en ;
     skos:definition   "NUTS/LAU classificatie: Overijse"@nl ;
-    skos:definition   "NUTS/LAU classification: Overijse"@en ;
     skos:notation     "23062" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2602,9 +2160,7 @@ nuts:BE24123062
 nuts:BE24123064
     a                 skos:Concept ;
     skos:prefLabel    "Pepingen"@nl ;
-    skos:prefLabel    "Pepingen"@en ;
     skos:definition   "NUTS/LAU classificatie: Pepingen"@nl ;
-    skos:definition   "NUTS/LAU classification: Pepingen"@en ;
     skos:notation     "23064" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2612,9 +2168,7 @@ nuts:BE24123064
 nuts:BE24123077
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Pieters-Leeuw"@nl ;
-    skos:prefLabel    "Sint-Pieters-Leeuw"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Pieters-Leeuw"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Pieters-Leeuw"@en ;
     skos:notation     "23077" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2622,9 +2176,7 @@ nuts:BE24123077
 nuts:BE24123081
     a                 skos:Concept ;
     skos:prefLabel    "Steenokkerzeel"@nl ;
-    skos:prefLabel    "Steenokkerzeel"@en ;
     skos:definition   "NUTS/LAU classificatie: Steenokkerzeel"@nl ;
-    skos:definition   "NUTS/LAU classification: Steenokkerzeel"@en ;
     skos:notation     "23081" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2632,9 +2184,7 @@ nuts:BE24123081
 nuts:BE24123086
     a                 skos:Concept ;
     skos:prefLabel    "Ternat"@nl ;
-    skos:prefLabel    "Ternat"@en ;
     skos:definition   "NUTS/LAU classificatie: Ternat"@nl ;
-    skos:definition   "NUTS/LAU classification: Ternat"@en ;
     skos:notation     "23086" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2642,9 +2192,7 @@ nuts:BE24123086
 nuts:BE24123088
     a                 skos:Concept ;
     skos:prefLabel    "Vilvoorde"@nl ;
-    skos:prefLabel    "Vilvoorde"@en ;
     skos:definition   "NUTS/LAU classificatie: Vilvoorde"@nl ;
-    skos:definition   "NUTS/LAU classification: Vilvoorde"@en ;
     skos:notation     "23088" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2652,9 +2200,7 @@ nuts:BE24123088
 nuts:BE24123094
     a                 skos:Concept ;
     skos:prefLabel    "Zaventem"@nl ;
-    skos:prefLabel    "Zaventem"@en ;
     skos:definition   "NUTS/LAU classificatie: Zaventem"@nl ;
-    skos:definition   "NUTS/LAU classification: Zaventem"@en ;
     skos:notation     "23094" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2662,9 +2208,7 @@ nuts:BE24123094
 nuts:BE24123096
     a                 skos:Concept ;
     skos:prefLabel    "Zemst"@nl ;
-    skos:prefLabel    "Zemst"@en ;
     skos:definition   "NUTS/LAU classificatie: Zemst"@nl ;
-    skos:definition   "NUTS/LAU classification: Zemst"@en ;
     skos:notation     "23096" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2672,9 +2216,7 @@ nuts:BE24123096
 nuts:BE24123097
     a                 skos:Concept ;
     skos:prefLabel    "Roosdaal"@nl ;
-    skos:prefLabel    "Roosdaal"@en ;
     skos:definition   "NUTS/LAU classificatie: Roosdaal"@nl ;
-    skos:definition   "NUTS/LAU classification: Roosdaal"@en ;
     skos:notation     "23097" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2682,9 +2224,7 @@ nuts:BE24123097
 nuts:BE24123098
     a                 skos:Concept ;
     skos:prefLabel    "Drogenbos"@nl ;
-    skos:prefLabel    "Drogenbos"@en ;
     skos:definition   "NUTS/LAU classificatie: Drogenbos"@nl ;
-    skos:definition   "NUTS/LAU classification: Drogenbos"@en ;
     skos:notation     "23098" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2692,9 +2232,7 @@ nuts:BE24123098
 nuts:BE24123099
     a                 skos:Concept ;
     skos:prefLabel    "Kraainem"@nl ;
-    skos:prefLabel    "Kraainem"@en ;
     skos:definition   "NUTS/LAU classificatie: Kraainem"@nl ;
-    skos:definition   "NUTS/LAU classification: Kraainem"@en ;
     skos:notation     "23099" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2702,9 +2240,7 @@ nuts:BE24123099
 nuts:BE24123100
     a                 skos:Concept ;
     skos:prefLabel    "Linkebeek"@nl ;
-    skos:prefLabel    "Linkebeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Linkebeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Linkebeek"@en ;
     skos:notation     "23100" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2712,9 +2248,7 @@ nuts:BE24123100
 nuts:BE24123101
     a                 skos:Concept ;
     skos:prefLabel    "Sint-Genesius-Rode"@nl ;
-    skos:prefLabel    "Sint-Genesius-Rode"@en ;
     skos:definition   "NUTS/LAU classificatie: Sint-Genesius-Rode"@nl ;
-    skos:definition   "NUTS/LAU classification: Sint-Genesius-Rode"@en ;
     skos:notation     "23101" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2722,9 +2256,7 @@ nuts:BE24123101
 nuts:BE24123102
     a                 skos:Concept ;
     skos:prefLabel    "Wemmel"@nl ;
-    skos:prefLabel    "Wemmel"@en ;
     skos:definition   "NUTS/LAU classificatie: Wemmel"@nl ;
-    skos:definition   "NUTS/LAU classification: Wemmel"@en ;
     skos:notation     "23102" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2732,9 +2264,7 @@ nuts:BE24123102
 nuts:BE24123103
     a                 skos:Concept ;
     skos:prefLabel    "Wezembeek-Oppem"@nl ;
-    skos:prefLabel    "Wezembeek-Oppem"@en ;
     skos:definition   "NUTS/LAU classificatie: Wezembeek-Oppem"@nl ;
-    skos:definition   "NUTS/LAU classification: Wezembeek-Oppem"@en ;
     skos:notation     "23103" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2742,9 +2272,7 @@ nuts:BE24123103
 nuts:BE24123104
     a                 skos:Concept ;
     skos:prefLabel    "Lennik"@nl ;
-    skos:prefLabel    "Lennik"@en ;
     skos:definition   "NUTS/LAU classificatie: Lennik"@nl ;
-    skos:definition   "NUTS/LAU classification: Lennik"@en ;
     skos:notation     "23104" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2752,9 +2280,7 @@ nuts:BE24123104
 nuts:BE24123105
     a                 skos:Concept ;
     skos:prefLabel    "Affligem"@nl ;
-    skos:prefLabel    "Affligem"@en ;
     skos:definition   "NUTS/LAU classificatie: Affligem"@nl ;
-    skos:definition   "NUTS/LAU classification: Affligem"@en ;
     skos:notation     "23105" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2762,9 +2288,7 @@ nuts:BE24123105
 nuts:BE24224001
     a                 skos:Concept ;
     skos:prefLabel    "Aarschot"@nl ;
-    skos:prefLabel    "Aarschot"@en ;
     skos:definition   "NUTS/LAU classificatie: Aarschot"@nl ;
-    skos:definition   "NUTS/LAU classification: Aarschot"@en ;
     skos:notation     "24001" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2772,9 +2296,7 @@ nuts:BE24224001
 nuts:BE24224007
     a                 skos:Concept ;
     skos:prefLabel    "Begijnendijk"@nl ;
-    skos:prefLabel    "Begijnendijk"@en ;
     skos:definition   "NUTS/LAU classificatie: Begijnendijk"@nl ;
-    skos:definition   "NUTS/LAU classification: Begijnendijk"@en ;
     skos:notation     "24007" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2782,9 +2304,7 @@ nuts:BE24224007
 nuts:BE24224008
     a                 skos:Concept ;
     skos:prefLabel    "Bekkevoort"@nl ;
-    skos:prefLabel    "Bekkevoort"@en ;
     skos:definition   "NUTS/LAU classificatie: Bekkevoort"@nl ;
-    skos:definition   "NUTS/LAU classification: Bekkevoort"@en ;
     skos:notation     "24008" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2792,9 +2312,7 @@ nuts:BE24224008
 nuts:BE24224009
     a                 skos:Concept ;
     skos:prefLabel    "Bertem"@nl ;
-    skos:prefLabel    "Bertem"@en ;
     skos:definition   "NUTS/LAU classificatie: Bertem"@nl ;
-    skos:definition   "NUTS/LAU classification: Bertem"@en ;
     skos:notation     "24009" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2802,9 +2320,7 @@ nuts:BE24224009
 nuts:BE24224011
     a                 skos:Concept ;
     skos:prefLabel    "Bierbeek"@nl ;
-    skos:prefLabel    "Bierbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Bierbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Bierbeek"@en ;
     skos:notation     "24011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2812,9 +2328,7 @@ nuts:BE24224011
 nuts:BE24224014
     a                 skos:Concept ;
     skos:prefLabel    "Boortmeerbeek"@nl ;
-    skos:prefLabel    "Boortmeerbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Boortmeerbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Boortmeerbeek"@en ;
     skos:notation     "24014" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2822,9 +2336,7 @@ nuts:BE24224014
 nuts:BE24224016
     a                 skos:Concept ;
     skos:prefLabel    "Boutersem"@nl ;
-    skos:prefLabel    "Boutersem"@en ;
     skos:definition   "NUTS/LAU classificatie: Boutersem"@nl ;
-    skos:definition   "NUTS/LAU classification: Boutersem"@en ;
     skos:notation     "24016" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2832,9 +2344,7 @@ nuts:BE24224016
 nuts:BE24224020
     a                 skos:Concept ;
     skos:prefLabel    "Diest"@nl ;
-    skos:prefLabel    "Diest"@en ;
     skos:definition   "NUTS/LAU classificatie: Diest"@nl ;
-    skos:definition   "NUTS/LAU classification: Diest"@en ;
     skos:notation     "24020" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2842,9 +2352,7 @@ nuts:BE24224020
 nuts:BE24224028
     a                 skos:Concept ;
     skos:prefLabel    "Geetbets"@nl ;
-    skos:prefLabel    "Geetbets"@en ;
     skos:definition   "NUTS/LAU classificatie: Geetbets"@nl ;
-    skos:definition   "NUTS/LAU classification: Geetbets"@en ;
     skos:notation     "24028" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2852,9 +2360,7 @@ nuts:BE24224028
 nuts:BE24224033
     a                 skos:Concept ;
     skos:prefLabel    "Haacht"@nl ;
-    skos:prefLabel    "Haacht"@en ;
     skos:definition   "NUTS/LAU classificatie: Haacht"@nl ;
-    skos:definition   "NUTS/LAU classification: Haacht"@en ;
     skos:notation     "24033" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2862,9 +2368,7 @@ nuts:BE24224033
 nuts:BE24224038
     a                 skos:Concept ;
     skos:prefLabel    "Herent"@nl ;
-    skos:prefLabel    "Herent"@en ;
     skos:definition   "NUTS/LAU classificatie: Herent"@nl ;
-    skos:definition   "NUTS/LAU classification: Herent"@en ;
     skos:notation     "24038" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2872,9 +2376,7 @@ nuts:BE24224038
 nuts:BE24224041
     a                 skos:Concept ;
     skos:prefLabel    "Hoegaarden"@nl ;
-    skos:prefLabel    "Hoegaarden"@en ;
     skos:definition   "NUTS/LAU classificatie: Hoegaarden"@nl ;
-    skos:definition   "NUTS/LAU classification: Hoegaarden"@en ;
     skos:notation     "24041" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2882,9 +2384,7 @@ nuts:BE24224041
 nuts:BE24224043
     a                 skos:Concept ;
     skos:prefLabel    "Holsbeek"@nl ;
-    skos:prefLabel    "Holsbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Holsbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Holsbeek"@en ;
     skos:notation     "24043" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2892,9 +2392,7 @@ nuts:BE24224043
 nuts:BE24224045
     a                 skos:Concept ;
     skos:prefLabel    "Huldenberg"@nl ;
-    skos:prefLabel    "Huldenberg"@en ;
     skos:definition   "NUTS/LAU classificatie: Huldenberg"@nl ;
-    skos:definition   "NUTS/LAU classification: Huldenberg"@en ;
     skos:notation     "24045" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2902,9 +2400,7 @@ nuts:BE24224045
 nuts:BE24224048
     a                 skos:Concept ;
     skos:prefLabel    "Keerbergen"@nl ;
-    skos:prefLabel    "Keerbergen"@en ;
     skos:definition   "NUTS/LAU classificatie: Keerbergen"@nl ;
-    skos:definition   "NUTS/LAU classification: Keerbergen"@en ;
     skos:notation     "24048" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2912,9 +2408,7 @@ nuts:BE24224048
 nuts:BE24224054
     a                 skos:Concept ;
     skos:prefLabel    "Kortenaken"@nl ;
-    skos:prefLabel    "Kortenaken"@en ;
     skos:definition   "NUTS/LAU classificatie: Kortenaken"@nl ;
-    skos:definition   "NUTS/LAU classification: Kortenaken"@en ;
     skos:notation     "24054" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2922,9 +2416,7 @@ nuts:BE24224054
 nuts:BE24224055
     a                 skos:Concept ;
     skos:prefLabel    "Kortenberg"@nl ;
-    skos:prefLabel    "Kortenberg"@en ;
     skos:definition   "NUTS/LAU classificatie: Kortenberg"@nl ;
-    skos:definition   "NUTS/LAU classification: Kortenberg"@en ;
     skos:notation     "24055" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2932,9 +2424,7 @@ nuts:BE24224055
 nuts:BE24224059
     a                 skos:Concept ;
     skos:prefLabel    "Landen"@nl ;
-    skos:prefLabel    "Landen"@en ;
     skos:definition   "NUTS/LAU classificatie: Landen"@nl ;
-    skos:definition   "NUTS/LAU classification: Landen"@en ;
     skos:notation     "24059" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2942,9 +2432,7 @@ nuts:BE24224059
 nuts:BE24224062
     a                 skos:Concept ;
     skos:prefLabel    "Leuven"@nl ;
-    skos:prefLabel    "Leuven"@en ;
     skos:definition   "NUTS/LAU classificatie: Leuven"@nl ;
-    skos:definition   "NUTS/LAU classification: Leuven"@en ;
     skos:notation     "24062" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2952,9 +2440,7 @@ nuts:BE24224062
 nuts:BE24224066
     a                 skos:Concept ;
     skos:prefLabel    "Lubbeek"@nl ;
-    skos:prefLabel    "Lubbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Lubbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Lubbeek"@en ;
     skos:notation     "24066" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2962,9 +2448,7 @@ nuts:BE24224066
 nuts:BE24224086
     a                 skos:Concept ;
     skos:prefLabel    "Oud-Heverlee"@nl ;
-    skos:prefLabel    "Oud-Heverlee"@en ;
     skos:definition   "NUTS/LAU classificatie: Oud-Heverlee"@nl ;
-    skos:definition   "NUTS/LAU classification: Oud-Heverlee"@en ;
     skos:notation     "24086" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2972,9 +2456,7 @@ nuts:BE24224086
 nuts:BE24224094
     a                 skos:Concept ;
     skos:prefLabel    "Rotselaar"@nl ;
-    skos:prefLabel    "Rotselaar"@en ;
     skos:definition   "NUTS/LAU classificatie: Rotselaar"@nl ;
-    skos:definition   "NUTS/LAU classification: Rotselaar"@en ;
     skos:notation     "24094" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2982,9 +2464,7 @@ nuts:BE24224094
 nuts:BE24224104
     a                 skos:Concept ;
     skos:prefLabel    "Tervuren"@nl ;
-    skos:prefLabel    "Tervuren"@en ;
     skos:definition   "NUTS/LAU classificatie: Tervuren"@nl ;
-    skos:definition   "NUTS/LAU classification: Tervuren"@en ;
     skos:notation     "24104" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -2992,9 +2472,7 @@ nuts:BE24224104
 nuts:BE24224107
     a                 skos:Concept ;
     skos:prefLabel    "Tienen"@nl ;
-    skos:prefLabel    "Tienen"@en ;
     skos:definition   "NUTS/LAU classificatie: Tienen"@nl ;
-    skos:definition   "NUTS/LAU classification: Tienen"@en ;
     skos:notation     "24107" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3002,9 +2480,7 @@ nuts:BE24224107
 nuts:BE24224109
     a                 skos:Concept ;
     skos:prefLabel    "Tremelo"@nl ;
-    skos:prefLabel    "Tremelo"@en ;
     skos:definition   "NUTS/LAU classificatie: Tremelo"@nl ;
-    skos:definition   "NUTS/LAU classification: Tremelo"@en ;
     skos:notation     "24109" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3012,9 +2488,7 @@ nuts:BE24224109
 nuts:BE24224130
     a                 skos:Concept ;
     skos:prefLabel    "Zoutleeuw"@nl ;
-    skos:prefLabel    "Zoutleeuw"@en ;
     skos:definition   "NUTS/LAU classificatie: Zoutleeuw"@nl ;
-    skos:definition   "NUTS/LAU classification: Zoutleeuw"@en ;
     skos:notation     "24130" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3022,9 +2496,7 @@ nuts:BE24224130
 nuts:BE24224133
     a                 skos:Concept ;
     skos:prefLabel    "Linter"@nl ;
-    skos:prefLabel    "Linter"@en ;
     skos:definition   "NUTS/LAU classificatie: Linter"@nl ;
-    skos:definition   "NUTS/LAU classification: Linter"@en ;
     skos:notation     "24133" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3032,9 +2504,7 @@ nuts:BE24224133
 nuts:BE24224134
     a                 skos:Concept ;
     skos:prefLabel    "Scherpenheuvel-Zichem"@nl ;
-    skos:prefLabel    "Scherpenheuvel-Zichem"@en ;
     skos:definition   "NUTS/LAU classificatie: Scherpenheuvel-Zichem"@nl ;
-    skos:definition   "NUTS/LAU classification: Scherpenheuvel-Zichem"@en ;
     skos:notation     "24134" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3042,9 +2512,7 @@ nuts:BE24224134
 nuts:BE24224135
     a                 skos:Concept ;
     skos:prefLabel    "Tielt-Winge"@nl ;
-    skos:prefLabel    "Tielt-Winge"@en ;
     skos:definition   "NUTS/LAU classificatie: Tielt-Winge"@nl ;
-    skos:definition   "NUTS/LAU classification: Tielt-Winge"@en ;
     skos:notation     "24135" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3052,9 +2520,7 @@ nuts:BE24224135
 nuts:BE24224137
     a                 skos:Concept ;
     skos:prefLabel    "Glabbeek"@nl ;
-    skos:prefLabel    "Glabbeek"@en ;
     skos:definition   "NUTS/LAU classificatie: Glabbeek"@nl ;
-    skos:definition   "NUTS/LAU classification: Glabbeek"@en ;
     skos:notation     "24137" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3062,9 +2528,7 @@ nuts:BE24224137
 nuts:BE25131003
     a                 skos:Concept ;
     skos:prefLabel    "Beernem"@nl ;
-    skos:prefLabel    "Beernem"@en ;
     skos:definition   "NUTS/LAU classificatie: Beernem"@nl ;
-    skos:definition   "NUTS/LAU classification: Beernem"@en ;
     skos:notation     "31003" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3072,9 +2536,7 @@ nuts:BE25131003
 nuts:BE25131004
     a                 skos:Concept ;
     skos:prefLabel    "Blankenberge"@nl ;
-    skos:prefLabel    "Blankenberge"@en ;
     skos:definition   "NUTS/LAU classificatie: Blankenberge"@nl ;
-    skos:definition   "NUTS/LAU classification: Blankenberge"@en ;
     skos:notation     "31004" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3082,9 +2544,7 @@ nuts:BE25131004
 nuts:BE25131005
     a                 skos:Concept ;
     skos:prefLabel    "Brugge"@nl ;
-    skos:prefLabel    "Brugge"@en ;
     skos:definition   "NUTS/LAU classificatie: Brugge"@nl ;
-    skos:definition   "NUTS/LAU classification: Brugge"@en ;
     skos:notation     "31005" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3092,9 +2552,7 @@ nuts:BE25131005
 nuts:BE25131006
     a                 skos:Concept ;
     skos:prefLabel    "Damme"@nl ;
-    skos:prefLabel    "Damme"@en ;
     skos:definition   "NUTS/LAU classificatie: Damme"@nl ;
-    skos:definition   "NUTS/LAU classification: Damme"@en ;
     skos:notation     "31006" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3102,9 +2560,7 @@ nuts:BE25131006
 nuts:BE25131012
     a                 skos:Concept ;
     skos:prefLabel    "Jabbeke"@nl ;
-    skos:prefLabel    "Jabbeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Jabbeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Jabbeke"@en ;
     skos:notation     "31012" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3112,9 +2568,7 @@ nuts:BE25131012
 nuts:BE25131022
     a                 skos:Concept ;
     skos:prefLabel    "Oostkamp"@nl ;
-    skos:prefLabel    "Oostkamp"@en ;
     skos:definition   "NUTS/LAU classificatie: Oostkamp"@nl ;
-    skos:definition   "NUTS/LAU classification: Oostkamp"@en ;
     skos:notation     "31022" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3122,9 +2576,7 @@ nuts:BE25131022
 nuts:BE25131033
     a                 skos:Concept ;
     skos:prefLabel    "Torhout"@nl ;
-    skos:prefLabel    "Torhout"@en ;
     skos:definition   "NUTS/LAU classificatie: Torhout"@nl ;
-    skos:definition   "NUTS/LAU classification: Torhout"@en ;
     skos:notation     "31033" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3132,9 +2584,7 @@ nuts:BE25131033
 nuts:BE25131040
     a                 skos:Concept ;
     skos:prefLabel    "Zedelgem"@nl ;
-    skos:prefLabel    "Zedelgem"@en ;
     skos:definition   "NUTS/LAU classificatie: Zedelgem"@nl ;
-    skos:definition   "NUTS/LAU classification: Zedelgem"@en ;
     skos:notation     "31040" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3142,9 +2592,7 @@ nuts:BE25131040
 nuts:BE25131042
     a                 skos:Concept ;
     skos:prefLabel    "Zuienkerke"@nl ;
-    skos:prefLabel    "Zuienkerke"@en ;
     skos:definition   "NUTS/LAU classificatie: Zuienkerke"@nl ;
-    skos:definition   "NUTS/LAU classification: Zuienkerke"@en ;
     skos:notation     "31042" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3152,9 +2600,7 @@ nuts:BE25131042
 nuts:BE25131043
     a                 skos:Concept ;
     skos:prefLabel    "Knokke-Heist"@nl ;
-    skos:prefLabel    "Knokke-Heist"@en ;
     skos:definition   "NUTS/LAU classificatie: Knokke-Heist"@nl ;
-    skos:definition   "NUTS/LAU classification: Knokke-Heist"@en ;
     skos:notation     "31043" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3162,9 +2608,7 @@ nuts:BE25131043
 nuts:BE25232003
     a                 skos:Concept ;
     skos:prefLabel    "Diksmuide"@nl ;
-    skos:prefLabel    "Diksmuide"@en ;
     skos:definition   "NUTS/LAU classificatie: Diksmuide"@nl ;
-    skos:definition   "NUTS/LAU classification: Diksmuide"@en ;
     skos:notation     "32003" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3172,9 +2616,7 @@ nuts:BE25232003
 nuts:BE25232006
     a                 skos:Concept ;
     skos:prefLabel    "Houthulst"@nl ;
-    skos:prefLabel    "Houthulst"@en ;
     skos:definition   "NUTS/LAU classificatie: Houthulst"@nl ;
-    skos:definition   "NUTS/LAU classification: Houthulst"@en ;
     skos:notation     "32006" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3182,9 +2624,7 @@ nuts:BE25232006
 nuts:BE25232010
     a                 skos:Concept ;
     skos:prefLabel    "Koekelare"@nl ;
-    skos:prefLabel    "Koekelare"@en ;
     skos:definition   "NUTS/LAU classificatie: Koekelare"@nl ;
-    skos:definition   "NUTS/LAU classification: Koekelare"@en ;
     skos:notation     "32010" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3192,9 +2632,7 @@ nuts:BE25232010
 nuts:BE25232011
     a                 skos:Concept ;
     skos:prefLabel    "Kortemark"@nl ;
-    skos:prefLabel    "Kortemark"@en ;
     skos:definition   "NUTS/LAU classificatie: Kortemark"@nl ;
-    skos:definition   "NUTS/LAU classification: Kortemark"@en ;
     skos:notation     "32011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3202,9 +2640,7 @@ nuts:BE25232011
 nuts:BE25232030
     a                 skos:Concept ;
     skos:prefLabel    "Lo-Reninge"@nl ;
-    skos:prefLabel    "Lo-Reninge"@en ;
     skos:definition   "NUTS/LAU classificatie: Lo-Reninge"@nl ;
-    skos:definition   "NUTS/LAU classification: Lo-Reninge"@en ;
     skos:notation     "32030" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3212,9 +2648,7 @@ nuts:BE25232030
 nuts:BE25333011
     a                 skos:Concept ;
     skos:prefLabel    "Ieper"@nl ;
-    skos:prefLabel    "Ieper"@en ;
     skos:definition   "NUTS/LAU classificatie: Ieper"@nl ;
-    skos:definition   "NUTS/LAU classification: Ieper"@en ;
     skos:notation     "33011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3222,9 +2656,7 @@ nuts:BE25333011
 nuts:BE25333016
     a                 skos:Concept ;
     skos:prefLabel    "Mesen"@nl ;
-    skos:prefLabel    "Mesen"@en ;
     skos:definition   "NUTS/LAU classificatie: Mesen"@nl ;
-    skos:definition   "NUTS/LAU classification: Mesen"@en ;
     skos:notation     "33016" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3232,9 +2664,7 @@ nuts:BE25333016
 nuts:BE25333021
     a                 skos:Concept ;
     skos:prefLabel    "Poperinge"@nl ;
-    skos:prefLabel    "Poperinge"@en ;
     skos:definition   "NUTS/LAU classificatie: Poperinge"@nl ;
-    skos:definition   "NUTS/LAU classification: Poperinge"@en ;
     skos:notation     "33021" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3242,9 +2672,7 @@ nuts:BE25333021
 nuts:BE25333029
     a                 skos:Concept ;
     skos:prefLabel    "Wervik"@nl ;
-    skos:prefLabel    "Wervik"@en ;
     skos:definition   "NUTS/LAU classificatie: Wervik"@nl ;
-    skos:definition   "NUTS/LAU classification: Wervik"@en ;
     skos:notation     "33029" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3252,9 +2680,7 @@ nuts:BE25333029
 nuts:BE25333037
     a                 skos:Concept ;
     skos:prefLabel    "Zonnebeke"@nl ;
-    skos:prefLabel    "Zonnebeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Zonnebeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Zonnebeke"@en ;
     skos:notation     "33037" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3262,9 +2688,7 @@ nuts:BE25333037
 nuts:BE25333039
     a                 skos:Concept ;
     skos:prefLabel    "Heuvelland"@nl ;
-    skos:prefLabel    "Heuvelland"@en ;
     skos:definition   "NUTS/LAU classificatie: Heuvelland"@nl ;
-    skos:definition   "NUTS/LAU classification: Heuvelland"@en ;
     skos:notation     "33039" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3272,9 +2696,7 @@ nuts:BE25333039
 nuts:BE25333040
     a                 skos:Concept ;
     skos:prefLabel    "Langemark-Poelkapelle"@nl ;
-    skos:prefLabel    "Langemark-Poelkapelle"@en ;
     skos:definition   "NUTS/LAU classificatie: Langemark-Poelkapelle"@nl ;
-    skos:definition   "NUTS/LAU classification: Langemark-Poelkapelle"@en ;
     skos:notation     "33040" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3282,9 +2704,7 @@ nuts:BE25333040
 nuts:BE25333041
     a                 skos:Concept ;
     skos:prefLabel    "Vleteren"@nl ;
-    skos:prefLabel    "Vleteren"@en ;
     skos:definition   "NUTS/LAU classificatie: Vleteren"@nl ;
-    skos:definition   "NUTS/LAU classification: Vleteren"@en ;
     skos:notation     "33041" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3292,9 +2712,7 @@ nuts:BE25333041
 nuts:BE25434002
     a                 skos:Concept ;
     skos:prefLabel    "Anzegem"@nl ;
-    skos:prefLabel    "Anzegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Anzegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Anzegem"@en ;
     skos:notation     "34002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3302,9 +2720,7 @@ nuts:BE25434002
 nuts:BE25434003
     a                 skos:Concept ;
     skos:prefLabel    "Avelgem"@nl ;
-    skos:prefLabel    "Avelgem"@en ;
     skos:definition   "NUTS/LAU classificatie: Avelgem"@nl ;
-    skos:definition   "NUTS/LAU classification: Avelgem"@en ;
     skos:notation     "34003" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3312,9 +2728,7 @@ nuts:BE25434003
 nuts:BE25434009
     a                 skos:Concept ;
     skos:prefLabel    "Deerlijk"@nl ;
-    skos:prefLabel    "Deerlijk"@en ;
     skos:definition   "NUTS/LAU classificatie: Deerlijk"@nl ;
-    skos:definition   "NUTS/LAU classification: Deerlijk"@en ;
     skos:notation     "34009" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3322,9 +2736,7 @@ nuts:BE25434009
 nuts:BE25434013
     a                 skos:Concept ;
     skos:prefLabel    "Harelbeke"@nl ;
-    skos:prefLabel    "Harelbeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Harelbeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Harelbeke"@en ;
     skos:notation     "34013" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3332,9 +2744,7 @@ nuts:BE25434013
 nuts:BE25434022
     a                 skos:Concept ;
     skos:prefLabel    "Kortrijk"@nl ;
-    skos:prefLabel    "Kortrijk"@en ;
     skos:definition   "NUTS/LAU classificatie: Kortrijk"@nl ;
-    skos:definition   "NUTS/LAU classification: Kortrijk"@en ;
     skos:notation     "34022" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3342,9 +2752,7 @@ nuts:BE25434022
 nuts:BE25434023
     a                 skos:Concept ;
     skos:prefLabel    "Kuurne"@nl ;
-    skos:prefLabel    "Kuurne"@en ;
     skos:definition   "NUTS/LAU classificatie: Kuurne"@nl ;
-    skos:definition   "NUTS/LAU classification: Kuurne"@en ;
     skos:notation     "34023" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3352,9 +2760,7 @@ nuts:BE25434023
 nuts:BE25434025
     a                 skos:Concept ;
     skos:prefLabel    "Lendelede"@nl ;
-    skos:prefLabel    "Lendelede"@en ;
     skos:definition   "NUTS/LAU classificatie: Lendelede"@nl ;
-    skos:definition   "NUTS/LAU classification: Lendelede"@en ;
     skos:notation     "34025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3362,9 +2768,7 @@ nuts:BE25434025
 nuts:BE25434027
     a                 skos:Concept ;
     skos:prefLabel    "Menen"@nl ;
-    skos:prefLabel    "Menen"@en ;
     skos:definition   "NUTS/LAU classificatie: Menen"@nl ;
-    skos:definition   "NUTS/LAU classification: Menen"@en ;
     skos:notation     "34027" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3372,9 +2776,7 @@ nuts:BE25434027
 nuts:BE25434040
     a                 skos:Concept ;
     skos:prefLabel    "Waregem"@nl ;
-    skos:prefLabel    "Waregem"@en ;
     skos:definition   "NUTS/LAU classificatie: Waregem"@nl ;
-    skos:definition   "NUTS/LAU classification: Waregem"@en ;
     skos:notation     "34040" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3382,9 +2784,7 @@ nuts:BE25434040
 nuts:BE25434041
     a                 skos:Concept ;
     skos:prefLabel    "Wevelgem"@nl ;
-    skos:prefLabel    "Wevelgem"@en ;
     skos:definition   "NUTS/LAU classificatie: Wevelgem"@nl ;
-    skos:definition   "NUTS/LAU classification: Wevelgem"@en ;
     skos:notation     "34041" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3392,9 +2792,7 @@ nuts:BE25434041
 nuts:BE25434042
     a                 skos:Concept ;
     skos:prefLabel    "Zwevegem"@nl ;
-    skos:prefLabel    "Zwevegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Zwevegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Zwevegem"@en ;
     skos:notation     "34042" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3402,9 +2800,7 @@ nuts:BE25434042
 nuts:BE25434043
     a                 skos:Concept ;
     skos:prefLabel    "Spiere-Helkijn"@nl ;
-    skos:prefLabel    "Spiere-Helkijn"@en ;
     skos:definition   "NUTS/LAU classificatie: Spiere-Helkijn"@nl ;
-    skos:definition   "NUTS/LAU classification: Spiere-Helkijn"@en ;
     skos:notation     "34043" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3412,9 +2808,7 @@ nuts:BE25434043
 nuts:BE25535002
     a                 skos:Concept ;
     skos:prefLabel    "Bredene"@nl ;
-    skos:prefLabel    "Bredene"@en ;
     skos:definition   "NUTS/LAU classificatie: Bredene"@nl ;
-    skos:definition   "NUTS/LAU classification: Bredene"@en ;
     skos:notation     "35002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3422,9 +2816,7 @@ nuts:BE25535002
 nuts:BE25535005
     a                 skos:Concept ;
     skos:prefLabel    "Gistel"@nl ;
-    skos:prefLabel    "Gistel"@en ;
     skos:definition   "NUTS/LAU classificatie: Gistel"@nl ;
-    skos:definition   "NUTS/LAU classification: Gistel"@en ;
     skos:notation     "35005" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3432,9 +2824,7 @@ nuts:BE25535005
 nuts:BE25535006
     a                 skos:Concept ;
     skos:prefLabel    "Ichtegem"@nl ;
-    skos:prefLabel    "Ichtegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Ichtegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Ichtegem"@en ;
     skos:notation     "35006" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3442,9 +2832,7 @@ nuts:BE25535006
 nuts:BE25535011
     a                 skos:Concept ;
     skos:prefLabel    "Middelkerke"@nl ;
-    skos:prefLabel    "Middelkerke"@en ;
     skos:definition   "NUTS/LAU classificatie: Middelkerke"@nl ;
-    skos:definition   "NUTS/LAU classification: Middelkerke"@en ;
     skos:notation     "35011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3452,9 +2840,7 @@ nuts:BE25535011
 nuts:BE25535013
     a                 skos:Concept ;
     skos:prefLabel    "Oostende"@nl ;
-    skos:prefLabel    "Oostende"@en ;
     skos:definition   "NUTS/LAU classificatie: Oostende"@nl ;
-    skos:definition   "NUTS/LAU classification: Oostende"@en ;
     skos:notation     "35013" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3462,9 +2848,7 @@ nuts:BE25535013
 nuts:BE25535014
     a                 skos:Concept ;
     skos:prefLabel    "Oudenburg"@nl ;
-    skos:prefLabel    "Oudenburg"@en ;
     skos:definition   "NUTS/LAU classificatie: Oudenburg"@nl ;
-    skos:definition   "NUTS/LAU classification: Oudenburg"@en ;
     skos:notation     "35014" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3472,9 +2856,7 @@ nuts:BE25535014
 nuts:BE25535029
     a                 skos:Concept ;
     skos:prefLabel    "De Haan"@nl ;
-    skos:prefLabel    "De Haan"@en ;
     skos:definition   "NUTS/LAU classificatie: De Haan"@nl ;
-    skos:definition   "NUTS/LAU classification: De Haan"@en ;
     skos:notation     "35029" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3482,9 +2864,7 @@ nuts:BE25535029
 nuts:BE25636006
     a                 skos:Concept ;
     skos:prefLabel    "Hooglede"@nl ;
-    skos:prefLabel    "Hooglede"@en ;
     skos:definition   "NUTS/LAU classificatie: Hooglede"@nl ;
-    skos:definition   "NUTS/LAU classification: Hooglede"@en ;
     skos:notation     "36006" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3492,9 +2872,7 @@ nuts:BE25636006
 nuts:BE25636007
     a                 skos:Concept ;
     skos:prefLabel    "Ingelmunster"@nl ;
-    skos:prefLabel    "Ingelmunster"@en ;
     skos:definition   "NUTS/LAU classificatie: Ingelmunster"@nl ;
-    skos:definition   "NUTS/LAU classification: Ingelmunster"@en ;
     skos:notation     "36007" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3502,9 +2880,7 @@ nuts:BE25636007
 nuts:BE25636008
     a                 skos:Concept ;
     skos:prefLabel    "Izegem"@nl ;
-    skos:prefLabel    "Izegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Izegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Izegem"@en ;
     skos:notation     "36008" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3512,9 +2888,7 @@ nuts:BE25636008
 nuts:BE25636010
     a                 skos:Concept ;
     skos:prefLabel    "Ledegem"@nl ;
-    skos:prefLabel    "Ledegem"@en ;
     skos:definition   "NUTS/LAU classificatie: Ledegem"@nl ;
-    skos:definition   "NUTS/LAU classification: Ledegem"@en ;
     skos:notation     "36010" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3522,9 +2896,7 @@ nuts:BE25636010
 nuts:BE25636011
     a                 skos:Concept ;
     skos:prefLabel    "Lichtervelde"@nl ;
-    skos:prefLabel    "Lichtervelde"@en ;
     skos:definition   "NUTS/LAU classificatie: Lichtervelde"@nl ;
-    skos:definition   "NUTS/LAU classification: Lichtervelde"@en ;
     skos:notation     "36011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3532,9 +2904,7 @@ nuts:BE25636011
 nuts:BE25636012
     a                 skos:Concept ;
     skos:prefLabel    "Moorslede"@nl ;
-    skos:prefLabel    "Moorslede"@en ;
     skos:definition   "NUTS/LAU classificatie: Moorslede"@nl ;
-    skos:definition   "NUTS/LAU classification: Moorslede"@en ;
     skos:notation     "36012" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3542,9 +2912,7 @@ nuts:BE25636012
 nuts:BE25636015
     a                 skos:Concept ;
     skos:prefLabel    "Roeselare"@nl ;
-    skos:prefLabel    "Roeselare"@en ;
     skos:definition   "NUTS/LAU classificatie: Roeselare"@nl ;
-    skos:definition   "NUTS/LAU classification: Roeselare"@en ;
     skos:notation     "36015" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3552,9 +2920,7 @@ nuts:BE25636015
 nuts:BE25636019
     a                 skos:Concept ;
     skos:prefLabel    "Staden"@nl ;
-    skos:prefLabel    "Staden"@en ;
     skos:definition   "NUTS/LAU classificatie: Staden"@nl ;
-    skos:definition   "NUTS/LAU classification: Staden"@en ;
     skos:notation     "36019" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3562,9 +2928,7 @@ nuts:BE25636019
 nuts:BE25737002
     a                 skos:Concept ;
     skos:prefLabel    "Dentergem"@nl ;
-    skos:prefLabel    "Dentergem"@en ;
     skos:definition   "NUTS/LAU classificatie: Dentergem"@nl ;
-    skos:definition   "NUTS/LAU classification: Dentergem"@en ;
     skos:notation     "37002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3572,9 +2936,7 @@ nuts:BE25737002
 nuts:BE25737022
     a                 skos:Concept ;
     skos:prefLabel    "Tielt"@nl ;
-    skos:prefLabel    "Tielt"@en ;
     skos:definition   "NUTS/LAU classificatie: Tielt"@nl ;
-    skos:definition   "NUTS/LAU classification: Tielt"@en ;
     skos:notation     "37022" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -3583,9 +2945,7 @@ nuts:BE25737022
 nuts:BE25737007
     a                 skos:Concept ;
     skos:prefLabel    "Meulebeke"@nl ;
-    skos:prefLabel    "Meulebeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Meulebeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Meulebeke"@en ;
     skos:notation     "37007" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -3594,9 +2954,7 @@ nuts:BE25737007
 nuts:BE25737010
     a                 skos:Concept ;
     skos:prefLabel    "Oostrozebeke"@nl ;
-    skos:prefLabel    "Oostrozebeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Oostrozebeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Oostrozebeke"@en ;
     skos:notation     "37010" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3604,9 +2962,7 @@ nuts:BE25737010
 nuts:BE25737011
     a                 skos:Concept ;
     skos:prefLabel    "Pittem"@nl ;
-    skos:prefLabel    "Pittem"@en ;
     skos:definition   "NUTS/LAU classificatie: Pittem"@nl ;
-    skos:definition   "NUTS/LAU classification: Pittem"@en ;
     skos:notation     "37011" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3614,9 +2970,7 @@ nuts:BE25737011
 nuts:BE25737021
     a                 skos:Concept ;
     skos:prefLabel    "Wingene"@nl ;
-    skos:prefLabel    "Wingene"@en ;
     skos:definition   "NUTS/LAU classificatie: Wingene"@nl ;
-    skos:definition   "NUTS/LAU classification: Wingene"@en ;
     skos:notation     "37021" ;
     time:hasBeginning "2025-01-01"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -3625,9 +2979,7 @@ nuts:BE25737021
 nuts:BE25737012
     a                 skos:Concept ;
     skos:prefLabel    "Ruiselede"@nl ;
-    skos:prefLabel    "Ruiselede"@en ;
     skos:definition   "NUTS/LAU classificatie: Ruiselede"@nl ;
-    skos:definition   "NUTS/LAU classification: Ruiselede"@en ;
     skos:notation     "37012" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -3636,9 +2988,7 @@ nuts:BE25737012
 nuts:BE25737015
     a                 skos:Concept ;
     skos:prefLabel    "Tielt"@nl ;
-    skos:prefLabel    "Tielt"@en ;
     skos:definition   "NUTS/LAU classificatie: Tielt"@nl ;
-    skos:definition   "NUTS/LAU classification: Tielt"@en ;
     skos:notation     "37015" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -3647,9 +2997,7 @@ nuts:BE25737015
 nuts:BE25737017
     a                 skos:Concept ;
     skos:prefLabel    "Wielsbeke"@nl ;
-    skos:prefLabel    "Wielsbeke"@en ;
     skos:definition   "NUTS/LAU classificatie: Wielsbeke"@nl ;
-    skos:definition   "NUTS/LAU classification: Wielsbeke"@en ;
     skos:notation     "37017" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3657,9 +3005,7 @@ nuts:BE25737017
 nuts:BE25737018
     a                 skos:Concept ;
     skos:prefLabel    "Wingene"@nl ;
-    skos:prefLabel    "Wingene"@en ;
     skos:definition   "NUTS/LAU classificatie: Wingene"@nl ;
-    skos:definition   "NUTS/LAU classification: Wingene"@en ;
     skos:notation     "37018" ;
     time:hasEnd       "2024-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
@@ -3668,9 +3014,7 @@ nuts:BE25737018
 nuts:BE25737020
     a                 skos:Concept ;
     skos:prefLabel    "Ardooie"@nl ;
-    skos:prefLabel    "Ardooie"@en ;
     skos:definition   "NUTS/LAU classificatie: Ardooie"@nl ;
-    skos:definition   "NUTS/LAU classification: Ardooie"@en ;
     skos:notation     "37020" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3678,9 +3022,7 @@ nuts:BE25737020
 nuts:BE25838002
     a                 skos:Concept ;
     skos:prefLabel    "Alveringem"@nl ;
-    skos:prefLabel    "Alveringem"@en ;
     skos:definition   "NUTS/LAU classificatie: Alveringem"@nl ;
-    skos:definition   "NUTS/LAU classification: Alveringem"@en ;
     skos:notation     "38002" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3688,9 +3030,7 @@ nuts:BE25838002
 nuts:BE25838008
     a                 skos:Concept ;
     skos:prefLabel    "De Panne"@nl ;
-    skos:prefLabel    "De Panne"@en ;
     skos:definition   "NUTS/LAU classificatie: De Panne"@nl ;
-    skos:definition   "NUTS/LAU classification: De Panne"@en ;
     skos:notation     "38008" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3698,9 +3038,7 @@ nuts:BE25838008
 nuts:BE25838014
     a                 skos:Concept ;
     skos:prefLabel    "Koksijde"@nl ;
-    skos:prefLabel    "Koksijde"@en ;
     skos:definition   "NUTS/LAU classificatie: Koksijde"@nl ;
-    skos:definition   "NUTS/LAU classification: Koksijde"@en ;
     skos:notation     "38014" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3708,9 +3046,7 @@ nuts:BE25838014
 nuts:BE25838016
     a                 skos:Concept ;
     skos:prefLabel    "Nieuwpoort"@nl ;
-    skos:prefLabel    "Nieuwpoort"@en ;
     skos:definition   "NUTS/LAU classificatie: Nieuwpoort"@nl ;
-    skos:definition   "NUTS/LAU classification: Nieuwpoort"@en ;
     skos:notation     "38016" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
@@ -3718,9 +3054,7 @@ nuts:BE25838016
 nuts:BE25838025
     a                 skos:Concept ;
     skos:prefLabel    "Veurne"@nl ;
-    skos:prefLabel    "Veurne"@en ;
     skos:definition   "NUTS/LAU classificatie: Veurne"@nl ;
-    skos:definition   "NUTS/LAU classification: Veurne"@en ;
     skos:notation     "38025" ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
