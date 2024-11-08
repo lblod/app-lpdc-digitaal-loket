@@ -211,7 +211,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.44.2
+    image: lblod/lpdc-management-service:0.44.3
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
