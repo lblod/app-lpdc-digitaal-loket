@@ -162,10 +162,8 @@ nutss:2024
     skos:hasTopConcept nuts:BE23343014 ;
     skos:hasTopConcept nuts:BE23343018 ;
     skos:hasTopConcept nuts:BE23444001 ;
-    skos:hasTopConcept nuts:BE23444001_VOOR_FUSIE_2019 ;
     skos:hasTopConcept nuts:BE23444029 ;
     skos:hasTopConcept nuts:BE23444011 ;
-    skos:hasTopConcept nuts:BE23444011_VOOR_FUSIE_2019 ;
     skos:hasTopConcept nuts:BE23444049 ;
     skos:hasTopConcept nuts:BE23444086 ;
     skos:hasTopConcept nuts:BE23444012 ;
@@ -1590,15 +1588,6 @@ nuts:BE23444001
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
 
-nuts:BE23444001_VOOR_FUSIE_2019
-    a                 skos:Concept ;
-    skos:prefLabel    "Aalter"@nl ;
-    skos:definition   "NUTS/LAU classificatie: Aalter"@nl ;
-    skos:notation     "44001" ;
-    time:hasEnd       "2018-12-31"^^xsd:date ;
-    skos:inScheme     nutss:2024 ;
-    skos:topConceptOf nutss:2024 .
-
 nuts:BE23444029
     a                 skos:Concept ;
     skos:prefLabel    "Knesselare"@nl ;
@@ -1614,15 +1603,6 @@ nuts:BE23444011
     skos:definition   "NUTS/LAU classificatie: Deinze"@nl ;
     skos:notation     "44083" ;
     time:hasBeginning "2019-01-01"^^xsd:date ;
-    skos:inScheme     nutss:2024 ;
-    skos:topConceptOf nutss:2024 .
-
-nuts:BE23444011_VOOR_FUSIE_2019
-    a                 skos:Concept ;
-    skos:prefLabel    "Deinze"@nl ;
-    skos:definition   "NUTS/LAU classificatie: Deinze"@nl ;
-    skos:notation     "44011" ;
-    time:hasEnd       "2018-12-31"^^xsd:date ;
     skos:inScheme     nutss:2024 ;
     skos:topConceptOf nutss:2024 .
 
