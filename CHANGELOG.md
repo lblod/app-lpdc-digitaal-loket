@@ -1,5 +1,10 @@
 # Changelog
-
+## Unreleased
+### Backend
+- Add `mock-login` accounts for the new fusies. (LPDC-1291)
+### Deploy Notes
+#### Docker Commands
+- `drc restart migrations && drc logs -ft --tail=200 migrations`
 ## v0.21.6 (2024-09-06)
 ### Backend
 - Remove duplicate URI for IBEG. (DL-5770)
