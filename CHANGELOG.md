@@ -1,9 +1,12 @@
 # Changelog
-## Unreleased
+## v0.22.0 (2024-11-25)
 ### Backend
 - Add `mock-login` accounts for the new fusies. (LPDC-1291)
+- Add new NUTS 2024 codelist.
+- Bump `lpdc-management`.
 ### Deploy Notes
 #### Docker Commands
+- `drc up -d lpdc-management`
 - `drc restart migrations && drc logs -ft --tail=200 migrations`
 ## v0.21.6 (2024-09-06)
 ### Backend
