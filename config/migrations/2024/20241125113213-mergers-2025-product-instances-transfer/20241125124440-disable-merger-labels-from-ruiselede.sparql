@@ -1,0 +1,34 @@
+
+  DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/2564e21e3650f91625189ccb7eb055e47754a0633c54c7582a899171fef60c52/LoketLB-LPDCGebruiker> {
+      <http://data.lblod.info/id/public-service/9964b06c-03f8-4f7b-84be-af1f8112c383> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/ece05fe5-295d-4eae-86be-a7a84675d951> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/700505f9-33ee-4f59-a642-23dddcddb93e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/990cdebf-84ad-44c1-9127-920070889811> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/62dd2faf-86a1-4dc1-b177-4abd2d211e80> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/5d67c766-9a63-4d8e-aeac-188ab133f1d6> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/4c142171-7501-45c7-9687-36a73dd6e3e6> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/a743847b-9bde-41ab-b965-6ee4c16337ff> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/804e2fd7-53de-42f3-93ae-d0fbddb5ab67> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/30f44449-06c9-4ca2-88a5-09f0a03f242f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/5b051411-a640-4e0b-9d8d-6f4967f82cad> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/b5ab9108-5986-48f3-8105-a5a22336220f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/81643c3b-7270-47fb-830e-57b809336854> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+    }
+  } INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/2564e21e3650f91625189ccb7eb055e47754a0633c54c7582a899171fef60c52/LoketLB-LPDCGebruiker> {
+      <http://data.lblod.info/id/public-service/9964b06c-03f8-4f7b-84be-af1f8112c383> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/ece05fe5-295d-4eae-86be-a7a84675d951> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/700505f9-33ee-4f59-a642-23dddcddb93e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/990cdebf-84ad-44c1-9127-920070889811> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/62dd2faf-86a1-4dc1-b177-4abd2d211e80> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/5d67c766-9a63-4d8e-aeac-188ab133f1d6> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/4c142171-7501-45c7-9687-36a73dd6e3e6> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/a743847b-9bde-41ab-b965-6ee4c16337ff> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/804e2fd7-53de-42f3-93ae-d0fbddb5ab67> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/30f44449-06c9-4ca2-88a5-09f0a03f242f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/5b051411-a640-4e0b-9d8d-6f4967f82cad> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/b5ab9108-5986-48f3-8105-a5a22336220f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/81643c3b-7270-47fb-830e-57b809336854> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+    }
+  }
