@@ -5,14 +5,24 @@ DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?organisation skos:prefLabel ?oldName.
   }
+  GRAPH ?g {
+    ?person foaf:familyName ?oldFamilyName.
+  }
 } INSERT {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?organisation skos:prefLabel ?newName.
+  }
+  GRAPH ?g {
+    ?person foaf:familyName ?newName.
   }
 } WHERE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?organisation a besluit:Bestuurseenheid;
                   skos:prefLabel ?oldName.
+  }
+  GRAPH ?g {
+    ?person foaf:member ?organisation;
+            foaf:familyName ?oldFamilyName.
   }
   VALUES (?organisation ?newName) {
     (<http://data.lblod.info/id/bestuurseenheden/99da98a7a0087d3429b084ebfc4eb5d488c593790d4d5af7253982a2e21a6a5f> """Bilzen-Hoeselt""") # Bilzen -> Bilzen-Hoeselt (municipality)
