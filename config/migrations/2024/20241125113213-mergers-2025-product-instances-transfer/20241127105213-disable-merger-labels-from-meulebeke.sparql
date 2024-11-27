@@ -1,0 +1,10 @@
+
+  DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/5a4b2b4f1de1f3b91b0348a7eb6d6aa0ef9420b8ec31374970c9ffe933a79515/LoketLB-LPDCGebruiker> {
+      <http://data.lblod.info/id/public-service/62afe7ab-560c-4059-833f-a80ef1fd037f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+    }
+  } INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/5a4b2b4f1de1f3b91b0348a7eb6d6aa0ef9420b8ec31374970c9ffe933a79515/LoketLB-LPDCGebruiker> {
+      <http://data.lblod.info/id/public-service/62afe7ab-560c-4059-833f-a80ef1fd037f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+    }
+  }
