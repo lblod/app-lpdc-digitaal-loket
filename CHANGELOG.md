@@ -1,4 +1,17 @@
 # Changelog
+## v0.23.0 (2024-11-28)
+### Frontend
+- [v0.19.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0190-2024-11-28) (LPDC-1318)
+### Backend
+- Bump `frontend`
+- Bump `lpdc-management` to v0.45.0 to allow publishing product instances with the merger label enabled (LPDC-1318)
+### Deploy Notes
+- Add local migrations to transfer product instances in the context of the 2025 municipality mergers, see the [script's README](https://github.com/lblod/lpdc-management-service/blob/development/migration-scripts/transfer-instances/readme.md#transfer-instances) for details.
+#### Docker Commands
+- `drc up -d lpdc lpdc-management`
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
+
 ## v0.22.0 (2024-11-25)
 ### Backend
 - Add `mock-login` accounts for the new fusies. (LPDC-1291)
@@ -8,6 +21,7 @@
 #### Docker Commands
 - `drc up -d lpdc-management`
 - `drc restart migrations && drc logs -ft --tail=200 migrations`
+
 ## v0.21.6 (2024-09-06)
 ### Backend
 - Remove duplicate URI for IBEG. (DL-5770)
