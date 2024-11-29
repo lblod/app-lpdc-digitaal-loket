@@ -90,7 +90,7 @@ services:
     logging: *default-logging
 
   migrations:
-    image: semtech/mu-migrations-service:0.8.0
+    image: semtech/mu-migrations-service:0.9.0
     depends_on:
       virtuoso:
         condition: service_started
