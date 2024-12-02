@@ -7,8 +7,10 @@
 - Bump `lpdc-management` to v0.45.0 to allow publishing product instances with the merger label enabled (LPDC-1318)
 ### Deploy Notes
 - Add local migrations to transfer product instances in the context of the 2025 municipality mergers, see the [script's README](https://github.com/lblod/lpdc-management-service/blob/development/migration-scripts/transfer-instances/readme.md#transfer-instances) for details.
+- On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 #### Docker Commands
 - `drc up -d lpdc lpdc-management`
+- On ACC and PROD: `drc up -d controle`
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 
 
