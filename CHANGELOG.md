@@ -1,4 +1,12 @@
 # Changelog
+## v0.23.1 (2024-12-03)
+### Backend
+- Fix: prefill geographical scope field for merged organisations (LPDC-1332)
+### Deploy instructions
+- Execute the migration to insert the missing werkingsgebieden
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
 ## v0.23.0 (2024-11-28)
 ### Frontend
 - [v0.19.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0190-2024-11-28) (LPDC-1318)
@@ -13,13 +21,12 @@
 - On ACC and PROD: `drc up -d controle`
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 
-
 ## v0.22.0 (2024-11-25)
 ### Backend
 - Add `mock-login` accounts for the new fusies. (LPDC-1291)
 - Add new NUTS 2024 codelist.
 - Bump `lpdc-management`.
-### Deploy Notes
+### Deploy instructions
 #### Docker Commands
 - `drc up -d lpdc-management`
 - `drc restart migrations && drc logs -ft --tail=200 migrations`
@@ -28,7 +35,7 @@
 ### Backend
 - Remove duplicate URI for IBEG. (DL-5770)
 - Bump `mu-cl-resources` to `v1.24.0`. (LPDC-1303)
-### Deploy Notes
+### Deploy instructions
 - Remove `mu-cl-resources` override from `docker-compose.override.yml`.
 #### Docker Commands
 - `drc restart migrations && drc logs -ft --tail=200 migrations`
@@ -36,12 +43,10 @@
 - `drc up -d lpdc-management`: Previous version was not deployed, so this command has not been run yet.
 
 ## v0.21.5 (2024-08-24)
-
 ### Backend
 - `lpcd-management-service` bumped to v0.44.2 to prevent overriding competent authorities when that field is empty in the concept (LPDC-1255)
-
-## Deploy instructions
-### Docker commands
+### Deploy instructions
+#### Docker commands
 - `drc up -d lpdc-management`
 
 ## v0.21.3 (2024-08-08)
