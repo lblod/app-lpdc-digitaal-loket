@@ -1,4 +1,12 @@
 # Changelog
+## v0.23.2 (2024-12-17)
+### Backend
+- Rename municipalities and OCMWs for 2025 municipality mergers (LPDC-1331)
+### Deploy instructions
+- Execute the migration to update the organisation names
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
 ## v0.23.1 (2024-12-03)
 ### Backend
 - Fix: prefill geographical scope field for merged organisations (LPDC-1332)
