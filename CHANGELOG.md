@@ -1,4 +1,12 @@
 # Changelog
+## v0.23.3 (TODO)
+### Backend
+- Add organisation statuses from OP (LPDC-1340)
+### Deploy instructions
+- Execute the migration to import the organisation status data
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
 ## v0.23.2 (2024-12-17)
 ### Backend
 - Rename municipalities and OCMWs for 2025 municipality mergers (LPDC-1331)
