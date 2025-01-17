@@ -1,0 +1,47 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix code: <http://lblod.data.gift/vocabularies/organisatie/> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix schemes: <http://lblod.data.gift/concept-schemes/> .
+@prefix concepts: <http://lblod.data.gift/concepts/> .
+
+schemes:b8dcb04f0d1feb86ff01cc0677363b20 rdf:type skos:ConceptScheme ;
+    mu:uuid "b8dcb04f0d1feb86ff01cc0677363b20" ;
+    skos:prefLabel "Organisatie status code" .
+
+concepts:63cc561de9188d64ba5840a42ae8f0d6 rdf:type code:OrganisatieStatusCode ;
+    mu:uuid "63cc561de9188d64ba5840a42ae8f0d6" ;
+    skos:prefLabel "Actief" ;
+    skos:inScheme schemes:b8dcb04f0d1feb86ff01cc0677363b20 ;
+    skos:topConceptOf schemes:b8dcb04f0d1feb86ff01cc0677363b20 .
+concepts:d02c4e12bf88d2fdf5123b07f29c9311 rdf:type code:OrganisatieStatusCode ;
+    mu:uuid "d02c4e12bf88d2fdf5123b07f29c9311" ;
+    skos:prefLabel "Niet Actief" ;
+    skos:inScheme schemes:b8dcb04f0d1feb86ff01cc0677363b20 ;
+    skos:topConceptOf schemes:b8dcb04f0d1feb86ff01cc0677363b20 .
+concepts:abf4fee82019f88cf122f986830621ab rdf:type code:OrganisatieStatusCode ;
+    mu:uuid "abf4fee82019f88cf122f986830621ab" ;
+    skos:prefLabel "In oprichting" ;
+    skos:inScheme schemes:b8dcb04f0d1feb86ff01cc0677363b20 ;
+    skos:topConceptOf schemes:b8dcb04f0d1feb86ff01cc0677363b20 .
+
+# Exported from OrganisatiePortaal (PROD) the query:
+# CONSTRUCT {
+#   ?s ?p ?o.
+# } WHERE {
+#   GRAPH <http://mu.semte.ch/graphs/public> {
+#     ?s ?p ?o.
+#   }
+#   VALUES ?s {
+#     <http://lblod.data.gift/concepts/63cc561de9188d64ba5840a42ae8f0d6>
+#     <http://lblod.data.gift/concepts/abf4fee82019f88cf122f986830621ab>
+#     <http://lblod.data.gift/concepts/d02c4e12bf88d2fdf5123b07f29c9311>
+#
+#     <http://lblod.data.gift/concept-schemes/b8dcb04f0d1feb86ff01cc0677363b20>
+#   }
+# }
+#
+# Manual changes:
+# - renamed prefixes from nsX to something more meaningful
+# - removed link to unneeded OP-specific "OP Public Export" concept scheme
+# - improved formatting

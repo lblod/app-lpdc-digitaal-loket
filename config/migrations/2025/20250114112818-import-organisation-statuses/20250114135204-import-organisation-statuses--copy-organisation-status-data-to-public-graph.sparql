@@ -1,0 +1,20 @@
+PREFIX regorg: <http://www.w3.org/ns/regorg#>
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?org regorg:orgStatus ?status.
+  }
+} WHERE {
+   GRAPH <http://mu.semte.ch/graphs/public> {
+     ?org a besluit:Bestuurseenheid.
+   }
+  GRAPH <http://mu.semte.ch/graphs/temporary-organization-status> {
+    ?org regorg:orgStatus ?status.
+  }
+}
+
+;
+
+# Remove temporary graph
+CLEAR GRAPH <http://mu.semte.ch/graphs/temporary-organization-status>
