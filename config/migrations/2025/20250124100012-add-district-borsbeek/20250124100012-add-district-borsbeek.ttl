@@ -1,0 +1,23 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ext: <http://mu.semte.ch/vocabularies/ext/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://data.lblod.info/id/bestuurseenheden/4b44e6f1-113b-4692-b149-44a889b215f2>
+    rdf:type besluit:Bestuurseenheid, skos:Concept ;
+    skos:prefLabel "Borsbeek" ;
+    mu:uuid "4b44e6f1-113b-4692-b149-44a889b215f2" ;
+    dcterms:identifier "2165162239" ;
+    ext:kbonummer "2165162239" ;
+    besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000003> ;
+    rdfs:seeAlso <http://centrale-vindplaats.lblod.info> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:inScheme <http://lblod.data.gift/concept-schemes/dcfb437e-1219-4d1e-891d-057f262da9d6> ;
+    skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+
+# Add as sub organisation of municipality Antwerpen
+<http://data.lblod.info/id/bestuurseenheden/670db1d66c0de3b931962e1044033ccfa9d6e3023aa9828a5f252c3bc69bd32c> org:hasSubOrganization <http://data.lblod.info/id/bestuurseenheden/4b44e6f1-113b-4692-b149-44a889b215f2> .
