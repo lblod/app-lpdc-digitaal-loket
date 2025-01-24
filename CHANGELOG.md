@@ -3,6 +3,7 @@
 ### Backend
 - Add organisation statuses from OP (LPDC-1340)
 - Bump `lpdc-management` service to v0.46.0 that no longer allows publishing product instances linked to old organisations (LPDC-1335)
+- Add `District Borsbeek` (LPDC-1336)
 ### Deploy instructions
 - Execute the migration to import the organisation status data
 #### Docker commands
