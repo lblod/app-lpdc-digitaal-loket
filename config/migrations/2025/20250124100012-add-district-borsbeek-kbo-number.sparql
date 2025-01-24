@@ -1,0 +1,23 @@
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?structuredId <https://data.vlaanderen.be/ns/generiek#lokaleIdentificator> ?kbo
+  }
+}
+WHERE {
+  VALUES (?eenheid ?kbo) {
+    (<http://data.lblod.info/id/bestuurseenheden/4b44e6f1-113b-4692-b149-44a889b215f2> "2165162239") # District Borsbeek
+  }
+
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?eenheid a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>;
+      <http://www.w3.org/ns/adms#identifier> ?identifier;
+      <http://www.w3.org/2004/02/skos/core#prefLabel> ?label.
+
+    ?identifier <http://www.w3.org/2004/02/skos/core#notation> "KBO nummer";
+      <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator> ?structuredId .
+
+    FILTER NOT EXISTS {
+       ?structuredId <https://data.vlaanderen.be/ns/generiek#lokaleIdentificator> ?foo
+    }
+  }
+}
