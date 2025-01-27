@@ -1,13 +1,16 @@
 # Changelog
+## Unreleased
+- Bump `lpdc-management` service to v0.46.0 that no longer allows publishing  product instances linked to old organisations (LPDC-1335)
+#### Docker commands
+- `drc pull lpdc-management; drc up -d lpdc-management`
+
 ## v0.23.3 (TODO)
 ### Backend
 - Add organisation statuses from OP (LPDC-1340)
-- Bump `lpdc-management` service to v0.46.0 that no longer allows publishing product instances linked to old organisations (LPDC-1335)
 ### Deploy instructions
 - Execute the migration to import the organisation status data
 #### Docker commands
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
-- `drc pull lpdc-management; drc up -d lpdc-management`
 
 ## v0.23.2 (2024-12-17)
 ### Backend
