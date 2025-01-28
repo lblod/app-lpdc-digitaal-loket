@@ -1,0 +1,145 @@
+DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://mu.semte.ch/vocabularies/core/uuid> "842c3d22-43bd-43f0-bf69-c72a4db19134" .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://purl.org/dc/terms/title> "Arbeidstrajectbegeleiding"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://purl.org/dc/terms/description> "<p>Arbeidstrajectbegeleiding is een methode om een werkzoekende via een intensief, planmatig en trapsgewijs traject naar werk te begeleiden. De arbeidstrajectbegeleider houdt rekening met de mogelijkheden en de beperkingen van de werkzoekende.</p>"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/AdviesBegeleiding> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/EconomieWerk> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/b5252468-1aa8-4866-84fd-e71ebf27089c> .
+<http://data.lblod.info/id/requirement/b5252468-1aa8-4866-84fd-e71ebf27089c> <http://mu.semte.ch/vocabularies/core/uuid> "b5252468-1aa8-4866-84fd-e71ebf27089c" .
+<http://data.lblod.info/id/requirement/b5252468-1aa8-4866-84fd-e71ebf27089c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/id/requirement/b5252468-1aa8-4866-84fd-e71ebf27089c> <http://purl.org/dc/terms/title> "Voorwaarden"@nl-be-x-informal .
+<http://data.lblod.info/id/requirement/b5252468-1aa8-4866-84fd-e71ebf27089c> <http://purl.org/dc/terms/description> "<p>Om in aanmerking te komen voor de arbeidstrajectbegeleiding:</p><ul><li>moet je cliënt zijn bij het OCMW</li><li>moet je behoren tot een specifieke kansengroep:<ul><li>leefloongerechtigde</li><li>allochtoon</li><li>laaggeschoold</li><li>werkzoekende met een arbeidshandicap.</li></ul></li></ul>"@nl-be-x-informal .
+<http://data.lblod.info/id/requirement/b5252468-1aa8-4866-84fd-e71ebf27089c> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.lblod.info/form-data/nodes/09668ad5-d27b-4ff4-8c7e-042a97f5a31a> .
+<http://data.lblod.info/form-data/nodes/09668ad5-d27b-4ff4-8c7e-042a97f5a31a> <http://mu.semte.ch/vocabularies/core/uuid> "fcc3fabf-997f-496e-a85c-d8236db7de5e" .
+<http://data.lblod.info/form-data/nodes/09668ad5-d27b-4ff4-8c7e-042a97f5a31a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
+<http://data.lblod.info/form-data/nodes/09668ad5-d27b-4ff4-8c7e-042a97f5a31a> <http://purl.org/dc/terms/title> "OCMW Melle"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/09668ad5-d27b-4ff4-8c7e-042a97f5a31a> <http://purl.org/dc/terms/description> ""@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/09668ad5-d27b-4ff4-8c7e-042a97f5a31a> <http://schema.org/url> "https://www.ocmwmelle.be/arbeidtrajectbegeleiding" .
+<http://data.lblod.info/form-data/nodes/09668ad5-d27b-4ff4-8c7e-042a97f5a31a> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://data.europa.eu/m8g/hasContactPoint> <http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> .
+<http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> <http://mu.semte.ch/vocabularies/core/uuid> "bb2f5d7d-242c-4564-b1c2-ef8439121073" .
+<http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
+<http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> <http://schema.org/url> "https://www.ocmwmelle.be/arbeidtrajectbegeleiding" .
+<http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> <http://schema.org/email> "contact@ocmwmelle.be" .
+<http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> <http://schema.org/telephone> "09/252.33.27" .
+<http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/f41599fb-0e88-4d78-b5b3-564f98663dc3> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> <http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <http://mu.semte.ch/vocabularies/core/uuid> "eded4270-d114-410d-9623-44340c749da4" .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/locn#Address> .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <https://data.vlaanderen.be/ns/adres#gemeentenaam> "Melle"@nl .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <https://data.vlaanderen.be/ns/adres#land> "België"@nl .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer> "12" .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <https://data.vlaanderen.be/ns/adres#postcode> "9090" .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <https://data.vlaanderen.be/ns/adres#Straatnaam> "Vossenstraat"@nl .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/677516> .
+<http://data.lblod.info/form-data/nodes/336cd9ba-0dd5-44f4-8321-b673f85a338f> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://purl.org/dc/terms/source> <https://ipdc.vlaanderen.be/id/concept/821b6ae1-12fd-4beb-9d5e-f9af70f34b1b> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.vlaanderen.be/id/conceptsnapshot/408a87c2-4611-4cdc-8eb0-d3007a5ae276> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://schema.org/productID> "43" .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant> "nl-be-x-informal" .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://schema.org/dateCreated> "2024-06-05T13:07:52.010Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://schema.org/dateModified> "2024-06-05T13:12:46.468Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://schema.org/dateSent> "2024-06-05T13:12:46.450Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verzonden> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444040> .
+<http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+}
+}
+;
+DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://mu.semte.ch/vocabularies/core/uuid> "f6977a96-20f5-418f-92c0-09602e01e501" .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://purl.org/dc/terms/title> "Aanvullende financiële hulp of steun op maat"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Een onverwachte tegenslag net nu je budget zo krap is. Of misschien heb je dan al een inkomen hoger dan het leefloon, maar heb je hoge maandelijkse uitgaven. In deze gevallen kan een éénmalige of maandelijkse steun een uitkomst bieden.</p>"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription> "<p data-indentation-level=\"0\"><strong>Éénmalige steun</strong></p><p data-indentation-level=\"0\">Zoals het woord het al zegt, wordt er voor één keer een steun toegekend om een tijdelijke financiële nood op te lossen. De toekenning van de steun gebeurt echter niet automatisch. Samen met de maatschappelijk werker wordt je financiële situatie bekeken en worden eerst alternatieven gezocht. Kan uitstel van betaling verkregen worden? Is het gezinsinkomen wel voldoende, maar wordt het verkeerd gespendeerd? Enkele vragen tijdens het sociaal onderzoek. De steun die je ontvangt, is in ieder geval bedoeld om levensnoodzakelijke zaken mee aan te kopen. Het OCMW is geen bank waar men renteloos kan lenen. De steun zal al dan niet terugvorderbaar zijn en naargelang je financiële situatie volledig of in delen worden terugbetaald.</p><p data-indentation-level=\"0\"><strong>Maandelijkse steun</strong></p><p data-indentation-level=\"0\">In uitzonderlijke gevallen kan ook een maandelijkse steun worden toegekend. Hierbij worden dezelfde vragen gesteld als bij de éénmalige steun. In het geval dat het gezinsinkomen voldoende is, maar een verkeerde budgettering aan de basis ligt, zal geen steun worden toegekend, maar word je doorverwezen naar de dienst budgetbegeleiding. Aan de toekenning van steun kan het OCMW bepaalde voorwaarden verbinden, bijvoorbeeld een job vinden.</p>"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/id/requirement/60ac9c1e-88df-4fdf-aebf-c851f8e58918> .
+<http://data.lblod.info/id/requirement/60ac9c1e-88df-4fdf-aebf-c851f8e58918> <http://mu.semte.ch/vocabularies/core/uuid> "60ac9c1e-88df-4fdf-aebf-c851f8e58918" .
+<http://data.lblod.info/id/requirement/60ac9c1e-88df-4fdf-aebf-c851f8e58918> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/id/requirement/60ac9c1e-88df-4fdf-aebf-c851f8e58918> <http://purl.org/dc/terms/title> "Voorwaarden"@nl-be-x-informal .
+<http://data.lblod.info/id/requirement/60ac9c1e-88df-4fdf-aebf-c851f8e58918> <http://purl.org/dc/terms/description> "<p>Je ervaart dat je onvoldoende financiële middelen hebt. Dit kan zijn in het algemeen of voor het bekostigen van bepaalde zaken. </p>"@nl-be-x-informal .
+<http://data.lblod.info/id/requirement/60ac9c1e-88df-4fdf-aebf-c851f8e58918> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/requirement/60ac9c1e-88df-4fdf-aebf-c851f8e58918> <http://data.europa.eu/m8g/hasSupportingEvidence> <http://data.lblod.info/id/evidence/140b66dd-f0a9-438a-a481-a0276836f78a> .
+<http://data.lblod.info/id/evidence/140b66dd-f0a9-438a-a481-a0276836f78a> <http://mu.semte.ch/vocabularies/core/uuid> "140b66dd-f0a9-438a-a481-a0276836f78a" .
+<http://data.lblod.info/id/evidence/140b66dd-f0a9-438a-a481-a0276836f78a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Evidence> .
+<http://data.lblod.info/id/evidence/140b66dd-f0a9-438a-a481-a0276836f78a> <http://purl.org/dc/terms/title> "Bewijs"@nl-be-x-informal .
+<http://data.lblod.info/id/evidence/140b66dd-f0a9-438a-a481-a0276836f78a> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Bij het eerste contact met het OCMW breng je best volgende zaken mee:</p><ul __rdfaid=\"a10a0cab-d949-4186-8791-8f78d3ea64d0\"><li __rdfaid=\"46e06b22-b714-495a-8f09-a1cbb72b86e8\"><p data-indentation-level=\"0\">Identiteitskaart</p></li><li __rdfaid=\"37839d99-3409-4a43-8833-996b46e185c0\"><p data-indentation-level=\"0\">Indien er inkomsten zijn, bewijzen van de huidige inkomsten van jou en eventueel jouw gezinsleden (dit geldt niet voor minderjarige kinderen).</p></li></ul><p data-indentation-level=\"0\">Het is mogelijk dat de maatschappelijk werker je nog bijkomende zaken vraagt.</p>"@nl-be-x-informal .
+<http://data.lblod.info/id/evidence/140b66dd-f0a9-438a-a481-a0276836f78a> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://purl.org/vocab/cpsv#follows> <http://data.lblod.info/id/rule/b6201399-5fcc-4019-9b7d-0bf2561bcb25> .
+<http://data.lblod.info/id/rule/b6201399-5fcc-4019-9b7d-0bf2561bcb25> <http://mu.semte.ch/vocabularies/core/uuid> "b6201399-5fcc-4019-9b7d-0bf2561bcb25" .
+<http://data.lblod.info/id/rule/b6201399-5fcc-4019-9b7d-0bf2561bcb25> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/rule/b6201399-5fcc-4019-9b7d-0bf2561bcb25> <http://purl.org/dc/terms/title> "Procedure"@nl-be-x-informal .
+<http://data.lblod.info/id/rule/b6201399-5fcc-4019-9b7d-0bf2561bcb25> <http://purl.org/dc/terms/description> "<ul __rdfaid=\"d7192ca7-fed9-48e0-8e76-8509e8f4f5aa\"><li __rdfaid=\"aed0bec2-36ac-4114-b5a4-38e633da7bc9\"><p data-indentation-level=\"0\">Je neemt contact op met het OCMW en geeft aan dat je een vraag rond aanvullende financiële steun hebt.</p></li><li __rdfaid=\"8a5d311d-58ac-4e49-b297-26dd13758897\"><p data-indentation-level=\"0\">Een maatschappelijk werker zal je ontvangen en samen met jou, jouw situatie bekijken.</p></li><li __rdfaid=\"08d6f7b7-85e7-4581-9e9c-d77bb6275ea1\"><p data-indentation-level=\"0\">De maatschappelijk werker zal samen met jou de meegebrachte documenten overlopen. Indien je nog geen documenten hebt meegebracht, geen probleem, dan zal de maatschappelijk werker je hiermee helpen.</p></li><li __rdfaid=\"8a919ede-66c8-4c7b-a007-78967f5f3cc2\"><p data-indentation-level=\"0\">De maatschappelijk werker zal bekijken welke vorm van steun (éénmalig of maandelijks) voor je het meest passend is. Je kan zelf beslissen of je ingaat op het voorstel.</p></li><li __rdfaid=\"b8e2eef8-734b-412b-9994-3cfef21b3f1d\"><p data-indentation-level=\"0\">Eens je ingaat op het voorstel, kan de budgetbegeleiding opgestart worden.</p></li></ul>"@nl-be-x-informal .
+<http://data.lblod.info/id/rule/b6201399-5fcc-4019-9b7d-0bf2561bcb25> <http://www.w3.org/ns/shacl#order> "0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/rule/b6201399-5fcc-4019-9b7d-0bf2561bcb25> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite> <http://data.lblod.info/form-data/nodes/833dc8d9-07f0-4eba-a8bd-ce21c1ef5ff6> .
+<http://data.lblod.info/form-data/nodes/833dc8d9-07f0-4eba-a8bd-ce21c1ef5ff6> <http://mu.semte.ch/vocabularies/core/uuid> "6f556736-03e9-4e2f-b136-96af4a70a10c" .
+<http://data.lblod.info/form-data/nodes/833dc8d9-07f0-4eba-a8bd-ce21c1ef5ff6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
+<http://data.lblod.info/form-data/nodes/833dc8d9-07f0-4eba-a8bd-ce21c1ef5ff6> <http://purl.org/dc/terms/title> "OCMW Melle"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/833dc8d9-07f0-4eba-a8bd-ce21c1ef5ff6> <http://purl.org/dc/terms/description> ""@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/833dc8d9-07f0-4eba-a8bd-ce21c1ef5ff6> <http://schema.org/url> "https://www.ocmwmelle.be/financiele-steun" .
+<http://data.lblod.info/form-data/nodes/833dc8d9-07f0-4eba-a8bd-ce21c1ef5ff6> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://data.europa.eu/m8g/hasContactPoint> <http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> .
+<http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> <http://mu.semte.ch/vocabularies/core/uuid> "fb03c2fb-31bd-4ef7-b176-ae91e6cd2323" .
+<http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
+<http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> <http://schema.org/url> "https://www.ocmwmelle.be/financiele-steun" .
+<http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> <http://schema.org/email> "contact@ocmwmelle.be" .
+<http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> <http://schema.org/telephone> "09/252.33.27" .
+<http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/85afdb23-39b6-4dd2-a4e1-d187b4f762d0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> <http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <http://mu.semte.ch/vocabularies/core/uuid> "bf3f89be-d12b-40f7-b6e7-7cd7cc5d418f" .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/locn#Address> .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <https://data.vlaanderen.be/ns/adres#gemeentenaam> "Melle"@nl .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <https://data.vlaanderen.be/ns/adres#land> "België"@nl .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer> "107" .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <https://data.vlaanderen.be/ns/adres#postcode> "9090" .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <https://data.vlaanderen.be/ns/adres#Straatnaam> "Vossenstraat"@nl .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1366192> .
+<http://data.lblod.info/form-data/nodes/d7e222eb-aba9-4084-aed9-20d7431bae40> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://purl.org/dc/terms/source> <https://ipdc.vlaanderen.be/id/concept/862e5c97-7c02-4130-b985-9b4e5711295e> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.vlaanderen.be/id/conceptsnapshot/1a373ee3-2a24-4542-9032-b7d3d84a7f7d> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://schema.org/productID> "21630" .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant> "nl-be-x-informal" .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://schema.org/dateCreated> "2024-06-05T09:11:00.127Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://schema.org/dateModified> "2024-06-19T08:09:45.503Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://schema.org/dateSent> "2024-06-05T09:34:42.650Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verzonden> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444040> .
+<http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+}
+}
+;
+INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/04895013fe6301f32aa46deae98abfb833a717ece5a33b6c453674c6d0f4cc5e/LoketLB-LPDCGebruiker> {
+
+      <http://data.lblod.info/id/published-public-service/e7733865-bf1d-4f40-8d16-ac61f6b24b6b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/e7733865-bf1d-4f40-8d16-ac61f6b24b6b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/e7733865-bf1d-4f40-8d16-ac61f6b24b6b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/842c3d22-43bd-43f0-bf69-c72a4db19134> .
+<http://data.lblod.info/id/published-public-service/e7733865-bf1d-4f40-8d16-ac61f6b24b6b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.118Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/e7733865-bf1d-4f40-8d16-ac61f6b24b6b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.118Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/068e4ac2-7c19-47a7-9832-098305fdbd27> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/068e4ac2-7c19-47a7-9832-098305fdbd27> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/068e4ac2-7c19-47a7-9832-098305fdbd27> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/f6977a96-20f5-418f-92c0-09602e01e501> .
+<http://data.lblod.info/id/published-public-service/068e4ac2-7c19-47a7-9832-098305fdbd27> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.337Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/068e4ac2-7c19-47a7-9832-098305fdbd27> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.337Z"^^xsd:dateTime .
+    }
+
+    }

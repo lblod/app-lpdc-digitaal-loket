@@ -1,0 +1,137 @@
+DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://mu.semte.ch/vocabularies/core/uuid> "7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef" .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://purl.org/dc/terms/title> "Tussenkomst in de huur van een personenalarmsysteem"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://purl.org/dc/terms/description> "<p>Een personenalarmsysteem zorgt ervoor dat u langer zelfstandig kunt wonen, doordat er bij een valpartij of problemen, gemakkelijk iemand bereikt kan worden via een knop die u altijd bij u draagt. </p><p>U betaalt voor een alarmsysteem een installatiekost en de huurprijs. U kunt hiervoor een tegemoetkoming krijgen. </p>"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription> "<p data-indentation-level=\"0\">Het personenalarmsysteem zorgt ervoor dat je langer alleen thuis kan blijven wonen. Met één druk op de knop waarschuw je iemand als je ziek wordt of valt. Weten dat er dag en nacht hulp bereikbaar is, geeft je een veilig gevoel.</p><p data-indentation-level=\"0\">U kan bij het Sociaal Huis Lokeren terecht voor een tussenkomst in de huur van een personenalarmsysteem. Voor het huren van het toestel zelf kan u terecht bij uw ziekenfonds.</p>"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/form-data/nodes/af5dcb84-6a16-40b2-9b68-d53d8dc867f2> .
+<http://data.lblod.info/form-data/nodes/af5dcb84-6a16-40b2-9b68-d53d8dc867f2> <http://mu.semte.ch/vocabularies/core/uuid> "f2dcde75-e37b-4566-8bd2-219bc9b2fcd6" .
+<http://data.lblod.info/form-data/nodes/af5dcb84-6a16-40b2-9b68-d53d8dc867f2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/form-data/nodes/af5dcb84-6a16-40b2-9b68-d53d8dc867f2> <http://purl.org/dc/terms/title> "Voorwaarde tussenkomst personenalarmsysteem"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/af5dcb84-6a16-40b2-9b68-d53d8dc867f2> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Recht hebben op de verhoogde tegemoetkoming bij het ziekenfonds en inwoner zijn van Lokeren.</p>"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/af5dcb84-6a16-40b2-9b68-d53d8dc867f2> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://purl.org/vocab/cpsv#produces> <http://data.lblod.info/form-data/nodes/297d3337-ff99-41ff-996b-be10a37076a2> .
+<http://data.lblod.info/form-data/nodes/297d3337-ff99-41ff-996b-be10a37076a2> <http://mu.semte.ch/vocabularies/core/uuid> "bea979f2-2a62-4b51-a880-e11c53be0f64" .
+<http://data.lblod.info/form-data/nodes/297d3337-ff99-41ff-996b-be10a37076a2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage> .
+<http://data.lblod.info/form-data/nodes/297d3337-ff99-41ff-996b-be10a37076a2> <http://purl.org/dc/terms/title> "Bedrag tussenkomst personenalarmsysteem"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/297d3337-ff99-41ff-996b-be10a37076a2> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">De tussenkomst in de huur van een personenalarmsysteem bedraagt 5 euro per maand. Dit bedrag wordt jaarlijks geïndexeerd.</p>"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/297d3337-ff99-41ff-996b-be10a37076a2> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://purl.org/dc/terms/source> <https://ipdc.vlaanderen.be/id/concept/cc4be90e-ade5-446b-9284-183e8ec39e6a> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.vlaanderen.be/id/conceptsnapshot/5f4ad16e-b878-47a5-9ac3-965eefa9c208> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://schema.org/productID> "21631" .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant> "nl-be-x-formal" .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://schema.org/dateCreated> "2024-02-14T13:50:42.688Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://schema.org/dateModified> "2024-02-14T13:58:51.723Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://schema.org/dateSent> "2024-02-14T13:58:51.723Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verzonden> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23646014> .
+<http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+}
+}
+;
+DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://mu.semte.ch/vocabularies/core/uuid> "eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5" .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://purl.org/dc/terms/title> "Dienst aangepast vervoer voor minder mobiele personen"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Bent u een rolstoelgebruiker of een minder mobiele persoon die geen gebruik kan maken van het openbaar vervoer, dan biedt deze dienst u individueel vervoer van deur tot deur, met een vervoermiddel met rolstoellift.</p>"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://purl.org/dc/terms/type> <https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience> <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MobiliteitOpenbareWerken> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://data.europa.eu/m8g/hasContactPoint> <http://data.lblod.info/form-data/nodes/a9e4d30d-af30-45ec-aef5-a6791686dab0> .
+<http://data.lblod.info/form-data/nodes/a9e4d30d-af30-45ec-aef5-a6791686dab0> <http://mu.semte.ch/vocabularies/core/uuid> "8d797fab-aac7-4e2a-acbd-03b299c8ff2e" .
+<http://data.lblod.info/form-data/nodes/a9e4d30d-af30-45ec-aef5-a6791686dab0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
+<http://data.lblod.info/form-data/nodes/a9e4d30d-af30-45ec-aef5-a6791686dab0> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://purl.org/dc/terms/source> <https://ipdc.vlaanderen.be/id/concept/35dbe1ed-bffa-4fb8-95b7-8bd089b61609> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.vlaanderen.be/id/conceptsnapshot/214bdb32-8190-4203-a08a-f8a1ce672275> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://schema.org/productID> "67" .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant> "nl-be-x-formal" .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://schema.org/dateCreated> "2024-02-13T08:50:29.939Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://schema.org/dateModified> "2024-02-13T08:54:47.893Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://schema.org/dateSent> "2024-02-13T08:54:47.893Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verzonden> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23646014> .
+<http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+}
+}
+;
+DELETE DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://mu.semte.ch/vocabularies/core/uuid> "b1c8a06e-0b59-4058-92b3-5c16acf8bf02" .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://purl.org/dc/terms/title> "Mantelzorgpremie"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Mantelzorg is de thuiszorg voor chronisch zieken, personen met een beperking en hulpbehoevenden door familieleden, vrienden, kennissen of buren. Het gaat om langdurige zorg die onbetaald is. </p>"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception> "<p data-indentation-level=\"0\">De premie wordt slechts toegekend als voor de zorgbehoevende geen zorgbudget voor zwaar zorgbehoevenden vanuit de Vlaamse Sociale Bescherming is verleend.</p>"@nl-be-x-formal .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://vocab.belgif.be/ns/publicservice#hasRequirement> <http://data.lblod.info/form-data/nodes/dcfa09d0-8853-4ccd-b2f9-0d49baa23547> .
+<http://data.lblod.info/form-data/nodes/dcfa09d0-8853-4ccd-b2f9-0d49baa23547> <http://mu.semte.ch/vocabularies/core/uuid> "f2ce6282-42a9-4023-9661-f6848c54ccb3" .
+<http://data.lblod.info/form-data/nodes/dcfa09d0-8853-4ccd-b2f9-0d49baa23547> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/form-data/nodes/dcfa09d0-8853-4ccd-b2f9-0d49baa23547> <http://purl.org/dc/terms/title> "Voorwaarden lokale mantelzorgpremie"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/dcfa09d0-8853-4ccd-b2f9-0d49baa23547> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">De zorgbehoevende moet minstens 65 jaar oud zijn op het moment van de zorgverlening.</p><p data-indentation-level=\"0\">De zorgbehoevende of elke meerderjarige persoon die met de mantelzorger samenwoont kan de premie aanvragen. Per zorgbehoevende kan er maar één premie toegekend worden.</p><p data-indentation-level=\"0\">De zorgbehoevende dient gedomicilieerd en effectief woonachtig te zijn in Lokeren. Personen die in een instelling verblijven kunnen niet genieten van deze mantelzorgpremie.</p><p data-indentation-level=\"0\">De premie wordt slechts toegekend als voor de zorgbehoevende geen zorgbudget voor zwaar zorgbehoevenden vanuit de Vlaamse Sociale Bescherming is verleend.</p>"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/dcfa09d0-8853-4ccd-b2f9-0d49baa23547> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://purl.org/vocab/cpsv#follows> <http://data.lblod.info/form-data/nodes/248c164c-7672-4663-bc5d-1062308e156e> .
+<http://data.lblod.info/form-data/nodes/248c164c-7672-4663-bc5d-1062308e156e> <http://mu.semte.ch/vocabularies/core/uuid> "ff7dcc8a-951b-4b88-9f55-a2570eb366d0" .
+<http://data.lblod.info/form-data/nodes/248c164c-7672-4663-bc5d-1062308e156e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/form-data/nodes/248c164c-7672-4663-bc5d-1062308e156e> <http://purl.org/dc/terms/title> "Procedure lokale mantelzorgpremie"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/248c164c-7672-4663-bc5d-1062308e156e> <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">De mantelzorger kan het aanvraagformulier aanvragen bij het Sociaal Huis.</p>"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/248c164c-7672-4663-bc5d-1062308e156e> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/248c164c-7672-4663-bc5d-1062308e156e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite> <http://data.lblod.info/form-data/nodes/e450629a-3235-4e61-9e59-86efee42ffdc> .
+<http://data.lblod.info/form-data/nodes/e450629a-3235-4e61-9e59-86efee42ffdc> <http://mu.semte.ch/vocabularies/core/uuid> "bf63bbe1-baa5-424e-9ca8-be64b7cfd4aa" .
+<http://data.lblod.info/form-data/nodes/e450629a-3235-4e61-9e59-86efee42ffdc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/WebSite> .
+<http://data.lblod.info/form-data/nodes/e450629a-3235-4e61-9e59-86efee42ffdc> <http://purl.org/dc/terms/title> "Lokeren.be"@nl-be-x-formal .
+<http://data.lblod.info/form-data/nodes/e450629a-3235-4e61-9e59-86efee42ffdc> <http://schema.org/url> "https://lokeren.be/producten-en-diensten/mantelzorgpremie" .
+<http://data.lblod.info/form-data/nodes/e450629a-3235-4e61-9e59-86efee42ffdc> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://data.europa.eu/m8g/hasContactPoint> <http://data.lblod.info/form-data/nodes/42bb61f2-51cf-4a3f-af9a-2cba3a2a501f> .
+<http://data.lblod.info/form-data/nodes/42bb61f2-51cf-4a3f-af9a-2cba3a2a501f> <http://mu.semte.ch/vocabularies/core/uuid> "70bcf74f-400a-49f6-8bb9-4d12df7515eb" .
+<http://data.lblod.info/form-data/nodes/42bb61f2-51cf-4a3f-af9a-2cba3a2a501f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/ContactPoint> .
+<http://data.lblod.info/form-data/nodes/42bb61f2-51cf-4a3f-af9a-2cba3a2a501f> <http://www.w3.org/ns/shacl#order> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant> "nl-be-x-formal" .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://schema.org/dateCreated> "2024-02-13T08:55:50.428Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://schema.org/dateModified> "2024-02-13T09:00:52.741Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://schema.org/dateSent> "2024-02-13T09:00:52.741Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verzonden> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23646014> .
+<http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+}
+}
+;
+INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/organizations/323a24f2fe81ee0b6586ec78be36760e478092e07386b2785992ea8b61941833/LoketLB-LPDCGebruiker> {
+
+      <http://data.lblod.info/id/published-public-service/952be94a-11d5-4e3a-8f6d-55ba4fbf94f8> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/952be94a-11d5-4e3a-8f6d-55ba4fbf94f8> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/952be94a-11d5-4e3a-8f6d-55ba4fbf94f8> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/7bbf8b3e-8e80-4d03-99e7-4efe7bb2d2ef> .
+<http://data.lblod.info/id/published-public-service/952be94a-11d5-4e3a-8f6d-55ba4fbf94f8> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.004Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/952be94a-11d5-4e3a-8f6d-55ba4fbf94f8> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.004Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/0464120e-fc95-4c29-ad53-9738b2017d2c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/0464120e-fc95-4c29-ad53-9738b2017d2c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/0464120e-fc95-4c29-ad53-9738b2017d2c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/eebc8fb4-1aac-4539-a1fb-a6e1a97b0ee5> .
+<http://data.lblod.info/id/published-public-service/0464120e-fc95-4c29-ad53-9738b2017d2c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.128Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/0464120e-fc95-4c29-ad53-9738b2017d2c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.128Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/fd81fd2c-7608-4712-a072-a7776de82439> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/fd81fd2c-7608-4712-a072-a7776de82439> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/fd81fd2c-7608-4712-a072-a7776de82439> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/b1c8a06e-0b59-4058-92b3-5c16acf8bf02> .
+<http://data.lblod.info/id/published-public-service/fd81fd2c-7608-4712-a072-a7776de82439> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.283Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/fd81fd2c-7608-4712-a072-a7776de82439> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.283Z"^^xsd:dateTime .
+    }
+
+    }
