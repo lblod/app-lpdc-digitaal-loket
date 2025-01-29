@@ -7,6 +7,8 @@
 ## v0.23.3 (TODO)
 ### Backend
 - Add organisation statuses from OP (LPDC-1340)
+- Add `District Borsbeek` (LPDC-1336)
+
 ### Deploy instructions
 - Execute the migration to import the organisation status data
 #### Docker commands

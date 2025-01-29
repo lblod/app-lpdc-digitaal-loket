@@ -1,0 +1,29 @@
+INSERT {
+  GRAPH ?bestuurseenheidGraph {
+    ?concept <http://data.lblod.info/vocabularies/lpdc/hasConceptDisplayConfiguration> ?displayConfig .
+    ?displayConfig a <http://data.lblod.info/vocabularies/lpdc/ConceptDisplayConfiguration> ;
+      <http://mu.semte.ch/vocabularies/core/uuid> ?configId ;
+      <http://data.lblod.info/vocabularies/lpdc/conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
+      <http://data.lblod.info/vocabularies/lpdc/conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
+      <http://purl.org/dc/terms/relation> ?bestuur .
+  }
+}
+WHERE {
+  VALUES ?bestuur {
+    <http://data.lblod.info/id/bestuurseenheden/4b44e6f1-113b-4692-b149-44a889b215f2> # District Borsbeek
+  }
+
+  ?bestuur <http://mu.semte.ch/vocabularies/core/uuid> ?bestuurId .
+
+  ?concept a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> ;
+    <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> ?versionedSource .
+
+  BIND(SHA512(CONCAT(STR(?concept), STR(?bestuurId))) as ?configId)
+  BIND(IRI(CONCAT('http://data.lblod.info/id/conceptual-display-configuration/', STR(?configId))) as ?displayConfig)
+  BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", STR(?bestuurId), "/LoketLB-LPDCGebruiker")) as ?bestuurseenheidGraph)
+
+  FILTER NOT EXISTS {
+    ?concept <http://data.lblod.info/vocabularies/lpdc/hasConceptDisplayConfiguration> ?displayConfig .
+    ?displayConfig <http://purl.org/dc/terms/relation> ?bestuur .
+  }
+}
