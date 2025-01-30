@@ -297,3 +297,23 @@ services:
       - virtuoso:database
     restart: always
     logging: *default-logging
+  ldes-consumer-instancesnapshot-bct:
+    image: redpencil/ldes-consumer:feature-rdf-connect-ldes-client
+    depends_on:
+      lpdc-management:
+        condition: service_healthy
+      migrations:
+        condition: service_healthy
+    volumes:
+      - ./data/ldes-consumer-instancesnapshot-bct:/data
+    environment:
+      LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct"
+      PERSIST_STATE: false
+      REPLACE_VERSIONS: false
+    labels:
+      - "logging=true"
+    links:
+      - virtuoso:database
+    restart: always
+    logging: *default-logging
