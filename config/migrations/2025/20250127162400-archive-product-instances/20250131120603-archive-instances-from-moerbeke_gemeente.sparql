@@ -1,5 +1,5 @@
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/3d48368a-3db1-415f-aeb2-1356ee37a722> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/3d48368a-3db1-415f-aeb2-1356ee37a722> <http://mu.semte.ch/vocabularies/core/uuid> "3d48368a-3db1-415f-aeb2-1356ee37a722" .
 <http://data.lblod.info/id/public-service/3d48368a-3db1-415f-aeb2-1356ee37a722> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -16,7 +16,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/625bff45-e418-41f9-8da2-f7712522ea8a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/625bff45-e418-41f9-8da2-f7712522ea8a> <http://mu.semte.ch/vocabularies/core/uuid> "625bff45-e418-41f9-8da2-f7712522ea8a" .
 <http://data.lblod.info/id/public-service/625bff45-e418-41f9-8da2-f7712522ea8a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -31,7 +31,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/5b41f291-fc32-4949-a2f8-c70771e66f40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/5b41f291-fc32-4949-a2f8-c70771e66f40> <http://mu.semte.ch/vocabularies/core/uuid> "5b41f291-fc32-4949-a2f8-c70771e66f40" .
 <http://data.lblod.info/id/public-service/5b41f291-fc32-4949-a2f8-c70771e66f40> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -116,7 +116,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/ccb02c54-204d-4bc6-83c8-fc6827c5ac42> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/ccb02c54-204d-4bc6-83c8-fc6827c5ac42> <http://mu.semte.ch/vocabularies/core/uuid> "ccb02c54-204d-4bc6-83c8-fc6827c5ac42" .
 <http://data.lblod.info/id/public-service/ccb02c54-204d-4bc6-83c8-fc6827c5ac42> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -201,7 +201,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/b7e4b128-2e9d-4ac3-8f4f-90f93dc6baa0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/b7e4b128-2e9d-4ac3-8f4f-90f93dc6baa0> <http://mu.semte.ch/vocabularies/core/uuid> "b7e4b128-2e9d-4ac3-8f4f-90f93dc6baa0" .
 <http://data.lblod.info/id/public-service/b7e4b128-2e9d-4ac3-8f4f-90f93dc6baa0> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -290,7 +290,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/df35700e-c66d-4b34-bef1-24c29efdf08f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/df35700e-c66d-4b34-bef1-24c29efdf08f> <http://mu.semte.ch/vocabularies/core/uuid> "df35700e-c66d-4b34-bef1-24c29efdf08f" .
 <http://data.lblod.info/id/public-service/df35700e-c66d-4b34-bef1-24c29efdf08f> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -373,7 +373,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/cf441ac4-974f-4b0f-b61f-ef8ed6f323e5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/cf441ac4-974f-4b0f-b61f-ef8ed6f323e5> <http://mu.semte.ch/vocabularies/core/uuid> "cf441ac4-974f-4b0f-b61f-ef8ed6f323e5" .
 <http://data.lblod.info/id/public-service/cf441ac4-974f-4b0f-b61f-ef8ed6f323e5> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -453,7 +453,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/7c274847-bf2b-4d93-9244-304766ad018e> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/7c274847-bf2b-4d93-9244-304766ad018e> <http://mu.semte.ch/vocabularies/core/uuid> "7c274847-bf2b-4d93-9244-304766ad018e" .
 <http://data.lblod.info/id/public-service/7c274847-bf2b-4d93-9244-304766ad018e> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -572,7 +572,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/2c952860-dd44-4513-aa21-f520c5aeb307> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/2c952860-dd44-4513-aa21-f520c5aeb307> <http://mu.semte.ch/vocabularies/core/uuid> "2c952860-dd44-4513-aa21-f520c5aeb307" .
 <http://data.lblod.info/id/public-service/2c952860-dd44-4513-aa21-f520c5aeb307> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -666,7 +666,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/f4fa7750-c6e4-4a95-bcbf-4d2f5c57b01c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/f4fa7750-c6e4-4a95-bcbf-4d2f5c57b01c> <http://mu.semte.ch/vocabularies/core/uuid> "f4fa7750-c6e4-4a95-bcbf-4d2f5c57b01c" .
 <http://data.lblod.info/id/public-service/f4fa7750-c6e4-4a95-bcbf-4d2f5c57b01c> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -751,7 +751,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/c46fcf84-e3d3-4d50-a009-926e71900cda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/c46fcf84-e3d3-4d50-a009-926e71900cda> <http://mu.semte.ch/vocabularies/core/uuid> "c46fcf84-e3d3-4d50-a009-926e71900cda" .
 <http://data.lblod.info/id/public-service/c46fcf84-e3d3-4d50-a009-926e71900cda> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -820,7 +820,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/72681539-9c0e-4f04-9d85-b3ef55f476cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/72681539-9c0e-4f04-9d85-b3ef55f476cd> <http://mu.semte.ch/vocabularies/core/uuid> "72681539-9c0e-4f04-9d85-b3ef55f476cd" .
 <http://data.lblod.info/id/public-service/72681539-9c0e-4f04-9d85-b3ef55f476cd> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -909,7 +909,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/ca68202e-8e0b-451a-9047-70f0833a9e00> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/ca68202e-8e0b-451a-9047-70f0833a9e00> <http://mu.semte.ch/vocabularies/core/uuid> "ca68202e-8e0b-451a-9047-70f0833a9e00" .
 <http://data.lblod.info/id/public-service/ca68202e-8e0b-451a-9047-70f0833a9e00> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1021,7 +1021,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/8402040e-6bc2-4601-878e-9299d317bb4a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/8402040e-6bc2-4601-878e-9299d317bb4a> <http://mu.semte.ch/vocabularies/core/uuid> "8402040e-6bc2-4601-878e-9299d317bb4a" .
 <http://data.lblod.info/id/public-service/8402040e-6bc2-4601-878e-9299d317bb4a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1123,7 +1123,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/42252c62-11dd-4fe0-b114-204a9042f6d9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/42252c62-11dd-4fe0-b114-204a9042f6d9> <http://mu.semte.ch/vocabularies/core/uuid> "42252c62-11dd-4fe0-b114-204a9042f6d9" .
 <http://data.lblod.info/id/public-service/42252c62-11dd-4fe0-b114-204a9042f6d9> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1231,7 +1231,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/4e9b01af-340f-41c1-b916-eecbff1626c1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/4e9b01af-340f-41c1-b916-eecbff1626c1> <http://mu.semte.ch/vocabularies/core/uuid> "4e9b01af-340f-41c1-b916-eecbff1626c1" .
 <http://data.lblod.info/id/public-service/4e9b01af-340f-41c1-b916-eecbff1626c1> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1328,7 +1328,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/4a4a547b-cfaa-4743-9aab-02c110f3b513> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/4a4a547b-cfaa-4743-9aab-02c110f3b513> <http://mu.semte.ch/vocabularies/core/uuid> "4a4a547b-cfaa-4743-9aab-02c110f3b513" .
 <http://data.lblod.info/id/public-service/4a4a547b-cfaa-4743-9aab-02c110f3b513> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1377,7 +1377,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/dd03e1c9-9b2d-47f4-b98a-2a347a41b933> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/dd03e1c9-9b2d-47f4-b98a-2a347a41b933> <http://mu.semte.ch/vocabularies/core/uuid> "dd03e1c9-9b2d-47f4-b98a-2a347a41b933" .
 <http://data.lblod.info/id/public-service/dd03e1c9-9b2d-47f4-b98a-2a347a41b933> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1466,7 +1466,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/fa4b4dae-7fb7-466e-bf15-737da8fdc28c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/fa4b4dae-7fb7-466e-bf15-737da8fdc28c> <http://mu.semte.ch/vocabularies/core/uuid> "fa4b4dae-7fb7-466e-bf15-737da8fdc28c" .
 <http://data.lblod.info/id/public-service/fa4b4dae-7fb7-466e-bf15-737da8fdc28c> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1574,7 +1574,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/46bc068b-31ab-4869-bfd2-ad8c7036e9b1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/46bc068b-31ab-4869-bfd2-ad8c7036e9b1> <http://mu.semte.ch/vocabularies/core/uuid> "46bc068b-31ab-4869-bfd2-ad8c7036e9b1" .
 <http://data.lblod.info/id/public-service/46bc068b-31ab-4869-bfd2-ad8c7036e9b1> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1653,7 +1653,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/fc5af397-8e94-41f4-8c63-a849606d5020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/fc5af397-8e94-41f4-8c63-a849606d5020> <http://mu.semte.ch/vocabularies/core/uuid> "fc5af397-8e94-41f4-8c63-a849606d5020" .
 <http://data.lblod.info/id/public-service/fc5af397-8e94-41f4-8c63-a849606d5020> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1741,7 +1741,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/e1f2b602-9f97-4955-9104-2ea7bcec7035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/e1f2b602-9f97-4955-9104-2ea7bcec7035> <http://mu.semte.ch/vocabularies/core/uuid> "e1f2b602-9f97-4955-9104-2ea7bcec7035" .
 <http://data.lblod.info/id/public-service/e1f2b602-9f97-4955-9104-2ea7bcec7035> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1831,7 +1831,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/abf817c3-b347-4690-8496-b6a56740c674> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/abf817c3-b347-4690-8496-b6a56740c674> <http://mu.semte.ch/vocabularies/core/uuid> "abf817c3-b347-4690-8496-b6a56740c674" .
 <http://data.lblod.info/id/public-service/abf817c3-b347-4690-8496-b6a56740c674> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -1931,7 +1931,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/aa3ee51f-e86a-43c1-bb40-d585feb4b015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/aa3ee51f-e86a-43c1-bb40-d585feb4b015> <http://mu.semte.ch/vocabularies/core/uuid> "aa3ee51f-e86a-43c1-bb40-d585feb4b015" .
 <http://data.lblod.info/id/public-service/aa3ee51f-e86a-43c1-bb40-d585feb4b015> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2045,7 +2045,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/17d336e3-aaf7-458a-a599-862806dc1e0f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/17d336e3-aaf7-458a-a599-862806dc1e0f> <http://mu.semte.ch/vocabularies/core/uuid> "17d336e3-aaf7-458a-a599-862806dc1e0f" .
 <http://data.lblod.info/id/public-service/17d336e3-aaf7-458a-a599-862806dc1e0f> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2159,7 +2159,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/ac621de9-4b5e-4c28-8c9c-1e26b36b5439> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/ac621de9-4b5e-4c28-8c9c-1e26b36b5439> <http://mu.semte.ch/vocabularies/core/uuid> "ac621de9-4b5e-4c28-8c9c-1e26b36b5439" .
 <http://data.lblod.info/id/public-service/ac621de9-4b5e-4c28-8c9c-1e26b36b5439> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2253,7 +2253,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/e53767d7-f713-4779-acce-011ec9491cbb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/e53767d7-f713-4779-acce-011ec9491cbb> <http://mu.semte.ch/vocabularies/core/uuid> "e53767d7-f713-4779-acce-011ec9491cbb" .
 <http://data.lblod.info/id/public-service/e53767d7-f713-4779-acce-011ec9491cbb> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2352,7 +2352,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/cef9e9e7-c234-4c14-8cd2-b379861473f1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/cef9e9e7-c234-4c14-8cd2-b379861473f1> <http://mu.semte.ch/vocabularies/core/uuid> "cef9e9e7-c234-4c14-8cd2-b379861473f1" .
 <http://data.lblod.info/id/public-service/cef9e9e7-c234-4c14-8cd2-b379861473f1> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2453,7 +2453,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/e15be43e-fc9a-4e44-9b66-49b77986a95a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/e15be43e-fc9a-4e44-9b66-49b77986a95a> <http://mu.semte.ch/vocabularies/core/uuid> "e15be43e-fc9a-4e44-9b66-49b77986a95a" .
 <http://data.lblod.info/id/public-service/e15be43e-fc9a-4e44-9b66-49b77986a95a> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2547,7 +2547,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/199bf2d0-6fa8-4e6d-8796-8897619886a5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/199bf2d0-6fa8-4e6d-8796-8897619886a5> <http://mu.semte.ch/vocabularies/core/uuid> "199bf2d0-6fa8-4e6d-8796-8897619886a5" .
 <http://data.lblod.info/id/public-service/199bf2d0-6fa8-4e6d-8796-8897619886a5> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2637,7 +2637,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/954fb678-8718-4e35-a826-6cf9b5c6fc2f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/954fb678-8718-4e35-a826-6cf9b5c6fc2f> <http://mu.semte.ch/vocabularies/core/uuid> "954fb678-8718-4e35-a826-6cf9b5c6fc2f" .
 <http://data.lblod.info/id/public-service/954fb678-8718-4e35-a826-6cf9b5c6fc2f> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2750,7 +2750,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/2899adb2-dcb8-47ec-9cbd-bd35934d72f0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/2899adb2-dcb8-47ec-9cbd-bd35934d72f0> <http://mu.semte.ch/vocabularies/core/uuid> "2899adb2-dcb8-47ec-9cbd-bd35934d72f0" .
 <http://data.lblod.info/id/public-service/2899adb2-dcb8-47ec-9cbd-bd35934d72f0> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2844,7 +2844,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/f9fbd90b-b95d-402d-919f-799aab92839f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/f9fbd90b-b95d-402d-919f-799aab92839f> <http://mu.semte.ch/vocabularies/core/uuid> "f9fbd90b-b95d-402d-919f-799aab92839f" .
 <http://data.lblod.info/id/public-service/f9fbd90b-b95d-402d-919f-799aab92839f> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -2944,7 +2944,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/205ee1ce-be40-4c08-b68c-76869b2787a9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/205ee1ce-be40-4c08-b68c-76869b2787a9> <http://mu.semte.ch/vocabularies/core/uuid> "205ee1ce-be40-4c08-b68c-76869b2787a9" .
 <http://data.lblod.info/id/public-service/205ee1ce-be40-4c08-b68c-76869b2787a9> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3027,7 +3027,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/6e933898-848e-49cc-85f3-692953411160> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/6e933898-848e-49cc-85f3-692953411160> <http://mu.semte.ch/vocabularies/core/uuid> "6e933898-848e-49cc-85f3-692953411160" .
 <http://data.lblod.info/id/public-service/6e933898-848e-49cc-85f3-692953411160> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3134,7 +3134,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/2d963ad0-5811-474f-81ae-cdcacd38e00c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/2d963ad0-5811-474f-81ae-cdcacd38e00c> <http://mu.semte.ch/vocabularies/core/uuid> "2d963ad0-5811-474f-81ae-cdcacd38e00c" .
 <http://data.lblod.info/id/public-service/2d963ad0-5811-474f-81ae-cdcacd38e00c> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3240,7 +3240,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/8800198f-70ed-404d-9edf-52cc03491734> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/8800198f-70ed-404d-9edf-52cc03491734> <http://mu.semte.ch/vocabularies/core/uuid> "8800198f-70ed-404d-9edf-52cc03491734" .
 <http://data.lblod.info/id/public-service/8800198f-70ed-404d-9edf-52cc03491734> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3355,7 +3355,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/3dc3a150-eaa6-42b3-b3b9-340cc7f4a9ac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/3dc3a150-eaa6-42b3-b3b9-340cc7f4a9ac> <http://mu.semte.ch/vocabularies/core/uuid> "3dc3a150-eaa6-42b3-b3b9-340cc7f4a9ac" .
 <http://data.lblod.info/id/public-service/3dc3a150-eaa6-42b3-b3b9-340cc7f4a9ac> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3438,7 +3438,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/b7808748-5bae-4cf3-9d6d-a171bd7cd7cf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/b7808748-5bae-4cf3-9d6d-a171bd7cd7cf> <http://mu.semte.ch/vocabularies/core/uuid> "b7808748-5bae-4cf3-9d6d-a171bd7cd7cf" .
 <http://data.lblod.info/id/public-service/b7808748-5bae-4cf3-9d6d-a171bd7cd7cf> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3535,7 +3535,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/3d7d1670-aaee-4b5d-821c-09184c5d03e3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/3d7d1670-aaee-4b5d-821c-09184c5d03e3> <http://mu.semte.ch/vocabularies/core/uuid> "3d7d1670-aaee-4b5d-821c-09184c5d03e3" .
 <http://data.lblod.info/id/public-service/3d7d1670-aaee-4b5d-821c-09184c5d03e3> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3590,7 +3590,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/ba42ec9b-2b9e-4c06-8399-047790c6cb77> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/ba42ec9b-2b9e-4c06-8399-047790c6cb77> <http://mu.semte.ch/vocabularies/core/uuid> "ba42ec9b-2b9e-4c06-8399-047790c6cb77" .
 <http://data.lblod.info/id/public-service/ba42ec9b-2b9e-4c06-8399-047790c6cb77> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3702,7 +3702,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/56d7e075-4738-487b-a925-758ec8498177> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/56d7e075-4738-487b-a925-758ec8498177> <http://mu.semte.ch/vocabularies/core/uuid> "56d7e075-4738-487b-a925-758ec8498177" .
 <http://data.lblod.info/id/public-service/56d7e075-4738-487b-a925-758ec8498177> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3783,7 +3783,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/5fe36bf3-4585-42c7-a92e-5dc13abb19c0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/5fe36bf3-4585-42c7-a92e-5dc13abb19c0> <http://mu.semte.ch/vocabularies/core/uuid> "5fe36bf3-4585-42c7-a92e-5dc13abb19c0" .
 <http://data.lblod.info/id/public-service/5fe36bf3-4585-42c7-a92e-5dc13abb19c0> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3877,7 +3877,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/38ab9ea9-949e-4071-b526-a36bb81300a9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/38ab9ea9-949e-4071-b526-a36bb81300a9> <http://mu.semte.ch/vocabularies/core/uuid> "38ab9ea9-949e-4071-b526-a36bb81300a9" .
 <http://data.lblod.info/id/public-service/38ab9ea9-949e-4071-b526-a36bb81300a9> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -3959,7 +3959,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/e4424de2-270f-4067-b25e-0ef01da999b7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/e4424de2-270f-4067-b25e-0ef01da999b7> <http://mu.semte.ch/vocabularies/core/uuid> "e4424de2-270f-4067-b25e-0ef01da999b7" .
 <http://data.lblod.info/id/public-service/e4424de2-270f-4067-b25e-0ef01da999b7> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4063,7 +4063,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/20171124-3974-4f74-9147-98b8e6a461e2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/20171124-3974-4f74-9147-98b8e6a461e2> <http://mu.semte.ch/vocabularies/core/uuid> "20171124-3974-4f74-9147-98b8e6a461e2" .
 <http://data.lblod.info/id/public-service/20171124-3974-4f74-9147-98b8e6a461e2> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4155,7 +4155,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/724d69fe-249f-4747-89f4-167b490ec61f> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/724d69fe-249f-4747-89f4-167b490ec61f> <http://mu.semte.ch/vocabularies/core/uuid> "724d69fe-249f-4747-89f4-167b490ec61f" .
 <http://data.lblod.info/id/public-service/724d69fe-249f-4747-89f4-167b490ec61f> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4244,7 +4244,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/c436b88d-5cc8-46b8-a07e-550833da6ea2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/c436b88d-5cc8-46b8-a07e-550833da6ea2> <http://mu.semte.ch/vocabularies/core/uuid> "c436b88d-5cc8-46b8-a07e-550833da6ea2" .
 <http://data.lblod.info/id/public-service/c436b88d-5cc8-46b8-a07e-550833da6ea2> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4327,7 +4327,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/df8375fb-ec2f-4333-b1fc-908f3a08e233> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/df8375fb-ec2f-4333-b1fc-908f3a08e233> <http://mu.semte.ch/vocabularies/core/uuid> "df8375fb-ec2f-4333-b1fc-908f3a08e233" .
 <http://data.lblod.info/id/public-service/df8375fb-ec2f-4333-b1fc-908f3a08e233> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4420,7 +4420,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/2c35c118-0a78-4523-b6e6-b79df9d19ef3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/2c35c118-0a78-4523-b6e6-b79df9d19ef3> <http://mu.semte.ch/vocabularies/core/uuid> "2c35c118-0a78-4523-b6e6-b79df9d19ef3" .
 <http://data.lblod.info/id/public-service/2c35c118-0a78-4523-b6e6-b79df9d19ef3> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4509,7 +4509,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/c4039d6b-553d-444a-821e-17be4fc71904> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/c4039d6b-553d-444a-821e-17be4fc71904> <http://mu.semte.ch/vocabularies/core/uuid> "c4039d6b-553d-444a-821e-17be4fc71904" .
 <http://data.lblod.info/id/public-service/c4039d6b-553d-444a-821e-17be4fc71904> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4607,7 +4607,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/4de149c5-55ce-45ba-b5e5-4ceae2bb55e0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/4de149c5-55ce-45ba-b5e5-4ceae2bb55e0> <http://mu.semte.ch/vocabularies/core/uuid> "4de149c5-55ce-45ba-b5e5-4ceae2bb55e0" .
 <http://data.lblod.info/id/public-service/4de149c5-55ce-45ba-b5e5-4ceae2bb55e0> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4723,7 +4723,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/bc86181d-8c6c-44da-81aa-0f02b8ce4866> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/bc86181d-8c6c-44da-81aa-0f02b8ce4866> <http://mu.semte.ch/vocabularies/core/uuid> "bc86181d-8c6c-44da-81aa-0f02b8ce4866" .
 <http://data.lblod.info/id/public-service/bc86181d-8c6c-44da-81aa-0f02b8ce4866> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4853,7 +4853,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/df3e48de-46d3-41c1-9467-59ace3178377> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/df3e48de-46d3-41c1-9467-59ace3178377> <http://mu.semte.ch/vocabularies/core/uuid> "df3e48de-46d3-41c1-9467-59ace3178377" .
 <http://data.lblod.info/id/public-service/df3e48de-46d3-41c1-9467-59ace3178377> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -4953,7 +4953,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/04a639ce-8716-484a-a86b-bdcb207541fe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/04a639ce-8716-484a-a86b-bdcb207541fe> <http://mu.semte.ch/vocabularies/core/uuid> "04a639ce-8716-484a-a86b-bdcb207541fe" .
 <http://data.lblod.info/id/public-service/04a639ce-8716-484a-a86b-bdcb207541fe> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5014,7 +5014,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/911f2c72-3fd8-4511-9449-f11ee4b86980> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/911f2c72-3fd8-4511-9449-f11ee4b86980> <http://mu.semte.ch/vocabularies/core/uuid> "911f2c72-3fd8-4511-9449-f11ee4b86980" .
 <http://data.lblod.info/id/public-service/911f2c72-3fd8-4511-9449-f11ee4b86980> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5116,7 +5116,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/ab1febf5-71e6-4248-969b-14805f659bc2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/ab1febf5-71e6-4248-969b-14805f659bc2> <http://mu.semte.ch/vocabularies/core/uuid> "ab1febf5-71e6-4248-969b-14805f659bc2" .
 <http://data.lblod.info/id/public-service/ab1febf5-71e6-4248-969b-14805f659bc2> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5203,7 +5203,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/06991c2c-9282-4760-91bc-475314d09179> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/06991c2c-9282-4760-91bc-475314d09179> <http://mu.semte.ch/vocabularies/core/uuid> "06991c2c-9282-4760-91bc-475314d09179" .
 <http://data.lblod.info/id/public-service/06991c2c-9282-4760-91bc-475314d09179> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5298,7 +5298,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/525435a5-73f9-41df-b4ee-4dbd3fce3b40> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/525435a5-73f9-41df-b4ee-4dbd3fce3b40> <http://mu.semte.ch/vocabularies/core/uuid> "525435a5-73f9-41df-b4ee-4dbd3fce3b40" .
 <http://data.lblod.info/id/public-service/525435a5-73f9-41df-b4ee-4dbd3fce3b40> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5382,7 +5382,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/81ee90aa-f6c6-4ab4-aa7c-ed642eb80b87> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/81ee90aa-f6c6-4ab4-aa7c-ed642eb80b87> <http://mu.semte.ch/vocabularies/core/uuid> "81ee90aa-f6c6-4ab4-aa7c-ed642eb80b87" .
 <http://data.lblod.info/id/public-service/81ee90aa-f6c6-4ab4-aa7c-ed642eb80b87> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5462,7 +5462,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/3909bca5-ed50-4b92-bc9c-783c770b8ef3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/3909bca5-ed50-4b92-bc9c-783c770b8ef3> <http://mu.semte.ch/vocabularies/core/uuid> "3909bca5-ed50-4b92-bc9c-783c770b8ef3" .
 <http://data.lblod.info/id/public-service/3909bca5-ed50-4b92-bc9c-783c770b8ef3> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5568,7 +5568,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/6b2727b6-4462-4356-8918-bf126d6ea4f6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/6b2727b6-4462-4356-8918-bf126d6ea4f6> <http://mu.semte.ch/vocabularies/core/uuid> "6b2727b6-4462-4356-8918-bf126d6ea4f6" .
 <http://data.lblod.info/id/public-service/6b2727b6-4462-4356-8918-bf126d6ea4f6> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5688,7 +5688,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/ae60859d-bc19-4b00-b2cb-366f20303776> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/ae60859d-bc19-4b00-b2cb-366f20303776> <http://mu.semte.ch/vocabularies/core/uuid> "ae60859d-bc19-4b00-b2cb-366f20303776" .
 <http://data.lblod.info/id/public-service/ae60859d-bc19-4b00-b2cb-366f20303776> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5795,7 +5795,7 @@ DELETE DATA {
 }
 ;
 DELETE DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
 <http://data.lblod.info/id/public-service/77d63a92-2c4a-4796-8865-45ef67d4790c> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
 <http://data.lblod.info/id/public-service/77d63a92-2c4a-4796-8865-45ef67d4790c> <http://mu.semte.ch/vocabularies/core/uuid> "77d63a92-2c4a-4796-8865-45ef67d4790c" .
 <http://data.lblod.info/id/public-service/77d63a92-2c4a-4796-8865-45ef67d4790c> <http://purl.org/pav/createdBy> <http://data.lblod.info/id/bestuurseenheden/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2> .
@@ -5878,318 +5878,621 @@ DELETE DATA {
 }
 ;
 INSERT DATA {
-    GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
-
-      <http://data.lblod.info/id/published-public-service/87af9d08-89c5-4346-88b2-2b0ea02d9ca2> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/87af9d08-89c5-4346-88b2-2b0ea02d9ca2> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/87af9d08-89c5-4346-88b2-2b0ea02d9ca2> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/5b41f291-fc32-4949-a2f8-c70771e66f40> .
-<http://data.lblod.info/id/published-public-service/87af9d08-89c5-4346-88b2-2b0ea02d9ca2> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.233Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/87af9d08-89c5-4346-88b2-2b0ea02d9ca2> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.233Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b6a64860-2848-4559-9a0a-4f804c4861a8> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/b6a64860-2848-4559-9a0a-4f804c4861a8> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/b6a64860-2848-4559-9a0a-4f804c4861a8> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ccb02c54-204d-4bc6-83c8-fc6827c5ac42> .
-<http://data.lblod.info/id/published-public-service/b6a64860-2848-4559-9a0a-4f804c4861a8> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.429Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b6a64860-2848-4559-9a0a-4f804c4861a8> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.429Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a4b5a2cc-9c0e-40b8-a704-ab984366e18b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/a4b5a2cc-9c0e-40b8-a704-ab984366e18b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/a4b5a2cc-9c0e-40b8-a704-ab984366e18b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/b7e4b128-2e9d-4ac3-8f4f-90f93dc6baa0> .
-<http://data.lblod.info/id/published-public-service/a4b5a2cc-9c0e-40b8-a704-ab984366e18b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.627Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a4b5a2cc-9c0e-40b8-a704-ab984366e18b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.627Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a709844d-e459-47ee-8de3-d758c1df88b6> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/a709844d-e459-47ee-8de3-d758c1df88b6> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/a709844d-e459-47ee-8de3-d758c1df88b6> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/df35700e-c66d-4b34-bef1-24c29efdf08f> .
-<http://data.lblod.info/id/published-public-service/a709844d-e459-47ee-8de3-d758c1df88b6> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:23.832Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a709844d-e459-47ee-8de3-d758c1df88b6> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:23.832Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/935ace46-29f6-48b4-ab4e-7998e6447970> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/935ace46-29f6-48b4-ab4e-7998e6447970> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/935ace46-29f6-48b4-ab4e-7998e6447970> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/cf441ac4-974f-4b0f-b61f-ef8ed6f323e5> .
-<http://data.lblod.info/id/published-public-service/935ace46-29f6-48b4-ab4e-7998e6447970> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:24.043Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/935ace46-29f6-48b4-ab4e-7998e6447970> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:24.043Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/8249e697-1fc7-48a1-93a6-9bef97e2e77a> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/8249e697-1fc7-48a1-93a6-9bef97e2e77a> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/8249e697-1fc7-48a1-93a6-9bef97e2e77a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/7c274847-bf2b-4d93-9244-304766ad018e> .
-<http://data.lblod.info/id/published-public-service/8249e697-1fc7-48a1-93a6-9bef97e2e77a> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:24.193Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/8249e697-1fc7-48a1-93a6-9bef97e2e77a> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:24.193Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a99e087d-8526-42f6-b24b-b099317ca3c1> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/a99e087d-8526-42f6-b24b-b099317ca3c1> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/a99e087d-8526-42f6-b24b-b099317ca3c1> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2c952860-dd44-4513-aa21-f520c5aeb307> .
-<http://data.lblod.info/id/published-public-service/a99e087d-8526-42f6-b24b-b099317ca3c1> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:24.407Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a99e087d-8526-42f6-b24b-b099317ca3c1> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:24.407Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/74d15e04-3383-43d9-8ed8-6e4dab5a58d6> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/74d15e04-3383-43d9-8ed8-6e4dab5a58d6> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/74d15e04-3383-43d9-8ed8-6e4dab5a58d6> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/f4fa7750-c6e4-4a95-bcbf-4d2f5c57b01c> .
-<http://data.lblod.info/id/published-public-service/74d15e04-3383-43d9-8ed8-6e4dab5a58d6> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:24.617Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/74d15e04-3383-43d9-8ed8-6e4dab5a58d6> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:24.617Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/12d4b008-e389-4d7c-80c1-08412093b44b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/12d4b008-e389-4d7c-80c1-08412093b44b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/12d4b008-e389-4d7c-80c1-08412093b44b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/c46fcf84-e3d3-4d50-a009-926e71900cda> .
-<http://data.lblod.info/id/published-public-service/12d4b008-e389-4d7c-80c1-08412093b44b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:24.814Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/12d4b008-e389-4d7c-80c1-08412093b44b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:24.814Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/d802f4c2-7b9c-45de-9dde-814da6619ec0> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/d802f4c2-7b9c-45de-9dde-814da6619ec0> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/d802f4c2-7b9c-45de-9dde-814da6619ec0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/72681539-9c0e-4f04-9d85-b3ef55f476cd> .
-<http://data.lblod.info/id/published-public-service/d802f4c2-7b9c-45de-9dde-814da6619ec0> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:25.048Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/d802f4c2-7b9c-45de-9dde-814da6619ec0> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:25.048Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/dc152f1d-98a3-4cf4-9b71-d079e97d2c2f> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/dc152f1d-98a3-4cf4-9b71-d079e97d2c2f> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/dc152f1d-98a3-4cf4-9b71-d079e97d2c2f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ca68202e-8e0b-451a-9047-70f0833a9e00> .
-<http://data.lblod.info/id/published-public-service/dc152f1d-98a3-4cf4-9b71-d079e97d2c2f> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:25.236Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/dc152f1d-98a3-4cf4-9b71-d079e97d2c2f> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:25.236Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/f398d482-30a9-4294-b22a-ad84dd395211> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/f398d482-30a9-4294-b22a-ad84dd395211> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/f398d482-30a9-4294-b22a-ad84dd395211> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/8402040e-6bc2-4601-878e-9299d317bb4a> .
-<http://data.lblod.info/id/published-public-service/f398d482-30a9-4294-b22a-ad84dd395211> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:25.424Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/f398d482-30a9-4294-b22a-ad84dd395211> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:25.424Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/34e80d4e-e6e5-46fd-91bf-ec3ab02769d5> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/34e80d4e-e6e5-46fd-91bf-ec3ab02769d5> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/34e80d4e-e6e5-46fd-91bf-ec3ab02769d5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/42252c62-11dd-4fe0-b114-204a9042f6d9> .
-<http://data.lblod.info/id/published-public-service/34e80d4e-e6e5-46fd-91bf-ec3ab02769d5> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:25.587Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/34e80d4e-e6e5-46fd-91bf-ec3ab02769d5> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:25.587Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/7118fa14-ac7b-4fc6-bf14-9e737f15dbc5> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/7118fa14-ac7b-4fc6-bf14-9e737f15dbc5> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/7118fa14-ac7b-4fc6-bf14-9e737f15dbc5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/4e9b01af-340f-41c1-b916-eecbff1626c1> .
-<http://data.lblod.info/id/published-public-service/7118fa14-ac7b-4fc6-bf14-9e737f15dbc5> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:25.782Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/7118fa14-ac7b-4fc6-bf14-9e737f15dbc5> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:25.782Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/862f2312-84d9-42e3-bffc-3b8ac0004752> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/862f2312-84d9-42e3-bffc-3b8ac0004752> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/862f2312-84d9-42e3-bffc-3b8ac0004752> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/4a4a547b-cfaa-4743-9aab-02c110f3b513> .
-<http://data.lblod.info/id/published-public-service/862f2312-84d9-42e3-bffc-3b8ac0004752> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:26.029Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/862f2312-84d9-42e3-bffc-3b8ac0004752> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:26.029Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6f7b7a31-ac74-45a6-9469-9a3ecd0765a1> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/6f7b7a31-ac74-45a6-9469-9a3ecd0765a1> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/6f7b7a31-ac74-45a6-9469-9a3ecd0765a1> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/dd03e1c9-9b2d-47f4-b98a-2a347a41b933> .
-<http://data.lblod.info/id/published-public-service/6f7b7a31-ac74-45a6-9469-9a3ecd0765a1> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:26.242Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6f7b7a31-ac74-45a6-9469-9a3ecd0765a1> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:26.242Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/41432889-fc1a-4e77-9702-04c896bc3273> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/41432889-fc1a-4e77-9702-04c896bc3273> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/41432889-fc1a-4e77-9702-04c896bc3273> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/fa4b4dae-7fb7-466e-bf15-737da8fdc28c> .
-<http://data.lblod.info/id/published-public-service/41432889-fc1a-4e77-9702-04c896bc3273> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:26.438Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/41432889-fc1a-4e77-9702-04c896bc3273> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:26.438Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/94ba15ca-16ec-4197-9a1e-430c3260bc5e> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/94ba15ca-16ec-4197-9a1e-430c3260bc5e> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/94ba15ca-16ec-4197-9a1e-430c3260bc5e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/46bc068b-31ab-4869-bfd2-ad8c7036e9b1> .
-<http://data.lblod.info/id/published-public-service/94ba15ca-16ec-4197-9a1e-430c3260bc5e> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:26.640Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/94ba15ca-16ec-4197-9a1e-430c3260bc5e> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:26.640Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3a8fa576-d3a3-4cfb-ba91-a41f08870805> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/3a8fa576-d3a3-4cfb-ba91-a41f08870805> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/3a8fa576-d3a3-4cfb-ba91-a41f08870805> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/fc5af397-8e94-41f4-8c63-a849606d5020> .
-<http://data.lblod.info/id/published-public-service/3a8fa576-d3a3-4cfb-ba91-a41f08870805> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:26.822Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3a8fa576-d3a3-4cfb-ba91-a41f08870805> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:26.822Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/76df0835-7324-476b-872c-45160a45af93> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/76df0835-7324-476b-872c-45160a45af93> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/76df0835-7324-476b-872c-45160a45af93> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e1f2b602-9f97-4955-9104-2ea7bcec7035> .
-<http://data.lblod.info/id/published-public-service/76df0835-7324-476b-872c-45160a45af93> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:27.001Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/76df0835-7324-476b-872c-45160a45af93> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:27.001Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6a766305-44ce-409d-83fd-ead0d2ddc92b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/6a766305-44ce-409d-83fd-ead0d2ddc92b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/6a766305-44ce-409d-83fd-ead0d2ddc92b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/abf817c3-b347-4690-8496-b6a56740c674> .
-<http://data.lblod.info/id/published-public-service/6a766305-44ce-409d-83fd-ead0d2ddc92b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:27.174Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6a766305-44ce-409d-83fd-ead0d2ddc92b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:27.174Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6521eceb-4e9f-4f78-ab25-042d1febff5d> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/6521eceb-4e9f-4f78-ab25-042d1febff5d> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/6521eceb-4e9f-4f78-ab25-042d1febff5d> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/aa3ee51f-e86a-43c1-bb40-d585feb4b015> .
-<http://data.lblod.info/id/published-public-service/6521eceb-4e9f-4f78-ab25-042d1febff5d> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:27.354Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6521eceb-4e9f-4f78-ab25-042d1febff5d> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:27.354Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/46862ad4-9ab4-4744-8c04-f12499ed47a2> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/46862ad4-9ab4-4744-8c04-f12499ed47a2> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/46862ad4-9ab4-4744-8c04-f12499ed47a2> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/17d336e3-aaf7-458a-a599-862806dc1e0f> .
-<http://data.lblod.info/id/published-public-service/46862ad4-9ab4-4744-8c04-f12499ed47a2> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:27.535Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/46862ad4-9ab4-4744-8c04-f12499ed47a2> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:27.535Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3686af9f-f1ff-4a36-a339-f0ed636f431f> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/3686af9f-f1ff-4a36-a339-f0ed636f431f> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/3686af9f-f1ff-4a36-a339-f0ed636f431f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ac621de9-4b5e-4c28-8c9c-1e26b36b5439> .
-<http://data.lblod.info/id/published-public-service/3686af9f-f1ff-4a36-a339-f0ed636f431f> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:27.744Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3686af9f-f1ff-4a36-a339-f0ed636f431f> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:27.744Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/1d052668-7d29-4864-8436-b23abd0079af> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/1d052668-7d29-4864-8436-b23abd0079af> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/1d052668-7d29-4864-8436-b23abd0079af> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e53767d7-f713-4779-acce-011ec9491cbb> .
-<http://data.lblod.info/id/published-public-service/1d052668-7d29-4864-8436-b23abd0079af> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:27.919Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/1d052668-7d29-4864-8436-b23abd0079af> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:27.919Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/db490a0f-e97e-45ef-bb8c-22376009eb54> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/db490a0f-e97e-45ef-bb8c-22376009eb54> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/db490a0f-e97e-45ef-bb8c-22376009eb54> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/cef9e9e7-c234-4c14-8cd2-b379861473f1> .
-<http://data.lblod.info/id/published-public-service/db490a0f-e97e-45ef-bb8c-22376009eb54> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:28.104Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/db490a0f-e97e-45ef-bb8c-22376009eb54> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:28.104Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/2e757027-731b-454d-9153-c98bc479a7ef> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/2e757027-731b-454d-9153-c98bc479a7ef> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/2e757027-731b-454d-9153-c98bc479a7ef> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e15be43e-fc9a-4e44-9b66-49b77986a95a> .
-<http://data.lblod.info/id/published-public-service/2e757027-731b-454d-9153-c98bc479a7ef> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:28.284Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/2e757027-731b-454d-9153-c98bc479a7ef> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:28.284Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/410bf189-ab18-4c3c-8c47-0a2321e870eb> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/410bf189-ab18-4c3c-8c47-0a2321e870eb> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/410bf189-ab18-4c3c-8c47-0a2321e870eb> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/199bf2d0-6fa8-4e6d-8796-8897619886a5> .
-<http://data.lblod.info/id/published-public-service/410bf189-ab18-4c3c-8c47-0a2321e870eb> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:28.482Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/410bf189-ab18-4c3c-8c47-0a2321e870eb> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:28.482Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b3743786-4c0a-40b9-8d46-660d32ebe21d> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/b3743786-4c0a-40b9-8d46-660d32ebe21d> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/b3743786-4c0a-40b9-8d46-660d32ebe21d> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/954fb678-8718-4e35-a826-6cf9b5c6fc2f> .
-<http://data.lblod.info/id/published-public-service/b3743786-4c0a-40b9-8d46-660d32ebe21d> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:28.673Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b3743786-4c0a-40b9-8d46-660d32ebe21d> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:28.673Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6a12744d-9c1f-49f0-aafd-d3db10fb8e4d> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/6a12744d-9c1f-49f0-aafd-d3db10fb8e4d> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/6a12744d-9c1f-49f0-aafd-d3db10fb8e4d> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2899adb2-dcb8-47ec-9cbd-bd35934d72f0> .
-<http://data.lblod.info/id/published-public-service/6a12744d-9c1f-49f0-aafd-d3db10fb8e4d> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:28.848Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/6a12744d-9c1f-49f0-aafd-d3db10fb8e4d> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:28.848Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/824e6d2b-3fce-41f3-a114-86ad5c8bdf24> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/824e6d2b-3fce-41f3-a114-86ad5c8bdf24> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/824e6d2b-3fce-41f3-a114-86ad5c8bdf24> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/f9fbd90b-b95d-402d-919f-799aab92839f> .
-<http://data.lblod.info/id/published-public-service/824e6d2b-3fce-41f3-a114-86ad5c8bdf24> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:29.027Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/824e6d2b-3fce-41f3-a114-86ad5c8bdf24> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:29.027Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/bb78b73f-e0a5-4d2d-ab13-1ee4d7ef9812> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/bb78b73f-e0a5-4d2d-ab13-1ee4d7ef9812> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/bb78b73f-e0a5-4d2d-ab13-1ee4d7ef9812> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/205ee1ce-be40-4c08-b68c-76869b2787a9> .
-<http://data.lblod.info/id/published-public-service/bb78b73f-e0a5-4d2d-ab13-1ee4d7ef9812> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:29.266Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/bb78b73f-e0a5-4d2d-ab13-1ee4d7ef9812> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:29.266Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b1abd60d-0c0e-41c9-bada-ce178f541d7e> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/b1abd60d-0c0e-41c9-bada-ce178f541d7e> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/b1abd60d-0c0e-41c9-bada-ce178f541d7e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/6e933898-848e-49cc-85f3-692953411160> .
-<http://data.lblod.info/id/published-public-service/b1abd60d-0c0e-41c9-bada-ce178f541d7e> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:29.480Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b1abd60d-0c0e-41c9-bada-ce178f541d7e> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:29.480Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/18b3a115-706e-4908-8b44-af8ab08eff73> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/18b3a115-706e-4908-8b44-af8ab08eff73> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/18b3a115-706e-4908-8b44-af8ab08eff73> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2d963ad0-5811-474f-81ae-cdcacd38e00c> .
-<http://data.lblod.info/id/published-public-service/18b3a115-706e-4908-8b44-af8ab08eff73> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:29.696Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/18b3a115-706e-4908-8b44-af8ab08eff73> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:29.696Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/91de4989-f7f2-414a-b05d-a5d9cac27052> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/91de4989-f7f2-414a-b05d-a5d9cac27052> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/91de4989-f7f2-414a-b05d-a5d9cac27052> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/8800198f-70ed-404d-9edf-52cc03491734> .
-<http://data.lblod.info/id/published-public-service/91de4989-f7f2-414a-b05d-a5d9cac27052> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:29.939Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/91de4989-f7f2-414a-b05d-a5d9cac27052> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:29.939Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/5f483f68-de01-4a5e-b204-a8e36e4b676c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/5f483f68-de01-4a5e-b204-a8e36e4b676c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/5f483f68-de01-4a5e-b204-a8e36e4b676c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/3dc3a150-eaa6-42b3-b3b9-340cc7f4a9ac> .
-<http://data.lblod.info/id/published-public-service/5f483f68-de01-4a5e-b204-a8e36e4b676c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:30.144Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/5f483f68-de01-4a5e-b204-a8e36e4b676c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:30.144Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/05345caa-304c-4840-97cd-ad25fe8c5d86> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/05345caa-304c-4840-97cd-ad25fe8c5d86> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/05345caa-304c-4840-97cd-ad25fe8c5d86> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/b7808748-5bae-4cf3-9d6d-a171bd7cd7cf> .
-<http://data.lblod.info/id/published-public-service/05345caa-304c-4840-97cd-ad25fe8c5d86> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:30.334Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/05345caa-304c-4840-97cd-ad25fe8c5d86> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:30.334Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/be7ecb6a-3b46-4a65-8ee7-0b494ee2ec1c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/be7ecb6a-3b46-4a65-8ee7-0b494ee2ec1c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/be7ecb6a-3b46-4a65-8ee7-0b494ee2ec1c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/3d7d1670-aaee-4b5d-821c-09184c5d03e3> .
-<http://data.lblod.info/id/published-public-service/be7ecb6a-3b46-4a65-8ee7-0b494ee2ec1c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:30.530Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/be7ecb6a-3b46-4a65-8ee7-0b494ee2ec1c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:30.530Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/79fe0b5a-557b-4036-b6a1-40d4095a22c8> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/79fe0b5a-557b-4036-b6a1-40d4095a22c8> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/79fe0b5a-557b-4036-b6a1-40d4095a22c8> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ba42ec9b-2b9e-4c06-8399-047790c6cb77> .
-<http://data.lblod.info/id/published-public-service/79fe0b5a-557b-4036-b6a1-40d4095a22c8> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:30.740Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/79fe0b5a-557b-4036-b6a1-40d4095a22c8> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:30.740Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b4a6a41e-e91e-4363-9f1f-1c5ab1d2b6d5> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/b4a6a41e-e91e-4363-9f1f-1c5ab1d2b6d5> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/b4a6a41e-e91e-4363-9f1f-1c5ab1d2b6d5> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/56d7e075-4738-487b-a925-758ec8498177> .
-<http://data.lblod.info/id/published-public-service/b4a6a41e-e91e-4363-9f1f-1c5ab1d2b6d5> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:30.922Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/b4a6a41e-e91e-4363-9f1f-1c5ab1d2b6d5> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:30.922Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/716ee87f-8670-4f24-81d2-1dd972893e30> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/716ee87f-8670-4f24-81d2-1dd972893e30> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/716ee87f-8670-4f24-81d2-1dd972893e30> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/5fe36bf3-4585-42c7-a92e-5dc13abb19c0> .
-<http://data.lblod.info/id/published-public-service/716ee87f-8670-4f24-81d2-1dd972893e30> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:31.130Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/716ee87f-8670-4f24-81d2-1dd972893e30> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:31.130Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/03e02d5b-6804-4cf1-86df-ec31e88b0fa4> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/03e02d5b-6804-4cf1-86df-ec31e88b0fa4> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/03e02d5b-6804-4cf1-86df-ec31e88b0fa4> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/38ab9ea9-949e-4071-b526-a36bb81300a9> .
-<http://data.lblod.info/id/published-public-service/03e02d5b-6804-4cf1-86df-ec31e88b0fa4> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:31.321Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/03e02d5b-6804-4cf1-86df-ec31e88b0fa4> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:31.321Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/9be8aa0c-4e4e-4817-8eb6-a3b170803231> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/9be8aa0c-4e4e-4817-8eb6-a3b170803231> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/9be8aa0c-4e4e-4817-8eb6-a3b170803231> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e4424de2-270f-4067-b25e-0ef01da999b7> .
-<http://data.lblod.info/id/published-public-service/9be8aa0c-4e4e-4817-8eb6-a3b170803231> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:31.541Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/9be8aa0c-4e4e-4817-8eb6-a3b170803231> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:31.541Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/30500e53-ade7-422f-8bed-177515da9d72> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/30500e53-ade7-422f-8bed-177515da9d72> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/30500e53-ade7-422f-8bed-177515da9d72> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/20171124-3974-4f74-9147-98b8e6a461e2> .
-<http://data.lblod.info/id/published-public-service/30500e53-ade7-422f-8bed-177515da9d72> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:31.720Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/30500e53-ade7-422f-8bed-177515da9d72> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:31.720Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/e6764cdd-c3ce-48b9-aaf3-cb0b5feb7520> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/e6764cdd-c3ce-48b9-aaf3-cb0b5feb7520> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/e6764cdd-c3ce-48b9-aaf3-cb0b5feb7520> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/724d69fe-249f-4747-89f4-167b490ec61f> .
-<http://data.lblod.info/id/published-public-service/e6764cdd-c3ce-48b9-aaf3-cb0b5feb7520> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:31.889Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/e6764cdd-c3ce-48b9-aaf3-cb0b5feb7520> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:31.889Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/e0a7d00a-2f87-402c-a9a4-ab7bfb36fead> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/e0a7d00a-2f87-402c-a9a4-ab7bfb36fead> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/e0a7d00a-2f87-402c-a9a4-ab7bfb36fead> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/c436b88d-5cc8-46b8-a07e-550833da6ea2> .
-<http://data.lblod.info/id/published-public-service/e0a7d00a-2f87-402c-a9a4-ab7bfb36fead> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:32.073Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/e0a7d00a-2f87-402c-a9a4-ab7bfb36fead> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:32.073Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/1982fb78-3be7-4df7-b457-6591b1c01314> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/1982fb78-3be7-4df7-b457-6591b1c01314> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/1982fb78-3be7-4df7-b457-6591b1c01314> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/df8375fb-ec2f-4333-b1fc-908f3a08e233> .
-<http://data.lblod.info/id/published-public-service/1982fb78-3be7-4df7-b457-6591b1c01314> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:32.268Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/1982fb78-3be7-4df7-b457-6591b1c01314> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:32.268Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/d93a4ef0-9531-4e6f-a75b-c900cee1eabd> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/d93a4ef0-9531-4e6f-a75b-c900cee1eabd> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/d93a4ef0-9531-4e6f-a75b-c900cee1eabd> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2c35c118-0a78-4523-b6e6-b79df9d19ef3> .
-<http://data.lblod.info/id/published-public-service/d93a4ef0-9531-4e6f-a75b-c900cee1eabd> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:32.446Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/d93a4ef0-9531-4e6f-a75b-c900cee1eabd> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:32.446Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/77d57a51-231f-4f3c-8aa7-64d4673eed74> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/77d57a51-231f-4f3c-8aa7-64d4673eed74> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/77d57a51-231f-4f3c-8aa7-64d4673eed74> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/c4039d6b-553d-444a-821e-17be4fc71904> .
-<http://data.lblod.info/id/published-public-service/77d57a51-231f-4f3c-8aa7-64d4673eed74> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:32.627Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/77d57a51-231f-4f3c-8aa7-64d4673eed74> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:32.627Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/d33b61f0-002f-4486-b4e1-de269c312c5c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/d33b61f0-002f-4486-b4e1-de269c312c5c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/d33b61f0-002f-4486-b4e1-de269c312c5c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/4de149c5-55ce-45ba-b5e5-4ceae2bb55e0> .
-<http://data.lblod.info/id/published-public-service/d33b61f0-002f-4486-b4e1-de269c312c5c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:32.844Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/d33b61f0-002f-4486-b4e1-de269c312c5c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:32.844Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/f5df5f95-63a3-4f01-95f5-46cbaf643cda> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/f5df5f95-63a3-4f01-95f5-46cbaf643cda> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/f5df5f95-63a3-4f01-95f5-46cbaf643cda> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/bc86181d-8c6c-44da-81aa-0f02b8ce4866> .
-<http://data.lblod.info/id/published-public-service/f5df5f95-63a3-4f01-95f5-46cbaf643cda> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:32.996Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/f5df5f95-63a3-4f01-95f5-46cbaf643cda> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:32.996Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/cfac31a0-a26e-45af-8590-0f1de8a0ca89> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/cfac31a0-a26e-45af-8590-0f1de8a0ca89> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/cfac31a0-a26e-45af-8590-0f1de8a0ca89> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/df3e48de-46d3-41c1-9467-59ace3178377> .
-<http://data.lblod.info/id/published-public-service/cfac31a0-a26e-45af-8590-0f1de8a0ca89> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:33.179Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/cfac31a0-a26e-45af-8590-0f1de8a0ca89> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:33.179Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a5bea591-6924-4d4b-98d3-dbd9b00f8785> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/a5bea591-6924-4d4b-98d3-dbd9b00f8785> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/a5bea591-6924-4d4b-98d3-dbd9b00f8785> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/04a639ce-8716-484a-a86b-bdcb207541fe> .
-<http://data.lblod.info/id/published-public-service/a5bea591-6924-4d4b-98d3-dbd9b00f8785> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:33.346Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/a5bea591-6924-4d4b-98d3-dbd9b00f8785> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:33.346Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/649651fb-7faf-4fed-a640-6d7faf3632cd> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/649651fb-7faf-4fed-a640-6d7faf3632cd> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/649651fb-7faf-4fed-a640-6d7faf3632cd> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/911f2c72-3fd8-4511-9449-f11ee4b86980> .
-<http://data.lblod.info/id/published-public-service/649651fb-7faf-4fed-a640-6d7faf3632cd> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:33.531Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/649651fb-7faf-4fed-a640-6d7faf3632cd> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:33.531Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/32e18c60-29ed-43d3-a88f-cdfdd9c7685f> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/32e18c60-29ed-43d3-a88f-cdfdd9c7685f> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/32e18c60-29ed-43d3-a88f-cdfdd9c7685f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ab1febf5-71e6-4248-969b-14805f659bc2> .
-<http://data.lblod.info/id/published-public-service/32e18c60-29ed-43d3-a88f-cdfdd9c7685f> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:33.732Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/32e18c60-29ed-43d3-a88f-cdfdd9c7685f> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:33.732Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/75ca4a67-b12d-474c-a4f1-b7c02f932476> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/75ca4a67-b12d-474c-a4f1-b7c02f932476> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/75ca4a67-b12d-474c-a4f1-b7c02f932476> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/06991c2c-9282-4760-91bc-475314d09179> .
-<http://data.lblod.info/id/published-public-service/75ca4a67-b12d-474c-a4f1-b7c02f932476> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:33.960Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/75ca4a67-b12d-474c-a4f1-b7c02f932476> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:33.960Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/e10a9caf-6e16-4cdd-8532-73defb0ba56f> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/e10a9caf-6e16-4cdd-8532-73defb0ba56f> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/e10a9caf-6e16-4cdd-8532-73defb0ba56f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/525435a5-73f9-41df-b4ee-4dbd3fce3b40> .
-<http://data.lblod.info/id/published-public-service/e10a9caf-6e16-4cdd-8532-73defb0ba56f> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:34.154Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/e10a9caf-6e16-4cdd-8532-73defb0ba56f> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:34.154Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/2d3e16c0-0064-47a3-8f59-07f126f8d3c8> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/2d3e16c0-0064-47a3-8f59-07f126f8d3c8> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/2d3e16c0-0064-47a3-8f59-07f126f8d3c8> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/81ee90aa-f6c6-4ab4-aa7c-ed642eb80b87> .
-<http://data.lblod.info/id/published-public-service/2d3e16c0-0064-47a3-8f59-07f126f8d3c8> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:34.369Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/2d3e16c0-0064-47a3-8f59-07f126f8d3c8> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:34.369Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/30dc322b-1cae-44d2-9eab-99ce82a574ca> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/30dc322b-1cae-44d2-9eab-99ce82a574ca> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/30dc322b-1cae-44d2-9eab-99ce82a574ca> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/3909bca5-ed50-4b92-bc9c-783c770b8ef3> .
-<http://data.lblod.info/id/published-public-service/30dc322b-1cae-44d2-9eab-99ce82a574ca> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:34.565Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/30dc322b-1cae-44d2-9eab-99ce82a574ca> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:34.565Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3eba1b50-f001-42e3-8073-f8e87b907918> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/3eba1b50-f001-42e3-8073-f8e87b907918> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/3eba1b50-f001-42e3-8073-f8e87b907918> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/6b2727b6-4462-4356-8918-bf126d6ea4f6> .
-<http://data.lblod.info/id/published-public-service/3eba1b50-f001-42e3-8073-f8e87b907918> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:34.706Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3eba1b50-f001-42e3-8073-f8e87b907918> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:34.706Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/7cf1fae4-ee65-464e-b31a-4d1e27255d62> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/7cf1fae4-ee65-464e-b31a-4d1e27255d62> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/7cf1fae4-ee65-464e-b31a-4d1e27255d62> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ae60859d-bc19-4b00-b2cb-366f20303776> .
-<http://data.lblod.info/id/published-public-service/7cf1fae4-ee65-464e-b31a-4d1e27255d62> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:34.908Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/7cf1fae4-ee65-464e-b31a-4d1e27255d62> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:34.908Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3a1bca85-823a-4c3d-adaf-661b985390b1> a <https://www.w3.org/ns/activitystreams#Tombstone> .
-<http://data.lblod.info/id/published-public-service/3a1bca85-823a-4c3d-adaf-661b985390b1> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
-<http://data.lblod.info/id/published-public-service/3a1bca85-823a-4c3d-adaf-661b985390b1> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/77d63a92-2c4a-4796-8865-45ef67d4790c> .
-<http://data.lblod.info/id/published-public-service/3a1bca85-823a-4c3d-adaf-661b985390b1> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-28T15:13:35.083Z"^^xsd:dateTime .
-<http://data.lblod.info/id/published-public-service/3a1bca85-823a-4c3d-adaf-661b985390b1> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-28T15:13:35.083Z"^^xsd:dateTime .
-    }
-
-    }
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/ad209d38-3fb4-4d9d-b24f-e6f638afd20a> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/ad209d38-3fb4-4d9d-b24f-e6f638afd20a> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/ad209d38-3fb4-4d9d-b24f-e6f638afd20a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/5b41f291-fc32-4949-a2f8-c70771e66f40> .
+<http://data.lblod.info/id/published-public-service/ad209d38-3fb4-4d9d-b24f-e6f638afd20a> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:50.690Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/ad209d38-3fb4-4d9d-b24f-e6f638afd20a> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:50.690Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/499cbc39-10a5-48f7-945f-fc06098d52ab> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/499cbc39-10a5-48f7-945f-fc06098d52ab> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/499cbc39-10a5-48f7-945f-fc06098d52ab> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ccb02c54-204d-4bc6-83c8-fc6827c5ac42> .
+<http://data.lblod.info/id/published-public-service/499cbc39-10a5-48f7-945f-fc06098d52ab> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:50.931Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/499cbc39-10a5-48f7-945f-fc06098d52ab> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:50.931Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/18ba1fad-a046-4f8f-8723-8d420e765c78> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/18ba1fad-a046-4f8f-8723-8d420e765c78> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/18ba1fad-a046-4f8f-8723-8d420e765c78> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/b7e4b128-2e9d-4ac3-8f4f-90f93dc6baa0> .
+<http://data.lblod.info/id/published-public-service/18ba1fad-a046-4f8f-8723-8d420e765c78> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:51.185Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/18ba1fad-a046-4f8f-8723-8d420e765c78> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:51.185Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/5749f6c2-5f17-4acd-8966-1dd869d2ec13> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/5749f6c2-5f17-4acd-8966-1dd869d2ec13> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/5749f6c2-5f17-4acd-8966-1dd869d2ec13> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/df35700e-c66d-4b34-bef1-24c29efdf08f> .
+<http://data.lblod.info/id/published-public-service/5749f6c2-5f17-4acd-8966-1dd869d2ec13> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:51.442Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/5749f6c2-5f17-4acd-8966-1dd869d2ec13> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:51.442Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/ff311897-54a4-4668-8ff6-c64440ee13fb> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/ff311897-54a4-4668-8ff6-c64440ee13fb> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/ff311897-54a4-4668-8ff6-c64440ee13fb> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/cf441ac4-974f-4b0f-b61f-ef8ed6f323e5> .
+<http://data.lblod.info/id/published-public-service/ff311897-54a4-4668-8ff6-c64440ee13fb> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:51.659Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/ff311897-54a4-4668-8ff6-c64440ee13fb> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:51.659Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/b10cd4d0-5314-4994-af45-1dace6ec27db> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/b10cd4d0-5314-4994-af45-1dace6ec27db> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/b10cd4d0-5314-4994-af45-1dace6ec27db> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/7c274847-bf2b-4d93-9244-304766ad018e> .
+<http://data.lblod.info/id/published-public-service/b10cd4d0-5314-4994-af45-1dace6ec27db> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:51.834Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/b10cd4d0-5314-4994-af45-1dace6ec27db> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:51.834Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/764241a3-6995-4a1b-ad74-2321ccce652c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/764241a3-6995-4a1b-ad74-2321ccce652c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/764241a3-6995-4a1b-ad74-2321ccce652c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2c952860-dd44-4513-aa21-f520c5aeb307> .
+<http://data.lblod.info/id/published-public-service/764241a3-6995-4a1b-ad74-2321ccce652c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:52.041Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/764241a3-6995-4a1b-ad74-2321ccce652c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:52.041Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/12441eb7-940e-41d1-9661-531cbcf44a13> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/12441eb7-940e-41d1-9661-531cbcf44a13> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/12441eb7-940e-41d1-9661-531cbcf44a13> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/f4fa7750-c6e4-4a95-bcbf-4d2f5c57b01c> .
+<http://data.lblod.info/id/published-public-service/12441eb7-940e-41d1-9661-531cbcf44a13> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:52.266Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/12441eb7-940e-41d1-9661-531cbcf44a13> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:52.266Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/10870ef1-a356-4635-8945-9537404fc519> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/10870ef1-a356-4635-8945-9537404fc519> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/10870ef1-a356-4635-8945-9537404fc519> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/c46fcf84-e3d3-4d50-a009-926e71900cda> .
+<http://data.lblod.info/id/published-public-service/10870ef1-a356-4635-8945-9537404fc519> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:52.473Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/10870ef1-a356-4635-8945-9537404fc519> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:52.473Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/653ee9cb-2e61-44db-bc17-40880e2fa126> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/653ee9cb-2e61-44db-bc17-40880e2fa126> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/653ee9cb-2e61-44db-bc17-40880e2fa126> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/72681539-9c0e-4f04-9d85-b3ef55f476cd> .
+<http://data.lblod.info/id/published-public-service/653ee9cb-2e61-44db-bc17-40880e2fa126> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:52.691Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/653ee9cb-2e61-44db-bc17-40880e2fa126> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:52.691Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/7b96f738-b047-4eee-bd0e-9159ec95170b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/7b96f738-b047-4eee-bd0e-9159ec95170b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/7b96f738-b047-4eee-bd0e-9159ec95170b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ca68202e-8e0b-451a-9047-70f0833a9e00> .
+<http://data.lblod.info/id/published-public-service/7b96f738-b047-4eee-bd0e-9159ec95170b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:52.913Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/7b96f738-b047-4eee-bd0e-9159ec95170b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:52.913Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/ad66b7fa-932a-454c-b4a6-94e65d6dd199> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/ad66b7fa-932a-454c-b4a6-94e65d6dd199> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/ad66b7fa-932a-454c-b4a6-94e65d6dd199> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/8402040e-6bc2-4601-878e-9299d317bb4a> .
+<http://data.lblod.info/id/published-public-service/ad66b7fa-932a-454c-b4a6-94e65d6dd199> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:53.114Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/ad66b7fa-932a-454c-b4a6-94e65d6dd199> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:53.114Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/ea008425-b269-411a-9073-c68a9dc38b0c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/ea008425-b269-411a-9073-c68a9dc38b0c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/ea008425-b269-411a-9073-c68a9dc38b0c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/42252c62-11dd-4fe0-b114-204a9042f6d9> .
+<http://data.lblod.info/id/published-public-service/ea008425-b269-411a-9073-c68a9dc38b0c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:53.276Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/ea008425-b269-411a-9073-c68a9dc38b0c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:53.276Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/170fe9e5-7a63-489d-b3cd-6f83a1a003c3> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/170fe9e5-7a63-489d-b3cd-6f83a1a003c3> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/170fe9e5-7a63-489d-b3cd-6f83a1a003c3> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/4e9b01af-340f-41c1-b916-eecbff1626c1> .
+<http://data.lblod.info/id/published-public-service/170fe9e5-7a63-489d-b3cd-6f83a1a003c3> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:53.482Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/170fe9e5-7a63-489d-b3cd-6f83a1a003c3> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:53.482Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/e84121c2-8886-4b72-a149-a75ece4fa79b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/e84121c2-8886-4b72-a149-a75ece4fa79b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/e84121c2-8886-4b72-a149-a75ece4fa79b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/4a4a547b-cfaa-4743-9aab-02c110f3b513> .
+<http://data.lblod.info/id/published-public-service/e84121c2-8886-4b72-a149-a75ece4fa79b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:53.713Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/e84121c2-8886-4b72-a149-a75ece4fa79b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:53.713Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/aae243a5-03e0-41a3-9fa7-ea56d5537d2c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/aae243a5-03e0-41a3-9fa7-ea56d5537d2c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/aae243a5-03e0-41a3-9fa7-ea56d5537d2c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/dd03e1c9-9b2d-47f4-b98a-2a347a41b933> .
+<http://data.lblod.info/id/published-public-service/aae243a5-03e0-41a3-9fa7-ea56d5537d2c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:53.967Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/aae243a5-03e0-41a3-9fa7-ea56d5537d2c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:53.967Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/3e1c42b6-5f87-436f-8ccd-5f542cfba63b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/3e1c42b6-5f87-436f-8ccd-5f542cfba63b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/3e1c42b6-5f87-436f-8ccd-5f542cfba63b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/fa4b4dae-7fb7-466e-bf15-737da8fdc28c> .
+<http://data.lblod.info/id/published-public-service/3e1c42b6-5f87-436f-8ccd-5f542cfba63b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:54.172Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/3e1c42b6-5f87-436f-8ccd-5f542cfba63b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:54.172Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/14939ae5-acd9-460e-b3fb-69d1ba87f9fa> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/14939ae5-acd9-460e-b3fb-69d1ba87f9fa> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/14939ae5-acd9-460e-b3fb-69d1ba87f9fa> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/46bc068b-31ab-4869-bfd2-ad8c7036e9b1> .
+<http://data.lblod.info/id/published-public-service/14939ae5-acd9-460e-b3fb-69d1ba87f9fa> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:54.402Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/14939ae5-acd9-460e-b3fb-69d1ba87f9fa> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:54.402Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/2d1f976a-8623-487d-8aa9-a7b95ea0977a> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/2d1f976a-8623-487d-8aa9-a7b95ea0977a> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/2d1f976a-8623-487d-8aa9-a7b95ea0977a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/fc5af397-8e94-41f4-8c63-a849606d5020> .
+<http://data.lblod.info/id/published-public-service/2d1f976a-8623-487d-8aa9-a7b95ea0977a> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:54.591Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/2d1f976a-8623-487d-8aa9-a7b95ea0977a> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:54.591Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/117fa67b-bbca-44ec-89a2-6d61b502044e> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/117fa67b-bbca-44ec-89a2-6d61b502044e> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/117fa67b-bbca-44ec-89a2-6d61b502044e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e1f2b602-9f97-4955-9104-2ea7bcec7035> .
+<http://data.lblod.info/id/published-public-service/117fa67b-bbca-44ec-89a2-6d61b502044e> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:54.782Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/117fa67b-bbca-44ec-89a2-6d61b502044e> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:54.782Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/6aa5af0a-aa19-472e-8aa9-94a4952d549f> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/6aa5af0a-aa19-472e-8aa9-94a4952d549f> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/6aa5af0a-aa19-472e-8aa9-94a4952d549f> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/abf817c3-b347-4690-8496-b6a56740c674> .
+<http://data.lblod.info/id/published-public-service/6aa5af0a-aa19-472e-8aa9-94a4952d549f> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:54.985Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/6aa5af0a-aa19-472e-8aa9-94a4952d549f> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:54.985Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/e567aa78-030b-4509-9931-b80c4b7cf019> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/e567aa78-030b-4509-9931-b80c4b7cf019> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/e567aa78-030b-4509-9931-b80c4b7cf019> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/aa3ee51f-e86a-43c1-bb40-d585feb4b015> .
+<http://data.lblod.info/id/published-public-service/e567aa78-030b-4509-9931-b80c4b7cf019> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:55.189Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/e567aa78-030b-4509-9931-b80c4b7cf019> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:55.189Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/869c4ac5-e45a-40d6-9c69-0ad8c56bfa12> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/869c4ac5-e45a-40d6-9c69-0ad8c56bfa12> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/869c4ac5-e45a-40d6-9c69-0ad8c56bfa12> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/17d336e3-aaf7-458a-a599-862806dc1e0f> .
+<http://data.lblod.info/id/published-public-service/869c4ac5-e45a-40d6-9c69-0ad8c56bfa12> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:55.403Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/869c4ac5-e45a-40d6-9c69-0ad8c56bfa12> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:55.403Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/3b04e48a-a215-4c5f-b4ef-dd91ea9c65a0> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/3b04e48a-a215-4c5f-b4ef-dd91ea9c65a0> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/3b04e48a-a215-4c5f-b4ef-dd91ea9c65a0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ac621de9-4b5e-4c28-8c9c-1e26b36b5439> .
+<http://data.lblod.info/id/published-public-service/3b04e48a-a215-4c5f-b4ef-dd91ea9c65a0> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:55.596Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/3b04e48a-a215-4c5f-b4ef-dd91ea9c65a0> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:55.596Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/6d3f771b-69c3-4626-af0f-7e5f1e89fbc4> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/6d3f771b-69c3-4626-af0f-7e5f1e89fbc4> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/6d3f771b-69c3-4626-af0f-7e5f1e89fbc4> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e53767d7-f713-4779-acce-011ec9491cbb> .
+<http://data.lblod.info/id/published-public-service/6d3f771b-69c3-4626-af0f-7e5f1e89fbc4> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:55.818Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/6d3f771b-69c3-4626-af0f-7e5f1e89fbc4> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:55.818Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/30c3819f-9bd5-4238-802a-6160d22c04b4> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/30c3819f-9bd5-4238-802a-6160d22c04b4> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/30c3819f-9bd5-4238-802a-6160d22c04b4> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/cef9e9e7-c234-4c14-8cd2-b379861473f1> .
+<http://data.lblod.info/id/published-public-service/30c3819f-9bd5-4238-802a-6160d22c04b4> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:56.036Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/30c3819f-9bd5-4238-802a-6160d22c04b4> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:56.036Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/e97da7d0-8b5d-4f69-9be0-3bf08ff399b0> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/e97da7d0-8b5d-4f69-9be0-3bf08ff399b0> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/e97da7d0-8b5d-4f69-9be0-3bf08ff399b0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e15be43e-fc9a-4e44-9b66-49b77986a95a> .
+<http://data.lblod.info/id/published-public-service/e97da7d0-8b5d-4f69-9be0-3bf08ff399b0> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:56.269Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/e97da7d0-8b5d-4f69-9be0-3bf08ff399b0> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:56.269Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/2a829e8e-043c-4521-9183-a029c5500518> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/2a829e8e-043c-4521-9183-a029c5500518> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/2a829e8e-043c-4521-9183-a029c5500518> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/199bf2d0-6fa8-4e6d-8796-8897619886a5> .
+<http://data.lblod.info/id/published-public-service/2a829e8e-043c-4521-9183-a029c5500518> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:56.469Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/2a829e8e-043c-4521-9183-a029c5500518> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:56.469Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/e5d1f044-7b4d-4bb1-9888-11b53e77d3d8> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/e5d1f044-7b4d-4bb1-9888-11b53e77d3d8> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/e5d1f044-7b4d-4bb1-9888-11b53e77d3d8> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/954fb678-8718-4e35-a826-6cf9b5c6fc2f> .
+<http://data.lblod.info/id/published-public-service/e5d1f044-7b4d-4bb1-9888-11b53e77d3d8> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:56.672Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/e5d1f044-7b4d-4bb1-9888-11b53e77d3d8> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:56.672Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/3726d9c6-4b0d-4c1c-8232-d45bce942e4d> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/3726d9c6-4b0d-4c1c-8232-d45bce942e4d> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/3726d9c6-4b0d-4c1c-8232-d45bce942e4d> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2899adb2-dcb8-47ec-9cbd-bd35934d72f0> .
+<http://data.lblod.info/id/published-public-service/3726d9c6-4b0d-4c1c-8232-d45bce942e4d> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:56.888Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/3726d9c6-4b0d-4c1c-8232-d45bce942e4d> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:56.888Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/40ac7b3c-ee0e-4e30-871d-d0b360ba4f16> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/40ac7b3c-ee0e-4e30-871d-d0b360ba4f16> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/40ac7b3c-ee0e-4e30-871d-d0b360ba4f16> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/f9fbd90b-b95d-402d-919f-799aab92839f> .
+<http://data.lblod.info/id/published-public-service/40ac7b3c-ee0e-4e30-871d-d0b360ba4f16> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:57.096Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/40ac7b3c-ee0e-4e30-871d-d0b360ba4f16> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:57.096Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/6f4ce396-b517-4108-9898-62d8b0b50a86> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/6f4ce396-b517-4108-9898-62d8b0b50a86> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/6f4ce396-b517-4108-9898-62d8b0b50a86> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/205ee1ce-be40-4c08-b68c-76869b2787a9> .
+<http://data.lblod.info/id/published-public-service/6f4ce396-b517-4108-9898-62d8b0b50a86> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:57.308Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/6f4ce396-b517-4108-9898-62d8b0b50a86> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:57.308Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/a9d130a7-de37-4eee-8dec-c9e862f32e73> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/a9d130a7-de37-4eee-8dec-c9e862f32e73> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/a9d130a7-de37-4eee-8dec-c9e862f32e73> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/6e933898-848e-49cc-85f3-692953411160> .
+<http://data.lblod.info/id/published-public-service/a9d130a7-de37-4eee-8dec-c9e862f32e73> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:57.573Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/a9d130a7-de37-4eee-8dec-c9e862f32e73> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:57.573Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/07099af7-ee74-4f0c-806f-4df538907764> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/07099af7-ee74-4f0c-806f-4df538907764> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/07099af7-ee74-4f0c-806f-4df538907764> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2d963ad0-5811-474f-81ae-cdcacd38e00c> .
+<http://data.lblod.info/id/published-public-service/07099af7-ee74-4f0c-806f-4df538907764> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:57.783Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/07099af7-ee74-4f0c-806f-4df538907764> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:57.783Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/b13b3e62-ef90-4add-bac0-b45f603d33b7> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/b13b3e62-ef90-4add-bac0-b45f603d33b7> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/b13b3e62-ef90-4add-bac0-b45f603d33b7> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/8800198f-70ed-404d-9edf-52cc03491734> .
+<http://data.lblod.info/id/published-public-service/b13b3e62-ef90-4add-bac0-b45f603d33b7> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:57.992Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/b13b3e62-ef90-4add-bac0-b45f603d33b7> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:57.992Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/588b1eaa-5772-4ad2-b5fc-19e5ba530a6a> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/588b1eaa-5772-4ad2-b5fc-19e5ba530a6a> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/588b1eaa-5772-4ad2-b5fc-19e5ba530a6a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/3dc3a150-eaa6-42b3-b3b9-340cc7f4a9ac> .
+<http://data.lblod.info/id/published-public-service/588b1eaa-5772-4ad2-b5fc-19e5ba530a6a> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:58.199Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/588b1eaa-5772-4ad2-b5fc-19e5ba530a6a> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:58.199Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/12501207-0ec7-4c4a-ae52-bfe57e89ccd4> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/12501207-0ec7-4c4a-ae52-bfe57e89ccd4> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/12501207-0ec7-4c4a-ae52-bfe57e89ccd4> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/b7808748-5bae-4cf3-9d6d-a171bd7cd7cf> .
+<http://data.lblod.info/id/published-public-service/12501207-0ec7-4c4a-ae52-bfe57e89ccd4> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:58.405Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/12501207-0ec7-4c4a-ae52-bfe57e89ccd4> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:58.405Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/719c9428-7f27-471f-9f33-303b816480b1> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/719c9428-7f27-471f-9f33-303b816480b1> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/719c9428-7f27-471f-9f33-303b816480b1> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/3d7d1670-aaee-4b5d-821c-09184c5d03e3> .
+<http://data.lblod.info/id/published-public-service/719c9428-7f27-471f-9f33-303b816480b1> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:58.615Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/719c9428-7f27-471f-9f33-303b816480b1> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:58.615Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/be0c0de9-8b1a-49cc-875d-22eff50e4e7c> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/be0c0de9-8b1a-49cc-875d-22eff50e4e7c> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/be0c0de9-8b1a-49cc-875d-22eff50e4e7c> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ba42ec9b-2b9e-4c06-8399-047790c6cb77> .
+<http://data.lblod.info/id/published-public-service/be0c0de9-8b1a-49cc-875d-22eff50e4e7c> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:58.816Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/be0c0de9-8b1a-49cc-875d-22eff50e4e7c> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:58.816Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/9d0d3e8a-9979-4fcf-b4ab-b83d7d550957> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/9d0d3e8a-9979-4fcf-b4ab-b83d7d550957> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/9d0d3e8a-9979-4fcf-b4ab-b83d7d550957> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/56d7e075-4738-487b-a925-758ec8498177> .
+<http://data.lblod.info/id/published-public-service/9d0d3e8a-9979-4fcf-b4ab-b83d7d550957> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:59.018Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/9d0d3e8a-9979-4fcf-b4ab-b83d7d550957> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:59.018Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/37507d34-86ff-4a84-9ca9-af1b5cde60b2> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/37507d34-86ff-4a84-9ca9-af1b5cde60b2> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/37507d34-86ff-4a84-9ca9-af1b5cde60b2> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/5fe36bf3-4585-42c7-a92e-5dc13abb19c0> .
+<http://data.lblod.info/id/published-public-service/37507d34-86ff-4a84-9ca9-af1b5cde60b2> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:59.222Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/37507d34-86ff-4a84-9ca9-af1b5cde60b2> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:59.222Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/d0d8f8c4-2fe9-48be-b7aa-94552edb0bd0> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/d0d8f8c4-2fe9-48be-b7aa-94552edb0bd0> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/d0d8f8c4-2fe9-48be-b7aa-94552edb0bd0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/38ab9ea9-949e-4071-b526-a36bb81300a9> .
+<http://data.lblod.info/id/published-public-service/d0d8f8c4-2fe9-48be-b7aa-94552edb0bd0> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:59.430Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/d0d8f8c4-2fe9-48be-b7aa-94552edb0bd0> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:59.430Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/fac388da-3538-4e27-9b9a-78dd54d58982> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/fac388da-3538-4e27-9b9a-78dd54d58982> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/fac388da-3538-4e27-9b9a-78dd54d58982> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/e4424de2-270f-4067-b25e-0ef01da999b7> .
+<http://data.lblod.info/id/published-public-service/fac388da-3538-4e27-9b9a-78dd54d58982> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:59.627Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/fac388da-3538-4e27-9b9a-78dd54d58982> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:59.627Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/76a8d29b-177a-4e91-9808-216ddb44cdfc> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/76a8d29b-177a-4e91-9808-216ddb44cdfc> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/76a8d29b-177a-4e91-9808-216ddb44cdfc> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/20171124-3974-4f74-9147-98b8e6a461e2> .
+<http://data.lblod.info/id/published-public-service/76a8d29b-177a-4e91-9808-216ddb44cdfc> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:05:59.825Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/76a8d29b-177a-4e91-9808-216ddb44cdfc> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:05:59.825Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/2c61a1ef-5028-42e6-91d2-e98e9ec4f193> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/2c61a1ef-5028-42e6-91d2-e98e9ec4f193> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/2c61a1ef-5028-42e6-91d2-e98e9ec4f193> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/724d69fe-249f-4747-89f4-167b490ec61f> .
+<http://data.lblod.info/id/published-public-service/2c61a1ef-5028-42e6-91d2-e98e9ec4f193> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:00.025Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/2c61a1ef-5028-42e6-91d2-e98e9ec4f193> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:00.025Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/3b79a9bf-1dff-4ec6-8a2d-618884e61cb4> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/3b79a9bf-1dff-4ec6-8a2d-618884e61cb4> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/3b79a9bf-1dff-4ec6-8a2d-618884e61cb4> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/c436b88d-5cc8-46b8-a07e-550833da6ea2> .
+<http://data.lblod.info/id/published-public-service/3b79a9bf-1dff-4ec6-8a2d-618884e61cb4> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:00.225Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/3b79a9bf-1dff-4ec6-8a2d-618884e61cb4> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:00.225Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/dced9773-d2b8-453e-9527-23b45e4a3aa7> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/dced9773-d2b8-453e-9527-23b45e4a3aa7> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/dced9773-d2b8-453e-9527-23b45e4a3aa7> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/df8375fb-ec2f-4333-b1fc-908f3a08e233> .
+<http://data.lblod.info/id/published-public-service/dced9773-d2b8-453e-9527-23b45e4a3aa7> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:00.445Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/dced9773-d2b8-453e-9527-23b45e4a3aa7> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:00.445Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/4cbf16c5-c793-4260-a934-8f4f07d403e0> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/4cbf16c5-c793-4260-a934-8f4f07d403e0> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/4cbf16c5-c793-4260-a934-8f4f07d403e0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/2c35c118-0a78-4523-b6e6-b79df9d19ef3> .
+<http://data.lblod.info/id/published-public-service/4cbf16c5-c793-4260-a934-8f4f07d403e0> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:00.642Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/4cbf16c5-c793-4260-a934-8f4f07d403e0> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:00.642Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/38083a14-eb7e-4aaf-bbaa-f2091df1c1b0> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/38083a14-eb7e-4aaf-bbaa-f2091df1c1b0> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/38083a14-eb7e-4aaf-bbaa-f2091df1c1b0> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/c4039d6b-553d-444a-821e-17be4fc71904> .
+<http://data.lblod.info/id/published-public-service/38083a14-eb7e-4aaf-bbaa-f2091df1c1b0> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:00.861Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/38083a14-eb7e-4aaf-bbaa-f2091df1c1b0> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:00.861Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/e0ab1c6c-3774-4e26-a9ec-fe05587daadd> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/e0ab1c6c-3774-4e26-a9ec-fe05587daadd> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/e0ab1c6c-3774-4e26-a9ec-fe05587daadd> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/4de149c5-55ce-45ba-b5e5-4ceae2bb55e0> .
+<http://data.lblod.info/id/published-public-service/e0ab1c6c-3774-4e26-a9ec-fe05587daadd> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:01.064Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/e0ab1c6c-3774-4e26-a9ec-fe05587daadd> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:01.064Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/97faf207-ea7d-4624-b5b7-958ab2ebeb62> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/97faf207-ea7d-4624-b5b7-958ab2ebeb62> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/97faf207-ea7d-4624-b5b7-958ab2ebeb62> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/bc86181d-8c6c-44da-81aa-0f02b8ce4866> .
+<http://data.lblod.info/id/published-public-service/97faf207-ea7d-4624-b5b7-958ab2ebeb62> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:01.215Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/97faf207-ea7d-4624-b5b7-958ab2ebeb62> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:01.215Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/6fa6a65f-28f2-41bb-8ed4-cafa31b360ae> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/6fa6a65f-28f2-41bb-8ed4-cafa31b360ae> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/6fa6a65f-28f2-41bb-8ed4-cafa31b360ae> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/df3e48de-46d3-41c1-9467-59ace3178377> .
+<http://data.lblod.info/id/published-public-service/6fa6a65f-28f2-41bb-8ed4-cafa31b360ae> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:01.464Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/6fa6a65f-28f2-41bb-8ed4-cafa31b360ae> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:01.464Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/ca2b2d6b-d22e-4305-addf-702dc444dc7e> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/ca2b2d6b-d22e-4305-addf-702dc444dc7e> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/ca2b2d6b-d22e-4305-addf-702dc444dc7e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/04a639ce-8716-484a-a86b-bdcb207541fe> .
+<http://data.lblod.info/id/published-public-service/ca2b2d6b-d22e-4305-addf-702dc444dc7e> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:01.663Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/ca2b2d6b-d22e-4305-addf-702dc444dc7e> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:01.663Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/fa8c821a-bad3-4144-8b01-8f7aa68ad860> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/fa8c821a-bad3-4144-8b01-8f7aa68ad860> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/fa8c821a-bad3-4144-8b01-8f7aa68ad860> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/911f2c72-3fd8-4511-9449-f11ee4b86980> .
+<http://data.lblod.info/id/published-public-service/fa8c821a-bad3-4144-8b01-8f7aa68ad860> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:01.866Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/fa8c821a-bad3-4144-8b01-8f7aa68ad860> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:01.866Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/b5f4972b-a3d9-450e-ac82-15c9aa89c272> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/b5f4972b-a3d9-450e-ac82-15c9aa89c272> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/b5f4972b-a3d9-450e-ac82-15c9aa89c272> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ab1febf5-71e6-4248-969b-14805f659bc2> .
+<http://data.lblod.info/id/published-public-service/b5f4972b-a3d9-450e-ac82-15c9aa89c272> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:02.084Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/b5f4972b-a3d9-450e-ac82-15c9aa89c272> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:02.084Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/7c621b84-281a-4967-8270-0772f7aaa83e> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/7c621b84-281a-4967-8270-0772f7aaa83e> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/7c621b84-281a-4967-8270-0772f7aaa83e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/06991c2c-9282-4760-91bc-475314d09179> .
+<http://data.lblod.info/id/published-public-service/7c621b84-281a-4967-8270-0772f7aaa83e> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:02.292Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/7c621b84-281a-4967-8270-0772f7aaa83e> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:02.292Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/622df469-b74d-417a-9d3a-0937b7917d94> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/622df469-b74d-417a-9d3a-0937b7917d94> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/622df469-b74d-417a-9d3a-0937b7917d94> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/525435a5-73f9-41df-b4ee-4dbd3fce3b40> .
+<http://data.lblod.info/id/published-public-service/622df469-b74d-417a-9d3a-0937b7917d94> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:02.499Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/622df469-b74d-417a-9d3a-0937b7917d94> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:02.499Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/aea606ee-8f78-49d7-a363-a8635ffd914b> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/aea606ee-8f78-49d7-a363-a8635ffd914b> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/aea606ee-8f78-49d7-a363-a8635ffd914b> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/81ee90aa-f6c6-4ab4-aa7c-ed642eb80b87> .
+<http://data.lblod.info/id/published-public-service/aea606ee-8f78-49d7-a363-a8635ffd914b> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:02.698Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/aea606ee-8f78-49d7-a363-a8635ffd914b> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:02.698Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/74e342b7-a156-485b-9d55-59d0dbabfe32> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/74e342b7-a156-485b-9d55-59d0dbabfe32> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/74e342b7-a156-485b-9d55-59d0dbabfe32> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/3909bca5-ed50-4b92-bc9c-783c770b8ef3> .
+<http://data.lblod.info/id/published-public-service/74e342b7-a156-485b-9d55-59d0dbabfe32> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:02.928Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/74e342b7-a156-485b-9d55-59d0dbabfe32> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:02.928Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/bd6dd317-7e3a-40aa-85de-c3f23ad3e69e> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/bd6dd317-7e3a-40aa-85de-c3f23ad3e69e> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/bd6dd317-7e3a-40aa-85de-c3f23ad3e69e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/6b2727b6-4462-4356-8918-bf126d6ea4f6> .
+<http://data.lblod.info/id/published-public-service/bd6dd317-7e3a-40aa-85de-c3f23ad3e69e> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:03.081Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/bd6dd317-7e3a-40aa-85de-c3f23ad3e69e> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:03.081Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/0906c905-ab2e-4508-96e2-b5c4469dca6e> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/0906c905-ab2e-4508-96e2-b5c4469dca6e> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/0906c905-ab2e-4508-96e2-b5c4469dca6e> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/ae60859d-bc19-4b00-b2cb-366f20303776> .
+<http://data.lblod.info/id/published-public-service/0906c905-ab2e-4508-96e2-b5c4469dca6e> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:03.276Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/0906c905-ab2e-4508-96e2-b5c4469dca6e> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:03.276Z"^^xsd:dateTime .
+}
+}
+;
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c5dbb08e35e2d090a05d119fef4cc161b5ee1f322698cb8ea3c8c6643a521cf2/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/published-public-service/ba16cae7-bb57-43ec-b44d-5fbc19bd5190> a <https://www.w3.org/ns/activitystreams#Tombstone> .
+<http://data.lblod.info/id/published-public-service/ba16cae7-bb57-43ec-b44d-5fbc19bd5190> <https://www.w3.org/ns/activitystreams#formerType> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/published-public-service/ba16cae7-bb57-43ec-b44d-5fbc19bd5190> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isPublishedVersionOf> <http://data.lblod.info/id/public-service/77d63a92-2c4a-4796-8865-45ef67d4790c> .
+<http://data.lblod.info/id/published-public-service/ba16cae7-bb57-43ec-b44d-5fbc19bd5190> <https://www.w3.org/ns/activitystreams#deleted> "2025-01-31T11:06:03.491Z"^^xsd:dateTime .
+<http://data.lblod.info/id/published-public-service/ba16cae7-bb57-43ec-b44d-5fbc19bd5190> <http://www.w3.org/ns/prov#generatedAtTime> "2025-01-31T11:06:03.491Z"^^xsd:dateTime .
+}
+}
