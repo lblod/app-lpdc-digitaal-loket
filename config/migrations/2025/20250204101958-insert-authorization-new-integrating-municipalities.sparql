@@ -1,0 +1,13 @@
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/authorization> {
+       ?organisation lpdc:canPublishInstanceToGraph <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct>.
+  }
+} WHERE {
+  VALUES ?organisation {
+    <http://data.lblod.info/id/bestuurseenheden/8d7de878-db13-4fe1-8d74-bb8c9a690d90> # Pelt (municipality)
+    <http://data.lblod.info/id/bestuurseenheden/fad1ca7a-ac26-43fc-b167-b8ae4f873553> # Pelt (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/764278b3ceac360476b418c108d1b022b6e0cc8fb676f3f6b6b9faf78a2375ba> # Geel (gemeente)
+  }
+}
