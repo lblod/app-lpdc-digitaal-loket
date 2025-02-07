@@ -3,10 +3,12 @@
 
 ## v0.24.0 (2025-02-10)
 ### Backend
+- Archive product instances for merged municipalities and OCMWs (LPDC-1317)
 - Add organisation statuses from OP (LPDC-1340)
 - Bump `lpdc-management` service to v0.46.2 that no longer allows publishing  product instances linked to old organisations (LPDC-1335)
 - Add `District Borsbeek` (LPDC-1336)
 ### Deploy instructions
+Generate the environment-specific migrations to archive product instances following these [instructions](https://github.com/lblod/lpdc-management-service/blob/development/migration-scripts/transfer-instances/readme.md#transfer-instances) and place these migrations in the `config/migrations/local/` folder.
 #### Docker commands
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 - `drc pull lpdc-management; drc up -d lpdc-management`
