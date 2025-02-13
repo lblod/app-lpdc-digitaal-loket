@@ -1,5 +1,12 @@
 # Changelog
 ## Unreleased
+### Backend
+- Add an LDES consumer for BCT to support additional integrating organisations  [LPDC-1324]
+### Deploy instructions
+- To enable the LDES consumer for BCT set the correct `LDES_ENDPOINT_VIEW` in the environment's `docker-compose.override.yaml`. Ensure the migration adding data to the authorisation graph is executed before starting the LDES consumer.
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+- `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
 
 ## v0.24.0 (2025-02-10)
 ### Backend
