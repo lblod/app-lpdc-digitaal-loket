@@ -1,0 +1,13 @@
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/4b93b99b2a80c6ce4e64850589a8c0163fc055b074b061a64add3e1af303f1fe/LoketLB-LPDCGebruiker> {
+  	?s ?p ?o.
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/4b93b99b2a80c6ce4e64850589a8c0163fc055b074b061a64add3e1af303f1fe/LoketLB-LPDCGebruiker> {
+  	?s a lpdc:FormalInformalChoice .
+  	?s ?p ?o .
+  }
+}
