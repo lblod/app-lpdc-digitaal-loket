@@ -1,6 +1,7 @@
 # Changelog
 ## Unreleased
 ### Backend
+- Reset formal/informal choice for Wortegem-Petegem [LPDC-1358]
 - Add an LDES consumer for BCT to support additional integrating organisations  [LPDC-1324]
 ### Deploy instructions
 - To enable the LDES consumer for BCT set the correct `LDES_ENDPOINT_VIEW` in the environment's `docker-compose.override.yaml`. Ensure the migration adding data to the authorisation graph is executed before starting the LDES consumer.
