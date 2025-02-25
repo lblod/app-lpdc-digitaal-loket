@@ -309,7 +309,7 @@ services:
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct"
-      PERSIST_STATE: false
+      PERSIST_STATE: true
       REPLACE_VERSIONS: false
     labels:
       - "logging=true"
