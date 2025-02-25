@@ -1,5 +1,7 @@
 # Changelog
 ## Unreleased
+
+## v0.25.0 (2025-02-25)
 ### Backend
 - Add an LDES consumer for BCT to support additional integrating organisations  [LPDC-1324]
 ### Deploy instructions
