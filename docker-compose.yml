@@ -223,7 +223,7 @@ services:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
       INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
       CONCEPT_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
-      ENABLE_MUNICIPALITY_MERGER_FLAG: "true"
+      ENABLE_MUNICIPALITY_MERGER_FLAG: "false"
     labels:
       - "logging=true"
     healthcheck:
