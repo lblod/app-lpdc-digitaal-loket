@@ -1,5 +1,7 @@
 # Changelog
 ## Unreleased
+### Backend
+- Bump `frontend` and `lpdc-management` to add the merger feature flag (LPDC-1339)
 
 ## v0.25.1 (2025-02-25)
 ### Backend
