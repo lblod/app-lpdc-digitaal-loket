@@ -2,6 +2,11 @@
 ## Unreleased
 ### Backend
 - Bump `frontend` and `lpdc-management` to add the merger feature flag (LPDC-1339)
+- Disable cache on public service concepts route [LPDC-1360]
+#### Docker commands
+- `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
+- `drc restart dispatcher`
+
 
 ## v0.25.1 (2025-02-25)
 ### Backend
