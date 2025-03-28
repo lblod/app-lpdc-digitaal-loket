@@ -6,16 +6,20 @@
 !/data/db/toLoad
 !/data/db/toLoad/*
 /data/files/*
+/data/ldes-consumer-instancesnapshot-bct/*
 .DS_Store
 *~
 
 !/tmp/
 
 docker-compose.override.yml
+*.bckp
+*.save
 
 /.idea
 /.idea/*
 
+/basic-auth/*
 .htpasswd
 .env
 data-backup
