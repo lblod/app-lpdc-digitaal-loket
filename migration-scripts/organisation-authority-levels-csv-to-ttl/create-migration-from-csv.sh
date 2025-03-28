@@ -29,8 +29,8 @@ do
       ;;
   esac
 
-  echo "<$uri> lpdc:competencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/$level>. #$lpdcName" >> "$filename"
-  echo -e "<$uri> lpdc:executionLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/$level>. \n" >> "$filename"
+  echo "<$uri> lpdc:organisationCompetencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/$level>. #$lpdcName" >> "$filename"
+  echo -e "<$uri> lpdc:organisationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/$level>. \n" >> "$filename"
 done < <(tail -n +3 lpdc.csv)
 
 echo "TTL file generation completed"
