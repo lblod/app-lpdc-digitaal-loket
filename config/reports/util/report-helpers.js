@@ -1,26 +1,27 @@
-import {generateReportFromData} from '../../helpers.js';
+import { generateReportFromData } from "../../helpers.js";
 
 /**
- * Generates a CSV for the given sparql query-result
+ * Generates a CSV for the given SPARQL query-result
  *
- * @param result - the query-result
- * @param metadata - metadata for the CSV file
- * @returns {Promise<void>}
+ * @param queryResults - the results from the query
+ * @param metadata - metadata for the resulting CSV file
  */
-export async function generateReportFromQueryResult({results, head}, metadata) {
-  if (!(results && results.bindings.length)) {
-    console.warn('[WARN] nothing to report on ...');
-  } else {
-    const bindings = results.bindings;
-    const vars = head.vars;
-    const data = bindings.map(row => {
+export async function generateReportFromQueryResult(queryResults, metadata) {
+  const bindings = queryResults.results?.bindings;
+  const header = queryResults.head?.vars;
+
+  if (bindings && bindings.length && header) {
+    const data = bindings.map((row) => {
       const obj = {};
-      vars.forEach((variable) => {
+      header.forEach((variable) => {
         obj[variable] = getSafeValue(row, variable);
       });
       return obj;
     });
-    await generateReportFromData(data, vars, metadata);
+
+    await generateReportFromData(data, header, metadata);
+  } else {
+    console.warn("[WARN] nothing to report on ...");
   }
 }
 
