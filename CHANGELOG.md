@@ -1,5 +1,11 @@
 # Changelog
 ## Unreleased
+
+## v0.26.0 (2025-03-28)
+### Frontend
+- Bump to [v0.20.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0200-2025-03-04)
+### Management
+- Bump to [v0.48.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.48.0)
 ### Backend
 - Bump `frontend` and `lpdc-management` to add the merger feature flag (LPDC-1339)
 - Disable cache on public service concepts route [LPDC-1370]
