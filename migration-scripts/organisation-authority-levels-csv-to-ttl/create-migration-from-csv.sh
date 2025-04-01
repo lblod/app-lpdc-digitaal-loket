@@ -11,6 +11,11 @@ while IFS=";" read -r ovo_nr naam bestuursniveau lpdcName class uri
 do
   level=""
 
+  # if no uri found, skip the org since it's not yet known in OP
+  if [ -z $uri ]; then
+    continue;
+  fi
+
   case "$bestuursniveau" in
     "Lokale overheid")
       level="Lokaal"

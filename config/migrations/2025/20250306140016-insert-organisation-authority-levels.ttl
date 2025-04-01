@@ -1,8 +1,0 @@
-@prefix lpdc:  <http://data.lblod.info/vocabularies/lpdc/> .
-
-<http://data.lblod.info/id/bestuurseenheden/38dc63f50a4f7ea61ef741d8944a874a59ba84b69b9ff3e73f69680da2c6ef37> lpdc:organizationCompetencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>. # Aartselaar
-<http://data.lblod.info/id/bestuurseenheden/38dc63f50a4f7ea61ef741d8944a874a59ba84b69b9ff3e73f69680da2c6ef37> lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>.
-
-<https://data.vlaanderen.be/id/organisatie/OVO027227> lpdc:organizationCompetencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal>. # Federale overheidsdiensten
-<https://data.vlaanderen.be/id/organisatie/OVO027227> lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Federaal>.
-
