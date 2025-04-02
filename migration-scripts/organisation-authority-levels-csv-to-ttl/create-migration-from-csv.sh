@@ -1,11 +1,17 @@
 #!/bin/bash
 
 # Create ttl file
-filename="$(date +%Y%m%d%H%M%S)-insert-organisation-authority-levels.ttl"
-touch "$filename"
+filename="$(date +%Y%m%d%H%M%S)-insert-organisation-authority-levels"
+ttlFile="$filename.ttl"
+graphFile="$filename.graph"
+
+touch "$ttlFile"
+touch "$graphFile"
+
+echo "http://mu.semte.ch/graphs/public" >> "$graphFile"
 
 # Add prefix header
-echo -e "@prefix lpdc:  <http://data.lblod.info/vocabularies/lpdc/> .\n" >> "$filename"
+echo -e "@prefix lpdc:  <http://data.lblod.info/vocabularies/lpdc/> .\n" >> "$ttlFile"
 
 while IFS=";" read -r ovo_nr naam bestuursniveau lpdcName class uri
 do
@@ -34,8 +40,8 @@ do
       ;;
   esac
 
-  echo "<$uri> lpdc:organizationCompetencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/$level>. #$lpdcName" >> "$filename"
-  echo -e "<$uri> lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/$level>. \n" >> "$filename"
+  echo "<$uri> lpdc:organizationCompetencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/$level>. #$lpdcName" >> "$ttlFile"
+  echo -e "<$uri> lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/$level>. \n" >> "$ttlFile"
 done < <(tail -n +3 lpdc.csv)
 
 echo "TTL file generation completed"
