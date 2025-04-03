@@ -1,5 +1,10 @@
 # Changelog
 ## Unreleased
+### Backend
+- datafix: disable municipality merger labels for product instances [LPDC-1403]
+### Deploy notes
+#### Docker instructions
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
 
 ## v0.26.1 (2025-04-04)
 ### Backend
