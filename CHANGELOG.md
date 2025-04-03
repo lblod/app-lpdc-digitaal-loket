@@ -12,12 +12,14 @@
 - Bump the BCT LDES consumer to a tagged version
 - Bump `lpdc-managament` adding extra validations on incoming instance snapshots [LPDC-1301]
 - datafix: link active organisations to new spatials [LPDC-1383]
+### Deploy notes
+- On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 #### Docker commands
 - `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
 - `drc restart dispatcher`
 - `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
-
+- On ACC and PROD: `drc up -d controle`
 
 ## v0.25.1 (2025-02-25)
 ### Backend
