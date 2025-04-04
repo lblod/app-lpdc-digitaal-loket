@@ -1,5 +1,10 @@
 # Changelog
 ## Unreleased
+### Backend
+- datafix: ensure all resources in IPDCOrganisaties concept scheme have the type `skos:Concept`
+### Deploy notes
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
 
 ## v0.26.0 (2025-03-28)
 ### Frontend
