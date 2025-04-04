@@ -1,5 +1,7 @@
 # Changelog
 ## Unreleased
+
+## v0.26.1 (2025-04-04)
 ### Backend
 - datafix: ensure all resources in IPDCOrganisaties concept scheme have the type `skos:Concept`
 ### Deploy notes
