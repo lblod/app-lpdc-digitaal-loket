@@ -1,6 +1,9 @@
 steps:
   run-latest-test-and-deploy-to-dev:
     image: ubuntu:22.04
+    environment:
+      SSH_KEY:
+        from_secret: ssh_key
     commands:
       - echo "install ssh"
       - apt-get update
@@ -14,8 +17,6 @@ steps:
       - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-ci && git fetch && git checkout ${CI_COMMIT_BRANCH} && git pull && cd /data/app-lpdc-digitaal-loket-ci/tests && npx playwright install && npx playwright install-deps && ./run-latest.sh; exitcode=$?; (cd /data/app-lpdc-digitaal-loket-ci/tests && mkdir /data/woodpecker-ci-app-lpdc-digitaal-loket-ci-build-results/build-${CI_PIPELINE_NUMBER} && cp -r all-reports/ /data/woodpecker-ci-app-lpdc-digitaal-loket-ci-build-results/build-${CI_PIPELINE_NUMBER}/); exit $exitcode'
       - ssh root@lpdc-dev.s.redhost.be 'cd /data/app-lpdc-digitaal-loket-dev && git fetch && git checkout development && git pull && docker compose down --remove-orphans && docker compose pull && docker compose up -d'
 
-    secrets: [ ssh_key ]
-
 when:
-  branch: development
-  event: push
+  - branch: [development]
+    event: push
