@@ -1,7 +1,37 @@
 # Changelog
 ## Unreleased
 ### Backend
+- datafix: disable municipality merger labels for product instances [LPDC-1403]
+### Deploy notes
+#### Docker instructions
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
+## v0.26.1 (2025-04-04)
+### Backend
+- datafix: ensure all resources in IPDCOrganisaties concept scheme have the type `skos:Concept`
+### Deploy notes
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
+## v0.26.0 (2025-03-28)
+### Frontend
+- Bump to [v0.20.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0200-2025-03-04)
+### Management
+- Bump to [v0.48.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.48.0)
+### Backend
 - Bump `frontend` and `lpdc-management` to add the merger feature flag (LPDC-1339)
+- Disable cache on public service concepts route [LPDC-1370]
+- Bump the BCT LDES consumer to a tagged version
+- Bump `lpdc-managament` adding extra validations on incoming instance snapshots [LPDC-1301]
+- datafix: link active organisations to new spatials [LPDC-1383]
+### Deploy notes
+- On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
+#### Docker commands
+- `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
+- `drc restart dispatcher`
+- `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+- On ACC and PROD: `drc up -d controle`
 
 ## v0.25.1 (2025-02-25)
 ### Backend

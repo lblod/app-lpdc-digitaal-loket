@@ -117,8 +117,15 @@ defmodule Dispatcher do
   #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
+
+  # NOTE (11/03/2025): Do *not* use cache in the following rule. When a user
+  # creates a new product instance from a concept, the management service can
+  # update the `conceptIsNew` and `conceptIsInstantiated` properties for the
+  # corresponding concept display configurations. These updates are not picked
+  # up by the cache, resulting in the frontend showing outdated information
+  # afterwards. (See LPDC-1370)
   match "/conceptual-public-services/*path" do
-    forward conn, path, "http://cache/conceptual-public-services/"
+    forward conn, path, "http://resource/conceptual-public-services/"
   end
 
   match "/identifiers/*path" do

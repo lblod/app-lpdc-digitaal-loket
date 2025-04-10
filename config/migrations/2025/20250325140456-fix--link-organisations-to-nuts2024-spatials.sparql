@@ -1,0 +1,63 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX regorg: <http://www.w3.org/ns/regorg#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX nuts:  <http://data.europa.eu/nuts/code/>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?werkingsgebied skos:exactMatch ?oldSpatial.
+  }
+} INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?werkingsgebied skos:exactMatch ?newSpatial.
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?org regorg:orgStatus <http://lblod.data.gift/concepts/63cc561de9188d64ba5840a42ae8f0d6>; # Active
+         besluit:werkingsgebied ?werkingsgebied.
+    ?werkingsgebied skos:exactMatch ?oldSpatial.
+    ?spatial time:hasEnd ?endDate.
+    FILTER (?endDate = "2024-12-31"^^xsd:date)
+  }
+  VALUES (?oldSpatial ?newSpatial) {
+    # Galmaarden (BE24123023) + Gooik (BE24123024) + Herne (BE24123032) -> Pajottegem (BE24123106)
+    (nuts:BE24123023 nuts:BE24123106)
+    (nuts:BE24123024 nuts:BE24123106)
+    (nuts:BE24123032 nuts:BE24123106)
+    # Ruiselede (BE25737012) + Wingene (BE25737018) -> Wingene (BE25737021)
+    (nuts:BE25737012 nuts:BE25737021)
+    (nuts:BE25737018 nuts:BE25737021)
+    # Meulebeke (BE25737007) + Tielt (BE25737015) -> Tielt (BE25737022)
+    (nuts:BE25737007 nuts:BE25737022)
+    (nuts:BE25737015 nuts:BE25737022)
+    # De Pinte (BE23444012) + Nazareth (BE23444048) -> Nazareth-De Pinte (BE23444086)
+    (nuts:BE23444012 nuts:BE23444086)
+    (nuts:BE23444048 nuts:BE23444086)
+    # Lochristi (BE23444034) + Wachtebeke (BE23444073) -> Lochristi (BE23444087)
+    (nuts:BE23444034 nuts:BE23444087)
+    (nuts:BE23444073 nuts:BE23444087)
+    # Lokeren (BE23646014) + Moerbeke (44045) -> Lokeren (BE23646029)
+    (nuts:BE23646014 nuts:BE23646029)
+    (nuts:BE23444045 nuts:BE23646029)
+    # Melle (BE23444040) + Merelbeke (44043) -> Merelbeke-Melle (BE23444088)
+    (nuts:BE23444040 nuts:BE23444088)
+    (nuts:BE23444043 nuts:BE23444088)
+    # Beveren (BE23646003) + Kruibeke (BE23646013) + Zwijndrecht (BE21111056) -> Beveren-Kruibeke-Zwijndrecht (BE23646030)
+    (nuts:BE23646003 nuts:BE23646030)
+    (nuts:BE23646013 nuts:BE23646030)
+    (nuts:BE21111056 nuts:BE23646030)
+    # Bilzen (BE22373006) + Hoeselt (BE22373032) -> Bilzen-Hoeselt (BE22373110)
+    (nuts:BE22373006 nuts:BE22373110)
+    (nuts:BE22373032 nuts:BE22373110)
+    # Borgloon (BE22373009) + Tongeren (BE22373083) -> Tongeren-Borgloon (BE22373111)
+    (nuts:BE22373009 nuts:BE22373111)
+    (nuts:BE22373083 nuts:BE22373111)
+    # Ham (BE22171069) + Tessenderlo (BE22171057) -> Tessenderlo-Ham (BE22171071)
+    (nuts:BE22171069 nuts:BE22171071)
+    (nuts:BE22171057 nuts:BE22171071)
+    # Hasselt (BE22171022) + Kortessem (BE22373040) -> Hasselt (BE22171072)
+    (nuts:BE22171022 nuts:BE22171072)
+    (nuts:BE22373040 nuts:BE22171072)
+  }
+}
