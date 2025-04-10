@@ -1,10 +1,18 @@
 # Changelog
 ## Unreleased
+### Frontend
+- Bump to [v0.21.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0210-2025-04-10)
+### Management
+- Bump to [v0.49.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.49.0)
 ### Backend
 - datafix: disable municipality merger labels for product instances [LPDC-1403]
+- added the competency and executing level to all the orgs with a migration [LPDC-1278]
+- Bump `frontend` and `lpdc-management` to add validation before saving between authority levels and authorities [LPDC-1278]
 ### Deploy notes
+- On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 #### Docker instructions
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
+- `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
 
 ## v0.26.1 (2025-04-04)
 ### Backend
