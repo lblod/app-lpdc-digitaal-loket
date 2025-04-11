@@ -166,7 +166,7 @@ services:
   # Report generation and dashboard specific services
   ################################################################################
   report-generation:
-    image: lblod/loket-report-generation-service:0.6.3
+    image: lblod/loket-report-generation-service:0.8.3
     depends_on:
       migrations:
         condition: service_healthy
