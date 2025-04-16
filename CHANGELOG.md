@@ -10,6 +10,7 @@
 - added the competency and executing level to all the orgs with a migration [LPDC-1278]
 - Bump `frontend` and `lpdc-management` to add validation before saving between authority levels and authorities [LPDC-1278]
 - Additional reports to monitor for authorities without levels [LPDC-1393]
+- datafix: delete triples with empty values for contact point URLs and address box numbers [LPDC-1297]
 ### Deploy notes
 - On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 #### Docker instructions
