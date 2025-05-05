@@ -11,12 +11,14 @@
 - Bump `frontend` and `lpdc-management` to add validation before saving between authority levels and authorities [LPDC-1278]
 - Additional reports to monitor for authorities without levels [LPDC-1393]
 - datafix: delete triples with empty values for contact point URLs and address box numbers [LPDC-1297]
+- bump BCT LDES consumer to new version [LPDC-1414]
 ### Deploy notes
 - On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 #### Docker instructions
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 - `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
 - `drc pull report-generation; drc up -d report-generation`
+- `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
 
 ## v0.26.1 (2025-04-04)
 ### Backend
