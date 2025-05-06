@@ -279,19 +279,19 @@ services:
     logging: *default-logging
 
   ldes-consumer-instancesnapshot-gent:
-    image: redpencil/ldes-consumer:feature-stability-improvements-r1.1
+    image: redpencil/ldes-consumer:0.9.1
     depends_on:
       lpdc-management:
         condition: service_healthy
       migrations:
         condition: service_healthy
+    volumes:
+      - ./data/ldes-consumer-instancesnapshot-gent:/data
     environment:
-      LDES_STREAM: "<endpoint ldes stream>"
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
-      LDES_LOGGING_LEVEL: "debug"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent"
-      SAVE_ALL_VERSIONS_IGNORING_TIMESTAMP_DATA: "true"
-      REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
+      PERSIST_STATE: true
+      REPLACE_VERSIONS: false # we query snapshots. snapshots don't change ...
       CRON_PATTERN: "*/2 * * * *" # run the job every 2 minutes
     labels:
       - "logging=true"
