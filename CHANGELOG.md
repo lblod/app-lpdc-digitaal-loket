@@ -11,14 +11,18 @@
 - Bump `frontend` and `lpdc-management` to add validation before saving between authority levels and authorities [LPDC-1278]
 - Additional reports to monitor for authorities without levels [LPDC-1393]
 - datafix: delete triples with empty values for contact point URLs and address box numbers [LPDC-1297]
-- bump BCT LDES consumer to new version [LPDC-1414]
+- bump BCT and Ghent LDES consumer to new version [LPDC-1414]
 ### Deploy notes
 - On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
+- On TEST and PROD: In the `docker-compose.override.yml` for `ldes-consumer-instancesnapshot-gent`, remove the `LDES_STREAM` entry, rename `LDES_LOGGING_LEVEL` to `LOG_LEVEL`, and update `LDES_ENDPOINT_VIEW` to
+  + TEST: "https://ldes.qa.stad.gent/ldes/lpdc/by-page"
+  + PROD: "https://ldes.stad.gent/ldes/lpdc/by-page"
 #### Docker instructions
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 - `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
 - `drc pull report-generation; drc up -d report-generation`
 - `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
+- `drc pull ldes-consumer-instancesnapshot-gent; drc up -d ldes-consumer-instancesnapshot-gent`
 
 ## v0.26.1 (2025-04-04)
 ### Backend
