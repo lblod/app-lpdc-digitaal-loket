@@ -33,7 +33,6 @@ defmodule Dispatcher do
   match "/mock/sessions/*path" do
     forward conn, path, "http://mocklogin/sessions/"
   end
-  
   match "/sessions/*path" do
     forward conn, path, "http://login/sessions/"
   end
@@ -118,6 +117,13 @@ defmodule Dispatcher do
   #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
+
+  # NOTE (11/03/2025): Do *not* use cache in the following rule. When a user
+  # creates a new product instance from a concept, the management service can
+  # update the `conceptIsNew` and `conceptIsInstantiated` properties for the
+  # corresponding concept display configurations. These updates are not picked
+  # up by the cache, resulting in the frontend showing outdated information
+  # afterwards. (See LPDC-1370)
   match "/conceptual-public-services/*path" do
     forward conn, path, "http://resource/conceptual-public-services/"
   end
@@ -133,6 +139,9 @@ defmodule Dispatcher do
   delete "/public-services/*path" do
     forward conn, path, "http://lpdc-management/public-services/"
   end
+
+  # Don't use cache in the following rules.
+  # See https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/docs/adr/0005-do-not-cache-instantie-overview.md
 
   get "/public-services/*path" do
     forward conn, path, "http://resource/public-services/"
