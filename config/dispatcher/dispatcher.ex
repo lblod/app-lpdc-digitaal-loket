@@ -22,6 +22,10 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/accounts/"
   end
 
+  match "/impersonations/*path" do
+    forward conn, path, "http://impersonation/impersonations/"
+  end
+
   #################################################################
   # Concepts and Concept Schemes
   #################################################################
