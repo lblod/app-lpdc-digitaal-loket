@@ -2,43 +2,22 @@ defmodule Dispatcher do
   use Matcher
   define_accept_types []
 
-  # In order to forward the 'themes' resource to the
-  # resource service, use the following forward rule:
-  #
-  # match "/themes/*path", @json do
-  #   Proxy.forward conn, path, "http://resource/themes/"
-  # end
-  #
-  # Run `docker-compose restart dispatcher` after updating
-  # this file.
-
-  get "/formal-informal-choices/*path" do
-      forward conn, path, "http://lpdc-management/formal-informal-choices/"
-  end
-
-  post "/formal-informal-choices/*path" do
-      forward conn, path, "http://lpdc-management/formal-informal-choices/"
-  end
-
-  match "/bestuurseenheden/*path" do
-    forward conn, path, "http://cache/bestuurseenheden/"
-  end
-  match "/werkingsgebieden/*path" do
-    forward conn, path, "http://cache/werkingsgebieden/"
-  end
-  match "/bestuurseenheid-classificatie-codes/*path" do
-    forward conn, path, "http://cache/bestuurseenheid-classificatie-codes/"
-  end
+  #################################################################
+  # Account control
+  #################################################################
 
   match "/mock/sessions/*path" do
     forward conn, path, "http://mocklogin/sessions/"
   end
+
   match "/sessions/*path" do
     forward conn, path, "http://login/sessions/"
   end
+
   match "/gebruikers/*path" do
     forward conn, path, "http://cache/gebruikers/"
   end
+
   match "/accounts/*path" do
     forward conn, path, "http://cache/accounts/"
   end
@@ -46,6 +25,7 @@ defmodule Dispatcher do
   #################################################################
   # Concepts and Concept Schemes
   #################################################################
+
   get "/concept-schemes/*path" do
     forward conn, path, "http://cache/concept-schemes/"
   end
@@ -57,6 +37,15 @@ defmodule Dispatcher do
   #################################################################
   # Public Services - LPDC-IPDC: custom API endpoints
   #################################################################
+
+  get "/formal-informal-choices/*path" do
+      forward conn, path, "http://lpdc-management/formal-informal-choices/"
+  end
+
+  post "/formal-informal-choices/*path" do
+      forward conn, path, "http://lpdc-management/formal-informal-choices/"
+  end
+
   get "/lpdc-management/conceptual-public-services/*path" do
     forward conn, path, "http://lpdc-management/conceptual-public-services/"
   end
@@ -84,6 +73,7 @@ defmodule Dispatcher do
   #################################################################
   # Reports
   #################################################################
+
   match "/reports/*path" do
     forward conn, path, "http://cache/reports/"
   end
@@ -128,6 +118,18 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/conceptual-public-services/"
   end
 
+  match "/bestuurseenheden/*path" do
+    forward conn, path, "http://cache/bestuurseenheden/"
+  end
+
+  match "/werkingsgebieden/*path" do
+    forward conn, path, "http://cache/werkingsgebieden/"
+  end
+
+  match "/bestuurseenheid-classificatie-codes/*path" do
+    forward conn, path, "http://cache/bestuurseenheid-classificatie-codes/"
+  end
+
   match "/identifiers/*path" do
     forward conn, path, "http://cache/identifiers/"
   end
@@ -142,7 +144,6 @@ defmodule Dispatcher do
 
   # Don't use cache in the following rules.
   # See https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/docs/adr/0005-do-not-cache-instantie-overview.md
-
   get "/public-services/*path" do
     forward conn, path, "http://resource/public-services/"
   end
