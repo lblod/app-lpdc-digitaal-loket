@@ -10,7 +10,7 @@ export default {
       description: 'Overview of LPDC services created so far',
       filePrefix: 'lpdcBestuurseenheid'
     };
-    // We want periodic report, of bestuurseenheid (naam, type, uri), public service instance (title, uri, modified, status)
+    // We want periodic report, of bestuurseenheid (naam, type, uri), public service instance (title, uri, modified, modifiedBy, status)
     console.log('Generating LPDC Bestuurseenheid Report');
     const queryString  = `
       PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
@@ -19,10 +19,11 @@ export default {
       PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
       PREFIX adms:    <http://www.w3.org/ns/adms#>
       PREFIX dct:     <http://purl.org/dc/terms/>
-      PREFIX schema:  <http://schema.org/> 
+      PREFIX schema:  <http://schema.org/>
       PREFIX pav:     <http://purl.org/pav/>
+      PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
 
-      SELECT DISTINCT ?uriBestuurseenheid ?naam ?typeUri ?type ?uriPublicService ?title ?modified ?status ?statusLabel WHERE {
+      SELECT DISTINCT ?uriBestuurseenheid ?naam ?typeUri ?type ?uriPublicService ?title ?modified ?modifiedBy ?status ?statusLabel WHERE {
         ?uriPublicService
           a                     lpdcExt:InstancePublicService ;
             adms:status           ?status ;
@@ -30,7 +31,7 @@ export default {
             dct:title             ?title ;
             pav:createdBy         ?uriBestuurseenheid .
 
-        ?uriBestuurseenheid 
+        ?uriBestuurseenheid
           a                     besluit:Bestuurseenheid ;
             skos:prefLabel        ?naam ;
             besluit:classificatie ?typeUri .
@@ -38,6 +39,15 @@ export default {
         ?typeUri skos:prefLabel ?type .
 
         ?status skos:prefLabel ?statusLabel .
+
+        OPTIONAL {
+          ?uriPublicService ext:lastModifiedBy ?modifiedByUri.
+
+          ?modifiedByUri foaf:firstName ?firstName ;
+                      foaf:familyName ?familyName .
+        }
+        BIND(CONCAT(COALESCE(?firstName, ""), " ", COALESCE(?familyName, "")) AS ?modifiedBy)
+
       }
     `;
     const queryResponse = await query(queryString);
@@ -51,6 +61,7 @@ export default {
       uriPublicService: r.uriPublicService.value,
       title: r.title.value,
       modified: r.modified.value,
+      modifiedBy: r.modifiedBy.value,
       status: r.status.value,
       statusLabel: r.statusLabel.value
     }));
