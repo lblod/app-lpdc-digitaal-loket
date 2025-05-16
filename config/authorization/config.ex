@@ -126,6 +126,23 @@ defmodule Acl.UserGroups.Config do
                       resource_prefix: "http://mu.semte.ch/sessions/"
                     } } ] },
 
+
+      # // PUBLIC - accounts
+      %GroupSpec{
+        name: "public",
+        useage: [:read, :read_for_write],
+        access: %AlwaysAccessible{},
+        graphs: [ %GraphSpec{
+                    graph: "http://mu.semte.ch/graphs/public",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://xmlns.com/foaf/0.1/OnlineAccount",
+                      ]
+                    }
+                  }
+                ]
+      },
+
       # // LPDC-IPDC
       %GroupSpec{
         name: "o-ipdc-lpdc-rwf",
