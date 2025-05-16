@@ -154,6 +154,13 @@ services:
     restart: always
     logging: *default-logging
 
+  impersonation:
+    image: lblod/impersonation-service:0.2.0
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
   sink:
     image: nginx:1.25.1
     volumes:
