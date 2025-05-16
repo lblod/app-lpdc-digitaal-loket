@@ -24,6 +24,7 @@
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 - `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
 - `drc pull report-generation; drc up -d report-generation`
+- `drc restart resource cache`
 - `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
 - `drc pull ldes-consumer-instancesnapshot-gent; drc up -d ldes-consumer-instancesnapshot-gent`
 
