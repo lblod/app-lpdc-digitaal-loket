@@ -181,21 +181,6 @@ defmodule Acl.UserGroups.Config do
                       ] } } ] },
 
       # // LOKETADMIN
-        %GroupSpec{
-          name: "o-admin-rwf",
-          useage: [:read, :write, :read_for_write],
-          access: access_by_role( "LoketAdmin" ),
-          graphs: [ %GraphSpec{
-                      graph: "http://mu.semte.ch/graphs/organizations/",
-                      constraint: %ResourceConstraint{
-                        resource_types: [
-                          "http://lblod.data.gift/vocabularies/reporting/Report",
-                          "http://vocab.deri.ie/cogs#Job",
-                          "http://open-services.net/ns/core#Error",
-                          "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
-                          "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
-                          "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"
-                        ] } } ] },
       %GroupSpec{
         name: "o-admin-sessions-rwf",
         useage: [:read, :write, :read_for_write],
@@ -209,6 +194,22 @@ defmodule Acl.UserGroups.Config do
           },
         ]
       },
+
+      %GroupSpec{
+        name: "o-admin-rwf",
+        useage: [:read, :write, :read_for_write],
+        access: access_by_role( "LoketAdmin" ),
+        graphs: [ %GraphSpec{
+                    graph: "http://mu.semte.ch/graphs/organizations/",
+                    constraint: %ResourceConstraint{
+                      resource_types: [
+                        "http://lblod.data.gift/vocabularies/reporting/Report",
+                        "http://vocab.deri.ie/cogs#Job",
+                        "http://open-services.net/ns/core#Error",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
+                        "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"
+                      ] } } ] },
 
       # // USER HAS NO DATA
       # this was moved to org instead.
