@@ -30,6 +30,28 @@ defmodule Acl.UserGroups.Config do
     }"
   end
 
+  defp is_admin() do
+    %AccessByQuery{
+      vars: [],
+      query: "
+        PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+        SELECT DISTINCT ?session_role WHERE {
+          VALUES ?session_role {
+            \"LoketAdmin\"
+          }
+          VALUES ?session_id {
+            <SESSION_ID>
+          }
+          {
+            ?session_id ext:sessionRole ?session_role .
+          } UNION {
+            ?session_id ext:originalSessionRole ?session_role .
+          }
+        }
+        LIMIT 1"
+      }
+  end
+
   def user_groups do
     # These elements are walked from top to bottom.  Each of them may
     # alter the quads to which the current query applies.  Quads are
@@ -142,9 +164,13 @@ defmodule Acl.UserGroups.Config do
           vars: ["session_group"],
           query: "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
                   PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
-                  SELECT ?session_group ?session_role WHERE {
-                    <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group.
-                    }" },
+                  SELECT DISTINCT ?session_group WHERE {
+                    {
+                      <SESSION_ID> ext:sessionGroup/mu:uuid ?session_group.
+                    } UNION {
+                      <SESSION_ID> ext:originalSessionGroup/mu:uuid ?session_group.
+                    }
+                  }" },
         graphs: [ %GraphSpec{
                     graph: "http://mu.semte.ch/graphs/organizations/",
                     constraint: %ResourceConstraint{
@@ -170,6 +196,19 @@ defmodule Acl.UserGroups.Config do
                           "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#FileDataObject",
                           "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#DataContainer"
                         ] } } ] },
+      %GroupSpec{
+        name: "o-admin-sessions-rwf",
+        useage: [:read, :write, :read_for_write],
+        access: is_admin(),
+        graphs: [
+          %GraphSpec{
+            graph: "http://mu.semte.ch/graphs/sessions",
+            constraint: %ResourceFormatConstraint{
+              resource_prefix: "http://mu.semte.ch/sessions/"
+            }
+          },
+        ]
+      },
 
       # // USER HAS NO DATA
       # this was moved to org instead.
