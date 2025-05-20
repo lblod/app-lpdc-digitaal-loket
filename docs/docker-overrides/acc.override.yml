@@ -56,28 +56,14 @@ services:
         max-size: "10m"
         max-file: "3"
 
-  mocklogin:
-    image: lblod/mock-login-service:0.4.0
-
-  dashboard:
-    environment:
-      VIRTUAL_HOST: "acc.dashboard.lpdc.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_HOST: "acc.dashboard.lpdc.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_EMAIL: "info@redpencil.io"
-    #############################
-    # Basic auth config.
-    #############################
-    volumes:
-      - ./config/basic-auth:/etc/nginx/conf.d
-    links:
-      - controle-identifier:backend
-    networks:
-      - proxy
-      - default
-
 ######################
 # END: CONTROLE
 ######################
+  identifier:
+    environment:
+      VIRTUAL_HOST: "dashboard.acc.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_HOST: "dashboard.acc.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_EMAIL: "info@redpencil.io"
 
   lpdc:
     environment:

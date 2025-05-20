@@ -138,7 +138,7 @@ services:
     logging: *default-logging
 
   login:
-    image: lblod/acmidm-login-service:0.9.2
+    image: lblod/acmidm-login-service:0.12.0
     environment:
       LOG_SINK_URL: "http://sink"
       MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
@@ -167,6 +167,8 @@ services:
   ################################################################################
   report-generation:
     image: lblod/loket-report-generation-service:0.8.3
+    environment:
+      DEFAULT_GRAPH: 'http://mu.semte.ch/graphs/organizations/141d9d6b-54af-4d17-b313-8d1c30bc3f5b/LoketLB-AdminDashboardLPDC'
     depends_on:
       migrations:
         condition: service_healthy
@@ -181,11 +183,27 @@ services:
     logging: *default-logging
 
   dashboard:
-    image: lblod/frontend-dashboard:1.6.0
+    image: lblod/frontend-dashboard:1.9.0
     environment:
-      EMBER_LOGIN_ROUTE: "mock-login"
-    links:
-      - identifier:backend
+      EMBER_LOGIN_ROUTE: "acmidm-login"
+      EMBER_DISABLE_ERRORS: "true"
+      EMBER_DISABLE_JOBS: "true"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  dashboard-login:
+    image: lblod/acmidm-login-service:0.12.0
+    environment:
+      LOG_SINK_URL: "http://sink"
+      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d" 
+      # The next variables are environment-specific.
+      # These should be overriden in docker-compose.override.yml
+      MU_APPLICATION_AUTH_DISCOVERY_URL: "<ACM_IDM_AUTH_DISCOVERY_URL>"
+      MU_APPLICATION_AUTH_CLIENT_ID: "<ACM_IDM_AUTH_CLIENT_ID>"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "<ACMIDM_AUTH_REDIRECT_URI>"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "<ACMIDM_AUTH_CLIENT_SECRET>"
     labels:
       - "logging=true"
     restart: always

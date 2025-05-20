@@ -154,11 +154,11 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/ns/adms#Identifier",
                       ] } } ] },
 
-      # // LOKETADMIN
+        # // Dashboard admin
         %GroupSpec{
           name: "o-admin-rwf",
           useage: [:read, :write, :read_for_write],
-          access: access_by_role( "LoketAdmin" ),
+          access: access_by_role( "LoketLB-AdminDashboardLPDC" ),
           graphs: [ %GraphSpec{
                       graph: "http://mu.semte.ch/graphs/organizations/",
                       constraint: %ResourceConstraint{

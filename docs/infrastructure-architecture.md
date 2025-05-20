@@ -81,7 +81,6 @@ index c0b05a6..8d46f5b 100644
     - controle-identifier
     - controle-dispatcher
     - mocklogin
-    - dashboard config overrides (basic auth enabled)
   - So, upon installing the initial and **for each new version**, do following steps,
     - Ensure to **copy the /config/dispatcher/dispatcher.ex** (without the commented /mock/sessions) to /config/controle-dispatcher/dispatcher.ex. .
     - **Merge the /config/dispatcher/dispatcher.ex** change of the /mock/sessions with the latest version of this file.
