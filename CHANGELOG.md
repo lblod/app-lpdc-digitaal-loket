@@ -1,5 +1,7 @@
 # Changelog
 ## Unreleased
+
+## v0.27.0 (2025-05-26)
 ### Frontend
 - Bump to [v0.21.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0210-2025-04-10)
 - Bump to [v0.21.1](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0211-2025-04-15)
@@ -14,7 +16,7 @@
 - Additional reports to monitor for authorities without levels [LPDC-1393]
 - datafix: delete triples with empty values for contact point URLs and address box numbers [LPDC-1297]
 - bump BCT and Ghent LDES consumer to new version [LPDC-1414]
-- add creator and lastmodifier user for publicServices [LPDC-1359] 
+- add creator and lastmodifier user for publicServices [LPDC-1359]
 ### Deploy notes
 - On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 - On TEST and PROD: In the `docker-compose.override.yml` for `ldes-consumer-instancesnapshot-gent`, remove the `LDES_STREAM` entry, rename `LDES_LOGGING_LEVEL` to `LOG_LEVEL`, and update `LDES_ENDPOINT_VIEW` to
