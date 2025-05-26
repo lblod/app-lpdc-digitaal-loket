@@ -1,5 +1,23 @@
 # Changelog
 ## Unreleased
+### Backend
+- enable ACM/IDM logins for the dashboard [LPDC-1413]
+
+### Deploy notes
+#### Dashboard
+The new dashboard requires a slightly different deploy setup. The dispatcher redirects requests to the frontend based on the host name. 
+
+- move the VIRTUAL_HOST and LETSENCRYT_* environment variables from the dashboard to the identifier service
+  > Note that the host names for the ACC and PROD dashboards will be different now.
+  > ACC: https://dashboard.acc.lpdc.lokaalbestuur.lblod.info
+  > PROD: http://dashboard.lpdc.lokaalbestuur.vlaanderen.be
+- add the correct environment variables to the dashboard and dashboard login services (See the overrides files for examples)
+- remove the mock-login service once both the dashboard and controle environments use ACM/IDM (ACC & PROD only)
+
+Once everything is updated in the docker-compose.override.yml file you need to `up -d` and restart some services.
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+- `drc up -d dashboard dashboard-login identifier`
+- `drc restart dispatcher`
 
 ## v0.27.0 (2025-05-26)
 ### Frontend
@@ -17,7 +35,6 @@
 - datafix: delete triples with empty values for contact point URLs and address box numbers [LPDC-1297]
 - bump BCT and Ghent LDES consumer to new version [LPDC-1414]
 - add creator and lastmodifier user for publicServices [LPDC-1359]
-- enable ACM/IDM logins for the dashboard [LPDC-1413]
 ### Deploy notes
 - On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 - On TEST and PROD: In the `docker-compose.override.yml` for `ldes-consumer-instancesnapshot-gent`, remove the `LDES_STREAM` entry, rename `LDES_LOGGING_LEVEL` to `LOG_LEVEL`, and update `LDES_ENDPOINT_VIEW` to
@@ -30,19 +47,6 @@
 - `drc restart resource cache`
 - `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
 - `drc pull ldes-consumer-instancesnapshot-gent; drc up -d ldes-consumer-instancesnapshot-gent`
-
-#### Dashboard
-The new dashboard requires a slightly different deploy setup. The dispatcher redirects requests to the frontend based on the host name. 
-
-- move the VIRTUAL_HOST config from the dashboard to the identifier service
-  > Note that the host names for the ACC and PROD dashboards will be different now.
-- add the correct environment variables to the dashboard and dashboard login services
-- remove the mock-login service (ACC & PROD only)
-
-Once everything is updated in the docker-compose.override.yml file you need to `up -d` and restart some services.
-- `drc restart migrations; drc logs -ft --tail=200 migrations`
-- `drc up -d dashboard dashboard-login identifier`
-- `drc restart dispatcher`
 
 ## v0.26.1 (2025-04-04)
 ### Backend
