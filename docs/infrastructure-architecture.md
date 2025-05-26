@@ -87,7 +87,7 @@ index c0b05a6..8d46f5b 100644
     - **Update in the docker-compose-override.yml** manually the frontend version (controle container), identifier version (controle-identifier container) and dispatcher version (controle-dispatcher) to the one of this release.
 - URLS
   - ACM/IDM login url: https://acc.lpdc-dev.s.redhost.be/ , or https://acc.lpdc.lokaalbestuur.lblod.info/
-  - dashboard url: https://acc.dashboard.lpdc.lpdc-dev.s.redhost.be/mock-login
+  - dashboard url: https://dashboard.acc.lpdc.lokaalbestuur.lblod.info
   - controle url: https://acc.controle.lpdc.lpdc-dev.s.redhost.be/mock-login
 
 # PROD
@@ -96,5 +96,5 @@ Same config as [acc](#acc).
 
 - URLS
   - ACM/IDM login url: https://lpdc.lokaalbestuur.vlaanderen.be
-  - dashboard url : https://dashboard.lpdc.lpdc-prod.s.redhost.be, or https://dashboard.prod.lpdc.lblod.info
+  - dashboard url : https://dashboard.lpdc.lokaalbestuur.vlaanderen.be
   - controle url: https://controle.lpdc.lpdc-prod.s.redhost.be/mock-login , or https://controle.prod.lpdc.lblod.info/mock-login
