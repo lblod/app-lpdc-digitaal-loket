@@ -81,6 +81,20 @@ services:
       - proxy
       - default
 
+  dashboard:
+    environment:
+      EMBER_ACMIDM_CLIENT_ID: "90f22656-a987-40dc-8376-d44954ca9ee1"
+      EMBER_ACMIDM_BASE_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
+      EMBER_ACMIDM_REDIRECT_URL: "https://dashboard.acc.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
+
+  dashboard-login:
+    environment:
+      MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
+      MU_APPLICATION_AUTH_CLIENT_ID: "90f22656-a987-40dc-8376-d44954ca9ee1"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "https://dashboard.acc.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
+
   login:
     environment:
       MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie.vlaanderen.be/op"

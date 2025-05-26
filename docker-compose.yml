@@ -188,6 +188,11 @@ services:
       EMBER_LOGIN_ROUTE: "acmidm-login"
       EMBER_DISABLE_ERRORS: "true"
       EMBER_DISABLE_JOBS: "true"
+      EMBER_ACMIDM_CLIENT_ID: "<CLIENT_ID>"
+      EMBER_ACMIDM_BASE_URL: "<BASE_URL>"
+      EMBER_ACMIDM_REDIRECT_URL: "<REDIRECT_URL>"
+      EMBER_ACMIDM_LOGOUT_URL: "<LOGOUT_URL>" 
+      EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
     labels:
       - "logging=true"
     restart: always
