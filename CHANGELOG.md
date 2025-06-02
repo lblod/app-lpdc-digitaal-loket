@@ -1,6 +1,16 @@
 # Changelog
 ## Unreleased
 
+## v0.27.1 (2025-06-02)
+### Frontend
+- Bump to [v0.22.1](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0221-2025-05-28)
+### Deploy notes
+- On PROD, comment the frontend image override in `docker-compose.override.yml`
+- On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
+#### Docker instructions
+- `drc pull lpdc; drc up -d lpdc`
+- `drc pull controle; drc up -d controle` (only on PROD and ACC)
+
 ## v0.27.0 (2025-05-26)
 ### Frontend
 - Bump to [v0.21.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0210-2025-04-10)
