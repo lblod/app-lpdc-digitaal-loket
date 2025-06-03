@@ -1,6 +1,12 @@
 defmodule Dispatcher do
   use Matcher
-  define_accept_types []
+
+  define_accept_types [
+    html: ["text/html", "application/xhtml+html"],
+    json: ["application/json", "application/vnd.api+json"],
+    upload: ["multipart/form-data"],
+    any: [ "*/*" ],
+  ]
 
   # In order to forward the 'themes' resource to the
   # resource service, use the following forward rule:
@@ -32,6 +38,9 @@ defmodule Dispatcher do
 
   match "/mock/sessions/*path" do
     forward conn, path, "http://mocklogin/sessions/"
+  end
+  match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
+    forward conn, path, "http://dashboard-login/sessions/"
   end
   match "/sessions/*path" do
     forward conn, path, "http://login/sessions/"
@@ -84,7 +93,7 @@ defmodule Dispatcher do
   #################################################################
   # Reports
   #################################################################
-  match "/reports/*path" do
+  match "/reports/*path",  %{ accept: [:json] } do
     forward conn, path, "http://cache/reports/"
   end
 
@@ -155,6 +164,26 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/concept-display-configurations/"
   end
 
+  #################################################################
+  # Frontend
+  #################################################################
+  get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest] }  do
+    forward conn, path, "http://dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["dashboard" | _rest] } do
+    forward conn, path, "http://dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["dashboard" | _rest] } do
+    # *_path allows a path to be supplied, but will not yield
+    # an error that we don't use the path variable.
+    forward conn, [], "http://dashboard/index.html"
+  end
+
+  #################################################################
+  # Other
+  #################################################################
   match "/*_" do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
   end
