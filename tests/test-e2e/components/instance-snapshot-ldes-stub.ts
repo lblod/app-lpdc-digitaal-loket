@@ -17,6 +17,15 @@ export class InstanceSnapshotLdesStub {
         return snapshot;
     }
 
+    static async createInvalidSnapshot(instanceId: string): Promise<Snapshot> {
+        const apiRequest = await request.newContext();
+        const response = await apiRequest.post(`${instanceSnapshotLdesStubUrl}/instancesnapshot/${instanceId}/invalid`);
+        const snapshot: Snapshot = await response.json();
+        await processSnapshot(apiRequest, snapshot.id);
+
+        return snapshot;
+    }
+
 }
 
 async function processSnapshot(request: APIRequestContext, instanceSnapshotId: string): Promise<void> {
@@ -35,7 +44,7 @@ async function processSnapshot(request: APIRequestContext, instanceSnapshotId: s
 async function isInstanceSnapshotProcessed(request: APIRequestContext, instanceSnapshotId: string): Promise<boolean> {
     const query = `
     ASK WHERE {
-        <http://mu.semte.ch/lpdc/instancesnapshots-ldes-data> <http://mu.semte.ch/vocabularies/ext/processed> <${instanceSnapshotId}> .
+        ?markerId <http://mu.semte.ch/vocabularies/ext/processedSnapshot> <${instanceSnapshotId}> .
     }       
     `;
     const response = await request.get(`${virtuosoUrl}/sparql`, {

@@ -1,0 +1,21 @@
+DELETE {
+    GRAPH ?g {
+        ?s <http://www.w3.org/ns/dcat#keyword> ?keyword .
+    }
+}
+INSERT {
+    GRAPH ?g {
+        ?s <http://www.w3.org/ns/dcat#keyword> ?newKeyword .
+    }
+}
+WHERE {
+    GRAPH ?g {
+        ?s a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+        ?s <http://www.w3.org/ns/dcat#keyword> ?keyword .
+    }
+    FILTER(
+        STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/") && STRENDS(STR(?g), "/LoketLB-LPDCGebruiker")
+        && lang(?keyword) = 'nl-be-x-formal'
+    )
+    BIND(STRLANG(STR(?keyword), "nl") AS ?newKeyword)
+}

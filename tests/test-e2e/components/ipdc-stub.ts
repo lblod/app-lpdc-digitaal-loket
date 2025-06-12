@@ -73,34 +73,46 @@ export class IpdcStub {
         return object[0];
     }
 
-    static async createSnapshotOfTypeCreate(conceptId: string): Promise<Snapshot> {
+    static async createSnapshotOfTypeCreate(conceptId: string, withRandomNewData: boolean = false): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/create`);
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/create`, { params: { withRandomNewData: withRandomNewData } });
         const snapshot: Snapshot = await response.json();
-        await processSnapshot(apiRequest, conceptId, snapshot.id);
-
-        return snapshot
-    }
-
-    static async createSnapshotOfTypeUpdate(conceptId: string, withRandomTitle: boolean = false): Promise<Snapshot> {
-        const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomTitle: withRandomTitle } });
-        const snapshot: Snapshot = await response.json();
-        await processSnapshot(apiRequest, conceptId, snapshot.id);
+        await processSnapshot(apiRequest, snapshot.id);
 
         return snapshot;
     }
 
-    static async createSnapshotOfTypeArchive(conceptId: string): Promise<Snapshot> {
+    static async createSnapshotOfTypeUpdate(conceptId: string, withRandomNewData: boolean = false, elementToUpdate: string = ''): Promise<Snapshot> {
         const apiRequest = await request.newContext();
-        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`);
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/update`, { params: { withRandomNewData: withRandomNewData, elementToUpdate: elementToUpdate} });
         const snapshot: Snapshot = await response.json();
-        await processSnapshot(apiRequest, conceptId, snapshot.id);
+        await processSnapshot(apiRequest, snapshot.id);
 
         return snapshot;
     }
 
-    static async publishShouldFail(instanceIri: string, statusCode: number, errorMessage: any) {
+    static async createSnapshotOfTypeArchive(conceptId: string, withRandomNewData: boolean = false): Promise<Snapshot> {
+        const apiRequest = await request.newContext();
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/archive`, { params: { withRandomNewData: withRandomNewData } });
+        const snapshot: Snapshot = await response.json();
+        await processSnapshot(apiRequest, snapshot.id);
+
+        return snapshot;
+    }
+
+    static async createInvalidSnapshot(conceptId: string): Promise<Snapshot> {
+        const apiRequest = await request.newContext();
+        const response = await apiRequest.post(`${ipdcStubUrl}/conceptsnapshot/${conceptId}/invalid`);
+        const snapshot = await response.json();
+        await processSnapshot(apiRequest, snapshot.id);
+
+        return snapshot;
+    }
+
+    static async publishShouldFail(instanceIri: string | undefined, statusCode: number, errorMessage: any) {
+        if (!instanceIri) {
+            throw Error('Can not publish should fail if no instanceIri provided');
+        }
         const apiRequest = await request.newContext();
         await apiRequest.post(`${ipdcStubUrl}/instanties/fail`, {
             headers: {
@@ -113,26 +125,42 @@ export class IpdcStub {
             }
         });
     }
+
+    static async publishShouldNotFail(instanceIri: string | undefined) {
+        if (!instanceIri) {
+            console.log(`Can not publish should not fail if no instanceIri provided, ignoring`);
+            return;
+        }
+
+        const apiRequest = await request.newContext();
+        await apiRequest.post(`${ipdcStubUrl}/instanties/notfail`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            data: {
+                instanceIri: instanceIri,
+            }
+        });
+    }
 }
 
-async function processSnapshot(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<void> {
+async function processSnapshot(request: APIRequestContext, snapshotId: string): Promise<void> {
     const maxPollAttempts = 60;
     for (let i = 0; i < maxPollAttempts; i++) {
         await wait(1000);
-        if (await isConceptSnapshotProcessed(request, conceptId, snapshotId)) {
+        if (await isConceptSnapshotProcessed(request, snapshotId)) {
             console.log(`Concept Snapshot processed after ${i + 1} seconds`);
             return;
         }
     }
-    console.log(`Concept Snapshot not processed after ${maxPollAttempts} seconds`);
+    throw new Error(`conceptSnapshot <${snapshotId}> not processed after ${maxPollAttempts} seconds`);
 }
 
-async function isConceptSnapshotProcessed(request: APIRequestContext, conceptId: string, snapshotId: string): Promise<boolean> {
+async function isConceptSnapshotProcessed(request: APIRequestContext, snapshotId: string): Promise<boolean> {
     const query = `
     ASK WHERE {
-        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService>.
-        <https://ipdc.tni-vlaanderen.be/id/concept/${conceptId}> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/${snapshotId}>.
-    }       
+        ?markerId <http://mu.semte.ch/vocabularies/ext/processedSnapshot> <${snapshotId}> .
+    }
     `;
     const response = await request.get(`${virtuosoUrl}/sparql`, {
         params: {
@@ -146,6 +174,7 @@ async function isConceptSnapshotProcessed(request: APIRequestContext, conceptId:
 
 type Snapshot = {
     id: string,
+    uuid: string,
     productId: string,
     title: string
 }

@@ -4,24 +4,27 @@
   "view": {
     "@id": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0",
     "@type": "Node",
-    "relation": []
+    "relation": [
+      {
+        "node": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=1",
+        "path": "generatedAtTime",
+        "@type": "GreaterThanOrEqualToRelation"
+      }
+    ]
   },
-  "@context": "http://ipdc-stub/ConceptJsonLdContext.jsonld",
+  "@context": ["http://ipdc-stub/ipdc-lpdc-im.jsonld", "http://ipdc-stub/ldes.jsonld"],
   "@id": "http://ipdc-stub/doc/conceptsnapshot?pageNumber=0",
   "@type": "EventStream",
   "member": [
     {
-      "id": "50fd7f03-276f-403e-ad39-152dba4e39be",
+      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be",
+      "@type": [
+        "ConceptSnapshot"
+      ],
+      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84",
+      "creatie": "2023-07-12T11:40:20.026205561Z",
+      "laatstGewijzigd": "2023-07-12T11:40:20.026209604Z",
       "generatedAtTime": "2023-07-12T11:40:20.441775Z",
-      "snapshotType": "Create",
-      "bevoegdBestuursniveaus": [
-        "Federaal",
-        "Europees"
-      ],
-      "uitvoerendBestuursniveaus": [
-        "Lokaal",
-        "Derden"
-      ],
       "naam": {
         "nl-BE-x-generated-informal": "Akte van Belgische nationaliteit - informal",
         "nl-BE-x-generated-formal": "Akte van Belgische nationaliteit - formal",
@@ -40,38 +43,16 @@
         "nl-BE-x-generated-formal": "Verdere beschrijving - formal",
         "en": "<p>The certificate states:</p><ul><li>the last name, first names, date and place of birth of the person to whom the certificate relates</li><li>the legal foundation of the declaration on the basis of which the certificate was drawn up</li><li>in the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.</li></ul><p>Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:</p><ul><li>A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.</li></ul><ul><li>An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.</li></ul>"
       },
-      "publicatiekanalen": [
-        "YourEurope"
-      ],
-      "tags": [
-        "YourEuropeVerplicht"
-      ],
-      "themas": [
-        "BurgerOverheid",
-        "CultuurSportVrijeTijd"
-      ],
-      "doelgroepen": [
-        "Burger",
-        "Onderneming"
-      ],
-      "yourEuropeCategorieen": [
-        "VerblijfNaturalisatie",
-        "VoertuigenVerkeersregels"
-      ],
       "uitzonderingen": {
         "nl": "Uitzonderingen - nl",
         "nl-BE-x-generated-formal": "Uitzonderingen - formal",
         "nl-BE-x-generated-informal": "Uitzonderingen - informal",
         "en": "Uitzonderingen - en"
       },
-      "regelgevingTekst": {
-        "nl-BE-x-generated-informal": "Regelgeving - informal",
-        "nl-BE-x-generated-formal": "Regelgeving - formal",
-        "nl": "Regelgeving - nl",
-        "en": "Regelgeving - en"
-      },
       "voorwaarden": [
         {
+          "@type": "Voorwaarde",
+          "order": 0.0,
           "beschrijving": {
             "en": "<p>The right to receive a copy of or an extract from certificates of Belgian nationality is limited to:</p><ul><li>yourself</li><li>your spouse, surviving spouse, or legal cohabitant</li><li>your legal representative (e.g. a parent, guardian, conservator)</li><li>blood relatives in the ascending or descending line (no relatives by affinity and side branches)</li><li>your heirs</li><li>special agents, such as notaries or lawyers.</li></ul><p>If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract.</p>",
             "nl-BE-x-generated-informal": "<p>De akte vermeldt:</p><ul><li>de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeft</li><li>de wettelijke basis van de verklaring op basis waarvan de akte werd opgesteld</li><li>in geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.</li></ul><p>Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:</p><ul><li>Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3><p>Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:</p><ul><li>uzelf</li><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>uw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>uw erfgenamen</li><li>bijzondere gemachtigden zoals een notaris of advocaat.</li></ul><p>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel.</p> - informal",
@@ -97,10 +78,8 @@
               "nl-BE-x-generated-formal": "Bewijs - formal",
               "en": "Evidence"
             },
-            "@type": "bewijsType"
-          },
-          "@type": "voorwaarde",
-          "order": 0.0
+            "@type": "Bewijs"
+          }
         }
       ],
       "procedures": [
@@ -132,11 +111,72 @@
                 "nl-BE-x-generated-informal": "procedure website beschrijving - informal"
               },
               "url": "https://procedure-website.com",
-              "@type": "website",
+              "@type": "Website",
               "order": 0.0
             }
           ],
-          "@type": "procedure",
+          "@type": "Procedure",
+          "order": 0.0
+        }
+      ],
+      "kosten": [
+        {
+          "beschrijving": {
+            "nl": "<p>De aanvraag en het attest zijn gratis.</p> - nl",
+            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis.</p> - informal",
+            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis.</p> - formal",
+            "en": "<p>De aanvraag en het attest zijn gratis.</p> - en"
+          },
+          "naam": {
+            "nl": "Bedrag kost - nl",
+            "nl-BE-x-generated-informal": "Bedrag kost - informal",
+            "nl-BE-x-generated-formal": "Bedrag kost - formal",
+            "en": "bedrag kost - en"
+          },
+          "@type": "Kost",
+          "order": 0.0
+        }
+      ],
+      "financieleVoordelen": [
+        {
+          "beschrijving": {
+            "nl": "<p>Beschrijving financieel voordeel.</p> - nl",
+            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel.</p> - informal",
+            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel.</p> - formal",
+            "en": "<p>Beschrijving financieel voordeel.</p> - en"
+          },
+          "naam": {
+            "nl": "Titel financieel voordeel. - nl",
+            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal",
+            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
+            "en": "Titel financieel voordeel. - en"
+          },
+          "@type": "FinancieelVoordeel",
+          "order": 0.0
+        }
+      ],
+      "regelgevingTekst": {
+        "nl-BE-x-generated-informal": "Regelgeving - informal",
+        "nl-BE-x-generated-formal": "Regelgeving - formal",
+        "nl": "Regelgeving - nl",
+        "en": "Regelgeving - en"
+      },
+      "regelgeving": [
+        {
+          "beschrijving": {
+            "nl": "<p>Beschrijving regelgevende bron.</p> - nl",
+            "nl-BE-x-generated-informal": "<p>Beschrijving regelgevende bron.</p> - informal",
+            "nl-BE-x-generated-formal": "<p>Beschrijving regelgevende bron.</p> - formal",
+            "en": "<p>Beschrijving regelgevende bron.</p> - en"
+          },
+          "naam": {
+            "nl": "Titel regelgevende bron. - nl",
+            "nl-BE-x-generated-informal": "Titel regelgevende bron. - informal",
+            "nl-BE-x-generated-formal": "Titel regelgevende bron. - formal",
+            "en": "Titel regelgevende bron. - en"
+          },
+          "url": "https://ipdc.be/regelgeving",
+          "@type": "Regelgeving",
           "order": 0.0
         }
       ],
@@ -155,74 +195,45 @@
             "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal"
           },
           "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit",
-          "@type": "website",
+          "@type": "Website",
           "order": 0.0
         }
       ],
-      "kosten": [
-        {
-          "beschrijving": {
-            "nl": "<p>De aanvraag en het attest zijn gratis.</p> - nl",
-            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis.</p> - informal",
-            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis.</p> - formal",
-            "en": "<p>De aanvraag en het attest zijn gratis.</p> - en"
-          },
-          "naam": {
-            "nl": "Bedrag kost - nl",
-            "nl-BE-x-generated-informal": "Bedrag kost - informal",
-            "nl-BE-x-generated-formal": "Bedrag kost - formal",
-            "en": "bedrag kost - en"
-          },
-          "@type": "kost",
-          "order": 0.0
-        }
+      "type": "FinancieelVoordeel",
+      "doelgroepen": [
+        "Burger",
+        "Onderneming"
       ],
-      "financieleVoordelen": [
-        {
-          "beschrijving": {
-            "nl": "<p>Beschrijving financieel voordeel.</p> - nl",
-            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel.</p> - informal",
-            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel.</p> - formal",
-            "en": "<p>Beschrijving financieel voordeel.</p> - en"
-          },
-          "naam": {
-            "nl": "Titel financieel voordeel. - nl",
-            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal",
-            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal",
-            "en": "Titel financieel voordeel. - en"
-          },
-          "@type": "financieelVoordeel",
-          "order": 0.0
-        }
+      "themas": [
+        "BurgerOverheid",
+        "CultuurSportVrijeTijd"
       ],
-      "regelgevendeBronnen": [
-        {
-          "beschrijving": {
-            "nl": "<p>Beschrijving regelgevende bron.</p> - nl",
-            "nl-BE-x-generated-informal": "<p>Beschrijving regelgevende bron.</p> - informal",
-            "nl-BE-x-generated-formal": "<p>Beschrijving regelgevende bron.</p> - formal",
-            "en": "<p>Beschrijving regelgevende bron.</p> - en"
-          },
-          "naam": {
-            "nl": "Titel regelgevende bron. - nl",
-            "nl-BE-x-generated-informal": "Titel regelgevende bron. - informal",
-            "nl-BE-x-generated-formal": "Titel regelgevende bron. - formal",
-            "en": "Titel regelgevende bron. - en"
-          },
-          "url": "https://ipdc.be/regelgeving",
-          "@type": "regelgevendeBron",
-          "order": 0.0
-        }
+      "bevoegdBestuursniveaus": [
+        "Federaal",
+        "Europees"
+      ],
+      "uitvoerendBestuursniveaus": [
+        "Lokaal",
+        "Derden"
+      ],
+      "zoektermen": {
+        "nl": [
+          "Akte - nl",
+          "Nationaliteit - nl"
+        ]
+      },
+      "publicatiekanalen": [
+        "YourEurope"
+      ],
+      "tags": [
+        "YourEuropeVerplicht"
+      ],
+      "yourEuropeCategorieen": [
+        "VerblijfNaturalisatie",
+        "VoertuigenVerkeersregels"
       ],
       "startDienstVerlening": "2020-08-26T11:40:20.026205561Z",
       "eindeDienstVerlening": "2025-07-12T11:40:20.026205561Z",
-      "type": "FinancieelVoordeel",
-      "talen": [
-        "ENG",
-        "DEU"
-      ],
-      "creatie": "2023-07-12T11:40:20.026205561Z",
-      "laatstGewijzigd": "2023-07-12T11:40:20.026209604Z",
       "productnummer": "1502",
       "gearchiveerd": false,
       "publicatieLink": {
@@ -238,441 +249,7 @@
         "uJeVersie": "31.3.0",
         "generatedFormeleFields": true,
         "generatedInformeleFields": true
-      },
-      "zoektermen": {
-        "nl": [
-          "Akte - nl",
-          "Nationaliteit - nl"
-        ]
-      },
-      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be",
-      "@type": "ConceptualPublicServiceSnapshot",
-      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84"
-    },
-    {
-      "id": "f23a4afa-5d92-4331-8f1d-a2b17382b6e9",
-      "generatedAtTime": "2023-03-07T15:14:53.754173Z",
-      "snapshotType": "Create",
-      "bevoegdBestuursniveaus": [
-        "Vlaams"
-      ],
-      "uitvoerendBestuursniveaus": [
-        "Lokaal"
-      ],
-      "naam": {
-        "nl-BE-x-generated-informal": "Financiële tussenkomst voor een verblijf in een woonzorgcentrum - informal",
-        "nl-BE-x-generated-formal": "Financiële tussenkomst voor een verblijf in een woonzorgcentrum - formal",
-        "nl": "Financiële tussenkomst voor een verblijf in een woonzorgcentrum",
-        "en": "Financial intervention for a stay in a residential care center"
-      },
-      "beschrijving": {
-        "nl": "<p>Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten.</p>",
-        "en": "<p>If you have problems paying for your stay in a residential care center, the OCMW can contribute to the financial costs.</p>",
-        "nl-BE-x-generated-informal": "<p>Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - informal</p>",
-        "nl-BE-x-generated-formal": "<p>Als u problemen hebt om uw verblijf in een woonzorgcentrum te betalen, dan kan het OCMW tussenkomen in de financiële kosten. - formal</p>"
-      },
-      "publicatiekanalen": [
-        "YourEurope"
-      ],
-      "tags": [
-        "YourEuropeVerplicht"
-      ],
-      "themas": [
-        "BouwenWonen",
-        "WelzijnGezondheid"
-      ],
-      "doelgroepen": [
-        "Burger"
-      ],
-      "yourEuropeCategorieen": [
-        "GezondheidszorgWoonzorgcentrum"
-      ],
-      "voorwaarden": [
-        {
-          "beschrijving": {
-            "nl": "<p>Wat meebrengen 1</p>",
-            "nl-BE-x-generated-informal": "<p>Wat meebrengen - informal 1</p>",
-            "nl-BE-x-generated-formal": "<p>Wat meebrengen - formal 1</p>",
-            "en": "<p>Bring something 1</p>"
-          },
-          "naam": {
-            "nl": "Wat meebrengen 1",
-            "nl-BE-x-generated-informal": "Wat meebrengen - informal 1",
-            "nl-BE-x-generated-formal": "Wat meebrengen - formal 1",
-            "en": "Bring something 1"
-          },
-          "bewijs": {
-            "beschrijving": {
-              "nl": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart 1</p>",
-              "nl-BE-x-generated-informal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - informal 1</p>",
-              "nl-BE-x-generated-formal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - formal 1</p>",
-              "en": "<p>An overview of the complete family income, an overview of savings, a copy of your identity card 1</p>"
-            },
-            "naam": {
-              "nl": "Bewijs om mee te brengen 1",
-              "nl-BE-x-generated-informal": "Bewijs om mee te brengen - informal 1",
-              "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal 1",
-              "en": "Evidence to bring with you 1"
-            },
-            "@type": "bewijsType"
-          },
-          "@type": "voorwaarde",
-          "order": 0.0
-        },
-        {
-          "beschrijving": {
-            "nl": "<p>Wat meebrengen 2</p>",
-            "nl-BE-x-generated-informal": "<p>Wat meebrengen - informal 2</p>",
-            "nl-BE-x-generated-formal": "<p>Wat meebrengen - formal 2</p>",
-            "en": "<p>Bring something 2</p>"
-          },
-          "naam": {
-            "nl": "Wat meebrengen 2",
-            "nl-BE-x-generated-informal": "Wat meebrengen - informal 2",
-            "nl-BE-x-generated-formal": "Wat meebrengen - formal 2",
-            "en": "Bring something 2"
-          },
-          "bewijs": {
-            "beschrijving": {
-              "nl": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart 2</p>",
-              "nl-BE-x-generated-informal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - informal 2</p>",
-              "nl-BE-x-generated-formal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - formal 2</p>",
-              "en": "<p>An overview of the complete family income, an overview of savings, a copy of your identity card 2</p>"
-            },
-            "naam": {
-              "nl": "Bewijs om mee te brengen 2",
-              "nl-BE-x-generated-informal": "Bewijs om mee te brengen - informal 2",
-              "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal 2",
-              "en": "Evidence to bring with you 2"
-            },
-            "@type": "bewijsType"
-          },
-          "@type": "voorwaarde",
-          "order": 1.0
-        },
-        {
-          "beschrijving": {
-            "nl": "<p>Wat meebrengen 3</p>",
-            "nl-BE-x-generated-informal": "<p>Wat meebrengen - informal 3</p>",
-            "nl-BE-x-generated-formal": "<p>Wat meebrengen - formal 3</p>",
-            "en": "<p>Bring something 3</p>"
-          },
-          "naam": {
-            "nl": "Wat meebrengen 3",
-            "nl-BE-x-generated-informal": "Wat meebrengen - informal 3",
-            "nl-BE-x-generated-formal": "Wat meebrengen - formal 3",
-            "en": "Bring something 3"
-          },
-          "bewijs": {
-            "beschrijving": {
-              "nl": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart 3</p>",
-              "nl-BE-x-generated-informal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - informal 3</p>",
-              "nl-BE-x-generated-formal": "<p>Een overzicht van het volledige gezinsinkomen, een overzicht van de spaargelden, een kopie van uw identiteitskaart - formal 3</p>",
-              "en": "<p>An overview of the complete family income, an overview of savings, a copy of your identity card 3</p>"
-            },
-            "naam": {
-              "nl": "Bewijs om mee te brengen 3",
-              "nl-BE-x-generated-informal": "Bewijs om mee te brengen - informal 3",
-              "nl-BE-x-generated-formal": "Bewijs om mee te brengen - formal 3",
-              "en": "Evidence to bring with you 3"
-            },
-            "@type": "bewijsType"
-          },
-          "@type": "voorwaarde",
-          "order": 2.0
-        }
-      ],
-      "procedures": [
-        {
-          "naam": {
-            "nl": "Procedure titel.",
-            "nl-BE-x-generated-informal": "Procedure titel. - informal",
-            "nl-BE-x-generated-formal": "Procedure titel. - formal",
-            "en": "Procedure titel. - en"
-          },
-          "beschrijving": {
-            "nl": "<p>Procedure beschrijving.</p>",
-            "nl-BE-x-generated-informal": "<p>Procedure beschrijving. - informal</p>",
-            "nl-BE-x-generated-formal": "<p>Procedure beschrijving. - formal</p>",
-            "en": "<p>Procedure beschrijving. - en</p>"
-          },
-          "websites": [
-            {
-              "naam": {
-                "nl-BE-x-generated-formal": "Procedure website naam - formal 2",
-                "nl": "Procedure website naam - nl 2",
-                "nl-BE-x-generated-informal": "Procedure website naam - informal 2",
-                "en": "Procedure website naam - en 2"
-              },
-              "beschrijving": {
-                "nl-BE-x-generated-formal": "procedure website beschrijving - formal 2",
-                "nl": "procedure website beschrijving - nl 2",
-                "en": "procedure website beschrijving - en 2",
-                "nl-BE-x-generated-informal": "procedure website beschrijving - informal 2"
-              },
-              "url": "https://procedure-website2.com",
-              "@type": "website",
-              "order": 1.0
-            },
-            {
-              "naam": {
-                "nl-BE-x-generated-formal": "Procedure website naam - formal 1",
-                "nl": "Procedure website naam - nl 1",
-                "nl-BE-x-generated-informal": "Procedure website naam - informal 1",
-                "en": "Procedure website naam - en 1"
-              },
-              "beschrijving": {
-                "nl-BE-x-generated-formal": "procedure website beschrijving - formal 1",
-                "nl": "procedure website beschrijving - nl 1",
-                "en": "procedure website beschrijving - en 1",
-                "nl-BE-x-generated-informal": "procedure website beschrijving - informal 1"
-              },
-              "url": "https://procedure-website1.com",
-              "@type": "website",
-              "order": 0.0
-            },
-            {
-              "naam": {
-                "nl-BE-x-generated-formal": "Procedure website naam - formal 3",
-                "nl": "Procedure website naam - nl 3",
-                "nl-BE-x-generated-informal": "Procedure website naam - informal 3",
-                "en": "Procedure website naam - en 3"
-              },
-              "beschrijving": {
-                "nl-BE-x-generated-formal": "procedure website beschrijving - formal 3",
-                "nl": "procedure website beschrijving - nl 3",
-                "en": "procedure website beschrijving - en 3",
-                "nl-BE-x-generated-informal": "procedure website beschrijving - informal 3"
-              },
-              "url": "https://procedure-website3.com",
-              "@type": "website",
-              "order": 2.0
-            }
-          ],
-          "@type": "procedure",
-          "order": 0.0
-        }
-      ],
-      "websites": [
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 1",
-            "nl": "Website Belgische nationaliteit en naturalisatie - nl 1",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 1",
-            "en": "Website Belgische nationaliteit en naturalisatie - en 1"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 1",
-            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving - nl 1",
-            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 1",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 1"
-          },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_1",
-          "@type": "website",
-          "order": 0.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 3",
-            "nl": "Website Belgische nationaliteit en naturalisatie 3",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 3",
-            "en": "Website Belgische nationaliteit en naturalisatie - en 3"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 3",
-            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 3",
-            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 3",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 3"
-          },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_3",
-          "@type": "website",
-          "order": 2.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie - formal 2",
-            "nl": "Website Belgische nationaliteit en naturalisatie 2",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie - informal 2",
-            "en": "Website Belgische nationaliteit en naturalisatie - en 2"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Website Belgische nationaliteit en naturalisatie beschrijving - formal 2",
-            "nl": "Website Belgische nationaliteit en naturalisatie beschrijving 2",
-            "en": "Website Belgische nationaliteit en naturalisatie beschrijving - en 2",
-            "nl-BE-x-generated-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - informal 2"
-          },
-          "url": "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit_2",
-          "@type": "website",
-          "order": 1.0
-        }
-      ],
-      "regelgevendeBronnen": [
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 1",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie - nl 1",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 1",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 1"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 1",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - nl 1",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 1",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 1"
-          },
-          "url": "https://codex.be/regelgevende-bron-1",
-          "@type": "regelgevendeBron",
-          "order": 0.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 3",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 3",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 3",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 3"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 3",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 3",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 3",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 3"
-          },
-          "url": "https://codex.be/regelgevende-bron-3",
-          "@type": "regelgevendeBron",
-          "order": 2.0
-        },
-        {
-          "naam": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie - formal 2",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie 2",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie - informal 2",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie - en 2"
-          },
-          "beschrijving": {
-            "nl-BE-x-generated-formal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - formal 2",
-            "nl": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving 2",
-            "en": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - en 2",
-            "nl-BE-x-generated-informal": "Regelgevende bron Belgische nationaliteit en naturalisatie beschrijving - informal 2"
-          },
-          "url": "https://codex.be/regelgevende-bron-2",
-          "@type": "regelgevendeBron",
-          "order": 1.0
-        }
-      ],      
-      "kosten": [
-        {
-          "beschrijving": {
-            "nl": "<p>De aanvraag en het attest zijn gratis. 3</p>",
-            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis. - informal 3</p>",
-            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis. - formal 3</p>",
-            "en": "<p>De aanvraag en het attest zijn gratis. - en 3</p>"
-          },
-          "naam": {
-            "nl": "Bedrag kost 3",
-            "nl-BE-x-generated-informal": "Bedrag kost - informal 3",
-            "nl-BE-x-generated-formal": "Bedrag kost - formal 3",
-            "en": "Bedrag kost - en 3"
-          },
-          "@type": "kost",
-          "order": 2.0
-        },
-        {
-          "beschrijving": {
-            "nl": "<p>De aanvraag en het attest zijn gratis. 1</p>",
-            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis. - informal 1</p>",
-            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis. - formal 1</p>",
-            "en": "<p>De aanvraag en het attest zijn gratis. - en 1</p>"
-          },
-          "naam": {
-            "nl": "Bedrag kost",
-            "nl-BE-x-generated-informal": "Bedrag kost - informal 1",
-            "nl-BE-x-generated-formal": "Bedrag kost - formal 1",
-            "en": "Bedrag kost - en 1"
-          },
-          "@type": "kost",
-          "order": 0.0
-        },
-        {
-          "beschrijving": {
-            "nl": "<p>De aanvraag en het attest zijn gratis. 2</p>",
-            "nl-BE-x-generated-informal": "<p>De aanvraag en het attest zijn gratis. - informal 2</p>",
-            "nl-BE-x-generated-formal": "<p>De aanvraag en het attest zijn gratis. - formal 2</p>",
-            "en": "<p>De aanvraag en het attest zijn gratis. - en 2</p>"
-          },
-          "naam": {
-            "nl": "Bedrag kost 2",
-            "nl-BE-x-generated-informal": "Bedrag kost - informal 2",
-            "nl-BE-x-generated-formal": "Bedrag kost - formal 2",
-            "en": "Bedrag kost - en 2"
-          },
-          "@type": "kost",
-          "order": 1.0
-        }
-      ],
-      "financieleVoordelen": [
-        {
-          "beschrijving": {
-            "nl": "<p>Beschrijving financieel voordeel. 1</p>",
-            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel. - informal 1</p>",
-            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel. - formal 1</p>",
-            "en": "<p>Beschrijving financieel voordeel. - en 1</p>"
-          },
-          "naam": {
-            "nl": "Titel financieel voordeel. 1",
-            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal 1",
-            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 1",
-            "en": "Titel financieel voordeel. - en 1"
-          },
-          "@type": "financieelVoordeel",
-          "order": 0.0
-        },
-        {
-          "beschrijving": {
-            "nl": "<p>Beschrijving financieel voordeel. 2</p>",
-            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel. - informal 2</p>",
-            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel. - formal 2</p>",
-            "en": "<p>Beschrijving financieel voordeel. - en 2</p>"
-          },
-          "naam": {
-            "nl": "Titel financieel voordeel. 2",
-            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal 2",
-            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 2",
-            "en": "Titel financieel voordeel. - en 2"
-          },
-          "@type": "financieelVoordeel",
-          "order": 1.0
-        },
-        {
-          "beschrijving": {
-            "nl": "<p>Beschrijving financieel voordeel. 3</p>",
-            "nl-BE-x-generated-informal": "<p>Beschrijving financieel voordeel. - informal 3</p>",
-            "nl-BE-x-generated-formal": "<p>Beschrijving financieel voordeel. - formal 3</p>",
-            "en": "<p>Beschrijving financieel voordeel. - en 3</p>"
-          },
-          "naam": {
-            "nl": "Titel financieel voordeel. 3",
-            "nl-BE-x-generated-informal": "Titel financieel voordeel. - informal 3",
-            "nl-BE-x-generated-formal": "Titel financieel voordeel. - formal 3",
-            "en": "Titel financieel voordeel. - en 3"
-          },
-          "@type": "financieelVoordeel",
-          "order": 2.0
-        }
-      ],
-      "startDienstVerlening": "2020-01-01T00:00:00Z",
-      "eindeDienstVerlening": "2030-12-31T00:00:00Z",
-      "type": "FinancieelVoordeel",
-      "talen": [
-        "ENG",
-        "DEU"
-      ],
-      "creatie": "2023-03-07T15:14:30.875550568Z",
-      "laatstGewijzigd": "2023-03-07T15:14:30.875551378Z",
-      "productnummer": "10092",
-      "gearchiveerd": false,
-      "@id": "https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/f23a4afa-5d92-4331-8f1d-a2b17382b6e9",
-      "@type": "ConceptualPublicServiceSnapshot",
-      "isVersionOf": "https://ipdc.tni-vlaanderen.be/id/concept/9adcd3db-3acc-4707-867f-e82a8b6429f8"
+      }
     }
   ]
 }

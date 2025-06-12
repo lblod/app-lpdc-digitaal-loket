@@ -265,7 +265,7 @@ test.describe('validate', () => {
 
     test(`validate address for address range`, async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
-        const params = {municipality: 'Kruibeke', street: 'O.L. Vrouwplein', houseNumber: '18-20'};
+        const params = {municipality: 'Kruibeke', street: 'O.L.Vrouwplein', houseNumber: '18-20'};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
             params
@@ -285,7 +285,7 @@ test.describe('validate', () => {
 
     test(`validate address for address in sub-municipality`, async ({request}) => {
         const loginResponse = await loginAsPepingen(request);
-        const params = {municipality: 'Leuven', street: 'Eenmeilaan', houseNumber: 2};
+        const params = {municipality: 'Leuven', street: 'Éénmeilaan', houseNumber: 2};
         const response = await request.get(`${dispatcherUrl}/lpdc-management/address/validate`, {
             headers: {cookie: loginResponse.cookie},
             params
@@ -296,7 +296,7 @@ test.describe('validate', () => {
         expect(actual).toEqual({
             gemeente: 'Leuven',
             postcode: '3010',
-            straat: 'Eénmeilaan',
+            straat: 'Éénmeilaan',
             huisnummer: '2',
             busnummer: undefined,
             adressenRegisterId: 'https://data.vlaanderen.be/id/adres/2272154'
@@ -544,4 +544,3 @@ test.describe('validate', () => {
     });
 
 });
-

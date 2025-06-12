@@ -1,0 +1,62 @@
+{
+  "@context": ["http://ipdc-stub/ipdc-lpdc-im.jsonld"],
+  "@id": "http://data.lblod.info/id/public-service/e8843fda-b3a8-4334-905c-8e49eb12203b",
+  "@type": "Instantie",
+  "naam": {
+    "nl": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
+    "nl-BE-x-formal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen",
+    "nl-BE-x-generated-informal": "Volledig ingevulde test om contract tussen ipdc en lpdc te testen - informal",
+    "en": "titel en"
+  },
+  "beschrijving": {
+    "en": "<p data-indentation-level=\"0\">beschrijving en</p>",
+    "nl-BE-x-generated-informal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat je het contract tussen ipdc en lpdc kan testen - informal</p>",
+    "nl": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>",
+    "nl-BE-x-formal": "<p data-indentation-level=\"0\">Dit is de hoofding voor een volledig ingevulde test zodat u het contract tussen ipdc en lpdc kan testen</p>"
+  },
+  "bevoegdBestuursniveaus": [
+    "Federaal",
+    "Provinciaal"
+  ],
+  "uitvoerendBestuursniveaus": [
+    "Europees",
+    "Provinciaal"
+  ],
+  "startDienstVerlening": "2024-03-12T12:00:00Z",
+  "eindeDienstVerlening": "2024-09-21T12:00:00Z",
+  "type": "AdviesBegeleiding",
+  "themas": [
+    "BurgerOverheid"
+  ],
+  "doelgroepen": [
+    "Burger",
+    "Vereniging",
+    "VlaamseOverheid"
+  ],
+  "geografischToepassingsgebieden": [
+    "BE24224020"
+  ],
+  "bevoegdeOverheden": [
+    {
+      "id": "OVO002514"
+    }
+  ],
+  "uitvoerendeOverheden": [
+    {
+      "id": "OVO002514"
+    }
+  ],
+  "creatie": "2024-04-24T14:01:09.807Z",
+  "laatstGewijzigd": "2024-04-24T14:09:32.778Z",
+  "laatstOntvangen": "2024-04-24T14:10:00.72350311Z",
+  "linkedConcept": "https://ipdc.tni-vlaanderen.be/id/concept/a7cedff2-e87d-42ca-b491-27075b7e15c2",
+  "linkedConceptId": "a7cedff2-e87d-42ca-b491-27075b7e15c2",
+  "linkedConceptProductnummer": "44618",
+  "productnummer": "44679",
+  "gearchiveerd": false,
+  "metadata": {
+    "uJeVersie": "34.5.0",
+    "generatedFormeleFields": false,
+    "generatedInformeleFields": true
+  }
+}

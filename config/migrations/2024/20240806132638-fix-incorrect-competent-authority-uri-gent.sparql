@@ -1,0 +1,79 @@
+PREFIX euro: <http://data.europa.eu/m8g/>
+PREFIX ipdc-lpdc: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX schema: <http://schema.org/>
+
+DELETE {
+  GRAPH ?g {
+    ?s ?p ?o .
+  }
+} INSERT {
+  GRAPH ?g {
+    ?s ?p ?correctedUri .
+  }
+} WHERE {
+  GRAPH ?g {
+    ?s ?p ?o .
+
+    VALUES ?p {
+      euro:hasCompetentAuthority
+      ipdc-lpdc:hasExecutingAuthority
+    }
+
+    FILTER NOT EXISTS {
+      ?s schema:publication ?publicationStatus.
+    }
+
+    FILTER (STRSTARTS(STR(?o), "http://data.lblod.info/id/bestuurseenheden/OVO"))
+    BIND (IRI(REPLACE(STR(?o), "http://data.lblod.info/id/bestuurseenheden/OVO", "https://data.vlaanderen.be/id/organisatie/OVO")) AS ?correctedUri)
+  }
+  FILTER (STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/"))
+}
+;
+# For already published services the status is also updated to ensure the
+# `lpdc-publish-service` picks it up.
+DELETE {
+  GRAPH ?g {
+    ?s ?p ?o .
+    ?s schema:publication "http://lblod.data.gift/concepts/publication-status/gepubliceerd" .
+  }
+} INSERT {
+  GRAPH ?g {
+    ?s ?p ?correctedUri .
+    ?s schema:publication "http://lblod.data.gift/concepts/publication-status/te-herpubliceren" .
+  }
+} WHERE {
+  GRAPH ?g {
+    ?s ?p ?o .
+
+    VALUES ?p {
+      euro:hasCompetentAuthority
+      ipdc-lpdc:hasExecutingAuthority
+    }
+
+    FILTER EXISTS {
+      ?s schema:publication "http://lblod.data.gift/concepts/publication-status/gepubliceerd" .
+    }
+
+    FILTER (STRSTARTS(STR(?o), "http://data.lblod.info/id/bestuurseenheden/OVO"))
+    BIND (IRI(REPLACE(STR(?o), "http://data.lblod.info/id/bestuurseenheden/OVO", "https://data.vlaanderen.be/id/organisatie/OVO")) AS ?correctedUri)
+  }
+  FILTER (STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/"))
+}
+;
+# Correct the faulty URIs used by the `lpdc-management-service` to construct the
+# OVO code lists
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+  }
+} INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?correctedUri ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+    FILTER (STRSTARTS(STR(?s), "http://data.lblod.info/id/bestuurseenheden/OVO"))
+    BIND (IRI(REPLACE(STR(?s), "http://data.lblod.info/id/bestuurseenheden/OVO", "https://data.vlaanderen.be/id/organisatie/OVO")) AS ?correctedUri)
+  }
+}

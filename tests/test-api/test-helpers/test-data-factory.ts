@@ -11,7 +11,6 @@ import {
     CompetentAuthorityLevel,
     ConceptTag,
     ExecutingAuthorityLevel,
-    InstancePublicationStatusType,
     InstanceStatus,
     ProductType,
     PublicationMedium,
@@ -25,6 +24,7 @@ import {ContactPointTestBuilder} from "./contact-point-test.builder";
 import {pepingenId} from "./login";
 import {AddressTestBuilder} from "./address.test-builder";
 import {Uri} from "./triple-array";
+import {PublishedPublicServiceTestBuilder} from "./published-public-service.test-builder";
 
 
 export class TestDataFactory {
@@ -146,7 +146,7 @@ export class TestDataFactory {
             .withCost(cost.getSubject())
             .withFinancialAdvantage(financialAdvantage.getSubject())
             .withContactPoint(contactPoint.getSubject())
-            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/23064'))
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24123064'))
             .withDateCreated(new Date())
             .withDateModified(new Date())
             .withStartDate(new Date())
@@ -171,7 +171,7 @@ export class TestDataFactory {
             ]
         };
     }
-    async createFullToRepublishPublicService(request: APIRequestContext, organisatieId: string) {
+    async createFullPublicServiceThatIsPublished(request: APIRequestContext, organisatieId: string) {
         const supportingEvidence = await EvidenceTestBuilder.anEvidenceForInstance()
             .buildAndPersist(request, organisatieId);
 
@@ -202,6 +202,7 @@ export class TestDataFactory {
             .withAddress(address.getSubject())
             .buildAndPersist(request, organisatieId);
 
+        const sendDate = new Date();
         const publicService = await PublicServiceTestBuilder.aPublicService()
             .withTitle('Instance title', Language.INFORMAL)
             .withDescription('Instance description', Language.INFORMAL)
@@ -223,18 +224,22 @@ export class TestDataFactory {
             .withCost(cost.getSubject())
             .withFinancialAdvantage(financialAdvantage.getSubject())
             .withContactPoint(contactPoint.getSubject())
-            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/23064'))
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24123064'))
             .withDateCreated(new Date())
             .withDateModified(new Date())
             .withStartDate(new Date())
             .withEndDate(new Date())
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withInstanceStatus(InstanceStatus.verstuurd)
-            .withDateSent(new Date())
-            .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
-            .withDatePublished(new Date())
+            .withInstanceStatus(InstanceStatus.verzonden)
+            .withDateSent(sendDate)
             .buildAndPersist(request, organisatieId);
+
+        await PublishedPublicServiceTestBuilder.aMinimalPublishedService()
+            .withGeneratedAtTime(sendDate)
+            .withIsPublishedVersionOf(publicService.getId())
+            .withDatePublished(new Date())
+            .buildAndPersist(request, pepingenId);
 
         return {
             publicService: publicService,

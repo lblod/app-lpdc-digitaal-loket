@@ -1,0 +1,10 @@
+delete {
+    graph <http://mu.semte.ch/graphs/migrate-refnis-nuts-lau> {
+        ?s ?p ?o
+    }
+}
+where {
+    graph <http://mu.semte.ch/graphs/migrate-refnis-nuts-lau> {
+      ?s ?p ?o
+    }
+}

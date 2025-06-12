@@ -8,7 +8,7 @@
       {
         "node": "http://hostname/doc/instancesnapshot?pageNumber=0",
         "path": "generatedAtTime",
-        "@type": "LessThanRelation"
+        "@type": "LessThanOrEqualToRelation"
       },
       {
         "node": "http://hostname/doc/instancesnapshot?pageNumber=2",
@@ -17,24 +17,24 @@
       }
     ]
   },
-  "@context": "http://hostname/InstanceJsonLdContext.jsonld",
+  "@context": ["http://hostname/ipdc-lpdc-im.jsonld", "http://hostname/ldes.jsonld"],
   "@id": "http://hostname/doc/instancesnapshot?pageNumber=1",
   "@type": "EventStream",
   "member": [
     {
       "@id": "http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127",
       "@type": [
-        "InstancePublicServiceSnapshot"
+        "InstantieSnapshot"
       ],
       "isVersionOf": "http://data.lblod.info/id/public-service/c31c343e-836c-4674-8efa-991cc2078493",
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
       "linkedConcept": "https://ipdc.tni-vlaanderen.be/id/concept/705d401c-1a41-4802-a863-b22499f71b84",
-      "aangemaaktOp": "2024-02-14T13:42:12.357Z",
-      "bewerktOp": "2024-02-14T13:59:25.237Z",
+      "creatie": "2024-02-14T13:42:12.357Z",
+      "laatstGewijzigd": "2024-02-14T13:59:25.237Z",
       "generatedAtTime": "2024-02-28T02:16:39.134Z",
-      "geldigVanaf": "2020-08-26T11:40:20.026205Z",
-      "geldigTot": "2025-07-12T11:40:20.026205Z",
-      "titel": {
+      "startDienstVerlening": "2020-08-26T11:40:20.026205Z",
+      "eindeDienstVerlening": "2025-07-12T11:40:20.026205Z",
+      "naam": {
         "en": "Certificate of Belgian nationality",
         "nl-BE-x-informal": "Akte van Belgische nationaliteit"
       },
@@ -42,7 +42,7 @@
         "en": "<p data-indentation-level=\"0\">The certificate of Belgian nationality is granted to citizens who have acquired Belgian nationality through the procedure of nationality declaration or naturalisation.</p>",
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">De akte van Belgische nationaliteit wordt toegekend aan burgers die de Belgische nationaliteit hebben verkregen via de procedure van nationaliteitsverklaring of van naturalisatie. Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen.</p>"
       },
-      "aanvullendeBeschrijving": {
+      "verdereBeschrijving": {
         "en": "<p data-indentation-level=\"0\">The certificate states:<ul><li>the last name, first names, date and place of birth of the person to whom the certificate relates</li><li>the legal foundation of the declaration on the basis of which the certificate was drawn up</li><li>in the case nationality is granted on the basis of Articles 8, § 1, 2°, b), 9, 2°, b), and 11, § 2, of the Belgian Nationality Code: the last name, first names, date and place of birth of the declarant or declarants.</li></ul>Under certain conditions, you can request a copy of or an extract from the certificate of Belgian nationality:<ul><li>A copy contains the original data of the certificate and the history of the status of the person to whom the certificate relates.</li></ul><ul><li>An extract, on the contrary, only states the current details of the certificate, without stating the history of the status of the person to whom the certificate relates. Therefore, an extract only shows the current status of the data.</li></ul></p>",
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Verdere beschrijving</p>"
       },
@@ -52,8 +52,8 @@
       },
       "voorwaarden": [
         {
-          "@type": "voorwaarde",
-          "titel": {
+          "@type": "Voorwaarde",
+          "naam": {
             "en": "Requirements - 1",
             "nl-BE-x-informal": "Voorwaarden - 1"
           },
@@ -63,8 +63,8 @@
           },
           "order": 0,
           "bewijs": {
-            "@type": "bewijsType",
-            "titel": {
+            "@type": "Bewijs",
+            "naam": {
               "en": "Evidence - 1",
               "nl-BE-x-informal": "Bewijs - 1"
             },
@@ -75,8 +75,8 @@
           }
         },
         {
-          "@type": "voorwaarde",
-          "titel": {
+          "@type": "Voorwaarde",
+          "naam": {
             "en": "Requirements - 2",
             "nl-BE-x-informal": "Voorwaarden - 2"
           },
@@ -86,8 +86,8 @@
           },
           "order": 1,
           "bewijs": {
-            "@type": "bewijsType",
-            "titel": {
+            "@type": "Bewijs",
+            "naam": {
               "en": "Evidence - 2",
               "nl-BE-x-informal": "Bewijs - 2"
             },
@@ -100,8 +100,8 @@
       ],
       "procedures": [
         {
-          "@type": "procedure",
-          "titel": {
+          "@type": "Procedure",
+          "naam": {
             "en": "Procedure - en - 1",
             "nl-BE-x-informal": "Procedure - nl - 1"
           },
@@ -112,8 +112,8 @@
           "order": 0,
           "websites": [
             {
-              "@type": "website",
-              "titel": {
+              "@type": "Website",
+              "naam": {
                 "en": "Procedure website title - 1 - 1",
                 "nl-BE-x-informal": "Procedure website titel - 1 - 1"
               },
@@ -125,8 +125,8 @@
               "order": 0
             },
             {
-              "@type": "website",
-              "titel": {
+              "@type": "Website",
+              "naam": {
                 "en": "Procedure website title - 1 - 2",
                 "nl-BE-x-informal": "Procedure website titel - 1 - 2"
               },
@@ -140,8 +140,8 @@
           ]
         },
         {
-          "@type": "procedure",
-          "titel": {
+          "@type": "Procedure",
+          "naam": {
             "en": "Procedure - en - 2",
             "nl-BE-x-informal": "Procedure - nl - 2"
           },
@@ -152,8 +152,8 @@
           "order": 1,
           "websites": [
             {
-              "@type": "website",
-              "titel": {
+              "@type": "Website",
+              "naam": {
                 "en": "Procedure website title - 2 - 1",
                 "nl-BE-x-informal": "Procedure website titel - 2 - 1"
               },
@@ -165,8 +165,8 @@
               "order": 0
             },
             {
-              "@type": "website",
-              "titel": {
+              "@type": "Website",
+              "naam": {
                 "en": "Procedure website title - 2 - 2",
                 "nl-BE-x-informal": "Procedure website titel - 2 - 2"
               },
@@ -182,8 +182,8 @@
       ],
       "kosten": [
         {
-          "@type": "kost",
-          "titel": {
+          "@type": "Kost",
+          "naam": {
             "en": "Amount cost - 1",
             "nl-BE-x-informal": "Bedrag kost - 1"
           },
@@ -194,8 +194,8 @@
           "order": 0
         },
         {
-          "@type": "kost",
-          "titel": {
+          "@type": "Kost",
+          "naam": {
             "en": "Amount cost - 2",
             "nl-BE-x-informal": "Bedrag kost - 2"
           },
@@ -208,8 +208,8 @@
       ],
       "financieleVoordelen": [
         {
-          "@type": "financieelVoordeel",
-          "titel": {
+          "@type": "FinancieelVoordeel",
+          "naam": {
             "en": "Financial advantage - 1",
             "nl-BE-x-informal": "Financieel voordeel - 1"
           },
@@ -220,8 +220,8 @@
           "order": 0
         },
         {
-          "@type": "financieelVoordeel",
-          "titel": {
+          "@type": "FinancieelVoordeel",
+          "naam": {
             "en": "Financial advantage - 2",
             "nl-BE-x-informal": "Financieel voordeel - 2"
           },
@@ -236,10 +236,10 @@
         "en": "<p data-indentation-level=\"0\">Regulation</p>",
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Regelgeving</p>"
       },
-      "regelgevendeBronnen": [
+      "regelgeving": [
         {
-          "@type": "regelgevendeBron",
-          "titel": {
+          "@type": "Regelgeving",
+          "naam": {
             "en": "Title legal resource - 1",
             "nl-BE-x-informal": "Titel regelgevende bron - 1"
           },
@@ -251,8 +251,8 @@
           "order": 0
         },
         {
-          "@type": "regelgevendeBron",
-          "titel": {
+          "@type": "Regelgeving",
+          "naam": {
             "en": "Title legal resource - 2",
             "nl-BE-x-informal": "Titel regelgevende bron - 2"
           },
@@ -264,23 +264,23 @@
           "order": 1
         }
       ],
-      "contactPunten": [
+      "contactgegevens": [
         {
-          "@type": "contactPunt",
+          "@type": "Contactgegevens",
           "email": "info@gent.be1",
-          "telefoon": "04123456781",
+          "telefoonnummer": "04123456781",
           "url": "https://www.gent.be1",
           "openingsuren": "24/24 - 1",
           "order": 0,
-          "adressen": [
+          "adres": [
             {
-              "@type": "adres",
-              "straat": {
+              "@type": "Adres",
+              "straatnaam": {
                 "nl": "Burggravenlaan"
               },
               "huisnummer": "1",
               "busnummer": "a",
-              "gemeente": {
+              "gemeentenaam": {
                 "nl": "Gent"
               },
               "land": {
@@ -291,21 +291,21 @@
           ]
         },
         {
-          "@type": "contactPunt",
+          "@type": "Contactgegevens",
           "email": "info@gent.be2",
-          "telefoon": "04123456782",
+          "telefoonnummer": "04123456782",
           "url": "https://www.gent.be2",
           "openingsuren": "24/24 - 2",
           "order": 1,
-          "adressen": [
+          "adres": [
             {
-              "@type": "adres",
-              "straat": {
+              "@type": "Adres",
+              "straatnaam": {
                 "nl": "Burggravenlaantje"
               },
               "huisnummer": "15",
               "busnummer": "b",
-              "gemeente": {
+              "gemeentenaam": {
                 "nl": "Gent-Sint-Pieter"
               },
               "land": {
@@ -316,10 +316,10 @@
           ]
         }
       ],
-      "meerInfo": [
+      "websites": [
         {
-            "@type": "website",
-            "titel": {
+            "@type": "Website",
+            "naam": {
               "en": "Belgian nationality and naturalization website - 1",
               "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - 1"
             },
@@ -331,8 +331,8 @@
             "order": 0
           },
           {
-            "@type": "website",
-            "titel": {
+            "@type": "Website",
+            "naam": {
               "en": "Belgian nationality and naturalization website - 2",
               "nl-BE-x-informal": "Website Belgische nationaliteit en naturalisatie beschrijving - 2"
             },
@@ -357,24 +357,24 @@
         "NLD",
         "ENG"
       ],
-      "bevoegdeBestuursniveaus": [
+      "bevoegdBestuursniveaus": [
         "Federaal",
         "Europees"
       ],
       "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-        "c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+        "http://data.lblod.info/id/bestuurseenheden/c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea"
       ],
-      "uitvoerendeBestuursniveaus": [
+      "uitvoerendBestuursniveaus": [
         "Lokaal",
         "Derden"
       ],
       "uitvoerendeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ],
       "geografischToepassingsgebieden": [
-        "http://vocab.belgif.be/auth/refnis2019/44000",
-        "http://vocab.belgif.be/auth/refnis2019/44021"
+        "BE234",
+        "BE23444021"
       ],
       "zoektermen": {
         "nl": [
@@ -382,7 +382,7 @@
           "Nationaliteit"
         ]
       },
-      "publicatieKanalen": [
+      "publicatiekanalen": [
         "YourEurope"
       ],
       "yourEuropeCategorieen": [
@@ -393,54 +393,54 @@
     {
       "@id": "http://data.lblod.info/id/public-service-snapshot/a62cee64-9086-4864-9be9-1f72798a8c72",
       "@type": [
-        "InstancePublicServiceSnapshot"
+        "InstantieSnapshot"
       ],
       "isVersionOf": "http://data.lblod.info/id/public-service/2e018424-7af6-4798-8026-0e627a8694d8",
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-      "aangemaaktOp": "2024-02-24T11:42:12.357Z",
-      "bewerktOp": "2024-02-25T13:59:25.236Z",
+      "aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "creatie": "2024-02-24T11:42:12.357Z",
+      "laatstGewijzigd": "2024-02-25T13:59:25.236Z",
       "generatedAtTime": "2024-03-01T06:32:10.377Z",
-      "titel": {
+      "naam": {
         "nl-BE-x-informal": "Instantie die gearchiveerd zal worden"
       },
       "beschrijving": {
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de instantie die gearchiveerd zal worden</p>"
       },
       "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ],
       "geografischToepassingsgebieden": [
-        "http://vocab.belgif.be/auth/refnis2019/44021"
+        "BE23444021"
       ],
       "uitvoerendeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ],
       "gearchiveerd": "false"
     },
     {
       "@id": "http://data.lblod.info/id/public-service-snapshot/f9aceb0a-5225-4b0c-be55-e14a2954347a",
       "@type": [
-        "InstancePublicServiceSnapshot"
+        "InstantieSnapshot"
       ],
       "isVersionOf": "http://data.lblod.info/id/public-service/2e018424-7af6-4798-8026-0e627a8694d8",
-      "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-      "aangemaaktOp": "2024-02-24T11:42:12.357Z",
-      "bewerktOp": "2024-02-27T13:59:25.236Z",
+      "aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+      "creatie": "2024-02-24T11:42:12.357Z",
+      "laatstGewijzigd": "2024-02-27T13:59:25.236Z",
       "generatedAtTime": "2024-03-02T06:32:10.377Z",
-      "titel": {
+      "naam": {
         "nl-BE-x-informal": "Instantie die gearchiveerd is"
       },
       "beschrijving": {
         "nl-BE-x-informal": "<p data-indentation-level=\"0\">Beschrijving van de instantie die gearchiveerd is</p>"
       },
       "bevoegdeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ],
       "geografischToepassingsgebieden": [
-        "http://vocab.belgif.be/auth/refnis2019/44021"
+        "BE23444021"
       ],
       "uitvoerendeOverheden": [
-        "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
       ],
       "gearchiveerd": "true"
     }

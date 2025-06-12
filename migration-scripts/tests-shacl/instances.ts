@@ -1,5 +1,4 @@
 import rdf from '@zazuko/env-node';
-import Dataset from '@zazuko/env';
 import SHACLValidator from 'rdf-validate-shacl';
 
 export async function main() {
@@ -39,9 +38,13 @@ async function instanceTestData() {
     const codeLists = await rdf.dataset().import(rdf.fromFile('codelists/example-codelists.ttl'));
     const schemasOntologies = await rdf.dataset().import(rdf.fromFile('schemas-ontologies/besluit.ttl'));
 
+    const conceptData = await rdf.dataset().import(rdf.fromFile('instances-concepts/concept-data/concept-test-cases-data.ttl'));
+
     const instanceData = await rdf.dataset().import(rdf.fromFile('instances-concepts/instance-data/instance-test-cases-data.ttl'));
 
-    validate(instanceData, schemasOntologies, codeLists, shapes);
+    const instanceAndConceptData = instanceData.merge(conceptData);
+
+    validate(instanceAndConceptData, schemasOntologies, codeLists, shapes);
 
 }
 

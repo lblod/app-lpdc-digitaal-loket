@@ -1,0 +1,22 @@
+INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        <http://lblod.data.gift/concept-schemes/093c3b84-de6d-4f77-a789-51c43196d3bc>
+          a                                               <http://www.w3.org/2004/02/skos/core#ConceptScheme> ;
+          <http://mu.semte.ch/vocabularies/core/uuid>     """9cf6fa63-1f49-4d53-af06-e1c235ece10b""" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel> "LPDC instance publication statuses"@en, "Publicatie statusen van LPDC instanties"@nl .
+
+        <http://lblod.data.gift/concepts/publication-status/gepubliceerd>
+          a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+          <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/093c3b84-de6d-4f77-a789-51c43196d3bc> ;
+          <http://mu.semte.ch/vocabularies/core/uuid>         """3369bb10-1962-11ed-b07c-132292303e92""" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel>     "Gepubliceerd"@nl ;
+          <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/093c3b84-de6d-4f77-a789-51c43196d3bc> .
+
+        <http://lblod.data.gift/concepts/publication-status/te-republiceren>
+          a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+          <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/093c3b84-de6d-4f77-a789-51c43196d3bc> ;
+          <http://mu.semte.ch/vocabularies/core/uuid>         """a7d01120-6f93-11ed-bcb8-a144c50c46d7""" ;
+          <http://www.w3.org/2004/02/skos/core#prefLabel>     "Te republiceren"@nl ;
+          <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/093c3b84-de6d-4f77-a789-51c43196d3bc> .
+    }
+}

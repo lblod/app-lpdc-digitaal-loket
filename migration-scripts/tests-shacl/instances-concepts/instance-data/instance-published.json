@@ -240,13 +240,13 @@
     ],
     "http://purl.org/dc/terms/spatial": [
       {
-        "@id": "http://vocab.belgif.be/auth/refnis2019/23064"
+        "@id": "http://data.europa.eu/nuts/code/BE24123064"
       },
       {
-        "@id": "http://vocab.belgif.be/auth/refnis2019/70000"
+        "@id": "http://data.europa.eu/nuts/code/BE22"
       },
       {
-        "@id": "http://vocab.belgif.be/auth/refnis2019/24086"
+        "@id": "http://data.europa.eu/nuts/code/BE24224086"
       }
     ],
     "http://purl.org/dc/terms/title": [
@@ -308,7 +308,7 @@
     ],
     "http://www.w3.org/ns/adms#status": [
       {
-        "@id": "http://lblod.data.gift/concepts/instance-status/verstuurd"
+        "@id": "http://lblod.data.gift/concepts/instance-status/verzonden"
       }
     ],
     "http://www.w3.org/ns/dcat#keyword": [

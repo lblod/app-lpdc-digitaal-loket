@@ -5,7 +5,6 @@ export type Presence = 'PRESENT';
 
 export interface Field {
     nl?: string;
-    en?: string | boolean;
     notRich?: boolean;
 };
 
@@ -46,16 +45,13 @@ export interface PublishedInstanceFields {
     procedures?: NestedFieldGroup[],
     kosten?: NestedFieldGroup[],
     financieleVoordelen?: NestedFieldGroup[],
-    regelgeving?: Field,
-    regelgevendeBronnen?: NestedFieldGroup[],
+    regelgevingTekst?: Field,
+    regelgeving?: NestedFieldGroup[],
     contactPunten?: ContactPointFields[],
     meerInfos?: NestedFieldGroup[],
     uuid?: string | Presence,
     createdBy?: string,
-    productId?: string,
     conceptSource?: string,
-    //TODO LPDC-709 This should not be send to IPDC
-    conceptStatus?: string;
     type?: string,
     aangemaaktOp?: string | Presence,
     bewerktOp?: string | Presence,
@@ -87,16 +83,12 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validateNestedFieldGroup(publicService, instance, 'http://purl.org/vocab/cpsv#follows', 'http://purl.org/vocab/cpsv#Rule', instanceFields.procedures, gekozenUOfJeVorm, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite', 'http://schema.org/WebSite');
     validateNestedFieldGroup(publicService, instance, 'http://data.europa.eu/m8g/hasCost', 'http://data.europa.eu/m8g/Cost', instanceFields.kosten, gekozenUOfJeVorm);
     validateNestedFieldGroup(publicService, instance, 'http://purl.org/vocab/cpsv#produces', 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage', instanceFields.financieleVoordelen, gekozenUOfJeVorm);
-    validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation', arrayContainingText(instanceFields.regelgeving, gekozenUOfJeVorm, true));
-    validateNestedFieldGroup(publicService, instance, 'http://data.europa.eu/m8g/hasLegalResource', 'http://data.europa.eu/eli/ontology#LegalResource', instanceFields.regelgevendeBronnen, gekozenUOfJeVorm);
+    validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation', arrayContainingText(instanceFields.regelgevingTekst, gekozenUOfJeVorm, true));
+    validateNestedFieldGroup(publicService, instance, 'http://data.europa.eu/m8g/hasLegalResource', 'http://data.europa.eu/eli/ontology#LegalResource', instanceFields.regelgeving, gekozenUOfJeVorm);
     validateNestedFieldGroup(publicService, instance, 'http://www.w3.org/2000/01/rdf-schema#seeAlso', 'http://schema.org/WebSite', instanceFields.meerInfos, gekozenUOfJeVorm);
     validateContactPointFields(publicService, instance, instanceFields.contactPunten);
-    validatePresentOrData(publicService, 'http://mu.semte.ch/vocabularies/core/uuid', instanceFields.uuid)
     validateData(publicService, 'http://purl.org/pav/createdBy', arrayContainingStringIds(instanceFields.createdBy));
-    //TODO LPDC-709 product id should not be send to IPDC
-    validateData(publicService, 'http://schema.org/productID', arrayContainingString(instanceFields.productId));
     validateData(publicService, 'http://purl.org/dc/terms/source', arrayContainingStringIds(instanceFields.conceptSource));
-    validateData(publicService, 'http://www.w3.org/ns/adms#status', arrayContainingStringIds(instanceFields.conceptStatus));
     validateData(publicService, 'http://purl.org/dc/terms/type', arrayContainingStringIds(instanceFields.type));
     validatePresentOrData(publicService, 'http://schema.org/dateCreated', instanceFields.aangemaaktOp, 'dateTime');
     validatePresentOrData(publicService, 'http://schema.org/dateModified', instanceFields.bewerktOp, 'dateTime');
@@ -210,13 +202,7 @@ function arrayContainingText(field: Field | undefined, gekozenUOfJeVorm: string,
     const embedPrefix = (contentEmbedded && !field.notRich) ? '<p data-indentation-level="0">' : '';
     const embedSuffix = (contentEmbedded && !field.notRich) ? '</p>' : '';
 
-    if (field.en !== undefined && field.en !== false) {
-        return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }, { "@language": "en", "@value": `${embedPrefix}${field.en}${embedSuffix}` }];
-    } else if (field.nl !== undefined && field.en === false) {
-        return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }, { "@language": "en", "@value": expect.anything() }];
-    } else {
-        return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }];
-    }
+    return [{ "@language": gekozenUOfJeVorm, "@value": `${embedPrefix}${field.nl}${embedSuffix}` }];
 }
 
 function arrayContainingString(aString: string | undefined, type?: string) {

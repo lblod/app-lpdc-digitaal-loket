@@ -1,0 +1,11 @@
+DELETE {
+    GRAPH ?g {
+        ?s <http://www.w3.org/ns/shacl#order> ?o .
+    }
+}
+WHERE {
+    GRAPH ?g {
+        ?s a <https://www.w3.org/ns/activitystreams#Tombstone> .
+        ?s <http://www.w3.org/ns/shacl#order> ?o .
+    }
+}

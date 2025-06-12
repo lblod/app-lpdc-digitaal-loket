@@ -1,0 +1,14 @@
+prefix skos:  <http://www.w3.org/2004/02/skos/core#>
+
+delete {
+    graph <http://mu.semte.ch/graphs/public> {
+        ?refniscode ?anyP ?anyObject.
+    }
+}
+where {
+    graph <http://mu.semte.ch/graphs/public> {
+        ?refniscode a skos:Concept ;
+                skos:inScheme <http://lblod.data.gift/vocabularies/lpdc-ipdc/IPDCLocaties>;
+                ?anyP ?anyObject.
+    }
+}

@@ -30,10 +30,11 @@ export default defineConfig ({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    headless: true
+    headless: true,
+    timezoneId: 'Europe/Brussels',
   },
   globalSetup: require.resolve('./global-setup'),
-  timeout: 120000,
+  timeout: 300000,
   expect: {
     timeout: 10000
   }

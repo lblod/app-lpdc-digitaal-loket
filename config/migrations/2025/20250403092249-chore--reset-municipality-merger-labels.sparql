@@ -1,0 +1,22 @@
+PREFIX ipdc-lpdc: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+
+DELETE {
+  GRAPH ?g {
+    ?productInstance ipdc-lpdc:forMunicipalityMerger "true"^^xsd:boolean.
+  }
+} INSERT {
+  GRAPH ?g {
+    ?productInstance ipdc-lpdc:forMunicipalityMerger "false"^^xsd:boolean.
+  }
+} WHERE {
+  GRAPH ?g {
+    ?productInstance a ipdc-lpdc:InstancePublicService;
+                     ipdc-lpdc:forMunicipalityMerger "true"^^xsd:boolean.
+  }
+
+  FILTER
+  (
+   STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/") &&
+   STRENDS(STR(?g), "/LoketLB-LPDCGebruiker")
+   )
+}

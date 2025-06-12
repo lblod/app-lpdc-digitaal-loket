@@ -1,0 +1,16 @@
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> "false"^^xsd:boolean.
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+    }
+    FILTER NOT EXISTS {
+        ?instance <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger> ?forMunicipalityMerger.
+    }
+    FILTER(
+        STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+        STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker"))
+}

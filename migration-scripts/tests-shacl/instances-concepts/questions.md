@@ -109,7 +109,7 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 
 #### Fields that are sent from LPDC -> IPDC that are not in vocabularium, nor shacl shape; but should not be added ? 
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> <https://ipdc.tni-vlaanderen.be/id/conceptsnapshot/50fd7f03-276f-403e-ad39-152dba4e39be> .
-- #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verstuurd> .
+- #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://www.w3.org/ns/adms#status> <http://lblod.data.gift/concepts/instance-status/verzonden> .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#conceptTag> <https://productencatalogus.data.vlaanderen.be/id/concept/ConceptTag/YourEuropeVerplicht> .
 - #<http://data.lblod.info/id/public-service/45769c3c-0fa0-476e-b90e-0d5f1f49355a> <http://schema.org/productID> "1502" .
 - 
@@ -188,6 +188,6 @@ shacl:class xsd:string ===> shacl:datatype xsd:string
 - concept: publicationMedium ontbreekt? = DONE
 - instance > follows > lpdcExt:hasWebsite vs lpdcExt:hasWebsites ? De shape verwacht lpdcExt:hasWebsite, maar de implementatie die we naar ipdc sturen is lpdcExt:hasWebsites; we are not using a context object when generating the json-ld; so this seems incorrect ... => fixed ... 
 - product id verwijderen van lpdc-publish - check (TODO LPDC-709)
-- status (ontwerp, verstuurd) verwijderen van lpdc-publish (TODO LPDC-709)
+- status (ontwerp, verzonden) verwijderen van lpdc-publish (TODO LPDC-709)
 - executing authority level: required for instance (not for concept)
 - competent authority level: required (both for concept and instance)

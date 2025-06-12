@@ -5,7 +5,6 @@ import {Literal, Predicates, Triple, TripleArray, Uri} from "./triple-array";
 import {
     CompetentAuthorityLevel,
     ExecutingAuthorityLevel,
-    InstancePublicationStatusType,
     InstanceStatus,
     ProductType,
     PublicationMedium,
@@ -58,13 +57,16 @@ export class PublicServiceTestBuilder {
     private reviewStatus: Uri;
     private instanceStatus: Uri;
     private dateSent: Literal;
-    private publicationStatus: Uri;
-    private datePublished: Literal;
+    private dutchLanguageVariant: Literal;
+    private needsConversionFromFormalToInformal: Literal;
+    private forMunicipalityMerger: Literal;
 
     static aPublicService() {
+        const instanceUuid = uuid();
         return new PublicServiceTestBuilder()
+            .withId(new Uri(`http://data.lblod.info/id/public-service/${instanceUuid}`))
+            .withUUID(instanceUuid)
             .withType()
-            .withUUID(uuid())
             .withTitle('Instance title', Language.INFORMAL)
             .withDescription('Instance description', Language.INFORMAL)
             .withDateCreated(new Date())
@@ -72,18 +74,13 @@ export class PublicServiceTestBuilder {
             .withStartDate(new Date())
             .withEndDate(new Date())
             .withInstanceStatus(InstanceStatus.ontwerp)
+            .withDutchLanguageVariant(Language.INFORMAL)
+            .withNeedsConversionFromFormalToInformal(false)
+            .withForMunicipalityMerger(false);
     }
 
     static aFullPublicService() {
-        return new PublicServiceTestBuilder()
-            .withType()
-            .withUUID(uuid())
-            .withTitle('Instance title', Language.INFORMAL)
-            .withDescription('Instance description', Language.INFORMAL)
-            .withDateCreated(new Date())
-            .withDateModified(new Date())
-            .withStartDate(new Date())
-            .withEndDate(new Date())
+        return PublicServiceTestBuilder.aPublicService()
             .withAdditionalDescriptions('Additional description', Language.INFORMAL)
             .withException('exception', Language.INFORMAL)
             .withRegulation('regulation', Language.INFORMAL)
@@ -97,16 +94,19 @@ export class PublicServiceTestBuilder {
             .withYourEuropeCategory(YourEuropeCategory.Bedrijf)
             .withPublicationMedium(PublicationMedium.YourEurope)
             .withReviewStatus(ReviewStatus.conceptUpdated)
-            .withSpatial(new Uri('http://vocab.belgif.be/auth/refnis2019/24001'))
+            .withSpatial(new Uri('http://data.europa.eu/nuts/code/BE24224001'))
             .withCompetentAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
             .withExecutingAuthority([new Uri(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`)])
-            .withInstanceStatus(InstanceStatus.ontwerp)
-            .withPublicationStatus(InstancePublicationStatusType.teHerpubliceren)
-            .withDatePublished(new Date())
+            .withForMunicipalityMerger(false)
     }
 
     private withType() {
         this.type =  new Uri(PublicServiceType);
+        return this;
+    }
+
+    withId(id: Uri): PublicServiceTestBuilder {
+        this.id = id;
         return this;
     }
 
@@ -181,7 +181,7 @@ export class PublicServiceTestBuilder {
     }
 
     withKeywords(keywords: string[]) {
-        this.keywords = keywords.map(keyword => new Literal(keyword, Language.INFORMAL))
+        this.keywords = keywords.map(keyword => new Literal(keyword, Language.NL))
         return this;
     }
 
@@ -310,13 +310,18 @@ export class PublicServiceTestBuilder {
         return this;
     }
 
-    withPublicationStatus(publicationStatus: InstancePublicationStatusType){
-        this.publicationStatus = new Uri(publicationStatus)
+    withDutchLanguageVariant(language: Language) {
+        this.dutchLanguageVariant = new Literal(language);
         return this;
     }
 
-    withDatePublished(date: Date) {
-        this.datePublished = new Literal(date.toISOString(), undefined, 'http://www.w3.org/2001/XMLSchema#dateTime');
+    withNeedsConversionFromFormalToInformal(needsConversionFromFormalToInformal: boolean) {
+        this.needsConversionFromFormalToInformal = new Literal(needsConversionFromFormalToInformal.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#boolean');
+        return this;
+    }
+
+    withForMunicipalityMerger(forMunicipalityMerger: boolean) {
+        this.forMunicipalityMerger = new Literal(forMunicipalityMerger.toString(), undefined, 'http://www.w3.org/2001/XMLSchema#boolean');
         return this;
     }
 
@@ -361,8 +366,9 @@ export class PublicServiceTestBuilder {
             new Triple(this.id, Predicates.reviewStatus, this.reviewStatus),
             new Triple(this.id, Predicates.instanceStatus, this.instanceStatus),
             new Triple(this.id, Predicates.dateSent, this.dateSent),
-            new Triple(this.id, Predicates.publicationStatus, this.publicationStatus),
-            new Triple(this.id, Predicates.datePublished, this.datePublished),
+            new Triple(this.id, Predicates.dutchLanguageVariant, this.dutchLanguageVariant),
+            new Triple(this.id, Predicates.needsConversionFromFormalToInformal, this.needsConversionFromFormalToInformal),
+            new Triple(this.id, Predicates.forMunicipalityMerger, this.forMunicipalityMerger),
         ];
         return new TripleArray(triples);
     }

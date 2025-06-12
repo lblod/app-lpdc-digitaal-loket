@@ -6,7 +6,9 @@
                                                                                          <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-18T06:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
                                                                                          <http://purl.org/dc/terms/title> "Minimalistische instantie"@nl-be-x-informal;
                                                                                          <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie</p>"@nl-be-x-informal;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>.
 
 <http://data.lblod.info/id/public-service-snapshot/84d1e739-d20c-4986-84d8-331bd58feb09> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
                                                                                          <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c0d6bf9a-fcc4-4d46-beb6-3f4d80f03bf3>;
@@ -16,7 +18,9 @@
                                                                                          <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-20T07:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
                                                                                          <http://purl.org/dc/terms/title> "Minimalistische instantie updatet"@nl-be-x-informal;
                                                                                          <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de minimalistische instantie updatet</p>"@nl-be-x-informal;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>.
 
 <http://data.lblod.info/id/public-service-snapshot/42f89ef6-338c-44c3-819f-5ab22a44bbe6> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
                                                                                          <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c17b67ac-c518-4f98-b73c-53b3c068ad21>;
@@ -26,7 +30,9 @@
                                                                                          <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-27T06:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
                                                                                          <http://purl.org/dc/terms/title> "Essentiële instantie"@nl-be-x-informal;
                                                                                          <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de essentiële instantie</p>"@nl-be-x-informal;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>.
 
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
                                                                                          <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/c31c343e-836c-4674-8efa-991cc2078493>;
@@ -51,11 +57,13 @@ _:df_820_18 a <http://data.europa.eu/m8g/Evidence>;
             <http://purl.org/dc/terms/title> "Evidence - 1"@en, "Bewijs - 1"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">If you collect the document yourself:<ul><li>your own identity card.</li></ul>If you are requesting the document for someone else:<ul><li>a power of attorney from that person and a copy of their identity card</li></ul><ul><li>as well as your own identity card.</li></ul> - 1</p>"@en, "<p data-indentation-level=\"0\">Als u het document zelf ophaalt:<ul><li>uw eigen identiteitskaart.</li></ul>Als u het document voor iemand anders aanvraagt:<ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - nl - 1</p>"@nl-be-x-informal.
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://vocab.belgif.be/ns/publicservice#hasRequirement> _:df_820_29.
-_:df_820_29 <http://purl.org/dc/terms/title> "Requirements - 2"@en, "Voorwaarden - 2"@nl-be-x-informal;
+_:df_820_29 a <http://data.europa.eu/m8g/Requirement>;
+            <http://purl.org/dc/terms/title> "Requirements - 2"@en, "Voorwaarden - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">The right to receive a copy of or an extract from certificates of Belgian nationality is limited to:<ul><li>yourself</li><li>your spouse, surviving spouse, or legal cohabitant</li><li>your legal representative (e.g. a parent, guardian, conservator)</li><li>blood relatives in the ascending or descending line (no relatives by affinity and side branches)</li><li>your heirs</li><li>special agents, such as notaries or lawyers.</li></ul>If the certificate is more than 100 years old, anyone is entitled to request a copy or an extract. - 2</p>"@en, "<p data-indentation-level=\"0\">De akte vermeldt:<ul><li>de naam, de voornamen, de geboortedatum en de geboorteplaats van de persoon op wie de akte betrekking heeft</li><li>de wettelijke basis van de verklaring op basis waarvan de akte werd opgesteld</li><li>in geval van nationaliteitstoekenning op basis van de artikelen 8, § 1, 2°, b), 9, 2°, b), en 11, § 2, van het Wetboek van de Belgische nationaliteit: de naam, de voornamen, de geboortedatum en de geboorteplaats van de verklaarder of verklaarders.</li></ul>Onder bepaalde voorwaarden kunt u een afschrift of een uittreksel van de akte van Belgische nationaliteit aanvragen:<ul><li>Een afschrift vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een uittreksel vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3>Voor akten van Belgische nationaliteit wordt het recht op een afschrift of uittreksel beperkt tot:<ul><li>uzelf</li><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>uw wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>uw erfgenamen</li><li>bijzondere gemachtigden zoals een notaris of advocaat.</li></ul>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel. - nl - 2</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 1;
             <http://data.europa.eu/m8g/hasSupportingEvidence> _:df_820_28.
-_:df_820_28 <http://purl.org/dc/terms/title> "Evidence - 2"@en, "Bewijs - 2"@nl-be-x-informal;
+_:df_820_28 a <http://data.europa.eu/m8g/Evidence>;
+            <http://purl.org/dc/terms/title> "Evidence - 2"@en, "Bewijs - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">If you collect the document yourself:<ul><li>your own identity card.</li></ul>If you are requesting the document for someone else:<ul><li>a power of attorney from that person and a copy of their identity card</li></ul><ul><li>as well as your own identity card.</li></ul> - 2</p>"@en, "<p data-indentation-level=\"0\">Als u het document zelf ophaalt:<ul><li>uw eigen identiteitskaart.</li></ul>Als u het document voor iemand anders aanvraagt:<ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>uw eigen identiteitskaart.</li></ul> - nl - 2</p>"@nl-be-x-informal.
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://purl.org/vocab/cpsv#follows> _:df_820_44.
 _:df_820_44 a <http://purl.org/vocab/cpsv#Rule>;
@@ -69,21 +77,25 @@ _:df_820_38 a <http://schema.org/WebSite>;
             <http://www.w3.org/ns/shacl#order> 0;
             <http://schema.org/url> "https://procedure-website.com11".
 _:df_820_44 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite> _:df_820_43.
-_:df_820_43 <http://purl.org/dc/terms/title> "Procedure website title - 1 - 2"@en, "Procedure website titel - 1 - 2"@nl-be-x-informal;
+_:df_820_43 a <http://schema.org/WebSite>;
+            <http://purl.org/dc/terms/title> "Procedure website title - 1 - 2"@en, "Procedure website titel - 1 - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Procedure website description - 1 - 2</p>"@en, "<p data-indentation-level=\"0\">Procedure website beschrijving - 1 - 2</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 1;
             <http://schema.org/url> "https://procedure-website.com12".
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://purl.org/vocab/cpsv#follows> _:df_820_59.
-_:df_820_59 <http://purl.org/dc/terms/title> "Procedure - en - 2"@en, "Procedure - nl - 2"@nl-be-x-informal;
+_:df_820_59 a <http://purl.org/vocab/cpsv#Rule>;
+            <http://purl.org/dc/terms/title> "Procedure - en - 2"@en, "Procedure - nl - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">You can request a copy of or an extract from the certificate of nationality from your municipality.If you have an electronic identity card (eID), you can request a copy of or an extract from the certificate online<ul><li>via the e-desk of your municipality</li><li>or via the certificates page of ‘My Citizen Profile’ ‘Mijn Burgerprofiel’).</li></ul>Those electronic copies and extracts bear the electronic seal of the Ministry of the Interior. They have the same legal value as those issued by the municipality. As long as the information on the certificate is correct, you can use it validly in any format (on paper or in digital format).Since 31 March 2019, certificates from the register office are registered in digital format only. If your certificate dates from before 31 March 2019, it may not yet be available digitally. Some municipalities digitise old archives when copies of or extracts from the certificates are requested or changes are made. - 2</p>"@en, "<p data-indentation-level=\"0\">U kunt een afschrift of een uittreksel van de akte van nationaliteit aanvragen in uw gemeente.Als u beschikt over een elektronische identiteitskaart (eID), kunt u een afschrift of uittreksel van de akte online aanvragen:<ul><li>via het e-loket van uw gemeente</li><li>of via de attestenpagina van 'Mijn Burgerprofiel'.</li></ul>Die elektronische afschriften en uittreksels zijn voorzien van een elektronisch zegel van het Ministerie van Binnenlandse Zaken. Ze hebben dezelfde juridische waarde als deze afgeleverd door de gemeente. Zolang de informatie op het bewijs correct is, kunt u het geldig gebruiken in om het even welke vorm (op papier of in digitale vorm).Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert uw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht. - 2</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 1;
             <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite> _:df_820_53.
-_:df_820_53 <http://purl.org/dc/terms/title> "Procedure website title - 2 - 1"@en, "Procedure website titel - 2 - 1"@nl-be-x-informal;
+_:df_820_53 a <http://schema.org/WebSite>;
+            <http://purl.org/dc/terms/title> "Procedure website title - 2 - 1"@en, "Procedure website titel - 2 - 1"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Procedure website description - 2 - 1</p>"@en, "<p data-indentation-level=\"0\">Procedure website beschrijving - 2 - 1</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 0;
             <http://schema.org/url> "https://procedure-website.com21".
 _:df_820_59 <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite> _:df_820_58.
-_:df_820_58 <http://purl.org/dc/terms/title> "Procedure website title - 2 - 2"@en, "Procedure website titel - 2 - 2"@nl-be-x-informal;
+_:df_820_58 a <http://schema.org/WebSite>;
+            <http://purl.org/dc/terms/title> "Procedure website title - 2 - 2"@en, "Procedure website titel - 2 - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Procedure website description - 2 - 2</p>"@en, "<p data-indentation-level=\"0\">Procedure website beschrijving - 2 - 2</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 1;
             <http://schema.org/url> "https://procedure-website.com22".
@@ -93,7 +105,8 @@ _:df_820_64 a <http://data.europa.eu/m8g/Cost>;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">The application and certificate are free. - 1</p>"@en, "<p data-indentation-level=\"0\">De aanvraag en het attest zijn gratis. - 1</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 0.
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://data.europa.eu/m8g/hasCost> _:df_820_69.
-_:df_820_69 <http://purl.org/dc/terms/title> "Amount cost - 2"@en, "Bedrag kost - 2"@nl-be-x-informal;
+_:df_820_69 a <http://data.europa.eu/m8g/Cost>;
+            <http://purl.org/dc/terms/title> "Amount cost - 2"@en, "Bedrag kost - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">The application and certificate are free. - 2</p>"@en, "<p data-indentation-level=\"0\">De aanvraag en het attest zijn gratis. - 2</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 1.
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://purl.org/vocab/cpsv#produces> _:df_820_74.
@@ -102,7 +115,8 @@ _:df_820_74 a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#Financ
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Description financial advantage - 1</p>"@en, "<p data-indentation-level=\"0\">Beschrijving financieel voordeel - 1</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 0.
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://purl.org/vocab/cpsv#produces> _:df_820_79.
-_:df_820_79 <http://purl.org/dc/terms/title> "Financial advantage - 2"@en, "Financieel voordeel - 2"@nl-be-x-informal;
+_:df_820_79 a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage>;
+            <http://purl.org/dc/terms/title> "Financial advantage - 2"@en, "Financieel voordeel - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Description financial advantage - 2</p>"@en, "<p data-indentation-level=\"0\">Beschrijving financieel voordeel - 2</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 1.
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#regulation> "<p data-indentation-level=\"0\">Regulation</p>"@en, "<p data-indentation-level=\"0\">Regelgeving</p>"@nl-be-x-informal;
@@ -113,7 +127,8 @@ _:df_820_86 a <http://data.europa.eu/eli/ontology#LegalResource>;
             <http://www.w3.org/ns/shacl#order> 0;
             <http://schema.org/url> "https://codex.vlaanderen.be/regelgeving1".
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://data.europa.eu/m8g/hasLegalResource> _:df_820_91.
-_:df_820_91 <http://purl.org/dc/terms/title> "Title legal resource - 2"@en, "Titel regelgevende bron - 2"@nl-be-x-informal;
+_:df_820_91 a <http://data.europa.eu/eli/ontology#LegalResource>;
+            <http://purl.org/dc/terms/title> "Title legal resource - 2"@en, "Titel regelgevende bron - 2"@nl-be-x-informal;
             <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Description legal resource - 2</p>"@en, "<p data-indentation-level=\"0\">Beschrijving regelgevende bron - 2</p>"@nl-be-x-informal;
             <http://www.w3.org/ns/shacl#order> 1;
             <http://schema.org/url> "https://codex.vlaanderen.be/regelgeving2".
@@ -133,25 +148,29 @@ _:df_820_95 a <http://www.w3.org/ns/locn#Address>;
             <https://data.vlaanderen.be/ns/adres#land> "België"@nl;
             <https://data.vlaanderen.be/ns/adres#postcode> "9000".
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://data.europa.eu/m8g/hasContactPoint> _:df_820_101.
-_:df_820_101 <http://www.w3.org/ns/shacl#order> 1;
+_:df_820_101 a <http://schema.org/ContactPoint>;
+             <http://www.w3.org/ns/shacl#order> 1;
              <http://schema.org/url> "https://www.gent.be2";
              <http://schema.org/email> "info@gent.be2";
              <http://schema.org/telephone> "04123456782";
              <http://schema.org/openingHours> "24/24 - 2";
              <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address> _:df_820_100.
-_:df_820_100 <https://data.vlaanderen.be/ns/adres#Straatnaam> "Burggravenlaantje"@nl;
+_:df_820_100 a <http://www.w3.org/ns/locn#Address>;
+             <https://data.vlaanderen.be/ns/adres#Straatnaam> "Burggravenlaantje"@nl;
              <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer> "15";
              <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer> "b";
              <https://data.vlaanderen.be/ns/adres#gemeentenaam> "Gent-Sint-Pieter"@nl;
              <https://data.vlaanderen.be/ns/adres#land> "België"@nl;
              <https://data.vlaanderen.be/ns/adres#postcode> "8000".
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://www.w3.org/2000/01/rdf-schema#seeAlso> _:df_820_106.
-_:df_820_106 <http://purl.org/dc/terms/title> "Belgian nationality and naturalization website - 1"@en, "Website Belgische nationaliteit en naturalisatie beschrijving - 1"@nl-be-x-informal;
+_:df_820_106 a <http://schema.org/WebSite>;
+             <http://purl.org/dc/terms/title> "Belgian nationality and naturalization website - 1"@en, "Website Belgische nationaliteit en naturalisatie beschrijving - 1"@nl-be-x-informal;
              <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Belgian nationality and naturalization description website - 1</p>"@en, "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - 1</p>"@nl-be-x-informal;
              <http://www.w3.org/ns/shacl#order> 0;
              <http://schema.org/url> "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit1".
 <http://data.lblod.info/id/public-service-snapshot/6e9334cb-272c-443d-8b0a-1b02149a5127> <http://www.w3.org/2000/01/rdf-schema#seeAlso> _:df_820_111.
-_:df_820_111 <http://purl.org/dc/terms/title> "Belgian nationality and naturalization website - 2"@en, "Website Belgische nationaliteit en naturalisatie beschrijving - 2"@nl-be-x-informal;
+_:df_820_111 a <http://schema.org/WebSite>;
+             <http://purl.org/dc/terms/title> "Belgian nationality and naturalization website - 2"@en, "Website Belgische nationaliteit en naturalisatie beschrijving - 2"@nl-be-x-informal;
              <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Belgian nationality and naturalization description website - 2</p>"@en, "<p data-indentation-level=\"0\">Website Belgische nationaliteit en naturalisatie beschrijving - 2</p>"@nl-be-x-informal;
              <http://www.w3.org/ns/shacl#order> 1;
              <http://schema.org/url> "https://justitie.belgium.be/nl/themas_en_dossiers/personen_en_gezinnen/nationaliteit2".
@@ -160,9 +179,10 @@ _:df_820_111 <http://purl.org/dc/terms/title> "Belgian nationality and naturaliz
                                                                                          <http://data.europa.eu/m8g/thematicArea> <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid>, <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd>;
                                                                                          <http://purl.org/dc/terms/language> <http://publications.europa.eu/resource/authority/language/NLD>, <http://publications.europa.eu/resource/authority/language/ENG>;
                                                                                          <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal>, <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Europees>;
-                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea>;
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>, <http://data.lblod.info/id/bestuurseenheden/c5623baf3970c5efa9746dff01afd43092c1321a47316dbe81ed79604b56e8ea>;
                                                                                          <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>, <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Derden>;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44000>, <http://vocab.belgif.be/auth/refnis2019/44021>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE234>, <http://data.europa.eu/nuts/code/BE23444021>;
                                                                                          <http://www.w3.org/ns/dcat#keyword> "Akte"@nl, "Nationaliteit"@nl;
                                                                                          <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium> <https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope>;
                                                                                          <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VerblijfNaturalisatie>, <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/VoertuigenVerkeersregels>.
@@ -175,7 +195,9 @@ _:df_820_111 <http://purl.org/dc/terms/title> "Belgian nationality and naturaliz
                                                                                          <http://www.w3.org/ns/prov#generatedAtTime> "2024-03-01T06:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
                                                                                          <http://purl.org/dc/terms/title> "Instantie die gearchiveerd zal worden"@nl-be-x-informal;
                                                                                          <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de instantie die gearchiveerd zal worden</p>"@nl-be-x-informal;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>;
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>;
                                                                                          <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived> false.
 
 <http://data.lblod.info/id/public-service-snapshot/f9aceb0a-5225-4b0c-be55-e14a2954347a> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
@@ -186,7 +208,9 @@ _:df_820_111 <http://purl.org/dc/terms/title> "Belgian nationality and naturaliz
                                                                                          <http://www.w3.org/ns/prov#generatedAtTime> "2024-03-02T06:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
                                                                                          <http://purl.org/dc/terms/title> "Instantie die gearchiveerd is"@nl-be-x-informal;
                                                                                          <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Beschrijving van de instantie die gearchiveerd is</p>"@nl-be-x-informal;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>;
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>;
                                                                                          <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isArchived> true.
 
 <http://data.lblod.info/id/public-service-snapshot/1e9d08b6-c298-4884-a201-bf5f17f30bb3> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
@@ -197,7 +221,9 @@ _:df_820_111 <http://purl.org/dc/terms/title> "Belgian nationality and naturaliz
                                                                                          <http://www.w3.org/ns/prov#generatedAtTime> "2024-02-29T14:32:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
                                                                                          <http://purl.org/dc/terms/title> "Toelating voor losse standplaats op een openbare markt"@nl-be-x-informal;
                                                                                          <http://purl.org/dc/terms/description> "<p data-indentation-level=\"0\">Een losse standplaats op een openbare markt is een standplaats voor de marktdag zelf en onderscheidt zich van een standplaats per abonnement. De gemeente bepaalt autonoom de werkwijze voor de toewijzing van de losse standplaatsen en legt de bepalingen vast in haar gemeentelijk reglement.</p>"@nl-be-x-informal;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>.
 
 <http://data.lblod.info/id/public-service-snapshot/24daf042-bdca-408d-80aa-caf724114103> a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicServiceSnapshot>;
                                                                                          <http://purl.org/dc/terms/isVersionOf> <http://data.lblod.info/id/public-service/645dcaec-7f27-44b7-85ba-b3ffe58c6328>;
@@ -207,4 +233,6 @@ _:df_820_111 <http://purl.org/dc/terms/title> "Belgian nationality and naturaliz
                                                                                          <http://www.w3.org/ns/prov#generatedAtTime> "2024-03-19T10:50:10.377Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
                                                                                          <http://purl.org/dc/terms/title> "Registerplicht"@nl-be-x-informal;
                                                                                          <http://purl.org/dc/terms/description> "<h3><strong>Registerplicht</strong></h3><p>Bijhouden van register waarin per nacht het aantal personen en het aantal bezette kamers wordt vermeld. Wie dergelijk register niet ontvangt moet dit spontaan vragen.&nbsp;</p><p>Uitbatingen die niet over de nodige permanentie beschikken om aan de registerplicht te voldoen, worden forfaitair berekend. (Zie &quot;Hoeveel kost het?&quot;)</p><h3><strong>Aangifte</strong></h3><p>Ten laatste veertien dagen na elk semester&nbsp;van het aanslagjaar moeten de ingevulde, ondertekende en gedateerde registerbladen (zie artikel 5 &sect; 1) teruggestuurd worden naar de bevoegde administratie (Stadsbelastingen). Deze registerbladen gelden als aangifte.</p><p>Het indienen van een aangifte kan enkel via het <a target=\"_blank\" href=https://formulieren.stad.gent/productie4.2/formulier/nl-NL/DefaultEnvironment/scBelastingLogies.aspx/frmLogiesInleiding>digitale aangifteformulier</a> of&nbsp;schriftelijk. Er zijn 3&nbsp;mogelijkheden:</p><ul>   <li>Je krijgt een voorstel van aangifte per semester. Je moet dit niet terug sturen indien er geen wijzigingen zijn. Dit is enkel voor de logies die een forfait bedrag betalen per bed.&nbsp;</li> <li>Je krijgt een aangifte of register. Dit stuur je terug per semester. Op 15 juli voor semester 1 en op 15 januari voor semester 2.</li>     <li>Indien je&nbsp;geen aangifte ontvangt, <a target=\"_blank\" href=https://stad.gent/nl/openingsuren-adressen/stadsbelastingen-stad-gent>contacteer</a> dan de Stadsbelastingen.&nbsp;</li></ul><h3><strong>Bezwaarschrift</strong></h3><p>Ben je niet akkoord met de aanslag, een belastingverhoging of een administratieve geldboete?</p><p>Als belastingplichtige, belastingschuldige of hun vertegenwoordiger kan je een schriftelijk bezwaarschrift indienen. Hoe en onder welke voorwaarden je dit kan doen, lees je op <a target=\"_blank\" href=https://stad.gent/nl/over-gent-stadsbestuur/stadsbelastingen-gent/bezwaarschrift-stedelijke-belastingen>deze pagina</a>.</p>"@nl-be-x-informal;
-                                                                                         <http://purl.org/dc/terms/spatial> <http://vocab.belgif.be/auth/refnis2019/44021>.
+                                                                                         <http://data.europa.eu/m8g/hasCompetentAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>;
+                                                                                         <http://purl.org/dc/terms/spatial> <http://data.europa.eu/nuts/code/BE23444021>;
+                                                                                         <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority> <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>.

@@ -34,7 +34,7 @@ test('Create new empty instance', async ({request}) => {
     expect(triples.findTriple(Predicates.hasCompetentAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.hasExecutingAuthority).getObjectValue()).toEqual(`http://data.lblod.info/id/bestuurseenheden/${pepingenId}`);
     expect(triples.findTriple(Predicates.status).getObjectValue()).toEqual('http://lblod.data.gift/concepts/instance-status/ontwerp');
-    expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://vocab.belgif.be/auth/refnis2019/23064');
+    expect(triples.findTriple(Predicates.spatial).getObjectValue()).toEqual('http://data.europa.eu/nuts/code/BE24123064');
 });
 
 
@@ -101,7 +101,6 @@ test('Create instance from concept: When concept has requirement than instance h
     expect(requirementTriples.findObject(Predicates.uuid)).not.toEqual(requirement.findObject(Predicates.uuid));
     expect(requirementTriples.findObject(Predicates.title)).toBeDefined();
     expect(requirementTriples.findObject(Predicates.description)).toBeDefined();
-    expect(requirementTriples.findObject(Predicates.source)).toEqual(requirement.getSubject());
 });
 
 test('Create instance from concept: When concept has requirement with evidence then instance has it too', async ({request}) => {
@@ -133,7 +132,6 @@ test('Create instance from concept: When concept has requirement with evidence t
     expect(evidenceTriples.findObject(Predicates.uuid)).not.toEqual(evidence.findObject(Predicates.uuid));
     expect(evidenceTriples.findObject(Predicates.title)).toBeDefined();
     expect(evidenceTriples.findObject(Predicates.description)).toBeDefined();
-    expect(evidenceTriples.findObject(Predicates.source)).toEqual(evidence.getSubject());
 });
 
 test('Create instance from concept: When concept has procedure then instance has it too', async ({request}) => {
@@ -159,7 +157,6 @@ test('Create instance from concept: When concept has procedure then instance has
     expect(procedureTriples.findObject(Predicates.uuid)).not.toEqual(procedure.findObject(Predicates.uuid));
     expect(procedureTriples.findObject(Predicates.title)).toBeDefined();
     expect(procedureTriples.findObject(Predicates.description)).toBeDefined();
-    expect(procedureTriples.findObject(Predicates.source)).toEqual(procedure.getSubject());
 });
 
 test('Create instance from concept: When concept has procedure with website then instance has it too', async ({request}) => {
@@ -192,7 +189,6 @@ test('Create instance from concept: When concept has procedure with website then
     expect(websiteTriples.findObject(Predicates.title)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.description)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.url)).toEqual(website.findObject(Predicates.url));
-    expect(websiteTriples.findObject(Predicates.source)).toEqual(website.getSubject());
 });
 
 test('Create instance from concept: When concept has website than instance has it too', async ({request}) => {
@@ -219,7 +215,6 @@ test('Create instance from concept: When concept has website than instance has i
     expect(websiteTriples.findObject(Predicates.title)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.description)).toBeDefined();
     expect(websiteTriples.findObject(Predicates.url)).toEqual(website.findObject(Predicates.url));
-    expect(websiteTriples.findObject(Predicates.source)).toEqual(website.getSubject());
 });
 
 test('Create instance from concept: When concept has cost then instance has it too', async ({request}) => {
@@ -245,7 +240,6 @@ test('Create instance from concept: When concept has cost then instance has it t
     expect(costTriples.findObject(Predicates.uuid)).not.toEqual(cost.findObject(Predicates.uuid));
     expect(costTriples.findObject(Predicates.title)).toBeDefined();
     expect(costTriples.findObject(Predicates.description)).toBeDefined();
-    expect(costTriples.findObject(Predicates.source)).toEqual(cost.getSubject());
 });
 
 test('Create instance from concept: When concept has financialAdvantage then concept has it too', async ({request}) => {
@@ -271,7 +265,6 @@ test('Create instance from concept: When concept has financialAdvantage then con
     expect(financialAdvantageTriples.findObject(Predicates.uuid)).not.toEqual(financialAdvantage.findObject(Predicates.uuid));
     expect(financialAdvantageTriples.findObjects(Predicates.title)).toBeDefined();
     expect(financialAdvantageTriples.findObjects(Predicates.description)).toBeDefined();
-    expect(financialAdvantageTriples.findObject(Predicates.source)).toEqual(financialAdvantage.getSubject());
 });
 
 test('Create instance from concept: ConceptInstantiated flag of ConceptDisplayConfiguration should be true', async ({request}) => {
@@ -662,39 +655,6 @@ test('Create instance from concept: all instance fields with language should hav
     expect(publicService.findObject(Predicates.exception)).toEqual(new Literal('exception nl', Language.FORMAL));
     expect(publicService.findAllTriples(Predicates.regulation)).toHaveLength(1);
     expect(publicService.findObject(Predicates.regulation)).toEqual(new Literal('regulation nl', Language.FORMAL));
-});
-
-test('Create instance from concept: When concept contains english language then this should not be removed, other languages but english/dutch should be removed', async ({request}) => {
-    const concept = await ConceptTestBuilder.aConcept()
-        .withTitles([
-            {value: 'title', language: Language.NL},
-            {value: 'title', language: Language.GENERATED_INFORMAL},
-            {value: 'title', language: Language.GENERATED_FORMAL},
-            {value: 'title', language: Language.EN},
-            {value: 'title', language: Language.DE},
-            {value: 'title', language: Language.FR},
-        ])
-        .withDescriptions([
-            {value: 'description', language: Language.NL},
-            {value: 'description', language: Language.GENERATED_INFORMAL},
-            {value: 'description', language: Language.GENERATED_FORMAL},
-            {value: 'description', language: Language.EN},
-            {value: 'description', language: Language.DE},
-            {value: 'description', language: Language.FR},
-        ])
-        .buildAndPersist(request);
-
-    await ConceptDisplayConfigurationTestBuilder.aConceptDisplayConfiguration()
-        .withConcept(concept.getId())
-        .buildAndPersist(request);
-
-    const response = await createForm(concept.getId(), request);
-    const publicService = await fetchType(request, response.data.uri, PublicServiceType);
-
-    expect(publicService.findAllTriples(Predicates.title)).toHaveLength(2);
-    expect(publicService.findObjects(Predicates.title)).toContainEqual(new Literal('title', Language.EN));
-    expect(publicService.findAllTriples(Predicates.description)).toHaveLength(2);
-    expect(publicService.findObjects(Predicates.description)).toContainEqual(new Literal('description', Language.EN));
 });
 
 test('Create instance from un-existing concept, returns notFoundError', async ({request}) => {

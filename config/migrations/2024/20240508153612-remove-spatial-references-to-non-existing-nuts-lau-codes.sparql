@@ -1,0 +1,20 @@
+PREFIX skos:  <http://www.w3.org/2004/02/skos/core#>
+PREFIX nuts-code: <http://data.europa.eu/nuts/code/>
+PREFIX nuts-scheme: <http://data.europa.eu/nuts/scheme/>
+
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?publicService <http://purl.org/dc/terms/spatial> ?nutscode.
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?publicService a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService>;
+        <http://purl.org/dc/terms/spatial> ?nutscode.
+    }
+
+    FILTER NOT EXISTS {
+        ?nutscode  a skos:Concept ;
+            skos:inScheme nuts-scheme:2021.
+    }
+}

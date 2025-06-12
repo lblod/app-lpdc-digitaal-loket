@@ -64,7 +64,7 @@ test.describe('Create a new instance not based on a concept', () => {
         await expect(instantieDetailsPage.koppelConceptLink).toBeVisible();
         await expect(instantieDetailsPage.aangemaaktOpHeader).toContainText(formattedToday);
         await expect(instantieDetailsPage.bewerktOpHeader).toContainText(formattedToday);
-        await expect(instantieDetailsPage.statusDocumentHeader).toContainText('Ontwerp');
+        await expect(instantieDetailsPage.statusHeader).toContainText('Ontwerp');
 
         await instantieDetailsPage.eigenschappenTab.click();
 
@@ -90,6 +90,7 @@ test.describe('Create a new instance not based on a concept', () => {
         await instantieDetailsPage.titelInput.fill(newTitel);
 
         const newBeschrijving = 'beschrijving' + uuid();
+        await instantieDetailsPage.beschrijvingEditor.click();
         await instantieDetailsPage.beschrijvingEditor.fill(newBeschrijving);
 
         await instantieDetailsPage.verzendNaarVlaamseOverheidButton.click();
@@ -102,7 +103,7 @@ test.describe('Create a new instance not based on a concept', () => {
         await homePage.searchInput.fill(newTitel);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).pill('Verzonden')).toBeVisible();
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: newTitel, expectedFormalOrInformalTripleLanguage: 'nl-be-x-formal' });
         expect(instancePublishedInIpdc).toBeTruthy();
@@ -114,7 +115,6 @@ test.describe('Create a new instance not based on a concept', () => {
                 beschrijving: { nl: newBeschrijving },
                 uuid: 'PRESENT',
                 createdBy: 'http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589',
-                conceptStatus: 'http://lblod.data.gift/concepts/instance-status/verstuurd',
                 aangemaaktOp: `PRESENT`,
                 bewerktOp: `PRESENT`,
                 bevoegdeOverheden: [
@@ -124,7 +124,7 @@ test.describe('Create a new instance not based on a concept', () => {
                     'http://data.lblod.info/id/bestuurseenheden/73840d393bd94828f0903e8357c7f328d4bf4b8fbd63adbfa443e784f056a589',
                 ],
                 geografischeToepassingsgebieden: [
-                    'http://vocab.belgif.be/auth/refnis2019/23064'
+                    'http://data.europa.eu/nuts/code/BE24123064'
                 ],
             },
             'nl-be-x-formal');

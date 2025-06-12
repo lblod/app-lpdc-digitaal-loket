@@ -1,0 +1,11 @@
+INSERT DATA {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+
+        <http://lblod.data.gift/concepts/publication-status/te-herpubliceren>
+            a                                                   <http://www.w3.org/2004/02/skos/core#Concept> ;
+            <http://www.w3.org/2004/02/skos/core#inScheme>      <http://lblod.data.gift/concept-schemes/093c3b84-de6d-4f77-a789-51c43196d3bc> ;
+            <http://mu.semte.ch/vocabularies/core/uuid>         """4112d57f-179b-4703-bcb9-4a0ac2e7f79a""" ;
+            <http://www.w3.org/2004/02/skos/core#prefLabel>     "Te herpubliceren"@nl ;
+            <http://www.w3.org/2004/02/skos/core#topConceptOf>  <http://lblod.data.gift/concept-schemes/093c3b84-de6d-4f77-a789-51c43196d3bc> .
+    }
+}

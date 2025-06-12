@@ -98,14 +98,18 @@ test.describe('Delete an instance', () => {
         await homePage.searchInput.fill(newTitel);
 
         await expect(homePage.resultTable.row(first_row).locator).toContainText(newTitel);
-        await expect(homePage.resultTable.row(first_row).locator).toContainText('Verzonden');
+        await expect(homePage.resultTable.row(first_row).pill('Verzonden')).toBeVisible();
 
         const instancePublishedInIpdc = await IpdcStub.findPublishedInstance({ title: newTitel, expectedFormalOrInformalTripleLanguage: "nl-be-x-formal" });
         expect(instancePublishedInIpdc).toBeTruthy();
         const publicService = IpdcStub.getObjectByType(instancePublishedInIpdc, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService');
         const publicServiceUri = publicService['@id'];
 
-        await homePage.resultTable.row(first_row).link('Bekijk').click();
+        await homePage.resultTable.row(first_row).link(newTitel).click();
+
+        await instantieDetailsPage.actiesMenu.locator.click();
+        await instantieDetailsPage.actiesMenu.productVerwijderenButton.isDisabled();
+
         await instantieDetailsPage.expectToBeVisible();
         await instantieDetailsPage.productOpnieuwBewerkenButton.click();
 
@@ -116,7 +120,9 @@ test.describe('Delete an instance', () => {
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.titelInput).toHaveValue(newTitel);
 
-        await instantieDetailsPage.productVerwijderenButton.click();
+        await instantieDetailsPage.actiesMenu.expectToBeVisible();
+        await instantieDetailsPage.actiesMenu.locator.click();
+        await instantieDetailsPage.actiesMenu.productVerwijderenButton.click();
         await productOfDienstVerwijderenModal.expectToBeVisible();
         await productOfDienstVerwijderenModal.verwijderenButton.click();
 

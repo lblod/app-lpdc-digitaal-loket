@@ -1,0 +1,13 @@
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        <http://lblod.data.gift/concepts/publication-status/te-herpubliceren> <http://mu.semte.ch/vocabularies/core/uuid> """4112d57f-179b-4703-bcb9-4a0ac2e7f79a""" .
+    }
+} INSERT {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        <http://lblod.data.gift/concepts/publication-status/te-herpubliceren> <http://mu.semte.ch/vocabularies/core/uuid> """a7d01120-6f93-11ed-bcb8-a144c50c46d7""" .
+    }
+} WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        <http://lblod.data.gift/concepts/publication-status/te-herpubliceren> <http://mu.semte.ch/vocabularies/core/uuid> """4112d57f-179b-4703-bcb9-4a0ac2e7f79a""" .
+    }
+}

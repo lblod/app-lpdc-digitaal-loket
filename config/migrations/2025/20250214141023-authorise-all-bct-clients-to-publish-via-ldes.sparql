@@ -1,0 +1,27 @@
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/authorization> {
+       ?organisation lpdc:canPublishInstanceToGraph <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct>.
+  }
+} WHERE {
+  VALUES ?organisation {
+    <http://data.lblod.info/id/bestuurseenheden/99da98a7a0087d3429b084ebfc4eb5d488c593790d4d5af7253982a2e21a6a5f> # Bilzen-Hoeselt (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/856cbc8af3fbe7390d43420e249c288596e87fbc069c601751d5c5fcd52c543b> # Denderleeuw (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/a733c5d62773299fec8ed05a9ff72eace407af42171594638d2a3f832d06f110> # Denderleeuw (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/8745182191882c1185893960aecc2ed4f91825d7a5ea2e62e9f2d7acca082a5e> # Eeklo (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/764278b3ceac360476b418c108d1b022b6e0cc8fb676f3f6b6b9faf78a2375ba> # Geel (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/243e6582a03e891c3a30a3e5db7552c83e703a609f82e1c5db8844a7ad1c8924> # Geetbets (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/b45815b052363cc4b1c89eeb8dd6ae4dbf8433883d314b4c1d88c96a8d912212> # Landen (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77> # Leuven (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/8a162fa437a54cb657b57514e4e0135ec106fce3206c29cd2f90b1859ed90dab> # Leuven (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/bab5de8f12aa24ded31c67cc00b626705d1336a63f5711c1c70a8438daa6da1b> # Lubbeek (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/514bd3d6ba551d4b2a7e866c7dafd65e371acd75240dc92610590c5804c641df> # Meerhout (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/efc00af720c638ed6425d46051f51d25fa7a624b973b2a07c39ba4498caee78d> # Meerhout (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/47857958-7d00-47e0-ae83-00d914eca93f> # Oudsbergen (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/8d7de878-db13-4fe1-8d74-bb8c9a690d90> # Pelt (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/fad1ca7a-ac26-43fc-b167-b8ae4f873553> # Pelt (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/69e815e62d4698903b7db1df39f372317439cb28a8c4ca62aa6bfd1acaa62266> # Stabroek (Gemeente)
+    <http://data.lblod.info/id/bestuurseenheden/3499c07d07336622b8880bd8fd9bd49667f88d6998755cb1dc31f58012248b43> # Tielt-Winge (Gemeente)
+  }
+}

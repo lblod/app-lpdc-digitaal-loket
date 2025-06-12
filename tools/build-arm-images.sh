@@ -148,6 +148,21 @@ sed -i '' -e 's/mu-javascript-template:feature-node-18/mu-javascript-template:fe
 docker build --no-cache -t redpencil/ldes-consumer:0.8.0-rc1-arm64-build .
 cd ..
 
+rm -rf ldes-consumer-service
+git clone https://github.com/redpencilio/ldes-consumer-service
+cd ldes-consumer-service || exit
+git checkout feature/stability-improvements
+docker build --no-cache -t redpencil/ldes-consumer:feature-stability-improvements-arm64-build .
+cd ..
+
+rm -rf ldes-consumer-service
+git clone https://github.com/redpencilio/ldes-consumer-service
+cd ldes-consumer-service || exit
+git checkout tags/vfeature-stability-improvements-r1.1
+docker build --no-cache -t redpencil/ldes-consumer:feature-stability-improvements-r1.1-arm64-build .
+cd ..
+
+
 git clone https://github.com/lblod/acmidm-login-service.git
 cd acmidm-login-service || exit
 git checkout tags/v0.9.2

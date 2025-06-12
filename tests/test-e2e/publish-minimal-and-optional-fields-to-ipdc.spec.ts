@@ -63,10 +63,12 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegVoorwaardeToeButton.click();
             await instantieDetailsPage.titelVoorwaardeInput().fill(voorwaardeTitel);
+            await instantieDetailsPage.beschrijvingVoorwaardeEditor().click();
             await instantieDetailsPage.beschrijvingVoorwaardeEditor().fill(voorwaardeBeschrijving);
 
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -107,10 +109,12 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegProcedureToeButton.click();
             await instantieDetailsPage.titelProcedureInput().fill(procedureTitel);
+            await instantieDetailsPage.beschrijvingProcedureEditor().click();
             await instantieDetailsPage.beschrijvingProcedureEditor().fill(procedureBeschrijving);
 
             await instantieDetailsPage.wijzigingenBewarenButton.click();
@@ -150,10 +154,12 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegProcedureToeButton.click();
             await instantieDetailsPage.titelProcedureInput().fill(procedureTitel);
+            await instantieDetailsPage.beschrijvingProcedureEditor().click();
             await instantieDetailsPage.beschrijvingProcedureEditor().fill(procedureBeschrijving);
 
             await instantieDetailsPage.voegWebsiteToeButtonVoorProcedure().click();
@@ -205,9 +211,11 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
+            await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().click();
             await instantieDetailsPage.beschrijvingRegelgevendeBronEditor().fill(regelgevendeBronBeschrijving);
             await instantieDetailsPage.regelgevendeBronUrlInput().fill(regelgevendeBronUrl);
 
@@ -223,7 +231,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             verifyInstancePublishedOnIPDC(
                 instancePublishedInIpdc,
                 {
-                    regelgevendeBronnen: [
+                    regelgeving: [
                         {
                             beschrijving: { nl: regelgevendeBronBeschrijving },
                             url: regelgevendeBronUrl,
@@ -245,6 +253,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
@@ -263,7 +272,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             verifyInstancePublishedOnIPDC(
                 instancePublishedInIpdc,
                 {
-                    regelgevendeBronnen: [
+                    regelgeving: [
                         {
                             titel: { nl: regelgevendeBronTitel },
                             url: regelgevendeBronUrl,
@@ -284,6 +293,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegRegelgevendeBronToeButton.click();
@@ -301,7 +311,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             verifyInstancePublishedOnIPDC(
                 instancePublishedInIpdc,
                 {
-                    regelgevendeBronnen: [
+                    regelgeving: [
                         {
                             url: regelgevendeBronUrl,
                             order: 1,
@@ -329,6 +339,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegContactpuntToeButton.click();
@@ -372,6 +383,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegContactpuntToeButton.click();
@@ -415,6 +427,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegContactpuntToeButton.click();
@@ -458,6 +471,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegContactpuntToeButton.click();
@@ -504,6 +518,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
                 await instantieDetailsPage.expectToBeVisible();
 
                 await instantieDetailsPage.titelInput.fill(titel);
+                await instantieDetailsPage.beschrijvingEditor.click();
                 await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
                 await instantieDetailsPage.voegContactpuntToeButton.click();
@@ -553,6 +568,7 @@ test.describe('Verifies editing and publishing of value objects with optional fi
             await instantieDetailsPage.expectToBeVisible();
 
             await instantieDetailsPage.titelInput.fill(titel);
+            await instantieDetailsPage.beschrijvingEditor.click();
             await instantieDetailsPage.beschrijvingEditor.fill(`${titel} beschrijving`);
 
             await instantieDetailsPage.voegWebsiteToeButton.click();

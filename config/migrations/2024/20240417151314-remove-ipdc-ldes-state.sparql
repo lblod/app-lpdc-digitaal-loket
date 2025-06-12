@@ -1,0 +1,5 @@
+DELETE WHERE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc> {
+        ?s <http://mu.semte.ch/vocabularies/ext/state> ?o .
+    }
+}

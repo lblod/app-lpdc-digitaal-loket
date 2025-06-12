@@ -3,6 +3,7 @@ import {deleteAll} from "../test-helpers/sparql";
 import {loginAsPepingen, loginAsPepingenButRemoveLPDCRightsFromSession, pepingenId} from "../test-helpers/login";
 import {PublicServiceTestBuilder} from "../test-helpers/public-service.test-builder";
 import {dispatcherUrl} from "../test-helpers/test-options";
+import {Predicates} from "../test-helpers/triple-array";
 
 test.beforeEach(async ({request}) => {
     await deleteAll(request);
@@ -16,7 +17,51 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+                }}
+        );
+        expect(response.ok()).toBeTruthy();
+
+        const responseBody = await response.json();
+        responseBody.toString();
+
+        const formUpdate = {
+            additions:
+                `@prefix : <#>.
+                 @prefix dct: <http://purl.org/dc/terms/>.
+                 @prefix pub: <http://data.lblod.info/id/public-service/>.
+                 
+                 pub:${publicService.getUUID()} dct:title "dit is een titel"@nl-be-x-informal.
+             `,
+            graph: responseBody.source,
+            removals: ''
+        }
+
+        const dateModified = publicService.findObject(Predicates.dateModified).getValue();
+        const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
+            data: formUpdate,
+            headers: {cookie: loginResponse.cookie, 'instance-version': dateModified}
+        });
+        expect(updateResponse.ok()).toBeTruthy();
+    });
+
+    test('When trying to put content for public service with incorrect language variant, returns http 400 Invalid', async ({request}) => {
+        const loginResponse = await loginAsPepingen(request);
+        const publicService = await PublicServiceTestBuilder.aPublicService()
+            .withNoPublicationMedium()
+            .buildAndPersist(request, pepingenId);
+
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -34,11 +79,12 @@ test.describe('Saving forms for instances', () => {
             removals: ''
         }
 
+        const dateModified = publicService.findObject(Predicates.dateModified).getValue();
         const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
-            headers: {cookie: loginResponse.cookie}
+            headers: {cookie: loginResponse.cookie, 'instance-version': dateModified}
         });
-        expect(updateResponse.ok()).toBeTruthy();
+        expect(updateResponse.status()).toEqual(400);
     });
 
     test('When trying to put content form for public service when user is not logged in, returns http 401 Unauthenticated', async ({request}) => {
@@ -47,7 +93,13 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -72,7 +124,13 @@ test.describe('Saving forms for instances', () => {
             .withNoPublicationMedium()
             .buildAndPersist(request, pepingenId);
 
-        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {headers: {cookie: loginResponse.cookie}});
+        const response = await request.get(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}/form/inhoud`, {
+            headers:
+                {
+                    cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+                }}
+        );
         expect(response.ok()).toBeTruthy();
 
         const responseBody = await response.json();
@@ -88,7 +146,11 @@ test.describe('Saving forms for instances', () => {
 
         const updateResponse = await request.put(`${dispatcherUrl}/lpdc-management/public-services/${encodeURIComponent(publicService.getId().getValue())}`, {
             data: formUpdate,
-            headers: {cookie: loginResponseNoRights.cookie}
+            headers:
+            {
+                cookie: loginResponse.cookie,
+                    'instance-version': publicService.findObject(Predicates.dateModified).getValue()
+            }
         });
         expect(updateResponse.status()).toEqual(403);
     });

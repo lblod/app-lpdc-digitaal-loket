@@ -60,7 +60,7 @@ test.describe('Link concept', () => {
 
         const titel = uuid();
         await instantieDetailsPage.titelInput.fill(titel);
-        await instantieDetailsPage.titelEngelsInput.click();
+        await instantieDetailsPage.titelInput.blur();
 
         await instantieDetailsPage.wijzigingenBewarenButton.click();
         await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
@@ -90,16 +90,18 @@ test.describe('Link concept', () => {
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptId);
-            await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Toegevoegd');
+            await toevoegenPage.searchInput.fill(conceptId);
+            await expect(toevoegenPage.resultTable.row(first_row).pill('Toegevoegd')).toBeVisible();
         });
 
         // unlink concept
         await homePage.goto();
         await homePage.reloadUntil(async () => {
             await homePage.searchInput.fill(titel);
-            await homePage.resultTable.row(first_row).link('Bewerk').click();
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
         });
+
+        await homePage.resultTable.row(first_row).link(titel).click();
         await instantieDetailsPage.expectToBeVisible();
         await expect(instantieDetailsPage.heading).toHaveText(titel);
         await expect(instantieDetailsPage.gekoppeldConceptLink).toContainText("3000");
@@ -116,9 +118,31 @@ test.describe('Link concept', () => {
         await homePage.productOfDienstToevoegenButton.click();
         await toevoegenPage.expectToBeVisible();
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptId);
-            await expect(toevoegenPage.resultTable.row(first_row).locator).not.toContainText('Toegevoegd');
+            await toevoegenPage.searchInput.fill(conceptId);
+            await expect(toevoegenPage.resultTable.row(first_row).pill('Toegevoegd')).not.toBeVisible();
         });
+
+        //Link using preview
+        await homePage.goto();
+        await homePage.reloadUntil(async () => {
+            await homePage.searchInput.fill(titel);
+            await expect(homePage.resultTable.row(first_row).locator).toContainText(titel);
+        });
+
+        await homePage.resultTable.row(first_row).link(titel).click();
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(titel);
+        await instantieDetailsPage.koppelConceptLink.click();
+        await koppelConceptPage.expectToBeVisible();
+        await koppelConceptPage.searchInput.fill(conceptId);
+        await expect(koppelConceptPage.resultTable.row(first_row).locator).toContainText(conceptId);
+        await koppelConceptPage.resultTable.row(first_row).link(conceptId).click();
+        await conceptDetailsPage.expectToBeVisible()
+        await conceptDetailsPage.koppelenButton.click();
+        await instantieDetailsPage.expectToBeVisible();
+        await expect(instantieDetailsPage.heading).toHaveText(titel);
+        await expect(instantieDetailsPage.gekoppeldConceptLink).toContainText("3000");
+
     });
 
     test('remove `nieuw` label on concept', async () => {
@@ -130,15 +154,15 @@ test.describe('Link concept', () => {
         const conceptId = uuid();
         await IpdcStub.createSnapshotOfTypeCreate(conceptId);
         await toevoegenPage.reloadUntil(async () => {
-            await toevoegenPage.searchConcept(conceptId)
+            await toevoegenPage.searchInput.fill(conceptId)
             await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText(conceptId);
         });
 
         await expect(toevoegenPage.resultTable.row(first_row).locator).toContainText('Nieuw');
-        await toevoegenPage.resultTable.row(first_row).link(`Concept created ${conceptId}`).click();
+        await toevoegenPage.resultTable.row(first_row).link(`Concept created - ${conceptId}`).click();
 
         await conceptDetailsPage.expectToBeVisible();
-        await expect(conceptDetailsPage.heading).toHaveText(`Concept: Concept created ${conceptId}`);
+        await expect(conceptDetailsPage.heading).toHaveText(`Concept: Concept created - ${conceptId}`);
 
         await conceptDetailsPage.nieuwConceptAlert.expectToBeVisible();
         await conceptDetailsPage.nieuwConceptAlertBerichtNietMeerTonenButton.click();

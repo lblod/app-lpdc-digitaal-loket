@@ -1,4 +1,4 @@
-# Operation suport
+# Operation support
 
 * [Add users](0001-add-user.md)
 * [Docker-compose vs drc](0002-docker-compose-vs-drc.md)
@@ -9,6 +9,7 @@
 * [Republish instances](0007-republish-instances.md)
 * [Restart ldes-stream](0008-restart-ldes-stream.md)
 * [Restore backup](0009-restore-backup-from-production-to-acceptance.md)
-* [Check refnis/2019](0010-check-refnis-2019.md)
-* [Remove formal informal choice for bestuur](0011-remove-formal-informal-choice-for-bestuur.md)
-* [Refresh instance review statuses](0012-refresh-instance-review-statuses.md)
+* [Remove formal informal choice for bestuur](0010-remove-formal-informal-choice-for-bestuur.md)
+* [Refresh instance review statuses](0011-refresh-instance-review-statuses.md)
+* [Authorize a bestuurseenheid to an instance snapshot graph](0012-authorize-a-bestuurseenheid-to-an-instance-snapshot-graph.md)
+* [reset instance snapshot processing](0013-reset-instance-snapshot-processing.md)

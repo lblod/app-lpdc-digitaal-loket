@@ -20,6 +20,9 @@
 oss:conceptShapes a rdf:Property;
        rdfs:label "shacl shapes for concepten van implementatiemodel"@nl .
 
+lpdcExt:FinancialAdvantage a rdfs:Class;
+                           rdfs:label "FinancialAdvantage"@nl;
+                           rdfs:subClassOf m8g:Output .
 
 <https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/ontwerpstandaard/> oss:conceptShapes oss:ConceptualPublicServiceShape,
                                                                                                   oss:ConceptLegalResourceShape,

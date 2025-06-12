@@ -1,0 +1,28 @@
+prefix skos:  <http://www.w3.org/2004/02/skos/core#>
+prefix nuts-code: <http://data.europa.eu/nuts/code/>
+prefix nuts-scheme: <http://data.europa.eu/nuts/scheme/>
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?werkingsgebied skos:exactMatch ?werkingsgebiedrefniscode.
+    }
+}
+INSERT {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?werkingsgebied skos:exactMatch ?nutscode.
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?werkingsgebied a <http://www.w3.org/ns/prov#Location> ;
+                      skos:exactMatch ?werkingsgebiedrefniscode.
+    }
+    GRAPH <http://mu.semte.ch/graphs/public> {
+        ?werkingsgebiedrefniscode a skos:Concept ;
+                  skos:inScheme <http://lblod.data.gift/vocabularies/lpdc-ipdc/IPDCLocaties>.
+    }
+    GRAPH <http://mu.semte.ch/graphs/migrate-refnis-nuts-lau> {
+        ?nutscode  a skos:Concept ;
+                    skos:inScheme     nuts-scheme:2016 ;
+                    skos:exactMatch  ?werkingsgebiedrefniscode.
+    }
+}

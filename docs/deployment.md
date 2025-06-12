@@ -20,7 +20,7 @@ services:
     image: lblod/lpdc-publish-service:latest
 ```
 
-## Dev
+## Dev and Test
 
 The dev environment is configured to run the latest of the development branch, and to also use the 'latest' dependents for frontend, management, publish.
 
@@ -29,7 +29,7 @@ Following steps can be used if you want to manually deploy a new version on dev 
 ```shell
   ssh root@lpdc-dev.s.redhost.be
 
-  cd /data/app-lpdc-digitaal-loket-dev
+  cd /data/app-lpdc-digitaal-loket-dev # or `cd /data/app-lpdc-digitaal-loket-test` for Test
 
   git pull
 
@@ -104,50 +104,6 @@ If needed, we first make a new release of these containers (instructions to be f
 
 # Deploying a release
 
-## Test
-
-On test we always deploy a released version.
-
-```shell
-  ssh root@lpdc-dev.s.redhost.be
-
-  cd /data/app-lpdc-digitaal-loket-test
-  
-  #take a backup of the existing logs
-  drc logs --timestamps > /backups/logs-test-backup/log-<your date - and followletter here>.txt
-  #example: drc logs --timestamps > /backups/logs-test-backup/log-2024-03-26-a.txt
-  
-  #zip the backup of the logs
-  tar -zcvf /backups/logs-test-backup/log-2024-03-26-a.txt.tar.gz /backups/logs-test-backup/log-2024-03-26-a.txt
-  
-  #remove the full file
-  rm /backups/logs-test-backup/log-2024-03-26-a.txt
-
-  git fetch --all --tags
-  
-  drc down --remove-orphans
-
-  git checkout tags/<my version>
-  #e.g. of a version: v0.2.0
-  
-  # Do necessary manual changes to docker-compose.override.yml files if required by release. 
-  
-  # enable maintenance frontend docker-compose.override.yml when migrations need to be executed
-  # lpdc:
-  #  image: lblod/frontend-generic-maintenance
-  #  environment:
-  #    EMBER_MAINTENANCE_MESSAGE: " We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikmaken van een verbeterde versie van LPDC voor een nog vlottere gebruikerservaring."
-  #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
-  #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
-    
-  drc pull
-
-  drc up -d
-
-  drc logs  --follow --timestamps --since 1m
- 
-```
-
 ## Acc
 
 On acc we always deploy a released version. 
@@ -168,10 +124,32 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   ssh root@lpdc-prod.s.redhost.be
   
   # bring the app-http-logger down
-  cd /data/app-http-logger  
+  cd /data/app-http-logger
+  
   drc down
  
   cd /data/app-lpdc-digitaal-loket
+  
+  #verify that ldes consumers and its processing in lpdc-management have finished (via logs)
+  
+  drc logs --timestamps --since 10m | grep ldes-consumer
+  
+  drc logs --timestamps --since 10m | grep lpdc-management-1
+  
+  # Remove all user sessions to avoid that users can keep working on cached version
+  # DELETE WHERE  {
+  #   GRAPH <http://mu.semte.ch/graphs/sessions> {
+  #     ?s ?p ?o.
+  #   }
+  # }
+  
+  #before stopping virtuoso make sure all db changes are saved to disk
+  docker exec -it my-virtuoso bash
+  isql-v -U dba -P $DBA_PASSWORD
+  SQL> checkpoint;
+  
+  #stop all containers
+  drc stop 
   
   #take a backup of the existing logs
   drc logs --timestamps > /backups/prod-logs-backups/log-<your date - and followletter here>.txt
@@ -182,8 +160,8 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   
   #remove the full file
   rm /backups/prod-logs-backups/log-2024-03-26-a.txt  
-  
-  # stop the app-lpdc-digitaal-loket down
+
+  # bring the app-lpdc-digitaal-loket down
   drc down --remove-orphans
   
   cd /data
@@ -219,7 +197,7 @@ Mention on rocket chat that we will perform a new release, so the operations tea
   #    EMBER_MAINTENANCE_MESSAGE: " We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikmaken van een verbeterde versie van LPDC voor een nog vlottere gebruikerservaring."
   #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
   #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
-  
+
   drc pull
 
   drc up -d
@@ -244,6 +222,6 @@ Mention on rocket chat that we will perform a new release, so the operations tea
  
 ```
 
-Mention on rocket chat that we will a new release was performed, operations monitoring can continue.
+Mention on rocket chat that a new release was performed, operations monitoring can continue.
 
 

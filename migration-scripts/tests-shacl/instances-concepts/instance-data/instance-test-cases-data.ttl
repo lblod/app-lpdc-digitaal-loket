@@ -113,15 +113,15 @@ ex:a-requirement
 ex:a-tag
     a skos:Concept.
 
-ex:an-output
-    a m8g:Output ;
+ex:a-financial-advantage
+    a lpdcExt:FinancialAdvantage ;
     dc:title """an-output-title"""@nl;
     dc:title """an-output-title-en"""@en;
     dc:description """an-output-description"""@nl;
     shacl:order 1.
 
-ex:another-output
-    a m8g:Output ;
+ex:another-financial-advantage
+    a lpdcExt:FinancialAdvantage ;
     dc:title """an-output-title"""@nl;
     dc:description """an-output-description"""@nl;
     shacl:order 2.
@@ -143,7 +143,7 @@ ex:a-minimal-valid-instance
     a lpdcExt:InstancePublicServiceSnapshot ;
     dc:title """title-nl"""@nl ;
     dc:description  """description-nl"""@nl ;
-    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
+    dc:spatial <http://data.europa.eu/nuts/code/BE23141002> ;
     m8g:hasCost ex:an-instance-cost-all-languages-valid;
     m8g:hasCompetentAuthority <http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> ;
     schema:dateCreated """2023-11-12T20:15:42.007Z"""^^xsd:dateTime ;
@@ -178,11 +178,11 @@ ex:a-full-valid-instance
     lpdcExt:instanceTag ex:a-tag;
     dcat:keyword """a-keyword"""@nl ;
     pera:language lang:NLD ;
-    cpsv:produces ex:an-output;
-    cpsv:produces ex:another-output;
+    cpsv:produces ex:a-financial-advantage;
+    cpsv:produces ex:another-financial-advantage;
     lpdcExt:publicationMedium ex:a-publication-medium;
     lpdcExt:regulation """regulation-nl"""@nl ;
-    dc:spatial <http://vocab.belgif.be/auth/refnis2019/41002> ;
+    dc:spatial <http://data.europa.eu/nuts/code/BE23141002> ;
     lpdcExt:targetAudience ex:a-target-audience ;
     m8g:thematicArea ex:a-thematic-area;
     dc:type ex:a-type;

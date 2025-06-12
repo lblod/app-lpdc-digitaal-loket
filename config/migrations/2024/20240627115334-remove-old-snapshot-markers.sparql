@@ -1,0 +1,5 @@
+DELETE WHERE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent> {
+       <http://mu.semte.ch/lpdc/instancesnapshots-ldes-data> <http://mu.semte.ch/vocabularies/ext/processed> ?instanceSnapshotId .
+    }
+}

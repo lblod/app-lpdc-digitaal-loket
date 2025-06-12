@@ -5,28 +5,58 @@ export const instanceSnapshot = (instanceId, gearchiveerd = false) => {
     return {
         "@id": `http://data.lblod.info/id/public-service-snapshot/${instanceSnapshotId}`,
         "@type": [
-            "InstancePublicServiceSnapshot"
+            "InstantieSnapshot"
         ],
         "isVersionOf": `http://data.lblod.info/id/public-service/${instanceId}`,
-        "createdBy": "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
-        "aangemaaktOp": "2024-02-24T11:42:12.357Z",
-        "bewerktOp": new Date().toISOString(),
+        "aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+        "creatie": "2024-02-24T11:42:12.357Z",
+        "laatstGewijzigd": new Date().toISOString(),
         "generatedAtTime": new Date().toISOString(),
-        "titel": {
+        "naam": {
             "nl-BE-x-informal": `Instantie ${instanceSnapshotId}`
         },
         "beschrijving": {
             "nl-BE-x-informal": `<p data-indentation-level=\"0\">Beschrijving van de instantie ${instanceSnapshotId}</p>`
         },
         "bevoegdeOverheden": [
-            "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+            "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
         ],
         "geografischToepassingsgebieden": [
-            "http://vocab.belgif.be/auth/refnis2019/44021"
+            "BE23444021"
         ],
         "uitvoerendeOverheden": [
-            "353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+            "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
         ],
         "gearchiveerd": gearchiveerd.toString()
+    };
+};
+
+export const invalidInstanceSnapshot = (instanceId) => {
+    const instanceSnapshotId = uuid();
+    return {
+        "@id": `http://data.lblod.info/id/public-service-snapshot/${instanceSnapshotId}`,
+        "@type": [
+            "InstantieSnapshot"
+        ],
+        "isVersionOf": `http://data.lblod.info/id/public-service/${instanceId}`,
+        "aangemaaktDoor": "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5",
+        "creatie": "2024-02-24T11:42:12.357Z",
+        "laatstGewijzigd": new Date().toISOString(),
+        "generatedAtTime": new Date().toISOString(),
+        "naam": {
+            "en": `Instantie ${instanceSnapshotId}`
+        },
+        "beschrijving": {
+            "nl-BE-x-informal": `<p data-indentation-level=\"0\">Beschrijving van de instantie ${instanceSnapshotId}</p>`
+        },
+        "bevoegdeOverheden": [
+            "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        ],
+        "geografischToepassingsgebieden": [
+            "BE23444021"
+        ],
+        "uitvoerendeOverheden": [
+            "http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5"
+        ],
     };
 };

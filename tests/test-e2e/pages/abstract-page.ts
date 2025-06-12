@@ -14,9 +14,9 @@ export abstract class AbstractPage {
   async reloadUntil(assertion: () => Promise<void>) {
     const maxReloadAttempts = 30;
     for (let i = 0; i < maxReloadAttempts; i++) {
+      try {
       await this.page.reload();
       await wait(1000);
-      try {
         await assertion();
         return;
       } catch (e) {

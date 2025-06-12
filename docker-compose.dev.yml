@@ -1,32 +1,42 @@
-version: "3.7"
-
 services:
+
   lpdc:
     restart: "no"
+
   mocklogin:
     image: lblod/mock-login-service:0.4.0
+
   identifier:
     ports:
       - "90:80"
     restart: "no"
+
   dispatcher:
     restart: "no"
+
   database:
     restart: "no"
+
   virtuoso:
     ports:
       - "8890:8890"
     restart: "no"
+
   deltanotifier:
     restart: "no"
+
   migrations:
     restart: "no"
+
   cache:
     restart: "no"
+
   resource:
     restart: "no"
+
   sink:
     restart: "no"
+
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################
@@ -43,9 +53,12 @@ services:
   ################################################################################
   # LPDC-specific services
   ################################################################################
+
   lpdc-management:
     restart: "no"
+
   lpdc-publish:
     restart: "no"
+
   ldes-consumer-conceptsnapshot-ipdc:
     restart: "no"

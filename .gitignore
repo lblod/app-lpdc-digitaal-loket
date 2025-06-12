@@ -6,16 +6,20 @@
 !/data/db/toLoad
 !/data/db/toLoad/*
 /data/files/*
+/data/ldes-consumer-instancesnapshot-bct/*
 .DS_Store
 *~
 
 !/tmp/
 
 docker-compose.override.yml
+*.bckp
+*.save
 
 /.idea
 /.idea/*
 
+/basic-auth/*
 .htpasswd
 .env
 data-backup
@@ -26,3 +30,5 @@ data-backup
 node_modules
 migration-scripts/**/migration-results/
 /migration-scripts/tests-shacl/dist/
+
+/config/migrations/local/*

@@ -26,4 +26,8 @@ export class Alert {
     button(label: string): Locator {
         return this.alert.locator(`button:has-text('${label}')`);
     }
+
+    getMessage(){
+        return this.alert.locator('.au-c-alert__message')
+    }
 }

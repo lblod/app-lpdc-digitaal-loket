@@ -1,27 +1,34 @@
 import { Locator, Page } from "@playwright/test";
+import { wait } from "../shared/shared";
 
 export class MultiSelect {
 
     private readonly page: Page;
     private readonly selectDiv: Locator;
+    readonly selectDivLocatorString: string;
     private readonly listContainer: Locator;
 
-    constructor(page: Page, forLabel: string) {
+    constructor(page: Page, forLabel: string, withinContainer: string = '') {
         this.page = page;
 
-        this.selectDiv = page.locator(`div.ember-basic-dropdown-trigger:below(label:text-is('${forLabel}'))`).first();
-        this.listContainer = page.locator(`ul:below(label:text-is('${forLabel}'))`).first();
+        this.selectDivLocatorString = `${withinContainer} div.ember-basic-dropdown-trigger:below(label:has-text('${forLabel}'))`;
+        this.selectDiv = page.locator(this.selectDivLocatorString).first();
+        this.listContainer = page.locator(`${withinContainer} ul:below(label:has-text('${forLabel}'))`).first();
     }
 
-    async selectValue(text: string) {
+    async selectValue(text: string, clickOption: boolean = true) {
         await this.selectDiv.click();
         await this.page.keyboard.type(text);
-        await this.option(text).click();
+        await wait(500);
+        if (clickOption) {
+            await this.option(text).click();
+        }
     }
 
     async insertNewValue(text: string) {
         await this.selectDiv.click();
         await this.page.keyboard.type(text);
+        await wait(500);
         await this.page.keyboard.press('Enter');
     }
 

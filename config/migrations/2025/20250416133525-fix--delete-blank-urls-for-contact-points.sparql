@@ -1,0 +1,18 @@
+PREFIX schema: <http://schema.org/>
+PREFIX ipdc-lpdc: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX euro: <http://data.europa.eu/m8g/>
+
+DELETE {
+  GRAPH ?g {
+    ?contactPoint schema:url ?url .
+  }
+} WHERE {
+  GRAPH ?g {
+    ?instance a ipdc-lpdc:InstancePublicService ;
+                euro:hasContactPoint ?contactPoint .
+    ?contactPoint a schema:ContactPoint ;
+                  schema:url ?url .
+    FILTER REGEX(STR(?url), "^\\s*$")
+  }
+  FILTER (STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/organizations/"))
+}
