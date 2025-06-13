@@ -1,7 +1,7 @@
 # Changelog
 ## Unreleased
 
-## v0.27.2 (2025-06-TODO)
+## v0.27.2 (2025-06-13)
 ### Backend
 - datafix: rename rename PZ Rivierenland to PZ Bornem/Puurs-Sint-Amands/Mechelen/Willebroek [LPDC-1424]
 ### Deploy notes
