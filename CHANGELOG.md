@@ -19,6 +19,13 @@ Once everything is updated in the docker-compose.override.yml file you need to `
 - `drc up -d dashboard dashboard-login identifier`
 - `drc restart dispatcher`
 
+## v0.27.2 (2025-06-13)
+### Backend
+- datafix: rename rename PZ Rivierenland to PZ Bornem/Puurs-Sint-Amands/Mechelen/Willebroek [LPDC-1424]
+### Deploy notes
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
 ## v0.27.1 (2025-06-02)
 ### Frontend
 - Bump to [v0.22.1](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0221-2025-05-28)
