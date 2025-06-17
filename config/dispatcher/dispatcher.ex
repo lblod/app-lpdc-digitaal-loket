@@ -2,29 +2,6 @@ defmodule Dispatcher do
   use Matcher
   define_accept_types []
 
-  #################################################################
-  # Account control
-  #################################################################
-
-  match "/mock/sessions/*path" do
-    forward conn, path, "http://mocklogin/sessions/"
-  end
-
-  match "/sessions/*path" do
-    forward conn, path, "http://login/sessions/"
-  end
-
-  match "/gebruikers/*path" do
-    forward conn, path, "http://cache/gebruikers/"
-  end
-
-  match "/accounts/*path" do
-    forward conn, path, "http://cache/accounts/"
-  end
-
-  match "/impersonations/*path" do
-    forward conn, path, "http://impersonation/impersonations/"
-  end
 
   #################################################################
   # Concepts and Concept Schemes
@@ -82,16 +59,18 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/reports/"
   end
 
-  get "/files/:id/download" do
-    forward conn, [], "http://file/files/" <> id <> "/download"
-  end
-
   get "/files/*path" do
     forward conn, path, "http://cache/files/"
   end
 
   patch "/files/*path" do
     forward conn, path, "http://cache/files/"
+  end
+
+  # File service
+
+  get "/files/:id/download" do
+    forward conn, [], "http://file/files/" <> id <> "/download"
   end
 
   post "/files/*path" do
@@ -138,14 +117,6 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/identifiers/"
   end
 
-  post "/public-services/*path" do
-    forward conn, path, "http://lpdc-management/public-services/"
-  end
-
-  delete "/public-services/*path" do
-    forward conn, path, "http://lpdc-management/public-services/"
-  end
-
   # Don't use cache in the following rules.
   # See https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/docs/adr/0005-do-not-cache-instantie-overview.md
   get "/public-services/*path" do
@@ -160,7 +131,42 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/concept-display-configurations/"
   end
 
+  # Services
+
+  post "/public-services/*path" do
+    forward conn, path, "http://lpdc-management/public-services/"
+  end
+
+  delete "/public-services/*path" do
+    forward conn, path, "http://lpdc-management/public-services/"
+  end
+
+  #################################################################
+  # Account control
+  #################################################################
+
+  match "/mock/sessions/*path" do
+    forward conn, path, "http://mocklogin/sessions/"
+  end
+
+  match "/sessions/*path" do
+    forward conn, path, "http://login/sessions/"
+  end
+
+  match "/gebruikers/*path" do
+    forward conn, path, "http://cache/gebruikers/"
+  end
+
+  match "/accounts/*path" do
+    forward conn, path, "http://cache/accounts/"
+  end
+
+  match "/impersonations/*path" do
+    forward conn, path, "http://impersonation/impersonations/"
+  end
+
   match "/*_" do
     send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
   end
+
 end
