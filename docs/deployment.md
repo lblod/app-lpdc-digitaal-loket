@@ -1,28 +1,8 @@
 # Development
 
-## Local
+## Test
 
-Locally, we should always depend on the latest docker containers. So:
-
-_docker-compose.override.yml_:
-```yml
-version: "3.7"
-
-services:
-
-  lpdc:
-    image: lblod/frontend-lpdc:latest
-
-  lpdc-management:
-    image: lblod/lpdc-management-service:latest
-
-  lpdc-publish:
-    image: lblod/lpdc-publish-service:latest
-```
-
-## Dev and Test
-
-The dev environment is configured to run the latest of the development branch, and to also use the 'latest' dependents for frontend, management, publish.
+The Test environment is configured to run the latest of the development branch, and to also use the 'latest' dependents for frontend, management, publish.
 
 Following steps can be used if you want to manually deploy a new version on dev environment; however see Continuous Integration.
 
@@ -98,126 +78,100 @@ app-lpdc-digitaal-loket uses 3 other docker containers we also develop directly:
 - lblod/lpdc-management-service:<version>
 - lblod/lpdc-publish-service:<version>
 
-After the demo after each sprint, we want to make a release of app-lpdc-digitaal-loket. For this we should first verify if we made any changes to any of the three other docker containers. (frontend, management, publish).
-If needed, we first make a new release of these containers (instructions to be found in these repos). Then we can update the versions in the docker-compose file. And make a release of app-lpdc-digitaal-loket, by making a release version in git (which also tags).
+New releases are created whenever appropriate and the frequency can differ over time.
 
-# Deploying a release
+### Classic release
 
-## Acc
+0. Check that the [changelog](https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/CHANGELOG.md) contains the necessary instructions for deployment. Some attention points, not exhaustive:
+  - If the frontend is bumped, there should be corresponding instructions to bump the `controle` frontend on ACC and PROD. Similar for the identifier and dispatcher.
+  - If the dispatcher configuration changed, there should be instructions to change the configuration for the controle-dispatcher accordingly.
+1. Merge all required features etc. into the master branch. This usually means merging the development branch into master.
+2. In the [changelog](https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/CHANGELOG.md) move the content of the `Unreleased` to a new release section with the appropriate title containing the version number and release date.
+3. Add an appropriate tag `vX.Y.Z[-N]`. For a pre-release, to be deployed to ACC, be sure to append a `-N`.
+4. Push the updated changelog and tag
+5. Merge the changes performed in master back into development.
 
-On acc we always deploy a released version.
+### Hotfix
+
+0. Create a hotfix branch by starting from master.
+1. Merge the hotfix branch directly into master, typically after the corresponding PR has been reviewed and approved.
+3. Add an appropriate tag `vX.Y.Z[-N]`. For a pre-release, to be deployed to ACC, be sure to append a `-N`.
+4. Push the changes along with the tag.
+5. After the hotfix release is finalised, merge the changes in master into the development branch.
+
+
+# Deploying (a release)
+
+## TEST
+
+The TEST environment follows the development branch and does not explicitly deploy releases. Note, on this environment the frontend is also configured to follow the latest tag.
+
+```shell
+ssh root@lpdc-dev.s.redhost.be
+
+cd /data/app-lpdc-digitaal-loket-test
+
+# Pull the latest changes
+git pull
+
+# Follow (new) instructions in the Deploy notes subsection in the changelog's Unreleased section. If you are deploying the changes from a hotfix release follow the instructions in that release's section.
+```
+
+## ACC
+
+On ACC we always deploy a (pre-)released version.
 
 _Infrastructure notes_:  [acceptance currently has special configs we want to remove over time](infrastructure-architecture.md#acc).
 
-Deployment instructions: similar to [prod](#prod).
+```shell
+ssh root@lpdc-dev.s.redhost.be
 
-## Prod
+cd /data/app-lpdc-digitaal-loket-acc
 
-On prod we always deploy a released version.
+# Follow the same instructions as for PROD.
+```
+
+## PROD
+
+On PROD we always deploy a released version.
 
 _Infrastructure notes_:  [production currently has special configs we want to remove over time](infrastructure-architecture.md#prod).
 
-Mention on rocket chat that we will perform a new release, so the operations team is warned.
+Optional, mention on rocket chat that we will perform a new release, so the operations team is warned. For example, in case (significant) downtime is expected.
+
+On PROD there are some environment-specific configurations/changes:
+- Ensure to copy the `/config/dispatcher/dispatcher.ex` (without the commented /mock/sessions) to `/config/controle-dispatcher/dispatcher.ex`.
+- Ensure the `/mock/sessions` route remains commented in  `/config/dispatcher/dispatcher.ex`.
+- In `docker-compose.override.yml` update the versions of the controle services (`controle`, `controle-identifier`, and `controle-dispatcher`) if their corresponding non-controle version changed.
 
 ```shell
   ssh root@lpdc-prod.s.redhost.be
 
-  # bring the app-http-logger down
-  cd /data/app-http-logger
-
-  drc down
-
   cd /data/app-lpdc-digitaal-loket
 
-  #verify that ldes consumers and its processing in lpdc-management have finished (via logs)
+  # Optional, verify that ldes consumers and its processing in lpdc-management have finished (via logs)
 
   drc logs --timestamps --since 10m | grep ldes-consumer
 
   drc logs --timestamps --since 10m | grep lpdc-management-1
 
-  # Remove all user sessions to avoid that users can keep working on cached version
+  # Optional, remove all user sessions to avoid that users can keep working on cached version
   # DELETE WHERE  {
   #   GRAPH <http://mu.semte.ch/graphs/sessions> {
   #     ?s ?p ?o.
   #   }
   # }
 
-  #before stopping virtuoso make sure all db changes are saved to disk
+  # If virtuoso will be stopped, make sure all db changes are saved to disk
   docker exec -it my-virtuoso bash
   isql-v -U dba -P $DBA_PASSWORD
   SQL> checkpoint;
 
-  #stop all containers
-  drc stop
-
-  #take a backup of the existing logs
-  drc logs --timestamps > /backups/prod-logs-backups/log-<your date - and followletter here>.txt
-  #as an example: drc logs --timestamps > /backups/prod-logs-backups/log-2024-03-26-a.txt
-
-  #zip the backup of the logs
-  tar -zcvf /backups/prod-logs-backups/log-2024-03-26-a.txt.tar.gz /backups/prod-logs-backups/log-2024-03-26-a.txt
-
-  #remove the full file
-  rm /backups/prod-logs-backups/log-2024-03-26-a.txt
-
-  # bring the app-lpdc-digitaal-loket down
-  drc down --remove-orphans
-
-  cd /data
-
-  #take a backup of all
-  tar -zcvf app-lpdc-digitaal-loket-prod.tar.gz app-lpdc-digitaal-loket/
-
-  cd /data/app-lpdc-digitaal-loket
-
+  # Fetch all tags
   git fetch --all --tags
+  
+  # Switch to the appropriate tag
+  git switch --detach VERSION_TAG
 
-  #some configs are only for prod, so stash them for now
-  git stash -u
-
-  git checkout tags/<my version>
-  #e.g. of a version: v0.2.0
-
-  # get back those configs
-  git stash apply
-
-  #manually merge and verify the configs unstashed (sometimes new configs have been added, and need manual additions/corrections)
-
-  #(possibly non exhaustive) list of manual changes:
-
-  #Ensure to copy the /config/dispatcher/dispatcher.ex (without the commented /mock/sessions) to /config/controle-dispatcher/dispatcher.ex. .
-  #Merge the /config/dispatcher/dispatcher.ex change of the /mock/sessions with the latest version of this file.
-  #Update in the docker-compose.override.yml manually the frontend version (controle container), identifier version (controle-identifier container) and dispatcher version (controle-dispatcher) to the one of this release.
-
-  # enable maintenance frontend docker-compose.override.yml when migrations need to be executed
-  # lpdc:
-  #  image: lblod/frontend-generic-maintenance
-  #  environment:
-  #    EMBER_MAINTENANCE_MESSAGE: " We geven de Lokale Producten- en Dienstencatalogus (LPDC) momenteel een update. Binnen enkele uren kan je gebruikmaken van een verbeterde versie van LPDC voor een nog vlottere gebruikerservaring."
-  #    EMBER_MAINTENANCE_APP_TITLE: "Lokale Producten- en Dienstencatalogus"
-  #    EMBER_MAINTENANCE_APP_URL: "lpdc.lokaalbestuur.vlaanderen.be"
-
-  drc pull
-
-  drc up -d
-
-  drc logs  --follow --timestamps --since 1m
-
-  git stash clear
-
-  cd /data
-
-  #take a backup of all
-  tar -zcvf app-lpdc-digitaal-loket-prod-2.tar.gz app-lpdc-digitaal-loket/
-
-  #move backups to /backups/prod-data-backups/<releasename> folder (e.g. 2023-09)
-
-  # bring the app-http-logger back up
-  cd /data/app-http-logger
-  drc up -d
-
-  # clean up unused docker containers
-  docker system prune -a
+  # Follow the instructions in the changelog. The Deploy notes and/or Docker instructions section for the release at hand should list all necessary steps.
 ```
-
-Mention on rocket chat that a new release was performed, operations monitoring can continue.
