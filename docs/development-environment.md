@@ -33,12 +33,7 @@ First install `git-lfs` (see <https://github.com/git-lfs/git-lfs/wiki/Installati
 ```
 
 To ease all typing for `docker compose` commands, start by creating the following files in the directory of the project:
-* A `docker-compose.override.yml` file with following content:
-
-```
-version: "3.7"
-```
-
+* A `docker-compose.override.yml` file
 * And an `.env` file with following content:
 
 ```
@@ -76,7 +71,7 @@ This will take a while; you may choose to monitor the migrations service in a se
 [2023-04-07 20:13:15] INFO  WEBrick::HTTPServer#start: pid=13 port=80
 ```
 
-At this point, you should be able to access the `/mock-login` path and see the available `bestuurseenheden`. After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `ldes-consumer-conceptsnapshot-ipdc` service, which is set to run at 00:00 UTC time on a daily basis. Do note that you need to be mindful of the `UTC vs Local Time` and `Summer vs Winter Time` differences:
+At this point, after booting the your local stack, you should be able to access the `/mock-login` path and see the available administrative units (*nl. bestuurseenheden*). After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `ldes-consumer-conceptsnapshot-ipdc` service, which is set to run at 00:00 UTC time on a daily basis. Do note that you need to be mindful of the `UTC vs Local Time` and `Summer vs Winter Time` differences:
 
 * A cron pattern of **"20 17 * * *"** runs at 17:20 UTC time every day
     - During *Summer Time*: Runs at 19:20 Brussels Time (UTC+2)
@@ -92,6 +87,29 @@ After changing the cron pattern, run `docker compose up -d` if the stack is offl
 ```
 
 The entire process takes between 30-60 minutes; you can confirm the job is done when no new logs are printed (the service itself does not log the end of the consumption process). At this stage, you can repeat the `/mock-login` flow again and click on `Product of dienst toevoegen`, where you will see the loaded IPDC TNI concepts.
+
+#### Alternative: initialise local setup with TEST data
+
+Alternatively you can initialise your local development setup with data from the TEST environment. This has the advantage that it is already properly populated with product instances and other relevant data. This does requires you have acces the the server via ssh.
+
+```shell
+cd /path/to/your/local/app-lpdc-digitaal-loket
+
+# If the stack is running, bring it down first
+docker compose down
+
+# Remove any current data
+rm -r data/db
+
+# sync the data from the test environment
+rsync -e ssh -avz -P root@lpdc-dev.s.redhost.be:/data/app-lpdc-digitaal-loket-test/data/db data/
+
+# Start virtuose and the migrations service
+docker compose up -d virtuoso migrations
+
+# When the migrations have run successfully, start the rest of the stack
+docker compose up -d
+```
 
 ### Normal start
 
@@ -215,10 +233,10 @@ cd tools
 ./build-arm-images.sh
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml`. 
+Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml`.
 See [contents for mac arm64](docker-overrides/docker-compose.tests.latest.override-arm64.yml) for an example; don't forget to replace api keys templates..
 
-Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml`. 
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml`.
 See [contents for mac arm64](docker-overrides/docker-compose.tests.development.override-arm64.yml) for an example; don't forget to replace api keys templates..
 
 ### Prerequisites when not running on mac arm64
@@ -236,13 +254,10 @@ services:
 
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content; don't forget to replace api keys templates..
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content; don't forget to replace api keys templates.
 
 ```dockerfile
-version: "3.7"
-
 services:
-
   lpdc-management:
     environment:
       ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
@@ -317,6 +332,3 @@ docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.ym
 ```
 
 _Note_: the test container keeps it database under the folder /tests/data-tests. It is reused over test runs. It contains the migrated data related to bestuurseenheden, personen, etc. If you want to have a very clean test run, stop docker, delete this folder, and restart test container.
-
-
-
