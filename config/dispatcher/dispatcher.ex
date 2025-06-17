@@ -1,17 +1,27 @@
 defmodule Dispatcher do
   use Matcher
-  define_accept_types []
 
+  define_accept_types [
+    html: ["text/html", "application/xhtml+html"],
+    json: ["application/json", "application/vnd.api+json"],
+    upload: ["multipart/form-data"],
+    any: [ "*/*" ],
+  ]
+
+  @html %{ accept: %{ html: true } }
+  @json %{ accept: %{ json: true } }
+  @upload %{ accept: %{ upload: true } }
+  @any %{ accept: %{ any: true } }
 
   #################################################################
   # Concepts and Concept Schemes
   #################################################################
 
-  get "/concept-schemes/*path" do
+  get "/concept-schemes/*path", @json do
     forward conn, path, "http://cache/concept-schemes/"
   end
 
-  get "/concepts/*path" do
+  get "/concepts/*path", @json do
     forward conn, path, "http://cache/concepts/"
   end
 
@@ -55,35 +65,35 @@ defmodule Dispatcher do
   # Reports
   #################################################################
 
-  match "/reports/*path" do
+  match "/reports/*path", @json do
     forward conn, path, "http://cache/reports/"
   end
 
-  get "/files/*path" do
+  get "/files/*path", @json do
     forward conn, path, "http://cache/files/"
   end
 
-  patch "/files/*path" do
+  patch "/files/*path", @json do
     forward conn, path, "http://cache/files/"
   end
 
   # File service
 
-  get "/files/:id/download" do
+  get "/files/:id/download", @any do
     forward conn, [], "http://file/files/" <> id <> "/download"
   end
 
-  post "/files/*path" do
+  post "/files/*path", @any do
     forward conn, path, "http://file/files/"
   end
 
   # TODO: find all usage of this endpoint and replace it with `POST /files`
   # This is kept to maintain compatibility with code that uses the "old" endpoint.
-  post "/file-service/files/*path" do
+  post "/file-service/files/*path", @any do
     forward conn, path, "http://file/files/"
   end
 
-  delete "/files/*path" do
+  delete "/files/*path", @any do
     forward conn, path, "http://file/files/"
   end
 
@@ -97,37 +107,37 @@ defmodule Dispatcher do
   # corresponding concept display configurations. These updates are not picked
   # up by the cache, resulting in the frontend showing outdated information
   # afterwards. (See LPDC-1370)
-  match "/conceptual-public-services/*path" do
+  match "/conceptual-public-services/*path", @json do
     forward conn, path, "http://resource/conceptual-public-services/"
   end
 
-  match "/bestuurseenheden/*path" do
+  match "/bestuurseenheden/*path", @json do
     forward conn, path, "http://cache/bestuurseenheden/"
   end
 
-  match "/werkingsgebieden/*path" do
+  match "/werkingsgebieden/*path", @json do
     forward conn, path, "http://cache/werkingsgebieden/"
   end
 
-  match "/bestuurseenheid-classificatie-codes/*path" do
+  match "/bestuurseenheid-classificatie-codes/*path", @json do
     forward conn, path, "http://cache/bestuurseenheid-classificatie-codes/"
   end
 
-  match "/identifiers/*path" do
+  match "/identifiers/*path", @json do
     forward conn, path, "http://cache/identifiers/"
   end
 
   # Don't use cache in the following rules.
   # See https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/docs/adr/0005-do-not-cache-instantie-overview.md
-  get "/public-services/*path" do
+  get "/public-services/*path", @json do
     forward conn, path, "http://resource/public-services/"
   end
 
-  match "/public-services/*path" do
+  match "/public-services/*path", @json do
     forward conn, path, "http://resource/public-services/"
   end
 
-  match "/concept-display-configurations/*path" do
+  match "/concept-display-configurations/*path", @json do
     forward conn, path, "http://resource/concept-display-configurations/"
   end
 
@@ -145,23 +155,23 @@ defmodule Dispatcher do
   # Account control
   #################################################################
 
-  match "/mock/sessions/*path" do
+  match "/mock/sessions/*path", @json do
     forward conn, path, "http://mocklogin/sessions/"
   end
 
-  match "/sessions/*path" do
+  match "/sessions/*path", @json do
     forward conn, path, "http://login/sessions/"
   end
 
-  match "/gebruikers/*path" do
+  match "/gebruikers/*path", @json do
     forward conn, path, "http://cache/gebruikers/"
   end
 
-  match "/accounts/*path" do
+  match "/accounts/*path", @json do
     forward conn, path, "http://cache/accounts/"
   end
 
-  match "/impersonations/*path" do
+  match "/impersonations/*path", @json do
     forward conn, path, "http://impersonation/impersonations/"
   end
 
