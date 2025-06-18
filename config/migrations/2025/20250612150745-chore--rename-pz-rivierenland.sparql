@@ -1,0 +1,43 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?pzRivierenland skos:prefLabel ?oldLabel .
+  }
+} INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?pzRivierenland skos:prefLabel "PZ Bornem/Puurs-Sint-Amands/Mechelen/Willebroek" .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?pzRivierenland skos:prefLabel ?oldLabel .
+    VALUES ?pzRivierenland {
+      <http://data.lblod.info/id/bestuurseenheden/81dd243d-f66c-4157-b105-5407aa83cb62>
+    }
+  }
+}
+;
+# Also update the mock-login information
+DELETE {
+  GRAPH ?g {
+    ?person foaf:familyName ?oldFamilyName .
+  }
+} INSERT {
+  GRAPH ?g {
+    ?person foaf:familyName "PZ Bornem/Puurs-Sint-Amands/Mechelen/Willebroek" .
+  }
+} WHERE {
+  GRAPH ?g {
+    ?person a foaf:Person ;
+            foaf:member ?pzRivierenland ;
+            foaf:familyName ?oldFamilyName .
+    VALUES ?pzRivierenland {
+      <http://data.lblod.info/id/bestuurseenheden/81dd243d-f66c-4157-b105-5407aa83cb62>
+    }
+    VALUES ?g {
+      <http://mu.semte.ch/graphs/organizations/81dd243d-f66c-4157-b105-5407aa83cb62>
+      <http://mu.semte.ch/graphs/public>
+    }
+  }
+}

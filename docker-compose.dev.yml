@@ -12,6 +12,9 @@ services:
   impersonation:
     restart: "no"
 
+  dashboard-login:
+    restart: "no"
+
   identifier:
     ports:
       - "90:80"

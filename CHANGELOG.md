@@ -1,10 +1,49 @@
 # Changelog
 ## Unreleased
+### Backend
+- enable ACM/IDM logins for the dashboard [LPDC-1413]
+
+### Deploy notes
+#### Dashboard
+The new dashboard requires a slightly different deploy setup. The dispatcher redirects requests to the frontend based on the host name. 
+
+- move the VIRTUAL_HOST and LETSENCRYT_* environment variables from the dashboard to the identifier service
+  > Note that the host names for the ACC and PROD dashboards will be different now.
+  > ACC: https://dashboard.acc.lpdc.lokaalbestuur.lblod.info
+  > PROD: http://dashboard.lpdc.lokaalbestuur.vlaanderen.be
+- add the correct environment variables to the dashboard and dashboard login services (See the overrides files for examples)
+- remove the mock-login service once both the dashboard and controle environments use ACM/IDM (ACC & PROD only)
+
+Once everything is updated in the docker-compose.override.yml file you need to `up -d` and restart some services.
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+- `drc up -d dashboard dashboard-login identifier`
+- `drc restart dispatcher`
+
+## v0.27.2 (2025-06-13)
+### Backend
+- datafix: rename rename PZ Rivierenland to PZ Bornem/Puurs-Sint-Amands/Mechelen/Willebroek [LPDC-1424]
+### Deploy notes
+#### Docker commands
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+
+## v0.27.1 (2025-06-02)
+### Frontend
+- Bump to [v0.22.1](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0221-2025-05-28)
+### Deploy notes
+- On PROD, comment the frontend image override in `docker-compose.override.yml`
+- On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
+#### Docker instructions
+- `drc pull lpdc; drc up -d lpdc`
+- `drc pull controle; drc up -d controle` (only on PROD and ACC)
+
+## v0.27.0 (2025-05-26)
 ### Frontend
 - Bump to [v0.21.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0210-2025-04-10)
 - Bump to [v0.21.1](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0211-2025-04-15)
+- Bump to [v0.22.0](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0220-2025-05-16)
 ### Management
 - Bump to [v0.49.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.49.0)
+- Bump to [v0.50.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.0)
 ### Backend
 - datafix: disable municipality merger labels for product instances [LPDC-1403]
 - added the competency and executing level to all the orgs with a migration [LPDC-1278]
@@ -12,6 +51,7 @@
 - Additional reports to monitor for authorities without levels [LPDC-1393]
 - datafix: delete triples with empty values for contact point URLs and address box numbers [LPDC-1297]
 - bump BCT and Ghent LDES consumer to new version [LPDC-1414]
+- add creator and lastmodifier user for publicServices [LPDC-1359]
 ### Deploy notes
 - On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
 - On TEST and PROD: In the `docker-compose.override.yml` for `ldes-consumer-instancesnapshot-gent`, remove the `LDES_STREAM` entry, rename `LDES_LOGGING_LEVEL` to `LOG_LEVEL`, and update `LDES_ENDPOINT_VIEW` to
@@ -21,6 +61,7 @@
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 - `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
 - `drc pull report-generation; drc up -d report-generation`
+- `drc restart resource cache`
 - `drc pull ldes-consumer-instancesnapshot-bct; drc up -d ldes-consumer-instancesnapshot-bct`
 - `drc pull ldes-consumer-instancesnapshot-gent; drc up -d ldes-consumer-instancesnapshot-gent`
 

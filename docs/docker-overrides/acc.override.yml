@@ -56,28 +56,14 @@ services:
         max-size: "10m"
         max-file: "3"
 
-  mocklogin:
-    image: lblod/mock-login-service:0.4.0
-
-  dashboard:
-    environment:
-      VIRTUAL_HOST: "acc.dashboard.lpdc.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_HOST: "acc.dashboard.lpdc.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_EMAIL: "info@redpencil.io"
-    #############################
-    # Basic auth config.
-    #############################
-    volumes:
-      - ./config/basic-auth:/etc/nginx/conf.d
-    links:
-      - controle-identifier:backend
-    networks:
-      - proxy
-      - default
-
 ######################
 # END: CONTROLE
 ######################
+  identifier:
+    environment:
+      VIRTUAL_HOST: "dashboard.acc.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_HOST: "dashboard.acc.lpdc.lokaalbestuur.lblod.info"
+      LETSENCRYPT_EMAIL: "info@redpencil.io"
 
   lpdc:
     environment:
@@ -94,6 +80,20 @@ services:
     networks:
       - proxy
       - default
+
+  dashboard:
+    environment:
+      EMBER_ACMIDM_CLIENT_ID: "90f22656-a987-40dc-8376-d44954ca9ee1"
+      EMBER_ACMIDM_BASE_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/auth"
+      EMBER_ACMIDM_REDIRECT_URL: "https://dashboard.acc.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      EMBER_ACMIDM_LOGOUT_URL: "https://authenticatie-ti.vlaanderen.be/op/v1/logout"
+
+  dashboard-login:
+    environment:
+      MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
+      MU_APPLICATION_AUTH_CLIENT_ID: "90f22656-a987-40dc-8376-d44954ca9ee1"
+      MU_APPLICATION_AUTH_REDIRECT_URI: "https://dashboard.acc.lpdc.lokaalbestuur.lblod.info/authorization/callback"
+      MU_APPLICATION_AUTH_CLIENT_SECRET: "secret"
 
   login:
     environment:
