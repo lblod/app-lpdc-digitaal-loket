@@ -4,7 +4,7 @@ This repository has two setups:
 
 * *docker-compose.yml*: This provides you with the backend components; there is an included frontend application which you can publish using a separate proxy (we tend to put a letsencrypt proxy in front).
 * *docker-compose.dev.yml*: Provides changes for a good frontend development setup.
-    - publishes the backend services on port 90 directly, so you can run `ember serve --proxy http://localhost:90/` when developing the frontend apps natively.
+    - publishes the backend services on port 90 directly, so you can run `ember serve --proxy http://localhost:90/` (or `eds --proxy http://host:90/` if you use [docker-ember](https://github.com/madnificent/docker-ember)) when developing the frontend app locally.
     - publishes the database instance on port 8890, so you can easily see what content is stored in the base triplestore.
     - provides a mock-login backend service, so you don't need the ACM/IDM integration.
 
@@ -33,8 +33,8 @@ First install `git-lfs` (see <https://github.com/git-lfs/git-lfs/wiki/Installati
 ```
 
 To ease all typing for `docker compose` commands, start by creating the following files in the directory of the project:
-* A `docker-compose.override.yml` file
-* And an `.env` file with following content:
+* A `docker-compose.override.yml` file that can remain empty for now
+* A `.env` file with following content:
 
 ```
 COMPOSE_FILE=docker-compose.yml:docker-compose.dev.yml:docker-compose.override.yml
@@ -88,9 +88,11 @@ After changing the cron pattern, run `docker compose up -d` if the stack is offl
 
 The entire process takes between 30-60 minutes; you can confirm the job is done when no new logs are printed (the service itself does not log the end of the consumption process). At this stage, you can repeat the `/mock-login` flow again and click on `Product of dienst toevoegen`, where you will see the loaded IPDC TNI concepts.
 
-#### Alternative: initialise local setup with TEST data
+#### Alternative: initialise local database with TEST data
 
 Alternatively you can initialise your local development setup with data from the TEST environment. This has the advantage that it is already properly populated with product instances and other relevant data. This does requires you have acces the the server via ssh.
+
+:warning: Using `rsync` to sync data from some other environment is a quick but dirty way to put data into a database. Although it usually works well enough for local development setups, it should never be used in other environments. Consult the docker-virtuoso [README](https://github.com/redpencilio/docker-virtuoso/blob/master/README.md#L104) for proper ways to load data into virtuoso.
 
 ```shell
 cd /path/to/your/local/app-lpdc-digitaal-loket
@@ -98,13 +100,13 @@ cd /path/to/your/local/app-lpdc-digitaal-loket
 # If the stack is running, bring it down first
 docker compose down
 
-# Remove any current data
+# Remove any current database folder
 rm -r data/db
 
 # sync the data from the test environment
 rsync -e ssh -avz -P root@lpdc-dev.s.redhost.be:/data/app-lpdc-digitaal-loket-test/data/db data/
 
-# Start virtuose and the migrations service
+# Start virtuoso and the migrations service
 docker compose up -d virtuoso migrations
 
 # When the migrations have run successfully, start the rest of the stack
@@ -149,7 +151,7 @@ Once installed, you may desire to upgrade your current setup to follow developme
 
 ### Upgrading the development setup
 
-For the dev setup, we assume you'll pull more often and will most likely clear the database separately:
+For the development setup, we assume you'll pull more often and will most likely clear the database separately:
 
 ```
 # This assumes the .env file has been set
@@ -241,13 +243,10 @@ See [contents for mac arm64](docker-overrides/docker-compose.tests.development.o
 
 ### Prerequisites when not running on mac arm64
 
-Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content; don't forget to replace api keys templates..
+Create a Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content; don't forget to replace api keys templates.
 
 ```dockerfile
-version: "3.7"
-
 services:
-
   lpdc-management:
     environment:
       ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
