@@ -9,6 +9,9 @@ services:
   login-lpdc:
     restart: "no"
 
+  impersonation:
+    restart: "no"
+
   identifier:
     ports:
       - "90:80"
