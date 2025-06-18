@@ -6,6 +6,9 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0
 
+  login-lpdc:
+    restart: "no"
+
   identifier:
     ports:
       - "90:80"
