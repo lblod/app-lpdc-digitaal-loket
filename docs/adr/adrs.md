@@ -23,3 +23,4 @@
 * [21. create published instance snapshot in create or update](0021-create-published-instance-snapshot-in-create-or-update-instance.md)
 * [22. processing snapshots](0022-processing-snapshots.md)
 * [23. lpdc management service api formating](0023-ldpc-management-service-api-formatting.md)
+* [24. Development process](0024-development-process.md)
