@@ -18,7 +18,7 @@ General information on running and maintaining an installation
 
 You'll need a beefy machine, with at least 16 GB of RAM.
 
-#### Running the dev setup
+### Running the dev setup
 
 First install `git-lfs` (see <https://github.com/git-lfs/git-lfs/wiki/Installation>)
 ```
@@ -40,7 +40,7 @@ To ease all typing for `docker compose` commands, start by creating the followin
 COMPOSE_FILE=docker-compose.yml:docker-compose.dev.yml:docker-compose.override.yml
 ```
 
-#### If you are starting for the first time:
+#### Initialise your local database
 
 This is an optional step. If you trust your machine is powerful enough, you can move on (this step should only be done once).
 First start virtuoso and let it setup itself:
@@ -118,7 +118,7 @@ docker compose up -d
 This should be your go-to way of starting the stack:
 
 ```
-docker compose up # or "docker compose up -d" if you want to run it in the background
+docker compose up -d # or "docker compose up" if you do not want to run it in the background
 ```
 
 Always double check the status of the migrations `docker compose logs -f --tail=200 migrations` and wait for everything to boot to ensure clean caches.
