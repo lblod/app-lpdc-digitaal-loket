@@ -12,7 +12,7 @@ services:
   impersonation:
     restart: "no"
 
-  dashboard-login:
+  login-dashboard:
     restart: "no"
 
   identifier:

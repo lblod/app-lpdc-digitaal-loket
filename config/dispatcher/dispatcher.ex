@@ -179,9 +179,13 @@ defmodule Dispatcher do
   # Dashboard
   #################################################################
 
+  # Login
+
   match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
-    forward conn, path, "http://dashboard-login/sessions/"
+    forward conn, path, "http://login-dashboard/sessions/"
   end
+
+  # Frontend
 
   get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest] }  do
     forward conn, path, "http://dashboard/assets/"
