@@ -90,9 +90,9 @@ The entire process takes between 30-60 minutes; you can confirm the job is done 
 
 #### Alternative: initialise local database with TEST data
 
-Alternatively you can initialise your local development setup with data from the TEST environment. This has the advantage that it is already properly populated with product instances and other relevant data. This does requires you have acces the the server via ssh.
+:warning: This is a quick but dirty way to add data into a database. Although it usually works well enough for local development setups, it should never be used in other environments. Consult the docker-virtuoso [README](https://github.com/redpencilio/docker-virtuoso/blob/master/README.md#L104) for proper ways to load data into virtuoso.
 
-:warning: Using `rsync` to sync data from some other environment is a quick but dirty way to put data into a database. Although it usually works well enough for local development setups, it should never be used in other environments. Consult the docker-virtuoso [README](https://github.com/redpencilio/docker-virtuoso/blob/master/README.md#L104) for proper ways to load data into virtuoso.
+Alternatively you can initialise your local development setup with data from the TEST environment. This has the advantage that it is already properly populated with product instances and other relevant data. This does requires you have acces the the server via ssh.
 
 ```shell
 cd /path/to/your/local/app-lpdc-digitaal-loket
