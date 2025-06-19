@@ -135,6 +135,17 @@ lpdc:
 
 You can then access the frontend by going to `http://localhost:4205/mock-login` (4205 can be changed to any other unused port on your system).
 
+
+LPDC relies on an external service[^1] to verify the validity of addresses inputted in the frontend. This service requires an API key to be provided for it to reply correctly. Otherwise you can encounter error messages in the frontend when handling address data. In your browser's developer console such errors will show up as `500` errors on requests for the `lpdc-management/address/...` route. You can configure LPDC's management service with a correct API key to prevent such errors, by adding something like the following to your `docker-compose.override.yml` file:
+
+```
+lpdc-management:
+  environment:
+    ADRESSEN_REGISTER_API_KEY: "REPLACE_BY_A_VALID_API_KEY"
+```
+
+The `docker-compose.override.yml` files in the different server environments for LPDC contain usable keys.
+
 ### Running the regular setup
 
 ```
@@ -331,3 +342,5 @@ docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.ym
 ```
 
 _Note_: the test container keeps it database under the folder /tests/data-tests. It is reused over test runs. It contains the migrated data related to bestuurseenheden, personen, etc. If you want to have a very clean test run, stop docker, delete this folder, and restart test container.
+
+[^1]: https://api.basisregisters.vlaanderen.be
