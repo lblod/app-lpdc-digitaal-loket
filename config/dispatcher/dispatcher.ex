@@ -30,11 +30,11 @@ defmodule Dispatcher do
   #################################################################
 
   get "/formal-informal-choices/*path" do
-      forward conn, path, "http://lpdc-management/formal-informal-choices/"
+    forward conn, path, "http://lpdc-management/formal-informal-choices/"
   end
 
   post "/formal-informal-choices/*path" do
-      forward conn, path, "http://lpdc-management/formal-informal-choices/"
+    forward conn, path, "http://lpdc-management/formal-informal-choices/"
   end
 
   #################################################################
