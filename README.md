@@ -10,9 +10,9 @@ The LPDC application is built on the data model defined in:
 [System Context Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559416630047&cot=14).
 
 Other repos:
-- [LPDC frontend](https://github.com/lblod/frontend-lpdc/tree/development)
-- [LPDC Management Service](https://github.com/lblod/lpdc-management-service/tree/development)
-- [LPDC Publish Service](https://github.com/lblod/lpdc-publish-service/tree/development)
+- [LPDC frontend](https://github.com/lblod/frontend-lpdc)
+- [LPDC Management Service](https://github.com/lblod/lpdc-management-service)
+- [LPDC Publish Service](https://github.com/lblod/lpdc-publish-service)
 
 ## 2. Functional Overview
 
