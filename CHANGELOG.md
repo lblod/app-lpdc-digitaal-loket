@@ -1,6 +1,16 @@
 # Changelog
 ## Unreleased
 
+## v0.27.3 (2025-06-20)
+### Frontend
+- Bump to [v0.50.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.1)
+### Frontend
+- Bump to [v0.22.2](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0222-2025-06-20)
+### Deploy notes
+- On ACC and PROD: bump the frontend version for the `controle` service in `docker-compose.override.yml`
+#### Docker commands
+- `drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management`
+
 ## v0.27.2 (2025-06-13)
 ### Backend
 - datafix: rename rename PZ Rivierenland to PZ Bornem/Puurs-Sint-Amands/Mechelen/Willebroek [LPDC-1424]
