@@ -1,0 +1,15 @@
+DELETE {
+  GRAPH ?g {
+    ?account <http://mu.semte.ch/vocabularies/ext/sessionRole> "LoketAdmin" .
+  }
+}
+INSERT {
+  GRAPH ?g {
+    ?account <http://mu.semte.ch/vocabularies/ext/sessionRole> "LoketLB-admin" .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?account <http://mu.semte.ch/vocabularies/ext/sessionRole> "LoketAdmin" .
+  }
+}

@@ -37,7 +37,7 @@ defmodule Acl.UserGroups.Config do
         PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
         SELECT DISTINCT ?session_role WHERE {
           VALUES ?session_role {
-            \"LoketAdmin\"
+            \"LoketLB-admin\"
           }
           VALUES ?session_id {
             <SESSION_ID>
