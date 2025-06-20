@@ -185,6 +185,18 @@ defmodule Dispatcher do
     forward conn, path, "http://login-dashboard/sessions/"
   end
 
+  match "/sessions/*path", %{ reverse_host: ["test", "dashboard" | _rest] } do
+    forward conn, path, "http://login-dashboard/sessions/"
+  end
+
+  match "/sessions/*path", %{ reverse_host: ["acc", "dashboard" | _rest] } do
+    forward conn, path, "http://login-dashboard/sessions/"
+  end
+
+  match "/sessions/*path", %{ reverse_host: ["dev", "dashboard" | _rest] } do
+    forward conn, path, "http://login-dashboard/sessions/"
+  end
+
   # Frontend
 
   get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest] }  do
@@ -196,6 +208,48 @@ defmodule Dispatcher do
   end
 
   match "/*_path", %{ reverse_host: ["dashboard" | _rest] } do
+    forward conn, [], "http://dashboard/index.html"
+  end
+
+  # Frontend TEST
+
+  get "/assets/*path",  %{ reverse_host: ["test", "dashboard" | _rest] }  do
+    forward conn, path, "http://dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["test", "dashboard" | _rest] } do
+    forward conn, path, "http://dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["test", "dashboard" | _rest] } do
+    forward conn, [], "http://dashboard/index.html"
+  end
+
+  # Frontend ACC
+
+  get "/assets/*path",  %{ reverse_host: ["acc", "dashboard" | _rest] }  do
+    forward conn, path, "http://dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["acc", "dashboard" | _rest] } do
+    forward conn, path, "http://dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["acc", "dashboard" | _rest] } do
+    forward conn, [], "http://dashboard/index.html"
+  end
+
+  # Frontend DEV
+
+  get "/assets/*path",  %{ reverse_host: ["dev", "dashboard" | _rest] }  do
+    forward conn, path, "http://dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["dev", "dashboard" | _rest] } do
+    forward conn, path, "http://dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["dev", "dashboard" | _rest] } do
     forward conn, [], "http://dashboard/index.html"
   end
 
