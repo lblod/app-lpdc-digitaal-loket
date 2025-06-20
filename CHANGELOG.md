@@ -1,5 +1,59 @@
 # Changelog
+
 ## Unreleased
+
+### Backend
+
+- enable ACM/IDM logins for the dashboard [LPDC-1413]
+- Enable ACM/IDM for LPDC [LPDC-1029] ([LPDC-1405] [LPDC-1406])
+- New `lpdc-management-service` with better admin support
+
+### Deploy notes
+
+#### Dashboard
+
+The new dashboard requires a slightly different deploy setup. The dispatcher redirects requests to the frontend based on the host name. 
+
+- move the VIRTUAL_HOST and LETSENCRYT_* environment variables from the dashboard to the identifier service
+  > Note that the host names for the ACC and PROD dashboards will be different now.
+  > ACC: https://dashboard.acc.lpdc.lokaalbestuur.lblod.info
+  > PROD: http://dashboard.lpdc.lokaalbestuur.vlaanderen.be
+- add the correct environment variables to the dashboard and dashboard login services (See the overrides files for examples)
+- remove the mock-login service once both the dashboard and controle environments use ACM/IDM (ACC & PROD only)
+
+Once everything is updated in the docker-compose.override.yml file you need to `up -d` and restart some services.
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
+- `drc up -d dashboard login-dashboard identifier`
+- `drc restart dispatcher`
+
+#### LPDC
+
+* There is a new login-lpdc service. Rename the old `login` to `login-lpdc` in
+  the `docker-compose.override.yml`.
+* Start the `impersonation` service
+
+    docker compose up -d impersonation
+
+* Add the ACM/IDM client id and secret and start the new lpdc Loket frontend.
+
+    drc up -d lpdc
+
+* New dispatcher, resource, and mu-auth rules:
+
+    drc restart cache resource database dispatcher
+
+* New `lpdc-management-service`:
+
+    drc up -d lpdc-management-service
+
+#### Controle
+
+All controle-* services and config should be removed from now on. This also
+includes basic-auth setup. Make sure to move and collect all `VIRTUAL_HOST` and
+`LETSENCRYPT_*` variables to the `identifier`. Restart and remove services
+accordingly:
+
+    drc up -d --remove-orphans
 
 ## v0.27.3 (2025-06-20)
 ### Frontend

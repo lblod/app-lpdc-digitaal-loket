@@ -2,15 +2,16 @@ services:
 
   mocklogin:
     image: lblod/mock-login-service:0.4.0
+
+  identifier:
+    environment:
+      VIRTUAL_HOST: "dashboard.test.lpdc.lpdc-dev.s.redhost.be"
+      LETSENCRYPT_HOST: "dashboard.test.lpdc.lpdc-dev.s.redhost.be"
+      LETSENCRYPT_EMAIL: "info@redpencil.io"
   
   dashboard:
     environment:
-      VIRTUAL_HOST: "test.dashboard.lpdc.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_HOST: "test.dashboard.lpdc.lpdc-dev.s.redhost.be"
-      LETSENCRYPT_EMAIL: "info@redpencil.io"
-    networks:
-      - proxy
-      - default
+      EMBER_LOGIN_ROUTE: "mock-login"
 
   lpdc:
     environment:
