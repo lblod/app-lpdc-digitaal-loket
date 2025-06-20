@@ -37,7 +37,7 @@ _Note_: secrets are blanked.
 
 **Create hidden .env file with contents:**
 
-_Note:_: we don't use the docker-compose.dev.yml file ...
+_Note_: we don't use the docker-compose.dev.yml file
 ```dotenv
 COMPOSE_FILE=docker-compose.yml:docker-compose.override.yml
 ```
@@ -62,7 +62,7 @@ index c0b05a6..8d46f5b 100644
 @@ -26,9 +26,9 @@ defmodule Dispatcher do
      forward conn, path, "http://cache/bestuurseenheid-classificatie-codes/"
    end
- 
+
 -  match "/mock/sessions/*path" do
 -    forward conn, path, "http://mocklogin/sessions/"
 -  end
@@ -92,7 +92,7 @@ index c0b05a6..8d46f5b 100644
 
 # PROD
 
-Same config as [acc](#acc). 
+Same config as [acc](#acc).
 
 - URLS
   - ACM/IDM login url: https://lpdc.lokaalbestuur.vlaanderen.be
