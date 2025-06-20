@@ -6,10 +6,13 @@ services:
   mocklogin:
     image: lblod/mock-login-service:0.4.0
 
-  login:
+  login-lpdc:
     restart: "no"
 
-  dashboard-login:
+  impersonation:
+    restart: "no"
+
+  login-dashboard:
     restart: "no"
 
   identifier:
