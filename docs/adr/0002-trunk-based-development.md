@@ -6,6 +6,8 @@ Date: 2023-07-13
 
 Accepted
 
+Superseded by [Development-process](0024-development-process.md) (2025-06-18)
+
 ## Context
 
 We need to devise a strategy for branching.
