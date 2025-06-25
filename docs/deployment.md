@@ -118,8 +118,6 @@ git pull
 
 On ACC we always deploy a (pre-)released version.
 
-_Infrastructure notes_:  [acceptance currently has special configs we want to remove over time](infrastructure-architecture.md#acc).
-
 ```shell
 ssh root@lpdc-dev.s.redhost.be
 
@@ -131,8 +129,6 @@ cd /data/app-lpdc-digitaal-loket-acc
 ## PROD
 
 On PROD we always deploy a released version.
-
-_Infrastructure notes_:  [production currently has special configs we want to remove over time](infrastructure-architecture.md#prod).
 
 Optional, mention on rocket chat that we will perform a new release, so the operations team is warned. For example, in case (significant) downtime is expected.
 
