@@ -1,6 +1,5 @@
 # Operation support
 
-* [Add users](0001-add-user.md)
 * [Docker-compose vs drc](0002-docker-compose-vs-drc.md)
 * [Logs](0003-logs.md)
 * [Production check](0004-production-check.md)

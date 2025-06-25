@@ -41,9 +41,6 @@ Following containers should be at least in the list:
 - app-lpdc-digitaal-loket-dashboard-1
 - app-lpdc-digitaal-loket-report-generation-1
 - app-lpdc-digitaal-loket-file-1
-- app-lpdc-digitaal-loket-controle-1
-- app-lpdc-digitaal-loket-controle-identifier-1
-- app-lpdc-digitaal-loket-controle-dispatcher-1
 - app-lpdc-digitaal-loket-login-1
 - app-lpdc-digitaal-loket-sink-1
 - app-lpdc-digitaal-loket-mocklogin-1
@@ -56,6 +53,7 @@ Following containers should be at least in the list:
 - app-lpdc-digitaal-loket-lpdc-management-1
 - app-lpdc-digitaal-loket-lpdc-publish-1
 - app-lpdc-digitaal-loket-ldes-consumer-conceptsnapshot-ipdc-1
+- app-lpdc-digitaal-loket-impersonation-1
 
 Following command strips off all other containers, and counts.
 ```shell
@@ -180,4 +178,3 @@ or
 ```shell
 docker compose logs --timestamps --since 70m | grep lpdc-publish-1 | grep "Could not publish"
 ```
-
