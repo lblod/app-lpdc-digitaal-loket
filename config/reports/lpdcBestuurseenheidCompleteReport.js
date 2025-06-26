@@ -52,9 +52,6 @@ export default {
 
       SELECT DISTINCT ?uriBestuurseenheid ?aangemaaktDoor ?aangemaaktOp ?typeUri ?typeBestuurseenheid ?uriPubliekeDienstverlening ?titel ?beschrijving ?aanvullendeBeschrijving 
                       ?uitzondering ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
           dct:title ?titel ;
           schema:dateModified ?aangepastOp ;
@@ -80,7 +77,7 @@ export default {
                          foaf:familyName ?familyName .
         }
         BIND(CONCAT(COALESCE(?firstName, ""), " ", COALESCE(?familyName, "")) AS ?aangepastDoor)
-      }
+      } LIMIT 100
     `;
 
     const baseResponse = await query(baseQuery);
@@ -108,9 +105,6 @@ export default {
 
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde .
         ?voorwaarde dct:title ?titelVoorwaarde ;
                     dct:description ?beschrijvingVoorwaarde .
@@ -121,7 +115,7 @@ export default {
                 dct:title       ?titelBewijsstuk ;
                 dct:description ?beschrijvingBewijsstuk .
         }
-      }
+      } LIMIT 100
     `;
 
     const reqResponse = await query(requirementsQuery);
@@ -143,9 +137,6 @@ export default {
       PREFIX schema: <http://schema.org/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelProcedure ?beschrijvingProcedure ?titelProcedureWebsite ?beschrijvingProcedureWebsite ?urlProcedureWebsite WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         ?uriPubliekeDienstverlening cpsv:follows ?procedure .
         ?procedure dct:title ?titelProcedure ;
                    dct:description ?beschrijvingProcedure .
@@ -155,7 +146,7 @@ export default {
                             schema:url ?urlProcedureWebsite .
           OPTIONAL { ?procedureWebsite dct:description ?beschrijvingProcedureWebsite }
         }
-      }
+      } LIMIT 100
     `;
 
     const procResponse = await query(proceduresQuery);
@@ -185,7 +176,7 @@ export default {
         ?uriPubliekeDienstverlening m8g:hasCost ?kosten .
         ?kosten dct:title ?titelKosten ;
                 dct:description ?beschrijvingKosten .
-      }
+      } LIMIT 100
     `;
 
     const costsResponse = await query(costsQuery);
@@ -203,13 +194,10 @@ export default {
       PREFIX dct: <http://purl.org/dc/terms/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelFinancieelVoordeel ?beschrijvingFinancieelVoordeel WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         ?uriPubliekeDienstverlening cpsv:produces ?financieleVoordeel .
         ?financieleVoordeel dct:title ?titelFinancieelVoordeel ;
                            dct:description ?beschrijvingFinancieelVoordeel .
-      }
+      } LIMIT 100
     `;
 
     const finResponse = await query(financialBenefitsQuery);
@@ -229,9 +217,6 @@ export default {
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?regelgevendeBron ?titelRegelgevendeBron ?beschrijvingRegelgevendeBron ?urlRegelgevendeBron WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:regulation ?regelgevendeBron }
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasLegalResource ?legalResource .
@@ -239,7 +224,7 @@ export default {
           OPTIONAL { ?legalResource dct:title ?titelRegelgevendeBron }
           OPTIONAL { ?legalResource dct:description ?beschrijvingRegelgevendeBron }
         }
-      }
+      } LIMIT 100
     `;
 
     const legalResponse = await query(legalResourcesQuery);
@@ -264,9 +249,6 @@ export default {
       SELECT DISTINCT 
         ?uriPubliekeDienstverlening ?contactpuntEmail ?contactpuntTelefoon ?contactpuntWebsiteUrl ?contactpuntOpeningsuren 
         ?postcode ?gemeente ?adres WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         ?uriPubliekeDienstverlening m8g:hasContactPoint ?contactpunt .
 
         OPTIONAL { ?contactpunt schema:email ?contactpuntEmail }
@@ -283,7 +265,7 @@ export default {
           OPTIONAL { ?contactpuntAdres adres:Adresvoorstelling.busnummer ?busnummer }
         }
         BIND(CONCAT(COALESCE(?straatnaam, ""), " ", COALESCE(?huisnummer, ""), " ", COALESCE(?busnummer, "")) AS ?adres)
-      }
+      } LIMIT 100
     `;
 
     const contactResponse = await query(contactPointsQuery);
@@ -315,14 +297,11 @@ export default {
       PREFIX schema: <http://schema.org/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelWebsite ?beschrijvingWebsite ?urlWebsite WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo .
         ?meerInfo dct:title ?titelWebsite ;
                   schema:url ?urlWebsite .
         OPTIONAL { ?meerInfo dct:description ?beschrijvingWebsite }
-      }
+      } LIMIT 100
     `;
 
     const moreInfoResponse = await query(moreInfoQuery);
@@ -361,9 +340,6 @@ export default {
         (GROUP_CONCAT(DISTINCT ?publicationMediumLabel; SEPARATOR="; ") AS ?publicatieKanalen)
         (GROUP_CONCAT(DISTINCT ?yourEuropeCategoryLabel; SEPARATOR="; ") AS ?categorieenYourEurope)
       WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
-      }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService .
 
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
@@ -416,6 +392,7 @@ export default {
       }
       GROUP BY
         ?uriPubliekeDienstverlening ?startDatum ?eindDatum ?productTypeLabel
+      LIMIT 100
     `;
 
     const detailResponse = await query(detailQuery);
