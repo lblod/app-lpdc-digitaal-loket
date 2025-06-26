@@ -53,7 +53,7 @@ export default {
       SELECT DISTINCT ?uriBestuurseenheid ?aangemaaktDoor ?aangemaaktOp ?typeUri ?typeBestuurseenheid ?uriPubliekeDienstverlening ?titel ?beschrijving ?aanvullendeBeschrijving 
                       ?uitzondering ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie WHERE {
       VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
       }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
           dct:title ?titel ;
@@ -94,7 +94,7 @@ export default {
       aangemaaktDoor: r.aangemaaktDoor.value,
       aangemaaktOp: r.aangemaaktOp.value,
       beschrijving: stripHtml(r.beschrijving.value),
-      aanvullendeBeschrijving:  r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
+      aanvullendeBeschrijving: r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
       uitzondering: r.uitzondering ? stripHtml(r.uitzondering.value) : '',
       typeBestuurseenheid: r.typeBestuurseenheid.value,
       aangepastDoor: r.aangepastDoor.value
@@ -109,7 +109,7 @@ export default {
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk WHERE {
       VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
       }
         ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde .
         ?voorwaarde dct:title ?titelVoorwaarde ;
@@ -129,8 +129,8 @@ export default {
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
       titelVoorwaarde: r.titelVoorwaarde.value,
       beschrijvingVoorwaarde: stripHtml(r.beschrijvingVoorwaarde.value),
-      titelBewijsstuk: r.titelBewijsstuk.value,
-      beschrijvingBewijsstuk:  r.beschrijvingBewijsstuk ? stripHtml(r.beschrijvingBewijsstuk.value) : '',
+      titelBewijsstuk: r.titelBewijsstuk ? r.titelBewijsstuk.value : '',
+      beschrijvingBewijsstuk: r.beschrijvingBewijsstuk ? stripHtml(r.beschrijvingBewijsstuk.value) : ''
     }));
     const groupedRequirements = groupByuriPubliekeDienstverlening(reqData, ['titelVoorwaarde', 'beschrijvingVoorwaarde', 'titelBewijsstuk', 'beschrijvingBewijsstuk']);
 
@@ -143,9 +143,9 @@ export default {
       PREFIX schema: <http://schema.org/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelProcedure ?beschrijvingProcedure ?titelProcedureWebsite ?beschrijvingProcedureWebsite ?urlProcedureWebsite WHERE {
-        VALUES ?uriPubliekeDienstverlening {
-          <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
-        }
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening cpsv:follows ?procedure .
         ?procedure dct:title ?titelProcedure ;
                    dct:description ?beschrijvingProcedure .
@@ -182,9 +182,6 @@ export default {
       PREFIX dct: <http://purl.org/dc/terms/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelKosten ?beschrijvingKosten WHERE {
-      VALUES ?uriPubliekeDienstverlening {
-        <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
-      }
         ?uriPubliekeDienstverlening m8g:hasCost ?kosten .
         ?kosten dct:title ?titelKosten ;
                 dct:description ?beschrijvingKosten .
@@ -206,9 +203,9 @@ export default {
       PREFIX dct: <http://purl.org/dc/terms/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelFinancieelVoordeel ?beschrijvingFinancieelVoordeel WHERE {
-        VALUES ?uriPubliekeDienstverlening {
-          <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
-        }
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening cpsv:produces ?financieleVoordeel .
         ?financieleVoordeel dct:title ?titelFinancieelVoordeel ;
                            dct:description ?beschrijvingFinancieelVoordeel .
@@ -232,9 +229,9 @@ export default {
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?regelgevendeBron ?titelRegelgevendeBron ?beschrijvingRegelgevendeBron ?urlRegelgevendeBron WHERE {
-        VALUES ?uriPubliekeDienstverlening {
-          <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
-        }
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:regulation ?regelgevendeBron }
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasLegalResource ?legalResource .
@@ -267,9 +264,9 @@ export default {
       SELECT DISTINCT 
         ?uriPubliekeDienstverlening ?contactpuntEmail ?contactpuntTelefoon ?contactpuntWebsiteUrl ?contactpuntOpeningsuren 
         ?postcode ?gemeente ?adres WHERE {
-          VALUES ?uriPubliekeDienstverlening {
-            <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
-          }
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening m8g:hasContactPoint ?contactpunt .
 
         OPTIONAL { ?contactpunt schema:email ?contactpuntEmail }
@@ -298,7 +295,7 @@ export default {
       contactpuntOpeningsuren: r.contactpuntOpeningsuren ? r.contactpuntOpeningsuren.value : '',
       postcode: r.postcode ? r.postcode.value : '',
       gemeente: r.gemeente ? r.gemeente.value : '',
-      adres: r.adres ? r.adres.value : '',
+      adres: r.adres ? r.adres.value : ''
     }));
     const groupedContactPoints = groupByuriPubliekeDienstverlening(contactData, [
       'contactpuntEmail',
@@ -318,9 +315,9 @@ export default {
       PREFIX schema: <http://schema.org/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelWebsite ?beschrijvingWebsite ?urlWebsite WHERE {
-        VALUES ?uriPubliekeDienstverlening {
-          <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
-        }
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo .
         ?meerInfo dct:title ?titelWebsite ;
                   schema:url ?urlWebsite .
@@ -332,8 +329,8 @@ export default {
     const moreInfoData = moreInfoResponse.results.bindings.map(r => ({
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
       titelWebsite: r.titelWebsite.value,
-      beschrijvingWebsite: r.beschrijvingWebsite ? stripHtml(r.beschrijvingWebsite.value) : '',
-      urlWebsite: r.urlWebsite.value
+      urlWebsite: r.urlWebsite.value,
+      beschrijvingWebsite: r.beschrijvingWebsite ? r.beschrijvingWebsite.value : ''
     }));
     const groupedMoreInfo = groupByuriPubliekeDienstverlening(moreInfoData, ['titelWebsite', 'beschrijvingWebsite', 'urlWebsite']);
 
@@ -364,9 +361,9 @@ export default {
         (GROUP_CONCAT(DISTINCT ?publicationMediumLabel; SEPARATOR="; ") AS ?publicatieKanalen)
         (GROUP_CONCAT(DISTINCT ?yourEuropeCategoryLabel; SEPARATOR="; ") AS ?categorieenYourEurope)
       WHERE {
-        VALUES ?uriPubliekeDienstverlening {
-          <http://data.lblod.info/id/public-service/82c6537f-595a-4c75-9b86-43ef03bf9d73>
-        }
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService .
 
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
