@@ -50,8 +50,11 @@ export default {
       PREFIX schema:  <http://schema.org/>
       PREFIX ext:     <http://mu.semte.ch/vocabularies/ext/>
 
-      SELECT DISTINCT ?uriBestuurseenheid ?aangemaaktDoor ?aangemaaktOp ?typeUri ?typeBestuurseenheid ?uriPubliekeDienstverlening ?titel ?beschrijving ?aanvullendeBeschrijving 
+      SELECT DISTINCT ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp ?typeUri ?typeBestuurseenheid ?uriPubliekeDienstverlening ?titel ?beschrijving ?aanvullendeBeschrijving 
                       ?uitzondering ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
           dct:title ?titel ;
           schema:dateModified ?aangepastOp ;
@@ -60,10 +63,11 @@ export default {
           lpdcExt:dutchLanguageVariant ?versie ;
           schema:productID ?IPDCConceptID ;
           pav:createdBy ?uriBestuurseenheid ;
+          dct:creator ?creator ;
           dct:description ?beschrijving .
 
         ?uriBestuurseenheid a besluit:Bestuurseenheid ;
-          skos:prefLabel ?aangemaaktDoor ;
+          skos:prefLabel ?naamBestuurseenheid ;
           besluit:classificatie ?typeUri .
         ?typeUri skos:prefLabel ?typeBestuurseenheid .
         ?status skos:prefLabel ?statusLabel 
@@ -76,25 +80,32 @@ export default {
           ?modifiedByUri foaf:firstName ?firstName ;
                          foaf:familyName ?familyName .
         }
+
+        OPTIONAL {
+          ?creator foaf:firstName ?creatorFirstName ;
+                          foaf:familyName ?creatorFamilyName .
+        }
         BIND(CONCAT(COALESCE(?firstName, ""), " ", COALESCE(?familyName, "")) AS ?aangepastDoor)
-      } LIMIT 100
+        BIND(CONCAT(COALESCE(?creatorFirstName, ""), " ", COALESCE(?creatorFamilyName, "")) AS ?aangemaaktDoor)
+      }
     `;
 
     const baseResponse = await query(baseQuery);
     const baseData = baseResponse.results.bindings.map(r => ({
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
-      titel: r.titel.value,
+      naamBestuurseenheid: r.naamBestuurseenheid.value,
+      typeBestuurseenheid: r.typeBestuurseenheid.value,
+      aangemaaktOp: r.aangemaaktOp.value,
+      aangemaaktDoor: r.aangemaaktDoor.value,
       aangepastOp: r.aangepastOp.value,
+      aangepastDoor: r.aangepastDoor.value,
+      IPDCConceptID: r.IPDCConceptID.value,
       statusLabel: r.statusLabel.value,
       versie: r.versie.value,
-      uriBestuurseenheid: r.uriBestuurseenheid.value,
-      aangemaaktDoor: r.aangemaaktDoor.value,
-      aangemaaktOp: r.aangemaaktOp.value,
+      titel: r.titel.value,
       beschrijving: stripHtml(r.beschrijving.value),
       aanvullendeBeschrijving: r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
       uitzondering: r.uitzondering ? stripHtml(r.uitzondering.value) : '',
-      typeBestuurseenheid: r.typeBestuurseenheid.value,
-      aangepastDoor: r.aangepastDoor.value
     }));
 
     // 2. Voorwaarden + bewijsstukken
@@ -104,7 +115,11 @@ export default {
       PREFIX m8g: <http://data.europa.eu/m8g/>
 
 
-      SELECT DISTINCT ?uriPubliekeDienstverlening ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk WHERE {
+      SELECT DISTINCT ?uriPubliekeDienstverlening ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk WHERE 
+      {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde .
         ?voorwaarde dct:title ?titelVoorwaarde ;
                     dct:description ?beschrijvingVoorwaarde .
@@ -115,7 +130,7 @@ export default {
                 dct:title       ?titelBewijsstuk ;
                 dct:description ?beschrijvingBewijsstuk .
         }
-      } LIMIT 100
+      }
     `;
 
     const reqResponse = await query(requirementsQuery);
@@ -137,6 +152,9 @@ export default {
       PREFIX schema: <http://schema.org/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelProcedure ?beschrijvingProcedure ?titelProcedureWebsite ?beschrijvingProcedureWebsite ?urlProcedureWebsite WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening cpsv:follows ?procedure .
         ?procedure dct:title ?titelProcedure ;
                    dct:description ?beschrijvingProcedure .
@@ -146,7 +164,7 @@ export default {
                             schema:url ?urlProcedureWebsite .
           OPTIONAL { ?procedureWebsite dct:description ?beschrijvingProcedureWebsite }
         }
-      } LIMIT 100
+      }
     `;
 
     const procResponse = await query(proceduresQuery);
@@ -173,10 +191,13 @@ export default {
       PREFIX dct: <http://purl.org/dc/terms/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelKosten ?beschrijvingKosten WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening m8g:hasCost ?kosten .
         ?kosten dct:title ?titelKosten ;
                 dct:description ?beschrijvingKosten .
-      } LIMIT 100
+      }
     `;
 
     const costsResponse = await query(costsQuery);
@@ -194,10 +215,13 @@ export default {
       PREFIX dct: <http://purl.org/dc/terms/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelFinancieelVoordeel ?beschrijvingFinancieelVoordeel WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening cpsv:produces ?financieleVoordeel .
         ?financieleVoordeel dct:title ?titelFinancieelVoordeel ;
                            dct:description ?beschrijvingFinancieelVoordeel .
-      } LIMIT 100
+      }
     `;
 
     const finResponse = await query(financialBenefitsQuery);
@@ -216,26 +240,29 @@ export default {
       PREFIX schema: <http://schema.org/>
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 
-      SELECT DISTINCT ?uriPubliekeDienstverlening ?regelgevendeBron ?titelRegelgevendeBron ?beschrijvingRegelgevendeBron ?urlRegelgevendeBron WHERE {
-        OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:regulation ?regelgevendeBron }
+      SELECT DISTINCT ?uriPubliekeDienstverlening ?regelgeving ?titelRegelgevendeBron ?beschrijvingRegelgevendeBron ?urlRegelgevendeBron WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
+        OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:regulation ?regelgeving }
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasLegalResource ?legalResource .
           ?legalResource schema:url ?urlRegelgevendeBron .
           OPTIONAL { ?legalResource dct:title ?titelRegelgevendeBron }
           OPTIONAL { ?legalResource dct:description ?beschrijvingRegelgevendeBron }
         }
-      } LIMIT 100
+      }
     `;
 
     const legalResponse = await query(legalResourcesQuery);
     const legalData = legalResponse.results.bindings.map(r => ({
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
-      regelgevendeBron: r.regelgevendeBron ? stripHtml(r.regelgevendeBron.value) : '',
+      regelgeving: r.regelgeving ? stripHtml(r.regelgeving.value) : '',
       titelRegelgevendeBron: r.titelRegelgevendeBron ? r.titelRegelgevendeBron.value : '',
       beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron ? stripHtml(r.beschrijvingRegelgevendeBron.value) : '',
       urlRegelgevendeBron: r.urlRegelgevendeBron ? r.urlRegelgevendeBron.value : ''
     }));
-    const groupedLegalResources = groupByuriPubliekeDienstverlening(legalData, ['regelgevendeBron', 'titelRegelgevendeBron', 'beschrijvingRegelgevendeBron', 'urlRegelgevendeBron']);
+    const groupedLegalResources = groupByuriPubliekeDienstverlening(legalData, ['regelgeving', 'titelRegelgevendeBron', 'beschrijvingRegelgevendeBron', 'urlRegelgevendeBron']);
 
 
     // 7. Contactpunten
@@ -248,7 +275,10 @@ export default {
 
       SELECT DISTINCT 
         ?uriPubliekeDienstverlening ?contactpuntEmail ?contactpuntTelefoon ?contactpuntWebsiteUrl ?contactpuntOpeningsuren 
-        ?postcode ?gemeente ?adres WHERE {
+        ?gemeente ?adres WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening m8g:hasContactPoint ?contactpunt .
 
         OPTIONAL { ?contactpunt schema:email ?contactpuntEmail }
@@ -258,14 +288,13 @@ export default {
 
         OPTIONAL {
           ?contactpunt lpdcExt:address ?contactpuntAdres .
-          OPTIONAL { ?contactpuntAdres adres:postcode ?postcode }
           OPTIONAL { ?contactpuntAdres adres:gemeentenaam ?gemeente }
           OPTIONAL { ?contactpuntAdres adres:Straatnaam ?straatnaam }
           OPTIONAL { ?contactpuntAdres adres:Adresvoorstelling.huisnummer ?huisnummer }
           OPTIONAL { ?contactpuntAdres adres:Adresvoorstelling.busnummer ?busnummer }
         }
         BIND(CONCAT(COALESCE(?straatnaam, ""), " ", COALESCE(?huisnummer, ""), " ", COALESCE(?busnummer, "")) AS ?adres)
-      } LIMIT 100
+      }
     `;
 
     const contactResponse = await query(contactPointsQuery);
@@ -275,7 +304,6 @@ export default {
       contactpuntTelefoon: r.contactpuntTelefoon ? r.contactpuntTelefoon.value : '',
       contactpuntWebsiteUrl: r.contactpuntWebsiteUrl ? r.contactpuntWebsiteUrl.value : '',
       contactpuntOpeningsuren: r.contactpuntOpeningsuren ? r.contactpuntOpeningsuren.value : '',
-      postcode: r.postcode ? r.postcode.value : '',
       gemeente: r.gemeente ? r.gemeente.value : '',
       adres: r.adres ? r.adres.value : ''
     }));
@@ -284,7 +312,6 @@ export default {
       'contactpuntTelefoon',
       'contactpuntWebsiteUrl',
       'contactpuntOpeningsuren',
-      'postcode',
       'gemeente',
       'adres'
     ]);
@@ -297,11 +324,14 @@ export default {
       PREFIX schema: <http://schema.org/>
 
       SELECT DISTINCT ?uriPubliekeDienstverlening ?titelWebsite ?beschrijvingWebsite ?urlWebsite WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo .
         ?meerInfo dct:title ?titelWebsite ;
                   schema:url ?urlWebsite .
         OPTIONAL { ?meerInfo dct:description ?beschrijvingWebsite }
-      } LIMIT 100
+      }
     `;
 
     const moreInfoResponse = await query(moreInfoQuery);
@@ -340,6 +370,9 @@ export default {
         (GROUP_CONCAT(DISTINCT ?publicationMediumLabel; SEPARATOR="; ") AS ?publicatieKanalen)
         (GROUP_CONCAT(DISTINCT ?yourEuropeCategoryLabel; SEPARATOR="; ") AS ?categorieenYourEurope)
       WHERE {
+      VALUES ?uriPubliekeDienstverlening {
+        <http://data.lblod.info/id/public-service/c7e00993-9608-4b57-a38b-7e6f27872008>
+      }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService .
 
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
@@ -392,7 +425,7 @@ export default {
       }
       GROUP BY
         ?uriPubliekeDienstverlening ?startDatum ?eindDatum ?productTypeLabel
-      LIMIT 100
+     
     `;
 
     const detailResponse = await query(detailQuery);
@@ -452,13 +485,12 @@ export default {
         ]),
         ...merge(groupedCosts, ['titelKosten', 'beschrijvingKosten']),
         ...merge(groupedFinancialBenefits, ['titelFinancieelVoordeel', 'beschrijvingFinancieelVoordeel']),
-        ...merge(groupedLegalResources, ['regelgevendeBron', 'titelRegelgevendeBron', 'beschrijvingRegelgevendeBron', 'urlRegelgevendeBron']),
+        ...merge(groupedLegalResources, ['regelgeving', 'titelRegelgevendeBron', 'beschrijvingRegelgevendeBron', 'urlRegelgevendeBron']),
         ...merge(groupedContactPoints, [
           'contactpuntEmail',
           'contactpuntTelefoon',
           'contactpuntWebsiteUrl',
           'contactpuntOpeningsuren',
-          'postcode',
           'gemeente',
           'adres'
         ]),
