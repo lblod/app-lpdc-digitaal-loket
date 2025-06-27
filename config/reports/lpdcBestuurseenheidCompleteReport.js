@@ -41,9 +41,9 @@ export default {
     const allUris = urisResponse.results.bindings.map(r => r.uriPubliekeDienstverlening.value);
 
     // 1. Basisinformatie
-    const baseInfoData = [];
+    const lpdcData = [];
     for (const valuesBlock of constructValuesBlock('uriPubliekeDienstverlening', allUris)) {
-      const baseQuery = `
+      const lpdcQuery = `
         PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
         PREFIX adms:    <http://www.w3.org/ns/adms#>
         PREFIX dct:     <http://purl.org/dc/terms/>
@@ -235,8 +235,8 @@ export default {
           ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
 
       `;
-      const baseResponse = await query(baseQuery);
-      const baseData = baseResponse.results.bindings.map(r => ({
+      const queryResponse = await query(lpdcQuery);
+      const queryData = queryResponse.results.bindings.map(r => ({
         uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
         naamBestuurseenheid: r.naamBestuurseenheid.value,
         typeBestuurseenheid: r.typeBestuurseenheid.value,
@@ -292,22 +292,12 @@ export default {
         publicatieKanalen: r.publicatieKanalen?.value || '',
         categorieenYourEurope: r.categorieenYourEurope?.value || ''
       }));
-      baseInfoData.push(...baseData);
+      lpdcData.push(...queryData);
     }
       
-    // Combineer alles per uriPubliekeDienstverlening
-    const finalData = baseInfoData.map(base => {
-      const id = base.uriPubliekeDienstverlening;
+    const csvHeaders = lpdcData.length > 0 ? Object.keys(lpdcData[0]) : [];
 
-      return {
-        ...base,
-      };
-    });
-
-    // Headers van CSV zijn alle keys van één record (als ze bestaan)
-    const csvHeaders = finalData.length > 0 ? Object.keys(finalData[0]) : [];
-
-    await generateReportFromData(finalData, csvHeaders, reportData);
+    await generateReportFromData(lpdcData, csvHeaders, reportData);
 
   }
 };
