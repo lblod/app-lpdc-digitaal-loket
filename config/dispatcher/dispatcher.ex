@@ -8,64 +8,39 @@ defmodule Dispatcher do
     any: [ "*/*" ],
   ]
 
-  # In order to forward the 'themes' resource to the
-  # resource service, use the following forward rule:
-  #
-  # match "/themes/*path", @json do
-  #   Proxy.forward conn, path, "http://resource/themes/"
-  # end
-  #
-  # Run `docker-compose restart dispatcher` after updating
-  # this file.
-
-  get "/formal-informal-choices/*path" do
-      forward conn, path, "http://lpdc-management/formal-informal-choices/"
-  end
-
-  post "/formal-informal-choices/*path" do
-      forward conn, path, "http://lpdc-management/formal-informal-choices/"
-  end
-
-  match "/bestuurseenheden/*path" do
-    forward conn, path, "http://cache/bestuurseenheden/"
-  end
-  match "/werkingsgebieden/*path" do
-    forward conn, path, "http://cache/werkingsgebieden/"
-  end
-  match "/bestuurseenheid-classificatie-codes/*path" do
-    forward conn, path, "http://cache/bestuurseenheid-classificatie-codes/"
-  end
-
-  match "/mock/sessions/*path" do
-    forward conn, path, "http://mocklogin/sessions/"
-  end
-  match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
-    forward conn, path, "http://dashboard-login/sessions/"
-  end
-  match "/sessions/*path" do
-    forward conn, path, "http://login/sessions/"
-  end
-  match "/gebruikers/*path" do
-    forward conn, path, "http://cache/gebruikers/"
-  end
-  match "/accounts/*path" do
-    forward conn, path, "http://cache/accounts/"
-  end
+  @html %{ accept: %{ html: true } }
+  @json %{ accept: %{ json: true } }
+  @upload %{ accept: %{ upload: true } }
+  @any %{ accept: %{ any: true } }
 
   #################################################################
   # Concepts and Concept Schemes
   #################################################################
-  get "/concept-schemes/*path" do
+
+  get "/concept-schemes/*path", @json do
     forward conn, path, "http://cache/concept-schemes/"
   end
 
-  get "/concepts/*path" do
+  get "/concepts/*path", @json do
     forward conn, path, "http://cache/concepts/"
   end
 
   #################################################################
   # Public Services - LPDC-IPDC: custom API endpoints
   #################################################################
+
+  get "/formal-informal-choices/*path" do
+    forward conn, path, "http://lpdc-management/formal-informal-choices/"
+  end
+
+  post "/formal-informal-choices/*path" do
+    forward conn, path, "http://lpdc-management/formal-informal-choices/"
+  end
+
+  #################################################################
+  # Public Services - LPDC-IPDC: custom API endpoints
+  #################################################################
+
   get "/lpdc-management/conceptual-public-services/*path" do
     forward conn, path, "http://lpdc-management/conceptual-public-services/"
   end
@@ -93,33 +68,36 @@ defmodule Dispatcher do
   #################################################################
   # Reports
   #################################################################
-  match "/reports/*path",  %{ accept: [:json] } do
+
+  match "/reports/*path", @json do
     forward conn, path, "http://cache/reports/"
   end
 
-  get "/files/:id/download" do
+  get "/files/*path", @json do
+    forward conn, path, "http://cache/files/"
+  end
+
+  patch "/files/*path", @json do
+    forward conn, path, "http://cache/files/"
+  end
+
+  # File service
+
+  get "/files/:id/download", @any do
     forward conn, [], "http://file/files/" <> id <> "/download"
   end
 
-  get "/files/*path" do
-    forward conn, path, "http://cache/files/"
-  end
-
-  patch "/files/*path" do
-    forward conn, path, "http://cache/files/"
-  end
-
-  post "/files/*path" do
+  post "/files/*path", @any do
     forward conn, path, "http://file/files/"
   end
 
   # TODO: find all usage of this endpoint and replace it with `POST /files`
   # This is kept to maintain compatibility with code that uses the "old" endpoint.
-  post "/file-service/files/*path" do
+  post "/file-service/files/*path", @any do
     forward conn, path, "http://file/files/"
   end
 
-  delete "/files/*path" do
+  delete "/files/*path", @any do
     forward conn, path, "http://file/files/"
   end
 
@@ -133,13 +111,41 @@ defmodule Dispatcher do
   # corresponding concept display configurations. These updates are not picked
   # up by the cache, resulting in the frontend showing outdated information
   # afterwards. (See LPDC-1370)
-  match "/conceptual-public-services/*path" do
+  match "/conceptual-public-services/*path", @json do
     forward conn, path, "http://resource/conceptual-public-services/"
   end
 
-  match "/identifiers/*path" do
+  match "/bestuurseenheden/*path", @json do
+    forward conn, path, "http://cache/bestuurseenheden/"
+  end
+
+  match "/werkingsgebieden/*path", @json do
+    forward conn, path, "http://cache/werkingsgebieden/"
+  end
+
+  match "/bestuurseenheid-classificatie-codes/*path", @json do
+    forward conn, path, "http://cache/bestuurseenheid-classificatie-codes/"
+  end
+
+  match "/identifiers/*path", @json do
     forward conn, path, "http://cache/identifiers/"
   end
+
+  # Don't use cache in the following rules.
+  # See https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/docs/adr/0005-do-not-cache-instantie-overview.md
+  get "/public-services/*path", @json do
+    forward conn, path, "http://resource/public-services/"
+  end
+
+  match "/public-services/*path", @json do
+    forward conn, path, "http://resource/public-services/"
+  end
+
+  match "/concept-display-configurations/*path", @json do
+    forward conn, path, "http://resource/concept-display-configurations/"
+  end
+
+  # Services
 
   post "/public-services/*path" do
     forward conn, path, "http://lpdc-management/public-services/"
@@ -149,24 +155,50 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/public-services/"
   end
 
-  # Don't use cache in the following rules.
-  # See https://github.com/lblod/app-lpdc-digitaal-loket/blob/master/docs/adr/0005-do-not-cache-instantie-overview.md
+  #################################################################
+  # Account control
+  #################################################################
 
-  get "/public-services/*path" do
-    forward conn, path, "http://resource/public-services/"
+  match "/mock/sessions/*path", @json do
+    forward conn, path, "http://mocklogin/sessions/"
   end
 
-  match "/public-services/*path" do
-    forward conn, path, "http://resource/public-services/"
+  match "/gebruikers/*path", @json do
+    forward conn, path, "http://cache/gebruikers/"
   end
 
-  match "/concept-display-configurations/*path" do
-    forward conn, path, "http://resource/concept-display-configurations/"
+  match "/accounts/*path", @json do
+    forward conn, path, "http://cache/accounts/"
+  end
+
+  match "/impersonations/*path", @json do
+    forward conn, path, "http://impersonation/impersonations/"
   end
 
   #################################################################
+  # Dashboard
+  #################################################################
+
+  # Login
+
+  match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
+    forward conn, path, "http://login-dashboard/sessions/"
+  end
+
+  match "/sessions/*path", %{ reverse_host: ["test", "dashboard" | _rest] } do
+    forward conn, path, "http://login-dashboard/sessions/"
+  end
+
+  match "/sessions/*path", %{ reverse_host: ["acc", "dashboard" | _rest] } do
+    forward conn, path, "http://login-dashboard/sessions/"
+  end
+
+  match "/sessions/*path", %{ reverse_host: ["dev", "dashboard" | _rest] } do
+    forward conn, path, "http://login-dashboard/sessions/"
+  end
+
   # Frontend
-  #################################################################
+
   get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest] }  do
     forward conn, path, "http://dashboard/assets/"
   end
@@ -176,15 +208,87 @@ defmodule Dispatcher do
   end
 
   match "/*_path", %{ reverse_host: ["dashboard" | _rest] } do
-    # *_path allows a path to be supplied, but will not yield
-    # an error that we don't use the path variable.
     forward conn, [], "http://dashboard/index.html"
+  end
+
+  # Frontend TEST
+
+  get "/assets/*path",  %{ reverse_host: ["test", "dashboard" | _rest] }  do
+    forward conn, path, "http://dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["test", "dashboard" | _rest] } do
+    forward conn, path, "http://dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["test", "dashboard" | _rest] } do
+    forward conn, [], "http://dashboard/index.html"
+  end
+
+  # Frontend ACC
+
+  get "/assets/*path",  %{ reverse_host: ["acc", "dashboard" | _rest] }  do
+    forward conn, path, "http://dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["acc", "dashboard" | _rest] } do
+    forward conn, path, "http://dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["acc", "dashboard" | _rest] } do
+    forward conn, [], "http://dashboard/index.html"
+  end
+
+  # Frontend DEV
+
+  get "/assets/*path",  %{ reverse_host: ["dev", "dashboard" | _rest] }  do
+    forward conn, path, "http://dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["dev", "dashboard" | _rest] } do
+    forward conn, path, "http://dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["dev", "dashboard" | _rest] } do
+    forward conn, [], "http://dashboard/index.html"
+  end
+
+  #################################################################
+  # LPDC
+  #################################################################
+
+  # NOTE: keep this as the last frontend. There is no host/reverse_host
+  # matching. This catches all attempts to access a frontend and should,
+  # because of the order sensitivity of mu-auth, come last.
+  # Some loket instances are hosted like "dev.lpdc.[...]" which make matching
+  # difficult.
+
+  # Login
+
+  match "/sessions/*path" do
+    forward conn, path, "http://login-lpdc/sessions/"
+  end
+
+  # Frontend
+
+  get "/assets/*path", @any do
+    forward conn, path, "http://lpdc/assets/"
+  end
+
+  get "/@appuniversum/*path", @any do
+    forward conn, path, "http://lpdc/@appuniversum/"
+  end
+
+  match "/*_path", @html do
+    forward conn, [], "http://lpdc/index.html"
   end
 
   #################################################################
   # Other
   #################################################################
+
   match "/*_" do
-    send_resp( conn, 404, "Route not found.  See config/dispatcher.ex" )
+    send_resp( conn, 404, "Route not found. See config/dispatcher.ex" )
   end
+
 end
