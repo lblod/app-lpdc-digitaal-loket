@@ -7,7 +7,7 @@
 - enable ACM/IDM logins for the dashboard [LPDC-1413]
 - Enable ACM/IDM for LPDC [LPDC-1029] ([LPDC-1405] [LPDC-1406])
 - New `lpdc-management-service` with better admin support
-- New report added "Overview of LPDC instances - all fields"
+- New report added "Overview of LPDC instances - all fields" [LPDC-1418]
 
 ### Deploy notes
 
