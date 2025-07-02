@@ -81,7 +81,7 @@ export default {
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
           dct:title ?titel ; schema:dateModified ?aangepastOp ; schema:dateCreated ?aangemaaktOp ;
           adms:status ?status ; lpdcExt:dutchLanguageVariant ?versie ; pav:createdBy ?uriBestuurseenheid ; 
-          dct:creator ?creator ; dct:description ?beschrijving .
+          dct:description ?beschrijving .
 
         ?uriBestuurseenheid a besluit:Bestuurseenheid ; skos:prefLabel ?naamBestuurseenheid ;
           besluit:classificatie/skos:prefLabel ?typeBestuurseenheid .
