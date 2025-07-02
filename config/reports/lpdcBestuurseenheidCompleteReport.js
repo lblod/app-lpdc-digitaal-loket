@@ -217,47 +217,49 @@ export default {
         ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
 
     `;
-    const queryResponse = await batchedQuery(lpdcQuery, 100);
-    const lpdcData = queryResponse.results.bindings.map(r => ({
+    const queryResponse = await batchedQuery(lpdcQuery, 1000);
+    const data = queryResponse.results.bindings;
+
+    const postProcessedData = data.map(r => ({
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
       naamBestuurseenheid: r.naamBestuurseenheid.value,
       typeBestuurseenheid: r.typeBestuurseenheid.value,
       aangemaaktOp: r.aangemaaktOp.value,
-      aangemaaktDoor: r.aangemaaktDoor.value,
-      aangepastOp: r.aangepastOp.value,
-      aangepastDoor: r.aangepastDoor?.value ?? '',
-      IPDCConceptID: r.IPDCConceptID?.value ?? '',
+      aangemaaktDoor: r.aangemaaktDoor?.value || '',
+      aangepastOp: r.aangepastOp?.value || '',
+      aangepastDoor: r.aangepastDoor?.value || '',
+      IPDCConceptID: r.IPDCConceptID?.value || '',
       statusLabel: r.statusLabel.value,
       versie: r.versie.value,
       titel: r.titel.value,
       beschrijving: stripHtml(r.beschrijving.value),
       aanvullendeBeschrijving: r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
       uitzondering: r.uitzondering ? stripHtml(r.uitzondering.value) : '',
-      titelVoorwaarde: r.titelVoorwaarde?.value ?? '',
+      titelVoorwaarde: r.titelVoorwaarde?.value || '',
       beschrijvingVoorwaarde: r.beschrijvingVoorwaarde ? stripHtml(r.beschrijvingVoorwaarde.value) : '',
-      titelBewijsstuk: r.titelBewijsstuk?.value ?? '',
+      titelBewijsstuk: r.titelBewijsstuk?.value || '',
       beschrijvingBewijsstuk: r.beschrijvingBewijsstuk ? stripHtml(r.beschrijvingBewijsstuk.value) : '',
-      titelProcedure: r.titelProcedure?.value ?? '',
+      titelProcedure: r.titelProcedure?.value || '',
       beschrijvingProcedure: r.beschrijvingProcedure ? stripHtml(r.beschrijvingProcedure.value) : '',
-      titelProcedureWebsite: r.titelProcedureWebsite?.value ?? '',
+      titelProcedureWebsite: r.titelProcedureWebsite?.value || '',
       beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite ? stripHtml(r.beschrijvingProcedureWebsite.value) : '',
-      urlProcedureWebsite: r.urlProcedureWebsite?.value ?? '',
-      titelKosten: r.titelKosten?.value ?? '',
+      urlProcedureWebsite: r.urlProcedureWebsite?.value || '',
+      titelKosten: r.titelKosten?.value || '',
       beschrijvingKosten: r.beschrijvingKosten ? stripHtml(r.beschrijvingKosten.value) : '',
-      titelFinancieelVoordeel: r.titelFinancieelVoordeel?.value ?? '',
+      titelFinancieelVoordeel: r.titelFinancieelVoordeel?.value || '',
       beschrijvingFinancieelVoordeel: r.beschrijvingFinancieelVoordeel ? stripHtml(r.beschrijvingFinancieelVoordeel.value) : '',
       regelgeving: r.regelgeving ? stripHtml(r.regelgeving.value) : '',
-      titelRegelgevendeBron: r.titelRegelgevendeBron?.value ?? '',
+      titelRegelgevendeBron: r.titelRegelgevendeBron?.value || '',
       beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron ? stripHtml(r.beschrijvingRegelgevendeBron.value) : '',
-      urlRegelgevendeBron: r.urlRegelgevendeBron?.value ?? '',
-      contactpuntEmail: r.contactpuntEmail?.value ?? '',
-      contactpuntTelefoon: r.contactpuntTelefoon?.value ?? '',
-      contactpuntWebsiteUrl: r.contactpuntWebsiteUrl?.value ?? '',
-      contactpuntOpeningsuren: r.contactpuntOpeningsuren?.value ?? '',
-      gemeente: r.gemeente?.value ?? '',
-      adres: r.adres?.value ?? '',
-      titelWebsite: r.titelWebsite?.value ?? '',
-      urlWebsite: r.urlWebsite?.value ?? '',
+      urlRegelgevendeBron: r.urlRegelgevendeBron?.value || '',
+      contactpuntEmail: r.contactpuntEmail?.value || '',
+      contactpuntTelefoon: r.contactpuntTelefoon?.value || '',
+      contactpuntWebsiteUrl: r.contactpuntWebsiteUrl?.value || '',
+      contactpuntOpeningsuren: r.contactpuntOpeningsuren?.value || '',
+      gemeente: r.gemeente?.value || '',
+      adres: r.adres?.value || '',
+      titelWebsite: r.titelWebsite?.value || '',
+      urlWebsite: r.urlWebsite?.value || '',
       beschrijvingWebsite: r.beschrijvingWebsite ? stripHtml(r.beschrijvingWebsite.value) : '',
       startDatum: r.startDatum?.value || '',
       eindDatum: r.eindDatum?.value || '',
@@ -274,10 +276,11 @@ export default {
       publicatieKanalen: r.publicatieKanalen?.value || '',
       categorieenYourEurope: r.categorieenYourEurope?.value || ''
     }));
-      
-    const csvHeaders = lpdcData.length > 0 ? Object.keys(lpdcData[0]) : [];
 
-    await generateReportFromData(lpdcData, csvHeaders, reportData);
+      
+    const csvHeaders = Object.keys(postProcessedData[0]);
+
+    await generateReportFromData(postProcessedData, csvHeaders, reportData);
 
   }
 };
