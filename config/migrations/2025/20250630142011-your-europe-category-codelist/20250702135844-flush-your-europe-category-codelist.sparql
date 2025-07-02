@@ -1,0 +1,19 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+      <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/YourEuropeCategorie> ?p ?o .
+      ?concept ?cp ?co .
+    }
+  }
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/YourEuropeCategorie> a skos:ConceptScheme .
+    <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/YourEuropeCategorie> ?p ?o .
+
+    OPTIONAL {
+      ?concept skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/YourEuropeCategorie> .
+      ?concept ?cp ?co .
+    }
+  }
+}

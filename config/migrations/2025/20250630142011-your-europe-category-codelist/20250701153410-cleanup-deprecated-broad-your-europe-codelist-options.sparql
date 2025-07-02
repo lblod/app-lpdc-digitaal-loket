@@ -1,0 +1,39 @@
+PREFIX dvc: <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+DELETE {
+  GRAPH ?g {
+    ?subject ?predicate ?concept .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    VALUES ?concept {
+      dvc:Reizen
+      dvc:WerkEnPensionering
+      dvc:Voertuigen
+      dvc:Verblijf
+      dvc:OnderwijsOfStage
+      dvc:Gezondheidszorg
+      dvc:BurgerEnFamilieRechten
+      dvc:Consumentenrechten
+      dvc:BeschermingPersoonsgegevens
+      dvc:Bedrijf
+      dvc:Werknemers
+      dvc:Belastingen
+      dvc:Goederen
+      dvc:Diensten
+      dvc:Bedrijfsfinanciering
+      dvc:Overheidsopdrachten
+      dvc:GezondheidVeiligheidWerk
+      dvc:ProcedureGeboorte
+      dvc:ProcedureVerblijf
+      dvc:ProcedureStudie
+      dvc:ProcedureWerk
+      dvc:ProcedureVerhuizing
+      dvc:ProcedurePensionering
+      dvc:ProcedureStartenExploiterenSluitenBedrijf
+    }
+    ?subject ?predicate ?concept .
+  }
+}
