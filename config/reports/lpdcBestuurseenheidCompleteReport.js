@@ -2,11 +2,11 @@ import { generateReportFromData } from '../helpers.js';
 import { querySudo as query } from '@lblod/mu-auth-sudo';
 
 export default {
-  cronPattern: '0 0 6 * * *',
+  cronPattern: '0 0 4 * * *',
   name: 'lpdcBestuurseenheidCompleteReport',
   execute: async () => {
     const reportData = {
-      title: 'Overview of LPDC instances - all fields',
+      title: 'Overview of LPDC services - all fields',
       description: 'Overview of LPDC services with all fields included',
       filePrefix: 'lpdcBestuurseenheidComplete'
     };
@@ -102,8 +102,8 @@ export default {
           ${valuesBlock}
           ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
             dct:title ?titel ; schema:dateModified ?aangepastOp ; schema:dateCreated ?aangemaaktOp ;
-            adms:status ?status ; lpdcExt:dutchLanguageVariant ?versie ; schema:productID ?IPDCConceptID ;
-            pav:createdBy ?uriBestuurseenheid ; dct:creator ?creator ; dct:description ?beschrijving .
+            adms:status ?status ; lpdcExt:dutchLanguageVariant ?versie ; pav:createdBy ?uriBestuurseenheid ; 
+            dct:creator ?creator ; dct:description ?beschrijving .
 
           ?uriBestuurseenheid a besluit:Bestuurseenheid ; skos:prefLabel ?naamBestuurseenheid ;
             besluit:classificatie/skos:prefLabel ?typeBestuurseenheid .
@@ -112,14 +112,18 @@ export default {
 
           OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:additionalDescription ?aanvullendeBeschrijving }
           OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:exception ?uitzondering }
+          OPTIONAL { ?uriPubliekeDienstverlening schema:productID ?IPDCConceptID }
 
           OPTIONAL {
             ?uriPubliekeDienstverlening ext:lastModifiedBy [ foaf:firstName ?firstName ; foaf:familyName ?familyName ] .
             BIND(CONCAT(COALESCE(?firstName, ""), " ", COALESCE(?familyName, "")) AS ?aangepastDoor)
           }
           OPTIONAL {
-            ?creator foaf:firstName ?creatorFirstName ; foaf:familyName ?creatorFamilyName .
-            BIND(CONCAT(COALESCE(?creatorFirstName, ""), " ", COALESCE(?creatorFamilyName, "")) AS ?aangemaaktDoor)
+            ?uriPubliekeDienstverlening dct:creator ?creator .
+            OPTIONAL {
+              ?creator foaf:firstName ?creatorFirstName ; foaf:familyName ?creatorFamilyName .
+              BIND(CONCAT(COALESCE(?creatorFirstName, ""), " ", COALESCE(?creatorFamilyName, "")) AS ?aangemaaktDoor)
+            }
           }
 
           OPTIONAL {
@@ -243,8 +247,8 @@ export default {
         aangemaaktOp: r.aangemaaktOp.value,
         aangemaaktDoor: r.aangemaaktDoor.value,
         aangepastOp: r.aangepastOp.value,
-        aangepastDoor: r.aangepastDoor.value,
-        IPDCConceptID: r.IPDCConceptID.value,
+        aangepastDoor: r.aangepastDoor?.value ?? '',
+        IPDCConceptID: r.IPDCConceptID?.value ?? '',
         statusLabel: r.statusLabel.value,
         versie: r.versie.value,
         titel: r.titel.value,
