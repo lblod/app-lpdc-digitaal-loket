@@ -41,8 +41,9 @@ export default {
       SELECT DISTINCT
         ?uriPubliekeDienstverlening ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
-        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie ?titelProcedure
-        ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
+        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
+        ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
+        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
         (GROUP_CONCAT(DISTINCT ?titelVoorwaarde; separator=" | ") AS ?titelVoorwaarde)
         (GROUP_CONCAT(DISTINCT ?beschrijvingVoorwaarde; separator=" | ") AS ?beschrijvingVoorwaarde)
         (GROUP_CONCAT(DISTINCT ?titelBewijsstuk; separator=" | ") AS ?titelBewijsstuk)
@@ -65,32 +66,49 @@ export default {
         (GROUP_CONCAT(DISTINCT ?titelWebsite; separator=" | ") AS ?titelWebsite)
         (GROUP_CONCAT(DISTINCT ?beschrijvingWebsite; separator=" | ") AS ?beschrijvingWebsite)
         (GROUP_CONCAT(DISTINCT ?urlWebsite; separator=" | ") AS ?urlWebsite)
-        (GROUP_CONCAT(DISTINCT ?targetAudienceLabel; SEPARATOR="; ") AS ?doelgroep)
-        (GROUP_CONCAT(DISTINCT ?thematicAreaLabel; SEPARATOR="; ") AS ?themas)
-        (GROUP_CONCAT(DISTINCT ?languageLabel; SEPARATOR="; ") AS ?talen)
-        (GROUP_CONCAT(DISTINCT ?competentAuthorityLevelLabel; SEPARATOR="; ") AS ?bevoegdBestuursniveau)
-        (GROUP_CONCAT(DISTINCT ?competentAuthorityLabel; SEPARATOR="; ") AS ?bevoegdeOverheid)
-        (GROUP_CONCAT(DISTINCT ?executingAuthorityLevelLabel; SEPARATOR="; ") AS ?uitvoerendBestuursniveau)
-        (GROUP_CONCAT(DISTINCT ?executingAuthorityLabel; SEPARATOR="; ") AS ?uitvoerendeOverheid)
-        (GROUP_CONCAT(DISTINCT ?spatialLabel; SEPARATOR="; ") AS ?geografischToepassingsgebied)
-        (GROUP_CONCAT(DISTINCT ?tag; SEPARATOR="; ") AS ?tags)
-        (GROUP_CONCAT(DISTINCT ?publicationMediumLabel; SEPARATOR="; ") AS ?publicatieKanalen)
-        (GROUP_CONCAT(DISTINCT ?yourEuropeCategoryLabel; SEPARATOR="; ") AS ?categorieenYourEurope)
+        (GROUP_CONCAT(DISTINCT ?targetAudienceLabel; separator=" | ") AS ?doelgroep)
+        (GROUP_CONCAT(DISTINCT ?thematicAreaLabel; separator=" | ") AS ?themas)
+        (GROUP_CONCAT(DISTINCT ?languageLabel; separator=" | ") AS ?talen)
+        (GROUP_CONCAT(DISTINCT ?competentAuthorityLevelLabel; separator=" | ") AS ?bevoegdBestuursniveau)
+        (GROUP_CONCAT(DISTINCT ?competentAuthorityLabel; separator=" | ") AS ?bevoegdeOverheid)
+        (GROUP_CONCAT(DISTINCT ?executingAuthorityLevelLabel; separator=" | ") AS ?uitvoerendBestuursniveau)
+        (GROUP_CONCAT(DISTINCT ?executingAuthorityLabel; separator=" | ") AS ?uitvoerendeOverheid)
+        (GROUP_CONCAT(DISTINCT ?spatialLabel; separator=" | ") AS ?geografischToepassingsgebied)
+        (GROUP_CONCAT(DISTINCT ?tag; separator=" | ") AS ?tags)
+        (GROUP_CONCAT(DISTINCT ?publicationMediumLabel; separator=" | ") AS ?publicatieKanalen)
+        (GROUP_CONCAT(DISTINCT ?yourEuropeCategoryLabel; separator=" | ") AS ?categorieenYourEurope)
 
       WHERE {
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
-          dct:title ?titel ; schema:dateModified ?aangepastOp ; schema:dateCreated ?aangemaaktOp ;
-          adms:status ?status ; lpdcExt:dutchLanguageVariant ?versie ; pav:createdBy ?uriBestuurseenheid ; 
-          dct:description ?beschrijving .
+                                      schema:dateModified ?aangepastOp .
 
-        ?uriBestuurseenheid a besluit:Bestuurseenheid ; skos:prefLabel ?naamBestuurseenheid ;
-          besluit:classificatie/skos:prefLabel ?typeBestuurseenheid .
+        OPTIONAL {
+          ?uriPubliekeDienstverlening pav:createdBy ?uriBestuurseenheid .
+          ?uriBestuurseenheid a besluit:Bestuurseenheid ;
+                            skos:prefLabel ?naamBestuurseenheid ;
+                            besluit:classificatie/skos:prefLabel ?typeBestuurseenheid .
+        }
 
-        ?status skos:prefLabel ?statusLabel .
+        OPTIONAL {
+          ?uriPubliekeDienstverlening adms:status ?status .
+          ?status skos:prefLabel ?statusLabel .
+        }
 
         OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:additionalDescription ?aanvullendeBeschrijving }
         OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:exception ?uitzondering }
         OPTIONAL { ?uriPubliekeDienstverlening schema:productID ?IPDCConceptID }
+        OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:needsConversionFromFormalToInformal ?vergtOmzettingNaarInformeel }
+        OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:forMunicipalityMerger ?voorGemeentelijkeFusie }
+        OPTIONAL { ?uriPubliekeDienstverlening schema:dateSent ?verstuurdOp }
+        OPTIONAL { ?uriPubliekeDienstverlening dct:title ?titel }
+        OPTIONAL { ?uriPubliekeDienstverlening schema:dateCreated ?aangemaaktOp }
+        OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:dutchLanguageVariant ?versie }
+        OPTIONAL { ?uriPubliekeDienstverlening dct:description ?beschrijving }
+
+        OPTIONAL {
+          ?uriPubliekeDienstverlening ext:reviewStatus ?reviewStatusLink.
+          ?reviewStatusLink skos:prefLabel ?reviewStatus .
+        }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening ext:lastModifiedBy [ foaf:firstName ?firstName ; foaf:familyName ?familyName ] .
@@ -213,26 +231,31 @@ export default {
       GROUP BY
         ?uriPubliekeDienstverlening ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
-        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie ?titelProcedure
-        ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
+        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
+        ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
+        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
 
     `;
-    const queryResponse = await batchedQuery(lpdcQuery, 1000);
+    const queryResponse = await batchedQuery(lpdcQuery, 1000, 1);
     const data = queryResponse.results.bindings;
 
     const postProcessedData = data.map(r => ({
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
-      naamBestuurseenheid: r.naamBestuurseenheid.value,
-      typeBestuurseenheid: r.typeBestuurseenheid.value,
-      aangemaaktOp: r.aangemaaktOp.value,
+      naamBestuurseenheid: r.naamBestuurseenheid?.value  || '',
+      typeBestuurseenheid: r.typeBestuurseenheid?.value  || '',
+      aangemaaktOp: r.aangemaaktOp?.value || '',
       aangemaaktDoor: r.aangemaaktDoor?.value || '',
-      aangepastOp: r.aangepastOp?.value || '',
+      aangepastOp: r.aangepastOp.value,
       aangepastDoor: r.aangepastDoor?.value || '',
+      verstuurdDoor: r.verstuurdDoor?.value || '',
       IPDCConceptID: r.IPDCConceptID?.value || '',
-      statusLabel: r.statusLabel.value,
-      versie: r.versie.value,
-      titel: r.titel.value,
-      beschrijving: stripHtml(r.beschrijving.value),
+      reviewStatus: r.reviewStatus?.value || '',
+      statusLabel: r.statusLabel?.value || '',
+      versie: r.versie?.value || '',
+      vergtOmzettingNaarInformeel: r.vergtOmzettingNaarInformeel?.value || '',
+      voorGemeentelijkeFusie: r.voorGemeentelijkeFusie?.value || '',
+      titel: r.titel?.value || '',
+      beschrijving: r.beschrijving ? stripHtml(r.beschrijving.value): '',
       aanvullendeBeschrijving: r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
       uitzondering: r.uitzondering ? stripHtml(r.uitzondering.value) : '',
       titelVoorwaarde: r.titelVoorwaarde?.value || '',
