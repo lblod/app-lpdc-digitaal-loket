@@ -20,6 +20,12 @@ export default {
         .trim();
     }
 
+    function stripOrder(text) {
+      return String(text)
+        .replace(/(\b\d+\s*)?\|\|\s*/g, '')
+        .replace(/^[^a-zA-Z0-9]*$/, '');    
+    }
+
     // Query
     console.log('Generating LPDC Bestuurseenheid Complete Report');
     const lpdcQuery = `
@@ -37,6 +43,8 @@ export default {
       PREFIX cpsv:    <http://purl.org/vocab/cpsv#>
       PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
       PREFIX adres:   <https://data.vlaanderen.be/ns/adres#>
+      PREFIX shacl: <http://www.w3.org/ns/shacl#>
+
 
       SELECT DISTINCT
         ?uriPubliekeDienstverlening ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp
@@ -45,25 +53,25 @@ export default {
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
         ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk
         ?titelProcedure ?beschrijvingProcedure ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
-        (GROUP_CONCAT(DISTINCT ?titelProcedureWebsite; separator=" | ") AS ?titelProcedureWebsite)
-        (GROUP_CONCAT(DISTINCT ?beschrijvingProcedureWebsite; separator=" | ") AS ?beschrijvingProcedureWebsite)
-        (GROUP_CONCAT(DISTINCT ?urlProcedureWebsite; separator=" | ") AS ?urlProcedureWebsite)
-        (GROUP_CONCAT(DISTINCT ?titelKosten; separator=" | ") AS ?titelKosten)
-        (GROUP_CONCAT(DISTINCT ?beschrijvingKosten; separator=" | ") AS ?beschrijvingKosten)
-        (GROUP_CONCAT(DISTINCT ?titelFinancieelVoordeel; separator=" | ") AS ?titelFinancieelVoordeel)
-        (GROUP_CONCAT(DISTINCT ?beschrijvingFinancieelVoordeel; separator=" | ") AS ?beschrijvingFinancieelVoordeel)
-        (GROUP_CONCAT(DISTINCT ?titelRegelgevendeBron; separator=" | ") AS ?titelRegelgevendeBron)
-        (GROUP_CONCAT(DISTINCT ?beschrijvingRegelgevendeBron; separator=" | ") AS ?beschrijvingRegelgevendeBron)
-        (GROUP_CONCAT(DISTINCT ?urlRegelgevendeBron; separator=" | ") AS ?urlRegelgevendeBron)
-        (GROUP_CONCAT(DISTINCT ?contactpuntEmail; separator=" | ") AS ?contactpuntEmail)
-        (GROUP_CONCAT(DISTINCT ?contactpuntTelefoon; separator=" | ") AS ?contactpuntTelefoon)
-        (GROUP_CONCAT(DISTINCT ?contactpuntWebsiteUrl; separator=" | ") AS ?contactpuntWebsiteUrl)
-        (GROUP_CONCAT(DISTINCT ?contactpuntOpeningsuren; separator=" | ") AS ?contactpuntOpeningsuren)
-        (GROUP_CONCAT(DISTINCT ?gemeente; separator=" | ") AS ?gemeente)
-        (GROUP_CONCAT(DISTINCT ?adres; separator=" | ") AS ?adres)
-        (GROUP_CONCAT(DISTINCT ?titelWebsite; separator=" | ") AS ?titelWebsite)
-        (GROUP_CONCAT(DISTINCT ?beschrijvingWebsite; separator=" | ") AS ?beschrijvingWebsite)
-        (GROUP_CONCAT(DISTINCT ?urlWebsite; separator=" | ") AS ?urlWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?titelProcedureWebsite); separator=" | ") AS ?titelProcedureWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?beschrijvingProcedureWebsite); separator=" | ") AS ?beschrijvingProcedureWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?urlProcedureWebsite); separator=" | ") AS ?urlProcedureWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderKosten), "||", ?titelKosten); separator=" | ") AS ?titelKosten)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderKosten), "||", ?beschrijvingKosten); separator=" | ") AS ?beschrijvingKosten)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderFinancieelVoordeel), "||", ?titelFinancieelVoordeel); separator=" | ") AS ?titelFinancieelVoordeel)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderFinancieelVoordeel), "||", ?beschrijvingFinancieelVoordeel); separator=" | ") AS ?beschrijvingFinancieelVoordeel)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderRegelgevendeBron), "||", ?titelRegelgevendeBron); separator=" | ") AS ?titelRegelgevendeBron)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderRegelgevendeBron), "||", ?beschrijvingRegelgevendeBron); separator=" | ") AS ?beschrijvingRegelgevendeBron)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderRegelgevendeBron), "||", ?urlRegelgevendeBron); separator=" | ") AS ?urlRegelgevendeBron)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?contactpuntEmail); separator=" | ") AS ?contactpuntEmail)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?contactpuntTelefoon); separator=" | ") AS ?contactpuntTelefoon)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?contactpuntWebsiteUrl); separator=" | ") AS ?contactpuntWebsiteUrl)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?contactpuntOpeningsuren); separator=" | ") AS ?contactpuntOpeningsuren)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?gemeente); separator=" | ") AS ?gemeente)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?adres); separator=" | ") AS ?adres)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?titelWebsite); separator=" | ") AS ?titelWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?beschrijvingWebsite); separator=" | ") AS ?beschrijvingWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?urlWebsite); separator=" | ") AS ?urlWebsite) 
         (GROUP_CONCAT(DISTINCT ?targetAudienceLabel; separator=" | ") AS ?doelgroep)
         (GROUP_CONCAT(DISTINCT ?thematicAreaLabel; separator=" | ") AS ?themas)
         (GROUP_CONCAT(DISTINCT ?languageLabel; separator=" | ") AS ?talen)
@@ -134,18 +142,18 @@ export default {
           ?procedure dct:title ?titelProcedure ; dct:description ?beschrijvingProcedure .
           OPTIONAL {
             ?procedure lpdcExt:hasWebsite ?website .
-            OPTIONAL { ?website dct:title ?titelProcedureWebsite ; dct:description ?beschrijvingProcedureWebsite ; schema:url ?urlProcedureWebsite }
+            OPTIONAL { ?website dct:title ?titelProcedureWebsite ; dct:description ?beschrijvingProcedureWebsite ; schema:url ?urlProcedureWebsite ; shacl:order ?orderProcedure }
           }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasCost ?kosten .
-          OPTIONAL { ?kosten dct:title ?titelKosten ; dct:description ?beschrijvingKosten }
+          OPTIONAL { ?kosten dct:title ?titelKosten ; dct:description ?beschrijvingKosten; shacl:order ?orderKosten }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening cpsv:produces ?voordeel .
-          OPTIONAL { ?voordeel dct:title ?titelFinancieelVoordeel ; dct:description ?beschrijvingFinancieelVoordeel }
+          OPTIONAL { ?voordeel dct:title ?titelFinancieelVoordeel ; dct:description ?beschrijvingFinancieelVoordeel ; shacl:order ?orderFinancieelVoordeel}
         }
 
         OPTIONAL {
@@ -154,28 +162,27 @@ export default {
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasLegalResource ?bron .
-          OPTIONAL { ?bron dct:title ?titelRegelgevendeBron ; dct:description ?beschrijvingRegelgevendeBron ; schema:url ?urlRegelgevendeBron }
+          OPTIONAL { ?bron dct:title ?titelRegelgevendeBron ; dct:description ?beschrijvingRegelgevendeBron ; schema:url ?urlRegelgevendeBron ; shacl:order ?orderRegelgevendeBron }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasContactPoint ?contact .
           OPTIONAL { ?contact schema:email ?contactpuntEmail ; schema:telephone ?contactpuntTelefoon ;
-                            schema:url ?contactpuntWebsiteUrl ; schema:openingHours ?contactpuntOpeningsuren }
+                            schema:url ?contactpuntWebsiteUrl ; schema:openingHours ?contactpuntOpeningsuren ;shacl:order ?orderContact}
           OPTIONAL {
             ?contact lpdcExt:address ?adresUri .
             OPTIONAL {
-              ?adresUri adres:gemeentenaam ?gemeente ;
-                        adres:Straatnaam ?straatnaam ;
-                        adres:Adresvoorstelling.huisnummer ?huisnummer ;
+              ?adresUri adres:Straatnaam ?straatnaam ; adres:Adresvoorstelling.huisnummer ?huisnummer ; 
                         adres:Adresvoorstelling.busnummer ?busnummer .
               BIND(CONCAT(COALESCE(?straatnaam, ""), " ", COALESCE(?huisnummer, ""), " ", COALESCE(?busnummer, "")) AS ?adres)
             }
+            OPTIONAL {?adresUri adres:gemeentenaam ?gemeente}
           }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo .
-          OPTIONAL { ?meerInfo dct:title ?titelWebsite ; dct:description ?beschrijvingWebsite ; schema:url ?urlWebsite }
+          OPTIONAL { ?meerInfo dct:title ?titelWebsite ; dct:description ?beschrijvingWebsite ; schema:url ?urlWebsite ; shacl:order ?orderWebsite }
         }
         
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
@@ -262,27 +269,29 @@ export default {
       titelBewijsstuk: r.titelBewijsstuk?.value || '',
       beschrijvingBewijsstuk: r.beschrijvingBewijsstuk ? stripHtml(r.beschrijvingBewijsstuk.value) : '',
       titelProcedure: r.titelProcedure?.value || '',
-      beschrijvingProcedure: r.beschrijvingProcedure ? stripHtml(r.beschrijvingProcedure.value) : '',
-      titelProcedureWebsite: r.titelProcedureWebsite?.value || '',
-      beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite ? stripHtml(r.beschrijvingProcedureWebsite.value) : '',
-      urlProcedureWebsite: r.urlProcedureWebsite?.value || '',
-      titelKosten: r.titelKosten?.value || '',
-      beschrijvingKosten: r.beschrijvingKosten ? stripHtml(r.beschrijvingKosten.value) : '',
-      titelFinancieelVoordeel: r.titelFinancieelVoordeel?.value || '',
-      beschrijvingFinancieelVoordeel: r.beschrijvingFinancieelVoordeel ? stripHtml(r.beschrijvingFinancieelVoordeel.value) : '',
+      beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripHtml(r.beschrijvingProcedure.value) : '',
+      titelProcedureWebsite: r.titelProcedureWebsite?.value ? stripOrder(r.titelProcedureWebsite.value) : '',
+      beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripOrder(stripHtml(r.beschrijvingProcedure.value)) : '',
+      titelProcedureWebsite: r.titelProcedureWebsite?.value ? stripOrder(r.titelProcedureWebsite.value) : '',
+      beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite?.value ? stripOrder(stripHtml(r.beschrijvingProcedureWebsite.value)) : '',
+      urlProcedureWebsite: r.urlProcedureWebsite?.value ? stripOrder(r.urlProcedureWebsite.value) : '',
+      titelKosten: r.titelKosten?.value ? stripOrder(r.titelKosten.value) : '',
+      beschrijvingKosten: r.beschrijvingKosten?.value ? stripOrder(stripHtml(r.beschrijvingKosten.value)) : '',
+      titelFinancieelVoordeel: r.titelFinancieelVoordeel?.value ? stripOrder(r.titelFinancieelVoordeel.value) : '',
+      beschrijvingFinancieelVoordeel: r.beschrijvingFinancieelVoordeel?.value ? stripOrder(stripHtml(r.beschrijvingFinancieelVoordeel.value)) : '',
       regelgeving: r.regelgeving ? stripHtml(r.regelgeving.value) : '',
-      titelRegelgevendeBron: r.titelRegelgevendeBron?.value || '',
-      beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron ? stripHtml(r.beschrijvingRegelgevendeBron.value) : '',
-      urlRegelgevendeBron: r.urlRegelgevendeBron?.value || '',
-      contactpuntEmail: r.contactpuntEmail?.value || '',
-      contactpuntTelefoon: r.contactpuntTelefoon?.value || '',
-      contactpuntWebsiteUrl: r.contactpuntWebsiteUrl?.value || '',
-      contactpuntOpeningsuren: r.contactpuntOpeningsuren?.value || '',
-      gemeente: r.gemeente?.value || '',
-      adres: r.adres?.value || '',
-      titelWebsite: r.titelWebsite?.value || '',
-      urlWebsite: r.urlWebsite?.value || '',
-      beschrijvingWebsite: r.beschrijvingWebsite ? stripHtml(r.beschrijvingWebsite.value) : '',
+      titelRegelgevendeBron: r.titelRegelgevendeBron?.value ? stripOrder(r.titelRegelgevendeBron.value) : '',
+      beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron?.value ? stripOrder(stripHtml(r.beschrijvingRegelgevendeBron.value)) : '',
+      urlRegelgevendeBron: r.urlRegelgevendeBron?.value ? stripOrder(r.urlRegelgevendeBron.value) : '',
+      contactpuntEmail: r.contactpuntEmail?.value ? stripOrder(r.contactpuntEmail.value) : '',
+      contactpuntTelefoon: r.contactpuntTelefoon?.value ? stripOrder(r.contactpuntTelefoon.value) : '',
+      contactpuntWebsiteUrl: r.contactpuntWebsiteUrl?.value ? stripOrder(r.contactpuntWebsiteUrl.value) : '',
+      contactpuntOpeningsuren: r.contactpuntOpeningsuren?.value ? stripOrder(r.contactpuntOpeningsuren.value) : '',
+      gemeente: r.gemeente?.value ? stripOrder(r.gemeente.value) : '',
+      adres: r.adres?.value ? stripOrder(r.adres.value) : '',
+      titelWebsite: r.titelWebsite?.value ? stripOrder(r.titelWebsite.value) : '',
+      urlWebsite: r.urlWebsite?.value ? stripOrder(r.urlWebsite.value) : '',
+      beschrijvingWebsite: r.beschrijvingWebsite?.value ? stripOrder(stripHtml(r.beschrijvingWebsite.value)) : '',
       startDatum: r.startDatum?.value || '',
       eindDatum: r.eindDatum?.value || '',
       productTypeLabel: r.productTypeLabel?.value || '',
