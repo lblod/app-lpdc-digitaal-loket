@@ -3,7 +3,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 DELETE {
   GRAPH ?g {
-    ?subject ?predicate ?concept .
+    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept .
   }
 }
 WHERE {
@@ -34,6 +34,6 @@ WHERE {
       dvc:ProcedurePensionering
       dvc:ProcedureStartenExploiterenSluitenBedrijf
     }
-    ?subject ?predicate ?concept .
+    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept .
   }
 }
