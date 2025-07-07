@@ -1,15 +1,14 @@
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
-@prefix dvcs:   <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/> .
 @prefix dvc:    <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/> .
 @prefix mu:     <http://mu.semte.ch/vocabularies/core/>.
 @prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix schemes: <http://lblod.data.gift/concept-schemes/> .
 
-dvcs:YourEuropeCategorie
+schemes:YourEuropeSubCategorie
     a                   skos:ConceptScheme ;
-    mu:uuid             "df9d7cf5-fce3-4f9c-965a-3f79bfd365a5" ;
-    skos:prefLabel      "YourEurope categorie in het kader van de Single Digital Gateway verordening"@nl ;
-    skos:definition     "Lijst van informatiegebieden die voor burgers en bedrijven van belang zijn bij de uitoefening van hun rechten uit hoofde van de interne markt."@nl .
-
+    mu:uuid             "53d920df-2421-4f54-a69b-aa6d551b7f65" ;
+    skos:prefLabel      "YourEurope subcategorieën in het kader van de Single Digital Gateway verordening"@nl ;
+    skos:definition     "Lijst van informatiegebieden die voor burgers en bedrijven van belang zijn bij de uitoefening van hun rechten uit hoofde van de interne markt. Dit is een subset van het volledige YourEurope categorieënschema met enkel de subcategorieën."@nl .
 
 ##############
 ### Reizen ###
@@ -22,8 +21,8 @@ dvc:ReizenDocumenten
     skos:prefLabel  "Verplichte reisdocumenten - A1"@nl ;
     skos:notation   "A1" ;
     skos:definition "Documenten die van EU-burgers, hun gezinsleden die geen EU-burgers zijn, alleenreizende minderjarigen en niet-EU-burgers verlangd worden wanneer zij EU-binnengrenzen overschrijden (identiteitsbewijs, visum, paspoort)"@nl ;
-    skos:inScheme     dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme     schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ReizenRechtenVerplichtingen
     a               skos:Concept ;
@@ -32,8 +31,8 @@ dvc:ReizenRechtenVerplichtingen
     skos:prefLabel  "Rechten en verplichtingen van reizigers - A2"@nl ;
     skos:notation   "A2" ;
     skos:definition "Rechten en verplichtingen van reizigers die per vliegtuig, trein, schip of bus in of vanuit de Unie reizen en van personen die pakketreizen of gekoppelde reisarrangementen kopen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ReizenOndersteuningBeperkteMobiliteit
     a               skos:Concept ;
@@ -42,8 +41,8 @@ dvc:ReizenOndersteuningBeperkteMobiliteit
     skos:prefLabel  "Ondersteuning in geval van beperkte mobiliteit - A3"@nl ;
     skos:notation   "A3" ;
     skos:definition "Ondersteuning in geval van beperkte mobiliteit bij reizen in of vanuit de Unie"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ReizenGoederen
     a               skos:Concept ;
@@ -52,8 +51,8 @@ dvc:ReizenGoederen
     skos:prefLabel  "Vervoer van goederen - A4"@nl ;
     skos:notation   "A4" ;
     skos:definition "Vervoer van dieren, planten, alcohol, tabak, sigaretten en andere goederen bij reizen in de Unie"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ReizenElektronischeGegevens
     a               skos:Concept ;
@@ -62,8 +61,8 @@ dvc:ReizenElektronischeGegevens
     skos:prefLabel  "Communicatie met elektronische berichten - A5"@nl ;
     skos:notation   "A5" ;
     skos:definition "Spraaktelefonie en verzending en ontvangst van elektronische berichten en elektronische gegevens binnen de Unie."@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ##########################
@@ -77,8 +76,8 @@ dvc:WerkEnPensioneringWerkZoeken
     skos:prefLabel  "Werk zoeken - B1"@nl ;
     skos:notation   "B1" ;
     skos:definition "Werk zoeken in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringGaanWerken
     a               skos:Concept ;
@@ -87,8 +86,8 @@ dvc:WerkEnPensioneringGaanWerken
     skos:prefLabel  "Gaan werken - B2"@nl ;
     skos:notation   "B2" ;
     skos:definition "Gaan werken in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringErkenningKwalificaties
     a               skos:Concept ;
@@ -97,8 +96,8 @@ dvc:WerkEnPensioneringErkenningKwalificaties
     skos:prefLabel  "Erkenning van kwalificaties - B3"@nl ;
     skos:notation   "B3" ;
     skos:definition "Erkenning van kwalificaties met het oog op werk in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringBelastingheffing
     a               skos:Concept ;
@@ -107,8 +106,8 @@ dvc:WerkEnPensioneringBelastingheffing
     skos:prefLabel  "Belastingheffing - B4"@nl ;
     skos:notation   "B4" ;
     skos:definition "Belastingheffing in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringAansprakelijkheidEnVerzekeringen
     a               skos:Concept ;
@@ -117,8 +116,8 @@ dvc:WerkEnPensioneringAansprakelijkheidEnVerzekeringen
     skos:prefLabel  "Regels inzake aansprakelijkheid en verzekeringen - B5"@nl ;
     skos:notation   "B5" ;
     skos:definition "Regels inzake aansprakelijkheid en verplichte verzekeringen in verband met verblijf of werk in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringArbeidsvoorwaarden
     a               skos:Concept ;
@@ -127,8 +126,8 @@ dvc:WerkEnPensioneringArbeidsvoorwaarden
     skos:prefLabel  "Vastgestelde arbeidsvoorwaarden en -omstandigheden - B6"@nl ;
     skos:notation   "B6" ;
     skos:definition "Bij wet of wettelijk instrument vastgestelde arbeidsvoorwaarden en -omstandigheden, ook voor gedetacheerde werknemers (met inbegrip van informatie over werktijden, betaald verlof, vakantierechten, rechten en verplichtingen in verband met overuren, medisch onderzoek, beëindiging van contracten en ontslag)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringGelijkeBehandeling
     a               skos:Concept ;
@@ -137,8 +136,8 @@ dvc:WerkEnPensioneringGelijkeBehandeling
     skos:prefLabel  "Gelijke behandeling - B7"@nl ;
     skos:notation   "B7" ;
     skos:definition "Equal treatment (rules prohibiting discrimination in the workplace, rules on equal pay for men and women and on equal pay for employees on fixed-term or permanent employment contracts)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringGezondheidEnVeiligheid
     a               skos:Concept ;
@@ -147,8 +146,8 @@ dvc:WerkEnPensioneringGezondheidEnVeiligheid
     skos:prefLabel  "Verplichtingen gezondheid en veiligheid - B8"@nl ;
     skos:notation   "B8" ;
     skos:definition "Verplichtingen in verband met gezondheid en veiligheid voor verschillende soorten activiteiten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerkEnPensioneringSocialezekerheidsrechten
     a               skos:Concept ;
@@ -157,8 +156,8 @@ dvc:WerkEnPensioneringSocialezekerheidsrechten
     skos:prefLabel  "Socialezekerheidsrechten en -verplichtingen - B9"@nl ;
     skos:notation   "B9" ;
     skos:definition "Socialezekerheidsrechten en -verplichtingen in de Unie, onder meer in verband met pensioenen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ##################
@@ -172,8 +171,8 @@ dvc:VoertuigenVerplaatsing
     skos:prefLabel  "Tijdelijke of permanente verplaatsing van motorvoertuigen - C1"@nl ;
     skos:notation   "C1" ;
     skos:definition "Tijdelijke of permanente verplaatsing van motorvoertuigen naar een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VoertuigenVerleningRijbewijzen
     a               skos:Concept ;
@@ -182,8 +181,8 @@ dvc:VoertuigenVerleningRijbewijzen
     skos:prefLabel  "Verkrijging en verlenging van rijbewijzen - C2"@nl ;
     skos:notation   "C2" ;
     skos:definition "Verkrijging en verlenging van rijbewijzen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VoertuigenVerplichteVerzekering
     a               skos:Concept ;
@@ -192,8 +191,8 @@ dvc:VoertuigenVerplichteVerzekering
     skos:prefLabel  "Verplichte motorrijtuigenverzekering - C3"@nl ;
     skos:notation   "C3" ;
     skos:definition "Verplichte motorrijtuigenverzekering"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VoertuigenKoopVerkoop
     a               skos:Concept ;
@@ -202,8 +201,8 @@ dvc:VoertuigenKoopVerkoop
     skos:prefLabel  "Koop en verkoop van motorvoertuigen - C4"@nl ;
     skos:notation   "C4" ;
     skos:definition "Koop en verkoop van motorvoertuigen in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VoertuigenVerkeersregels
     a               skos:Concept ;
@@ -212,8 +211,8 @@ dvc:VoertuigenVerkeersregels
     skos:prefLabel  "Nationale verkeersregels en voorschriften voor bestuurders - C5"@nl ;
     skos:notation   "C5" ;
     skos:definition "Nationale verkeersregels en voorschriften voor bestuurders, met inbegrip van algemene regels voor het gebruik van de nationale wegeninfrastructuur: tijdsgebonden heffingen (vignet), afstandsgebonden heffingen (tol), emissiestickers"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ################
@@ -227,8 +226,8 @@ dvc:VerblijfVerhuizing
     skos:prefLabel  "Tijdelijke of permanente verhuizing - D1"@nl ;
     skos:notation   "D1" ;
     skos:definition "Tijdelijke of permanente verhuizing naar een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VerblijfKoopVerkoop
     a               skos:Concept ;
@@ -237,8 +236,8 @@ dvc:VerblijfKoopVerkoop
     skos:prefLabel  "Koop en verkoop van vastgoed - D2"@nl ;
     skos:notation   "D2" ;
     skos:definition "Koop en verkoop van vastgoed, met inbegrip van voorwaarden en verplichtingen met betrekking tot belasting, eigendom of gebruik van dergelijk vastgoed, waaronder het gebruik ervan als tweede verblijf"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VerblijfVerkiezingen
     a               skos:Concept ;
@@ -247,8 +246,8 @@ dvc:VerblijfVerkiezingen
     skos:prefLabel  "Deelname aan verkiezingen - D3"@nl ;
     skos:notation   "D3" ;
     skos:definition "Deelname aan gemeentelijke verkiezingen en verkiezingen voor het Europees Parlement"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VerblijfVerblijfskaarten
     a               skos:Concept ;
@@ -257,8 +256,8 @@ dvc:VerblijfVerblijfskaarten
     skos:prefLabel  "Voorschriften betreffende verblijfskaarten - D4"@nl ;
     skos:notation   "D4" ;
     skos:definition "Voorschriften betreffende verblijfskaarten voor EU-burgers en hun gezinsleden, waaronder gezinsleden die geen EU-burgers zijn"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VerblijfNaturalisatie
     a               skos:Concept ;
@@ -267,8 +266,8 @@ dvc:VerblijfNaturalisatie
     skos:prefLabel  "Voorwaarden voor naturalisatie - D5"@nl ;
     skos:notation   "D5" ;
     skos:definition "Voorwaarden voor de naturalisatie van onderdanen van een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:VerblijfOverlijden
     a               skos:Concept ;
@@ -277,8 +276,8 @@ dvc:VerblijfOverlijden
     skos:prefLabel  "Regels in geval van overlijden - D6"@nl ;
     skos:notation   "D6" ;
     skos:definition "Regels die gelden in geval van overlijden, met inbegrip van regels inzake de repatriëring van stoffelijke overschotten naar een andere lidstaat."@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ########################
@@ -292,8 +291,8 @@ dvc:OnderwijsOfStageOnderwijsstelsel
     skos:prefLabel  "Onderwijsstelsel - E1"@nl ;
     skos:notation   "E1" ;
     skos:definition "Onderwijsstelsel in een andere lidstaat, met inbegrip van voor- en vroegschoolse educatie en opvang, basis- en secundair onderwijs, hoger onderwijs en volwassenenonderwijs;"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:OnderwijsOfStageVrijwilligerswerk
     a               skos:Concept ;
@@ -302,8 +301,8 @@ dvc:OnderwijsOfStageVrijwilligerswerk
     skos:prefLabel  "Vrijwilligerswerk - E2"@nl ;
     skos:notation   "E2" ;
     skos:definition "Vrijwilligerswerk doen in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:OnderwijsOfStageStage
     a               skos:Concept ;
@@ -312,8 +311,8 @@ dvc:OnderwijsOfStageStage
     skos:prefLabel  "Stage lopen - E3"@nl ;
     skos:notation   "E3" ;
     skos:definition "Stage lopen in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:OnderwijsOfStageOnderzoek
     a               skos:Concept ;
@@ -322,8 +321,8 @@ dvc:OnderwijsOfStageOnderzoek
     skos:prefLabel  "Onderzoek doen - E4"@nl ;
     skos:notation   "E4" ;
     skos:definition "Onderzoek doen in een andere lidstaat in het kader van een onderwijsprogramma"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 #######################
@@ -337,8 +336,8 @@ dvc:GezondheidszorgMedischeBehandeling
     skos:prefLabel  "Medische behandeling ondergaan - F1"@nl ;
     skos:notation   "F1" ;
     skos:definition "Een medische behandeling ondergaan in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GezondheidszorgGeneesmiddelenKopen
     a               skos:Concept ;
@@ -347,8 +346,8 @@ dvc:GezondheidszorgGeneesmiddelenKopen
     skos:prefLabel  "Voorgeschreven geneesmiddelen kopen - F2"@nl ;
     skos:notation   "F2" ;
     skos:definition "Online of in persoon geneesmiddelen kopen in een andere lidstaat dan die waar zij door een arts zijn voorgeschreven"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GezondheidszorgZiekteverzekering
     a               skos:Concept ;
@@ -357,8 +356,8 @@ dvc:GezondheidszorgZiekteverzekering
     skos:prefLabel  "Regels inzake ziekteverzekering - F3"@nl ;
     skos:notation   "F3" ;
     skos:definition "Regels inzake ziekteverzekering die van toepassing zijn tijdens een kort of langdurig verblijf in een andere lidstaat, met inbegrip van regels over de wijze waarop een Europese ziekteverzekeringskaart moet worden aangevraagd"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen
     a               skos:Concept ;
@@ -367,8 +366,8 @@ dvc:GezondheidszorgPreventieveOpenbareGezondheidsmaatregelen
     skos:prefLabel  "Rechten en verplichtingen tot preventieve openbare gezondheidsmaatregelen - F4"@nl ;
     skos:notation   "F4" ;
     skos:definition "Algemene informatie over toegangsrechten en verplichtingen om deel te nemen aan beschikbare preventieve openbare gezondheidsmaatregelen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GezondheidszorgNoodnummers
     a               skos:Concept ;
@@ -377,8 +376,8 @@ dvc:GezondheidszorgNoodnummers
     skos:prefLabel  "Nationale noodnummers - F5"@nl ;
     skos:notation   "F5" ;
     skos:definition "Diensten die worden verstrekt via nationale noodnummers zoals „112” en „116”"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GezondheidszorgWoonzorgcentrum
     a               skos:Concept ;
@@ -387,8 +386,8 @@ dvc:GezondheidszorgWoonzorgcentrum
     skos:prefLabel  "Rechten en voorwaarden woonzorgcentrum - F6"@nl ;
     skos:notation   "F6" ;
     skos:definition "Rechten en voorwaarden om naar een woonzorgcentrum te verhuizen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ##############################
@@ -402,8 +401,8 @@ dvc:BurgerEnFamilieRechtenKinderen
     skos:prefLabel  "Rechten en plichten in het kader van kinderen - G1"@nl ;
     skos:notation   "G1" ;
     skos:definition "Geboorte, ouderlijk gezag over minderjarige kinderen, ouderlijke verantwoordelijkheden, regels inzake draagmoederschap en adoptie, met inbegrip van stiefouderadoptie, onderhoudsverplichtingen voor kinderen in een grensoverschrijdende gezinssituatie"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BurgerEnFamilieRechtenPartners
     a               skos:Concept ;
@@ -412,8 +411,8 @@ dvc:BurgerEnFamilieRechtenPartners
     skos:prefLabel  "Samenleven van partners - G2"@nl ;
     skos:notation   "G2" ;
     skos:definition "Samenleven van partners met verschillende nationaliteiten, met inbegrip van partners van hetzelfde geslacht (huwelijk, geregistreerd partnerschap, scheiding van tafel en bed, echtscheiding, huwelijksvermogensrechten, rechten van samenwonenden)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BurgerEnFamilieRechtenGenderIdentiteit
     a               skos:Concept ;
@@ -422,8 +421,8 @@ dvc:BurgerEnFamilieRechtenGenderIdentiteit
     skos:prefLabel  "Regels inzake genderidentiteit - G3"@nl ;
     skos:notation   "G3" ;
     skos:definition "Regels inzake erkenning van de genderidentiteit"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BurgerEnFamilieRechtenErfrechtenEnPlichten
     a               skos:Concept ;
@@ -432,8 +431,8 @@ dvc:BurgerEnFamilieRechtenErfrechtenEnPlichten
     skos:prefLabel  "Erfrechten en -plichten - G4"@nl ;
     skos:notation   "G4" ;
     skos:definition "Erfrechten en -plichten in een andere lidstaat, met inbegrip van belastingregels"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BurgerEnFamilieRechtenOntvoeringKinderen
     a               skos:Concept ;
@@ -442,8 +441,8 @@ dvc:BurgerEnFamilieRechtenOntvoeringKinderen
     skos:prefLabel  "Rechten en regels grensoverschrijdende ontvoering kinderen - G5"@nl ;
     skos:notation   "G5" ;
     skos:definition "Rechten en regels die gelden bij grensoverschrijdende ontvoering van kinderen door een van de ouders"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ##########################
@@ -457,8 +456,8 @@ dvc:ConsumentenrechtenAankoop
     skos:prefLabel  "Aankoop van goederen, digitale inhoud of diensten - H1"@nl ;
     skos:notation   "H1" ;
     skos:definition "Online of in persoon goederen, digitale inhoud of diensten (waaronder financiële diensten) in een andere lidstaat kopen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ConsumentenrechtenBankrekening
     a               skos:Concept ;
@@ -467,8 +466,8 @@ dvc:ConsumentenrechtenBankrekening
     skos:prefLabel  "Bankrekening hebben - H2"@nl ;
     skos:notation   "H2" ;
     skos:definition "Een bankrekening hebben in een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ConsumentenrechtenNutsvoorzieningen
     a               skos:Concept ;
@@ -477,8 +476,8 @@ dvc:ConsumentenrechtenNutsvoorzieningen
     skos:prefLabel  "Aansluiting op nutsvoorzieningen - H3"@nl ;
     skos:notation   "H3" ;
     skos:definition "Aansluiting op nutsvoorzieningen, zoals gas, elektriciteit, water, verwijdering van huishoudelijk afval, telecommunicatie en internet"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ConsumentenrechtenBetalingen
     a               skos:Concept ;
@@ -487,8 +486,8 @@ dvc:ConsumentenrechtenBetalingen
     skos:prefLabel  "Betalingen voor grensoverschrijdende betalingen - H4"@nl ;
     skos:notation   "H4" ;
     skos:definition "Betalingen, waaronder overmakingen, en termijnen voor grensoverschrijdende betalingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ConsumentenrechtenConsumentenrechten
     a               skos:Concept ;
@@ -497,8 +496,8 @@ dvc:ConsumentenrechtenConsumentenrechten
     skos:prefLabel  "Consumentenrechten bij aankoop van goederen en diensten - H5"@nl ;
     skos:notation   "H5" ;
     skos:definition "Consumentenrechten en -waarborgen bij aankoop van goederen en diensten, met inbegrip van procedures voor de beslechting van en vergoeding bij consumentengeschillen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ConsumentenrechtenVeiligheid
     a               skos:Concept ;
@@ -507,8 +506,8 @@ dvc:ConsumentenrechtenVeiligheid
     skos:prefLabel  "Veiligheid en beveiliging van producten - H6"@nl ;
     skos:notation   "H6" ;
     skos:definition "Veiligheid en beveiliging van consumentenproducten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ConsumentenrechtenHuurMotorvoertuigen
     a               skos:Concept ;
@@ -517,8 +516,8 @@ dvc:ConsumentenrechtenHuurMotorvoertuigen
     skos:prefLabel  "Huur van motorvoertuigen - H7"@nl ;
     skos:notation   "H7" ;
     skos:definition "Huur van motorvoertuigen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ###################################
@@ -532,8 +531,8 @@ dvc:BeschermingPersoonsgegevensUitoefeningRechten
     skos:prefLabel  "Uitoefening van de rechten - I1"@nl ;
     skos:notation   "I1" ;
     skos:definition "Uitoefening van de rechten van de betrokkenen met betrekking tot de bescherming van persoonsgegevens"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ###############
@@ -547,8 +546,8 @@ dvc:BedrijfRegistratieproceduresRechtsvormen
     skos:prefLabel  "Registratieprocedures en rechtsvormen - J1"@nl ;
     skos:notation   "J1" ;
     skos:definition "Registratie, wijziging van de rechtsvorm of sluiting van een bedrijf (registratieprocedures en rechtsvormen voor bedrijven)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfVerplaatsing
     a               skos:Concept ;
@@ -557,8 +556,8 @@ dvc:BedrijfVerplaatsing
     skos:prefLabel  "Verplaatsing van een bedrijf - J2"@nl ;
     skos:notation   "J2" ;
     skos:definition "Verplaatsing van een bedrijf naar een andere lidstaat"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfIntellectueleEigendomsrechten
     a               skos:Concept ;
@@ -567,8 +566,8 @@ dvc:BedrijfIntellectueleEigendomsrechten
     skos:prefLabel  "Intellectuele-eigendomsrechten - J3"@nl ;
     skos:notation   "J3" ;
     skos:definition "Intellectuele-eigendomsrechten (octrooiaanvragen, registratie van handelsmerken, tekeningen of modellen, verwerving van licenties voor reproductie)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfTransparantie
     a               skos:Concept ;
@@ -577,8 +576,8 @@ dvc:BedrijfTransparantie
     skos:prefLabel  "Transparantie bij handelspraktijken - J4"@nl ;
     skos:notation   "J4" ;
     skos:definition "Billijkheid en transparantie bij handelspraktijken, met inbegrip van consumentenrechten en -waarborgen in verband met de verkoop van goederen en diensten;"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfOnlineBetaalFuncties
     a               skos:Concept ;
@@ -587,8 +586,8 @@ dvc:BedrijfOnlineBetaalFuncties
     skos:prefLabel  "Grensoverschrijdende onlinebetaalfuncties - J5"@nl ;
     skos:notation   "J5" ;
     skos:definition "Aanbieden van grensoverschrijdende onlinebetaalfuncties bij de onlineverkoop van goederen en diensten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfOvereenkomstenrecht
     a               skos:Concept ;
@@ -597,8 +596,8 @@ dvc:BedrijfOvereenkomstenrecht
     skos:prefLabel  "Rechten en verplichtingen overeenkomstenrecht - J6"@nl ;
     skos:notation   "J6" ;
     skos:definition "Rechten en verplichtingen uit hoofde van het overeenkomstenrecht, met inbegrip van verschuldigde rente wegens achterstallige betaling"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfInsolventieLiquidatie
     a               skos:Concept ;
@@ -607,8 +606,8 @@ dvc:BedrijfInsolventieLiquidatie
     skos:prefLabel  "Insolventieprocedures en liquidatie - J7"@nl ;
     skos:notation   "J7" ;
     skos:definition "Insolventieprocedures en liquidatie van bedrijven"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfKredietVerzekering
     a               skos:Concept ;
@@ -617,8 +616,8 @@ dvc:BedrijfKredietVerzekering
     skos:prefLabel  "Kredietverzekering - J8"@nl ;
     skos:notation   "J8" ;
     skos:definition "kredietverzekering"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfFusieVerkoop
     a               skos:Concept ;
@@ -627,8 +626,8 @@ dvc:BedrijfFusieVerkoop
     skos:prefLabel  "Bedrijfsfusies of verkoop - J9"@nl ;
     skos:notation   "J9" ;
     skos:definition "Bedrijfsfusies of verkoop van een bedrijf"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfAansprakelijkheidBestuurders
     a               skos:Concept ;
@@ -637,8 +636,8 @@ dvc:BedrijfAansprakelijkheidBestuurders
     skos:prefLabel  "Wettelijke aansprakelijkheid van bestuurders - J10"@nl ;
     skos:notation   "J10" ;
     skos:definition "Wettelijke aansprakelijkheid van bestuurders en commissarissen van een bedrijf"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfPersoonsgegevens
     a               skos:Concept ;
@@ -647,8 +646,8 @@ dvc:BedrijfPersoonsgegevens
     skos:prefLabel  "Verwerking van persoonsgegevens - J11"@nl ;
     skos:notation   "J11" ;
     skos:definition "Regels en verplichtingen met betrekking tot de verwerking van persoonsgegevens"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ##################
@@ -662,8 +661,8 @@ dvc:WerknemersArbeidsvoorwaarden
     skos:prefLabel  "Arbeidsvoorwaarden - K1"@nl ;
     skos:notation   "K1" ;
     skos:definition "Bij wet of wettelijk instrument vastgestelde arbeidsvoorwaarden (met inbegrip van werktijden, betaald verlof, vakantierechten, rechten en verplichtingen in verband met overuren, medisch onderzoek, beëindiging van contracten en ontslag)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerknemersSocialezekerheid
     a               skos:Concept ;
@@ -672,8 +671,8 @@ dvc:WerknemersSocialezekerheid
     skos:prefLabel  "Socialezekerheidsrechten en -verplichtingen - K2"@nl ;
     skos:notation   "K2" ;
     skos:definition "Socialezekerheidsrechten en -verplichtingen in de Unie (aanmelding als werkgever, aanmelding van werknemers, kennisgeving van beëindiging van een arbeidsovereenkomst, betaling van sociale bijdragen, rechten en verplichtingen in verband met pensioenen)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerknemersTewerkstelling
     a               skos:Concept ;
@@ -682,8 +681,8 @@ dvc:WerknemersTewerkstelling
     skos:prefLabel  "Tewerkstelling van werknemers - K3"@nl ;
     skos:notation   "K3" ;
     skos:definition "Tewerkstelling van werknemers in andere lidstaten (detachering, regels betreffende het vrij verrichten van diensten, woonplaatsvereisten voor werknemers)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerknemersGelijkeBehandeling
     a               skos:Concept ;
@@ -692,8 +691,8 @@ dvc:WerknemersGelijkeBehandeling
     skos:prefLabel  "Gelijke behandeling - K4"@nl ;
     skos:notation   "K4" ;
     skos:definition "Gelijke behandeling (regels die discriminatie op het werk verbieden, regels inzake gelijke betaling van mannen en vrouwen en inzake gelijke betaling van werknemers met contracten voor bepaalde of onbepaalde tijd)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:WerknemersPersoneelsvertegenwoordiging
     a               skos:Concept ;
@@ -702,8 +701,8 @@ dvc:WerknemersPersoneelsvertegenwoordiging
     skos:prefLabel  "Personeelsvertegenwoordiging - K5"@nl ;
     skos:notation   "K5" ;
     skos:definition "Regels voor personeelsvertegenwoordiging"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ###################
@@ -717,8 +716,8 @@ dvc:BelastingenBTW
     skos:prefLabel  "BTW - L1"@nl ;
     skos:notation   "L1" ;
     skos:definition "BTW: informatie over de algemene regels, tarieven en vrijstellingen, registratie voor en betaling van btw, verkrijging van teruggave"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BelastingenAccijnzen
     a               skos:Concept ;
@@ -727,8 +726,8 @@ dvc:BelastingenAccijnzen
     skos:prefLabel  "Accijnzen - L2"@nl ;
     skos:notation   "L2" ;
     skos:definition "Accijnzen: informatie over de algemene regels, tarieven en vrijstellingen, registratie voor en betaling van accijnzen, verkrijging van teruggave"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BelastingenDouanerechten
     a               skos:Concept ;
@@ -737,8 +736,8 @@ dvc:BelastingenDouanerechten
     skos:prefLabel  "Douanerechten - L3"@nl ;
     skos:notation   "L3" ;
     skos:definition "Douanerechten en andere belastingen en rechten op ingevoerde producten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BelastingenDouaneprocedures
     a               skos:Concept ;
@@ -747,8 +746,8 @@ dvc:BelastingenDouaneprocedures
     skos:prefLabel  "Douaneprocedures - L4"@nl ;
     skos:notation   "L4" ;
     skos:definition "Douaneprocedures voor invoer en uitvoer in het kader van het douanewetboek van de Unie"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BelastingenOverigeBelastingen
     a               skos:Concept ;
@@ -757,8 +756,8 @@ dvc:BelastingenOverigeBelastingen
     skos:prefLabel  "Overige belastingen - L5"@nl ;
     skos:notation   "L5" ;
     skos:definition "Overige belastingen: betaling, tarieven, belastingaangiften"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ################
@@ -772,8 +771,8 @@ dvc:GoederenCEMarkering
     skos:prefLabel  "CE-markering - M1"@nl ;
     skos:notation   "M1" ;
     skos:definition "Verkrijging van CE-markering"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenVoorschriftenVereisten
     a               skos:Concept ;
@@ -782,8 +781,8 @@ dvc:GoederenVoorschriftenVereisten
     skos:prefLabel  "Productvoorschriften en vereisten - M2"@nl ;
     skos:notation   "M2" ;
     skos:definition "Voorschriften en vereisten voor producten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenNormenSpecificatiesCertificering
     a               skos:Concept ;
@@ -792,8 +791,8 @@ dvc:GoederenNormenSpecificatiesCertificering
     skos:prefLabel  "Normen, specificaties en certificering - M3"@nl ;
     skos:notation   "M3" ;
     skos:definition "Vaststelling van toepasselijke normen, technische specificaties en productcertificering"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenErkenningZonderSpecificaties
     a               skos:Concept ;
@@ -802,8 +801,8 @@ dvc:GoederenErkenningZonderSpecificaties
     skos:prefLabel  "Erkenning producten zonder EU-specificaties - M4"@nl ;
     skos:notation   "M4" ;
     skos:definition "Wederzijdse erkenning van producten waarvoor geen EU-specificaties gelden"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenGevaarlijkeStoffen
     a               skos:Concept ;
@@ -812,8 +811,8 @@ dvc:GoederenGevaarlijkeStoffen
     skos:prefLabel  "Verpakking van gevaarlijke stoffen - M5"@nl ;
     skos:notation   "M5" ;
     skos:definition "Voorschriften voor de indeling, etikettering en verpakking van gevaarlijke stoffen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenVerkoopOpAfstand
     a               skos:Concept ;
@@ -822,8 +821,8 @@ dvc:GoederenVerkoopOpAfstand
     skos:prefLabel  "Verkoop op afstand en buiten verkoopruimten - M6"@nl ;
     skos:notation   "M6" ;
     skos:definition "Verkoop op afstand en buiten verkoopruimten: informatie die vooraf aan klanten moet worden gegeven, schriftelijke bevestiging van overeenkomsten, herroeping van overeenkomsten, aflevering van goederen, andere specifieke verplichtingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenProductenMetGebreken
     a               skos:Concept ;
@@ -832,8 +831,8 @@ dvc:GoederenProductenMetGebreken
     skos:prefLabel  "Producten met gebreken - M7"@nl ;
     skos:notation   "M7" ;
     skos:definition "Producten met gebreken: consumentenrechten en garantie, verantwoordelijkheid na verkoop, rechtsmiddelen voor benadeelde partij"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenKeurmerken
     a               skos:Concept ;
@@ -842,8 +841,8 @@ dvc:GoederenKeurmerken
     skos:prefLabel  "Certificering, keurmerken - M8"@nl ;
     skos:notation   "M8" ;
     skos:definition "Certificering, keurmerken (EMAS, energielabels, ecodesign, EU-milieukeur)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:GoederenRecyclage
     a               skos:Concept ;
@@ -852,8 +851,8 @@ dvc:GoederenRecyclage
     skos:prefLabel  "Recyclage en afvalbeheer - M9"@nl ;
     skos:notation   "M9" ;
     skos:definition "Recyclage en afvalbeheer"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ################
@@ -867,8 +866,8 @@ dvc:DienstenLicentiesVergunningen
     skos:prefLabel  "Licenties en vergunningen - N1"@nl ;
     skos:notation   "N1" ;
     skos:definition "Verkrijging van licenties, vergunningen en toestemming om een bedrijf te starten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:DienstenKennisgevingGrensoverschrijdendeActiviteiten
     a               skos:Concept ;
@@ -877,8 +876,8 @@ dvc:DienstenKennisgevingGrensoverschrijdendeActiviteiten
     skos:prefLabel  "Kennisgeving van grensoverschrijdende activiteiten - N2"@nl ;
     skos:notation   "N2" ;
     skos:definition "Kennisgeving van grensoverschrijdende activiteiten aan de autoriteiten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:DienstenErkenningBeroepskwalificaties
     a               skos:Concept ;
@@ -887,8 +886,8 @@ dvc:DienstenErkenningBeroepskwalificaties
     skos:prefLabel  "Erkenning van beroepskwalificaties - N3"@nl ;
     skos:notation   "N3" ;
     skos:definition "Erkenning van beroepskwalificaties, met inbegrip van beroepsonderwijs en -opleiding"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ############################
@@ -902,8 +901,8 @@ dvc:BedrijfsfinancieringFinancieringUnie
     skos:prefLabel  "Financiering op Unieniveau - O1"@nl ;
     skos:notation   "O1" ;
     skos:definition "Verkrijging van toegang tot financiering op Unieniveau, met inbegrip van financieringsprogramma’s en bedrijfssubsidies van de Unie"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfsfinancieringFinancieringNationaal
     a               skos:Concept ;
@@ -912,8 +911,8 @@ dvc:BedrijfsfinancieringFinancieringNationaal
     skos:prefLabel  "Financiering op nationaal niveau - O2"@nl ;
     skos:notation   "O2" ;
     skos:definition "Verkrijging van toegang tot financiering op nationaal niveau"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:BedrijfsfinancieringOndernemersInitiatieven
     a               skos:Concept ;
@@ -922,8 +921,8 @@ dvc:BedrijfsfinancieringOndernemersInitiatieven
     skos:prefLabel  "Op ondernemers gerichte initiatieven - O3"@nl ;
     skos:notation   "O3" ;
     skos:definition "Op ondernemers gerichte initiatieven (uitwisselingen voor nieuwe ondernemers, mentorprogramma’s enz.)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ###########################
@@ -937,8 +936,8 @@ dvc:OverheidsopdrachtenDeelname
     skos:prefLabel  "Deelname aan openbare aanbestedingen - P1"@nl ;
     skos:notation   "P1" ;
     skos:definition "Deelname aan openbare aanbestedingen: regels en procedures"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:OverheidsopdrachtenOnlineInschrijving
     a               skos:Concept ;
@@ -947,8 +946,8 @@ dvc:OverheidsopdrachtenOnlineInschrijving
     skos:prefLabel  "Online-inschrijving - P2"@nl ;
     skos:notation   "P2" ;
     skos:definition "Online-inschrijving op openbare aanbestedingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:OverheidsopdrachtenMeldingOnregelmatigheden
     a               skos:Concept ;
@@ -957,8 +956,8 @@ dvc:OverheidsopdrachtenMeldingOnregelmatigheden
     skos:prefLabel  "Melding van onregelmatigheden - P3"@nl ;
     skos:notation   "P3" ;
     skos:definition "Melding van onregelmatigheden in verband met aanbestedingsprocedures"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 ################################
@@ -972,8 +971,8 @@ dvc:GezondheidVeiligheidWerkVerplichtingen
     skos:prefLabel  "Verplichtingen in verband met gezondheid en veiligheid - Q1"@nl ;
     skos:notation   "Q1" ;
     skos:definition "Verplichtingen in verband met gezondheid en veiligheid voor verschillende soorten activiteiten, waaronder risicopreventie, voorlichting en opleiding"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 #########################
@@ -987,8 +986,8 @@ dvc:ProcedureGeboorteBewijs
     skos:prefLabel  "Aanvraag geboortebewijs - R1"@nl ;
     skos:notation   "R1" ;
     skos:definition "Aanvraag van bewijs van registratie van een geboorte"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 #########################
@@ -1002,8 +1001,8 @@ dvc:ProcedureVerblijfBewijs
     skos:prefLabel  "Aanvraag verblijfsbewijs - S1"@nl ;
     skos:notation   "S1" ;
     skos:definition "Aanvraag van bewijs van verblijf"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 #######################
 ### ProcedureStudie ###
@@ -1016,8 +1015,8 @@ dvc:ProcedureStudieAanvraagTertiairOnderwijs
     skos:prefLabel  "Aanvraag financiering tertiair onderwijs - T1"@nl ;
     skos:notation   "T1" ;
     skos:definition "Aanvraag bij een overheidsorgaan of -instantie van studiefinanciering, zoals studiebeurzen en studieleningen, voor tertiair onderwijs"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureStudieVerzoekToelatingTertiairOnderwijs
     a               skos:Concept ;
@@ -1026,8 +1025,8 @@ dvc:ProcedureStudieVerzoekToelatingTertiairOnderwijs
     skos:prefLabel  "Verzoek toelating tot openbaar tertiair onderwijs - T2"@nl ;
     skos:notation   "T2" ;
     skos:definition "Indiening van een initieel verzoek om toelating tot een openbare instelling voor tertiair onderwijs"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureStudieVerzoekErkenningDiploma
     a               skos:Concept ;
@@ -1036,8 +1035,8 @@ dvc:ProcedureStudieVerzoekErkenningDiploma
     skos:prefLabel  "Verzoek om academische erkenning van diploma’s - T3"@nl ;
     skos:notation   "T3" ;
     skos:definition "Verzoek om academische erkenning van diploma’s, getuigschriften of andere bewijzen van studies of opleidingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 #####################
 ### ProcedureWerk ###
@@ -1050,8 +1049,8 @@ dvc:ProcedureWerkVerzoek
     skos:prefLabel  "Verzoek tot bepaling van de toepasselijke wetgeving (883/2004 - titel 2) - U1"@nl ;
     skos:notation   "U1" ;
     skos:definition "Verzoek tot bepaling van de toepasselijke wetgeving overeenkomstig titel II van Verordening (EU) nr. 883/2004"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureWerkWijzigingBeroepssituatie
     a               skos:Concept ;
@@ -1060,8 +1059,8 @@ dvc:ProcedureWerkWijzigingBeroepssituatie
     skos:prefLabel  "Kennisgeving wijziging situatie i.k.v. socialezekerheidsuitkeringen - U2"@nl ;
     skos:notation   "U2" ;
     skos:definition "Kennisgeving van wijzigingen in de persoonlijke of beroepssituatie van de persoon die socialezekerheidsuitkeringen ontvangt, voor zover die wijzigingen voor die uitkeringen van belang zijn"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureWerkAanvraagZiekteverzekeringskaart
     a               skos:Concept ;
@@ -1070,8 +1069,8 @@ dvc:ProcedureWerkAanvraagZiekteverzekeringskaart
     skos:prefLabel  "Aanvraag van een Europese ziekteverzekeringskaart - U3"@nl ;
     skos:notation   "U3" ;
     skos:definition "Aanvraag van een Europese ziekteverzekeringskaart (EHIC)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureWerkAangifteInkomstenbelasting
     a               skos:Concept ;
@@ -1080,8 +1079,8 @@ dvc:ProcedureWerkAangifteInkomstenbelasting
     skos:prefLabel  "Indiening van een aangifte voor de inkomstenbelasting - U4"@nl ;
     skos:notation   "U4" ;
     skos:definition "Indiening van een aangifte voor de inkomstenbelasting"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 ###########################
 ### ProcedureVerhuizing ###
@@ -1094,8 +1093,8 @@ dvc:ProcedureVerhuizingAdreswijziging
     skos:prefLabel  "Registratie van adreswijziging - V1"@nl ;
     skos:notation   "V1" ;
     skos:definition "Registratie van adreswijziging"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureVerhuizingInschrijvingMotorvoertuig
     a               skos:Concept ;
@@ -1104,8 +1103,8 @@ dvc:ProcedureVerhuizingInschrijvingMotorvoertuig
     skos:prefLabel  "Inschrijving van een motorvoertuig - V2"@nl ;
     skos:notation   "V2" ;
     skos:definition "Inschrijving van een motorvoertuig dat van oorsprong is uit een lidstaat of daar al is ingeschreven, volgens de standaardprocedures"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureVerhuizingStickersWegeninfrastructuur
     a               skos:Concept ;
@@ -1114,8 +1113,8 @@ dvc:ProcedureVerhuizingStickersWegeninfrastructuur
     skos:prefLabel  "Verkrijging van stickers voor de wegeninfrastructuur - V3"@nl ;
     skos:notation   "V3" ;
     skos:definition "Verkrijging van stickers voor het gebruik van de nationale wegeninfrastructuur: door een overheidsinstantie of -orgaan opgelegde tijdsgebonden heffingen (vignet) of afstandsgebonden heffingen (tol)"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureVerhuizingEmissiestickers
     a               skos:Concept ;
@@ -1124,8 +1123,8 @@ dvc:ProcedureVerhuizingEmissiestickers
     skos:prefLabel  "Verkrijging emissiestickers - V4"@nl ;
     skos:notation   "V4" ;
     skos:definition "Verkrijging van door een overheidsinstantie of -orgaan afgegeven emissiestickers"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 #############################
 ### ProcedurePensionering ###
@@ -1138,8 +1137,8 @@ dvc:ProcedurePensioneringAanvraagUitkering
     skos:prefLabel  "Aanvraag (pre)pensioenuitkering - W1"@nl ;
     skos:notation   "W1" ;
     skos:definition "Aanvraag (pre)pensioenuitkering van verplichte regelingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedurePensioneringVerzoekOmInformatie
     a               skos:Concept ;
@@ -1148,8 +1147,8 @@ dvc:ProcedurePensioneringVerzoekOmInformatie
     skos:prefLabel  "Verzoek om informatie over pensioengegevens - W2"@nl ;
     skos:notation   "W2" ;
     skos:definition "Verzoek om informatie over pensioengegevens van verplichte regelingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 
 #################################################
@@ -1163,8 +1162,8 @@ dvc:ProcedureStartenExploiterenSluitenBedrijfKennisgeving
     skos:prefLabel  "Kennisgeving van bedrijfsactiviteit - X1"@nl ;
     skos:notation   "X1" ;
     skos:definition "Kennisgeving van bedrijfsactiviteit, vergunningen voor de uitoefening van een bedrijfsactiviteit, wijzigingen van bedrijfsactiviteit en beëindiging van een bedrijfsactiviteit zonder insolventie- of liquidatieprocedures, met uitzondering van de initiële inschrijving van een bedrijfsactiviteit in het bedrijfsregister en met uitzondering van procedures voor de oprichting van vennootschappen in de zin van artikel 54, tweede alinea, VWEU of bestanden die deze vennootschappen later indienen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureStartenExploiterenSluitenBedrijfPensioenEnVerzekeringsregelingenWerkgever
     a               skos:Concept ;
@@ -1173,8 +1172,8 @@ dvc:ProcedureStartenExploiterenSluitenBedrijfPensioenEnVerzekeringsregelingenWer
     skos:prefLabel  "Aanmelding van een werkgever bij pensioen- en verzekeringsregelingen - X2"@nl ;
     skos:notation   "X2" ;
     skos:definition "Aanmelding van een werkgever (een natuurlijke persoon) bij verplichte pensioen- en verzekeringsregelingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureStartenExploiterenSluitenBedrijfPensioenEnVerzekeringsregelingenWerknemer
     a               skos:Concept ;
@@ -1183,8 +1182,8 @@ dvc:ProcedureStartenExploiterenSluitenBedrijfPensioenEnVerzekeringsregelingenWer
     skos:prefLabel  "Aanmelding van werknemers bij pensioen- en verzekeringsregelingen - X3"@nl ;
     skos:notation   "X3" ;
     skos:definition "Aanmelding van werknemers bij verplichte pensioen- en verzekeringsregelingen"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureStartenExploiterenSluitenBedrijfAangifteVennootschapsbelasting
     a               skos:Concept ;
@@ -1193,8 +1192,8 @@ dvc:ProcedureStartenExploiterenSluitenBedrijfAangifteVennootschapsbelasting
     skos:prefLabel  "Indiening van een aangifte voor de vennootschapsbelasting - X4"@nl ;
     skos:notation   "X4" ;
     skos:definition "Indiening van een aangifte voor de vennootschapsbelasting"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureStartenExploiterenSluitenBedrijfBeeindigingArbeidsovereenkomst
     a               skos:Concept ;
@@ -1203,8 +1202,8 @@ dvc:ProcedureStartenExploiterenSluitenBedrijfBeeindigingArbeidsovereenkomst
     skos:prefLabel  "Kennisgeving van beëindiging van een arbeidsovereenkomst aan socialezekerheidsregelingen - X5"@nl ;
     skos:notation   "X5" ;
     skos:definition "Kennisgeving van beëindiging van een arbeidsovereenkomst met een werknemer aan socialezekerheidsregelingen, met uitzondering van procedures voor de collectieve beëindiging van arbeidsovereenkomsten"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
 
 dvc:ProcedureStartenExploiterenSluitenBedrijfBetalingSocialeBijdragen
     a               skos:Concept ;
@@ -1213,5 +1212,5 @@ dvc:ProcedureStartenExploiterenSluitenBedrijfBetalingSocialeBijdragen
     skos:prefLabel  "Betaling van sociale bijdragen voor werknemers - X6"@nl ;
     skos:notation   "X6" ;
     skos:definition "Betaling van sociale bijdragen voor werknemers"@nl ;
-    skos:inScheme   dvcs:YourEuropeCategorie ;
-    skos:topConceptOf dvcs:YourEuropeCategorie .
+    skos:inScheme   schemes:YourEuropeSubCategorie ;
+    skos:topConceptOf schemes:YourEuropeSubCategorie .
