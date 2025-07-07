@@ -43,11 +43,8 @@ export default {
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
         ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
-        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
-        (GROUP_CONCAT(DISTINCT ?titelVoorwaarde; separator=" | ") AS ?titelVoorwaarde)
-        (GROUP_CONCAT(DISTINCT ?beschrijvingVoorwaarde; separator=" | ") AS ?beschrijvingVoorwaarde)
-        (GROUP_CONCAT(DISTINCT ?titelBewijsstuk; separator=" | ") AS ?titelBewijsstuk)
-        (GROUP_CONCAT(DISTINCT ?beschrijvingBewijsstuk; separator=" | ") AS ?beschrijvingBewijsstuk)
+        ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk
+        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
         (GROUP_CONCAT(DISTINCT ?titelProcedureWebsite; separator=" | ") AS ?titelProcedureWebsite)
         (GROUP_CONCAT(DISTINCT ?beschrijvingProcedureWebsite; separator=" | ") AS ?beschrijvingProcedureWebsite)
         (GROUP_CONCAT(DISTINCT ?urlProcedureWebsite; separator=" | ") AS ?urlProcedureWebsite)
@@ -62,6 +59,7 @@ export default {
         (GROUP_CONCAT(DISTINCT ?contactpuntTelefoon; separator=" | ") AS ?contactpuntTelefoon)
         (GROUP_CONCAT(DISTINCT ?contactpuntWebsiteUrl; separator=" | ") AS ?contactpuntWebsiteUrl)
         (GROUP_CONCAT(DISTINCT ?contactpuntOpeningsuren; separator=" | ") AS ?contactpuntOpeningsuren)
+        (GROUP_CONCAT(DISTINCT ?gemeente; separator=" | ") AS ?gemeente)
         (GROUP_CONCAT(DISTINCT ?adres; separator=" | ") AS ?adres)
         (GROUP_CONCAT(DISTINCT ?titelWebsite; separator=" | ") AS ?titelWebsite)
         (GROUP_CONCAT(DISTINCT ?beschrijvingWebsite; separator=" | ") AS ?beschrijvingWebsite)
@@ -233,10 +231,11 @@ export default {
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
         ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
-        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?gemeente ?startDatum ?eindDatum ?productTypeLabel
+        ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk
+        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
 
     `;
-    const queryResponse = await batchedQuery(lpdcQuery, 1000, 1);
+    const queryResponse = await batchedQuery(lpdcQuery, 1000);
     const data = queryResponse.results.bindings;
 
     const postProcessedData = data.map(r => ({
