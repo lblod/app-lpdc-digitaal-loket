@@ -3,7 +3,8 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 DELETE {
   GRAPH ?g {
-    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept .
+    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept ;
+             a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
   }
 }
 WHERE {
