@@ -7,6 +7,7 @@
 - enable ACM/IDM logins for the dashboard [LPDC-1413]
 - Enable ACM/IDM for LPDC [LPDC-1029] ([LPDC-1405] [LPDC-1406])
 - New `lpdc-management-service` with better admin support
+- created new yourEurope codelist with only the subcategories [LPDC-1423]
 
 ### Deploy notes
 
@@ -54,6 +55,17 @@ includes basic-auth setup. Make sure to move and collect all `VIRTUAL_HOST` and
 accordingly:
 
     drc up -d --remove-orphans
+
+#### YourEurope codelist
+
+```
+drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
+```
+
+**Cleanup of TEST data**
+
+For the cleanup of test data we can add and run the following migration by creating a file in the local migrations folder `config/migrations/local/20250701153410-cleanup-deprecated-broad-your-europe-codelist-options.sparql`. This will remove all the dangling 'broad' options that are still linked in the yourEurope dropdown.
+
 
 ## v0.27.3 (2025-06-20)
 ### Frontend
