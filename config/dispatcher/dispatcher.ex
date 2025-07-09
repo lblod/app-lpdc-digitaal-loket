@@ -159,10 +159,6 @@ defmodule Dispatcher do
   # Account control
   #################################################################
 
-  match "/mock/sessions/*path", @json do
-    forward conn, path, "http://mocklogin/sessions/"
-  end
-
   match "/gebruikers/*path", @json do
     forward conn, path, "http://cache/gebruikers/"
   end
