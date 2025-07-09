@@ -53,10 +53,12 @@ export default {
         ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
         ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk
-        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
-        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?titelProcedureWebsite); separator=" | ") AS ?titelProcedureWebsite)
-        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?beschrijvingProcedureWebsite); separator=" | ") AS ?beschrijvingProcedureWebsite)
-        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?urlProcedureWebsite); separator=" | ") AS ?urlProcedureWebsite)
+        ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?titelProcedure); separator=" | ") AS ?titelProcedure)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?beschrijvingProcedure); separator=" | ") AS ?beschrijvingProcedure)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedureWebsite), "||", ?titelProcedureWebsite); separator=" | ") AS ?titelProcedureWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedureWebsite), "||", ?beschrijvingProcedureWebsite); separator=" | ") AS ?beschrijvingProcedureWebsite)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedureWebsite), "||", ?urlProcedureWebsite); separator=" | ") AS ?urlProcedureWebsite)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderKosten), "||", ?titelKosten); separator=" | ") AS ?titelKosten)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderKosten), "||", ?beschrijvingKosten); separator=" | ") AS ?beschrijvingKosten)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderFinancieelVoordeel), "||", ?titelFinancieelVoordeel); separator=" | ") AS ?titelFinancieelVoordeel)
@@ -140,10 +142,10 @@ export default {
 
         OPTIONAL {
           ?uriPubliekeDienstverlening cpsv:follows ?procedure .
-          ?procedure dct:title ?titelProcedure ; dct:description ?beschrijvingProcedure .
+          ?procedure dct:title ?titelProcedure ; dct:description ?beschrijvingProcedure ; shacl:order ?orderProcedure .
           OPTIONAL {
             ?procedure lpdcExt:hasWebsite ?website .
-            OPTIONAL { ?website dct:title ?titelProcedureWebsite ; dct:description ?beschrijvingProcedureWebsite ; schema:url ?urlProcedureWebsite ; shacl:order ?orderProcedure }
+            OPTIONAL { ?website dct:title ?titelProcedureWebsite ; dct:description ?beschrijvingProcedureWebsite ; schema:url ?urlProcedureWebsite ; shacl:order ?orderProcedureWebsite }
           }
         }
 
@@ -240,7 +242,7 @@ export default {
         ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
         ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk
-        ?titelProcedure ?beschrijvingProcedure ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
+        ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
 
     `;
     const queryResponse = await batchedQuery(lpdcQuery, 1000);
@@ -269,9 +271,7 @@ export default {
       beschrijvingVoorwaarde: r.beschrijvingVoorwaarde ? stripHtml(r.beschrijvingVoorwaarde.value) : '',
       titelBewijsstuk: r.titelBewijsstuk?.value || '',
       beschrijvingBewijsstuk: r.beschrijvingBewijsstuk ? stripHtml(r.beschrijvingBewijsstuk.value) : '',
-      titelProcedure: r.titelProcedure?.value || '',
-      beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripHtml(r.beschrijvingProcedure.value) : '',
-      titelProcedureWebsite: r.titelProcedureWebsite?.value ? stripOrder(r.titelProcedureWebsite.value) : '',
+      titelProcedure: r.titelProcedure?.value ? stripOrder(r.titelProcedure.value) : '',
       beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripOrder(stripHtml(r.beschrijvingProcedure.value)) : '',
       titelProcedureWebsite: r.titelProcedureWebsite?.value ? stripOrder(r.titelProcedureWebsite.value) : '',
       beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite?.value ? stripOrder(stripHtml(r.beschrijvingProcedureWebsite.value)) : '',
@@ -291,8 +291,8 @@ export default {
       gemeente: r.gemeente?.value ? stripOrder(r.gemeente.value) : '',
       adres: r.adres?.value ? stripOrder(r.adres.value) : '',
       titelWebsite: r.titelWebsite?.value ? stripOrder(r.titelWebsite.value) : '',
-      urlWebsite: r.urlWebsite?.value ? stripOrder(r.urlWebsite.value) : '',
       beschrijvingWebsite: r.beschrijvingWebsite?.value ? stripOrder(stripHtml(r.beschrijvingWebsite.value)) : '',
+      urlWebsite: r.urlWebsite?.value ? stripOrder(r.urlWebsite.value) : '',
       startDatum: r.startDatum?.value || '',
       eindDatum: r.eindDatum?.value || '',
       productTypeLabel: r.productTypeLabel?.value || '',
