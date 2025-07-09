@@ -27,6 +27,7 @@ export default {
     }
 
     // Query
+    // Construction of the GROUP_CONCAT was made to use shacl:order since without it, the order of the entries wasn't according to the form. shacl:order makes it a consistent way of ordering.
     console.log('Generating LPDC Bestuurseenheid Complete Report');
     const lpdcQuery = `
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
