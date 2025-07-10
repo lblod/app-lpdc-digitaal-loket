@@ -64,7 +64,50 @@ drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
 
 **Cleanup of TEST data**
 
-For the cleanup of test data we can add and run the following migration by creating a file in the local migrations folder `config/migrations/local/20250701153410-cleanup-deprecated-broad-your-europe-codelist-options.sparql`. This will remove all the dangling 'broad' options that are still linked in the yourEurope dropdown.
+For the cleanup of test data we can add and run the following migration by creating a file in the local migrations folder `config/migrations/local/20250701153410-cleanup-deprecated-broad-your-europe-codelist-options.sparql`. This will remove all the dangling 'broad' options that are still linked in the yourEurope dropdown:
+
+```
+PREFIX dvc: <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+DELETE {
+  GRAPH ?g {
+    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept ;
+             a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    VALUES ?concept {
+      dvc:Reizen
+      dvc:WerkEnPensionering
+      dvc:Voertuigen
+      dvc:Verblijf
+      dvc:OnderwijsOfStage
+      dvc:Gezondheidszorg
+      dvc:BurgerEnFamilieRechten
+      dvc:Consumentenrechten
+      dvc:BeschermingPersoonsgegevens
+      dvc:Bedrijf
+      dvc:Werknemers
+      dvc:Belastingen
+      dvc:Goederen
+      dvc:Diensten
+      dvc:Bedrijfsfinanciering
+      dvc:Overheidsopdrachten
+      dvc:GezondheidVeiligheidWerk
+      dvc:ProcedureGeboorte
+      dvc:ProcedureVerblijf
+      dvc:ProcedureStudie
+      dvc:ProcedureWerk
+      dvc:ProcedureVerhuizing
+      dvc:ProcedurePensionering
+      dvc:ProcedureStartenExploiterenSluitenBedrijf
+    }
+    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept .
+  }
+}
+```
 
 
 ## v0.27.3 (2025-06-20)
