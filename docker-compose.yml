@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.24.0
+    image: lblod/frontend-lpdc:0.24.1
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
@@ -199,7 +199,7 @@ services:
       EMBER_ACMIDM_CLIENT_ID: "<CLIENT_ID>"
       EMBER_ACMIDM_BASE_URL: "<BASE_URL>"
       EMBER_ACMIDM_REDIRECT_URL: "<REDIRECT_URL>"
-      EMBER_ACMIDM_LOGOUT_URL: "<LOGOUT_URL>" 
+      EMBER_ACMIDM_LOGOUT_URL: "<LOGOUT_URL>"
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
     labels:
       - "logging=true"
@@ -210,7 +210,7 @@ services:
     image: lblod/acmidm-login-service:0.12.0
     environment:
       LOG_SINK_URL: "http://sink"
-      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d" 
+      MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
       # The next variables are environment-specific.
       # These should be overriden in docker-compose.override.yml
       MU_APPLICATION_AUTH_DISCOVERY_URL: "<ACM_IDM_AUTH_DISCOVERY_URL>"
@@ -241,7 +241,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.50.2
+    image: lblod/lpdc-management-service:0.50.3
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"

@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### Frontend
+- Bump to [v0.24.1](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0241-2025-07-10)
+### Management
+- Bump to [v0.50.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.3)
+
 ### Backend
 
 - enable ACM/IDM logins for the dashboard [LPDC-1413]
@@ -111,7 +116,7 @@ WHERE {
 
 
 ## v0.27.3 (2025-06-20)
-### Frontend
+### Management
 - Bump to [v0.50.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.1)
 ### Frontend
 - Bump to [v0.22.2](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0222-2025-06-20)
