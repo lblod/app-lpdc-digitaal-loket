@@ -30,21 +30,14 @@ Once everything is updated in the docker-compose.override.yml file you need to `
 
 * There is a new login-lpdc service. Rename the old `login` to `login-lpdc` in
   the `docker-compose.override.yml`.
-* Start the `impersonation` service
-
-    docker compose up -d impersonation
-
-* Add the ACM/IDM client id and secret and start the new lpdc Loket frontend.
-
-    drc up -d lpdc
-
-* New dispatcher, resource, and mu-auth rules:
-
-    drc restart cache resource database dispatcher
-
-* New `lpdc-management-service`:
-
-    drc up -d lpdc-management-service
+* Start the `impersonation` service  
+  `docker compose up -d impersonation`
+* Add the ACM/IDM client id and secret and start the new lpdc Loket frontend.  
+  `drc up -d lpdc`
+* New dispatcher, resource, and mu-auth rules:  
+  `drc restart cache resource database dispatcher`
+* New `lpdc-management-service`:  
+  `drc up -d lpdc-management-service`
 
 #### Controle
 
