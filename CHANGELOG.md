@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v0.28.0 (2025-07-10)
 
 ### Backend
 
