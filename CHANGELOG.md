@@ -64,10 +64,11 @@ accordingly:
 #### YourEurope codelist
 
 ```
+drc restart migrations; drc logs -ft --tail=200 migrations
 drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
 ```
 
-**Cleanup of TEST data**
+**Cleanup of deprecated yourEurope codelist options in TEST data**
 
 For the cleanup of test data we can add and run the following migration by creating a file in the local migrations folder `config/migrations/local/20250701153410-cleanup-deprecated-broad-your-europe-codelist-options.sparql`. This will remove all the dangling 'broad' options that are still linked in the yourEurope dropdown:
 
