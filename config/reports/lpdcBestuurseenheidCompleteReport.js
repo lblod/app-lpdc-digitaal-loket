@@ -52,8 +52,11 @@ export default {
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
         ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
-        ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk
         ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderVoorwaarde), "||", ?titelVoorwaarde); separator=" | ") AS ?titelVoorwaarde)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderVoorwaarde), "||", ?beschrijvingVoorwaarde); separator=" | ") AS ?beschrijvingVoorwaarde)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderBewijsstuk), "||", ?titelBewijsstuk); separator=" | ") AS ?titelBewijsstuk)
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderBewijsstuk), "||", ?beschrijvingBewijsstuk); separator=" | ") AS ?beschrijvingBewijsstuk)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?titelProcedure); separator=" | ") AS ?titelProcedure)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedure), "||", ?beschrijvingProcedure); separator=" | ") AS ?beschrijvingProcedure)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderProcedureWebsite), "||", ?titelProcedureWebsite); separator=" | ") AS ?titelProcedureWebsite)
@@ -133,10 +136,10 @@ export default {
 
         OPTIONAL {
           ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde .
-          OPTIONAL { ?voorwaarde dct:title ?titelVoorwaarde ; dct:description ?beschrijvingVoorwaarde }
+          OPTIONAL { ?voorwaarde dct:title ?titelVoorwaarde ; dct:description ?beschrijvingVoorwaarde ; shacl:order ?orderVoorwaarde }
           OPTIONAL {
             ?voorwaarde m8g:hasSupportingEvidence ?bewijs .
-            OPTIONAL { ?bewijs dct:title ?titelBewijsstuk ; dct:description ?beschrijvingBewijsstuk }
+            OPTIONAL { ?bewijs dct:title ?titelBewijsstuk ; dct:description ?beschrijvingBewijsstuk ; shacl:order ?orderBewijsstuk }
           }
         }
 
@@ -241,7 +244,6 @@ export default {
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
         ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
-        ?titelVoorwaarde ?beschrijvingVoorwaarde ?titelBewijsstuk ?beschrijvingBewijsstuk
         ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
 
     `;
@@ -267,10 +269,10 @@ export default {
       beschrijving: r.beschrijving ? stripHtml(r.beschrijving.value): '',
       aanvullendeBeschrijving: r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
       uitzondering: r.uitzondering ? stripHtml(r.uitzondering.value) : '',
-      titelVoorwaarde: r.titelVoorwaarde?.value || '',
-      beschrijvingVoorwaarde: r.beschrijvingVoorwaarde ? stripHtml(r.beschrijvingVoorwaarde.value) : '',
-      titelBewijsstuk: r.titelBewijsstuk?.value || '',
-      beschrijvingBewijsstuk: r.beschrijvingBewijsstuk ? stripHtml(r.beschrijvingBewijsstuk.value) : '',
+      titelVoorwaarde: r.titelVoorwaarde?.value ? stripOrder(r.titelVoorwaarde.value) : '',
+      beschrijvingVoorwaarde: r.beschrijvingVoorwaarde?.value ? stripOrder(stripHtml(r.beschrijvingVoorwaarde.value)) : '',
+      titelBewijsstuk: r.titelBewijsstuk?.value ? stripOrder(r.titelBewijsstuk.value) : '',
+      beschrijvingBewijsstuk: r.beschrijvingBewijsstuk?.value ? stripOrder(stripHtml(r.beschrijvingBewijsstuk.value)) : '',
       titelProcedure: r.titelProcedure?.value ? stripOrder(r.titelProcedure.value) : '',
       beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripOrder(stripHtml(r.beschrijvingProcedure.value)) : '',
       titelProcedureWebsite: r.titelProcedureWebsite?.value ? stripOrder(r.titelProcedureWebsite.value) : '',
