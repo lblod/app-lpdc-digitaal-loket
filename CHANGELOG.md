@@ -2,11 +2,17 @@
 
 ## Unreleased
 
+### Frontend
+- Bump to [v0.24.1](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0241-2025-07-10)
+### Management
+- Bump to [v0.50.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.3)
+
 ### Backend
 
 - enable ACM/IDM logins for the dashboard [LPDC-1413]
 - Enable ACM/IDM for LPDC [LPDC-1029] ([LPDC-1405] [LPDC-1406])
 - New `lpdc-management-service` with better admin support
+- created new yourEurope codelist with only the subcategories [LPDC-1423]
 
 ### Deploy notes
 
@@ -55,8 +61,62 @@ accordingly:
 
     drc up -d --remove-orphans
 
+#### YourEurope codelist
+
+```
+drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
+```
+
+**Cleanup of TEST data**
+
+For the cleanup of test data we can add and run the following migration by creating a file in the local migrations folder `config/migrations/local/20250701153410-cleanup-deprecated-broad-your-europe-codelist-options.sparql`. This will remove all the dangling 'broad' options that are still linked in the yourEurope dropdown:
+
+```
+PREFIX dvc: <https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+DELETE {
+  GRAPH ?g {
+    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept ;
+             a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    VALUES ?concept {
+      dvc:Reizen
+      dvc:WerkEnPensionering
+      dvc:Voertuigen
+      dvc:Verblijf
+      dvc:OnderwijsOfStage
+      dvc:Gezondheidszorg
+      dvc:BurgerEnFamilieRechten
+      dvc:Consumentenrechten
+      dvc:BeschermingPersoonsgegevens
+      dvc:Bedrijf
+      dvc:Werknemers
+      dvc:Belastingen
+      dvc:Goederen
+      dvc:Diensten
+      dvc:Bedrijfsfinanciering
+      dvc:Overheidsopdrachten
+      dvc:GezondheidVeiligheidWerk
+      dvc:ProcedureGeboorte
+      dvc:ProcedureVerblijf
+      dvc:ProcedureStudie
+      dvc:ProcedureWerk
+      dvc:ProcedureVerhuizing
+      dvc:ProcedurePensionering
+      dvc:ProcedureStartenExploiterenSluitenBedrijf
+    }
+    ?subject <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory> ?concept .
+  }
+}
+```
+
+
 ## v0.27.3 (2025-06-20)
-### Frontend
+### Management
 - Bump to [v0.50.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.1)
 ### Frontend
 - Bump to [v0.22.2](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0222-2025-06-20)
