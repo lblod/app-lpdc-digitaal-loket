@@ -13,8 +13,11 @@
 - Enable ACM/IDM for LPDC [LPDC-1029] ([LPDC-1405] [LPDC-1406])
 - New `lpdc-management-service` with better admin support
 - created new yourEurope codelist with only the subcategories [LPDC-1423]
+- New report added "Overview of LPDC instances - all fields" [LPDC-1418]
 
 ### Deploy notes
+
+- `drc restart report-generation`
 
 #### Dashboard
 

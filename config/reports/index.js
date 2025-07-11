@@ -1,4 +1,5 @@
 import lpdcBestuurseenheidReport from "./lpdcBestuurseenheidReport";
+import lpdcBestuurseenheidCompleteReport from "./lpdcBestuurseenheidCompleteReport";
 import lpdcConceptsReport from "./lpdcConceptsReport";
 import instancesStuckinPublishingForLPDCReport from "./instancesStuckinPublishingForLPDCReport";
 import formalInformalChoiceLPDCReport from "./formalInformalChoiceLPDCReport";
@@ -11,6 +12,7 @@ import organizationsWithoutExecutingAuthorityLevel from "./organizationsWithoutE
 
 export default [
   lpdcBestuurseenheidReport,
+  lpdcBestuurseenheidCompleteReport,
   lpdcConceptsReport,
   instancesStuckinPublishingForLPDCReport,
   formalInformalChoiceLPDCReport,
