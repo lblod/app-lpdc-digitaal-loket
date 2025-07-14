@@ -14,10 +14,12 @@
 
 - created new yourEurope codelist with only the subcategories [LPDC-1423]
 - New report added "Overview of LPDC instances - all fields" [LPDC-1418]
+- New Dashboard LPDC doesn't show most recent reports [LPDC-1448]
 
 ### Deploy notes
 
 - `drc restart report-generation`
+- `drc restart dispatcher`
 
 #### YourEurope codelist
 
