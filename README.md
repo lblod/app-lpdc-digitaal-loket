@@ -1,8 +1,6 @@
 # LPDC (Lokale Producten- en Dienstencatalogus) - Digitaal loket
 
-_Note_: Documentation is structured using [The software guidebook by Simon Brown](https://leanpub.com/documenting-software-architecture).
-
-## 1. Context
+## Context
 
 The LPDC application is built on the data model defined in:
 * https://data.vlaanderen.be/doc/implementatiemodel/ipdc-lpdc/
@@ -14,15 +12,7 @@ Other repos:
 - [LPDC Management Service](https://github.com/lblod/lpdc-management-service)
 - [LPDC Publish Service](https://github.com/lblod/lpdc-publish-service)
 
-## 2. Functional Overview
-
-## 3. Quality Attributes
-
-## 4. Constraints
-
-## 5. [Principles](docs/principles.md)
-
-## 6. Software Architecture
+## Software Architecture
 
 [Container Diagram](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764558708522486&cot=14)
 
@@ -32,18 +22,9 @@ Component Diagram: The architecture is that each docker can in fact be seen as a
 
 [Sequence Diagram For 'Reading and updating concepts from LDES stream'](https://miro.com/app/board/uXjVPrXQm7w=/?moveToWidget=3458764559654392138&cot=14)
 
-## 7. Code
+## Further documentation
 
-## 8. Data
-
-## 9. [Infrastructure Architecture](docs/infrastructure-architecture.md)
-
-## 10. [Deployment](docs/deployment.md)
-
-## 11. [Operation and Support](docs/operation-support/operation-support.md)
-
-## 12. [Development Environment](docs/development-environment.md)
-
-## 13. [Decision Log](docs/adr/adrs.md)
-
-## 14. [Integrerende gemeentes](docs/integrerende-gemeentes.md)
+- Setting up and running a local [development environment](docs/development-environment.md)
+- [Making releases and deploying](docs/deployment.md) to the different environments.
+- Additional documentation on [operational support](docs/operation-support/operation-support.md) and supporting [integrating parties](docs/integrerende-gemeentes.md).
+- An overview of (historical) [decisions](docs/adr/adrs.md) that shaped the applications.

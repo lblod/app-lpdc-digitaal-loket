@@ -1,0 +1,14 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?concept skos:prefLabel ?prefLabel .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?concept skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/YourEuropeCategorie> .
+    ?concept skos:prefLabel ?prefLabel .
+    ?concept skos:broader ?broaderConcept .
+  }
+}

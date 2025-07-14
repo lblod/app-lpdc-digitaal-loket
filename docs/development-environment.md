@@ -4,21 +4,15 @@ This repository has two setups:
 
 * *docker-compose.yml*: This provides you with the backend components; there is an included frontend application which you can publish using a separate proxy (we tend to put a letsencrypt proxy in front).
 * *docker-compose.dev.yml*: Provides changes for a good frontend development setup.
-    - publishes the backend services on port 90 directly, so you can run `ember serve --proxy http://localhost:90/` when developing the frontend apps natively.
+    - publishes the backend services on port 90 directly, so you can run `ember serve --proxy http://localhost:90/` (or `eds --proxy http://host:90/` if you use [docker-ember](https://github.com/madnificent/docker-ember)) when developing the frontend app locally.
     - publishes the database instance on port 8890, so you can easily see what content is stored in the base triplestore.
     - provides a mock-login backend service, so you don't need the ACM/IDM integration.
 
-# Running and maintaining
+## Setting up a local development stack
 
-General information on running and maintaining an installation
+Setting up a local stack essentially consists of two steps: 1) checking out this project, and 2) initialising the local database with some data.
 
-## Running your setup
-
-### System requirements
-
-You'll need a beefy machine, with at least 16 GB of RAM.
-
-#### Running the dev setup
+### Prerequisites
 
 First install `git-lfs` (see <https://github.com/git-lfs/git-lfs/wiki/Installation>)
 ```
@@ -33,19 +27,14 @@ First install `git-lfs` (see <https://github.com/git-lfs/git-lfs/wiki/Installati
 ```
 
 To ease all typing for `docker compose` commands, start by creating the following files in the directory of the project:
-* A `docker-compose.override.yml` file with following content:
-
-```
-version: "3.7"
-```
-
-* And an `.env` file with following content:
+* A `docker-compose.override.yml` file that can remain empty for now
+* A `.env` file with following content:
 
 ```
 COMPOSE_FILE=docker-compose.yml:docker-compose.dev.yml:docker-compose.override.yml
 ```
 
-#### If you are starting for the first time:
+### Initialise your local database
 
 This is an optional step. If you trust your machine is powerful enough, you can move on (this step should only be done once).
 First start virtuoso and let it setup itself:
@@ -76,7 +65,7 @@ This will take a while; you may choose to monitor the migrations service in a se
 [2023-04-07 20:13:15] INFO  WEBrick::HTTPServer#start: pid=13 port=80
 ```
 
-At this point, you should be able to access the `/mock-login` path and see the available `bestuurseenheden`. After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `ldes-consumer-conceptsnapshot-ipdc` service, which is set to run at 00:00 UTC time on a daily basis. Do note that you need to be mindful of the `UTC vs Local Time` and `Summer vs Winter Time` differences:
+At this point, after booting the your local stack, you should be able to access the `/mock-login` path and see the available administrative units (*nl. bestuurseenheden*). After logging in and clicking on `Product of dienst toevoegen`, you will notice the following message: *Er werden geen producten of diensten gevonden*. In order to ingest concepts from IPDC, you need to trigger the `ldes-consumer-conceptsnapshot-ipdc` service, which is set to run at 00:00 UTC time on a daily basis. Do note that you need to be mindful of the `UTC vs Local Time` and `Summer vs Winter Time` differences:
 
 * A cron pattern of **"20 17 * * *"** runs at 17:20 UTC time every day
     - During *Summer Time*: Runs at 19:20 Brussels Time (UTC+2)
@@ -93,12 +82,37 @@ After changing the cron pattern, run `docker compose up -d` if the stack is offl
 
 The entire process takes between 30-60 minutes; you can confirm the job is done when no new logs are printed (the service itself does not log the end of the consumption process). At this stage, you can repeat the `/mock-login` flow again and click on `Product of dienst toevoegen`, where you will see the loaded IPDC TNI concepts.
 
+### Alternative: initialise local database with TEST data
+
+:warning: This is a quick but dirty way to add data into a database. Although it usually works well enough for local development setups, it should never be used in other environments. Consult the docker-virtuoso [README](https://github.com/redpencilio/docker-virtuoso/blob/master/README.md#L104) for proper ways to load data into virtuoso.
+
+Alternatively you can initialise your local development setup with data from the TEST environment. This has the advantage that it is already properly populated with product instances and other relevant data. This does requires you have ssh access to the server with the TEST environment.
+
+```shell
+cd /path/to/your/local/app-lpdc-digitaal-loket
+
+# If the stack is running, bring it down first
+docker compose down
+
+# Remove any current database folder
+rm -r data/db
+
+# sync the data from the test environment
+rsync -e ssh -avz -P root@lpdc-dev.s.redhost.be:/data/app-lpdc-digitaal-loket-test/data/db data/
+
+# Start virtuoso and the migrations service
+docker compose up -d virtuoso migrations
+
+# When the migrations have run successfully, start the rest of the stack
+docker compose up -d
+```
+
 ### Normal start
 
 This should be your go-to way of starting the stack:
 
 ```
-docker compose up # or "docker compose up -d" if you want to run it in the background
+docker compose up -d # or "docker compose up" if you do not want to run it in the background
 ```
 
 Always double check the status of the migrations `docker compose logs -f --tail=200 migrations` and wait for everything to boot to ensure clean caches.
@@ -115,7 +129,18 @@ lpdc:
 
 You can then access the frontend by going to `http://localhost:4205/mock-login` (4205 can be changed to any other unused port on your system).
 
-### Running the regular setup
+
+LPDC relies on an external service[^1] to verify the validity of addresses inputted in the frontend. This service requires an API key to be provided for it to reply correctly. Otherwise you can encounter error messages in the frontend when handling address data. In your browser's developer console such errors will show up as `500` errors on requests for the `lpdc-management/address/...` route. You can configure LPDC's management service with a correct API key to prevent such errors, by adding something like the following to your `docker-compose.override.yml` file:
+
+```
+lpdc-management:
+  environment:
+    ADRESSEN_REGISTER_API_KEY: "REPLACE_BY_A_VALID_API_KEY"
+```
+
+The `docker-compose.override.yml` files in the different server environments for LPDC contain usable keys.
+
+## Running the regular setup
 
 ```
 docker compose up -d
@@ -125,72 +150,7 @@ The stack is built starting from [mu-project](https://github.com/mu-semtech/mu-p
 
 OpenAPI documentation can be generated using [cl-resources-openapi-generator](https://github.com/mu-semtech/cl-resources-openapi-generator).
 
-## Upgrading your setup
-
-Once installed, you may desire to upgrade your current setup to follow development of the main stack. The following example describes how to do this easily for both the demo setup, as well as for the development one.
-
-### Upgrading the development setup
-
-For the dev setup, we assume you'll pull more often and will most likely clear the database separately:
-
-```
-# This assumes the .env file has been set
-
-# Bring the stack down
-docker compose down
-
-# Pull in the changes
-git pull
-
-# Launch the stack
-docker compose up -d
-```
-
-As with the initial setup, we wait for everything to boot to ensure clean caches. You may choose to monitor the migrations service in a separate terminal to and wait for the overview of all migrations to appear: `docker compose logs -f --tail=200 migrations`.
-
-Once the migrations have run, you can go on with your current setup.
-
-### Backing up your local database
-
-One helpful way to ease your development process is to back up your local database (the `/data/db/` folder) after migrations are completed, and concepts are pulled through the `ldes-consumer-conceptsnapshot-ipdc` service.
-
-If your local data reaches a stage you deem to be tainted and you want to start anew, you can do the following:
-
-```
-# Bring down the running stack
-docker compose down
-
-# Remove existing database folder
-rm -rf data/db
-
-# Copy backed-up database folder
-cp -r [location-of-backed-up-db-folder] data/
-
-# Bring the stack back up again
-docker compose up
-```
-
-This process will restore your local data to the state in which they were backed up in.
-
-## Cleaning the database
-
-At some point, you may want to clean the database and make sure it's in a pristine state.
-
-```
-# This assumes the .env file has been set
-
-# Bring down the current setup
-docker compose down
-
-# Keep only required database files
-rm -Rf data/db
-git checkout data/db
-
-# Bring the stack back up
-docker compose up -d
-```
-
-### Prerequisites when running on mac arm64
+## Additional steps when running on mac arm64
 
 Build all arm64 images using script
 ```shell
@@ -215,34 +175,28 @@ cd tools
 ./build-arm-images.sh
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml`. 
+Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml`.
 See [contents for mac arm64](docker-overrides/docker-compose.tests.latest.override-arm64.yml) for an example; don't forget to replace api keys templates..
 
-Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml`. 
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml`.
 See [contents for mac arm64](docker-overrides/docker-compose.tests.development.override-arm64.yml) for an example; don't forget to replace api keys templates..
 
 ### Prerequisites when not running on mac arm64
 
-Create Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content; don't forget to replace api keys templates..
+Create a Dockerfile in tests folder with name `docker-compose.tests.latest.override.yml` and following content; don't forget to replace api keys templates.
 
 ```dockerfile
-version: "3.7"
-
 services:
-
   lpdc-management:
     environment:
       ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
 
 ```
 
-Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content; don't forget to replace api keys templates..
+Create Dockerfile in tests folder with name `docker-compose.tests.development.override.yml` and following content; don't forget to replace api keys templates.
 
 ```dockerfile
-version: "3.7"
-
 services:
-
   lpdc-management:
     environment:
       ADRESSEN_REGISTER_API_KEY: <ADRESSEN_REGISTER_API_KEY>
@@ -319,4 +273,4 @@ docker compose -f ./docker-compose.tests.yml -f ./docker-compose.tests.latest.ym
 _Note_: the test container keeps it database under the folder /tests/data-tests. It is reused over test runs. It contains the migrated data related to bestuurseenheden, personen, etc. If you want to have a very clean test run, stop docker, delete this folder, and restart test container.
 
 
-
+[^1]: https://api.basisregisters.vlaanderen.be
