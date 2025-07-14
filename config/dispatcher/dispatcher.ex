@@ -49,6 +49,14 @@ defmodule Dispatcher do
     forward conn, path, "http://lpdc-management/contact-info-options/"
   end
 
+  get "/lpdc-management/creator-options/*path" do
+    forward conn, path, "http://lpdc-management/creator-options/"
+  end
+
+  get "/lpdc-management/last-modifier-options/*path" do
+    forward conn, path, "http://lpdc-management/last-modifier-options/"
+  end
+
   match "/lpdc-management/address/*path" do
     forward conn, path, "http://lpdc-management/address/"
   end
