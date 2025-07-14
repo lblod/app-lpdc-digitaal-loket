@@ -3,8 +3,11 @@
 ## Unreleased
 
 ### Frontend
+
 - Bump to [v0.24.1](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0241-2025-07-10)
+
 ### Management
+
 - Bump to [v0.50.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.3)
 
 ### Backend
