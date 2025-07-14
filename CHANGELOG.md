@@ -4,15 +4,16 @@
 
 ### Frontend
 
-- Bump to [v0.24.1](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0241-2025-07-10)
+- Bump to [v0.24.2](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0242-2025-07-14)
 
 ### Management
 
-- Bump to [v0.50.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.3)
+- Bump to [v0.50.4](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.4)
 
 ### Backend
 
 - created new yourEurope codelist with only the subcategories [LPDC-1423]
+- add creator and last modifier filtering [LPDC-1421]
 - New report added "Overview of LPDC instances - all fields" [LPDC-1418]
 - New Dashboard LPDC doesn't show most recent reports [LPDC-1448]
 

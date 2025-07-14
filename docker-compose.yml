@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.24.1
+    image: lblod/frontend-lpdc:0.24.2
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
@@ -241,7 +241,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.50.3
+    image: lblod/lpdc-management-service:0.50.4
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
