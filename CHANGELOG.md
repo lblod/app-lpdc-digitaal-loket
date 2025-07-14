@@ -22,12 +22,12 @@
 - `drc restart report-generation`
 - `drc restart dispatcher`
 
-#### YourEurope codelist
+#### YourEurope codelist & creator/lastmodifier filtering
 
 ```
 drc restart migrations; drc logs -ft --tail=200 migrations
 drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
-drc restart resource cache
+drc restart resource cache dispatcher
 ```
 
 **Cleanup of deprecated yourEurope codelist options in TEST data**
