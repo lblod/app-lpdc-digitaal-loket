@@ -69,8 +69,10 @@ defmodule Dispatcher do
   # Reports
   #################################################################
 
+  # NOTE: use resources! This service has `links: - virtuoso:datase`, because
+  # it is heavy on the database.
   match "/reports/*path", @json do
-    forward conn, path, "http://cache/reports/"
+    forward conn, path, "http://resource/reports/"
   end
 
   get "/files/*path", @json do
