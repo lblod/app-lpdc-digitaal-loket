@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v0.28.0 (2025-07-10)
 
 ### Frontend
 - Bump to [v0.24.1](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0241-2025-07-10)
@@ -39,21 +39,14 @@ Once everything is updated in the docker-compose.override.yml file you need to `
 
 * There is a new login-lpdc service. Rename the old `login` to `login-lpdc` in
   the `docker-compose.override.yml`.
-* Start the `impersonation` service
-
-    docker compose up -d impersonation
-
-* Add the ACM/IDM client id and secret and start the new lpdc Loket frontend.
-
-    drc up -d lpdc
-
-* New dispatcher, resource, and mu-auth rules:
-
-    drc restart cache resource database dispatcher
-
-* New `lpdc-management-service`:
-
-    drc up -d lpdc-management-service
+* Start the `impersonation` service  
+  `docker compose up -d impersonation`
+* Add the ACM/IDM client id and secret and start the new lpdc Loket frontend.  
+  `drc up -d lpdc`
+* New dispatcher, resource, and mu-auth rules:  
+  `drc restart cache resource database dispatcher`
+* New `lpdc-management-service`:  
+  `drc up -d lpdc-management-service`
 
 #### Controle
 
