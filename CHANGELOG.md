@@ -16,11 +16,13 @@
 - add creator and last modifier filtering [LPDC-1421]
 - New report added "Overview of LPDC instances - all fields" [LPDC-1418]
 - New Dashboard LPDC doesn't show most recent reports [LPDC-1448]
+- Generate migration with transfer-instances to move instances from OCMW Riemst to Gemeente Riemst [LPDC-1440]
 
 ### Deploy notes
 
 - `drc restart report-generation`
 - `drc restart dispatcher`
+- `drc restart migrations; drc logs -ft --tail=200 migrations`
 
 #### YourEurope codelist & creator/lastmodifier filtering
 
