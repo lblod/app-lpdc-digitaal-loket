@@ -22,7 +22,6 @@
 
 - `drc restart report-generation`
 - `drc restart dispatcher`
-- `drc restart migrations; drc logs -ft --tail=200 migrations`
 
 #### YourEurope codelist & creator/lastmodifier filtering
 
