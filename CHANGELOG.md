@@ -33,7 +33,6 @@ Important to note here
 Once everything is done:
 - `drc restart migrations; drc logs -ft --tail=200 migrations`
 
-
 #### YourEurope codelist & creator/lastmodifier filtering
 
 ```
