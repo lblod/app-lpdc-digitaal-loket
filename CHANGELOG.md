@@ -5,6 +5,7 @@
 ### Frontend
 
 - Bump to [v0.24.2](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0242-2025-07-14)
+- Bump to [v0.24.3](https://github.com/lblod/frontend-lpdc/blob/master/CHANGELOG.md#v0243-2025-07-29)
 
 ### Management
 
