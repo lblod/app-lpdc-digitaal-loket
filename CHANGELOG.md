@@ -28,6 +28,7 @@
 Generate the environment-specific migrations to archive and transfer the Riemst product instances following these [instructions](https://github.com/lblod/lpdc-management-service/blob/master/migration-scripts/transfer-instances/readme.md) and place these migrations in the `config/migrations/local/` folder.
 
 Important to note here
+- For this migration we want to keep the current Competent Authority and Executing Authority, so run `npm run transfer-instances` and `npm run archive-instances`
 - After the normal npm install, you need to also run `npm install -g --save-dev ts-node typescript`
 - You need to generate the migrations within the lpdc-management container, then copy them to the folder mentioned above within the app.
 
