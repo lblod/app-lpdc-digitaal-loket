@@ -9,6 +9,7 @@
 ### Management
 
 - Bump to [v0.50.4](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.4)
+- Bump to [v0.50.5](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.5)
 
 ### Backend
 
@@ -23,7 +24,7 @@
 - `drc restart report-generation`
 - `drc restart dispatcher`
 
-#### Migration OCMWRiemst to Gemeente Riemst
+#### Migration OCMW Riemst to Gemeente Riemst
 Generate the environment-specific migrations to archive and transfer the Riemst product instances following these [instructions](https://github.com/lblod/lpdc-management-service/blob/master/migration-scripts/transfer-instances/readme.md) and place these migrations in the `config/migrations/local/` folder.
 
 Important to note here
