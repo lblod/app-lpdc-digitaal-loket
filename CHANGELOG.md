@@ -9,6 +9,9 @@
 
 - Bump to [v0.50.6](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.6)
 
+### Backend
+- Ensure restart directive is set for lpdc-management [DL-6508]
+
 
 ## v0.29.1 (2025-08-01)
 ### Backend

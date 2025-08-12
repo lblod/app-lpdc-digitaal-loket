@@ -257,6 +257,8 @@ services:
       ENABLE_MUNICIPALITY_MERGER_FLAG: "false"
     labels:
       - "logging=true"
+    restart: always
+    logging: *default-logging
     healthcheck:
       test: [ "CMD", "wget", "--spider", "http://localhost" ]
       interval: 5s
