@@ -1,0 +1,43 @@
+PREFIX schema: <http://schema.org/>
+PREFIX adres: <https://data.vlaanderen.be/ns/adres#>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX m8g: <http://data.europa.eu/m8g/>
+
+DELETE {
+  GRAPH ?g {
+    ?service m8g:hasContactPoint ?contactPoint .
+
+    ?contactPoint ?p1 ?o1 .
+
+    ?address ?p2 ?o2 .
+  }
+} WHERE {
+  GRAPH ?g {
+    ?service m8g:hasContactPoint ?contactPoint .
+
+    ?contactPoint a schema:ContactPoint .
+
+    FILTER NOT EXISTS { ?contactPoint schema:telephone ?tel . }
+    FILTER NOT EXISTS { ?contactPoint schema:email ?email . }
+    FILTER NOT EXISTS { ?contactPoint schema:url ?url . }
+    FILTER NOT EXISTS { ?contactPoint schema:openingHours ?openingHours . }
+
+    # check for either no address at all OR an address that is completely empty
+    FILTER NOT EXISTS {
+      ?contactPoint lpdcExt:address ?address .
+      { ?address adres:Straatnaam ?straat . }
+      UNION
+      { ?address adres:gemeentenaam ?gemeente . }
+      UNION
+      { ?address adres:Adresvoorstelling.huisnummer ?huisnummer . }
+      UNION
+      { ?address adres:postcode ?postcode . }
+    }
+
+    ?contactPoint ?p1 ?o1 .
+    OPTIONAL {
+      ?contactPoint lpdcExt:address ?address .
+      ?address ?p2 ?o2 .
+    }
+  }
+}
