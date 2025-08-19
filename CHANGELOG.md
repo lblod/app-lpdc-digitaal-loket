@@ -11,7 +11,14 @@
 
 ### Backend
 - Ensure restart directive is set for lpdc-management [DL-6508]
+- Migration to cleanup empty contactpoints [DL-6752]
 
+### Deploy notes
+
+```
+drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
+drc restart migrations; drc logs -ft --tail=200 migrations
+```
 
 ## v0.29.1 (2025-08-01)
 ### Backend
