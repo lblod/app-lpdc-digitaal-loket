@@ -3,11 +3,11 @@
 ## Unreleased
 ### Frontend
 
-- Bump to [v0.24.4](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#rocket-enhancement)
+- Bump to [v0.24.4](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#rocket-enhancement) [LPDC-1378]
 
 ### Management
 
-- Bump to [v0.50.6](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.6)
+- Bump to [v0.50.6](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.6) [LPDC-1402]
 
 ### Backend
 - Ensure restart directive is set for lpdc-management [DL-6508]
