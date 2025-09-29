@@ -46,6 +46,9 @@ services:
   sink:
     restart: "no"
 
+  update-bestuurseenheid-mock-login:
+    restart: "no"
+
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################

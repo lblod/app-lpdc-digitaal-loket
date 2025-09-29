@@ -170,6 +170,18 @@ services:
     restart: always
     logging: *default-logging
 
+  update-bestuurseenheid-mock-login:
+    image: lblod/update-bestuurseenheid-mock-login-service:0.6.0
+    environment:
+      RUN_CRON_ON_START: "true"
+      CRON_PATTERN: "0 0 22 * * *" # everyday at 22h
+    volumes:
+      - ./config/mock-login:/config
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################
