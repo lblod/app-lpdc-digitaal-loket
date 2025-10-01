@@ -1,0 +1,22 @@
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+
+CONSTRUCT {
+  ?s lpdc:organizationCompetencyLevel ?competencyLevel .
+} WHERE {
+  ?s a besluit:Bestuurseenheid ;
+    org:classification ?o .
+
+  BIND(
+    IF(
+      ?o = <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000000> || ?o = <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/80310756-ce0a-4a1b-9b8e-7c01b6cc7a2d>,
+      <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Provinciaal>,
+      IF(
+        ?o = <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/d90c511e-f827-488c-84ba-432c8f69561c>,
+        <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams>,
+        <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>
+      )
+    )
+    as ?competencyLevel)
+}

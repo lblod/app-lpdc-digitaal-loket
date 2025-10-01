@@ -1,0 +1,8 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+  ?s a besluit:Bestuurseenheid, skos:Concept .
+} WHERE {
+  ?s a besluit:Bestuurseenheid .
+}

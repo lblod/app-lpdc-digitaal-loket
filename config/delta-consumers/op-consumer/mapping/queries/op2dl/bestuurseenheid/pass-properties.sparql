@@ -1,0 +1,24 @@
+PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
+PREFIX geosparql: <http://www.opengis.net/ont/geosparql#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX regorg: <http://www.w3.org/ns/regorg#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+  ?s ?p ?o.
+} WHERE {
+  ?s a besluit:Bestuurseenheid;
+    ?p ?o.
+
+  FILTER (?p IN (
+    mu:uuid,
+    regorg:orgStatus,
+    besluit:werkingsgebied
+  ))
+}

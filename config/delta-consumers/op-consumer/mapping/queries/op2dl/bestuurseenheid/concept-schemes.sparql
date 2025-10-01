@@ -1,0 +1,9 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+  ?s skos:topConceptOf <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+    skos:inScheme <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> .
+} WHERE {
+  ?s a besluit:Bestuurseenheid.
+}

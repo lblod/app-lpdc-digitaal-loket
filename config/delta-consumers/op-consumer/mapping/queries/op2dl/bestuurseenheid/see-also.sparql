@@ -1,0 +1,8 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX schema: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT {
+  ?s schema:seeAlso <http://centrale-vindplaats.lblod.info> .
+} WHERE {
+  ?s a besluit:Bestuurseenheid .
+}
