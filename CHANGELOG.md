@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v0.30.0 (2025-10-08)
 ### Frontend
 
 - Bump to [v0.24.4](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#rocket-enhancement) [LPDC-1378]
