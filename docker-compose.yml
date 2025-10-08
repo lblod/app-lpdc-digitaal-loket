@@ -246,6 +246,13 @@ services:
     restart: always
     logging: *default-logging
 
+  db-cleanup:
+    image: lblod/db-cleanup-service:0.5.1
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
   ################################################################################
   # LPDC-specific Services
   ################################################################################
