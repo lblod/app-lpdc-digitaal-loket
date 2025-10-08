@@ -1,0 +1,8 @@
+PREFIX organisatie: <http://lblod.data.gift/vocabularies/organisatie/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+  ?s skos:topConceptOf <http://lblod.data.gift/concept-schemes/b8dcb04f0d1feb86ff01cc0677363b20> .
+} WHERE {
+  ?s a organisatie:OrganisatieStatusCode .
+}
