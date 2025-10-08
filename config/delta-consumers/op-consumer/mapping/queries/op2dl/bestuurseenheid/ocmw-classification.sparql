@@ -1,5 +1,5 @@
-PREFIX org: <http://www.w3.org/ns/org#>
 PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX org: <http://www.w3.org/ns/org#>
 
 CONSTRUCT {
   ?s besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/cc4e2d67-603b-4784-9b61-e50bac1ec089> .

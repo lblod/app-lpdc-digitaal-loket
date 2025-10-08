@@ -1,7 +1,8 @@
+PREFIX organisatie: <http://lblod.data.gift/vocabularies/organisatie/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 CONSTRUCT {
   ?s skos:inScheme <http://data.vlaanderen.be/id/conceptscheme/BestuurseenheidClassificatieCode> .
 } WHERE {
-  ?s skos:inScheme <http://data.vlaanderen.be/id/conceptscheme/BestuurseenheidClassificatieCode> .
+  ?s a organisatie:BestuurseenheidClassificatieCode .
 }
