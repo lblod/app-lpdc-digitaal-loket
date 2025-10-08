@@ -1,0 +1,91 @@
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
+      ?p ?o .
+
+    FILTER (?p IN (
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
+      <http://data.lblod.info/vocabularies/erediensten/betrokkenBestuur>,
+      <http://data.lblod.info/vocabularies/lpdc/organizationCompetencyLevel>,
+      <http://data.lblod.info/vocabularies/lpdc/organizationExecutingLevel>,
+      <http://data.vlaanderen.be/ns/besluit#werkingsgebied>,
+      <http://data.vlaanderen.be/ns/besluit#classificatie>,
+      <http://mu.semte.ch/vocabularies/core/uuid>,
+      <http://mu.semte.ch/vocabularies/ext/inProvincie>,
+      <http://mu.semte.ch/vocabularies/ext/kbonummer>,
+      <http://purl.org/dc/terms/identifier>,
+      <http://www.w3.org/2000/01/rdf-schema#seeAlso>,
+      <http://www.w3.org/2004/02/skos/core#inScheme>,
+      <http://www.w3.org/2004/02/skos/core#prefLabel>,
+      <http://www.w3.org/2004/02/skos/core#altLabel>,
+      <http://www.w3.org/2004/02/skos/core#topConceptOf>,
+      <http://www.w3.org/ns/regorg#orgStatus>,
+      <http://www.w3.org/ns/org#hasSubOrganization>,
+      <http://www.w3.org/ns/prov#wasDerivedFrom>,
+      <http://mu.semte.ch/vocabularies/ext/isTrailUser>
+    ))
+  }
+}
+;
+# 20 before
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s a <http://mu.semte.ch/vocabularies/ext/BestuurseenheidClassificatieCode> ;
+      ?p ?o .
+
+    FILTER (?p IN (
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
+      <http://www.w3.org/2004/02/skos/core#prefLabel>,
+      <http://mu.semte.ch/vocabularies/core/uuid>,
+      <http://www.w3.org/2004/02/skos/core#topConceptOf>,
+      <http://www.w3.org/2004/02/skos/core#inScheme>
+    ))
+  }
+}
+;
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s a <http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode> ;
+      ?p ?o .
+
+    FILTER (?p IN (
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
+      <http://www.w3.org/2004/02/skos/core#prefLabel>,
+      <http://mu.semte.ch/vocabularies/core/uuid>,
+      <http://www.w3.org/2004/02/skos/core#topConceptOf>,
+      <http://www.w3.org/2004/02/skos/core#inScheme>
+    ))
+  }
+}
+;
+# 586 before
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s a <http://www.w3.org/ns/prov#Location> ;
+      ?p ?o .
+
+    FILTER (?p IN (
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
+      <http://www.w3.org/2000/01/rdf-schema#label>,
+      <http://mu.semte.ch/vocabularies/ext/werkingsgebiedNiveau>,
+      <http://mu.semte.ch/vocabularies/core/uuid>,
+      <http://www.w3.org/2004/02/skos/core#exactMatch>
+    ))
+  }
+}
