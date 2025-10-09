@@ -1,0 +1,21 @@
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX organisatie: <http://lblod.data.gift/vocabularies/organisatie/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+  ?s ?p ?o.
+} WHERE {
+  ?s a organisatie:OrganisatieStatusCode;
+    ?p ?o.
+
+  FILTER (?p IN (
+    rdf:type,
+    mu:uuid,
+    skos:inScheme,
+    skos:prefLabel,
+    skos:topConceptOf
+  ))
+
+  FILTER (?o != <http://lblod.data.gift/concept-schemes/10caf4a4-1ff5-4c05-917e-56489910d68b>)
+}
