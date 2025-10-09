@@ -32,5 +32,6 @@ CONSTRUCT {
     <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/ea446861-2c51-45fa-afd3-4e4a37b71562>
   ))
 
+  # Trick bypassing a bug in virtuoso, not deleting strings with special characters
   BIND(STR(?o) AS ?oString)
 }
