@@ -1,5 +1,16 @@
 # Changelog
 
+## Unreleased
+### Frontend
+
+- Bump to [v0.24.5](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0245-2025-10-13) [LPDC-1441]
+
+### Deploy notes
+
+```
+drc pull lpdc; drc up -d lpdc
+```
+
 ## v0.30.0 (2025-10-08)
 ### Frontend
 
