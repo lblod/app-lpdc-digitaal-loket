@@ -1,0 +1,40 @@
+PREFIX cleanup: <http://mu.semte.ch/vocabularies/ext/cleanup/>
+PREFIX mu:      <http://mu.semte.ch/vocabularies/core/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+<http://data.lblod.info/id/cleanup-job/f5ac21ba-5672-43cd-855f-b57f560f50dg> a cleanup:Job ;
+  mu:uuid "f5ac21ba-5672-43cd-855f-b57f560f50dg" ;
+  dcterms:title "Link concept display configurations to new admin units`" ;
+  cleanup:randomQuery """
+    INSERT {
+      GRAPH ?bestuurseenheidGraph {
+        ?concept <http://data.lblod.info/vocabularies/lpdc/hasConceptDisplayConfiguration> ?displayConfig .
+        ?displayConfig a <http://data.lblod.info/vocabularies/lpdc/ConceptDisplayConfiguration> ;
+          <http://mu.semte.ch/vocabularies/core/uuid> ?configId ;
+          <http://data.lblod.info/vocabularies/lpdc/conceptIsNew> "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
+          <http://data.lblod.info/vocabularies/lpdc/conceptInstantiated> "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> ;
+          <http://purl.org/dc/terms/relation> ?bestuur .
+      }
+    } WHERE {
+      GRAPH <http://mu.semte.ch/graphs/public> {
+        ?bestuur a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
+          <http://mu.semte.ch/vocabularies/core/uuid> ?bestuurId .
+      
+        ?concept a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#ConceptualPublicService> ;
+          <http://mu.semte.ch/vocabularies/ext/hasVersionedSource> ?versionedSource .
+      }
+
+      BIND(IRI(CONCAT("http://mu.semte.ch/graphs/organizations/", STR(?bestuurId), "/LoketLB-LPDCGebruiker")) as ?bestuurseenheidGraph)
+
+      FILTER NOT EXISTS {
+        GRAPH ?bestuurseenheidGraph {
+          ?concept <http://data.lblod.info/vocabularies/lpdc/hasConceptDisplayConfiguration> ?displayConfig .
+          ?displayConfig <http://purl.org/dc/terms/relation> ?bestuur .
+        }
+      }
+
+      BIND(SHA512(CONCAT(STR(?concept), STR(?bestuurId))) as ?configId)
+      BIND(IRI(CONCAT('http://data.lblod.info/id/conceptual-display-configuration/', STR(?configId))) as ?displayConfig)
+    }
+    """ ;
+  cleanup:cronPattern "0 * * * *" .

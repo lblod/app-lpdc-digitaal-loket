@@ -54,6 +54,9 @@ And finally, run:
 drc up -d
 # Wait for the op-public-consumer to ingest all it needs to ingest
 drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=38887a85-dba2-4edc-9298-ae87c82bc662"
+drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=f5ac21ba-5672-43cd-855f-b57f560f50dg"
+# you might need to run this one about 5 times to test the creation of products in newly added admin units, because especially on DEV many concepts need to be linked to the new besturen. Otherwise, let the cron job do its work and in a few hours it should be ready!
+# the last query takes a little while to execute, but it should come through without timeouts
 ```
 
 

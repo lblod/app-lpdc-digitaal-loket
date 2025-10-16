@@ -248,6 +248,8 @@ services:
 
   db-cleanup:
     image: lblod/db-cleanup-service:0.5.1
+    environment:
+      MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql" # Heavy queries, has to go to virtuoso directly otherwise times out
     labels:
       - "logging=true"
     restart: always

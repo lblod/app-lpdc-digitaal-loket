@@ -31,4 +31,4 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
       FILTER (STRSTARTS(STR(?nutsScheme), "http://data.europa.eu/nuts/scheme/"))
     }
     """ ;
-  cleanup:cronPattern "0 0 * * *" .
+  cleanup:cronPattern "0 * * * *" .
