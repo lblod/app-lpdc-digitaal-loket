@@ -24,13 +24,53 @@ drc pull lpdc; drc up -d lpdc
 ### Backend
 - Ensure restart directive is set for lpdc-management [DL-6508]
 - Migration to cleanup empty contactpoints [DL-6752]
+- Introduce sync with OP [LPDC-1451]
 
 ### Deploy notes
 
+Update docker-compose.override.yml to add the config of op-public-consumer:
+```
+  op-public-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info" # For DEV
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # For QA
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # For PROD
+      DCR_LANDING_ZONE_DATABASE: "virtuoso"
+      DCR_REMAPPING_DATABASE: "virtuoso"
+      DCR_DISABLE_DELTA_INGEST: "true"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+Then run
 ```
 drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
-drc restart migrations; drc logs -ft --tail=200 migrations
+drc restart migrations; drc logs -ft --tail=200 migrations # wait for all migrations to run
+drc up -d op-public-consumer; drc logs -ft --tail=200 op-public-consumer # wait for the initial sync to complete
 ```
+
+Update the docker-compose.override.yml again:
+```
+  op-public-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info" # For DEV
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # For QA
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # For PROD
+      DCR_LANDING_ZONE_DATABASE: "database"
+      DCR_REMAPPING_DATABASE: "database"
+      DCR_DISABLE_DELTA_INGEST: "false"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+And finally, run:
+```
+drc up -d
+# Wait for the op-public-consumer to ingest all it needs to ingest
+drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=38887a85-dba2-4edc-9298-ae87c82bc662"
+drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=f5ac21ba-5672-43cd-855f-b57f560f50dg"
+# you might need to run this one about 5 times to test the creation of products in newly added admin units, because especially on DEV many concepts need to be linked to the new besturen. Otherwise, let the cron job do its work and in a few hours it should be ready!
+# the last query takes a little while to execute, but it should come through without timeouts
+```
+
 
 ## v0.29.1 (2025-08-01)
 ### Backend

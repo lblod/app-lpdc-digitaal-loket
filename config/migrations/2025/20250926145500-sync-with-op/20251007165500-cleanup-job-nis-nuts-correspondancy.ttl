@@ -1,0 +1,34 @@
+PREFIX cleanup: <http://mu.semte.ch/vocabularies/ext/cleanup/>
+PREFIX mu:      <http://mu.semte.ch/vocabularies/core/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+<http://data.lblod.info/id/cleanup-job/38887a85-dba2-4edc-9298-ae87c82bc662> a cleanup:Job ;
+  mu:uuid "38887a85-dba2-4edc-9298-ae87c82bc662" ;
+  dcterms:title "Insert nuts code to Location when correspondancy found with nis code from OP`" ;
+  cleanup:randomQuery """
+    PREFIX prov: <http://www.w3.org/ns/prov#>
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+    INSERT {
+      GRAPH <http://mu.semte.ch/graphs/public> {
+        ?werkingsgebied skos:exactMatch ?nuts .
+      }
+    } WHERE {
+      GRAPH <http://mu.semte.ch/graphs/public> {
+        ?werkingsgebied a prov:Location.
+
+        ?nis skos:inScheme ?nisScheme ;
+          skos:exactMatch ?nuts .
+
+        ?nuts skos:inScheme ?nutsScheme .
+      }
+
+      GRAPH <http://mu.semte.ch/graphs/landing-zone/op-public> {
+        ?werkingsgebied skos:exactMatch ?nis .
+      }
+
+      FILTER (STRSTARTS(STR(?nisScheme), "http://vocab.belgif.be/auth/refnis"))
+      FILTER (STRSTARTS(STR(?nutsScheme), "http://data.europa.eu/nuts/scheme/"))
+    }
+    """ ;
+  cleanup:cronPattern "15 20 * * *" .

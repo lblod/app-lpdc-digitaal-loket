@@ -1,0 +1,14 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX org: <http://www.w3.org/ns/org#>
+
+CONSTRUCT {
+  ?s besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/cc4e2d67-603b-4784-9b61-e50bac1ec089> .
+} WHERE {
+  ?s org:classification ?classification .
+
+  # The consumers currently don't support the OCMWv subcategories
+  FILTER (?classification IN
+    ( <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/34b5af85-dc9f-468f-9e03-ef89b174c267>,
+      <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/e8294b73-87c9-4fa2-9441-1937350763c9>
+    ))
+}
