@@ -174,7 +174,7 @@ services:
     image: lblod/update-bestuurseenheid-mock-login-service:0.6.0
     environment:
       RUN_CRON_ON_START: "true"
-      CRON_PATTERN: "0 0 22 * * *" # everyday at 22h
+      CRON_PATTERN: "20 20 * * *" # everyday at 20h20m (UTC)
     volumes:
       - ./config/mock-login:/config
     labels:

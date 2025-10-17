@@ -37,4 +37,4 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
       BIND(IRI(CONCAT('http://data.lblod.info/id/conceptual-display-configuration/', STR(?configId))) as ?displayConfig)
     }
     """ ;
-  cleanup:cronPattern "0 * * * *" .
+  cleanup:cronPattern "05 20 * * *" .
