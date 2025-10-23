@@ -1,33 +1,13 @@
 # Changelog
-
 ## Unreleased
 ### Frontend
-
 - Bump to [v0.25.0](https://github.com/lblod/frontend-lpdc/blob/e66c371b829d70ec72f76dc47a345b3605c45a68/CHANGELOG.md#v0250-2025-10-14) [LPDC-1074]
 - Bump to [v0.24.5](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0245-2025-10-13) [LPDC-1441]
 
-### Deploy notes
-
-```
-drc pull lpdc; drc up -d lpdc
-```
-
-## v0.30.0 (2025-10-08)
-### Frontend
-
-- Bump to [v0.24.4](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#rocket-enhancement) [LPDC-1378]
-
-### Management
-
-- Bump to [v0.50.6](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.6) [LPDC-1402]
-
 ### Backend
-- Ensure restart directive is set for lpdc-management [DL-6508]
-- Migration to cleanup empty contactpoints [DL-6752]
 - Introduce sync with OP [LPDC-1451]
 
 ### Deploy notes
-
 Update docker-compose.override.yml to add the config of op-public-consumer:
 ```
   op-public-consumer:
@@ -43,7 +23,7 @@ Update docker-compose.override.yml to add the config of op-public-consumer:
 
 Then run
 ```
-drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
+drc pull lpdc; drc up -d lpdc
 drc restart migrations; drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc up -d op-public-consumer; drc logs -ft --tail=200 op-public-consumer # wait for the initial sync to complete
 ```
@@ -71,6 +51,24 @@ drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=f5ac21ba-
 # the last query takes a little while to execute, but it should come through without timeouts
 ```
 
+## v0.30.0 (2025-10-08)
+### Frontend
+
+- Bump to [v0.24.4](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#rocket-enhancement) [LPDC-1378]
+
+### Management
+
+- Bump to [v0.50.6](https://github.com/lblod/lpdc-management-service/releases/tag/v0.50.6) [LPDC-1402]
+
+### Backend
+- Ensure restart directive is set for lpdc-management [DL-6508]
+- Migration to cleanup empty contactpoints [DL-6752]
+
+### Deploy notes
+
+```
+drc pull lpdc lpdc-management; drc up -d lpdc lpdc-management
+```
 
 ## v0.29.1 (2025-08-01)
 ### Backend
