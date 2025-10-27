@@ -119,15 +119,7 @@ Always double check the status of the migrations `docker compose logs -f --tail=
 
 Once the migrations have run, you can start developing your application by connecting the ember frontend application to this backend. See <https://github.com/lblod/frontend-lpdc> for more information on development with the ember application.
 
-In case your work only involves changes in the backend, you can use the included `frontend-lpdc` image in order to interface with the frontend without having to run it separately on your local machine; you can do so by adding the following to your `docker-compose.override.yml` file:
-
-```
-lpdc:
-  ports:
-    - 4205:80
-```
-
-You can then access the frontend by going to `http://localhost:4205/mock-login` (4205 can be changed to any other unused port on your system).
+In case your work only involves changes in the backend, you can use the included `frontend-lpdc` image which is exposed by the `identifier` on port 90 in `docker-compose.dev.yml` without having to run the frontend separately on your local machine. You can access it by going to `http://localhost:90/mock-login`.
 
 
 LPDC relies on an external service[^1] to verify the validity of addresses inputted in the frontend. This service requires an API key to be provided for it to reply correctly. Otherwise you can encounter error messages in the frontend when handling address data. In your browser's developer console such errors will show up as `500` errors on requests for the `lpdc-management/address/...` route. You can configure LPDC's management service with a correct API key to prevent such errors, by adding something like the following to your `docker-compose.override.yml` file:
