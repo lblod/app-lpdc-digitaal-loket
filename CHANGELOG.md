@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## v0.31.0 (2025-11-04)
 ### Frontend
 - Bump to [v0.25.0](https://github.com/lblod/frontend-lpdc/blob/e66c371b829d70ec72f76dc47a345b3605c45a68/CHANGELOG.md#v0250-2025-10-14) [LPDC-1074]
 - Bump to [v0.24.5](https://github.com/lblod/frontend-lpdc/blob/development/CHANGELOG.md#v0245-2025-10-13) [LPDC-1441]
