@@ -1,0 +1,16 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+ 	  <http://data.lblod.info/id/bestuurseenheden/141d9d6b-54af-4d17-b313-8d1c30bc3f5b>
+		  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
+ 			<http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> ;
+ 			<http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://centrale-vindplaats.lblod.info> ;
+ 			<http://data.vlaanderen.be/ns/besluit#classificatie> <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/52cc9d8d-1c9a-4d92-9936-da9d4a622ec4> ;
+ 			<http://www.w3.org/2004/02/skos/core#prefLabel> "Agentschap Binnenlands Bestuur" ;
+ 			<http://mu.semte.ch/vocabularies/core/uuid> "141d9d6b-54af-4d17-b313-8d1c30bc3f5b" ;
+			<http://purl.org/dc/terms/identifier> "OVO001835" ;
+ 			<http://www.w3.org/2004/02/skos/core#topConceptOf> <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+ 			<http://www.w3.org/2004/02/skos/core#inScheme> <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/IPDCOrganisaties> ;
+ 			<http://data.lblod.info/vocabularies/lpdc/organizationExecutingLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Vlaams> ;
+ 			<http://data.lblod.info/vocabularies/lpdc/organizationCompetencyLevel> <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams> .
+  }
+}

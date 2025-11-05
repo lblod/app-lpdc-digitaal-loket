@@ -1,7 +1,10 @@
 # Changelog
 ## Unreleased
+### Backend
  - Virtuoso config was complelety off. Fixed this.
-### deploy notes
+  - Allow organizations of classification "Agentschap Binnenlands Bestuur" to be consumed into LPDC [LPDC-1502]
+### Deploy instructions
+#### Virtuoso
 ```
 drc exec virtuoso bash
 isql-v
@@ -10,6 +13,12 @@ exit;
 exit;
 drc restart virtuoso
 ```
+#### OP consumer
+
+```
+drc restart op-public-consumer migrations
+```
+
 ## v0.31.0 (2025-11-05)
 ### Frontend
 - Bump to [v0.25.0](https://github.com/lblod/frontend-lpdc/blob/e66c371b829d70ec72f76dc47a345b3605c45a68/CHANGELOG.md#v0250-2025-10-14) [LPDC-1074]
