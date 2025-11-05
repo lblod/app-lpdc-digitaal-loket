@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## v0.31.1 (2025-11-05)
 ### Backend
  - Virtuoso config was complelety off. Fixed this.
   - Allow organizations of classification "Agentschap Binnenlands Bestuur" to be consumed into LPDC [LPDC-1502]
