@@ -1,7 +1,10 @@
 # Changelog
 ## Unreleased
+### Backend
  - Virtuoso config was complelety off. Fixed this.
-### deploy notes
+  - Allow organizations of classification "Agentschap Binnenlands Bestuur" to be consumed into LPDC [LPDC-1502]
+### Deploy instructions
+#### Virtuoso
 ```
 drc exec virtuoso bash
 isql-v
@@ -10,6 +13,40 @@ exit;
 exit;
 drc restart virtuoso
 ```
+#### OP consumer
+The change adds one extra classification to flow to the triplestore. Triples will be added, we don't expect any deletion. For this reason, the easiest is, I think, to re-run the initial sync.
+
+First update the override config as such:
+```
+  op-public-consumer:
+    environment:
+      DCR_LANDING_ZONE_DATABASE: "virtuoso"
+      DCR_REMAPPING_DATABASE: "virtuoso"
+      DCR_DISABLE_DELTA_INGEST: "true"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+Then run
+```
+drc exec op-public-consumer curl -X DELETE http://localhost/initial-sync-jobs
+drc up -d op-public-consumer; drc logs -ft --tail=200 op-public-consumer # wait for the initial sync to complete
+```
+
+Update back the override config:
+```
+  op-public-consumer:
+    environment:
+      DCR_LANDING_ZONE_DATABASE: "database"
+      DCR_REMAPPING_DATABASE: "database"
+      DCR_DISABLE_DELTA_INGEST: "false"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+Finally, run
+```
+drc up -d op-public-consumer
+```
+
 ## v0.31.0 (2025-11-05)
 ### Frontend
 - Bump to [v0.25.0](https://github.com/lblod/frontend-lpdc/blob/e66c371b829d70ec72f76dc47a345b3605c45a68/CHANGELOG.md#v0250-2025-10-14) [LPDC-1074]
