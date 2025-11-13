@@ -1,5 +1,15 @@
 # Changelog
 
+## Unreleased
+### Backend
+- Ensure restart directive is set for lpdc-management [LPDC-1490]
+
+### Deploy notes
+
+```
+drc restart report-generation
+```
+
 ## v0.30.0 (2025-10-08)
 ### Frontend
 
