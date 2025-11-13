@@ -2,7 +2,7 @@
 
 ## Unreleased
 ### Backend
-- Ensure restart directive is set for lpdc-management [LPDC-1490]
+- Address and symbol query fix in report[LPDC-1490]
 
 ### Deploy notes
 
