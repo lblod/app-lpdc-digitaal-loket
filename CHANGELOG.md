@@ -71,6 +71,16 @@ drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=f5ac21ba-
 # the last query takes a little while to execute, but it should come through without timeouts
 ```
 
+## Unreleased
+### Backend
+- Address and symbol query fix in report[LPDC-1490]
+
+### Deploy notes
+
+```
+drc restart report-generation
+```
+
 ## v0.30.0 (2025-10-08)
 ### Frontend
 

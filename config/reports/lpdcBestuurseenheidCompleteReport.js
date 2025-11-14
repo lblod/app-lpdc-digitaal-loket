@@ -23,7 +23,6 @@ export default {
     function stripOrder(text) {
       return String(text)
         .replace(/(\b\d+\s*)?\|\|\s*/g, '')
-        .replace(/^[^a-zA-Z0-9]*$/, '');    
     }
 
     // Query
@@ -177,11 +176,10 @@ export default {
                             schema:url ?contactpuntWebsiteUrl ; schema:openingHours ?contactpuntOpeningsuren ;shacl:order ?orderContact}
           OPTIONAL {
             ?contact lpdcExt:address ?adresUri .
-            OPTIONAL {
-              ?adresUri adres:Straatnaam ?straatnaam ; adres:Adresvoorstelling.huisnummer ?huisnummer ; 
-                        adres:Adresvoorstelling.busnummer ?busnummer .
-              BIND(CONCAT(COALESCE(?straatnaam, ""), " ", COALESCE(?huisnummer, ""), " ", COALESCE(?busnummer, "")) AS ?adres)
-            }
+            OPTIONAL { ?adresUri adres:Straatnaam ?straatnaam }
+            OPTIONAL { ?adresUri adres:Adresvoorstelling.huisnummer ?huisnummer }
+            OPTIONAL { ?adresUri adres:Adresvoorstelling.busnummer ?busnummer }
+            BIND(CONCAT(COALESCE(?straatnaam, ""), " ", COALESCE(?huisnummer, ""), " ", COALESCE(?busnummer, "")) AS ?adres)
             OPTIONAL {?adresUri adres:gemeentenaam ?gemeente}
           }
         }
