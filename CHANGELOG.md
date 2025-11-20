@@ -1,4 +1,14 @@
 # Changelog
+## v0.31.2 (2025-11-20)
+### Backend
+- Address and symbol query fix in report[LPDC-1490]
+
+### Deploy notes
+
+```
+drc restart report-generation
+```
+
 ## v0.31.1 (2025-11-05)
 ### Backend
  - Virtuoso config was complelety off. Fixed this.
@@ -69,16 +79,6 @@ drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=38887a85-
 drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=f5ac21ba-5672-43cd-855f-b57f560f50dg"
 # you might need to run this one about 5 times to test the creation of products in newly added admin units, because especially on DEV many concepts need to be linked to the new besturen. Otherwise, let the cron job do its work and in a few hours it should be ready!
 # the last query takes a little while to execute, but it should come through without timeouts
-```
-
-## Unreleased
-### Backend
-- Address and symbol query fix in report[LPDC-1490]
-
-### Deploy notes
-
-```
-drc restart report-generation
 ```
 
 ## v0.30.0 (2025-10-08)
