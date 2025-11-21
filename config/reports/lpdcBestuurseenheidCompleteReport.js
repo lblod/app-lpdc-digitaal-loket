@@ -126,19 +126,16 @@ export default {
           BIND(CONCAT(COALESCE(?firstName, ""), " ", COALESCE(?familyName, "")) AS ?aangepastDoor)
         }
         OPTIONAL {
-          ?uriPubliekeDienstverlening dct:creator ?creator .
-          OPTIONAL {
-            ?creator foaf:firstName ?creatorFirstName ; foaf:familyName ?creatorFamilyName .
-            BIND(CONCAT(COALESCE(?creatorFirstName, ""), " ", COALESCE(?creatorFamilyName, "")) AS ?aangemaaktDoor)
-          }
+          ?uriPubliekeDienstverlening dct:creator [ foaf:firstName ?creatorFirstName ; foaf:familyName ?creatorFamilyName ] .
+          BIND(CONCAT(COALESCE(?creatorFirstName, ""), " ", COALESCE(?creatorFamilyName, "")) AS ?aangemaaktDoor)
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde .
-          OPTIONAL { ?voorwaarde dct:title ?titelVoorwaarde ; dct:description ?beschrijvingVoorwaarde ; shacl:order ?orderVoorwaarde }
+          ?voorwaarde dct:title ?titelVoorwaarde ; dct:description ?beschrijvingVoorwaarde ; shacl:order ?orderVoorwaarde .
           OPTIONAL {
             ?voorwaarde m8g:hasSupportingEvidence ?bewijs .
-            OPTIONAL { ?bewijs dct:title ?titelBewijsstuk ; dct:description ?beschrijvingBewijsstuk ; shacl:order ?orderBewijsstuk }
+            ?bewijs dct:title ?titelBewijsstuk ; dct:description ?beschrijvingBewijsstuk ; shacl:order ?orderBewijsstuk .
           }
         }
 
@@ -147,18 +144,19 @@ export default {
           ?procedure dct:title ?titelProcedure ; dct:description ?beschrijvingProcedure ; shacl:order ?orderProcedure .
           OPTIONAL {
             ?procedure lpdcExt:hasWebsite ?website .
-            OPTIONAL { ?website dct:title ?titelProcedureWebsite ; dct:description ?beschrijvingProcedureWebsite ; schema:url ?urlProcedureWebsite ; shacl:order ?orderProcedureWebsite }
+             ?website dct:title ?titelProcedureWebsite ; schema:url ?urlProcedureWebsite ; shacl:order ?orderProcedureWebsite .
+            OPTIONAL { ?website dct:description ?beschrijvingProcedureWebsite }
           }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasCost ?kosten .
-          OPTIONAL { ?kosten dct:title ?titelKosten ; dct:description ?beschrijvingKosten; shacl:order ?orderKosten }
+          ?kosten dct:title ?titelKosten ; dct:description ?beschrijvingKosten; shacl:order ?orderKosten .
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening cpsv:produces ?voordeel .
-          OPTIONAL { ?voordeel dct:title ?titelFinancieelVoordeel ; dct:description ?beschrijvingFinancieelVoordeel ; shacl:order ?orderFinancieelVoordeel}
+          ?voordeel dct:title ?titelFinancieelVoordeel ; dct:description ?beschrijvingFinancieelVoordeel ; shacl:order ?orderFinancieelVoordeel .
         }
 
         OPTIONAL {
@@ -167,13 +165,19 @@ export default {
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasLegalResource ?bron .
-          OPTIONAL { ?bron dct:title ?titelRegelgevendeBron ; dct:description ?beschrijvingRegelgevendeBron ; schema:url ?urlRegelgevendeBron ; shacl:order ?orderRegelgevendeBron }
+          ?bron schema:url ?urlRegelgevendeBron ; shacl:order ?orderRegelgevendeBron .
+          OPTIONAL { ?bron dct:title ?titelRegelgevendeBron }
+          OPTIONAL { ?bron dct:description ?beschrijvingRegelgevendeBron }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasContactPoint ?contact .
-          OPTIONAL { ?contact schema:email ?contactpuntEmail ; schema:telephone ?contactpuntTelefoon ;
-                            schema:url ?contactpuntWebsiteUrl ; schema:openingHours ?contactpuntOpeningsuren ;shacl:order ?orderContact}
+          ?contact shacl:order ?orderContact .
+          OPTIONAL { ?contact schema:email ?contactpuntEmail }
+          OPTIONAL { ?contact schema:telephone ?contactpuntTelefoon }
+          OPTIONAL { ?contact schema:url ?contactpuntWebsiteUrl }
+          OPTIONAL { ?contact schema:openingHours ?contactpuntOpeningsuren }
+
           OPTIONAL {
             ?contact lpdcExt:address ?adresUri .
             OPTIONAL { ?adresUri adres:Straatnaam ?straatnaam }
@@ -186,7 +190,8 @@ export default {
 
         OPTIONAL {
           ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo .
-          OPTIONAL { ?meerInfo dct:title ?titelWebsite ; dct:description ?beschrijvingWebsite ; schema:url ?urlWebsite ; shacl:order ?orderWebsite }
+          ?meerInfo dct:title ?titelWebsite ; schema:url ?urlWebsite ; shacl:order ?orderWebsite .
+          OPTIONAL { meerInfo dct:description ?beschrijvingWebsite ; }
         }
         
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
