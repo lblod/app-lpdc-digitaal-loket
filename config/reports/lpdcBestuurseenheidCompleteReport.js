@@ -191,7 +191,7 @@ export default {
         OPTIONAL {
           ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo .
           ?meerInfo dct:title ?titelWebsite ; schema:url ?urlWebsite ; shacl:order ?orderWebsite .
-          OPTIONAL { meerInfo dct:description ?beschrijvingWebsite ; }
+          OPTIONAL { ?meerInfo dct:description ?beschrijvingWebsite }
         }
         
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
