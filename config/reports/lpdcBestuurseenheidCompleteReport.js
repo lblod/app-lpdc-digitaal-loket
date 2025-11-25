@@ -17,12 +17,11 @@ export default {
         .replace(/<(\/?(p|div|br|h[1-6]|li|ul|ol|table|tr|td|th))[^>]*>/gi, ' ')
         .replace(/<[^>]+>/g, '')
         .replace(/\s+/g, ' ')
-        .trim();
     }
 
     function stripOrder(text) {
       return String(text)
-        .replace(/(\b\d+\s*)?\|\|\s*/g, '')
+        .replace(/(\b\d+\s*)?\|\|/g, '')
     }
 
     // Query
@@ -313,10 +312,9 @@ export default {
       publicatieKanalen: r.publicatieKanalen?.value || '',
       categorieenYourEurope: r.categorieenYourEurope?.value || ''
     }));
-
       
     const csvHeaders = Object.keys(postProcessedData[0]);
-
+  
     await generateReportFromData(postProcessedData, csvHeaders, reportData);
 
   }
