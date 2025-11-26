@@ -13,15 +13,16 @@ export default {
 
     // Helper functies
     function stripHtml(html) {
+      if (html.replace(/<[^>]+>/g, '') === '') return '';
       return html
-        .replace(/<(\/?(p|div|br|h[1-6]|li|ul|ol|table|tr|td|th))[^>]*>/gi, ' ')
+        .replace(/<\/?(p|div|br|h[1-6]|li|ul|ol|table|tr|td|th)[^>]*>/gi, ' ')
         .replace(/<[^>]+>/g, '')
         .replace(/\s+/g, ' ')
     }
 
     function stripOrder(text) {
       return String(text)
-        .replace(/(\b\d+\s*)?\|\|/g, '')
+        .replace(/(\d*)\|\|/g, '')
     }
 
     // Query
@@ -272,21 +273,21 @@ export default {
       aanvullendeBeschrijving: r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
       uitzondering: r.uitzondering ? stripHtml(r.uitzondering.value) : '',
       titelVoorwaarde: r.titelVoorwaarde?.value ? stripOrder(r.titelVoorwaarde.value) : '',
-      beschrijvingVoorwaarde: r.beschrijvingVoorwaarde?.value ? stripOrder(stripHtml(r.beschrijvingVoorwaarde.value)) : '',
+      beschrijvingVoorwaarde: r.beschrijvingVoorwaarde?.value ? stripHtml(stripOrder(r.beschrijvingVoorwaarde.value)) : '',
       titelBewijsstuk: r.titelBewijsstuk?.value ? stripOrder(r.titelBewijsstuk.value) : '',
-      beschrijvingBewijsstuk: r.beschrijvingBewijsstuk?.value ? stripOrder(stripHtml(r.beschrijvingBewijsstuk.value)) : '',
+      beschrijvingBewijsstuk: r.beschrijvingBewijsstuk?.value ? stripHtml(stripOrder(r.beschrijvingBewijsstuk.value)) : '',
       titelProcedure: r.titelProcedure?.value ? stripOrder(r.titelProcedure.value) : '',
-      beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripOrder(stripHtml(r.beschrijvingProcedure.value)) : '',
+      beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripHtml(stripOrder(r.beschrijvingProcedure.value)) : '',
       titelProcedureWebsite: r.titelProcedureWebsite?.value ? stripOrder(r.titelProcedureWebsite.value) : '',
-      beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite?.value ? stripOrder(stripHtml(r.beschrijvingProcedureWebsite.value)) : '',
+      beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite?.value ? stripHtml(stripOrder(r.beschrijvingProcedureWebsite.value)) : '',
       urlProcedureWebsite: r.urlProcedureWebsite?.value ? stripOrder(r.urlProcedureWebsite.value) : '',
       titelKosten: r.titelKosten?.value ? stripOrder(r.titelKosten.value) : '',
-      beschrijvingKosten: r.beschrijvingKosten?.value ? stripOrder(stripHtml(r.beschrijvingKosten.value)) : '',
+      beschrijvingKosten: r.beschrijvingKosten?.value ? stripHtml(stripOrder(r.beschrijvingKosten.value)) : '',
       titelFinancieelVoordeel: r.titelFinancieelVoordeel?.value ? stripOrder(r.titelFinancieelVoordeel.value) : '',
-      beschrijvingFinancieelVoordeel: r.beschrijvingFinancieelVoordeel?.value ? stripOrder(stripHtml(r.beschrijvingFinancieelVoordeel.value)) : '',
+      beschrijvingFinancieelVoordeel: r.beschrijvingFinancieelVoordeel?.value ? stripHtml(stripOrder(r.beschrijvingFinancieelVoordeel.value)) : '',
       regelgeving: r.regelgeving ? stripHtml(r.regelgeving.value) : '',
       titelRegelgevendeBron: r.titelRegelgevendeBron?.value ? stripOrder(r.titelRegelgevendeBron.value) : '',
-      beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron?.value ? stripOrder(stripHtml(r.beschrijvingRegelgevendeBron.value)) : '',
+      beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron?.value ? stripHtml(stripOrder(r.beschrijvingRegelgevendeBron.value)) : '',
       urlRegelgevendeBron: r.urlRegelgevendeBron?.value ? stripOrder(r.urlRegelgevendeBron.value) : '',
       contactpuntEmail: r.contactpuntEmail?.value ? stripOrder(r.contactpuntEmail.value) : '',
       contactpuntTelefoon: r.contactpuntTelefoon?.value ? stripOrder(r.contactpuntTelefoon.value) : '',
@@ -295,7 +296,7 @@ export default {
       gemeente: r.gemeente?.value ? stripOrder(r.gemeente.value) : '',
       adres: r.adres?.value ? stripOrder(r.adres.value) : '',
       titelWebsite: r.titelWebsite?.value ? stripOrder(r.titelWebsite.value) : '',
-      beschrijvingWebsite: r.beschrijvingWebsite?.value ? stripOrder(stripHtml(r.beschrijvingWebsite.value)) : '',
+      beschrijvingWebsite: r.beschrijvingWebsite?.value ? stripHtml(stripOrder(r.beschrijvingWebsite.value)) : '',
       urlWebsite: r.urlWebsite?.value ? stripOrder(r.urlWebsite.value) : '',
       startDatum: r.startDatum?.value || '',
       eindDatum: r.eindDatum?.value || '',
