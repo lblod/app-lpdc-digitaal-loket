@@ -1,5 +1,6 @@
 import { generateReportFromData } from '../helpers.js';
 import { batchedQuery } from '../helpers.js';
+import { querySudo as query } from '@lblod/mu-auth-sudo';
 
 export default {
   cronPattern: '0 0 4 * * *',
@@ -11,24 +12,53 @@ export default {
       filePrefix: 'lpdcBestuurseenheidComplete'
     };
 
-    // Helper functies
-    function stripHtml(html) {
-      if (html.replace(/<[^>]+>/g, '') === '') return '';
-      return html
-        .replace(/<\/?(p|div|br|h[1-6]|li|ul|ol|table|tr|td|th)[^>]*>/gi, ' ')
-        .replace(/<[^>]+>/g, '')
-        .replace(/\s+/g, ' ')
-    }
-
-    function stripOrder(text) {
-      return String(text)
-        .replace(/(\d*)\|\|/g, '')
-    }
-
     // Query
     // Construction of the GROUP_CONCAT was made to use shacl:order since without it, the order of the entries wasn't according to the form. shacl:order makes it a consistent way of ordering.
     console.log('Generating LPDC Bestuurseenheid Complete Report');
-    const lpdcQuery = `
+
+    console.log('Getting all instances first')
+
+    const instancesQuery = `
+       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+       SELECT DISTINCT ?uriPubliekeDienstverlening WHERE {
+         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService.
+      }
+    `;
+
+    let instancesQueryResult = await query(instancesQuery);
+    instancesQueryResult = instancesQueryResult.results.bindings;
+    const instances = instancesQueryResult.map(r => r.uriPubliekeDienstverlening.value);
+
+    let allData = [];
+    const total = instances.length;
+    const batchSize = 3;
+
+    for (let start = 0; start < total; start += batchSize) {
+      const batch = instances.slice(start, start + batchSize);
+
+      const promises = batch.map((instance) => {
+        const queryString = generateDetailsQuery(instance);
+        return query(queryString).then((res) => postProcessData(res.results.bindings));
+      });
+
+      const results = await Promise.all(promises);
+
+      for (const group of results) {
+        allData = [...allData, ...group];
+      }
+
+      console.log(`Processed: ${Math.min(start + batch.length, total)} of ${total}`);
+    }
+
+    const csvHeaders = Object.keys(allData[0]);
+
+    await generateReportFromData(allData, csvHeaders, reportData);
+
+  }
+};
+
+function generateDetailsQuery(instanceUri) {
+    return `
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
       PREFIX adms:    <http://www.w3.org/ns/adms#>
       PREFIX dct:     <http://purl.org/dc/terms/>
@@ -49,7 +79,7 @@ export default {
       SELECT DISTINCT
         ?uriPubliekeDienstverlening ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
-        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
+        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
         ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderVoorwaarde), "||", ?titelVoorwaarde); separator=" | ") AS ?titelVoorwaarde)
@@ -76,7 +106,7 @@ export default {
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?adres); separator=" | ") AS ?adres)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?titelWebsite); separator=" | ") AS ?titelWebsite)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?beschrijvingWebsite); separator=" | ") AS ?beschrijvingWebsite)
-        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?urlWebsite); separator=" | ") AS ?urlWebsite) 
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?urlWebsite); separator=" | ") AS ?urlWebsite)
         (GROUP_CONCAT(DISTINCT ?targetAudienceLabel; separator=" | ") AS ?doelgroep)
         (GROUP_CONCAT(DISTINCT ?thematicAreaLabel; separator=" | ") AS ?themas)
         (GROUP_CONCAT(DISTINCT ?languageLabel; separator=" | ") AS ?talen)
@@ -90,6 +120,9 @@ export default {
         (GROUP_CONCAT(DISTINCT ?yourEuropeCategoryLabel; separator=" | ") AS ?categorieenYourEurope)
 
       WHERE {
+        VALUES ?uriPubliekeDienstverlening {
+          <${instanceUri}>
+        }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
                                       schema:dateModified ?aangepastOp .
 
@@ -193,7 +226,7 @@ export default {
           ?meerInfo dct:title ?titelWebsite ; schema:url ?urlWebsite ; shacl:order ?orderWebsite .
           OPTIONAL { ?meerInfo dct:description ?beschrijvingWebsite }
         }
-        
+
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
         OPTIONAL { ?uriPubliekeDienstverlening schema:endDate ?eindDatum }
         OPTIONAL {
@@ -245,15 +278,28 @@ export default {
       GROUP BY
         ?uriPubliekeDienstverlening ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
-        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
+        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
         ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
-
     `;
-    const queryResponse = await batchedQuery(lpdcQuery, 1000);
-    const data = queryResponse.results.bindings;
+}
 
-    const postProcessedData = data.map(r => ({
+// Helper functies
+function stripHtml(html) {
+  if (html.replace(/<[^>]+>/g, '') === '') return '';
+  return html
+    .replace(/<\/?(p|div|br|h[1-6]|li|ul|ol|table|tr|td|th)[^>]*>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+}
+
+function stripOrder(text) {
+  return String(text)
+    .replace(/(\d*)\|\|/g, '')
+}
+
+function postProcessData(data) {
+    return data.map(r => ({
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
       naamBestuurseenheid: r.naamBestuurseenheid?.value  || '',
       typeBestuurseenheid: r.typeBestuurseenheid?.value  || '',
@@ -313,10 +359,4 @@ export default {
       publicatieKanalen: r.publicatieKanalen?.value || '',
       categorieenYourEurope: r.categorieenYourEurope?.value || ''
     }));
-      
-    const csvHeaders = Object.keys(postProcessedData[0]);
-  
-    await generateReportFromData(postProcessedData, csvHeaders, reportData);
-
-  }
-};
+}
