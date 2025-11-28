@@ -1,4 +1,14 @@
 # Changelog
+## Unreleased
+### Backend
+- LPDC Complete report: Analysis of missing data [LPDC-1491]
+
+### Deploy notes
+
+```
+drc restart report-generation
+```
+
 ## v0.31.2 (2025-11-20)
 ### Backend
 - Address and symbol query fix in report[LPDC-1490]

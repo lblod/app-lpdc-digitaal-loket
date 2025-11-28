@@ -1,5 +1,6 @@
 import { generateReportFromData } from '../helpers.js';
 import { batchedQuery } from '../helpers.js';
+import { querySudo as query } from '@lblod/mu-auth-sudo';
 
 export default {
   cronPattern: '0 0 4 * * *',
@@ -11,24 +12,53 @@ export default {
       filePrefix: 'lpdcBestuurseenheidComplete'
     };
 
-    // Helper functies
-    function stripHtml(html) {
-      return html
-        .replace(/<(\/?(p|div|br|h[1-6]|li|ul|ol|table|tr|td|th))[^>]*>/gi, ' ')
-        .replace(/<[^>]+>/g, '')
-        .replace(/\s+/g, ' ')
-        .trim();
-    }
-
-    function stripOrder(text) {
-      return String(text)
-        .replace(/(\b\d+\s*)?\|\|\s*/g, '')
-    }
-
     // Query
     // Construction of the GROUP_CONCAT was made to use shacl:order since without it, the order of the entries wasn't according to the form. shacl:order makes it a consistent way of ordering.
     console.log('Generating LPDC Bestuurseenheid Complete Report');
-    const lpdcQuery = `
+
+    console.log('Getting all instances first')
+
+    const instancesQuery = `
+       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+       SELECT DISTINCT ?uriPubliekeDienstverlening WHERE {
+         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService.
+      }
+    `;
+
+    let instancesQueryResult = await query(instancesQuery);
+    instancesQueryResult = instancesQueryResult.results.bindings;
+    const instances = instancesQueryResult.map(r => r.uriPubliekeDienstverlening.value);
+
+    let allData = [];
+    const total = instances.length;
+    const batchSize = 3;
+
+    for (let start = 0; start < total; start += batchSize) {
+      const batch = instances.slice(start, start + batchSize);
+
+      const promises = batch.map((instance) => {
+        const queryString = generateDetailsQuery(instance);
+        return query(queryString).then((res) => postProcessData(res.results.bindings));
+      });
+
+      const results = await Promise.all(promises);
+
+      for (const group of results) {
+        allData = [...allData, ...group];
+      }
+
+      console.log(`Processed: ${Math.min(start + batch.length, total)} of ${total}`);
+    }
+
+    const csvHeaders = Object.keys(allData[0]);
+
+    await generateReportFromData(allData, csvHeaders, reportData);
+
+  }
+};
+
+function generateDetailsQuery(instanceUri) {
+    return `
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
       PREFIX adms:    <http://www.w3.org/ns/adms#>
       PREFIX dct:     <http://purl.org/dc/terms/>
@@ -49,7 +79,7 @@ export default {
       SELECT DISTINCT
         ?uriPubliekeDienstverlening ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
-        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
+        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
         ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderVoorwaarde), "||", ?titelVoorwaarde); separator=" | ") AS ?titelVoorwaarde)
@@ -76,7 +106,7 @@ export default {
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderContact), "||", ?adres); separator=" | ") AS ?adres)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?titelWebsite); separator=" | ") AS ?titelWebsite)
         (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?beschrijvingWebsite); separator=" | ") AS ?beschrijvingWebsite)
-        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?urlWebsite); separator=" | ") AS ?urlWebsite) 
+        (GROUP_CONCAT(DISTINCT CONCAT(str(?orderWebsite), "||", ?urlWebsite); separator=" | ") AS ?urlWebsite)
         (GROUP_CONCAT(DISTINCT ?targetAudienceLabel; separator=" | ") AS ?doelgroep)
         (GROUP_CONCAT(DISTINCT ?thematicAreaLabel; separator=" | ") AS ?themas)
         (GROUP_CONCAT(DISTINCT ?languageLabel; separator=" | ") AS ?talen)
@@ -90,6 +120,9 @@ export default {
         (GROUP_CONCAT(DISTINCT ?yourEuropeCategoryLabel; separator=" | ") AS ?categorieenYourEurope)
 
       WHERE {
+        VALUES ?uriPubliekeDienstverlening {
+          <${instanceUri}>
+        }
         ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
                                       schema:dateModified ?aangepastOp .
 
@@ -126,19 +159,16 @@ export default {
           BIND(CONCAT(COALESCE(?firstName, ""), " ", COALESCE(?familyName, "")) AS ?aangepastDoor)
         }
         OPTIONAL {
-          ?uriPubliekeDienstverlening dct:creator ?creator .
-          OPTIONAL {
-            ?creator foaf:firstName ?creatorFirstName ; foaf:familyName ?creatorFamilyName .
-            BIND(CONCAT(COALESCE(?creatorFirstName, ""), " ", COALESCE(?creatorFamilyName, "")) AS ?aangemaaktDoor)
-          }
+          ?uriPubliekeDienstverlening dct:creator [ foaf:firstName ?creatorFirstName ; foaf:familyName ?creatorFamilyName ] .
+          BIND(CONCAT(COALESCE(?creatorFirstName, ""), " ", COALESCE(?creatorFamilyName, "")) AS ?aangemaaktDoor)
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde .
-          OPTIONAL { ?voorwaarde dct:title ?titelVoorwaarde ; dct:description ?beschrijvingVoorwaarde ; shacl:order ?orderVoorwaarde }
+          ?voorwaarde dct:title ?titelVoorwaarde ; dct:description ?beschrijvingVoorwaarde ; shacl:order ?orderVoorwaarde .
           OPTIONAL {
             ?voorwaarde m8g:hasSupportingEvidence ?bewijs .
-            OPTIONAL { ?bewijs dct:title ?titelBewijsstuk ; dct:description ?beschrijvingBewijsstuk ; shacl:order ?orderBewijsstuk }
+            ?bewijs dct:title ?titelBewijsstuk ; dct:description ?beschrijvingBewijsstuk ; shacl:order ?orderBewijsstuk .
           }
         }
 
@@ -147,18 +177,19 @@ export default {
           ?procedure dct:title ?titelProcedure ; dct:description ?beschrijvingProcedure ; shacl:order ?orderProcedure .
           OPTIONAL {
             ?procedure lpdcExt:hasWebsite ?website .
-            OPTIONAL { ?website dct:title ?titelProcedureWebsite ; dct:description ?beschrijvingProcedureWebsite ; schema:url ?urlProcedureWebsite ; shacl:order ?orderProcedureWebsite }
+             ?website dct:title ?titelProcedureWebsite ; schema:url ?urlProcedureWebsite ; shacl:order ?orderProcedureWebsite .
+            OPTIONAL { ?website dct:description ?beschrijvingProcedureWebsite }
           }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasCost ?kosten .
-          OPTIONAL { ?kosten dct:title ?titelKosten ; dct:description ?beschrijvingKosten; shacl:order ?orderKosten }
+          ?kosten dct:title ?titelKosten ; dct:description ?beschrijvingKosten; shacl:order ?orderKosten .
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening cpsv:produces ?voordeel .
-          OPTIONAL { ?voordeel dct:title ?titelFinancieelVoordeel ; dct:description ?beschrijvingFinancieelVoordeel ; shacl:order ?orderFinancieelVoordeel}
+          ?voordeel dct:title ?titelFinancieelVoordeel ; dct:description ?beschrijvingFinancieelVoordeel ; shacl:order ?orderFinancieelVoordeel .
         }
 
         OPTIONAL {
@@ -167,13 +198,19 @@ export default {
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasLegalResource ?bron .
-          OPTIONAL { ?bron dct:title ?titelRegelgevendeBron ; dct:description ?beschrijvingRegelgevendeBron ; schema:url ?urlRegelgevendeBron ; shacl:order ?orderRegelgevendeBron }
+          ?bron schema:url ?urlRegelgevendeBron ; shacl:order ?orderRegelgevendeBron .
+          OPTIONAL { ?bron dct:title ?titelRegelgevendeBron }
+          OPTIONAL { ?bron dct:description ?beschrijvingRegelgevendeBron }
         }
 
         OPTIONAL {
           ?uriPubliekeDienstverlening m8g:hasContactPoint ?contact .
-          OPTIONAL { ?contact schema:email ?contactpuntEmail ; schema:telephone ?contactpuntTelefoon ;
-                            schema:url ?contactpuntWebsiteUrl ; schema:openingHours ?contactpuntOpeningsuren ;shacl:order ?orderContact}
+          ?contact shacl:order ?orderContact .
+          OPTIONAL { ?contact schema:email ?contactpuntEmail }
+          OPTIONAL { ?contact schema:telephone ?contactpuntTelefoon }
+          OPTIONAL { ?contact schema:url ?contactpuntWebsiteUrl }
+          OPTIONAL { ?contact schema:openingHours ?contactpuntOpeningsuren }
+
           OPTIONAL {
             ?contact lpdcExt:address ?adresUri .
             OPTIONAL { ?adresUri adres:Straatnaam ?straatnaam }
@@ -186,9 +223,10 @@ export default {
 
         OPTIONAL {
           ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo .
-          OPTIONAL { ?meerInfo dct:title ?titelWebsite ; dct:description ?beschrijvingWebsite ; schema:url ?urlWebsite ; shacl:order ?orderWebsite }
+          ?meerInfo dct:title ?titelWebsite ; schema:url ?urlWebsite ; shacl:order ?orderWebsite .
+          OPTIONAL { ?meerInfo dct:description ?beschrijvingWebsite }
         }
-        
+
         OPTIONAL { ?uriPubliekeDienstverlening schema:startDate ?startDatum }
         OPTIONAL { ?uriPubliekeDienstverlening schema:endDate ?eindDatum }
         OPTIONAL {
@@ -240,15 +278,28 @@ export default {
       GROUP BY
         ?uriPubliekeDienstverlening ?naamBestuurseenheid ?aangemaaktDoor ?aangemaaktOp
         ?typeBestuurseenheid ?titel ?beschrijving ?aanvullendeBeschrijving ?uitzondering
-        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie 
+        ?aangepastOp ?aangepastDoor ?IPDCConceptID ?statusLabel ?versie
         ?vergtOmzettingNaarInformeel ?reviewStatus ?voorGemeentelijkeFusie ?verstuurdOp
         ?regelgeving ?startDatum ?eindDatum ?productTypeLabel
-
     `;
-    const queryResponse = await batchedQuery(lpdcQuery, 1000);
-    const data = queryResponse.results.bindings;
+}
 
-    const postProcessedData = data.map(r => ({
+// Helper functies
+function stripHtml(html) {
+  if (html.replace(/<[^>]+>/g, '') === '') return '';
+  return html
+    .replace(/<\/?(p|div|br|h[1-6]|li|ul|ol|table|tr|td|th)[^>]*>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+}
+
+function stripOrder(text) {
+  return String(text)
+    .replace(/(\d*)\|\|/g, '')
+}
+
+function postProcessData(data) {
+    return data.map(r => ({
       uriPubliekeDienstverlening: r.uriPubliekeDienstverlening.value,
       naamBestuurseenheid: r.naamBestuurseenheid?.value  || '',
       typeBestuurseenheid: r.typeBestuurseenheid?.value  || '',
@@ -268,21 +319,21 @@ export default {
       aanvullendeBeschrijving: r.aanvullendeBeschrijving ? stripHtml(r.aanvullendeBeschrijving.value) : '',
       uitzondering: r.uitzondering ? stripHtml(r.uitzondering.value) : '',
       titelVoorwaarde: r.titelVoorwaarde?.value ? stripOrder(r.titelVoorwaarde.value) : '',
-      beschrijvingVoorwaarde: r.beschrijvingVoorwaarde?.value ? stripOrder(stripHtml(r.beschrijvingVoorwaarde.value)) : '',
+      beschrijvingVoorwaarde: r.beschrijvingVoorwaarde?.value ? stripHtml(stripOrder(r.beschrijvingVoorwaarde.value)) : '',
       titelBewijsstuk: r.titelBewijsstuk?.value ? stripOrder(r.titelBewijsstuk.value) : '',
-      beschrijvingBewijsstuk: r.beschrijvingBewijsstuk?.value ? stripOrder(stripHtml(r.beschrijvingBewijsstuk.value)) : '',
+      beschrijvingBewijsstuk: r.beschrijvingBewijsstuk?.value ? stripHtml(stripOrder(r.beschrijvingBewijsstuk.value)) : '',
       titelProcedure: r.titelProcedure?.value ? stripOrder(r.titelProcedure.value) : '',
-      beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripOrder(stripHtml(r.beschrijvingProcedure.value)) : '',
+      beschrijvingProcedure: r.beschrijvingProcedure?.value ? stripHtml(stripOrder(r.beschrijvingProcedure.value)) : '',
       titelProcedureWebsite: r.titelProcedureWebsite?.value ? stripOrder(r.titelProcedureWebsite.value) : '',
-      beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite?.value ? stripOrder(stripHtml(r.beschrijvingProcedureWebsite.value)) : '',
+      beschrijvingProcedureWebsite: r.beschrijvingProcedureWebsite?.value ? stripHtml(stripOrder(r.beschrijvingProcedureWebsite.value)) : '',
       urlProcedureWebsite: r.urlProcedureWebsite?.value ? stripOrder(r.urlProcedureWebsite.value) : '',
       titelKosten: r.titelKosten?.value ? stripOrder(r.titelKosten.value) : '',
-      beschrijvingKosten: r.beschrijvingKosten?.value ? stripOrder(stripHtml(r.beschrijvingKosten.value)) : '',
+      beschrijvingKosten: r.beschrijvingKosten?.value ? stripHtml(stripOrder(r.beschrijvingKosten.value)) : '',
       titelFinancieelVoordeel: r.titelFinancieelVoordeel?.value ? stripOrder(r.titelFinancieelVoordeel.value) : '',
-      beschrijvingFinancieelVoordeel: r.beschrijvingFinancieelVoordeel?.value ? stripOrder(stripHtml(r.beschrijvingFinancieelVoordeel.value)) : '',
+      beschrijvingFinancieelVoordeel: r.beschrijvingFinancieelVoordeel?.value ? stripHtml(stripOrder(r.beschrijvingFinancieelVoordeel.value)) : '',
       regelgeving: r.regelgeving ? stripHtml(r.regelgeving.value) : '',
       titelRegelgevendeBron: r.titelRegelgevendeBron?.value ? stripOrder(r.titelRegelgevendeBron.value) : '',
-      beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron?.value ? stripOrder(stripHtml(r.beschrijvingRegelgevendeBron.value)) : '',
+      beschrijvingRegelgevendeBron: r.beschrijvingRegelgevendeBron?.value ? stripHtml(stripOrder(r.beschrijvingRegelgevendeBron.value)) : '',
       urlRegelgevendeBron: r.urlRegelgevendeBron?.value ? stripOrder(r.urlRegelgevendeBron.value) : '',
       contactpuntEmail: r.contactpuntEmail?.value ? stripOrder(r.contactpuntEmail.value) : '',
       contactpuntTelefoon: r.contactpuntTelefoon?.value ? stripOrder(r.contactpuntTelefoon.value) : '',
@@ -291,7 +342,7 @@ export default {
       gemeente: r.gemeente?.value ? stripOrder(r.gemeente.value) : '',
       adres: r.adres?.value ? stripOrder(r.adres.value) : '',
       titelWebsite: r.titelWebsite?.value ? stripOrder(r.titelWebsite.value) : '',
-      beschrijvingWebsite: r.beschrijvingWebsite?.value ? stripOrder(stripHtml(r.beschrijvingWebsite.value)) : '',
+      beschrijvingWebsite: r.beschrijvingWebsite?.value ? stripHtml(stripOrder(r.beschrijvingWebsite.value)) : '',
       urlWebsite: r.urlWebsite?.value ? stripOrder(r.urlWebsite.value) : '',
       startDatum: r.startDatum?.value || '',
       eindDatum: r.eindDatum?.value || '',
@@ -308,11 +359,4 @@ export default {
       publicatieKanalen: r.publicatieKanalen?.value || '',
       categorieenYourEurope: r.categorieenYourEurope?.value || ''
     }));
-
-      
-    const csvHeaders = Object.keys(postProcessedData[0]);
-
-    await generateReportFromData(postProcessedData, csvHeaders, reportData);
-
-  }
-};
+}
