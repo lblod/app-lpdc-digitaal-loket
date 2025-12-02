@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## v0.32.0 (2025-12-02)
 ### Backend
 - LPDC Complete report: Analysis of missing data [LPDC-1491]
 
