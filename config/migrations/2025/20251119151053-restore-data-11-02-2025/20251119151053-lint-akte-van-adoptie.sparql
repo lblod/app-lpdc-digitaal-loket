@@ -1,0 +1,378 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c6ce52f7a484e12c7f385f1116766fa9a8d1a1798e4e265a77a8881a2bda9b60/LoketLB-LPDCGebruiker> {
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Vlaamse overheid"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://purl.org/dc/terms/title>	"Akte van adoptie"@nl .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<http://schema.org/openingHours>	" "^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#e5d2a7dd-65e5-4ba1-b734-8a8236fc7269>	<http://purl.org/dc/terms/description>	"<p>Als je het document <strong>zelf ophaalt</strong>:</p><ul><li>jouw eigen identiteitskaart of verblijfsvergunning.</li></ul><p>Als je het document <strong>voor iemand anders</strong> aanvraagt:</p><ul><li>een volmacht van de betrokkene en een kopie van zijn of haar identiteitskaart</li><li>jouw eigen identiteitskaart.</li></ul><p>Als je een gerechtvaardigd belang moet aantonen om een afschrift of uittreksel te verkrijgen, dan moet je ook een <strong>bewijs van gerechtvaardigd belang</strong> toevoegen bij jouw aanvraag, bv. een onderhands mandaat van de betrokken persoon.</p>"@nl .
+<http://mu.semte.ch/blank#685dc489-68d2-4e0e-a35e-51bf8884af97>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#685dc489-68d2-4e0e-a35e-51bf8884af97>	<http://purl.org/dc/terms/description>	"<p>De akte van adoptie vermeldt:</p><ul><li>de naam, voornamen, geboorteplaats en -datum van de adoptanten alsook van de geadopteerde</li><li>de nieuwe naam en, in voorkomend geval, de nieuwe voornaam van de geadopteerde na de adoptie</li><li>de soort van adoptie: gewone of volle adoptie</li><li>in voorkomend geval, de datum van de erkenning van de buitenlandse adoptie door de federale centrale autoriteit.</li></ul><p>Onder bepaalde voorwaarden kan je een afschrift of een uittreksel van de akte aanvragen:</p><ul><li>Een <strong>afschrift </strong>vermeldt de oorspronkelijke gegevens van de akte en de historiek van de staat van de persoon op wie de akte betrekking heeft.</li><li>Een <strong>uittreksel </strong>vermeldt daarentegen enkel de actuele gegevens van de akte, zonder vermelding van de historiek van de staat van de persoon op wie de akte betrekking heeft. Op een uittreksel is dus enkel de huidige toestand van de gegevens zichtbaar.</li></ul><h3>Wie kan een afschrift of uittreksel aanvragen?</h3><p>Voor akten van adoptie wordt het recht op een afschrift of uittreksel beperkt tot:</p><ul><li>de personen op wie de akte betrekking heeft (adoptieouders en geadopteerde)</li><li>de wettelijke vertegenwoordiger (bv. ouder, voogd, bewindvoerder)</li><li>als ze een <a href=\"https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel/privacyverklaring-mijn-burgerprofiel/attesten-in-mijn-burgerprofiel/attesten-en-akten-in-het-domein-burgerzaken/gerechtvaardigd-belang-voor-het-verkrijgen-van-afschriften-en-uittreksels\">gerechtvaardigd belang</a> kunnen aantonen:<ul><li>de echtgeno(o)te, overlevende echtgeno(o)te of wettelijk samenwonende</li><li>bloedverwanten in opgaande of neerdalende lijn (geen aanverwanten en zijtakken)</li><li>erfgenamen.</li></ul></li></ul><p>Als de akte meer dan 100 jaar oud is, heeft iedereen recht op een afschrift of uittreksel.</p>"@nl .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://mu.semte.ch/blank#e5d2a7dd-65e5-4ba1-b734-8a8236fc7269>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/8e8cfbaa-017a-402d-8e15-76c35fec8766> .
+<http://mu.semte.ch/blank#d8c35125-6c2d-459a-95a3-2885c549f976>	<http://purl.org/dc/terms/title>	"Een ongekend kind adopteren"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://schema.org/productID>	"15051"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#e5d2a7dd-65e5-4ba1-b734-8a8236fc7269>	<http://purl.org/dc/terms/title>	"Bewijs"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/8e8cfbaa-017a-402d-8e15-76c35fec8766> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://schema.org/dateModified>	"2025-02-11T12:21:36.839Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://mu.semte.ch/vocabularies/core/uuid>	"8e8cfbaa-017a-402d-8e15-76c35fec8766" .
+<http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Koning Albertstraat"@nl .
+<http://mu.semte.ch/blank#d8c35125-6c2d-459a-95a3-2885c549f976>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#d84806ab-4b35-466d-9e97-d7e1afe1a95c>	<http://purl.org/dc/terms/description>	"<p>Je kan een afschrift of een uittreksel van een akte van adoptie aanvragen in de <strong>gemeente </strong>waar de erkenning werd overgeschreven in de registers van de burgerlijke stand.</p><p>Als je beschikt over een elektronische identiteitskaart (eID), kan je een afschrift of uittreksel van de akte <strong>online </strong>aanvragen:</p><ul><li>via het e-loket van jouw gemeente</li><li>of via de attestenpagina van <a href=\"https://www.vlaanderen.be/uw-overheid/mijn-burgerprofiel\">\u2018Mijn Burgerprofiel\u2019</a>.</li></ul><p>Sinds 31 maart 2019 worden akten van de burgerlijke stand uitsluitend digitaal geregistreerd. Dateert jouw akte van voor 31 maart 2019, dan is die misschien nog niet in digitale vorm beschikbaar. Sommige gemeenten digitaliseren oude archieven naarmate afschriften of uittreksels van de akten worden opgevraagd of wijzigingen worden aangebracht.</p><h3>Kan ik het afschrift of uittreksel gebruiken in het buitenland?</h3><p>In de meeste gevallen moet het document eerst gelegaliseerd en eventueel vertaald worden. Op de website van de Federale overheidsdienst Buitenlandse Zaken kunt je nakijken <a href=\"https://diplomatie.belgium.be/nl/legalisatie-van-documenten/zoekcriteria-legalisatie\">of jouw document al dan niet voorzien moet worden van een legalisatie of apostille</a>.</p><p>Heb je een afschrift of uittreksel met apostille of legalisatie nodig, dan kan je het document met legalisatie of apostille aanvragen via het e-loket <a href=\"https://elegalisation.diplomatie.be\">e-Legalisation</a>.</p><p>De prijs voor een legalisatie of apostille is steeds 20 euro per document.</p><p><a href=\"https://diplomatie.belgium.be/nl/legalisatie-van-documenten\">Meer informatie over legalisatie en apostille</a></p>"@nl .
+<http://mu.semte.ch/blank#d8c35125-6c2d-459a-95a3-2885c549f976>	<http://mu.semte.ch/vocabularies/core/uuid>	"97c4a2a0-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://mu.semte.ch/blank#b77af52e-4787-463d-b165-2d67e247ab24>	<http://mu.semte.ch/vocabularies/core/uuid>	"97c69e70-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#d84806ab-4b35-466d-9e97-d7e1afe1a95c>	<http://purl.org/dc/terms/title>	"Procedure"@nl .
+<http://mu.semte.ch/blank#d84806ab-4b35-466d-9e97-d7e1afe1a95c>	<http://mu.semte.ch/vocabularies/core/uuid>	"98f05160-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<http://mu.semte.ch/vocabularies/core/uuid>	"9bb8e740-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#b77af52e-4787-463d-b165-2d67e247ab24>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/WebSite> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#publicationMedium>	<https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory>	<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/BurgerEnFamilieRechtenKinderen> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO000061> .
+<http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<http://schema.org/email>	"burgerzaken@lint.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002156> .
+<http://mu.semte.ch/blank#b77af52e-4787-463d-b165-2d67e247ab24>	<http://purl.org/dc/terms/title>	"Een gekend kind adopteren"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Vlaams> .
+<http://mu.semte.ch/blank#685dc489-68d2-4e0e-a35e-51bf8884af97>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/c6ce52f7a484e12c7f385f1116766fa9a8d1a1798e4e265a77a8881a2bda9b60> .
+<http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9>	<http://mu.semte.ch/vocabularies/core/uuid>	"9bb8e740-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#685dc489-68d2-4e0e-a35e-51bf8884af97>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<http://schema.org/url>	"https://www.lint.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#d84806ab-4b35-466d-9e97-d7e1afe1a95c>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Bewijs"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://mu.semte.ch/blank#d8c35125-6c2d-459a-95a3-2885c549f976>	<http://schema.org/url>	"https://productcatalogus.ipdc.vlaanderen.be/nl/instantie/324"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#b77af52e-4787-463d-b165-2d67e247ab24>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/bestuurseenheden/c6ce52f7a484e12c7f385f1116766fa9a8d1a1798e4e265a77a8881a2bda9b60>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/bestuurseenheden/c6ce52f7a484e12c7f385f1116766fa9a8d1a1798e4e265a77a8881a2bda9b60>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://schema.org/dateCreated>	"2022-10-31T13:16:30.072Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://mu.semte.ch/blank#e5d2a7dd-65e5-4ba1-b734-8a8236fc7269>	<http://mu.semte.ch/vocabularies/core/uuid>	"9b0834e0-9ede-11f0-88d2-4dbc5f2a791c" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/YourEuropeCategorie/BurgerEnFamilieRechtenKinderen>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Rechten en plichten in het kader van kinderen"@nl .
+<http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Lint"@nl .
+<http://mu.semte.ch/blank#685dc489-68d2-4e0e-a35e-51bf8884af97>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#e5d2a7dd-65e5-4ba1-b734-8a8236fc7269> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://www.w3.org/2000/01/rdf-schema#seeAlso>	<http://mu.semte.ch/blank#b77af52e-4787-463d-b165-2d67e247ab24> .
+<http://mu.semte.ch/blank#b77af52e-4787-463d-b165-2d67e247ab24>	<http://schema.org/url>	"https://productcatalogus.ipdc.vlaanderen.be/nl/instantie/323"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://mu.semte.ch/blank#d8c35125-6c2d-459a-95a3-2885c549f976>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/WebSite> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/PublicatieKanaal/YourEurope>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Your Europe"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#685dc489-68d2-4e0e-a35e-51bf8884af97> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://www.w3.org/2000/01/rdf-schema#seeAlso>	<http://mu.semte.ch/blank#d8c35125-6c2d-459a-95a3-2885c549f976> .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"41"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#286c9e67-b891-4256-a272-4cd613b7a526>	<http://schema.org/telephone>	"+32 3 460 13 30"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/bestuurseenheden/c6ce52f7a484e12c7f385f1116766fa9a8d1a1798e4e265a77a8881a2bda9b60>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lint" .
+<http://mu.semte.ch/blank#685dc489-68d2-4e0e-a35e-51bf8884af97>	<http://mu.semte.ch/vocabularies/core/uuid>	"99f0d170-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#d84806ab-4b35-466d-9e97-d7e1afe1a95c> .
+<http://mu.semte.ch/blank#d84806ab-4b35-466d-9e97-d7e1afe1a95c>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://purl.org/dc/terms/description>	"<p>De akte van adoptie wordt opgesteld door de ambtenaar van de burgerlijke stand op basis van een adoptievonnis of arrest. Onder bepaalde voorwaarden kan je een afschrift of een uittreksel van de akte aanvragen.</p>"@nl .
+<http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run onderstaande CONSTRUCT query via productencatalogus database
+#   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
+# Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource
+#
+# Query:
+#
+# PREFIX lpdcExt:<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+# PREFIX adms:<http://www.w3.org/ns/adms#>
+# PREFIX dct:<http://purl.org/dc/terms/>
+# PREFIX pav:<http://purl.org/pav/>
+# PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+# PREFIX besluit:<http://data.vlaanderen.be/ns/besluit#>
+# PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+# PREFIX schema:<http://schema.org/>
+# PREFIX ext:<http://mu.semte.ch/vocabularies/ext/>
+# PREFIX belgif:<http://vocab.belgif.be/ns/publicservice#>
+# PREFIX m8g:<http://data.europa.eu/m8g/>
+# PREFIX cpsv:<http://purl.org/vocab/cpsv#>
+# PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+# PREFIX adres:<https://data.vlaanderen.be/ns/adres#>
+# PREFIX shacl:<http://www.w3.org/ns/shacl#>
+# PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+# PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+# CONSTRUCT {
+# ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService;
+# mu:uuid ?localId;
+# dct:source ?uriPubliekeDienstverlening;
+# ext:hasVersionedSource ?uriPubliekeDienstverlening;
+# lpdcExt:dutchLanguageVariant ?languageVariant;
+# schema:dateModified ?aangepastOp;
+# pav:createdBy ?uriBestuurseenheid;
+# adms:status ?status;
+# lpdcExt:additionalDescription ?aanvullendeBeschrijving;
+# lpdcExt:exception ?uitzondering;
+# schema:productID ?IPDCConceptID;
+# lpdcExt:needsConversionFromFormalToInformal ?vergtOmzettingNaarInformeel;
+# lpdcExt:forMunicipalityMerger ?voorGemeentelijkeFusie;
+# schema:dateSent ?verstuurdOp;
+# dct:title ?titel;
+# schema:dateCreated ?aangemaaktOp;
+# lpdcExt:dutchLanguageVariant ?versie;
+# dct:description ?beschrijving;
+# ext:reviewStatus ?reviewStatusLink;
+# ext:lastModifiedBy ?lastModifiedBy;
+# dct:creator ?creator;
+# schema:startDate ?startDatum;
+# schema:endDate ?eindDatum;
+# dct:type ?productType;
+# lpdcExt:targetAudience ?targetAudience;
+# m8g:thematicArea ?thematicArea;
+# dct:language ?language;
+# lpdcExt:competentAuthorityLevel ?competentAuthorityLevel;
+# m8g:hasCompetentAuthority ?competentAuthority;
+# lpdcExt:executingAuthorityLevel ?executingAuthorityLevel;
+# lpdcExt:hasExecutingAuthority ?executingAuthority;
+# dct:spatial ?spatial;
+# <http://www.w3.org/ns/dcat#keyword> ?tag;
+# lpdcExt:publicationMedium ?publicationMedium;
+# belgif:hasRequirement ?voorwaarde;
+# cpsv:follows ?procedure;
+# m8g:hasCost ?kosten;
+# cpsv:produces ?voordeel;
+# lpdcExt:regulation ?regelgeving;
+# m8g:hasLegalResource ?bron;
+# m8g:hasContactPoint ?contact;
+# rdfs:seeAlso ?meerInfo;
+# lpdcExt:yourEuropeCategory ?yourEuropeCategory.
+# ?uriBestuurseenheid a besluit:Bestuurseenheid;skos:prefLabel ?naamBestuurseenheid;besluit:classificatie ?classificatie.
+# ?classificatie skos:prefLabel ?typeBestuurseenheid.
+# ?status skos:prefLabel ?statusLabel.
+# ?reviewStatusLink skos:prefLabel ?reviewStatus.
+# ?creator foaf:firstName ?creatorFirstName;foaf:familyName ?creatorFamilyName.
+# ?lastModifiedBy foaf:firstName ?firstName;foaf:familyName ?familyName.
+
+# ?productType skos:prefLabel ?productTypeLabel.
+# ?targetAudience skos:prefLabel ?targetAudienceLabel.
+# ?thematicArea skos:prefLabel ?thematicAreaLabel.
+# ?language skos:prefLabel ?languageLabel.
+# ?competentAuthorityLevel skos:prefLabel ?competentAuthorityLevelLabel.
+# ?competentAuthority skos:prefLabel ?competentAuthorityLabel.
+# ?executingAuthorityLevel skos:prefLabel ?executingAuthorityLevelLabel.
+# ?executingAuthority skos:prefLabel ?executingAuthorityLabel.
+# ?spatial skos:prefLabel ?spatialLabel.
+# ?publicationMedium skos:prefLabel ?publicationMediumLabel.
+# ?yourEuropeCategory skos:prefLabel ?yourEuropeCategoryLabel.
+
+# ?voorwaarde mu:uuid ?voorwaardeUuid; rdf:type ?voorwaardeType;dct:title ?titelVoorwaarde;dct:description ?beschrijvingVoorwaarde;shacl:order ?orderVoorwaarde;m8g:hasSupportingEvidence ?bewijs.
+# ?bewijs mu:uuid ?bewijsUuid; rdf:type ?bewijsType;dct:title ?titelBewijsstuk;dct:description ?beschrijvingBewijsstuk;shacl:order ?orderBewijsstuk.
+# ?procedure mu:uuid ?procedureUuid; rdf:type ?procedureType;dct:title ?titelProcedure;dct:description ?beschrijvingProcedure;shacl:order ?orderProcedure;lpdcExt:hasWebsite ?website.
+# ?website mu:uuid ?procedureWebsiteUuid; rdf:type ?procedureWebsiteType;dct:title ?titelProcedureWebsite;dct:description ?beschrijvingProcedureWebsite;schema:url ?urlProcedureWebsite;shacl:order ?orderProcedureWebsite.
+# ?kosten mu:uuid ?kostenUuid; rdf:type ?kostenType;dct:title ?titelKosten;dct:description ?beschrijvingKosten;shacl:order ?orderKosten.
+# ?voordeel mu:uuid ?voordeelUuid; rdf:type ?voordeelType;dct:title ?titelFinancieelVoordeel;dct:description ?beschrijvingFinancieelVoordeel;shacl:order ?orderFinancieelVoordeel.
+# ?bron mu:uuid ?bronUuid; rdf:type ?bronType;dct:title ?titelRegelgevendeBron;dct:description ?beschrijvingRegelgevendeBron;schema:url ?urlRegelgevendeBron;shacl:order ?orderRegelgevendeBron.
+# ?contact mu:uuid ?contactUuid; rdf:type ?contactType;schema:email ?contactpuntEmail;schema:telephone ?contactpuntTelefoon;schema:url ?contactpuntWebsiteUrl;schema:openingHours ?contactpuntOpeningsuren;lpdcExt:address ?adresUri;shacl:order ?orderContact.
+# ?adresUri mu:uuid ?adresUuid; rdf:type ?adressType;adres:Straatnaam ?straatnaam;adres:Adresvoorstelling.huisnummer ?huisnummer;adres:Adresvoorstelling.busnummer ?busnummer;adres:gemeentenaam ?gemeente.
+# ?meerInfo mu:uuid ?websiteUuid; rdf:type ?websiteType;dct:title ?titelWebsite;dct:description ?beschrijvingWebsite;schema:url ?urlWebsite;shacl:order ?orderWebsite.
+
+# }
+# WHERE {
+# VALUES ?uriPubliekeDienstverlening {<https://ipdc.vlaanderen.be/id/instantie/8e8cfbaa-017a-402d-8e15-76c35fec8766>}
+# ?uriPubliekeDienstverlening a lpdcExt:InstancePublicServiceSnapshot;
+#                                 schema:dateModified ?aangepastOp.  
+# BIND(STRAFTER(STR(?uriPubliekeDienstverlening), "https://ipdc.vlaanderen.be/id/instantie/") AS ?localId)
+# BIND("nl" AS ?languageVariant)
+# OPTIONAL {?uriPubliekeDienstverlening pav:createdBy ?uriBestuurseenheid.?uriBestuurseenheid a besluit:Bestuurseenheid;skos:prefLabel ?naamBestuurseenheid;besluit:classificatie ?classificatie.OPTIONAL{?classificatie skos:prefLabel ?typeBestuurseenheid}}
+# OPTIONAL{?uriPubliekeDienstverlening adms:status ?status.?status skos:prefLabel ?statusLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:additionalDescription ?aanvullendeBeschrijving}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:exception ?uitzondering}
+# OPTIONAL{?uriPubliekeDienstverlening schema:productID ?IPDCConceptID}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:needsConversionFromFormalToInformal ?vergtOmzettingNaarInformeel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:forMunicipalityMerger ?voorGemeentelijkeFusie}
+# OPTIONAL{?uriPubliekeDienstverlening schema:dateSent ?verstuurdOp}
+# OPTIONAL{?uriPubliekeDienstverlening dct:title ?titel FILTER(LANG(?titel) IN ("nl"))}
+# OPTIONAL{?uriPubliekeDienstverlening schema:dateCreated ?aangemaaktOp}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:dutchLanguageVariant ?versie}
+# OPTIONAL{?uriPubliekeDienstverlening dct:description ?beschrijving FILTER(LANG(?beschrijving) IN ("nl"))}
+# OPTIONAL{?uriPubliekeDienstverlening ext:reviewStatus ?reviewStatusLink.?reviewStatusLink skos:prefLabel ?reviewStatus}
+# OPTIONAL{?uriPubliekeDienstverlening ext:lastModifiedBy ?lastModifiedBy.?lastModifiedBy foaf:firstName ?firstName;foaf:familyName ?familyName}
+# OPTIONAL{?uriPubliekeDienstverlening dct:creator ?creator.?creator foaf:firstName ?creatorFirstName;foaf:familyName ?creatorFamilyName}
+# OPTIONAL{?uriPubliekeDienstverlening schema:startDate ?startDatum}
+# OPTIONAL{?uriPubliekeDienstverlening schema:endDate ?eindDatum}
+# OPTIONAL{?uriPubliekeDienstverlening dct:type ?productType.?productType skos:prefLabel ?productTypeLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:targetAudience ?targetAudience.?targetAudience skos:prefLabel ?targetAudienceLabel}
+# OPTIONAL{?uriPubliekeDienstverlening m8g:thematicArea ?thematicArea.?thematicArea skos:prefLabel ?thematicAreaLabel}
+# OPTIONAL{?uriPubliekeDienstverlening dct:language ?language.?language skos:prefLabel ?languageLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:competentAuthorityLevel ?competentAuthorityLevel.?competentAuthorityLevel skos:prefLabel ?competentAuthorityLevelLabel}
+# OPTIONAL{?uriPubliekeDienstverlening m8g:hasCompetentAuthority ?competentAuthority.}
+# OPTIONAL{?competentAuthority skos:prefLabel ?competentAuthorityLabel.}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:executingAuthorityLevel ?executingAuthorityLevel.?executingAuthorityLevel skos:prefLabel ?executingAuthorityLevelLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:hasExecutingAuthority ?executingAuthority.}
+# OPTIONAL{?executingAuthority skos:prefLabel ?executingAuthorityLabel.}
+# OPTIONAL{?uriPubliekeDienstverlening dct:spatial ?spatial.?spatial skos:prefLabel ?spatialLabel}
+# OPTIONAL{?uriPubliekeDienstverlening <http://www.w3.org/ns/dcat#keyword> ?tag}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:publicationMedium ?publicationMedium.?publicationMedium skos:prefLabel ?publicationMediumLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:yourEuropeCategory ?yourEuropeCategory.?yourEuropeCategory skos:prefLabel ?yourEuropeCategoryLabel}
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde.
+#   OPTIONAL {
+#     ?voorwaarde rdf:type ?voorwaardeType;
+#                 dct:title ?titelVoorwaarde;
+#                 mu:uuid ?voorwaardeUuid;
+#                 dct:description ?beschrijvingVoorwaarde.
+#                 OPTIONAL {?voorwaarde shacl:order ?orderVoorwaarde}.
+#     FILTER(
+#       LANG(?titelVoorwaarde) IN ("nl") &&
+#       LANG(?beschrijvingVoorwaarde) IN ("nl")
+#     )
+#   }
+#   OPTIONAL {
+#     ?voorwaarde m8g:hasSupportingEvidence ?bewijs.
+#     OPTIONAL {
+#       ?bewijs rdf:type ?bewijsType;
+#              dct:title ?titelBewijsstuk;
+#              mu:uuid ?bewijsUuid;
+#              dct:description ?beschrijvingBewijsstuk.
+#              OPTIONAL {?bewijs shacl:order ?orderBewijsstuk }
+#       FILTER(
+#         LANG(?titelBewijsstuk) IN ("nl") &&
+#         LANG(?beschrijvingBewijsstuk) IN ("nl")
+#       )
+#     }
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening cpsv:follows ?procedure.
+#   OPTIONAL {
+#     ?procedure rdf:type ?procedureType;
+#                dct:title ?titelProcedure;
+#                mu:uuid ?procedureUuid;
+#                dct:description ?beschrijvingProcedure.
+#                OPTIONAL {?procedure shacl:order ?orderProcedure}
+#     FILTER(
+#       LANG(?titelProcedure) IN ("nl") &&
+#       LANG(?beschrijvingProcedure) IN ("nl")
+#     )
+#   }
+#   OPTIONAL {
+#     ?procedure lpdcExt:hasWebsite ?website.
+#     OPTIONAL {
+#       ?website rdf:type ?procedureWebsiteType;
+#                dct:title ?titelProcedureWebsite;
+#                mu:uuid ?procedureWebsiteUuid;
+#                schema:url ?urlProcedureWebsite.
+#                OPTIONAL {?website dct:description ?beschrijvingProcedureWebsite}
+#                OPTIONAL {?website shacl:order ?orderProcedureWebsite}
+#       FILTER(
+#         LANG(?titelProcedureWebsite) IN ("nl") &&
+#         LANG(?beschrijvingProcedureWebsite) IN ("nl")
+#       )
+#     }
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening m8g:hasCost ?kosten.
+#   OPTIONAL {
+#     ?kosten rdf:type ?kostenType;
+#             dct:title ?titelKosten;
+#             mu:uuid ?kostenUuid;
+#             dct:description ?beschrijvingKosten.
+#             OPTIONAL {?kosten shacl:order ?orderKosten}
+#     FILTER(
+#       LANG(?titelKosten) IN ("nl") &&
+#       LANG(?beschrijvingKosten) IN ("nl")
+#     )
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening cpsv:produces ?voordeel.
+#   OPTIONAL {
+#     ?voordeel rdf:type ?voordeelType;
+#               dct:title ?titelFinancieelVoordeel;
+#               mu:uuid ?voordeelUuid;
+#               dct:description ?beschrijvingFinancieelVoordeel.
+#               OPTIONAL {?voordeel shacl:order ?orderFinancieelVoordeel}
+#     FILTER(
+#       LANG(?titelFinancieelVoordeel) IN ("nl") &&
+#       LANG(?beschrijvingFinancieelVoordeel) IN ("nl")
+#     )
+#   }
+# }
+
+# OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:regulation ?regelgeving }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening m8g:hasLegalResource ?bron.
+#   OPTIONAL {
+#     ?bron rdf:type ?bronType;
+#           mu:uuid ?bronUuid;
+#           schema:url ?urlRegelgevendeBron.
+#           OPTIONAL {?bron dct:title ?titelRegelgevendeBron}
+#           OPTIONAL {?bron dct:description ?beschrijvingRegelgevendeBron}
+#           OPTIONAL {?bron shacl:order ?orderRegelgevendeBron}
+#     FILTER(
+#   ( !BOUND(?titelRegelgevendeBron)
+#      || LANG(?titelRegelgevendeBron) IN ("nl") )
+#   &&
+#   ( !BOUND(?beschrijvingRegelgevendeBron)
+#      || LANG(?beschrijvingRegelgevendeBron) IN ("nl") )
+# )
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening m8g:hasContactPoint ?contact.
+#   OPTIONAL {
+#     ?contact rdf:type ?contactType;
+#           mu:uuid ?contactUuid.
+#           OPTIONAL { ?contact schema:email ?contactpuntEmail }
+#           OPTIONAL { ?contact schema:telephone ?contactpuntTelefoon }
+#           OPTIONAL { ?contact schema:url ?contactpuntWebsiteUrl }
+#           OPTIONAL { ?contact schema:openingHours ?contactpuntOpeningsuren }
+#           OPTIONAL {?contact shacl:order ?orderContact}
+#   }
+#   OPTIONAL {
+#     ?contact lpdcExt:address ?adresUri;
+#       mu:uuid ?adresUuid.
+#       OPTIONAL { ?adresUri rdf:type ?adressType}
+#       OPTIONAL { ?adresUri adres:Straatnaam ?straatnaam }
+#       OPTIONAL { ?adresUri adres:Adresvoorstelling.huisnummer ?huisnummer }
+#       OPTIONAL { ?adresUri adres:Adresvoorstelling.busnummer ?busnummer }
+#       OPTIONAL { ?adresUri adres:gemeentenaam ?gemeente }
+#         FILTER(
+#           ( !BOUND(?straatnaam)
+#             || LANG(?straatnaam) IN ("nl") )
+#           &&
+#           ( !BOUND(?gemeente)
+#             || LANG(?gemeente) IN ("nl") )
+#         )
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo.
+#   OPTIONAL {
+#     ?meerInfo rdf:type ?websiteType;
+#               dct:title ?titelWebsite;
+#               mu:uuid ?websiteUuid;
+#               schema:url ?urlWebsite.
+#               OPTIONAL {?meerInfo dct:description ?beschrijvingWebsite}
+#               OPTIONAL {?meerInfo shacl:order ?orderWebsite }
+#   FILTER(
+#     LANG(?titelWebsite) IN ("nl")
+#     && ( !BOUND(?beschrijvingWebsite)
+#         || LANG(?beschrijvingWebsite) IN ("nl") )
+#   )
+#   }
+# }
+# }
+
+
+
+
+

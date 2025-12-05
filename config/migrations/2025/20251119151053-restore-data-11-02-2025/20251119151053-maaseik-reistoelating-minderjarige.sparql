@@ -1,0 +1,59 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e/LoketLB-LPDCGebruiker> {
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://mu.semte.ch/blank#bbac0b04-04a1-4161-ba37-d2bd3d1c4ff2>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#1eed01dd-ab26-4d7d-b45e-e69dc377b7d9> .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Cultuur, Sport en Vrije Tijd"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://schema.org/productID>	"53542"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://mu.semte.ch/blank#59abf962-c93b-48c8-a42a-65baae72746c>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Maaseik" .
+<http://mu.semte.ch/blank#bbac0b04-04a1-4161-ba37-d2bd3d1c4ff2>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#1eed01dd-ab26-4d7d-b45e-e69dc377b7d9>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://schema.org/dateModified>	"2025-02-11T12:09:35.436Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://mu.semte.ch/blank#59abf962-c93b-48c8-a42a-65baae72746c>	<http://purl.org/dc/terms/description>	"<p>E\u00E9n van de ouders of voogd kan een reistoelating aanvragen bij de gemeente.</p>"@nl .
+<http://mu.semte.ch/blank#bbac0b04-04a1-4161-ba37-d2bd3d1c4ff2>	<http://purl.org/dc/terms/description>	"Bij aanvraag dien je de nodige bewijsstukken mee te brengen (zie bewijsstukken)."@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://www.w3.org/ns/dcat#keyword>	"reizen"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Toelating> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://mu.semte.ch/blank#59abf962-c93b-48c8-a42a-65baae72746c>	<http://purl.org/dc/terms/title>	"Procedure"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO024762> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://mu.semte.ch/blank#1eed01dd-ab26-4d7d-b45e-e69dc377b7d9>	<http://purl.org/dc/terms/title>	"Bewijs"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://www.w3.org/ns/dcat#keyword>	"minderjarige"@nl .
+<http://mu.semte.ch/blank#bbac0b04-04a1-4161-ba37-d2bd3d1c4ff2>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#59abf962-c93b-48c8-a42a-65baae72746c> .
+<http://mu.semte.ch/blank#1eed01dd-ab26-4d7d-b45e-e69dc377b7d9>	<http://mu.semte.ch/vocabularies/core/uuid>	"9ac5d4b0-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#59abf962-c93b-48c8-a42a-65baae72746c>	<http://mu.semte.ch/vocabularies/core/uuid>	"98476730-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://purl.org/dc/terms/title>	"Reistoelating voor minderjarigen"@nl .
+<http://mu.semte.ch/blank#bbac0b04-04a1-4161-ba37-d2bd3d1c4ff2>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://www.w3.org/ns/dcat#keyword>	"attest"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd> .
+<http://mu.semte.ch/blank#59abf962-c93b-48c8-a42a-65baae72746c>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://www.w3.org/ns/dcat#keyword>	"reistoelating"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#bbac0b04-04a1-4161-ba37-d2bd3d1c4ff2> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Federale overheid"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002167> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://www.w3.org/ns/dcat#keyword>	"reisattest"@nl .
+<http://mu.semte.ch/blank#1eed01dd-ab26-4d7d-b45e-e69dc377b7d9>	<http://purl.org/dc/terms/description>	"<ul><li>Identiteitskaart van de persoon die de toelating geeft.</li><li>De voogd van de minderjarige brengt ook een bewijs van ouderlijke macht mee.</li></ul>"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://mu.semte.ch/vocabularies/core/uuid>	"e3461a68-efcc-4a9b-9dbd-4bdeef6c864b" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Toelating>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Toelating"@nl .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://purl.org/dc/terms/description>	"<p>Een reistoelating voor minderjarigen of 'ouderlijke machtiging' is een document waarop je als ouder toelating geeft aan jouw <strong>minderjarig kind</strong> om naar het buitenland te reizen. Die schriftelijke toestemming is aan te raden als het minderjarige kind alleen of in het gezelschap van andere personen dan zijn ouder(s) reist. Als het kind met \u00E9\u00E9n ouder reist, staat het de ouders vrij om het akkoord van de andere ouder op papier te zetten.</p>"@nl .
+<http://mu.semte.ch/blank#bbac0b04-04a1-4161-ba37-d2bd3d1c4ff2>	<http://mu.semte.ch/vocabularies/core/uuid>	"996e8210-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<http://schema.org/dateCreated>	"2025-02-11T12:09:35.436Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via productencatalogus database (staat in bestand in zelfde map als deze 20251119151053_lint_akte_van_adoptie.sparql, alleen met andere lpdcExt:InstancePublicServiceSnapshot
+#   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
+# Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource

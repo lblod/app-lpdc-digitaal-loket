@@ -1,0 +1,58 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>	"<p>Voor Belgen of vreemdelingen die niet in Belgi\u00EB wonen, kan een handtekening enkel gewettigd worden bij de <a href=\"https://diplomatie.belgium.be/nl/legalisatie-van-documenten\">dienst Legalisatie van de federale overheidsdienst Buitenlandse Zaken</a>.</p>"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#cb1465b9-383a-44f7-8642-ca32af704fce> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e> .
+<http://mu.semte.ch/blank#c10b9d9f-5dc2-46e4-bc04-f93b018cf5e4>	<http://mu.semte.ch/vocabularies/core/uuid>	"9ac7d080-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://mu.semte.ch/vocabularies/core/uuid>	"902ac295-69da-4b0d-82c8-19b8a68811ac" .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>	"<p>Voor Belgen of vreemdelingen die niet in Belgi\u00EB wonen, kan een handtekening enkel gewettigd worden bij de <a href=\"https://diplomatie.belgium.be/nl/legalisatie-van-documenten\">dienst Legalisatie van de federale overheidsdienst Buitenlandse Zaken</a>.</p>"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://schema.org/dateCreated>	"2025-02-11T12:08:51.655Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/bestuurseenheden/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Maaseik" .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/902ac295-69da-4b0d-82c8-19b8a68811ac> .
+<http://mu.semte.ch/blank#cb1465b9-383a-44f7-8642-ca32af704fce>	<http://mu.semte.ch/vocabularies/core/uuid>	"997008b0-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#dc71f94f-fe3a-44fe-ac79-0782bb840f0f>	<http://purl.org/dc/terms/description>	"<p>De burgemeester van de gemeente of zijn gemachtigde gaat na of de te legaliseren handtekening overeenstemt met die van de persoon van wie de identiteit wordt vastgesteld. Een handtekening op een wit vel papier kan nooit gelegaliseerd worden.</p><p>Voor bepaalde attesten van bevolking en akten van burgerlijke stand die je nodig hebt in het buitenland, kan je de legalisatie online aanvragen via het e-loket <a href=\"https://elegalisation.diplomatie.be\">eLegalization</a>.</p><p> </p>"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://schema.org/dateModified>	"2025-02-11T12:08:51.655Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/902ac295-69da-4b0d-82c8-19b8a68811ac> .
+<http://mu.semte.ch/blank#dc71f94f-fe3a-44fe-ac79-0782bb840f0f>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>	"<p>Voor Belgen of vreemdelingen die niet in Belgi\u00EB wonen, kan een handtekening enkel gewettigd worden bij de <a href=\"https://diplomatie.belgium.be/nl/legalisatie-van-documenten\">dienst Legalisatie van de federale overheidsdienst Buitenlandse Zaken</a>.</p>"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO003988> .
+<http://mu.semte.ch/blank#cb1465b9-383a-44f7-8642-ca32af704fce>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+<http://mu.semte.ch/blank#cb1465b9-383a-44f7-8642-ca32af704fce>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#c10b9d9f-5dc2-46e4-bc04-f93b018cf5e4>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://mu.semte.ch/blank#c10b9d9f-5dc2-46e4-bc04-f93b018cf5e4>	<http://purl.org/dc/terms/title>	"Bewijs"@nl .
+<http://mu.semte.ch/blank#dc71f94f-fe3a-44fe-ac79-0782bb840f0f>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Bewijs"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://mu.semte.ch/blank#dc71f94f-fe3a-44fe-ac79-0782bb840f0f>	<http://purl.org/dc/terms/title>	"Procedure"@nl .
+<http://mu.semte.ch/blank#cb1465b9-383a-44f7-8642-ca32af704fce>	<http://purl.org/dc/terms/description>	"<ul><li>De persoon van wie de handtekening gewettigd moet worden, moet zijn woonplaats hebben in een Belgische gemeente.</li><li>Het document mag niet bestemd zijn voor immorele, bedrieglijke of strafbare oogmerken.</li><li>De formaliteit moet nuttig of nodig zijn. Het mag bijgevolg niet gaan om een louter private akte (een eigenhandig geschreven testament bijvoorbeeld).</li></ul>"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002167> .
+<http://mu.semte.ch/blank#c10b9d9f-5dc2-46e4-bc04-f93b018cf5e4>	<http://purl.org/dc/terms/description>	"<ul><li>het document waarop de handtekening moet gewettigd worden</li><li>jouw identiteitskaart</li></ul><p>Laat je de handtekening van iemand anders wettigen, dan moet je de identiteitskaart van deze persoon en een door hem of haar ondertekende volmacht meebrengen.</p>"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Federale overheid"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Bewijs> .
+<http://mu.semte.ch/blank#cb1465b9-383a-44f7-8642-ca32af704fce>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#c10b9d9f-5dc2-46e4-bc04-f93b018cf5e4> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://www.w3.org/ns/dcat#keyword>	"handtekening"@nl .
+<http://mu.semte.ch/blank#dc71f94f-fe3a-44fe-ac79-0782bb840f0f>	<http://mu.semte.ch/vocabularies/core/uuid>	"984a7470-9ede-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://purl.org/dc/terms/description>	"<p>Het wettigen of legaliseren van een handtekening betekent dat een daartoe bevoegde overheid de echtheid van een handtekening schriftelijk bevestigt. Deze wettiging heeft echter niet tot doel de echtheid van de inhoud van het document te bewijzen.</p><p>Je kan jouw handtekening laten wettigen bij het gemeentebestuur van de gemeente waar je woont of in een andere gemeente.</p>"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger en Overheid"@nl .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://schema.org/productID>	"53541"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://purl.org/dc/terms/title>	"Wettiging handtekening"@nl .
+<http://mu.semte.ch/blank#cb1465b9-383a-44f7-8642-ca32af704fce>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#dc71f94f-fe3a-44fe-ac79-0782bb840f0f> .
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via productencatalogus database (staat in bestand in zelfde map als deze 20251119151053_lint_akte_van_adoptie.sparql, alleen met andere lpdcExt:InstancePublicServiceSnapshot
+#   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
+# Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource
