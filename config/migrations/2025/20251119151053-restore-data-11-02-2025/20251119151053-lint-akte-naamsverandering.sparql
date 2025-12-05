@@ -74,6 +74,6 @@ INSERT DATA {
 }
 
 ### Stappen voor verkrijgen van deze data:
-# Stap 1: Run de CONSTRUCT query via productencatalogus database (staat in bestand in zelfde map als deze 20251119151053_lint_akte_van_adoptie.sparql, alleen met andere lpdcExt:InstancePublicServiceSnapshot
+# Stap 1: Run de CONSTRUCT query via productencatalogus database (staat in bestand in zelfde map als deze 20251119151053_lint_akte_van_adoptie.sparql, alleen met andere lpdcExt:InstancePublicServiceSnapshot)
 #   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
 # Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource
