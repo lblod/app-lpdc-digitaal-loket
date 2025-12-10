@@ -1,0 +1,45 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6/LoketLB-LPDCGebruiker> {
+
+<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://mu.semte.ch/vocabularies/core/uuid>	"05c6fbaf-ea38-4d99-b38a-7f31b6c7321b" .
+<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://mu.semte.ch/vocabularies/core/uuid>	"72910af6-e67a-4208-acc8-dd792e212f04" .
+<http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://mu.semte.ch/vocabularies/core/uuid>	"1f9b5189-2f19-4ba3-a7ef-7ddf87f73af8" .
+<http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Cost> .
+<http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Mechelen" .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://data.europa.eu/m8g/hasContactPoint>	<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://data.europa.eu/m8g/hasCost>	<http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/MilieuEnergie> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://mu.semte.ch/vocabularies/core/uuid>	"5c034020-591c-439e-a3b2-f87caab91fb1" .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://mu.semte.ch/vocabularies/core/uuid>	"5c034020-591c-439e-a3b2-f87caab91fb1" .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">Kleine hoeveelheden asbest kan je zelf verpakken in folie met asbestlogo en brengen naar het recyclagepark. Je kan deze folie aankopen op onze recyclageparken, asbest moet steeds verpakt binnengebracht worden op onze parken, dit kan je niet ter plaatse doen!</p><p data-indentation-level=\"0\">Opgelet! Ook asbestverdachte en asbestvrije golfplaten, cementplaten of leien moeten verpakt worden aangeboden in transparante zak met asbestfolie!</p>"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://purl.org/dc/terms/spatial>	<http://data.europa.eu/nuts/code/BE21212025> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://purl.org/dc/terms/title>	"Asbest afvoeren"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Voorwerp> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://purl.org/vocab/cpsv#follows>	<http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://schema.org/dateCreated>	"2024-11-28T12:24:46.850Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://schema.org/dateModified>	"2024-12-10T08:20:48.872Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/ontwerp> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl-be-x-informal" .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger>	"false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal>	"false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Onderneming> .
+<http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Organisatie> .
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via backup van 11-2, sinds dit een ontwerp was en niet verzonden. Hiervoor paar kleine aanpassingen gemaakt op de eerder getoonde query in 20251119151053_lint_akte_van_adoptie.sparql
+# Step 2: Bestuurseenheid informatie toevoegen
