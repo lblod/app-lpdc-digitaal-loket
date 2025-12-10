@@ -4,14 +4,22 @@ INSERT DATA {
 <http://data.europa.eu/nuts/code/BE21212025>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Mechelen"@nl .
 
 <http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://mu.semte.ch/vocabularies/core/uuid>	"05c6fbaf-ea38-4d99-b38a-7f31b6c7321b" .
+<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://schema.org/email>	"info@ivarem.be" .
+<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://schema.org/openingHours>	"maandag tot vrijdag tussen 8 u. en 17 u." .
+<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://schema.org/telephone>	"0800 90 441" .
+<http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://schema.org/url>	"https://www.ivarem.be/" .
 <http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
 <http://data.lblod.info/form-data/nodes/1dfadee0-29d1-47fe-af23-db964424ecc0>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 
 <http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://mu.semte.ch/vocabularies/core/uuid>	"72910af6-e67a-4208-acc8-dd792e212f04" .
+<http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://purl.org/dc/terms/description>	"<ul __rdfaid=\"2da27e34-3122-4865-af26-3a50b8ccf6cb\"><li __rdfaid=\"cc08016a-444f-478a-8a54-52cb0a429504\"><p data-indentation-level=\"0\">Neem eerst contact op met de infolijn op het nummer 0800 90 441, we kijken dan na of er nog plaats is in de asbestcontainer van het recyclagepark waar jij je asbest naartoe zal brengen.</p></li><li __rdfaid=\"f9fecfac-87b8-4133-be3b-ddc89418416c\"><p data-indentation-level=\"0\">Doe dit enkel voor kleine hoeveelheden (max. 1 m\u00B3).</p></li><li __rdfaid=\"01a9e7c0-2d14-4df8-986a-7dbcb4488270\"><p data-indentation-level=\"0\">Alles asbest dien je vooraf thuis luchtdicht te verpakken in een transparante zak of folie m\u00E9t het asbestlogo.</p></li><li __rdfaid=\"3ba604ad-ce86-4e27-a31f-f1716691eecd\"><p data-indentation-level=\"0\">Deze zakken kan je kopen op onze recyclageparken of bij een doe-het-zelf-zaak.</p></li></ul>"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://purl.org/dc/terms/title>	"Procedure"@nl-be-x-informal .
 <http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
 <http://data.lblod.info/form-data/nodes/3705f8c4-d2e1-44b3-8176-7bc846bc4a15>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 
 <http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://mu.semte.ch/vocabularies/core/uuid>	"1f9b5189-2f19-4ba3-a7ef-7ddf87f73af8" .
+<http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://purl.org/dc/terms/description>	"<ul __rdfaid=\"355dffed-ba82-4262-9668-9f1d2ad42856\"><li __rdfaid=\"0fa9b50b-46ba-44a3-be2d-ba0d35f7f469\"><p data-indentation-level=\"0\">Op het recyclagepark (per begonnen m\u00B3) - 7,50 euro (Jaarlijks eerste m\u00B3 gratis, op te gebruiken per 0,25 m\u00B3)</p></li><li __rdfaid=\"616937ef-2bde-43e4-bec1-deebd8cf3b70\"><p data-indentation-level=\"0\">Asbestzakken (80 cm X 120 cm) - 1,50 euro per stuk</p></li><li __rdfaid=\"bc93bfce-de70-4c49-b453-9c8b6ed840fb\"><p data-indentation-level=\"0\">Asbestfolie (buisfolie, breedte 130 cm) - 1,50 euro per lopende meter</p></li><li __rdfaid=\"baadd8df-8428-44fa-98af-c5e03e9f9539\"><p data-indentation-level=\"0\">Persoonlijk beschermingspakket asbest (1 mondmasker, 1 wegwerpoverall klasse 5/6 en 1 paar wegwerphandschoenen) - 25,00 euro per pakket</p></li></ul>"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://purl.org/dc/terms/title>	"Kosten"@nl-be-x-informal .
 <http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Cost> .
 <http://data.lblod.info/form-data/nodes/a6695f7c-8f14-4050-9799-1c805804800e>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 
