@@ -1,4 +1,15 @@
 # Changelog
+## Unreleased
+### Management
+
+- Bump to [v0.51.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.51.1) [LPDC-1496]
+
+### Deploy notes
+
+```
+drc pull lpdc-management && drc up -d lpdc-management
+```
+
 ## v0.32.0 (2025-12-02)
 ### Backend
 - LPDC Complete report: Analysis of missing data [LPDC-1491]
