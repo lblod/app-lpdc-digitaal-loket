@@ -1,0 +1,78 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://purl.org/dc/terms/title>	"Identiteitskaart afhalen"@nl .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6> .
+<http://mu.semte.ch/blank#e3f753df-a7b2-42d3-80fe-077400715af0>	<http://schema.org/email>	"vragen.bevolking@mechelen.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid> .
+<http://mu.semte.ch/blank#e3f753df-a7b2-42d3-80fe-077400715af0>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002172> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://mu.semte.ch/blank#a7b199d0-a5ef-4ff8-81aa-32cb7a94f3fc>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite>	<http://mu.semte.ch/blank#ed46a414-14b1-4a02-99d0-e366524542d8> .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<http://mu.semte.ch/blank#90fd5a5c-7414-4507-a565-afa96364594f>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><h3 data-indentation-level=\"0\" style=\"\" level=\"3\" indentationlevel=\"0\" alignment=\"left\" class=\"say-heading\"><strong>Je moet persoonlijk langskomen met:</strong></h3><ul style=\"unordered\" hierarchical=\"false\" class=\"say-bullet-list\"><li class=\"say-list-item\" data-list-marker=\"1. \"><p class=\"say-paragraph\">je identiteitskaart of vervangdocument bij diefstal/verlies</p></li><li class=\"say-list-item\" data-list-marker=\"2. \"><p class=\"say-paragraph\">de witte omslag met de PIN/PUkcodes</p></li></ul><p class=\"say-paragraph\">Je vingerafdrukken worden opnieuw gecontroleerd.</p><p class=\"say-paragraph\">Ouders of voogd mogen steeds de kids-ID van hun -12 jarige kind(eren) komen ophalen. Hiervoor is geen volmacht nodig. </p><p class=\"say-paragraph\">Afhalen van de identiteitskaart kan niet met volmacht en moet altijd persoonlijk gebeuren omdat de vingerafdrukken opnieuw gecontroleerd worden.</p></div>"@nl .
+<http://mu.semte.ch/blank#e3f753df-a7b2-42d3-80fe-077400715af0>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c> .
+<http://mu.semte.ch/blank#90fd5a5c-7414-4507-a565-afa96364594f>	<http://purl.org/dc/terms/title>	"Meebrengen"@nl .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://mu.semte.ch/blank#90fd5a5c-7414-4507-a565-afa96364594f>	<http://mu.semte.ch/vocabularies/core/uuid>	"b3353dd0-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://data.europa.eu/m8g/hasCost>	<http://mu.semte.ch/blank#f7c6885f-e739-4bdc-ad5c-0f3bc81beb63> .
+<http://mu.semte.ch/blank#f7c6885f-e739-4bdc-ad5c-0f3bc81beb63>	<http://mu.semte.ch/vocabularies/core/uuid>	"a9b60f00-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://mu.semte.ch/blank#c8db3cfb-5512-4e57-8436-f2ebd402653f>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Voorwerp> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>	"<div lang=\"nl-BE\" data-say-document=\"true\"><ul style=\"unordered\" hierarchical=\"false\" class=\"say-bullet-list\"><li class=\"say-list-item\" data-list-marker=\"1. \"><p class=\"say-paragraph\">Heb je je <strong>identiteitskaart in spoed</strong> aangevraagd, dan komen de pin/pukcodes toe bij de gemeente. Je wordt telefonisch verwittigd zodra de identiteitskaart en de codes zijn toegekomen.</p></li><li class=\"say-list-item\" data-list-marker=\"2. \"><p class=\"say-paragraph\">Heb je na 3 weken nog steeds <strong>geen witte enveloppe met pin/pukcode ontvangen</strong> of ben je de <strong>codes kwijt</strong> vooraleer je de nieuwe identiteitskaart hebt opgehaald? <a href=\"https://mechelen.egovflow.be/request/add/PIN-PUK\" class=\"say-pill say-link\">Vraag dan eerst nieuwe pin/pukcodes</a> aan.</p></li></ul></div>"@nl .
+<http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Met deze witte enveloppe en je oude identiteitskaart kan je je nieuwe identiteitskaart komen afhalen en activeren.</p></div>"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Voorwerp>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Voorwerp"@nl .
+<http://mu.semte.ch/blank#e3f753df-a7b2-42d3-80fe-077400715af0>	<http://mu.semte.ch/vocabularies/core/uuid>	"5cdb1220-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#c8db3cfb-5512-4e57-8436-f2ebd402653f>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#a7b199d0-a5ef-4ff8-81aa-32cb7a94f3fc>	<http://purl.org/dc/terms/title>	"Procedure"@nl .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://schema.org/dateCreated>	"2025-08-29T08:45:19.264Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://mu.semte.ch/blank#a7b199d0-a5ef-4ff8-81aa-32cb7a94f3fc>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#e3f753df-a7b2-42d3-80fe-077400715af0> .
+<http://mu.semte.ch/blank#c8db3cfb-5512-4e57-8436-f2ebd402653f>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Je hebt een witte enveloppe met pin/pukcode ontvangen om je nieuwe identiteitskaart af te halen en te activeren.</p></div>"@nl .
+<http://mu.semte.ch/blank#a7b199d0-a5ef-4ff8-81aa-32cb7a94f3fc>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://mu.semte.ch/blank#f7c6885f-e739-4bdc-ad5c-0f3bc81beb63>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#a7b199d0-a5ef-4ff8-81aa-32cb7a94f3fc> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#c8db3cfb-5512-4e57-8436-f2ebd402653f> .
+<http://mu.semte.ch/blank#e3f753df-a7b2-42d3-80fe-077400715af0>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#c8db3cfb-5512-4e57-8436-f2ebd402653f>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://schema.org/dateModified>	"2025-09-08T06:10:44.307Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002172> .
+<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://mu.semte.ch/blank#a7b199d0-a5ef-4ff8-81aa-32cb7a94f3fc>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Voor het afhalen van je identiteitskaart maak je een afspraak. </p><p class=\"say-paragraph\">De pincode kan je wijzigen aan het loket bij de afhaling.</p><p class=\"say-paragraph\">Als je identiteitskaart niet binnen de 3 maanden werd afgehaald, zal je identiteitskaart vernietigd worden.</p></div>"@nl .
+<http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Mechelen"@nl .
+<http://mu.semte.ch/blank#f7c6885f-e739-4bdc-ad5c-0f3bc81beb63>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Cost> .
+<http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<http://mu.semte.ch/vocabularies/core/uuid>	"5cdb1220-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#e3f753df-a7b2-42d3-80fe-077400715af0>	<http://schema.org/telephone>	"0800 20 800"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#c8db3cfb-5512-4e57-8436-f2ebd402653f>	<http://mu.semte.ch/vocabularies/core/uuid>	"9c926940-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://schema.org/productID>	"59486"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8> .
+<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://mu.semte.ch/blank#90fd5a5c-7414-4507-a565-afa96364594f>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Reuzenstraat"@nl .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Je hebt je identiteitskaart 2 \u00E0 3 weken geleden aangevraagd in het Huis van de Mechelaar (foto binnengebracht, handtekening geplaatst en betaald) en je hebt per post de witte enveloppe met pin/pukcode ontvangen.</p></div>"@nl .
+<http://mu.semte.ch/blank#a7b199d0-a5ef-4ff8-81aa-32cb7a94f3fc>	<http://mu.semte.ch/vocabularies/core/uuid>	"8d4b2030-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#c8db3cfb-5512-4e57-8436-f2ebd402653f>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#90fd5a5c-7414-4507-a565-afa96364594f> .
+<http://mu.semte.ch/blank#f7c6885f-e739-4bdc-ad5c-0f3bc81beb63>	<http://purl.org/dc/terms/title>	"Bedrag"@nl .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://mu.semte.ch/vocabularies/core/uuid>	"6aa50996-9da3-48fe-b1d1-c5b3e8f531b8" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BurgerOverheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger en Overheid"@nl .
+<http://mu.semte.ch/blank#f7c6885f-e739-4bdc-ad5c-0f3bc81beb63>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Je betaalt altijd bij de aanvraag, bij het afhalen hoef je niet meer te betalen.</p></div>"@nl .
+<http://data.lblod.info/id/public-service/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8> .
+<http://data.lblod.info/id/bestuurseenheden/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Mechelen" .
+
+<http://mu.semte.ch/blank#ed46a414-14b1-4a02-99d0-e366524542d8>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#ed46a414-14b1-4a02-99d0-e366524542d8>	<http://schema.org/url>	"https://mechelen.mijnafspraakmaken.be/?product=39"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#ed46a414-14b1-4a02-99d0-e366524542d8>	<http://mu.semte.ch/vocabularies/core/uuid>	"7bb5ef80-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#ed46a414-14b1-4a02-99d0-e366524542d8>	<http://purl.org/dc/terms/title>	"Maak een afspraak"@nl .
+<http://mu.semte.ch/blank#ed46a414-14b1-4a02-99d0-e366524542d8>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/WebSite> .
+
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via productencatalogus database, query is te vinden in 20251211105414-aalst-herkenning in zelfde map, met andere uri. 
+#   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
+# Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource

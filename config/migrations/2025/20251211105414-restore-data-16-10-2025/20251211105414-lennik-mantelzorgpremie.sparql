@@ -1,0 +1,68 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/931a2bf4f5c461d8c3636b446fa642693d4535d865d3af068e87d25ddc93374e/LoketLB-LPDCGebruiker> {
+
+<http://mu.semte.ch/blank#586f9b46-296f-43e0-98e2-b110534e7f0a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27> .
+<http://mu.semte.ch/blank#586f9b46-296f-43e0-98e2-b110534e7f0a>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://schema.org/dateModified>	"2025-09-08T13:57:54.525111Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://mu.semte.ch/blank#f5d5b869-e5b4-47f1-bd4d-675d3983d7f7>	<http://mu.semte.ch/vocabularies/core/uuid>	"a41f8c10-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#e81ac12c-e318-45aa-b879-ba9f446ada1f> .
+<http://data.lblod.info/id/bestuurseenheden/931a2bf4f5c461d8c3636b446fa642693d4535d865d3af068e87d25ddc93374e>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lennik" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Financieel voordeel"@nl .
+<http://mu.semte.ch/blank#586f9b46-296f-43e0-98e2-b110534e7f0a>	<http://schema.org/email>	"sociale.dienst@lennik.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002147> .
+<http://mu.semte.ch/blank#f95a0782-be42-41a2-a519-27f776fb84d1>	<http://mu.semte.ch/vocabularies/core/uuid>	"85c920f0-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel> .
+<http://mu.semte.ch/blank#f95a0782-be42-41a2-a519-27f776fb84d1>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#f95a0782-be42-41a2-a519-27f776fb84d1>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/WebSite> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://schema.org/productID>	"59607"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002505> .
+<http://mu.semte.ch/blank#586f9b46-296f-43e0-98e2-b110534e7f0a>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<http://mu.semte.ch/blank#586f9b46-296f-43e0-98e2-b110534e7f0a>	<http://schema.org/telephone>	"02 532 41 45"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27>	<http://mu.semte.ch/vocabularies/core/uuid>	"606faa90-9edc-11f0-88d2-4dbc5f2a791c" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://mu.semte.ch/blank#f95a0782-be42-41a2-a519-27f776fb84d1>	<http://purl.org/dc/terms/title>	"Lennik"@nl .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://mu.semte.ch/blank#f5d5b869-e5b4-47f1-bd4d-675d3983d7f7>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://mu.semte.ch/vocabularies/core/uuid>	"d9f97aeb-8e28-4842-8ee8-774d606cc7bd" .
+<http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Deken Verbesseltstraat"@nl .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://mu.semte.ch/blank#e81ac12c-e318-45aa-b879-ba9f446ada1f>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://mu.semte.ch/blank#f5d5b869-e5b4-47f1-bd4d-675d3983d7f7>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Lennik"@nl .
+<http://mu.semte.ch/blank#e81ac12c-e318-45aa-b879-ba9f446ada1f>	<http://purl.org/dc/terms/title>	"Procedure"@nl .
+<http://data.lblod.info/id/bestuurseenheden/931a2bf4f5c461d8c3636b446fa642693d4535d865d3af068e87d25ddc93374e>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#586f9b46-296f-43e0-98e2-b110534e7f0a> .
+<http://mu.semte.ch/blank#586f9b46-296f-43e0-98e2-b110534e7f0a>	<http://mu.semte.ch/vocabularies/core/uuid>	"606faa90-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/bestuurseenheden/931a2bf4f5c461d8c3636b446fa642693d4535d865d3af068e87d25ddc93374e>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Inwoners van Lennik die bij hen thuis zorg dragen voor een zorgbehoevende en/of mindervalide persoon kunnen - onder bepaalde voorwaarden - genieten van een mantelzorgpremie. </p><p class=\"say-paragraph\">Voor nieuwe aanvragen en meer info kan je terecht bij de sociale dienst van het OCMW.</p></div>"@nl .
+<http://mu.semte.ch/blank#f5d5b869-e5b4-47f1-bd4d-675d3983d7f7>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#e81ac12c-e318-45aa-b879-ba9f446ada1f>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://purl.org/dc/terms/title>	"Mantelzorgpremie"@nl .
+<http://mu.semte.ch/blank#f95a0782-be42-41a2-a519-27f776fb84d1>	<http://schema.org/url>	"https://www.lennik.be/mantelzorgpremie"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#f5d5b869-e5b4-47f1-bd4d-675d3983d7f7> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://schema.org/dateCreated>	"2025-07-16T07:10:11.461Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://mu.semte.ch/blank#f5d5b869-e5b4-47f1-bd4d-675d3983d7f7>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Men houdt rekening met : </p><ul style=\"unordered\" hierarchical=\"false\" class=\"say-bullet-list\"><li class=\"say-list-item\" data-list-marker=\"1. \"><p class=\"say-paragraph\">De mate van zorgbehoevendheid.</p></li><li class=\"say-list-item\" data-list-marker=\"2. \"><p class=\"say-paragraph\">De inkomsten van de zorgbehoevende.</p></li></ul><p class=\"say-paragraph\">Het gezamenlijk belastbaar inkomen van de zorgbehoevende mag de inkomstengrenzen van de verhoogde tegemoetkoming niet overschrijden. <br class=\"say-hard-break\"><br class=\"say-hard-break\">De mantelzorgpremie bedraagt 74 euro per maand en wordt 2x per jaar uitbetaald.</p></div>"@nl .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/d9f97aeb-8e28-4842-8ee8-774d606cc7bd> .
+<http://mu.semte.ch/blank#e81ac12c-e318-45aa-b879-ba9f446ada1f>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Voor nieuwe aanvragen kan je het aanvraagformulier bekomen via de sociale dienst van het OCMW.</p><p class=\"say-paragraph\">Indien je dossier goedgekeurd is, zal je recht ingaan de maand die volgt op je aanvraag.</p><p class=\"say-paragraph\">Bezorg de nodige documenten via mail of via de post aan het OCMW. Indien je dossier goedgekeurd is, zal je recht ingaan de maand die volgt op je aanvraag.</p></div>"@nl .
+<http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"9"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://www.w3.org/2000/01/rdf-schema#seeAlso>	<http://mu.semte.ch/blank#f95a0782-be42-41a2-a519-27f776fb84d1> .
+<http://mu.semte.ch/blank#e81ac12c-e318-45aa-b879-ba9f446ada1f>	<http://mu.semte.ch/vocabularies/core/uuid>	"959c7d60-9edc-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/d9f97aeb-8e28-4842-8ee8-774d606cc7bd> .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/931a2bf4f5c461d8c3636b446fa642693d4535d865d3af068e87d25ddc93374e> .
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via productencatalogus database, query is te vinden in 20251211105414-aalst-herkenning in zelfde map, met andere uri. 
+#   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
+# Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource

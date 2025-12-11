@@ -1,0 +1,58 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002509> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://data.europa.eu/m8g/hasCost>	<http://mu.semte.ch/blank#448b21b3-c325-4503-a23a-753dabe127af> .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<http://schema.org/email>	"thuisdiensten@bekkevoort.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#448b21b3-c325-4503-a23a-753dabe127af>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">De kostprijs hangt af van je inkomen, je medische toestand en je gezinssamenstelling. De maximumprijs is \u20AC 8,50 per uur.</p>"@nl .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc> .
+<http://mu.semte.ch/blank#448b21b3-c325-4503-a23a-753dabe127af>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Cost> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08> .
+<http://data.lblod.info/id/bestuurseenheden/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Bekkevoort" .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/bcbe9f96-6390-4c67-9e61-f2d774fbf153> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<http://schema.org/openingHours>	"https://www.bekkevoort.be/afspraak-maken#select/productguid/36C92B1B-EA9C-41C4-9D65-5CFE0EFE4A88/Poetshulp"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://purl.org/dc/terms/title>	"Poetshulp"@nl .
+<http://mu.semte.ch/blank#448b21b3-c325-4503-a23a-753dabe127af>	<http://mu.semte.ch/vocabularies/core/uuid>	"3dad8410-9ee0-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/bcbe9f96-6390-4c67-9e61-f2d774fbf153> .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<http://mu.semte.ch/vocabularies/core/uuid>	"440eaa00-9ee0-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://schema.org/productID>	"50830"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO002013> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://schema.org/dateCreated>	"2024-10-24T10:47:47.160Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/bestuurseenheden/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">Ben je bejaard, chronisch ziek of heb je een handicap, en kan je jouw woning niet meer zelf onderhouden, dan kan je via het lokaal bestuur poetshulp aanvragen.</p>"@nl .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<http://schema.org/url>	"https://www.bekkevoort.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/AdviesBegeleiding> .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Bekkevoort"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://mu.semte.ch/blank#448b21b3-c325-4503-a23a-753dabe127af>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://mu.semte.ch/blank#448b21b3-c325-4503-a23a-753dabe127af>	<http://purl.org/dc/terms/title>	"Kostprijs"@nl .
+<http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Eugeen Coolsstraat"@nl .
+<http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/bestuurseenheden/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/AdviesBegeleiding>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Advies en begeleiding"@nl .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://schema.org/dateModified>	"2024-10-24T11:28:41.046312Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"17"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://mu.semte.ch/blank#18cdd59e-486e-4f21-a6cb-6a38d39f0f09>	<http://schema.org/telephone>	"013/46 05 60"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08>	<http://mu.semte.ch/vocabularies/core/uuid>	"440eaa00-9ee0-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<http://mu.semte.ch/vocabularies/core/uuid>	"bcbe9f96-6390-4c67-9e61-f2d774fbf153" .
+<http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via productencatalogus database, query is te vinden in 20251211105414-aalst-herkenning in zelfde map, met andere uri. 
+#   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
+# Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource

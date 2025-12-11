@@ -1,0 +1,346 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4/LoketLB-LPDCGebruiker> {
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd> .
+<http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Aalst" .
+<http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/CultuurSportVrijeTijd>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Cultuur, Sport en Vrije Tijd"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#1582336e-1c19-41dd-9a77-46cec207440d> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://www.w3.org/ns/dcat#keyword>	"vereniging"@nl .
+<http://mu.semte.ch/blank#4863d380-90b4-4e49-b53a-5f3343ecaa4f>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://mu.semte.ch/vocabularies/core/uuid>	"f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca" .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://purl.org/dc/terms/title>	"Erkenning als Aalsterse vereniging"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Financieel voordeel"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO001992> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://www.w3.org/ns/dcat#keyword>	"cultuur"@nl .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://schema.org/dateModified>	"2025-07-24T06:19:30.940768Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<https://data.vlaanderen.be/id/organisatie/OVO001992> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://www.w3.org/ns/dcat#keyword>	"subsidie"@nl .
+<http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/974816591f269bb7d74aa1720922651529f3d3b2a787f5c60b73e5a0384950a4> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging> .
+<http://mu.semte.ch/blank#1582336e-1c19-41dd-9a77-46cec207440d>	<http://purl.org/dc/terms/title>	"Erkenningsvoorwaarden"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://www.w3.org/ns/dcat#keyword>	"jeugd"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://www.w3.org/ns/dcat#keyword>	"sport"@nl .
+<http://mu.semte.ch/blank#1582336e-1c19-41dd-9a77-46cec207440d>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://mu.semte.ch/blank#4863d380-90b4-4e49-b53a-5f3343ecaa4f>	<http://mu.semte.ch/vocabularies/core/uuid>	"04980cc0-9edd-11f0-88d2-4dbc5f2a791c" .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel> .
+<http://mu.semte.ch/blank#4863d380-90b4-4e49-b53a-5f3343ecaa4f>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://mu.semte.ch/blank#1582336e-1c19-41dd-9a77-46cec207440d>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Vereniging>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Vereniging"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">De stad Aalst erkent verenigingen als blijk van appreciatie voor de verenigingen, hun maatschappelijk belang en omdat ze een bijdrage leveren aan de missie en doelstellingen die de stad vooropstelt. Erkend worden als Aalsterse vereniging is de eerste voorwaarde om toegang te krijgen tot logistieke ondersteuning en werkings- en investeringssubsidies van de stad Aalst.  </p>"@nl .
+<http://mu.semte.ch/blank#1582336e-1c19-41dd-9a77-46cec207440d>	<http://mu.semte.ch/vocabularies/core/uuid>	"119c91c0-9edd-11f0-88d2-4dbc5f2a791c" .
+<http://mu.semte.ch/blank#1582336e-1c19-41dd-9a77-46cec207440d>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">Voldoen aan de voorwaarden opgesteld in het \"Stedelijk reglement erkenning als Aalsterse vereniging.: </p><ol data-list-style=\"decimal\" __rdfaid=\"86c9809d-726e-43c0-a284-75640e1d454f\"><li __rdfaid=\"d9fea2eb-0459-4b12-8df1-1407893d6eb6\"><p data-indentation-level=\"0\">De vereniging is een feitelijke vereniging, een private stichting of een vzw. </p></li><li __rdfaid=\"d9fea2eb-0459-4b12-8df1-1407893d6eb6\"><p data-indentation-level=\"0\"> De vereniging bestaat uit minstens 5 leden. De vereniging voegt bij haar erkenningsaanvraag een overzicht van de activiteiten die ze organiseert en geeft aan hoeveel leden de vereniging heeft.</p></li><li __rdfaid=\"d9fea2eb-0459-4b12-8df1-1407893d6eb6\"><p data-indentation-level=\"0\">De vereniging heeft haar werking in hoofdzaak op het grondgebied van de stad Aalst.  Indien bepaalde infrastructuur die noodzakelijk is om de activiteiten van de vereniging uit te oefenen niet of nauwelijks aanwezig is op het grondgebied van de stad Aalst kan hierop een uitzondering worden gemaakt. Het college van burgemeester en schepenen beslist of deze uitzondering kan toegestaan worden. </p></li><li __rdfaid=\"d9fea2eb-0459-4b12-8df1-1407893d6eb6\"><p data-indentation-level=\"0\">De vereniging is opgericht op particulier initiatief, zonder commerci\u00EBle en/of beroepsdoeleinden of winstoogmerk. </p></li><li __rdfaid=\"d9fea2eb-0459-4b12-8df1-1407893d6eb6\"><p data-indentation-level=\"0\">De vereniging onderschrijft de principes van de democratische rechtsstaat. De vereniging dient dit niet op te nemen in haar statuten. Het volstaat dat het tegendeel niet kan worden aangetoond.</p></li><li __rdfaid=\"d9fea2eb-0459-4b12-8df1-1407893d6eb6\"><p data-indentation-level=\"0\">De vereniging dient open te staan voor alle ge\u00EFnteresseerden die de doelstellingen van de vereniging onderschrijven.</p></li><li __rdfaid=\"d9fea2eb-0459-4b12-8df1-1407893d6eb6\"><p data-indentation-level=\"0\">De vereniging gebruikt het Nederlands als voertaal in haar interne en externe communicatie en in de uitvoering van haar activiteiten.</p></li></ol>"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://schema.org/productID>	"36264"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#4863d380-90b4-4e49-b53a-5f3343ecaa4f> .
+<http://mu.semte.ch/blank#4863d380-90b4-4e49-b53a-5f3343ecaa4f>	<http://purl.org/dc/terms/description>	"<ul __rdfaid=\"799c0983-541a-4ee0-ba89-19a656ebde68\"><li __rdfaid=\"50cc46f1-89d0-4979-b911-33df5bd01d47\"><p data-indentation-level=\"0\">Een vereniging kan de erkenning aanvragen door het daartoe voorziene <a href=\"https://aalst.be/formulier-erkenning-als-aalsterse-vereniging\" __rdfaid=\"8264653e-48b4-4c88-8cd0-3bdedd538e4b\">aanvraagformulier </a> in te dienen bij de stad (geschreven of online).</p></li><li __rdfaid=\"b7b17723-1db0-4a8b-be07-24d6dd94efb4\"><p data-indentation-level=\"0\">De stad beoordeelt de aanvraag op ontvankelijkheid, volledigheid en inhoud en kan indien nodig bijkomende informatie opvragen.</p></li><li __rdfaid=\"b7b17723-1db0-4a8b-be07-24d6dd94efb4\"><p data-indentation-level=\"0\">Het college van burgemeester en schepenen beoordeelt de aanvragen en beslist over de erkenning van de vereniging.</p></li></ul>"@nl .
+<https://data.vlaanderen.be/id/organisatie/OVO001992>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Stad Aalst" .
+<http://mu.semte.ch/blank#4863d380-90b4-4e49-b53a-5f3343ecaa4f>	<http://purl.org/dc/terms/title>	"Hoe doe je een aanvraag?"@nl .
+<http://data.lblod.info/id/public-service/f2885aa7-589e-4f3d-9af8-be2e4ce7b3ca>	<http://schema.org/dateCreated>	"2023-08-04T12:27:24.755Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via productencatalogus database 
+#   Belangrijk om te zien bij query zijn velden source & versionedSource (beide gebruik gemaakt van de ipdc uri hiervoor) uuid (gegenereert uit de URI) en dutchLanguageVersion (handmatig toegevoegd).
+# Stap 2: Verander alle IPDC ID's naar het bijpassende LPDC id, behalve de object onder dcterms:source en de object onder ext:hasVersionedSource
+#
+# Query:
+#
+# PREFIX lpdcExt:<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+# PREFIX adms:<http://www.w3.org/ns/adms#>
+# PREFIX dct:<http://purl.org/dc/terms/>
+# PREFIX pav:<http://purl.org/pav/>
+# PREFIX foaf:<http://xmlns.com/foaf/0.1/>
+# PREFIX besluit:<http://data.vlaanderen.be/ns/besluit#>
+# PREFIX skos:<http://www.w3.org/2004/02/skos/core#>
+# PREFIX schema:<http://schema.org/>
+# PREFIX ext:<http://mu.semte.ch/vocabularies/ext/>
+# PREFIX belgif:<http://vocab.belgif.be/ns/publicservice#>
+# PREFIX m8g:<http://data.europa.eu/m8g/>
+# PREFIX cpsv:<http://purl.org/vocab/cpsv#>
+# PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>
+# PREFIX adres:<https://data.vlaanderen.be/ns/adres#>
+# PREFIX shacl:<http://www.w3.org/ns/shacl#>
+# PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+# PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+# CONSTRUCT {
+# ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService;
+# mu:uuid ?localId;
+# dct:source ?uriPubliekeDienstverlening;
+# ext:hasVersionedSource ?uriPubliekeDienstverlening;
+# lpdcExt:dutchLanguageVariant ?languageVariant;
+# schema:dateModified ?aangepastOp;
+# pav:createdBy ?uriBestuurseenheid;
+# adms:status ?status;
+# lpdcExt:additionalDescription ?aanvullendeBeschrijving;
+# lpdcExt:exception ?uitzondering;
+# schema:productID ?IPDCConceptID;
+# lpdcExt:needsConversionFromFormalToInformal ?vergtOmzettingNaarInformeel;
+# lpdcExt:forMunicipalityMerger ?voorGemeentelijkeFusie;
+# schema:dateSent ?verstuurdOp;
+# dct:title ?titel;
+# schema:dateCreated ?aangemaaktOp;
+# lpdcExt:dutchLanguageVariant ?versie;
+# dct:description ?beschrijving;
+# ext:reviewStatus ?reviewStatusLink;
+# ext:lastModifiedBy ?lastModifiedBy;
+# dct:creator ?creator;
+# schema:startDate ?startDatum;
+# schema:endDate ?eindDatum;
+# dct:type ?productType;
+# lpdcExt:targetAudience ?targetAudience;
+# m8g:thematicArea ?thematicArea;
+# dct:language ?language;
+# lpdcExt:competentAuthorityLevel ?competentAuthorityLevel;
+# m8g:hasCompetentAuthority ?competentAuthority;
+# lpdcExt:executingAuthorityLevel ?executingAuthorityLevel;
+# lpdcExt:hasExecutingAuthority ?executingAuthority;
+# dct:spatial ?spatial;
+# <http://www.w3.org/ns/dcat#keyword> ?tag;
+# lpdcExt:publicationMedium ?publicationMedium;
+# belgif:hasRequirement ?voorwaarde;
+# cpsv:follows ?procedure;
+# m8g:hasCost ?kosten;
+# cpsv:produces ?voordeel;
+# lpdcExt:regulation ?regelgeving;
+# m8g:hasLegalResource ?bron;
+# m8g:hasContactPoint ?contact;
+# rdfs:seeAlso ?meerInfo;
+# lpdcExt:yourEuropeCategory ?yourEuropeCategory.
+# ?uriBestuurseenheid a besluit:Bestuurseenheid;skos:prefLabel ?naamBestuurseenheid;besluit:classificatie ?classificatie.
+# ?classificatie skos:prefLabel ?typeBestuurseenheid.
+# ?status skos:prefLabel ?statusLabel.
+# ?reviewStatusLink skos:prefLabel ?reviewStatus.
+# ?creator foaf:firstName ?creatorFirstName;foaf:familyName ?creatorFamilyName.
+# ?lastModifiedBy foaf:firstName ?firstName;foaf:familyName ?familyName.
+
+# ?productType skos:prefLabel ?productTypeLabel.
+# ?targetAudience skos:prefLabel ?targetAudienceLabel.
+# ?thematicArea skos:prefLabel ?thematicAreaLabel.
+# ?language skos:prefLabel ?languageLabel.
+# ?competentAuthorityLevel skos:prefLabel ?competentAuthorityLevelLabel.
+# ?competentAuthority skos:prefLabel ?competentAuthorityLabel.
+# ?executingAuthorityLevel skos:prefLabel ?executingAuthorityLevelLabel.
+# ?executingAuthority skos:prefLabel ?executingAuthorityLabel.
+# ?spatial skos:prefLabel ?spatialLabel.
+# ?publicationMedium skos:prefLabel ?publicationMediumLabel.
+# ?yourEuropeCategory skos:prefLabel ?yourEuropeCategoryLabel.
+
+# ?voorwaarde mu:uuid ?voorwaardeUuid; rdf:type ?voorwaardeType;dct:title ?titelVoorwaarde;dct:description ?beschrijvingVoorwaarde;shacl:order ?orderVoorwaarde;m8g:hasSupportingEvidence ?bewijs.
+# ?bewijs mu:uuid ?bewijsUuid; rdf:type ?bewijsType;dct:title ?titelBewijsstuk;dct:description ?beschrijvingBewijsstuk;shacl:order ?orderBewijsstuk.
+# ?procedure mu:uuid ?procedureUuid; rdf:type ?procedureType;dct:title ?titelProcedure;dct:description ?beschrijvingProcedure;shacl:order ?orderProcedure;lpdcExt:hasWebsite ?website.
+# ?website mu:uuid ?procedureWebsiteUuid; rdf:type ?procedureWebsiteType;dct:title ?titelProcedureWebsite;dct:description ?beschrijvingProcedureWebsite;schema:url ?urlProcedureWebsite;shacl:order ?orderProcedureWebsite.
+# ?kosten mu:uuid ?kostenUuid; rdf:type ?kostenType;dct:title ?titelKosten;dct:description ?beschrijvingKosten;shacl:order ?orderKosten.
+# ?voordeel mu:uuid ?voordeelUuid; rdf:type ?voordeelType;dct:title ?titelFinancieelVoordeel;dct:description ?beschrijvingFinancieelVoordeel;shacl:order ?orderFinancieelVoordeel.
+# ?bron mu:uuid ?bronUuid; rdf:type ?bronType;dct:title ?titelRegelgevendeBron;dct:description ?beschrijvingRegelgevendeBron;schema:url ?urlRegelgevendeBron;shacl:order ?orderRegelgevendeBron.
+# ?contact mu:uuid ?contactUuid; rdf:type ?contactType;schema:email ?contactpuntEmail;schema:telephone ?contactpuntTelefoon;schema:url ?contactpuntWebsiteUrl;schema:openingHours ?contactpuntOpeningsuren;lpdcExt:address ?adresUri;shacl:order ?orderContact.
+# ?adresUri mu:uuid ?adresUuid; rdf:type ?adressType;adres:Straatnaam ?straatnaam;adres:Adresvoorstelling.huisnummer ?huisnummer;adres:Adresvoorstelling.busnummer ?busnummer;adres:gemeentenaam ?gemeente.
+# ?meerInfo mu:uuid ?websiteUuid; rdf:type ?websiteType;dct:title ?titelWebsite;dct:description ?beschrijvingWebsite;schema:url ?urlWebsite;shacl:order ?orderWebsite.
+
+# }
+# WHERE {
+# VALUES ?uriPubliekeDienstverlening {<https://ipdc.vlaanderen.be/id/instantie/f92e13c0-2323-43df-9aff-6474c289ae67>}
+# ?uriPubliekeDienstverlening a lpdcExt:InstancePublicServiceSnapshot;
+#                                 schema:dateModified ?aangepastOp.  
+# BIND(STRAFTER(STR(?uriPubliekeDienstverlening), "https://ipdc.vlaanderen.be/id/instantie/") AS ?localId)
+# BIND("nl" AS ?languageVariant)
+# OPTIONAL {?uriPubliekeDienstverlening pav:createdBy ?uriBestuurseenheid.?uriBestuurseenheid a besluit:Bestuurseenheid;skos:prefLabel ?naamBestuurseenheid;besluit:classificatie ?classificatie.OPTIONAL{?classificatie skos:prefLabel ?typeBestuurseenheid}}
+# OPTIONAL{?uriPubliekeDienstverlening adms:status ?status.?status skos:prefLabel ?statusLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:additionalDescription ?aanvullendeBeschrijving}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:exception ?uitzondering}
+# OPTIONAL{?uriPubliekeDienstverlening schema:productID ?IPDCConceptID}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:needsConversionFromFormalToInformal ?vergtOmzettingNaarInformeel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:forMunicipalityMerger ?voorGemeentelijkeFusie}
+# OPTIONAL{?uriPubliekeDienstverlening schema:dateSent ?verstuurdOp}
+# OPTIONAL{?uriPubliekeDienstverlening dct:title ?titel FILTER(LANG(?titel) IN ("nl"))}
+# OPTIONAL{?uriPubliekeDienstverlening schema:dateCreated ?aangemaaktOp}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:dutchLanguageVariant ?versie}
+# OPTIONAL{?uriPubliekeDienstverlening dct:description ?beschrijving FILTER(LANG(?beschrijving) IN ("nl"))}
+# OPTIONAL{?uriPubliekeDienstverlening ext:reviewStatus ?reviewStatusLink.?reviewStatusLink skos:prefLabel ?reviewStatus}
+# OPTIONAL{?uriPubliekeDienstverlening ext:lastModifiedBy ?lastModifiedBy.?lastModifiedBy foaf:firstName ?firstName;foaf:familyName ?familyName}
+# OPTIONAL{?uriPubliekeDienstverlening dct:creator ?creator.?creator foaf:firstName ?creatorFirstName;foaf:familyName ?creatorFamilyName}
+# OPTIONAL{?uriPubliekeDienstverlening schema:startDate ?startDatum}
+# OPTIONAL{?uriPubliekeDienstverlening schema:endDate ?eindDatum}
+# OPTIONAL{?uriPubliekeDienstverlening dct:type ?productType.?productType skos:prefLabel ?productTypeLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:targetAudience ?targetAudience.?targetAudience skos:prefLabel ?targetAudienceLabel}
+# OPTIONAL{?uriPubliekeDienstverlening m8g:thematicArea ?thematicArea.?thematicArea skos:prefLabel ?thematicAreaLabel}
+# OPTIONAL{?uriPubliekeDienstverlening dct:language ?language.?language skos:prefLabel ?languageLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:competentAuthorityLevel ?competentAuthorityLevel.?competentAuthorityLevel skos:prefLabel ?competentAuthorityLevelLabel}
+# OPTIONAL{?uriPubliekeDienstverlening m8g:hasCompetentAuthority ?competentAuthority.}
+# OPTIONAL{?competentAuthority skos:prefLabel ?competentAuthorityLabel.}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:executingAuthorityLevel ?executingAuthorityLevel.?executingAuthorityLevel skos:prefLabel ?executingAuthorityLevelLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:hasExecutingAuthority ?executingAuthority.}
+# OPTIONAL{?executingAuthority skos:prefLabel ?executingAuthorityLabel.}
+# OPTIONAL{?uriPubliekeDienstverlening dct:spatial ?spatial.?spatial skos:prefLabel ?spatialLabel}
+# OPTIONAL{?uriPubliekeDienstverlening <http://www.w3.org/ns/dcat#keyword> ?tag}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:publicationMedium ?publicationMedium.?publicationMedium skos:prefLabel ?publicationMediumLabel}
+# OPTIONAL{?uriPubliekeDienstverlening lpdcExt:yourEuropeCategory ?yourEuropeCategory.?yourEuropeCategory skos:prefLabel ?yourEuropeCategoryLabel}
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening belgif:hasRequirement ?voorwaarde.
+#   OPTIONAL {
+#     ?voorwaarde rdf:type ?voorwaardeType;
+#                 dct:title ?titelVoorwaarde;
+#                 mu:uuid ?voorwaardeUuid;
+#                 dct:description ?beschrijvingVoorwaarde.
+#                 OPTIONAL {?voorwaarde shacl:order ?orderVoorwaarde}.
+#     FILTER(
+#       LANG(?titelVoorwaarde) IN ("nl") &&
+#       LANG(?beschrijvingVoorwaarde) IN ("nl")
+#     )
+#   }
+#   OPTIONAL {
+#     ?voorwaarde m8g:hasSupportingEvidence ?bewijs.
+#     OPTIONAL {
+#       ?bewijs rdf:type ?bewijsType;
+#              dct:title ?titelBewijsstuk;
+#              mu:uuid ?bewijsUuid;
+#              dct:description ?beschrijvingBewijsstuk.
+#              OPTIONAL {?bewijs shacl:order ?orderBewijsstuk }
+#       FILTER(
+#         LANG(?titelBewijsstuk) IN ("nl") &&
+#         LANG(?beschrijvingBewijsstuk) IN ("nl")
+#       )
+#     }
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening cpsv:follows ?procedure.
+#   OPTIONAL {
+#     ?procedure rdf:type ?procedureType;
+#                dct:title ?titelProcedure;
+#                mu:uuid ?procedureUuid;
+#                dct:description ?beschrijvingProcedure.
+#                OPTIONAL {?procedure shacl:order ?orderProcedure}
+#     FILTER(
+#       LANG(?titelProcedure) IN ("nl") &&
+#       LANG(?beschrijvingProcedure) IN ("nl")
+#     )
+#   }
+#   OPTIONAL {
+#     ?procedure lpdcExt:hasWebsite ?website.
+#     OPTIONAL {
+#       ?website rdf:type ?procedureWebsiteType;
+#                dct:title ?titelProcedureWebsite;
+#                mu:uuid ?procedureWebsiteUuid;
+#                schema:url ?urlProcedureWebsite.
+#                OPTIONAL {?website dct:description ?beschrijvingProcedureWebsite}
+#                OPTIONAL {?website shacl:order ?orderProcedureWebsite}
+#       FILTER(
+#         LANG(?titelProcedureWebsite) IN ("nl") &&
+#         LANG(?beschrijvingProcedureWebsite) IN ("nl")
+#       )
+#     }
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening m8g:hasCost ?kosten.
+#   OPTIONAL {
+#     ?kosten rdf:type ?kostenType;
+#             dct:title ?titelKosten;
+#             mu:uuid ?kostenUuid;
+#             dct:description ?beschrijvingKosten.
+#             OPTIONAL {?kosten shacl:order ?orderKosten}
+#     FILTER(
+#       LANG(?titelKosten) IN ("nl") &&
+#       LANG(?beschrijvingKosten) IN ("nl")
+#     )
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening cpsv:produces ?voordeel.
+#   OPTIONAL {
+#     ?voordeel rdf:type ?voordeelType;
+#               dct:title ?titelFinancieelVoordeel;
+#               mu:uuid ?voordeelUuid;
+#               dct:description ?beschrijvingFinancieelVoordeel.
+#               OPTIONAL {?voordeel shacl:order ?orderFinancieelVoordeel}
+#     FILTER(
+#       LANG(?titelFinancieelVoordeel) IN ("nl") &&
+#       LANG(?beschrijvingFinancieelVoordeel) IN ("nl")
+#     )
+#   }
+# }
+
+# OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:regulation ?regelgeving }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening m8g:hasLegalResource ?bron.
+#   OPTIONAL {
+#     ?bron rdf:type ?bronType;
+#           mu:uuid ?bronUuid;
+#           schema:url ?urlRegelgevendeBron.
+#           OPTIONAL {?bron dct:title ?titelRegelgevendeBron}
+#           OPTIONAL {?bron dct:description ?beschrijvingRegelgevendeBron}
+#           OPTIONAL {?bron shacl:order ?orderRegelgevendeBron}
+#     FILTER(
+#   ( !BOUND(?titelRegelgevendeBron)
+#      || LANG(?titelRegelgevendeBron) IN ("nl") )
+#   &&
+#   ( !BOUND(?beschrijvingRegelgevendeBron)
+#      || LANG(?beschrijvingRegelgevendeBron) IN ("nl") )
+# )
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening m8g:hasContactPoint ?contact.
+#   OPTIONAL {
+#     ?contact rdf:type ?contactType;
+#           mu:uuid ?contactUuid.
+#           OPTIONAL { ?contact schema:email ?contactpuntEmail }
+#           OPTIONAL { ?contact schema:telephone ?contactpuntTelefoon }
+#           OPTIONAL { ?contact schema:url ?contactpuntWebsiteUrl }
+#           OPTIONAL { ?contact schema:openingHours ?contactpuntOpeningsuren }
+#           OPTIONAL {?contact shacl:order ?orderContact}
+#   }
+#   OPTIONAL {
+#     ?contact lpdcExt:address ?adresUri;
+#       mu:uuid ?adresUuid.
+#       OPTIONAL { ?adresUri rdf:type ?adressType}
+#       OPTIONAL { ?adresUri adres:Straatnaam ?straatnaam }
+#       OPTIONAL { ?adresUri adres:Adresvoorstelling.huisnummer ?huisnummer }
+#       OPTIONAL { ?adresUri adres:Adresvoorstelling.busnummer ?busnummer }
+#       OPTIONAL { ?adresUri adres:gemeentenaam ?gemeente }
+#         FILTER(
+#           ( !BOUND(?straatnaam)
+#             || LANG(?straatnaam) IN ("nl") )
+#           &&
+#           ( !BOUND(?gemeente)
+#             || LANG(?gemeente) IN ("nl") )
+#         )
+#   }
+# }
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening rdfs:seeAlso ?meerInfo.
+#   OPTIONAL {
+#     ?meerInfo rdf:type ?websiteType;
+#               dct:title ?titelWebsite;
+#               mu:uuid ?websiteUuid;
+#               schema:url ?urlWebsite.
+#               OPTIONAL {?meerInfo dct:description ?beschrijvingWebsite}
+#               OPTIONAL {?meerInfo shacl:order ?orderWebsite }
+#   FILTER(
+#     LANG(?titelWebsite) IN ("nl")
+#     && ( !BOUND(?beschrijvingWebsite)
+#         || LANG(?beschrijvingWebsite) IN ("nl") )
+#   )
+#   }
+# }
+# }
