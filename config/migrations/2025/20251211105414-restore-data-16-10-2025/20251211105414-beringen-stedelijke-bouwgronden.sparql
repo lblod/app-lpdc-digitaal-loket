@@ -1,0 +1,70 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198/LoketLB-LPDCGebruiker> {
+<http://data.europa.eu/nuts/code/BE22171004>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Beringen"@nl .
+
+<http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<http://mu.semte.ch/vocabularies/core/uuid>	"d71f3407-683d-49b4-b63f-fc851c99a4ea" .
+<http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"1" .
+<http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Beringen"@nl .
+<http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Collegestraat"@nl .
+
+<http://data.lblod.info/form-data/nodes/3f5a43fb-9f9d-40dd-9a7a-ef2aaaf72bdf>	<http://mu.semte.ch/vocabularies/core/uuid>	"8a59e933-b13b-496f-af98-ea9a11b8afda" .
+<http://data.lblod.info/form-data/nodes/3f5a43fb-9f9d-40dd-9a7a-ef2aaaf72bdf>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Schrijf je online in <a href=\"https://eloket.icordis.be/nl/beringen/eloket/1/68/0?sc=xzUNzBAhwrQxOmmgSZvwMV8Wg1CmbB6hcCOGEE26k3d\" class=\"say-pill say-link\">Stedelijke bouwgronden, projectgronden en weides - mailinglijst verkoop en verhuur - Stad Beringen</a></p></div>"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/3f5a43fb-9f9d-40dd-9a7a-ef2aaaf72bdf>	<http://purl.org/dc/terms/title>	"Procedure"@nl-be-x-informal .
+<http://data.lblod.info/form-data/nodes/3f5a43fb-9f9d-40dd-9a7a-ef2aaaf72bdf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://data.lblod.info/form-data/nodes/3f5a43fb-9f9d-40dd-9a7a-ef2aaaf72bdf>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<http://mu.semte.ch/vocabularies/core/uuid>	"d71f3407-683d-49b4-b63f-fc851c99a4ea" .
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<http://schema.org/email>	"info@beringen.be" .
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<http://schema.org/openingHours>	"https://www.beringen.be/stadhuis" .
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<http://schema.org/telephone>	"011 43 02 11" .
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<http://schema.org/url>	"https://www.beringen.be/" .
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<http://www.w3.org/ns/shacl#order>	"1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03> .
+
+<http://data.lblod.info/id/bestuurseenheden/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<http://data.lblod.info/id/bestuurseenheden/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/bestuurseenheden/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Beringen" .
+
+<http://data.lblod.info/id/persoon/67e67820-06d6-11ef-a651-7bde980db646>	<http://xmlns.com/foaf/0.1/familyName>	"Dogan" .
+<http://data.lblod.info/id/persoon/67e67820-06d6-11ef-a651-7bde980db646>	<http://xmlns.com/foaf/0.1/firstName>	"Hilal" .
+
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://data.europa.eu/m8g/hasContactPoint>	<http://data.lblod.info/form-data/nodes/e090da95-5ff5-40b8-a379-fbcfdc4529dc> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BouwenWonen> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://mu.semte.ch/vocabularies/core/uuid>	"12130f55-1e44-4fa9-96ed-02411797a610" .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://mu.semte.ch/vocabularies/ext/lastModifiedBy>	<http://data.lblod.info/id/persoon/67e67820-06d6-11ef-a651-7bde980db646> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://purl.org/dc/terms/creator>	<http://data.lblod.info/id/persoon/67e67820-06d6-11ef-a651-7bde980db646> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Wil je graag op de hoogte gehouden worden van verkopen en verhuringen van stedelijke bouw- en projectgronden of weides? Schrijf je dan in op onze verzendlijst en ontvang een mailtje van ons zodra een procedure wordt opgestart. </p></div>"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://purl.org/dc/terms/spatial>	<http://data.europa.eu/nuts/code/BE22171004> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://purl.org/dc/terms/title>	"Stedelijke bouwgronden, projectgronden en weides - mailingslijst verkoop en verhuur"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://purl.org/vocab/cpsv#follows>	<http://data.lblod.info/form-data/nodes/3f5a43fb-9f9d-40dd-9a7a-ef2aaaf72bdf> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://schema.org/dateCreated>	"2025-09-23T11:52:03.755Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://schema.org/dateModified>	"2025-10-02T06:50:19.878Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://schema.org/dateSent>	"2025-10-02T06:50:19.852Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/verzonden> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl-be-x-informal" .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#exception>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">De verkoop van industrie- en KMO-gronden valt hier niet onder. Daarvoor kan je de dienst ondernemen contacteren.</p></div>"@nl-be-x-informal .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#forMunicipalityMerger>	"false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#needsConversionFromFormalToInformal>	"false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610> <http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198> .
+<http://lblod.data.gift/concepts/instance-status/verzonden>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Verzonden"@nl .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/BouwenWonen>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Bouwen en Wonen"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+
+ }
+}
+
+### Stappen voor verkrijgen van deze data:
+# Stap 1: Run de CONSTRUCT query via productencatalogus database, query is te vinden in 20251211105414-aalst-herkenning in zelfde map, met andere uri. Deze is wel gerund op de backup, niet te vinden op productcatalogus, dus ietwat anders. 
+# Stap 2: Voeg bestuurseenheid informatie toe. 
