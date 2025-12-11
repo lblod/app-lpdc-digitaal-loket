@@ -6,7 +6,7 @@
 
 ### Management
 
-- Bump to [v0.51.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.51.1) [LPDC-1496]
+- Bump to [v0.51.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.51.2) [LPDC-1496] [LPDC-1513]
 
 ### Deploy notes
 
