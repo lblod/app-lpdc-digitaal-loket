@@ -288,7 +288,7 @@ services:
       retries: 200
 
   lpdc-publish:
-    image: lblod/lpdc-publish-service:0.19.0
+    image: lblod/lpdc-publish-service:0.20.0
     depends_on:
       migrations:
         condition: service_healthy
