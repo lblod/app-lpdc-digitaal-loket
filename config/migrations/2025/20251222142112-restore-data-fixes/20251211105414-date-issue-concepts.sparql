@@ -1,0 +1,16 @@
+
+# Mechelen asbest afvoeren
+
+DELETE DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/5c034020-591c-439e-a3b2-f87caab91fb1>	<http://schema.org/dateModified>	"2024-12-10T08:20:48.872Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+ }
+}
+
+# Beringen stedelijke bouwgronden
+
+DELETE DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/12130f55-1e44-4fa9-96ed-02411797a610>	<http://schema.org/dateModified>	"2025-10-02T06:50:19.878Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+ }
+}
