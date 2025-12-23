@@ -1,5 +1,9 @@
 # Changelog
 ## Unreleased
+### Backend
+
+- Bump lpdc-publish to [v0.20.0] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.20.0) [LPDC-1514]
+
 ### Frontend
 
 - Bump to [v0.25.1](https://github.com/lblod/frontend-lpdc/releases/tag/v0.25.1) [LPDC-1496]
@@ -11,7 +15,7 @@
 ### Deploy notes
 
 ```
-drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+drc pull lpdc lpdc-management lpdc-publish && drc up -d lpdc lpdc-management lpdc-publish
 ```
 
 ## v0.32.0 (2025-12-02)
