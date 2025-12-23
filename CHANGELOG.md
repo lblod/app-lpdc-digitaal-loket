@@ -2,7 +2,7 @@
 ## Unreleased
 ### Backend
 
-- Bump lpdc-publish to [v0.20.0] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.20.0) [LPDC-1514]
+- Bump lpdc-publish to [v0.20.1] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.20.1) [LPDC-1514 & LPDC-1515]
 
 ### Frontend
 
