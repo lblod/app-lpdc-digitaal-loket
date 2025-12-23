@@ -1,0 +1,126 @@
+# ################### Adresprobleem. Dit zou ik doen met de retrieve query en dan moet ik voor elke gewoon dit ophalen :D #Verwijst naar mist nog. Prefix is
+# INSERT DATA {
+#   GRAPH <http://mu.semte.ch/graphs/organizations/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6/LoketLB-LPDCGebruiker> {
+#     <http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<https://data.vlaanderen.be/ns/adres#land>	"België"@nl ;
+#       <https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/3201934> ;
+#       <http://data.europa.eu/m8g/hasCompetentAuthority>	"2800"  .
+
+#   }
+# }
+
+# ADRESFIX
+## Mechelen - Identiteitskaart (asbest afhalen moet nog maar dat is een concept)
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/be278471a2a318edba32e7ac4294c0eafbe4c8077a34dcbb9c2e43211d4a78a6/LoketLB-LPDCGebruiker> {
+    <http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<https://data.vlaanderen.be/ns/adres#postcode>	"2800"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#59ab1ffe-3c57-4107-9a3f-5c8b6977d91c>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/3201934> .
+
+    <http://data.lblod.info/form-data/nodes/62cc1a0a-a0e9-423c-85d5-6c8e5ff65f23>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://data.lblod.info/form-data/nodes/62cc1a0a-a0e9-423c-85d5-6c8e5ff65f23>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/3871762> .
+    <http://data.lblod.info/form-data/nodes/62cc1a0a-a0e9-423c-85d5-6c8e5ff65f23>	<https://data.vlaanderen.be/ns/adres#postcode>	"2812" .
+  }
+}
+
+## Bekkevoort - Poetshulp
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc/LoketLB-LPDCGebruiker> {
+    <http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08>	<https://data.vlaanderen.be/ns/adres#postcode>	"3460"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#df465b52-27b4-434d-8fe8-cf479ba42d08> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1210837> .
+  }
+}
+
+## Beringen - Stedelijke bouwgronden
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<https://data.vlaanderen.be/ns/adres#postcode>	"3580" .
+    <http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/2134563> .
+    <http://data.lblod.info/form-data/nodes/0f31e078-e7c7-47b4-9481-4bf94ef87f03>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+
+  }
+}
+
+## Lennik - Gele doos, Babyspullen, Mantelzorgpremie
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/931a2bf4f5c461d8c3636b446fa642693d4535d865d3af068e87d25ddc93374e/LoketLB-LPDCGebruiker> {
+    <http://mu.semte.ch/blank#4a018435-ba61-4a52-b74d-ff0bee4866db>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#4a018435-ba61-4a52-b74d-ff0bee4866db>	<https://data.vlaanderen.be/ns/adres#postcode>	"1750"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#4a018435-ba61-4a52-b74d-ff0bee4866db> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/2872123> .
+
+    <http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27>	<https://data.vlaanderen.be/ns/adres#postcode>	"1750"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#c4e7c788-a83c-4b0b-b89b-1c54d7685027> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/2872123> .
+
+    <http://mu.semte.ch/blank#c4e7c788-a83c-4b0b-b89b-1c54d7685027>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#c4e7c788-a83c-4b0b-b89b-1c54d7685027>	<https://data.vlaanderen.be/ns/adres#postcode>	"1750"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#aae042af-5540-4536-a23a-a00538f40b27> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1298248>.
+
+  }
+}
+
+
+## Lint - alle aktes (7 totaal)
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c6ce52f7a484e12c7f385f1116766fa9a8d1a1798e4e265a77a8881a2bda9b60/LoketLB-LPDCGebruiker> {
+    <http://mu.semte.ch/blank#05ed211f-e701-4cbe-a833-c44b3a036c6b>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#05ed211f-e701-4cbe-a833-c44b3a036c6b>	<https://data.vlaanderen.be/ns/adres#postcode>	"2547"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#05ed211f-e701-4cbe-a833-c44b3a036c6b> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1024175> .
+
+    <http://mu.semte.ch/blank#11d8c828-4035-4c91-b8cc-5c42dc9c21dd>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#11d8c828-4035-4c91-b8cc-5c42dc9c21dd>	<https://data.vlaanderen.be/ns/adres#postcode>	"2547"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#11d8c828-4035-4c91-b8cc-5c42dc9c21dd> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1024175> .
+
+    <http://mu.semte.ch/blank#38cc6bf6-00c7-4ef5-9e66-283730b541d9>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#38cc6bf6-00c7-4ef5-9e66-283730b541d9>	<https://data.vlaanderen.be/ns/adres#postcode>	"2547"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#38cc6bf6-00c7-4ef5-9e66-283730b541d9> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1024175> .
+
+    <http://mu.semte.ch/blank#43e008f9-1a84-49d3-9f06-7e2287fa0c39>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#43e008f9-1a84-49d3-9f06-7e2287fa0c39>	<https://data.vlaanderen.be/ns/adres#postcode>	"2547"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#43e008f9-1a84-49d3-9f06-7e2287fa0c39> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1024175> .
+
+    <http://mu.semte.ch/blank#c66e9cfb-e52f-420b-936b-3bf11ef9511c>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#c66e9cfb-e52f-420b-936b-3bf11ef9511c>	<https://data.vlaanderen.be/ns/adres#postcode>	"2547"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#c66e9cfb-e52f-420b-936b-3bf11ef9511c> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1024175> .
+
+    <http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9>	<https://data.vlaanderen.be/ns/adres#postcode>	"2547"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#f20a3f78-acfd-4d35-bf43-51becfd808c9> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1024175> .
+
+    <http://mu.semte.ch/blank#f918c5ca-e3f4-44d6-aaed-a275a14a155c>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+    <http://mu.semte.ch/blank#f918c5ca-e3f4-44d6-aaed-a275a14a155c>	<https://data.vlaanderen.be/ns/adres#postcode>	"2547"^^<http://www.w3.org/2001/XMLSchema#string> .
+    <http://mu.semte.ch/blank#f918c5ca-e3f4-44d6-aaed-a275a14a155c> <https://data.vlaanderen.be/ns/adres#verwijstNaar> <https://data.vlaanderen.be/id/adres/1024175>.
+  }
+}
+
+
+
+
+
+### QUERY
+# PREFIX lpdcExt:<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+# PREFIX schema:<http://schema.org/>
+# PREFIX m8g:<http://data.europa.eu/m8g/>
+# PREFIX adres:<https://data.vlaanderen.be/ns/adres#>
+
+# CONSTRUCT {
+# ?adresUri adres:land ?adresLand; adres:postcode ?adresPostCode; adres:verwijstNaar ?adresVerwijstNaar.
+# }
+
+# WHERE {
+# VALUES ?uriPubliekeDienstverlening { <https://ipdc.vlaanderen.be/id/instantie/6aa50996-9da3-48fe-b1d1-c5b3e8f531b8>	}
+# ?uriPubliekeDienstverlening a lpdcExt:InstancePublicServiceSnapshot;
+#                                 schema:dateModified ?aangepastOp.  
+
+
+# OPTIONAL {
+#   ?uriPubliekeDienstverlening m8g:hasContactPoint ?contact.
+#   OPTIONAL {
+#     ?contact lpdcExt:address ?adresUri.
+#       OPTIONAL { ?adresUri adres:land ?adresLand}
+#       OPTIONAL { ?adresUri adres:postcode ?adresPostCode}
+#       OPTIONAL { ?adresUri adres:verwijstNaar ?adresVerwijstNaar}   }
+# }
+# }
