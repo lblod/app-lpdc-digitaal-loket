@@ -1,0 +1,105 @@
+PREFIX schema: <http://schema.org/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+
+# Lint
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c6ce52f7a484e12c7f385f1116766fa9a8d1a1798e4e265a77a8881a2bda9b60/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/e0d8a99e-73db-4805-9dea-ad6e690f194d> #Registratie geslacht
+      schema:productID "1500" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/411256b4-7d1f-464f-8853-b710cd3fbe7f> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/c80d865b-ba37-4034-b7b6-6cfe4c5f5a60> .
+
+    <http://data.lblod.info/id/public-service/8852342c-fba3-445d-b001-87bdc3d88831> #Belgische nationaliteit 
+      schema:productID "1502" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/7717d7c3-fa05-4e01-b8d1-53462d53a94d> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/69cd0569-6755-4bd0-9899-a8d45a3a6333> .
+
+    <http://data.lblod.info/id/public-service/2e7018ac-3252-4946-8f8c-05aea33e4c24> #Levenloos kind
+      schema:productID "1503" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/1e83a60c-3309-4b40-b353-e86e8afeeb14> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/275115a6-015d-4d1d-83eb-191cd1e85373> .
+
+    <http://data.lblod.info/id/public-service/d9e232f2-5a53-4690-a8ba-4c4bde177a3e> #naamsverandering 
+      schema:productID "1498" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/9a56e920-51be-43df-bf40-ecb470105a0d> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/4a5ace97-4939-4913-a47f-1fe46946fc7f> .
+
+    <http://data.lblod.info/id/public-service/8e8cfbaa-017a-402d-8e15-76c35fec8766> #adoptie
+      schema:productID "1496" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/9250faec-c65a-4f28-a343-e9b7028e6cdb> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/3800cbc7-66ba-4260-94e6-26d30463af70> .
+
+    <http://data.lblod.info/id/public-service/d0114e61-d7de-4e55-9498-541e121d0db2> #verklaring naamskeuze 
+      schema:productID "1497" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/a5430c32-63be-42b6-9293-cc694d1111f3> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/401c06db-8fe5-4ccd-928a-fd6f5f1097d6> .
+
+    <http://data.lblod.info/id/public-service/f9d7c3cf-d055-4d78-9cee-a53d365761ac>	 #voornaamsverandering #CHECKOUT!!
+      schema:productID "1499" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/c4abeeed-49f8-48b5-963c-6fa0111914b8> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/7d0ef123-d81c-4436-bffb-eed05bdd9acb> .
+  }
+}
+
+# Maaseik
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/organizations/7aa957d6377d45bf9e2a1dbaf7524d01b1999cf0cc5bc8c4f4a2380e13ef096e/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/faa31ad1-6d4e-4371-b6fd-f046c7e96c7f> #Attest van leven
+      schema:productID "779" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/bc52afb5-b203-4359-b29e-a0f5b1fd8bc3> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/f0ef290f-53ce-4154-8ddd-03b132af4a6d> .
+
+    <http://data.lblod.info/id/public-service/f92e13c0-2323-43df-9aff-6474c289ae67> #Gezinssamenstelling
+      schema:productID "781" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/a7669427-0af8-434d-ac6c-97161e74fac1> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/5fdfd8fb-7435-4dc8-9831-0f15024e7397> .
+
+    <http://data.lblod.info/id/public-service/e3461a68-efcc-4a9b-9dbd-4bdeef6c864b> #Reistoelating
+      schema:productID "747" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/9b05fed8-f1ee-42c5-8cec-cc5e6f481a65> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/9ac3b3fb-f6da-4b6d-996a-29dae8a29f1b> .
+
+    <http://data.lblod.info/id/public-service/4f707283-2ce6-4c32-a0f7-752a58d073a7> #Strafregister
+      schema:productID "940" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/84110eee-2ae4-43cb-af35-9501301a6cc7> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/fd986482-eea9-48aa-b5c2-7adfe6789e16> .
+
+    <http://data.lblod.info/id/public-service/902ac295-69da-4b0d-82c8-19b8a68811ac> #Handtekening
+      schema:productID "756" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/d15d1de7-acf0-481e-8446-b1f6b9c196b5> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/ca746a48-ca64-4211-9b19-cb6daf4dad0f> .
+  }
+}
+
+# Bekkevoort
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/780e50a94a76c850a8f88c7e01427de38b445dcc6ebe79815a6d0f44adc530bc/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/bcbe9f96-6390-4c67-9e61-f2d774fbf153> #Poetshulp
+      schema:productID "721" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/f34ff895-9cb2-4999-8bd5-a61504f26283> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/94534751-25bb-4e57-bc9c-e9b2f48ccb78> .
+  }
+}
+
+
+# Lennik
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/931a2bf4f5c461d8c3636b446fa642693d4535d865d3af068e87d25ddc93374e/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/8371c9e5-fd79-417a-93e0-487ab8eb41ba> #Babyspullen
+      schema:productID "21622" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/edbbc779-bca3-4271-a473-d133193ce967> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/deacf211-cc26-4ade-8a8d-5099e17a4dc9> .
+
+    <http://data.lblod.info/id/public-service/4c6409f0-0a68-45e8-805c-7319d8b0bdcf> #Gele doos
+      schema:productID "21613" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/75a4fa6a-c130-42ec-9a79-f2d4e2fc8a6e> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/22bb0e5a-bdde-4bd8-8c1a-f0907ec05493> .
+  
+    <http://data.lblod.info/id/public-service/d9f97aeb-8e28-4842-8ee8-774d606cc7bd> #Mantelzorgpremie
+      schema:productID "83" ;
+      dcterms:source <https://ipdc.vlaanderen.be/id/concept/90df9d40-dab0-407d-90d0-e11953e42077> ;
+      ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/26c6fa8c-9579-499a-a3ab-d8d70c98578a> .
+  }
+}
+
