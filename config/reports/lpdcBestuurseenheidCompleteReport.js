@@ -286,7 +286,7 @@ function generateWebsiteQuery(uri) {
   `;
 }
 
-function generateEigenschappenFirstQuery(uri) {
+function generateEigenschappenGeneralQuery(uri) {
   return `
     PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
     PREFIX dct:     <http://purl.org/dc/terms/>
@@ -341,7 +341,7 @@ function generateEigenschappenFirstQuery(uri) {
   `;
 }
 
-function generateEigenschappenSecondQuery(uri) {
+function generateEigenschappenCodelistsQuery(uri) {
   return `
     PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
     PREFIX dct:     <http://purl.org/dc/terms/>
@@ -397,8 +397,8 @@ async function fetchAllDataForUri(uri) {
     query(generateKostenQuery(uri)),
     query(generateProcedureQuery(uri)),
     query(generateVoorwaardeQuery(uri)),
-    query(generateEigenschappenFirstQuery(uri)),
-    query(generateEigenschappenSecondQuery(uri))
+    query(generateEigenschappenGeneralQuery(uri)),
+    query(generateEigenschappenCodelistsQuery(uri))
   ]);
 
   const details = detailsRes.results.bindings[0] || {};
