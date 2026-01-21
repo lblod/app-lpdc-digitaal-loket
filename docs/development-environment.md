@@ -34,6 +34,50 @@ To ease all typing for `docker compose` commands, start by creating the followin
 COMPOSE_FILE=docker-compose.yml:docker-compose.dev.yml:docker-compose.override.yml
 ```
 
+### Setting up the app for the first time
+Update docker-compose.override.yml to add the config of op-public-consumer:
+```
+  op-public-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info" # For DEV
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # For QA
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # For PROD
+      DCR_LANDING_ZONE_DATABASE: "virtuoso"
+      DCR_REMAPPING_DATABASE: "virtuoso"
+      DCR_DISABLE_DELTA_INGEST: "true"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+Then run
+```
+drc up -d
+drc restart migrations; drc logs -ft --tail=200 migrations # wait for all migrations to run
+drc up -d op-public-consumer; drc logs -ft --tail=200 op-public-consumer # wait for the initial sync to complete
+```
+
+Update the docker-compose.override.yml again:
+```
+  op-public-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://dev.organisaties.abb.lblod.info" # For DEV
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # For QA
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # For PROD
+      DCR_LANDING_ZONE_DATABASE: "database"
+      DCR_REMAPPING_DATABASE: "database"
+      DCR_DISABLE_DELTA_INGEST: "false"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+And finally, run:
+```
+drc up -d
+# Wait for the op-public-consumer to ingest all it needs to ingest
+drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=38887a85-dba2-4edc-9298-ae87c82bc662"
+drc exec db-cleanup curl -X GET "http://localhost/runCronJob?cronJobID=f5ac21ba-5672-43cd-855f-b57f560f50dg"
+# you might need to run this one about 5 times to test the creation of products in newly added admin units, because especially on DEV many concepts need to be linked to the new besturen. Otherwise, let the cron job do its work and in a few hours it should be ready!
+# the last query takes a little while to execute, but it should come through without timeouts
+```
+
 ### Initialise your local database
 
 This is an optional step. If you trust your machine is powerful enough, you can move on (this step should only be done once).
@@ -72,6 +116,8 @@ At this point, after booting the your local stack, you should be able to access 
     - During *Winter Time*: Runs at 18:20 Brussels Time (UTC+1)
 
 You can force-trigger the service to run by overriding the `CRON_PATTERN` in your `docker-compose.override.yml` file; [crontab guru](https://crontab.guru/) is a nice playground to explore changing the pattern, and it houses a dedicated [examples section](https://crontab.guru/examples.html) where you can view the different options.
+
+NOTE: for environment variables setup, ask a developer for the necessary keys.
 
 After changing the cron pattern, run `docker compose up -d` if the stack is offline or `docker compose up -d ldes-consumer-conceptsnapshot-ipdc` if the stack is already running in order to let the consumer service pick up this new change. Once the cron pattern is triggered, you can see the consumer pulling in the concepts from the IPDC TNI environment:
 
