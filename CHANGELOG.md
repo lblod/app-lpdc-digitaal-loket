@@ -1,4 +1,15 @@
 # Changelog
+## Unreleased
+### Frontend
+
+- Bump to [v0.26.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.26.0) [LPDC-1498]
+
+### Deploy notes
+
+```
+drc pull lpdc && drc up -d lpdc
+```
+
 ## v0.33.1 (2026-01-20)
 ### Frontend
 
