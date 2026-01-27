@@ -171,6 +171,10 @@ defmodule Acl.UserGroups.Config do
                         "http://www.w3.org/ns/locn#Address",
                         "http://data.lblod.info/vocabularies/lpdc/ConceptDisplayConfiguration",
                         "http://data.lblod.info/vocabularies/lpdc/FormalInformalChoice",
+                        "https://schema.org/Conversation",
+                        "https://schema.org/AskAction",
+                        "https://schema.org/ReplyAction",
+                        "https://schema.org/DataFeedItem",
                         ] } } ] },
 
       # // ORGANIZATION HAS POSSIBLY DUPLICATE USER DATA
