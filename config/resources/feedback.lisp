@@ -20,7 +20,7 @@
 
 (define-resource feedback-vraag ()
   :class (s-prefix "schema2:AskAction")
-  :properties `((:vraag :string ,(s-prefix "schema2:question"))
+  :properties `((:vraag :html ,(s-prefix "schema2:question"))
                 (:timestamp :datetime ,(s-prefix "schema2:startTime"))
                 (:van :uri ,(s-prefix "schema2:agent"))
                 (:naar :uri ,(s-prefix "schema2:recipient")))
@@ -31,7 +31,7 @@
 
 (define-resource feedback-antwoord ()
   :class (s-prefix "schema2:ReplyAction")
-  :properties `((:antwoord :string ,(s-prefix "schema2:resultComment"))
+  :properties `((:antwoord :html ,(s-prefix "schema2:resultComment"))
                 (:timestamp :datetime ,(s-prefix "schema2:startTime"))
                 (:van :uri ,(s-prefix "schema2:agent"))
                 (:naar :uri ,(s-prefix "schema2:recipient")))
