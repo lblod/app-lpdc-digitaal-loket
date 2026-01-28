@@ -125,7 +125,7 @@ services:
     logging: *default-logging
 
   resource:
-    image: semtech/mu-cl-resources:1.24.0
+    image: semtech/mu-cl-resources:feature-html-type
     depends_on:
       migrations:
         condition: service_healthy
