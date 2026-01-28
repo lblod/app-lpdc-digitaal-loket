@@ -58,6 +58,9 @@
                         :as "last-modifier")
              (gebruiker :via ,(s-prefix "dct:creator")
                      :as "creator"))
+  :has-many `((feedback :via ,(s-prefix "skos:primarySubject")
+                                :inverse t
+                                :as "feedbacks"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
   :features '(include-uri)
   :on-path "public-services"
