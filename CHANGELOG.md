@@ -13,7 +13,16 @@
 
 - Update to `redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state`
 
+### Frontend
+
+- Bump to [v0.26.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.26.0) [LPDC-1498]
+
 ### Deploy notes
+
+```bash
+drc pull lpdc && drc up -d lpdc
+```
+
 Fill-in the following environment variables in the `docker-compose.override.yml`
 
 `conceptsnapshot-ipdc-proxy`:
@@ -42,8 +51,8 @@ drcu ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes
 # Ensure LDES feeds consume their respective feeds successfully
 
 # Ensure lpdc-management service processing incoming conceptsnapshots and instancesnapshots correctly (this typically takes a while)
-```
 
+```
 
 ## v0.33.1 (2026-01-20)
 ### Frontend
