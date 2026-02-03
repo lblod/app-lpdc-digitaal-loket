@@ -375,7 +375,7 @@ services:
     logging: *default-logging
 
   feedback-available-flag-service:
-    image: lblod/feedback-available-flag-service:latest
+    image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
     environment:
       STATUS_PREDICATE: 'https://schema.org/actionStatus'
       STATUS_URI: 'http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b'
