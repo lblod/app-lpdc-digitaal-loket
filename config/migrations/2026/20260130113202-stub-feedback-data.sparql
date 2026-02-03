@@ -1,0 +1,47 @@
+PREFIX schema: <https://schema.org/>
+PREFIX adms: <https://www.w3.org/ns/adms#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/5116efa8-e96e-46a2-aba6-c077e9056a96/LoketLB-LPDCGebruiker> {
+
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123>
+    a schema:Conversation ;
+    mu:uuid "test-123" ;
+    schema:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema:productID "12345" ;
+    schema:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#BEANTWOORD> ;
+    schema:actionStatus <http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b> ;
+    schema:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123>
+    a schema:AskAction ;
+    mu:uuid "test-q-123" ;
+    schema:question "Test vraag"^^rdf:HTML ;
+    schema:startTime "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema:agent <https://data.vlaanderen.be/id/organisatie/OVO001995> ;
+    schema:recipient <https://data.vlaanderen.be/id/organisatie/OVO002117> .
+
+    <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123>
+    a schema:ReplyAction ;
+    mu:uuid "test-a-123" ;
+    schema:resultComment "Test antwoord"^^rdf:HTML ;
+    schema:startTime "2026-01-26T11:00:00.000Z"^^xsd:dateTime ;
+    schema:agent <https://data.vlaanderen.be/id/organisatie/OVO002117> ;
+    schema:recipient <https://data.vlaanderen.be/id/organisatie/OVO001995> .
+
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback-snapshot/test-snapshot-123>
+    a schema:DataFeedItem ;
+    mu:uuid "test-snapshot-123" ;
+    schema:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema:item <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123> ;
+    dct:isVersionOf <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123> .
+  }
+}
