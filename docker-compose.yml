@@ -374,6 +374,18 @@ services:
     restart: always
     logging: *default-logging
 
+  feedback-available-flag-service:
+    image: lblod/feedback-available-flag-service:latest
+    environment:
+      STATUS_PREDICATE: 'https://schema.org/actionStatus'
+      STATUS_URI: 'http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b'
+      INSTANCE_TYPE: 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService'
+      INSTANCE_PREDICATE: 'http://www.w3.org/2004/02/skos/core#primarySubject'
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
   ################################################################################
   # Consumers
   ################################################################################

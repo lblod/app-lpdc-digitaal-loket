@@ -78,6 +78,13 @@ services:
   ldes-consumer-conceptsnapshot-ipdc:
     restart: "no"
 
+  feedback-available-flag-service:
+    environment:
+      HEALING_CRON: '*/3 * * * *'
+      DEBUG: true
+    restart: "no"
+
+
   ################################################################################
   # Consumers
   ################################################################################

@@ -169,19 +169,19 @@ defmodule Dispatcher do
   # Feedback
   #################################################################
 
-  get "/feedbacks/*path", @json do
+  match "/feedbacks/*path", @json do
     forward conn, path, "http://resource/feedbacks/"
   end
 
-  get "/feedback-vragen/*path", @json do
+  match "/feedback-vragen/*path", @json do
     forward conn, path, "http://resource/feedback-vragen/"
   end
 
-  get "/feedback-antwoorden/*path", @json do
+  match "/feedback-antwoorden/*path", @json do
     forward conn, path, "http://resource/feedback-antwoorden/"
   end
 
-  get "/feedback-snapshots/*path", @json do
+  match "/feedback-snapshots/*path", @json do
     forward conn, path, "http://resource/feedback-snapshots/"
   end
 

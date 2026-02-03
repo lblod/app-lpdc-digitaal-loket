@@ -47,6 +47,7 @@
   :properties `((:dutch-language-variant :string ,(s-prefix "lpdcExt:dutchLanguageVariant"))
                 (:needs-conversion-from-formal-to-informal :boolean ,(s-prefix "lpdcExt:needsConversionFromFormalToInformal"))
                 (:for-municipality-merger :boolean ,(s-prefix "lpdcExt:forMunicipalityMerger"))
+                (:feedback-available :boolean ,(s-prefix "schema:flagged"))
                 (:date-sent :datetime ,(s-prefix "schema:dateSent")))
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")

@@ -1,0 +1,150 @@
+PREFIX schema2: <https://schema.org/>
+PREFIX schema: <http://schema.org/>
+PREFIX adms: <https://www.w3.org/ns/adms#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <https://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+DELETE {
+  GRAPH ?g {
+    ?publicService schema:flagged ?existingValue .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    VALUES ?publicService {
+      <http://data.lblod.info/id/public-service/6d623b8b-a8e6-4e0a-af47-c571dc7fa4a4> # should be true after cron-job
+      <http://data.lblod.info/id/public-service/259fe623-0256-47c4-aea9-f039d7712fcc> # should be false after cron-job
+      <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> # should be false after cron-job
+      <http://data.lblod.info/id/public-service/fd44dbd4-d3c6-4000-a3b1-ed9e7a1f3914> # should be false after cron-job
+      <http://data.lblod.info/id/public-service/656b2491-71b3-4bb4-a08f-447a3fbeb40a> # should be false after cron-job
+      <http://data.lblod.info/id/public-service/97202861-d752-494e-a37c-e789a3793ec1> # should be false after cron-job
+      <http://data.lblod.info/id/public-service/454177e6-c2df-4095-811b-9197ef786bb4> # should be false after cron-job
+      <http://data.lblod.info/id/public-service/1f9cbe66-0bc5-4a0b-bd67-b22c60325f7c> # should be true after cron-job
+    }
+    ?publicService schema:flagged ?existingValue .
+  }
+};
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/5116efa8-e96e-46a2-aba6-c077e9056a96/LoketLB-LPDCGebruiker> {
+
+  # should stay true
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123>
+    a schema2:Conversation ;
+    mu:uuid "test-123" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/6d623b8b-a8e6-4e0a-af47-c571dc7fa4a4> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:actionStatus <http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/6d623b8b-a8e6-4e0a-af47-c571dc7fa4a4> schema:flagged true .
+
+    # should turn false because no linked feedback
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-1>
+    a schema2:Conversation ;
+    mu:uuid "test-1" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:actionStatus <http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/259fe623-0256-47c4-aea9-f039d7712fcc> schema:flagged true .
+
+    # should turn false because no linked status
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-2>
+    a schema2:Conversation ;
+    mu:uuid "test-2" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> schema:flagged true .
+
+    #should turn false because of link to other status
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-3>
+    a schema2:Conversation ;
+    mu:uuid "test-3" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/fd44dbd4-d3c6-4000-a3b1-ed9e7a1f3914> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:actionStatus <http://lblod.data.gift/concepts/2e4a6c8d-9f1b-4d3e-5a7c-9e1f3b5d7a9c> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/fd44dbd4-d3c6-4000-a3b1-ed9e7a1f3914> schema:flagged true .
+
+    # should stay false because link to other status
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-4>
+    a schema2:Conversation ;
+    mu:uuid "test-4" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/656b2491-71b3-4bb4-a08f-447a3fbeb40a> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:actionStatus <http://lblod.data.gift/concepts/2e4a6c8d-9f1b-4d3e-5a7c-9e1f3b5d7a9c> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/656b2491-71b3-4bb4-a08f-447a3fbeb40a> schema:flagged false .
+
+    # should stay false because link to feedback with no status
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-5>
+    a schema2:Conversation ;
+    mu:uuid "test-5" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/97202861-d752-494e-a37c-e789a3793ec1> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/97202861-d752-494e-a37c-e789a3793ec1> schema:flagged false .
+
+    # should stay false because no link to feedback
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-6>
+    a schema2:Conversation ;
+    mu:uuid "test-6" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    schema2:actionStatus <http://lblod.data.gift/concepts/2e4a6c8d-9f1b-4d3e-5a7c-9e1f3b5d7a9c> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/454177e6-c2df-4095-811b-9197ef786bb4> schema:flagged false .
+
+    # should turn true because link with correct status
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-7>
+    a schema2:Conversation ;
+    mu:uuid "test-7" ;
+    schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    schema2:productID "12345" ;
+    schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/1f9cbe66-0bc5-4a0b-bd67-b22c60325f7c> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    schema2:actionStatus <http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b> ;
+    schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
+    schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+
+    <http://data.lblod.info/id/public-service/1f9cbe66-0bc5-4a0b-bd67-b22c60325f7c> schema:flagged false .
+  }
+}
