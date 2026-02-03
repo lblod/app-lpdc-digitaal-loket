@@ -17,7 +17,7 @@ WHERE {
     VALUES ?publicService {
       <http://data.lblod.info/id/public-service/6d623b8b-a8e6-4e0a-af47-c571dc7fa4a4> # should be true after cron-job
       <http://data.lblod.info/id/public-service/259fe623-0256-47c4-aea9-f039d7712fcc> # should be false after cron-job
-      <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> # should be false after cron-job
+      <http://data.lblod.info/id/public-service/b341617a-cb31-4f56-b705-1c0847cf3430> # should be false after cron-job
       <http://data.lblod.info/id/public-service/fd44dbd4-d3c6-4000-a3b1-ed9e7a1f3914> # should be false after cron-job
       <http://data.lblod.info/id/public-service/656b2491-71b3-4bb4-a08f-447a3fbeb40a> # should be false after cron-job
       <http://data.lblod.info/id/public-service/97202861-d752-494e-a37c-e789a3793ec1> # should be false after cron-job
@@ -32,9 +32,9 @@ INSERT DATA {
   GRAPH <http://mu.semte.ch/graphs/organizations/5116efa8-e96e-46a2-aba6-c077e9056a96/LoketLB-LPDCGebruiker> {
 
   # should stay true
-    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123>
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test>
     a schema2:Conversation ;
-    mu:uuid "test-123" ;
+    mu:uuid "test" ;
     schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
     schema2:productID "12345" ;
     schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
@@ -67,12 +67,12 @@ INSERT DATA {
     schema2:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
     schema2:productID "12345" ;
     schema2:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
-    skos:primarySubject <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/b341617a-cb31-4f56-b705-1c0847cf3430> ;
     adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
     schema2:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
     schema2:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
 
-    <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> schema:flagged true .
+    <http://data.lblod.info/id/public-service/b341617a-cb31-4f56-b705-1c0847cf3430> schema:flagged true .
 
     #should turn false because of link to other status
     <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-3>
