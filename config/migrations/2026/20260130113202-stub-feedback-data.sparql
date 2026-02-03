@@ -16,7 +16,7 @@ INSERT DATA {
     schema:productID "12345" ;
     schema:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
     skos:primarySubject <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> ;
-    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#NIEUW> ;
+    adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#BEANTWOORD> ;
     schema:actionStatus <http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b> ;
     schema:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
     schema:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
