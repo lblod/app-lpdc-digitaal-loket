@@ -173,12 +173,25 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/feedbacks/"
   end
 
+<<<<<<< LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
   match "/feedback-vragen/*path", @json do
     forward conn, path, "http://resource/feedback-vragen/"
   end
 
   match "/feedback-antwoorden/*path", @json do
     forward conn, path, "http://resource/feedback-antwoorden/"
+=======
+  patch "/feedbacks/*path", @json do
+    forward conn, path, "http://resource/feedbacks/"
+  end
+
+  get "/feedback-questions/*path", @json do
+    forward conn, path, "http://resource/feedback-questions/"
+  end
+
+  get "/feedback-answers/*path", @json do
+    forward conn, path, "http://resource/feedback-answers/"
+>>>>>>> LPDC-1287-Set-up-Mu-CL-
   end
 
   match "/feedback-snapshots/*path", @json do

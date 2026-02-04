@@ -9,39 +9,39 @@ PREFIX dct: <http://purl.org/dc/terms/>
 INSERT DATA {
   GRAPH <http://mu.semte.ch/graphs/organizations/5116efa8-e96e-46a2-aba6-c077e9056a96/LoketLB-LPDCGebruiker> {
 
-    <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123>
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback/a9c7a813-d03e-4a80-a23e-227ca9103841>
     a schema:Conversation ;
-    mu:uuid "test-123" ;
-    schema:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
+    mu:uuid "ae9a1fff-a069-4402-9c23-aeebc1ab039a" ;
+    schema:dateCreated "2026-01-25T10:00:00.000Z"^^xsd:dateTime ;
     schema:productID "12345" ;
     schema:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
-    skos:primarySubject <http://data.lblod.info/id/public-service/f36b2539-c6db-4817-be9d-6bf3b31fabdb> ;
+    skos:primarySubject <http://data.lblod.info/id/public-service/6bfa90bc-b12d-44f6-93d4-1fc6fd042f5c> ;
     adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#BEANTWOORD> ;
     schema:actionStatus <http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b> ;
-    schema:question <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123> ;
-    schema:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123> .
+    schema:question <https://ipdc.vlaanderen.be/publicatie/id/question/5a7ccb5c-06a9-443d-adaf-b9ea0b8c8e19> ;
+    schema:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/0a277336-c3bb-4712-8f38-f06687d4cc08> .
 
-    <https://ipdc.vlaanderen.be/publicatie/id/question/test-q-123>
+    <https://ipdc.vlaanderen.be/publicatie/id/question/5a7ccb5c-06a9-443d-adaf-b9ea0b8c8e19>
     a schema:AskAction ;
-    mu:uuid "test-q-123" ;
+    mu:uuid "5a7ccb5c-06a9-443d-adaf-b9ea0b8c8e19" ;
     schema:question "Test vraag"^^rdf:HTML ;
     schema:startTime "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
     schema:agent <https://data.vlaanderen.be/id/organisatie/OVO001995> ;
     schema:recipient <https://data.vlaanderen.be/id/organisatie/OVO002117> .
 
-    <https://ipdc.vlaanderen.be/publicatie/id/answer/test-a-123>
+    <https://ipdc.vlaanderen.be/publicatie/id/answer/0a277336-c3bb-4712-8f38-f06687d4cc08>
     a schema:ReplyAction ;
-    mu:uuid "test-a-123" ;
+    mu:uuid "0a277336-c3bb-4712-8f38-f06687d4cc08" ;
     schema:resultComment "Test antwoord"^^rdf:HTML ;
-    schema:startTime "2026-01-26T11:00:00.000Z"^^xsd:dateTime ;
+    schema:startTime "2026-01-27T11:00:00.000Z"^^xsd:dateTime ;
     schema:agent <https://data.vlaanderen.be/id/organisatie/OVO002117> ;
     schema:recipient <https://data.vlaanderen.be/id/organisatie/OVO001995> .
 
-    <https://ipdc.vlaanderen.be/publicatie/id/feedback-snapshot/test-snapshot-123>
+    <https://ipdc.vlaanderen.be/publicatie/id/feedback-snapshot/28978c8a-6c64-4375-b0d1-094a2045f7ad>
     a schema:DataFeedItem ;
-    mu:uuid "test-snapshot-123" ;
-    schema:dateCreated "2026-01-26T10:00:00.000Z"^^xsd:dateTime ;
-    schema:item <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123> ;
-    dct:isVersionOf <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-123> .
+    mu:uuid "28978c8a-6c64-4375-b0d1-094a2045f7ad" ;
+    schema:dateCreated "2026-01-28T10:00:00.000Z"^^xsd:dateTime ;
+    schema:item <https://ipdc.vlaanderen.be/publicatie/id/feedback/a9c7a813-d03e-4a80-a23e-227ca9103841> ;
+    dct:isVersionOf <https://ipdc.vlaanderen.be/publicatie/id/feedback/a9c7a813-d03e-4a80-a23e-227ca9103841> .
   }
 }
