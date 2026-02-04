@@ -173,12 +173,16 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/feedbacks/"
   end
 
-  get "/feedback-vragen/*path", @json do
-    forward conn, path, "http://resource/feedback-vragen/"
+  patch "/feedbacks/*path", @json do
+    forward conn, path, "http://resource/feedbacks/"
   end
 
-  get "/feedback-antwoorden/*path", @json do
-    forward conn, path, "http://resource/feedback-antwoorden/"
+  get "/feedback-questions/*path", @json do
+    forward conn, path, "http://resource/feedback-questions/"
+  end
+
+  get "/feedback-answers/*path", @json do
+    forward conn, path, "http://resource/feedback-answers/"
   end
 
   get "/feedback-snapshots/*path", @json do
