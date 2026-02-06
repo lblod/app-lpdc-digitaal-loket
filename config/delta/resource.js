@@ -18,11 +18,11 @@ export default [
     match: {
       predicate: {
         type: 'uri',
-        value: 'https://schema.org/actionStatus'
+        value: 'http://www.w3.org/ns/adms#status'
       },
       object: {
         type: 'uri',
-        value: 'http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b'
+        value: 'https://ipdc.vlaanderen.be/ns/FeedbackStatus#AANGEMAAKT'
       }
     },
     callback: {
