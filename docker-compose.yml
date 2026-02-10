@@ -376,11 +376,6 @@ services:
 
   feedback-available-flag-service:
     image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
-    environment:
-      STATUS_PREDICATE: 'http://www.w3.org/ns/adms#status'
-      STATUS_URI: 'https://ipdc.vlaanderen.be/ns/FeedbackStatus#AANGEMAAKT'
-      INSTANCE_TYPE: 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService'
-      INSTANCE_PREDICATE: 'http://www.w3.org/2004/02/skos/core#primarySubject'
     labels:
       - "logging=true"
     restart: always

@@ -1,20 +1,19 @@
-PREFIX schema: <http://schema.org/>
 PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 
 DELETE {
     GRAPH ?bestuurseenheidGraph {
-        ?instance schema:flagged ?currentValue.
+        ?instance lpdcExt:feedbackAvailable ?currentValue.
     }
 }
 INSERT {
     GRAPH ?bestuurseenheidGraph {
-        ?instance schema:flagged false.
+        ?instance lpdcExt:feedbackAvailable false.
     }
 }
 WHERE {
     GRAPH ?bestuurseenheidGraph {
         ?instance a lpdcExt:InstancePublicService.
-        OPTIONAL { ?instance schema:flagged ?currentValue. }
+        OPTIONAL { ?instance lpdcExt:feedbackAvailable ?currentValue. }
     }
 
     FILTER(

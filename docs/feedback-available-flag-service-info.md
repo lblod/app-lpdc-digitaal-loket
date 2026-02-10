@@ -5,13 +5,18 @@ Feedback comes with two status:
  - status (via `adms:status`) used to signal the status of the feedback resource.
  - processing-status (via `schema2:actionStatus`) used to signal the status of the processing of the feedback.
 
-The microservice flags instances based on if they have any linked feedbacks with the status `feedbackstatus:AANGEMAAKT `.
+The microservice flags instances + adds the processsing-status based on if they have any linked feedbacks with the status `feedbackstatus:AANGEMAAKT`.
+When a feedback gets the processing-status `Beëindigd`, the microservice sets the status to `feedbackstatus:BEANTWOORD` and unflags the linked instance if there are
+no other linked feedbacks with status `feedbackstatus:AANGEMAAKT`.
 
 ## How It Works
 
 1. The service listens for delta notifications from [delta-notifier](https://github.com/mu-semtech/delta-notifier)
-2. When a feedbacks's status changes to or from the configured 'available' status, it gets the instance linked to the
+2. When a feedbacks's status changes to the configured 'start' status, it gets the instance linked to the
    feedback.
-3. The service updates the `schema:flagged` flag on the instance resource
+3. The service updates the `lpdcExt:feedbackAvailable` flag on the instance resource and sets the configured 'start'
+   processing-status on the feedback.
+4. When a feedback's processing-status is changed to the configured 'end' processing-status, it sets the status to the 
+   configured 'end' status and it unflags the instance if there are no other linked feedbacks in the 'start' status.
 
 There is also a cronjob that runs daily to make sure missed deltas are handled.
