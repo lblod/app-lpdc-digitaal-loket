@@ -1,5 +1,5 @@
 PREFIX schema: <https://schema.org/>
-PREFIX adms: <https://www.w3.org/ns/adms#>
+PREFIX adms: <http://www.w3.org/ns/adms#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -17,7 +17,7 @@ INSERT DATA {
     schema:about <https://ipdc.vlaanderen.be/id/instantie/90f7f512-dccc-4f00-b02a-26838978b2ba> ;
     skos:primarySubject <http://data.lblod.info/id/public-service/6bfa90bc-b12d-44f6-93d4-1fc6fd042f5c> ;
     adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#BEANTWOORD> ;
-    schema:actionStatus <http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b> ;
+    schema:actionStatus <http://lblod.data.gift/concepts/2e4a6c8d-9f1b-4d3e-5a7c-9e1f3b5d7a9c> ;
     schema:question <https://ipdc.vlaanderen.be/publicatie/id/question/5a7ccb5c-06a9-443d-adaf-b9ea0b8c8e19> ;
     schema:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/0a277336-c3bb-4712-8f38-f06687d4cc08> .
 

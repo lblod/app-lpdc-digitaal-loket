@@ -7,6 +7,8 @@
                       :as "status")
              (concept :via ,(s-prefix "schema2:actionStatus")
                                             :as "processing-status")
+             (concept :via ,(s-prefix "schema2:result")
+                                            :as "processing-result")
              (feedback-question :via ,(s-prefix "schema2:question")
                              :as "question")
              (feedback-answer :via ,(s-prefix "schema2:suggestedAnswer")
