@@ -18,6 +18,7 @@ INSERT DATA {
     skos:primarySubject <http://data.lblod.info/id/public-service/6bfa90bc-b12d-44f6-93d4-1fc6fd042f5c> ;
     adms:status <https://ipdc.vlaanderen.be/ns/FeedbackStatus#BEANTWOORD> ;
     schema:actionStatus <http://lblod.data.gift/concepts/2e4a6c8d-9f1b-4d3e-5a7c-9e1f3b5d7a9c> ;
+    schema:result <http://lblod.data.gift/concepts/caa0b2d0-4bfa-46c8-8ee3-f77d0fdfa655> ;
     schema:question <https://ipdc.vlaanderen.be/publicatie/id/question/5a7ccb5c-06a9-443d-adaf-b9ea0b8c8e19> ;
     schema:suggestedAnswer <https://ipdc.vlaanderen.be/publicatie/id/answer/0a277336-c3bb-4712-8f38-f06687d4cc08> .
 
