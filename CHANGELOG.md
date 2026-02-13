@@ -8,6 +8,12 @@
 
 - Bump to [v0.52.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.52.1) [LPDC-1012] [LPDC-1559]
 
+### Deploy notes
+
+```
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+```
+
 ## v0.34.0 (2026-02-05)
 ### Frontend
 
