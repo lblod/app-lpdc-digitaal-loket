@@ -262,7 +262,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.51.3
+    image: lblod/lpdc-management-service:0.52.0
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
@@ -321,8 +321,8 @@ services:
   ldes-consumer-conceptsnapshot-ipdc:
     image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
     depends_on:
-      lpdc-management:
-        condition: service_healthy
+      # lpdc-management:
+      #   condition: service_healthy
       migrations:
         condition: service_healthy
     volumes:
@@ -346,8 +346,8 @@ services:
   ldes-consumer-instancesnapshot-gent:
     image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
     depends_on:
-      lpdc-management:
-        condition: service_healthy
+      # lpdc-management:
+      #   condition: service_healthy
       migrations:
         condition: service_healthy
     volumes:
@@ -369,8 +369,8 @@ services:
   ldes-consumer-instancesnapshot-bct:
     image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
     depends_on:
-      lpdc-management:
-        condition: service_healthy
+      # lpdc-management:
+      #   condition: service_healthy
       migrations:
         condition: service_healthy
     volumes:

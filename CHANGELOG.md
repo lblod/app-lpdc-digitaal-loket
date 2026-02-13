@@ -13,6 +13,10 @@
 
 - Update to `redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state`
 
+### `lpdc-management`
+
+- Update to `lblod/lpdc-management-service:0.52.0`
+
 ### Frontend
 
 - Bump to [v0.26.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.26.0) [LPDC-1498]
