@@ -309,22 +309,33 @@ services:
     links:
       - virtuoso:database # We want to go directly to virtuoso database
 
+  conceptsnapshot-ipdc-proxy: # service which proxies to IPDC conceptsnapshot LDES feed. 
+    image: lblod/api-proxy-service:feature-plugin-support
+    environment:
+      API_URL: "<IPDC LDES feed endpoint>"
+      API_KEY_HEADER: "X-API-KEY"
+      API_KEY: "<api-key>"
+    volumes:
+      - ./config/conceptsnapshot-ipdc-proxy/:/config/
+
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-stability-improvements-r1.1
+    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
     depends_on:
-      lpdc-management:
-        condition: service_healthy
+      # lpdc-management:
+      #   condition: service_healthy
       migrations:
         condition: service_healthy
+    volumes:
+      - ./data/ldes-consumer-instancesnapshot-ipdc:/data
     environment:
-      LDES_STREAM: "<endpoint ldes stream>"
-      LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
-      LDES_ENDPOINT_HEADER_XAPIKEY: "X-API-KEY;<your endpoint api key value here>"
-      LDES_LOGGING_LEVEL: "debug"
+      LDES_ENDPOINT_VIEW: "http://conceptsnapshot-ipdc-proxy?limit=25&pageNumber=0"
+      LOG_LEVEL: "debug"
+      LDES_POLLING_INTERVAL: 60000
+      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
-      SAVE_ALL_VERSIONS_IGNORING_TIMESTAMP_DATA: "true"
-      REPLACE_VERSIONS: "false" # we query snapshots. snapshots don't change ...
-      CRON_PATTERN: "*/15 * * * *" # run the job every 15 minutes
+      INGEST_MODE: "ALL" # store ldes member version as-is
+      PERSIST_STATE: true
+      REPLACE_VERSIONS: false # store all snapshots/versions
     labels:
       - "logging=true"
     links:
@@ -333,10 +344,10 @@ services:
     logging: *default-logging
 
   ldes-consumer-instancesnapshot-gent:
-    image: redpencil/ldes-consumer:0.9.1
+    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
     depends_on:
-      lpdc-management:
-        condition: service_healthy
+      # lpdc-management:
+      #   condition: service_healthy
       migrations:
         condition: service_healthy
     volumes:
@@ -344,9 +355,11 @@ services:
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent"
+      LDES_POLLING_INTERVAL: 60000
+      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      INGEST_MODE: "ALL" # store ldes member version as-is
       PERSIST_STATE: true
-      REPLACE_VERSIONS: false # we query snapshots. snapshots don't change ...
-      CRON_PATTERN: "*/2 * * * *" # run the job every 2 minutes
+      REPLACE_VERSIONS: false
     labels:
       - "logging=true"
     links:
@@ -354,10 +367,10 @@ services:
     restart: always
     logging: *default-logging
   ldes-consumer-instancesnapshot-bct:
-    image: redpencil/ldes-consumer:0.9.1
+    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
     depends_on:
-      lpdc-management:
-        condition: service_healthy
+      # lpdc-management:
+      #   condition: service_healthy
       migrations:
         condition: service_healthy
     volumes:
@@ -365,6 +378,9 @@ services:
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct"
+      LDES_POLLING_INTERVAL: 60000
+      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      INGEST_MODE: "ALL" # store ldes member version as-is
       PERSIST_STATE: true
       REPLACE_VERSIONS: false
     labels:
