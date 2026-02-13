@@ -166,6 +166,30 @@ defmodule Dispatcher do
   end
 
   #################################################################
+  # Feedback
+  #################################################################
+
+  get "/feedbacks/*path", @json do
+    forward conn, path, "http://resource/feedbacks/"
+  end
+
+  patch "/feedbacks/*path", @json do
+    forward conn, path, "http://resource/feedbacks/"
+  end
+
+  get "/feedback-questions/*path", @json do
+    forward conn, path, "http://resource/feedback-questions/"
+  end
+
+  get "/feedback-answers/*path", @json do
+    forward conn, path, "http://resource/feedback-answers/"
+  end
+
+  get "/feedback-snapshots/*path", @json do
+    forward conn, path, "http://resource/feedback-snapshots/"
+  end
+
+  #################################################################
   # Account control
   #################################################################
 

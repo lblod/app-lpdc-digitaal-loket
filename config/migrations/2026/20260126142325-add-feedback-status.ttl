@@ -1,0 +1,103 @@
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf:            <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:           <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix mu:             <http://mu.semte.ch/vocabularies/core/> .
+@prefix feedbackstatus: <https://ipdc.vlaanderen.be/ns/FeedbackStatus#> .
+@prefix concepts:       <http://lblod.data.gift/concepts/> .
+@prefix schemes:        <http://lblod.data.gift/concept-schemes/> .
+
+
+#ipdc-status
+feedbackstatus:FeedbackStatus
+    a               skos:ConceptScheme ;
+    mu:uuid         "9a2c4e6f-8d1b-4a3e-5c7d-9f1e3a5c7e9a" ;
+    skos:prefLabel  "Feedback status"@nl ;
+    skos:definition "Mogelijke statussen voor feedback"@nl .
+
+feedbackstatus:AANGEMAAKT
+    a                 skos:Concept ;
+    mu:uuid           "5f8a9c1e-2d4b-4e6a-8c9f-1b3d5e7a9c2f" ;
+    skos:topConceptOf feedbackstatus:FeedbackStatus ;
+    skos:inScheme     feedbackstatus:FeedbackStatus ;
+    skos:prefLabel    "Aangemaakt"@nl ;
+    skos:definition   "De feedback is aangemaakt maar nog niet beantwoord"@nl .
+
+feedbackstatus:BEANTWOORD
+    a                 skos:Concept ;
+    mu:uuid           "8e2a4c6d-9f1b-4d3e-5a7c-9e1f3b5d7c9e" ;
+    skos:topConceptOf feedbackstatus:FeedbackStatus ;
+    skos:inScheme     feedbackstatus:FeedbackStatus ;
+    skos:prefLabel    "Beantwoord"@nl ;
+    skos:definition   "De feedback is beantwoord"@nl .
+
+feedbackstatus:ANTWOORD_GELEZEN
+    a                 skos:Concept ;
+    mu:uuid           "3c5e7a9c-2f4b-4e6d-9a1c-3e5f7b9d2c4e" ;
+    skos:topConceptOf feedbackstatus:FeedbackStatus ;
+    skos:inScheme     feedbackstatus:FeedbackStatus ;
+    skos:prefLabel    "Antwoord gelezen"@nl ;
+    skos:definition   "Het antwoord op de feedback is gelezen"@nl .
+
+feedbackstatus:INGETROKKEN
+    a                 skos:Concept ;
+    mu:uuid           "6d8f1a2c-4e3b-4a5d-8c7f-2b4e6a8c1d3f" ;
+    skos:topConceptOf feedbackstatus:FeedbackStatus ;
+    skos:inScheme     feedbackstatus:FeedbackStatus ;
+    skos:prefLabel    "Ingetrokken"@nl ;
+    skos:definition   "De feedback is ingetrokken"@nl .
+
+
+#processing-status
+<http://lblod.data.gift/concept-schemes/71e4ab64-28f6-44bd-9e96-32751ba2b664>
+    a               skos:ConceptScheme ;
+    mu:uuid         "71e4ab64-28f6-44bd-9e96-32751ba2b664" ;
+    skos:prefLabel  "Verwerking status"@nl ;
+    skos:definition "Verwerking status van een feedback"@nl .
+
+<http://lblod.data.gift/concepts/094d76ed-59c9-45a6-9f62-f93f79675c00>
+    a                 skos:Concept ;
+    mu:uuid           "094d76ed-59c9-45a6-9f62-f93f79675c00" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/71e4ab64-28f6-44bd-9e96-32751ba2b664> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/71e4ab64-28f6-44bd-9e96-32751ba2b664> ;
+    skos:prefLabel    "Geweigerd"@nl ;
+    skos:definition   "De feedback werd geweigerd"@nl .
+
+<http://lblod.data.gift/concepts/caa0b2d0-4bfa-46c8-8ee3-f77d0fdfa655>
+    a                 skos:Concept ;
+    mu:uuid           "caa0b2d0-4bfa-46c8-8ee3-f77d0fdfa655" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/71e4ab64-28f6-44bd-9e96-32751ba2b664> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/71e4ab64-28f6-44bd-9e96-32751ba2b664> ;
+    skos:prefLabel    "Geaccepteerd"@nl ;
+    skos:definition   "De feedback is geaccepteerd"@nl .
+
+
+#status
+<http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c>
+    a               skos:ConceptScheme ;
+    mu:uuid         "3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c" ;
+    skos:prefLabel  "Feedback status lpdc"@nl ;
+    skos:definition "Mogelijke statussen voor de feedback binnen lpdc"@nl .
+
+<http://lblod.data.gift/concepts/1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b>
+    a                 skos:Concept ;
+    mu:uuid           "1b3c5e7f-2a4d-4c6e-9f1b-3d5a7c9e2f4b" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:prefLabel    "Open"@nl ;
+    skos:definition   "De verwerking is open"@nl .
+
+<http://lblod.data.gift/concepts/7c9e1a3f-5d8b-4e2c-9a1e-3f5b7d9c2e4a>
+    a                 skos:Concept ;
+    mu:uuid           "7c9e1a3f-5d8b-4e2c-9a1e-3f5b7d9c2e4a" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:prefLabel    "Verwerking bezig"@nl ;
+    skos:definition   "De feedback wordt verwerkt"@nl .
+
+<http://lblod.data.gift/concepts/2e4a6c8d-9f1b-4d3e-5a7c-9e1f3b5d7a9c>
+    a                 skos:Concept ;
+    mu:uuid           "2e4a6c8d-9f1b-4d3e-5a7c-9e1f3b5d7a9c" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:prefLabel    "Verwerkt"@nl ;
+    skos:definition   "De feedback is verwerkt"@nl .
