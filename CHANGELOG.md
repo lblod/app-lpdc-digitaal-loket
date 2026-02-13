@@ -19,6 +19,21 @@
 
 ### Frontend
 
+- Bump to [v0.27.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.27.0) [LPDC-1457] [LPDC-1012]
+
+### Management
+
+- Bump to [v0.52.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.52.1) [LPDC-1012] [LPDC-1559]
+
+### Deploy notes
+
+```
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+```
+
+## v0.34.0 (2026-02-05)
+### Frontend
+
 - Bump to [v0.26.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.26.0) [LPDC-1498]
 
 ### Deploy notes
