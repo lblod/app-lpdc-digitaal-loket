@@ -1,0 +1,17 @@
+# Authorities fix
+## Oostende - Gratis energiescan
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/764a0c6bbc866153ae70cf75d745b9477fa010567246cfe6683b7bb8aec541b4/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/4b2c91a8-9552-41d7-a1ef-22ced8b956e7>
+      <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/826f1b30776e0f506c1193f503c5f393d4a817af38e34aaa0a00abd33b7e5565> .
+
+  }
+}
+
+## PZ Mechelen/Willebroek - Plaatsing vogelschrikkanon
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/73777b2512fc25f16554612a13b0de2265a56540a5ea6665bf69a8b5a805569a/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/4255c55d-46a7-4ea1-a258-9478483bb09f>
+      <http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/73777b2512fc25f16554612a13b0de2265a56540a5ea6665bf69a8b5a805569a> .
+  }
+}

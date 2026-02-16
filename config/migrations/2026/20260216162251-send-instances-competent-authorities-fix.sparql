@@ -1,0 +1,63 @@
+# Send CompetentAuthorities fix
+## Oostende Gemeente
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/764a0c6bbc866153ae70cf75d745b9477fa010567246cfe6683b7bb8aec541b4/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/e26334a7-ecbd-4d00-a9cf-49dd52ad9cbd>
+      <http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/f2e7afdc-4a60-4731-836e-ce7106855bb9> ;
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/verzonden> .
+      
+    <http://data.lblod.info/id/public-service/015d3390-636b-4e53-a5d6-c259a2b4e78d>
+      <http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/f2e7afdc-4a60-4731-836e-ce7106855bb9> ;
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/verzonden> .
+      
+    <http://data.lblod.info/id/public-service/2b812a43-ebfc-4503-9d37-66eee1b95baa>
+      <http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/f2e7afdc-4a60-4731-836e-ce7106855bb9> ;
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/verzonden> .
+
+  }
+}
+
+INSERT   {
+  GRAPH <http://mu.semte.ch/graphs/organizations/764a0c6bbc866153ae70cf75d745b9477fa010567246cfe6683b7bb8aec541b4/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/e26334a7-ecbd-4d00-a9cf-49dd52ad9cbd>
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/ontwerp> .
+    
+    <http://data.lblod.info/id/public-service/015d3390-636b-4e53-a5d6-c259a2b4e78d>
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/ontwerp> .
+      
+    <http://data.lblod.info/id/public-service/2b812a43-ebfc-4503-9d37-66eee1b95baa>
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/ontwerp> .
+  }
+}
+
+## Horebeke OCMW
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/cffc0ca7d178a6f52a83668200ca2e19c54e0ee78e0afb1236db877236e2d8b4/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/9007c137-0181-46ef-994a-891608cd0326>
+      <http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/c9fd02221ff5b1f0e671b6a155bef39f9aa6232e351eb4f0f00239f677d51643> ;
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/verzonden> .
+  }
+}
+
+INSERT   {
+  GRAPH <http://mu.semte.ch/graphs/organizations/cffc0ca7d178a6f52a83668200ca2e19c54e0ee78e0afb1236db877236e2d8b4/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/9007c137-0181-46ef-994a-891608cd0326>
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/ontwerp> .
+  }
+}
+
+## Hoegaarden Gemeente
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/42887f141929197c227828071ec7dec4cb5435794fedfc7fcf901648e0ea4742/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/a7ee5f78-2c38-4cf1-ad1b-b0517dbe14c7>
+      <http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/a65afe7380499a2c24c2d039f2a97493f2f99bc03836de9bb99c2c267676388f> ;
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/verzonden> .
+  }
+}
+
+INSERT   {
+  GRAPH <http://mu.semte.ch/graphs/organizations/42887f141929197c227828071ec7dec4cb5435794fedfc7fcf901648e0ea4742/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/a7ee5f78-2c38-4cf1-ad1b-b0517dbe14c7>
+      <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/ontwerp> .
+  }
+}
