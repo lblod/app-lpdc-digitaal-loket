@@ -19,7 +19,7 @@
 
 ### Frontend
 
-- Bump to [v0.27.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.27.0) [LPDC-1457] [LPDC-1012]
+- Bump to [v0.27.1](https://github.com/lblod/frontend-lpdc/releases/tag/v0.27.0) [LPDC-1457] [LPDC-1012] [LPDC-1581]
 
 ### Management
 

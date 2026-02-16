@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.27.0
+    image: lblod/frontend-lpdc:0.27.1
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
@@ -309,7 +309,7 @@ services:
     links:
       - virtuoso:database # We want to go directly to virtuoso database
 
-  conceptsnapshot-ipdc-proxy: # service which proxies to IPDC conceptsnapshot LDES feed. 
+  conceptsnapshot-ipdc-proxy: # service which proxies to IPDC conceptsnapshot LDES feed.
     image: lblod/api-proxy-service:feature-plugin-support
     environment:
       API_URL: "<IPDC LDES feed endpoint>"
