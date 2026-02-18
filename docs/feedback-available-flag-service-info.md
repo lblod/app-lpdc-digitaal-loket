@@ -7,7 +7,7 @@ Feedback comes with 3 statuses:
  - processing-status (via `schema2:result`) used to signal the status of the processing of the feedback.
 
 The microservice flags instances + adds the status based on if they have any linked feedbacks with the ipdc-status `feedbackstatus:AANGEMAAKT`.
-When a feedback gets the status `Verwerkt`, the microservice sets the ipdc-status to `feedbackstatus:BEANTWOORD` and unflags the linked instance if there are
+When a feedback gets the status `Verwerkt`, the microservice unflags the linked instance if there are
 no other linked feedbacks with ipdc-status `feedbackstatus:AANGEMAAKT`.
 
 ## How It Works
@@ -17,7 +17,6 @@ no other linked feedbacks with ipdc-status `feedbackstatus:AANGEMAAKT`.
    feedback.
 3. The service updates the `lpdcExt:feedbackAvailable` flag on the instance resource and sets the configured 'start'
    status on the feedback.
-4. When a feedback's status is changed to the configured 'end' status, it sets the ipdc-status to the 
-   configured 'end' ipdc-status and it unflags the instance if there are no other linked feedbacks in the 'start' ipdc-status.
+4. When a feedback's status is changed to the configured 'end' status, it unflags the instance if there are no other linked feedbacks in the 'start' ipdc-status.
 
 There is also a cronjob that runs daily to make sure missed deltas are handled.

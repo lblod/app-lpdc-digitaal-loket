@@ -62,7 +62,7 @@ INSERT DATA {
 
         <http://data.lblod.info/id/public-service/b341617a-cb31-4f56-b705-1c0847cf3430> lpdcExt:feedbackAvailable true .
 
-        #should turn false because of link to other status + feedbackStatus to Beantwoord
+        #should turn false because of link to other status
         <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-3>
         a schema2:Conversation ;
         mu:uuid "test-3" ;
@@ -77,7 +77,7 @@ INSERT DATA {
 
         <http://data.lblod.info/id/public-service/fd44dbd4-d3c6-4000-a3b1-ed9e7a1f3914> lpdcExt:feedbackAvailable true .
 
-        # should stay false because link to other status + feedback to Beantwoord
+        # should stay false because link to other status
         <https://ipdc.vlaanderen.be/publicatie/id/feedback/test-4>
         a schema2:Conversation ;
         mu:uuid "test-4" ;
