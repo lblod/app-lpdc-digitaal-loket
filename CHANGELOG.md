@@ -27,8 +27,14 @@
 
 ### Deploy notes
 
-```
+```bash
+drc down ldes-consumer-conceptsnapshot-ipdc ldes-consumer-instancesnapshot-gent ldes-consumer-instancesnapshot-bct
+rm -rf ./data/ldes-consumer-instancesnapshot-bct
+rm -rf ./data/ldes-consumer-instancesnapshot-gent
+drc up ldes-consumer-conceptsnapshot-ipdc ldes-consumer-instancesnapshot-gent ldes-consumer-instancesnapshot-bct -d
+## Check if the 3 ldes-consumers are correctly consuming the feeds
 drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+## The lpdc-management probably does not need to process any new instances/concepts
 ```
 
 ## v0.34.0 (2026-02-05)
