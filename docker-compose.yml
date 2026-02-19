@@ -450,8 +450,8 @@ services:
       - virtuoso:database
     restart: always
 
-  feedback-available-flag-service:
-    image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
+  lpdc-feedback-management-service:
+    image: lblod/lpdc-feedback-management-service:feature-LPDC-1286-Consume-feedback-instances-from-LDES-LPDC
     labels:
       - "logging=true"
     restart: always

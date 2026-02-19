@@ -26,7 +26,7 @@ export default [
       }
     },
     callback: {
-      url: 'http://feedback-available-flag-service/delta',
+      url: 'http://lpdc-feedback-management-service/delta',
       method: 'POST'
     },
     options: {
@@ -47,7 +47,7 @@ export default [
       }
     },
     callback: {
-      url: 'http://feedback-available-flag-service/delta',
+      url: 'http://lpdc-feedback-management-service/delta',
       method: 'POST'
     },
     options: {

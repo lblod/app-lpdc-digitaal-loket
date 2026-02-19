@@ -1,6 +1,6 @@
-# Feedback Available Flag Service
+# Lpdc Feedback Management Service
 
-This [microservice](https://github.com/lblod/feedback-available-flag-service) is used to flag instances based on available feedback.
+This [microservice](https://github.com/lblod/lpdc-feedback-management-service) is used to flag instances based on available feedback.
 Feedback comes with 3 statuses:
  - ipdc-status (via `adms:status`) used to signal the status of the feedback resource from ipdc.
  - status (via `schema2:actionStatus`) used to signal the status of the feedback resource within lpdc.
