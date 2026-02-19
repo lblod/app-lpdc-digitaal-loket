@@ -1,4 +1,36 @@
 # Changelog
+## Unreleased
+
+### `ldes-consumer-conceptsnapshot-ipdc`
+
+- Update to `redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state`
+
+### `ldes-consumer-instancesnapshot-gent`
+
+- Update to `redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state`
+
+### `ldes-consumer-instancesnapshot-bct`
+
+- Update to `redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state`
+
+### `lpdc-management`
+
+- Update to `lblod/lpdc-management-service:0.52.0`
+
+### Frontend
+
+- Bump to [v0.27.1](https://github.com/lblod/frontend-lpdc/releases/tag/v0.27.0) [LPDC-1457] [LPDC-1012] [LPDC-1581]
+
+### Management
+
+- Bump to [v0.52.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.52.1) [LPDC-1012] [LPDC-1559]
+
+### Deploy notes
+
+```
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+```
+
 ## v0.34.0 (2026-02-05)
 ### Frontend
 
@@ -6,8 +38,39 @@
 
 ### Deploy notes
 
-```
+```bash
 drc pull lpdc && drc up -d lpdc
+```
+
+Fill-in the following environment variables in the `docker-compose.override.yml`
+
+`conceptsnapshot-ipdc-proxy`:
+- `API_URL`
+- `API_KEY`
+
+`ldes-consumer-conceptsnapshot-ipdc`:
+- `LDES_POLLING_INTERVAL`
+
+`ldes-consumer-instancesnapshot-gent`:
+- `LDES_ENDPOINT_VIEW`
+- `LDES_POLLING_INTERVAL`
+
+`ldes-consumer-instancesnapshot-bct`:
+- `LDES_ENDPOINT_VIEW`
+- `LDES_POLLING_INTERVAL`
+
+```bash
+# Reset LDES feeds
+rm -rf data/ldes-consumer-instancesnapshot-bct
+rm -rf data/ldes-consumer-instancesnapshot-gent
+rm -rf data/ldes-consumer-conceptsnapshot-ipdc
+
+drcu ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes-consumer-conceptsnapshot-ipdc conceptsnapshot-ipdc-proxy
+
+# Ensure LDES feeds consume their respective feeds successfully
+
+# Ensure lpdc-management service processing incoming conceptsnapshots and instancesnapshots correctly (this typically takes a while)
+
 ```
 
 ## v0.33.1 (2026-01-20)
