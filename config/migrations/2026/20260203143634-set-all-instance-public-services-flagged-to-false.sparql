@@ -1,0 +1,23 @@
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+
+DELETE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance lpdcExt:feedbackAvailable ?currentValue.
+    }
+}
+INSERT {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance lpdcExt:feedbackAvailable false.
+    }
+}
+WHERE {
+    GRAPH ?bestuurseenheidGraph {
+        ?instance a lpdcExt:InstancePublicService.
+        OPTIONAL { ?instance lpdcExt:feedbackAvailable ?currentValue. }
+    }
+
+    FILTER(
+        STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+        STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+    )
+}

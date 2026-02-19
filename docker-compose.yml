@@ -390,6 +390,13 @@ services:
     restart: always
     logging: *default-logging
 
+  feedback-available-flag-service:
+    image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
   ################################################################################
   # Consumers
   ################################################################################
