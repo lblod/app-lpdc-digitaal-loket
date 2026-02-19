@@ -409,24 +409,8 @@ services:
   # feeback
   ################################################################################
 
-  conceptsnapshot-ipdc-feedback-proxy: # service which proxies to IPDC feedback conceptsnapshot LDES feed.
-    image: lblod/api-proxy-service:feature-plugin-support
-    environment:
-      API_URL: 'Insert API URL'
-      API_KEY_HEADER: "X-API-KEY"
-      API_KEY: 'Insert API-KEY'
-    volumes:
-      - ./config/proxy/:/config/
-
   ldes-consumer-conceptsnapshot-ipdc-feedback:
     image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
-    # Met bovenstaande image:
-    # (INGEST_MODE: "ALL" en REPLACE_VERSIONS: false) -> enkel snapshots in de ldes graph zonder data van feedback/question/answer
-    # (INGEST_MODE: "MATERIALIZE" en REPLACE_VERSIONS: true) -> enkel snapshots in de ldes graph zonder data van feedback/question/answer, maar snapshot URI vervangen door feedback URI
-    #
-    # Met image: redpencil/ldes-consumer:feature-stability-improvements-r1.1
-    # (INGEST_MODE: "ALL" en REPLACE_VERSIONS: false) -> zie ik wel feedback/question/answer data in de ldes graph
-    # (INGEST_MODE: "MATERIALIZE" en REPLACE_VERSIONS: true) -> zie ik wel feedback/question/answer data in de ldes graph, maar geen verschil met bovenstaande settings
     depends_on:
       lpdc-management:
         condition: service_healthy
@@ -435,10 +419,11 @@ services:
     volumes:
       - ./data/ldes-consumer-instancesnapshot-ipdc-feedback:/data
     environment:
-      LDES_ENDPOINT_VIEW: "http://conceptsnapshot-ipdc-feedback-proxy?limit=25&pageNumber=0"
+      LDES_ENDPOINT_VIEW: "https://qa.ipdc-ldes-mirror.lblod.info/feedbacksnapshots/1"
+      LDES_ENDPOINT_HEADERS: "Insert credentials"
       LOG_LEVEL: "debug"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      LDES_REQUESTS_PER_MINUTE: 0
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc-feedback"
       INGEST_MODE: "MATERIALIZE"
       PERSIST_STATE: true
@@ -446,12 +431,12 @@ services:
     labels:
       - "logging=true"
     links:
-      - virtuoso:database # We want to go directly to virtuoso database
+      - virtuoso:database
     restart: always
 
-#  feedback-available-flag-service:
-#    image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
-#    labels:
-#      - "logging=true"
-#    restart: always
-#    logging: *default-logging
+  feedback-available-flag-service:
+    image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
