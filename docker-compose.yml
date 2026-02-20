@@ -309,15 +309,6 @@ services:
     links:
       - virtuoso:database # We want to go directly to virtuoso database
 
-  conceptsnapshot-ipdc-proxy: # service which proxies to IPDC conceptsnapshot LDES feed.
-    image: lblod/api-proxy-service:feature-plugin-support
-    environment:
-      API_URL: "<IPDC LDES feed endpoint>"
-      API_KEY_HEADER: "X-API-KEY"
-      API_KEY: "<api-key>"
-    volumes:
-      - ./config/conceptsnapshot-ipdc-proxy/:/config/
-
   ldes-consumer-conceptsnapshot-ipdc:
     image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
     depends_on:
@@ -328,7 +319,7 @@ services:
     volumes:
       - ./data/ldes-consumer-instancesnapshot-ipdc:/data
     environment:
-      LDES_ENDPOINT_VIEW: "http://conceptsnapshot-ipdc-proxy?limit=25&pageNumber=0"
+      LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       LOG_LEVEL: "debug"
       LDES_POLLING_INTERVAL: 60000
       LDES_REQUESTS_PER_MINUTE: 0 # unlimited
