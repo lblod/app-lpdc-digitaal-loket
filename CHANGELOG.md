@@ -27,6 +27,13 @@
 
 ### Deploy notes
 
+`docker-compose.override.yml`
+```yml
+ldes-consumer-conceptsnapshot-ipdc:
+  environment:
+    LDES_ENDPOINT_VIEW: "https://ipdc-ldes-mirror.lblod.info/conceptsnapshots/1" # or "https://qa.ipdc-ldes-mirror.lblod.info/conceptsnapshots/1"
+```
+
 ```bash
 drc down ldes-consumer-conceptsnapshot-ipdc ldes-consumer-instancesnapshot-gent ldes-consumer-instancesnapshot-bct
 rm -rf ./data/ldes-consumer-instancesnapshot-bct
