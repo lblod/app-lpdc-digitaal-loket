@@ -19,7 +19,7 @@
                              :as "receiver-bestuurseenheid"))
   :resource-base (s-url "https://ipdc.vlaanderen.be/publicatie/id/feedback/")
   :features '(include-uri)
-  :on-path "feedbacks"
+  :on-path "feedback"
 )
 
 (define-resource feedback-question ()
