@@ -39,6 +39,31 @@ export default [
     match: {
       predicate: {
         type: 'uri',
+        value: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'
+      },
+      object: {
+        type: 'uri',
+        value: 'https://schema.org/Conversation'
+      },
+      graph: {
+        type: 'uri',
+        value: 'http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data'
+      }
+    },
+    callback: {
+      url: 'http://lpdc-feedback-management-service/delta',
+      method: 'POST'
+    },
+    options: {
+      resourceFormat: 'v0.0.1',
+      gracePeriod: 1000,
+      ignoreFromSelf: true
+    }
+  },
+  {
+    match: {
+      predicate: {
+        type: 'uri',
         value: 'https://schema.org/actionStatus'
       },
       object: {

@@ -434,9 +434,8 @@ services:
       REPLACE_VERSIONS: true
     labels:
       - "logging=true"
-    links:
-      - virtuoso:database
     restart: always
+    logging: *default-logging
 
   lpdc-feedback-management-service:
     image: lblod/lpdc-feedback-management-service:feature-LPDC-1286-Consume-feedback-instances-from-LDES-LPDC
