@@ -3,6 +3,7 @@
   :properties `((:created-at :datetime ,(s-prefix "schema2:dateCreated"))
                 (:productnummer :string ,(s-prefix "schema2:productID"))
                 (:lpdc-instance-derived-uri :uri ,(s-prefix "schema2:about"))
+                (:generated-at-time :datetime ,(s-prefix "prov:generatedAtTime"))
                 (:ipdc-status :uri ,(s-prefix "adms2:status"))
                 (:status :uri ,(s-prefix "schema2:actionStatus"))
                 (:processing-status :uri ,(s-prefix "schema2:result")))
