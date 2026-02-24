@@ -1,9 +1,10 @@
 (define-resource feedback ()
   :class (s-prefix "schema2:Conversation")
   :properties `((:created-at :datetime ,(s-prefix "schema2:dateCreated"))
+                (:generated-at-time :datetime ,(s-prefix "prov:generatedAtTime"))
                 (:productnummer :string ,(s-prefix "schema2:productID"))
                 (:lpdc-instance-derived-uri :uri ,(s-prefix "schema2:about")))
-  :has-one `((concept :via ,(s-prefix "adms:status")
+  :has-one `((concept :via ,(s-prefix "adms2:status")
                       :as "ipdc-status")
              (concept :via ,(s-prefix "schema2:actionStatus")
                                             :as "status")
@@ -46,16 +47,4 @@
   :resource-base (s-url "https://ipdc.vlaanderen.be/publicatie/id/answer/")
   :features '(include-uri)
   :on-path "feedback-answers"
-)
-
-(define-resource feedback-snapshot ()
-  :class (s-prefix "schema2:DataFeedItem")
-  :properties `((:created-at :datetime ,(s-prefix "schema2:dateCreated")))
-  :has-one `((feedback :via ,(s-prefix "schema2:item")
-                       :as "feedback")
-             (feedback :via ,(s-prefix "dct:isVersionOf")
-                       :as "is-version-of"))
-  :resource-base (s-url "https://ipdc.vlaanderen.be/publicatie/id/feedback-snapshot/")
-  :features '(include-uri)
-  :on-path "feedback-snapshots"
 )

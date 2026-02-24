@@ -1,6 +1,8 @@
 # Lpdc Feedback Management Service
 
-This [microservice](https://github.com/lblod/lpdc-feedback-management-service) is used to flag instances based on available feedback.
+Microservice used to ingest feedback data from ipdc ldes feed + flag instances based on available feedback. Designed for
+the [semantic.works](https://semantic.works/) microservices stack.
+
 Feedback comes with 3 statuses:
  - ipdc-status (via `adms:status`) used to signal the status of the feedback resource from ipdc.
  - status (via `schema2:actionStatus`) used to signal the status of the feedback resource within lpdc.
@@ -17,6 +19,12 @@ no other linked feedbacks with ipdc-status `feedbackstatus:AANGEMAAKT`.
    feedback.
 3. The service updates the `lpdcExt:feedbackAvailable` flag on the instance resource and sets the configured 'start'
    status on the feedback.
-4. When a feedback's status is changed to the configured 'end' status, it unflags the instance if there are no other linked feedbacks in the 'start' ipdc-status.
+4. When a feedback's status is changed to the configured 'end' status, it unflags the instance if there are no other
+   linked feedbacks in the 'start'
+   ipdc-status.
 
 There is also a cronjob that runs daily to make sure missed deltas are handled.
+
+Besides the above, the microservice also handles ingesting feedback ldes data from ipdc + enriching this data. It does
+this via a cronjob that
+moves incoming feedback snapshots to it's correct organization graph with some added enrichments.

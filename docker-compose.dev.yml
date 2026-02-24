@@ -80,7 +80,9 @@ services:
   ldes-consumer-conceptsnapshot-ipdc:
     restart: "no"
 
-  ldes-consumer-conceptsnapshot-ipdc-feedback:
+  ldes-consumer-feedbacksnapshot-ipdc:
+    environment:
+      LOG_LEVEL: "debug"
     restart: "no"
 
   lpdc-feedback-management-service:
