@@ -169,8 +169,8 @@ defmodule Dispatcher do
   # Feedback
   #################################################################
 
-  match "/feedbacks/*path", @json do
-    forward conn, path, "http://resource/feedbacks/"
+  match "/feedback/*path", @json do
+    forward conn, path, "http://resource/feedback/"
   end
 
   match "/feedback-questions/*path", @json do

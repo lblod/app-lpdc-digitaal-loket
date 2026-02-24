@@ -61,7 +61,7 @@
                      :as "creator"))
   :has-many `((feedback :via ,(s-prefix "skos:primarySubject")
                                 :inverse t
-                                :as "feedbacks"))
+                                :as "feedback"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
   :features '(include-uri)
   :on-path "public-services"

@@ -1,7 +1,6 @@
 (define-resource feedback ()
   :class (s-prefix "schema2:Conversation")
   :properties `((:created-at :datetime ,(s-prefix "schema2:dateCreated"))
-                (:generated-at-time :datetime ,(s-prefix "prov:generatedAtTime"))
                 (:productnummer :string ,(s-prefix "schema2:productID"))
                 (:lpdc-instance-derived-uri :uri ,(s-prefix "schema2:about")))
   :has-one `((concept :via ,(s-prefix "adms2:status")
@@ -20,7 +19,7 @@
                              :as "receiver-bestuurseenheid"))
   :resource-base (s-url "https://ipdc.vlaanderen.be/publicatie/id/feedback/")
   :features '(include-uri)
-  :on-path "feedbacks"
+  :on-path "feedback"
 )
 
 (define-resource feedback-question ()
