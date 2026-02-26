@@ -26,7 +26,7 @@ export default [
       }
     },
     callback: {
-      url: 'http://lpdc-feedback-management-service/delta',
+      url: 'http://lpdc-feedback-management-service/delta-status-start',
       method: 'POST'
     },
     options: {
@@ -51,7 +51,7 @@ export default [
       }
     },
     callback: {
-      url: 'http://lpdc-feedback-management-service/delta',
+      url: 'http://lpdc-feedback-management-service/delta-ingest',
       method: 'POST'
     },
     options: {
@@ -72,7 +72,7 @@ export default [
       }
     },
     callback: {
-      url: 'http://lpdc-feedback-management-service/delta',
+      url: 'http://lpdc-feedback-management-service/delta-status-end',
       method: 'POST'
     },
     options: {
