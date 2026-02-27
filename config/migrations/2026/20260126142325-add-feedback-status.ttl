@@ -101,3 +101,11 @@ feedbackstatus:INGETROKKEN
     skos:inScheme     <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
     skos:prefLabel    "Verwerkt"@nl ;
     skos:definition   "De feedback is verwerkt"@nl .
+
+<http://lblod.data.gift/concepts/a0575bbd-17b6-4f04-b1b2-e554e29cd428>
+    a                 skos:Concept ;
+    mu:uuid           "a0575bbd-17b6-4f04-b1b2-e554e29cd428" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/3a8f5c7e-9d2b-4f1a-8e3c-6b4d9a2e5f8c> ;
+    skos:prefLabel    "Verzonden"@nl ;
+    skos:definition   "De feedback is verzonden naar ipdc"@nl .
