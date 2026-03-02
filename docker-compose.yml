@@ -424,8 +424,8 @@ services:
     volumes:
       - ./data/ldes-consumer-feedbacksnapshot-ipdc:/data
     environment:
-      LDES_ENDPOINT_VIEW: "https://qa.ipdc-ldes-mirror.lblod.info/feedbacksnapshots/1"
-      LDES_ENDPOINT_HEADERS: "Insert credentials"
+      LDES_ENDPOINT_VIEW: "Insert ipdc ldes feedback endpoint"
+      LDES_ENDPOINT_HEADERS: "Insert credentials for ldes endpoint"
       LDES_POLLING_INTERVAL: 60000
       LDES_REQUESTS_PER_MINUTE: 0
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data"
@@ -439,6 +439,9 @@ services:
 
   lpdc-feedback-management-service:
     image: lblod/lpdc-feedback-management-service:feature-LPDC-1286-Consume-feedback-instances-from-LDES-LPDC
+    environment:
+      IPDC_JSON_ENDPOINT: "Insert ipdc feedback publish endpoint"
+      IPDC_X_API_KEY: 'Insert credentials for publish endpoint'
     labels:
       - "logging=true"
     restart: always
