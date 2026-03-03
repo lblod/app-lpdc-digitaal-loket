@@ -2,7 +2,7 @@ import { generateReportFromData } from '../helpers.js';
 import { querySudo as query } from '@lblod/mu-auth-sudo';
 
 export default {
-    cronPattern: '*/5 * * * *',
+    cronPattern: '0 45 23 * * *',
     name: 'feedbackReport',
 
     execute: async () => {
