@@ -9,6 +9,7 @@ import conceptSnapshotProcessingReport from "./conceptSnapshotProcessingReport";
 import conceptSnapshotsNotProcessedReport from "./conceptSnapshotsNotProcessedReport";
 import organizationsWithoutCompetentAuthorityLevel from "./organizationsWithoutCompetentAuthorityLevel";
 import organizationsWithoutExecutingAuthorityLevel from "./organizationsWithoutExecutingAuthorityLevel";
+import feedbackReport from "./feedbackReport";
 
 export default [
   lpdcBestuurseenheidReport,
@@ -22,4 +23,5 @@ export default [
   conceptSnapshotsNotProcessedReport,
   organizationsWithoutCompetentAuthorityLevel,
   organizationsWithoutExecutingAuthorityLevel,
+  feedbackReport,
 ];
