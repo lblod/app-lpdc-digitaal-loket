@@ -88,7 +88,6 @@ services:
   lpdc-feedback-management-service:
     environment:
       HEALING_CRON: '*/3 * * * *'
-      INGEST_CRON: '*/2 * * * *'
       DEBUG: true
     restart: "no"
 

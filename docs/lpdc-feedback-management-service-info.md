@@ -1,7 +1,10 @@
 # Lpdc Feedback Management Service
 
-Microservice used to ingest feedback data from ipdc ldes feed + flag instances based on available feedback. Designed for
-the [semantic.works](https://semantic.works/) microservices stack.
+Microservice used to ingest feedback data from ipdc ldes feed + flag instances based on available feedback.
+It handles publishing answers on feedbacks to ipdc when a feedback is in the correct state.
+Designed for the [semantic.works](https://semantic.works/) microservices stack.
+This microservice is made for [LPDC](https://github.com/lblod/app-lpdc-digitaal-loket) but can be configured via
+environment variables to be used in other applications that use the same feedback resource.
 
 Feedback comes with 3 statuses:
 
@@ -24,6 +27,9 @@ no other linked feedback with ipdc-status `feedbackstatus:AANGEMAAKT`.
 
 There is also a cronjob that runs daily to make sure missed deltas are handled.
 
-Besides the above, the microservice also handles ingesting feedback ldes data from ipdc + enriching this data. It does
-this via a cronjob that
+The microservice handles ingesting feedback ldes data from ipdc + enriches this data.
+It does this via a cronjob + delta's that
 moves incoming feedback snapshots to it's correct organization graph with some added enrichments.
+
+Finally, this service publishes answers on feedback to the ipdc answer endpoint. It uses retry logic
+to handle failed publish calls and records errors in the ipdc-feedback-publication-errors graph.
