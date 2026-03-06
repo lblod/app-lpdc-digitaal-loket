@@ -381,13 +381,6 @@ services:
     restart: always
     logging: *default-logging
 
-  feedback-available-flag-service:
-    image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
-    labels:
-      - "logging=true"
-    restart: always
-    logging: *default-logging
-
   ################################################################################
   # Consumers
   ################################################################################
@@ -417,4 +410,40 @@ services:
     restart: always
     labels:
       - "logging=true"
+    logging: *default-logging
+
+  ################################################################################
+  # feeback
+  ################################################################################
+
+  ldes-consumer-conceptsnapshot-ipdc-feedback:
+    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
+    depends_on:
+      lpdc-management:
+        condition: service_healthy
+      migrations:
+        condition: service_healthy
+    volumes:
+      - ./data/ldes-consumer-instancesnapshot-ipdc-feedback:/data
+    environment:
+      LDES_ENDPOINT_VIEW: "https://qa.ipdc-ldes-mirror.lblod.info/feedbacksnapshots/1"
+      LDES_ENDPOINT_HEADERS: "Insert credentials"
+      LOG_LEVEL: "debug"
+      LDES_POLLING_INTERVAL: 60000
+      LDES_REQUESTS_PER_MINUTE: 0
+      MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc-feedback"
+      INGEST_MODE: "MATERIALIZE"
+      PERSIST_STATE: true
+      REPLACE_VERSIONS: true
+    labels:
+      - "logging=true"
+    links:
+      - virtuoso:database
+    restart: always
+
+  feedback-available-flag-service:
+    image: lblod/feedback-available-flag-service:feature-LPDC-1569-Add-flag-Feedback-available-to-instance-that-has-feedback-with-status-open
+    labels:
+      - "logging=true"
+    restart: always
     logging: *default-logging
