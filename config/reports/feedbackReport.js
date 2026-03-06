@@ -21,7 +21,7 @@ export default {
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 
-            SELECT DISTINCT ?feedbackUri ?feedbackText ?feedbackStatus ?feedbackStatusIPDC ?feedbackProcessingStatus ?source ?bestuurseenheidUri ?bestuurseenheidName ?instanceUri ?instanceName ?dateFeedbackSent ?dateFeedbackReply ?datePublished {
+            SELECT DISTINCT ?feedbackUri ?feedbackText ?feedbackStatus ?feedbackStatusIPDC ?feedbackProcessingStatus ?source ?sourceLabel ?bestuurseenheidUri ?bestuurseenheidName ?instanceUri ?instanceName ?dateFeedbackSent ?dateFeedbackReply ?datePublished {
                 GRAPH ?orgGraph {
                     ?feedbackUri a schema2:Conversation ;
                         adms2:status ?feedbackStatusIPDCConcept;
@@ -32,6 +32,7 @@ export default {
                     ?feedbackUri schema2:question ?question.   
                     ?question schema2:question ?feedbackText.
                     ?question schema2:agent ?source.
+                    
                      
                     OPTIONAL {
                         ?instanceUri dct:title ?instanceName.
@@ -53,6 +54,8 @@ export default {
                 GRAPH <http://mu.semte.ch/graphs/public> {
                     ?bestuurseenheidUri skos:prefLabel ?bestuurseenheidName.
                     ?feedbackStatusIPDCConcept skos:prefLabel ?feedbackStatusIPDC.
+                    ?source a skos:Concept.
+                    ?source skos:prefLabel ?sourceLabel.
                 }
 
                 OPTIONAL {
@@ -85,6 +88,7 @@ export default {
                 feedbackStatusIPDC: getSafeValue(row, 'feedbackStatusIPDC'),
                 feedbackProcessingStatus: getSafeValue(row, 'feedbackProcessingStatus'),
                 source: getSafeValue(row, 'source'),
+                sourceLabel: getSafeValue(row, 'sourceLabel'),
                 bestuurseenheidUri: getSafeValue(row, 'bestuurseenheidUri'),
                 bestuurseenheidName: getSafeValue(row, 'bestuurseenheidName'),
                 instanceUri: getSafeValue(row, 'instanceUri'),
@@ -102,6 +106,7 @@ export default {
             'feedbackStatusIPDC',
             'feedbackProcessingStatus',
             'source',
+            'sourceLabel',
             'bestuurseenheidUri',
             'bestuurseenheidName',
             'instanceUri',
