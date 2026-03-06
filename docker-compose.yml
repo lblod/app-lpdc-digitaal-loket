@@ -438,10 +438,7 @@ services:
     logging: *default-logging
 
   lpdc-feedback-management-service:
-    image: lblod/lpdc-feedback-management-service:feature-LPDC-1580-sync-back-publish
-    depends_on:
-      migrations:
-        condition: service_healthy
+    image: lblod/lpdc-feedback-management-service:1.0.0
     environment:
       IPDC_JSON_ENDPOINT: "Insert ipdc feedback publish endpoint"
       IPDC_X_API_KEY: 'Insert credentials for publish endpoint'
