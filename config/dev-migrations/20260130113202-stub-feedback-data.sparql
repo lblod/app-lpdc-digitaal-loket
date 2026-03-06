@@ -1,5 +1,5 @@
 PREFIX schema: <https://schema.org/>
-PREFIX adms: <http://www.w3.org/ns/adms#>
+PREFIX adms: <https://www.w3.org/ns/adms#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -37,12 +37,5 @@ INSERT DATA {
     schema:startTime "2026-01-27T11:00:00.000Z"^^xsd:dateTime ;
     schema:agent <https://data.vlaanderen.be/id/organisatie/OVO002117> ;
     schema:recipient <https://data.vlaanderen.be/id/organisatie/OVO001995> .
-
-    <https://ipdc.vlaanderen.be/publicatie/id/feedback-snapshot/28978c8a-6c64-4375-b0d1-094a2045f7ad>
-    a schema:DataFeedItem ;
-    mu:uuid "28978c8a-6c64-4375-b0d1-094a2045f7ad" ;
-    schema:dateCreated "2026-01-28T10:00:00.000Z"^^xsd:dateTime ;
-    schema:item <https://ipdc.vlaanderen.be/publicatie/id/feedback/a9c7a813-d03e-4a80-a23e-227ca9103841> ;
-    dct:isVersionOf <https://ipdc.vlaanderen.be/publicatie/id/feedback/a9c7a813-d03e-4a80-a23e-227ca9103841> .
   }
 }

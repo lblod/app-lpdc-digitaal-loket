@@ -28,4 +28,4 @@ Component Diagram: The architecture is that each docker can in fact be seen as a
 - [Making releases and deploying](docs/deployment.md) to the different environments.
 - Additional documentation on [operational support](docs/operation-support/operation-support.md) and supporting [integrating parties](docs/integrerende-gemeentes.md).
 - An overview of (historical) [decisions](docs/adr/adrs.md) that shaped the applications.
-- Info about the [feedback-available-flag-service](docs/feedback-available-flag-service-info.md).
+- Info about the [lpdc-feedback-management-service](docs/lpdc-feedback-management-service-info.md).

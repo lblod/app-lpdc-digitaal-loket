@@ -80,12 +80,15 @@ services:
   ldes-consumer-conceptsnapshot-ipdc:
     restart: "no"
 
-  ldes-consumer-conceptsnapshot-ipdc-feedback:
+  ldes-consumer-feedbacksnapshot-ipdc:
+    environment:
+      LOG_LEVEL: "debug"
     restart: "no"
 
-  feedback-available-flag-service:
+  lpdc-feedback-management-service:
     environment:
       HEALING_CRON: '*/3 * * * *'
+      INGEST_CRON: '*/2 * * * *'
       DEBUG: true
     restart: "no"
 
