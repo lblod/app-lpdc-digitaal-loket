@@ -21,16 +21,17 @@ export default {
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 
-            SELECT DISTINCT ?feedbackUri ?feedbackText ?feedbackStatus ?feedbackStatusIPDC ?feedbackProcessingStatus ?bestuurseenheidUri ?bestuurseenheidName ?instanceUri ?instanceName ?dateCreated ?datePublished {
+            SELECT DISTINCT ?feedbackUri ?feedbackText ?feedbackStatus ?feedbackStatusIPDC ?feedbackProcessingStatus ?source ?bestuurseenheidUri ?bestuurseenheidName ?instanceUri ?instanceName ?dateFeedbackSent ?dateFeedbackReply ?datePublished {
                 GRAPH ?orgGraph {
                     ?feedbackUri a schema2:Conversation ;
                         adms2:status ?feedbackStatusIPDCConcept;
                         lpdcExt:receiverBestuurseenheid ?bestuurseenheidUri;
                         skos:primarySubject ?instanceUri;
-                        schema2:dateCreated ?dateCreated.
+                        schema2:dateCreated ?dateFeedbackSent.
                      
                     ?feedbackUri schema2:question ?question.   
                     ?question schema2:question ?feedbackText.
+                    ?question schema2:agent ?source.
                      
                     OPTIONAL {
                         ?instanceUri dct:title ?instanceName.
@@ -39,12 +40,15 @@ export default {
                     OPTIONAL {
                         ?feedbackUri schema2:datePublished ?datePublished.
                     }
+                    
+                    OPTIONAL {
+                        ?feedbackUri schema2:suggestedAnswer ?answer.
+                        ?answer schema2:startTime ?dateFeedbackReply.
+                    }
                 }
 
-                FILTER (?orgGraph NOT IN (
-                    <http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data>,
-                    <http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data/unknown-receiver>
-                ))
+                FILTER STRSTARTS(str(?orgGraph), "http://mu.semte.ch/graphs/organizations/")
+                FILTER STRENDS(str(?orgGraph), "/LoketLB-LPDCGebruiker")
 
                 GRAPH <http://mu.semte.ch/graphs/public> {
                     ?bestuurseenheidUri skos:prefLabel ?bestuurseenheidName.
@@ -69,7 +73,7 @@ export default {
                     }
                 }
             }
-            ORDER BY DESC(?dateCreated)
+            ORDER BY DESC(?dateFeedbackSent)
         `;
 
         const queryResponse = await query(queryString);
@@ -80,11 +84,13 @@ export default {
                 feedbackStatus: getSafeValue(row, 'feedbackStatus'),
                 feedbackStatusIPDC: getSafeValue(row, 'feedbackStatusIPDC'),
                 feedbackProcessingStatus: getSafeValue(row, 'feedbackProcessingStatus'),
+                source: getSafeValue(row, 'source'),
                 bestuurseenheidUri: getSafeValue(row, 'bestuurseenheidUri'),
                 bestuurseenheidName: getSafeValue(row, 'bestuurseenheidName'),
                 instanceUri: getSafeValue(row, 'instanceUri'),
                 instanceName: getSafeValue(row, 'instanceName'),
-                dateCreated: getSafeValue(row, 'dateCreated'),
+                dateFeedbackSent: getSafeValue(row, 'dateFeedbackSent'),
+                dateFeedbackReply: getSafeValue(row, 'dateFeedbackReply'),
                 datePublished: getSafeValue(row, 'datePublished'),
             };
         });
@@ -95,11 +101,13 @@ export default {
             'feedbackStatus',
             'feedbackStatusIPDC',
             'feedbackProcessingStatus',
+            'source',
             'bestuurseenheidUri',
             'bestuurseenheidName',
             'instanceUri',
             'instanceName',
-            'dateCreated',
+            'dateFeedbackSent',
+            'dateFeedbackReply',
             'datePublished',
         ], reportData);
     }

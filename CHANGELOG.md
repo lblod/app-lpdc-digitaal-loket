@@ -8,6 +8,7 @@
 - lpdc-feedback-management-service [LPDC-1579]
 - Sync back: publish [LPDC-1580]
 - LDES ingest [LPDC-1578]
+- Build report on feedback functionality [LPDC-1294]
 
 ### `ldes-consumer-conceptsnapshot-ipdc`
 
@@ -61,7 +62,7 @@ drc up ldes-consumer-conceptsnapshot-ipdc ldes-consumer-instancesnapshot-gent ld
 ## Check if the 3 ldes-consumers are correctly consuming the feeds
 drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
 ## The lpdc-management probably does not need to process any new instances/concepts
-drc restart migrations dispatcher database deltanotifier
+drc restart migrations dispatcher database deltanotifier report-generation
 drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service 
 ```
 
