@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## v0.35.0 (2026-02-24)
 
 ### `ldes-consumer-conceptsnapshot-ipdc`
 
