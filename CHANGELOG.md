@@ -1,6 +1,6 @@
 # Changelog
 ## Unreleased
-### Backend
+### Feedback
 
 - Set up Mu-CL & Mu-auth [LPDC-1287]
 - Add flag "Feedback available" to instance that has feedback with status open [LPDC-1569]
@@ -9,6 +9,28 @@
 - Sync back: publish [LPDC-1580]
 - LDES ingest [LPDC-1578]
 - Build report on feedback functionality [LPDC-1294]
+
+### Deploy notes
+`docker-compose.override.yml`
+```yml
+ldes-consumer-feedbacksnapshot-ipdc:
+  environment:
+    LDES_ENDPOINT_VIEW: "https://ipdc-ldes-mirror.lblod.info/feedbacksnapshots/1" # or "https://qa.ipdc-ldes-mirror.lblod.info/feedbacksnapshots/1"
+    LDES_ENDPOINT_HEADERS: >
+      { "Authorization": "insert base encoded credentials" }
+
+lpdc-feedback-management-service:
+  environment:
+    IPDC_JSON_ENDPOINT: 'https://api.ipdc.vlaanderen.be/publicaties/abb/feedback/antwoord' # or "https://api.ipdc.tni-vlaanderen.be/publicatie/abb/feedback/antwoord"
+    IPDC_X_API_KEY: 'insert api key for ipdc'
+```
+
+```bash
+drc restart migrations dispatcher database deltanotifier report-generation
+drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service 
+```
+
+## v0.35.0 (2026-02-24)
 
 ### `ldes-consumer-conceptsnapshot-ipdc`
 
@@ -41,17 +63,6 @@
 ldes-consumer-conceptsnapshot-ipdc:
   environment:
     LDES_ENDPOINT_VIEW: "https://ipdc-ldes-mirror.lblod.info/conceptsnapshots/1" # or "https://qa.ipdc-ldes-mirror.lblod.info/conceptsnapshots/1"
-
-ldes-consumer-feedbacksnapshot-ipdc:
-  environment:
-    LDES_ENDPOINT_VIEW: "https://ipdc-ldes-mirror.lblod.info/feedbacksnapshots/1" # or "https://qa.ipdc-ldes-mirror.lblod.info/feedbacksnapshots/1"
-    LDES_ENDPOINT_HEADERS: >
-      { "Authorization": "insert base encoded credentials" }
-
-lpdc-feedback-management-service:
-  environment:
-    IPDC_JSON_ENDPOINT: 'https://api.ipdc.vlaanderen.be/publicaties/abb/feedback/antwoord' # or "https://api.ipdc.tni-vlaanderen.be/publicatie/abb/feedback/antwoord"
-    IPDC_X_API_KEY: 'insert api key for ipdc'
 ```
 
 ```bash
@@ -62,8 +73,6 @@ drc up ldes-consumer-conceptsnapshot-ipdc ldes-consumer-instancesnapshot-gent ld
 ## Check if the 3 ldes-consumers are correctly consuming the feeds
 drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
 ## The lpdc-management probably does not need to process any new instances/concepts
-drc restart migrations dispatcher database deltanotifier report-generation
-drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service 
 ```
 
 ## v0.34.0 (2026-02-05)
