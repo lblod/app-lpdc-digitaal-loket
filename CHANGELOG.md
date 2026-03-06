@@ -1,6 +1,6 @@
 # Changelog
 ## Unreleased
-### Backend
+### Feedback
 
 - Set up Mu-CL & Mu-auth [LPDC-1287]
 - Add flag "Feedback available" to instance that has feedback with status open [LPDC-1569]
