@@ -1,5 +1,9 @@
 # Changelog
 ## Unreleased
+### New Link UX
+
+- Update `lpdc-management` service to version 0.53.0 [LPDC-1367]
+
 ### Feedback
 
 - Set up Mu-CL & Mu-auth [LPDC-1287]
