@@ -3,6 +3,7 @@
 ### New Link UX
 
 - Update `lpdc-management` service to version 0.53.0 [LPDC-1367]
+- Update frontend to version 0.28.0 [LPDC-1367]
 
 ### Feedback
 
