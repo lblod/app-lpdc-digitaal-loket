@@ -1,0 +1,25 @@
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+DELETE {
+  GRAPH ?bestuurseenheidGraph {
+    ?instance <http://purl.org/dc/terms/spatial> ?spatial .
+  }
+}
+WHERE {
+  # 1. Match the instance in its specific graph
+  GRAPH ?bestuurseenheidGraph {
+    ?instance a <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> ;
+              <http://purl.org/dc/terms/spatial> ?spatial .
+  }
+  FILTER(
+    STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+    STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+  )
+
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?spatial time:hasEnd ?endDate .
+  }
+
+  FILTER(?endDate <= "2024-12-31"^^xsd:date)
+}

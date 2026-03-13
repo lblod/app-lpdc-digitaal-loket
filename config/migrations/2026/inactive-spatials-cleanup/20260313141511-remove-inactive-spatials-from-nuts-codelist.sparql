@@ -1,0 +1,20 @@
+PREFIX dvcs: <https://productencatalogus.data.vlaanderen.be/id/conceptscheme/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?spatial skos:inScheme <http://data.europa.eu/nuts/scheme/2024> .
+
+    ?spatial skos:topConceptOf <http://data.europa.eu/nuts/scheme/2024> .
+
+    <http://data.europa.eu/nuts/scheme/2024> skos:hasTopConcept ?spatial .
+  }
+} WHERE {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?spatial skos:inScheme <http://data.europa.eu/nuts/scheme/2024> ;
+             <http://www.w3.org/2006/time#hasEnd> ?endDate .
+
+    FILTER(?endDate <= "2024-12-31"^^xsd:date)
+  }
+}
