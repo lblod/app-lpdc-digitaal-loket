@@ -13,6 +13,7 @@
 - lpdc-feedback-management-service [LPDC-1579]
 - Sync back: publish [LPDC-1580]
 - LDES ingest [LPDC-1578]
+- Build report on feedback functionality [LPDC-1294]
 
 ### Deploy notes
 `docker-compose.override.yml`
@@ -30,7 +31,7 @@ lpdc-feedback-management-service:
 ```
 
 ```bash
-drc restart migrations dispatcher database deltanotifier
+drc restart migrations dispatcher database deltanotifier report-generation
 drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service 
 ```
 
