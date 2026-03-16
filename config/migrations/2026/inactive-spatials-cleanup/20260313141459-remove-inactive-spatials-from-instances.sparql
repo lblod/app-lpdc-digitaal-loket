@@ -20,6 +20,4 @@ WHERE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?spatial time:hasEnd ?endDate .
   }
-
-  FILTER(?endDate <= "2024-12-31"^^xsd:date)
 }
