@@ -1,5 +1,8 @@
 # Changelog
 ## Unreleased
+
+- Cleanup inactive spatials [LPDC-1598]
+
 ### New Link UX
 
 - Update `lpdc-management` service to version 0.53.0 [LPDC-1367]
