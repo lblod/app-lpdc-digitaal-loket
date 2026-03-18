@@ -1,5 +1,8 @@
 # Changelog
 ## Unreleased
+
+- Cleanup inactive spatials [LPDC-1598]
+
 ### Feedback
 
 - Set up Mu-CL & Mu-auth [LPDC-1287]
