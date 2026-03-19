@@ -13,7 +13,6 @@
 (add-prefix "cpsv" "http://purl.org/vocab/cpsv#")
 (add-prefix "dul" "http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#")
 (add-prefix "adms" "http://www.w3.org/ns/adms#")
-(add-prefix "adms2" "https://www.w3.org/ns/adms#")
 (add-prefix "person" "http://www.w3.org/ns/person#")
 (add-prefix "org" "http://www.w3.org/ns/org#")
 (add-prefix "prov" "http://www.w3.org/ns/prov#")

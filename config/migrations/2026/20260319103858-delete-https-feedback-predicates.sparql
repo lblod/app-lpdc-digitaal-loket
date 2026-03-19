@@ -1,0 +1,18 @@
+PREFIX schema2: <https://schema.org/>
+PREFIX adms2: <https://www.w3.org/ns/adms#>
+PREFIX prov2: <https://www.w3.org/ns/prov#>
+
+DELETE {
+    GRAPH ?g {
+        ?feedback prov2:generatedAtTime ?httpsTime.
+        ?feedback adms2:status ?httpsStatus.
+    }
+}
+WHERE {
+    GRAPH ?g {
+        ?feedback a schema2:Conversation.
+        OPTIONAL { ?feedback prov2:generatedAtTime ?httpsTime. }
+        OPTIONAL { ?feedback adms2:status ?httpsStatus. }
+    }
+    FILTER(?g != <http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data>)
+}

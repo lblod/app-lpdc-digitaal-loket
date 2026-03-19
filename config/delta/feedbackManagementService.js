@@ -3,7 +3,7 @@ export default [
     match: {
       predicate: {
         type: 'uri',
-        value: 'https://www.w3.org/ns/adms#status'
+        value: 'http://www.w3.org/ns/adms#status'
       },
       object: {
         type: 'uri',
