@@ -17,6 +17,7 @@
 - Sync back: publish [LPDC-1580]
 - LDES ingest [LPDC-1578]
 - Build report on feedback functionality [LPDC-1294]
+- Update frontend to version 0.28.2 [LPDC-1615] [LPDC-1602]
 
 ### Deploy notes
 `docker-compose.override.yml`
