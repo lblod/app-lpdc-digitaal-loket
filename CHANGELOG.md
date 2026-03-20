@@ -18,6 +18,8 @@
 - LDES ingest [LPDC-1578]
 - Build report on feedback functionality [LPDC-1294]
 - Update frontend to version 0.28.2 [LPDC-1615] [LPDC-1602]
+- Remove https to http conversion code when ipdc made their changes [LPDC-1604]
+- Write documentation [LPDC-1296]
 
 ### Deploy notes
 `docker-compose.override.yml`
