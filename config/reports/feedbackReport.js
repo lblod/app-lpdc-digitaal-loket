@@ -16,7 +16,7 @@ export default {
 
         const queryString = `
             PREFIX schema2: <https://schema.org/>
-            PREFIX adms2: <https://www.w3.org/ns/adms#>
+            PREFIX adms: <http://www.w3.org/ns/adms#>
             PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
             PREFIX dct: <http://purl.org/dc/terms/>
             PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
@@ -24,7 +24,7 @@ export default {
             SELECT DISTINCT ?feedbackUri ?feedbackText ?feedbackStatus ?feedbackStatusIPDC ?feedbackProcessingStatus ?source ?sourceLabel ?bestuurseenheidUri ?bestuurseenheidName ?instanceUri ?instanceName ?dateFeedbackSent ?dateFeedbackReply ?datePublished {
                 GRAPH ?orgGraph {
                     ?feedbackUri a schema2:Conversation ;
-                        adms2:status ?feedbackStatusIPDCConcept;
+                        adms:status ?feedbackStatusIPDCConcept;
                         lpdcExt:receiverBestuurseenheid ?bestuurseenheidUri;
                         skos:primarySubject ?instanceUri;
                         schema2:dateCreated ?dateFeedbackSent.

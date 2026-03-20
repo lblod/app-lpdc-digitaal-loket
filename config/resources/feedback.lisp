@@ -5,7 +5,7 @@
                 (:date-published :datetime ,(s-prefix "schema2:datePublished"))
                 (:productnumber :string ,(s-prefix "schema2:productID"))
                 (:lpdc-instance-derived-uri :url ,(s-prefix "schema2:about"))
-                (:ipdc-status :url ,(s-prefix "adms2:status"))
+                (:ipdc-status :url ,(s-prefix "adms:status"))
                 (:status :url ,(s-prefix "schema2:actionStatus"))
                 (:processing-status :url ,(s-prefix "schema2:result"))
                 (:retry-count :integer ,(s-prefix "ext:publishRetryCount")))
