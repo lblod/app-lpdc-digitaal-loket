@@ -2,6 +2,7 @@
 ## Unreleased
 
 - Cleanup inactive spatials [LPDC-1598]
+- Bump lpdc-publish to [v0.21.0] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.21.0) [LPDC-1546]
 
 ### New Link UX
 
@@ -39,6 +40,7 @@ lpdc-feedback-management-service:
 ```bash
 drc restart migrations dispatcher database deltanotifier report-generation
 drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service 
+drc pull lpdc-publish && drc up -d lpdc-publish
 ```
 
 ## v0.35.0 (2026-02-24)
