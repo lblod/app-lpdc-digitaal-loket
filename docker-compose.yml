@@ -446,3 +446,23 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
+  error-alert:
+    image: lblod/loket-error-alert-service:1.0.1
+    environment:
+      APP_NAME: 'LPDC'
+    volumes:
+      - ./config/error-alert:/config/
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  deliver-email-service:
+    image: redpencil/deliver-email-service:1.0.0
+    environment:
+      MAILBOX_URI: "http://data.lblod.info/id/mailboxes/1"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging

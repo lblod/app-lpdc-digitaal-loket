@@ -98,3 +98,9 @@ services:
 
   op-public-consumer:
     restart: "no"
+
+  deliver-email-service:
+    environment:
+      EMAIL_CRON_PATTERN: "*/5 * * * *"
+      WELL_KNOWN_SERVICE: "test"
+      FROM_NAME: "Your Name"
