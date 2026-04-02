@@ -438,10 +438,30 @@ services:
     logging: *default-logging
 
   lpdc-feedback-management-service:
-    image: lblod/lpdc-feedback-management-service:1.0.1
+    image: lblod/lpdc-feedback-management-service:1.0.2
     environment:
       IPDC_JSON_ENDPOINT: "Insert ipdc feedback publish endpoint"
       IPDC_X_API_KEY: 'Insert credentials for publish endpoint'
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  error-alert:
+    image: lblod/loket-error-alert-service:1.0.1
+    environment:
+      APP_NAME: 'LPDC'
+    volumes:
+      - ./config/error-alert:/config/
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  deliver-email-service:
+    image: redpencil/deliver-email-service:1.0.0
+    environment:
+      MAILBOX_URI: "http://data.lblod.info/id/mailboxes/1"
     labels:
       - "logging=true"
     restart: always
