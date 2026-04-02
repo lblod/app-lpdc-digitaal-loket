@@ -21,6 +21,7 @@
 - Update frontend to version 0.28.2 [LPDC-1615] [LPDC-1602]
 - Remove https to http conversion code when ipdc made their changes [LPDC-1604]
 - Write documentation [LPDC-1296]
+- Update frontend to version 0.29.0 [LPDC-1622] [LPDC-1623]
 
 ### Deploy notes
 `docker-compose.override.yml`
