@@ -14,7 +14,7 @@
 - Set up Mu-CL & Mu-auth [LPDC-1287]
 - Add flag "Feedback available" to instance that has feedback with status open [LPDC-1569]
 - Consume feedback instances from LDES LPDC [LPDC-1286]
-- lpdc-feedback-management-service [LPDC-1579]
+- lpdc-feedback-management-service [LPDC-1579] 
 - Sync back: publish [LPDC-1580]
 - LDES ingest [LPDC-1578]
 - Build report on feedback functionality [LPDC-1294]
@@ -22,6 +22,7 @@
 - Remove https to http conversion code when ipdc made their changes [LPDC-1604]
 - Write documentation [LPDC-1296]
 - Update frontend to version 0.29.0 [LPDC-1622] [LPDC-1623]
+- added mail notification when feedback fails to publish [LPDC-1611]
 
 ### Deploy notes
 `docker-compose.override.yml`
@@ -38,9 +39,11 @@ lpdc-feedback-management-service:
     IPDC_X_API_KEY: 'insert api key for ipdc'
 ```
 
+Set the correct `deliver-email-service` and `error-alert` env variables, copy from loket
+
 ```bash
 drc restart migrations dispatcher database deltanotifier report-generation
-drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service 
+drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service error-alert deliver-email-service
 drc pull lpdc-publish && drc up -d lpdc-publish
 ```
 
