@@ -44,7 +44,7 @@ Set the correct `deliver-email-service` and `error-alert` env variables, copy fr
 ```bash
 drc restart migrations dispatcher database deltanotifier report-generation
 drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service error-alert deliver-email-service
-drc pull lpdc-publish && drc up -d lpdc-publish
+drc pull lpdc-publish lpdc && drc up -d lpdc-publish lpdc
 ```
 
 ## v0.35.0 (2026-02-24)
