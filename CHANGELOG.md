@@ -42,8 +42,9 @@ lpdc-feedback-management-service:
 Set the correct `deliver-email-service` and `error-alert` env variables, copy from loket
 
 ```bash
-drc restart migrations dispatcher database deltanotifier report-generation
-drc up -d resource ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service error-alert deliver-email-service
+drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
+drc restart resource dispatcher cache database deltanotifier report-generation
+drc up -d ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service error-alert deliver-email-service
 drc pull lpdc-publish lpdc && drc up -d lpdc-publish lpdc
 ```
 
