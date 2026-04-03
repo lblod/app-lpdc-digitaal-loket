@@ -45,7 +45,7 @@ Set the correct `deliver-email-service` and `error-alert` env variables, copy fr
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc restart resource dispatcher cache database deltanotifier report-generation
 drc up -d ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service error-alert deliver-email-service
-drc pull lpdc-publish lpdc && drc up -d lpdc-publish lpdc
+drc pull lpdc-publish lpdc lpdc-management && drc up -d lpdc-publish lpdc lpdc-management
 ```
 
 ## v0.35.0 (2026-02-24)
