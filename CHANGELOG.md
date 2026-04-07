@@ -3,6 +3,7 @@
 
 - Cleanup inactive spatials [LPDC-1598]
 - Bump lpdc-publish to [v0.21.0] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.21.0) [LPDC-1546]
+- Update frontend to version [0.29.1](https://github.com/lblod/frontend-lpdc/releases/tag/v0.29.1) [LPDC-1612]
 
 ### New Link UX
 
