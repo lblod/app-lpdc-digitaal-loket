@@ -2,6 +2,17 @@
 
 ## Unreleased
 
+### Database
+
+- Swap mu-auth for sparql-parser [DL-6568]
+
+### Deploy notes
+
+```bash
+drc up -d database
+drc restart resource cache
+```
+
 ## v0.36.0 (2026-04-07)
 
 - Cleanup inactive spatials [LPDC-1598]
