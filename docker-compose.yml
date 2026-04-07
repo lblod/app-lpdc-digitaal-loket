@@ -56,7 +56,7 @@ services:
     logging: *default-logging
 
   database:
-    image: semtech/mu-authorization:feature-service-roam-r1.1
+    image: semtech/sparql-parser:0.0.15
     depends_on:
       migrations:
         condition: service_healthy
@@ -64,14 +64,9 @@ services:
         condition: service_started
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
-      DATABASE_OVERLOAD_RECOVERY: "true"
-      # DATABASE_COMPATIBILITY: "Virtuoso"
-      # Note: not sure whether it gets picked up properly; it is meant for healing-process which may make
-      # heavy queries
-      QUERY_MAX_PROCESSING_TIME: 605000
-      QUERY_MAX_EXECUTION_TIME: 605000
     volumes:
       - ./config/authorization:/config
+      - ./data/authorization:/data
     labels:
       - "logging=true"
     restart: always
