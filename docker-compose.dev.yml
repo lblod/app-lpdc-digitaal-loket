@@ -1,5 +1,4 @@
 services:
-
   lpdc:
     restart: "no"
 
@@ -57,10 +56,10 @@ services:
 
   dashboard:
     restart: "no"
-  
+
   report-generation:
     restart: "no"
-  
+
   file:
     restart: "no"
 
@@ -87,14 +86,26 @@ services:
 
   lpdc-feedback-management-service:
     environment:
-      HEALING_CRON: '*/3 * * * *'
+      HEALING_CRON: "*/3 * * * *"
       DEBUG: true
     restart: "no"
-
 
   ################################################################################
   # Consumers
   ################################################################################
 
   op-public-consumer:
+    restart: "no"
+
+  error-alert:
+    environment:
+      EMAIL_FROM: "test@example.com"
+      EMAIL_TO: "123@example.com"
+    restart: "no"
+
+  deliver-email-service:
+    environment:
+      EMAIL_CRON_PATTERN: "*/5 * * * *"
+      WELL_KNOWN_SERVICE: "test"
+      FROM_NAME: "Your Name"
     restart: "no"
