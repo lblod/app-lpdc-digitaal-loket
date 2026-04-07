@@ -1,5 +1,8 @@
 # Changelog
+
 ## Unreleased
+
+## v0.36.0 (2026-04-07)
 
 - Cleanup inactive spatials [LPDC-1598]
 - Bump lpdc-publish to [v0.21.0] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.21.0) [LPDC-1546]
