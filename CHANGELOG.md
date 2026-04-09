@@ -1,6 +1,12 @@
 # Changelog
 
 ## Unreleased
+- Run LPDC Complete Report sequentially [LPDC-1631]
+
+### Deploy notes
+```bash
+drc restart report-generation
+```
 
 ## v0.36.0 (2026-04-07)
 
