@@ -387,19 +387,16 @@ function stripOrder(text) {
 
 
 async function fetchAllDataForUri(uri) {
-  const [detailsRes, websiteRes, contactRes, regelgevingRes, financieelVoordeelRes, kostenRes, procedureRes, voorwaardeRes, eigenschappen1Res, eigenschappen2Res
-  ] = await Promise.all([
-    query(generateDetailsUri(uri)),
-    query(generateWebsiteQuery(uri)),
-    query(generateContactQuery(uri)),
-    query(generateRegelgevingQuery(uri)),
-    query(generateFinancieelVoordeel(uri)),
-    query(generateKostenQuery(uri)),
-    query(generateProcedureQuery(uri)),
-    query(generateVoorwaardeQuery(uri)),
-    query(generateEigenschappenGeneralQuery(uri)),
-    query(generateEigenschappenCodelistsQuery(uri))
-  ]);
+  const detailsRes = await query(generateDetailsUri(uri));
+  const websiteRes = await query(generateWebsiteQuery(uri));
+  const contactRes = await query(generateContactQuery(uri));
+  const regelgevingRes = await query(generateRegelgevingQuery(uri));
+  const financieelVoordeelRes = await query(generateFinancieelVoordeel(uri));
+  const kostenRes = await query(generateKostenQuery(uri));
+  const procedureRes = await query(generateProcedureQuery(uri));
+  const voorwaardeRes = await query(generateVoorwaardeQuery(uri));
+  const eigenschappen1Res = await query(generateEigenschappenGeneralQuery(uri));
+  const eigenschappen2Res = await query(generateEigenschappenCodelistsQuery(uri));
 
   const details = detailsRes.results.bindings[0] || {};
   const website = websiteRes.results.bindings[0] || {};
