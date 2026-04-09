@@ -2,6 +2,41 @@
 
 ## Unreleased
 
+- Update LDES consumer images to [`feature-update-ldes-client`](https://github.com/redpencilio/ldes-consumer-service/pull/54) tag [LPDC-1629]
+  * This update contains a refactor of the state management: state is now persisted through a LevelDB database instead of a json file
+  * The LDES feeds will need to be reingested
+
+### Deploy notes
+Bring the ldes consumers down:
+```bash
+drc down ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes-consumer-conceptsnapshot-ipdc ldes-consumer-feedbacksnapshot-ipdc
+```
+
+Drop the ingestion graphs. We need to drop these to prevent duplicate blank nodes.
+
+```SPARQL
+DROP SILENT GRAPH <http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc>;
+DROP SILENT GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent>;
+DROP SILENT GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct>;
+DROP SILENT GRAPH <http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data>;
+```
+
+
+```bash
+# Delete the states of the 4 consumers
+rm -rf ./data/ldes-consumer-instancesnapshot-bct
+rm -rf ./data/ldes-consumer-instancesnapshot-gent
+rm -rf ./data/ldes-consumer-instancesnapshot-ipdc
+rm -rf ./data/ldes-consumer-feedbacksnapshot-ipdc
+
+# Start the consumers again
+drc up -d ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes-consumer-conceptsnapshot-ipdc ldes-consumer-feedbacksnapshot-ipdc
+```
+
+The state of the consumers will no longer be a json file, but a LevelDB folder.
+Ensure the 3 consumers have successfully ingested their feeds.
+Ensure the `lpdc-management` service has fully processed the conceptsnapshot data.
+
 ## v0.36.0 (2026-04-07)
 
 - Cleanup inactive spatials [LPDC-1598]
