@@ -10,7 +10,7 @@
 
 #### Production only
 
-In `docker-compose.yml`, ensure:
+In `docker-compose.override.yml`, ensure:
 
 ```
   resource:
