@@ -3,9 +3,16 @@
 ## Unreleased
 - Run LPDC Complete Report sequentially [LPDC-1631]
 
+### Frontend
+- Bump to [v0.30.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.30.0) [LPDC-1619]
+
+### Management
+- Bump to [v0.54.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.0) [LPDC-1619]
+
 ### Deploy notes
 ```bash
 drc restart report-generation
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
 ```
 
 ## v0.36.0 (2026-04-07)
