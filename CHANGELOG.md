@@ -14,7 +14,6 @@ In `docker-compose.yml`, ensure:
 
 ```
   resource:
-    image: semtech/mu-cl-resources:1.27.2
     environment:
       LISP_DYNAMIC_SPACE_SIZE: "8192" # 1GB by default, increase to 8GB on systems with a lot of data
   database:
