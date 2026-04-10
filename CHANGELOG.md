@@ -15,6 +15,33 @@ drc restart report-generation
 drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
 ```
 
+### Database
+
+- Swap mu-auth for sparql-parser [DL-6568]
+
+### Deploy notes
+
+#### Production only
+
+In `docker-compose.override.yml`, ensure:
+
+```
+  resource:
+    environment:
+      LISP_DYNAMIC_SPACE_SIZE: "8192" # 1GB by default, increase to 8GB on systems with a lot of data
+  database:
+    environment:
+      LISP_DYNAMIC_SPACE_SIZE: 8192
+```
+
+The `LISP_DYNAMIC_SPACE_SIZE` should be increased to 8192 in both services.
+
+#### All environments
+
+```bash
+drc up -d database resource
+```
+
 ## v0.36.0 (2026-04-07)
 
 - Cleanup inactive spatials [LPDC-1598]
