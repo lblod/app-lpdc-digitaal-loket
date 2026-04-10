@@ -43,6 +43,7 @@
   :activitystreams "https://www.w3.org/ns/activitystreams#"
   :cpsv "http://purl.org/vocab/cpsv#"
   :schema "http://schema.org/"
+  :schema2 "https://schema.org/"
   :dcat "http://www.w3.org/ns/dcat#"
   :terms "http://purl.org/dc/terms/"
   :locn "http://www.w3.org/ns/locn#"
@@ -126,10 +127,10 @@
   ("locn:Address" -> _)
   ("lpdc:ConceptDisplayConfiguration" -> _)
   ("lpdc:FormalInformalChoice" -> _)
-  ("schema:Conversation" -> _)
-  ("schema:AskAction" -> _)
-  ("schema:ReplyAction" -> _)
-  ("schema:DataFeedItem" -> _))
+  ("schema2:Conversation" -> _)
+  ("schema2:AskAction" -> _)
+  ("schema2:ReplyAction" -> _)
+  ("schema2:DataFeedItem" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)

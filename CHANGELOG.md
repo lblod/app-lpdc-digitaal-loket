@@ -8,9 +8,26 @@
 
 ### Deploy notes
 
+#### Production only
+
+In `docker-compose.yml`, ensure:
+
+```
+  resource:
+    image: semtech/mu-cl-resources:1.27.2
+    environment:
+      LISP_DYNAMIC_SPACE_SIZE: "8192" # 1GB by default, increase to 8GB on systems with a lot of data
+  database:
+    environment:
+      LISP_DYNAMIC_SPACE_SIZE: 8192
+```
+
+The `LISP_DYNAMIC_SPACE_SIZE` should be increased to 8192 in both services.
+
+#### All environments
+
 ```bash
-drc up -d database
-drc restart resource cache
+drc up -d database resource
 ```
 
 ## v0.36.0 (2026-04-07)
