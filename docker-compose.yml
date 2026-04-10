@@ -64,7 +64,7 @@ services:
         condition: service_started
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
-      LISP_DYNAMIC_SPACE_SIZE: 4096
+      LISP_DYNAMIC_SPACE_SIZE: 4096 # 1GB by default, increase to 8GB on systems with a lot of data
     volumes:
       - ./config/authorization:/config
       - ./data/authorization:/data
@@ -121,7 +121,7 @@ services:
     logging: *default-logging
 
   resource:
-    image: semtech/mu-cl-resources:1.27.2
+    image: semtech/mu-cl-resources:feature-html-type
     depends_on:
       migrations:
         condition: service_healthy
