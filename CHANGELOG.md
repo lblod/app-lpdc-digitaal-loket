@@ -1,6 +1,46 @@
 # Changelog
 
 ## Unreleased
+- Run LPDC Complete Report sequentially [LPDC-1631]
+
+### Frontend
+- Bump to [v0.30.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.30.0) [LPDC-1619]
+
+### Management
+- Bump to [v0.54.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.0) [LPDC-1619]
+
+### Deploy notes
+```bash
+drc restart report-generation
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+```
+
+### Database
+
+- Swap mu-auth for sparql-parser [DL-6568]
+
+### Deploy notes
+
+#### Production only
+
+In `docker-compose.override.yml`, ensure:
+
+```
+  resource:
+    environment:
+      LISP_DYNAMIC_SPACE_SIZE: "8192" # 1GB by default, increase to 8GB on systems with a lot of data
+  database:
+    environment:
+      LISP_DYNAMIC_SPACE_SIZE: 8192
+```
+
+The `LISP_DYNAMIC_SPACE_SIZE` should be increased to 8192 in both services.
+
+#### All environments
+
+```bash
+drc up -d database resource
+```
 
 - Update LDES consumer images to [`feature-custom-member-processing`](https://github.com/redpencilio/ldes-consumer-service/pull/57) tag [LPDC-1629]
   * This update contains a refactor of the state management: state is now persisted through a LevelDB database instead of a json file
