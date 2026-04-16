@@ -379,10 +379,10 @@ services:
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct"
       LDES_POLLING_INTERVAL: 60000
       LDES_REQUESTS_PER_MINUTE: 0 # unlimited
-
+      LOG_LEVEL: "debug"
       INGEST_MODE: "ALL" # store ldes member version as-is
       REPLACE_VERSIONS: false # store all snapshots/versions
-      ORDERING_STRATEGY: "ascending"
+      ORDERING_STRATEGY: "none"
       EMIT_LAST_VERSION_ONLY: false
 
       PERSIST_STATE: true
