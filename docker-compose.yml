@@ -382,6 +382,10 @@ services:
       LOG_LEVEL: "debug"
       INGEST_MODE: "ALL" # store ldes member version as-is
       REPLACE_VERSIONS: false # store all snapshots/versions
+
+      # This needs to be 'none' as the ldes-feed contains an issue in how next-page relationships are specified
+      # Due to this issue, the ldes-consumer fails when ORDERING_STRATEGY is set to "descending".
+      # It is not a big issue to set this to "none" in this case, as we store all versions.
       ORDERING_STRATEGY: "none"
       EMIT_LAST_VERSION_ONLY: false
 
