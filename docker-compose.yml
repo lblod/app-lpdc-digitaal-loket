@@ -322,7 +322,7 @@ services:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       LOG_LEVEL: "debug"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      LDES_REQUESTS_PER_MINUTE: 40
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
 
       INGEST_MODE: "ALL" # store ldes member version as-is
@@ -351,7 +351,7 @@ services:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      LDES_REQUESTS_PER_MINUTE: 40
       LOG_LEVEL: "debug"
       INGEST_MODE: "ALL" # store ldes member version as-is
       REPLACE_VERSIONS: false # store all snapshots/versions
@@ -378,7 +378,7 @@ services:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      LDES_REQUESTS_PER_MINUTE: 40 # unlimited
       LOG_LEVEL: "debug"
       INGEST_MODE: "ALL" # store ldes member version as-is
       REPLACE_VERSIONS: false # store all snapshots/versions
@@ -443,7 +443,7 @@ services:
       LDES_ENDPOINT_VIEW: "Insert ipdc ldes feedback endpoint"
       LDES_ENDPOINT_HEADERS: "Insert credentials for ldes endpoint"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0
+      LDES_REQUESTS_PER_MINUTE: 40
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data"
 
       INGEST_MODE: "MATERIALIZE"
