@@ -310,7 +310,7 @@ services:
       - virtuoso:database # We want to go directly to virtuoso database
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-update-ldes-client
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       # lpdc-management:
       #   condition: service_healthy
@@ -318,6 +318,7 @@ services:
         condition: service_healthy
     volumes:
       - ./data/ldes-consumer-conceptsnapshot-ipdc:/data
+      - ./config/ldes-consumer/conceptsnapshot-ipdc/process-member.ts:/config/process-member.ts
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       LOG_LEVEL: "debug"
@@ -339,7 +340,7 @@ services:
     logging: *default-logging
 
   ldes-consumer-instancesnapshot-gent:
-    image: redpencil/ldes-consumer:feature-update-ldes-client
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       # lpdc-management:
       #   condition: service_healthy
@@ -347,6 +348,7 @@ services:
         condition: service_healthy
     volumes:
       - ./data/ldes-consumer-instancesnapshot-gent:/data
+      - ./config/ldes-consumer/instancesnapshot-gent/process-member.ts:/config/process-member.ts
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent"
@@ -366,7 +368,7 @@ services:
     restart: always
     logging: *default-logging
   ldes-consumer-instancesnapshot-bct:
-    image: redpencil/ldes-consumer:feature-update-ldes-client
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       # lpdc-management:
       #   condition: service_healthy
@@ -374,6 +376,7 @@ services:
         condition: service_healthy
     volumes:
       - ./data/ldes-consumer-instancesnapshot-bct:/data
+      - ./config/ldes-consumer/instancesnapshot-bct/process-member.ts:/config/process-member.ts
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct"
@@ -433,7 +436,7 @@ services:
   ################################################################################
 
   ldes-consumer-feedbacksnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-update-ldes-client
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       migrations:
         condition: service_healthy
