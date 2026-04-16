@@ -447,6 +447,7 @@ services:
       LDES_ENDPOINT_HEADERS: "Insert credentials for ldes endpoint"
       LDES_POLLING_INTERVAL: 60000
       LDES_REQUESTS_PER_MINUTE: 40
+      LOG_LEVEL: "debug"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data"
 
       INGEST_MODE: "MATERIALIZE"
