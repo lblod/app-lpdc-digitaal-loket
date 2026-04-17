@@ -307,23 +307,28 @@ services:
       - virtuoso:database # We want to go directly to virtuoso database
 
   ldes-consumer-conceptsnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       # lpdc-management:
       #   condition: service_healthy
       migrations:
         condition: service_healthy
     volumes:
-      - ./data/ldes-consumer-instancesnapshot-ipdc:/data
+      - ./data/ldes-consumer-conceptsnapshot-ipdc:/data
+      - ./config/ldes-consumer/conceptsnapshot-ipdc/process-member.ts:/config/process-member.ts
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       LOG_LEVEL: "debug"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      LDES_REQUESTS_PER_MINUTE: 40
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/conceptsnapshots-ldes-data/ipdc"
+
       INGEST_MODE: "ALL" # store ldes member version as-is
-      PERSIST_STATE: true
       REPLACE_VERSIONS: false # store all snapshots/versions
+      ORDERING_STRATEGY: "ascending"
+      EMIT_LAST_VERSION_ONLY: false
+
+      PERSIST_STATE: true
     labels:
       - "logging=true"
     links:
@@ -332,7 +337,7 @@ services:
     logging: *default-logging
 
   ldes-consumer-instancesnapshot-gent:
-    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       # lpdc-management:
       #   condition: service_healthy
@@ -340,14 +345,19 @@ services:
         condition: service_healthy
     volumes:
       - ./data/ldes-consumer-instancesnapshot-gent:/data
+      - ./config/ldes-consumer/instancesnapshot-gent/process-member.ts:/config/process-member.ts
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      LDES_REQUESTS_PER_MINUTE: 40
+      LOG_LEVEL: "debug"
       INGEST_MODE: "ALL" # store ldes member version as-is
+      REPLACE_VERSIONS: false # store all snapshots/versions
+      ORDERING_STRATEGY: "none"
+      EMIT_LAST_VERSION_ONLY: false
+
       PERSIST_STATE: true
-      REPLACE_VERSIONS: false
     labels:
       - "logging=true"
     links:
@@ -355,7 +365,7 @@ services:
     restart: always
     logging: *default-logging
   ldes-consumer-instancesnapshot-bct:
-    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       # lpdc-management:
       #   condition: service_healthy
@@ -363,14 +373,23 @@ services:
         condition: service_healthy
     volumes:
       - ./data/ldes-consumer-instancesnapshot-bct:/data
+      - ./config/ldes-consumer/instancesnapshot-bct/process-member.ts:/config/process-member.ts
     environment:
       LDES_ENDPOINT_VIEW: "<endpoint first page of ldes stream>"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0 # unlimited
+      LDES_REQUESTS_PER_MINUTE: 40 # unlimited
+      LOG_LEVEL: "debug"
       INGEST_MODE: "ALL" # store ldes member version as-is
+      REPLACE_VERSIONS: false # store all snapshots/versions
+
+      # This needs to be 'none' as the ldes-feed contains an issue in how next-page relationships are specified
+      # Due to this issue, the ldes-consumer fails when ORDERING_STRATEGY is set to "descending".
+      # It is not a big issue to set this to "none" in this case, as we store all versions.
+      ORDERING_STRATEGY: "none"
+      EMIT_LAST_VERSION_ONLY: false
+
       PERSIST_STATE: true
-      REPLACE_VERSIONS: false
     labels:
       - "logging=true"
     links:
@@ -414,7 +433,7 @@ services:
   ################################################################################
 
   ldes-consumer-feedbacksnapshot-ipdc:
-    image: redpencil/ldes-consumer:feature-dont-persist-unemitted-members-in-state
+    image: redpencil/ldes-consumer:feature-custom-member-processing
     depends_on:
       migrations:
         condition: service_healthy
@@ -424,18 +443,23 @@ services:
       LDES_ENDPOINT_VIEW: "Insert ipdc ldes feedback endpoint"
       LDES_ENDPOINT_HEADERS: "Insert credentials for ldes endpoint"
       LDES_POLLING_INTERVAL: 60000
-      LDES_REQUESTS_PER_MINUTE: 0
+      LDES_REQUESTS_PER_MINUTE: 40
+      LOG_LEVEL: "debug"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/graphs/lpdc/feedbacksnapshot-ldes-data"
+
       INGEST_MODE: "MATERIALIZE"
-      PERSIST_STATE: true
       REPLACE_VERSIONS: true
+      ORDERING_STRATEGY: "ascending"
+      EMIT_LAST_VERSION_ONLY: false
+
+      PERSIST_STATE: true
     labels:
       - "logging=true"
     restart: always
     logging: *default-logging
 
   lpdc-feedback-management-service:
-    image: lblod/lpdc-feedback-management-service:1.0.3
+    image: lblod/lpdc-feedback-management-service:1.0.4
     environment:
       IPDC_JSON_ENDPOINT: "Insert ipdc feedback publish endpoint"
       IPDC_X_API_KEY: 'Insert credentials for publish endpoint'

@@ -42,6 +42,32 @@ The `LISP_DYNAMIC_SPACE_SIZE` should be increased to 8192 in both services.
 drc up -d database resource
 ```
 
+- Update LDES consumer images to [`feature-custom-member-processing`](https://github.com/redpencilio/ldes-consumer-service/pull/57) tag [LPDC-1629]
+  * This update contains a refactor of the state management: state is now persisted through a LevelDB database instead of a json file
+  * The LDES feeds will need to be reingested
+
+### Deploy notes
+Bring the ldes consumers down:
+```bash
+drc down ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes-consumer-conceptsnapshot-ipdc ldes-consumer-feedbacksnapshot-ipdc
+```
+```bash
+# Delete the states of the 4 consumers
+rm -rf ./data/ldes-consumer-instancesnapshot-bct
+rm -rf ./data/ldes-consumer-instancesnapshot-gent
+rm -rf ./data/ldes-consumer-instancesnapshot-ipdc
+rm -rf ./data/ldes-consumer-feedbacksnapshot-ipdc
+
+# Start the consumers again
+drc up -d ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes-consumer-conceptsnapshot-ipdc ldes-consumer-feedbacksnapshot-ipdc
+```
+
+The state of the consumers will no longer be a json file, but a LevelDB folder.
+Ensure the 3 consumers have successfully ingested their feeds.
+Both the `lpdc-management` and `lpdc-feedback-management-service` should not need to process the ingested data, as they have already processed it in the past.
+
+Note: ingestion of the Gent feed will take a while, some babysitting might be required.
+
 ## v0.36.0 (2026-04-07)
 
 - Cleanup inactive spatials [LPDC-1598]
