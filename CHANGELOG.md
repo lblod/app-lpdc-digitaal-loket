@@ -59,8 +59,8 @@ rm -rf ./data/ldes-consumer-instancesnapshot-gent
 rm -rf ./data/ldes-consumer-instancesnapshot-ipdc
 rm -rf ./data/ldes-consumer-feedbacksnapshot-ipdc
 
-# Start the consumers again
-drc up -d ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes-consumer-conceptsnapshot-ipdc ldes-consumer-feedbacksnapshot-ipdc
+# Start the consumers again + feedback service
+drc up -d ldes-consumer-instancesnapshot-bct ldes-consumer-instancesnapshot-gent ldes-consumer-conceptsnapshot-ipdc ldes-consumer-feedbacksnapshot-ipdc lpdc-feedback-management-service
 ```
 
 The state of the consumers will no longer be a json file, but a LevelDB folder.
