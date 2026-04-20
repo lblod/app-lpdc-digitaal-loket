@@ -83,6 +83,10 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/reports/"
   end
 
+  get "/files/:id/download", @any do
+      forward conn, [], "http://file/files/" <> id <> "/download"
+    end
+
   get "/files/*path", @json do
     forward conn, path, "http://cache/files/"
   end
@@ -92,10 +96,6 @@ defmodule Dispatcher do
   end
 
   # File service
-
-  get "/files/:id/download", @any do
-    forward conn, [], "http://file/files/" <> id <> "/download"
-  end
 
   post "/files/*path", @any do
     forward conn, path, "http://file/files/"
