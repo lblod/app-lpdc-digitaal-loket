@@ -303,8 +303,6 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-    links:
-      - virtuoso:database # We want to go directly to virtuoso database
 
   ldes-consumer-conceptsnapshot-ipdc:
     image: redpencil/ldes-consumer:feature-custom-member-processing
