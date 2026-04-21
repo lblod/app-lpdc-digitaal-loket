@@ -26,18 +26,20 @@ export default {
       PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
       PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
       PREFIX lpdc:    <http://data.lblod.info/vocabularies/lpdc/>
+      PREFIX oslc: <http://open-services.net/ns/core#>
+
       
       SELECT DISTINCT ?instanceIri ?type ?title ?bestuurseenheidLabel ?classificatieLabel ?errorCode ?errorMessage ?dateCreated ?dateSent WHERE {
             GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
                 ?publicationError a lpdc:InstancePublicationError .
                 ?publicationError http:statusCode ?errorCode .
-                ?publicationError schema:error ?errorMessage .
-                ?publicationError dct:source ?instanceIri .
+                ?publicationError oslc:largePreview ?errorMessage .
+                ?publicationError dct:references ?instanceIri .
                 OPTIONAL {
                     ?publicationError dct:title ?title .
                 }
                 ?publicationError foaf:owner ?bestuurseenheidIri .
-                ?publicationError schema:dateCreated ?dateCreated .
+                ?publicationError dct:created ?dateCreated .
                 ?publicationError as:formerType ?type .
                 OPTIONAL {
                     ?publicationError schema:dateSent ?dateSent .

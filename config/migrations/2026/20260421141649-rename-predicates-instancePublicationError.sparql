@@ -1,0 +1,29 @@
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
+PREFIX schema: <http://schema.org/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX oslc: <http://open-services.net/ns/core#>
+
+
+DELETE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
+        ?publicationError schema:error ?errorMessage .
+        ?publicationError dct:source ?instanceIri .
+        ?publicationError schema:dateCreated ?dateCreated .
+    }
+}
+INSERT {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
+        ?publicationError oslc:largePreview ?errorMessage .
+        ?publicationError dct:references ?instanceIri .
+        ?publicationError dct:created ?dateCreated .
+    }
+}
+WHERE {
+    GRAPH <http://mu.semte.ch/graphs/lpdc/ipdc-publication-errors> {
+        ?publicationError a lpdc:InstancePublicationError .
+        ?publicationError schema:error ?errorMessage .
+        ?publicationError dct:source ?instanceIri .
+        ?publicationError schema:dateCreated ?dateCreated .
+    }
+}
+
