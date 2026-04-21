@@ -2,6 +2,7 @@
 
 ## Unreleased
 - Run LPDC Complete Report sequentially [LPDC-1631]
+- LPDC rapporten - downloads are json files instead of csv [LPDC-1637]
 
 ### Frontend
 - Bump to [v0.30.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.30.0) [LPDC-1619]
@@ -12,8 +13,8 @@
 
 ### Deploy notes
 ```bash
-drc restart report-generation
-drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+drc restart report-generation dispatcher
+drc pull lpdc lpdc-management dashboard file && drc up -d lpdc lpdc-management dashboard file
 ```
 
 ### Database
