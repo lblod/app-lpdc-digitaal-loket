@@ -3,6 +3,7 @@
 ## Unreleased
 - Run LPDC Complete Report sequentially [LPDC-1631]
 - Mail if sending instance fails [LPDC-1627]
+- LPDC rapporten - downloads are json files instead of csv [LPDC-1637]
 
 ### Frontend
 - Bump to [v0.30.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.30.0) [LPDC-1619]
@@ -13,8 +14,8 @@
 
 ### Deploy notes
 ```bash
-drc restart report-generation error-alert deltanotifier migrations
-drc pull lpdc lpdc-management lpdc-publish && drc up -d lpdc lpdc-management lpdc-publish
+drc restart report-generation error-alert deltanotifier migrations dispatcher
+drc pull lpdc lpdc-management lpdc-publish dashboard file && drc up -d lpdc lpdc-management lpdc-publish dashboard file
 ```
 
 ### Database
