@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## v0.37.0 (2026-05-04)
 - Run LPDC Complete Report sequentially [LPDC-1631]
 - Mail if sending instance fails [LPDC-1627]
 - LPDC rapporten - downloads are json files instead of csv [LPDC-1637]
