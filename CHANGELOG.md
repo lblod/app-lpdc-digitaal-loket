@@ -4,6 +4,7 @@
 - Run LPDC Complete Report sequentially [LPDC-1631]
 - Mail if sending instance fails [LPDC-1627]
 - LPDC rapporten - downloads are json files instead of csv [LPDC-1637]
+- Add option to turn herziening nodig off [LPDC-1650]
 
 ### Frontend
 - Bump to [v0.30.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.30.0) [LPDC-1619]
