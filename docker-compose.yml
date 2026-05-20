@@ -273,6 +273,7 @@ services:
       INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
       CONCEPT_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
       ENABLE_MUNICIPALITY_MERGER_FLAG: "false"
+      ENABLE_REVIEW_STATUS_UPDATES: "true"  # put "false" to turn herziening nodig off
     labels:
       - "logging=true"
     restart: always
