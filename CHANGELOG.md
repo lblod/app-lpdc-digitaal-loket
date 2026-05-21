@@ -1,8 +1,11 @@
 # Changelog
 ## Unreleased
+- Add option to turn herziening nodig off. To turn this on put DISABLE_REVIEW_STATUS_UPDATES: "true" in docker-compose.override [LPDC-1650]
+
 ### Management
 - Bump to [v0.54.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.2) [LPDC-1644]
 - Bump to [v0.54.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.3) [LPDC-1661]
+- Bump to [v0.54.4](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.4) [LPDC-1650]
 - Bump acm-login service [DL-7346]
 
 ### Deploy notes
@@ -15,7 +18,6 @@ drc pull lpdc-management login-lpdc login-dashboard && drc up -d lpdc-management
 - Run LPDC Complete Report sequentially [LPDC-1631]
 - Mail if sending instance fails [LPDC-1627]
 - LPDC rapporten - downloads are json files instead of csv [LPDC-1637]
-- Add option to turn herziening nodig off [LPDC-1650]
 
 ### Frontend
 - Bump to [v0.30.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.30.0) [LPDC-1619]
