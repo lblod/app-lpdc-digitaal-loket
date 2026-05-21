@@ -1,4 +1,15 @@
 # Changelog
+## Unreleased
+### Management
+- Bump to [v0.54.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.2) [LPDC-1644]
+- Bump to [v0.54.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.3) [LPDC-1661]
+- Bump acm-login service [DL-7346]
+
+### Deploy notes
+
+```
+drc pull lpdc-management login-lpdc login-dashboard && drc up -d lpdc-management login-lpdc login-dashboard
+```
 
 ## v0.37.0 (2026-05-04)
 - Run LPDC Complete Report sequentially [LPDC-1631]
