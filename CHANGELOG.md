@@ -14,6 +14,14 @@
 drc pull lpdc-management login-lpdc login-dashboard && drc up -d lpdc-management login-lpdc login-dashboard
 ```
 
+## v0.37.1 (2026-05-22)
+- Herziening nodig toggle [LPDC-1650]. To avoid deploying everything untested [LPDC-1661]. To turn this on put DISABLE_REVIEW_STATUS_UPDATES: "true" in docker-compose.override
+
+### Deploy notes
+```bash
+drc pull lpdc-management && drc up -d lpdc-management 
+```
+
 ## v0.37.0 (2026-05-04)
 - Run LPDC Complete Report sequentially [LPDC-1631]
 - Mail if sending instance fails [LPDC-1627]
