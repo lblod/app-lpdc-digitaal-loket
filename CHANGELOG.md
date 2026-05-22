@@ -1,4 +1,14 @@
 # Changelog
+## Unreleased
+### Management
+- Bump to [v0.54.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.2) [LPDC-1644]
+- Bump acm-login service [DL-7346]
+
+### Deploy notes
+
+```
+drc pull lpdc-management login-lpdc login-dashboard && drc up -d lpdc-management login-lpdc login-dashboard
+```
 
 ## v0.37.1 (2026-05-22)
 - Herziening nodig toggle [LPDC-1650]. To avoid deploying everything untested [LPDC-1661]. To turn this on put DISABLE_REVIEW_STATUS_UPDATES: "true" in docker-compose.override
