@@ -1,6 +1,7 @@
 # Changelog
 ## Unreleased
 - Add option to turn herziening nodig off. To turn this on put DISABLE_REVIEW_STATUS_UPDATES: "true" in docker-compose.override [LPDC-1650]
+- Add a script to delete the inaccurate herziening nodig labels [LPDC-1638]
 
 ### Management
 - Bump to [v0.54.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.2) [LPDC-1644]
@@ -13,6 +14,13 @@
 
 ```
 drc pull lpdc-management login-lpdc login-dashboard && drc up -d lpdc-management login-lpdc login-dashboard
+
+```
+#### Management inaccurate herziening nodig
+```bash
+drc exec -it lpdc-management sh
+cd app/migration-scripts/herziening-nodig-delete
+npm install --include=dev && SPARQL_URL=http://virtuoso:8890/sparql npm start
 ```
 
 ## v0.37.1 (2026-05-22)
