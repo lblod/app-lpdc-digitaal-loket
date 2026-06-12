@@ -217,7 +217,7 @@ services:
     logging: *default-logging
 
   login-dashboard:
-    image: lblod/acmidm-login-service:0.12.1.rc-2
+    image: lblod/acmidm-login-service:0.13.0
     environment:
       LOG_SINK_URL: "http://sink"
       MU_APPLICATION_AUTH_ROLE_CLAIM: "abb_lpdc_rol_3d"
