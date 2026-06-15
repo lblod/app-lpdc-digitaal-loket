@@ -50,6 +50,7 @@
                 (:feedback-available :boolean ,(s-prefix "lpdcExt:feedbackAvailable"))
                 (:revision-modified-date :datetime ,(s-prefix "lpdcExt:revisionModifiedDate"))
                 (:formal-informal-modified-date :datetime ,(s-prefix "lpdcExt:formalInformalModifiedDate"))
+                (:feedback-modified-date :datetime ,(s-prefix "lpdcExt:feedbackModifiedDate"))
                 (:date-sent :datetime ,(s-prefix "schema:dateSent")))
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")
