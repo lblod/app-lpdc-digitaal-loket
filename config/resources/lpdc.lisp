@@ -48,7 +48,7 @@
                 (:needs-conversion-from-formal-to-informal :boolean ,(s-prefix "lpdcExt:needsConversionFromFormalToInformal"))
                 (:for-municipality-merger :boolean ,(s-prefix "lpdcExt:forMunicipalityMerger"))
                 (:feedback-available :boolean ,(s-prefix "lpdcExt:feedbackAvailable"))
-                (:revision-modified-date :datetime ,(s-prefix "lpdcExt:revisionModifiedDate"))
+                (:review-status-modified-date :datetime ,(s-prefix "lpdcExt:reviewStatusModifiedDate"))
                 (:formal-informal-modified-date :datetime ,(s-prefix "lpdcExt:formalInformalModifiedDate"))
                 (:feedback-modified-date :datetime ,(s-prefix "lpdcExt:feedbackModifiedDate"))
                 (:date-sent :datetime ,(s-prefix "schema:dateSent")))
