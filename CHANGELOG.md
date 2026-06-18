@@ -10,6 +10,7 @@
 - Bump to [v0.54.4](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.4) [LPDC-1650]
 - Bump to [v0.55.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.55.0) [LPDC-1638]
 - Bump acm-login service [DL-7346]
+- Bump to [v0.55.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.55.1) [LPDC-1662]
 
 ### Deploy notes
 
