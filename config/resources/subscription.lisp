@@ -10,7 +10,6 @@
                 (:notify-feedback :boolean ,(s-prefix "ext:notifyFeedback"))
                 (:notify-review-needed :boolean ,(s-prefix "ext:notifyReviewNeeded"))
                 (:notify-u-je :boolean ,(s-prefix "ext:notifyUJe"))
-                (:notify-clicked :boolean ,(s-prefix "ext:notifyClicked")))
   :has-one `((gebruiker :via ,(s-prefix "dct:creator")
                         :as "creator"))
   :has-many `((public-service :via ,(s-prefix "ext:subscriptionInstance")
