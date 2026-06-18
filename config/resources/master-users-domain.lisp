@@ -9,6 +9,9 @@
               (bestuurseenheid :via ,(s-prefix "foaf:member")
                               :as "bestuurseenheden")
              )
+  :has-one `((subscription :via ,(s-prefix "dct:creator")
+                          :inverse t
+                          :as "subscription"))
   :on-path "gebruikers"
 )
 
