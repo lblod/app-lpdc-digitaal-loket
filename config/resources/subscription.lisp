@@ -3,7 +3,7 @@
   :properties `((:subscription-frequency :string ,(s-prefix "ext:subscriptionFrequency"))
                 (:subscription-active :boolean ,(s-prefix "ext:subscriptionActive"))
                 (:email-address :string ,(s-prefix "ext:emailAddress"))
-                (:status-report-enabled :boolean ,(s-prefix "ext:statusReportEnabled"))
+                (:status-report-enabled :boolean ,(s-prefix "lpdcExt:statusReportEnabled"))
                 (:last-notified-at :datetime ,(s-prefix "lpdcExtext:lastNotifiedAt"))
                 (:notify-feedback :boolean ,(s-prefix "lpdcExtext:notifyFeedback"))
                 (:notify-review-status :boolean ,(s-prefix "lpdcExtext:notifyReviewStatus"))
