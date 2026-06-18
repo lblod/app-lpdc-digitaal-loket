@@ -64,7 +64,7 @@
                      :as "creator"))
   :has-many `((feedback :via ,(s-prefix "skos:primarySubject")
                                 :inverse t
-                                :as "feedback"))
+                                :as "feedback")
               (subscription :via ,(s-prefix "ext:subscriptionInstance")
                           :inverse t
                           :as "subscriptions"))
