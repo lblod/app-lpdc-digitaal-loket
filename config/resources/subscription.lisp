@@ -9,7 +9,7 @@
                 (:last-notified-at :datetime ,(s-prefix "ext:lastNotifiedAt"))
                 (:notify-feedback :boolean ,(s-prefix "ext:notifyFeedback"))
                 (:notify-review-needed :boolean ,(s-prefix "ext:notifyReviewNeeded"))
-                (:notify-u-je :boolean ,(s-prefix "ext:notifyUJe"))
+                (:notify-u-je :boolean ,(s-prefix "ext:notifyUJe")))
   :has-one `((gebruiker :via ,(s-prefix "dct:creator")
                         :as "creator"))
   :has-many `((public-service :via ,(s-prefix "ext:subscriptionInstance")
