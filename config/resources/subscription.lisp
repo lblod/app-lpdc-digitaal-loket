@@ -12,7 +12,7 @@
                 (:notify-clicked :boolean ,(s-prefix "ext:notifyClicked")))
   :has-one `((gebruiker :via ,(s-prefix "dct:creator")
                         :as "creator"))
-  :has-many `((public-service :via ,(s-prefix "ext:subject")
+  :has-many `((public-service :via ,(s-prefix "ext:subscriptionInstance")
                               :as "instances"))
   :resource-base (s-url "http://data.lblod.info/id/subscriptions/")
   :features '(include-uri)
