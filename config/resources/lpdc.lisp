@@ -65,6 +65,9 @@
   :has-many `((feedback :via ,(s-prefix "skos:primarySubject")
                                 :inverse t
                                 :as "feedback"))
+              (subscription :via ,(s-prefix "ext:subscriptionInstance")
+                          :inverse t
+                          :as "subscriptions"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
   :features '(include-uri)
   :on-path "public-services"
