@@ -1,6 +1,7 @@
 (define-resource subscription ()
   :class (s-prefix "ext:Subscription")
-  :properties `((:subscription-frequency :string ,(s-prefix "ext:subscriptionFrequency"))
+  :properties `((:organization-uuid :string ,(s-prefix "ext:organizationUuid"))
+                (:subscription-frequency :string ,(s-prefix "ext:subscriptionFrequency"))
                 (:subscription-active :boolean ,(s-prefix "ext:subscriptionActive"))
                 (:email-address :string ,(s-prefix "ext:emailAddress"))
                 (:scope :string ,(s-prefix "ext:scope"))
