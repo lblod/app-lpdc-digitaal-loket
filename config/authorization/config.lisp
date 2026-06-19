@@ -131,7 +131,7 @@
   ("schema2:AskAction" -> _)
   ("schema2:ReplyAction" -> _)
   ("schema2:DataFeedItem" -> _)
-  ("ext:Subscription" -> _))
+  ("ext:NotificationPreference" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)

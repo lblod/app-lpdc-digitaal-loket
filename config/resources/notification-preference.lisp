@@ -1,6 +1,6 @@
-(define-resource subscription ()
-  :class (s-prefix "ext:Subscription")
-  :properties `((:frequency :string ,(s-prefix "ext:subscriptionFrequency"))
+(define-resource notification-preference ()
+  :class (s-prefix "ext:NotificationPreference")
+  :properties `((:frequency :string ,(s-prefix "ext:notificationFrequency"))
                 (:email-address :string ,(s-prefix "ext:mailAdresVoorNotificaties"))
                 (:status-report-enabled :boolean ,(s-prefix "lpdcExt:statusReportEnabled"))
                 (:last-notified-at :datetime ,(s-prefix "lpdcExt:lastNotifiedAt"))
@@ -8,11 +8,10 @@
                 (:notify-review-status :boolean ,(s-prefix "lpdcExt:notifyReviewStatus"))
                 (:notify-formal-informal :boolean ,(s-prefix "lpdcExt:notifyFormalInformal")))
   :has-one `((gebruiker :via ,(s-prefix "lpdcExt:hasNotificationPreference")
-                      :inverse t
-                      :as "gebruiker"))
-  :has-many `((public-service :via ,(s-prefix "ext:subscriptionInstance")
+                        :inverse t
+                        :as "gebruiker"))
+  :has-many `((public-service :via ,(s-prefix "ext:notificationInstance")
                               :as "instances"))
-  :resource-base (s-url "http://data.lblod.info/id/subscriptions/")
+  :resource-base (s-url "http://data.lblod.info/id/notification-preferences/")
   :features '(include-uri)
-  :on-path "subscriptions"
-)
+  :on-path "notification-preferences")
