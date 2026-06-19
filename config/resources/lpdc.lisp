@@ -65,7 +65,7 @@
   :has-many `((feedback :via ,(s-prefix "skos:primarySubject")
                         :inverse t
                         :as "feedback")
-              (notification-preference :via ,(s-prefix "lpdcExt:notificationInstance")  ; fixed: same predicate as notification-preference, correct inverse resource
+              (notification-preference :via ,(s-prefix "lpdcExt:notificationInstance") 
                                        :inverse t
                                        :as "notification-preferences"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
