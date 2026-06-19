@@ -3,7 +3,7 @@
   :resource-base (s-url "http://data.lblod.info/id/gebruiker/")
   :properties `((:voornaam :string ,(s-prefix "foaf:firstName"))
                 (:achternaam :string ,(s-prefix "foaf:familyName"))
-                (:rijksregister-nummer :string ,(s-prefix "dct:identifier"))
+                (:mail-adres :string ,(s-prefix "foaf:email")))
                 (:wil-mail-ontvangen :boolean ,(s-prefix "ext:wilMailOntvangen")))
   :has-many `((account :via ,(s-prefix "foaf:account")
                        :as "account")
