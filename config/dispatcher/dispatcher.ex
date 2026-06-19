@@ -189,12 +189,16 @@ defmodule Dispatcher do
   # Subscription
   #################################################################
 
-  match "/notification-preferences/*path", @json do
-    forward conn, path, "http://resource/notification-preferences/"
-  end
-
   match "/notification-rules/*path", @json do
     forward conn, path, "http://resource/notification-rules/"
+  end
+
+  match "/notification-rule-configs/*path", @json do
+    forward conn, path, "http://resource/notification-rule-configs/"
+  end
+
+  match "/notification-preferences/*path", @json do
+    forward conn, path, "http://resource/notification-preferences/"
   end
   
   #################################################################
