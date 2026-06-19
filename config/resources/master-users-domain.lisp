@@ -4,7 +4,6 @@
   :properties `((:voornaam :string ,(s-prefix "foaf:firstName"))
                 (:achternaam :string ,(s-prefix "foaf:familyName"))
                 (:mail-adres :string ,(s-prefix "foaf:email")))
-                (:wil-mail-ontvangen :boolean ,(s-prefix "ext:wilMailOntvangen")))
   :has-many `((account :via ,(s-prefix "foaf:account")
                        :as "account")
               (bestuurseenheid :via ,(s-prefix "foaf:member")

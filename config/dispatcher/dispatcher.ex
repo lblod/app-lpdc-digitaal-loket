@@ -193,6 +193,9 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/notification-preferences/"
   end
 
+  match "/notification-rules/*path", @json do
+    forward conn, path, "http://resource/notification-rules/"
+  end
   #################################################################
   # Account control
   #################################################################
