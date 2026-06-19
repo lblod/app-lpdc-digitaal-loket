@@ -7,9 +7,9 @@
   :has-many `((account :via ,(s-prefix "foaf:account")
                        :as "account")
               (bestuurseenheid :via ,(s-prefix "foaf:member")
-                              :as "bestuurseenheden"))
+                               :as "bestuurseenheden"))
   :has-one `((notification-preference :via ,(s-prefix "lpdcExt:hasNotificationPreference")
-                                       :as "notification-preference"))
+                                      :as "notification-preference"))
   :on-path "gebruikers"
 )
 
