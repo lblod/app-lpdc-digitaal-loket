@@ -131,7 +131,7 @@
   ("schema2:AskAction" -> _)
   ("schema2:ReplyAction" -> _)
   ("schema2:DataFeedItem" -> _)
-  ("lpdcExt:NotificationRule" -> _)
+  ("skos:Concept" -> _)
   ("lpdcExt:NotificationPreference" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
