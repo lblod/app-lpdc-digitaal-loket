@@ -14,4 +14,5 @@
                               :as "instances"))
   :resource-base (s-url "http://data.lblod.info/id/subscriptions/")
   :features '(include-uri)
-  :on-path "subscriptions")
+  :on-path "subscriptions"
+)
