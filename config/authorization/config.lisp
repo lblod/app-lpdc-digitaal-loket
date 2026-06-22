@@ -48,7 +48,6 @@
   :terms "http://purl.org/dc/terms/"
   :locn "http://www.w3.org/ns/locn#"
   :lpdc "http://data.lblod.info/vocabularies/lpdc/"
-  :lpdcExt "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#"
   :adms "http://www.w3.org/ns/adms#"
   :reporting "http://lblod.data.gift/vocabularies/reporting/"
   :cogs "http://vocab.deri.ie/cogs#"
@@ -133,8 +132,8 @@
   ("schema2:ReplyAction" -> _)
   ("schema2:DataFeedItem" -> _)
   ("skos:Concept" -> _)
-  ("lpdcExt:NotificationRuleConfig" -> _)
-  ("lpdcExt:NotificationPreference" -> _))
+  ("ipdc-lpdc:NotificationRuleConfig" -> _)
+  ("ipdc-lpdc:NotificationPreference" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)
