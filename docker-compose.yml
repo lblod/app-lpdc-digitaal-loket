@@ -484,3 +484,10 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
+  lpdc-email-notification-service:
+    image: lblod/lpdc-email-notification-service:feature-notification-service
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
