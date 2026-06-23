@@ -150,6 +150,14 @@
   ("nfo:DataContainer" -> _)
   ("nfo:FileDataObject" -> _))
 
+(define-graph jobs ("http://mu.semte.ch/graphs/system/jobs")
+  ("cogs:Job" -> _)
+  ("task:Task" -> _)
+  ("core:Error" -> _)
+  ("adms:Status" -> _)
+  ("nfo:DataContainer" -> _)
+  ("nfo:FileDataObject" -> _))
+
 (supply-allowed-group "public")
 
 (supply-allowed-group "LoketLB-LPDCGebruiker"
@@ -221,3 +229,7 @@
 (grant (read write)
   :to-graph (organizations-admin)
   :for-allowed-group "LoketLB-AdminDashboardLPDC")
+
+(grant (read write)
+  :to-graph (jobs)
+  :for-allowed-group "admin")
