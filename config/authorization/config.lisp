@@ -51,7 +51,8 @@
   :adms "http://www.w3.org/ns/adms#"
   :reporting "http://lblod.data.gift/vocabularies/reporting/"
   :cogs "http://vocab.deri.ie/cogs#"
-  :core "http://open-services.net/ns/core#")
+  :core "http://open-services.net/ns/core#"
+  :task "http://redpencil.data.gift/vocabularies/tasks/")
 
 (type-cache::add-type-for-prefix "http://mu.semte.ch/sessions/" "http://mu.semte.ch/vocabularies/session/Session")
 
