@@ -260,7 +260,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.55.0
+    image: lblod/lpdc-management-service:0.55.1
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
@@ -458,7 +458,7 @@ services:
     logging: *default-logging
 
   lpdc-feedback-management-service:
-    image: lblod/lpdc-feedback-management-service:1.0.4
+    image: lblod/lpdc-feedback-management-service:1.0.5
     environment:
       IPDC_JSON_ENDPOINT: "Insert ipdc feedback publish endpoint"
       IPDC_X_API_KEY: 'Insert credentials for publish endpoint'
