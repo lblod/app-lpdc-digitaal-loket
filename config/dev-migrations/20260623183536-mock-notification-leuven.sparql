@@ -16,9 +16,12 @@ INSERT DATA {
       mu:uuid "a1b2c3d4-e5f6-7890-abcd-ef1234567890" ;
       schema:email "test@example.com" ;
       lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/b2c3d4e5-f6a7-8901-bcde-f12345678901> ;
-      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/182d1441-db0f-4a03-851f-a09ff28ba781> ;
+      lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/1b58b0f3-582d-43f2-a6e5-8da247223f58> ;
+      lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/43768631-fdde-4a41-934c-9936d73b0bd9> ;
       lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> ;
-      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/1babf63a-a053-4c61-b1b8-adfe00c84c96> .
+      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/de97836e-8a72-456e-912b-42ff79008b4c> ;
+      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/1babf63a-a053-4c61-b1b8-adfe00c84c96> ;
+      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/34f631e8-d7fc-4c89-9c0c-901db34cf18a> .
 
     <http://data.lblod.info/id/notification-rule-configs/b2c3d4e5-f6a7-8901-bcde-f12345678901>
       a lpdcExt:NotificationRuleConfig ;
