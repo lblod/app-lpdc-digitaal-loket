@@ -18,6 +18,7 @@ INSERT DATA {
       lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/b2c3d4e5-f6a7-8901-bcde-f12345678901> ;
       lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/1b58b0f3-582d-43f2-a6e5-8da247223f58> ;
       lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/43768631-fdde-4a41-934c-9936d73b0bd9> ;
+      lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf> ;
       lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> ;
       lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/de97836e-8a72-456e-912b-42ff79008b4c> ;
       lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/1babf63a-a053-4c61-b1b8-adfe00c84c96> ;
@@ -40,5 +41,11 @@ INSERT DATA {
       mu:uuid "43768631-fdde-4a41-934c-9936d73b0bd9" ;
       lpdcExt:notificationFrequency "weekly" ;
       lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/906311f3-f9f0-4b02-80de-d339df39a4ad> .
+    
+    <http://data.lblod.info/id/notification-rule-configs/e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf>
+      a lpdcExt:NotificationRuleConfig ;
+      mu:uuid "e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf" ;
+      lpdcExt:notificationFrequency "twice a year" ;
+      lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/e2dcc9bf-e105-47ab-90ac-5e8119f464bc> .
   }
 }
