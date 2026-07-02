@@ -45,7 +45,6 @@ INSERT DATA {
     <http://data.lblod.info/id/notification-rule-configs/e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf>
       a lpdcExt:NotificationRuleConfig ;
       mu:uuid "e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf" ;
-      lpdcExt:notificationFrequency "twice a year" ;
       lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/e2dcc9bf-e105-47ab-90ac-5e8119f464bc> .
   }
 }
