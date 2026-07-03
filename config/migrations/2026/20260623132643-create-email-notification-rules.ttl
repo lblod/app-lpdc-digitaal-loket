@@ -32,11 +32,11 @@
     skos:prefLabel    "U/je"@nl ;
     skos:definition   "U/je werd gewijzigd"@nl .
 
-<http://lblod.data.gift/concepts/e2dcc9bf-e105-47ab-90ac-5e8119f464bc>
+<http://lblod.data.gift/concepts/634522c3-f5bd-4f53-82d3-983b7cbbdb10>
     a                 skos:Concept ;
-    mu:uuid           "e2dcc9bf-e105-47ab-90ac-5e8119f464bc" ;
+    mu:uuid           "634522c3-f5bd-4f53-82d3-983b7cbbdb10" ;
     skos:topConceptOf <http://lblod.data.gift/concept-schemes/8b9fcaa2-e346-4e48-b9b7-757a6f6acb04> ;
     skos:inScheme     <http://lblod.data.gift/concept-schemes/8b9fcaa2-e346-4e48-b9b7-757a6f6acb04> ;
-    skos:prefLabel    "Statusrapport"@nl ;
-    skos:definition   "Halfjaarlijks statusrapport beschikbaar op 1 januari en 1 juli"@nl .
+    skos:prefLabel    "Status rapport"@nl ;
+    skos:definition   "Status rapport"@nl .
 

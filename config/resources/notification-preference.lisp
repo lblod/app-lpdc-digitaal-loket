@@ -1,17 +1,10 @@
-(define-resource notification-rule ()
-  :class (s-prefix "skos:Concept")
-  :properties `((:label :string ,(s-prefix "skos:prefLabel"))
-                (:description :string ,(s-prefix "skos:definition")))
-  :resource-base (s-url "http://data.lblod.info/id/notification-rules/")
-  :features '(include-uri)
-  :on-path "notification-rules"
-)
-
 (define-resource notification-rule-config ()
   :class (s-prefix "lpdcExt:NotificationRuleConfig")
-  :properties `((:frequency :string ,(s-prefix "lpdcExt:notificationFrequency")))
-  :has-one `((notification-rule :via ,(s-prefix "lpdcExt:hasEnabledRule")
-                                :as "notification-rule"))
+  :properties `((:frequency :string ,(s-prefix "lpdcExt:notificationFrequency"))
+                (:notification-rule :url ,(s-prefix "lpdcExt:hasEnabledRule")))
+  :has-one `((notification-preference :via ,(s-prefix "lpdcExt:hasNotificationRuleConfig")
+                                          :inverse t
+                                          :as "notification-preference"))
   :resource-base (s-url "http://data.lblod.info/id/notification-rule-config/")
   :features '(include-uri)
   :on-path "notification-rule-configs"
@@ -26,8 +19,7 @@
                                         :as "notification-rule-configs")
               (public-service :via ,(s-prefix "lpdcExt:notificationInstance")
                               :as "instances"))
-  :has-one `((gebruiker :via ,(s-prefix "lpdcExt:hasNotificationPreference")
-                        :inverse t
+  :has-one `((gebruiker :via ,(s-prefix "dct:creator")
                         :as "gebruiker"))
   :resource-base (s-url "http://data.lblod.info/id/notification-preferences/")
   :features '(include-uri)

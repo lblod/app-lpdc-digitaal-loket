@@ -8,7 +8,8 @@
                        :as "account")
               (bestuurseenheid :via ,(s-prefix "foaf:member")
                                :as "bestuurseenheden"))
-  :has-one `((notification-preference :via ,(s-prefix "lpdcExt:hasNotificationPreference")
+  :has-one `((notification-preference :via ,(s-prefix "dct:creator")
+                                      :inverse t
                                       :as "notification-preference"))
   :on-path "gebruikers"
 )
