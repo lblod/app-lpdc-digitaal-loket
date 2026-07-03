@@ -32,3 +32,11 @@
     skos:prefLabel    "U/je"@nl ;
     skos:definition   "U/je werd gewijzigd"@nl .
 
+<http://lblod.data.gift/concepts/634522c3-f5bd-4f53-82d3-983b7cbbdb10>
+    a                 skos:Concept ;
+    mu:uuid           "634522c3-f5bd-4f53-82d3-983b7cbbdb10" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/8b9fcaa2-e346-4e48-b9b7-757a6f6acb04> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/8b9fcaa2-e346-4e48-b9b7-757a6f6acb04> ;
+    skos:prefLabel    "Status rapport"@nl ;
+    skos:definition   "Status rapport"@nl .
+
