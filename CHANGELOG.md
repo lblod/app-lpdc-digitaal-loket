@@ -4,6 +4,8 @@
 - Add a script to delete the inaccurate herziening nodig labels [LPDC-1638]
 - Bump acmidm-login-service to `v0.13.0` [LPDC-1645]
 - Bump lpdc-feedback-management-service to `v1.0.5` [LPDC-1665]
+### Frontend
+- Bump to [v0.31.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.31.0) [LPDC-1479] [LPDC-1636]
 
 ### Management
 - Bump to [v0.54.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.54.2) [LPDC-1644]
@@ -16,7 +18,7 @@
 ### Deploy notes
 
 ```
-drc pull lpdc-management login-lpdc login-dashboard lpdc-feedback-management-service && drc up -d lpdc-management login-lpdc login-dashboard lpdc-feedback-management-service
+drc pull lpdc lpdc-management login-lpdc login-dashboard lpdc-feedback-management-service && drc up -d lpdc lpdc-management login-lpdc login-dashboard lpdc-feedback-management-service
 
 ```
 #### Management inaccurate herziening nodig
