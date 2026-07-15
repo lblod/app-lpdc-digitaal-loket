@@ -150,10 +150,6 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/log-sources/"
   end
 
-  match "/status-codes/*path" do
-    forward conn, path, "http://resource/acm-idm-service-log-entries/" # TODO: check if needed?
-  end
-
   #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
