@@ -4,7 +4,7 @@ PREFIX schema: <http://schema.org/>
 PREFIX ext:   <http://mu.semte.ch/vocabularies/ext/>
 
 CONSTRUCT {
-  ?s ext:wilMailOntvangen ?emailString .
+  ?s ext:mailAdresVoorNotificaties ?emailString .
 } WHERE {
   ?s a besluit:Bestuurseenheid;
     org:classification ?classification ;
