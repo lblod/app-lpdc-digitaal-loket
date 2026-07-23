@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## v0.37.2 (2026-07-23)
 - Add option to turn herziening nodig off. To turn this on put DISABLE_REVIEW_STATUS_UPDATES: "true" in docker-compose.override [LPDC-1650]
 - Add a script to delete the inaccurate herziening nodig labels [LPDC-1638]
 - Bump acmidm-login-service to `v0.13.0` [LPDC-1645]
