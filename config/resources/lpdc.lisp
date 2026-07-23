@@ -61,10 +61,13 @@
              (gebruiker :via ,(s-prefix "ext:lastModifiedBy")
                         :as "last-modifier")
              (gebruiker :via ,(s-prefix "dct:creator")
-                     :as "creator"))
+                        :as "creator"))
   :has-many `((feedback :via ,(s-prefix "skos:primarySubject")
-                                :inverse t
-                                :as "feedback"))
+                        :inverse t
+                        :as "feedback")
+              (notification-preference :via ,(s-prefix "lpdcExt:notificationInstance") 
+                                       :inverse t
+                                       :as "notification-preferences"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
   :features '(include-uri)
   :on-path "public-services"

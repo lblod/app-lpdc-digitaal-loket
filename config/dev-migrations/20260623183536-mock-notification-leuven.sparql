@@ -1,0 +1,50 @@
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX schema: <http://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/notification-preferences/a1b2c3d4-e5f6-7890-abcd-ef1234567890>
+      a lpdcExt:NotificationPreference ;
+      mu:uuid "a1b2c3d4-e5f6-7890-abcd-ef1234567890" ;
+      schema:email "test@example.com" ;
+      dct:creator <http://data.lblod.info/id/persoon/f8056f91a397696befe8984d893517b9> ;
+      lpdcExt:notificationsEnabled true ;
+      lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/b2c3d4e5-f6a7-8901-bcde-f12345678901> ;
+      lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/1b58b0f3-582d-43f2-a6e5-8da247223f58> ;
+      lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/43768631-fdde-4a41-934c-9936d73b0bd9> ;
+      lpdcExt:hasNotificationRuleConfig <http://data.lblod.info/id/notification-rule-configs/e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf> ;
+      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> ;
+      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/de97836e-8a72-456e-912b-42ff79008b4c> ;
+      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/1babf63a-a053-4c61-b1b8-adfe00c84c96> ;
+      lpdcExt:notificationInstance <http://data.lblod.info/id/public-service/34f631e8-d7fc-4c89-9c0c-901db34cf18a> .
+
+    <http://data.lblod.info/id/notification-rule-configs/b2c3d4e5-f6a7-8901-bcde-f12345678901>
+      a lpdcExt:NotificationRuleConfig ;
+      mu:uuid "b2c3d4e5-f6a7-8901-bcde-f12345678901" ;
+      lpdcExt:notificationFrequency "weekly" ;
+      lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/60cd1b30-fa29-4fd9-a618-2f8566153849> .
+
+    <http://data.lblod.info/id/notification-rule-configs/1b58b0f3-582d-43f2-a6e5-8da247223f58>
+      a lpdcExt:NotificationRuleConfig ;
+      mu:uuid "1b58b0f3-582d-43f2-a6e5-8da247223f58" ;
+      lpdcExt:notificationFrequency "weekly" ;
+      lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/83d7bade-9b45-4d28-9348-3edcdcf99edc> .
+
+    <http://data.lblod.info/id/notification-rule-configs/43768631-fdde-4a41-934c-9936d73b0bd9>
+      a lpdcExt:NotificationRuleConfig ;
+      mu:uuid "43768631-fdde-4a41-934c-9936d73b0bd9" ;
+      lpdcExt:notificationFrequency "weekly" ;
+      lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/906311f3-f9f0-4b02-80de-d339df39a4ad> .
+    
+    <http://data.lblod.info/id/notification-rule-configs/e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf>
+      a lpdcExt:NotificationRuleConfig ;
+      mu:uuid "e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf" ;
+      lpdcExt:notificationFrequency "bi-annual" ;
+      lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/634522c3-f5bd-4f53-82d3-983b7cbbdb10> .
+  }
+}

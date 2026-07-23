@@ -1,0 +1,26 @@
+(define-resource notification-rule-config ()
+  :class (s-prefix "lpdcExt:NotificationRuleConfig")
+  :properties `((:frequency :string ,(s-prefix "lpdcExt:notificationFrequency"))
+                (:notification-rule :url ,(s-prefix "lpdcExt:hasEnabledRule")))
+  :has-one `((notification-preference :via ,(s-prefix "lpdcExt:hasNotificationRuleConfig")
+                                          :inverse t
+                                          :as "notification-preference"))
+  :resource-base (s-url "http://data.lblod.info/id/notification-rule-config/")
+  :features '(include-uri)
+  :on-path "notification-rule-configs"
+)
+
+(define-resource notification-preference ()
+  :class (s-prefix "lpdcExt:NotificationPreference")
+  :properties `((:notifications-enabled :boolean ,(s-prefix "lpdcExt:notificationsEnabled"))
+                (:email-address :string ,(s-prefix "schema:email")))
+  :has-many `((notification-rule-config :via ,(s-prefix "lpdcExt:hasNotificationRuleConfig")
+                                        :as "notification-rule-configs")
+              (public-service :via ,(s-prefix "lpdcExt:notificationInstance")
+                              :as "instances"))
+  :has-one `((gebruiker :via ,(s-prefix "dct:creator")
+                        :as "gebruiker"))
+  :resource-base (s-url "http://data.lblod.info/id/notification-preferences/")
+  :features '(include-uri)
+  :on-path "notification-preferences"
+)

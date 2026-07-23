@@ -3,12 +3,14 @@
   :resource-base (s-url "http://data.lblod.info/id/gebruiker/")
   :properties `((:voornaam :string ,(s-prefix "foaf:firstName"))
                 (:achternaam :string ,(s-prefix "foaf:familyName"))
-                (:rijksregister-nummer :string ,(s-prefix "dct:identifier")))
+                (:mail-adres :string ,(s-prefix "foaf:email")))
   :has-many `((account :via ,(s-prefix "foaf:account")
                        :as "account")
               (bestuurseenheid :via ,(s-prefix "foaf:member")
-                              :as "bestuurseenheden")
-             )
+                               :as "bestuurseenheden"))
+  :has-one `((notification-preference :via ,(s-prefix "dct:creator")
+                                      :inverse t
+                                      :as "notification-preference"))
   :on-path "gebruikers"
 )
 

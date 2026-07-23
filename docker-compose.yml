@@ -204,8 +204,6 @@ services:
     image: lblod/frontend-dashboard:1.10.0
     environment:
       EMBER_LOGIN_ROUTE: "acmidm-login"
-      EMBER_DISABLE_ERRORS: "true"
-      EMBER_DISABLE_JOBS: "true"
       EMBER_ACMIDM_CLIENT_ID: "<CLIENT_ID>"
       EMBER_ACMIDM_BASE_URL: "<BASE_URL>"
       EMBER_ACMIDM_REDIRECT_URL: "<REDIRECT_URL>"
@@ -482,6 +480,13 @@ services:
     image: redpencil/deliver-email-service:1.0.0
     environment:
       MAILBOX_URI: "http://data.lblod.info/id/mailboxes/1"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  lpdc-email-notification-service:
+    image: lblod/lpdc-email-notification-service:feature-notification-service
     labels:
       - "logging=true"
     restart: always
