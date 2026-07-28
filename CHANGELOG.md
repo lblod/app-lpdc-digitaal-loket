@@ -12,6 +12,9 @@
 - LPDC Statusreport - send to bestuurseenheden [LPDC-1681]
 
 ### Deploy notes
+#### Development
+- Frontend changes are currently available through a custom branch configured via docker-compose.override.yml.
+
 #### Development & QA
 `docker-compose.override.yml`
 ```yml
