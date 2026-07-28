@@ -1,4 +1,31 @@
 # Changelog
+## Unreleased
+### Email notification service
+- MVP version: Notifications front end for LPDC [LPDC-1657]
+- Finalize notifications front end for LPDC [LPDC-1668]
+- New service for notifications [LPDC-1656]
+- handle adhoc/instant notifications [LPDC-1673]
+- Finalize Notifications backend [LPDC-1675]
+- Implementation of notification rules [LPDC-1659]
+- LPDC notification - report 2 times a year [LPDC-1676]
+- LPDC Notifiaction BE - Review fixes [LPDC-1686]
+- LPDC Statusreport - send to bestuurseenheden [LPDC-1681]
+
+### Deploy notes
+#### Development & QA
+`docker-compose.override.yml`
+```yml
+  lpdc-email-notification-service:
+    environment:
+      ENABLE_NOTIFICATIONS: "false"
+```
+#### All environments
+```bash
+drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
+drc restart resource dispatcher cache database
+drc up -d lpdc-email-notification-service
+```
+
 ## v0.37.2 (2026-07-23)
 - Add option to turn herziening nodig off. To turn this on put DISABLE_REVIEW_STATUS_UPDATES: "true" in docker-compose.override [LPDC-1650]
 - Add a script to delete the inaccurate herziening nodig labels [LPDC-1638]
