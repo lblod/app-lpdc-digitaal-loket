@@ -24,6 +24,8 @@
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc restart resource dispatcher cache database
 drc up -d lpdc-email-notification-service
+drc pull lpdc && drc up -d lpdc
+
 ```
 
 ## v0.37.2 (2026-07-23)
