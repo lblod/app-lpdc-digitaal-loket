@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.30.0
+    image: lblod/frontend-lpdc:0.31.0
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
@@ -456,7 +456,7 @@ services:
     logging: *default-logging
 
   lpdc-feedback-management-service:
-    image: lblod/lpdc-feedback-management-service:1.0.4
+    image: lblod/lpdc-feedback-management-service:1.0.5
     environment:
       IPDC_JSON_ENDPOINT: "Insert ipdc feedback publish endpoint"
       IPDC_X_API_KEY: 'Insert credentials for publish endpoint'
