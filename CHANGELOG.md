@@ -1,4 +1,12 @@
 # Changelog
+## Unreleased
+- Bump frontend to version [0.32.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.32.0) [LPDC-1688]
+
+### Deploy notes
+```bash
+drc pull lpdc && drc up -d lpdc
+```
+
 ## v0.37.2 (2026-07-23)
 - Add option to turn herziening nodig off. To turn this on put DISABLE_REVIEW_STATUS_UPDATES: "true" in docker-compose.override [LPDC-1650]
 - Add a script to delete the inaccurate herziening nodig labels [LPDC-1638]
