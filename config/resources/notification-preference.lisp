@@ -19,7 +19,9 @@
               (public-service :via ,(s-prefix "lpdcExt:notificationInstance")
                               :as "instances"))
   :has-one `((gebruiker :via ,(s-prefix "dct:creator")
-                        :as "gebruiker"))
+                        :as "gebruiker")
+             (bestuurseenheid :via ,(s-prefix "org:linkedTo")
+                        :as "bestuurseenheid"))
   :resource-base (s-url "http://data.lblod.info/id/notification-preferences/")
   :features '(include-uri)
   :on-path "notification-preferences"
