@@ -1,10 +1,32 @@
 # Changelog
 ## Unreleased
 - Bump frontend to version [0.32.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.32.0) [LPDC-1688]
+### Management
+- Bump to [v0.56.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.0) [LPDC-1698] [LPDC-1692]
+
+#### All environments
+*lpdc-management retry snapshot processing migration:*
+```
+PREFIX schema: <http://schema.org/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+DELETE { GRAPH ?g { ?m ?p ?o } }
+WHERE {
+  GRAPH ?g {
+    ?m a lpdcExt:VersionedLdesSnapshotProcessedMarker .
+    ?m schema:status "failed" .
+    ?m schema:dateCreated ?date ;
+       schema:error ?error .
+    ?m ?p ?o .
+  }
+  FILTER(STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/lpdc/instancesnapshots"))
+  FILTER(?date > "2026-07-14T14:06:05.210Z"^^xsd:dateTime)
+}
+```
 
 ### Deploy notes
 ```bash
-drc pull lpdc && drc up -d lpdc
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
 ```
 
 ## v0.37.2 (2026-07-23)
