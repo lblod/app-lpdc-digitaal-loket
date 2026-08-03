@@ -1,5 +1,8 @@
 # Changelog
 ## Unreleased
+### Management
+- Bump to [v0.56.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.0) [LPDC-1698] [LPDC-1692]
+
 ### Email notification service
 - MVP version: Notifications front end for LPDC [LPDC-1657]
 - Finalize notifications front end for LPDC [LPDC-1668]
@@ -29,8 +32,7 @@
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc restart resource dispatcher cache database deltanotifier
 drc up -d lpdc-email-notification-service dashboard
-drc pull lpdc && drc up -d lpdc
-
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management 
 ```
 
 ## v0.37.2 (2026-07-23)
