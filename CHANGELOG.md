@@ -12,21 +12,23 @@
 - LPDC Statusreport - send to bestuurseenheden [LPDC-1681]
 
 ### Deploy notes
-#### Development
-- Frontend changes are currently available through a custom branch configured via docker-compose.override.yml.
-
-#### Development & QA
+#### All environments
+- Frontend changes for the notifications feature is available via the `feature-notifications` branch, updated in the docker-compose.override.yml:
 `docker-compose.override.yml`
 ```yml
+  lpdc:
+     image: lblod/frontend-lpdc:feature-notifications
   lpdc-email-notification-service:
     environment:
-      ENABLE_NOTIFICATIONS: "false"
+      ENABLE_STATUSREPORT_NOTIFICATIONS: "false" # only set to true on PROD
+      LPDC_URL: "https://test.lpdc.lokaalbestuur.lblod.info" # update URL depending on env
+      IPDC_URL: "https://productcatalogus.ipdc.tni-vlaanderen.be" # update URL depending on env
 ```
-#### All environments
+
 ```bash
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc restart resource dispatcher cache database deltanotifier
-drc up -d lpdc-email-notification-service
+drc up -d lpdc-email-notification-service dashboard
 drc pull lpdc && drc up -d lpdc
 
 ```
