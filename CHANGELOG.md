@@ -28,6 +28,25 @@
       IPDC_URL: "https://productcatalogus.ipdc.tni-vlaanderen.be" # update URL depending on env
 ```
 
+*lpdc-management retry snapshot processing migration:*
+```
+PREFIX schema: <http://schema.org/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+DELETE { GRAPH ?g { ?m ?p ?o } }
+WHERE {
+  GRAPH ?g {
+    ?m a lpdcExt:VersionedLdesSnapshotProcessedMarker .
+    ?m schema:status "failed" .
+    ?m schema:dateCreated ?date ;
+       schema:error ?error .
+    ?m ?p ?o .
+  }
+  FILTER(STRSTARTS(STR(?g), "http://mu.semte.ch/graphs/lpdc/instancesnapshots"))
+  FILTER(?date > "2026-07-14T14:06:05.210Z"^^xsd:dateTime)
+}
+```
+
 ```bash
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc restart resource dispatcher cache database deltanotifier
