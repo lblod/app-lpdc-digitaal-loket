@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## v0.37.3 (2026-08-03)
 - Bump frontend to version [0.32.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.32.0) [LPDC-1688]
 ### Management
 - Bump to [v0.56.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.0) [LPDC-1698] [LPDC-1692]
