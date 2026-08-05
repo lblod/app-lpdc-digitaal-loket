@@ -2,6 +2,7 @@
 ## Unreleased
 ### Management
 - Bump to [v0.56.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.0) [LPDC-1698] [LPDC-1692]
+- Bump to [v0.56.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.1) [LPDC-1693]
 
 ### Email notification service
 - MVP version: Notifications front end for LPDC [LPDC-1657]
