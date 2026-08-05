@@ -51,7 +51,7 @@ WHERE {
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc restart resource dispatcher cache database deltanotifier
 drc up -d lpdc-email-notification-service dashboard
-drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management 
+drc pull lpdc lpdc-management deliver-email-service && drc up -d lpdc lpdc-management deliver-email-service
 ```
 
 ## v0.37.2 (2026-07-23)
