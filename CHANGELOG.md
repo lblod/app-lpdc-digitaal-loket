@@ -1,7 +1,6 @@
 # Changelog
 ## Unreleased
 ### Management
-- Bump to [v0.56.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.0) [LPDC-1698] [LPDC-1692]
 - Bump to [v0.56.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.1) [LPDC-1693]
 
 ### Email notification service
@@ -29,6 +28,19 @@
       IPDC_URL: "https://productcatalogus.ipdc.tni-vlaanderen.be" # update URL depending on env
 ```
 
+```bash
+drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
+drc restart resource dispatcher cache database deltanotifier
+drc up -d lpdc-email-notification-service dashboard
+drc pull lpdc lpdc-management deliver-email-service && drc up -d lpdc lpdc-management deliver-email-service
+```
+
+## v0.37.3 (2026-08-03)
+- Bump frontend to version [0.32.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.32.0) [LPDC-1688]
+### Management
+- Bump to [v0.56.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.0) [LPDC-1698] [LPDC-1692]
+
+#### All environments
 *lpdc-management retry snapshot processing migration:*
 ```
 PREFIX schema: <http://schema.org/>
@@ -48,11 +60,9 @@ WHERE {
 }
 ```
 
+### Deploy notes
 ```bash
-drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
-drc restart resource dispatcher cache database deltanotifier
-drc up -d lpdc-email-notification-service dashboard
-drc pull lpdc lpdc-management deliver-email-service && drc up -d lpdc lpdc-management deliver-email-service
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
 ```
 
 ## v0.37.2 (2026-07-23)
