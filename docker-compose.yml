@@ -486,7 +486,7 @@ services:
     logging: *default-logging
 
   lpdc-email-notification-service:
-    image: lblod/lpdc-email-notification-service:1.0.2
+    image: lblod/lpdc-email-notification-service:1.0.3
     labels:
       - "logging=true"
     restart: always
