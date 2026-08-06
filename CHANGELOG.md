@@ -1,4 +1,12 @@
 # Changelog
+## Unreleased
+- LPDC dashboard - report all fields does not run anymore [LPDC-1685]
+
+### Deploy notes
+```
+drc restart report-generation
+```
+
 ## v0.37.3 (2026-08-03)
 - Bump frontend to version [0.32.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.32.0) [LPDC-1688]
 ### Management
