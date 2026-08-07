@@ -56,8 +56,7 @@ function generateDetailsUri(uri) {
 
       WHERE {
         VALUES ?uriPubliekeDienstverlening {<${uri}>}
-        ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService ;
-                                      schema:dateModified ?aangepastOp .
+        ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService .
 
         OPTIONAL {
           ?uriPubliekeDienstverlening pav:createdBy ?uriBestuurseenheid .
@@ -77,6 +76,7 @@ function generateDetailsUri(uri) {
         OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:needsConversionFromFormalToInformal ?vergtOmzettingNaarInformeel }
         OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:forMunicipalityMerger ?voorGemeentelijkeFusie }
         OPTIONAL { ?uriPubliekeDienstverlening schema:dateSent ?verstuurdOp }
+        OPTIONAL { ?uriPubliekeDienstverlening schema:dateModified ?aangepastOp }
         OPTIONAL { ?uriPubliekeDienstverlening dct:title ?titel }
         OPTIONAL { ?uriPubliekeDienstverlening schema:dateCreated ?aangemaaktOp }
         OPTIONAL { ?uriPubliekeDienstverlening lpdcExt:dutchLanguageVariant ?versie }
@@ -415,7 +415,7 @@ async function fetchAllDataForUri(uri) {
       typeBestuurseenheid: details.typeBestuurseenheid?.value  || '',
       aangemaaktOp: details.aangemaaktOp?.value || '',
       aangemaaktDoor: details.aangemaaktDoor?.value || '',
-      aangepastOp: details.aangepastOp.value,
+      aangepastOp: details.aangepastOp?.value  || '',
       aangepastDoor: details.aangepastDoor?.value || '',
       IPDCConceptID: details.IPDCConceptID?.value || '',
       reviewStatus: details.reviewStatus?.value || '',

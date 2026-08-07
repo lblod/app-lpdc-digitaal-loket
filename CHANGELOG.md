@@ -1,5 +1,7 @@
 # Changelog
 ## Unreleased
+- LPDC dashboard - report all fields does not run anymore [LPDC-1685]
+
 ### Management
 - Bump to [v0.56.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.1) [LPDC-1693]
 
@@ -14,8 +16,8 @@
 - LPDC Notifiaction BE - Review fixes [LPDC-1686]
 - LPDC Statusreport - send to bestuurseenheden [LPDC-1681]
 
-### Deploy notes
-#### All environments
+#### Deploy notes
+##### All environments
 - Frontend changes for the notifications feature is available via the `feature-notifications` branch, updated in the docker-compose.override.yml:
 `docker-compose.override.yml`
 ```yml
@@ -33,6 +35,11 @@ drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migr
 drc restart resource dispatcher cache database deltanotifier
 drc up -d lpdc-email-notification-service dashboard
 drc pull lpdc lpdc-management deliver-email-service && drc up -d lpdc lpdc-management deliver-email-service
+```
+
+### Deploy notes
+```
+drc restart report-generation
 ```
 
 ## v0.37.3 (2026-08-03)
