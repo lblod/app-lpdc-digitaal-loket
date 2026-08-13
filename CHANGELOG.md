@@ -1,6 +1,7 @@
 # Changelog
 ## Unreleased
 - LPDC dashboard - report all fields does not run anymore [LPDC-1685]
+- Bump frontend to version [0.33.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.33.0) [LPDC-1668]
 
 ### Management
 - Bump to [v0.56.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.1) [LPDC-1693]
@@ -20,16 +21,13 @@
 
 #### Deploy notes
 ##### All environments
-- Frontend changes for the notifications feature is available via the `feature-notifications` branch, updated in the docker-compose.override.yml:
-`docker-compose.override.yml`
 ```yml
-  lpdc:
-     image: lblod/frontend-lpdc:feature-notifications
   lpdc-email-notification-service:
     environment:
       ENABLE_STATUSREPORT_NOTIFICATIONS: "false" # only set to true on PROD
       LPDC_URL: "https://test.lpdc.lokaalbestuur.lblod.info" # update URL depending on env
       IPDC_URL: "https://productcatalogus.ipdc.tni-vlaanderen.be" # update URL depending on env
+      FROM_EMAIL_ADDRESS: "LPDC TEST <lblod-loket-qa@semantic.works>" # update depending on env, check deliver-email-service
 ```
 
 ```bash
