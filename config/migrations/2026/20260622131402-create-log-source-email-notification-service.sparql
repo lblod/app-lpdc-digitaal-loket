@@ -1,0 +1,7 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    <http://data.lblod.info/id/log-sources/399da403-9156-4776-87f4-d5088f698455> a <http://mu.semte.ch/vocabularies/ext/LogSource>;
+       <http://mu.semte.ch/vocabularies/core/uuid> "399da403-9156-4776-87f4-d5088f698455";
+       <http://www.w3.org/2004/02/skos/core#prefLabel> "LPDC email notification service".
+   }
+}

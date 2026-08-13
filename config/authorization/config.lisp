@@ -51,7 +51,8 @@
   :adms "http://www.w3.org/ns/adms#"
   :reporting "http://lblod.data.gift/vocabularies/reporting/"
   :cogs "http://vocab.deri.ie/cogs#"
-  :core "http://open-services.net/ns/core#")
+  :core "http://open-services.net/ns/core#"
+  :task "http://redpencil.data.gift/vocabularies/tasks/")
 
 (type-cache::add-type-for-prefix "http://mu.semte.ch/sessions/" "http://mu.semte.ch/vocabularies/session/Session")
 
@@ -130,7 +131,10 @@
   ("schema2:Conversation" -> _)
   ("schema2:AskAction" -> _)
   ("schema2:ReplyAction" -> _)
-  ("schema2:DataFeedItem" -> _))
+  ("schema2:DataFeedItem" -> _)
+  ("skos:Concept" -> _)
+  ("ipdc-lpdc:NotificationRuleConfig" -> _)
+  ("ipdc-lpdc:NotificationPreference" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)
@@ -144,6 +148,14 @@
   ("reporting:Report" -> _)
   ("cogs:Job" -> _)
   ("core:Error" -> _)
+  ("nfo:DataContainer" -> _)
+  ("nfo:FileDataObject" -> _))
+
+(define-graph jobs ("http://mu.semte.ch/graphs/system/jobs")
+  ("cogs:Job" -> _)
+  ("task:Task" -> _)
+  ("core:Error" -> _)
+  ("adms:Status" -> _)
   ("nfo:DataContainer" -> _)
   ("nfo:FileDataObject" -> _))
 
@@ -218,3 +230,7 @@
 (grant (read write)
   :to-graph (organizations-admin)
   :for-allowed-group "LoketLB-AdminDashboardLPDC")
+
+(grant (read write)
+  :to-graph (jobs)
+  :for-allowed-group "admin")

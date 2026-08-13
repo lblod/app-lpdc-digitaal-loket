@@ -1,6 +1,41 @@
 # Changelog
 ## Unreleased
 - LPDC dashboard - report all fields does not run anymore [LPDC-1685]
+- Bump frontend to version [0.33.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.33.0) [LPDC-1668]
+
+### Management
+- Bump to [v0.56.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.1) [LPDC-1693]
+- Bump to [v0.56.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.2) [LPDC-1699]
+- Bump to [v0.56.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.3) [LPDC-1707]
+
+### Email notification service
+- MVP version: Notifications front end for LPDC [LPDC-1657]
+- Finalize notifications front end for LPDC [LPDC-1668]
+- New service for notifications [LPDC-1656]
+- handle adhoc/instant notifications [LPDC-1673]
+- Finalize Notifications backend [LPDC-1675]
+- Implementation of notification rules [LPDC-1659]
+- LPDC notification - report 2 times a year [LPDC-1676]
+- LPDC Notifiaction BE - Review fixes [LPDC-1686]
+- LPDC Statusreport - send to bestuurseenheden [LPDC-1681]
+
+#### Deploy notes
+##### All environments
+```yml
+  lpdc-email-notification-service:
+    environment:
+      ENABLE_STATUSREPORT_NOTIFICATIONS: "false" # only set to true on PROD
+      LPDC_URL: "https://test.lpdc.lokaalbestuur.lblod.info" # update URL depending on env
+      IPDC_URL: "https://productcatalogus.ipdc.tni-vlaanderen.be" # update URL depending on env
+      FROM_EMAIL_ADDRESS: "LPDC TEST <lblod-loket-qa@semantic.works>" # update depending on env, check deliver-email-service
+```
+
+```bash
+drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
+drc restart resource dispatcher cache database deltanotifier
+drc up -d lpdc-email-notification-service dashboard
+drc pull lpdc lpdc-management deliver-email-service && drc up -d lpdc lpdc-management deliver-email-service
+```
 
 ### Deploy notes
 ```

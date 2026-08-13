@@ -17,8 +17,11 @@
 (read-domain-file "master-users-domain.lisp")
 (read-domain-file "master-reports-domain.lisp")
 (read-domain-file "master-files-domain.lisp")
+(read-domain-file "master-log-domain.lisp")
+(read-domain-file "master-job-domain.lisp")
 (read-domain-file "lpdc.lisp")
 (read-domain-file "feedback.lisp")
+(read-domain-file "notification-preference.lisp")
 
 ;; Extra security layer to return 403 on GET /files
 ;; It should be ok for mu-auth; but devs can make bugs and add files to the wrong graph (i.e. public)

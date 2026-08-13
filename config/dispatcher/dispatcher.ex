@@ -112,6 +112,45 @@ defmodule Dispatcher do
   end
 
   #################################################################
+  # master-job-domain.lisp
+  #################################################################
+  match "/jobs/*path", @json do
+    forward conn, path, "http://cache/jobs/"
+  end
+
+  match "/tasks/*path" do
+    forward conn, path, "http://cache/tasks/"
+  end
+
+  match "/data-containers/*path" do
+    forward conn, path, "http://cache/data-containers/"
+  end
+
+  match "/job-errors/*path"  do
+    forward conn, path, "http://cache/job-errors/"
+  end
+
+  ###############################################################
+  # master-log-domain.lisp
+  ###############################################################
+
+  match "/log-entries/*path" do
+    forward conn, path, "http://resource/log-entries/"
+  end
+
+  match "/log-levels/*path" do
+    forward conn, path, "http://resource/log-levels/"
+  end
+
+  match "/status-codes/*path" do
+    forward conn, path, "http://resource/status-codes/"
+  end
+
+  match "/log-sources/*path" do
+    forward conn, path, "http://resource/log-sources/"
+  end
+
+  #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
 
@@ -183,6 +222,22 @@ defmodule Dispatcher do
 
   match "/feedback-snapshots/*path", @json do
     forward conn, path, "http://resource/feedback-snapshots/"
+  end
+
+  #################################################################
+  # Subscription
+  #################################################################
+
+  match "/notification-rules/*path", @json do
+    forward conn, path, "http://resource/notification-rules/"
+  end
+
+  match "/notification-rule-configs/*path", @json do
+    forward conn, path, "http://resource/notification-rule-configs/"
+  end
+
+  match "/notification-preferences/*path", @json do
+    forward conn, path, "http://resource/notification-preferences/"
   end
 
   #################################################################

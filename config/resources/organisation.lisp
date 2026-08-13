@@ -22,17 +22,6 @@
                 (:is-trial-user :boolean ,(s-prefix "ext:isTrailUser"))
                 (:view-only-modules :string-set ,(s-prefix "ext:viewOnlyModules")))
 
-  :has-many `((contact-punt :via ,(s-prefix "schema:contactPoint")
-                            :as "contactinfo")
-              (bestuursorgaan :via ,(s-prefix "besluit:bestuurt")
-                              :inverse t
-                              :as "bestuursorganen")
-              (vendor :via ,(s-prefix "muAccount:canActOnBehalfOf")
-                              :inverse t
-                              :as "vendors")
-              (participation :via ,(s-prefix "m8g:playsRole")
-                            :as "participations"))
-
   :has-one `((werkingsgebied :via ,(s-prefix "besluit:werkingsgebied")
                              :as "werkingsgebied")
              (werkingsgebied :via ,(s-prefix "ext:inProvincie")
@@ -44,3 +33,15 @@
   :features '(include-uri)
   :on-path "bestuurseenheden"
 )
+
+(define-resource werkingsgebied ()
+  :class (s-prefix "prov:Location")
+  :properties `((:naam :string ,(s-prefix "rdfs:label"))
+                (:niveau :string, (s-prefix "ext:werkingsgebiedNiveau")))
+
+  :has-many `((bestuurseenheid :via ,(s-prefix "besluit:werkingsgebied")
+                               :inverse t
+                               :as "bestuurseenheid"))
+  :resource-base (s-url "http://data.lblod.info/id/werkingsgebieden/")
+  :features '(include-uri)
+  :on-path "werkingsgebieden")
