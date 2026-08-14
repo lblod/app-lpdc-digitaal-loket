@@ -1,4 +1,13 @@
 # Changelog
+## Unreleased
+- Dangling instances feedbackAvailable [LPDC-1702]
+
+#### Deploy notes
+```bash
+drc pull lpdc-management && drc up -d lpdc-management 
+drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
+```
+
 ## v0.38.0 (2026-08-14)
 - LPDC dashboard - report all fields does not run anymore [LPDC-1685]
 - Bump frontend to version [0.33.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.33.0) [LPDC-1668]
