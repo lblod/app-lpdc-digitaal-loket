@@ -1,0 +1,17 @@
+PREFIX ipdc-lpdc: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+
+DELETE {
+  GRAPH ?g {
+    ?publicService ?p ?o .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?publicService ipdc-lpdc:feedbackAvailable ?feedback .
+    FILTER NOT EXISTS {
+      ?publicService ?p2 ?o2 .
+      FILTER(?p2 != ipdc-lpdc:feedbackAvailable)
+    }
+    ?publicService ?p ?o .
+  }
+}
