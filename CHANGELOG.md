@@ -1,11 +1,13 @@
 # Changelog
 ## Unreleased
 - Dangling instances feedbackAvailable [LPDC-1702]
+- LPDC Complete Report - fix to keep it running [LPDC-1712]
 
 #### Deploy notes
 ```bash
 drc pull lpdc-management && drc up -d lpdc-management 
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
+drc restart report-generation
 ```
 
 ## v0.38.0 (2026-08-14)
