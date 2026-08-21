@@ -27,6 +27,10 @@ export default {
     let allData = [];
     for (const uri of instances) {
       const data = await fetchAllDataForUri(uri);
+      if (!data) {
+        console.warn(`Skipping ${uri}, no details found`);
+        continue;
+      }
       allData.push(data);
       console.log(`Processed ${allData.length} of ${instances.length}`);
     }
@@ -56,8 +60,6 @@ function generateDetailsUri(uri) {
 
       WHERE {
         VALUES ?uriPubliekeDienstverlening {<${uri}>}
-        ?uriPubliekeDienstverlening a lpdcExt:InstancePublicService .
-
         OPTIONAL {
           ?uriPubliekeDienstverlening pav:createdBy ?uriBestuurseenheid .
           ?uriBestuurseenheid a besluit:Bestuurseenheid ;
@@ -388,6 +390,11 @@ function stripOrder(text) {
 
 async function fetchAllDataForUri(uri) {
   const detailsRes = await query(generateDetailsUri(uri));
+  const details = detailsRes.results.bindings[0];
+
+  if (!details) {
+    return null;
+  }
   const websiteRes = await query(generateWebsiteQuery(uri));
   const contactRes = await query(generateContactQuery(uri));
   const regelgevingRes = await query(generateRegelgevingQuery(uri));
@@ -398,7 +405,6 @@ async function fetchAllDataForUri(uri) {
   const eigenschappen1Res = await query(generateEigenschappenGeneralQuery(uri));
   const eigenschappen2Res = await query(generateEigenschappenCodelistsQuery(uri));
 
-  const details = detailsRes.results.bindings[0] || {};
   const website = websiteRes.results.bindings[0] || {};
   const contact = contactRes.results.bindings[0] || {};
   const regelgeving = regelgevingRes.results.bindings[0] || {};
