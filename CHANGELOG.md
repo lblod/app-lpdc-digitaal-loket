@@ -2,12 +2,14 @@
 ## Unreleased
 - Dangling instances feedbackAvailable [LPDC-1702]
 - LPDC Complete Report - fix to keep it running [LPDC-1712]
+- Frontend [v0.33.1](https://github.com/lblod/frontend-lpdc/blob/7cf0ae6e6a1a9f13e337468756de76316accb42f/CHANGELOG.md#v0331-2026-08-25)
 
 #### Deploy notes
 ```bash
 drc pull lpdc-management && drc up -d lpdc-management 
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
 drc restart report-generation
+drc up -d lpdc
 ```
 
 ## v0.38.0 (2026-08-14)
