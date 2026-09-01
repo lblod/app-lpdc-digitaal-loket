@@ -1,0 +1,28 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <http://schema.org/>
+PREFIX ipdc-lpdc: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+  GRAPH ?g {
+    ?pref schema:dateCreated "2026-08-18T12:00:00Z"^^xsd:dateTime .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?pref rdf:type ipdc-lpdc:NotificationPreference .
+    FILTER NOT EXISTS { ?pref schema:dateCreated ?c . }
+  }
+};
+
+INSERT {
+  GRAPH ?g {
+    ?pref schema:dateModified "2026-08-18T12:00:00Z"^^xsd:dateTime .
+  }
+}
+WHERE {
+  GRAPH ?g {
+    ?pref rdf:type ipdc-lpdc:NotificationPreference .
+    FILTER NOT EXISTS { ?pref schema:dateModified ?m . }
+  }
+}
