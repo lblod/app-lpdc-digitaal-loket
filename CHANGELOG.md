@@ -20,6 +20,7 @@ drc up -d lpdc
 - Bump to [v0.56.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.1) [LPDC-1693]
 - Bump to [v0.56.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.2) [LPDC-1699]
 - Bump to [v0.56.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.3) [LPDC-1707]
+- Bump to [v0.56.4](https://github.com/lblod/lpdc-management-service/releases/tag/v0.56.4) [LPDC-1721]
 
 ### Email notification service
 - MVP version: Notifications front end for LPDC [LPDC-1657]
