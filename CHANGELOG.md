@@ -10,7 +10,7 @@
 ```bash
 drc pull lpdc-management && drc up -d lpdc-management 
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
-drc restart report-generation
+drc restart report-generation resource
 drc pull lpdc && drc up -d lpdc
 ```
 
