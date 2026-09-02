@@ -2,7 +2,8 @@
 ## Unreleased
 - Dangling instances feedbackAvailable [LPDC-1702]
 - LPDC Complete Report - fix to keep it running [LPDC-1712]
-- Frontend [v0.33.1](https://github.com/lblod/frontend-lpdc/blob/7cf0ae6e6a1a9f13e337468756de76316accb42f/CHANGELOG.md#v0331-2026-08-25)
+- Bump frontend to version [0.33.1](https://github.com/lblod/frontend-lpdc/releases/tag/v0.33.1) [LPDC-1716]
+- Bump frontend to version [0.33.2](https://github.com/lblod/frontend-lpdc/releases/tag/v0.33.2) [LPDC-1710] [LPDC-1713] [LPDC-1672]
 - store the datetime of the notification subscription creation/modified [LPDC-1710]
 
 #### Deploy notes
