@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.33.0
+    image: lblod/frontend-lpdc:0.33.2
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
@@ -20,8 +20,6 @@ services:
       EMBER_ACMIDM_SWITCH_REDIRECT_URL: "<ACMIDM_SWITCH_REDIRECT_URL>"
       EMBER_ADMIN_ROLE: "LoketLB-admin"
       EMBER_FUSIES: "false"
-    links:
-      - identifier:backend
     labels:
       - "logging=true"
     restart: always
@@ -258,7 +256,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.56.4
+    image: lblod/lpdc-management-service:0.56.5
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
