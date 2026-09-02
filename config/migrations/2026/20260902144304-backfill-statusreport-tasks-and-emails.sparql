@@ -1,0 +1,39 @@
+PREFIX task: <http://redpencil.data.gift/vocabularies/tasks/>
+PREFIX dct:  <http://purl.org/dc/terms/>
+PREFIX nmo: <http://www.semanticdesktop.org/ontologies/2007/03/22/nmo#>
+
+# Backfill linkTaskToPreference for existing statusReport tasks
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/system/jobs> {
+    ?task dct:references ?ref .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/system/jobs> {
+    ?task task:operation <http://lblod.data.gift/id/jobs/concept/TaskOperation/lpdcStatusReportNotification> ;
+          dct:references ?email .
+  }
+  GRAPH <http://mu.semte.ch/graphs/system/email> {
+    ?email dct:references ?ref .
+    FILTER(?ref != <http://lblod.data.gift/id/jobs/concept/TaskOperation/lpdcStatusReportNotification>)
+  }
+}
+
+;
+
+# Backfill adding the 2nd dct:references (statusReport task) to existing statusReport emails
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/system/email> {
+    ?email dct:references <http://lblod.data.gift/id/jobs/concept/TaskOperation/lpdcStatusReportNotification> .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/system/email> {
+    ?email a nmo:Email ;
+           nmo:messageSubject ?subject .
+    FILTER(STRSTARTS(?subject, "LPDC-rapport"))
+    FILTER NOT EXISTS {
+      ?email dct:references <http://lblod.data.gift/id/jobs/concept/TaskOperation/lpdcStatusReportNotification> .
+    }
+  }
+}
