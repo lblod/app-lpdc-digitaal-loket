@@ -51,7 +51,8 @@
                 (:review-status-modified-date :datetime ,(s-prefix "lpdcExt:reviewStatusModifiedDate"))
                 (:formal-informal-modified-date :datetime ,(s-prefix "lpdcExt:formalInformalModifiedDate"))
                 (:feedback-modified-date :datetime ,(s-prefix "lpdcExt:feedbackModifiedDate"))
-                (:date-sent :datetime ,(s-prefix "schema:dateSent")))
+                (:date-sent :datetime ,(s-prefix "schema:dateSent"))
+                (:is-year-old :boolean ,(s-prefix "lpdcExt:isYearOld")))
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
                       :as "review-status")
              (conceptual-public-service :via ,(s-prefix "dct:source")
@@ -65,7 +66,7 @@
   :has-many `((feedback :via ,(s-prefix "skos:primarySubject")
                         :inverse t
                         :as "feedback")
-              (notification-preference :via ,(s-prefix "lpdcExt:notificationInstance") 
+              (notification-preference :via ,(s-prefix "lpdcExt:notificationInstance")
                                        :inverse t
                                        :as "notification-preferences"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")

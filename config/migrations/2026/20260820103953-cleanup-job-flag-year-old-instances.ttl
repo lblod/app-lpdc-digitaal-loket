@@ -1,0 +1,36 @@
+PREFIX cleanup: <http://mu.semte.ch/vocabularies/ext/cleanup/>
+PREFIX mu:      <http://mu.semte.ch/vocabularies/core/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+
+<http://data.lblod.info/id/cleanup-job/65c88814-100f-4e6e-b691-8311c1749166> a cleanup:Job ;
+  mu:uuid "65c88814-100f-4e6e-b691-8311c1749166" ;
+  dcterms:title "Flag instances not updated in a year`" ;
+  cleanup:randomQuery """
+    PREFIX prov: <http://www.w3.org/ns/prov#>
+    PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+    PREFIX schema: <http://schema.org/>
+
+    DELETE {
+      GRAPH ?bestuurseenheidGraph {
+        ?instance lpdcExt:isYearOld ?currentValue .
+      }
+    }
+    INSERT {
+      GRAPH ?bestuurseenheidGraph {
+        ?instance lpdcExt:isYearOld true .
+      }
+    } WHERE {
+      GRAPH ?bestuurseenheidGraph {
+        ?instance a lpdcExt:InstancePublicService ;
+                  schema:dateModified ?lastModifiedOn .
+        OPTIONAL { ?instance lpdcExt:isYearOld ?currentValue . }
+      }
+      BIND(xsd:date(NOW() - "P1Y"^^xsd:duration) AS ?lastYear)
+      FILTER(?lastModifiedOn <= ?lastYear)
+      FILTER(
+          STRSTARTS(STR(?bestuurseenheidGraph), "http://mu.semte.ch/graphs/organizations/") &&
+          STRENDS(STR(?bestuurseenheidGraph), "/LoketLB-LPDCGebruiker")
+      )
+    }
+    """ ;
+  cleanup:cronPattern "25 21 * * *" .
