@@ -51,6 +51,7 @@
                 (:review-status-modified-date :datetime ,(s-prefix "lpdcExt:reviewStatusModifiedDate"))
                 (:formal-informal-modified-date :datetime ,(s-prefix "lpdcExt:formalInformalModifiedDate"))
                 (:feedback-modified-date :datetime ,(s-prefix "lpdcExt:feedbackModifiedDate"))
+                (:year-old-modified-date :datetime ,(s-prefix "lpdcExt:yearOldModifiedDate"))
                 (:date-sent :datetime ,(s-prefix "schema:dateSent"))
                 (:is-year-old :boolean ,(s-prefix "lpdcExt:isYearOld")))
   :has-one `((concept :via ,(s-prefix "ext:reviewStatus")
