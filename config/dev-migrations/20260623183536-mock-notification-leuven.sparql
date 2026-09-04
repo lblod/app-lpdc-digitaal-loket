@@ -7,12 +7,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX org: <http://www.w3.org/ns/org#>
 
-INSERT DATA {
+# Only insert the mock notification preference if there is no existing notificationPreference created by gemeente leuven (mock-login)
+INSERT {
   GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
     <http://data.lblod.info/id/notification-preferences/a1b2c3d4-e5f6-7890-abcd-ef1234567890>
       a lpdcExt:NotificationPreference ;
       mu:uuid "a1b2c3d4-e5f6-7890-abcd-ef1234567890" ;
       schema:email "test@example.com" ;
+      schema:dateCreated "2026-09-03T12:02:31.017Z"^^xsd:dateTime ;
+      schema:dateModified "2026-09-03T12:02:31.017Z"^^xsd:dateTime ;
       dct:creator <http://data.lblod.info/id/persoon/f8056f91a397696befe8984d893517b9> ;
       org:linkedTo <http://data.lblod.info/id/bestuurseenheden/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77> ;
       lpdcExt:notificationsEnabled true ;
@@ -48,5 +51,15 @@ INSERT DATA {
       mu:uuid "e9c6c061-d53e-4c04-9dfd-b3bb4f1fbccf" ;
       lpdcExt:notificationFrequency "bi-annual" ;
       lpdcExt:hasEnabledRule <http://lblod.data.gift/concepts/634522c3-f5bd-4f53-82d3-983b7cbbdb10> .
+  }
+}
+WHERE {
+  ?bestuurseenheid mu:uuid "c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77" .
+  FILTER NOT EXISTS {
+    GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
+      ?existingPref a lpdcExt:NotificationPreference ;
+        org:linkedTo ?bestuurseenheid ;
+        dct:creator <http://data.lblod.info/id/persoon/f8056f91a397696befe8984d893517b9> .
+    }
   }
 }
