@@ -19,7 +19,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
     INSERT {
       GRAPH ?bestuurseenheidGraph {
         ?instance lpdcExt:isYearOld true ;
-                  lpdcExt:yearOldModifiedDate ?now .
+                  lpdcExt:yearOldModifiedDate ?nowZ .
       }
     } WHERE {
       GRAPH ?bestuurseenheidGraph {
@@ -29,6 +29,7 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
         OPTIONAL { ?instance lpdcExt:yearOldModifiedDate ?yearOldModifiedDate . }
         BIND(NOW() AS ?now)
       }
+      BIND(xsd:dateTime(CONCAT(STR(?now), "Z")) AS ?nowZ)
       BIND(xsd:date(NOW() - "P1Y"^^xsd:duration) AS ?lastYear)
       FILTER(?lastModifiedOn <= ?lastYear)
       FILTER NOT EXISTS {
