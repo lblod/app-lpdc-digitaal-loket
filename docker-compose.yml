@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.33.2
+    image: lblod/frontend-lpdc:0.34.0
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
@@ -242,8 +242,6 @@ services:
 
   db-cleanup:
     image: lblod/db-cleanup-service:0.5.1
-    environment:
-      MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql" # Heavy queries, has to go to virtuoso directly otherwise times out
     labels:
       - "logging=true"
     restart: always
@@ -256,7 +254,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.56.5
+    image: lblod/lpdc-management-service:0.57.0
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
@@ -484,7 +482,7 @@ services:
     logging: *default-logging
 
   lpdc-email-notification-service:
-    image: lblod/lpdc-email-notification-service:1.0.6
+    image: lblod/lpdc-email-notification-service:1.1.0
     labels:
       - "logging=true"
     restart: always

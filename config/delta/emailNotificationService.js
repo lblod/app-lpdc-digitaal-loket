@@ -87,4 +87,26 @@ export default [
       ignoreFromSelf: false,
     },
   },
+    {
+    match: {
+      predicate: {
+        type: "uri",
+        value:
+          "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#isYearOld",
+      },
+      object: {
+        type: "literal",
+        value: "true",
+      },
+    },
+    callback: {
+      url: "http://lpdc-email-notification-service/delta-year-old",
+      method: "POST",
+    },
+    options: {
+      resourceFormat: "v0.0.1",
+      gracePeriod: 1000,
+      ignoreFromSelf: false,
+    },
+  },
 ];
