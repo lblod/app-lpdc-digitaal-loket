@@ -6,12 +6,17 @@
 - Bump frontend to version [0.33.2](https://github.com/lblod/frontend-lpdc/releases/tag/v0.33.2) [LPDC-1710] [LPDC-1713] [LPDC-1672]
 - store the datetime of the notification subscription creation/modified [LPDC-1710]
 - Bump notification service [1.0.6](https://github.com/lblod/lpdc-email-notification-service/releases/tag/v1.0.6) [LPDC-1723]
+- Bump notification service [1.1.0](https://github.com/lblod/lpdc-email-notification-service/releases/tag/v1.1.0) [LPDC-1724] [LPDC-1680]
+- Bump frontend to version [0.34.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.34.0) [LPDC-1655] [LPDC-1680]
+
+### Management
+- Bump to [v0.57.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.0) [LPDC-1655] [LPDC-1680]
 
 #### Deploy notes
 ```bash
 drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migrations to run
-drc pull lpdc lpdc-management lpdc-email-notification-service && drc up -d lpdc lpdc-management lpdc-email-notification-service 
-drc restart report-generation resource
+drc pull lpdc lpdc-management lpdc-email-notification-service && drc up -d lpdc lpdc-management lpdc-email-notification-service db-cleanup
+drc restart report-generation resource deltanotifier
 ```
 
 ## v0.38.0 (2026-08-14)
