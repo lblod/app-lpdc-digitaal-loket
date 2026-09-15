@@ -8,6 +8,7 @@
 - Bump notification service [1.0.6](https://github.com/lblod/lpdc-email-notification-service/releases/tag/v1.0.6) [LPDC-1723]
 - Bump notification service [1.1.0](https://github.com/lblod/lpdc-email-notification-service/releases/tag/v1.1.0) [LPDC-1724] [LPDC-1680]
 - Bump frontend to version [0.34.0](https://github.com/lblod/frontend-lpdc/releases/tag/v0.34.0) [LPDC-1655] [LPDC-1680]
+- Bump frontend to version [0.34.1](https://github.com/lblod/frontend-lpdc/releases/tag/v0.34.1) [LPDC-641]
 
 ### Management
 - Bump to [v0.57.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.0) [LPDC-1655] [LPDC-1680]
