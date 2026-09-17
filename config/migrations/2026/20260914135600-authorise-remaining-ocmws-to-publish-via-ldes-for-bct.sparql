@@ -1,0 +1,20 @@
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/authorization> {
+       ?organisation lpdc:canPublishInstanceToGraph <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/bct>.
+  }
+} WHERE {
+  VALUES ?organisation {
+    <http://data.lblod.info/id/bestuurseenheden/9ae900a5447b7d727ca6496910220d4389aba7f1869923f1bbf9729bdeca28e2>	# Bilzen-Hoeselt (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/ba64836606bc59e1334a787a10e97766268fd98e0dc834175963acb182ad16eb>	# Lubbeek (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/b4aa549332cbc6e6b92d2e466b49af8111ad67b774ee4c990f98d3b77c5c6fa1>	# Geel (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/0063f3bf54b42af14f148c0e5bb503ee555d7dbc6926a0eda03d5c523809ae4b>	# Geetbets (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/13b25c80-8d3a-4821-95b0-ffc4e850cb4b> 	                          # Oudsbergen (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/6861e7ab92ff73b8d448edb2e16e9e400201c5ceeb66afb82b185adef4bcbaa0>	# Stabroek (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/772ed719a9478a76710f3d92bcd43556cb85a1ebc1c04e9561dc1327df846c4b>	# Tielt-Winge (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/204f9fe956eaf101f6e268a5403ad8494d7ed532d5fb7ea7334543b1e5cb916e>	# Eeklo (OCMW)
+    <http://data.lblod.info/id/bestuurseenheden/3034a27a33930cc51bd440d5c270e96d7e536caec358175a57d41a0b9879695b>	# Landen (OCMW)
+
+  }
+}
