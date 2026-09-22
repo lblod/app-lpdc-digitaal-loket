@@ -1,4 +1,4 @@
-# Changelog
+## v0.39.0 (2026-09-22)
 ## Unreleased
 - Dangling instances feedbackAvailable [LPDC-1702]
 - LPDC Complete Report - fix to keep it running [LPDC-1712]
@@ -23,6 +23,8 @@ drc restart migrations && drc logs -ft --tail=200 migrations # wait for all migr
 drc pull lpdc lpdc-management lpdc-email-notification-service && drc up -d lpdc lpdc-management lpdc-email-notification-service db-cleanup
 drc restart report-generation resource deltanotifier
 ```
+
+add local migration on prod to retry the ocmw bct markers
 
 ## v0.38.0 (2026-08-14)
 - LPDC dashboard - report all fields does not run anymore [LPDC-1685]
