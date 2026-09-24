@@ -1,0 +1,84 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
+
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://schema.org/productID>	"42692"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/1e067517-7c85-4438-94bc-7371e6c1d52f> .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Oostrozebeke" .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/1e067517-7c85-4438-94bc-7371e6c1d52f> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://schema.org/dateCreated>	"2024-02-02T11:01:02.874Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://mu.semte.ch/vocabularies/core/uuid>	"1e067517-7c85-4438-94bc-7371e6c1d52f" .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/6eb63a95ebb0e5fcb9e59b25a264977107e690a46a89755da1637d1427693560> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Infrastructuur en materiaal"@nl .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/dc/terms/title>	"Tussenkomsten in Diftar"@nl .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">De gemeente Oostrozebeke komt tussen in het gewichtsdiftarsysteem voor restaval aan mensen die ziek zijn en thuis wonen.</p></div>"@nl .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"OCMW" .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/InfrastructuurMateriaal> .
+
+<http://mu.semte.ch/blank#423fa58d-0bee-4ba9-92a0-809b0bf703d9>	<http://mu.semte.ch/vocabularies/core/uuid>	"6da03be0-7a86-11f1-9c10-d9d20570fa93" .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#1fd52f86-9416-43f4-b977-aedd84a2975b> .
+<http://mu.semte.ch/blank#0e25c642-ffcd-4f04-801b-ab67e340a083>	<http://mu.semte.ch/vocabularies/core/uuid>	"f576d200-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#423fa58d-0bee-4ba9-92a0-809b0bf703d9>	<http://schema.org/url>	"https://www.oostrozebeke.be/producten/detail/2550/tussenkomsten-in-diftar"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#ea53a470-571d-4c08-988b-f4565c69b5e8>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://mu.semte.ch/blank#1fd52f86-9416-43f4-b977-aedd84a2975b>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Print het aanvraagformulier af of ga het ophalen bij de dienst onthaal en bevolking of het OCMW/sociaal huis.</p><p class=\"say-paragraph\">Breng je (kopie van het) attest van het VAPH (Vlaams Agentschap voor Personen met een Handicap) dat recht op een forfait voor incontinentiemateriaal bevestigt of een attest van het ziekenfonds dat recht op incontinentieforfait binnen de verplichte ziekteverzekering bevestigt mee</p><p class=\"say-paragraph\">Heb je bovenstaande niet: laat het invullen door uw huisarts. </p><p class=\"say-paragraph\">Kom langs bij de dienst onthaal en bevolking of het OCMW/sociaal huis van Oostrozebeke.</p></div>"@nl .
+<http://mu.semte.ch/blank#1fd52f86-9416-43f4-b977-aedd84a2975b>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#0e25c642-ffcd-4f04-801b-ab67e340a083>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#1fd52f86-9416-43f4-b977-aedd84a2975b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite>	<http://mu.semte.ch/blank#423fa58d-0bee-4ba9-92a0-809b0bf703d9> .
+<http://mu.semte.ch/blank#1fd52f86-9416-43f4-b977-aedd84a2975b>	<http://mu.semte.ch/vocabularies/core/uuid>	"84684bb0-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#0e25c642-ffcd-4f04-801b-ab67e340a083>	<http://purl.org/dc/terms/title>	"Voorwaarden tussenkomsten in Difrar"@nl .
+<http://mu.semte.ch/blank#0e25c642-ffcd-4f04-801b-ab67e340a083>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#ea53a470-571d-4c08-988b-f4565c69b5e8> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#0e25c642-ffcd-4f04-801b-ab67e340a083> .
+<http://mu.semte.ch/blank#423fa58d-0bee-4ba9-92a0-809b0bf703d9>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Dit is de link naar de uitleg rond de tussenkomsten in Diftar op de website van het OCMW/sociaal huis van Oostrozebeke.</p></div>"@nl .
+<http://mu.semte.ch/blank#1fd52f86-9416-43f4-b977-aedd84a2975b>	<http://purl.org/dc/terms/title>	"Tussenkomsten in diftar"@nl .
+<http://mu.semte.ch/blank#423fa58d-0bee-4ba9-92a0-809b0bf703d9>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#0e25c642-ffcd-4f04-801b-ab67e340a083>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#423fa58d-0bee-4ba9-92a0-809b0bf703d9>	<http://purl.org/dc/terms/title>	"https://www.oostrozebeke.be/producten/detail/2550/tussenkomsten-in-diftar"@nl .
+<http://mu.semte.ch/blank#1fd52f86-9416-43f4-b977-aedd84a2975b>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://mu.semte.ch/blank#ea53a470-571d-4c08-988b-f4565c69b5e8>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Ingevuld en ondertekend aanvraagformulier gratis afvalzakken.</p><p class=\"say-paragraph\">Wanneer je in aanmerking komt voor aanvullende steun, moet je geen aanvraagformulier bezorgen. Je maatschappelijk werker brengt het voor je in orde.</p></div>"@nl .
+<http://mu.semte.ch/blank#ea53a470-571d-4c08-988b-f4565c69b5e8>	<http://purl.org/dc/terms/title>	"Tussenkomsten in Diftar"@nl .
+<http://mu.semte.ch/blank#0e25c642-ffcd-4f04-801b-ab67e340a083>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Je moet in Oostrozebeke wonen en ouder zijn dan 10 jaar.</p><p class=\"say-paragraph\">Ziek zijn is leven met chronische incontinentie of chronische stoma, leven met nierinsuffici\u00EBntie en thuis dialyseren of in de thuissituatie sondevoeding gebruiken of recht hebben op aanvullende steun van het OCMW van Oostrozebeke.</p><p class=\"say-paragraph\"></p></div>"@nl .
+<http://mu.semte.ch/blank#ea53a470-571d-4c08-988b-f4565c69b5e8>	<http://mu.semte.ch/vocabularies/core/uuid>	"15935720-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#423fa58d-0bee-4ba9-92a0-809b0bf703d9>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/WebSite> .
+
+<http://mu.semte.ch/blank#1eb78392-a777-44e5-94c7-1ec2bc35a983>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#1eb78392-a777-44e5-94c7-1ec2bc35a983>	<http://purl.org/dc/terms/title>	"Tussenkomst in Diftar"@nl .
+<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2>	<http://schema.org/email>	"sociaalhuis@oostrozebeke.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2>	<http://mu.semte.ch/vocabularies/core/uuid>	"2422c1e0-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#1eb78392-a777-44e5-94c7-1ec2bc35a983>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">Er wordt 60 euro (of 20 euro in geval van aanvullende steun) overgemaakt op je Diftar rekening. </p></div>"@nl .
+<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2>	<http://schema.org/openingHours>	"Elke werkdag van 9 u. tot 12 u. en op dinsdag van 16.30 en 18 u. zonder afspraak en van 13.30 tot 16.30 met afspraak."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#1eb78392-a777-44e5-94c7-1ec2bc35a983>	<http://mu.semte.ch/vocabularies/core/uuid>	"0d4a3750-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Oostrozebeke"@nl .
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Ernest Brengierstraat"@nl .
+<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2>	<http://schema.org/telephone>	"056/67 11 50"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://purl.org/vocab/cpsv#produces>	<http://mu.semte.ch/blank#1eb78392-a777-44e5-94c7-1ec2bc35a983> .
+<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2> .
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#1eb78392-a777-44e5-94c7-1ec2bc35a983>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage> .
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<http://mu.semte.ch/vocabularies/core/uuid>	"2422c1e0-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429> .
+<http://mu.semte.ch/blank#88bce481-9db3-4e98-83e9-e3535cd857a2>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<https://data.vlaanderen.be/ns/adres#postcode>	"8780" .
+<http://mu.semte.ch/blank#ab031066-2caf-4659-8884-578ba0d6f429>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/1163413> .
+
+
+  }
+}

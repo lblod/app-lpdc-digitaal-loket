@@ -1,0 +1,62 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
+
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Oostrozebeke" .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>De aankoop van pampers is duur en neemt een hele hap uit het budget. </p><p>In de pamperbank verzamelt men ongebruikte luiers, die dan in een bepaalde hoeveelheid goedkoop of gratis aangeboden worden aan jonge gezinnen met een beperkt budget. </p>"@nl .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>  .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>  .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Voorwerp> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://mu.semte.ch/vocabularies/core/uuid>	"a802da53-b277-4f15-9105-6d99dff42a9c" .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>De aankoop van pampers is duur en neemt een hele hap uit het budget. </p><p>In de pamperbank verzamelt men ongebruikte luiers, die dan in een bepaalde hoeveelheid goedkoop of gratis aangeboden worden aan jonge gezinnen met een beperkt budget. </p>"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://schema.org/dateCreated>	"2024-02-02T12:38:49.761Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Voorwerp>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Voorwerp"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://purl.org/dc/terms/description>	"<p>Voor mensen met een beperkt budget is het soms moeilijk om de vele verzorgingsproducten die voor een baby nodig zijn, te betalen. Je kunt daarom gratis luiers verkrijgen via de pamperbank.</p>"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://schema.org/productID>	"42695"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>De aankoop van pampers is duur en neemt een hele hap uit het budget. </p><p>In de pamperbank verzamelt men ongebruikte luiers, die dan in een bepaalde hoeveelheid goedkoop of gratis aangeboden worden aan jonge gezinnen met een beperkt budget. </p>"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/a802da53-b277-4f15-9105-6d99dff42a9c> .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"OCMW" .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://purl.org/dc/terms/title>	"Luiers via de pamperbank"@nl .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/a802da53-b277-4f15-9105-6d99dff42a9c> .
+
+<http://mu.semte.ch/blank#2d0e69b7-0c54-4c23-b08a-8fdd69b4c234>	<http://mu.semte.ch/vocabularies/core/uuid>	"9827fd80-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#2d0e69b7-0c54-4c23-b08a-8fdd69b4c234>	<http://purl.org/dc/terms/description>	"<p>Je hebt een kind tussen 0 en 3 jaar dat pampers draagt. </p><p>Je hebt een te beperkt inkomen om comfortabel te kunnen leven. </p>"@nl .
+<http://mu.semte.ch/blank#2d0e69b7-0c54-4c23-b08a-8fdd69b4c234>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+<http://mu.semte.ch/blank#2d0e69b7-0c54-4c23-b08a-8fdd69b4c234>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#2d0e69b7-0c54-4c23-b08a-8fdd69b4c234> .
+<http://mu.semte.ch/blank#2d0e69b7-0c54-4c23-b08a-8fdd69b4c234>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+
+<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb>	<http://schema.org/telephone>	"056/67 11 50"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb>	<http://schema.org/url>	"https://www.oostrozebeke.be/sociaalhuis"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5> .
+<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb>	<http://schema.org/email>	"sociaalhuis@oostrozebeke.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb> .
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Ernest Brengierstraat"@nl .
+<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Oostrozebeke"@nl .
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://mu.semte.ch/blank#a1a9ec5e-67cf-4da0-82b4-67c775faedcb>	<http://mu.semte.ch/vocabularies/core/uuid>	"2093f5d0-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<http://mu.semte.ch/vocabularies/core/uuid>	"2093f5d0-7a86-11f1-9c10-d9d20570fa93" .
+
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<https://data.vlaanderen.be/ns/adres#postcode>	"8780" .
+<http://mu.semte.ch/blank#4bd06268-c9bc-4be7-8bdb-21a102084cc5>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/1163413> .
+
+  }
+}

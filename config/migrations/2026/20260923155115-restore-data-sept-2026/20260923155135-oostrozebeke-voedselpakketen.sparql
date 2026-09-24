@@ -1,0 +1,73 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
+
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/d5012226-0238-440b-8e08-f2b4ef84049c> .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Oostrozebeke" .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://purl.org/dc/terms/title>	"Voedselpakketten"@nl .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://mu.semte.ch/vocabularies/core/uuid>	"d5012226-0238-440b-8e08-f2b4ef84049c" .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Voorwerp> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://purl.org/dc/terms/description>	"<p>Als je een laag inkomen hebt, schulden hebt of andere problemen hebt en je kan niet voorzien in jouw basisbehoeften of de basisbehoeften van jouw gezin, dan kan je bij het OCMW terecht voor een voedselpakket.</p><p>De samenstelling van het voedselpakket is afhankelijk van de beschikbare voeding. De pakketten bevatten meestal rijst, spaghetti, melk, olie, confituur, maaltijden in blik, ...</p>"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/Voorwerp>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Voorwerp"@nl .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://schema.org/productID>	"42840"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://schema.org/dateCreated>	"2024-02-05T08:46:38.481Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/d5012226-0238-440b-8e08-f2b4ef84049c> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"OCMW" .
+
+<http://mu.semte.ch/blank#96c55e1d-6450-4142-a0f5-af93036e5c90>	<http://mu.semte.ch/vocabularies/core/uuid>	"f55df2d0-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#00a56d2a-2ab6-4f4f-98fc-5f6119cab26b>	<http://purl.org/dc/terms/description>	"<p>Het voedselpakket is gratis.</p>"@nl .
+<http://mu.semte.ch/blank#4861173f-09b5-4fec-acde-818327be13c0>	<http://purl.org/dc/terms/title>	"Procedure"@nl .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://data.europa.eu/m8g/hasCost>	<http://mu.semte.ch/blank#00a56d2a-2ab6-4f4f-98fc-5f6119cab26b> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#4861173f-09b5-4fec-acde-818327be13c0> .
+<http://mu.semte.ch/blank#96c55e1d-6450-4142-a0f5-af93036e5c90>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#96c55e1d-6450-4142-a0f5-af93036e5c90>	<http://purl.org/dc/terms/description>	"<div lang=\"nl-BE\" data-say-document=\"true\"><ul style=\"unordered\" hierarchical=\"false\" class=\"say-bullet-list\"><li class=\"say-list-item\" data-list-marker=\"1. \"><p class=\"say-paragraph\">Je bent inwoner van de gemeente;</p></li><li class=\"say-list-item\" data-list-marker=\"2. \"><p class=\"say-paragraph\">Je hebt een beperkt inkomen;</p></li><li class=\"say-list-item\" data-list-marker=\"3. \"><p class=\"say-paragraph\">Je komt, na een financieel en sociaal onderzoek, in aanmerking voor aanvullende steun.</p></li></ul></div>"@nl .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#96c55e1d-6450-4142-a0f5-af93036e5c90> .
+<http://mu.semte.ch/blank#4861173f-09b5-4fec-acde-818327be13c0>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://mu.semte.ch/blank#4861173f-09b5-4fec-acde-818327be13c0>	<http://mu.semte.ch/vocabularies/core/uuid>	"8449a020-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#00a56d2a-2ab6-4f4f-98fc-5f6119cab26b>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#4861173f-09b5-4fec-acde-818327be13c0>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#96c55e1d-6450-4142-a0f5-af93036e5c90>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#00a56d2a-2ab6-4f4f-98fc-5f6119cab26b>	<http://mu.semte.ch/vocabularies/core/uuid>	"06bb98c0-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#4861173f-09b5-4fec-acde-818327be13c0>	<http://purl.org/dc/terms/description>	"<p>Een maatschappelijk werker onderzoekt jouw sociale en financi\u00EBle situatie.</p>"@nl .
+<http://mu.semte.ch/blank#00a56d2a-2ab6-4f4f-98fc-5f6119cab26b>	<http://purl.org/dc/terms/title>	"Kost"@nl .
+<http://mu.semte.ch/blank#00a56d2a-2ab6-4f4f-98fc-5f6119cab26b>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Cost> .
+<http://mu.semte.ch/blank#96c55e1d-6450-4142-a0f5-af93036e5c90>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<http://mu.semte.ch/vocabularies/core/uuid>	"24122010-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<http://schema.org/openingHours>	"Elke werkdag van 9 u. tot 12 u. en op dinsdag van 16.30 en 18 u. zonder afspraak en van 13.30 tot 16.30 met afspraak."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<http://mu.semte.ch/vocabularies/core/uuid>	"24122010-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d> .
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649> .
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<http://schema.org/email>	"sociaalhuis@oostrozebeke.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Ernest Brengierstraat"@nl .
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<http://schema.org/url>	"https://www.oostrozebeke.be/sociaalhuis"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Oostrozebeke"@nl .
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#996ff331-cccb-4a5f-b420-34505cc1b63d>	<http://schema.org/telephone>	"056/67 11 50"^^<http://www.w3.org/2001/XMLSchema#string> .
+
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<https://data.vlaanderen.be/ns/adres#postcode>	"8780" .
+<http://mu.semte.ch/blank#5af75700-a71d-4525-ad88-81bb1070b649>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/1163413> .
+
+
+  }
+}
