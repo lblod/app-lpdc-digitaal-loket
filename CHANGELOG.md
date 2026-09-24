@@ -1,5 +1,7 @@
-## v0.39.0 (2026-09-22)
 ## Unreleased
+- Bump frontend to version [0.35.0](https://github.com/lblod/frontend-lpdc/blob/625d160d375206416b25a4d8e769c74547bc5daa/CHANGELOG.md#v0350-2026-09-23) [LPDC-1752]
+
+## v0.39.0 (2026-09-22)
 - Dangling instances feedbackAvailable [LPDC-1702]
 - LPDC Complete Report - fix to keep it running [LPDC-1712]
 - Bump frontend to version [0.33.1](https://github.com/lblod/frontend-lpdc/releases/tag/v0.33.1) [LPDC-1716]
