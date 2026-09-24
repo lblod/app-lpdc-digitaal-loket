@@ -26,6 +26,9 @@ export default {
           OPTIONAL {
             ?uri besluit:classificatie/skos:prefLabel ?classification.
           }
+          FILTER NOT EXISTS {
+            ?uri lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Derden> .
+          }
         }
       } ORDER BY ?prefLabel ?classification
       `;
