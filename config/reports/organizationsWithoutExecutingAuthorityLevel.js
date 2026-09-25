@@ -27,7 +27,7 @@ export default {
             ?uri besluit:classificatie/skos:prefLabel ?classification.
           }
         }
-      } ORDER BY ?prefLabel ?classification
+      } ORDER BY ?name ?classification
       `;
 
     const queryResponse = await querySudo(queryString);

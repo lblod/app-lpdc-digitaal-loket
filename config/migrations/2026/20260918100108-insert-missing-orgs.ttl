@@ -1,0 +1,26 @@
+@prefix rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ns1:	<https://data.vlaanderen.be/id/organisatie/> .
+@prefix skos:	<http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns4:	<http://mu.semte.ch/vocabularies/core/> .
+@prefix ns5:	<https://productencatalogus.data.vlaanderen.be/id/conceptscheme/> .
+@prefix lpdc:  <http://data.lblod.info/vocabularies/lpdc/> .
+
+ns1:OVO027263
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"9f3a60cb-6ea7-4914-bb23-00f2f9281b81" ;
+	skos:prefLabel	"Federale Dienst voor alimentatievorderingen"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+  lpdc:organizationCompetencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal> ;
+  lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Federaal> ;
+	skos:inScheme	ns5:IPDCOrganisaties .
+
+ns1:OVO003887
+	rdf:type	skos:Concept ;
+	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
+	ns4:uuid	"f44a2903-6f2c-4a70-8db0-aa6bd8b15166" ;
+	skos:prefLabel	"publiq"@nl ;
+	skos:topConceptOf	ns5:IPDCOrganisaties ;
+  lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Derden> ;
+	skos:inScheme	ns5:IPDCOrganisaties .
