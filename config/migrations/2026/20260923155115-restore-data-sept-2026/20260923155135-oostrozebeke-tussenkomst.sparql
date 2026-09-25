@@ -1,0 +1,81 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
+
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Oostrozebeke" .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>Elk OCMW kan dit anders invullen en toepassen, zowel wat betreft</p><ul><li>de personen die hiervoor in aanmerking komen als</li><li>de aard van de kosten waarvoor een tegemoetkoming voorzien wordt als</li><li>de grootte van het bedrag dan men, vanuit het OCMW, voorziet</li><li>of het toegekende bedrag terugvorderbaar gesteld wordt of niet</li><li>of de steun terugvorderbaar wordt gesteld (geheel of gedeeltelijk) of niet</li><li>enz.</li></ul>"@nl .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/dc/terms/title>	"Tussenkomst in farmaceutische en (para-) medische kosten"@nl .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://schema.org/dateCreated>	"2024-02-02T13:43:07.968Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://mu.semte.ch/vocabularies/core/uuid>	"894f5a21-deb9-48b8-a572-8a122ee84f9a" .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/894f5a21-deb9-48b8-a572-8a122ee84f9a> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>Elk OCMW kan dit anders invullen en toepassen, zowel wat betreft</p><ul><li>de personen die hiervoor in aanmerking komen als</li><li>de aard van de kosten waarvoor een tegemoetkoming voorzien wordt als</li><li>de grootte van het bedrag dan men, vanuit het OCMW, voorziet</li><li>of het toegekende bedrag terugvorderbaar gesteld wordt of niet</li><li>of de steun terugvorderbaar wordt gesteld (geheel of gedeeltelijk) of niet</li><li>enz.</li></ul>"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/894f5a21-deb9-48b8-a572-8a122ee84f9a> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Financieel voordeel"@nl .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://schema.org/productID>	"42699"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/dc/terms/description>	"<p>Heb je een beperkt inkomen en voldoe je aan de gestelde voorwaarden, dan kan het OCMW tussenkomen in jouw medische, paramedische of farmaceutische kosten.</p><p>Je kan een tussenkomst krijgen in:</p><ul><li>de remgelden voor wie een ziekteverzekering heeft</li><li>de kosten voor medische prestaties waarvoor de ziekteverzekering niet tussenkomt</li><li>de bijdragen aan het ziekenfonds voor wie geen vrijstelling heeft.</li></ul>"@nl .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>Elk OCMW kan dit anders invullen en toepassen, zowel wat betreft</p><ul><li>de personen die hiervoor in aanmerking komen als</li><li>de aard van de kosten waarvoor een tegemoetkoming voorzien wordt als</li><li>de grootte van het bedrag dan men, vanuit het OCMW, voorziet</li><li>of het toegekende bedrag terugvorderbaar gesteld wordt of niet</li><li>of de steun terugvorderbaar wordt gesteld (geheel of gedeeltelijk) of niet</li><li>enz.</li></ul>"@nl .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"OCMW" .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+
+<http://mu.semte.ch/blank#9ace9e7a-512d-4570-bd6a-e79c3cd12e19>	<http://purl.org/dc/terms/description>	"<ul><li>Neem contact op met het OCMW in kader van een financi\u00EBle tegemoetkoming bij farmaceutische of (para-)medische kosten.</li><li>Een maatschappelijk werker zal je ontvangen en, samen met jou, jouw maatschappelijke en financi\u00EBle situatie en jouw vraag bekijken.</li><li>In sommige gevallen (dat is afhankelijk van de voorwaarden die gesteld worden), zal de maatschappelijk werker een sociaal onderzoek doen.</li><li>De maatschappelijk werker gaat bekijken welke dienstverlening van het OCMW voor je het meest passend is. Dat kan uiteraard deze dienstverlening zijn maar eventueel ook een andere.</li></ul>"@nl .
+<http://mu.semte.ch/blank#9ace9e7a-512d-4570-bd6a-e79c3cd12e19>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://mu.semte.ch/blank#9ace9e7a-512d-4570-bd6a-e79c3cd12e19>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#4ce28730-c605-4f21-9dea-e3669bf06174>	<http://mu.semte.ch/vocabularies/core/uuid>	"9206bc30-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#4ce28730-c605-4f21-9dea-e3669bf06174>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#c39d5753-e3ee-4b97-a29e-5930346c6824> .
+<http://mu.semte.ch/blank#4ce28730-c605-4f21-9dea-e3669bf06174>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#4ce28730-c605-4f21-9dea-e3669bf06174> .
+<http://mu.semte.ch/blank#9ace9e7a-512d-4570-bd6a-e79c3cd12e19>	<http://mu.semte.ch/vocabularies/core/uuid>	"dea26620-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#c39d5753-e3ee-4b97-a29e-5930346c6824>	<http://mu.semte.ch/vocabularies/core/uuid>	"a4284e60-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#4ce28730-c605-4f21-9dea-e3669bf06174>	<http://purl.org/dc/terms/description>	"<ul><li>Je bent inwoner van de gemeente van het OCMW</li><li>Je hebt onvoldoende geld</li><li>Een sociaal onderzoek zal uitwijzen of je in aanmerking komt voor deze tegemoetkoming</li></ul>"@nl .
+<http://mu.semte.ch/blank#c39d5753-e3ee-4b97-a29e-5930346c6824>	<http://purl.org/dc/terms/description>	"<ul><li>Jouw identiteitskaart</li><li>Een overzicht van jouw inkomsten en uitgaven aan de hand van jouw rekeninguittreksels</li><li>Een overzicht van de terugbetalingen bij jouw ziekenfonds</li><li>Een overzicht van de aangekochte geneesmiddelen bij jouw apotheker.</li></ul><p>Het is mogelijk dat de maatschappelijk werker je nog andere zaken gaat vragen om te bezorgen.</p>"@nl .
+<http://mu.semte.ch/blank#c39d5753-e3ee-4b97-a29e-5930346c6824>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://mu.semte.ch/blank#4ce28730-c605-4f21-9dea-e3669bf06174>	<http://purl.org/dc/terms/title>	"Voorwaarden"@nl .
+<http://mu.semte.ch/blank#c39d5753-e3ee-4b97-a29e-5930346c6824>	<http://purl.org/dc/terms/title>	"Bewijs"@nl .
+<http://mu.semte.ch/blank#9ace9e7a-512d-4570-bd6a-e79c3cd12e19>	<http://purl.org/dc/terms/title>	"Procedure"@nl .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#9ace9e7a-512d-4570-bd6a-e79c3cd12e19> .
+<http://mu.semte.ch/blank#4ce28730-c605-4f21-9dea-e3669bf06174>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<http://mu.semte.ch/vocabularies/core/uuid>	"aa5a9c20-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<http://schema.org/url>	"https://www.oostrozebeke.be/sociaalhuis"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#1ad08a1f-6199-4742-9306-43b12114707b>	<http://mu.semte.ch/vocabularies/core/uuid>	"a03ce360-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#1ad08a1f-6199-4742-9306-43b12114707b>	<http://purl.org/dc/terms/title>	"Financieel voordeel"@nl .
+<http://mu.semte.ch/blank#1ad08a1f-6199-4742-9306-43b12114707b>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#FinancialAdvantage> .
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Ernest Brengierstraat"@nl .
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<http://schema.org/openingHours>	"Elke werkdag van 9 u. tot 12 u. en op dinsdag van 16.30 en 18 u. zonder afspraak en van 13.30 tot 16.30 met afspraak."^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://purl.org/vocab/cpsv#produces>	<http://mu.semte.ch/blank#1ad08a1f-6199-4742-9306-43b12114707b> .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<http://mu.semte.ch/vocabularies/core/uuid>	"aa5a9c20-7a85-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<http://schema.org/telephone>	"056/67 11 50"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c> .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#1ad08a1f-6199-4742-9306-43b12114707b>	<http://purl.org/dc/terms/description>	"<p>Het bedrag van de tussenkomst is afhankelijk van jouw financi\u00EBle situatie.</p><p> </p>"@nl .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c> .
+<http://mu.semte.ch/blank#526e8e00-1568-43c8-be63-ed624de5956c>	<http://schema.org/email>	"sociaalhuis@oostrozebeke.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#1ad08a1f-6199-4742-9306-43b12114707b>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Oostrozebeke"@nl .
+
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<https://data.vlaanderen.be/ns/adres#postcode>	"8780" .
+<http://mu.semte.ch/blank#ac040afd-955e-4600-b969-9d739691756c>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/1163413> .
+
+
+  }
+}

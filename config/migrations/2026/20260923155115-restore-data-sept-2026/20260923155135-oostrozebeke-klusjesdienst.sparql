@@ -1,0 +1,80 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
+
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<div data-say-document=\"true\" lang=\"nl-BE\"><p class=\"say-paragraph\">De prijs is 20 euro per uur.</p></div>"@nl .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Oostrozebeke" .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
+<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Type/AdviesBegeleiding>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Advies en begeleiding"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/dc/terms/title>	"Klusjesdienst"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://mu.semte.ch/vocabularies/core/uuid>	"74ee0d6a-0284-4b8a-a951-4ca9b6f85392" .
+<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://data.europa.eu/m8g/thematicArea>	<https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>	<https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://schema.org/dateCreated>	"2024-02-02T10:50:25.362Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/74ee0d6a-0284-4b8a-a951-4ca9b6f85392> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://schema.org/productID>	"42687"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/74ee0d6a-0284-4b8a-a951-4ca9b6f85392> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">De prijs is 20 euro per uur.</p></div>"@nl .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">De prijs is 20 euro per uur.</p></div>"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000002>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"OCMW" .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/dc/terms/type>	<https://productencatalogus.data.vlaanderen.be/id/concept/Type/AdviesBegeleiding> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">Kun je door ziekte, een beperking of leeftijd sommige klussen aan en rond jouw woning niet meer uitvoeren, dan kan de klusjesdienst die voor je doen.</p><p data-indentation-level=\"0\">Je kunt beroep doen op de klusjesdienst voor:</p><ul __rdfaid=\"7405df71-e0df-4f3f-8a1c-fa992e5c3bf5\"><li __rdfaid=\"9af5bcbd-9e6b-4870-a1f3-57ae194ff101\"><p data-indentation-level=\"0\">tuinonderhoud (gras maaien, struiken snoeien, \u2026),</p></li><li __rdfaid=\"bb8600b0-ee5c-4972-9cb5-b8e291c9bc1a\"><p data-indentation-level=\"0\">kleine herstellingen in en rond het huis (kapotte schakelaars, sanitair ontstoppen, \u2026)</p></li><li __rdfaid=\"7b3598a3-7c63-4665-bce7-3cdcfc7c064d\"><p data-indentation-level=\"0\">schilderen, behangen, \u2026.</p></li></ul>"@nl .
+
+<http://mu.semte.ch/blank#ebebe7a5-6f73-470c-bbd9-1fb94dd63478>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">Je doet de aanvraag bij het OCMW/Sociaal huis.</p><p data-indentation-level=\"0\">Een maatschappelijk werker komt langs om afspraken te maken.</p><p data-indentation-level=\"0\">Je krijgt een bericht wanneer een klusjesman kan komen.</p>"@nl .
+<http://mu.semte.ch/blank#2a25507d-f171-4cd8-b502-7d89fa992254>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/WebSite> .
+<http://mu.semte.ch/blank#055904d9-70fe-4a51-905c-a88c224abb41>	<http://mu.semte.ch/vocabularies/core/uuid>	"1706bd40-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#2a25507d-f171-4cd8-b502-7d89fa992254>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#2a25507d-f171-4cd8-b502-7d89fa992254>	<http://mu.semte.ch/vocabularies/core/uuid>	"71260740-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#055904d9-70fe-4a51-905c-a88c224abb41>	<http://purl.org/dc/terms/description>	"<ul __rdfaid=\"d41c0111-af79-4da4-966a-93238e821526\"><li __rdfaid=\"2c14f2f5-d070-4753-960c-dcbd142bbbde\"><p data-indentation-level=\"0\">Identiteitskaart;</p></li><li __rdfaid=\"35b59ada-e55e-43aa-860e-a3fccc22d834\"><p data-indentation-level=\"0\">bewijs van inkomsten;</p></li><li __rdfaid=\"c9eb11ab-a153-4264-8eec-6cb623656031\"><p data-indentation-level=\"0\">evt. bewijs van beperking, ziekte.</p></li></ul>"@nl .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#8b9dbba8-ceaa-4645-bba1-738eb7f9ef00> .
+<http://mu.semte.ch/blank#055904d9-70fe-4a51-905c-a88c224abb41>	<http://purl.org/dc/terms/title>	"Bewijsstukken klusjesdienst"@nl .
+<http://mu.semte.ch/blank#8b9dbba8-ceaa-4645-bba1-738eb7f9ef00>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#2a25507d-f171-4cd8-b502-7d89fa992254>	<http://purl.org/dc/terms/description>	"<p data-indentation-level=\"0\">Dit is de website van de gemeente Oostrozebeke.</p>"@nl .
+<http://mu.semte.ch/blank#ebebe7a5-6f73-470c-bbd9-1fb94dd63478>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<http://mu.semte.ch/blank#8b9dbba8-ceaa-4645-bba1-738eb7f9ef00>	<http://purl.org/dc/terms/description>	"<ul __rdfaid=\"d897eff1-654b-4379-9f2f-745802ab1463\"><li __rdfaid=\"3b4f80f7-ed92-4826-8004-b16afdf1035a\"><p data-indentation-level=\"0\">je moet ingeschreven zijn in Oostrozebeke;</p></li><li __rdfaid=\"5482902b-4435-4165-a74a-38470ddeef91\"><p data-indentation-level=\"0\">een bepaald inkomen hebben;</p></li><li __rdfaid=\"8d20ac68-3519-4733-aaff-e4f86ea01497\"><p data-indentation-level=\"0\">je hebt de leeftijd van 80 jaar bereikt of je hebt door ziekte of een beperking hulp nodig.</p></li></ul>"@nl .
+<http://mu.semte.ch/blank#8b9dbba8-ceaa-4645-bba1-738eb7f9ef00>	<http://mu.semte.ch/vocabularies/core/uuid>	"9fb2fd70-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#ebebe7a5-6f73-470c-bbd9-1fb94dd63478>	<http://mu.semte.ch/vocabularies/core/uuid>	"88590de0-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#ebebe7a5-6f73-470c-bbd9-1fb94dd63478>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#055904d9-70fe-4a51-905c-a88c224abb41>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://mu.semte.ch/blank#ebebe7a5-6f73-470c-bbd9-1fb94dd63478>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasWebsite>	<http://mu.semte.ch/blank#2a25507d-f171-4cd8-b502-7d89fa992254> .
+<http://mu.semte.ch/blank#8b9dbba8-ceaa-4645-bba1-738eb7f9ef00>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#2a25507d-f171-4cd8-b502-7d89fa992254>	<http://schema.org/url>	"https://www.oostrozebeke.be/klusjesdienst"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#ebebe7a5-6f73-470c-bbd9-1fb94dd63478> .
+<http://mu.semte.ch/blank#2a25507d-f171-4cd8-b502-7d89fa992254>	<http://purl.org/dc/terms/title>	"https://www.oostrozebeke.be"@nl .
+<http://mu.semte.ch/blank#8b9dbba8-ceaa-4645-bba1-738eb7f9ef00>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#055904d9-70fe-4a51-905c-a88c224abb41> .
+<http://mu.semte.ch/blank#ebebe7a5-6f73-470c-bbd9-1fb94dd63478>	<http://purl.org/dc/terms/title>	"Procedure klusjesdienst"@nl .
+<http://mu.semte.ch/blank#8b9dbba8-ceaa-4645-bba1-738eb7f9ef00>	<http://purl.org/dc/terms/title>	"Voorwaarden klusjesdienst"@nl .
+
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://www.w3.org/ns/locn#Address> .
+<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541>	<http://mu.semte.ch/vocabularies/core/uuid>	"26db5230-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<http://mu.semte.ch/vocabularies/core/uuid>	"26db5230-7a86-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541>	<http://schema.org/email>	"sociaalhuis@oostrozebeke.be"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541>	<http://schema.org/url>	"https://www.oostrozebeke.be/sociaalhuis"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<https://data.vlaanderen.be/ns/adres#gemeentenaam>	"Oostrozebeke"@nl .
+<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#address>	<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59> .
+<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://data.europa.eu/m8g/hasContactPoint>	<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541> .
+<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://schema.org/ContactPoint> .
+<http://mu.semte.ch/blank#a5a10c89-34a6-49fb-b08c-cdf2e618c541>	<http://schema.org/telephone>	"056/67 11 50"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>	"6"^^<http://www.w3.org/2001/XMLSchema#string> .
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<https://data.vlaanderen.be/ns/adres#Straatnaam>	"Ernest Brengierstraat"@nl .
+
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<https://data.vlaanderen.be/ns/adres#land>	"Belgi\u00EB"@nl .
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<https://data.vlaanderen.be/ns/adres#postcode>	"8780" .
+<http://mu.semte.ch/blank#a26e3e4c-5681-4ad9-a005-c531ebc77a59>	<https://data.vlaanderen.be/ns/adres#verwijstNaar>	<https://data.vlaanderen.be/id/adres/1163413> .
+
+  }
+}

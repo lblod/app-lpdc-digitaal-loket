@@ -1,0 +1,10 @@
+DELETE WHERE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/47fc435a-3f77-4224-8a65-524a6c5f49ca> ?p ?o .
+  }
+}
+DELETE WHERE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/1490ca18f894573f76065dc4fdfa2f9c0bcb00964a6af2e21ff8a81e9f1d1198/LoketLB-LPDCGebruiker> {
+    <http://data.lblod.info/id/public-service/4a7a3384-77e3-4f78-97c2-06e842403c1b> ?p ?o .
+  }
+}

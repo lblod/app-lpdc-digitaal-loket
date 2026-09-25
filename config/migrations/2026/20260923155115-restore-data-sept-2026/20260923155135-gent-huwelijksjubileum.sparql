@@ -1,0 +1,56 @@
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+
+<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/ca6ff490-10b2-ea11-a853-005056a8c14b> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"Bent u binnenkort 50 jaar getrouwd of vier u nog een ander huwelijksjubileum? Vraag een huldiging aan bij de stad."@nl-be-x-informal .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/ca6ff490-10b2-ea11-a853-005056a8c14b> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl-be-x-informal .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
+<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl-be-x-informal .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"Ben je binnenkort 50 jaar getrouwd of vier je nog een ander huwelijksjubileum? Vraag een huldiging aan bij de stad."@nl-be-x-informal .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#hasExecutingAuthority>	<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#competentAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal> .
+<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gemeente" .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://schema.org/productID>	"50605"^^<http://www.w3.org/2001/XMLSchema#string> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/dc/terms/description>	"<p>Het Gentse stadsbestuur biedt gratis huldigingen aan aan Gentse echtparen die hun huwelijksverjaardag vieren. Je kunt de viering aanvragen voor jezelf of voor een familielid.</p><ul></ul>"@nl-be-x-informal .
+<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Gent" .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://schema.org/dateCreated>	"2020-06-19T09:38:11Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl-be-x-informal" .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/dc/terms/title>	"Huwelijksjubileum vieren"@nl-be-x-informal .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://mu.semte.ch/vocabularies/core/uuid>	"ca6ff490-10b2-ea11-a853-005056a8c14b" .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#InstancePublicService> .
+<http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl-be-x-informal .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5> .
+<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"Ben je binnenkort 50 jaar getrouwd of vier je nog een ander huwelijksjubileum? Vraag een huldiging aan bij de stad."@nl-be-x-informal .
+
+<http://mu.semte.ch/blank#90f45205-1be1-4e25-97ad-cb8aec241318>	<http://mu.semte.ch/vocabularies/core/uuid>	"427a9720-7a87-11f1-9c10-d9d20570fa93" .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928> .
+<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928>	<http://data.europa.eu/m8g/hasSupportingEvidence>	<http://mu.semte.ch/blank#f07cb9c4-9bd2-4784-9c94-84741a89d6c3> .
+<http://mu.semte.ch/blank#90f45205-1be1-4e25-97ad-cb8aec241318>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Cost> .
+<http://mu.semte.ch/blank#f07cb9c4-9bd2-4784-9c94-84741a89d6c3>	<http://purl.org/dc/terms/title>	"Wat heb ik nodig?"@nl-be-x-informal .
+<http://mu.semte.ch/blank#90f45205-1be1-4e25-97ad-cb8aec241318>	<http://purl.org/dc/terms/title>	"Hoeveel kost het?"@nl-be-x-informal .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://data.europa.eu/m8g/hasCost>	<http://mu.semte.ch/blank#90f45205-1be1-4e25-97ad-cb8aec241318> .
+<http://mu.semte.ch/blank#d4411000-b366-4dd9-b485-10b15e0c5308>	<http://mu.semte.ch/vocabularies/core/uuid>	"2ae461e0-7a87-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928>	<http://purl.org/dc/terms/title>	"Welke huwelijksjubilea worden gevierd?"@nl-be-x-informal .
+<http://mu.semte.ch/blank#f07cb9c4-9bd2-4784-9c94-84741a89d6c3>	<http://purl.org/dc/terms/description>	"<p>Je hebt je identiteitskaart en een korte levensschets nodig.</p>"@nl-be-x-informal .
+<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928>	<http://purl.org/dc/terms/description>	"<p>De volgende huwelijksverjaardagen worden gevierd:</p><ul>\t<li>Goud: 50 jaar</li>\t<li>Diamant: 60 jaar</li>\t<li>Briljant: 65 jaar</li>\t<li>Platina: 70 jaar</li>\t<li>Albast: 75 jaar</li>\t<li>Eik: 80 jaar</li></ul>"@nl-be-x-informal .
+<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Requirement> .
+<http://mu.semte.ch/blank#d4411000-b366-4dd9-b485-10b15e0c5308>	<http://purl.org/dc/terms/title>	"Hoe vraag je de viering aan?"@nl-be-x-informal .
+<http://mu.semte.ch/blank#d4411000-b366-4dd9-b485-10b15e0c5308>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://purl.org/vocab/cpsv#Rule> .
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/vocab/cpsv#follows>	<http://mu.semte.ch/blank#d4411000-b366-4dd9-b485-10b15e0c5308> .
+<http://mu.semte.ch/blank#f07cb9c4-9bd2-4784-9c94-84741a89d6c3>	<http://mu.semte.ch/vocabularies/core/uuid>	"4a70dc00-7a87-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#90f45205-1be1-4e25-97ad-cb8aec241318>	<http://purl.org/dc/terms/description>	"<p>Het stadsbestuur organiseert deze huldigingen gratis voor jubilarissen.</p>"@nl-be-x-informal .
+<http://mu.semte.ch/blank#f07cb9c4-9bd2-4784-9c94-84741a89d6c3>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.europa.eu/m8g/Evidence> .
+<http://mu.semte.ch/blank#90f45205-1be1-4e25-97ad-cb8aec241318>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928>	<http://mu.semte.ch/vocabularies/core/uuid>	"39fb4c20-7a87-11f1-9c10-d9d20570fa93" .
+<http://mu.semte.ch/blank#d4411000-b366-4dd9-b485-10b15e0c5308>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<http://mu.semte.ch/blank#d4411000-b366-4dd9-b485-10b15e0c5308>	<http://purl.org/dc/terms/description>	"<ul><li>Elke kandidaat ontvangt 3 maanden v\u00F3\u00F3r de verjaardag een felicitatiebrief met een vrijblijvende uitnodiging voor de viering.</li><li><strong>Minimaal 2 maanden v\u00F3\u00F3r de datum van de viering </strong>maak je een afspraak bij de <a href=\"https://stad.gent/nl/openingsuren-adressen/dienst-burgerzaken-huwen-en-samenwonen\">Dienst Burgerzaken - Huwen en Samenwonen</a>.</li><li>De viering van het jubileum gebeurt enkel op vraag van de betrokkenen of hun familie.</li></ul><p>Tijdens de Gentse feesten zijn er geen vieringen van jubilea.</p><h3>Waar vindt de viering plaats?</h3><p>Je kunt kiezen tussen het <strong>stadhuis</strong> of een <strong>dienstencentrum</strong>.</p><h4>Met de auto naar het stadhuis</h4><p>Het Gentse stadhuis ligt op de rand van het autovrije gebied. Bekijk dus vooraf goed hoe je&nbsp;naar het stadhuis komt en informeer je over het <a href=\"http://stad.gent/mobiliteit-openbare-werken/mobiliteit\">Gentse mobiliteitsplan en de mogelijke vervoersmiddelen</a>.</p><p>Ben je minder mobiel? Vraag bij het <a href=\"https://stad.gent/nl/openingsuren-adressen/mobiliteitsbedrijf-stad-gent\">Mobiliteitsbedrijf </a>een vergunning aan&nbsp;om met een voertuig&nbsp;in het voetgangersgebied te rijden, tot in de Hoogpoort.</p>"@nl-be-x-informal .
+<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928>	<http://www.w3.org/ns/shacl#order>	"0"^^<http://www.w3.org/2001/XMLSchema#integer> . 
+
+<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b> <http://www.w3.org/ns/adms#status>	<http://lblod.data.gift/concepts/instance-status/verzonden>
+  }
+}
