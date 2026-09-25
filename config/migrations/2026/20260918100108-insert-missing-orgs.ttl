@@ -9,7 +9,7 @@
 ns1:OVO027263
 	rdf:type	skos:Concept ;
 	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
-	ns4:uuid	"69c1333b-dbe6-458e-ac80-35d1dc86867e" ;
+	ns4:uuid	"9f3a60cb-6ea7-4914-bb23-00f2f9281b81" ;
 	skos:prefLabel	"Federale Dienst voor alimentatievorderingen"@nl ;
 	skos:topConceptOf	ns5:IPDCOrganisaties ;
   lpdc:organizationCompetencyLevel <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Federaal> ;
@@ -19,7 +19,7 @@ ns1:OVO027263
 ns1:OVO003887
 	rdf:type	skos:Concept ;
 	rdfs:seeAlso	<https://wegwijs.vlaanderen.be> ;
-	ns4:uuid	"6a08f5f6-a2cc-468b-b170-00ad717747f4" ;
+	ns4:uuid	"f44a2903-6f2c-4a70-8db0-aa6bd8b15166" ;
 	skos:prefLabel	"publiq"@nl ;
 	skos:topConceptOf	ns5:IPDCOrganisaties ;
   lpdc:organizationExecutingLevel <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Derden> ;
