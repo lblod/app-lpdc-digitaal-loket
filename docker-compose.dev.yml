@@ -112,3 +112,13 @@ services:
       WELL_KNOWN_SERVICE: "test"
       FROM_NAME: "Your Name"
     restart: "no"
+
+  ################################################################################
+  # Chat / natural language reports
+  ################################################################################
+
+  natural-language-report:
+    restart: "no"
+
+  chat:
+    restart: "no"
