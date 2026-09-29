@@ -4,7 +4,6 @@ INSERT DATA {
 <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
 <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5> .
 <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://mu.semte.ch/vocabularies/ext/hasVersionedSource>	<https://ipdc.vlaanderen.be/id/instantie/ca6ff490-10b2-ea11-a853-005056a8c14b> .
-<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"Bent u binnenkort 50 jaar getrouwd of vier u nog een ander huwelijksjubileum? Vraag een huldiging aan bij de stad."@nl-be-x-informal .
 <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/ca6ff490-10b2-ea11-a853-005056a8c14b> .
 <https://productencatalogus.data.vlaanderen.be/id/concept/BevoegdBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl-be-x-informal .
 <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
@@ -25,7 +24,6 @@ INSERT DATA {
 <http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl-be-x-informal .
 <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://purl.org/pav/createdBy>	<http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5> .
 <http://data.lblod.info/id/bestuurseenheden/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5>	<http://data.vlaanderen.be/ns/besluit#classificatie>	<http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/5ab0e9b8a3b2ca7c5e000001> .
-<https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"Ben je binnenkort 50 jaar getrouwd of vier je nog een ander huwelijksjubileum? Vraag een huldiging aan bij de stad."@nl-be-x-informal .
 
 <http://mu.semte.ch/blank#90f45205-1be1-4e25-97ad-cb8aec241318>	<http://mu.semte.ch/vocabularies/core/uuid>	"427a9720-7a87-11f1-9c10-d9d20570fa93" .
 <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>	<http://vocab.belgif.be/ns/publicservice#hasRequirement>	<http://mu.semte.ch/blank#c4e6c709-d4cf-4c09-898e-854178340928> .

@@ -1,7 +1,6 @@
 INSERT DATA {
   GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
 
-<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<div data-say-document=\"true\" lang=\"nl-BE\"><p class=\"say-paragraph\">De prijs is 20 euro per uur.</p></div>"@nl .
 <http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Oostrozebeke" .
 <http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
 <https://productencatalogus.data.vlaanderen.be/id/concept/Thema/WelzijnGezondheid>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Welzijn en Gezondheid"@nl .
@@ -25,7 +24,6 @@ INSERT DATA {
 <http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#dutchLanguageVariant>	"nl" .
 <http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
 <http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/74ee0d6a-0284-4b8a-a951-4ca9b6f85392> .
-<http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">De prijs is 20 euro per uur.</p></div>"@nl .
 <http://publications.europa.eu/resource/authority/language/NLD>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Nederlands"@nl .
 <http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<div lang=\"nl-BE\" data-say-document=\"true\"><p class=\"say-paragraph\">De prijs is 20 euro per uur.</p></div>"@nl .
 <http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>	<http://data.europa.eu/m8g/hasCompetentAuthority>	<http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf> .

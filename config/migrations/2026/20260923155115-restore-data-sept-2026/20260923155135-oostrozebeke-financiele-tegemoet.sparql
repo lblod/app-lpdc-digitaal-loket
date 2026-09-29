@@ -1,7 +1,6 @@
 INSERT DATA {
   GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
 
-<http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>De grootte van de steun en de vorm waarin deze verleend wordt, kan verschillen. </p><p> </p>"@nl .
 <http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Oostrozebeke" .
 <http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>	<http://schema.org/dateCreated>	"2024-02-05T08:38:54.186Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <http://data.lblod.info/id/bestuurseenheden/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf>	<http://www.w3.org/1999/02/22-rdf-syntax-ns#type>	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> .
@@ -15,7 +14,6 @@ INSERT DATA {
 <http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>	<http://purl.org/dc/terms/language>	<http://publications.europa.eu/resource/authority/language/NLD> .
 <https://productencatalogus.data.vlaanderen.be/id/concept/Doelgroep/Burger>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Burger"@nl .
 <http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>	<http://purl.org/dc/terms/source>	<https://ipdc.vlaanderen.be/id/instantie/88dbef16-5453-4c49-bbb3-163366ddcad5> .
-<http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#additionalDescription>	"<p>De grootte van de steun en de vorm waarin deze verleend wordt, kan verschillen. </p><p> </p>"@nl .
 <https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Lokale overheid"@nl .
 <https://productencatalogus.data.vlaanderen.be/id/concept/Type/FinancieelVoordeel>	<http://www.w3.org/2004/02/skos/core#prefLabel>	"Financieel voordeel"@nl .
 <http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>	<https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#executingAuthorityLevel>	<https://productencatalogus.data.vlaanderen.be/id/concept/UitvoerendBestuursniveau/Lokaal> .
