@@ -13,6 +13,14 @@ drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
 drc restart report-generation
 ```
 
+## v0.39.1 (2026-10-01)
+- LPDC Complete Report - Fix to keep running [LPDC-1712]
+
+### Deploy notes
+```bash
+drc restart report-generation
+```
+
 ## v0.39.0 (2026-09-22)
 - Dangling instances feedbackAvailable [LPDC-1702]
 - LPDC Complete Report - fix to keep it running [LPDC-1712]
