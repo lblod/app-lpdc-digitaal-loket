@@ -3,7 +3,7 @@
 
 ### Deploy notes
 ```bash
-drc restart report-generation resource deltanotifier
+drc restart report-generation
 ```
 
 ## v0.39.0 (2026-09-22)
