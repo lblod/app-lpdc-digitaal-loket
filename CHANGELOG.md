@@ -1,3 +1,11 @@
+## v0.39.1 (2026-10-01)
+- LPDC Complete Report - Fix to keep running [LPDC-1712]
+
+### Deploy notes
+```bash
+drc restart report-generation resource deltanotifier
+```
+
 ## v0.39.0 (2026-09-22)
 ## Unreleased
 - Dangling instances feedbackAvailable [LPDC-1702]
