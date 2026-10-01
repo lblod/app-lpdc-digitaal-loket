@@ -1,6 +1,7 @@
 ## Unreleased
 - Bump frontend to version [0.35.0](https://github.com/lblod/frontend-lpdc/blob/625d160d375206416b25a4d8e769c74547bc5daa/CHANGELOG.md#v0350-2026-09-23) [LPDC-1752]
 - add missing orgs and their executing/competent levels [LPDC-1700]
+- LPDC Complete Report - Fix to keep running [LPDC-1712]
 
 ### Management
 - Bump to [v0.57.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.2) [LPDC-1779]
