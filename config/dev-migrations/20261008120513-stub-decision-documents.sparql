@@ -1,0 +1,57 @@
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+# Only insert mock data if the field generation does not exist yet
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
+
+    # Decision document
+    <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
+      a lpdcExt:decisionDocument ;
+      mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000001" ;
+      lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" .
+
+    # Field generation
+    <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
+      a lpdcExt:fieldGeneration ;
+      mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000002" ;
+      lpdcExt:relatedField "procedure-title" .
+
+    # Generation attempt 1
+    <http://data.lblod.info/id/generation-attempts/a1b2c3d4-e5f6-4000-8000-000000000003>
+      a lpdcExt:generationAttempt ;
+      mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000003" ;
+      lpdcExt:attemptNumber 1 ;
+      lpdcExt:originalText "Originele tekst voor de procedure." ;
+      lpdcExt:generatedText "Eerste gegenereerde versie van de procedure." ;
+      lpdcExt:finalText "Eerste geselecteerde versie van de procedure." ;
+      lpdcExt:generationAttempt <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
+
+    # Generation attempt 2
+    <http://data.lblod.info/id/generation-attempts/a1b2c3d4-e5f6-4000-8000-000000000004>
+      a lpdcExt:generationAttempt ;
+      mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000004" ;
+      lpdcExt:attemptNumber 2 ;
+      lpdcExt:originalText "Originele tekst voor de procedure." ;
+      lpdcExt:generatedText "Tweede gegenereerde versie van de procedure." ;
+      lpdcExt:finalText "Definitieve tekst gekozen door de gebruiker." ;
+      lpdcExt:generationAttempt <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
+
+    # Link decision document to existing mock public service
+    <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
+      lpdcExt:decisionDocumentInstance <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> .
+
+    # Link field generation to existing mock public service
+    <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
+      lpdcExt:fieldGenerationInstance <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> .
+  }
+}
+WHERE {
+  FILTER NOT EXISTS {
+    GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
+      <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
+        a lpdcExt:fieldGeneration .
+    }
+  }
+}
