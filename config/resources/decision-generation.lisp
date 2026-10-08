@@ -5,7 +5,7 @@
   :properties `((:extracted-html :string
                                  ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
-              :via ,(s-prefix "lpdcExt:uploadedFile")
+              :via ,(s-prefix "nie:dataSource")
               :as "file"))
   :has-many `((attachment
                :via ,(s-prefix "lpdcExt:attachment")

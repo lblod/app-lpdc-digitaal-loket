@@ -75,7 +75,7 @@
                                        :inverse t
                                        :as "decision-documents")
               (field-generation
-                                       :via ,(s-prefix "lpdcExt:fieldGeneration")
+                                       :via ,(s-prefix "lpdcExt:fieldGenerationInstance")
                                        :inverse t
                                        :as "field-generations"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
