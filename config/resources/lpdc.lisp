@@ -69,7 +69,15 @@
                         :as "feedback")
               (notification-preference :via ,(s-prefix "lpdcExt:notificationInstance")
                                        :inverse t
-                                       :as "notification-preferences"))
+                                       :as "notification-preferences")
+              (decision-document
+                                       :via ,(s-prefix "lpdcExt:decisionDocument")
+                                       :inverse t
+                                       :as "decision-documents")
+              (field-generation
+                                       :via ,(s-prefix "lpdcExt:fieldGeneration")
+                                       :inverse t
+                                       :as "fieldGeneration"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
   :features '(include-uri)
   :on-path "public-services"
