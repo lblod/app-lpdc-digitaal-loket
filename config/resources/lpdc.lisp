@@ -71,7 +71,7 @@
                                        :inverse t
                                        :as "notification-preferences")
               (decision-document
-                                       :via ,(s-prefix "lpdcExt:decisionDocument")
+                                       :via ,(s-prefix "lpdcExt:decisionDocumentInstance")
                                        :inverse t
                                        :as "decision-documents")
               (field-generation
