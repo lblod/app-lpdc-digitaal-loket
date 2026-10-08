@@ -77,7 +77,7 @@
               (field-generation
                                        :via ,(s-prefix "lpdcExt:fieldGeneration")
                                        :inverse t
-                                       :as "fieldGeneration"))
+                                       :as "field-generations"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")
   :features '(include-uri)
   :on-path "public-services"
