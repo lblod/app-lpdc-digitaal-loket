@@ -42,7 +42,8 @@ INSERT {
     <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
       a lpdcExt:fieldGeneration ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000002" ;
-      lpdcExt:relatedField "procedure-title" .
+      lpdcExt:relatedField "dct:title" ;
+      lpdcExt:relatedSubject <http://data.lblod.info/id/rule/9c5e2a74-f717-48df-89f0-c37f2ca11ae7> .
 
     # Generation attempt 1
     <http://data.lblod.info/id/generation-attempts/a1b2c3d4-e5f6-4000-8000-000000000003>

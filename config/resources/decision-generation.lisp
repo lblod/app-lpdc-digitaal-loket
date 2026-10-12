@@ -34,8 +34,10 @@
 
 (define-resource field-generation ()
   :class (s-prefix "lpdcExt:fieldGeneration")
-  :properties `((:related-field :string
-                                ,(s-prefix "lpdcExt:relatedField"))) ; predicate of the field (for example Procedure - Titel, Aanvullende beschrijving, etc.)
+  :properties `((:related-field   :string
+                                  ,(s-prefix "lpdcExt:relatedField")) ; predicate of the field
+                (:related-subject :url
+                                  ,(s-prefix "lpdcExt:relatedSubject"))) ; subject of the field, to tell nested properties with the same predicate apart (for example the title of a Procedure vs. the title of the service)
   :has-many `((generation-attempt
                :via ,(s-prefix "lpdcExt:generationAttempt")
                :inverse t
