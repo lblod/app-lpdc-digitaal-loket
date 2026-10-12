@@ -1,5 +1,6 @@
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # Only insert mock data if the field generation does not exist yet
@@ -10,7 +11,32 @@ INSERT {
     <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
       a lpdcExt:decisionDocument ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000001" ;
-      lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" .
+      dct:title "Voorbeeld beslissingsdocument" ;
+      lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" ;
+      lpdcExt:attachment <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005> ,
+                         <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000006> .
+
+    # Attachment 1 (with a sub-attachment)
+    <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005>
+      a lpdcExt:attachment ;
+      mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000005" ;
+      dct:title "Voorbeeld bijlage 1" ;
+      lpdcExt:extractedHtml "<p>Geëxtraheerde HTML van bijlage 1.</p>" ;
+      lpdcExt:subAttachment <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000007> .
+
+    # Attachment 2
+    <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000006>
+      a lpdcExt:attachment ;
+      mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000006" ;
+      dct:title "Voorbeeld bijlage 2" ;
+      lpdcExt:extractedHtml "<p>Geëxtraheerde HTML van bijlage 2.</p>" .
+
+    # Sub-attachment of attachment 1
+    <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000007>
+      a lpdcExt:attachment ;
+      mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000007" ;
+      dct:title "Voorbeeld sub-bijlage" ;
+      lpdcExt:extractedHtml "<p>Geëxtraheerde HTML van de sub-bijlage.</p>" .
 
     # Field generation
     <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
