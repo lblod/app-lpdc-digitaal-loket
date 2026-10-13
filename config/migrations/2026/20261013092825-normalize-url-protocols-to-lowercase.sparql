@@ -1,0 +1,19 @@
+DELETE { GRAPH ?g { ?s schema:url ?u } }
+INSERT { GRAPH ?g { ?s schema:url ?n } }
+WHERE {
+  GRAPH ?g { ?s schema:url ?u }
+  FILTER( REGEX(STR(?u), "^[Hh][Tt][Tt][Pp][Ss]://") )
+  BIND( REPLACE(STR(?u), "^[Hh][Tt][Tt][Pp][Ss]://", "https://") AS ?n )
+  FILTER( ?u != ?n )
+}
+
+;
+
+DELETE { GRAPH ?g { ?s schema:url ?u } }
+INSERT { GRAPH ?g { ?s schema:url ?n } }
+WHERE {
+  GRAPH ?g { ?s schema:url ?u }
+  FILTER( REGEX(STR(?u), "^[Hh][Tt][Tt][Pp]://") )
+  BIND( REPLACE(STR(?u), "^[Hh][Tt][Tt][Pp]://", "http://") AS ?n )
+  FILTER( ?u != ?n )
+}
