@@ -261,6 +261,37 @@ defmodule Dispatcher do
   end
 
   #################################################################
+  # CHAT
+  # To the resource service, not the cache: the data is per user and
+  # changes every few seconds.
+  #################################################################
+
+  match "/chat-conversations/*path", @json do
+    forward conn, path, "http://resource/chat-conversations/"
+  end
+
+  match "/chat-messages/*path", @json do
+    forward conn, path, "http://resource/chat-messages/"
+  end
+
+  match "/chat-instant-messages/*path", @json do
+    forward conn, path, "http://resource/chat-instant-messages/"
+  end
+
+  match "/chat-agents/*path", @json do
+    forward conn, path, "http://resource/chat-agents/"
+  end
+
+  #################################################################
+  # CHAT ASSISTANT
+  # The chat's turn endpoint: POST /assistant/conversations/:id/turns
+  #################################################################
+
+  match "/assistant/*path" do
+    forward conn, path, "http://natural-language-report/assistant/"
+  end
+
+  #################################################################
   # Dashboard
   #################################################################
 
@@ -292,7 +323,7 @@ defmodule Dispatcher do
     forward conn, path, "http://dashboard/@appuniversum/"
   end
 
-  match "/*_path", %{ reverse_host: ["dashboard" | _rest] } do
+  match "/*_path", %{ accept: %{ html: true }, reverse_host: ["dashboard" | _rest] } do
     forward conn, [], "http://dashboard/index.html"
   end
 
@@ -306,7 +337,7 @@ defmodule Dispatcher do
     forward conn, path, "http://dashboard/@appuniversum/"
   end
 
-  match "/*_path", %{ reverse_host: ["test", "dashboard" | _rest] } do
+  match "/*_path", %{ accept: %{ html: true }, reverse_host: ["test", "dashboard" | _rest] } do
     forward conn, [], "http://dashboard/index.html"
   end
 
@@ -320,7 +351,7 @@ defmodule Dispatcher do
     forward conn, path, "http://dashboard/@appuniversum/"
   end
 
-  match "/*_path", %{ reverse_host: ["acc", "dashboard" | _rest] } do
+  match "/*_path", %{ accept: %{ html: true }, reverse_host: ["acc", "dashboard" | _rest] } do
     forward conn, [], "http://dashboard/index.html"
   end
 
@@ -334,8 +365,22 @@ defmodule Dispatcher do
     forward conn, path, "http://dashboard/@appuniversum/"
   end
 
-  match "/*_path", %{ reverse_host: ["dev", "dashboard" | _rest] } do
+  match "/*_path", %{ accept: %{ html: true }, reverse_host: ["dev", "dashboard" | _rest] } do
     forward conn, [], "http://dashboard/index.html"
+  end
+
+  # The chat frontend (frontend-report-assistant). Hosted on the "chat"
+  # subdomain (reverse_host), so the SPA stays a separate app.
+  get "/assets/*path", %{ reverse_host: ["chat" | _rest] } do
+    forward conn, path, "http://chat/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["chat" | _rest] } do
+    forward conn, path, "http://chat/@appuniversum/"
+  end
+
+  match "/*_path", %{ accept: %{ html: true }, reverse_host: ["chat" | _rest] } do
+    forward conn, [], "http://chat/index.html"
   end
 
   #################################################################
