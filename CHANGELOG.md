@@ -2,6 +2,7 @@
 - Bump frontend to version [0.35.0](https://github.com/lblod/frontend-lpdc/blob/625d160d375206416b25a4d8e769c74547bc5daa/CHANGELOG.md#v0350-2026-09-23) [LPDC-1752]
 - add missing orgs and their executing/competent levels [LPDC-1700]
 - migration to lowercase the existing url protocols [LPDC-1784]
+- Bump notification service [1.1.1](https://github.com/lblod/lpdc-email-notification-service/releases/tag/v1.1.1) [LPDC-1722]
 
 ### Management
 - Bump to [v0.57.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.2) [LPDC-1779]
@@ -10,7 +11,7 @@
 #### Deploy notes
 ```
 drc restart migrations && drc logs -ft --tail=200 migrations
-drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+drc pull lpdc lpdc-management lpdc-email-notification-service && drc up -d lpdc lpdc-management lpdc-email-notification-service
 ```
 
 ## v0.39.2 (2026-10-02)
