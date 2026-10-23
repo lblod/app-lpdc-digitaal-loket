@@ -95,7 +95,9 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/files/"
   end
 
-  # File service
+  delete "/files/*path" do
+    forward conn, path, "http://file/files/"
+  end
 
   post "/files/*path", @any do
     forward conn, path, "http://file/files/"
