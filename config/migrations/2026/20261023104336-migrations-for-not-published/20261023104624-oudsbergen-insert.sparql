@@ -10,7 +10,7 @@ INSERT DATA {
     <http://data.lblod.info/id/public-service/1e760d36-d6c1-4a86-aeb3-c997593b6c6e>
       dct:source <https://ipdc.vlaanderen.be/id/concept/a8f8f7a7-9198-4636-8b6c-db598b73fd5a> ;
       ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/c133fe86-2f21-42b8-993f-f28fc2c745de> ;
-      schema:productID "1380"^^xsd:string ;
+      schema:productID "1380" ;
       ext:reviewStatus <http://lblod.data.gift/concepts/review-status/concept-gewijzigd> .
 
   }

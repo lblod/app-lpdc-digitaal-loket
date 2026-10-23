@@ -10,31 +10,31 @@ INSERT DATA {
     <http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>
       dct:source <https://ipdc.vlaanderen.be/id/concept/88541c6a-708d-4b8a-9b22-562213c0ff06> ;
       ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/fd3d91e5-60be-4000-8fec-e94ea49b0ae9> ;
-      schema:productID "21626"^^xsd:string .
+      schema:productID "21626" .
 
     # 769
     <http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>
       dct:source <https://ipdc.vlaanderen.be/id/concept/16e367d3-ac1c-49dc-a123-8f5f1f769d86> ;
       ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/0b9d7186-695e-4a9e-af0e-bf48475bda5c> ;
-      schema:productID "769"^^xsd:string .
+      schema:productID "769" .
 
     # 5003
     <http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>
       dct:source <https://ipdc.vlaanderen.be/id/concept/1ffeefda-5353-4d90-aa2c-9b36e6acad72> ;
       ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/f7efeca4-4227-4c96-8c0d-af489c30faa5> ;
-      schema:productID "5003"^^xsd:string .
+      schema:productID "5003" .
 
     # 115
     <http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>
       dct:source <https://ipdc.vlaanderen.be/id/concept/38745068-d6a7-4e59-9f6d-75d0dbfc9324> ;
       ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/5aabba68-0377-40e0-8e3c-dec24ffdfdc6> ;
-      schema:productID "115"^^xsd:string .
+      schema:productID "115" .
 
     # 122
     <http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>
       dct:source <https://ipdc.vlaanderen.be/id/concept/55fb7259-ea12-4282-be86-cf3bd0155d0d> ;
       ext:hasVersionedSource <https://ipdc.vlaanderen.be/id/conceptsnapshot/74e4607e-af95-44ba-8cb4-fdcfd83f1de7> ;
-      schema:productID "122"^^xsd:string ;
+      schema:productID "122" ;
       ext:reviewStatus <http://lblod.data.gift/concepts/review-status/concept-gewijzigd> .
   }
 }
