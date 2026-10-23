@@ -1,0 +1,23 @@
+PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX dct: <http://purl.org/dc/terms/>
+
+# missing conceptInstantiated, the bestuur has an instance of the concept: true
+INSERT { GRAPH ?g { ?cdc lpdc:conceptInstantiated "true"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> } }
+WHERE {
+  GRAPH ?g { ?concept lpdc:hasConceptDisplayConfiguration ?cdc . ?cdc a lpdc:ConceptDisplayConfiguration .
+             ?i a lpdcExt:InstancePublicService ; dct:source ?concept . }
+  FILTER NOT EXISTS { GRAPH ?g { ?cdc lpdc:conceptInstantiated ?any } }
+};
+# still missing conceptInstantiated (no instance of the concept): false
+INSERT { GRAPH ?g { ?cdc lpdc:conceptInstantiated "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> } }
+WHERE {
+  GRAPH ?g { ?concept lpdc:hasConceptDisplayConfiguration ?cdc . ?cdc a lpdc:ConceptDisplayConfiguration . }
+  FILTER NOT EXISTS { GRAPH ?g { ?cdc lpdc:conceptInstantiated ?any } }
+};
+# missing conceptIsNew: false (it only drives the "nieuw" label)
+INSERT { GRAPH ?g { ?cdc lpdc:conceptIsNew "false"^^<http://mu.semte.ch/vocabularies/typed-literals/boolean> } }
+WHERE {
+  GRAPH ?g { ?concept lpdc:hasConceptDisplayConfiguration ?cdc . ?cdc a lpdc:ConceptDisplayConfiguration . }
+  FILTER NOT EXISTS { GRAPH ?g { ?cdc lpdc:conceptIsNew ?any } }
+}

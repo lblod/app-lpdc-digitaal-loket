@@ -1,0 +1,22 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX schema: <http://schema.org/>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/47857958-7d00-47e0-ae83-00d914eca93f/LoketLB-LPDCGebruiker> {
+    ?instance dct:source ?source .
+    ?instance ext:hasVersionedSource ?versionedSource .
+    ?instance schema:productID ?productID .
+  }
+}
+WHERE {
+  VALUES ?instance {
+    <http://data.lblod.info/id/public-service/1e760d36-d6c1-4a86-aeb3-c997593b6c6e>
+  }
+
+  GRAPH <http://mu.semte.ch/graphs/organizations/47857958-7d00-47e0-ae83-00d914eca93f/LoketLB-LPDCGebruiker> {
+    OPTIONAL { ?instance dct:source ?source . }
+    OPTIONAL { ?instance ext:hasVersionedSource ?versionedSource . }
+    OPTIONAL { ?instance schema:productID ?productID . }
+  }
+}

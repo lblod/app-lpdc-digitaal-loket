@@ -1,0 +1,27 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX schema: <http://schema.org/>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
+    ?instance dct:source ?source .
+    ?instance ext:hasVersionedSource ?versionedSource .
+    ?instance schema:productID ?productID .
+  }
+}
+WHERE {
+  VALUES ?instance {
+    <http://data.lblod.info/id/public-service/d5012226-0238-440b-8e08-f2b4ef84049c>
+    <http://data.lblod.info/id/public-service/894f5a21-deb9-48b8-a572-8a122ee84f9a>
+    <http://data.lblod.info/id/public-service/a802da53-b277-4f15-9105-6d99dff42a9c>
+    <http://data.lblod.info/id/public-service/88dbef16-5453-4c49-bbb3-163366ddcad5>
+    <http://data.lblod.info/id/public-service/1e067517-7c85-4438-94bc-7371e6c1d52f>
+    <http://data.lblod.info/id/public-service/74ee0d6a-0284-4b8a-a951-4ca9b6f85392>
+  }
+
+  GRAPH <http://mu.semte.ch/graphs/organizations/b5a995382b4d908862d8203045a669c3d058553c16a4e2370030a012cf5f74bf/LoketLB-LPDCGebruiker> {
+    OPTIONAL { ?instance dct:source ?source . }
+    OPTIONAL { ?instance ext:hasVersionedSource ?versionedSource . }
+    OPTIONAL { ?instance schema:productID ?productID . }
+  }
+}

@@ -1,0 +1,24 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX schema: <http://schema.org/>
+
+DELETE WHERE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>
+      dct:source ?value .
+  }
+};
+
+DELETE WHERE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>
+      ext:hasVersionedSource ?value .
+  }
+};
+
+DELETE WHERE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    <https://stad.gent/id/product/ca6ff490-10b2-ea11-a853-005056a8c14b>
+      schema:productID ?value .
+  }
+}

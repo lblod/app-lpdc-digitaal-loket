@@ -1,0 +1,20 @@
+PREFIX m8g:     <http://data.europa.eu/m8g/>
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    ?instance ?linkPredicate ?childToDelete .
+    ?childToDelete ?p ?o .
+  }
+}
+WHERE {
+  VALUES ?childToDelete {
+    <http://data.lblod.info/id/rule/90254d34-1d20-4b1e-b29a-b06bfc315e45> 
+    <http://data.lblod.info/id/cost/d2c6041d-9c22-4632-93c6-5330d92b62f6>
+    <http://data.lblod.info/id/requirement/755a0748-5647-4bae-99f3-0eef9384a6da>
+  }
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    ?instance ?linkPredicate ?childToDelete .
+    ?childToDelete ?p ?o .
+  }
+}

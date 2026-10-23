@@ -1,0 +1,44 @@
+PREFIX schema: <http://schema.org/>
+
+DELETE {
+  GRAPH ?g {
+    ?instance ?property ?oldValue .
+  }
+}
+WHERE {
+  VALUES ?instance {
+    <https://stad.gent/id/product/73910975-12b2-ea11-a853-005056a8c14b>
+  }
+
+  VALUES ?property {
+    schema:dateModified
+    schema:dateCreated
+    schema:dateSent
+  }
+
+  GRAPH ?g {
+    ?instance ?property ?oldValue .
+  }
+
+  {
+    SELECT ?g ?instance ?property (MAX(?date) AS ?keep)
+    WHERE {
+      VALUES ?instance {
+    <https://stad.gent/id/product/73910975-12b2-ea11-a853-005056a8c14b>
+      }
+
+      VALUES ?property {
+        schema:dateModified
+        schema:dateCreated
+        schema:dateSent
+      }
+
+      GRAPH ?g {
+        ?instance ?property ?date .
+      }
+    }
+    GROUP BY ?g ?instance ?property
+  }
+
+  FILTER(?oldValue != ?keep)
+}
