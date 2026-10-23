@@ -134,7 +134,8 @@
   ("schema2:DataFeedItem" -> _)
   ("skos:Concept" -> _)
   ("ipdc-lpdc:NotificationRuleConfig" -> _)
-  ("ipdc-lpdc:NotificationPreference" -> _))
+  ("ipdc-lpdc:NotificationPreference" -> _)
+  ("nfo:FileDataObject" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)
