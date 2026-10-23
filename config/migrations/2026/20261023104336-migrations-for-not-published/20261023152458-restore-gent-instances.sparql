@@ -1,0 +1,60 @@
+PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+
+# Gent's "Bouwovertredingen melden", "Milieuhinder melden" and "Slechte woningkwaliteit melden" lost most of their
+# data in the Virtuoso crash of 09/10, so every new snapshot of them fails with "Kan <…> niet vinden voor type".
+# Delete what is left of them and retry their latest snapshot: the snapshot processing then creates them again.
+
+# 1. Delete the triples that are left (dates and links to a rule, cost or website)
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    ?instance ?p ?o .
+  }
+}
+WHERE {
+  VALUES ?instance {
+    <https://stad.gent/id/product/7f424d58-2019-eb11-a852-005056a8478c> # Bouwovertredingen melden
+    <https://stad.gent/id/product/a4aa05da-13b2-ea11-a853-005056a8c14b> # Milieuhinder melden
+    <https://stad.gent/id/product/7aaa05da-13b2-ea11-a853-005056a8c14b> # Slechte woningkwaliteit melden
+  }
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    ?instance ?p ?o .
+  }
+};
+
+# 2. Delete their type. The crash left it where step 1 can't find it, and as long as it is there,
+#    LPDC treats the instance as existing and fails to load it.
+DELETE DATA {
+  GRAPH <http://mu.semte.ch/graphs/organizations/353234a365664e581db5c2f7cc07add2534b47b8e1ab87c821fc6e6365e6bef5/LoketLB-LPDCGebruiker> {
+    <https://stad.gent/id/product/7f424d58-2019-eb11-a852-005056a8478c> a lpdcExt:InstancePublicService .
+    <https://stad.gent/id/product/a4aa05da-13b2-ea11-a853-005056a8c14b> a lpdcExt:InstancePublicService .
+    <https://stad.gent/id/product/7aaa05da-13b2-ea11-a853-005056a8c14b> a lpdcExt:InstancePublicService .
+  }
+};
+
+# 3. Forget that their latest snapshot was processed, so the snapshot processing picks it up again
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent> {
+    ?marker ?p ?o .
+  }
+}
+WHERE {
+  VALUES ?instance {
+    <https://stad.gent/id/product/7f424d58-2019-eb11-a852-005056a8478c>
+    <https://stad.gent/id/product/a4aa05da-13b2-ea11-a853-005056a8c14b>
+    <https://stad.gent/id/product/7aaa05da-13b2-ea11-a853-005056a8c14b>
+  }
+  GRAPH <http://mu.semte.ch/graphs/lpdc/instancesnapshots-ldes-data/gent> {
+    ?latestSnapshot dct:isVersionOf ?instance ;
+                    prov:generatedAtTime ?generatedAtTime .
+    FILTER NOT EXISTS {
+      ?newerSnapshot dct:isVersionOf ?instance ;
+                     prov:generatedAtTime ?newerGeneratedAtTime .
+      FILTER(?newerGeneratedAtTime > ?generatedAtTime)
+    }
+    ?marker ext:processedSnapshot ?latestSnapshot ;
+            ?p ?o .
+  }
+}
