@@ -9,7 +9,7 @@ INSERT {
 
     # Decision document
     <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
-      a lpdcExt:decisionDocument ;
+      a lpdcExt:DecisionDocument ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000001" ;
       dct:title "Voorbeeld beslissingsdocument" ;
       lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" ;
@@ -18,7 +18,7 @@ INSERT {
 
     # Attachment 1 (with a sub-attachment)
     <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005>
-      a lpdcExt:attachment ;
+      a lpdcExt:Attachment ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000005" ;
       dct:title "Voorbeeld bijlage 1" ;
       lpdcExt:extractedHtml "<p>Geëxtraheerde HTML van bijlage 1.</p>" ;
@@ -26,28 +26,28 @@ INSERT {
 
     # Attachment 2
     <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000006>
-      a lpdcExt:attachment ;
+      a lpdcExt:Attachment ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000006" ;
       dct:title "Voorbeeld bijlage 2" ;
       lpdcExt:extractedHtml "<p>Geëxtraheerde HTML van bijlage 2.</p>" .
 
     # Sub-attachment of attachment 1
     <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000007>
-      a lpdcExt:attachment ;
+      a lpdcExt:Attachment ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000007" ;
       dct:title "Voorbeeld sub-bijlage" ;
       lpdcExt:extractedHtml "<p>Geëxtraheerde HTML van de sub-bijlage.</p>" .
 
     # Field generation
     <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
-      a lpdcExt:fieldGeneration ;
+      a lpdcExt:FieldGeneration ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000002" ;
       lpdcExt:relatedField "dct:title" ;
       lpdcExt:relatedSubject <http://data.lblod.info/id/rule/9c5e2a74-f717-48df-89f0-c37f2ca11ae7> .
 
     # Generation attempt 1
     <http://data.lblod.info/id/generation-attempts/a1b2c3d4-e5f6-4000-8000-000000000003>
-      a lpdcExt:generationAttempt ;
+      a lpdcExt:GenerationAttempt ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000003" ;
       lpdcExt:attemptNumber 1 ;
       lpdcExt:originalText "Originele tekst voor de procedure." ;
@@ -57,7 +57,7 @@ INSERT {
 
     # Generation attempt 2
     <http://data.lblod.info/id/generation-attempts/a1b2c3d4-e5f6-4000-8000-000000000004>
-      a lpdcExt:generationAttempt ;
+      a lpdcExt:GenerationAttempt ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000004" ;
       lpdcExt:attemptNumber 2 ;
       lpdcExt:originalText "Originele tekst voor de procedure." ;
@@ -78,7 +78,7 @@ WHERE {
   FILTER NOT EXISTS {
     GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
       <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
-        a lpdcExt:fieldGeneration .
+        a lpdcExt:FieldGeneration .
     }
   }
 }

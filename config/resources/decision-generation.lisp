@@ -1,7 +1,7 @@
 (in-package :mu-cl-resources)
 
 (define-resource decision-document ()
-  :class (s-prefix "lpdcExt:decisionDocument")
+  :class (s-prefix "lpdcExt:DecisionDocument")
   :properties `((:title          :string ,(s-prefix "dct:title"))
                 (:extracted-html :string ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
@@ -15,7 +15,7 @@
   :on-path "decision-documents")
 
 (define-resource attachment ()
-  :class (s-prefix "lpdcExt:attachment")
+  :class (s-prefix "lpdcExt:Attachment")
   :properties `((:title          :string ,(s-prefix "dct:title"))
                 (:extracted-html :string ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
@@ -33,7 +33,7 @@
   :on-path "attachments")
 
 (define-resource field-generation ()
-  :class (s-prefix "lpdcExt:fieldGeneration")
+  :class (s-prefix "lpdcExt:FieldGeneration")
   :properties `((:related-field   :string
                                   ,(s-prefix "lpdcExt:relatedField")) ; predicate of the field
                 (:related-subject :url
@@ -47,7 +47,7 @@
   :on-path "field-generations")
 
 (define-resource generation-attempt ()
-  :class (s-prefix "lpdcExt:generationAttempt")
+  :class (s-prefix "lpdcExt:GenerationAttempt")
   :properties `((:attempt-number :integer
                                  ,(s-prefix "lpdcExt:attemptNumber"))
                 (:original-text :string
