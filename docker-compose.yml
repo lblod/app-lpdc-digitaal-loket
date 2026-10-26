@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:0.35.0
+    image: lblod/frontend-lpdc:feature-heerlijk-helder
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
