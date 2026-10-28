@@ -14,6 +14,7 @@
   :features '(include-uri)
   :on-path "decision-documents")
 
+
 (define-resource attachment ()
   :class (s-prefix "lpdcExt:Attachment")
   :properties `((:title          :string ,(s-prefix "dct:title"))
@@ -36,26 +37,32 @@
   :class (s-prefix "lpdcExt:FieldGeneration")
   :properties `((:related-field   :string
                                   ,(s-prefix "lpdcExt:relatedField")) ; predicate of the field
+  :properties `((:related-field   :url
+                                  ,(s-prefix "lpdcExt:relatedField"))
                 (:related-subject :url
                                   ,(s-prefix "lpdcExt:relatedSubject"))) ; subject of the field, to tell nested properties with the same predicate apart (for example the title of a Procedure vs. the title of the service)
   :has-many `((generation-attempt
                :via ,(s-prefix "lpdcExt:generationAttempt")
                :inverse t
-               :as "generation-attempts"))
+               :as "generation-activities"))
   :resource-base (s-url "http://data.lblod.info/id/generations/")
   :features '(include-uri)
   :on-path "field-generations")
 
-(define-resource generation-attempt ()
-  :class (s-prefix "lpdcExt:GenerationAttempt")
-  :properties `((:attempt-number :integer
+(define-resource generation-activity ()
+  :class (s-prefix "prov:Activity")
+  :properties `((:type :url
+                       ,(s-prefix "dct:type"))
+                (:attempt-number :integer
                                  ,(s-prefix "lpdcExt:attemptNumber"))
                 (:original-text :string
-                                 ,(s-prefix "lpdcExt:originalText"))
+                                ,(s-prefix "lpdcExt:originalText"))
                 (:generated-text :string
                                  ,(s-prefix "lpdcExt:generatedText"))
                 (:final-text :string
-                             ,(s-prefix "lpdcExt:finalText")))
-  :resource-base (s-url "http://data.lblod.info/id/generation-attempts/")
+                             ,(s-prefix "lpdcExt:finalText"))
+                (:status :string
+                         ,(s-prefix "lpdcExt:status")))
+  :resource-base (s-url "http://data.lblod.info/id/generation-activities/")
   :features '(include-uri)
-  :on-path "generation-attempts")
+  :on-path "generation-activities")
