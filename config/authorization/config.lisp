@@ -135,7 +135,10 @@
   ("skos:Concept" -> _)
   ("ipdc-lpdc:NotificationRuleConfig" -> _)
   ("ipdc-lpdc:NotificationPreference" -> _)
-  ("nfo:FileDataObject" -> _))
+  ("nfo:FileDataObject" -> _)
+  ("nfo:DataContainer" -> _)
+  ("task:Task" -> _)
+  ("cogs:Job" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)

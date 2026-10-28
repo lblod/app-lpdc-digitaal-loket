@@ -117,7 +117,7 @@ defmodule Dispatcher do
   # master-job-domain.lisp
   #################################################################
   match "/jobs/*path", @json do
-    forward conn, path, "http://cache/jobs/"
+    forward conn, path, "http://resource/jobs/"
   end
 
   match "/tasks/*path" do
