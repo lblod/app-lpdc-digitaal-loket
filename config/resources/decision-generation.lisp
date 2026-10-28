@@ -14,7 +14,6 @@
   :features '(include-uri)
   :on-path "decision-documents")
 
-
 (define-resource attachment ()
   :class (s-prefix "lpdcExt:Attachment")
   :properties `((:title          :string ,(s-prefix "dct:title"))
@@ -35,14 +34,12 @@
 
 (define-resource field-generation ()
   :class (s-prefix "lpdcExt:FieldGeneration")
-  :properties `((:related-field   :string
-                                  ,(s-prefix "lpdcExt:relatedField")) ; predicate of the field
   :properties `((:related-field   :url
                                   ,(s-prefix "lpdcExt:relatedField"))
                 (:related-subject :url
-                                  ,(s-prefix "lpdcExt:relatedSubject"))) ; subject of the field, to tell nested properties with the same predicate apart (for example the title of a Procedure vs. the title of the service)
-  :has-many `((generation-attempt
-               :via ,(s-prefix "lpdcExt:generationAttempt")
+                                  ,(s-prefix "lpdcExt:relatedSubject")))
+  :has-many `((generation-activity
+               :via ,(s-prefix "lpdcExt:hasGenerationActivity")
                :inverse t
                :as "generation-activities"))
   :resource-base (s-url "http://data.lblod.info/id/generations/")
