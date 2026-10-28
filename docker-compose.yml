@@ -487,9 +487,9 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
-  
+
   lpdc-document-to-html-service:
-    image: lpdc-document-to-html-service:latest
+    image: lblod/lpdc-document-to-html-service:feature-email-to-html-service
     volumes:
       - ./data/files:/share
     restart: "no"
