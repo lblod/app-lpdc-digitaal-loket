@@ -1,18 +1,19 @@
 (in-package :mu-cl-resources)
 
-(define-resource decision-document ()
-  :class (s-prefix "lpdcExt:DecisionDocument")
+(define-resource source-document ()
+  :class (s-prefix "lpdcExt:SourceDocument")
   :properties `((:title          :string ,(s-prefix "dct:title"))
-                (:extracted-html :string ,(s-prefix "lpdcExt:extractedHtml")))
+                (:type           :url    ,(s-prefix "dct:type"))
+                (:extracted-html :html   ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
               :via ,(s-prefix "nie:dataSource")
               :as "file"))
   :has-many `((attachment
                :via ,(s-prefix "lpdcExt:attachment")
                :as "attachments"))
-  :resource-base (s-url "http://data.lblod.info/id/decision-documents/")
+  :resource-base (s-url "http://data.lblod.info/id/source-documents/")
   :features '(include-uri)
-  :on-path "decision-documents")
+  :on-path "source-documents")
 
 (define-resource attachment ()
   :class (s-prefix "lpdcExt:Attachment")
@@ -21,10 +22,10 @@
   :has-one `((file
               :via ,(s-prefix "nie:dataSource")
               :as "file")
-             (decision-document
+             (source-document
               :via ,(s-prefix "lpdcExt:attachment")
               :inverse t
-              :as "decision-document"))
+              :as "source-document"))
   :has-many `((attachment
                :via ,(s-prefix "lpdcExt:subAttachment")
                :as "sub-attachments"))

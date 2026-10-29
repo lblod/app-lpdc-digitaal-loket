@@ -8,9 +8,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 INSERT {
   GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
 
-    # Decision document
-    <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
-      a lpdcExt:DecisionDocument ;
+    # Source document
+    <http://data.lblod.info/id/source-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
+      a lpdcExt:SourceDocument ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000001" ;
       dct:title "Voorbeeld beslissingsdocument" ;
       lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" ;
@@ -75,9 +75,9 @@ INSERT {
       lpdcExt:hasGenerationActivity
         <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
 
-    # Link decision document to existing mock public service
-    <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
-      lpdcExt:decisionDocumentInstance
+    # Link source document to existing mock public service
+    <http://data.lblod.info/id/source-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
+      lpdcExt:sourceDocumentInstance
         <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> .
 
     # Link field generation to existing mock public service
