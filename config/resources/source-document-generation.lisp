@@ -1,18 +1,19 @@
 (in-package :mu-cl-resources)
 
-(define-resource decision-document ()
-  :class (s-prefix "lpdcExt:DecisionDocument")
+(define-resource source-document ()
+  :class (s-prefix "lpdcExt:SourceDocument")
   :properties `((:title          :string ,(s-prefix "dct:title"))
-                (:extracted-html :string ,(s-prefix "lpdcExt:extractedHtml")))
+                (:type           :url    ,(s-prefix "dct:type"))
+                (:extracted-html :html   ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
               :via ,(s-prefix "nie:dataSource")
               :as "file"))
   :has-many `((attachment
                :via ,(s-prefix "lpdcExt:attachment")
                :as "attachments"))
-  :resource-base (s-url "http://data.lblod.info/id/decision-documents/")
+  :resource-base (s-url "http://data.lblod.info/id/source-documents/")
   :features '(include-uri)
-  :on-path "decision-documents")
+  :on-path "source-documents")
 
 (define-resource attachment ()
   :class (s-prefix "lpdcExt:Attachment")
@@ -21,10 +22,10 @@
   :has-one `((file
               :via ,(s-prefix "nie:dataSource")
               :as "file")
-             (decision-document
+             (source-document
               :via ,(s-prefix "lpdcExt:attachment")
               :inverse t
-              :as "decision-document"))
+              :as "source-document"))
   :has-many `((attachment
                :via ,(s-prefix "lpdcExt:subAttachment")
                :as "sub-attachments"))
@@ -34,28 +35,32 @@
 
 (define-resource field-generation ()
   :class (s-prefix "lpdcExt:FieldGeneration")
-  :properties `((:related-field   :string
-                                  ,(s-prefix "lpdcExt:relatedField")) ; predicate of the field
+  :properties `((:related-field   :url
+                                  ,(s-prefix "lpdcExt:relatedField"))
                 (:related-subject :url
-                                  ,(s-prefix "lpdcExt:relatedSubject"))) ; subject of the field, to tell nested properties with the same predicate apart (for example the title of a Procedure vs. the title of the service)
-  :has-many `((generation-attempt
-               :via ,(s-prefix "lpdcExt:generationAttempt")
+                                  ,(s-prefix "lpdcExt:relatedSubject")))
+  :has-many `((generation-activity
+               :via ,(s-prefix "lpdcExt:hasGenerationActivity")
                :inverse t
-               :as "generation-attempts"))
+               :as "generation-activities"))
   :resource-base (s-url "http://data.lblod.info/id/generations/")
   :features '(include-uri)
   :on-path "field-generations")
 
-(define-resource generation-attempt ()
-  :class (s-prefix "lpdcExt:GenerationAttempt")
-  :properties `((:attempt-number :integer
+(define-resource generation-activity ()
+  :class (s-prefix "prov:Activity")
+  :properties `((:type :url
+                       ,(s-prefix "dct:type"))
+                (:attempt-number :integer
                                  ,(s-prefix "lpdcExt:attemptNumber"))
                 (:original-text :string
-                                 ,(s-prefix "lpdcExt:originalText"))
+                                ,(s-prefix "lpdcExt:originalText"))
                 (:generated-text :string
                                  ,(s-prefix "lpdcExt:generatedText"))
                 (:final-text :string
-                             ,(s-prefix "lpdcExt:finalText")))
-  :resource-base (s-url "http://data.lblod.info/id/generation-attempts/")
+                             ,(s-prefix "lpdcExt:finalText"))
+                (:status :string
+                         ,(s-prefix "lpdcExt:status")))
+  :resource-base (s-url "http://data.lblod.info/id/generation-activities/")
   :features '(include-uri)
-  :on-path "generation-attempts")
+  :on-path "generation-activities")

@@ -70,10 +70,10 @@
               (notification-preference :via ,(s-prefix "lpdcExt:notificationInstance")
                                        :inverse t
                                        :as "notification-preferences")
-              (decision-document
-                                       :via ,(s-prefix "lpdcExt:decisionDocumentInstance")
+              (source-document
+                                       :via ,(s-prefix "lpdcExt:sourceDocumentInstance")
                                        :inverse t
-                                       :as "decision-documents")
+                                       :as "source-documents")
               (field-generation
                                        :via ,(s-prefix "lpdcExt:fieldGenerationInstance")
                                        :inverse t

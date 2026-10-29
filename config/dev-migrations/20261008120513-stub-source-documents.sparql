@@ -1,20 +1,22 @@
 PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # Only insert mock data if the field generation does not exist yet
 INSERT {
   GRAPH <http://mu.semte.ch/graphs/organizations/c648ea5d12626ee3364a02debb223908a71e68f53d69a7a7136585b58a083e77/LoketLB-LPDCGebruiker> {
 
-    # Decision document
-    <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
-      a lpdcExt:DecisionDocument ;
+    # Source document
+    <http://data.lblod.info/id/source-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
+      a lpdcExt:SourceDocument ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000001" ;
       dct:title "Voorbeeld beslissingsdocument" ;
       lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" ;
-      lpdcExt:attachment <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005> ,
-                         <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000006> .
+      lpdcExt:attachment
+        <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005> ,
+        <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000006> .
 
     # Attachment 1 (with a sub-attachment)
     <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005>
@@ -22,7 +24,8 @@ INSERT {
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000005" ;
       dct:title "Voorbeeld bijlage 1" ;
       lpdcExt:extractedHtml "<p>Geëxtraheerde HTML van bijlage 1.</p>" ;
-      lpdcExt:subAttachment <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000007> .
+      lpdcExt:subAttachment
+        <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000007> .
 
     # Attachment 2
     <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000006>
@@ -42,36 +45,45 @@ INSERT {
     <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
       a lpdcExt:FieldGeneration ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000002" ;
-      lpdcExt:relatedField "dct:title" ;
-      lpdcExt:relatedSubject <http://data.lblod.info/id/rule/9c5e2a74-f717-48df-89f0-c37f2ca11ae7> .
+      lpdcExt:relatedField dct:title ;
+      lpdcExt:relatedSubject
+        <http://data.lblod.info/id/rule/9c5e2a74-f717-48df-89f0-c37f2ca11ae7> .
 
-    # Generation attempt 1
-    <http://data.lblod.info/id/generation-attempts/a1b2c3d4-e5f6-4000-8000-000000000003>
-      a lpdcExt:GenerationAttempt ;
+    # Generation activity 1 - generated but not used
+    <http://data.lblod.info/id/generation-activities/a1b2c3d4-e5f6-4000-8000-000000000003>
+      a prov:Activity ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000003" ;
+      dct:type lpdcExt:GenerationActivity ;
       lpdcExt:attemptNumber 1 ;
       lpdcExt:originalText "Originele tekst voor de procedure." ;
       lpdcExt:generatedText "Eerste gegenereerde versie van de procedure." ;
       lpdcExt:finalText "Eerste geselecteerde versie van de procedure." ;
-      lpdcExt:generationAttempt <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
+      lpdcExt:status lpdcExt:notUsed ;
+      lpdcExt:hasGenerationActivity
+        <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
 
-    # Generation attempt 2
-    <http://data.lblod.info/id/generation-attempts/a1b2c3d4-e5f6-4000-8000-000000000004>
-      a lpdcExt:GenerationAttempt ;
+    # Generation activity 2 - inserted/used
+    <http://data.lblod.info/id/generation-activities/a1b2c3d4-e5f6-4000-8000-000000000004>
+      a prov:Activity ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000004" ;
+      dct:type lpdcExt:GenerationActivity ;
       lpdcExt:attemptNumber 2 ;
       lpdcExt:originalText "Originele tekst voor de procedure." ;
       lpdcExt:generatedText "Tweede gegenereerde versie van de procedure." ;
       lpdcExt:finalText "Definitieve tekst gekozen door de gebruiker." ;
-      lpdcExt:generationAttempt <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
+      lpdcExt:status lpdcExt:used ;
+      lpdcExt:hasGenerationActivity
+        <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
 
-    # Link decision document to existing mock public service
-    <http://data.lblod.info/id/decision-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
-      lpdcExt:decisionDocumentInstance <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> .
+    # Link source document to existing mock public service
+    <http://data.lblod.info/id/source-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
+      lpdcExt:sourceDocumentInstance
+        <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> .
 
     # Link field generation to existing mock public service
     <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002>
-      lpdcExt:fieldGenerationInstance <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> .
+      lpdcExt:fieldGenerationInstance
+        <http://data.lblod.info/id/public-service/2bc7d6b7-d134-459d-9a66-7dea329170ca> .
   }
 }
 WHERE {
