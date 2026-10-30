@@ -2,7 +2,6 @@ PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
 PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 # Only insert mock data if the field generation does not exist yet
 INSERT {
@@ -13,10 +12,7 @@ INSERT {
       a lpdcExt:SourceDocument ;
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000001" ;
       dct:title "Voorbeeld beslissingsdocument" ;
-      lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" ;
-      lpdcExt:attachment
-        <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005> ,
-        <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000006> .
+      lpdcExt:extractedHtml "<h1>Voorbeeld document</h1><p>Dit is de geëxtraheerde HTML van het brondocument.</p>" .
 
     # Attachment 1 (with a sub-attachment)
     <http://data.lblod.info/id/attachments/a1b2c3d4-e5f6-4000-8000-000000000005>
@@ -58,7 +54,7 @@ INSERT {
       lpdcExt:originalText "Originele tekst voor de procedure." ;
       lpdcExt:generatedText "Eerste gegenereerde versie van de procedure." ;
       lpdcExt:finalText "Eerste geselecteerde versie van de procedure." ;
-      lpdcExt:status lpdcExt:notUsed ;
+      lpdcExt:status "notUsed" ;
       lpdcExt:hasGenerationActivity
         <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
 
@@ -71,7 +67,7 @@ INSERT {
       lpdcExt:originalText "Originele tekst voor de procedure." ;
       lpdcExt:generatedText "Tweede gegenereerde versie van de procedure." ;
       lpdcExt:finalText "Definitieve tekst gekozen door de gebruiker." ;
-      lpdcExt:status lpdcExt:used ;
+      lpdcExt:status "used" ;
       lpdcExt:hasGenerationActivity
         <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
 

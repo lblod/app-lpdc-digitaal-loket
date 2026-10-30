@@ -7,9 +7,6 @@
   :has-one `((file
               :via ,(s-prefix "nie:dataSource")
               :as "file"))
-  :has-many `((attachment
-               :via ,(s-prefix "lpdcExt:attachment")
-               :as "attachments"))
   :resource-base (s-url "http://data.lblod.info/id/source-documents/")
   :features '(include-uri)
   :on-path "source-documents")
@@ -20,11 +17,7 @@
                 (:extracted-html :string ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
               :via ,(s-prefix "nie:dataSource")
-              :as "file")
-             (source-document
-              :via ,(s-prefix "lpdcExt:attachment")
-              :inverse t
-              :as "source-document"))
+              :as "file"))
   :has-many `((attachment
                :via ,(s-prefix "lpdcExt:subAttachment")
                :as "sub-attachments"))
