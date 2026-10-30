@@ -63,6 +63,9 @@ services:
   file:
     restart: "no"
 
+  download-url:
+    restart: "no"
+
   db-cleanup:
     restart: "no"
 
