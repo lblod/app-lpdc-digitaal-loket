@@ -5,7 +5,7 @@
   :properties `((:title          :string ,(s-prefix "dct:title"))
                 (:extracted-html :html   ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
-              :via ,(s-prefix "nie:dataSource")
+              :via ,(s-prefix "dct:source")
               :as "file"))
   :resource-base (s-url "http://data.lblod.info/id/source-documents/")
   :features '(include-uri)
@@ -16,7 +16,7 @@
   :properties `((:title          :string ,(s-prefix "dct:title"))
                 (:extracted-html :string ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
-              :via ,(s-prefix "nie:dataSource")
+              :via ,(s-prefix "dct:source")
               :as "file"))
   :has-many `((attachment
                :via ,(s-prefix "lpdcExt:subAttachment")
