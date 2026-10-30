@@ -117,7 +117,7 @@ defmodule Dispatcher do
   # master-job-domain.lisp
   #################################################################
   match "/jobs/*path", @json do
-    forward conn, path, "http://cache/jobs/"
+    forward conn, path, "http://resource/jobs/"
   end
 
   match "/tasks/*path" do
@@ -150,6 +150,13 @@ defmodule Dispatcher do
 
   match "/log-sources/*path" do
     forward conn, path, "http://resource/log-sources/"
+  end
+
+  #################################################################
+  # source-document-generation.lisp
+  #################################################################
+  match "/source-documents/*path", @json do
+    forward conn, path, "http://cache/source-documents/"
   end
 
   #################################################################
