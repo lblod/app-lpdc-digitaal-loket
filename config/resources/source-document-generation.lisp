@@ -3,7 +3,6 @@
 (define-resource source-document ()
   :class (s-prefix "lpdcExt:SourceDocument")
   :properties `((:title          :string ,(s-prefix "dct:title"))
-                (:type           :url    ,(s-prefix "dct:type"))
                 (:extracted-html :html   ,(s-prefix "lpdcExt:extractedHtml")))
   :has-one `((file
               :via ,(s-prefix "nie:dataSource")
