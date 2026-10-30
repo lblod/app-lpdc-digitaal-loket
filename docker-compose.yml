@@ -240,6 +240,17 @@ services:
     restart: always
     logging: *default-logging
 
+  download-url:
+    image: lblod/download-url-service:1.3.0
+    environment:
+      CACHING_MAX_RETRIES: "10"
+    volumes:
+      - ./data/files:/share
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
   db-cleanup:
     image: lblod/db-cleanup-service:0.5.1
     labels:

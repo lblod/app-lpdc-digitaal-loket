@@ -135,6 +135,7 @@
   ("skos:Concept" -> _)
   ("ipdc-lpdc:NotificationRuleConfig" -> _)
   ("ipdc-lpdc:NotificationPreference" -> _)
+  ("nfo:RemoteDataObject" -> _)
   ("nfo:FileDataObject" -> _)
   ("nfo:DataContainer" -> _)
   ("task:Task" -> _)

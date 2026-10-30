@@ -7,8 +7,7 @@ export default [
       },
       object: {
         type: "uri",
-        value:
-          "http://redpencil.data.gift/id/concept/JobStatus/scheduled",
+        value: "http://redpencil.data.gift/id/concept/JobStatus/scheduled",
       },
     },
     callback: {

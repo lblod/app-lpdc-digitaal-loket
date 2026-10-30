@@ -113,6 +113,10 @@ defmodule Dispatcher do
     forward conn, path, "http://file/files/"
   end
 
+  match "/remote-data-objects/*path" do
+    forward conn, path, "http://resource/remote-data-objects/"
+  end
+
   #################################################################
   # master-job-domain.lisp
   #################################################################
