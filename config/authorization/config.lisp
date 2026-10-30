@@ -138,7 +138,8 @@
   ("nfo:FileDataObject" -> _)
   ("nfo:DataContainer" -> _)
   ("task:Task" -> _)
-  ("cogs:Job" -> _))
+  ("cogs:Job" -> _)
+  ("ipdc-lpdc:SourceDocument" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)

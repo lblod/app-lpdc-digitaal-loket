@@ -153,6 +153,13 @@ defmodule Dispatcher do
   end
 
   #################################################################
+  # source-document-generation.lisp
+  #################################################################
+  match "/source-documents/*path", @json do
+    forward conn, path, "http://cache/source-documents/"
+  end
+
+  #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
 
