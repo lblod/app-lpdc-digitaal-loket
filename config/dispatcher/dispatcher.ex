@@ -95,7 +95,9 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/files/"
   end
 
-  # File service
+  delete "/files/*path" do
+    forward conn, path, "http://file/files/"
+  end
 
   post "/files/*path", @any do
     forward conn, path, "http://file/files/"
@@ -111,11 +113,15 @@ defmodule Dispatcher do
     forward conn, path, "http://file/files/"
   end
 
+  match "/remote-data-objects/*path" do
+    forward conn, path, "http://resource/remote-data-objects/"
+  end
+
   #################################################################
   # master-job-domain.lisp
   #################################################################
   match "/jobs/*path", @json do
-    forward conn, path, "http://cache/jobs/"
+    forward conn, path, "http://resource/jobs/"
   end
 
   match "/tasks/*path" do
@@ -148,6 +154,13 @@ defmodule Dispatcher do
 
   match "/log-sources/*path" do
     forward conn, path, "http://resource/log-sources/"
+  end
+
+  #################################################################
+  # source-document-generation.lisp
+  #################################################################
+  match "/source-documents/*path", @json do
+    forward conn, path, "http://cache/source-documents/"
   end
 
   #################################################################
