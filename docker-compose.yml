@@ -199,7 +199,7 @@ services:
     logging: *default-logging
 
   dashboard:
-    image: lblod/frontend-dashboard:1.10.0
+    image: lblod/frontend-dashboard:1.10.2
     environment:
       EMBER_LOGIN_ROUTE: "acmidm-login"
       EMBER_ACMIDM_CLIENT_ID: "<CLIENT_ID>"
