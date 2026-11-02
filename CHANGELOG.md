@@ -6,6 +6,7 @@
 - Bump notification service [1.1.1](https://github.com/lblod/lpdc-email-notification-service/releases/tag/v1.1.1) [LPDC-1722]
 
 ### Management
+- Bump to [v0.58.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.58.0) [LPDC-1741]
 - Bump to [v0.57.2](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.2) [LPDC-1779]
 - Bump to [v0.57.3](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.3) [LPDC-1784]
 
