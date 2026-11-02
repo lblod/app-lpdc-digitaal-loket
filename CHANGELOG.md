@@ -1,5 +1,7 @@
 ## Unreleased
-- Bump frontend to version [0.35.0](https://github.com/lblod/frontend-lpdc/blob/625d160d375206416b25a4d8e769c74547bc5daa/CHANGELOG.md#v0350-2026-09-23) [LPDC-1752]
+- Update frontend:
+  - [v0.36.0](https://github.com/lblod/frontend-lpdc/blob/64095bb4b5d89891741fd10ff3ea9f210a762435/CHANGELOG.md#v0360-2026-11-02) [LDPC-1311] [LPDC-1731] [LPDC-1783]
+  - [v0.35.0](https://github.com/lblod/frontend-lpdc/blob/625d160d375206416b25a4d8e769c74547bc5daa/CHANGELOG.md#v0350-2026-09-23) [LPDC-1752]
 - add missing orgs and their executing/competent levels [LPDC-1700]
 - migration to lowercase the existing url protocols [LPDC-1784]
 - migration to insert missing executing/competent levels for instances in ontwerp [LPDC-1787]
