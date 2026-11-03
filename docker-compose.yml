@@ -103,7 +103,11 @@ services:
     restart: always
     logging: *default-logging
     healthcheck:
-      test: [ "CMD-SHELL", "chmod +x /tmp/health_checks/migrations-healthcheck.sh; /tmp/health_checks/migrations-healthcheck.sh" ]
+      test:
+        [
+          "CMD-SHELL",
+          "chmod +x /tmp/health_checks/migrations-healthcheck.sh; /tmp/health_checks/migrations-healthcheck.sh",
+        ]
       interval: 5s
       timeout: 5s
       start_period: 30s
@@ -184,7 +188,7 @@ services:
   report-generation:
     image: lblod/loket-report-generation-service:0.8.3
     environment:
-      DEFAULT_GRAPH: 'http://mu.semte.ch/graphs/organizations/141d9d6b-54af-4d17-b313-8d1c30bc3f5b/LoketLB-AdminDashboardLPDC'
+      DEFAULT_GRAPH: "http://mu.semte.ch/graphs/organizations/141d9d6b-54af-4d17-b313-8d1c30bc3f5b/LoketLB-AdminDashboardLPDC"
     depends_on:
       migrations:
         condition: service_healthy
@@ -274,7 +278,7 @@ services:
       ADRESSEN_REGISTER_API_KEY: "<ADRESSEN_REGISTER_API_KEY>"
       IPDC_API_ENDPOINT: "<IPDC_API_ENDPOINT_URL>"
       IPDC_API_KEY: "<IPDC_API_KEY>"
-      MU_SPARQL_ENDPOINT: 'http://database:8890/sparql'
+      MU_SPARQL_ENDPOINT: "http://database:8890/sparql"
       MU_APPLICATION_GRAPH: "http://mu.semte.ch/application"
       INSTANCE_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
       CONCEPT_SNAPSHOT_PROCESSING_CRON_PATTERN: "*/1 * * * *" # run the job every minute
@@ -284,7 +288,7 @@ services:
     restart: always
     logging: *default-logging
     healthcheck:
-      test: [ "CMD", "wget", "--spider", "http://localhost" ]
+      test: ["CMD", "wget", "--spider", "http://localhost"]
       interval: 5s
       timeout: 5s
       start_period: 30s
@@ -466,7 +470,7 @@ services:
     image: lblod/lpdc-feedback-management-service:1.0.5
     environment:
       IPDC_JSON_ENDPOINT: "Insert ipdc feedback publish endpoint"
-      IPDC_X_API_KEY: 'Insert credentials for publish endpoint'
+      IPDC_X_API_KEY: "Insert credentials for publish endpoint"
     labels:
       - "logging=true"
     restart: always
@@ -475,7 +479,7 @@ services:
   error-alert:
     image: lblod/loket-error-alert-service:1.0.1
     environment:
-      APP_NAME: 'LPDC'
+      APP_NAME: "LPDC"
     volumes:
       - ./config/error-alert:/config/
     labels:
@@ -503,4 +507,14 @@ services:
     image: lblod/lpdc-document-to-html-service:feature-email-to-html-service
     volumes:
       - ./data/files:/share
-    restart: "no"
+    restart: always
+    logging: *default-logging
+
+  check-url:
+    image: lblod/check-url-service:feature-security-checks
+    environment:
+      VALIDATE_URL_ALLOW_HTTP: "true"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging

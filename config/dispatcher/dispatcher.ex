@@ -163,6 +163,10 @@ defmodule Dispatcher do
     forward conn, path, "http://cache/source-documents/"
   end
 
+  match "/check-link/*path", @json do
+    forward conn, path, "http://check-url/"
+  end
+
   #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
@@ -238,7 +242,7 @@ defmodule Dispatcher do
   end
 
   #################################################################
-  # Subscription
+  # Notifications
   #################################################################
 
   match "/notification-rules/*path", @json do
