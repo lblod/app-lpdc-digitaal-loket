@@ -3,10 +3,12 @@
 (define-resource source-document ()
   :class (s-prefix "lpdcExt:SourceDocument")
   :properties `((:title          :string ,(s-prefix "dct:title"))
-                (:extracted-html :html   ,(s-prefix "lpdcExt:extractedHtml")))
+                (:extracted-html :html   ,(s-prefix "lpdc:extractedHtml")))
   :has-one `((file
               :via ,(s-prefix "dct:source")
               :as "file"))
+  :has-many `((public-service :via ,(s-prefix "lpdcExt:sourceDocumentInstance")
+                              :as "instances"))
   :resource-base (s-url "http://data.lblod.info/id/source-documents/")
   :features '(include-uri)
   :on-path "source-documents")
@@ -14,7 +16,7 @@
 (define-resource attachment ()
   :class (s-prefix "lpdcExt:Attachment")
   :properties `((:title          :string ,(s-prefix "dct:title"))
-                (:extracted-html :string ,(s-prefix "lpdcExt:extractedHtml")))
+                (:extracted-html :string ,(s-prefix "lpdc:extractedHtml")))
   :has-one `((file
               :via ,(s-prefix "dct:source")
               :as "file"))
