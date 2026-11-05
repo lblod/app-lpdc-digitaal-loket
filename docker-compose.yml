@@ -518,3 +518,20 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
+  hh-rewrite:
+    image: semantic-ai/hh-rewrite-service:0.1.0
+    environment:
+      CONFIG_PATH: /config/config.json
+      ALLOW_MU_AUTH_SUDO: "false"
+      MU_SPARQL_ENDPOINT: http://database:8890/sparql
+      MU_SPARQL_UPDATEPOINT: http://database:8890/sparql
+      LOG_LEVEL: INFO
+      LLM__API_KEY: ${LLM_API_KEY}
+    volumes:
+      - ./config/hh-rewrite/config-ollama.json:/config/config.json:ro
+      - ./docker-compose.yml:/tmp/docker-compose.yaml:ro
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging

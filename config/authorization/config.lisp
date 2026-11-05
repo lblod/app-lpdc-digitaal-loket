@@ -106,7 +106,13 @@
   ("org:Organization" -> _)
   ("organisatie:TypeVestiging" -> _)
   ("organisatie:OrganisatieStatusCode" -> _)
-  ("foaf:OnlineAccount" -> _)) ;; only this is needed for login
+  ("foaf:OnlineAccount" -> _) ;; only this is needed for login
+  ("ext:Guideline" -> _)
+  ;; TODO: move these to organizations-ipdc-lpdc
+   ("ipdc-lpdc:FieldGeneration" -> _)
+  ("ext:AICall" -> _)
+  ("task:Task" -> _)
+  ("prov:Activity" -> _))
 
 (define-graph organizations-ipdc-lpdc ("http://mu.semte.ch/graphs/organizations/")
   ("ipdc-lpdc:ConceptualPublicService" -> _)
@@ -217,7 +223,8 @@
             FILTER( ?session_role = \"LoketLB-AdminDashboardLPDC\" )
           }")
 
-(grant (read)
+;; TODO: remove write again
+(grant (read write)
   :to-graph (public)
   :for-allowed-group "public")
 

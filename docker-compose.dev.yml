@@ -121,3 +121,24 @@ services:
       WELL_KNOWN_SERVICE: "test"
       FROM_NAME: "Your Name"
     restart: "no"
+
+  ollama:
+    image: ollama/ollama:0.40.14
+    environment:
+      OLLAMA_KEEP_ALIVE: "-1"
+      OLLAMA_LOAD_TIMEOUT: "10m"
+    volumes:
+      - ollama-models:/root/.ollama/models
+    entrypoint:
+      - /bin/sh
+      - -c
+      - ollama serve & pid=$$! && sleep 5 && ollama pull gemma4:e4b-it-qat && wait $$pid
+    restart: "no"
+
+  hh-rewrite:
+    # ports:
+    #   - "8080:80"
+    restart: "no"
+
+volumes:
+  ollama-models:
