@@ -261,7 +261,7 @@ defmodule Dispatcher do
   # Heerlijk Helder
   #################################################################
 
-  post "/hh-rewrites", @json do
+  post "/hh-rewrites" do
     forward conn, [], "http://hh-rewrite/hh-rewrites"
   end
 
