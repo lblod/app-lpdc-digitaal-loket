@@ -52,7 +52,9 @@
   :reporting "http://lblod.data.gift/vocabularies/reporting/"
   :cogs "http://vocab.deri.ie/cogs#"
   :core "http://open-services.net/ns/core#"
-  :task "http://redpencil.data.gift/vocabularies/tasks/")
+  :task "http://redpencil.data.gift/vocabularies/tasks/"
+  :sioc "http://rdfs.org/sioc/ns#"
+  :sioct "http://rdfs.org/sioc/types#")
 
 (type-cache::add-type-for-prefix "http://mu.semte.ch/sessions/" "http://mu.semte.ch/vocabularies/session/Session")
 
@@ -106,7 +108,8 @@
   ("org:Organization" -> _)
   ("organisatie:TypeVestiging" -> _)
   ("organisatie:OrganisatieStatusCode" -> _)
-  ("foaf:OnlineAccount" -> _)) ;; only this is needed for login
+  ("foaf:OnlineAccount" -> _) ;; only this is needed for login
+  ("prov:SoftwareAgent" -> _))
 
 (define-graph organizations-ipdc-lpdc ("http://mu.semte.ch/graphs/organizations/")
   ("ipdc-lpdc:ConceptualPublicService" -> _)
@@ -158,6 +161,20 @@
   ("adms:Status" -> _)
   ("nfo:DataContainer" -> _)
   ("nfo:FileDataObject" -> _))
+
+;; Chat: one graph per account, only its owner reads or writes it.
+;; The chat types appear in no other group: a graph-less insert lands
+;; in every graph whose group allows the type.
+(define-graph chat ("http://mu.semte.ch/graphs/users/")
+  ("reporting:Report" -> _)
+  ("core:Error" -> _)
+  ("nfo:DataContainer" -> _)
+  ("nfo:FileDataObject" -> _)
+  ("cogs:Job" -> _)
+  ("sioc:Thread" -> _)
+  ("sioc:Post" -> _)
+  ("sioct:InstantMessage" -> _)
+  ("activitystreams:Document" -> _))
 
 (supply-allowed-group "public")
 
@@ -211,6 +228,14 @@
             FILTER( ?session_role = \"LoketLB-AdminDashboardLPDC\" )
           }")
 
+(supply-allowed-group "chat-owner"
+  :parameters ("session_account")
+  :query "PREFIX session: <http://mu.semte.ch/vocabularies/session/>
+    PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+    SELECT DISTINCT ?session_account WHERE {
+      <SESSION_ID> session:account/mu:uuid ?session_account.
+    }")
+
 (grant (read)
   :to-graph (public)
   :for-allowed-group "public")
@@ -234,3 +259,18 @@
 (grant (read write)
   :to-graph (jobs)
   :for-allowed-group "admin")
+
+;; natural-language-report-service reads the public graph under its own
+;; scope during refinement (code lists, lookup_values). The service passes
+;; this scope with mu's query(q, { scope }); sparql-parser then uses only
+;; this grant, so the LLM reads public data and nothing beyond it.
+;; Execution (run_report) still runs as the caller's session.
+(with-scope "http://services.semantic.works/natural-language-report"
+  (grant (read)
+    :to-graph public
+    :for-allowed-group "public"))
+
+;; Chat: one graph per account, only its owner reads or writes it.
+(grant (read write)
+  :to-graph (chat)
+  :for-allowed-group "chat-owner")

@@ -17,6 +17,7 @@
 (read-domain-file "master-users-domain.lisp")
 (read-domain-file "master-reports-domain.lisp")
 (read-domain-file "master-files-domain.lisp")
+(read-domain-file "chat-domain.lisp")
 (read-domain-file "master-log-domain.lisp")
 (read-domain-file "master-job-domain.lisp")
 (read-domain-file "lpdc.lisp")

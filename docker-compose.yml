@@ -487,3 +487,35 @@ services:
       - "logging=true"
     restart: always
     logging: *default-logging
+
+  ################################################################################
+  # CHAT / NATURAL LANGUAGE REPORTS
+  ################################################################################
+  natural-language-report:
+    image: lblod/natural-language-report-service:0.2.0
+    volumes:
+      - ./data/files:/share
+      - ./config/report-profiles/:/config/profiles/
+    environment:
+      MU_SPARQL_ENDPOINT: "http://database:8890/sparql"
+      CSV_SEPARATOR: ";"
+      SUBJECT_CHUNK_SIZE: "100"
+      ROW_LIMIT: "200000"
+      MAX_PATH_DEPTH: "12"
+      INLINE_VALUES_MAX: "50"
+      VALUES_TTL: "3600"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+  chat:
+    image: lblod/frontend-report-assistant:0.3.0
+    links:
+      - identifier:backend
+    environment:
+      EMBER_ASSISTANT_PATH: "/assistant"
+      EMBER_APP_NAME: "Rapportassistent"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging

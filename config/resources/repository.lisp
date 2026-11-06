@@ -77,3 +77,7 @@
 (add-prefix "lpdc" "http://data.lblod.info/vocabularies/lpdc/")
 (add-prefix "pera" "http://publications.europa.eu/resource/authority/")
 (add-prefix "ext" "http://mu.semte.ch/vocabularies/ext/")
+
+(add-prefix "sioc" "http://rdfs.org/sioc/ns#")
+(add-prefix "sioct" "http://rdfs.org/sioc/types#")
+(add-prefix "as" "https://www.w3.org/ns/activitystreams#")

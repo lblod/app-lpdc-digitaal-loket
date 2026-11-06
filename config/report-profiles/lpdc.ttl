@@ -1,0 +1,606 @@
+# Profiel "Producten en diensten (LPDC)": instanties en concepten van
+# publieke dienstverlening, hun onderdelen (voorwaarden, bewijsstukken,
+# procedures, websites, kosten, financiële voordelen, regelgevende bronnen,
+# contactpunten, adressen), publicatie naar IPDC, feedback van IPDC,
+# bestuurseenheden, gebruikers, meldingsvoorkeuren en de codelijsten.
+#
+# Bronnen:
+# - lpdc-management-service src/driven/persistence/domain-to-quads-mapper.ts
+#   is de autoriteit voor instanties, concepten en hun onderdelen (wat echt
+#   in de triplestore staat);
+# - lpdc-management-service src/driven/persistence/forms/*/form.ttl voor de
+#   namen van de velden en de codelijst per veld;
+# - config/resources/*.lisp voor bestuurseenheden, gebruikers, feedback,
+#   meldingsvoorkeuren en de weergave van concepten;
+# - het implementatiemodel IPDC-LPDC (ontwerpstandaard 2024-07-04,
+#   shacl/instantie-shape.ttl en concept-shape.ttl, lokaal in
+#   migration-scripts/tests-shacl/instances-concepts/shapes/).
+#
+# Een rapport loopt als de gebruiker. Die leest de publieke graaf (concepten,
+# codelijsten, bestuurseenheden) en de graaf van zijn eigen bestuur
+# (instanties, gepubliceerde versies, verwijderde instanties, feedback,
+# conceptweergave, u/je-keuze, gebruikers, meldingsvoorkeuren).
+#
+# Tekstvelden zijn rdf:langString. Een instantie heeft één Nederlandse
+# variant (zie "taalvariant"); een concept heeft er tot vijf (nl,
+# nl-be-x-formal, nl-be-x-informal, nl-be-x-generated-formal,
+# nl-be-x-generated-informal). Een kolom op de titel van een concept geeft
+# dus een rij per variant, tenzij met sh:groupConcat.
+#
+# De status van een instantie, de herzieningsstatus en de status van een
+# gearchiveerd concept zijn URI's zonder label in de data. Ze staan hier als
+# sh:nodeKind sh:IRI met sh:in; de woorden staan in de veldnaam.
+#
+# De vlaggen van de conceptweergave (is nieuw, is geïnstantieerd) hebben het
+# datatype <http://mu.semte.ch/vocabularies/typed-literals/boolean>, niet
+# xsd:boolean.
+#
+# Codelijsten zijn skos:Concept met skos:inScheme; één entiteit "code" dekt
+# ze allemaal. Bevoegde en uitvoerende overheden zijn codes uit
+# IPDCOrganisaties; een bestuurseenheid is ook zo'n code.
+#
+# Niet opgenomen: concept- en instantiesnapshots uit de LDES-stromen en
+# publicatiefouten (graven die een gebruiker niet leest; daarom ook geen
+# ext:hasVersionedSource, ext:previousVersionedSource en
+# lpdc:hasLatestFunctionalChange), mu:uuid, sh:order, adres:verwijstNaar,
+# schema:about van feedback (skos:primarySubject wijst naar de instantie),
+# accounts en sessies.
+@prefix sh:      <http://www.w3.org/ns/shacl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix org:     <http://www.w3.org/ns/org#> .
+@prefix regorg:  <http://www.w3.org/ns/regorg#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix pav:     <http://purl.org/pav/> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix schema:  <http://schema.org/> .
+@prefix schema2: <https://schema.org/> .
+@prefix as:      <https://www.w3.org/ns/activitystreams#> .
+@prefix cpsv:    <http://purl.org/vocab/cpsv#> .
+@prefix m8g:     <http://data.europa.eu/m8g/> .
+@prefix eli:     <http://data.europa.eu/eli/ontology#> .
+@prefix ps:      <http://vocab.belgif.be/ns/publicservice#> .
+@prefix locn:    <http://www.w3.org/ns/locn#> .
+@prefix adres:   <https://data.vlaanderen.be/ns/adres#> .
+@prefix besluit: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#> .
+@prefix lpdc:    <http://data.lblod.info/vocabularies/lpdc/> .
+@prefix ext:     <http://mu.semte.ch/vocabularies/ext/> .
+@prefix mutl:    <http://mu.semte.ch/vocabularies/typed-literals/> .
+@prefix ent:     <http://data.lblod.info/id/report-entities/> .
+@prefix veld:    <http://data.lblod.info/id/report-fields/lpdc/> .
+
+<http://data.lblod.info/id/report-profiles/lpdc>
+  a owl:Ontology ;
+  dct:title "Producten en diensten (LPDC)" ;
+  sh:prefixes [
+    sh:declare [ sh:prefix "lpdcExt"  ; sh:namespace "https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "lpdc"     ; sh:namespace "http://data.lblod.info/vocabularies/lpdc/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "cpsv"     ; sh:namespace "http://purl.org/vocab/cpsv#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "m8g"      ; sh:namespace "http://data.europa.eu/m8g/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "eli"      ; sh:namespace "http://data.europa.eu/eli/ontology#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "ps"       ; sh:namespace "http://vocab.belgif.be/ns/publicservice#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "schema"   ; sh:namespace "http://schema.org/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "schema2"  ; sh:namespace "https://schema.org/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "as"       ; sh:namespace "https://www.w3.org/ns/activitystreams#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "dcat"     ; sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "dct"      ; sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "pav"      ; sh:namespace "http://purl.org/pav/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "adms"     ; sh:namespace "http://www.w3.org/ns/adms#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "prov"     ; sh:namespace "http://www.w3.org/ns/prov#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "locn"     ; sh:namespace "http://www.w3.org/ns/locn#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "adres"    ; sh:namespace "https://data.vlaanderen.be/ns/adres#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "besluit"  ; sh:namespace "http://data.vlaanderen.be/ns/besluit#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "org"      ; sh:namespace "http://www.w3.org/ns/org#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "regorg"   ; sh:namespace "http://www.w3.org/ns/regorg#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "foaf"     ; sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "skos"     ; sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "ext"      ; sh:namespace "http://mu.semte.ch/vocabularies/ext/"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "rdfs"     ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] ;
+    sh:declare [ sh:prefix "xsd"      ; sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ] ;
+  ] .
+
+#################################################################
+# Velden die concept en instantie delen (de publieke dienst)
+#################################################################
+
+veld:titel a sh:PropertyShape ;
+  sh:path dct:title ; sh:name "titel" ; sh:datatype rdf:langString .
+veld:beschrijving a sh:PropertyShape ;
+  sh:path dct:description ; sh:name "beschrijving" ; sh:datatype rdf:langString .
+veld:aanvullendeBeschrijving a sh:PropertyShape ;
+  sh:path lpdcExt:additionalDescription ; sh:name "aanvullende beschrijving" ; sh:datatype rdf:langString .
+veld:uitzonderingen a sh:PropertyShape ;
+  sh:path lpdcExt:exception ; sh:name "uitzonderingen" ; sh:datatype rdf:langString .
+veld:regelgeving a sh:PropertyShape ;
+  sh:path lpdcExt:regulation ; sh:name "regelgeving" ; sh:datatype rdf:langString .
+veld:tag a sh:PropertyShape ;
+  sh:path dcat:keyword ; sh:name "tag" ; sh:datatype rdf:langString .
+veld:productnummer a sh:PropertyShape ;
+  sh:path schema:productID ; sh:name "productnummer" ; sh:datatype xsd:string .
+veld:aanvraagbaarVan a sh:PropertyShape ;
+  sh:path schema:startDate ; sh:name "aanvraagbaar van" ; sh:datatype xsd:dateTime .
+veld:aanvraagbaarTot a sh:PropertyShape ;
+  sh:path schema:endDate ; sh:name "aanvraagbaar tot en met" ; sh:datatype xsd:dateTime .
+
+veld:producttype a sh:PropertyShape ;
+  sh:path dct:type ; sh:name "producttype" ;
+  sh:description "Codelijst conceptscheme/Type" ;
+  sh:node ent:Code .
+veld:doelgroep a sh:PropertyShape ;
+  sh:path lpdcExt:targetAudience ; sh:name "doelgroep" ;
+  sh:description "Codelijst conceptscheme/Doelgroep" ;
+  sh:node ent:Code .
+veld:thema a sh:PropertyShape ;
+  sh:path m8g:thematicArea ; sh:name "thema" ;
+  sh:description "Codelijst conceptscheme/Thema" ;
+  sh:node ent:Code .
+veld:bevoegdBestuursniveau a sh:PropertyShape ;
+  sh:path lpdcExt:competentAuthorityLevel ; sh:name "bevoegd bestuursniveau" ;
+  sh:description "Codelijst conceptscheme/BevoegdBestuursniveau" ;
+  sh:node ent:Code .
+veld:bevoegdeOverheid a sh:PropertyShape ;
+  sh:path m8g:hasCompetentAuthority ; sh:name "bevoegde overheid" ;
+  sh:description "Codelijst conceptscheme/IPDCOrganisaties; een lokaal bestuur is ook een bestuurseenheid" ;
+  sh:or ( [ sh:node ent:Code ] [ sh:node ent:Bestuurseenheid ] ) .
+veld:uitvoerendBestuursniveau a sh:PropertyShape ;
+  sh:path lpdcExt:executingAuthorityLevel ; sh:name "uitvoerend bestuursniveau" ;
+  sh:description "Codelijst conceptscheme/UitvoerendBestuursniveau" ;
+  sh:node ent:Code .
+veld:uitvoerendeOverheid a sh:PropertyShape ;
+  sh:path lpdcExt:hasExecutingAuthority ; sh:name "uitvoerende overheid" ;
+  sh:description "Codelijst conceptscheme/IPDCOrganisaties; een lokaal bestuur is ook een bestuurseenheid" ;
+  sh:or ( [ sh:node ent:Code ] [ sh:node ent:Bestuurseenheid ] ) .
+veld:publicatiekanaal a sh:PropertyShape ;
+  sh:path lpdcExt:publicationMedium ; sh:name "publicatiekanaal" ;
+  sh:description "Codelijst conceptscheme/PublicatieKanaal" ;
+  sh:node ent:Code .
+veld:categorieYourEurope a sh:PropertyShape ;
+  sh:path lpdcExt:yourEuropeCategory ; sh:name "categorie Your Europe" ;
+  sh:description "Codelijst conceptscheme/YourEuropeCategorie" ;
+  sh:node ent:Code .
+
+veld:voorwaarde a sh:PropertyShape ;
+  sh:path ps:hasRequirement ; sh:name "voorwaarde" ; sh:node ent:Voorwaarde .
+veld:procedure a sh:PropertyShape ;
+  sh:path cpsv:follows ; sh:name "procedure" ; sh:node ent:Procedure .
+veld:website a sh:PropertyShape ;
+  sh:path rdfs:seeAlso ; sh:name "website (meer info)" ; sh:node ent:Website .
+veld:kost a sh:PropertyShape ;
+  sh:path m8g:hasCost ; sh:name "kost" ; sh:node ent:Kost .
+veld:financieelVoordeel a sh:PropertyShape ;
+  sh:path cpsv:produces ; sh:name "financieel voordeel" ; sh:node ent:FinancieelVoordeel .
+veld:regelgevendeBron a sh:PropertyShape ;
+  sh:path m8g:hasLegalResource ; sh:name "regelgevende bron" ; sh:node ent:RegelgevendeBron .
+
+#################################################################
+# Instantie en concept
+#################################################################
+
+ent:Instantie
+  a sh:NodeShape ;
+  rdfs:label "instantie" ;
+  sh:description "Product of dienst van een bestuur, in de graaf van dat bestuur" ;
+  sh:targetClass lpdcExt:InstancePublicService ;
+  sh:property veld:titel , veld:beschrijving , veld:aanvullendeBeschrijving ,
+              veld:uitzonderingen , veld:regelgeving , veld:tag , veld:productnummer ,
+              veld:aanvraagbaarVan , veld:aanvraagbaarTot ,
+              veld:producttype , veld:doelgroep , veld:thema ,
+              veld:bevoegdBestuursniveau , veld:bevoegdeOverheid ,
+              veld:uitvoerendBestuursniveau , veld:uitvoerendeOverheid ,
+              veld:publicatiekanaal , veld:categorieYourEurope ,
+              veld:voorwaarde , veld:procedure , veld:website , veld:kost ,
+              veld:financieelVoordeel , veld:regelgevendeBron ;
+  sh:property [ sh:path dct:language ; sh:name "taal" ;
+                sh:description "Codelijst conceptscheme/Taal" ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path dct:spatial ; sh:name "geografisch toepassingsgebied" ;
+                sh:description "NUTS/LAU-code (provincie, gemeente)" ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path m8g:hasContactPoint ; sh:name "contactpunt" ;
+                sh:node ent:Contactpunt ] ;
+  sh:property [ sh:path dct:source ; sh:name "concept" ;
+                sh:description "Het concept waarvan de instantie vertrok; leeg voor een instantie zonder concept" ;
+                sh:node ent:Concept ] ;
+  sh:property [ sh:path adms:status ; sh:name "status (ontwerp of verzonden)" ;
+                sh:nodeKind sh:IRI ;
+                sh:in ( <http://lblod.data.gift/concepts/instance-status/ontwerp>
+                        <http://lblod.data.gift/concepts/instance-status/verzonden> ) ] ;
+  sh:property [ sh:path ext:reviewStatus ; sh:name "herzieningsstatus (concept-gewijzigd of concept-gearchiveerd)" ;
+                sh:description "Gezet wanneer het concept wijzigt of gearchiveerd wordt; leeg wanneer er niets te herzien is" ;
+                sh:nodeKind sh:IRI ;
+                sh:in ( <http://lblod.data.gift/concepts/review-status/concept-gewijzigd>
+                        <http://lblod.data.gift/concepts/review-status/concept-gearchiveerd> ) ] ;
+  sh:property [ sh:path pav:createdBy ; sh:name "bestuur" ;
+                sh:description "Het bestuur dat de instantie beheert" ;
+                sh:node ent:Bestuurseenheid ] ;
+  sh:property [ sh:path dct:creator ; sh:name "aangemaakt door" ;
+                sh:node ent:Gebruiker ] ;
+  sh:property [ sh:path ext:lastModifiedBy ; sh:name "laatst gewijzigd door" ;
+                sh:node ent:Gebruiker ] ;
+  sh:property [ sh:path schema:dateCreated ; sh:name "aangemaakt op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema:dateModified ; sh:name "gewijzigd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema:dateSent ; sh:name "verzonden op" ;
+                sh:description "Laatste keer verzonden naar IPDC" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path lpdcExt:reviewStatusModifiedDate ; sh:name "herzieningsstatus gewijzigd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path lpdcExt:dutchLanguageVariant ; sh:name "taalvariant (nl-be-x-formal of nl-be-x-informal)" ;
+                sh:description "De u-vorm (formal) of je-vorm (informal) van de teksten" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path lpdcExt:needsConversionFromFormalToInformal ; sh:name "moet naar je-vorm" ;
+                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path lpdcExt:formalInformalModifiedDate ; sh:name "je-vorm-vlag gewijzigd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path lpdcExt:forMunicipalityMerger ; sh:name "voor fusiegemeente" ;
+                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path lpdcExt:feedbackAvailable ; sh:name "heeft open feedback" ;
+                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path lpdcExt:feedbackModifiedDate ; sh:name "feedback gewijzigd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path lpdcExt:isYearOld ; sh:name "ouder dan een jaar" ;
+                sh:description "Meer dan een jaar niet gewijzigd" ;
+                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path lpdcExt:yearOldModifiedDate ; sh:name "ouder-dan-een-jaar-vlag gewijzigd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path lpdcExt:copyOf ; sh:name "kopie van" ;
+                sh:node ent:Instantie ] ;
+  sh:property [ sh:path [ sh:inversePath lpdcExt:isPublishedVersionOf ] ; sh:name "gepubliceerde versie" ;
+                sh:description "Een versie per verzending naar IPDC" ;
+                sh:node ent:GepubliceerdeVersie ] ;
+  sh:property [ sh:path [ sh:inversePath skos:primarySubject ] ; sh:name "feedback" ;
+                sh:node ent:Feedback ] ;
+  sh:property [ sh:path [ sh:inversePath lpdcExt:notificationInstance ] ; sh:name "meldingsvoorkeur" ;
+                sh:node ent:Meldingsvoorkeur ] .
+
+ent:Concept
+  a sh:NodeShape ;
+  rdfs:label "concept" ;
+  sh:description "Product of dienst uit de Vlaamse productencatalogus (IPDC), in de publieke graaf" ;
+  sh:targetClass lpdcExt:ConceptualPublicService ;
+  sh:property veld:titel , veld:beschrijving , veld:aanvullendeBeschrijving ,
+              veld:uitzonderingen , veld:regelgeving , veld:tag , veld:productnummer ,
+              veld:aanvraagbaarVan , veld:aanvraagbaarTot ,
+              veld:producttype , veld:doelgroep , veld:thema ,
+              veld:bevoegdBestuursniveau , veld:bevoegdeOverheid ,
+              veld:uitvoerendBestuursniveau , veld:uitvoerendeOverheid ,
+              veld:publicatiekanaal , veld:categorieYourEurope ,
+              veld:voorwaarde , veld:procedure , veld:website , veld:kost ,
+              veld:financieelVoordeel , veld:regelgevendeBron ;
+  sh:property [ sh:path lpdcExt:conceptTag ; sh:name "concepttag" ;
+                sh:description "Codelijst conceptscheme/ConceptTag, bv. YourEuropeAanbevolen" ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path adms:status ; sh:name "status (gearchiveerd)" ;
+                sh:description "Alleen gezet voor een gearchiveerd concept" ;
+                sh:nodeKind sh:IRI ;
+                sh:in ( <http://lblod.data.gift/concepts/concept-status/gearchiveerd> ) ] ;
+  sh:property [ sh:path lpdc:hasConceptDisplayConfiguration ; sh:name "weergave" ;
+                sh:description "Of het concept nieuw of al geïnstantieerd is voor het eigen bestuur" ;
+                sh:node ent:ConceptWeergave ] ;
+  sh:property [ sh:path [ sh:inversePath dct:source ] ; sh:name "instantie" ;
+                sh:description "De instanties van het eigen bestuur op basis van dit concept" ;
+                sh:node ent:Instantie ] .
+
+#################################################################
+# Onderdelen van een publieke dienst
+#################################################################
+
+ent:Voorwaarde
+  a sh:NodeShape ;
+  rdfs:label "voorwaarde" ;
+  sh:targetClass m8g:Requirement ;
+  sh:property veld:titel , veld:beschrijving ;
+  sh:property [ sh:path m8g:hasSupportingEvidence ; sh:name "bewijsstuk" ;
+                sh:node ent:Bewijsstuk ] .
+
+ent:Bewijsstuk
+  a sh:NodeShape ;
+  rdfs:label "bewijsstuk" ;
+  sh:targetClass m8g:Evidence ;
+  sh:property veld:titel , veld:beschrijving .
+
+ent:Procedure
+  a sh:NodeShape ;
+  rdfs:label "procedure" ;
+  sh:targetClass cpsv:Rule ;
+  sh:property veld:titel , veld:beschrijving ;
+  sh:property [ sh:path lpdcExt:hasWebsite ; sh:name "website" ;
+                sh:node ent:Website ] .
+
+ent:Website
+  a sh:NodeShape ;
+  rdfs:label "website" ;
+  sh:targetClass schema:WebSite ;
+  sh:property veld:titel , veld:beschrijving ;
+  sh:property [ sh:path schema:url ; sh:name "url" ;
+                sh:datatype xsd:string ] .
+
+ent:Kost
+  a sh:NodeShape ;
+  rdfs:label "kost" ;
+  sh:targetClass m8g:Cost ;
+  sh:property veld:titel , veld:beschrijving .
+
+ent:FinancieelVoordeel
+  a sh:NodeShape ;
+  rdfs:label "financieel voordeel" ;
+  sh:targetClass lpdcExt:FinancialAdvantage ;
+  sh:property veld:titel , veld:beschrijving .
+
+ent:RegelgevendeBron
+  a sh:NodeShape ;
+  rdfs:label "regelgevende bron" ;
+  sh:targetClass eli:LegalResource ;
+  sh:property veld:titel , veld:beschrijving ;
+  sh:property [ sh:path schema:url ; sh:name "url" ;
+                sh:datatype xsd:string ] .
+
+ent:Contactpunt
+  a sh:NodeShape ;
+  rdfs:label "contactpunt" ;
+  sh:targetClass schema:ContactPoint ;
+  sh:property [ sh:path schema:url ; sh:name "website" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema:email ; sh:name "e-mail" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema:telephone ; sh:name "telefoon" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema:openingHours ; sh:name "openingsuren" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path lpdcExt:address ; sh:name "adres" ;
+                sh:node ent:Adres ] .
+
+ent:Adres
+  a sh:NodeShape ;
+  rdfs:label "adres" ;
+  sh:targetClass locn:Address ;
+  sh:property [ sh:path adres:Straatnaam ; sh:name "straat" ;
+                sh:datatype rdf:langString ] ;
+  sh:property [ sh:path adres:Adresvoorstelling.huisnummer ; sh:name "huisnummer" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path adres:Adresvoorstelling.busnummer ; sh:name "busnummer" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path adres:postcode ; sh:name "postcode" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path adres:gemeentenaam ; sh:name "gemeente" ;
+                sh:datatype rdf:langString ] ;
+  sh:property [ sh:path adres:land ; sh:name "land" ;
+                sh:datatype rdf:langString ] .
+
+#################################################################
+# Publicatie naar IPDC
+#################################################################
+
+ent:GepubliceerdeVersie
+  a sh:NodeShape ;
+  rdfs:label "gepubliceerde versie" ;
+  sh:description "Wat bij een verzending naar IPDC ging; gepubliceerd op is gezet zodra IPDC het aannam" ;
+  sh:targetClass lpdcExt:PublishedInstancePublicServiceSnapshot ;
+  sh:property [ sh:path prov:generatedAtTime ; sh:name "verzonden op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema:datePublished ; sh:name "gepubliceerd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path lpdcExt:isPublishedVersionOf ; sh:name "instantie" ;
+                sh:node ent:Instantie ] .
+
+ent:VerwijderdeInstantie
+  a sh:NodeShape ;
+  rdfs:label "verwijderde instantie" ;
+  sh:description "Wat overblijft van een verwijderde instantie die al naar IPDC ging" ;
+  sh:targetClass as:Tombstone ;
+  sh:property [ sh:path as:deleted ; sh:name "verwijderd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema:datePublished ; sh:name "verwijdering gepubliceerd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path lpdcExt:isPublishedVersionOf ; sh:name "was instantie" ;
+                sh:description "De URI van de verwijderde instantie; de instantie zelf bestaat niet meer" ;
+                sh:nodeKind sh:IRI ] .
+
+#################################################################
+# Feedback van IPDC (https://schema.org/)
+#################################################################
+
+ent:Feedback
+  a sh:NodeShape ;
+  rdfs:label "feedback" ;
+  sh:targetClass schema2:Conversation ;
+  sh:property [ sh:path schema2:dateCreated ; sh:name "aangemaakt op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema2:datePublished ; sh:name "gepubliceerd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema2:productID ; sh:name "productnummer" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path adms:status ; sh:name "status in IPDC" ;
+                sh:description "Codelijst Feedback status: Aangemaakt, Beantwoord, Antwoord gelezen, Ingetrokken" ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path schema2:actionStatus ; sh:name "status in LPDC" ;
+                sh:description "Codelijst Feedback status lpdc" ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path schema2:result ; sh:name "verwerking" ;
+                sh:description "Codelijst Verwerking status: Geaccepteerd, Geweigerd" ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path schema2:question ; sh:name "vraag" ;
+                sh:node ent:FeedbackVraag ] ;
+  sh:property [ sh:path schema2:suggestedAnswer ; sh:name "antwoord" ;
+                sh:node ent:FeedbackAntwoord ] ;
+  sh:property [ sh:path skos:primarySubject ; sh:name "instantie" ;
+                sh:node ent:Instantie ] ;
+  sh:property [ sh:path lpdcExt:receiverBestuurseenheid ; sh:name "ontvanger" ;
+                sh:node ent:Bestuurseenheid ] .
+
+ent:FeedbackVraag
+  a sh:NodeShape ;
+  rdfs:label "feedbackvraag" ;
+  sh:targetClass schema2:AskAction ;
+  sh:property [ sh:path schema2:question ; sh:name "tekst" ;
+                sh:description "HTML" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema2:startTime ; sh:name "tijdstip" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema2:agent ; sh:name "van" ;
+                sh:or ( [ sh:node ent:Code ] [ sh:node ent:Bestuurseenheid ] ) ] ;
+  sh:property [ sh:path schema2:recipient ; sh:name "aan" ;
+                sh:or ( [ sh:node ent:Code ] [ sh:node ent:Bestuurseenheid ] ) ] .
+
+ent:FeedbackAntwoord
+  a sh:NodeShape ;
+  rdfs:label "feedbackantwoord" ;
+  sh:targetClass schema2:ReplyAction ;
+  sh:property [ sh:path schema2:resultComment ; sh:name "tekst" ;
+                sh:description "HTML" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema2:startTime ; sh:name "tijdstip" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema2:agent ; sh:name "van" ;
+                sh:or ( [ sh:node ent:Code ] [ sh:node ent:Bestuurseenheid ] ) ] ;
+  sh:property [ sh:path schema2:recipient ; sh:name "aan" ;
+                sh:or ( [ sh:node ent:Code ] [ sh:node ent:Bestuurseenheid ] ) ] .
+
+#################################################################
+# Instellingen van een bestuur
+#################################################################
+
+ent:ConceptWeergave
+  a sh:NodeShape ;
+  rdfs:label "conceptweergave" ;
+  sh:description "Per concept en per bestuur: is het concept nieuw, is het al geïnstantieerd" ;
+  sh:targetClass lpdc:ConceptDisplayConfiguration ;
+  sh:property [ sh:path lpdc:conceptIsNew ; sh:name "is nieuw" ;
+                sh:datatype mutl:boolean ] ;
+  sh:property [ sh:path lpdc:conceptInstantiated ; sh:name "is geïnstantieerd" ;
+                sh:datatype mutl:boolean ] ;
+  sh:property [ sh:path dct:relation ; sh:name "bestuur" ;
+                sh:node ent:Bestuurseenheid ] ;
+  sh:property [ sh:path [ sh:inversePath lpdc:hasConceptDisplayConfiguration ] ; sh:name "concept" ;
+                sh:node ent:Concept ] .
+
+ent:UJeKeuze
+  a sh:NodeShape ;
+  rdfs:label "u/je-keuze" ;
+  sh:description "De keuze van een bestuur voor de u-vorm of de je-vorm" ;
+  sh:targetClass lpdc:FormalInformalChoice ;
+  sh:property [ sh:path lpdc:chosenForm ; sh:name "gekozen vorm (formal of informal)" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema:dateCreated ; sh:name "gekozen op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path dct:relation ; sh:name "bestuur" ;
+                sh:node ent:Bestuurseenheid ] .
+
+ent:Meldingsvoorkeur
+  a sh:NodeShape ;
+  rdfs:label "meldingsvoorkeur" ;
+  sh:description "Welke e-mailmeldingen een gebruiker wil krijgen" ;
+  sh:targetClass lpdcExt:NotificationPreference ;
+  sh:property [ sh:path lpdcExt:notificationsEnabled ; sh:name "meldingen aan" ;
+                sh:datatype xsd:boolean ] ;
+  sh:property [ sh:path schema:email ; sh:name "e-mail" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path schema:dateCreated ; sh:name "aangemaakt op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path schema:dateModified ; sh:name "gewijzigd op" ;
+                sh:datatype xsd:dateTime ] ;
+  sh:property [ sh:path dct:creator ; sh:name "gebruiker" ;
+                sh:node ent:Gebruiker ] ;
+  sh:property [ sh:path org:linkedTo ; sh:name "bestuur" ;
+                sh:node ent:Bestuurseenheid ] ;
+  sh:property [ sh:path lpdcExt:hasNotificationRuleConfig ; sh:name "meldingsregel" ;
+                sh:node ent:Meldingsregel ] ;
+  sh:property [ sh:path lpdcExt:notificationInstance ; sh:name "instantie" ;
+                sh:node ent:Instantie ] .
+
+ent:Meldingsregel
+  a sh:NodeShape ;
+  rdfs:label "meldingsregel" ;
+  sh:targetClass lpdcExt:NotificationRuleConfig ;
+  sh:property [ sh:path lpdcExt:notificationFrequency ; sh:name "frequentie" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path lpdcExt:hasEnabledRule ; sh:name "regel" ;
+                sh:description "Codelijst Notificatie regels: Feedback, Herziening, U/je, >1 jaar, Status rapport" ;
+                sh:node ent:Code ] .
+
+#################################################################
+# Besturen en gebruikers
+#################################################################
+
+ent:Bestuurseenheid
+  a sh:NodeShape ;
+  rdfs:label "bestuurseenheid" ;
+  sh:targetClass besluit:Bestuurseenheid ;
+  sh:property [ sh:path skos:prefLabel ; sh:name "naam" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path skos:altLabel ; sh:name "andere naam" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path ext:kbonummer ; sh:name "KBO-nummer" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path dct:identifier ; sh:name "identificator" ;
+                sh:description "OVO-code en KBO-nummer" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path besluit:classificatie ; sh:name "soort bestuur" ;
+                sh:description "Gemeente, OCMW, provincie, ..." ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path regorg:orgStatus ; sh:name "organisatiestatus" ;
+                sh:node ent:Code ] ;
+  sh:property [ sh:path besluit:werkingsgebied ; sh:name "werkingsgebied" ;
+                sh:node ent:Werkingsgebied ] ;
+  sh:property [ sh:path ext:inProvincie ; sh:name "provincie" ;
+                sh:node ent:Werkingsgebied ] ;
+  sh:property [ sh:path prov:wasDerivedFrom ; sh:name "ontstaan uit" ;
+                sh:description "De besturen die samen dit bestuur werden (fusie)" ;
+                sh:node ent:Bestuurseenheid ] ;
+  sh:property [ sh:path [ sh:inversePath pav:createdBy ] ; sh:name "instantie" ;
+                sh:description "De instanties die dit bestuur beheert" ;
+                sh:node ent:Instantie ] .
+
+ent:Werkingsgebied
+  a sh:NodeShape ;
+  rdfs:label "werkingsgebied" ;
+  sh:targetClass prov:Location ;
+  sh:property [ sh:path rdfs:label ; sh:name "naam" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path ext:werkingsgebiedNiveau ; sh:name "niveau" ;
+                sh:description "Gemeente, Provincie, ..." ;
+                sh:datatype xsd:string ] .
+
+ent:Gebruiker
+  a sh:NodeShape ;
+  rdfs:label "gebruiker" ;
+  sh:targetClass foaf:Person ;
+  sh:property [ sh:path foaf:firstName ; sh:name "voornaam" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path foaf:familyName ; sh:name "achternaam" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path foaf:member ; sh:name "bestuur" ;
+                sh:node ent:Bestuurseenheid ] .
+
+#################################################################
+# Codelijsten
+#################################################################
+
+ent:Code
+  a sh:NodeShape ;
+  rdfs:label "code" ;
+  sh:description "Een waarde uit een codelijst (thema, doelgroep, type, NUTS/LAU, IPDC-organisatie, ...)" ;
+  sh:targetClass skos:Concept ;
+  sh:property [ sh:path skos:prefLabel ; sh:name "naam" ;
+                sh:datatype rdf:langString ] ;
+  sh:property [ sh:path skos:notation ; sh:name "notatie" ;
+                sh:datatype xsd:string ] ;
+  sh:property [ sh:path skos:definition ; sh:name "definitie" ;
+                sh:datatype rdf:langString ] ;
+  sh:property [ sh:path skos:inScheme ; sh:name "codelijst" ;
+                sh:node ent:Codelijst ] .
+
+ent:Codelijst
+  a sh:NodeShape ;
+  rdfs:label "codelijst" ;
+  sh:targetClass skos:ConceptScheme ;
+  sh:property [ sh:path skos:prefLabel ; sh:name "naam" ;
+                sh:datatype rdf:langString ] .
