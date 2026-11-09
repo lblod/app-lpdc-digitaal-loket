@@ -141,8 +141,8 @@
   ("nfo:DataContainer" -> _)
   ("task:Task" -> _)
   ("cogs:Job" -> _)
-  ("ipdc-lpdc:SourceDocument" -> _)
-  ("ipdc-lpdc:FieldGeneration" -> _)
+  ("lpdc:SourceDocument" -> _)
+  ("lpdc:FieldGeneration" -> _)
   ("ext:AICall" -> _)
   ("prov:Activity" -> _))
 
