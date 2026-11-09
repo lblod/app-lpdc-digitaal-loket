@@ -71,11 +71,11 @@
                                        :inverse t
                                        :as "notification-preferences")
               (source-document
-                                       :via ,(s-prefix "lpdcExt:sourceDocumentInstance")
+                                       :via ,(s-prefix "lpdc:sourceDocumentInstance")
                                        :inverse t
                                        :as "source-documents")
               (field-generation
-                                       :via ,(s-prefix "lpdcExt:fieldGenerationInstance")
+                                       :via ,(s-prefix "lpdc:fieldGenerationInstance")
                                        :inverse t
                                        :as "field-generations"))
   :resource-base (s-url "http://data.lblod.info/id/public-service/")

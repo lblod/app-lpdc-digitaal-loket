@@ -270,7 +270,7 @@ services:
     depends_on:
       migrations:
         condition: service_healthy
-    image: lblod/lpdc-management-service:0.57.2
+    image: lblod/lpdc-management-service:0.58.0
     environment:
       LOG_SPARQL_ALL: "false"
       LOG_SPARQL_QUERIES: "false"
@@ -498,7 +498,7 @@ services:
     logging: *default-logging
 
   lpdc-email-notification-service:
-    image: lblod/lpdc-email-notification-service:1.1.0
+    image: lblod/lpdc-email-notification-service:1.1.1
     labels:
       - "logging=true"
     restart: always
