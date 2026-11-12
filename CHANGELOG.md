@@ -21,7 +21,7 @@ drc pull lpdc lpdc-management lpdc-email-notification-service && drc up -d lpdc 
 ```
 
 ##### Virtuoso bump
-To bump virtuoso to 1.4.0, follow the following [instructions](https://github.com/redpencilio/docker-virtuoso/tree/v1.4.0#upgrading). Prior to step 3, make a new folder called toLoad under data/db/.
+To bump virtuoso to 1.4.0, follow the following [instructions](https://github.com/redpencilio/docker-virtuoso/tree/v1.4.0#upgrading). Prior to step 3, make a new folder called toLoad under data/db/ with `mkdir -p data/db/toLoad`.
 
 ## v0.39.2 (2026-10-02)
 - LPDC Complete Report - Fix to keep running [LPDC-1712]
