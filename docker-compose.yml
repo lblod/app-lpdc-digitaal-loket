@@ -521,7 +521,7 @@ services:
     logging: *default-logging
 
   hh-rewrite:
-    image: semantic-ai/hh-rewrite-service:0.1.0
+    image: semanticai/hh-rewrite-service:feature-datamodel-changes
     environment:
       CONFIG_PATH: /config/config.json
       ALLOW_MU_AUTH_SUDO: "false"

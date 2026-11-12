@@ -53,8 +53,10 @@
                                  ,(s-prefix "lpdc:generatedText"))
                 (:final-text :string
                              ,(s-prefix "lpdc:finalText"))
-                (:status :string
-                         ,(s-prefix "adms:status")))
+                (:status :url
+                         ,(s-prefix "adms:status"))
+                (:is-improved :boolean
+                         ,(s-prefix "lpdc:isImproved")))
   :resource-base (s-url "http://data.lblod.info/id/generation-activities/")
   :features '(include-uri)
   :on-path "generation-activities")
