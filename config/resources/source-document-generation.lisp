@@ -54,7 +54,7 @@
                 (:final-text :string
                              ,(s-prefix "lpdc:finalText"))
                 (:status :string
-                         ,(s-prefix "lpdc:status")))
+                         ,(s-prefix "adms:status")))
   :resource-base (s-url "http://data.lblod.info/id/generation-activities/")
   :features '(include-uri)
   :on-path "generation-activities")
