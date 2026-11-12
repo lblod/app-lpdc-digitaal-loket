@@ -7,6 +7,7 @@
 - migration to lowercase the existing url protocols [LPDC-1784]
 - migration to insert missing executing/competent levels for instances in ontwerp [LPDC-1787]
 - Bump notification service [1.1.1](https://github.com/lblod/lpdc-email-notification-service/releases/tag/v1.1.1) [LPDC-1722]
+- Bump virtuoso [LPDC-1807]
 
 ### Management
 - Bump to [v0.58.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.58.0) [LPDC-1741]
@@ -18,6 +19,9 @@
 drc restart migrations && drc logs -ft --tail=200 migrations
 drc pull lpdc lpdc-management lpdc-email-notification-service && drc up -d lpdc lpdc-management lpdc-email-notification-service
 ```
+
+##### Virtuoso bump
+To bump virtuoso to 1.4.0, follow the following [instructions](https://github.com/redpencilio/docker-virtuoso/tree/v1.4.0#upgrading). Prior to step 3, make a new folder called toLoad under data/db/ with `mkdir -p data/db/toLoad`.
 
 ## v0.39.2 (2026-10-02)
 - LPDC Complete Report - Fix to keep running [LPDC-1712]
