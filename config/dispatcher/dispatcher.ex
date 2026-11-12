@@ -159,6 +159,14 @@ defmodule Dispatcher do
   #################################################################
   # source-document-generation.lisp
   #################################################################
+  match "/field-generations/*path", @json do
+    forward conn, path, "http://cache/field-generations/"
+  end
+
+  match "/generation-activities/*path", @json do
+    forward conn, path, "http://cache/generation-activities/"
+  end
+
   match "/source-documents/*path", @json do
     forward conn, path, "http://cache/source-documents/"
   end
