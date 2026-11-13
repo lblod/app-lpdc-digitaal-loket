@@ -50,6 +50,9 @@ services:
   update-bestuurseenheid-mock-login:
     restart: "no"
 
+  check-url:
+    restart: "no"
+
   ################################################################################
   # Report generation and dashboard specific services
   ################################################################################
@@ -61,6 +64,9 @@ services:
     restart: "no"
 
   file:
+    restart: "no"
+
+  download-url:
     restart: "no"
 
   db-cleanup:
@@ -91,6 +97,9 @@ services:
     restart: "no"
 
   lpdc-email-notification-service:
+    restart: "no"
+
+  lpdc-document-to-html-service:
     restart: "no"
 
   ################################################################################
