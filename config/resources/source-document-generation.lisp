@@ -33,9 +33,10 @@
                                   ,(s-prefix "lpdc:relatedField"))
                 (:related-subject :url
                                   ,(s-prefix "lpdc:relatedSubject")))
+  :has-one `((public-service :via ,(s-prefix "lpdc:fieldGenerationInstance")
+                              :as "instance"))
   :has-many `((generation-activity
                :via ,(s-prefix "lpdc:hasGenerationActivity")
-               :inverse t
                :as "generation-activities"))
   :resource-base (s-url "http://data.lblod.info/id/generations/")
   :features '(include-uri)
@@ -53,8 +54,13 @@
                                  ,(s-prefix "lpdc:generatedText"))
                 (:final-text :string
                              ,(s-prefix "lpdc:finalText"))
-                (:status :string
-                         ,(s-prefix "adms:status")))
+                (:status :url
+                         ,(s-prefix "adms:status"))
+                (:is-improved :boolean
+                         ,(s-prefix "lpdc:isImproved")))
+  :has-one `((field-generation :via ,(s-prefix "lpdc:hasGenerationActivity")
+                              :inverse t
+                              :as "field-generation"))
   :resource-base (s-url "http://data.lblod.info/id/generation-activities/")
   :features '(include-uri)
   :on-path "generation-activities")

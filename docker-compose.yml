@@ -6,7 +6,7 @@ x-logging: &default-logging
 
 services:
   lpdc:
-    image: lblod/frontend-lpdc:feature-heerlijk-helder
+    image: lblod/frontend-lpdc:feature-hh-rewrite-modal
     environment:
       EMBER_ACMIDM_SCOPE: "openid rrn profile vo abb_lpdc"
       # The next variables are environment-specific
@@ -20,6 +20,7 @@ services:
       EMBER_ACMIDM_SWITCH_REDIRECT_URL: "<ACMIDM_SWITCH_REDIRECT_URL>"
       EMBER_ADMIN_ROLE: "LoketLB-admin"
       EMBER_FUSIES: "false"
+      EMBER_HEERLIJK_HELDER: "true"
     labels:
       - "logging=true"
     restart: always
@@ -514,6 +515,21 @@ services:
     image: lblod/check-url-service:feature-security-checks
     environment:
       VALIDATE_URL_ALLOW_HTTP: "true"
+    labels:
+      - "logging=true"
+    restart: always
+    logging: *default-logging
+
+  hh-rewrite:
+    image: semanticai/hh-rewrite-service:feature-datamodel-changes
+    environment:
+      ALLOW_MU_AUTH_SUDO: "false"
+      MU_SPARQL_ENDPOINT: http://database:8890/sparql
+      MU_SPARQL_UPDATEPOINT: http://database:8890/sparql
+      LOG_LEVEL: INFO
+    volumes:
+      - ./config/hh-rewrite:/config:ro
+      - ./docker-compose.yml:/tmp/docker-compose.yaml:ro
     labels:
       - "logging=true"
     restart: always

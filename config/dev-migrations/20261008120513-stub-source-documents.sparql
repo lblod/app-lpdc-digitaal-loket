@@ -3,6 +3,7 @@ PREFIX lpdcExt: <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#>
 PREFIX lpdc: <http://data.lblod.info/vocabularies/lpdc/>
 PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX adms: <http://www.w3.org/ns/adms#>
 
 # Only insert mock data if the field generation does not exist yet
 INSERT {
@@ -44,7 +45,10 @@ INSERT {
       mu:uuid "a1b2c3d4-e5f6-4000-8000-000000000002" ;
       lpdc:relatedField dct:title ;
       lpdc:relatedSubject
-        <http://data.lblod.info/id/rule/9c5e2a74-f717-48df-89f0-c37f2ca11ae7> .
+        <http://data.lblod.info/id/rule/9c5e2a74-f717-48df-89f0-c37f2ca11ae7> ;
+      lpdc:hasGenerationActivity
+        <http://data.lblod.info/id/generation-activities/a1b2c3d4-e5f6-4000-8000-000000000003> ,
+        <http://data.lblod.info/id/generation-activities/a1b2c3d4-e5f6-4000-8000-000000000004> .
 
     # Generation activity 1 - generated but not used
     <http://data.lblod.info/id/generation-activities/a1b2c3d4-e5f6-4000-8000-000000000003>
@@ -55,9 +59,7 @@ INSERT {
       lpdc:originalText "Originele tekst voor de procedure." ;
       lpdc:generatedText "Eerste gegenereerde versie van de procedure." ;
       lpdc:finalText "Eerste geselecteerde versie van de procedure." ;
-      lpdc:status "notUsed" ;
-      lpdc:hasGenerationActivity
-        <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
+      adms:status <http://lblod.data.gift/concepts/0ec7b4a8-c281-4ff7-8b50-c02063a1e0dc> . # Not used
 
     # Generation activity 2 - inserted/used
     <http://data.lblod.info/id/generation-activities/a1b2c3d4-e5f6-4000-8000-000000000004>
@@ -68,9 +70,7 @@ INSERT {
       lpdc:originalText "Originele tekst voor de procedure." ;
       lpdc:generatedText "Tweede gegenereerde versie van de procedure." ;
       lpdc:finalText "Definitieve tekst gekozen door de gebruiker." ;
-      lpdc:status "used" ;
-      lpdc:hasGenerationActivity
-        <http://data.lblod.info/id/generations/a1b2c3d4-e5f6-4000-8000-000000000002> .
+      adms:status <http://lblod.data.gift/concepts/25504f03-b26a-45ef-a288-0a364a8f2c0c> . # Used
 
     # Link source document to existing mock public service
     <http://data.lblod.info/id/source-documents/a1b2c3d4-e5f6-4000-8000-000000000001>
