@@ -136,8 +136,8 @@ services:
     restart: "no"
 
   hh-rewrite:
-    # ports:
-    #   - "8080:80"
+    environment:
+      CONFIG_PATH: /config/config-ollama.json
     restart: "no"
 
 volumes:

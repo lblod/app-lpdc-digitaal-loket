@@ -523,14 +523,12 @@ services:
   hh-rewrite:
     image: semanticai/hh-rewrite-service:feature-datamodel-changes
     environment:
-      CONFIG_PATH: /config/config.json
       ALLOW_MU_AUTH_SUDO: "false"
       MU_SPARQL_ENDPOINT: http://database:8890/sparql
       MU_SPARQL_UPDATEPOINT: http://database:8890/sparql
       LOG_LEVEL: INFO
-      LLM__API_KEY: ${LLM_API_KEY}
     volumes:
-      - ./config/hh-rewrite/config-ollama.json:/config/config.json:ro
+      - ./config/hh-rewrite:/config:ro
       - ./docker-compose.yml:/tmp/docker-compose.yaml:ro
     labels:
       - "logging=true"
