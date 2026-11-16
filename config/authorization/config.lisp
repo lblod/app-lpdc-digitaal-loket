@@ -107,8 +107,7 @@
   ("organisatie:TypeVestiging" -> _)
   ("organisatie:OrganisatieStatusCode" -> _)
   ("foaf:OnlineAccount" -> _) ;; only this is needed for login
-  ("foaf:Agent" -> _)
-  ("ext:Guideline" -> _))
+  ("foaf:Agent" -> _))
 
 (define-graph organizations-ipdc-lpdc ("http://mu.semte.ch/graphs/organizations/")
   ("ipdc-lpdc:ConceptualPublicService" -> _)
