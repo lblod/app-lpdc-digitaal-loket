@@ -521,7 +521,7 @@ services:
     logging: *default-logging
 
   hh-rewrite:
-    image: semanticai/hh-rewrite-service:feature-datamodel-changes
+    image: semanticai/hh-rewrite-service:feature-guideline-to-config
     environment:
       ALLOW_MU_AUTH_SUDO: "false"
       MU_SPARQL_ENDPOINT: http://database:8890/sparql
