@@ -1,3 +1,11 @@
+## v0.39.4 (2026-11-18)
+- Fix for prefix query [LPDC-1784]
+
+#### Deploy notes
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+```
+
 ## v0.39.3 (2026-11-18)
 - Update frontend:
   - [v0.36.1](https://github.com/lblod/frontend-lpdc/blob/0285bedb7af6cde5579b1e9ed4e20b36b44674f2/CHANGELOG.md#v0361-2026-11-04) [LDPC-1311]
