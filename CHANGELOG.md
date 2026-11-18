@@ -1,3 +1,13 @@
+## Unreleased
+
+### Management
+- Bump to [v0.58.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.58.0) [LPDC-1741]
+
+#### Deploy notes
+```
+drc pull lpdc-management && drc up -d lpdc-management
+```
+
 ## v0.39.3 (2026-11-18)
 - Update frontend:
   - [v0.36.1](https://github.com/lblod/frontend-lpdc/blob/0285bedb7af6cde5579b1e9ed4e20b36b44674f2/CHANGELOG.md#v0361-2026-11-04) [LDPC-1311]
