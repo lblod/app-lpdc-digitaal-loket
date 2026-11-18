@@ -1,3 +1,5 @@
+PREFIX schema: <https://schema.org/>
+
 DELETE { GRAPH ?g { ?s schema:url ?u } }
 INSERT { GRAPH ?g { ?s schema:url ?n } }
 WHERE {
