@@ -54,8 +54,8 @@
                                  ,(s-prefix "lpdc:generatedText"))
                 (:final-text :string
                              ,(s-prefix "lpdc:finalText"))
-                (:status :url
-                         ,(s-prefix "adms:status"))
+                (:usage-status :url
+                         ,(s-prefix "lpdc:usageStatus"))
                 (:is-improved :boolean
                          ,(s-prefix "lpdc:isImproved")))
   :has-one `((field-generation :via ,(s-prefix "lpdc:hasGenerationActivity")
