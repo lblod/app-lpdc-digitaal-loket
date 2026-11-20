@@ -1,11 +1,12 @@
 ## Unreleased
+- Bump lpdc-publish to [v0.22.1] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.22.1) [LPDC-1782]
 
 ### Management
 - Bump to [v0.58.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.58.0) [LPDC-1741]
 
 #### Deploy notes
 ```
-drc pull lpdc-management && drc up -d lpdc-management
+drc pull lpdc-management lpdc-publish && drc up -d lpdc-management lpdc-publish
 ```
 
 ## v0.39.4 (2026-11-18)
