@@ -159,6 +159,14 @@ defmodule Dispatcher do
   #################################################################
   # source-document-generation.lisp
   #################################################################
+  match "/field-generations/*path", @json do
+    forward conn, path, "http://cache/field-generations/"
+  end
+
+  match "/generation-activities/*path", @json do
+    forward conn, path, "http://cache/generation-activities/"
+  end
+
   match "/source-documents/*path", @json do
     forward conn, path, "http://cache/source-documents/"
   end
@@ -255,6 +263,14 @@ defmodule Dispatcher do
 
   match "/notification-preferences/*path", @json do
     forward conn, path, "http://resource/notification-preferences/"
+  end
+
+  #################################################################
+  # Heerlijk Helder
+  #################################################################
+
+  post "/hh-rewrites" do
+    forward conn, [], "http://hh-rewrite/hh-rewrites"
   end
 
   #################################################################

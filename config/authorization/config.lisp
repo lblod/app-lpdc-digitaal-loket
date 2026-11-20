@@ -106,7 +106,8 @@
   ("org:Organization" -> _)
   ("organisatie:TypeVestiging" -> _)
   ("organisatie:OrganisatieStatusCode" -> _)
-  ("foaf:OnlineAccount" -> _)) ;; only this is needed for login
+  ("foaf:OnlineAccount" -> _) ;; only this is needed for login
+  ("foaf:Agent" -> _))
 
 (define-graph organizations-ipdc-lpdc ("http://mu.semte.ch/graphs/organizations/")
   ("ipdc-lpdc:ConceptualPublicService" -> _)
@@ -140,7 +141,11 @@
   ("nfo:DataContainer" -> _)
   ("task:Task" -> _)
   ("cogs:Job" -> _)
-  ("ipdc-lpdc:SourceDocument" -> _))
+  ("lpdc:SourceDocument" -> _)
+  ("lpdc:FieldGeneration" -> _)
+  ("ext:AICall" -> _)
+  ("prov:Activity" -> _)
+  ("core:Error" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)

@@ -1,0 +1,24 @@
+@prefix skos:           <http://www.w3.org/2004/02/skos/core#> .
+@prefix mu:             <http://mu.semte.ch/vocabularies/core/> .
+
+<http://lblod.data.gift/concept-schemes/c240e1dd-fdf8-4a9b-8f8b-af70e63d9192>
+    a               skos:ConceptScheme ;
+    mu:uuid         "c240e1dd-fdf8-4a9b-8f8b-af70e63d9192" ;
+    skos:prefLabel  "Heerlijk Helder verwerkingstatus"@nl ;
+    skos:definition "Verwerking status van een Heerlijk Helder generatie"@nl .
+
+<http://lblod.data.gift/concepts/25504f03-b26a-45ef-a288-0a364a8f2c0c>
+    a                 skos:Concept ;
+    mu:uuid           "25504f03-b26a-45ef-a288-0a364a8f2c0c" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/c240e1dd-fdf8-4a9b-8f8b-af70e63d9192> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/c240e1dd-fdf8-4a9b-8f8b-af70e63d9192> ;
+    skos:prefLabel    "Gebruikt"@nl ;
+    skos:definition   "De Heerlijk Helder generatie is gebruikt"@nl .
+
+<http://lblod.data.gift/concepts/0ec7b4a8-c281-4ff7-8b50-c02063a1e0dc>
+    a                 skos:Concept ;
+    mu:uuid           "0ec7b4a8-c281-4ff7-8b50-c02063a1e0dc" ;
+    skos:topConceptOf <http://lblod.data.gift/concept-schemes/c240e1dd-fdf8-4a9b-8f8b-af70e63d9192> ;
+    skos:inScheme     <http://lblod.data.gift/concept-schemes/c240e1dd-fdf8-4a9b-8f8b-af70e63d9192> ;
+    skos:prefLabel    "Niet gebruikt"@nl ;
+    skos:definition   "De Heerlijk Helder generatie is niet gebruikt"@nl .

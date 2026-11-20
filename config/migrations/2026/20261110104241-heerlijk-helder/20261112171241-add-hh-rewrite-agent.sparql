@@ -1,0 +1,10 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX mu:   <http://mu.semte.ch/vocabularies/core/>
+PREFIX tcs:  <https://w3id.org/tcs#>
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    <http://lblod.data.gift/id/components/hh-rewrite/v1.0.0> a tcs:InstancePipelineComponent, foaf:Agent ;
+                                                             mu:uuid "be8827c3-6b4d-4807-be6a-882e8ee8fa4d" .
+    }
+  }
