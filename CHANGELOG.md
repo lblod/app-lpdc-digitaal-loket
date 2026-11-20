@@ -1,12 +1,13 @@
 ## Unreleased
 - Bump lpdc-publish to [v0.22.1] (https://github.com/lblod/lpdc-publish-service/releases/tag/v0.22.1) [LPDC-1782]
+- bump file-service to [v0.3.5.3](https://github.com/mu-semtech/file-service/releases/tag/v3.5.3)
 
 ### Management
 - Bump to [v0.58.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.58.0) [LPDC-1741]
 
 #### Deploy notes
 ```
-drc pull lpdc-management lpdc-publish && drc up -d lpdc-management lpdc-publish
+drc pull lpdc-management lpdc-publish file && drc up -d lpdc-management lpdc-publish file
 ```
 
 ## v0.39.4 (2026-11-18)

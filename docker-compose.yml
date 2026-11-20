@@ -229,7 +229,7 @@ services:
     logging: *default-logging
 
   file:
-    image: semtech/mu-file-service:3.4.0
+    image: semtech/mu-file-service:3.5.3
     depends_on:
       migrations:
         condition: service_healthy
