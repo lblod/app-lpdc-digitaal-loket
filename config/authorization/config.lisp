@@ -144,7 +144,8 @@
   ("lpdc:SourceDocument" -> _)
   ("lpdc:FieldGeneration" -> _)
   ("ext:AICall" -> _)
-  ("prov:Activity" -> _))
+  ("prov:Activity" -> _)
+  ("core:Error" -> _))
 
 (define-graph org ("http://mu.semte.ch/graphs/organizations/")
   ("foaf:Person" -> _)
