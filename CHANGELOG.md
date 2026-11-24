@@ -1,3 +1,13 @@
+## v0.39.5 (2026-11-24)
+### Management
+- Bump to [v0.57.4](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.4) [LPDC-1838]
+
+### Deploy notes
+The frontend is currently rolled back to 0.34.3 on the server. During deployment, restore it to the intended version (0.36.1).
+```bash
+drc pull lpdc lpdc-management && drc up -d lpdc lpdc-management
+```
+
 ## v0.39.4 (2026-11-18)
 - Fix for prefix query [LPDC-1784]
 
