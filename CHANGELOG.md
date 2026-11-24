@@ -1,4 +1,4 @@
-## v0.39.5 (2026-11-24)
+## v0.39.5 (2026-11-24) 
 ### Management
 - Bump to [v0.57.4](https://github.com/lblod/lpdc-management-service/releases/tag/v0.57.4) [LPDC-1838]
 
