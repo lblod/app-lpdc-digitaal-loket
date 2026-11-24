@@ -57,6 +57,8 @@ export interface PublishedInstanceFields {
     bewerktOp?: string | Presence,
     geldigVanaf?: string,
     geldigTot?: string,
+    beschikbaarVanaf?: string,
+    beschikbaarTotEnMet?: string,
     doelgroepen?: string[],
     themas?: string[],
     talen?: string[],
@@ -94,6 +96,8 @@ export function verifyInstancePublishedOnIPDC(instance: any[], instanceFields: P
     validatePresentOrData(publicService, 'http://schema.org/dateModified', instanceFields.bewerktOp, 'dateTime');
     validateData(publicService, 'http://schema.org/startDate', arrayContainingString(instanceFields.geldigVanaf, 'dateTime'));
     validateData(publicService, 'http://schema.org/endDate', arrayContainingString(instanceFields.geldigTot, 'dateTime'));
+    validateData(publicService, 'http://schema.org/availabilityStarts', arrayContainingString(instanceFields.beschikbaarVanaf, 'dateTime'));
+    validateData(publicService, 'http://schema.org/availabilityEnds', arrayContainingString(instanceFields.beschikbaarTotEnMet, 'dateTime'));
     validateData(publicService, 'https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience', arrayContainingStringIds(instanceFields.doelgroepen));
     validateData(publicService, 'http://data.europa.eu/m8g/thematicArea', arrayContainingStringIds(instanceFields.themas));
     validateData(publicService, 'http://purl.org/dc/terms/language', arrayContainingStringIds(instanceFields.talen));
