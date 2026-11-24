@@ -4,6 +4,7 @@
 
 ### Management
 - Bump to [v0.58.0](https://github.com/lblod/lpdc-management-service/releases/tag/v0.58.0) [LPDC-1741]
+- Bump to [v0.58.1](https://github.com/lblod/lpdc-management-service/releases/tag/v0.58.1) [LPDC-1838]
 
 #### Deploy notes
 ```
