@@ -168,6 +168,38 @@ defmodule Dispatcher do
   end
 
   #################################################################
+  # besluit.lisp
+  #################################################################
+
+  match "/agenda-items/*path", @json do
+    forward conn, path, "http://resource/agenda-items/"
+  end
+
+  match "/agenda-item-handlings/*path", @json do
+    forward conn, path, "http://resource/agenda-item-handlings/"
+  end
+
+  match "/articles/*path", @json do
+    forward conn, path, "http://resource/articles/"
+  end
+
+  match "/governing-bodies/*path", @json do
+    forward conn, path, "http://resource/governing-bodies/"
+  end
+
+  match "/governing-body-classification-codes/*path", @json do
+    forward conn, path, "http://resource/governing-body-classification-codes/"
+  end
+
+  match "/resolutions/*path", @json do
+    forward conn, path, "http://resource/resolutions/"
+  end
+
+  match "/sessions/*path", @json do
+    forward conn, path, "http://resource/sessions/"
+  end
+
+  #################################################################
   # Public Services - LPDC-IPDC
   #################################################################
 

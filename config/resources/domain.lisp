@@ -23,6 +23,7 @@
 (read-domain-file "feedback.lisp")
 (read-domain-file "notification-preference.lisp")
 (read-domain-file "source-document-generation.lisp")
+(read-domain-file "besluit.lisp")
 
 ;; Extra security layer to return 403 on GET /files
 ;; It should be ok for mu-auth; but devs can make bugs and add files to the wrong graph (i.e. public)
