@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6219e70b-a11d-41ee-932f-1de6fab63f66> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/056ce378-80ad-465c-a6ff-9e7f427b43dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06808dec-0883-41a9-932f-4e1dbfce464f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/21dd7ca5-0fbf-4795-80c5-34655d129dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5e8d9624-6fc9-4220-acdb-affac1d4f5bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b55312b-f388-42d7-913b-1b7fa2fe03d4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc1d2c8-5d20-4607-ab4b-a96ad7d3adc2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b50e7bb5-a505-44ae-8207-2fb21ca780d5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c251bdc4-9793-405e-8b78-c3e0ee673f9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c451ff4b-94fa-477b-8baa-81e0be4bd852>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cec759f6-1f78-4c21-8314-2aff4bd2401f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4c0bf94-9863-4204-bf32-7c7993067dae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0d592ac-a567-4638-9ba8-411d725bfa74>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2855dc5-1bda-4127-9e37-67f9c96edd0c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ff83b9b0-0723-48bf-9870-b6fa200fc786> ;
+    ns1:geplandeStart "2023-09-14T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a816a351-bad7-4bdf-893d-8c0a30fd5f67> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3477a3ff-0a8d-4b85-bf05-16027e5dd5f5> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fcf42403-2747-4b3b-a2b4-cffcfa393785> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e72ca0e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-09-14T21:26:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-09-14T20:01:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d4c0bf94-9863-4204-bf32-7c7993067dae> ;
+    ns1:openbaar true ;
+    ns3:uuid "eedefef0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0abcbb76-5af1-48ea-830c-ba2a413b2167> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0abcbb76-5af1-48ea-830c-ba2a413b2167> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de ontwerpakte voor de kosteloze grondafstand tussen Realfin BV; Pieter Dobbelaere; Dobbelaere Investment Group CV; Kerkfabriek Sint-Martinus Lovendegem; Linda Dobbelaere; Romain Coppens; Johan Gillis en Nadine Ketelers; Maxime Ghesquière en Janassa Tsouhlarakis; Emmelie Mouton; Linda Maes; Maxime Defraigne enerzijds en de gemeente Lievegem anderzijds, opgemaakt door Nele Droesbeke, Vlaams commissaris bij de dienst Vastgoedtransacties, voor een strook grond aan Molendreef 4-6-8, 9920 Lievegem, met het gereserveerd perceelsidentificatienummer afdeling 2, sectie B, 1578 B, met een oppervlakte volgens meting van 34,55 m² goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Patrimonium - akte kosteloze grondafstand Molendreef 4-6-8: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepenGuy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Het collegebesluit van 4 maart 2019 met de goedkeuring van de omgevingsvergunning 2018/170 voor Molendreef 4-6-8Het besluit van het college van 10 januari 2023 over de principiële goedkeuring van de kosteloze grondafstand van een strook grond aan Molendreef 4-6-8 en opdracht vastgoedtransacties 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Op 4 maart 2019 werd aan Urban ID, Citadellaan 20, 9000 Gent, een omgevingsvergunning verleend voor het het bouwen van een meergezinswoning (14 appartementen ) na sloop van de bestaande bebouwing op een terrein, gelegen Molendreef 4, 6 en 8 te 9920 Lievegem, kadastraal bekend: Afdeling 2, sectie B, perceelnrs. 1578A, 1076/2K, 1073C en 1071P. 
+                                                            Op vraag van de gemeente werd de voorbouwlijn 1 m achteruit geplaatst. In de omgevingsvergunning werd geen grondafstand opgelegd. De eigenaars zijn bereid de strook grond voor de voorbouwlijn (voetpadzone van 1 m breed en ongeveer 34 m lang) kosteloos af te staan aan de gemeente zodat deze strook aan het openbaar domein kan worden toegevoegd. 
+                                                            Voor deze overdracht werd op 20 februari 2023 een opmetingsplan (zie bijlage) en een prekadastratie opgemaakt door BV Wille-Caus.De over te dragen zone bestaat uit een strook grond van 34,55 m² gelegen Molendreef 4-6-8,  9920 Lievegem, met het gereserveerd perceelsidentificatienummer afdeling 2, sectie B, 1578 B (zie bijlage). 
+                                                            Op basis van het opmetingsplan en de prekadastratie maakte de dienst Vastgoedtransacties de ontwerpakte voor deze kosteloze grondafstand op (zie bijlage).De overdracht van de strook grond heeft betrekking op de gemeenschappelijke delen van het appartement. Tot nu toe is er geen syndicus aangesteld die de vereniging van mede-eigenaren kan vertegenwoordigen. Om die reden zijn alle eigenaars van de privatieve kavels in de akte opgenomen. Zij zijn immers voor een bepaald % eigenaar van die over te dragen strook grond. 
+                                                            De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                             
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Er is geen financiële impact voor de gemeente. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "eef25fe0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad keurt de ontwerpakte voor de kosteloze grondafstand tussen Realfin BV; Pieter Dobbelaere; Dobbelaere Investment Group CV; Kerkfabriek Sint-Martinus Lovendegem; Linda Dobbelaere; Romain Coppens; Johan Gillis en Nadine Ketelers; Maxime Ghesquière en Janassa Tsouhlarakis; Emmelie Mouton; Linda Maes; Maxime Defraigne enerzijds en de gemeente Lievegem anderzijds, opgemaakt door Nele Droesbeke, Vlaams commissaris bij de dienst Vastgoedtransacties, voor een strook grond aan Molendreef 4-6-8, 9920 Lievegem, met het gereserveerd perceelsidentificatienummer afdeling 2, sectie B, 1578 B, met een oppervlakte volgens meting van 34,55 m² goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e72f6000-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium - akte kosteloze grondafstand Molendreef 4-6-8: goedkeuring" .
+

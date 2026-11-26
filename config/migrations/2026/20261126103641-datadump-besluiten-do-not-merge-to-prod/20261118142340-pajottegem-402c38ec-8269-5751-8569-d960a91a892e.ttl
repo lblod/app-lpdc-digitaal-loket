@@ -1,0 +1,94 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/f5327685-a171-4f26-8879-b6a1f40de58e> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/306f7478-0007-4a23-afbe-d60a62c7ebf7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/742f914e-4950-4e95-9409-d4063675cf12> ;
+    ns1:geplandeStart "2026-02-16T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/f7324a9f-f33d-49bd-bec1-5b44e910439b> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "ff5bd322-b1a8-508c-a2b6-5d59aa411f40" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-02-16T12:47:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/306f7478-0007-4a23-afbe-d60a62c7ebf7> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c2a60f89-f17d-4f17-8ea9-ab7767f52f89> ;
+    ns1:openbaar false ;
+    ns3:uuid "9cab7989-6bff-5131-a9f6-c9ffdfdea984" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/306f7478-0007-4a23-afbe-d60a62c7ebf7> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/306f7478-0007-4a23-afbe-d60a62c7ebf7> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/306f7478-0007-4a23-afbe-d60a62c7ebf7> a ns1:Besluit ;
+    ns2:description """ 
+                                                    Het college van burgemeester en schepenen keurt de politieverordening met tijdelijke verkeersmaatregelen voor de vinkenzettingen goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Tijdelijke politieverordening: vinkenzetting Schoolstraat, 1570 Pajottegem - periode 2026" ;
+    ns1:motivering """ 
+                                 
+                                      
+                                    
+                                         
+                                     
+                                     
+                                 
+                            """@nl ;
+    ns3:uuid "402c38ec-8269-5751-8569-d960a91a892e" ;
+    prov:value """ 
+                                 
+                                    Enig artikel - Ter gelegenheid van de vinkenzettingen worden volgende beperkingsmaatregelen voor het verkeer genomen van 8.30 uur tot 10.30 uur op: 
+                                     
+                                        Zaterdag 18 april 2026 
+                                        Zondag 26 april 2026 
+                                        Zondag 3 mei 2026 
+                                        Zondag 10 mei 2026 
+                                        Zondag 17 mei 2026 
+                                        Zondag 24 mei 2026 
+                                        Zondag 31 mei 2026 
+                                        Zondag 7 juni 2026 
+                                        Zondag 14 juni 2026 
+                                        Zondag 21 juni 2026 
+                                        Zondag 28 juni 2026 
+                                        Zondag 5 juli 2026 
+                                        Zondag 12 juli 2026 
+                                        Zondag 19 juli 2026 
+                                        Zondag 26 juli 2026 
+                                     
+                                    Op de Schoolstraat deel na de zijstraat met de bareel geldt:          verboden toegang voor iedere bestuurderDit wordt gesignaleerd door: 
+                                     
+                                        verkeersborden C3 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                            De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen. 
+                                            Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt. 
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/306f7478-0007-4a23-afbe-d60a62c7ebf7> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/306f7478-0007-4a23-afbe-d60a62c7ebf7> a ns1:Agendapunt ;
+    ns3:uuid "4638e1bd-a81e-533a-b9de-0ef160fcb77c" .
+

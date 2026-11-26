@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/b08d46a3-ef05-4bd4-abce-ada7c56b660c> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/126ca534-4770-42c3-9cb7-bdc33fb5fbbf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/926051c6-f2c8-433b-a4ae-1ce3287fd32e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98f37eca-dd43-4498-b9c1-a31288ebefed>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc1e231e-4571-49ee-ae6d-e6b84fdfbca8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3aa6978-e5aa-48d0-9faf-870ed6fea09d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e79f7f62-fbfc-41ba-b31d-ea8ee67ba098>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ea479ba8-7244-41d6-8336-512b40dc3f0b> ;
+    ns1:geplandeStart "2025-08-12T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/29d5c4b4-35e3-4fa5-8de7-1171644a5b5e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9fdfa3de-496e-46e7-a744-c078e50847b5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "e2d48ff7-7e88-5f92-b71c-0a9df5b08a30" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-08-12T13:36:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98f37eca-dd43-4498-b9c1-a31288ebefed> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c3aa6978-e5aa-48d0-9faf-870ed6fea09d> ;
+    ns1:openbaar false ;
+    ns3:uuid "7ed07898-f0a6-53e8-a07d-17db86ee98b4" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98f37eca-dd43-4498-b9c1-a31288ebefed> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/98f37eca-dd43-4498-b9c1-a31288ebefed> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/98f37eca-dd43-4498-b9c1-a31288ebefed> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Strapdag Twinkel' op 19 september 2025 van 7.30 uur tot en met 16.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van Strapdag Twinkel: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 12 augustus 2025 over de aanvraag evenement Strapdag Twinkel - Basisschool Twinkel: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Pieter Van Hecke, namens Basisschool Twinkel, organiseert 'Strapdag Twinkel' op 19 september 2025 van 9.00 uur tot en met 16.00 uur.Er werd op 4 juli 2025 een aanvraag ingediend door Pieter Van Hecke, namens Basisschool Twinkel, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "1f464f03-6fe4-5981-a888-4f7928c4ff79" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Strapdag Twinkel' op 19 september 2025 van 7.30 uur tot en met 16.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod op volledige parking Veldhoek, 9931 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98f37eca-dd43-4498-b9c1-a31288ebefed> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98f37eca-dd43-4498-b9c1-a31288ebefed> a ns1:Agendapunt ;
+    ns3:uuid "0bb3792a-2820-526f-a9aa-8c7bf358d48a" .
+

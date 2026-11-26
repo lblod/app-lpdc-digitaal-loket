@@ -1,0 +1,146 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/998e950f-4a6f-407e-acc8-21f0454943be> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/126b5d00-e069-4e28-b529-cf0f3ac3fa4f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/165c23ef-46b9-458f-b9b0-5dbc73c379b2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/17387b65-ced4-4251-8c34-51cf19d58f12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1fc6887a-ce70-4ba4-ac9e-ee961ef6ac02>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/381c20a3-8080-42a8-9221-7cdcbfd8ca0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38d10030-92e0-4af2-8eef-0118f76f76eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/433715a9-1e9a-40af-b0d8-613899c834ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a87114f-e4ab-4cac-91ab-92033fd684e5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dd9427a-ecad-4d8f-8bde-403db3d87d60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f9a9ccd-7a00-4b11-b963-ea9d49ce9bc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52c0136d-8a66-47f6-a824-301f44e5bfa2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ae7b9a5-ca72-4215-86e4-15dae2cf1794>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7af75996-5356-499b-8094-de17d5f0f4e1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87785798-6639-4c6f-bfa4-260ee7647588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9e41e560-e2c4-46f4-9e22-4608f5957da1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f6ee797-2c73-4fb4-9bba-d13a543c7b62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b218d9dc-8bae-4b81-bba1-70375cce2307>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be9900d6-a624-438d-bd99-063b4ea93f41>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c45d5bbb-1ee0-4518-8198-c4675b746bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8f55e5a-ccdf-47cf-bff8-0e38acb72112>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9156811-9d61-455c-a63b-8b086125c7ec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9ec27d7-f5aa-4dd6-a42b-e9679c4d8326>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1cb10c6-2945-49fd-9b6c-1f2711281a68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4f56cb2-2c2b-4fc7-9f65-01a4d1da85f5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5dd5bd3-73dd-4c59-a91b-954ae172da6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd2b8423-4c83-48a5-a7cb-405b6d4dc153>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5f26532-dc4e-42f0-9a15-74038fc65044> ;
+    ns1:geplandeStart "2023-12-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e0ffeb14-446f-4b4c-a17d-9f5791fa2dae> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d1612c76-4d4d-4b68-9053-0c49145eadf9> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4b578639-cd04-4965-be39-ac33532e8409> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e8104a20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-12-20T21:42:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-12-20T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f> ;
+    ns1:openbaar true ;
+    ns3:uuid "f7df39c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6ee12e08-5b68-4075-ae4f-8ad18216b594> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6ee12e08-5b68-4075-ae4f-8ad18216b594> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/84121221-4217-40e3-ada2-cd1379b168e1> ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt de wijzigingen aan het reglement over de Lievegembon vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Reglement over de Lievegembon - wijziging: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Guy De Neve, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur van 22 december 2017, artikelen 40 en 41 inzake de bevoegdheden van de gemeenteraad De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen en latere wijzigingenHet gemeenteraadsbesluit van Lievegem van 20 november 2019 over het reglement over de Lievegembon 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    In de gemeenteraad van 20 november 2019 werd het reglement goedgekeurd over de Lievegembon. Ondertussen zijn er enkele veranderingen nodig voor de goede werking van de Lievegembon. 
+                                    Termijn vervaldatumIn het reglement werd beslist om de vervaltermijn van de Lievegembon te leggen op 1 jaar na uitgiftedatum.Echter krijgt het lokaal bestuur regelmatig aanvragen tot verlenging van deze vervaltermijnen door mensen die opmerken dat hun Lievegembonnen vervallen zijn.Het voorstel is om de vervaltermijn van de Lievegembon te verlengen naar 2 jaar.Dat zorgt ervoor dat de mensen meer tijd krijgen om hun Lievegembonnen te gebruiken bij de lokale handelaars.ADVIES LEA: Ongunstig om de vervaltermijn te verlengen naar 2 jaar. Er werden maar 4 aanvragen tot verlenging gevraagd in 2023. Bij een verlenging naar 2 jaar zullen er ook personen zijn die hun Lievegembonnen vergeten. 
+                                    Werkwijze terugbetaling aan handelaars De werkwijze werd aangepast om zo beter tegemoet te komen aan de gewijzigde werkwijze van het lokaal bestuur in verband met het werken op afspraak. 
+                                    De nieuwe werkwijze: De handelaars ontwaarden de ontvangen Lievegembonnen en verzamelen ze in een enveloppe waarop minimaal de naam van de onderneming, het ondernemingsnummer en de bankrekening vermeld staan. Nadien maakt de handelaar een afspraak (sterk aan te raden) met team onthaal Lievegem voor het inleveren van de Lievegembonnen uiterlijk 3 maanden na de vervaldatum van de bon.  Na het verstrijken van de periode van 3 maanden na de vervaldatum, vervalt het recht op terugbetaling.  Na het indienen van de ontwaarde Lievegembonnen wordt het verschuldigde totaalbedrag gestort op het rekeningnummer van de handelaar.ADVIES LEA: Gunstig, mits de voorwaarde dat een afspraak maken niet verplicht wordt. 
+                                    Verkoopplaatsen De Lievegembon kan enkel nog aangekocht worden bij de 3 contactpunten en de 3 bibliotheken en niet meer bij team sport.ADVIES LEA: Gunstig. 
+                                    Verlenging terugbetalingstermijn voor handelaars:We kregen de vraag van een handelaar om de terugbetalingstermijn voor handelaars te verlengen naar een langere termijn dan 3 maanden na vervaldatum van de Lievegembon.In het reglement werd beslist dat de handelaars de gekregen Lievegembonnen uiterlijk 3 maanden na de vervaldatum van de Lievegembon samen met een ingevuld terugbetalingsformulier dienen te bezorgen aan het lokaal bestuur. Na het verstrijken van de periode van 3 maanden na de vervaldatum, vervalt het recht op terugbetaling.Er werden in 2023 al 5 vragen ingediend tot verlenging van de terugbetalingstermijn voor handelaars.Deze aanvragen worden behandeld in het college van burgemeester en schepenen. Deze aanvragen worden goedgekeurd als een uitzonderlijke en éénmalig toegestane gunstmaatregel.De Lievegembonnen zijn in het leven geroepen om de lokale economie te ondersteunen waarbij lokaal bestuur Lievegem zelf geen intentie heeft om winst te maken op de verkoop van Lievegembonnen. Elke bestede bon zou dus op eender welk tijdstip kunnen worden terugbetaald aan een handelaar zonder hinder of schade voor lokaal bestuur Lievegem.Daarom wordt voorgesteld om de terugbetalingstermijn voor handelaars te verlengen naar 1 jaar. Zo is er een gelijkschakeling van vervaltermijn voor gebruikers en de terugbetalingstermijn voor handelaars.ADVIES LEA: Gunstig voor de verlenging naar 1 jaar. Zo worden de vervaldatum voor gebruikers en handelaars gelijkgetrokken.ADVIES team financiën: de Lievegembonnen zijn in het leven geroepen om de lokale economie te ondersteunen waarbij lokaal bestuur Lievegem zelf geen intentie heeft om winst te maken op de verkoop van Lievegembonnen. Elke bestede bon zou dus op eender welk tijdstip kunnen worden terugbetaald aan een handelaar zonder hinder of schade voor lokaal bestuur Lievegem. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Inkomsten uit de verkoop van Lievegembonnen worden geregistreerd onder jaarbudgetrekening xxxx/GBB-SSC/0500-00/7000099/GEMEENTE/CBS/IP-GEEN.Alle terugbetalingen aan handelaars van aangewende Lievegembonnen worden geregistreerd onder jaarbudgetrekening xxxx/GBB-SSC/0500-00/6159999/GEMEENTE/CBS/IP-GEEN. 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Reglement over de Lievegembon 
+                                    Artikel 1    AlgemeenDit reglement regelt de uitgifte van de Lievegembon. De Lievegembon is een betaalmiddel en wordt uitgegeven in drie waarden: 5, 10 en 25 euro. Elke bon heeft een uniek serienummer/barcode. Op elke bon wordt de vervaldatum vermeld. De Lievegembon is vanaf die datum één jaar geldig. Na de vervaldatum is de bon niet meer geldig en wordt deze niet meer aanvaard. 
+                                    Artikel 2    VerkooppuntenDe Lievegembon kan worden aangekocht in de volgende punten (tijdens de openingsuren):•    Contactpunt Lovendegem•    Contactpunt Waarschoot•    Contactpunt Zomergem•    Bibliotheek Lovendegem•    Bibliotheek Waarschoot•    Bibliotheek ZomergemHet college van burgemeester en schepenen kan de locaties waar de Lievegembon verkocht wordt, aanpassen.Artikel 3    Deelnemende handelaarsAlle Lievegemse handelaars kunnen deelnemen. Deelname is gratis. Handelaars ontvangen een etalagesticker ‘Welkom met de Lievegembon’ die ze op een zichtbare plaats in de etalage hangen. Deelnemende handelaars kunnen zich registreren als handelaar die Lievegembonnen aanvaardt door zich aan te melden in de digitale bedrijvengids. Hierdoor is een geactualiseerde lijst van de deelnemende handelaars steeds beschikbaar op de gemeentelijke website van Lievegem. Als de gegevens van de handelszaak veranderen of de zaak wordt stopgezet, dan moet dit onmiddellijk gemeld worden aan het team omgeving - lokale economie. Deelname stopt automatisch bij de beëindiging van de zaak.Artikel 4.    Aanvaarden van de LievegembonLievegembonnen moeten altijd aanvaard worden, ook tijdens de koopjesperiode. De Lievegembon is geldig tot en met de vervaldatum vermeld op de bon. Vervallen Lievegembonnen kunnen niet omgeruild worden, noch door de deelnemende handelaars aanvaard worden. De klant geeft de Lievegembon af aan de handelaar die de vervaldatum en het serienummer/de barcode zal controleren. De Lievegembon is niet inwisselbaar tegen geld. Er kan niet teruggeven worden op de Lievegembon. Een Lievegembon wordt niet vervangen in geval van verlies.Artikel 5.    Terugbetaling van de Lievegembon aan handelaarsDe handelaars ontwaarden de ontvangen Lievegembonnen en verzamelen ze in een enveloppe waarop minimaal de naam van de onderneming, het ondernemingsnummer en de bankrekening vermeld staan.Nadien maakt de handelaar een afspraak met team onthaal Lievegem voor het inleveren van de Lievegembonnen uiterlijk één jaar na de vervaldatum van de bon. Na het verstrijken van de periode van één jaar na de vervaldatum, vervalt het recht op terugbetaling. Na het indienen van de ontwaarde Lievegembonnen wordt het verschuldigde totaalbedrag gestort op het rekeningnummer van de handelaar.Artikel 6.    KostenHet lokaal bestuur draagt alle kosten voor het invoeren van de Lievegembon. Er worden geen kosten aangerekend aan de deelnemende handelaars.Artikel 7.    Toepassingen voor het lokaal bestuurHet lokaal bestuur kan zelf de Lievegembon gebruiken in het kader van het geven van attenties en subsidiebeleid binnen de daartoe voorziene beschikbare kredieten. Het lokaal bestuur zal al het mogelijke doen om aan de verplichtingen te voldoen, maar kan niet aansprakelijk gesteld worden voor vertragingen of het niet plaatsvinden van een levering die voortvloeit uit omstandigheden buiten haar wil, zoals stakingen, werkonderbrekingen, natuurrampen of andere gebeurtenissen die de productie of levering van de Lievegembon verhinderen. Het lokaal bestuur kan niet aansprakelijk gesteld worden voor de kwaliteit van de producten of diensten die werden geleverd na de betaling met de Lievegembon. Het lokaal bestuur kan ten allen tijde beslissen om geen Lievegembon meer uit te geven. In dat geval zullen de bonnen in omloop nog behandeld worden conform dit reglement. In geval van betwisting of discussie neem het college van burgemeester en schepenen een gemotiveerde beslissing. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    De gemeentelijke reglementen worden bekendgemaakt aan ABB via het digitaal loket en via de gemeentelijke website.Team onthaal, team financiën en team communicatie 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikelen 40 en 41 inzake de bevoegdheden van de gemeenteraad De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen en latere wijzigingenHet gemeenteraadsbesluit van Lievegem van 20 november 2019 over het reglement over de Lievegembon 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            In de gemeenteraad van 20 november 2019 werd het reglement goedgekeurd over de Lievegembon. Ondertussen zijn er enkele veranderingen nodig voor de goede werking van de Lievegembon. 
+                                                            Termijn vervaldatumIn het reglement werd beslist om de vervaltermijn van de Lievegembon te leggen op 1 jaar na uitgiftedatum.Echter krijgt het lokaal bestuur regelmatig aanvragen tot verlenging van deze vervaltermijnen door mensen die opmerken dat hun Lievegembonnen vervallen zijn.Het voorstel is om de vervaltermijn van de Lievegembon te verlengen naar 2 jaar.Dat zorgt ervoor dat de mensen meer tijd krijgen om hun Lievegembonnen te gebruiken bij de lokale handelaars.ADVIES LEA: Ongunstig om de vervaltermijn te verlengen naar 2 jaar. Er werden maar 4 aanvragen tot verlenging gevraagd in 2023. Bij een verlenging naar 2 jaar zullen er ook personen zijn die hun Lievegembonnen vergeten. 
+                                                            Werkwijze terugbetaling aan handelaars De werkwijze werd aangepast om zo beter tegemoet te komen aan de gewijzigde werkwijze van het lokaal bestuur in verband met het werken op afspraak. 
+                                                            De nieuwe werkwijze: De handelaars ontwaarden de ontvangen Lievegembonnen en verzamelen ze in een enveloppe waarop minimaal de naam van de onderneming, het ondernemingsnummer en de bankrekening vermeld staan. Nadien maakt de handelaar een afspraak (sterk aan te raden) met team onthaal Lievegem voor het inleveren van de Lievegembonnen uiterlijk 3 maanden na de vervaldatum van de bon.  Na het verstrijken van de periode van 3 maanden na de vervaldatum, vervalt het recht op terugbetaling.  Na het indienen van de ontwaarde Lievegembonnen wordt het verschuldigde totaalbedrag gestort op het rekeningnummer van de handelaar.ADVIES LEA: Gunstig, mits de voorwaarde dat een afspraak maken niet verplicht wordt. 
+                                                            Verkoopplaatsen De Lievegembon kan enkel nog aangekocht worden bij de 3 contactpunten en de 3 bibliotheken en niet meer bij team sport.ADVIES LEA: Gunstig. 
+                                                            Verlenging terugbetalingstermijn voor handelaars:We kregen de vraag van een handelaar om de terugbetalingstermijn voor handelaars te verlengen naar een langere termijn dan 3 maanden na vervaldatum van de Lievegembon.In het reglement werd beslist dat de handelaars de gekregen Lievegembonnen uiterlijk 3 maanden na de vervaldatum van de Lievegembon samen met een ingevuld terugbetalingsformulier dienen te bezorgen aan het lokaal bestuur. Na het verstrijken van de periode van 3 maanden na de vervaldatum, vervalt het recht op terugbetaling.Er werden in 2023 al 5 vragen ingediend tot verlenging van de terugbetalingstermijn voor handelaars.Deze aanvragen worden behandeld in het college van burgemeester en schepenen. Deze aanvragen worden goedgekeurd als een uitzonderlijke en éénmalig toegestane gunstmaatregel.De Lievegembonnen zijn in het leven geroepen om de lokale economie te ondersteunen waarbij lokaal bestuur Lievegem zelf geen intentie heeft om winst te maken op de verkoop van Lievegembonnen. Elke bestede bon zou dus op eender welk tijdstip kunnen worden terugbetaald aan een handelaar zonder hinder of schade voor lokaal bestuur Lievegem.Daarom wordt voorgesteld om de terugbetalingstermijn voor handelaars te verlengen naar 1 jaar. Zo is er een gelijkschakeling van vervaltermijn voor gebruikers en de terugbetalingstermijn voor handelaars.ADVIES LEA: Gunstig voor de verlenging naar 1 jaar. Zo worden de vervaldatum voor gebruikers en handelaars gelijkgetrokken.ADVIES team financiën: de Lievegembonnen zijn in het leven geroepen om de lokale economie te ondersteunen waarbij lokaal bestuur Lievegem zelf geen intentie heeft om winst te maken op de verkoop van Lievegembonnen. Elke bestede bon zou dus op eender welk tijdstip kunnen worden terugbetaald aan een handelaar zonder hinder of schade voor lokaal bestuur Lievegem. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Inkomsten uit de verkoop van Lievegembonnen worden geregistreerd onder jaarbudgetrekening xxxx/GBB-SSC/0500-00/7000099/GEMEENTE/CBS/IP-GEEN.Alle terugbetalingen aan handelaars van aangewende Lievegembonnen worden geregistreerd onder jaarbudgetrekening xxxx/GBB-SSC/0500-00/6159999/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e811d0c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    De gemeenteraad stelt het gewijzigd reglement over de Lievegembon vast. 
+                                    Artikel 2Dit reglement vervangt alle voorgaande versies en treedt in werking vanaf 1 januari 2024. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad stelt het gewijzigd reglement over de Lievegembon vast. 
+                                                            Artikel 2Dit reglement vervangt alle voorgaande versies en treedt in werking vanaf 1 januari 2024. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f0a14860-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Reglement over de Lievegembon - wijziging: vaststelling" .
+

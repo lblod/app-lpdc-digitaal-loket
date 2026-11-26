@@ -1,0 +1,158 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/defba549-28f6-4651-9433-399dda856695> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/443664ac-a188-469a-9a07-517412b3700a>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5c61630a-6ab8-4b6c-b656-110a4777c70d> ;
+    ns2:geplandeStart "2025-06-24T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/89d25427-38ba-4ceb-af68-151230201f74> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:uuid "1d932b57-a3a0-5c09-a440-7525b26fbe73" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-06-24T20:08:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5c61630a-6ab8-4b6c-b656-110a4777c70d> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cbe08f17-ef7f-42b7-a2ef-0a2121ca4b89> ;
+    ns2:openbaar true ;
+    ns1:uuid "2f4dfd6a-1281-5378-ad18-1feac284003d" ;
+    dcterms:description """ 
+                             
+                                De gemeenteraad heeft in vergadering van 23 juni 2025 het retributiereglement m.b.t. vakantiedagen, grabbelpas en uitstappen die door de afdeling Beleven worden georganiseerd, vastgesteld voor de periode van 1 september 2025 tot en met 31 december 2031. Artikel 7 van dit retributiereglement voorziet dat het college van burgemeester en schepenen gemachtigd is om de tarieven voor vakantiedagen, Grabbelpas en uitstappen vast te stellen. De argumentatie tot differentiatie in de tarieven is opgenomen in het besluit van de gemeenteraad. Dit reglement treedt in werking op 1 september 2025. 
+                                Aan het college van burgemeester en schepenen wordt gevraagd de tarieven vast te stellen met ingang van 1 september 2025.  
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5c61630a-6ab8-4b6c-b656-110a4777c70d> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5c61630a-6ab8-4b6c-b656-110a4777c70d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5c61630a-6ab8-4b6c-b656-110a4777c70d> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Tarieven retributiereglement op vakantiedagen, Grabbelpas en uitstappen die door de afdeling Beleven worden georganiseerd - Vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De gemeenteraad heeft in vergadering van 23 juni 2025 het retributiereglement m.b.t. vakantiedagen, grabbelpas en uitstappen georganiseerd door de afdeling Beleven, vastgesteld voor de periode van 1 september 2025 tot en met 31 december 2031.  
+                                 
+                                 
+                                    Juridische grond 
+                                    Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                    Bevoegdheidsgrond  
+                                     
+                                        Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                     
+                                    Toepasselijke regelgeving 
+                                     
+                                        De omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteit;  
+                                     
+                                     
+                                        De gemeenteraadsbeslissing van 23 juni 2025 m.b.t. de vaststelling van het retributiereglement op vakantiedagen, grabbelpas en uitstappen die door de afdeling Beleven worden georganiseerd. 
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De gemeenteraad heeft in vergadering van 23 juni 2025 het retributiereglement m.b.t. vakantiedagen, grabbelpas en uitstappen georganiseerd door de afdeling Beleven, vastgesteld. Artikel 7 van dit retributiereglement voorziet dat het college van burgemeester en schepenen gemachtigd is om de tarieven voor vakantiedagen, Grabbelpas en uitstappen vast te stellen. De argumentatie tot differentiatie in de tarieven is opgenomen in het besluit van de gemeenteraad.  
+                                    Aan het college van burgemeester en schepenen wordt gevraagd de tarieven vast te stellen met ingang van 1 september 2025.  
+                                 
+                                 
+                                    Financiële weerslag 
+                                    De retributies zijn opgenomen in het meerjarenplan om aan de voorwaarden tot het bereiken van het financieel evenwicht te voldoen zoals bepaald in het besluit van de Vlaamse regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale besturen. 
+                                 
+                            """@nl ;
+    ns1:uuid "aad7e228-401d-5c05-ad78-7ada9f954a8a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel: Het college voor burgemeester en schepenen stelt de tarieven van het retributiereglement voor vakantiedagen, grabbelpas en uitstappen die door de afdeling Beleven worden georganiseerd vast: 
+                                    Artikel 1: Opheffing 
+                                    Het besluit van het college van burgemeester en schepenen van 30 juni 2020 inzake de vaststelling van de tarieven van de retributies voor vakantiedagen, grabbelpas en uitstappen die door de afdeling Beleven worden georganiseerd, wordt opgeheven met ingang van 1 september 2025. 
+                                    Artikel 2: Tarieven 
+                                    Voor een termijn van 1 september 2025 tot en met 31 december 2031 worden de retributies voor de vakantiedagen, de grabbelpas en de uitstappen die door de afdeling Beleven worden georganiseerd als volgt vastgesteld: 
+                                     BASISAANBOD: 
+                                    Vakantiedagen (spel, sport en cultuur) voor kinderen van 2,5 tot 12 jaar:  
+                                    
+                                        
+                                            
+                                            
+                                            
+                                         
+                                         
+                                             
+                                                  
+                                                Basistarief Puurs-Sint-Amands 
+                                                Basistarief niet-Puurs-Sint-Amands 
+                                             
+                                             
+                                                vakantiedag 
+                                                < 3 uur: 4,90 euro 
+                                                < 3 uur: 5,50 euro 
+                                             
+                                             
+                                                3 - 6 uur: 7,25 euro 
+                                                3 - 6 uur: 8,40 euro 
+                                             
+                                             
+                                                > 6 uur: 12,90 euro 
+                                                > 6 uur: 16,40 euro 
+                                             
+                                         
+                                     
+                                    Indien er minder dan een week vooraf geannuleerd wordt voor een vakantiedag is de aangerekende kostprijs hiervan verschuldigd en een administratieve kost van 10 euro.De betaalde retributie wordt enkel terugbetaald wanneer de annulatie van een inschrijving aanvaard wordt: 
+                                     
+                                        bij ziekte (mits bewijs van een medisch attest, in te leveren binnen de 48u na aanvang van de ziekte) 
+                                        bij een overlijden in de familie (bewijs met overlijdensbericht) 
+                                     
+                                    AANVULLEND AANBOD: 
+                                    Grabbelpas, uitstappen en specifieke dagen/weken:   
+                                    
+                                        
+                                            
+                                            
+                                            
+                                         
+                                         
+                                             
+                                                  
+                                                Basistarief Puurs-Sint-Amands 
+                                                Basistarief niet-Puurs-Sint-Amands 
+                                             
+                                             
+                                                Grabbelpas 
+                                                Per activiteit 
+                                                Per activiteit 
+                                             
+                                             
+                                                UItstappen 
+                                                Per activiteit 
+                                                Per activiteit 
+                                             
+                                             
+                                                Specifieke dagen/weken 
+                                                Per activiteit 
+                                                Per activiteit 
+                                             
+                                         
+                                     
+                                    Indien er minder dan een week vooraf geannuleerd wordt voor Grabbelpas-activiteit, een uitstap - specifieke dagen/weken is de kostprijs hiervan verschuldigd en een administratieve kost van 10 euro. 
+                                    De betaalde retributie wordt enkel terugbetaald wanneer de annulatie van een inschrijving aanvaard wordt: 
+                                     
+                                        bij ziekte (mits bewijs van een medisch attest, in te leveren binnen de 48u na aanvang van de ziekte); 
+                                        bij een overlijden in de familie (bewijs met overlijdensbericht); 
+                                     
+                                    Overige retributies: 
+                                    Wanneer kinderen laattijdig worden afgehaald zal er bovenop de verschuldigde retributie van het opvangmoment of activiteit en een administratieve kost van 10 euro worden aangerekend. 
+                                    Bij herhaaldelijk niet terugbrengen van reservekledij wordt een retributie aangerekend van 20 euro. 
+                                    Artikel 3: Bekendmaking 
+                                    Deze beslissing wordt bekendgemaakt overeenkomstig artikel 286 van het Decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen.  
+                                    De bekendmaking van dit reglement wordt aan de toezichthoudende overheid ter kennis gebracht overeenkomstig artikel 330 van het Decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen.  
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5c61630a-6ab8-4b6c-b656-110a4777c70d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5c61630a-6ab8-4b6c-b656-110a4777c70d> a ns2:Agendapunt ;
+    ns1:uuid "7f5d302b-e667-58c4-8111-2d9cef7cf191" .
+

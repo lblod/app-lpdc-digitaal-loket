@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5c8359d9-ca98-4398-94a1-09d22851416f> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0fd9dfd4-266e-4942-93cc-62bd161a269e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2cfbe131-2f70-463d-93e2-ef7cb2e845ba>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/55373a14-5942-4ca3-9565-1340caf7d45a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1b2c269-b17e-4615-9202-f86af016c08b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a6a6e64e-707e-4790-9e6c-9570884476ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b2826de5-5f04-4b22-85c6-6cce73d5b093>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e10f28b5-14fb-4081-b80e-fecbd5d43462> ;
+    ns1:geplandeStart "2025-06-10T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/75948179-3599-41c9-81bc-8a05d8cf5cee> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "ce9b0fc2-665c-5a41-bd0c-0b981a3adbc4" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-06-10T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a1b2c269-b17e-4615-9202-f86af016c08b> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b> ;
+    ns1:openbaar false ;
+    ns3:uuid "113c55ff-0bfa-5574-a931-3569f5f4cefd" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1b2c269-b17e-4615-9202-f86af016c08b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a1b2c269-b17e-4615-9202-f86af016c08b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a1b2c269-b17e-4615-9202-f86af016c08b> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Feestweekend 50 jaar DDZZ' op 29 juni 2025 van 10.00 uur tot en met 23.45 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Feestweekend 50 jaar DDZZ' - De Dolfijnen Zwemclub Zomergem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 10 juni 2025 over de aanvraag evenement Feestweekend 50 jaar DDZZ - De Dolfijnen Zwemclub Zomergem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Jarno Van Landschoot, namens De Dolfijnen Zwemclub Zomergem, organiseert 'Feestweekend 50 jaar DDZZ' op 29 juni 2025 van 14.00 uur tot en met 23.00 uur.Er werd op 4 mei 2025 een aanvraag ingediend door Jarno Van Landschoot, namens De Dolfijnen Zwemclub Zomergem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "5ce7b8d7-9e1f-56b9-8c1f-a7704ff351f5" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Feestweekend 50 jaar DDZZ' op 29 juni 2025 van 10.00 uur tot en met 23.45 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod op eerste deel parking grenzend aan het plein aan sportcentrum Den Boer (2 parkeerstroken) en 5 parkeerplaatsen op de dwarse parking aan sportcentrum Den Boer. De achterste 2 parkeerstroken en grootste deel van de dwarse parking blijven beschikbaar voor bezoekers. 
+                                        Afsluiten Den Boer net voorbij toegang dwarse parking en net voorbij eerste deel parking grenzend aan het plein aan sportcentrum Den Boer 
+                                        Wegomlegging via Den Boer-Begonialaan en omgekeerd 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd 
+                                    1. Borden E32. nadar + C3 net voorbij toegang dwarse parking en net voorbij eerste deel parking grenzend aan het plein aan sportcentrum Den Boer    Borden C3 + 'uitgezonderd plaatselijk verkeer' + F45 aan kruispunten Den Boer/Sportlaan en Tulpenlaan/Begonialaan    Borden F45L aan kruispunten Den Boer/Begonialaan en Hofbouwstraat/Tulpenlaan3. Borden F41 aan kruispunten Tulpenlaan/Begonialaan, Begonialaan/Den Boer (2x) en Den Boer/Sportlaan 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a1b2c269-b17e-4615-9202-f86af016c08b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1b2c269-b17e-4615-9202-f86af016c08b> a ns1:Agendapunt ;
+    ns3:uuid "1556bbee-d97d-5740-9bb9-db06468b67a9" .
+

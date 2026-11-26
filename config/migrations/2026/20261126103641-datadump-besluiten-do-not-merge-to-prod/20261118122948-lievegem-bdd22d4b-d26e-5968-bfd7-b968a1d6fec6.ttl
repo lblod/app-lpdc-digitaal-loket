@@ -1,0 +1,95 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6ec5bd26-77e0-4b75-a80a-f375cbf2ddce> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20e660e1-878a-4a1d-8e15-3083e934fa3a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/268093ec-78e6-4860-b2b1-88bc67ad5521>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bde08de-929d-4733-a4a9-ae503490051a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6f1f2184-fa85-4728-9bc7-15f372415150>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c65c9174-ee69-49e8-80eb-ac88826fe111> ;
+    ns1:geplandeStart "2026-08-11T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d4a5300e-af03-4fd5-a62a-1a147235b26a> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "7449da63-b1a1-58e7-9e67-277eb97cc26f" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-08-11T14:49:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6bde08de-929d-4733-a4a9-ae503490051a> ;
+    ns1:openbaar false ;
+    ns2:uuid "f8073621-4954-5c29-a4c6-798621d4b2e2" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Ronsele Koerst 2026' op 5 september 2026 van 10.00 uur tot en met 18.30 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Ronsele Koerst 2026 - De Vrolijke Vélovrienden: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 11 augustus 2026 over de aanvraag vergunning wielerwedstrijd Ronsele Koerst - De Vrolijke Vélovrienden: goedkeuringHet besluit van het college van burgemeester en schepenen van 11 augustus 2026 over de aanvraag evenement Ronsele Kermis - Wijkfeestcomité Ronsele: goedkeuringHet besluit van het college van burgemeester en schepenen van 11 augustus 2026 over het tijdelijk politiereglement naar aanleiding van Ronsele Kermis 2026 - Wijkfeestcomité Ronsele: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Franky Hautekeete, namens De Vrolijke Vélovrienden, organiseert 'Ronsele Koerst 2026' op 5 september 2026 van 12.30 uur tot en met 18.00 uur.Er werd op 16 juli 2026 een aanvraag ingediend door Franky Hautekeete, namens De Vrolijke Vélovrienden, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "bdd22d4b-d26e-5968-bfd7-b968a1d6fec6" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Ronsele Koerst 2026' op 5 september 2026 wordt vastgesteld als volgt: 
+                                    Van 10.00 uur tot en met 18.30 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod in de straten langs het parcours van de wielerwedstrijd (met uitzondering van Eikendreef): Burgemeester Henri Ryckaertstraat - Ronselestraat - Hoekstraat - Stoktevijver - Daalmen - Daalmstraat. 
+                                     
+                                    
+                                        Van 11.30 uur tot en met 18.30 uur:
+                                     
+                                     
+                                        Eénrichtingsverkeer in de straten langs het parcours: Burgemeester Henri Ryckaertstraat - Ronselestraat - Hoekstraat - Stoktevijver - Daalmen - Daalmstraat (tot kruispunt met Kleitstraat). 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    Van 10.00 uur tot en met 18.30 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                    
+                                        Van 11.30 uur tot en met 18.30 uur:
+                                     
+                                     
+                                        Bord C1 + F19 op kruispunt Leischoot/Hoekstraat 
+                                        Bord C1 + F19 + C31b op volgende kruispunten: Kleitstraat/Daalmstraat, Aardekensstraat/Hoekstraat, Stoktevijver/Stoktevijver, Daalmen/Stoktevijver en Park Ter Daelmen/Stoktevijver 
+                                        Bord C1 + F19 + C31a op volgende kruispunten: Burgemeester Henri Ryckaertstraat/Ronselekouter, Burgemeester Henri Ryckaertstraat/Eikendreef, Ronselestraat/ Raymond Leersstraat, Hoekstraat/Raymond Leerstraat en Eikendreef/Stoktevijver 
+                                        Bord C1 + F19 + D1e op kruispunt Azaleastraat/Daalmstraat 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053> a ns1:Agendapunt ;
+    ns2:uuid "d1482e52-73bc-57b2-8a15-fbd21d6aa547" .
+

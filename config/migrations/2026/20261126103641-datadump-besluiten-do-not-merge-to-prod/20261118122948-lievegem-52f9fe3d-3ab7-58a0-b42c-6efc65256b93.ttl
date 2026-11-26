@@ -1,0 +1,135 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5c8359d9-ca98-4398-94a1-09d22851416f> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0fd9dfd4-266e-4942-93cc-62bd161a269e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2cfbe131-2f70-463d-93e2-ef7cb2e845ba>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/55373a14-5942-4ca3-9565-1340caf7d45a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1b2c269-b17e-4615-9202-f86af016c08b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a6a6e64e-707e-4790-9e6c-9570884476ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b2826de5-5f04-4b22-85c6-6cce73d5b093>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e10f28b5-14fb-4081-b80e-fecbd5d43462> ;
+    ns1:geplandeStart "2025-06-10T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/75948179-3599-41c9-81bc-8a05d8cf5cee> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "ce9b0fc2-665c-5a41-bd0c-0b981a3adbc4" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-06-10T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a6a6e64e-707e-4790-9e6c-9570884476ce> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b7af61cf-e63b-47aa-b2aa-6cc1ae91d2e6> ;
+    ns1:openbaar false ;
+    ns2:uuid "9d80fefd-f273-547f-aad0-4ed870548b28" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a6a6e64e-707e-4790-9e6c-9570884476ce> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a6a6e64e-707e-4790-9e6c-9570884476ce> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a6a6e64e-707e-4790-9e6c-9570884476ce> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Vlaanderen Zingt' van 11 juli 2025 9.00 uur tot en met 12 juli 2025 1.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Vlaanderen Zingt' - Landelijke Gilde Waarschoot: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 10 juni 2025 over de aanvraag evenement Vlaanderen Zingt - Landelijke Gilde Waarschoot: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nick Van Hulle, namens Landelijke Gilde Waarschoot, organiseert, 'Vlaanderen Zingt' van 11 juli 2025 17.00 uur tot en met 12 juli 2025 1.00 uur.Er werd op 10 april 2025 een aanvraag ingediend door Nick Van Hulle, namens Landelijke Gilde Waarschoot, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de gemeentediensten per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "52f9fe3d-3ab7-58a0-b42c-6efc65256b93" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Vlaanderen Zingt' op 11 juli 2025 wordt vastgesteld als volgt: 
+                                    1. Vanaf 10 juli 2025 8.00 uur tot en met 14 juli 2025 16.00 uur: 
+                                     
+                                        inname zone voor gemeentehuis voor plaatsing mobiel podium, Waarschootdorp 1-3, 9920 Lievegem. 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Op 11 juli 2025 vanaf 9.00 uur tot en met 12 juli 2025 1.00 uur:
+                                     
+                                     
+                                         
+                                            Stilstaan- en parkeerverbod op 10 parkeerplaatsen ter hoogte van Kerkstraat 3-5, 9950 Lievegem 
+                                            Stilstaan- en parkeerverbod ter hoogte van Waarschootdorp 1 tot en met Stationsstraat 18, 9950 Lievegem aan beide zijden van de weg 
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            3. Op 11 juli 2025 vanaf 12.00 uur tot en met 12 juli 2025 1.00 uur:
+                                         
+                                     
+                                     
+                                        Afsluiten voor doorgaand verkeer vanaf Waarschootdorp 1 tot en met Stationsstraat 18 (hoek Metaalstraat). De fietspaden blijven toegankelijk tot start van het evenement om 17.00 uur 
+                                        wegomlegging via Gastelstraat - Hovingen - Kouterweg en Molenstraat 
+                                        wegomlegging via Nijverheidsstraat en Stationsplein 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Vanaf 10 juli 2025 8.00 uur tot en met 14 juli 2025 16.00 uur: 
+                                     
+                                        geen signalisatie nodig 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Op 11 juli 2025 vanaf 9.00 uur tot en met 12 juli 2025 1.00 uur:
+                                     
+                                     
+                                         
+                                            Borden E3 
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            3. Op 11 juli 2025 vanaf 12.00 uur tot en met 12 juli 2025 1.00 uur:
+                                         
+                                     
+                                     
+                                        Nadar + C3 aan volgende kruispunten: Waarschootdorp/Kerkstraat en Stationsstraat/Metaalstraat 
+                                        Borden F41 aan volgende kruispunten: Waarschootdorp/Kerkstraat, Kerkstraat/Gastelstraat, Hovingen/Kouterweg, Kouterweg/Molenstraat en Stationsstraat/Molenstraat 
+                                        Afdekken borden 'verboden +3,5 ton' in Gastelstraat en Kouterweg 
+                                        Bord F45L + 'verboden +3,5 ton' op kruispunt Kerkstraat/Gastelstraat 
+                                        Nadar + C3 + F45L + 'uitgezonderd plaatselijk verkeer' aan het kruispunt Stationsstraat/Molenstraat 
+                                        Borden F41 aan volgende kruispunten: Waarschootdorp/Kerkstraat, Schoolstraat/Nijverheidsstraat, Stationsplein/Stationsstraat 
+                                        Afdekken borden 'verboden +3,5 ton' in Nieuwstraat, Tuinbouwstraat en Stationsplein 
+                                        Borden 'evenement' op de invalswegen 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden.  
+                                    De borden voor parkeerverbod en wegomlegging worden al op de juiste plaats gezet door de gemeentediensten. Bij aanvang en einde van het evenement zal de organisator zelf de overige borden voor het afsluiten van de feestzone op straat plaatsen en terug. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a6a6e64e-707e-4790-9e6c-9570884476ce> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a6a6e64e-707e-4790-9e6c-9570884476ce> a ns1:Agendapunt ;
+    ns2:uuid "455d9259-75d5-5fad-929a-4806ece4d8fc" .
+

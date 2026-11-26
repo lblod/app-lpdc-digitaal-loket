@@ -1,0 +1,114 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns1:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns1:openbaar true ;
+    ns2:uuid "fe8a12e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0b965221-8c5e-49bc-95a6-7574127c467b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0b965221-8c5e-49bc-95a6-7574127c467b> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt het bestek en de raming voor de opdracht “Renovatie van De Kring, perceel 3 tribune.”, opgesteld door AWP Architecture & Engineering bv, Kerkstraat 1 te 9950 Lievegem en het veiligheids- en gezondheidsplan opgesteld door AWP Architecture & Engineering bv, Kerkstraat 1 te 9950 Lievegem, goed. De lastvoorwaarden worden vastgesteld zoals voorzien in het bestek en zoals opgenomen in de algemene uitvoeringsregels van de overheidsopdrachten voor aannemingen van werken, leveringen en diensten. De raming bedraagt € 114.312,3 excl. btw of € incl. € 138.317,88 21% btw. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Renovatie De Kring - perceel 3 tribune - lastvoorwaarden en gunningswijze, veiligheids- en gezondheidsplan: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen patrimonium 
+                                                            Jeroen Van Acker, schepen cultuur 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen. 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen. 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 36. 
+                                                            Het koninklijk besluit van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het koninklijk besluit van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen, meer bepaald artikel 90, 1°. 
+                                                            Het decreet van 26 maart 2004 betreffende de openbaarheid van bestuur. 
+                                                            Het Decreet lokaal bestuur van 22 december 2017, en latere wijzigingen, inzonderheid artikelen 326 tot en met 341,  betreffende het bestuurlijk toezicht 
+                                                            Het Decreet over het lokaal bestuur van 22 december 2017, meer bepaald artikelen 41, 10 ° betreffende de bevoegdheden van de gemeenteraad omtrent vaststellen van de plaatsingsprocedure en het vaststellen van de voorwaarden. 
+                                                            Het Bestuursdecreet van 7 december 2018. 
+                                                            Besluit van het college van burgemeester en schepenen van Lievegem van 27 oktober 2020 over het aanstellen van een architect bis voor de renovatie van De Kring. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het dossier wordt voorgelegd aan de gemeenteraad omdat de opdracht niet langer kan worden beschouwd als een nominatieve investering gezien het totaalbedrag voor dit project, zoals opgenomen in het overzicht nominatieve investeringen, wordt overschreden.In het kader van de opdracht "Renovatie van De Kring, perceel 3 tribune” werd door AWP Architecture & Engineering bv, Kerkstraat 1 te 9950 Lievegem zowel een bestek als een veiligheids- en gezondheidsplan opgesteld.Er wordt voorgesteld de opdracht te gunnen bij wijze van openbare procedure. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De financiële ramingen voor de aanbestedingen bedragen : 
+                                                             
+                                                                aanbesteding 1 buitenschil: € 440.960,07 excl. btw of € 533.561,69 incl. 21% btw. 
+                                                                aanbesteding 2 binnenwerken :  € 368.930,30 excl. btw of € 446.405,67 incl. 21% btw.  
+                                                                aanbesteding 3 tribune: € 114.312,30 excl. btw of € 138.317,88 incl. 21% btw. 
+                                                                aanbesteding 4 techniek: € 168.717,65 excl. btw of € 204.148,36 incl. 21% btw. 
+                                                                aanbesteding 5a theatertechniek: € 136.229,54 excl. btw of € 164.837,74 incl. 21% btw. 
+                                                                aanbesteding 5b theatertoebehoren: € 26.450,00 excl. btw of € 32.004,50 incl. 21% btw. 
+                                                             
+                                                            Totaal aanbestedingen: € 1.255.599,87 excl. btw of € 1.519.275,84 incl. 21% btw. 
+                                                            Ereloon bedraagt 7,85%: € 98.564,59 excl. btw of € 119.263,15 incl. 21% btw. 
+                                                            Algemeen totaal werken en erelonen:  € 1.354.164,45 excl. btw of € 1.638.538,99 incl. 21% btw. 
+                                                            Voor dit investeringsproject is nog een krediet van € 1.111.922,13 beschikbaar onder jaarbudgetrekening 2022/ACT-418/0705-00/2210007/GEMEENTE/CBS/IP-GEEN (ACT-418 = afwerken project De Kring Waarschoot). 
+                                                            Op het krediet zoals voorzien onder ACT-418 werd dit jaar reeds een factuur aangerekend t.b.v. 2.178 euro voor opmaak plan ventilatie zaal en foyer (Studiebureau Schoonackers bvba). 
+                                                            Er is bijgevolg nog een tekort van € 528.794,86. 
+                                                            Om dit project te kunnen uitvoeren, zal het krediet bij de eerstvolgende meerjarenplanaanpassing moeten worden verhoogd. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ecfafcb0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 De gemeenteraad keurt het bestek en de raming voor de opdracht “Renovatie van De Kring, perceel 3 tribune.”, opgesteld door AWP Architecture & Engineering bv, Kerkstraat 1 te 9950 Lievegem en het veiligheids- en gezondheidsplan opgesteld door AWP Architecture & Engineering bv, Kerkstraat 1 te 9950 Lievegem, goed. De lastvoorwaarden worden vastgesteld zoals voorzien in het bestek en zoals opgenomen in de algemene uitvoeringsregels van de overheidsopdrachten voor aannemingen van werken, leveringen en diensten. De raming bedraagt € 114.312,3 excl. btw of € 138.317,88 incl. 21% btw. 
+                                                             
+                                                            Artikel 2 Bovengenoemde opdracht wordt gegund bij wijze van openbare procedure. 
+                                                             
+                                                            Artikel 3De aankondiging van de opdracht wordt ingevuld, goedgekeurd en bekendgemaakt op nationaal niveau. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f223c9b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Renovatie De Kring - perceel 3 tribune - lastvoorwaarden en gunningswijze, veiligheids- en gezondheidsplan: goedkeuring" .
+

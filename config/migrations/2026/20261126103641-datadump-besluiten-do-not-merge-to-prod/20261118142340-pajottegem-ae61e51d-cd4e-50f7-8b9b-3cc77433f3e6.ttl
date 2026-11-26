@@ -1,0 +1,195 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/d424cf8f-85ae-4c7f-b1c5-377bde43fb34> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/01836431-9d81-4de5-92cc-a357e07baa6b>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/56ea51da-044d-4abe-a690-6f30b69a709f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9fe7cf44-005f-4896-a498-91cc86365d4f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c8291ebf-66ae-4475-bb11-648d3acd039d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/ebc36766-0621-4f90-82ca-f1276dc8b94f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> ;
+    ns1:geplandeStart "2025-05-26T15:10:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/0e627fd7-9f7d-4214-b8cf-940a6debd277> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "c8a7198e-939d-5fed-ada8-7afe153a3c6d" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-26T15:05:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9fe7cf44-005f-4896-a498-91cc86365d4f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> ;
+    ns1:openbaar false ;
+    ns2:uuid "98a94c00-72c2-5a8d-9a2a-37ee60133119" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9fe7cf44-005f-4896-a498-91cc86365d4f> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/9fe7cf44-005f-4896-a498-91cc86365d4f> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/9fe7cf44-005f-4896-a498-91cc86365d4f> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Internationale wielerwedstrijd in open omloop op 8 juni 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Brussels Cycling Classic - 8 juni 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "ae61e51d-cd4e-50f7-8b9b-3cc77433f3e6" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Internationale wielerwedstrijd in open omloop op 8 juni 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 12u15 tot 17u30:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 12.00 uur tot 17.30 uur in volgende straten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Patriotsesteenweg (N255) Stilstaan en parkeren verboden (fig E3) op de Patriotsesteenweg vanaf de Rue de L'Yser (grondgebied Edingen) tot de Geraardsbergsesteenweg. 
+                                            Geraardsbergsesteenweg (N495) Stilstaan en parkeren verboden (fig E3) op de Geraardsbergsesteenweg vanaf het kruispunt met de Patriotsesteenweg tot de Herhout. 
+                                            Herhout (N495) Stilstaan en parkeren verboden (fig E3) op de Herhout vanaf de Geraardsbergsesteenweg tot de Edingseweg (grondgebied Geraardsbergen) 
+                                            Heirbaan Stilstaan en parkeren verboden (fig E3) op de Heirbaan vanaf de Kapellestraat (grondgebied Geraardsbergen) tot de Meidries (grondgebied Geraardsbergen) 
+                                            Congobergstraat Stilstaan en parkeren verboden (fig E3) op de Congobergstraat vanaf de Steenberg (grondgebied Geraardsbergen) tot de Repingestraat 
+                                            Errebekstraat Stilstaan en parkeren verboden (fig E3) op de Errebekstraat vanaf het kruispunt met de Congobergstraat tot de Huismanstraat 
+                                            Huismanstraat Stilstaan en parkeren verboden (fig E3) op de Huismanstraat vanaf het kruispunt met de Errebekstraat tot Sint Leonardus 
+                                            Sint Leonardus Stilstaan en parkeren verboden (fig E3) op Sint Leonardus vanaf het kruispunt met de Huismanstraat tot het kruispunt met de Hollestraat 
+                                            Hollestraat Stilstaan en parkeren verboden (fig E3) op de Hollestraat vanaf het kruispunt met de Waterstraat tot de Baljuwstraat 
+                                            Baljuwstraat Stilstaan en parkeren verboden (fig E3) op de Baljuwstraat vanaf de Hollestraat tot het Marktplein 
+                                            Marktplein (N272) Stilstaan en parkeren verboden (fig E3) op het Marktplein vanaf de Nieuwstraat tot de Steenbakkerijstraat 
+                                            Steenbakkerijstraat (N272) Stilstaan en parkeren verboden (fig E3) op de Steenbakkerijstraat vanaf het Marktplein tot de Geraardsbergsestraat 
+                                            Geraardsbergsestraat (N272) Stilstaan en parkeren verboden (fig E3) op de Geraardsbergsestraat vanaf de Steenbakkerijstraat tot de Pauwelstraat (grondgebied Geraardsbergen) 
+                                            Waterstraat (N272) Stilstaan en parkeren verboden (fig E3) op de Waterstraat vanaf de Repingestraat tot de Hollestraat 
+                                            Repingestraat (N272) Stilstaan en parkeren verboden (fig E3) op de Repingestraat vanaf de Ninoofsesteenweg tot de Waterstraat 
+                                            Langestraat (N272) Stilstaan en parkeren verboden (fig E3) op de Langestraat vanaf de Vollezeelsesteenweg tot de Edingsesteenweg 
+                                            Edingsesteenweg (N285) Stilstaan en parkeren verboden (fig E3) op de Edingsesteenweg vanaf het kruispunt met de Langestraat tot Het kruispunt met de Ninoofse Steenweg 
+                                            Ninoofse Steenweg (N28) Stilstaan en parkeren verboden (fig E3) op de Ninoofse Steenweg vanaf het kruispunt met de Edingsesteenweg tot de Ninoofsesteenweg (grondgebied Pepingen). 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 13.00 uur tot 17.30 uur in volgende straten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Congobergstraat Verboden richting voor ieder bestuurder (fig C1) op de Congobergstraat vanaf de Errebekstraat tot de Steenberg (grondgebied Geraardsbergen) 
+                                            Errebekstraat Verboden richting voor ieder bestuurder (fig C1) op de Errebekstraat vanaf de Huismanstraat tot de Congobergstraat 
+                                            Huismanstraat Verboden richting voor ieder bestuurder (fig C1) op de Huismanstraat vanaf Sint Leonardus tot de Errebekstraat 
+                                            Sint Leonardus Verboden richting voor ieder bestuurder (fig C1) op Sint Leonardus vanaf de Hollestraat tot de Huismanstraat 
+                                            Hollestraat Verboden richting voor ieder bestuurder (fig C1) op de Hollestraat 
+                                             
+                                                vanaf de Baljuwstraat tot Sint Leonardus 
+                                                vanaf de Waterstraat tot de Modrielaan 
+                                             
+                                            Baljuwstraat Verboden richting voor ieder bestuurder (fig C1) op de Baljuwstraat vanaf het Marktplein tot de Hollestraat 
+                                            Marktplein Verboden richting voor ieder bestuurder (fig C1) op Marktplein vanaf de Steenbakkerijstraat tot de Nieuwstraat.  
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 13.00 uur tot 17.30 uur op volgende kruispunten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Congobergstraat:  
+                                             
+                                                Oulstbergstraat / Congobergstraat  
+                                                Errebekstraat / Congobergstraat 
+                                             
+                                            Repingestraat:  
+                                             
+                                                Bakkerstraat / Repingestraat  
+                                                Ezelveldstraat / Repingestraat  
+                                                Repekouter / Repingestraat 
+                                             
+                                            Errebekstraat:  
+                                             
+                                                Errebekstraat / Errebekstraat 
+                                             
+                                            Huismanstraat:  
+                                             
+                                                Grunselborrestraat / Huismanstraat 
+                                             
+                                            Sint Leonardus:  
+                                             
+                                                Huismanstraat / Sint Leonardus  
+                                                Sint Leonardus / Sint Leonardus thv nr 42  
+                                                Ketelbaan / Sint Leonardus  
+                                                Molenveldbaan / Sint Leonardus  
+                                                Hollestraat / Sint Leonardus 
+                                             
+                                            Hollestraat:  
+                                             
+                                                Molenveldbaan / Hollestraat  
+                                                Munkbaan / Hollestraat  
+                                                Meidoornstraat / Hollestraat  
+                                                Meloketse / Hollestraat  
+                                                Smeedries / Hollestraat  
+                                                Hollestraat / Hollestraat thv nr 21  
+                                                Hollestraat / Hollestraat thv nr 2  
+                                                Smeedries / Hollestraat  
+                                                Waterstraat / Hollestraat 
+                                             
+                                            Baljuwstraat:  
+                                             
+                                                Hollebeekstraat / Baljuwstraat 
+                                             
+                                            Marktplein:  
+                                             
+                                                Bolwerkstraat / Marktplein  
+                                                Hoogstraat / Marktplein 
+                                             
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9fe7cf44-005f-4896-a498-91cc86365d4f> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9fe7cf44-005f-4896-a498-91cc86365d4f> a ns1:Agendapunt ;
+    ns2:uuid "adde8549-90be-5a96-af0e-561551f6617b" .
+

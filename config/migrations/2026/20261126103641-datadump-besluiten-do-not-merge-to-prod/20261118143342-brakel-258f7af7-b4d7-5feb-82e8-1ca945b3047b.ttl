@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns2:Zitting ;
+    ns2:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns2:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns2:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns2:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns1:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571> ;
+    ns2:openbaar true ;
+    ns1:uuid "bce91632-357d-5d29-9aa2-0ae51eec8443" ;
+    dcterms:description """ 
+                                                             
+                                                                Per aangetekend schrijven d.d. 13 oktober 2025 werd de gemeente Brakel opgeroepen door Farys om voor Creat Services dv. deel te nemen aan de Buitengewone Algemene Vergadering d.d. 16 december 2025 om 14.30 uur in Flanders EXPO, Maaltekouter 1 te 9051 Gent; 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/128350ce-cef3-4746-a3fc-94abb96b71cc> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/128350ce-cef3-4746-a3fc-94abb96b71cc> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Samenwerkingsverbanden. FARYS. Creat Services dv. Uitnodiging Buitengewone Algemene Vergadering d.d. 16 december 2025. Goedkeuring." ;
+    ns2:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet Lokaal Bestuur van 22 december 2017; 
+                                                                    Het raadsbesluit van 03 februari 2025 omtrent de aanduiding van een vertegenwoordiger en een plaatsvervanger voor de Algemene Vergadering van Creat Services dv; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    -Het feit dat de gemeente Brakel aangesloten is bij Creat Services dv; 
+                                                                    -De statuten van Creat Services dv; 
+                                                                    -De oproepingsbrief d.d. 13 oktober 2025 omtrent de uitnodiging voor de Buitengewone Algemene Vergadering van Creat Services dv op 16 december 2025 om 14.30 uur in Flanders Expo waarbij tevens de agenda werd meegedeeld; 
+                                                                    1. Wijziging van vermogen 
+                                                                    2. Actualisering van bijlagen 1 en 2 aan de statuten ingevolge wijziging van vermogen 
+                                                                    3. Evaluatieverslag mbt de werking van de dienstverlenende vereniging, het ondernemingsplan 2025-2030, de te ontwikkelen activiteiten en de te volgen strategie 2026 (cfr. artikel 432 Decreet over het Lokaal Bestuur) 
+                                                                    4. Begroting 2026 (cfr artikel 432 Decreet over het Lokaal Bestuur) 
+                                                                    5. Statutaire benoemingen 
+                                                                    Varia 
+                                                                      
+                                                                    De vergadering zal fysiek plaatsvinden met digitale inbelmogelijkheden via ZOOM. 
+                                                                    De effectieve en plaatsvervangende vertegenwoordigers van de deelnemers zullen in oktober 2025 persoonlijk een uitnodiging per e-mail ontvangen 
+                                                                      
+                                                                    -Het college van burgemeester en schepen d.d. 20 oktober 2025 nam kennis van de oproepingsbrief en stelt voor om deze agenda en alle bijhorende stukken goed te keuren; 
+                                                                 
+                                                            """@nl ;
+    ns1:uuid "258f7af7-b4d7-5feb-82e8-1ca945b3047b" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Artikel 1. De gemeenteraad beslist goedkeuring te verlenen aan alle punten op de agenda van de Buitengewone Algemene Vergadering van Creat Services dv van 16 december 2025 en de daarbij behorende documentatie nodig voor het onderzoek van de agendapunten : 
+                                                                    1. Wijziging van vermogen 
+                                                                    2. Actualisering van bijlagen 1 en 2 aan de statuten ingevolge wijziging van vermogen 
+                                                                    3. Evaluatieverslag mbt de werking van de dienstverlenende vereniging, het ondernemingsplan 2025-2030, de te ontwikkelen activiteiten en de te volgen strategie 2026 (cfr. artikel 432 Decreet over het Lokaal Bestuur) 
+                                                                    4. Begroting 2026 (cfr artikel 432 Decreet over het Lokaal Bestuur) 
+                                                                    5. Statutaire benoemingen 
+                                                                    Varia 
+                                                                    Artikel 2. De gemeenteraad draagt de aangeduide vertegenwoordiger(s)/plaatsvervangend vertegenwoordiger op om namens het bestuur alle akten en bescheiden met betrekking tot de Buitengewone Algemene Vergadering van Creat Services dv vastgesteld op 16 december 2025, te onderschrijven en haar/zijn stemgedrag af te stemmen op het in de beslissing van de gemeenteraad van heden bepaalde standpunt met betrekking tot de agendapunten van voormelde Algemene Vergadering.  
+                                                                    Artikel 3. Een afschrift van dit besluit zal verzonden worden hetzij per post t.a.v. Creat Services dv, p/a Intercommunaal Beheer, Stropstraat 1 te 9000 Gent, hetzij per elektronische post naar het e-mailadres avcreatservices@creat.be. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "cfebc30d-8a57-5265-b137-278ba6155380" ;
+    dcterms:title "Samenwerkingsverbanden. FARYS. Creat Services dv. Uitnodiging Buitengewone Algemene Vergadering d.d. 16 december 2025. Goedkeuring." .
+

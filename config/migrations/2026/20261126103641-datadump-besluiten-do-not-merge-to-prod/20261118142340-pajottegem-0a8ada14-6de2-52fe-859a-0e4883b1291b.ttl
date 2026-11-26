@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/000d80ac-be60-48e0-ad27-c06a22600f53> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0a5a007c-fb17-4a23-a065-454e2e4fdf41>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5f243214-b148-4b17-8380-5ad85a15e978>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7928caa8-0ecc-4beb-86ba-9e1ed594b223>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b2461d80-32da-4724-a430-978db06afc30>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b58d39dd-9fb8-44a6-8a00-8bb3cf627996>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/db5ebefc-1246-48fa-9747-850d7e3235d3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f48cbf2b-04b0-4577-b69b-bab91efc0c5a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fbe06e1f-0382-4f93-a00c-fb4cb58d239c> ;
+    ns1:geplandeStart "2025-05-19T17:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/95c356e8-8f0f-4f5f-ac9b-89ff4dbd2255> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "e0b51ac0-832d-55e0-b5e3-cd07cfcb7a09" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-19T16:34:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/142b0b70-7f83-4645-a8f3-ddd5dbc80958> ;
+    ns1:openbaar false ;
+    ns2:uuid "15700b7e-230b-5491-a8af-1b34305e8e38" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/6d6eb68b-c3a8-40d1-97a5-76d30911d037> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/6d6eb68b-c3a8-40d1-97a5-76d30911d037> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de fietsdoortocht De 1000km voor Kom op tegen Kanker op donderdag 29 mei 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: De 1000km voor Kom op tegen Kanker - Donderdag 29 mei 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "0a8ada14-6de2-52fe-859a-0e4883b1291b" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van de fietsdoortocht De 1000km voor Kom op tegen Kanker op donderdag 29 mei 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                     
+                                        Op parking 1 en 2 van sportcentrum Koornmolen geldt:  
+                                          het stilstaan en parkeren is verboden;  
+                                          het einde van de parkeerreglementering wordt aangeduid;    het begin van de parkeerreglementering wordt aangeduid.  Dit wordt gesignaleerd door: - verkeersborden E3  - de verkeersborden worden aangevuld met x-borden Xa en  Xd 
+                                        Op parking 1 van sportcentrum Koornmolen tussen 6u en 22u geldt:  
+                                        de toegang is verboden in beide richtingen, voor iedere bestuurder, uitgezonderd plaatselijk verkeer. Dit wordt gesignaleerd door: - verkeersborden C3 
+                                        - de verkeersborden worden aangevuld met type IV-borden 
+                                     
+                                    
+                                        Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                     
+                                     
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037> a ns1:Agendapunt ;
+    ns2:uuid "7d47673f-c81e-525d-8d1b-71ce06f2b51e" .
+

@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/b2a8d654-f324-42b0-8779-53bf7859ff36> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7de44ba3-d0a9-461f-a08f-a65e980501c6>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/85e39c88-0066-400b-bfad-116858fde2fa> ;
+    ns2:geplandeStart "2025-03-17T14:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/53dd25dc-7706-44ca-aa46-614727311c87> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "c45b2ab5-61e6-5366-ab4f-b830983e1493" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-17T13:58:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7de44ba3-d0a9-461f-a08f-a65e980501c6> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d74ca788-f646-4e60-93bb-49491cb21c07> ;
+    ns2:openbaar true ;
+    ns1:uuid "feb02e5e-ef7c-5fb8-82e3-24f13c948eba" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7de44ba3-d0a9-461f-a08f-a65e980501c6> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/7de44ba3-d0a9-461f-a08f-a65e980501c6> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/7de44ba3-d0a9-461f-a08f-a65e980501c6> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de De 17,55 km van Gooik op 23 maart 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: De 17,55 km van Gooik - 23 maart 2025" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns1:uuid "4553984b-6616-5358-9c99-16331230e919" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van De 17,55 km van Gooik op 23 maart 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf Van 9u tot 11u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op de Dorpsstraat van de Houteman tot de Lindeboomstraat langs beide zijden van de weg geldt:
+                                     
+                                     
+                                         
+                                              het stilstaan en parkeren is verboden; 
+                                              het einde van de parkeerreglementering wordt aangeduid; 
+                                              het begin van de parkeerreglementering wordt aangeduid; 
+                                              de parkeerreglementering geldt over een afstand van meer dan 300 meter. 
+                                         
+                                        Dit wordt gesignaleerd door: 
+                                         
+                                            verkeersborden E3 
+                                            de verkeersborden worden aangevuld met x-borden Xb, Xa, Xd  
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                     
+                                     
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk  voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7de44ba3-d0a9-461f-a08f-a65e980501c6> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7de44ba3-d0a9-461f-a08f-a65e980501c6> a ns2:Agendapunt ;
+    ns1:uuid "89d7b0b8-0524-5c4a-b306-668cd0b2541b" .
+

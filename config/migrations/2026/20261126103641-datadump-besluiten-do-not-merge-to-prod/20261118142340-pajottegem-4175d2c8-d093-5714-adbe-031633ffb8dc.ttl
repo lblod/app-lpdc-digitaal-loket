@@ -1,0 +1,145 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/000d80ac-be60-48e0-ad27-c06a22600f53> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0a5a007c-fb17-4a23-a065-454e2e4fdf41>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5f243214-b148-4b17-8380-5ad85a15e978>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7928caa8-0ecc-4beb-86ba-9e1ed594b223>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b2461d80-32da-4724-a430-978db06afc30>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b58d39dd-9fb8-44a6-8a00-8bb3cf627996>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/db5ebefc-1246-48fa-9747-850d7e3235d3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f48cbf2b-04b0-4577-b69b-bab91efc0c5a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fbe06e1f-0382-4f93-a00c-fb4cb58d239c> ;
+    ns2:geplandeStart "2025-05-19T17:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/95c356e8-8f0f-4f5f-ac9b-89ff4dbd2255> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "e0b51ac0-832d-55e0-b5e3-cd07cfcb7a09" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-19T16:34:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8> ;
+    ns2:openbaar false ;
+    ns3:uuid "5e979de4-254e-53a1-94e9-05e52a03c5f1" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Lokale wielerwedstrijd - Open Omloop - Juniores - UCI CAT 1.17.3 op 14 juni 2025 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: G.P. Kesterse Wielervrienden - 14 juni 2025" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "4175d2c8-d093-5714-adbe-031633ffb8dc" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Lokale wielerwedstrijd - Open Omloop - Juniores - UCI CAT 1.17.3 op 14 juni 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 08.00 uur tot 19.00 uur in volgende straten:
+                                     
+                                     
+                                        - Bruneaustraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Bruneaustraat vanaf het kruispunt met de Oude Molenstraat (N272) tot het kruispunt met de Edingsesteenweg (N285) (vertrek- en aankomstzone). 
+                                          
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 13.00 uur tot 18.00 uur in volgende straten: 
+                                        - Edingsesteenweg (N285) 
+                                        Stilstaan en parkeren verboden (fig E3) op de Edingsesteenweg (N285) vanaf het kruispunt met de Bruneaustraat tot het kruispunt met de Kattestraat. 
+                                        - Kattestraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Kattestraat vanaf het kruispunt met de Edingsesteenweg (N285) tot het kruispunt met de Heidestraat. 
+                                        - Heidestraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Heidestraat vanaf het kruispunt met de Kattestraat tot het kruispunt met de Kesterweg. 
+                                        - Kesterweg 
+                                        Stilstaan en parkeren verboden (fig E3) op de Kesterweg vanaf het kruispunt met de Heidestraat tot het kruispunt met de Vierbergenstraat. 
+                                        - Vierbergenstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Vierbergenstraat vanaf het kruispunt met de Kesterweg tot het kruispunt met de Goteringenstraat. 
+                                        - Goteringenstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Goteringenstraat vanaf het kruispunt met de Vierbergenstraat tot het kruispunt met de Langestraat (N272). 
+                                        - Langestraat (N272) 
+                                        Stilstaan en parkeren verboden (fig E3) op de Langestraat (N272) vanaf het kruispunt met de Goteringenstraat tot het kruispunt met de Edingsesteenweg (N285). 
+                                        - Bruneaustraat (N272) 
+                                        Stilstaan en parkeren verboden (fig E3) op de Bruneaustraat (N272) vanaf het kruispunt met de Edingsesteenweg (N285) tot het kruispunt met de Oude Molenstraat (N272). 
+                                          
+                                        Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 14.00 uur tot 18.00 uur in volgende straten: 
+                                        - Bruneaustraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Bruneaustraat vanaf het kruispunt met de Edingsesteenweg (N285) tot het kruispunt met de Oude Molenstraat (N272). 
+                                        - Kattestraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Kattestraat vanaf het kruispunt met de Heidestraat tot het kruispunt met de Edingsesteenweg (N285). 
+                                        - Heidestraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Heidestraat vanaf het kruispunt met de Kesterweg tot het kruispunt met de Kattestraat. 
+                                        - Kesterweg 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Kesterweg vanaf het kruispunt met de Vierbergenstraat tot het kruispunt met de Heidestraat. 
+                                        - Vierbergenstraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Vierbergenstraat vanaf het kruispunt met de Goteringenstraat tot het kruispunt met de Kesterweg. 
+                                        - Goteringenstraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Goteringenstraat vanaf het kruispunt met de Langestraat (N272) tot het kruispunt met de Vierbergenstraat. 
+                                          
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 14.00 uur tot 18.00 uur op volgende kruispunten: 
+                                        - Edingsesteenweg 
+                                        Edingsesteenweg / Bruneaustraat 
+                                        - Kesterweg 
+                                        Kesterweg / Bruneaustraat 
+                                        - Heidestraat 
+                                        Kesterheide / Heidestraat 
+                                        - Kesterweg 
+                                        Kesterweg / Heidestraat 
+                                        Vierbergenstraat / Kesterweg 
+                                        - Vierbergenstraat 
+                                        Vierbergenstraat / Kesterweg 
+                                        - Warandestraat 
+                                        Warandestraat / Vierbergenstraat 
+                                        - Berghomstraat 
+                                        Berghomstraat / Vierbergenstraat 
+                                        - Daalstraat 
+                                        Daalstraat / Goteringenstraat 
+                                        Daalstraat / Goteringenstraat 
+                                        Daalstraat / Goteringenstraat 
+                                        - Frankrijkstraat 
+                                        Frankrijkstraat / Goteringenstraat 
+                                        - Peverstraat 
+                                        Peverstraat / Goteringenstraat 
+                                        - Goteringenstraat 
+                                        Goteringenstraat / Goteringenstraat 
+                                        - Langestraat 
+                                        Langestraat / Goteringenstraat 
+                                          
+                                        Doodlopende weg (fig F45) wordt ingelast van 14.00 uur tot 18.00 uur op volgende kruispunten: 
+                                        - Kattestraat 
+                                        Kattestraat / Kleine Kattestraat 
+                                          
+                                        Alle vaste en mobiele verkeersinfrastructuur op het parcours dient beschermd/verwijderd te worden. 
+                                          
+                                        Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                     
+                                     
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8> a ns2:Agendapunt ;
+    ns3:uuid "df951d3c-d740-5502-be58-8bb8597815f4" .
+

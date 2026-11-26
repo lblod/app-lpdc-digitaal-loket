@@ -1,0 +1,195 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/23dd80ac-4226-4c0e-907c-918f837b6bb6> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/788d0698-e96a-4888-9678-632b8dcfdeea>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> ;
+    ns2:geplandeStart "2025-04-28T14:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/1d959af7-2c0a-4f0b-acbb-a3cec0a4fe5c> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "9350d82c-6be8-5d63-be54-1c8170398115" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-04-28T13:26:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/788d0698-e96a-4888-9678-632b8dcfdeea> ;
+    ns2:openbaar false ;
+    ns1:uuid "7e80f99e-5ad9-5cf9-b3b5-8541e3387cfe" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Kermis op 7/05 t.e.m. 12/05 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Meikermis Herne - 7/05 t.e.m. 12/05" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns1:uuid "02252a48-4bf1-524f-97a4-15067a44961a" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Kermis op 7/05 t.e.m. 12/05 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf vanaf 18u tot middernacht:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        Volgende verkeersmaatregelen worden genomen door de technische dienst van de gemeente: 
+                                        
+                                            Parkeerverbod (borden E3) op de parkeerstrook gelegen Stationsstraat (rijrichting Station) tussen het kruispunt met Scherpstraat en het kruispunt met Oude Stationsstraat, met opschrift 'kermisvoertuigen':
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Van maandag 5 mei tot en met woensdag 7 mei
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Stilstaan- en parkeerverbod (borden E3) wordt ingelast op alle parkeerplaatsen op het Centrum
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Volledig Centrum:
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Van woensdag 7 mei vanaf 17.00 uur tot dinsdag 13 mei omstreeks 10.00 uur
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Op woensdag 10 mei vanaf 18.00 uur tot middernacht (laatste lijnbus wordt doorgelaten op Centrum):
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Verboden toegang, in beide richtingen, voor ieder bestuurder uitgezonderd fietsers (door middel van nadarhekkens met borden C3 en onderborden M2) wordt ingelast op het Centrum, vanaf het kruispunt met de N255 tot aan het kruispunt met de Grotestraat
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Eenrichtingsverkeer wordt ingelast (borden C1, F19 en C31a/b) in de Hernebosstraat, verboden rijrichting voor iedere bestuurder komend van de Patriotsesteenweg en rijdend in de richting van de Grotestraat
+                                         
+                                        
+                                             
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Volgende omleidingen gaan van kracht (borden F41):
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            voor verkeer komend van Lindestraat, via Grotestraat en Hernebosstraat naar Patriotsesteenweg
+                                            voor verkeer komend van Patriotsesteenweg (N255) via Barakkendries, Grotestraat naar Lindestraat
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Omstreeks middernacht wordt het verkeer toegelaten over het Centrum, de verkeerstekens worden aan het oog onttrokken
+                                         
+                                        
+                                             
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Op vrijdag 9 mei van 15.00 uur tot middernacht, zaterdag 10 mei van 15.00 tot middernacht, zondag 11 mei van 13.00 tot middernacht en maandag 12 mei van 15.00 tot 22.00 uur:
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Verboden toegang, in beide richtingen, voor ieder bestuurder uitgezonderd fietsers (door middel van nadarhekkens met borden C3 en onderborden M2) wordt ingelast op het Centrum, vanaf het kruispunt met de N255 tot aan het kruispunt met de Grotestraat
+                                         
+                                        
+                                            Eenrichtingsverkeer wordt ingelast (borden C1, F19 en C31) in de Hernebosstraat, verboden rijrichting voor iedere bestuurder komend van de N255 en rijdend in de richting van de Grotestraat
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Eenrichtingsverkeer wordt ingelast (borden C1, F19 en C31) in de Aerebeekstraat/Ommegangstraat, verboden rijrichting voor iedere bestuurder komend van de Lindestraat en rijdend in de richting van de Ekkelenbergstraat (uitgezonderd Lijnbussen, deze hebben toegang in beide richtingen zoals voorgaande jaren)
+                                         
+                                        
+                                             
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Volgende omleidingen gaan van kracht (borden F41):
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        voor verkeer komend van Lindestraat, via Grotestraat en Hernebosstraat naar Patriotsesteenweg
+                                        voor verkeer komend van Patriotsesteenweg (N255) via Barakkendries, Grotestraat naar Lindestraat
+                                         
+                                     
+                                    
+                                        Omleiding De Lijn (op vrijdag 9 mei en maandag 12 mei 2025):
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Reguliere omleiding voorzien via Ommegangstraat/Aerebeekstraat in beide rijrichtingen
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren/gemeentediensten: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> a ns2:Agendapunt ;
+    ns1:uuid "87f30315-932f-579f-ab6f-2ae5eea30e16" .
+

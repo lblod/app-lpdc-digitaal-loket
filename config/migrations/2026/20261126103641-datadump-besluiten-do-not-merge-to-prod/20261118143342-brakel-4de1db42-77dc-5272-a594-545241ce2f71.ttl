@@ -1,0 +1,102 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5afd0928-c253-41e7-af39-ad98c34d0fcd> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/002d8258-6db2-4643-a230-ddf6d2066d93>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/00458c40-2fd2-4635-9996-c16fc09d86de>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0534f6b0-745e-434b-8f38-2ad72c4cb80d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/078ec042-d47a-4fc0-82da-50f46147e73c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0cdbf2bc-91e4-4a45-bfd2-5943d289ec76>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/242194c0-d3e8-4741-8206-cc6e072e32ad>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3a5be618-36f2-499e-8277-3b5f62c98b6d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/46efa108-fdfa-49b1-a9a2-f8c1004c8050>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/48aeb379-fd0b-4380-a05f-7cc158cda529>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6ed8c030-c48b-4f7b-b1fc-bace368e9370>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/96c450d6-43b8-4891-9271-77d677ff27fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a1140b3d-0866-460c-9163-c182c0184407>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/b1a42438-502b-4e38-a65b-9f8eb5ba88b9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e0961336-2398-4d65-ac65-c04960b14198>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e6f0060e-4b07-43a1-a36a-2bfecc36576b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f2579736-bcbe-4cc0-9f35-29b4a7c306ef>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fd53c75d-262b-42cb-b3d1-1d37f91eade2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/ff088b72-2ba3-41d9-b9a1-3f27ec835e4b> ;
+    ns1:geplandeStart "2025-04-07T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/86608a14-4d26-4661-b33f-52f512590e7f> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/481c036d-38d7-4134-80ac-2d50bc0ddac5> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/5843b39f-f9e0-4378-b098-f415daf495f6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "620e2014-dae6-54b7-8788-24fcdb42159f" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-04-07T19:57:00+02:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e0961336-2398-4d65-ac65-c04960b14198> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0534f6b0-745e-434b-8f38-2ad72c4cb80d> ;
+    ns1:openbaar true ;
+    ns2:uuid "69667384-342b-5ba6-b2ba-808592e89d8b" ;
+    dcterms:description """ 
+                        """,
+        """ 
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e0961336-2398-4d65-ac65-c04960b14198> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/e0961336-2398-4d65-ac65-c04960b14198> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/e0961336-2398-4d65-ac65-c04960b14198> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/2f189152-1786-4b55-a3a9-d7f06de63f1c> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Meerjarenplan 2020-2025 deel OCMW. Goedkeuring aanpassing 9 (OCMW)." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Het decreet van 22 december 2017 over lokaal bestuur 
+                                    Het besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- & beheerscyclus van de lokale en provinciale besturen (BVR BBC) 
+                                    Het ministerieel besluit van 26 juni 2018 tot vaststelling van de modellen en nadere voorschriften van de beleidsrapporten, de rekeningstelsels en de digitale rapportering van de beleids- & beheerscyclus van de lokale en provinciale besturen (MB BBC) 
+                                    De omzendbrief KB/ABB 2019/4 van 3 mei 2019 over de strategische meerjarenplannen 2020-2025 van de lokale en provinciale besturen volgens de beleids- & beheerscyclus. 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Artikel 257 van het decreet lokaal bestuur bepaalt dat minstens 1 keer per jaar het meerjarenplan moet aangepast worden, waarbij de kredieten van het volgende jaar worden vastgesteld. Bij de aanpassing wordt ook het resultaat van de intussen vastgestelde jaarrekening verwerkt.Het komt de Gemeenteraad toe het deel van de raad voor maatschappelijk welzijn van de aanpassing van het meerjarenplan 2020-2025 goed te keuren.Door die goedkeuring, en de vaststelling van het eigen deel, is het meerjarenplan in zijn geheel vastgesteld. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Het decreet van 22 december 2017 over lokaal bestuur 
+                                                                    Het besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- & beheerscyclus van de lokale en provinciale besturen (BVR BBC) 
+                                                                    Het ministerieel besluit van 26 juni 2018 tot vaststelling van de modellen en nadere voorschriften van de beleidsrapporten, de rekeningstelsels en de digitale rapportering van de beleids- & beheerscyclus van de lokale en provinciale besturen (MB BBC) 
+                                                                    De omzendbrief KB/ABB 2019/4 van 3 mei 2019 over de strategische meerjarenplannen 2020-2025 van de lokale en provinciale besturen volgens de beleids- & beheerscyclus. 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Artikel 257 van het decreet lokaal bestuur bepaalt dat minstens 1 keer per jaar het meerjarenplan moet aangepast worden, waarbij de kredieten van het volgende jaar worden vastgesteld. Bij de aanpassing wordt ook het resultaat van de intussen vastgestelde jaarrekening verwerkt.Het komt de Gemeenteraad toe het deel van de raad voor maatschappelijk welzijn van de aanpassing van het meerjarenplan 2020-2025 goed te keuren.Door die goedkeuring, en de vaststelling van het eigen deel, is het meerjarenplan in zijn geheel vastgesteld. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "4de1db42-77dc-5272-a594-545241ce2f71" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel:  Het deel van de raad voor maatschappelijk welzijn van de aanpassing van het meerjarenplan 2020- 2025 / 9, in bijlage bij dit besluit, wordt goedgekeurd. 
+                                    Door die goedkeuring, en de vaststelling van het eigen deel, is het meerjarenplan in zijn geheel vastgesteld. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Enig artikel:  Het deel van de raad voor maatschappelijk welzijn van de aanpassing van het meerjarenplan 2020- 2025 / 9, in bijlage bij dit besluit, wordt goedgekeurd. 
+                                                                    Door die goedkeuring, en de vaststelling van het eigen deel, is het meerjarenplan in zijn geheel vastgesteld. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e0961336-2398-4d65-ac65-c04960b14198> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e0961336-2398-4d65-ac65-c04960b14198> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "0928d6dd-a442-5646-9c81-2096ef061aa5" ;
+    dcterms:title "Meerjarenplan 2020-2025 deel OCMW. Goedkeuring aanpassing 9 (OCMW)." .
+

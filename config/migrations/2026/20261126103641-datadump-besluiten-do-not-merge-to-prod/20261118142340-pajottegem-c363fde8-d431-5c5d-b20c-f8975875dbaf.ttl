@@ -1,0 +1,66 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/6e30aac1-1fae-41da-9a98-bcd8dfe22447> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fdb04ffc-75c3-4bbd-a930-8eee78931e02> ;
+    ns2:geplandeStart "2025-03-24T14:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2ada9de9-f2ff-45cb-b466-4ac17573e5cc> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "5e3231a7-08de-50b2-a0da-5ae16eeec286" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-24T13:00:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/75f899e4-6327-4763-af5b-b8b30497f92a> ;
+    ns2:openbaar true ;
+    ns3:uuid "709e568c-a546-5be9-94aa-888bcf3e59cb" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Paastornooi KV Kester Gooik op 19 april en 21 april 2025 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: Paastornooi KV Kester Gooik - 19 april en 21 april 2025 " ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "c363fde8-d431-5c5d-b20c-f8975875dbaf" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Paastornooi KV Kester Gooik op 19 april en 21 april 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf van 8u tot 18u:
+                                     
+                                     
+                                        Op de Lindestraat tussen Rozenbroekstraat en Bergenbroekstraat langs beide zijden van de weg geldt:  
+                                          het stilstaan en parkeren is verboden;   het begin van de parkeerreglementering wordt aangeduid. Dit wordt gesignaleerd door:- verkeersborden E3 - de verkeersborden worden aangevuld met x-borden Xa  
+                                        Op de Lindestraat vanaf de Bergenbroekstraat in de richting van de Rozenbroekstraat geldt:  
+                                          verboden rijrichting voor iedere bestuurder;   de maatregel geldt niet voor fietsers. In de tegenovergestelde richting geldt:   toegelaten rijrichting op de openbare weg met eenrichtingsverkeer;   fietsers mogen in beide richtingen rijden. Dit wordt gesignaleerd door:- verkeersborden C1 - de verkeersborden worden aangevuld met onderborden M2 - verkeersborden F19 - de verkeersborden worden aangevuld met onderborden M4  
+                                        Op de Lindestraat ter hoogte van de voetbalterreinen (nr. 31A) en huisnummer 35 geldt:  
+                                          de bestuurders zijn verplicht links of rechts af te slaan. Dit wordt gesignaleerd door:- verkeersborden D1   
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk  voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c> a ns2:Agendapunt ;
+    ns3:uuid "ba3de434-9473-5874-aa71-16702f07881a" .
+

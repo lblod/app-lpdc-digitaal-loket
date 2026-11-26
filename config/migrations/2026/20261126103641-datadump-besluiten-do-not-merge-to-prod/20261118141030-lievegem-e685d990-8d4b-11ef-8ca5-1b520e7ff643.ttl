@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3027bbce-6e1b-47b4-bc0b-f53c72f1f9d2> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1b0c2c7b-0314-444b-ba38-6b1f25637bc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27e0c4db-269e-409a-8d55-33db7daf7c9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aac60983-db3c-4247-b27f-4860f02157a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ba5489da-e01f-4521-be10-56c4a038e97d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d6f26eb7-74ad-4e5a-bcb3-b89aa65ac7b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d84d3931-b8bf-4253-ad24-7fabe8331040>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6446375-946b-4c3d-9dcc-c3cf171303a1> ;
+    ns1:geplandeStart "2020-09-09T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e04bbeb0-1e3c-48c6-86c0-2e3a8995ae98> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/619a64f0-35fa-41f1-9895-5360cd9bf16b> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2cf19f34-4e9d-4ca2-9af9-b8280d2d4efc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e687ae50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-09-09T23:00:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-09-09T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a> ;
+    ns1:openbaar true ;
+    ns2:uuid "efdd5c20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/814b0c26-3095-484f-9c8d-5de8ee0c9a60> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/814b0c26-3095-484f-9c8d-5de8ee0c9a60> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad verleent gunstig advies over de aanvraag van 6 mei 2020 bij de Vlaamse Minister van Binnenlands Bestuur vanwege het Bisdom Gent tot opheffing van de parochie Sint-Maurus Beke en de samenvoeging met de parochie Sint-Martinus, Zomergem. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Opheffing van de parochie Sint-Maurus, Beke en samenvoeging met de parochie Sint-Martinus, Zomergem: advies" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Jeroen Van Acker, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 40 
+                                                            Samenwerkingsakkoord van 2 juli 2008 tot wijziging van het samenwerkingsakkoord van 27 mei 2004 tussen de Federale Overheid, de Duitstalige Gemeenschap, het Vlaamse Gewest, het Waalse Gewest en het Brussels Hoofdstedelijk Gewest betreffende de erkenning van de erediensten, de wedden en pensioenen van de bedienaars der erediensten, de kerkfabrieken en de instellingen belast met het beheer van de temporaliën van de erkende erediensten, artikel 3, §1 
+                                                            Besluit van de Vlaamse Regering van 30 september 2005 over de vaststelling van de criteria voor de erkenning van de plaatselijke kerk- en geloofsgemeenschappen van de erkende erediensten, artikel 7/5 §2 
+                                                            Besluit van het college van burgemeester en schepenen van 2 juni 2020 met het advies over de opheffing van de parochie Sint-Maurus, Beke en samenvoeging met de parochie Sint-Martinus, Zomergem 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Brief van ABB, Afdeling lokale organisatie en werking van 15 mei 2020 met de vraag een advies te geven over de aanvraag bij de Vlaamse Minister van Binnenlands Bestuur vanwege het Bisdom Gent tot opheffing van de parochie Sint-Maurus Beke en de samenvoeging met de parochie Sint-Martinus, Zomergem.De gunstige adviezen van de kerkfabriek Sint Maurus Beke en de kerkfabriek Sint Martinus Zomergem.Naar aanleiding van de beslissing van het college van 2 juni 2020 ontving de gemeente op 17 juni 2020 de e-mail van ABB, Team Organisatie en Werking met de vraag dit voor advies voor te leggen aan de gemeenteraad. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "e685d990-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1  
+                                                            De gemeenteraad neemt kennis van de brief van ABB, Afdeling lokale organisatie en werking van 15 mei 2020 met de vraag een advies te geven over de aanvraag van 6 mei 2020 bij de Vlaamse Minister van Binnenlands Bestuur vanwege het Bisdom Gent tot opheffing van de parochie Sint-Maurus Beke en de samenvoeging met de parochie Sint-Martinus, Zomergem en van de e-mail van 17 juni 2020 met de vraag dit voor advies voor te leggen aan de gemeenteraad. 
+                                                            Artikel 2 
+                                                            De gemeenteraad verleent gunstig advies over deze aanvraag. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "efddaa40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Opheffing van de parochie Sint-Maurus, Beke en samenvoeging met de parochie Sint-Martinus, Zomergem: advies" .
+

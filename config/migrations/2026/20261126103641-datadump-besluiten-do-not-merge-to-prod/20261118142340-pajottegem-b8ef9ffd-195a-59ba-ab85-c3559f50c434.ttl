@@ -1,0 +1,71 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/2e25b699-9c45-4b5f-88aa-f2317708c5b4> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7581ad62-644b-48ae-91d8-e61e89da9c92>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> ;
+    ns1:geplandeStart "2025-03-03T14:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2df52d40-fdb0-47e3-ad17-61cd1328bd94> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "f4236215-c3aa-5737-867a-627147783926" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-03T13:23:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b7627505-31a8-4bb8-88c3-7f1a483624f3> ;
+    ns1:openbaar true ;
+    ns3:uuid "5e4ca1f5-73e2-5ea4-ace7-e47810526bf6" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/32681227-42c7-40cb-9bd5-d9ed5aea1380> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/32681227-42c7-40cb-9bd5-d9ed5aea1380> a ns1:Besluit ;
+    ns2:description """ 
+                                                    Het college van burgemeester en schepenen gaat akkoord met de te nemen verkeersmaatregelen in het kader van Kaatswedstrijden op Centrum 17, 1540 Pajottegem 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Tijdelijke politieverordening voor Kaatswedstrijden op verschillende data in 2025 te Centrum 17, 1540 Pajottegem" ;
+    ns1:motivering """ 
+                                 
+                                    Aan het college wordt gevraagd volgende verkeersmaatregelen te nemen voor Kaatswedstrijden, telkens van 8u t.e.m 13u: 
+                                      
+                                    Stilstaan en parkeerverbod (E3) op kaatsplein te Centrum 17, 1540 Pajottegem; 
+                                    Verboden toegang in beide richtingen voor iedere bestuurder (C3). 
+                                 
+                            """@nl ;
+    ns3:uuid "b8ef9ffd-195a-59ba-ab85-c3559f50c434" ;
+    prov:value """ 
+                                 
+                                    Artikel 1- Het college van burgemeester en schepenen gaat akkoord met de te nemen verkeersmaatregelen in het kader van Kaatswedstrijden op Centrum 17, 1540 Pajottegem op volgende data: 
+                                    4 mei 
+                                    18 mei 
+                                    8 juni 
+                                    15 juni 
+                                    29 juni 
+                                    24 augustus 
+                                      
+                                    31 augustus niet mogelijk wegens viering jubilarissen. 
+                                      
+                                    Artikel 2- De tijdelijke verkeersmaatregelen geschieden conform de vigerende wetgeving. 
+                                    Volgende verkeersmaatregelen worden genomen telkens van 8 uur tot 13 uur op hogervermelde data op Centrum 17, 1540 Pajottegem: 
+                                      
+                                    Stilstaan en parkeerverbod (E3) op kaatsplein te Centrum 17, 1540 Pajottegem; 
+                                    Verboden toegang in beide richtingen voor iedere bestuurder (C3). 
+                                      
+                                    De borden worden geleverd, in dienst gesteld en opgehaald door de gemeentelijke technische dienst. Tegenstrijdige signalisatie wordt afgedekt zolang de tijdelijke verkeersmaatregelen van kracht zijn. 
+                                    Verkeersborden betreffende het stilstaan en/of parkeren worden ten minste 48 uur op voorhand geplaatst. Onderborden van het type V vermelden datum en tijdstip waarop het verbod van kracht is. Onderborden van het type Xa, Xb, Xc of Xd vermelden de richting waarin en afstand waarover het verbod geldt. 
+                                    Artikel 3- Bewoners van straten die afgesloten of omgelegd worden of waar eenrichtingsverkeer of een stilstaan- en parkeerverbod wordt ingevoerd, dienen daarvan door de organisator van het evenement ten minste 48 uur op voorhand schriftelijk in kennis te worden gesteld. 
+                                    Artikel 4- Overtredingen op de bepalingen van deze verordening zullen gestraft worden met politiestraffen. 
+                                    Artikel 5- Dit besluit wordt meegedeeld aan de dienst mobiliteit, die het besluit bekendmaakt aan de aanvrager, de gemeentelijke technische dienst, het Agentschap Wegen en Verkeer (indien van toepassing), de diensten voor openbaar vervoer, (indien van toepassing) de hulpdiensten en aan de burger via GIPOD/Geopunt.be. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380> a ns1:Agendapunt ;
+    ns3:uuid "daafa027-3711-52ea-85d1-436ed0842f5b" .
+

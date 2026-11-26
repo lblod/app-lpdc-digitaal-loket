@@ -1,0 +1,120 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/95dbc1a1-d62c-48a1-8260-c6e3de42bc7a> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/24de6323-dd23-4126-af9e-de6bdf7c9199>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> ;
+    ns1:geplandeStart "2026-01-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/5ea7f311-1236-4fac-b2d3-d2654e49a56f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "513db5ae-2c98-5473-bd45-758b6903d6d1" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-01-20T20:16:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2e95b8bc-3a87-4830-8041-e7842ac6909e> ;
+    ns1:openbaar false ;
+    ns3:uuid "55cc7800-6bc2-5f74-b6df-67ec100e5d2e" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Aanvullend verkeersreglement - Zone met beperkte parkeertijd - Breendonk" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Voor de zone met beperkte parkeertijd wordt er een kleine uitbreiding gedaan zodat er meer uniformiteit is in de kern van Breendonk. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                             
+                                                Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56, §2 
+                                                Het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens, artikel 5; 
+                                                Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Voor de zone met beperkte parkeertijd wordt er een kleine uitbreiding gedaan zodat er meer uniformiteit is in de kern van Breendonk. 
+                                 
+                            """@nl ;
+    ns3:uuid "42aa1d6f-13a1-5cd3-a73a-b671c3cd5229" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Artikel 1 : het parkeren is toegelaten; de parkeertijd is beperkt en de parkeerschijf moet gebruikt worden; het gebruik van de schijf is voorgeschreven. De beperkte parkeertijd geldt niet voor personen in het bezit van een parkeerkaart voor mindervalide 
+                                            Artikel 2: De parkeerzone met parkeerschijfregeling wordt afgebakend op volgende locaties: 
+                                            
+                                                Breendonk-dorp 53 - Breendonk-Dorp 54A
+                                             
+                                            
+                                                Beenhouwerstraat 8 -  Beenhouwerstraat 3
+                                             
+                                            
+                                                Breendonk-Dorp 70 - Breendonk-Dorp 74 (Hoek de Buisseretlaan)
+                                             
+                                            
+                                                Breendonk-dorp 113 - Breendonk-dorp 94
+                                             
+                                            
+                                                 
+                                             
+                                            
+                                                Parking Jan Hammeneckerstraat 2 - Breendonk-dorp 119
+                                             
+                                            
+                                                 
+                                             
+                                            Dit wordt aangeduid door verkeerstekens met zonale geldigheid: 
+                                             
+                                                 Verkeersbord ZE9a - onderbord GVIIb (parkeerschijf)  
+                                                 verkeersbord ZE9a/ - onderbord GVIIb (parkeerschijf)  
+                                             
+                                         
+                                     
+                                    
+                                        Artikel 3: het parkeren is beperkt in tijd: deze maatregel geldt alle dagen tussen 09.00u en 18.00u, uitgezonderd op zon- en feestdagen
+                                     
+                                    Artikel 4: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> a ns1:Agendapunt ;
+    ns3:uuid "b7d8f7dd-f3b8-51d9-bb43-38d327053b93" .
+

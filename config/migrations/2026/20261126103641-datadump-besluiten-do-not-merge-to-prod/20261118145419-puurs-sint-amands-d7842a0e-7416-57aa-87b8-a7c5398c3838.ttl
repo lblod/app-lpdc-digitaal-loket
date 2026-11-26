@@ -1,0 +1,107 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/55cb6f1b-61e0-4970-a345-2fd043829bd7> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2b786136-1b9b-451e-ba69-4751757815e9> ;
+    ns2:geplandeStart "2026-03-17T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/2a2699f7-54dd-4069-88ac-49bf7ceb0b39> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "c08a5e6e-ffb7-5a49-8316-3763e8b8a6e1" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-03-17T19:44:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2b786136-1b9b-451e-ba69-4751757815e9> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/048aabec-0b5c-4cb3-aee5-b008b8683aff> ;
+    ns2:openbaar false ;
+    ns3:uuid "506cc0f9-6860-5fb7-8ab7-1338d59a1161" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2b786136-1b9b-451e-ba69-4751757815e9> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/2b786136-1b9b-451e-ba69-4751757815e9> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/2b786136-1b9b-451e-ba69-4751757815e9> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:title "Aanvullend verkeersreglement - Jan Van Droogenbroeckstraat" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    We ontvingen van een bewoner uit de Romain Steppestraat de vraag om te onderzoeken of er een bijkomende parkeerplaats voor personen met een handicap kan worden voorzien. De bestaande parkeerplaats in de parkeerstrook van de Romain Steppestraat blijkt immers vaak bezet door andere voertuigen met een geldige parkeerkaart voor personen met een handicap, waardoor de beschikbaarheid beperkt is. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                      
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    We ontvingen van een bewoner uit de Romain Steppestraat de vraag om te onderzoeken of er een bijkomende parkeerplaats voor personen met een handicap kan worden voorzien. De bestaande parkeerplaats in de parkeerstrook van de Romain Steppestraat blijkt immers vaak bezet door andere voertuigen met een geldige parkeerkaart voor personen met een handicap, waardoor de beschikbaarheid beperkt is. 
+                                    Bij het zoeken naar een geschikte bijkomende locatie werd rekening gehouden met een redelijke wandelafstand en de nabijheid van verschillende voorzieningen, zoals de bakker, horecazaken, toeristische trekpleisters rond de kaai, de bibliotheek en het dorpshuis. 
+                                    Uit het onderzoek bleek dat de parkeerplaats op de hoek van de Jan Van Droogenbroeckstraat en de Emile Verhaerenstraat hiervoor een geschikte locatie is. Momenteel geldt op deze plaats enkel een regeling voor laden en lossen (via onderbord). Navraag bij de omliggende handelaars leert echter dat deze plek in de praktijk niet wordt gebruikt voor leveringen. 
+                                    Aangezien laden en lossen binnen de regelgeving onder stilstaan en parkeren valt, en dit ook mogelijk blijft op een parkeerplaats voor personen met een handicap, werd beslist om deze parkeerplaats om te vormen tot een parkeerplaats voor personen met een handicap. 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                 
+                                 
+                                    Financiële weerslag 
+                                      
+                                    
+                                         
+                                     
+                                 
+                            """@nl ;
+    ns3:uuid "d7842a0e-7416-57aa-87b8-a7c5398c3838" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Hoek Emile Verhaerenstraat 71 - Jan Van Droogenbroeckstraat het parkeren is toegelaten, het parkeren is voorbehouden voor mindervaliden Dit wordt aangeduid door verkeerstekens: 
+                                    - E9a - GVIId 
+                                    Artikel 2 : Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2b786136-1b9b-451e-ba69-4751757815e9> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2b786136-1b9b-451e-ba69-4751757815e9> a ns2:Agendapunt ;
+    ns3:uuid "63e71073-ff37-52c9-8fb5-5d82f15ea503" .
+

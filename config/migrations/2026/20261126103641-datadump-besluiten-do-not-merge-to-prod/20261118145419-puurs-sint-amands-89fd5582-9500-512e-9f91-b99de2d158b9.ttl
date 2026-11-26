@@ -1,0 +1,88 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/c9e5ae39-2dc9-46a8-be78-8425255470e6> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/037aa6dc-065e-4b38-b73d-e217f725b141>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/abf306df-b197-433e-99fa-c4147cfbdd33> ;
+    ns1:geplandeStart "2025-09-08T22:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/ceb98d0d-7020-492b-90e3-b478bdb47724> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "87a3b16d-22f7-58c0-b8e0-4639db711155" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-09-08T20:22:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/037aa6dc-065e-4b38-b73d-e217f725b141> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e2b4d63c-e261-463f-a9a2-1ce7df35b6ca> ;
+    ns1:openbaar false ;
+    ns3:uuid "8cbfaa5d-894f-53cd-a0bf-e1d49043bafd" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/037aa6dc-065e-4b38-b73d-e217f725b141> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/037aa6dc-065e-4b38-b73d-e217f725b141> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/037aa6dc-065e-4b38-b73d-e217f725b141> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Tijdelijke politieverordening op het wegverkeer - Meir" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Van augustus 2025 tot mei 2026 zijn er wegen- en rioleringswerken in de R.Verbelenstraat. Door deze werken is er meer verkeer via Meir van Oppuurs naar Bornem en omgekeerd. Wegens de smalle breedte van de straat en het beperkte zicht opteren we om de snelheid te verlagen op het deel tussen kruispunt Meir en Meir nr. 83a naar 30 km/u. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond 
+                                             
+                                                Decreet Lokaal Bestuur, artikel 56 §2 in samenhang met de Nieuwe Gemeentewet van 24 juni 1988, artikel 130 bis 
+                                             
+                                         
+                                     
+                                     
+                                        Toepasselijke regelgeving:  
+                                         
+                                            De wet van 16 maart 1968 betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk bestuur van 16 maart 1968; 
+                                            Het koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer, en latere wijzigingen; 
+                                            Het koninklijk besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens, en latere wijzigingen; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Van augustus 2025 tot mei 2026 zijn er wegen- en rioleringswerken in de R.Verbelenstraat. Door deze werken is er meer verkeer via Meir van Oppuurs naar Bornem en omgekeerd. Wegens de smalle breedte van de straat en het beperkte zicht opteren we om de snelheid te verlagen op het deel tussen kruispunt Meir en Meir nr. 83a naar 30 km/u. 
+                                 
+                            """@nl ;
+    ns3:uuid "89fd5582-9500-512e-9f91-b99de2d158b9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Het college van burgemeester en schepenen keurt de tijdelijke politieverordening “Meir” goed te Puurs-Sint-Amands voor de duur van de werken aan de R. Verbelenstraat tot mei 2026. 
+                                    Artikel 2: 
+                                     
+                                        snelheidsverlaging wordt gesignaleerd d.m.v. verkeersbord C43 30km  t.h.v.  
+                                             
+                                                Meir 89 
+                                                Meir 93 D en Meir 71 
+                                                Meir 73 en Meir 79 (spooroverweg) 
+                                                Meir 83a 
+                                              
+                                        einde snelheidsverlaging wordt gesignaleerd d.m.v. verkeersbord C45 30km  t.h.v. Meir 83b  
+                                     
+                                    Artikel 3: Overtreding van dit reglement wordt bestraft overeenkomstig de verkeerswet. 
+                                    Artikel 4: Dit reglement wordt bekendgemaakt overeenkomstig artikel 286 van het decreet over het lokaal bestuur. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/037aa6dc-065e-4b38-b73d-e217f725b141> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/037aa6dc-065e-4b38-b73d-e217f725b141> a ns1:Agendapunt ;
+    ns3:uuid "27801343-2eab-5c6b-90e3-1d5fa1309d8c" .
+

@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/zittingen/e63ffb58-7fde-4fa3-8ea4-3bff6d6b0f80> a ns1:Zitting ;
+    ns1:behandelt <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/01610404-a461-42a7-93dc-e8a0b9e3534c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0678e31b-b242-4453-8d64-29bfb40cec79>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0d73f93d-2994-4731-bb00-eaf47fffda82>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0e7fbe6e-9a4e-449d-9813-de2f8adbc2b4>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/1b48ec14-183b-46c0-a291-f3fd871264e5>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/25ee21ac-8fa7-4cab-a28c-381bf925bcd8>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/32ca4b57-52fc-48e2-8e85-f64204be92de>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/3500e26e-e88c-4331-a4f1-23f7cace6116>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/36e0bb64-c855-47a2-8832-f6c28dfaea07>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/4380b4c3-334a-4a6e-b0cb-72facce05a97>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/4b0c9eb5-2ef9-4c8e-bfed-46aebd8d5b3a>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/570d3094-d832-4819-a496-a60f41f293d1>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/5909e095-a02a-4d3b-aa7c-8ef32f083234>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/5f5409eb-d393-404d-a38c-ea497ce37012>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/6073a8ab-db43-47f5-aeca-898f47eda322>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/6a49a919-852d-43fa-a1a2-4d63e50b25f1>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/821cc440-a278-4578-90fe-31fdc43c064b>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/82a7eaf0-a866-41cf-9ce0-9eb88018d2ca>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/90a5b887-9ea8-4975-bc50-c40c9be7bf99>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/920e4af7-5493-4ad9-bc7c-9b20928c3db9>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/92916166-dc87-41e2-8ae3-13f7f987521d>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/938e2fe2-0efe-43a6-8771-20c015fbf94c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/96718854-66e9-4562-b100-57a0cb1e8662>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a37d373c-4f77-4dad-932b-859d6a03f4e7>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a5ed6dd2-3742-4a4f-a887-9e44c7d46cf2>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a71d39ff-cb1d-4a70-91cc-71f2fc2b50fe>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a71fb070-29df-4571-bce6-8d082fa90c0d>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a7da9cc0-aa96-4649-acb2-f49352c39c6c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/ad768f9b-3822-4ab4-9055-371e1c7bd00b>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/bc458b42-1891-4917-8aac-9e62a71b8bb8>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/be1e6657-0002-43d1-b492-a0b7addefd3d>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c4598922-aaf1-4d61-9406-bbc8ffe62cba>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c5d4a4f4-5cee-49ed-a61b-9bd55fc6cdb9>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c9819895-3320-4471-aae2-39916e112624>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d3e7e72f-2ee6-4c00-8779-889f6571322e>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d729d1b0-8ea8-4c77-9df7-452b9baf1bb6>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/da67345f-a7ca-44fe-8e84-d793693250d8>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/df3c1a19-1c2c-4d08-ad1f-79f96f4b4c3d>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/e53be263-d782-40e2-8be6-7b2e0a3171ae>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/f6368714-e899-40b1-b58f-22535c9aa100>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/f6425a16-e641-406e-b11c-b757bcf563dd>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/f74debab-8be9-4830-8598-705176006072> ;
+    ns1:geplandeStart "2025-03-13T17:45:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://aarschot-echo.cipalschaubroeck.be/id/documenten/10be5376-ecc7-4198-bbf8-453928db231b> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/5e6b3a6d7e4548297a0373f68bc9ba93c9d4155e3e50afef2bbb1de1a3e824ef> ;
+    ns3:uuid "25aa545f-420b-5927-a80f-b76a3ab88373" ;
+    prov:atLocation "Vergaderlokaal 1ste verdieping stadhuis" ;
+    prov:startedAtTime "2025-03-13T17:47:00+01:00"^^xsd:dateTime .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/938e2fe2-0efe-43a6-8771-20c015fbf94c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1b48ec14-183b-46c0-a291-f3fd871264e5> ;
+    ns1:openbaar false ;
+    ns3:uuid "d5593201-11a0-5483-a435-2ddb8c257435" ;
+    dcterms:subject <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/938e2fe2-0efe-43a6-8771-20c015fbf94c> ;
+    prov:generated <https://aarschot-echo.cipalschaubroeck.be/id/besluiten/938e2fe2-0efe-43a6-8771-20c015fbf94c> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/besluiten/938e2fe2-0efe-43a6-8771-20c015fbf94c> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college gaat akkoord met de tijdelijke verordening op het wegverkeer op 21.03.2025 - Jozef Tielemansstraat 10, 3200 Aarschot - Verhuiswerken 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/5e6b3a6d7e4548297a0373f68bc9ba93c9d4155e3e50afef2bbb1de1a3e824ef> ;
+    ns2:title "Tijdelijke verordening op het wegverkeer op 21.03.2025 - Jozef Tielemansstraat 10, 3200 Aarschot - Verhuiswerken" ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving 
+                                     
+                                        de nieuwe gemeentewet, gewijzigd bij de wet van 12.01.2006 (BS 31.01.2007 - erratum BS 02.02.2007) tot wijziging van de nieuwe gemeentewet, artikel 119 en 130bis; 
+                                        in toepassing van de hoger genoemde wet is het college van burgemeester en schepenen bevoegd voor de tijdelijke politieverordeningen op het wegverkeer; 
+                                        de gecoördineerde wetten van 16.03.1968 betreffende de politie over het wegverkeer en alle latere wijzigingen; 
+                                        het koninklijk besluit van 01.12.1975 houdende algemeen reglement op de politie van het wegverkeer en alle latere wijzigingen; 
+                                        het ministerieel besluit van 11.10.1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                        het ministerieel rondschrijven van 14.11.1977 betreffende de aanvullende reglementen en de plaatsing van verkeerstekens; 
+                                     
+                                 
+                                 
+                                    Feiten, context en motivering 
+                                    Gelet op de aanvraag van D. R. E., Jozef Tielemansstraat 10 0202, 3200 Aarschot;Overwegende dat de verder genoemde weg(en) behoort/behoren tot de wegen onder toezicht van de stad;Overwegende dat de verkeersveiligheid moet worden gegarandeerd tijdens verhuiswerken op 21.03.2025 om 10 uur tot 16 uur in Jozef Tielemansstraat 10, 3200 Aarschot. 
+                                 
+                            """@nl ;
+    ns3:uuid "609acae8-4ccc-5bab-989f-9d85adfffc8e" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Op 21.03.2025 om 10 uur tot 16 uur wordt er te Jozef Tielemansstraat 10, 3200 Aarschot een verhuiswagen en -lift op de rijbaan geplaatst die het verkeer in de straat voor gemotoriseerd verkeer onderbreekt. Gedurende de verhuiswerken geldt er vanuit de Martelarenstraat naar de jozef Tielemansstraat inrijverbod met uitzondering van het plaatselijk verkeer. In het straatgedeelte jozef Tielemansstraat tussen de aansluiting met de Martelarenstraat en de aansluiting met Ten Drossaarde geldt in voornoemde periode tweerichtingsverkeer. 
+                                      
+                                    Artikel 2 
+                                    De in Art. 1 genoemde verkeerssituatie wordt als volgt aangeduid: 
+                                     
+                                        Op de Jozef Tielemansstraat ter hoogte van de aansluiting met de Martelarenstraat door middel van een verkeershek voorzien van verlichting, teken C3, onderbord 'uitgezonderd plaatselijk verkeer', teken F45 en teken A39 (bestaand teken F19 wordt afgedekt) 
+                                        Op de Jozef Tielemansstraat ter hoogte van de aansluiting met Ten Drossaarde door middel van teken A39 (bestaande tekens C1 en C31b worden afgedekt) 
+                                        Op de Jozef Tielemansstraat ter hoogte van huisnummer 12 door middel van een verkeershek voorzien van verlichting en teken C3 
+                                     
+                                      
+                                    Artikel 3 
+                                    Afschrift van deze beslissing wordt opgestuurd naar de Griffie van de Rechtbank van Eerste Aanleg, Politierechtbank, Smoldersplein 3, 3000 Leuven. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/938e2fe2-0efe-43a6-8771-20c015fbf94c> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/938e2fe2-0efe-43a6-8771-20c015fbf94c> a ns1:Agendapunt ;
+    ns3:uuid "c3044a3f-0c89-5d3d-8b12-1269c5e9512c" .
+

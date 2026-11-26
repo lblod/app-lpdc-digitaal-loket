@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/147bc410-56ca-479d-8c5b-6d097f1d4b30> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a7b986a3-6354-496a-8685-98d2cb9a2606>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d590095d-eebf-4e95-b1f4-0adff035a9fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc3d3935-6ff1-4bcf-a4a8-cb3d40aa293a> ;
+    ns3:geplandeStart "2026-06-09T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bad7219c-3446-4d4a-991f-ede84b5fcb3a> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "7c98a062-7af9-5735-ad62-bb34833a925c" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-06-09T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a7b986a3-6354-496a-8685-98d2cb9a2606> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c8d5291f-6ca1-4877-a131-4cec61abba10> ;
+    ns3:openbaar false ;
+    ns2:uuid "f65b3e04-84d0-5e58-8cc5-51e18a4cd211" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a7b986a3-6354-496a-8685-98d2cb9a2606> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a7b986a3-6354-496a-8685-98d2cb9a2606> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a7b986a3-6354-496a-8685-98d2cb9a2606> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Nebulastreffen V15' op 27 juni 2026 van 9.00 uur tot en met 24.00 uur en op 28 juni 2026 van 9.00 uur tot en met 18.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van Nebulastreffen V15 - MV Nebulasbikers Lievegem VZW: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 9 juni 2026 over de aanvraag evenement Nebulastreffen V15 - MV Nebulasbikers Lievegem VZW: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Peter Rooms, namens MV Nebulasbikers Lievegem VZW, organiseert 'Nebulastreffen V15' op 27 juni 2026 van 9.00 uur tot en met 24.00 uur en op 28 juni 2026 van 9.00 uur tot en met 18.00 uur.Er werd op 26 maart 2026 een aanvraag ingediend door Peter Rooms, namens MV Nebulasbikers Lievegem VZW, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    team sport 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "4260388a-2ef4-5c6d-8300-5a7b1b4270dc" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Nebulastreffen V15' wordt vastgesteld als volgt: 
+                                    Op zaterdag 27 juni 2026 van 9.00 uur tot en met 24.00 uur en op zondag 28 juni 2026 van 9.00 uur tot en met 18.00 uur: 
+                                     
+                                        Parkeerverbod op 3 rijen van voorste deel parking sportsite Lovendegem, Sportstraat 24, 9920 Lievegem 
+                                     
+                                    
+                                        Op zondag 28 juni 2026 van 9.00 uur tot en met 18.00 uur:
+                                     
+                                     
+                                         
+                                            Bijkomend parkeerverbod op achterste deel parking sportsite Lovendegem, Sportstraat 24, 9920 Lievegem 
+                                         
+                                        
+                                            De parkeerstrook met laadpalen (tot aan tweede boom) blijft gedurende het hele weekend beschikbaar voor bezoekers van het sportcentrum.
+                                         
+                                        
+                                             
+                                         
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a7b986a3-6354-496a-8685-98d2cb9a2606> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a7b986a3-6354-496a-8685-98d2cb9a2606> a ns3:Agendapunt ;
+    ns2:uuid "f3f0391d-3b1b-5a1c-8793-675bf7444d16" .
+

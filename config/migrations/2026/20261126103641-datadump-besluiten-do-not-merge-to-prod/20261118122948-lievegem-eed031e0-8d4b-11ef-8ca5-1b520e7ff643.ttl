@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4010cba7-ac3e-4e54-af4c-9a5828598f1e> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05fc1ce9-eb6f-4d97-b96a-f583a4d10a91>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23efc5ed-2b22-4cfe-892b-710c27710215>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2bda4302-a2f0-4ee9-ac2c-941a747e166f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b87beb0-cde9-4088-bd3f-9205a514c17d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d8ab414-f71f-455c-a075-4fda295554f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6439560f-0948-4cd1-844d-55cb9e76b432>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9883a87a-ecc7-4ad9-ab41-efd5ffc255bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f166014-8d22-4799-b171-94518fb79761>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c2c15d69-adda-4088-a9b2-3999b1eef99d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c89a991b-94e8-4a40-953c-7d829f519713>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dbdb15f3-f665-4862-a4bf-46afa519a2a3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcd173fa-0d50-4d5a-b7e4-c25f82be8b6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e104a52b-1f78-4289-bb34-3d0cbf2ea06d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f214ebf7-c8fe-4d5b-8376-caa9fee36016> ;
+    ns2:geplandeStart "2023-05-31T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/91baaf1c-5178-4180-89f8-2c255c6c530d> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/cb3181ac-0ddd-44ff-9873-5bf122ea65c7> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/1a092372-3466-442e-a65b-1a751d777e48> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "eecd72c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-05-31T21:28:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-31T20:02:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/23efc5ed-2b22-4cfe-892b-710c27710215> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c2c15d69-adda-4088-a9b2-3999b1eef99d> ;
+    ns2:openbaar true ;
+    ns1:uuid "f0b2d490-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23efc5ed-2b22-4cfe-892b-710c27710215> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/23efc5ed-2b22-4cfe-892b-710c27710215> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/23efc5ed-2b22-4cfe-892b-710c27710215> a ns2:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de deontologische code voor lokale mandatarissen goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Deontologische code voor lokale mandatarissen: goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet lokaal bestuur van 22 december 2017, artikel 39 over de deontologische code Besluit van het college van 25 april 2023 over de principiële goedkeuring van de deontologische code voor lokale mandatarissen 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Als lokaal bestuur hebben we de decretale verplichting om een deontologische code voor mandatarissen te hebben. Op 16 februari 2023 kreeg het lokaal bestuur een bericht van minister Bart Somers over de deontologische code en deontologische commissie. 
+                                                            Bijlagen van VVSG: 
+                                                             
+                                                                Deontologische code mandatarissen en het addendum 
+                                                                Van toepassing zijnde wetgeving 
+                                                             
+                                                            Team secretariaat maakte, op basis van het model van VVSG, een voorstel van deontologische code voor mandatarissen. 
+                                                            Dit moet goedgekeurd worden door de gemeente- en de OCMW-raad. 
+                                                            Op 17 april 2023 werd de deontologische code besproken met geïnteresseerde raadsleden en hier en daar aangepast: 
+                                                             
+                                                                artikel 1 - tweede alineaDeze code is bij uitbreiding ook van toepassing op de medewerkers van de lokale mandatarissen, welke hun statuut of hoedanigheid ook is (kabinets- en fractiemedewerkers), op de raadgevers van de mandatarissen en op de vertrouwenspersonen van de mandatarissen (zoals bedoeld in art. 16 van het decreet lokaal bestuur). 
+                                                                Een aparte IT-policy voor de raadsleden 
+                                                                Geen aparte code voor de BCSD-leden. 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns1:uuid "eed031e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad keurt de deontologische code voor lokale mandatarissen goed. 
+                                                            Artikel 2 
+                                                            De deontologische commissie wordt op heden samengesteld in een aparte beslissing. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/23efc5ed-2b22-4cfe-892b-710c27710215> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23efc5ed-2b22-4cfe-892b-710c27710215> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "f0ad5650-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Deontologische code voor lokale mandatarissen: goedkeuring" .
+

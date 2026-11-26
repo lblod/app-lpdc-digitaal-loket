@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns2:Zitting ;
+    ns2:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns2:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns2:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns2:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns1:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/50ce7363-303c-41df-bb1f-348180f369d1> ;
+    ns2:openbaar true ;
+    ns1:uuid "389b3d2a-6784-5f31-81f5-e858ca3e5aaf" ;
+    dcterms:description """ 
+                                                             
+                                                                aanpassing reglement 'kader privélesgever zwemmen 2025-2026' 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Sportsite de Rijdt (zwembad). Kaderovereenkomst private lesgevers." ;
+    ns2:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Goedkeuring reglement 'kader privélesgever' gemeenteraad dd. 2 juni 2025 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Zwembad Brakel is een zwembad waar voornamelijk kinderen leren zwemmen. Tijdens de publieksuren is het toegestaan om privélessen te geven, binnen het kader van het reglement ‘Privélesgever’. Om een vlotte organisatie te garanderen en de maximumcapaciteit van het zwembad niet te overschrijden, geldt een limiet van 26 lesgevers (dit waren tot vorig jaar alle aanvragen), elk met maximaal 4 leerlingen tegelijk. 
+                                                                    Voor het werkjaar 2025-2026 is deze limiet bereikt en staan er nog meerdere lesgevers op de wachtlijst. Door het maximum aan te passen naar 30 lesgevers, elk met maximaal 3 leerlingen, kunnen vier extra lesgevers worden toegelaten. Daarnaast zal bij de toewijzing rekening worden gehouden met de woonplaats van de lesgever, om het lokale karakter van het zwembad te behouden. 
+                                                                      
+                                                                      
+                                                                    Kader prive-lesgever / lesgeefster zwemmen 
+                                                                      
+                                                                    Aanpassing 1 2025/2026. Gemeenteraad 3 november 2025 
+                                                                      
+                                                                    Om de kwaliteit van de zwemlessen te bevorderen is het geven van privé-zwemles enkel mogelijk onder bepaalde voorwaarden. 
+                                                                    U wordt beschouwd als privélesgever wanneer u les geeft tijdens de publieke openingsuren uitgezonderd van familie of stageopdrachten. 
+                                                                    Wanneer u wordt beschouwd als privé lesgever / lesgeefster dient u zich te registreren. 
+                                                                    Na registratie ontvangt u al dan niet een goedkeuring. 
+                                                                      
+                                                                    Deze registratie gebeurt door middel van een “aanvraagformulier privé lesgever – lesgeefster zwemmen”. 
+                                                                    Naast de algemene gegevens verklaart de kandidaat lesgever op het aanvraagformulier dat hij/zij zich in regel heeft gesteld met alle fiscale en sociale verplichtingen voor de toepassing van een bijberoep of hoofdberoep. 
+                                                                    De kandidaat privé lesgever waarborgt tevens de kwaliteit van de zwemlessen die in zwembad Brakel worden gegeven door de verklaring dat  hij/zij  een gediplomeerd lesgever is. 
+                                                                    Het aanvraagformulier houdt geen exclusiviteitsrecht in, noch de reservatie van voorbehouden banen. 
+                                                                    Het geeft enkel – mits in orde met de formaliteiten – de mogelijkheid om zwemlessen te geven in zwembad Brakel. 
+                                                                      
+                                                                    In dit aanvraagformulier wordt tevens kennis genomen van de voorwaarden bij privé zwemles. 
+                                                                    Deze zijn : 
+                                                                      
+                                                                    -       De tijdstippen waarop les gegeven kan worden zijn alle publieke openingsuren, uitgezonderd seniorenzwemmen en baantjeszwemmen; 
+                                                                    -       Het reglement van Interne Orde is van toepassing op alle activiteiten en alle bezoekers van het zwembad; 
+                                                                    -       Lesgevers dienen minimum 18 jaar oud te zijn; 
+                                                                    -       Lesgevers dienen het nodige diploma te hebben. (diploma verplicht als bijlage bij deze overeenkomst) Diploma’s die voor erkenning in aanmerking komen zijn bachelors en masters lichamelijk opvoeding, Initiators zwemmen (trainer C), trainers of instructeurs B zwemmen en trainers A zwemmen, Redders met een hoger redder diploma bij Sport Vlaanderen met een geldig bijscholingsattest; 
+                                                                    -       Tijdens de zwemles is de lesgever verantwoordelijk voor de veiligheid van de kinderen. Kinderen die jonger zijn dan 8 (of die onvoldoende zwemvaardig zijn) die voor of na de zwemles in het bad blijven dienen vergezeld te zijn door een persoon van 18 jaar of ouder, in badkledij, die zelf beschikt over voldoende zwemvaardigheid. Wanneer het kind niet vergezeld is door een volwassene zorgen de ouders en de lesgever ervoor dat het kind voor en na de les niet in het zwembad gaat; 
+                                                                    -       Gebruikers geven les in het vrije gedeelte van het zwembad. Lesgeven in een baan kan niet. Er kan ook geen baan afgehuurd worden; 
+                                                                    -       De lessen mogen de andere zwemmers niet hinderen; 
+                                                                    -       De beheerder zal de gegevens en coördinaten van de gebruiker nooit doorgeven aan geïnteresseerde zwembadbezoekers; 
+                                                                    -       Lesgevers worden op de hoogte gebracht van de sluitingsdagen via de gebruikelijke kanalen (via kassa, website,…); 
+                                                                    -       Elke lesgroep mag uit maximaal 3 personen bestaan per lesgever. Dit om de kwaliteit van de les te waarborgen. Wanneer de gebruiker aan meer dan 3 personen per lesgroep wil lesgeven dient dit specifiek aangevraagd te worden; 
+                                                                    -       Het gebruik van didactisch materiaal van het zwembad is toegelaten; 
+                                                                    -       Duiklessen of lessen aquafitness, aquagym zijn niet toegelaten tijdens de publieksuren (tenzij goedkeuring door het schepencollege); 
+                                                                    -       Lesgevers die zich niet houden aan de voorwaarden verliezen hun goedkeuring; 
+                                                                    -       De lesgever is verantwoordelijk voor alle ongevallen die zouden voorkomen aan haar leden, trainers en begeleiders tijdens het gebruik van het Zwembad en zal in voorkomend geval de Beheerder hiervoor vrijwaren. De Gebruiker verbindt er zich toe alle nodige verzekeringen af te sluiten ter dekking van deze lichamelijke ongevallen; 
+                                                                    -       De lesgever verbindt er zich toe het reglement van inwendige orde te respecteren en hierop toe te zien; 
+                                                                    -       De meest recente versie van het reglement van interne orde is raadpleegbaar aan de ad valvas van het sportcentrum; 
+                                                                    -       De lesgever en de persoon die zwemles krijgt betaalt een toegangsticket conform het geldende tariefreglement; 
+                                                                    -       De personen die les krijgen worden door de lesgever opgehaald en teruggebracht naar het trefpunt: gang lockers; 
+                                                                    -       De zwemhal wordt enkel betreden in badkledij, Kinderen worden voor de duur van de les door de privé-lesgever opgevolgd.  Conform het Reglement voor Interne Orde worden de kinderen jonger dan 8 jaar voor en na de les begeleid door een volwassene; 
+                                                                    -       De exploitant van het zwembad behoudt zich het recht voor om de voorwaarden te wijzigen gedurende de duur van de registratieperiode. De geregistreerde lesgevers worden hierover per email geïnformeerd; 
+                                                                    -       De registratieperiode loopt van 1 september 2025 tot en met 31 augustus 2026; 
+                                                                    -       De richtlijnen van de redder worden gevolgd. 
+                                                                      
+                                                                    De lessen kunnen pas starten na de goedkeuring van het aanvraagformulier door de beheerder. Om de maximumcapaciteit van het zwembad te kunnen respecteren is er een limiet van 30 goedgekeurde privélesgevers. Lesgevers met een goedkeuring van het vorige sportjaar krijgen voorrang. 
+                                                                      
+                                                                    Naast de 26 lesgevers die een erkenning hebben voor 2025-2026 zullen er 4 lesgevers toegevoegd worden van de wachtlijst op 31/8/2025. De toekenning van deze extra erkenningen gebeurt op basis van woonplaats: lesgevers die op het grondgebied van Brakel wonen krijgen voorrang. Voor lesgevers buiten Brakel wordt de afstand tot het zwembad (Jagersstraat 68, 9660 Brakel) als criterium gebruikt. 
+                                                                      
+                                                                    Aanpassing 1 treed in werking vanaf 1 januari 2026 
+                                                                 
+                                                            """@nl ;
+    ns1:uuid "0b50f4e1-bdf1-50d3-9345-6ff988c9c774" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    De gemeenteraad neemt akte van de inhoudelijke aanpassing van het reglement 'kader privélesgever' en keurt dit goed. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "7684d5af-6965-5990-aab7-3e6f836aa393" ;
+    dcterms:title "Sportsite de Rijdt (zwembad). Kaderovereenkomst private lesgevers." .
+

@@ -1,0 +1,216 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/d424cf8f-85ae-4c7f-b1c5-377bde43fb34> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/01836431-9d81-4de5-92cc-a357e07baa6b>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/56ea51da-044d-4abe-a690-6f30b69a709f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9fe7cf44-005f-4896-a498-91cc86365d4f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c8291ebf-66ae-4475-bb11-648d3acd039d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/ebc36766-0621-4f90-82ca-f1276dc8b94f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> ;
+    ns2:geplandeStart "2025-05-26T15:10:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/0e627fd7-9f7d-4214-b8cf-940a6debd277> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "c8a7198e-939d-5fed-ada8-7afe153a3c6d" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-26T15:05:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a0cbb00d-de91-4c71-9437-fe34fe3b1c65> ;
+    ns2:openbaar false ;
+    ns3:uuid "bcbf71a1-34a3-5dad-81fe-031427deac3b" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Jaarmarkt op 6 juni, 7 juni en 9 juni 2025 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: Jaarmarkt Herne 2025 - 6 juni, 7 juni en 9 juni 2025" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "35025694-40df-5f13-84bb-88c3ce1000e3" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Markt op 6 juni, 7 juni en 9 juni 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 8u tot 22u:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        Vrijdag 6 juni van 15u00 tot zaterdag 7 juni tot 18u30 
+                                         
+                                            Voorsignalisatie: 
+                                             
+                                                borden 'Lokale feesten' op voet met oranje knipperlichten op volgende locaties: 
+                                                 
+                                                    Oude Steenweg (N255) op 200 meter van de jaarmarktweide, in beide richtingen 
+                                                 
+                                             
+                                            Snelheidsbeheersing: 
+                                             
+                                                Oude Steenweg (N255) C43 "50 km/u" op voet met oranje knippelicht op 300 meter van de jaarmarktweide in beide richtingen 
+                                                 
+                                                    tegenstrijdige signalisatie wordt afgedekt binnen deze perimeter 
+                                                 
+                                                Oude Steenweg (N255) C43 "30 km/u" op voet met oranje knipperlicht op 150 meter van de jaarmarktweide in beide richtingen 
+                                                 
+                                                    tegenstrijdige signalsiatie wordt afgedekt binnen deze perimeter 
+                                                 
+                                             
+                                            Veiligheid ter hoogte van de toegang tot de jaarmarktweide en de sanitaire voorzieningen aan de overkant van deze toegang: 
+                                             
+                                                10 meter voor en na deze denkbeeldige oversteekplaats wordt het bord A51 op voet geplaatst met oranje knipperlicht 
+                                                aan de denkbeeldige oversteekplaats wordt langs beide zijden van de weg een 'Victor Veilig' mannetje geplaatst om de oversteekplaats te signaleren 
+                                             
+                                         
+                                        
+                                            Maandag 9 juni 2024 van 06u00 tot 19u00:
+                                         
+                                        
+                                             
+                                         
+                                         
+                                            Snelheidsbeheersing: 
+                                             
+                                                Oude Steenweg (N255): C43 "50 km/u" op voet met oranje knipperlicht op 150 meter van het kruispunt van Hollestraat - C43 "30km/u" op voet met oranje knipperlicht op 300 meter van het kruispunt met Hollestraat 
+                                                Patriotsesteenweg (N255): C43 "50 km/u" op voet met oranje knipperlicht op 150 meter van het kruispunt van Geraardsbergsesteenweg (N495) - C43 "30km/u" op voet met oranje knipperlicht op 300 meter van het kruispunt met Geraardsbergsesteenweg (N495) 
+                                                Spoorwegstraat (N269): C43 " 30 km/u" op 150 meter van het kruispunt met Scherpstraat 
+                                             
+                                            Verboden toegang in beide richtingen voor iedere bestuurder op de: 
+                                             
+                                                Oude Steenweg (N255) ter hoogte van het kruispunt met Scheibeekstraat, kant Centrum: 
+                                                 
+                                                    nadar + C3 + type IV 'Uitgezonderd plaatselijk verkeer', F45, oranje bord 'Parking' en twee knipperlichten 
+                                                 
+                                                Oude Steenweg (N255) op 150 meter van Aubrakendries, kant Scheibeekstraat 
+                                                 
+                                                    New Jersey's op de rijbaan met centraal een doorgang van 4 meter opgevuld door nadars, C3 en twee knipperlichten 
+                                                 
+                                                Kapellestraat ter hoogte van de school, richting Centrum 
+                                                 
+                                                    New Jersey's op de rijbaan met centraal een doorgang van 4 meter opgevuld met nadars, C3 en twee knipperlichten 
+                                                 
+                                                Spoorwegstraat (N269) ter hoogte van het kruispunt met Rendries, kant Centrum 
+                                                 
+                                                    New Jersey's op de rijbaan met centraal een doorgang van 4 meter opgevuld met nadars, C3 en twee knipperlichten 
+                                                 
+                                                Lindestraat ter hoogte van het rusthuis 
+                                                 
+                                                    New Jerseys op de rijbaan met centraal een doorgang van 4 meter opgevuld met nadars, C3 en twee knipperlichten 
+                                                 
+                                                Grotestraat 150 meter voor kruispunt Lindestraat (parking voormalige school blijft toegankelijk) 
+                                                 
+                                                    New Jersey's op de rijbaan met centraal een doorgang van 4 meter opgevuld met nadars, C3 en twee knipperlichten 
+                                                 
+                                                Patriotsesteenweg (N255) ter hoogte van huisnummer 24 
+                                                 
+                                                    New Jersey's op de rijbaan met centraal een doorgang van 4 meter opgevuld met nadars, C3 en twee knipperlichten 
+                                                 
+                                             
+                                            Verboden toegang in beide richtingen voor iedere bestuurder, uitgezonderd plaatselijk verkeer, telkens voorzien van een nadar met C3, type IV 'uitgezonderd plaatselijk verkeer' en twee oranje knipperlichten: 
+                                             
+                                                Gessereyendries vanaf het kruispunt met de Boesmolenstraat tot aan het kruispunt met Oude Steenweg (N255) 
+                                                Kapellestraat vanaf het kruispunt met Ekkelenbergstraat rijrichting Centrum 
+                                                Hernebosstraat vanaf het kruispunt met Grotestraat tot het kruispunt met Patriotsesteenweg (N255) 
+                                                Patriotsesteenweg (N255) vanaf het kruispunt met Geraardsbergsesteenweg (N495) 
+                                                Barakkendries vanaf het kruispunt met Grotestraat tot het kruispunt met Patriotsesteenweg (N255) 
+                                                Hoogbaan ter hoogte van het kruispunt met Grotestraat tot het kruispunt met Barakkendries 
+                                                Diepestraat vanaf het kruispunt met Geraardsbergsesteenweg (N495) tot het kruispunt met Patriotsesteenweg (N255) 
+                                                Liezebeekwijk ter hoogte van het kruispunt met Kapellestraat (beide ingangen) 
+                                             
+                                            Omleidingen worden ingelegd middels F41 op voet ("omleiding") in: 
+                                             
+                                                Spoorwegstraat (N269) ter hoogte van het kruispunt met Scherpstraat in de richting van Galmaarden en in de richting van Geraardsbergsesteenweg (N495) via Breemstraat (N269)) 
+                                                Geraardsbergsesteenweg (N495) ter hoogte van het kruispunt met Breemstraat (N269) in de richting van Galmaarden (via Spoorwegstraat (N269)), in de richting van Geraardsbergsen en Edingen via Geraardsbergsesteenweg 
+                                                Rendries ter hoogte van het kruispunt met Geraardsbergsesteenweg (N495) in de richting van Geraardsbergen en Edingen via Geraardsbergsesteenweg 
+                                                Geraardsbergsesteenweg (N495) ter hoogte van het kruispunt met Diepestraat in de richting van Geraardsbergen en Edingen via Geraardsbergsesteenweg (N495) 
+                                                Patriotsesteenweg (N255) ter hoogte van het kruispunt met Geraardsbergsesteenweg (N495) in de richting van Geraardsbergen en Edingen via Geraardsbergsesteenweg 
+                                                Lindestraat ter hoogte van het kruispunt met Aerebeekstraat in richting van Ekkelenbergstraat (via Aerebeekstraat) en in de richting van Kokejane (via Van Cauwenberghelaan) 
+                                                Steenweg Asse (N285) ter hoogte van het rondpunt, kant Van Cauwenberghelaan, in de richting van Gooik en Edingen via Steenweg Asse (N285) 
+                                                Steenweg Asse (N285) ter hoogte van het rondpunt kant Kokejanestraat in de richting van Gooik en Edingen via Steenweg Asse (N285) 
+                                                Edingsesteenweg (N285) ter hoogte van het kruispunt met Langestraat (N272) in de richting van Vollezele en Edingen 
+                                                Langestraat (N272) ter hoogte van het kruispunt met Ninoofsesteenweg (N255) in de richting van Ninove en Kester 
+                                             
+                                            Verboden richting voor iedere bestuurder (C1) en openbare weg met eenrichtingsverkeer (F19) 
+                                             
+                                                Algemeen: met ieder verkeersbord C1 dat bij het begin van een wegvak met verboden richting geplaatst is, moet op het uiteinde een F19 overeenkomen, rechts in de rijrichting geplaatst. Straten die aantakken op de wegvakken waar eenrichtingsverkeer geldt, worden voorzien van het bord C31a of b. 
+                                                Aerebeekstraat: verboden rijrichting vanaf het kruispunt met Processiestraat tot aan het kruispunt met Lindestraat (uitgez. Busverkeer De Lijn) 
+                                                Ommegangstraat: verboden rijrichting vanaf het kruispunt met Ekkelenbergstraat tot het kruispunt met Aerebeekstraat (uitgez. Busverkeer De Lijn) 
+                                                Hoogbaan: verboden rijrichting vanaf het kruispunt met Barakkendries tot het kruispunt met Grotestraat 
+                                                Barakkendries: verboden rijrichting vanaf het kruispunt met Grotestraat tot het kruispunt met Edingsesteenweg (N255) 
+                                             
+                                            Stilstaan- en parkeerverbod wordt ingelegd middels E3, Type V, Xa, Xb, Xc, Xd op voet in volgende straten, langs beide zijden, tenzij anders aangegeven: 
+                                             
+                                                Aerebeekstraat: vanaf Lindestraat tot Ommegangstraat, langs beide zijden 
+                                                Ommeganstraat: vanaf Aerebeekstraat tot kruispunt Ekkelenbergstraat, langs beide zijden 
+                                                Heldenplein: alle parkeerplaatsen op de gelijkgrondse berm 
+                                                Oude Steenweg: vanaf het kruispunt met Centrum tot 50 meter voorbei het kruispunt met Aubrakendries 
+                                                Bloemendaelstraat 
+                                                Grotestraat: vanaf het kruispunt met Lindestraat tot aan de voormalige school 
+                                                Rendries: vanaf het kruispunt met Stationsstraat (N269) tot het kruispunt met Klein-Breemstraat (N269) langs de linkerzijde in de richting van Klein-Breemstraat 
+                                                Barakkendries 
+                                                Hoogbaan 
+                                                Liezebeekwijk: vanaf het kruispunt met de Kapellestraat (dicht bij het Centrum gelegen) tot het kruispunt met Oude Steenweg (N255) 
+                                                Hernebosstraat 
+                                                Centrum: alle parkeerplaatsen, inclusief het kaatsplein aan het gemeentehuis 
+                                                Centrum en Lindestraat, tot aan het kruispunt met Aerebeekstraat 
+                                                Spoorwegstraat (N269): vanaf het kruispunt met Oude Steenweg (N255) tot 50 meter voorbij het kruispunt met Scherpstraat 
+                                                Patriotsesteenweg (N255) vanaf het kruispunt met Oude Steenweg (N255) tot 50 meter voorbij Patriotsesteenweg 26 
+                                                Parking rusthuis (nadars met twee knipperlichten) 
+                                                Kapellestraat: vanaf het kruispunt met Oude Steenweg (N255) tot het kruispunt met Liezebeekwijk 
+                                                Parking Markevallei: volledige inname voor parking hulpdiensten/mindervaliden/etc. 
+                                             
+                                            Voorsignalisatie 
+                                             
+                                                Middels borden "Centrum Herne niet bereikbaar" op volgende locaties: 
+                                                 
+                                                    Grondgebied Vollezele op Oude Steenweg (N255) ter hoogte van de verkeerslichten 
+                                                    Grondgebied Tollembeek: Hernestraat ter hoogte van kruispunt met Plaats 
+                                                    Patriotsesteenweg (N255): 50 meter voor het kruispunt met Geraardsbergsesteenweg (N2495) 
+                                                    Geraardsbergsesteenweg (N495): ter hoogte van het kruispunt met Breemstraat (N269) 
+                                                    Grondgebied Gooik: Edingsesteenweg (N285) ter hoogte van het kruispunt met Langestraat (N272) 
+                                                    Grondgebied Edingen: Steenweg Asse (N285) ter hoogte van gemeentegrens met Edingen 
+                                                 
+                                                Middels borden 'Lokale feesten' 
+                                                 
+                                                    Oude Steenweg (N255): ter hoogte van de gemeentegrens, circa 200 meter voor Scheibeekstraat 
+                                                    Patriotsesteenweg (N255): ter hoogte van het kruispunt met Barakkendries 
+                                                    Spoorwegstraat (N269): ter hoogte van het kruispunt met Oude-Stationsstraat 
+                                                    Lindestraat ter hoogte van het Parochiaal Centrum 
+                                                 
+                                                Toegankelijk voor hulpdiensten 
+                                                 
+                                                    Een invalsweg is voorbehouden voor de hulpdiensten via Kapellestraat, Ekkelenbergstraat, Scheibeekstraat, Oude Steenweg (richting Ninove), en via Kapellestraat, Ekkelenbergstraat, Barakkenbergstraat en Steenweg Asse (N285) (richting Edingen). De betonnen palen ter hoogte van Oude Steenweg (N255) en Liezebeekwijk worden door de gemeentelijke technische dienst tijdelijk weggehaald en vervangen door verwijderbare palen. De organisatoren van de jaarmarkt moeten er op toezien dat ter hoogte van de verbindingsweg geen kramen, noch andere obstakels worden geplaatst. De Liezebeekwijk wordt volledig parkeervrij gehouden. 
+                                                 
+                                             
+                                          
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> a ns2:Agendapunt ;
+    ns3:uuid "b74d7cdf-9761-5bcf-a0d3-6292bad495ff" .
+

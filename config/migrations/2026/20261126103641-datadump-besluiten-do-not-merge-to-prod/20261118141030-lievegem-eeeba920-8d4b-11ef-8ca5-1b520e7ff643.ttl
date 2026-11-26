@@ -1,0 +1,97 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6219e70b-a11d-41ee-932f-1de6fab63f66> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/056ce378-80ad-465c-a6ff-9e7f427b43dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06808dec-0883-41a9-932f-4e1dbfce464f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/21dd7ca5-0fbf-4795-80c5-34655d129dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5e8d9624-6fc9-4220-acdb-affac1d4f5bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b55312b-f388-42d7-913b-1b7fa2fe03d4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc1d2c8-5d20-4607-ab4b-a96ad7d3adc2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b50e7bb5-a505-44ae-8207-2fb21ca780d5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c251bdc4-9793-405e-8b78-c3e0ee673f9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c451ff4b-94fa-477b-8baa-81e0be4bd852>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cec759f6-1f78-4c21-8314-2aff4bd2401f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4c0bf94-9863-4204-bf32-7c7993067dae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0d592ac-a567-4638-9ba8-411d725bfa74>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2855dc5-1bda-4127-9e37-67f9c96edd0c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ff83b9b0-0723-48bf-9870-b6fa200fc786> ;
+    ns1:geplandeStart "2023-09-14T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a816a351-bad7-4bdf-893d-8c0a30fd5f67> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3477a3ff-0a8d-4b85-bf05-16027e5dd5f5> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fcf42403-2747-4b3b-a2b4-cffcfa393785> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e72ca0e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-09-14T21:26:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-09-14T20:01:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b50e7bb5-a505-44ae-8207-2fb21ca780d5> ;
+    ns1:openbaar true ;
+    ns2:uuid "eeea2280-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7f654238-f574-483d-b87b-d76ea4db3f04> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7f654238-f574-483d-b87b-d76ea4db3f04> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt het ontwerp rooilijnplan voor de gedeeltelijke wijziging (verlegging) van de buurtwegen (voetwegen) 61 en 64 Lovendegem, met name het deel tussen Meienbroek en de Bredestraat, voorlopig vast en belast het college met het voeren van een openbaar onderzoek over het ontwerp rooilijnplan. De gemeenteraad keurt het grondinnemingsplan voor de realisatie van de gedeeltelijke wijziging (verlegging) van de buurtwegen (voetwegen) 61 en 64 Lovendegem goed en verzoekt de dienst Vastgoedstransacties om deze grondinnemingen ten behoeve van de gemeente te realiseren. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Voetwegen 61 en 64 Lovendegem - gedeeltelijke verplaatsing - rooilijnplan - grondinnemingsplan: voorlopige vaststelling" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepenVincent Laroy, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingenHet decreet van 19 december 2014 over de Vlaamse Vastgoedcodex, waarbij de bevoegdheid van de Vlaamse commissarissen werd vastgelegd tot het uitvoeren van bepaalde vermogensrechterlijke verrichtingen in naam en voor rekening van het Vlaamse Gewest, de Vlaamse Gemeenschap, de Vlaamse gemeenschaps- en gewestinstellingen en bepaalde entiteiten zoals de gemeentenHet decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Het decreet van 3 mei 2019 over de gemeentewegenHet besluit van de gemeenteraad Lovendegem van 28 augustus 2014 met de goedkeuring van het trage wegenplan LovendegemHet besluit van de gemeenteraad Lovendegem van 25 oktober 2018 met de voorlopige vaststelling van het rooilijnplan voor de gedeeltelijke verlegging van de buurtwegen 61 en 64Het besluit van het college van 27 december 2022 met de principiële goedkeuring van het ontwerp rooilijnplan en het grondinnemingsplan voor de verlegging en verbreding van de voetwegen 61 en 64  
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad van Lovendegem keurde op 28 augustus 2014 de adviesnota trage wegen met bijhorend trage wegenplan en actieplan goed. In het trage wegenplan van Lovendegem was de verbreding, de gedeeltelijke verlegging en de heropening van de voetwegen 61 en 64 als actie 4a opgenomen (zie bijlage).Actie 4.a van dit actieplan trage wegen luidt als volgt: "Verbinding Meienbroek-Bredestraat (trage wegen nrs. 20, 21a, 22 en 22a = delen van buurtwegen 61 en 64) - Onderzoek van deze trage wegen met het doel deze wegen te (her)openen of te verleggen om een veilig alternatief traject voor fietsers en wandelaars te bieden voor de N9. Na onderzoek opmaak van een inrichtings- en uitvoeringsplan."Na onderzoek en overleg met de betrokken eigenaars bleken deze mondeling principieel akkoord met het verleggen en heropenen van een deel van de buurtwegen (voetwegen) 61 en 64, zodat er een trage weg in gebruik kan worden genomen tussen Meienbroek en de Bredestraat.Dit principieel akkoord omvat de vrijwillige verkoop aan de gemeente van een strook grond aan de rand van de betrokken percelen met een breedte variërend van 2 m tot 2,5 m en het verleggen van delen van de buurtwegen 61 en 64 (publieke erfdienstbaarheden van 1 m breedte) aansluitend op de te verkopen strook grond. 
+                                                            Landmeter Erik Biebuyck, Bierstal 39 te 9920 Lievegem maakte hiertoe in 2018 een opmetingsplan, een grondinnameplan en een ontwerp rooilijnplan op.De grondiname van in totaal 1.401 m² werd op 23 november 2018 door Vastgoedtransacties geschat op 15.000 euro (zie bijlage). 
+                                                            Het ontwerp rooilijnplan werd voorlopig vastgesteld door de gemeenteraad op 25 oktober 2018 (zie bijlage). 
+                                                            Tijdens het openbaar onderzoek van het voorlopig vastgestelde rooilijnplan maakte de provincie heel wat opmerkingen waardoor het rooilijnplan moest herwerkt worden.Door de fusie heeft dit dossier vertraging opgelopen.Bovendien is de regelgeving op de rooilijnplannen gewijzigd (gemeentewegendecreet van 3 mei 2019).In november 2022 herwerkte landmeter Erik Biebuyck het rooilijnplan (zie deel noord en deel zuid in bijlage). Het grondinnameplan bleef ongewijzigd.De provincie leverde een gunstig préadvies bij het herwerkte ontwerp rooilijnplan af op 13 december 2022 (zie bijlage).De Watering De Burggravenstroom leverde een voorwaardelijk gunstig advies bij het herwerkte ontwerp rooilijnplan af op 8 juni 2023 (zie bijlage). De verlegde voetweg 61 is immers deels op de oever van de onbevaarbare waterloop O302 - Centerloop gesitueerd. 
+                                                            Volgende plannen, opgemaakt door landmeter Erik Biebuyck, worden heden voorgelegd aan de gemeenteraad: 
+                                                            - het opmetingsplan van 11 mei 2018.- het ontwerp rooilijnplan van 6 januari 2023 (deel N en deel Z).- het grondinnemingsplan van 6 januari 2023. 
+                                                            Er wordt voorgesteld om aan de dienst Vastgoedstransacties de opdracht te geven om de gronden te verwerven. 
+                                                            Het ontwerp rooilijnplan wordt als volgt gemotiveerd: 
+                                                            1. Het algemeen belang van de trageweggebruikers wordt niet geschonden. Door de voorgestelde verplaatsing ontstaat opnieuw een functionele tragewegverbinding tussen Meienbroek en de Bredestraat. Langs de Bredestraat loopt een lokale, functionele fietsroute. 
+                                                            2. De beoogde voetwegverplaatsing en verbreding maken het herstel (heropening) van een functionele tragewegverbinding tussen Meienbroek en de Bredestraat mogelijk. 
+                                                            3. De beoogde voetwegverplaatsing en verbreding zijn gunstig voor de verkeersveiligheid. Deze tragewegverbinding biedt immers een veilig alternatief traject voor fietsers en voetgangers voor de gewestweg N9 (Grote Baan). Fietsers en voetgangers komende van Meienbroek kunnen via deze tragewegverbinding, de Bredestraat, de Hazelaarstraat en Binnenslag de N9 veilig oversteken aan de verkeerslichten. 
+                                                            4. De betrokken voetwegen zijn als actuele gemeentewegen niet gemeentegrensoverschrijdend. 
+                                                            5. De actuele verbindings- en ontsluitingsfuncties van de voetwegen 61 en 64 en buurtweg 61 blijven behouden en de behoeften van de toekomstige generaties worden gevrijwaard. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            In het meerjarenplan 2020 - 2025 is voor de aankoop van de gronden voor de realisatie van de verlegging en verbreding van de voetwegen tussen de Bredestraat en Meienbroek een krediet voorzien van €15.000 onder jaarbudgetrekening 2023/ACT-007/0600-00/2200000/GEMEENTE/CBS/IP-GEEN. Dit krediet is gebaseerd op een schatting door Vastgoedtransacties van 23 november 2018 (zie bijlage). Op basis van een recent advies van de dienst Vastgoedtransacties zal voorgesteld worden om het krediet bij de meerjarenplanaanpassing 4 te verhogen naar €18.000. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "eeeba920-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1Het ontwerp rooilijnplan voor de gedeeltelijke wijziging (verlegging) van de buurtwegen (voetwegen) 61 en 64 Lovendegem, met name het deel tussen Meienbroek en de Bredestraat, wordt voorlopig vastgesteld. Artikel 2Het college van burgemeester en schepenen wordt belast met het voeren van een openbaar onderzoek over het ontwerp rooilijnplan, volgens artikel 17 §2 van het gemeentewegendecreet, waarna de gemeenteraad een definitieve beslissing zal nemen over dit ontwerp rooilijnplan.Artikel 3Het grondinnemingsplan voor de realisatie van de gedeeltelijke wijziging (verlegging) van de buurtwegen (voetwegen) 61 en 64 Lovendegem wordt goedgekeurd.  
+                                                            Artikel 4De dienst Vastgoedstransacties van de Vlaamse overheid wordt verzocht deze grondinnemingen ten behoeve van de gemeente te realiseren. De ambtenaren van de dienst Vastgoedtransacties worden gemachtigd alle handelingen te stellen, onderhandelingen te voeren, ontwerp akten op te maken en na goedkeuring door de gemeenteraad de akten te laten verlijden, om de verwerving van deze gronden tot een goed einde te brengen. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e72d3d20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Voetwegen 61 en 64 Lovendegem - gedeeltelijke verplaatsing - rooilijnplan - grondinnemingsplan: voorlopige vaststelling" .
+

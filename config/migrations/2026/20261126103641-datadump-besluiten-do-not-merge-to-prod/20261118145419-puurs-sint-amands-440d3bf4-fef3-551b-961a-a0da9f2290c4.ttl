@@ -1,0 +1,185 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/035dd634-3ca5-40ee-87e2-93176f8113e2> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/112d513a-bf2a-4818-a34a-8633890f0a10>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2b822a59-5b79-46cc-8a46-9f3656b59e78> ;
+    ns1:geplandeStart "2026-06-16T20:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/29d16505-3a56-4e99-a9d0-649276b186f5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "527ce5e3-f1e8-5a38-8023-6744420464b2" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-06-16T20:37:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/112d513a-bf2a-4818-a34a-8633890f0a10> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e37a3afa-8600-4020-a77d-7c6baf5a1310> ;
+    ns1:openbaar false ;
+    ns3:uuid "b795c598-37a5-5376-abf2-51dd68dd3d77" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/112d513a-bf2a-4818-a34a-8633890f0a10> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/112d513a-bf2a-4818-a34a-8633890f0a10> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/112d513a-bf2a-4818-a34a-8633890f0a10> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e8afe7c5-9640-4db8-8f74-3f023bec3241> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands – Aanpassingen op basis van inwerkingtreding nieuw strafwetboek" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De Algemene Bestuurlijke Politieverordening (ABP) Puurs-Sint-Amands wordt jaarlijks aangepast in het najaar, waarbij de vernieuwde versie in werking treedt op 1 januari van het volgende jaar.  
+                                    In februari 2024 werden er belangrijke wijzigingen doorgevoerd in het strafwetboek. Deze hebben ook een gevolg voor de GAS-wetgeving (en dus de ABP). De inwerkingtreding van het nieuwe strafwetboek wordt voorzien op 1 september 2026. Om te vermijden dat bepaalde gedragingen onbestraft blijven, is het noodzakelijk om de ABP tegen die datum aan te passen.  
+                                    Aan het college van burgemeester en schepenen wordt gevraagd 
+                                     
+                                        zich akkoord te verklaren met de voorgestelde wijzigingen van de ABP (zoals opgenomen in het document als bijlage) 
+                                        het agendapunt met betrekking tot de goedkeuring van de gewijzigde ABP door te verwijzen naar de eerstvolgende gemeenteraad. 
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                        Volgende bevoegdheidsgrond en regelgeving is van toepassing: 
+                                        Bevoegdheidsgrond 
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                         
+                                        Toepasselijke regelgeving 
+                                     
+                                     
+                                        de Nieuwe Gemeentewet, artikel 119, 119bis en 135 §2 
+                                        de Wet van 24 juni 2013 betreffende de gemeentelijke administratieve sancties, inclusief latere wijzigingen 
+                                        de Omzendbrief van 22 juli 2014 waarbij uitleg wordt verschaft bij de nieuwe regelgeving aangaande de gemeentelijke administratieve sancties 
+                                        het strafwetboek van 8 juni 1867 en latere wijzigingen, in het bijzonder de wijzigingen die werden aangebracht in februari 2024 en die in werking zullen treden op 8 april 2026 
+                                        de Gemeenteraadsbeslissing van 4 maart 2024 met als titel Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands – Goedkeuring 
+                                        de Gemeenteraadsbeslissing van 16 december 2024 met als titel Herziening Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands – inwerkingtreding 1 januari 2025 
+                                        de Gemeenteraadsbeslissing van 15 december 2025 met als titel Herziening Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands – inwerkingtreding 1 januari 2026. 
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                    Gelet op het feit dat deze aanpassingen voor 1 september 2026 dienen geagendeerd te worden op de gemeenteraad en er tijdens de maanden juli en augustus geen gemeenteraden plaatsvinden, kon voor de nieuwe artikelen in de ABP het advies van de jeugdraad niet gevraagd worden. Het advies van de jeugdraad zal daarom bij de volgende herziening (gepland in het najaar van 2026) gevraagd worden. 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De meest actuele versie van de Algemene Bestuurlijke Politieverordening (ABP) Puurs-Sint-Amands werd goedgekeurd door de gemeenteraad van 15 december 2025 en trad in werking op 1 januari 2026.  
+                                    In februari 2024 werden er belangrijke wijzigingen doorgevoerd in het strafwetboek. De invoering van het nieuw strafwetboek heeft ook een impact op de GAS-wetgeving, meer bepaald op volgende punten: 
+                                    1. De politiestraffen verdwijnen 
+                                    Dit betekent dat gemeenten voor de handhaving van hun lokale politieverordeningen voortaan enkel nog kunnen kiezen voor GAS-sancties en niet meer voor politiestraffen. 
+                                    In het verleden werd door de gemeente Puurs-Sint-Amands reeds de keuze gemaakt om te werken met GAS-sancties en niet (meer) met politiestraffen. Deze wijziging heeft dus geen gevolg voor onze GAS-werking of de inhoud van de ABP.  
+                                    2. Een aantal misdrijven die momenteel aparte gemengde inbreuken zijn, worden samengebracht in één allesomvattende bepaling met gewijzigde omschrijving “vandalisme” 
+                                    Dit houdt in dat de gemengde inbreuken die momenteel zijn opgenomen in de ABP gewijzigd moeten worden naar de bepalingen en omschrijvingen van het nieuwe strafwetboek. Hiervoor diende echter eerst de GAS-wet van 24 juni 2013 te worden gewijzigd. In deze wet worden immers de gemengde inbreuken inhoudelijk opgesomd. 
+                                    Deze noodzakelijke wijziging van de GAS-wet werd op 30 april 2026 gestemd in de Kamer van Volksvertegenwoordigers. De wet moet nu nog bekrachtigd en afgekondigd worden door de Koning en gepubliceerd in het Belgisch Staatsblad. Deze handelingen zullen echter geen inhoudelijke wijzigingen meer kunnen teweeg brengen aan de wetswijziging, waardoor de aanpassingen wel reeds kunnen worden doorgevoerd in de ABP Puurs-Sint-Amands en we op datum van inwerkingtreding van het nieuwe strafwetboek kunnen beschikken over een juridisch correcte lokale politieverordening. 
+                                    Het gaat meer bepaald om volgende gemengde inbreuken in de ABP Puurs-Sint-Amands: 
+                                     
+                                         
+                                             
+                                                artikel 19bis (graffiti) 
+                                             
+                                         
+                                     
+                                    Dit artikel wordt opgeheven en mee opgenomen in een nieuw artikel 87/2 met betrekking tot vandalisme 
+                                     
+                                         
+                                             
+                                                artikel 84 (beledigingen) 
+                                             
+                                         
+                                     
+                                    De verwijzing naar de bepalingen van het oude SWB wordt geschrapt en er wordt een nieuw artikel 83bis ingevoerd met nieuwe bepalingen met betrekking tot beledigingen 
+                                     
+                                         
+                                             
+                                                artikel 84/1 (diefstallen) 
+                                             
+                                         
+                                     
+                                    De artikelnummers van het SWB worden aangepast op basis van het nieuwe SWB en er worden enkele aanpassingen doorgevoerd in functie van de duidelijkheid van het artikel 
+                                     
+                                         
+                                             
+                                                artikel 87 + 87/1 + 87bis + 87ter + 87quater + 87quinquies + 87sexies (vernielingen) 
+                                             
+                                         
+                                     
+                                    De oude artikelen worden geschrapt. Alle bepalingen worden gegroepeerd in twee nieuwe artikelen met betrekking tot vandalisme (artikel 87/2 en 87/3). 
+                                     
+                                         
+                                             
+                                                artikel 87septies (slagen of verwondingen) 
+                                             
+                                         
+                                     
+                                    De artikelnummers van het SWB worden aangepast op basis van het nieuwe SWB en de omschrijving van het feit wordt aangepast aan de nieuwe bepalingen. 
+                                     
+                                         
+                                             
+                                                artikel 104 + 105 + 106 + 107 (vermommingen) 
+                                             
+                                         
+                                     
+                                    De algemene omschrijving wordt gewijzigd naar “Verbod van gezichtsbedekking in de open ruimte”. De artikelnummers van het SWB en de bijhorende terminologie worden aangepast op basis van het nieuwe SWB.  
+                                     3. Een aantal overtredingen worden gedepenaliseerd 
+                                    Een aantal inbreuken zullen vanaf 1 september 2026 niet meer strafbaar zijn in het strafwetboek. Om straffeloosheid voor deze inbreuken te vermijden, kan de gemeente deze handelingen opnemen als een (niet-gemengde) GAS1-inbreuk. 
+                                    Het gaat meer bepaald om volgende inbreuken: 
+                                     
+                                         
+                                             
+                                                feitelijkheden en lichte gewelddaden   (artikel 83 ABP) 
+                                             
+                                         
+                                     
+                                    Deze inbreuken worden gedepenaliseerd voor zover de gestelde handelingen geen link hebben met een lichamelijk letsel, pijn of schade aan de gezondheid. Hierbij kan bijvoorbeeld gedacht worden aan: 
+                                     
+                                         
+                                             
+                                                 
+                                                     
+                                                        het in de war brengen van iemands kapsel; 
+                                                        het afnemen van iemands hoed en die op de grond gooien; 
+                                                        het uit de handen trekken van een voorwerp; 
+                                                        niespoeder, jeukpoeder of een stinkbom werpen; 
+                                                        trekken aan iemands kledij; 
+                                                        iemand begieten met water of olie; 
+                                                        het bevuilen van iemands kledij; 
+                                                        het werpen van een voorwerp op iemand. 
+                                                     
+                                                 
+                                             
+                                         
+                                     
+                                    De aanpassingen die werden doorgevoerd in artikel 83 van de ABP dekken – weliswaar in meer eigentijds taalgebruik – de gedepenaliseerde bepalingen.  
+                                     
+                                         
+                                             
+                                                nachtlawaai    (artikel 148 en 150 ABP) 
+                                             
+                                         
+                                     
+                                    Artikel 148 wordt aangepast in het kader van de depenalisering. Er wordt verduidelijkt wat onder de term ‘nachtlawaai’ kan vallen en voor welke situaties het artikel niet van toepassing is. 
+                                    In artikel 150 wordt een uitzondering geschrapt, aangezien deze reeds werd opgenomen in het nieuwe artikel 148.  
+                                    Aanvullend worden nog twee bijkomende aanpassingen doorgevoerd aan de ABP: 
+                                    1. Toevoegen van een nieuw artikel rond zegelverbreking 
+                                    Artikel 39 van de Wet Bestuurlijke Handhaving van 15 januari 2024 voegt een nieuw artikel 133ter toe aan de Nieuwe Gemeentewet. In de eerste paragraaf van dit artikel wordt de bestuurlijke verzegeling van een inrichting door de burgemeester opgenomen. 
+                                    In de lokale ABP wordt een nieuw artikel 110bis ingevoerd, dat bepaalt dat het verbreking van een verzegeling gesanctioneerd kan worden met een gemeentelijke administratieve sanctie.  
+                                    2. Schrappen van het protocolakkoord GAS2 en GAS3 als bijlage aan de ABP 
+                                    Het protocolakkoord GAS2 en GAS3 werd tot op heden toegevoegd als bijlage aan de ABP. Dit protocolakkoord dient aangepast te worden op basis van de bepalingen van het nieuwe SWB. We ontvingen echter de informatie dat het parket momenteel onderzoekt om de protocolakkoorden GAS2 en GAS3 te uniformiseren over de verschillende arrondissementen heen, maar dat deze oefening pas later op het jaar gefinaliseerd zal zijn. Om te vermijden dat de volledige ABP opnieuw op de gemeenteraad moet verschijnen ter goedkeuring, wordt het protocolakkoord vanaf heden opgenomen als apart document (zoals ook met de andere protocolakkoorden gebeurde). De aanpassing van het protocolakkoord wordt opgenomen als een apart agendapunt. 
+                                 
+                            """@nl ;
+    ns3:uuid "440d3bf4-fef3-551b-961a-a0da9f2290c4" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1.  Het college verklaart zich akkoord met de voorgestelde wijzigingen aan de Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands.  
+                                    Artikel 2. Het college verwijst het agendapunt met betrekking tot de goedkeuring van de gewijzigde Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands door naar de eerstvolgende gemeenteraad. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/112d513a-bf2a-4818-a34a-8633890f0a10> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/112d513a-bf2a-4818-a34a-8633890f0a10> a ns1:Agendapunt ;
+    ns3:uuid "311d988c-3514-5db8-b33b-56f50f459e5a" .
+

@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns1:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/599c0456-02cd-4477-b778-ae2408de18fa> ;
+    ns1:openbaar true ;
+    ns2:uuid "08106a14-5702-5830-8359-db2651481184" ;
+    dcterms:description """ 
+                                                             
+                                                                Het aangetekend schrijven d.d. 13 oktober 2025 van IVLA omtrent de uitnodiging aan de gemeente Brakel tot deelname aan de Buitengewone Algemene Vergadering d.d. 11 december 2025 om 19u00. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Samenwerkingsverbanden. IVLA. Uitnodiging Buitengewone Algemene Vergadering d.d. 11 december 2025. Goedkeuring." ;
+    ns1:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Het Decreet Lokaal Bestuur van 22 december 2017, deel 3; 
+                                                                    Het Raadsbesluit d.d. 03 februari 2025 betreffende de aanstelling vertegenwoordiger en plaatsvervanger voor de algemene vergadering; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Het aangetekend schrijven d.d. 13 oktober 2025 van IVLA omtrent de uitnodiging aan de gemeente Brakel tot deelname aan de Buitengewone Algemene Vergadering d.d. 11 december 2025 om 19u00 te Ronse. 
+                                                                    Het Raadsbesluit d.d. 03 februari 2025 betreffende de aanstelling vertegenwoordiger en plaatsvervanger voor de algemene vergadering; 
+                                                                    De bijgevoegde agenda van voormelde vergadering zijnde: 
+                                                                    1.   Beleidsnota IVLA 2026 
+                                                                    2.   Begroting IVLA 2026 
+                                                                    3.   Varia 
+                                                                    Het College van Burgemeester en Schepenen d.d. 20 oktober 2025 nam kennis van deze uitnodiging en stelt voor om voormelde agenda goed te keuren. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "4f00ade3-7c43-57c4-8642-d78cd1658b68" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Art. 1: De agenda van de Buitengewone Algemene Vergadering d.d. 11 december 2025 van IVLA wordt goedgekeurd. 
+                                                                    Art. 2: De vertegenwoordiger van de gemeente die zal deelnemen aan de Buitengewone Algemene Vergadering wordt opgedragen hun stemgedrag af te stemmen op de beslissing genomen zoals in artikel 1 van dit besluit.  
+                                                                    Art. 3: Afschrift van deze beslissing zal toegestuurd worden aan het secretariaat van IVLA - info@ivla.be. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e4c722a9-469d-5ca1-bb66-b420d7bb4025" ;
+    dcterms:title "Samenwerkingsverbanden. IVLA. Uitnodiging Buitengewone Algemene Vergadering d.d. 11 december 2025. Goedkeuring." .
+

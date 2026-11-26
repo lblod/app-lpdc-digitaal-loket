@@ -1,0 +1,115 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/20d28bb5-807d-4186-9b8c-689e0489d460> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0d5a217c-c525-4e44-8013-3a8793791c88>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20b5e72e-9354-4170-98a3-c05c4e977881>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/37ce7e8a-c85d-431f-b3b1-4ef0d7cdfc5b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/39e4d294-dce8-4a6d-b36b-adab96e5b270>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/49410121-aef1-4042-b4f4-14aef82f264e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52422d96-ab04-4dae-aa8c-f8ea19b24f71>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/526a42ab-4198-41a6-9b39-98502758bf39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5a1c70ee-9069-4c19-bb17-7283f3198599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63b209a3-f5d7-4935-a37f-b64cb99e8f09>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/67c3237c-605e-4d1d-956b-38d93832a2af>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7355b519-e12c-412f-bdee-376d8a1dbac7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76c10515-311c-4a8e-97aa-b1383f959784>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bb5c221-724b-4edc-961b-b27f1cfddca6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/80391454-10c4-453b-9b8f-6e3f5eec2653>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8d722b2a-54c6-4cc1-ad13-058b5e6be17c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8fb7032d-2fa5-40f0-949b-e2fca027c07c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92755a1e-88d0-4d80-bf7f-05b9e7158bf5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/96f8b747-94cf-489d-93a8-36447215c1a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9dbbd1cc-1767-4669-88c7-c7c7c1678702>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a37a1dd9-22a8-45c9-8eff-269a0670589d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a522cfb9-9568-4db8-a6af-d0af935fb996>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5be802e-4cc9-4c38-977f-fdb6f3b04188>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a77b4fe2-987e-481c-8e85-a74f29837a69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aaf15f5e-c92c-4ddc-aceb-96527f71d48c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b451b262-4244-408b-b5c3-d83e0c8ef95e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd23b2fa-0997-43f2-8d2b-ed99b62d7ffb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd92fff3-77ca-41fb-a39d-3dbefc3df099>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d97b397e-04c9-4cee-a615-d87c20e939f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dbc8fd54-1dcb-4e9d-a8c1-2b2bbd70b039>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e53a82bc-8ac7-4963-a32c-d7afe35917ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f53ca798-c48a-41e7-9b15-c1f5daec8513>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f89c6e85-2216-4d01-a677-be26d437b23f> ;
+    ns1:geplandeStart "2021-09-15T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ab677b54-776e-4473-8db7-186edde3daab> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5b49bd77-10b9-4ede-a1cf-382ae765e5d9> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/21b852cd-eb6e-4187-9409-6b5402b5c378> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e92563a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2021-09-15T20:43:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-09-15T20:02:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/49410121-aef1-4042-b4f4-14aef82f264e> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/80391454-10c4-453b-9b8f-6e3f5eec2653> ;
+    ns1:openbaar true ;
+    ns3:uuid "e94065b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/49410121-aef1-4042-b4f4-14aef82f264e> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/49410121-aef1-4042-b4f4-14aef82f264e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/49410121-aef1-4042-b4f4-14aef82f264e> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad bekrachtigt de beslissing van het college tot goedkeuring van het addendum bij de samenwerkingsovereenkomst met het Vlaams Agentschap Zorg en Gezondheid in het kader van het besluit van de Vlaamse Regering van 16 juli 2021 tot toekenning van een subsidie aan de lokale besturen om de bronopsporing ter bestrijding van de COVID-19 pandemie te versterken – optie 1. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Besluit van het college van burgemeester en schepenen van 17 augustus 2021 houdende goedkeuring COVID-19 projectsubsidie tracing - verlenging keuze optie 1 : bekrachtiging" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Tony Vermeire, burgemeesterHilde De Graeve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41, 5° over de bevoegdheden van de gemeenteraad inzake het goedkeuren van beheersovereenkomsten en samenwerkingsovereenkomsten 
+                                                            Besluit van de Vlaamse Regering van 13 november 2020 tot toekenning van een subsidie aan de lokale besturen om de contact- en bronopsporing ter bestrijding van de Covid-19-pandemie te versterken 
+                                                            Besluit van het college van burgemeester en schepenen van 11 augustus 2020 over de goedkeuring deelname aan contactopvolging COVID-19-team - keuze scenario 2 
+                                                            Besluit van het college van burgemeester en schepenen van 8 december 2020 en besluit van de gemeenteraad van 27 januari 2021 over de goedkeuring bij hoogdringendheid van de COVID-19 projectsubsidie tracing - keuze optie 1 en samenwerkingsovereenkomst met het Vlaams Agentschap Zorg en Gezondheid 
+                                                            Besluit Vlaamse Regering 13 november 2020 tot toekenning van een subsidie aan de lokale besturen om de contact- en bronopsporing ter bestrijding van de COVID-19-pandemie te versterken. 
+                                                            Besluit van het college van burgemeester en schepenen van 13 april 2021 en het besluit van de gemeenteraad van 28 april 2021 over de goedkeuring COVID-19 projectsubsidie tracing -verlenging keuze optie 1 
+                                                            Besluit van de Vlaamse regering van 23 april 2021 tot toekenning van een subsidie aan de lokale besturen om de bronopsporing en het contactonderzoek ter bestrijding van de COVID-19-pandemie te versterken tot verderzetting van de engagementen in het kader van het wijzigingsbesluit van de Vlaamse Regering van 7 mei 2021 
+                                                            Besluit van het college van burgemeester en schepenen van 25 mei 2021 en het besluit van de gemeenteraad van 30 juni 2021 over de goedkeuring COVID-19 projectsubsidie tracing - verlenging keuze optie 1 
+                                                            Besluit van de Vlaamse regering van 16 juli 2021 tot toekenning van een subsidie aan de lokale besturen om de bronopsporing ter bestrijding van de COVID-19-pandemie te versterken 
+                                                            Besluit van het college van burgemeester en schepenen van 17 augustus 2021 over de goedkeuring bij hoogdringendheid van COVID-19 projectsubsidie tracing - verlenging keuze optie 1 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De Vlaamse Regering keurde op 16 juli 2021 een nieuw BVR voor de lokale preventie, sensibilisering, quarantaine coaching en bronopsporing goed. 
+                                                            Het besluit van 16 juli 2021  kent een specifieke subsidie toe aan de Vlaamse gemeentebesturen ter ondersteuning van optie 1: de lokale bronopsporing (d.w.z. de complementaire werking en inzet in preventie, sensibilisering, lokale bronopsporing, quarantainecoaching en aandacht voor kwetsbare personen) en dit van 1 september tot en met 15 oktober 2021.  
+                                                            De financiering voor optie 1 blijft ongewijzigd: een forfaitaire financiering op basis van het aantal inwoners van de gemeente: 0,125 euro per inwoner en per maand.  
+                                                            Het betreft een nieuw besluit van de Vlaamse regering, daarom moeten nieuwe addenda of (nieuwe) samenwerkingsovereenkomsten worden ingediend bij het Agentschap Binnenlands Bestuur.  De uiterste deadline is 30 september 2021. 
+                                                            Gemeentebesturen die nu reeds een samenwerkingsovereenkomst hebben met het Agentschap Zorg en Gezondheid, hebben volgende keuzemogelijkheden:  -    het bestuur heeft reeds een overeenkomst voor optie 1, dan kan deze met een addendum verlengd worden voor optie 1. -    het bestuur heeft een overeenkomst voor optie 2, dan kan men overstappen naar optie 1. Hiervoor is een nieuwe samenwerkingsovereenkomst nodig. Optie 2 verlengen is niet meer mogelijk. -    het bestuur kan ook kiezen om de samenwerking niet te verlengen.  Dan dienen we het Agentschap Binnenlands Bestuur op de hoogte te brengen van de stopzetting. 
+                                                            Ons bestuur heeft reeds een overeenkomst voor optie 1 en we ervaren deze werking als zeer nuttig en efficiënt. 
+                                                            Het insturen van de nodige documenten gebeurt via het Loket voor lokale besturen, via de module Berichtencentrum. 
+                                                            Gezien de korte tijdspanne om dit nieuwe addendum in te sturen, werd de overeenkomst bij hoogdringendheid ter goedkeuring voorgelegd aan het college van burgemeester en schepenen van 17 augustus 2021, waarbij gevraagd werd om de wijziging voor de verlenging optie 1 goed te keuren. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Optie 1 
+                                                            We ontvangen vanaf 1 september 2021 verder een forfaitair bedrag per maand, a rato van 0,125 euro per inwoner per maand en dit voor een periode tot en met 15 oktober 2021. 
+                                                            Op 1 januari 2020 telde de gemeente Lievegem officieel 26.242 inwoners. Op basis van dit inwonersaantal komt een vergoeding van 0,125 euro per inwoner neer op een tussenkomst van 3.280,25 euro per maand dewelke zal worden geregistreerd onder de jaarbudgetrekening 2021/GBB-WELZYN/0190-00/7406999/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e9057f90-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad bekrachtigt de beslissing van het college van 17 augustus 2021 over de goedkeuring van het addendum bij de  samenwerkingsovereenkomst in het kader van het besluit Vlaamse Regering 13 november 2020 tot toekenning van een subsidie aan de lokale besturen om de contact- en bronopsporing ter bestrijding van de COVID-19- pandemie te versterken en het geconsolideerde besluit van de Vlaamse regering van 23 april 2021 tot toekenning van een subsidie aan de lokale besturen om de bronopsporing en het contactonderzoek ter bestrijding van de COVID-19-pandemie te versterken tot verderzetting van de engagementen in het kader van het besluit van de Vlaamse Regering van 16 juli 2021 tot toekenning van een subsidie aan de lokale besturen om de bronopsporing ter bestrijding van de COVID-19 pandemie te versterken – optie 1. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/49410121-aef1-4042-b4f4-14aef82f264e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/49410121-aef1-4042-b4f4-14aef82f264e> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e91fbe50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Besluit van het college van burgemeester en schepenen van 17 augustus 2021 houdende goedkeuring COVID-19 projectsubsidie tracing - verlenging keuze optie 1 : bekrachtiging" .
+

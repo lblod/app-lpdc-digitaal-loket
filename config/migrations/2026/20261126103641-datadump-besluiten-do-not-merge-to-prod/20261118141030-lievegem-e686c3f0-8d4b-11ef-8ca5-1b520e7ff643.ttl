@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3027bbce-6e1b-47b4-bc0b-f53c72f1f9d2> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1b0c2c7b-0314-444b-ba38-6b1f25637bc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27e0c4db-269e-409a-8d55-33db7daf7c9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aac60983-db3c-4247-b27f-4860f02157a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ba5489da-e01f-4521-be10-56c4a038e97d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d6f26eb7-74ad-4e5a-bcb3-b89aa65ac7b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d84d3931-b8bf-4253-ad24-7fabe8331040>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6446375-946b-4c3d-9dcc-c3cf171303a1> ;
+    ns1:geplandeStart "2020-09-09T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e04bbeb0-1e3c-48c6-86c0-2e3a8995ae98> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/619a64f0-35fa-41f1-9895-5360cd9bf16b> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2cf19f34-4e9d-4ca2-9af9-b8280d2d4efc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e687ae50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-09-09T23:00:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-09-09T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc> ;
+    ns1:openbaar true ;
+    ns3:uuid "efe9b830-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/52a32c20-365d-4ec1-84c3-b1abbd90e765> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/52a32c20-365d-4ec1-84c3-b1abbd90e765> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeente is reeds toegetreden tot de S-divisie voor de deelgemeenten Zomergem en Waarschoot. De gemeente beslist de uitbreiding van toetreding en de inbreng van gebruiksrechten voor de sportaccommodatie van de deelgemeente Lovendegem en Waarschoot tot de secundaire activiteit van TMVW, volgens de regels en de modaliteiten van de statuten van TMVW en van het toetredingsdossier. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Uitbreiding van toetreding tot de divisie Secundaire Diensten van TMVW (deelgemeenten Lovendegem en Waarschoot): goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, in het bijzonder artikel 40 en 420Gemeenteraadsbesluit van 15 december 2005 over de toetreding tot de S-divisie voor de deelgemeente Zomergem, en de inbreng van het gebruiksrecht op het zwembad Den Boer met ingang vanaf 1 januari 2006Gemeenteraadsbesluit van 15 oktober 2008 over de uitbreiding van toetreding tot de S-divisie voor de deelgemeente Zomergem, en de inbreng van het gebruiksrecht op 3 sporthallen, 2 voetbalterreinen, 5 tennisterreinen en een atletiekterrein, met ingang vanaf 1 november 2008Gemeenteraadsbesluit van 15 december 2011 over de toetreding tot de S-divisie voor de deelgemeente Waarschoot, en de inbreng van het gebruiksrecht op de sporthal, de judozaal, de spinningzaal en de voetbalterreinen C en D, met ingang vanaf 1 mei 2012Collegebesluit van 18 augustus 2020 over de uitbreiding van toetreding tot de divisie Secundaire Diensten (TMVW) 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente Lievegem baat watergerelateerde installaties uit in de domeinen sport, ontspanning.Deze uitbating gaat gepaard met investeringen, (technische) exploitatie, commerciële uitbating, financiering en beheer.De gemeente kan deze activiteiten alleen of intergemeentelijk organiseren en terzake vrij en autonoom kan beslissen.Het voorstel van TMVW, opdrachthoudende vereniging, in verband met de uitbreiding van toetreding als deelnemer tot de divisie Secundaire Diensten van TMVW.Uit het dossier, voorgelegd door TMVW, blijkt dat de statuten van TMVW voorzien dat de autonomie van de gemeenten/steden ten volle wordt gerespecteerd, middels o.m. het bestaan van een afzonderlijk adviescomité Secundaire Diensten, waarvan de leden gelinkt zijn aan de raad van bestuur van TMVW, ook op financieel vlak.TMVW wijst in het dossier op de duidelijke meerwaarden voor de toekomstige deelnemers op operationeel en financieel vlak, en met name wat betreft de schaaleffecten, de financiële effecten, de personeelsaanwending. 
+                                                            Lievegem maakt sinds 1 januari 2006 deel uit van de S-divisie van TMVW (Secundaire diensten – Beheer sportinfrastructuur) op basis van de toetreding van deelgemeente Zomergem. Nadien werd ook met deelgemeente Waarschoot nog (voor een gedeelte van de sportinfrastructuur) toegetreden tot de S-divisie met ingang op 1 mei 2012. 
+                                                            Een toetreding tot de S-divisie levert onder meer volgende meerwaarden : 
+                                                            •    Schaaleffecten op het vlak van overeenkomsten voor onderhouds- en investeringswerken, omzetten en toepassen van nieuwe richtlijnen, aankoopverrichtingen en commerciële exploitatie;  •    Alternatieve inzetbaarheid voor gerichte functieprofielen (bvb. redders); •    Financiële effecten zoals de aftrekbaarheid van BTW op aankopen, externe dienstverlening en aanneming van werken voor onder meer investeringen; •    Evenwichtige spreiding van de financiële lasten door het jaarlijks in rekening brengen van de afschrijvingen op investeringen in plaats van de werkelijke aflossingen van leningen die ermee gepaard gaan. 
+                                                            Gezien het samenvoegen van de gemeenten Lovendegem, Waarschoot en Zomergem tot Lievegem wordt overwogen om de bestaande toetreding uit te breiden, enerzijds met de inbreng van een deel van de sportinfrastructuur van deelgemeente Lovendegem en anderzijds met nog een bijkomende inbreng voor deelgemeente Waarschoot. 
+                                                            In te brengen infrastructuur deelgemeente Lovendegem : 1)    Sportcentrum Lovendegem (Sportstraat 24) 
+                                                            •    Sporthal •    4 outdoor tennisterreinen •    6 kleedkamers voor voetbalterreinen •    Bol- en petanquezaal •    3 voetbalterreinen •    speeltuin  Niet ingebracht: cafetaria sporthal, polyvalente zaal, B-kantine en kantine bol- en petanquezaal.  2)    Sportcentrum Vinderhoute (Neerstraat 43) 
+                                                            •    Voetbalterrein met 4 kleedkamers •    Scheidsrechterslokaal en lokaal centrale verwarming  Niet ingebracht: polyvalente zaal en cafetaria.  3)    Gemeentelijke visvijver (Kannunik Triestlaan)  4)    Finse looppiste (Tulpenstraat) 
+                                                            Bijkomend in te brengen infrastructuur deelgemeente Waarschoot : 
+                                                            •    Petanqueterreinen •    Finse looppiste •    Beachvolleybalveld •    Basketterreinen •    Speelterrein •    4 tennisterreinen •    Voetbalvelden A en B met bijhorende kleedkamers 
+                                                            Niet ingebracht: tennischalet en cafetaria voetbalterreinen. 
+                                                            Bij toetreding moet door elke deelnemer worden ingetekend op een aandeel Sk met een nominale waarde van 50 euro. In ruil voor de inbreng van het gebruiksrecht op de betreffende sportinfrastructuur worden vervolgens een éénmalige vergoeding en S-aandelen met een nominale waarde van 50 euro toegekend. Lievegem beschikt op die manier momenteel al over honderd aandelen Sk en achttienduizend aandelen S. 
+                                                            Voor de waardering van het gebruiksrecht wordt vertrokken van de resterende boekwaarde van de in te brengen sportinfrastructuur (cfr. gemeentelijke boekhouding) en wordt het gebruiksrecht (d.i. de inbrengwaarde) gelijkgesteld aan 50% van deze boekwaarde. De éénmalige vergoeding bedraagt 35% van die berekende inbrengwaarde en wordt uitbetaald in twaalf gelijke jaarlijkse schijven, dit voor de eerste keer in het jaar van (bijkomende) toetreding.  Na aftrek van de vergoeding wordt het resterend saldo van de inbreng vergoed door toekenning van S-aandelen waarbij één aandeel wordt toegekend per schijf van 50 euro gewaardeerd gebruiksrecht (af te ronden naar de lager gelegen eenheid). Dit wordt cumulatief bekeken samen met de voorgenomen uitbreiding van inbreng gebruiksrecht voor de deelgemeente Waarschoot, alsook met de al bestaande inbrengen voor de deelgemeenten Zomergem en Waarschoot. 
+                                                            Voor de bijkomende inbreng voor Lovendegem en Waarschoot is de berekening dus als volgt : 
+                                                             
+                                                              
+                                                            Voor de uitbreiding moet niet meer worden ingetekend op een Sk-aandeel gezien Lievegem al over Sk-aandelen beschikt door de vroegere toetreding van Zomergem en Waarschoot. 
+                                                            Het aantal S-aandelen is bepaald conform de huidige statutaire bepalingen (aan een nominale waarde van € 50 per aandeel), rekening houdend met de vastgelegde waarde van het bijkomend gevestigd gebruiksrecht, alsook met de waarde van de reeds bestaande gebruiksrechten. De uitgiftepremie geldt als een restbedrag. De waarde van de S-aandelen alsook de uitgiftepremie blijven, zowel in de gemeentelijke boekhouding, als in de boekhouding van TMVW, uitgedrukt als vergoeding voor de gedane inbreng van gebruiksrechten.  Met betrekking tot de operationele gevolgen voor het personeel wordt voorgesteld om vast te houden aan de huidige werkwijze waarbij geen medewerkers worden overgedragen aan TMVW en de personeelskosten jaarlijks worden doorgerekend aan TMVW op basis van een dienstverleningsovereenkomst. Zowel voor de gedeeltelijke inbreng van de sportinfrastructuur voor deelgemeente Lovendegem als voor de uitbreiding van de inbreng voor deelgemeente Waarschoot is een simulatie gemaakt (cfr. inbrengdossiers in bijlage) van het potentieel financieel voordeel. 
+                                                            Op basis van het inbrengdossier voor deelgemeente Lovendegem (en de vooropgestelde plannen voor de periode 2020 - 2025) wordt door de uitbating via TMVW een jaarlijks terugkerend financieel voordeel in het vooruitzicht gesteld van 11% (oftewel circa 83.900 euro). Voor wat betreft het investeringsprogramma is rekening gehouden met een bedrag van 8.513.000 euro excl. BTW op basis waarvan het vereiste budget uiteindelijk 1.668.576 euro neerwaarts kon worden bijgesteld ingevolge de mogelijkheden tot BTW-recuperatie. 
+                                                            Gezien de geringe bijkomende inbreng en de ermee gepaard gaande investeringsplannen over de periode 2020 - 2025 zijn het gesimuleerd jaarlijks terugkerend financieel voordeel en het BTW-voordeel op de investeringsuitgaven voor deelgemeente Waarschoot verwaarloosbaar. Deze uitbreiding van toetreding dient eerder te worden gezien in het kader van een globaal beheer van de betrokken sportsite. Maar ingeval van toekomstige, grotere investeringsprojecten zullen de voordelen logischerwijze proportioneel toenemen.  Op basis van voorgaande toelichting en de meer gedetailleerde uitbreidingsdossiers in bijlage wordt geadviseerd om beide uitbreidingsdossiers voor goedkeuring voor te leggen aan de gemeenteraad van 1 juli 2020 op basis van het ontwerpbesluit voor de gemeenteraad zoals terug te vinden in bijlage 6 van de respectieve uitbreidingsdossiers. 
+                                                            Het college was principieel akkoord met het advies van team Sport en team Financiën tot uitbreiding van toetreding tot de divisie Secundaire Diensten van TMVW. 
+                                                            Er vond op 1 juli 2020 een infovergadering voor de raadsleden plaats. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Door de bijkomende inbreng van sportinfrastructuur in de S-divisie van TMVW zal een gedeelte van het gemeentelijk patrimonium worden uitgeboekt en samen met de ermee gepaard gaande exploitatieuitgaven en -ontvangsten worden overgeheveld naar de S-divisie. Vervolgens zal het exploitatieresultaat van de ingebrachte infrastructuur jaarlijks ten laste worden gelegd aan de gemeente, samen met de afschrijvingen van de investeringen en de eraan verbonden financieringskosten. 
+                                                            De jaarlijkse exploitatiebijdrage wordt in de gemeentebegroting ten laste genomen onder de jaarbudgetrekeningen xxxx/GBB-SPORT/0742-01/6494000/GEMEENTE/CBS/IP-GEEN,  xxxx/GBB-SPORT/0742-01/6495000/GEMEENTE/CBS/IP-GEEN (aanrekening prijssubsidies) en xxxx/GBB-SPORT/0742-01/7020999/GEMEENTE/CBS/IP-GEEN (recuperatie personeelskost). 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e686c3f0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeente is reeds toegetreden tot de S-divisie voor de deelgemeenten Zomergem en Waarschoot. De gemeente beslist de uitbreiding van toetreding en de inbreng van gebruiksrechten voor de sportaccommodatie van de deelgemeenten Lovendegem en Waarschoot tot de secundaire activiteit van TMVW, volgens de regels en de modaliteiten van de statuten van TMVW en van de beide toetredingsdossiers die allen als bijlage aan onderhavig besluit worden toegevoegd. 
+                                                            Artikel 2 
+                                                            De gemeente brengt per 1 oktober 2020 het gebruiksrecht, en de daarmee gepaard gaande rechten, in TMVW in van de volgende sportinfrastructuur:LovendegemSportcentrum Lovendegem gelegen te Sportstraat 24, 9920 Lievegem gekadastreerd te Lovendegem afdeling 2, sectie B, percelen 0805F, 0805G, 477, 478A, 479A, 480, 481, 482, 788, 788A en 786P uitgezonderd cafetaria, polyvalente zaal, B-kantine en kantine bol- en petanquezaal.Sportcentrum Vinderhoute gelegen te Neerstraat 43, 9921 Lievegem gekadastreerd te Lovendegem afdeling 3, sectie B, percelen 0343L, 0343M en 0335C uitgezonderd polyvalente zaal en cafetaria.Gemeentelijke visvijver gelegen te Kannunik Triestlaan, 9920 Lievegem gekadastreerd onder Lovendegem afdeling 1, sectie A, perceel 1722K inclusief openbaar domeinFinse Piste gelegen te Tulpenstraat, 9920 Lievegem gekadastreerd onder Lovendegem afdeling 2, sectie B, perceel 1154A. 
+                                                            Artikel 3De gemeente brengt per 1 oktober 2020 het gebruiksrecht, en de daarmee gepaard gaande rechten, in TMVW in van de volgende sportinfrastructuur:WaarschootDe petanqueterreinen, de Finse piste, het beachvolleybalveld, de basketterreinen, het speelterrein, 4 tennisterreinen en de voetbalvelden A en B met bijhorende kleedkamers, gelegen in het sportcentrum te Waarschoot, Sportstraat 3, 9950 Lievegem kadastraal gekend onder Waarschoot afdeling 1, sectie E, perceel 244f.De inbreng is exclusief de tennischalet en cafetaria voetbal. 
+                                                            Artikel 4LovendegemDe waarde van het gebruiksrecht van de in artikel 2 vermelde sportinfrastructuren bedraagt € 458 163,09. Dit gebruiksrecht wordt door TMVW aan de gemeente vergoed onder de vorm van:o een éénmalige vergoeding (= 35 % van het gebruiksrecht) van € 160 357,08 uitbetaald in twaalf schijveno de toekenning van 9 780 bijkomende S-aandelen met een nominale waarde van € 50 per aandeel, rekening houdend met de gelijktijdige bijkomende inbreng van gebruiksrecht voor deelgemeente Waarschoot, alsook met de reeds bestaande inbreng voor de deelgemeenten Zomergem en Waarschoot.Er rest een uitgiftepremie van € 41,38. 
+                                                            Artikel 5WaarschootDe waarde van het gebruiksrecht van de in artikel 3 vermelde sportinfrastructuren bedraagt € 47 633,82. Dit gebruiksrecht wordt door TMVW aan de gemeente vergoed onder de vorm van:o een éénmalige vergoeding (= 35 % van het gebruiksrecht) van € 16 671,84 uitbetaald in twaalf schijven;o de toekenning van 1 016 bijkomende S-aandelen met een nominale waarde van € 50 per aandeel, rekening houdend met de gelijktijdige bijkomende inbreng van gebruiksrecht voor deelgemeente Lovendegem, alsook met de reeds bestaande inbreng voor de deelgemeenten Zomergem en Waarschoot.Er rest een uitgiftepremie van € 41,38. 
+                                                            Artikel 6 
+                                                            Het College van Burgemeester en Schepenen wordt gemachtigd tot finalisering van de overeenkomst waarvan sprake in punt 3.2 van het toetredingsdossier, en de Burgemeester en de Algemeen Directeur tot ondertekening ervan. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "efecc570-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Uitbreiding van toetreding tot de divisie Secundaire Diensten van TMVW (deelgemeenten Lovendegem en Waarschoot): goedkeuring" .
+

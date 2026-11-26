@@ -1,0 +1,211 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/zittingen/75285e9a-1187-4e9a-bc1b-fe350749a815> a ns2:Zitting ;
+    ns2:behandelt <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/5e538396-849d-4d7e-b6b7-abef2f4952e1> ;
+    ns2:geplandeStart "2026-02-06T10:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://aarschot-echo.cipalschaubroeck.be/id/documenten/0edc4946-7e6d-491e-8e62-65cd70ec6a78> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/4256fc054914087c9cf37c9e7fb35e4a614ed7b74f45c55ce39772f12c7cd9a8> ;
+    ns1:uuid "aff9d39a-eeee-5a95-8322-075cca252c74" ;
+    prov:atLocation "Schepenzaal" ;
+    prov:startedAtTime "2026-02-06T11:28:00+01:00"^^xsd:dateTime .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5e538396-849d-4d7e-b6b7-abef2f4952e1> a ns2:BehandelingVanAgendapunt ;
+    ns2:openbaar true ;
+    ns1:uuid "708f4cc7-8610-572b-8e72-3b5617c21f5c" ;
+    dcterms:description """ 
+                             
+                                De oprichtingsakte van de projectvereniging -IGS Cultuurregio Oost-Brabant, afgekort COBRA, wordt vandaag 6 februari 2026 verleden te Aarschot, zetelgemeente van de projectvereniging.  Deze oprichtingsakte wordt opgesteld in uitvoering van het Decreet Lokaal Bestuur betreffende de oprichting van een projectvereniging, en met het oog op de integrale bekendmaking van de oprichtingsakte (met inbegrip van de statuten) in de bijlagen van het Belgisch Staatsblad. 
+                             
+                        """ ;
+    dcterms:subject <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/5e538396-849d-4d7e-b6b7-abef2f4952e1> ;
+    prov:generated <https://aarschot-echo.cipalschaubroeck.be/id/besluiten/5e538396-849d-4d7e-b6b7-abef2f4952e1> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/besluiten/5e538396-849d-4d7e-b6b7-abef2f4952e1> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns3:description """ 
+                                                    De oprichtingsakte van de projectvereniging -IGS Cultuurregio Oost-Brabant, afgekort COBRA, wordt vandaag 6 februari 2026 verleden te Aarschot, zetelgemeente van de projectvereniging.  Deze oprichtingsakte wordt opgesteld in uitvoering van het Decreet Lokaal Bestuur betreffende de oprichting van een projectvereniging, en met het oog op de integrale bekendmaking van de oprichtingsakte (met inbegrip van de statuten) in de bijlagen van het Belgisch Staatsblad. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/4256fc054914087c9cf37c9e7fb35e4a614ed7b74f45c55ce39772f12c7cd9a8> ;
+    ns3:title "Oprichtingsakte - projectvereniging : IGS Cultuurregio Oost-Brabant - afgekort COBRA" ;
+    ns2:motivering """ 
+                                 
+                                    Regelgeving 
+                                     
+                                        het decreet van 22.12.2017 over het lokaal bestuur, zoals gewijzigd en de bijhorende besluiten en omzendbrieven van de Vlaamse regering; 
+                                        de wet van 29.07.1991 betreffende de uitdrukkelijke motivering van bestuurshandelingen; 
+                                        het bestuursdecreet van 07.12.2018; 
+                                        het besluit van de Vlaamse Regering d.d. 30.03.2018 betreffende de beleids- en beheerscyclus van de gemeenten, de provincies en de openbare centra voor maatschappelijk welzijn. 
+                                     
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en motivering 
+                                    In toepassing van artikel 402 van het decreet over het lokaal bestuur van 22.12.2017 wordt de projectvereniging opgericht bij akte, verleden voor de burgemeester van de gemeente waar de zetel gevestigd wordt. Met behoud van de toepassing van de wettelijke bepalingen over de inbreng van onroerende goederen verkrijgt de oprichtingsakte geldigheid op de datum van de dagtekening ervan door de ondertekening van alle gemeenten en andere rechtspersonen die deelnemen aan de oprichting ervan.De oprichtingsakte omvat de statuten en wordt binnen een termijn van dertig dagen na de dagtekening ervan ter informatie aan de toezichthoudende overheid voorgelegd. De oprichtingsakte wordt integraal bekendgemaakt in de bijlagen bij het Belgisch Staatsblad en wordt terzelfder tijd ter inzage van eenieder neergelegd in de zetel van de projectvereniging. 
+                                 
+                            """@nl ;
+    ns1:uuid "3dedbb5d-cdfa-55fd-94cf-3b6fad6875a0" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    1. Identificatie van de akte 
+                                    Op 6 februari 2026 wordt deze oprichtingsakte verleden te Aarschot, zetelgemeente van de projectvereniging, voor de burgemeester van de stad Aarschot (hierna: de ‘instrumenterende burgemeester’). 
+                                    Deze oprichtingsakte wordt opgesteld in uitvoering van het Decreet Lokaal Bestuur betreffende de oprichting van een projectvereniging, en met het oog op de integrale bekendmaking van de oprichtingsakte (met inbegrip van de statuten) in de bijlagen van het Belgisch Staatsblad. 
+                                    2. Deelnemende lokale besturen (oprichters) en vertegenwoordiging 
+                                    De onderstaande lokale besturen treden op als oprichters en deelnemers van de projectvereniging: 
+                                     
+                                        Aarschot 
+                                        Begijnendijk 
+                                        Bekkevoort 
+                                        Bierbeek 
+                                        Boortmeerbeek 
+                                        Boutersem 
+                                        Diest 
+                                        Geetbets 
+                                        Haacht 
+                                        Herent 
+                                        Hoegaarden 
+                                        Holsbeek 
+                                        Keerbergen 
+                                        Kortenaken 
+                                        Kortenberg 
+                                        Landen 
+                                        Leuven 
+                                        Linter 
+                                        Lubbeek 
+                                        Oud-Heverlee 
+                                        Rotselaar 
+                                        Scherpenheuvel-Zichem 
+                                        Tielt-Winge 
+                                        Tienen 
+                                        Tremelo 
+                                        Zoutleeuw 
+                                     
+                                    De oprichters worden voor de ondertekening van deze oprichtingsakte wettelijk vertegenwoordigd door de personen vermeld in Bijlage 2, met opgave van hun hoedanigheid en de titel/rechtsgrond (gemeenteraadsbesluit en/of volmacht). 
+                                    Opmerking: indien een deelnemer tekent via volmacht, wordt de volmacht als afzonderlijke bijlage aan deze akte gehecht en geparafeerd door de instrumenterende burgemeester. 
+                                    3. Voorafgaande beslissingen van de gemeenteraden 
+                                    De oprichting van de projectvereniging steunt op gelijkluidende beslissingen van de gemeenteraden van de deelnemende lokale besturen. Per deelnemer wordt verwezen naar het gemeenteraadsbesluit met zoals opgenomen in Bijlage 2. 
+                                    4. Verklaring van oprichting 
+                                    De verschijners verklaren namens hun respectieve lokale besturen een projectvereniging op te richten onder de naam “IGS Cultuurregio Oost-Brabant”, afgekort “COBRA”, met zetel te Ten Drossaarde 1, 3200 Aarschot. 
+                                    De projectvereniging wordt opgericht voor de periode van 15 februari 2026 tot 15 februari 2032, zoals opgenomen in de statuten. 
+                                    De doelstellingen van de projectvereniging en de volledige werking worden geregeld in de statuten, die integraal deel uitmaken van deze oprichtingsakte. 
+                                    5. Statuten (integraal) 
+                                    De statuten van de projectvereniging worden hieronder integraal overgenomen. Zij maken onlosmakelijk deel uit van deze oprichtingsakte en worden tevens beschouwd als Bijlage 1. 
+                                    STATUTEN 
+                                    I. RECHTSVORM, NAAM, ZETEL, DUUR EN DOELSTELLINGEN 
+                                    RECHTSVORM VAN DE PROJECTVERENIGING 
+                                    De projectvereniging is een publiekrechtelijke rechtspersoon. 
+                                    Voor alles wat niet in deze statuten is bepaald, gelden de bepalingen van het Decreet Lokaal Bestuur (hierna ‘Decreet’). Voor alles wat niet uitdrukkelijk geregeld is in deze statuten of in het Decreet Lokaal Bestuur, zijn de bepalingen van het Wetboek van vennootschappen en verenigingen (hierna ‘Wetboek’) van toepassing die gelden voor de vennootschapsvorm van de coöperatieve vennootschap, zoals bepaald in artikel 397 van het Decreet. De Omzendbrief KBBJ/ABB 2022/1 is tevens toepasselijk. 
+                                    Indien de bepalingen in deze statuten strijdig zouden zijn met de bepalingen van het Decreet of – indien van toepassing – met het Wetboek, hebben het Decreet en het Wetboek voorrang op deze statuten. 
+                                    NAAM VAN DE PROJECTVERENIGING 
+                                    De projectvereniging draagt als naam “IGS Cultuurregio Oost-Brabant”, afgekort “COBRA”. 
+                                    Alle akten, facturen, aankondigingen, bekendmakingen, brieven, websites en alle andere stukken, al dan niet in elektronische vorm, die uitgaan van de projectvereniging, moeten de volgende gegevens vermelden: naam van de vereniging, de rechtsvorm, het adres van de zetel, het ondernemingsnummer, het woord “rechtspersonenregister” of “RPR” en bevoegde rechtbank volgens de zetel, in voorkomend geval e-mailadres en website en in voorkomend geval, het feit dat de projectvereniging in vereffening is. 
+                                    ZETEL 
+                                    De projectvereniging heeft haar zetel in Ten Drossaarde 1, 3200 Aarschot. 
+                                    De zetel kan worden verplaatst met instemming van alle deelnemers. 
+                                    DUUR 
+                                    De projectvereniging wordt opgericht voor de periode van 15 februari 2026 tot 15 februari 2032. 
+                                    Mits gunstig besluit van de gemeenteraad van elk van de leden, kan de projectvereniging opeenvolgende keren worden verlengd voor telkens maximaal zes jaar. 
+                                    Tijdens de duur die is vastgesteld bij de oprichting of verlenging van een projectvereniging, is geen uittreding mogelijk. 
+                                    DOELSTELLINGEN 
+                                    De vereniging versterkt de intergemeentelijke samenwerking rond lokaal cultuurbeleid en stimuleert afstemming tussen culturele actoren in de regio. Ze initieert en ondersteunt bovenlokale en publieksgerichte cultuurinitiatieven, bevordert participatie en betrokkenheid van inwoners, en ontwikkelt zich als een lerend netwerk dat bijdraagt aan een levendig cultureel klimaat in de referentieregio Oost-Brabant. 
+                                    II.        DEELNEMERS (LEDEN) 
+                                    DEELNEMERS AAN (LEDEN VAN) DE PROJECTVERENIGING 
+                                    De deelnemende gemeenten zijn: Aarschot, Begijnendijk, Bekkevoort, Bierbeek, Boortmeerbeek, Boutersem, Diest, Geetbets, Haacht, Herent, Hoegaarden, Holsbeek, Keerbergen, Kortenaken, Kortenberg, Landen, Leuven, Linter, Lubbeek, Oud-Heverlee, Rotselaar, Scherpenheuvel-Zichem, Tielt-Winge, Tienen, Tremelo, Zoutleeuw. 
+                                    De toetreding van een nieuwe deelnemer wordt vooraf eerst besproken door de Raad van Bestuur van de projectvereniging. 
+                                    De toetreding wordt vervolgens aan alle deelnemers van de projectvereniging overgemaakt. Indien tweederde van de deelnemende gemeenten deze toetreding goedkeuren door een beslissing van hun bevoegd orgaan (gemeenteraad) is de toetreding van het nieuwe lid aanvaard. 
+                                    De toetreding vangt aan op de eerste dag van de maand volgend op de goedkeuring van de toetreding door de laatste deelnemer. 
+                                    III.       BESTUUR VAN DE PROJECTVERENIGING 
+                                    BESTUUR VAN DE VERENIGINGEN 
+                                    De projectvereniging wordt bestuurd door een raad van bestuur waarvan de leden worden benoemd door de deelnemers. 
+                                    SAMENSTELLING VAN DE RAAD VAN BESTUUR 
+                                    De leden van de raad van bestuur bestaan alleen uit natuurlijke personen. 
+                                    Er bestaat een onverenigbaarheid tussen het mandaat van bestuurder van de projectvereniging en de volgende ambten, functies of mandaten: 
+                                     
+                                        lid van een regering, zowel op federaal niveau als op niveau van de gewesten en gemeenschappen; 
+                                        lid van een wetgevende vergadering, zowel op federaal niveau als op niveau van de gewesten en gemeenschappen; 
+                                        lid van het Europees Parlement en van de Europese Commissie; 
+                                        provinciegouverneur of adjunct van de gouverneur van Vlaams-Brabant; 
+                                        arrondissementscommissaris of adjunct-arrondissementscommissaris; 
+                                        provinciegriffier; 
+                                        lid van een bestuurs- of controleorgaan in of werknemer van een privaatrechtelijke rechtspersoon die activiteiten uitoefent in dezelfde beleidsdomeinen als de projectvereniging; 
+                                        werknemer van een deelnemend openbaar bestuur, of van een administratie die is belast met hetzij de uitoefening van het gewoon toezicht op de lokale besturen, hetzij de uitoefening van een specifiek toezicht op grond van de doelstellingen van de projectvereniging. 
+                                     
+                                    Elke deelnemer vaardigt één stemgerechtigd lid en één lid met raadgevende stem af naar de raad van bestuur. 
+                                    De stemgerechtigde leden die worden afgevaardigd door de gemeenten zijn burgemeester, schepen of raadsleden van de deelnemende gemeenten. 
+                                    Elk stemgerechtigd lid beschikt over één stem. 
+                                    De voorzitter van de raad van bestuur wordt gekozen uit de stemgerechtigde leden die door de gemeenten werden benoemd als lid van de raad van bestuur. 
+                                    De Raad van Bestuur kan zich laten bijstaan door ambtenaren en externe deskundigen of kan andere personen uitnodigen die een bijdrage kunnen leveren. De wijze van aanstelling van deze personen wordt geregeld via het huishoudelijk reglement. 
+                                    BEVOEGDHEDEN VAN DE RAAD VAN BESTUUR 
+                                    De raad van bestuur heeft de volgende bevoegdheden (dit zijn de bevoegdheden die de deelnemers hem uitdrukkelijk hebben opgedragen in de gemeenteraadsbeslissingen die de oprichting van de projectvereniging voorafgaan): 
+                                     
+                                        de inhoudelijke beleidslijnen, weergegeven in de cultuurnota; 
+                                        het financieel beleid m.i.v. het benoemen van de accountant zoals voorzien in artikel 404§4 Decreet Lokaal Bestuur; 
+                                        het personeelsbeleid. 
+                                     
+                                    De raad van bestuur maakt een huishoudelijk reglement op waarin de werkingsmodaliteiten van de raad van bestuur worden vastgelegd. Dat huishoudelijk reglement kan worden gewijzigd bij eenvoudige beslissing van de stemgerechtigde leden van de raad van bestuur. 
+                                    De raad van bestuur kan het dagelijks personeelsbeheer, de dagelijkse financiële werking, de bevoegdheid voor het aanstellen en het ontslaan van het personeel, alsook de sanctie- en tuchtbevoegdheid ten aanzien van het personeel toevertrouwen aan een of meerdere van zijn leden of een aangestelde coördinator hiervoor. 
+                                    Deze delegaties worden opgenomen in een huishoudelijk reglement, waarin de aard, de duur en de grenzen van de delegatie duidelijk omschreven zijn. 
+                                    BEËINDIGING VAN EEN MANDAAT IN DE RAAD VAN BESTUUR 
+                                    De bestuurders worden benoemd voor een termijn voor de duur van de projectvereniging. 
+                                    De bestuurders zijn van rechtswege ontslagnemend bij het verlies van hun openbaar mandaat, uitgezonderd in geval van de algehele vernieuwing van gemeenteraden. 
+                                    In dat geval wijzen de deelnemende gemeenten in de loop van de maand januari die volgt op het jaar van de verkiezingen tot algehele vernieuwing van de gemeenteraden, de nieuwe bestuurders aan. Zij treden aan op 1 februari daaropvolgend. Eventueel worden nog bestuurders door andere deelnemers aangewezen in de loop van de maand die volgt op de installatie van hun eigen raden. 
+                                    Het mandaat van de bestuurder wordt eveneens beëindigd indien de respectievelijke raad die hij vertegenwoordigt zijn mandaat intrekt. 
+                                    DE WERKING VAN DE RAAD VAN BESTUUR 
+                                    Om geldig te beraadslagen en te beslissen geldt als aanwezigheidsquorum de gewone meerderheid van het aantal bestuurders, zowel in het geheel als in de groep van de bestuurders die de gemeenten hebben aangewezen. 
+                                    Van dit aanwezigheidsquorum kan worden afgeweken voor een tweede vergadering die volgt op een onvoldoende samengestelde eerdere vergadering, en op voorwaarde dat het gaat om punten die voor de tweede keer op de agenda voorkomen. 
+                                    Deze bepaling geldt niet voor de voorstellen tot statutenwijziging en aanvaarding van toetredingen. 
+                                    De meerderheid die vereist is voor de beslissingen is altijd de gewone meerderheid die bereikt moet worden, zowel in het geheel als in de groep van de bestuurders die de gemeenten benoemd hebben. 
+                                    De leden van de raad van bestuur ontvangen geen presentiegeld. 
+                                    De raad van bestuur vergadert minimaal 2 keer per jaar. De uitnodigingen met de agenda worden minstens 2 weken vooraf verzonden. 
+                                    De raad van bestuur kan zijn werkingsmodaliteiten vastleggen in een huishoudelijk reglement. 
+                                    Dit huishoudelijk reglement kan worden gewijzigd bij eenvoudige meerderheid. 
+                                    VERTEGENWOORDIGING VAN DE PROJECTVERENIGING 
+                                    Tegenover derden volstaat, opdat de vereniging geldig vertegenwoordigd zou zijn, de handtekening van de voorzitter van de raad van bestuur en het personeelslid dat aan het hoofd staat van het personeel van de projectvereniging. 
+                                    IV.       FINANCIEEL BEHEER 
+                                    BEGROTING EN REKENINGEN 
+                                    De boekhouding wordt gevoerd overeenkomstig de wetgeving op de boekhouding en met naleving van de richtlijnen die de overheid uitvaardigt met betrekking tot de boekhoudkundige verrichtingen. 
+                                    De raad van bestuur stelt de jaarrekening jaarlijks vast en legt ze samen met het activiteitenverslag en het verslag van de accountant jaarlijks ter informatie en kennisgeving voor aan de gemeenteraden van de deelnemende gemeenten. 
+                                    FINANCIERING 
+                                    De financiering van de projectvereniging gebeurt door middel van een financiële bijdrage op basis van het aantal inwoners op 1 januari van het betreffende jaar. Elke gemeente betaalt eenzelfde basisbedrag per inwoner. 
+                                    FINANCIËLE CONTROLE 
+                                    De raad van bestuur benoemt een accountant die de controle op de financiële toestand                uitvoert en hierover jaarlijks rapporteert aan de raad van bestuur. 
+                                    V.        WIJZIGING STATUTEN EN ONTBINDING 
+                                    WIJZIGING VAN DE STATUTEN 
+                                    Een wijziging van de statuten moet door tweederde van de deelnemende gemeenten worden goedgekeurd door een beslissing van hun bevoegd orgaan (gemeenteraad). De wijziging vangt aan op de eerste dag van de maand volgend op de goedkeuring van de nieuwe statuten door de laatste deelnemer. 
+                                    ONTBINDING VAN DE PROJECTVERENIGING 
+                                    De projectvereniging kan voortijdig worden ontbonden mits goedkeuring door de gemeenteraden van minstens tweederde van de deelnemende gemeenten. 
+                                    De raad van bestuur van de projectvereniging is verantwoordelijk voor de afwikkeling van activa en passiva en stelt hiertoe eventueel een vereffenaar aan. 
+                                    Bestemming van de activa na ontbinding: 
+                                    De in de projectvereniging aanwezige middelen of schulden worden evenredig verdeeld over de deelnemende gemeenten à rato van het inwonersaantal op 1 januari van het betreffende jaar. 
+                                    Bij de ontbinding van de vereniging zullen de eventueel in gebruik gegeven goederen worden teruggegeven aan de eigenaars, in zoverre hun rechten daarop kunnen bewezen worden aan de hand van geschreven overeenkomsten. 
+                                    6. Bestuursorganen – aanduiding bestuurders 
+                                    Overeenkomstig de statuten vaardigt elke deelnemer één stemgerechtigd lid en één lid met raadgevende stem af naar de raad van bestuur. De naam- en contactgegevens van de aangeduide bestuurders worden opgenomen in Bijlage 3 op basis van de gemeenteraadsbeslissingen of latere aanduidingsbesluiten. 
+                                    De aanduiding van bestuurders is op zichzelf geen voorwaarde voor de geldigheid van de oprichting; de oprichting gebeurt door de deelnemende lokale besturen die deze akte ondertekenen. 
+                                    7. Bijlagen 
+                                    Bijlage 1 – Statuten IGS COBRA (opgenomen in punt 5) 
+                                    Bijlage 2 – Overzichtstabel wettelijke vertegenwoordigers  
+                                    Bijlage 3 – Samenstelling raad van bestuur  
+                                    8. Ondertekening 
+                                    Aldus verleden te Aarschot op 6 februari 2026.  
+                                    Deze akte wordt ondertekend door de instrumenterende burgemeester en door of namens elk deelnemend lokaal bestuur, met verwijzing naar Bijlage 2 voor de identificatie van de ondertekenaars. 
+                                    Instrumenterende burgemeester (Aarschot) 
+                                    Gwendolyn Rutten 
+                                      
+                                      
+                                    Algemeen directeur 
+                                    Christi Van Calster 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5e538396-849d-4d7e-b6b7-abef2f4952e1> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/5e538396-849d-4d7e-b6b7-abef2f4952e1> a ns2:Agendapunt ;
+    ns1:uuid "fffc12b0-67f5-590b-8d22-164f91cd719d" .
+

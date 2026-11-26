@@ -1,0 +1,96 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3bbe50aa-c3e8-4b7c-bb7c-4682052a4673> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06f1f332-650a-4d40-a99c-0c733ffa85d1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c0f89c5-baa1-4637-811c-23ba8ba0c6be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/143b01fe-df79-4464-a86e-9f3331c41dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/19777059-5d19-4c19-aa75-c9728f3c1f7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1a496b2e-cf0d-4492-81c2-1b83c32841ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b6e8646-0e53-4476-873e-8ca4b5d87f79>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5039459f-5883-4417-bf07-a5cb8f922dff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5824b498-b950-4a56-91f6-1756c8e16615>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d9d3cf3-2cc8-49f0-bc97-86d52713181a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bcb7c92-bded-425b-bb57-1dcf51a32ec4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6deb0f16-50f3-4267-8661-88276e847e60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/739e24ab-2ffe-4fa2-b120-e9f780b542b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7db1854b-eea1-4071-8222-2fa3573c65ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/881bd7fd-6ec4-4882-9a14-15458378f51e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c65b0e5-e5ef-4730-988c-87d06b6a3993>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9314a642-ce70-4a85-ab4f-027dddbfb7ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9384f2b2-5078-47d0-a1e8-5f572f245831>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1970aac-3846-476f-9089-3c9b90d2cebc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a82e01d6-03ea-4b9f-9b5a-9a4e48d048f2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce690ef6-529c-465b-8bc2-0a504cb16e40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e447ed51-ca89-4f26-aec4-4b20f2adbbfb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee301e9c-da25-478b-9b4a-3c795b77db7a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2fb6d2d-2bb1-461a-bced-cbe1f05eb6db> ;
+    ns1:geplandeStart "2024-10-23T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ae70f37b-eb96-4735-833b-ce97bceb51f6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bd4fa978-f012-49c2-acc4-4646b86642e0> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fe261bc2-7e58-4536-8439-b9dedda822ba> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ed05ab10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-10-23T21:17:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-10-23T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9314a642-ce70-4a85-ab4f-027dddbfb7ef> ;
+    ns1:openbaar true ;
+    ns2:uuid "8b2f9820-a8d4-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8ebeb75-42b5-4230-b9db-aab06688cc36> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8ebeb75-42b5-4230-b9db-aab06688cc36> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt een persoon, in dienst bij de Intergemeentelijke opdrachthoudende Vereniging voor huisvuilverwerking Meetjesland (IVM), aan tot GAS-vaststeller voor de gemeente Lievegem om vaststellingen te doen welke uitsluitend kunnen bestraft worden met een gemeentelijke administratieve sanctie en die vallen onder de bevoegdheden inzake zwerfvuil en sluikstort. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Gebruik van 'tijdelijk' vaste camera's in de strijd tegen sluikstort en zwerfvuil - GAS-vaststeller: aanstelling" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                            Vincent Laroy, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Wet van 24 juni 2013 over de gemeentelijke administratieve sancties, artikel 21Koninklijk Besluit van 21 december 2013 tot vaststelling van de minimumvoorwaarden inzake selectie, aanwerving, opleiding en bevoegdheid van de ambtenaren en personeelsleden die bevoegd zijn tot vaststelling van inbreuken die aanleiding kunnen geven tot de oplegging van een gemeentelijke administratieve sanctie, gewijzigd door het Koninklijk Besluit van 13 januari 2016Gemeentedecreet van 22 december 2017 , artikel 40 over de bevoegdheid van de gemeenteraadGemeenteraadsbesluit van 26 februari 2020 over het vaststellen van de algemene zonale politieverordening Deinze/Zulte/LievegemPolitieverordening van 31 maart 2021 over de inzameling en het beheer van huishoudelijke afvalstoffen en vergelijkbare bedrijfsafvalstoffen Gemeenteraadsbesluit van 26 mei 2021 over het gebruik van 'tijdelijk' vaste camera's op een niet-besloten plaats inzake sluikstort en zwerfvuilGemeenteraadsbesluit van 23 februari 2022 over het gebruik van 'tijdelijk' vaste camera's op een niet-besloten plaats inzake sluikstort en zwerfvuil - GAS-vaststeller: aanstelling 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Op 19 augustus 2024 heeft lokaal bestuur Lievegem een schrijven ontvangen van IVM over de aanstelling van een medewerker van IVM tot GAS-vaststeller voor zwerfvuil en sluikstort (brief in bijlage). 
+                                                            Hierin staat vermeld dat op 4 maart 2024  Andor Lavin Martinez in dienst kwam bij de organisatie IVM als deskundige afvalpreventie, sensibilisatie en communicatie. Hij zal toetreden tot het camerateam, dat reeds bestaat uit mevrouw Annelies Neyt en mevrouw Kimberly Huyghebaert. 
+                                                            Opdat hij zijn taak zou kunnen uitoefenen, is het noodzakelijk dat de gemeenteraad  Andor Lavin Martinez benoemt in zijn functie als vaststeller GAS-overtredingen. 
+                                                            De voorwaarden om als GAS-vaststeller te mogen optreden zijn: - Minimaal 18 jaar oud zijn- Geen strafrechtelijke veroordeling hebben opgelopen (uittreksel strafregister in bijlage)- Minstens beschikken over een getuigschrift hoger secundair onderwijs (kopie diploma in bijlage)- In max. 10 dagen een opleiding van 40u hebben gevolgd in een erkende opleidingsinstelling (brevet vaststeller GAS uitgegeven door de politieschool in bijlage). 
+                                                            De documenten waaruit blijkt dat Andor Lavin Martinez aan bovenstaande voorwaarden voldoet, werden toegevoegd in bijlage. 
+                                                            Annelies Neyt en Kimberly Huyghebaert, eveneens aangesteld als GAS-vaststeller voor de gemeente Lievegem, blijven optreden als GAS-vaststeller voor de gemeente Lievegem. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "59dd8f70-9394-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enige besluit 
+                                                            De gemeenteraad stelt Andor Lavin Martinez, in dienst bij de Intergemeentelijke opdrachthoudende Vereniging voor huisvuilverwerking Meetjesland (IVM), aan tot GAS-vaststeller voor de gemeente Lievegem om vaststellingen te doen welke uitsluitend kunnen bestraft worden met een gemeentelijke administratieve sanctie en die vallen onder de bevoegdheden inzake zwerfvuil en sluikstort zoals omgeschreven in de huidige artikels 36 en 38 van de Algemene Zonale Politieverordening Deinze- Zulte-Lievegem van 26 februari 2020 (hetzij, in geval van wijziging, enige latere rechtsgrond waarin diezelfde bepaling is opgenomen). 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ed0a3ef0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Gebruik van 'tijdelijk' vaste camera's in de strijd tegen sluikstort en zwerfvuil - GAS-vaststeller: aanstelling" .
+

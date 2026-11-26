@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/874a64e4-caca-4a9c-908f-2ec7938eb48b> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0cf0530d-af84-48fb-8b83-8231ec44cd0e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/15918205-72af-473b-a6c2-3b28138f4ff9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/432d4372-7150-45cf-a0e1-36a3805adb3b>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5157f243-4410-4746-a46b-451bf31060e2>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b575e88a-23fb-4dca-a41a-5b09b526acbc>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/cbdc789f-3513-4c65-a10e-133f5a74d91f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/edaa540e-00e0-433e-8427-5a86daa1fea7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f9721908-2712-4d32-bb85-c6411db536e9> ;
+    ns2:geplandeStart "2025-05-12T14:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/283fcec7-18c8-435d-bcab-ee4021b3f0e9> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "41ff24fe-ee8a-57f4-893f-318a9e5df267" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-12T14:00:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0cf0530d-af84-48fb-8b83-8231ec44cd0e> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f9721908-2712-4d32-bb85-c6411db536e9> ;
+    ns2:openbaar false ;
+    ns3:uuid "02a6c623-3cdc-534c-ab8e-4ab785832f4e" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0cf0530d-af84-48fb-8b83-8231ec44cd0e> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/0cf0530d-af84-48fb-8b83-8231ec44cd0e> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/0cf0530d-af84-48fb-8b83-8231ec44cd0e> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Lokale wedstrijd - Open omloop - WAOD op 24 mei 2025 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: Wielerwedstrijd Neigem Pedaleert - 24 mei 2025" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "27ae0cc8-90e7-523d-9e2d-c067f302a840" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Lokale wedstrijd - Open omloop - WAOD op 24 mei 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 10u tot 20u:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 10.00 uur tot 20.00 uur in volgende straten: 
+                                        - Opperstenbosstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Opperstenbosstraat vanaf het kruispunt met de Oude Heerbaan tot Vreckom (grondgebied Ninove). 
+                                        - Oude Heerbaan 
+                                        Stilstaan en parkeren verboden (fig E3) op de Oude Heerbaan vanaf het kruispunt met de Opperstenbosstraat tot het kruispunt met de Hoevestraat. 
+                                        - Hoevestraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Hoevestraat vanaf het kruispunt met de Oude Heerbaan tot het kruispunt met de Ninoofse Steenweg. 
+                                        - Strijlandstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Strijlandstraat vanaf het kruispunt met de Ninoofse Steenweg tot het kruispunt met de Terhagenstraat. 
+                                        - Terhagenstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Terhagenstraat vanaf het kruispunt met de Strijlandstraat tot het kruispunt met de Kroonstraat. 
+                                        - Kroonstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Kroonstraat vanaf het kruispunt met de Terhagenstraat tot het kruispunt met de Drie Egyptenbaan. 
+                                        - Drie Egyptenbaan 
+                                        Stilstaan en parkeren verboden (fig E3) op de Drie Egyptenbaan vanaf het kruispunt met de Kroonstraat tot de Brusselseheerweg (grondgebied Ninove). 
+                                          
+                                        Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 12.00 uur tot 19.00 uur in volgende straten: 
+                                        - Drie Egyptenbaan 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Drie Egyptenbaan vanaf de Brusselseheerweg (Ninove) tot het kruispunt met de Kroonstraat, 
+                                        - Kroonstraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Kroonstraat vanaf het kruispunt met de Drie Egyptenbaan tot het kruispunt met de Terhagenstraat. 
+                                        - Terhagenstraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Terhagenstraat vanaf het kruispunt met de Kroonstraat tot het kruispunt met de Strijlandstraat. 
+                                        - Hoevestraat 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Hoevestraat vanaf het kruispunt met de Ninoofse Steenweg (N28) tot het kruispunt met de Oude Heerbaan. 
+                                        - Oude Heerbaan 
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Oude Heerbaan vanaf het kruispunt met de Hoevestraat tot het kruispunt met de Opperstenbosstraat. 
+                                          
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 12.00 uur tot 19.00 uur op volgende kruispunten: 
+                                        - Kroonstraat 
+                                        Drie Egyptenbaan / Kroonstraat 
+                                        Kelenbergstraat / Kroonstraat 
+                                        Gotestraat / Kroonstraat 
+                                        - Terhagenstraat 
+                                        Kroonstraat / Terhagenstraat 
+                                        Terhagenstraat / Terhagenstraat 
+                                        - Hoevestraat 
+                                        Ninoofse Steenweg / Hoevestraat 
+                                        - Oude Heerbaan 
+                                        Hoevestraat / Oude Heerbaan 
+                                          
+                                        Alle vaste en mobiele verkeersinfrastructuur op het parcours dient beschermd/verwijderd te worden. 
+                                        Alle betrokken verkeerssignalisatie dient tevens afgedekt/verwijderd te worden. 
+                                          
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0cf0530d-af84-48fb-8b83-8231ec44cd0e> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0cf0530d-af84-48fb-8b83-8231ec44cd0e> a ns2:Agendapunt ;
+    ns3:uuid "45fbe926-6015-5a6a-9468-efc4ba0767b3" .
+

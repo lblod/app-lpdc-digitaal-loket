@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/73ba18aa-ea9a-4aae-a765-c733e1397d52> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/003a94af-d762-4da4-a7bc-f73299c947cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/04b745cc-2195-49e6-aaab-284a94f9447b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/051dca70-fc5a-4c63-a142-f7ca0a358a6f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/2520d3dd-7478-4a6e-aa97-d05b711a7154>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/30551822-c500-49d1-bc0a-094708fed392>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/4790ad5b-4205-4fe5-b632-1845388e2f55>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6552a2a8-faad-4c90-9409-4e8d9ae5a485>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6921eddd-d348-43dc-ac06-475aa923ffeb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/7311839b-54d7-4337-9a49-2c950437c1f7>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8969185e-c436-4328-8275-415bf8d52f76>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8a178447-7f3c-4c94-9993-a9e69eed5527>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8ed10e0c-075c-4a1e-b61e-6a498c0c4acf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a23f6dc1-ad3b-4d96-8413-c59ba67b0f7d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/ad282140-1c95-4ea2-9b4e-74bf4f1377ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bc8ddb0c-1538-4cce-8f0b-2c753dd77a0d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c6b4e8d9-8e2f-4384-99ca-53a38468a1d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d8b1af31-ab1e-489e-86d7-32eecd4f48ea>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/daef299c-44c2-445a-a914-a9c8337f1df9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e3f3081e-24b7-4759-98ab-a3e0df2226a6>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f735f1d3-65e0-40f9-b177-a823ea9ed9f6> ;
+    ns1:geplandeStart "2025-06-02T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/084040f8-b9f4-4105-975a-ec2447bbed1f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/documenten/e8c27808-fe9d-4882-b411-f828f302c1c0> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/ac1e1acd-4f44-42eb-8e73-377721d3a797> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/1a9e0d2a-8c2e-432d-9ba0-e61ebcf0ed93> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "2ec43509-b4e2-5e4f-818b-bc033a4cf7ce" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-06-02T20:00:00+02:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/051dca70-fc5a-4c63-a142-f7ca0a358a6f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8ed10e0c-075c-4a1e-b61e-6a498c0c4acf> ;
+    ns1:openbaar true ;
+    ns2:uuid "ccb1bb02-c4f0-5ccb-9e92-81138aeec058" ;
+    dcterms:description """ 
+                                                             
+                                                                De aangetekend brief d.d. 12 mei 2025 vanwege de Woonmaatschappij Vlaamse Ardennen waarbij de gemeente Brakel wordt uitgenodigd tot deelname aan de jaarlijkse Algemene Vergadering van 03 juni 2025 om 19u00 te 9700 Oudenaarde, Ladeuze 5. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/051dca70-fc5a-4c63-a142-f7ca0a358a6f> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/051dca70-fc5a-4c63-a142-f7ca0a358a6f> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/051dca70-fc5a-4c63-a142-f7ca0a358a6f> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Samenwerkingsverbanden. Woonmaatschappij Vlaamse Ardennen. Uitnodiging Algemene Vergadering d.d. 3 juni 2025. Goedkeuring." ;
+    ns1:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Het Decreet Lokaal Bestuur van 22 december 2017; 
+                                                                    Het raadbesluit d.d. 03 maart 2025 omtrent de aanduiding van een vertegenwoordiger voor de algemene vergadering voor de volledige legislatuur; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    - De uitnodiging voor de jaarlijkse Algemene Vergadering der aandeelhouders van Woonmaatschappij Vlaamse Ardennen met maatschappelijke zetel te 9700 Oudenaarde, Sint-Jozefsplein 18, die zal gehouden worden op dinsdag 03 juni 2025 om 19u00 in Ladeuze, Ladeuze 5 te 9680 Maarkedal. 
+                                                                    Het aangetekend schrijven d.d. 12 mei 2025 van de Woonmaatschappij Vlaamse Ardennen met de volgende dagorde: 
+                                                                    1. Jaarverslag van de Raad van Bestuur en Commissaris; 
+                                                                    2. Goedkeuring jaarrekening 
+                                                                    3. Winstbestemming 
+                                                                    4. Kwijting bestuurders en commissaris 
+                                                                    5. Varia 
+                                                                      
+                                                                    - De gemeenteraadsbeslissing d.d. 07 april 2025 waarbij de vertegenwoordigers werden aangeduid om de gemeente Brakel te vertegenwoordigen in de Algemene vergaderingen van Woonmaatschappij Vlaamse Ardennen 
+                                                                    - Het College van Burgemeester en Schepenen d.d. 19 mei 2025 nam kennis van de uitnodiging en de agenda van de Woonmaatschappij Vlaamse Ardennen d.d.03 juni 2025. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "69327dc8-280b-54b7-a06c-e262a57cd731" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Art. 1: De agenda van de jaarlijkse Algemene Vergadering der aandeelhouders van Woonmaatschappij Vlaamse Ardennen d.d. 03 juni 2025 wordt goedgekeurd. 
+                                                                    Art. 2: De vertegenwoordiger van de gemeente die zal deelnemen aan de jaarlijkse Algemene Vergadering wordt opgedragen het stemgedrag af te stemmen op de beslissing genomen zoals in artikel 1 van dit besluit.  
+                                                                    Art. 3: Afschrift van deze beslissing en het inschrijvingsformulier zal toegestuurd worden aan Woonmaatschappij Vlaamse Ardennen aan nathalie.verhaeghe@wmvla.be 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/051dca70-fc5a-4c63-a142-f7ca0a358a6f> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/051dca70-fc5a-4c63-a142-f7ca0a358a6f> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "8a9fa548-65cd-57cb-843f-f3124c84d6cc" ;
+    dcterms:title "Samenwerkingsverbanden. Woonmaatschappij Vlaamse Ardennen. Uitnodiging Algemene Vergadering d.d. 3 juni 2025. Goedkeuring." .
+

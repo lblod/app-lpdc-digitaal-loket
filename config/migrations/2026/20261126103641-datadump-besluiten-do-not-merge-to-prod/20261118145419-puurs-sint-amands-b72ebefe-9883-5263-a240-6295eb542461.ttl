@@ -1,0 +1,128 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/c1acb7bd-eada-459d-b2d4-e17139846388> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4368b2c7-cc82-4b74-abed-6bc83653f071>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/747470d0-ff36-4f46-bbad-4379e2160faa> ;
+    ns1:geplandeStart "2026-02-24T20:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/383bf47d-deee-4ce0-b8ef-c4646b69b9f5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "43344160-0c54-5ca3-bd45-c137dc440e63" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-02-24T20:38:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/747470d0-ff36-4f46-bbad-4379e2160faa> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4368b2c7-cc82-4b74-abed-6bc83653f071> ;
+    ns1:openbaar false ;
+    ns3:uuid "39dd74cd-ada9-562c-91be-5c2f786c4619" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/747470d0-ff36-4f46-bbad-4379e2160faa> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/747470d0-ff36-4f46-bbad-4379e2160faa> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/747470d0-ff36-4f46-bbad-4379e2160faa> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Aanvullend verkeersreglement - Kleine Amer - Vooruitgangstraat" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Ter hoogte van Kleine Amer en Vooruitgangstraat worden er vaak bochten afgesneden wat tot gevaarlijke situatie kan leiden met verkeer uit tegenovergestelde richting. Door het beperkte zicht kan je tegenliggers moeilijk zien afkomen, eveneens zorgen geparkeerde wagens in de 'blinde' bochten ook voor gevaarlijke situaties. Om hier aan tegemoet te komen willen we de gevaarlijke bochten voorzien van een middenmarkering. 
+                                      
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                      
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Ter hoogte van Kleine Amer en Vooruitgangstraat worden er vaak bochten afgesneden wat tot gevaarlijke situatie kan leiden met verkeer uit tegenovergestelde richting. Door het beperkte zicht kan je tegenliggers moeilijk zien afkomen, eveneens zorgen geparkeerde wagens in de 'blinde' bochten ook voor gevaarlijke situaties. Om hier aan tegemoet te komen willen we de gevaarlijke bochten voorzien van een middenmarkering. 
+                                      
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 1. 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Financiële weerslag 
+                                      
+                                    
+                                         
+                                     
+                                 
+                            """@nl ;
+    ns3:uuid "b72ebefe-9883-5263-a240-6295eb542461" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Middenmarkering Kleine Amer - Vooruitgangstraat: 
+                                    Kleine Amer nr.108 - 11, Kleine Amer nr.137, Vooruitgangstraat nr.2, Vooruitgangstraat nr.10, Vooruitgangstraat nr.7: Het is iedere bestuurder verboden de onderbroken streep te overschrijden, behalve om in te halen, om links af te slaan, om te keren of om van rijstrook te veranderen. 
+                                     
+                                         
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Wegmarkering WM72.3  
+                                             
+                                         
+                                     
+                                      
+                                    Artikel 2 : Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                    
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/747470d0-ff36-4f46-bbad-4379e2160faa> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/747470d0-ff36-4f46-bbad-4379e2160faa> a ns1:Agendapunt ;
+    ns3:uuid "8c37197d-604e-5ecd-82b7-f641414d0d6b" .
+

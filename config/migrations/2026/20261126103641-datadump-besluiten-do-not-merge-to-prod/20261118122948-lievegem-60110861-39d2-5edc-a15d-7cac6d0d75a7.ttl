@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/87794e7d-543f-4da0-9ada-caa9aa48b82b> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a557c9d4-3385-4a58-9c06-bc5b4da174a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> ;
+    ns3:geplandeStart "2026-08-18T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0d228c5a-442c-4117-9fea-caadaa3b5deb> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "12b86113-a84b-5600-a2c0-27659982b41b" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-08-18T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a557c9d4-3385-4a58-9c06-bc5b4da174a1> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> ;
+    ns3:openbaar false ;
+    ns1:uuid "5dd33c97-c980-5d8f-a35e-bae106728c80" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a557c9d4-3385-4a58-9c06-bc5b4da174a1> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a557c9d4-3385-4a58-9c06-bc5b4da174a1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a557c9d4-3385-4a58-9c06-bc5b4da174a1> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Nazomerfeest 2026' en 'Sound Of Summer' van vrijdag 18 september 2026 19.30 uur tot en met zaterdag 19 september 2026 3.00 uuren van zaterdag 19 september 2026 18.00 uur tot en met zondag 20 september 2026 5.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Nazomerfeest 2026' en 'Sound of Summer' - KLJ Waarschoot: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 18 augustus 2026 over de aanvraag evenement Sound of Summer - septemberweekend 2026 - KLJ Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 18 augustus 2026 over de aanvraag inname openbaar domein - plaatsen van aanhangwagen met reclame op dorpsplein Waarschoot voor 'Sound Of Summer' - KLJ Waarschoot: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Xenia Van Maldegem, namens KLJ Waarschoot, organiseert 'Nazomerfeest 2026' en 'Sound Of Summer'.Het nazomerfeest vindt plaats van vrijdag 18 september 2026 20.30 uur tot en met zaterdag 19 september 2026 2.00 uur en Sound Of Summer vindt plaats op dezelfde locatie van zaterdag 19 september 2026 19.00 uur tot en met zondag 20 september 2026 4.00 uur.Er werd op 28 mei 2026 een aanvraag ingediend door Xenia Van Maldegem, namens KLJ Waarschoot om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "60110861-39d2-5edc-a15d-7cac6d0d75a7" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Nazomerfeest 2026' en 'Sound Of Summer' wordt vastgesteld als volgt: 
+                                    van vrijdag 18 september 2026 19.30 uur tot en met zaterdag 19 september 2026 3.00 uur en van zaterdag 19 september 2026 18.00 uur tot en met zondag 20 september 2026 5.00 uur: 
+                                     
+                                        Afsluiten van Willemstraat (uitgezonderd bewoners) 
+                                        Stilstaan- en parkeerverbod in Willemstraat 
+                                        invoeren van éénrichtingsverkeer in Berg en Zevenbunders (vanaf kruispunt Keerstraatje/Berg tot en met kruispunt Zevenbunders/Hendrik Consciencelaan) 
+                                        Stilstaan- en parkeerverbod in Berg en Zevenbunders langs de rijweg (vanaf kruispunt Keerstraatje/Berg tot en met kruispunt Zevenbunders/Hendrik Consciencelaan). De parkeervakken blijven beschikbaar 
+                                        Wegomlegging via Hendrik Consciencelaan - Berg 
+                                        Afsluiten van wegel van Weststraat (tussen huisnummer 39 en 41) naar Willemstraat 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    van vrijdag 18 september 2026 19.30 uur tot en met zaterdag 19 september 2026 3.00 uur en van zaterdag 19 september 2026 18.00 uur tot en met zondag 20 september 2026 5.00 uur: 
+                                    1. Nadar + C3 + bord 'uitgezonderd bewoners' + M2 aan kruispunt Willemstraat/Berg 
+                                    2. Borden E3 
+                                    3. - Bord F19 + M4 op volgende kruispunten: Keerstraatje/Berg, Berg/Willemstraat, Berg/Zevenbunders en Zevenbunders/Zevenbunders (2x)    - Bord C1 + M2  op volgende kruispunten: Berg/Willemstraat, Berg/Zevenbunders, Zevenbunders/Zevenbunders (2x) en Zevenbunders/Hendrik Consciencelaan 
+                                        - Bord C31a op volgende kruispunten: Rapenburg/Berg, Zevenbunders/Zevenbunders en Hendrik Consciencelaan/Zevenbunders 
+                                        - Bord C31b op volgende kruispunten: Berg/Willemstraat en Hendrik Consciencelaan/Zevenbunders 
+                                    4. Borden E3 
+                                    5. Borden F41 
+                                    6. Nadar + C3 + M2 aan het begin van de wegel uit Weststraat richting Willemstraat (tussen huisnummer 39 en 41) 
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a557c9d4-3385-4a58-9c06-bc5b4da174a1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a557c9d4-3385-4a58-9c06-bc5b4da174a1> a ns3:Agendapunt ;
+    ns1:uuid "f092b059-6779-5f7a-9f6c-64465f2d5120" .
+

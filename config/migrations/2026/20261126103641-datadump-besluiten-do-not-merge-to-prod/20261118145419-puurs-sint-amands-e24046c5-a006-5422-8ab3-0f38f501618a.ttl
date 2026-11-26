@@ -1,0 +1,147 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/c1acb7bd-eada-459d-b2d4-e17139846388> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4368b2c7-cc82-4b74-abed-6bc83653f071>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/747470d0-ff36-4f46-bbad-4379e2160faa> ;
+    ns1:geplandeStart "2026-02-24T20:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/383bf47d-deee-4ce0-b8ef-c4646b69b9f5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "43344160-0c54-5ca3-bd45-c137dc440e63" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-02-24T20:38:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4368b2c7-cc82-4b74-abed-6bc83653f071> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/62b1e449-5f57-4248-a7b0-fd28d873336a> ;
+    ns1:openbaar false ;
+    ns2:uuid "f95ffe62-620f-5c03-9954-a801e4333323" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4368b2c7-cc82-4b74-abed-6bc83653f071> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/4368b2c7-cc82-4b74-abed-6bc83653f071> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/4368b2c7-cc82-4b74-abed-6bc83653f071> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Donkstraat" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Er wordt hinderlijk parkeergedrag ervaren in de Donkstraat tussen Ruisbroek-dorp en Rietveld. De huidige parkeersituatie in de Donkstraat is van die aard dat het parkern buiten de vakken niet verboden is wat voor hinder zorgt bij het kruisend verkeer. Deze AVR maakt met enkele kleine ingrepen het parkeren tussen de parkeervakken niet meer mogelijk zodat het verkeer terug op een vlotte manier kan kruisen. 
+                                      
+                                      
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                      
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Er wordt hinderlijk parkeergedrag ervaren in de Donkstraat tussen Ruisbroek-dorp en Rietveld. De huidige parkeersituatie in de Donkstraat is van die aard dat het parkern buiten de vakken niet verboden is wat voor hinder zorgt bij het kruisend verkeer. Deze AVR maakt met enkele kleine ingrepen het parkeren tussen de parkeervakken niet meer mogelijk zodat het verkeer terug op een vlotte manier kan kruisen. 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Financiële weerslag 
+                                      
+                                    
+                                         
+                                     
+                                 
+                            """@nl ;
+    ns2:uuid "e24046c5-a006-5422-8ab3-0f38f501618a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Parkeerregeling Donkstraat: 
+                                    Donkstraat nr.2 (hoek Ruisbroek-Dorp 68) : het parkeren is verboden; het begin van de parkeerreglementering wordt aangeduid; 
+                                    Dit wordt aangeduid door verkeerstekens: 
+                                     
+                                         Verkeersbord E1 - Onderbord Xc 8m  
+                                     
+                                     
+                                        
+                                             
+                                         
+                                     
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Donkstraat nr.2a - nr.14, Donkstraat nr.23A - nr.15: het parkeren is verboden; het begin van de parkeerreglementering wordt aangeduid; het einde van de parkeerreglementering wordt aangeduid. 
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Verkeersbord E1 - Onderbord Xa - Onderbord Xb  
+                                             
+                                         
+                                     
+                                     
+                                        Donkstraat nr.26, Donkstraat nr.29, Donkstraat nr.1a : het parkeren is verboden; het begin van de parkeerreglementering wordt aangeduid;  
+                                        Dit wordt aangeduid door verkeerstekens: 
+                                         
+                                             Verkeersbord E1 - Onderbord Xa   
+                                         
+                                     
+                                    Artikel 2: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                    
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4368b2c7-cc82-4b74-abed-6bc83653f071> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4368b2c7-cc82-4b74-abed-6bc83653f071> a ns1:Agendapunt ;
+    ns2:uuid "68335cf1-cbca-5af9-87e0-bc4127d8d789" .
+

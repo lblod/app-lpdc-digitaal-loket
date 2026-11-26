@@ -1,0 +1,75 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/0ead36f8-612c-4755-8f02-5c035cc69895> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3d3096ce-9c10-45ee-a326-b997a6bd438d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ca5e353a-b998-496b-8df9-162dcdf5014c> ;
+    ns2:geplandeStart "2026-06-23T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9ff49c66-c8e6-44df-8707-ebaa9629733f> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "11ea0f35-a83b-55e0-b64e-53a589b83d43" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-06-23T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d4ba1be2-e61a-4c32-b436-f013a8c5e739> ;
+    ns2:openbaar false ;
+    ns3:uuid "553661aa-f872-5107-abae-057a31b234ba" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'BBQ Beke Tuinwijk' op 2 augustus 2026 van 9.00 uur tot 21.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'BBQ Beke Tuinwijk' - Buurtcomité Beke Tuinwijk: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 23 juni 2026 over de aanvraag buurtfeest BBQ Beke Tuinwijk - Buurtcomité Beke Tuinwijk: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Ilse De Craene, namens buurtcomité Beke Tuinwijk, organiseert 'BBQ Beke Tuinwijk' op 2 augustus 2026 van 9.00 uur tot en met 21.00 uur.Er werd op 16 april 2026 een aanvraag ingediend door Ilse De Craene, namens buurtcomité Beke Tuinwijk, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    De inwoners van Beke Tuinwijk moeten één week voor de aanvang van het evenement door de organisatie per brief worden verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "1693c0bf-dd8a-5a33-b6fc-9023fb33b7ac" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'BBQ Beke Tuinwijk' op 2 augustus 2026 van 9.00 uur tot en met 21.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Afsluiten van Beke Tuinwijk, 9950 Lievegem  
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Nadar + C3 + 'uitgezonderd fietsers' + 'uitgezonderd plaatselijk verkeer' aan kruispunt Beke Tuinwijk/Renning 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb> a ns2:Agendapunt ;
+    ns3:uuid "09304f7f-5dd1-5924-b609-46f13e64566e" .
+

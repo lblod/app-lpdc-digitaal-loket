@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3027bbce-6e1b-47b4-bc0b-f53c72f1f9d2> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1b0c2c7b-0314-444b-ba38-6b1f25637bc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27e0c4db-269e-409a-8d55-33db7daf7c9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aac60983-db3c-4247-b27f-4860f02157a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ba5489da-e01f-4521-be10-56c4a038e97d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d6f26eb7-74ad-4e5a-bcb3-b89aa65ac7b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d84d3931-b8bf-4253-ad24-7fabe8331040>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6446375-946b-4c3d-9dcc-c3cf171303a1> ;
+    ns1:geplandeStart "2020-09-09T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e04bbeb0-1e3c-48c6-86c0-2e3a8995ae98> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/619a64f0-35fa-41f1-9895-5360cd9bf16b> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2cf19f34-4e9d-4ca2-9af9-b8280d2d4efc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e687ae50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-09-09T23:00:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-09-09T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d> ;
+    ns1:openbaar true ;
+    ns3:uuid "efdbfc90-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de nominatieve subsidie voor het strategisch project "Regie van en voor het Oost-Vlaams kerngebied"aan de provincie Oost-Vlaanderen voor een bedrag van 5.422,76 € goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Gemeentelijke nominatieve toelage strategisch project Regie van en voor het Oost-Vlaams Kerngebied provincie Oost-Vlaanderen 2020: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 14 november 1983 betreffende de controle op de toekenning en op de aanwending van sommige toelagen. Het decreet lokaal bestuur van 22 december 2017, artikel 41,23°Het besluit van het college van burgemeester en schepenen van de gemeente Zomergem van 13 maart 2017 ter goedkeuring van het ESF-dossier "Versterkt Streekbeleid G28+, Regionetwerk Gent"Het besluit van het college van burgemeester en schepenen van de gemeente Waarschoot van 20 maart 2017 ter principiële goedkeuring van het ESF-dossier "Versterkt Streekbeleid" met Veneco² en de 14 gemeenten van het Meetjesland voor de streekwerking voor het MeetjeslandHet besluit van de gemeenteraad van de gemeente Waarschoot van 30 maart 2017 ter goedkeuring van het ESF-dossier "Versterkt Streekbeleid" met Veneco² en de 14 gemeenten van het Meetjesland voor de streekwerking voor het MeetjeslandHet besluit van het college van burgemeester en schepenen van de gemeente Lovendegem van 2 maart 2017 ter goedkeuring van het ESF-dossier "Versterkt Streekbeleid"Het besluit van het college van burgemeester en schepenen van de gemeente Lovendegem van 16 maart 2017 tot intrekking van het vorig besluit van 2 maart 2017 ter goedkeuring van het ESF-dossier "Versterkt Streekbeleid" en de goedkeuring van het ESF-dossier "Versterkt Streekbeleid" 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Historiek 
+                                                            Op 20 december 2016 keurde de Minister voor Ruimtelijke Ordening het strategisch project "Regie van en voor het Oost-Vlaams Kerngebied" (hierna: OVK-project) goed. Dit project wordt uitgewerkt met de partners van het Regionetwerk Gent, Veneco en Stad Gent, en 23 steden en gemeente in de ruime regio rond Gent. 
+                                                            Op het gezamenlijk burgemeestersoverleg van 16 december 2016 werden afspraken gemaakt over de financiële bijdrage van de gemeenten ingeval van goedkeuring van dit project. 
+                                                            Vervolgens is een ESF-aanvraag "Versterkt Streekbeleid" ingediend door o.m. Veneco en de provincie Oost-Vlaanderen. Deze ESF-aanvraag betrof sociaal-economische acties voor de streekontwikkeling, terwijl het voormelde strategisch OVK-project de ruimtelijke acties op zich had genomen. 
+                                                            Op vraag van de lokale besturen werden het ESF-project en het OVK-project geïntegreerd en werd 1 financiële vraag gesteld aan de gemeenten, waarbij aan de gemeenten enkel voor het derde werkingsjaar van het OVK-project een éénmalige bijdrage was gevraagd. Dit voorstel dateert van februari 2017. De colleges van de deelgemeenten van Lievegem hebben hierover een beslissing genomen in de loop van de maart 2017, naar aanleiding van de brief van Veneco (zie bijlage). Hierbij voorzag Lovendegem € 1.750,39, Waarschoot € 1.675,18 en Zomergem € 1.997,19. 
+                                                            Dit goedgekeurde project kent een verloop van 1 oktober 2017 en loopt nog tot 30 september 2020. Thans wordt de gemeentelijke bijdrage gevraagd voor het derde werkingsjaar. De bijdragen van de deelgemeenten apart betreffen samen € 5.422,76 (zie bijlage). 
+                                                            Vraag tot nominatieve toelage 
+                                                            Deze beslissingen van de vorige besturen van de deelgemeenten zijn echter uit het oog verloren. Er is dan ook geen budget voorzien in het meerjarenplan om aan de beloofde bijdrage te betalen. 
+                                                            In dat opzicht moet een nominatieve toelage van € 5.422,76 aan de provincie Oost-Vlaanderen worden toegekend. Hiervoor wordt de goedkeuring aan de gemeenteraad gevraagd. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Het gevraagde bedrag van 5.422,76€ wordt door team Financiën beschouwd als een nominatieve subsidie en te boeken op: 2020/GBB-OMG/0600-00/6494000/GEMEENTE/CBS/IP-GEEN 
+                                                            Hiervoor kunnen kredieten worden verschoven vanuit 2020/GBB-OMG/0600-00/6143007/GEMEENTE/CBS/IP-GEEN - publicatiekosten omgeving. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e6864ec0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad keurt de nominatieve subsidie voor het strategisch project "Regie van en voor het Oost-Vlaams kerngebied" aan de provincie Oost-Vlaanderen voor een bedrag van 5.422,76€ goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "efeac9a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Gemeentelijke nominatieve toelage strategisch project Regie van en voor het Oost-Vlaams Kerngebied provincie Oost-Vlaanderen 2020: goedkeuring" .
+

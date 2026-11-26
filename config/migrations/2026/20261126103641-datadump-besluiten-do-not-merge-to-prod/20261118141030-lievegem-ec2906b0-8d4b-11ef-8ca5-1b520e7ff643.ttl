@@ -1,0 +1,122 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/13531b75-2b97-49e6-95b5-0130577929ca> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3087dcaf-8404-4313-8c4d-cf86d7068e89>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b11927eb-1bef-4718-bdb3-8a26d2d317a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e7de92-a36c-4219-9e13-c69071e37e4c> ;
+    ns1:geplandeStart "2022-03-30T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5072526b-b5d4-4d2b-ba68-1047063dac6e> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6062ed9f-3a18-4da2-b571-465c2cc37207> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6b4a4077-779d-4b4b-9f0b-f39d932e61c9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ec275900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-03-30T21:10:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-03-30T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a> ;
+    ns1:openbaar true ;
+    ns3:uuid "ed169b00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/d7060f97-c417-474c-abc6-ef006cb61f41> ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt het subsidiereglement werkingssubsidies Lievegemse ouderraad vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Subsidiereglement - werkingssubsidies ouderraden van Lievegemse scholen: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Caroline Fredrick, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet van 22 december 2017 over het lokaal bestuur, inzonderheid artikel 56 §1: college bereidt de besluiten van de gemeenteraad voor.Decreet van 30 november 2007 over het flankerend onderwijsbeleid op lokaal niveauHet besluit van het college van burgemeester en schepenen van 1 maart 2022 houdende de principiële goedkeuring van het reglement werkingssubsidies ouderraden Lievegemse scholen   
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Er wordt voor een termijn aanvangend voor schooljaar 2021-2022 tot en met schooljaar 2025-2026 een subsidiereglement gevestigd voor het toekennen van een werkingssubsidie aan erkende ouderraden van Lievegemse scholen. 
+                                    Per schooljaar kunnen de ouderraden een werkingssubsidie krijgen. Daarmee wil het gemeentebestuur in het kader van een flankerend onderwijsbeleid ouderparticipatie bevorderen. 
+                                    Het bedrag van de subsidie bedraagt 150 euro per ouderraad en per schooljaar. 
+                                    De aanvraag kan enkel via het digitale formulier. Aanvragen voor het lopende schooljaar dien je na dat schooljaar in tussen 1 juli en 15 september.Voorbeeld:Tussen 1 juli 2022 en 15 september 2022 dien je de aanvraag in voor schooljaar 2021 – 2022.Tussen 1 juli 2023 en 15 september 2023 dien je de aanvraag in voor schooljaar 2022 – 2023.Tussen 1 juli 2024 en 15 september 2024 dien je de aanvraag in voor schooljaar 2023 – 2024.Etc. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Er is budget voorzien gedurende de volledige legislatuur op GBB-SSC/0889-00/6493000/GEMEENTE/CBS/IP-GEEN 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Reglement werkingssubsidies ouderraden van Lievegemse scholen 
+                                    PeriodeArtikel 1Er wordt voor een termijn aanvangend voor schooljaar 2021-2022 tot en met schooljaar 2025-2026 een subsidiereglement gevestigd voor het toekennen van een werkingssubsidie aan erkende ouderraden van Lievegemse scholen. 
+                                    DoelArtikel 2De ouderraad wendt de werkingssubsidie aan om zo een kwalitatieve werking te faciliteren, want de gemeente Lievegem heeft als doel ouderparticipatie bevorderen. 
+                                    Voorwaarden voor het bekomen van de werkingssubsidieArtikel 3Om in aanmerking te komen de werkingssubsidie te ontvangen, moet de ouderraad verbonden zijn aan een vestiging van een erkende onderwijsinstelling op het grondgebied van de gemeente Lievegem.Artikel 4§1. De ouderraad moet een actieve werking hebben tijdens het volledige schooljaar waarvoor de werkingssubsidie aangevraagd wordt.§2. De ouderraad mag geen commerciële, handels- of winstdoeleinden nastreven.§3. Er is maximaal 1 ouderraad per schoolvestiging.§4. Eventuele wijzigingen dienen zo snel mogelijk gemeld te worden.Bedrag van de subsidieArtikel 5Het bedrag van de subsidie bedraagt 150 euro per ouderraad en per schooljaar. 
+                                    Procedure (Aanvraag, uitbetaling, staving)Aanvraag van de subsidieArtikel 6Het aanvraagformulier staat ter beschikking via de gemeentelijke website tussen 1 juli en 15 september. Enkel aanvragen ingediend tijdens deze periode komen in aanmerking.Artikel 7Na verificatie van de aangereikte gegevens weerhoudt het gemeentebestuur enkel correct en volledig ingevulde aanvraagformulieren.UitbetalingArtikel 8De subsidie wordt gestort op het opgegeven rekeningnummer van de ouderraad.StavingArtikel 9De ouderraad voegt bij de aanvraag een beknopt activiteitenverslag toe van het voorgaande schooljaar.Artikel 10Het gemeentebestuur kan een ouderraad vragen haar werking bijkomend te staven.BetwistingenArtikel 11het college van burgemeester en schepenen oordeelt over alle betwistingen over de toepassing van dit reglement. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt opgestuurd naar Team financiën.Bekendmaking op de website.Naar ABB via digitaal loket. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Caroline Fredrick, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, inzonderheid artikel 56 §1: college bereidt de besluiten van de gemeenteraad voor.Decreet van 30 november 2007 over het flankerend onderwijsbeleid op lokaal niveauHet besluit van het college van burgemeester en schepenen van 1 maart 2022 houdende de principiële goedkeuring van het reglement werkingssubsidies ouderraden Lievegemse scholen   
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Er wordt voor een termijn aanvangend voor schooljaar 2021-2022 tot en met schooljaar 2025-2026 een subsidiereglement gevestigd voor het toekennen van een werkingssubsidie aan erkende ouderraden van Lievegemse scholen. 
+                                                            Per schooljaar kunnen de ouderraden een werkingssubsidie krijgen. Daarmee wil het gemeentebestuur in het kader van een flankerend onderwijsbeleid ouderparticipatie bevorderen. 
+                                                            Het bedrag van de subsidie bedraagt 150 euro per ouderraad en per schooljaar. 
+                                                            De aanvraag kan enkel via het digitale formulier. Aanvragen voor het lopende schooljaar dien je na dat schooljaar in tussen 1 juli en 15 september.Voorbeeld:Tussen 1 juli 2022 en 15 september 2022 dien je de aanvraag in voor schooljaar 2021 – 2022.Tussen 1 juli 2023 en 15 september 2023 dien je de aanvraag in voor schooljaar 2022 – 2023.Tussen 1 juli 2024 en 15 september 2024 dien je de aanvraag in voor schooljaar 2023 – 2024.Etc. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Er is budget voorzien gedurende de volledige legislatuur op GBB-SSC/0889-00/6493000/GEMEENTE/CBS/IP-GEEN 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ec2906b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1De gemeenteraad stelt het subsidiereglement werkingssubsidies Lievegemse ouderraad vast.Artikel 2Het subsidiereglement treedt vanaf 1 april 2022 in werking. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad stelt het subsidiereglement werkingssubsidies Lievegemse ouderraad vast.Artikel 2Het subsidiereglement treedt vanaf 1 april 2022 in werking. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "ed1a1d70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Subsidiereglement - werkingssubsidies ouderraden van Lievegemse scholen: vaststelling" .
+

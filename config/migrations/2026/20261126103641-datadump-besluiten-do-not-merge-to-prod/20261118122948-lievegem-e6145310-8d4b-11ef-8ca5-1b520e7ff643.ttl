@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/67813274-3b7a-49f9-b9c9-4340aed05429> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2371935b-7ad6-4871-af1c-8089e789c391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42299301-8db7-4bbf-ae43-b3b4e96ecd75>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50439503-35eb-4857-a55d-25da89a6089f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5856e334-1733-4d65-8957-97a405084cb7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65fdb4dd-4ccc-4e03-957b-90fcc179cde0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/99120f73-d62d-48c9-b773-7826c5491feb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fabf93-37f3-4314-807c-752f83afa18b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc17426a-5ef8-46a5-9063-831499691106>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0e68f3f-8930-4481-a410-e168d0bf59e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns1:geplandeStart "2024-01-31T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d806425-9a34-4095-988a-05678b76355f> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0682f2be-d210-4ac2-9225-4ac8a0eeb628> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3369f7d3-24df-47ea-acab-50b627f1e882> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e6273ed0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-01-31T21:22:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-31T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426> ;
+    ns1:openbaar true ;
+    ns3:uuid "e614c840-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad neemt kennis van het advies van de Gecoro ten aanzien van het ontwerp van het gemeentelijk ruimtelijk uitvoeringsplan Agrarisch gebied Zomergem. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Ontwerp RUP Agrarisch gebied Zomergem - advies Gecoro: kennisname" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet lokaal bestuur, artikel 40Het decreet van 5 april 1995 houdende algemene bepalingen inzake milieubeleidDe Vlaamse Codex Ruimtelijke Ordening, artikelen 2.2.1 - 2.2.6 en 2.2.18 - 2.2.25Het decreet van 1 juli 2016 tot wijziging van de regelgeving voor ruimtelijke uitvoeringsplannen teneinde de planmilieueffectrapportage en andere effectbeoordelingen in het planningsproces voor ruimtelijke uitvoeringsplannen te integreren door wijziging van diverse decretenHet besluit van de Vlaamse Regering van 17 februari 2017 betreffende het geïntegreerde planningsproces voor ruimtelijke uitvoeringsplannen, planmilieueffectrapportage, ruimtelijke veiligheidsrapportage en andere effectbeoordelingenHet besluit van het college van burgemeester en schepenen van Zomergem van 27 december 2018 tot goedkeuring van de startnota gemeentelijk RUP Agrarisch open ruimte gebiedHet besluit van het college van burgemeester en schepenen van 30 maart 2021 omtrent de bespreking nota gemeentelijk RUP Agrarisch gebied ZomergemHet besluit van het college van burgemeester en schepenen van 31 augustus 2021 tot goedkeuring van de scopingsnota gemeentelijk RUP Agrarisch gebied ZomergemHet besluit van het college van burgemeester en schepenen van 1 februari 2022 tot goedkeuring van de aangepaste versie van de scopingsnota gemeentelijk Agrarisch gebied ZomergemHet besluit van het college van burgemeester en schepenen van 10 mei 2022 tot goedkeuring van het voorontwerp gemeentelijk RUP Agrarisch gebied ZomergemHet besluit van de gemeenteraad van 23 november 2022 tot voorlopige vaststelling van het ontwerp gemeentelijk RUP Agrarisch gebied Zomergem 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Schets van het procedureverloop 
+                                                            Het college van burgemeester en schepenen van de gemeente Zomergem heeft op 27 december 2018 de startnota van het gemeentelijk RUP Agrarisch open ruimte gebied goedgekeurd.Deze startnota werd vervolgens samen met de procesnota ter inzage gelegd. De publieke consultatie is gehouden van 12 november 2019 tot en met 10 januari 2020. Het publieke participatiemoment is doorgegaan op 27 november 2019.Na verschillende planteams heeft het college beslist om de tweede doelstelling van het RUP (om een recreatiepool voor zachte recreatie te voorzien) niet langer aan te houden.Op 31 augustus 2021 heeft het college van burgemeester en schepenen van Lievegem de scopingsnota goedgekeurd.Echter op 25 oktober geeft Team MER aan dat de scopingsnota, goedgekeurd door het college, onvoldoende informatie bevat om een correcte beslissing te kunnen nemen over de plan-MER- plicht. Er dient een aangepaste versie van de scopingsnota opgemaakt te worden en opnieuw aan Team MER bezorgd te worden.Vervolgens heeft het planteam de scopingsnota herwerkt.Op 1 februari 2022 heeft het college van burgemeester en schepenen de aangepaste versie van de scopingsnota goedgekeurd en deze opnieuw bezorgd aan Team MER.Op 1 maart 2022 heeft het team MER bepaald dat er geen plan-MER opgesteld moet worden voor het voorliggende RUP.Op 10 mei 2022 is het voorontwerp RUP Agrarisch gebied Zomergem uitgewerkt, met een duidelijk grafisch plan en stedenbouwkundige voorschriften. Dit voorontwerp heeft als basis gediend voor de schriftelijke adviesvragen.Op 23 november 2022 heeft de gemeenteraad het ontwerp RUP Agrarisch gebied Zomergem voorlopig vastgesteld. 
+                                                            Het initieel openbaar onderzoek van dit voorlopig vastgesteld RUP is georganiseerd van 9 januari 2023 tot en met 10 maart 2023. Omwille van een procedurefout (fout in publicatie op de website) is het openbaar onderzoek opnieuw georganiseerd van 1 september 2023 tot en met 30 oktober 2023. 
+                                                            De gemeentelijke commissie voor ruimtelijke ordening (hierna: Gecoro) bundelt en coördineert alle adviezen, opmerkingen en bezwaren ten aanzien van een voorlopig vastgesteld gemeentelijk ruimtelijk uitvoeringsplan en brengt binnen negentig dagen na het einde van het openbaar onderzoek gemotiveerd advies uit bij de gemeenteraad. Het advies bevat de integrale adviezen van de deputatie en van het departement. 
+                                                            In bijlage het gemotiveerd advies van de Gecoro ten aanzien van het voorlopig vastgesteld gemeentelijk RUP Agrarisch gebied Zomergem en een synthese van de ingediende adviezen, opmerkingen en bezwaren, uitgebracht tijdens de georganiseerde openbaar onderzoeken. 
+                                                            Vervolg procedure 
+                                                            De gemeenteraad stelt binnen 180 dagen na het einde van het openbaar onderzoek het gemeentelijk ruimtelijk uitvoeringsplan definitief vast. Dit betekent dat de definitieve vaststelling ten laatste op de gemeenteraad van 24 april 2024 mag worden geagendeerd. 
+                                                            Op gemotiveerd verzoek van het college van burgemeester en schepenen beslist de gemeenteraad over een verlenging met zestig dagen van de termijn waarin het plan moet worden vastgesteld. Indien het college dit wenst uit te stellen, dan kan dit, maar de gemeenteraad moet ten laatste op 26 juni beslissen (de 180e dag + 60 dagen). 
+                                                            Als het gemeentelijk ruimtelijk uitvoeringsplan niet definitief wordt vastgesteld binnen de termijn, vermeld in paragraaf 6, eerste lid, vervalt het ontwerp van gemeentelijk ruimtelijk uitvoeringsplan. 
+                                                            Bij de definitieve vaststelling van het plan kunnen ten opzichte van het voorlopig vastgestelde plan alleen wijzigingen worden aangebracht die gebaseerd zijn op of voortvloeien uit de tijdens het openbaar onderzoek geformuleerde bezwaren en opmerkingen, of uit de adviezen, uitgebracht door de aangewezen diensten en overheden, of uit het advies van de gemeentelijke commissie voor ruimtelijke ordening. 
+                                                            De definitieve vaststelling van het plan kan echter geen betrekking hebben op delen van het grondgebied die niet opgenomen zijn in het voorlopig vastgestelde plan. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e6145310-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad neemt kennis van het advies van de Gecoro ten aanzien van het ontwerp van het gemeentelijk ruimtelijk uitvoeringsplan Agrarisch gebied Zomergem. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e6173940-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Ontwerp RUP Agrarisch gebied Zomergem - advies Gecoro: kennisname" .
+

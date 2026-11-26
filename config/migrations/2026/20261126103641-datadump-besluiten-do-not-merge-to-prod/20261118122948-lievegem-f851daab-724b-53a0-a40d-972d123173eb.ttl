@@ -1,0 +1,106 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/f2709e26-1e74-4e2e-99d1-2611293cd281> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63d94650-b618-4e07-a2e4-e92306eddf8b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc2c78ab-9386-4bcf-9299-3c8d3e5e07fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> ;
+    ns2:geplandeStart "2026-04-07T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/74103a52-2c11-4b34-91e1-ca922c513e88> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "8ce1d4c2-564c-5311-a748-01fa39adeea3" ;
+    prov:atLocation "'t Leiken, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-04-07T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> ;
+    ns2:openbaar false ;
+    ns3:uuid "7714b3fa-2ee8-55ad-aadb-b1e764de8dc3" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7bd4b2a3-c64c-4440-9750-46092ba6be39> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7bd4b2a3-c64c-4440-9750-46092ba6be39> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Buitenspeeldag 2026' op 22 april 2026 wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Buitenspeeldag 2026' - team jeugd - gemeente Lievegem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 7 april 2026 over aanvraag evenement Buitenspeeldag 2026 - Team jeugd: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Sara Van Acker, namens team jeugd - gemeente lievegem, organiseert 'Buitenspeeldag 2026' op woensdag 22 april 2026 van 14.00 uur tot en met 17.00 uur.Er werd op 26 februari 2026 een aanvraag ingediend door Sara Van Acker, namens team jeugd, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "f851daab-724b-53a0-a40d-972d123173eb" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Buitenspeeldag 2026 op 22 april 2026 wordt vastgesteld als volgt: 
+                                    van 12.00 uur tot en met 18.00 uur: 
+                                     
+                                        Aanduiding 'evenement' aan zebrapaden ter hoogte van WZC De Linde, Schoolstraat 33, 9950 Lievegem. 
+                                        Stilstaan- en parkeerverbod op de parkeerplaatsen aan Hofbouwstraat 1 ('t Kwadrant) en Hofbouwstraat 2B (KSA Oepites), 9930 Lievegem 
+                                        Aanduiding 'evenement' ter hoogte van Kasteeldreef 57 en 66, 9920 Lievegem 
+                                        Stilstaan- en parkeerverbod ter hoogte van Kasteeldreef 57 en op volledige parking Kasteeldreef 72, 9920 Lievegem. 
+                                     
+                                    
+                                        van 12.30 uur (na passage van het schoolverkeer) tot en met 18.00 uur:
+                                     
+                                    
+                                         
+                                            afsluiten Hofbouwstraat voor alle verkeer vanaf Hofbouwstraat 2B (KSA Oepites) tot voorbij Hofbouwstraat 1 ('t Kwadrant), 9930 Lievegem  
+                                            Hofbouwstraat wordt doodlopend vanaf kruispunt Hofbouwstraat/Luitenant Dobbelaerestraat en vanaf kruispunt Hofbouwstraat/Kruisdreef, 9930 Lievegem 
+                                        
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    van 12.00 uur tot en met 18.00 uur: 
+                                     
+                                        Borden 'evenement' en A51 
+                                        Borden E3 
+                                        Borden 'evenement' en A51 
+                                        Borden E3 
+                                     
+                                    
+                                        van 12.30 uur tot en met 18.00 uur:
+                                     
+                                    
+                                         
+                                            Bord C3 ter hoogte van Hofbouwstraat 2B en Hofbouwstraat 1, 9930 Lievegem 
+                                            Bord C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45 op kruispunt Kruisdreef/Hofbouwstraat, Luitenant Dobbelaerestraat/Hofbouwstraat en Tulpenlaan/Hofbouwstraat, 9930 Lievegem. 
+                                        
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden en terug bij aanvang en einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39> a ns2:Agendapunt ;
+    ns3:uuid "81be4822-6d5d-537d-9599-0652110bf4c2" .
+

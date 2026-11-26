@@ -1,0 +1,139 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/aa9d4a09-a1cf-43cc-a3a6-4b457870d903> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c377066-651c-4217-9704-d53dbd509b12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4ce8a08a-0492-4280-8735-610b96f4948b> ;
+    ns3:geplandeStart "2026-07-14T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5ea1e6d5-f67d-44e4-b710-b8f2e4344c31> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "6d55133d-21dc-576a-b216-fd2544bb3e66" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-07-14T13:32:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4ce8a08a-0492-4280-8735-610b96f4948b> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3c377066-651c-4217-9704-d53dbd509b12> ;
+    ns3:openbaar false ;
+    ns2:uuid "3f222e56-7908-51c2-8992-c97a78038ee0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4ce8a08a-0492-4280-8735-610b96f4948b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4ce8a08a-0492-4280-8735-610b96f4948b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4ce8a08a-0492-4280-8735-610b96f4948b> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Leestjeskermis' van maandag 14 september 2026 7.00 uur tot en met donderdag 17 september 2026 12.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Leestjeskermis 2026' - Dekenij Leest en Kerkstraat: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 14 juli 2026 over de aanvraag evenement Leestjeskermis 2026 - Dekenij Leest en Kerkstraat: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Patrick Bruggeman, namens Dekenij Leest en Kerkstraat organiseert 'Leestjeskermis 2026' van woensdag 16 september 2026 7.00 uur tot en met donderdag 17 september 2026 1.00 uur.Er werd op 2 juni 2026 een aanvraag ingediend door Patrick Bruggeman, namens Dekenij Leest en Kerkstraat om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns2:uuid "1aebf28d-6e31-5e1a-9a9a-7f843d80327a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Leestjeskermis 2026' wordt vastgesteld als volgt: 
+                                     
+                                    1. van maandag 14 september 2026 7.00 uur tot en met donderdag 17 september 2026 11.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod ter hoogte van Leest 34 -44 voor plaatsing tent en drankcontainer 
+                                     
+                                     
+                                    2. van maandag 14 september 2026 8.00 uur tot en met donderdag 17 september 2026 12.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod ter hoogte van Leest 39 - 41 voor plaatsing podium 
+                                        plaatsen nodige signalisatie aan het podium voor beurtelings verkeer (zolang het podium er staat) 
+                                        Snelheidsbeperking: max. 30 km/u 100m voor en na het podium ter hoogte van Leest 39-41, 9950 Lievegem 
+                                        voorsignalisatie ter hoogte van kruispunten met Notelaarstraat en Gastelstraat 
+                                     
+                                     
+                                    3. van woensdag 16 september 2026 6.00 uur tot en met donderdag 17 september 2026 1.00 uur: 
+                                     
+                                        Afsluiten van Renning, Leest en Kerkstraat tussen N9 en Waarschootdorp 
+                                        Omleiding voorzien via Schoolstraat - N9 en omgekeerd 
+                                        Afsluiten van Gastelstraat aan het kruispunt met Leest 
+                                        Omleiding voorzien via Metaalstraat 
+                                        Stilstaan- en parkeerverbod in Renning, Leest, Kerkstraat en eerste deel Lejourstraat (vanaf kruispunt met Kerkstraat tot zijbaantjes met garages) 
+                                     
+                                      
+                                    
+                                        4. van woensdag 16 september 2026 17.00 uur tot en met donderdag 17 september 2026 1.00 uur:
+                                     
+                                     
+                                         
+                                            Volledig afsluiten van Leest ter hoogte van huisnummer 40 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        Artikel 2
+                                     
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                    1. van maandag 14 september 2026 20.00 uur tot en met donderdag 17 september 2026 11.00 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                     
+                                    2. van dinsdag 16 september 2026 8.00 uur tot en met donderdag 17 september 2026 12.00 uur: 
+                                     
+                                        Borden E3 
+                                        Borden D1c en D1d + knipperlicht aan beide zijden van het podium 
+                                        Borden voor beurtelings verkeer B19 en B21 
+                                        Borden C43 '30' en C45 '30'  
+                                        borden A51 + 'evenement' 
+                                     
+                                      
+                                    3. van woensdag 16 september 2026 6.00 uur tot en met donderdag 17 september 2026 1.00 uur: 
+                                     
+                                        Nadar + C3 + M2 op de volgende kruispunten: Renning/N9, Renning/Beke Tuinwijk, Renning/Renning Tuinwijk, Leest/Weverstraat, Leest/Notelaarstraat, Kerkstraat/Lejourstraat, Kerkstraat/Jaspaertstede en Kerkstraat/Waarschootdorp. 
+                                        Borden F41 op de volgende kruispunten: Renning/N9, N9/Schoolstraat (2x), Kerkstraat/Waarschootdorp 
+                                        Bord C31a op het kruispunt N9/Renning (richting Eeklo - Gent) 
+                                        Bord C31b op het kruispunt N9/Renning (richting Gent  Eeklo) 
+                                        Nadar + C3 + M2 op het kruispunt Leest/Gastelstraat 
+                                        Nadar + C3 + M2 + F45b op de volgende kruispunten: Hovingen/Vinkenstraat, Hovingen/Merelstraat, Hovingen/Bovenmeers en Hovingen/Metaalstraat 
+                                        Borden F41 op de volgende kruispunten: Hovingen/Bovenmeers, Hovingen/Metaalstraat (2x) en Metaalstraat/Stationsstraat 
+                                        Borden E3 
+                                     
+                                      
+                                    4. van woensdag 16 september 2026 17.00 uur tot en met donderdag 17 september 2026 1.00 uur: 
+                                     
+                                        Nadarhekkens + C3 
+                                     
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4ce8a08a-0492-4280-8735-610b96f4948b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4ce8a08a-0492-4280-8735-610b96f4948b> a ns3:Agendapunt ;
+    ns2:uuid "6a88fdd7-818d-50ae-b180-67be8517177c" .
+

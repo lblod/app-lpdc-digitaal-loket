@@ -1,0 +1,73 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/9ea1cb68-510a-4030-87a7-3fb447fee86e> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6c33f273-98a0-4d67-8c3e-858f7eb6b829>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/72b59844-6948-4849-b31b-0fc145f1c187>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8b7f63a5-93ed-459e-a4c4-fe66552f8294>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> ;
+    ns2:geplandeStart "2026-04-27T12:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/f9e05e51-685a-4235-9ff4-8d15cd8cc47f> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "897cd4bf-86cb-5673-984f-48f9e2724d15" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-04-27T13:06:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8b7f63a5-93ed-459e-a4c4-fe66552f8294> ;
+    ns2:openbaar false ;
+    ns3:uuid "5b8bdfca-a7ca-5d78-8e07-77c53db5edb1" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor het schoolfeest op 9 mei 2026 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: Schoolfeest Basisschool de Oester 'schatten van Vroeger' - 9 mei 2026" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "a2df1223-070d-531f-8511-a81fb67a71cf" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van schoolfeest op 9 mei 2026 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Verboden stil te staan en te parkeren (fig. E3) op Strijlandstraat, tussen het kruispunt met Processiestraat en het kruispunt met Wolvenstraat- geldigheid 9 mei van 9u tot 22u  
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> a ns2:Agendapunt ;
+    ns3:uuid "193216ee-2064-5f01-a9ff-9c1b470086db" .
+

@@ -1,0 +1,79 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/2e25b699-9c45-4b5f-88aa-f2317708c5b4> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7581ad62-644b-48ae-91d8-e61e89da9c92>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> ;
+    ns1:geplandeStart "2025-03-03T14:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2df52d40-fdb0-47e3-ad17-61cd1328bd94> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "f4236215-c3aa-5737-867a-627147783926" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-03T13:23:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380> ;
+    ns1:openbaar true ;
+    ns3:uuid "992b894c-b448-5779-8c7f-13630c282576" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> a ns1:Besluit ;
+    ns2:description """ 
+                                                    Het college van burgemeester en schepenen gaat akkoord met de te nemen verkeersmaatregelen in het kader van Vinkenzettingen op Schoolstraat, 1570 Pajottegem 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Tijdelijke politieverordening voor Vinkenzettingen op verschillende data in 2025 te Schoolstraat, 1570 Pajottegem" ;
+    ns1:motivering """ 
+                                 
+                                    Aan het college wordt gevraagd volgende verkeersmaatregelen te nemen voor Vinkenzettingen: 
+                                      
+                                    Nadar + C3 'verboden toegang voor alle verkeer' op Schoolstraat net na de zijweg met bareel 
+                                    Nadar + C3 'verboden toegang voor alle verkeer' op Schoolstraat tussen school en het LOI. 
+                                      
+                                    Doorgang voor hulpdiensten moet te allen tijde mogelijk zijn. 
+                                    De doorgang voor fietsers en voetgangers kan via de loods en de zijweg met bareel. 
+                                 
+                            """@nl ;
+    ns3:uuid "cb585cff-84fa-5491-a34e-6ff9ab68a630" ;
+    prov:value """ 
+                                 
+                                    Artikel 1- Het college van burgemeester en schepenen gaat akkoord met de te nemen verkeersmaatregelen in het kader van de Vinkenzettingen op Schoolstraat, 1570 Pajottegem op volgende data:  
+                                    Zaterdag 19/04  
+                                    Zondag  27/04  
+                                    Zondag 04/05  
+                                    Zondag 11/05   
+                                    Zondag 18/05   
+                                    Zondag 25/05   
+                                    Zondag 01/06   
+                                    Zaterdag 07/06  
+                                    Zondag 08/06 
+                                    Zondag 15/06    
+                                    Zondag 22/06    
+                                    Zondag 06/07    
+                                    Zondag13/07      
+                                    Zondag 20/07  
+                                    Zondag 27/07    
+                                    Artikel 2- De tijdelijke verkeersmaatregelen geschieden conform de vigerende wetgeving. 
+                                    Volgende verkeersmaatregelen worden genomen telkens van 8u30 uur tot 10u30 uur op hogervermelde data op Schoolstraat, 1570 Pajottegem: 
+                                      
+                                    Nadar + C3 'verboden toegang voor alle verkeer' op Schoolstraat net na de zijweg met bareel 
+                                    Nadar + C3 'verboden toegang voor alle verkeer' op Schoolstraat tussen school en het LOI. 
+                                      
+                                    Verkeersborden betreffende het stilstaan en/of parkeren worden ten minste 48 uur op voorhand geplaatst. Onderborden van het type V vermelden datum en tijdstip waarop het verbod van kracht is. Onderborden van het type Xa, Xb, Xc of Xd vermelden de richting waarin en afstand waarover het verbod geldt. 
+                                    Artikel 3- Bewoners van straten die afgesloten of omgelegd worden of waar eenrichtingsverkeer of een stilstaan- en parkeerverbod wordt ingevoerd, dienen daarvan door de organisator van het evenement ten minste 48 uur op voorhand schriftelijk in kennis te worden gesteld. 
+                                    Artikel 4- Overtredingen op de bepalingen van deze verordening zullen gestraft worden met politiestraffen. 
+                                    Artikel 5- Dit besluit wordt meegedeeld aan de dienst mobiliteit, die het besluit bekendmaakt aan de aanvrager, de gemeentelijke technische dienst, het Agentschap Wegen en Verkeer (indien van toepassing), de diensten voor openbaar vervoer, (indien van toepassing) de hulpdiensten en aan de burger via GIPOD/Geopunt.be. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> a ns1:Agendapunt ;
+    ns3:uuid "310054a2-9bc1-5b20-977e-b9f576715ca0" .
+

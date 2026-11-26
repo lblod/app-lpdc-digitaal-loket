@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/bb444da6-861a-409e-9e4d-22ddf02f60c2> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4ffbb529-d4f0-4b77-b5e1-27d0edafca0b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/86fe271d-4db9-4b98-9751-f2d7aa6f665c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a3bcec3-5ba4-4282-a89e-bf379bcfc7dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a3b76eaf-d939-4193-abfd-7c04ec6c693e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1f6e50b-31f8-4e15-93b0-eb69c17c9aac>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dbbb9828-04ab-4a0d-8177-2f13cebc170e> ;
+    ns3:geplandeStart "2026-09-29T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/48f6205a-9fd9-4c6d-90b2-89f7ec83cc89> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "bad5ba02-611d-599a-b8e9-e1b53a966a30" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-09-29T13:50:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d1f6e50b-31f8-4e15-93b0-eb69c17c9aac> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a3b76eaf-d939-4193-abfd-7c04ec6c693e> ;
+    ns3:openbaar false ;
+    ns1:uuid "3ecee18c-f7be-58a3-b85a-2b2609e35dc0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1f6e50b-31f8-4e15-93b0-eb69c17c9aac> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d1f6e50b-31f8-4e15-93b0-eb69c17c9aac> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d1f6e50b-31f8-4e15-93b0-eb69c17c9aac> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Opening Groene Velden' van 8 oktober 2026 16.00 uur tot en met 10 oktober 2026 9.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Opening Groene Velden' - Team omgeving-milieu gemeente Lievegem: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 29 september 2026 over de aanvraag evenement Opening Groene Velden - Team omgeving-milieu: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Rudy Vanhove, namens team omgeving-milieu - gemeente Lievegem, organiseert 'Opening Groene Velden' op 10 oktober 2026 van 10.30 uur tot en met 17.00 uur.Er werd op 8 september 2026 een aanvraag ingediend door Rudy Vanhove, namens team omgeving-milieu - gemeente Lievegem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "e27f5502-e0eb-571d-808c-175b71e72995" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Opening Groene Velden' van 8 oktober 2026 16.00 uur tot en met 10 oktober 2026 9.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod ter hoogte van Trekweg, 9921 Lievegem, onder de brug van de R4 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d1f6e50b-31f8-4e15-93b0-eb69c17c9aac> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1f6e50b-31f8-4e15-93b0-eb69c17c9aac> a ns3:Agendapunt ;
+    ns1:uuid "c4c45d69-ffd8-5565-bc15-f5e100d18454" .
+

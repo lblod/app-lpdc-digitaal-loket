@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/dd5eb060-b6d3-4780-86ac-1c46757ca81b> a ns3:Zitting ;
+    ns3:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b0fb0387-4c6e-40d1-8393-6add529ce799>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/bdd15279-676f-47c0-96f6-db348c42c0b6> ;
+    ns3:geplandeStart "2025-04-14T14:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2364b49d-3045-48c7-9b26-c79a0a017613> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "b10ed617-5898-5ad6-b4bb-87e12d301072" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-04-14T14:24:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bdd15279-676f-47c0-96f6-db348c42c0b6> ;
+    ns3:openbaar false ;
+    ns2:uuid "c313da4e-953c-57b7-a8cf-1be6bbd346f3" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor een buurtfeest op 1 mei 2025 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: Buurtfeest Klein-Rankhove - 1 mei 2025" ;
+    ns3:motivering """ 
+                            """@nl ;
+    ns2:uuid "e16c153f-6a46-5fb6-a9cf-5a0ac463e07b" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van een buurtfeest op 1 mei 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen tussen 12u en 22u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verboden toegang voor alle verkeer, uitgezonderd plaatselijk verkeer (C3 + type IV 'uitgezonderd plaatselijk verkeer + F45) op:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Klein Rankhove, tussen kruispunt Van Cauwenberghelaan en kruispunt Rankhove
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Afsluiten van de rijweg (nadar + C3 + dagslapers)
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        T.h.v. Klein-Rankhove 3 (B&B blijft bereikbaar)
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d> a ns3:Agendapunt ;
+    ns2:uuid "c65d9392-94cd-5145-98c5-f9942c5fb2b1" .
+

@@ -1,0 +1,72 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5d5624e2-2689-4edf-b826-ed418eb8d726> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02e461d8-9457-4462-bcf3-ae9023038d39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/040ff837-f912-4527-be10-576e2c21a3a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31b086ce-f5b3-4d7b-a538-37d4d8dfcf50>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/773db485-658a-4e7b-be39-7eb511439f54>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/abf4bd6c-18b8-4950-b6ea-4a095b5588ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b7b1954e-16fc-4c28-90dc-447f69613bab>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be3ac6b4-2bd2-4c0b-8d37-55465a918a48>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d731f175-4cda-45fd-9950-b5a6ece1a56c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee440fb1-4741-4901-b091-77c89026b892> ;
+    ns3:geplandeStart "2021-01-27T20:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e450014f-53c6-44fd-bda7-4ddded313fd6> ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/02348813-41ac-4562-bf38-c82d5a645439> ;
+    ns3:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0e90d608-db5c-42ea-a422-18032aca2b7a> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "ed452510-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-01-27T21:08:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-01-27T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/040ff837-f912-4527-be10-576e2c21a3a0> a ns3:BehandelingVanAgendapunt ;
+    ns3:openbaar true ;
+    ns1:uuid "f6810950-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/040ff837-f912-4527-be10-576e2c21a3a0> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/040ff837-f912-4527-be10-576e2c21a3a0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/040ff837-f912-4527-be10-576e2c21a3a0> a ns3:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de notulen en het zittingsverslag van de gemeenteraadszitting van 16 december 2020 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Goedkeuren notulen en zittingsverslag van de vorige zitting" ;
+    ns3:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Tony Vermeire, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 32Gemeenteraadsbesluit van 29 mei 2019 houdende goedkeuring huishoudelijk reglement gemeenteraad, artikel 31 en 32 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De notulen en het zittingsverslag van de vergadering van de gemeenteraad worden onder de verantwoordelijkheid van de algemeen directeur opgesteld.Behalve in spoedeisende gevallen worden de notulen en het zittingsverslag van de vorige vergadering ten minste acht dagen voor de dag van de vergadering ter beschikking gesteld van de gemeenteraadsleden. Elk gemeenteraadslid heeft het recht tijdens de vergadering opmerkingen te maken over de redactie van de notulen en het zittingsverslag van de vorige vergadering. Als die opmerkingen door de gemeenteraad worden aangenomen, worden de notulen en het zittingsverslag in die zin aangepast.Als er geen opmerkingen worden gemaakt over de notulen en het zittingsverslag van de vorige vergadering worden de notulen en het zittingsverslag als goedgekeurd beschouwd en worden ze ondertekend door de voorzitter van de gemeenteraad en de algemeen directeur. 
+                                                            Het zittingsverslag is te bekijken op https://youtu.be/v6MGlGVYfn4 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "ed460f70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            De gemeenteraad keurt de notulen en het zittingsverslag van de gemeenteraadszitting van 16 december 2020 goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/040ff837-f912-4527-be10-576e2c21a3a0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/040ff837-f912-4527-be10-576e2c21a3a0> a ns3:Agendapunt ;
+    ns3:geplandOpenbaar true ;
+    ns1:uuid "f6815770-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Goedkeuren notulen en zittingsverslag van de vorige zitting" .
+

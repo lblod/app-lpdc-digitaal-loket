@@ -1,0 +1,64 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/zittingen/91f0269e-838f-4872-bf28-3bf610fb1637> a ns2:Zitting ;
+    ns2:behandelt <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/31159493-697c-49f3-867f-a4e57406a609> ;
+    ns2:geplandeStart "2025-01-08T12:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://aarschot-echo.cipalschaubroeck.be/id/documenten/c0dbdef5-c795-4fc5-873e-2a5ef82f2813> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/4256fc054914087c9cf37c9e7fb35e4a614ed7b74f45c55ce39772f12c7cd9a8> ;
+    ns3:uuid "2da9e1d0-ce48-11ef-9218-6931664218fe" ;
+    prov:atLocation "diverse" ;
+    prov:startedAtTime "2025-01-08T13:29:00+01:00"^^xsd:dateTime .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/31159493-697c-49f3-867f-a4e57406a609> a ns2:BehandelingVanAgendapunt ;
+    ns2:openbaar false ;
+    ns3:uuid "2da94590-ce48-11ef-9218-6931664218fe" ;
+    dcterms:description """ 
+                             
+                                Op basis van de overwegingen aangehaald in het besluit, beslist de burgemeester de terreinen aan de Laaksite met onmiddellijke ingang en tot en met zondag 12 januari 2025 ongeschikt te verklaren voor voetbalwedstrijden. In de voornoemde periode worden op de terreinen alleen voetbaltrainingen nog toegestaan. 
+                             
+                        """ ;
+    dcterms:subject <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/31159493-697c-49f3-867f-a4e57406a609> ;
+    prov:generated <https://aarschot-echo.cipalschaubroeck.be/id/besluiten/31159493-697c-49f3-867f-a4e57406a609> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/besluiten/31159493-697c-49f3-867f-a4e57406a609> a ns2:Besluit ;
+    ns1:description """ 
+                                                    Op basis van de overwegingen aangehaald in het besluit, beslist de burgemeester de terreinen aan de Laaksite met onmiddellijke ingang en tot en met zondag 12 januari 2025 ongeschikt te verklaren voor voetbalwedstrijden. In de voornoemde periode worden op de terreinen alleen voetbaltrainingen nog toegestaan. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/4256fc054914087c9cf37c9e7fb35e4a614ed7b74f45c55ce39772f12c7cd9a8> ;
+    ns1:title "Tijdelijke ongeschiktverklaring van de terreinen aan de Laaksite voor voetbalwedstrijden" ;
+    ns2:motivering """ 
+                                 
+                                    Regelgeving 
+                                     
+                                        het decreet van 22.12.2017 over het lokaal bestuur en de bijhorende besluiten en omzendbrieven van de Vlaamse regering; 
+                                        de wet van 29.07.1991 betreffende de uitdrukkelijke motivering van bestuurshandelingen; 
+                                        de wet van 11.04.1994 betreffende de openbaarheid van bestuur; 
+                                        het bestuursdecreet van 7.12.2018; 
+                                        het Besluit van de Vlaamse Regering d.d. 30.03.2018 betreffende de beleids- en beheerscyclus van de lokale besturen; 
+                                        het decreet lokaal bestuur, artikelen 63 tot en met 67, en de artikelen 133, 134ter en 135 van de nieuwe Gemeentewet; 
+                                     
+                                 
+                                 
+                                    Feiten, context en motivering 
+                                    In voorbereiding op de bouw van een nieuwe sporthal en de aanleg van nieuwe sportvelden, startte op 6 januari 2025 de sloop van de huidige voetbalkantine en de aanpalende gebouwtjes en constructies op de sportsite langs de Grote Laakweg in Aarschot.Om de sportclubs die momenteel op de site resideren de mogelijkheid te bieden hun werking verder te zetten, voorziet de stad in een tijdelijke oplossing. Daarvoor zijn op de site vijf containerunits geplaatst met kleedruimte, doucheruimte, sanitair blok en kantine.  Omwille van de slechte weersomstandigheden, die nu al geruime tijd aanhouden, heeft de aanleg van nutsvoorzieningen in deze ruimten vertraging opgelopen. In de ruimten is daardoor momenteel geen water of elektriciteit beschikbaar. Aflopen voor water konden evenmin worden aangelegd. Door de aanhoudende regen zijn ook de toegangswegen tijdelijk niet geschikt om grotere aantallen spelers en bezoekers op een veilige manier naar het terrein te leiden. 
+                                    Het is daardoor niet mogelijk het eerstkomend weekend voetbalwedstrijden te laten doorgaan op de terreinen aan de Laaksite. De kunstgrasvelden blijven wel beschikbaar voor voetbaltrainingen. 
+                                 
+                            """@nl ;
+    ns3:uuid "2da8a950-ce48-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Op basis van deze overwegingen besluit de burgemeester de terreinen aan de Laaksite met onmiddellijke ingang en tot en met zondag 12 januari 2025 ongeschikt te verklaren voor voetbalwedstrijden. In de voornoemde periode worden op de terreinen alleen voetbaltrainingen nog toegestaan. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/31159493-697c-49f3-867f-a4e57406a609> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/31159493-697c-49f3-867f-a4e57406a609> a ns2:Agendapunt ;
+    ns3:uuid "2da80d10-ce48-11ef-9218-6931664218fe" .
+

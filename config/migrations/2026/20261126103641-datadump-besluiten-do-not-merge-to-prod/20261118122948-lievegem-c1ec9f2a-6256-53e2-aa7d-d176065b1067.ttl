@@ -1,0 +1,107 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/97c40671-41b3-4f23-9663-df70ecd4c616> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/188dbad9-93f7-4db3-ad4f-00daedd12cf5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2620ff7f-fb77-4d42-9050-c09ef5998235>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6e6e0e8b-655d-41e2-9649-6f6290e04377>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ea3f468-6c4f-4836-95af-2f7465766058>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e1e44471-ced4-4f3c-89da-c7cf773f0b79> ;
+    ns1:geplandeStart "2025-10-21T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/89e89c1b-533a-40ad-a870-44221e505169> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "12281dfc-e7ea-5667-865c-3e97d83e9128" ;
+    prov:atLocation "zaal De Inslag, gemeentehuis Waarschoot, Waarschootdorp 1, 9950 Lievegem" ;
+    prov:startedAtTime "2025-10-21T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ea3f468-6c4f-4836-95af-2f7465766058> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6c0211d2-12d9-4035-9400-68ae944180b8> ;
+    ns1:openbaar false ;
+    ns3:uuid "ec0cf627-7a70-5360-b394-afd5fa2a0a85" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ea3f468-6c4f-4836-95af-2f7465766058> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6ea3f468-6c4f-4836-95af-2f7465766058> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6ea3f468-6c4f-4836-95af-2f7465766058> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het college van burgemeester en schepenen stelt het tijdelijk politiereglement van 'Winterhappening met kerstmannenloop' van vrijdag 19 december 2025 7.00 uur tot en met zaterdag 20 december 2025 12.00 uur vast. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Winterhappening met kerstmannenloop' - Feestcomité Centrum Zomergem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 21 oktober 205 over de aanvraag evenement Winterhappening met kerstmannenloop - Feestcomité Centrum Zomergem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Ronny Claeys, namens Feestcomité Zomergem centrum organiseert 'Winterhappening met kerstmannenloop' op 19 december 2025 van 17.30 uur tot en met 24.00 uur.Er werd op 16 september 2025 een aanvraag ingediend door Ronny Claeys, namens Feestcomité Zomergem centrum om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "c1ec9f2a-6256-53e2-aa7d-d176065b1067" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Winterhappening met kerstmannenloop' wordt vastgesteld als volgt: 
+                                    1. Van vrijdag 19 december 2025 7.00 uur tot en met zaterdag 20 december 2025 12.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod op Markt en op de parkeerplaatsen achter het gemeentehuis in Zomerlaan. 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Van vrijdag 19 december 2025 17.00 uur tot en met zaterdag 20 december 2025 0.30 uur:
+                                     
+                                     
+                                         
+                                            Afsluiten van een deel van het parcours van de kerstmannenloop: Markt - Dreef (tussen Markt en Kruisdreef, tot voor het kruispunt) 
+                                            Eénrichtingsverkeer in Hofbouwstraat vanaf Kruisdreef tot en met Luitenant Dobbelaerestraat 
+                                            Omleiding voor éénrichtingsverkeer in Hofbouwstraat via Luitenant Dobbelaerestraat, Den Boer en Tulpenlaan 
+                                            Omleiding tijdens de kerstmannenloop:1. Voertuigen komende van Kruisstraat/Langeboeken en rijdend richting Brugge worden omgeleid via Moerstraat, Durmstraat, Ter Wal en Guido Gezellestraat.2. Voertuigen komende van Kruisstraat en rijdend richting Eeklo worden omgeleid via Azaleastraat.3. Voertuigen komende van Koning Leopold III laan en rijdend richting Gent worden omgeleid via Guido Gezellestraat, Ter Wal en Durmstraat.4. Voertuigen komende van Koning Leopold III laan en rijdend richting Eeklo worden omgeleid via Guido Gezellestraat, Ter Wal, Boven, Hendrik Claeysstraat, Zandstraat, Motje en Azaleastraat.5. Voertuigen komende van Burg. Henri Ryckaertstraat en rijdend richting Gent worden omgeleid via Daalmstraat, Azaleastraat, Motje.6. Tegenstrijdige borden worden afgedekt.7. Plaatsing van informatiebord voor vervoer +3,5 ton ter hoogte van Lobrug/Koning Leopoldstraat en Durmstraat/Moerstraat. 
+                                         
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Van vrijdag 19 december 2025 7.00 uur tot en met zaterdag 20 december 2025 12.00 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Van vrijdag 19 december 2025 17.00 uur tot en met zaterdag 20 december 2025 0.30 uur:
+                                     
+                                     
+                                        Nadar + C3 op volgende kruispunten: Lt. Dobbelaerestraat/Markt - Kleitstraat/Markt - Zomerlaan/Markt - Maarten Steyaertplein/Markt - Kerkhofstraat/Dreef 
+                                        Bord F19 op het kruispunt Hofbouwstraat/Kruisdreef 
+                                        Bord C1 + C31a op het kruispunt Luitenant Dobbelaerestraat/Hofbouwstraat 
+                                        Nadar + C3 + F45 + 'uitgezonderd plaatselijk verkeer' en de nodige borden F41 worden geplaatst volgens plannen in bijlage. 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ea3f468-6c4f-4836-95af-2f7465766058> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ea3f468-6c4f-4836-95af-2f7465766058> a ns1:Agendapunt ;
+    ns3:uuid "360b2cc5-3b5e-5313-b77b-9209afce06c1" .
+

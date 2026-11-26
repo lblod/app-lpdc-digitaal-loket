@@ -1,0 +1,105 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/23dd80ac-4226-4c0e-907c-918f837b6bb6> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/788d0698-e96a-4888-9678-632b8dcfdeea>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2f5acc4-2a93-4660-bbd5-8926a2a23c1b> ;
+    ns2:geplandeStart "2025-04-28T14:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/1d959af7-2c0a-4f0b-acbb-a3cec0a4fe5c> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "9350d82c-6be8-5d63-be54-1c8170398115" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-04-28T13:26:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/788d0698-e96a-4888-9678-632b8dcfdeea> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9d5cf9d7-624d-4f1d-91b8-e14cbea07d17> ;
+    ns2:openbaar false ;
+    ns1:uuid "01460093-19ea-5785-8600-9a0bc8c11e86" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/788d0698-e96a-4888-9678-632b8dcfdeea> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/788d0698-e96a-4888-9678-632b8dcfdeea> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/788d0698-e96a-4888-9678-632b8dcfdeea> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Kermis op 29/04 t.e.m. 5/05 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Kermis Tollembeek - 29/04 t.e.m. 5/05" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns1:uuid "33575848-15ff-5b45-879b-105c3d53c389" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Kermis op 29/04 t.e.m. 5/05 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf vanaf 18u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                          
+                                        Stilstaan- en parkeerverbod (E3) dienen 48 uur op voorhand te worden ingelast op volgende plaatsen: 
+                                        Dinsdag 29 april 2025 vanaf 18 uur tot maandag 5 mei 2024 23.59 uur op de Plaats om de opstelling en de afbraak van de attracties mogelijk te maken 
+                                        Op de dagen en uren van het evenement op alle op dat moment bruikbare parkings op de Plaats; 
+                                          
+                                        Volgende straten dienen door een verkeersbord C3 volledig te worden afgesloten: 
+                                        Plaats ter hoogte van het kruispunt met de Hernestraat en de Plaatsstraat 
+                                        op vrijdag 2 mei 2025 van 18.30 uur tot 23.59 uur 
+                                        op zaterdag 3 mei 2025 van 18.30 uur tot 23.59 uur 
+                                        op zondag 4 mei 2025 van 8 uur tot 22 uur (in functie van randactiviteiten) 
+                                        op maandag 5 mei 2025 van 15.30 uur tot 23.59 uur 
+                                        Waterstraat ter hoogte van huisnummer 1 (enkel Plaats Tollembeek wordt afgesloten): 
+                                        op vrijdag 2 mei 2025 van 18.30 uur tot 23.59 uur; 
+                                        op zaterdag3 mei 2025 van 18.30 uur tot 23.59 uur; 
+                                        op zondag 4 mei 2025 van 11.30 uur tot 23.59 uur; 
+                                        op maandag 5 mei 2025 van 15.30 uur tot 23.59 uur; 
+                                          
+                                        Volgende straten dienen door een verkeersbord C3 en “uitgezonderd plaatselijk verkeer” + nachtverlichting volledig te worden afgesloten ter hoogte van: 
+                                        Waterstraat, vanaf het kruispunt met de Hollestraat tot de brug over de Markrivier. 
+                                          
+                                          
+                                        Omleiding (F41) wordt ingelast vanaf vrijdag 2 mei 2025 18.30 uur tot maandag 5 mei 2025 23.59 uur: 
+                                        Voor het verkeer komende uit de richting van Galmaarden: 
+                                        Plaatsstraat, op het kruispunt met de Modrielaan - Plaats Tollembeek onderbroken/Herne bereikbaar; 
+                                        Hollestraat, op het kruispunt met de Modrielaan; 
+                                        Waterstraat, op het kruispunt met de Hollestraat; 
+                                          
+                                         Voor het verkeer komende uit de richting van Herne: 
+                                        Plaatsstraat, op het kruispunt met de Modrielaan 
+                                          
+                                        Voor het verkeer komende uit de richting van Vollezele: 
+                                        Waterstraat, op het kruispunt met de Hollestraat richting Herne 
+                                        Waterstraat, op het kruispunt met de Hollestraat richting Galmaarden 
+                                        Modrielaan, op het kruispunt met de Hollestraat 
+                                        Plaatsstraat, op het kruispunt met de Modrielaan 
+                                          
+                                        Aandachtsborden dienen te worden voorzien ter hoogte van: 
+                                        kruispunt van de Statiestraat met de Plaatsstraat komende van Galmaarden; 
+                                        de frituur in de Hernestraat komende van Herne; 
+                                        de brug aan de Mark komende van Vollezele. 
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/788d0698-e96a-4888-9678-632b8dcfdeea> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/788d0698-e96a-4888-9678-632b8dcfdeea> a ns2:Agendapunt ;
+    ns1:uuid "a2937559-0207-513b-8b91-6a2679c4e82a" .
+

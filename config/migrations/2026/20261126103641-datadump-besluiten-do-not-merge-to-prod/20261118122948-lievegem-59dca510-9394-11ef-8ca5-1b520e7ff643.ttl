@@ -1,0 +1,135 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3bbe50aa-c3e8-4b7c-bb7c-4682052a4673> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06f1f332-650a-4d40-a99c-0c733ffa85d1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c0f89c5-baa1-4637-811c-23ba8ba0c6be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/143b01fe-df79-4464-a86e-9f3331c41dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/19777059-5d19-4c19-aa75-c9728f3c1f7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1a496b2e-cf0d-4492-81c2-1b83c32841ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b6e8646-0e53-4476-873e-8ca4b5d87f79>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5039459f-5883-4417-bf07-a5cb8f922dff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5824b498-b950-4a56-91f6-1756c8e16615>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d9d3cf3-2cc8-49f0-bc97-86d52713181a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bcb7c92-bded-425b-bb57-1dcf51a32ec4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6deb0f16-50f3-4267-8661-88276e847e60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/739e24ab-2ffe-4fa2-b120-e9f780b542b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7db1854b-eea1-4071-8222-2fa3573c65ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/881bd7fd-6ec4-4882-9a14-15458378f51e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c65b0e5-e5ef-4730-988c-87d06b6a3993>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9314a642-ce70-4a85-ab4f-027dddbfb7ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9384f2b2-5078-47d0-a1e8-5f572f245831>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1970aac-3846-476f-9089-3c9b90d2cebc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a82e01d6-03ea-4b9f-9b5a-9a4e48d048f2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce690ef6-529c-465b-8bc2-0a504cb16e40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e447ed51-ca89-4f26-aec4-4b20f2adbbfb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee301e9c-da25-478b-9b4a-3c795b77db7a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2fb6d2d-2bb1-461a-bced-cbe1f05eb6db> ;
+    ns1:geplandeStart "2024-10-23T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ae70f37b-eb96-4735-833b-ce97bceb51f6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bd4fa978-f012-49c2-acc4-4646b86642e0> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fe261bc2-7e58-4536-8439-b9dedda822ba> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ed05ab10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-10-23T21:17:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-10-23T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/739e24ab-2ffe-4fa2-b120-e9f780b542b9> ;
+    ns1:openbaar true ;
+    ns3:uuid "8b0ca6d0-a8d4-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/5ec00622-f854-4d66-a3d6-cd8653904744> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/5ec00622-f854-4d66-a3d6-cd8653904744> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt principieel de aankoop van het lot in de Hugo Verriestlaan 26-28-30 te 9950 Lievegem goed en verzoekt notariaat De Raedt-Pauwels om deze aankoop te behoeve van de gemeente te realiseren. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Patrimonium - aankoop grond Hugo Verriestlaan 26-28-30 - aankoopbelofte en opdracht notaris: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepenFreddy Haegeman, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11° Het domeingoederendecreet van 30 november 2018De omzendbrief KB/ABB 2019/3 over de transacties van onroerende goederen door lokale en provinciale besturen en door besturen van de erkende eredienstenHet besluit van het college van burgemeester en schepenen van 13 juni 2023 over het tijdelijk gebruik van een grond in de Nijverheidsstraat als publieke parkingHet besluit van het college van burgemeester en schepenen van 4 juni 2024 over de goedkeuring van de prijsvraag voor de opmaak van een schattingsverslag voor een aanbod van een grond te Hugo Verriestlaan 26-28-30Het besluit van het college van burgemeester en schepenen van 9 juli 2024 over de gunning opmaak schattingsverslag voor een aanbod van een grond te Hugo Verriestlaan 26-28-30Het besluit van het college van burgemeester en schepenen van 27 augustus 2024 met de kennisname van het schattingsverslag en de machtiging van de burgemeester om te onderhandelen over de aankoop van een grond te Hugo Verriestlaan 26-28-30Het besluit van het college van burgemeester en schepenen van 24 september 2024 met het akkoord opmaak aankoopbelofte van een grond te Hugo Verriestlaan 26-28-30 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente ontving van Villavip VZW, Evolis 103 te 8530 Harelbeke, het voorstel voor de aankoop van een lot grond in de Hugo Verriestlaan 26-28-30 te 9950 Lievegem, met een totaal gemeten oppervlakte van 2.108,60 m².Dit lijkt een interessante aankoop voor de gemeente om volgende redenen:- Dit lot is gelegen in het centrum van Waarschoot, oa. vlakbij De Kring en het verenigingslokaal De Passage.- Op deze gronden is een openbare parking vergunbaar.- Een groene openbare parking zou een meerwaarde betekenen in het centrum van Waarschoot.- De huur van de tijdelijke parking die de gemeente momenteel huurt in de Nijverheidsstraat kan stopgezet worden. 
+                                                            Deze parking is volgens het gewestplan gelegen in woonuitbreidingsgebied. 
+                                                            Het college van burgemeester en schepenen besliste om deze opportuniteit te onderzoeken en een schattingsverslag te laten opmaken voor dit lot.Dominique Goegebeur, beëdigd landmeter-expert, maakte het schattingsverslag van 19 augustus 2024 op (zie bijlage).Op basis van dit schattingsverslag onderhandelde de burgemeester in opdracht van het college van burgemeester en schepenen over de aankoop van dit lot. 
+                                                            Op 6 september 2024 ontving de gemeente een mailwissel van Villavip met de geassocieerde notarissen De Smet & Willems te Zwalm (zie bijlage) waaruit blijkt dat Villavip bereid is om dit lot aan de gemeente te verkopen voor de som van 530.000 euro onder volgende opschortende voorwaarden: 
+                                                             
+                                                                het bekomen van een definitieve en uitvoerbare bouwvergunning voor het bouwen van een publieke parking voor 31 maart 2025. Als er beroep wordt aangetekend voor de vergunning van de gemeente bij deputatie, kan de gemeente ervoor kiezen om deze termijn te verlengen met 5 maanden tot 31 augustus 2025. Zij dienen voor deze termijnverlenging een aangetekend schrijven te richten naar de verkoper uiterlijk op 31 maart 2025. 
+                                                                de kandidaat koper kan verzaken aan de opschortende voorwaarde en vooralsnog de grond aankopen. 
+                                                                akte 2 maanden nadat de opschortende voorwaarde vervuld is. 
+                                                             
+                                                            
+                                                                en de bijkomende voorwaarde:
+                                                             
+                                                             
+                                                                Indien de verkavelingsvergunningsaanvraag van Fundamens niet definitief en uitvoerbaar is voor 31 januari 2025, dan zal Fundamens extra kosten maken voor de start der werken van de bouwvergunning voor het bouwen van een halfopen ééngezinswoning en een woning voor 10 personen met een beperking en zorgkoppel in halfopen bebouwing. (Omgevingsvergunning - O/2022/376 - Hugo Verriestlaan 26, 28 en 30.) Indien de koper vooralsnog de aankoopoptie licht binnen de termijn opgenomen in de opschortende voorwaarde, dan zal de prijs verhoogd worden met de gemaakte kosten, met een maximum van 5.000 euro. De facturen van deze kosten zullen voorgelegd worden aan koper. 
+                                                             
+                                                            De vraagprijs ligt binnen de geschatte verkoopwaarde van deze eigendom. Het college van burgemeester en schepenen gaf een principieel akkoord voor deze aankoop onder de vermelde voorwaarden en legt dit voor aan de gemeenteraad. 
+                                                            De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De uitgave bedraagt 530.000 euro. 
+                                                            Voor de aankoop van deze gronden is er in het meerjarenplan 2020 - 2026 geen krediet voorzien.  
+                                                            De opschortende voorwaarde zal ten vroegste in 2025 gerealiseerd worden zodat het geen probleem is dat de kredieten zullen voorzien worden bij meerjarenplanaanpassing 5. 
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                                 Gunstig visum AFD/2024/145/VW van Bart Van Petegem van 03 oktober 2024  
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "59dca510-9394-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad keurt de opmaak van een aankoopbelofte goed voor het lot in de Hugo Verriestlaan 26-28-30 te 9950 Lievegem, voor een aankoopsom van 530.000 euro, met volgende opschortende voorwaarden: 
+                                                             
+                                                                het bekomen van een definitieve en uitvoerbare bouwvergunning voor het bouwen van een publieke parking voor 31 maart 2025. Als er beroep wordt aangetekend voor de vergunning van de gemeente bij deputatie, kan de gemeente ervoor kiezen om deze termijn te verlengen met 5 maanden tot 31 augustus 2025. Zij dienen voor deze termijnverlenging een aangetekend schrijven te richten naar de verkoper uiterlijk op 31 maart 2025. 
+                                                                de kandidaat koper kan verzaken aan de opschortende voorwaarde en vooralsnog de grond aankopen. 
+                                                                akte 2 maanden nadat de opschortende voorwaarde vervuld is. 
+                                                             
+                                                            
+                                                                Bijkomende voorwaarde:
+                                                             
+                                                             
+                                                                Indien de verkavelingsvergunningsaanvraag van Fundamens niet definitief en uitvoerbaar is voor 31 januari 2025, dan zal Fundamens extra kosten maken voor de start der werken van de bouwvergunning voor het bouwen van een halfopen ééngezinswoning en een woning voor 10 personen met een beperking en zorgkoppel in halfopen bebouwing. (Omgevingsvergunning - O/2022/376 - Hugo Verriestlaan 26, 28 en 30.) Indien de koper vooralsnog de aankoopoptie licht binnen de termijn opgenomen in de opschortende voorwaarde, dan zal de prijs verhoogd worden met de gemaakte kosten, met een maximum van 5.000 euro. De facturen van deze kosten zullen voorgelegd worden aan koper. 
+                                                             
+                                                            Artikel 2De gemeenteraad verzoekt notariaat De Raedt-Pauwels, Schoolstraat 60 te 9950 Lievegem, deze aankoop ten behoeve van de gemeente te realiseren, inclusief de opmaak van een aankoopbelofte met de vermelde voorwaarden. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "ed0b7770-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium - aankoop grond Hugo Verriestlaan 26-28-30 - aankoopbelofte en opdracht notaris: goedkeuring" .
+

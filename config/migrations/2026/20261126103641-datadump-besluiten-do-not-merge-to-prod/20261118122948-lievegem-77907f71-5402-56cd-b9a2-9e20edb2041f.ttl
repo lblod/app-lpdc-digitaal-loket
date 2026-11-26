@@ -1,0 +1,98 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/a461bcf1-88ea-4af5-a647-d8cdf749d395> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fdfaa893-ad91-4925-a5c2-2cfa527bb866> ;
+    ns2:geplandeStart "2026-03-10T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/8e0979ce-c9de-4ea8-b411-8c19c4ca2e79> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "bdcbeea2-3198-5431-93dd-384d2a207878" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-03-10T14:23:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fdfaa893-ad91-4925-a5c2-2cfa527bb866> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f6667d78-39ea-4401-a86e-3c86772d846a> ;
+    ns2:openbaar false ;
+    ns3:uuid "c9f8f897-b189-5270-8f0a-13cc86453642" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fdfaa893-ad91-4925-a5c2-2cfa527bb866> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/fdfaa893-ad91-4925-a5c2-2cfa527bb866> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/fdfaa893-ad91-4925-a5c2-2cfa527bb866> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Schoolfeest Twinkel' op 30 mei 2026 wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Schoolfeest Twinkel' - Basisschool Twinkel: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 10 maart 2026 over aanvraag evenement Schoolfeest Twinkel - Basisschool Twinkel 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Pieter Van Hecke, namens Basisschool Twinkel, organiseert 'Schoolfeest Twinkel' op 30 mei 2026 vanaf 15.00 uur tot en met 23.00 uur.Er werd op 6 februari 2026 een aanvraag ingediend door Pieter Van Hecke, namens Basisschool Twinkel, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Er werd op 4 maart 2026 toestemming gevraagd aan gemeente Maldegem voor het plaatsen van signalisatie op hun grondgebied. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "77907f71-5402-56cd-b9a2-9e20edb2041f" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Schoolfeest Twinkel' op 30 mei 2026 wordt vastgesteld als volgt: 
+                                    1. Van 8.00 uur tot en met 23.00 uur: 
+                                     
+                                        Parkeerverbod op de volledige parkeerstrook ter hoogte van Basisschool Twinkel  
+                                        Parkeerverbod op parking Veldhoek, 9931 Lievegem, uitgezonderd voor medewerkers. De medewerkers kunnen parkeren vooraleer de straat wordt afgesloten en kunnen pas de parking verlaten als de straat opnieuw wordt vrijgegeven. 
+                                     
+                                    
+                                        2. Van 9.00 uur tot en met 23.00 uur:
+                                     
+                                     
+                                         
+                                            Afsluiten van Veldhoek vanaf kruispunt met Oostwinkeldorp tot voorbij Veldhoek 4 
+                                            Omleiding via Oostwinkeldorp - Panthaagstraat - Vlamingstraat en omgekeerd 
+                                         
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Van 8.00 uur tot en met 23.00 uur: 
+                                     
+                                        Borden E3 
+                                        Borden E3 + onderbord 'uitgezonderd medewerkers schoolfeest' 
+                                     
+                                    
+                                        2.  Van 9.00 uur tot en met 23.00 uur:
+                                     
+                                     
+                                         
+                                            Nadars + C3 ter hoogte van het kruispunt met Oostwinkeldorp en huisnummer 4 
+                                            Nadars + C3 + F45 + 'uitgezonderd plaatselijk verkeer' op het kruispunt Veldhoek/Vlamingstraat 
+                                            Borden F41 op volgende kruispunten: Veldhoek/Oostwinkeldorp, Panthaagstraat/Kruipuit, Vlamingstraat/Panthaagstraat en Vlamingstraat/Veldhoek 
+                                         
+                                     
+                                     
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fdfaa893-ad91-4925-a5c2-2cfa527bb866> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fdfaa893-ad91-4925-a5c2-2cfa527bb866> a ns2:Agendapunt ;
+    ns3:uuid "cdbc97f4-c30d-5911-a230-b8b54ad4f6f7" .
+

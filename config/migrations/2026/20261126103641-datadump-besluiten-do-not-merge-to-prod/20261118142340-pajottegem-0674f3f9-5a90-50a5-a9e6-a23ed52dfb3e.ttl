@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/6e30aac1-1fae-41da-9a98-bcd8dfe22447> a ns3:Zitting ;
+    ns3:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5b56b45d-ad83-4e14-a2e6-b98d1297de0c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fdb04ffc-75c3-4bbd-a930-8eee78931e02> ;
+    ns3:geplandeStart "2025-03-24T14:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2ada9de9-f2ff-45cb-b466-4ac17573e5cc> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "5e3231a7-08de-50b2-a0da-5ae16eeec286" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-24T13:00:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fdb04ffc-75c3-4bbd-a930-8eee78931e02> ;
+    ns3:openbaar false ;
+    ns1:uuid "ccc64f77-4365-5ce3-841c-b5d2b49d8de8" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Open Stoeterij op 13 april 2025 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Politieverordening: Open Stoeterij  - 13 april 2025",
+        "Politieverordening: Open Stoeterij - 13 april 2025" ;
+    ns3:motivering """ 
+                            """@nl ;
+    ns1:uuid "0674f3f9-5a90-50a5-a9e6-a23ed52dfb3e" ;
+    prov:value """ 
+                                 
+                                    
+                                         
+                                     
+                                    
+                                        Artikel 1 - Ter gelegenheid van Opendeur op 13 april 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf tussen 10u en 18u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verboden toegang voor iedere bestuurder (uitgezonderd organisatie en plaatselijk verkeer) op 13/04 tussen 10u en 18u (C3 + type IV 'Uitgezonderd plaatselijk verkeer) + F45):
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Waterstraat tussen kruispunt Repingenstraat en kruispunt Hollestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verbod tot stilstaan en parkeren (E3) met geldigheid 13/04 tussen 06u en 20u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        thv SKO Vollezele langs beide zijden op de parallelle parkeerzones
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Omleiding via:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         Hollestraat - Vollezeelsesteenweg in beide rijrichtingen
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk  voorziene verkeersborden en hekkens dienen door de organisatoren volgens het bijhorende signalisatieplan, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/17dfd6bf-f184-4f37-9eeb-02f2e01e9be4> a ns3:Agendapunt ;
+    ns1:uuid "eb49b9bf-01fc-50af-980c-b3a20e0f679c" .
+

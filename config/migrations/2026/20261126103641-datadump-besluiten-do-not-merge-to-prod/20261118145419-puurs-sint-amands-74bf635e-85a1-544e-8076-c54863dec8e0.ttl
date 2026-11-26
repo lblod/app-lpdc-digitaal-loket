@@ -1,0 +1,229 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/b03077a6-d50e-46e5-9e89-0ff3b20d36bb> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5309b023-ef86-4933-895d-ec7c46f5c38f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/778173d8-0bcf-4592-81d0-77f2d4e78113> ;
+    ns2:geplandeStart "2025-11-18T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/4374cd65-cf39-429b-9453-c6da9352a012> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:uuid "8489fcd6-92ca-5cd7-a975-9334a4449b99" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-11-18T20:33:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/778173d8-0bcf-4592-81d0-77f2d4e78113> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8a1b15a0-48d7-4437-81a0-478248eef631> ;
+    ns2:openbaar false ;
+    ns1:uuid "92351a3a-f560-50ea-a8dc-dcf30deea852" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/778173d8-0bcf-4592-81d0-77f2d4e78113> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/778173d8-0bcf-4592-81d0-77f2d4e78113> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/778173d8-0bcf-4592-81d0-77f2d4e78113> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Zone met beperkte parkeertijd - Oppuurs" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Binnen onze gemeente worden de zones met beperkte parkeertijd uitgebreid zodat er meer uniformiteit is in de deelkernen. Na diverse meldingen over toenemend parkeergedrag in Oppuursdorp en de komst van een handelspand met automaten werd er een herstructurering van de parkeermogelijkheden geadviseerd door de gemeentelijke verkeerscel in juni 2025. de herstructurering wordt in dit besluit mee opgenomen.   
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                             
+                                                Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56, §2 
+                                                Het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens, artikel 5; 
+                                                Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Binnen onze gemeente worden de zones met beperkte parkeertijd uitgebreid zodat er meer uniformiteit is in de deelkernen. Na diverse meldingen over toenemend parkeergedrag in Oppuursdorp en de komst van een handelspand met automaten werd er een herstructurering van de parkeermogelijkheden geadviseerd door de gemeentelijke verkeerscel in juni 2025. de herstructurering wordt in dit besluit mee opgenomen.   
+                                    Voor de het centrum van Oppuurs werd gekozen om ook een blauwe zone in te voeren. Beperkte parkeertijd voorkomt dat dezelfde voertuigen urenlang dezelfde plaatsen bezet houden. Ook stimuleert dit de lokale economie, klanten die snel iets willen kopen of eten vinden makkelijker een vrije plaats. Er is meer kans op een tijdelijke parking dichter bij huis. Ook voor toerisme is dit een pluspunt, de beperkte tijd zorgt voor regelmatige vrijgave van mogelijke plaatsen. Daar bovenop zorgt minder zoekverkeer naar vrije plaatsen voor veiliger verkeer. Wie langer wil parkeren wordt aangemoedigd om op andere voorziene plaatsen te parkeren. 
+                                 
+                            """@nl ;
+    ns1:uuid "74bf635e-85a1-544e-8076-c54863dec8e0" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Artikel 1 : Parkeerzone Oppuursdorp-Meirstraat met parkeerschijfregeling: 
+                                            Het parkeren is toegelaten; de parkeertijd is beperkt en de parkeerschijf moet gebruikt worden; het gebruik van de schijf is voorgeschreven. De beperkte parkeertijd geldt niet voor personen in het bezit van een parkeerkaart voor mindervalide 
+                                            De parkeerzone met parkeerschijfregeling wordt afgebakend op volgende locaties: 
+                                            
+                                                Oppuursdorp 20 - Oppuursdorp 11
+                                             
+                                            
+                                                Voortstraat 1 - Voortstraat 2
+                                             
+                                            
+                                                Meirstraat 9 - Meirstraat 18
+                                             
+                                            
+                                                 
+                                             
+                                            
+                                                 Dit wordt aangeduid door verkeerstekens met zonale geldigheid:
+                                             
+                                             
+                                                 Verkeersbord ZE9a - onderbord GVIIb (parkeerschijf)  
+                                                 Verkeersbord ZE9b - onderbord GVIIb (parkeerschijf)  
+                                             
+                                            
+                                                Het parkeren is beperkt in tijd: deze maatregel geldt alle dagen tussen 09.00u en 18.00u, uitgezonderd op zon- en feestdagen
+                                             
+                                            
+                                                 
+                                             
+                                            
+                                                 
+                                             
+                                            
+                                                Artikel 2: Oppuursdorp nr. 72 -74
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Het parkeren is toegelaten; de parkeertijd is beperkt in tijd en geldt 15min; het gebruik van de schijf is voorgeschreven. De beperkte parkeertijd geldt niet voor personen in het bezit van een parkeerkaart voor mindervalide
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Dit wordt aangeduid door verkeerstekens:
+                                     
+                                     
+                                         
+                                             Verkeersbord E9a - onderbord GVIIb (parkeerschijf)  
+                                             Onderbord GVIIc - Max 15 min  
+                                         
+                                         
+                                             
+                                                
+                                                     
+                                                 
+                                                 
+                                                    De denkbeeldige rand van de rijbaan wordt aangeduid. Het deel van de openbare weg dat gelegen is aan de andere kant van deze streep is voorbehouden voor het stilstaan en parkeren, behalve op autosnelwegen en autowegen.. 
+                                                    Dit wordt aangeduid door verkeerstekens: 
+                                                     
+                                                         Wegmarkering WM75.2  
+                                                     
+                                                 
+                                             
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Artikel 3: Oppuursdorp nr. 49
+                                         
+                                     
+                                     
+                                         
+                                            
+                                                 
+                                             
+                                             
+                                                Voertuigen moeten parkeren binnen de afgebakende plaatsen. 
+                                                Dit wordt aangeduid door verkeerstekens: 
+                                                 
+                                                     Wegmarkering WM77.5  
+                                                 
+                                             
+                                         
+                                     
+                                      
+                                    Artikel 4 : Oppuursdorp nr 49 - 45a 
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Het parkeren is verboden; het begin van de parkeerreglementering wordt aangeduid; het einde van de parkeerreglementering wordt aangeduid. 
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Verkeersbord E1  
+                                                 Onderbord GXa  
+                                                 Onderbord GXb  
+                                             
+                                         
+                                     
+                                      
+                                    Artikel 5 : Oppuursdorp nr 45a - 43 
+                                     
+                                         
+                                             
+                                                De denkbeeldige rand van de rijbaan wordt aangeduid. Het deel van de openbare weg dat gelegen is aan de andere kant van deze streep is voorbehouden voor het stilstaan en parkeren, behalve op autosnelwegen en autowegen.. 
+                                                Dit wordt aangeduid door verkeerstekens: 
+                                                 
+                                                     Wegmarkering WM75.2  
+                                                 
+                                             
+                                            
+                                                 
+                                             
+                                            
+                                                Artikel 6 : Oppuursdorp 43
+                                             
+                                         
+                                        
+                                             
+                                         
+                                         
+                                             
+                                                
+                                                     
+                                                 
+                                                 
+                                                    Het parkeren is verboden; de parkeerreglementering geldt over een afstand van 25m. 
+                                                    Dit wordt aangeduid door verkeerstekens: 
+                                                     
+                                                         Verkeersbord E1  
+                                                         Onderbord GXc 25m  
+                                                     
+                                                 
+                                             
+                                         
+                                     
+                                      
+                                    Artikel 7: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/778173d8-0bcf-4592-81d0-77f2d4e78113> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/778173d8-0bcf-4592-81d0-77f2d4e78113> a ns2:Agendapunt ;
+    ns1:uuid "b61c3c6a-2e8f-5d14-8117-126aa3f5ba84" .
+

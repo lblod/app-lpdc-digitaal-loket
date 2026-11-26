@@ -1,0 +1,117 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/67813274-3b7a-49f9-b9c9-4340aed05429> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2371935b-7ad6-4871-af1c-8089e789c391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42299301-8db7-4bbf-ae43-b3b4e96ecd75>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50439503-35eb-4857-a55d-25da89a6089f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5856e334-1733-4d65-8957-97a405084cb7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65fdb4dd-4ccc-4e03-957b-90fcc179cde0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/99120f73-d62d-48c9-b773-7826c5491feb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fabf93-37f3-4314-807c-752f83afa18b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc17426a-5ef8-46a5-9063-831499691106>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0e68f3f-8930-4481-a410-e168d0bf59e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns2:geplandeStart "2024-01-31T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d806425-9a34-4095-988a-05678b76355f> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0682f2be-d210-4ac2-9225-4ac8a0eeb628> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3369f7d3-24df-47ea-acab-50b627f1e882> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "e6273ed0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-01-31T21:22:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-31T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns2:openbaar true ;
+    ns1:uuid "e62235c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/65b18321-528f-4e3b-a927-c135e83f1b5d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/65b18321-528f-4e3b-a927-c135e83f1b5d> a ns2:Besluit ;
+    ns3:description """ 
+                                                    Het ontwerp, bestek en raming (aanbestedingsdossier) worden goedgekeurd. De raming bedraagt 573.578,72 euro incl. 21% BTW. De werken worden gegund via een openbare procedure. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Kerkstraat - heraanleg fietspad (deel Vinkenstraat/Jaspaertstede - Gastelstraat) -  lastvoorwaarden en gunningswijze, aanbestedingsdossier: goedkeuring",
+        "Kerkstraat - heraanleg fietspad (deel Vinkenstraat/Jaspaertstede - Gastelstraat) - lastvoorwaarden en gunningswijze, aanbestedingsdossier: goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Freddy Haegeman, schepen openbare werken Waarschoot en Beke 
+                                                            Chris De Wispelaere, schepen mobiliteit 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikel 41, 10° waarbij wordt bepaald dat de gemeenteraad bevoegd is voor de vaststelling van de plaatsingsprocedure en de voorwaarden van overheidsopdrachten als het gaat om een opdracht die niet is opgenomen in de lijst van dagelijks bestuur. 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikels 326 tot en met 341 betreffende het bestuurlijk toezicht. 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen. 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 36 (openbare procedure). 
+                                                            Het KB van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het KB van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen. 
+                                                            Het decreet van 26 maart 2004 betreffende de openbaarheid van bestuur. 
+                                                            Reglement met betrekking tot het toekennen van subsidies voor fietsvoorzieningen gelegen op het lokaal functioneel fietsroutenetwerk, goedgekeurd door de provincieraad van Oost-Vlaanderen op 29 april 2020 
+                                                            Het besluit van de gemeenteraad van 30 januari 2019 over de vaststelling van het begrip 'dagelijks bestuur' waarbij het college bevoegd is voor alle investeringskredieten die nominatief zijn opgenomen in de beleidsplanning. 
+                                                            Het besluit van de gemeenteraad van 20 december 2023 over de Meerjarenplan 2024 - 2026 deel gemeente Lievegem: vaststelling waarbij de nominatieve investeringen werden goedgekeurd, inzonderheid ACT-131: Kerkstraat - heraanleg fietspad 
+                                                            Het besluit van het college van 9 mei 2023 waarbij het ontwerp voor deze werken werd goedgekeurd. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Op 6 september 2022 werd tijdens een infovergadering in het gemeentehuis van Waarschoot het ontwerp toegelicht aan de bewoners. 
+                                                            Op 23 augustus 2023 werd het verder uitgewerkte ontwerp voorgelegd aan de Projectstuurgroep waarbij De Lijn niet akkoord kon gaan met het voorgestelde ontwerp. Uit latere besprekingen (zowel intern als met De Lijn) bleek dat er geen consensus mogelijk was waardoor het dossier verder werd uitgewerkt met voldoende rijbaanbreedte voor De Lijn, met parkeerplaatsen en met voetpaden van minstens 1.5 meter breed. De overblijvende breedte wordt gebruikt voor de aanleg van fietspaden waardoor deze breedte varieert tussen 1.15 en 1.40 meter. Dit voldoet niet aan de bepalingen van het fietsvademecum waardoor geen subsidiëring mogelijk is. 
+                                                            Voor dit project werd een ontwerp met bestek en raming opgesteld door het studiebureau. Uit de raming blijkt dat de totale kostprijs van dit project wordt geraamd op 474.032,00 euro excl. BTW (573.578,72 euro incl. 21% BTW): 
+                                                             
+                                                                riolering: 53.758 euro excl. BTW (BTW is 100% aftrekbaar en dus geen kost) 
+                                                                wegenis: 408.465 euro excl. BTW en 494.242,65 euro inclusief  21% BTW 
+                                                                groenaanleg: 11.809 euro excl. BTW en 14.288,89 euro inclusief 21% BTW 
+                                                             
+                                                            Er wordt voorgesteld de opdracht te gunnen via een openbare procedure. 
+                                                            Dit dossier moet voorgelegd worden aan de gemeenteraad omdat het niet past binnen het decreet lokaal bestuur artikel 56 §3 6° (vaststelling van de plaatsingsprocedure en de voorwaarden van overheidsopdrachten voor de opdrachten die de gemeenteraad nominatief aan het college heeft toevertrouwd). Het budget van 600.000 euro (MJP2023: 20.000 euro / MJP2024: 580.000 euro) zoals voorzien in de lijst voor het project ‘ACT-131: Kerkstraat - heraanleg fietspad’ wordt immers overschreden.  Dus voor deze overheidsopdracht is artikel 41 10° van toepassing waarbij het vaststellen van de plaatsingsprocedure en het vaststellen van de voorwaarden van overheidsopdrachten tot de bevoegdheid van de gemeenteraad behoort (tenzij de opdracht past binnen begrip dagelijks bestuur of nominatief aan het college heeft toevertrouwd, wat hier dus niet het geval is). 
+                                                            Het aanbestedingsdossier voor de wegeniswerken in de Kerkstraat is klaar voor goedkeuring. Dit dossier werd opgemaakt door studiebureau AWP Engineering, Kerkstraat 1, 9950 Lievegem. 
+                                                            De uitvoeringstermijn voor de werken is vastgelegd op 50 werkdagen. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Voor deze opdracht is momenteel een krediet van 600.000 euro beschikbaar in het financieel meerjarenplan onder jaarbudgetrekening ACT-131/0200-00/2240007/GEMEENTE/CBS/IP-GEEN (ACT-131: Kerkstraat - heraanleg fietspad) op basis waarvan zowel de kosten voor de studie, de uitvoering als de BTW zouden moeten worden gefinancierd. De totale kost wordt momenteel geraamd op 603.055,53 euro:    ontwerper (7.25% ereloon): 40.765,99 euro incl. 21% BTW   uitvoering: 562.289,54 euro,  zijnde 53.758 euro excl. BTW + 508.531,54 euro incl. 21% BTW Op basis van de raming zou er een krediettekort zijn van 3.055,53 euro waarvoor via een interne kredietverschuiving de nodige kredieten kunnen verplaatst worden van 2024/ACT-484/0200-00/2240007/GEMEENTE/CBS/IP-GEEN (Dekenijstraat + Hendrik Claeysstraat + Boven + Alfons Sifferstraat: heraanleg en verbreden voetpaden. We zullen nu nog geen interne kredietverschuiving doorvoeren en stellen voor om hiermee te wachten tot er zicht is op het gunningsbedrag zodat duidelijk wordt of er een interne kredietverschuiving nodig is en voor welk bedrag. 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "e626c9a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad keurt het ontwerp 'Kerkstraat - heraanleg fietspad' met bestek en raming, opgesteld door Studiebureel AWP Engineering, Kerkstraat 1, 9950 Lievegem, goed. De lastvoorwaarden worden vastgesteld zoals voorzien in het bestek en zoals opgenomen in de algemene uitvoeringsregels van de overheidsopdrachten voor aannemingen van werken, leveringen en diensten. De raming bedraagt 474.032,00 euro excl. BTW (573.578,72 euro incl. 21% BTW): 
+                                                             
+                                                                riolering: 53.758 euro excl. BTW 
+                                                                wegenis: 408.465 euro excl. BTW 
+                                                                groenaanleg: 11.809 euro excl. BTW 
+                                                             
+                                                            Artikel 2 
+                                                            De werken worden gegund via een openbare procedure. 
+                                                            Artikel 3Het college van burgemeester en schepenen wordt gemachtigd alle verdere beslissingen te nemen over de uitvoering van de gunningsprocedure. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "e627db10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Kerkstraat - heraanleg fietspad (deel Vinkenstraat/Jaspaertstede - Gastelstraat) - lastvoorwaarden en gunningswijze, aanbestedingsdossier: goedkeuring" .
+

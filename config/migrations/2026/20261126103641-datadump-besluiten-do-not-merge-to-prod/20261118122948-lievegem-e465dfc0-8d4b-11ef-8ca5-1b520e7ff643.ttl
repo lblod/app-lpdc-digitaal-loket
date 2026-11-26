@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns1:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f> ;
+    ns1:openbaar true ;
+    ns3:uuid "e460d6b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de gewijzigde dotaties voor het dienstjaar 2022 als volgt goed: 
+                                                    Voor exploitatie: 824.697,00 euro                                                                                                                                                           Voor investeringen: 88.168,00 euroBijdrage voor de pensioenen: 2.682,19 euro. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Hulpverleningszone Centrum - gewijzigde exploitatie- en investeringsdotatie voor het dienstjaar 2022: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Tony Vermeire, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Wet van 15 mei 2007 betreffende de civiele veiligheid, artikelen 67 en 68Koninklijk Besluit van 19 april 2014 houdende het algemeen reglement op de boekhouding van de hulpverleningszonesDecreet lokaal bestuur van 22 december 2017, artikel 40, § 1-2Gemeenteraadsbesluit van 20 oktober 2021 over de goedkeuring van de gewijzigde exploitatie- en investeringsdotatie voor het dienstjaar 2022 van de Hulpverleningszone Centrum 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Mail van 7 juni 2022 van de Hulpverleningszone centrum over de goedkeuring van de gewijzigde dotatie 2022 aan de Hulpverleningszone Centrum 
+                                                            De zoneraad van Hulpverleningszone Centrum heeft op 25 oktober 2021 de begroting voor het dienstjaar 2022 goedgekeurd. Voor de gemeente Lievegem waren de in de begroting 2022 opgenomen dotaties als volgt:Voor exploitatie: 795.795,29 euro                                                                                                                                                           Voor investeringen: 88.260,32 euroBijdrage voor de pensioenen: 2.682,19 euroNet als de vorige jaren wordt de initiële begroting van de hulpverleningszone bijgestuurd. Na de bespreking ervan in de begrotingscommissie op 03 juni 2022 keurde het college van de hulpverleningszone op 03 juni 2022 het ontwerp van de begrotingswijziging voor het dienstjaar 2022 goed.De begrotingswijziging 2022 betreft voornamelijk een technische bijsturing. Een belangrijke aanpassing van de begroting betreft het verwerken van het begrotingsresultaat van 2021. Het begrotingsresultaat van in totaal 2,8 miljoen euro wordt in deze budgetwijziging geristorneerd naar de verschillende gemeenten volgens het aandeel van iedere gemeente in dit resultaat (m.a.w. volgens de verdeelsleutel voor het jaar 2021). Het ristorno zal verwerkt worden via de uitgavenkredieten van de zone en staat bijgevolg los van de hieronder vermelde gewijzigde dotatie.Een andere belangrijke wijziging betreft de aanpassing van de personeelsbegroting aan de recente evoluties inzake de wedde-index. De voorliggende begrotingswijziging houdt rekening met een aanpassing van deze index in de maand februari, april, juni, en december 2022, conform de laatste verwachtingen van het Federaal Planbureau. Naar aanleiding van de hoge inflatie worden ook de energiekosten (elektriciteit en gas voor de kazernes van de zone, alsook de brandstoffen voor de voertuigen) bijgestuurd. Andere aanpassingen hebben betrekking op de ontvangstenzijde. Globaal beschouwd worden de verwachte ontvangsten uit retributies en subsidies naar boven bijgestuurd.Bovenstaande aanpassingen hebben tot gevolg dat de gemeentelijke dotaties, dewelke als sluitpost van de begroting van de hulpverleningszone dienen, herberekend moeten worden. Het gevolg is dat de gemeentelijke exploitatiedotaties stijgen, en de investeringsdotaties min of meer ongewijzigd kunnen blijven. De bijdragen van de gemeenten voor de financiering van de pensioenen wijzigen niet.De gewijzigde dotaties van de gemeenten aan de hulpverleningszone dienen goedgekeurd te worden door de gemeenteraad. In functie van het ontwerp van de begrotingswijziging en de door de gemeenten aanvaarde verdeelsleutel worden voor het jaar 2022 door de gemeente Lievegem volgende dotaties toegekend aan de Hulpverleningszone Centrum:Voor exploitatie: 824.697,00 euro                                                                                                                                                           Voor investeringen: 88.168,00 euroBijdrage voor de pensioenen: 2.682,19 euroDe definitieve goedkeuring van de begrotingswijziging 2022 door de zoneraad is gepland op 29 juni 2022.De goedkeuring van de toezichthoudende overheid is vereist opdat de begrotingswijziging uitvoerbaar zou zijn. Het bestuurlijk toezicht dient daarom een afschrift van de gemeenteraadsbesluiten betreffende de dotaties aan de zone te ontvangen om de begrotingswijziging voor het dienstjaar 2022 definitief te kunnen goedkeuren. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De exploitatiebijdrage van 795.795,29 euro is in het meerjarenplan 2020 - 2025 opgenomen in het exploitatiebudget onder jaarbudgetrekening 2022/GBB-SSC/0410-00/6494000/GEMEENTE/CBS/IP-GEEN en wordt via budgetwijziging vermeerderd naar 824.697,00 euro. 
+                                                            De bijdrage voor de pensioenen ten bedrage van 2.682,19 euro is in het meerjarenplan 2020 - 2025 opgenomen in het exploitatiebudget onder jaarbudgetrekening 2022/GBB-SSC/0410-00/6494001/GEMEENTE/CBS/IP-GEEN. Deze bijdrage blijft ongewijzigd. 
+                                                            De investeringsbijdrage van 88.260,32 euro is in het meerjarenplan 2020 - 2025 opgenomen in het investeringsbudget onder jaarbudgetrekening 2022/GBB-SSC/0410-00/6640000/GEMEENTE/CBS/IP-GEEN en wordt via budgetwijziging verminderd naar 88.168,00 euro. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e465dfc0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad keurt de gewijzigde dotaties voor het dienstjaar 2022 als volgt goed: 
+                                                            Voor exploitatie: 824.697,00 euro                                                                                                                                                           Voor investeringen: 88.168,00 euroBijdrage voor de pensioenen: 2.682,19 euro. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e44efc60-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Hulpverleningszone Centrum - gewijzigde exploitatie- en investeringsdotatie voor het dienstjaar 2022: goedkeuring" .
+

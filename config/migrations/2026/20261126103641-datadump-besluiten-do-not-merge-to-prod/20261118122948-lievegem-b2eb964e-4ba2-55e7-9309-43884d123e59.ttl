@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/b331680a-5744-4aa2-be1e-9cdc1ecbfba3> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/601a7cd8-089b-4b2b-ab12-749d72ee6616>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e274d3a7-89d7-4222-ad50-4ad021970fda> ;
+    ns2:geplandeStart "2025-02-25T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/73fe7741-9db3-4d3a-abc9-9121111170bf> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "fd20a3cf-dd77-5112-a7e8-ba902f4d89c6" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-02-25T13:38:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e274d3a7-89d7-4222-ad50-4ad021970fda> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/601a7cd8-089b-4b2b-ab12-749d72ee6616> ;
+    ns2:openbaar false ;
+    ns1:uuid "98943ebc-7486-5fed-9cd6-90f121158966" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e274d3a7-89d7-4222-ad50-4ad021970fda> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/e274d3a7-89d7-4222-ad50-4ad021970fda> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/e274d3a7-89d7-4222-ad50-4ad021970fda> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Attracties Paaskermis Waarschoot 2025' van maandag 14 april 2025 8.00 uur tot en met dinsdag 22 april 2025 8.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Attracties Paaskermis Waarschoot 2025' - team evenementen gemeente Lievegem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag evenement Paaskermis Waarschoot - Kermiscommissie Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag Paaskermis Waarschoot 2025, kinderuurtje en toewijzing standplaatsen spektakelattracties en kermisgastronomie: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag evenement Activiteiten voor kinderen tijdens Paaskermis Waarschoot - Gezinsbond Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag inname van openbaar domein - plein achter Sint-Ghislenuskerk, Waarschootdorp, 9950 Lievegem voor Paaskermis 2025 - Kermiscommissie Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over het tijdelijk politiereglement naar aanleiding van 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' - Gezinsbond Waarschoot: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen - gemeente Lievegem organiseert 'Attracties Paaskermis Waarschoot 2025' vanaf vrijdag 18 april 2025 tot en met maandag 21 april 2025.Er werd op 7 januari 2025 een aanvraag ingediend door team Evenementen Gemeente Lievegem om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    Het betreft het plaatsen van attracties op het dorpsplein voor de kerk (opbouw vanaf woensdag 16 april 2025 8.00 uur tot afbouw dinsdag 22 april 2025 8.00 uur) en de inname van (een deel van) de parking aan de begraafplaats te Hovingen (vanaf maandag 14 april 2025 8.00 uur tot en met dinsdag 22 april 2025 8.00 uur).De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Deze inname is in GIPOD geregistreerd met het nummer 17726919. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns1:uuid "b2eb964e-4ba2-55e7-9309-43884d123e59" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Attracties Paaskermis Waarschoot 2025' wordt vastgesteld als volgt: 
+                                    1. Van woensdag 16 april 2025 8.00 uur tot afbouw dinsdag 22 april 2025 8.00 uur:- inname dorpsplein voor de kerk voor het plaatsen van de kermisattracties, inclusief fietspad aan de kant van Waarschootdorp. Fietsers die afslaan richting Schoolstraat komen hierbij even op de rijbaan.- Het fietspad aan de kant van Stationsstraat blijft vrij voor de fietsers.- Zone 30 vanaf kruispunt Stationsstraat/Metaalstraat tot en met Waarschootdorp 6, 9950 Lievegem- Zone 30 vanaf Kerkstraat 1 tot en met het kruispunt Stationsstraat/Metaalstraat, 9950 Lievegem 
+                                    2. Van maandag 14 april 2025 8.00 uur tot en met dinsdag 22 april 2025 8.00 uur:- parkeerverbod op de parking aan de begraafplaats in Hovingen, uitgezonderd foorkramers op de aangeduide plaatsen. Er blijven nog enkele parkeerplaatsen vrij voor bezoekers van de begraafplaats. 
+                                    - De parkeerplaatsen voor personen met een handicap en voorbehouden voor elektrisch laden moeten vrij blijven. 
+                                      
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. - Nadar + D1 + bord 'fietsers op de rijbaan' op de plaats waar het fietspad onderbroken is 
+                                        - Borden F4a ter hoogte van Kerkstraat 1 en van kruispunt Stationsstraat/Metaalstraat, 9950 Lievegem    - Borden F4b ter hoogte van Waarschootdorp 6 en van kruispunt Stationsstraat/Metaalstraat, 9950 Lievegem    - Afdekken bord F4b (einde zone 30) ter hoogte van kruispunt Waarschootdorp, 9950 Lievegem 
+                                    2. Borden E3 
+                                      
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e274d3a7-89d7-4222-ad50-4ad021970fda> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e274d3a7-89d7-4222-ad50-4ad021970fda> a ns2:Agendapunt ;
+    ns1:uuid "20a6d7c6-e80d-5b2c-a8ba-c2985d8002fd" .
+

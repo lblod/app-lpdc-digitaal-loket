@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/2e25b699-9c45-4b5f-88aa-f2317708c5b4> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/32681227-42c7-40cb-9bd5-d9ed5aea1380>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7581ad62-644b-48ae-91d8-e61e89da9c92>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> ;
+    ns1:geplandeStart "2025-03-03T14:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2df52d40-fdb0-47e3-ad17-61cd1328bd94> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "f4236215-c3aa-5737-867a-627147783926" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-03T13:23:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7581ad62-644b-48ae-91d8-e61e89da9c92> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b6c1aa98-f1e0-4f21-9e26-adc4ecdc2279> ;
+    ns1:openbaar true ;
+    ns2:uuid "7c56cffb-11e8-5666-bb33-e6d4562a08b1" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7581ad62-644b-48ae-91d8-e61e89da9c92> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/7581ad62-644b-48ae-91d8-e61e89da9c92> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/7581ad62-644b-48ae-91d8-e61e89da9c92> a ns1:Besluit ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de wandeltocht(en) op 9 maart 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Kriek & Mattentochten 2025 - 9 maart 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "c39ff38e-7f88-5e21-b27f-2f6df1a075ff" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van wandeltocht(en) op 9 maart 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf tussen 7u en 18u:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        Een stilstaan- en parkeerverbod (E3) wordt 48u op voorhand geplaatst op volgende locaties: 
+                                        Lorengstraat tussen Spoorwegstraat en Lorengdreef 
+                                        Parking GBS Markevallei in de Grotestraat, uitgezonderd bussen 
+                                        Parking kaatsplein Centrum 17 
+                                          
+                                        Verboden toegang, voor iedere bestuurder in beide richtingen (C3) uitgezonderd plaatselijk verkeer (type IV): 
+                                        Hernekouter, t.h.v. kruispunt Hernekouter (te plaatsen tussen huisnummer 2 en huisnummer 27) 1 nadarhek met werflicht 
+                                        Hernekouter t.h.v. huisnummer 27 (in richting van sporthal) 2 nadarhekken met werflichten 
+                                          
+                                        Eenrichtingsverkeer (C1, F19, C31 a/b) met uitzondering van fietsers (M2, M4) wordt ingelast in: 
+                                        Lorengstraat tussen Spoorwegstraat en Scherpstraat: verboden rijrichting voor verkeer komende van de Scherpstraat in de richting van het Station 
+                                          
+                                        Snelheidsbeperking tot 30 km/u (C43) wordt ingelast in: 
+                                        Spoorwegstraat tussen kruispunten Scherpstraat en Lorengstraat 
+                                        Lorengstraat tussen Spoorwegstraat en Scherpstraat  
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd, in dienst gesteld en opgehaald door de technische dienst. Tegenstrijdige signalisatie wordt afgedekt zolang de tijdelijke maatregelen van kracht zijn. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                        De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen. 
+                                        De deelnemers dienen zich strikt te houden aan de verkeersregels en andere vigerende wetgeving. Het betreft geen wedstrijd. De organisatie staat in voor de communicatie van voorgenoemde. 
+                                        Werknemers van de organisatie worden door de organisatie voorzien van een parkeerkaart met specifieke kleur 
+                                        De organisatie voorziet 2 parkeerkaarten per woning in de Hernekouter. Deze hebben een andere kleur dan die van de werknemers van de organisatie. 
+                                        Bij het innemen van parkeerplaatsen in de omgeving van het station, ziet de organisatie erop toe dat het plein vrij blijft van geparkeerde voertuigen. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7581ad62-644b-48ae-91d8-e61e89da9c92> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7581ad62-644b-48ae-91d8-e61e89da9c92> a ns1:Agendapunt ;
+    ns2:uuid "c9bbef50-0499-57c9-9d7b-862e921435a0" .
+

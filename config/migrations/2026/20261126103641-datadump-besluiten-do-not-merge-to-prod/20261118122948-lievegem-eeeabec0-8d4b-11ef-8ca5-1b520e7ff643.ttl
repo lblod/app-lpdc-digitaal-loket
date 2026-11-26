@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6219e70b-a11d-41ee-932f-1de6fab63f66> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/056ce378-80ad-465c-a6ff-9e7f427b43dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06808dec-0883-41a9-932f-4e1dbfce464f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/21dd7ca5-0fbf-4795-80c5-34655d129dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5e8d9624-6fc9-4220-acdb-affac1d4f5bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b55312b-f388-42d7-913b-1b7fa2fe03d4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc1d2c8-5d20-4607-ab4b-a96ad7d3adc2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b50e7bb5-a505-44ae-8207-2fb21ca780d5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c251bdc4-9793-405e-8b78-c3e0ee673f9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c451ff4b-94fa-477b-8baa-81e0be4bd852>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cec759f6-1f78-4c21-8314-2aff4bd2401f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4c0bf94-9863-4204-bf32-7c7993067dae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0d592ac-a567-4638-9ba8-411d725bfa74>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2855dc5-1bda-4127-9e37-67f9c96edd0c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ff83b9b0-0723-48bf-9870-b6fa200fc786> ;
+    ns2:geplandeStart "2023-09-14T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a816a351-bad7-4bdf-893d-8c0a30fd5f67> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3477a3ff-0a8d-4b85-bf05-16027e5dd5f5> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fcf42403-2747-4b3b-a2b4-cffcfa393785> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e72ca0e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-09-14T21:26:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-09-14T20:01:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5e8d9624-6fc9-4220-acdb-affac1d4f5bc> ;
+    ns2:openbaar true ;
+    ns3:uuid "eee73c50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3443dacf-d38e-4dd0-b98d-2c998fae978b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3443dacf-d38e-4dd0-b98d-2c998fae978b> a ns2:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad keurt de ontwerpakte voor de kosteloze grondafstand tussen Dijken BV enerzijds en de gemeente Lievegem anderzijds, opgemaakt door notaris Jeroen Parmentier, geassocieerde notaris in BV NOTAS, voor 4 loten grond te Tuimelaar 7+, 9930 Lievegem, met een totale oppervlakte volgens meting van 151,71 m² goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Patrimonium - akte kosteloze grondafstand Tuimelaar 7: goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Freddy Haegeman, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Het collegebesluit van 15 november 2022 met de voorwaardelijke goedkeuring van de verkaveling V/2022/12 voor Tuimelaar 7 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Op 13 november 2018 werd studieburo Goegebeur uit Eeklo door Farys aangesteld als ontwerper van de openbare werken te Tuimelaar-Paterstraat. 
+                                                            Op 15 november 2022 werd aan Filip De Pauw, Engelendale 19 te 9900 Eeklo, een omgevingsvergunning verleend voor het verkavelen van gronden gelegen te Tuimelaar 7, 9930 Lievegem, kadastraal bekend: Afdeling 5, sectie B, perceelnrs. 1452A en 1452B.In deze omgevingsvergunning werd de volgende voorwaarde opgenomen:"De zone van het inventarisitem 'Kruis van Beke', conform het verkavelingsplan, moet integraal kosteloos afgestaan worden aan de gemeente, zodat het behoud en het onderhoud van het kruis door de gemeente kan gebeuren. Ook de gele zone palend aan de wegenis Tuimelaar in functie van de heraanleg van de wegenis moet kosteloos worden afgestaan aan de gemeente. De aanvrager dient zelf een notaris aan te stellen voor het verlijden van de aktes en in te staan voor alle kosten voor de overdracht."De over te dragen stroken grond volgens het verkavelingsplan hebben een totale oppervlakte van 114,62 m². 
+                                                            Op 16 november 2022 maakte studieburo Goegebeur, in opdracht van Farys en de gemeente, de individuele opmetingsplannen voor de aanleg van een fietspad te Tuimelaar op. Tuimelaar 7 wordt gevat door de innameplannen nrs. 6 en 7 (zie bijlage)De over te dragen stroken grond volgens het verkavelingsplan worden hierbij in het groen aangeduid op dit opmetingsplan (loten 6B, 7A en 7D).Maar om het fietspad te kunnen aanleggen dient er bijkomend 13,93 m² te worden overgedragen (loten 6A, 7B en 7C in het geel aangeduid op dit opmetingsplan) tot in totaal 128,55 m². 
+                                                            Op 14 juli 2023 maakte landmeter-expert Filip De Pauw, in opdracht van de verkavelaar, een opmetingsplan voor inname  7 te Tuimelaar 7.De loten 7A en 7B op dit opmetingsplan omvatten de loten 7A, 7B, 7C en 7D van het opmetingsplan van studieburo Goegebeur en zijn in totaal 23,16 m² groter.Voor inname 6 wordt het opmetingsplan van studieburo Goegebeur gevolgd.Samenvattend: de verkavelaar biedt een kosteloze grondafstand aan van in totaal 151,71 m². Deze overdracht omvat de nodige grond voor het aanleggen van het fietspad en is zelfs 23,16 m² groter. 
+                                                            De verkavelaar heeft notaris Jeroen Parmentier, geassocieerde notaris in BV NOTAS, aangesteld om de akte voor de kosteloze afstand van de vermelde loten grond op te maken, op basis van de vermelde opmetingsplannen. Deze akte wordt heden ter goedkeuring voorgelegd aan de gemeenteraad. 
+                                                            De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                             
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Er is geen financiële impact voor de gemeente. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "eeeabec0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad keurt de ontwerpakte voor de kosteloze grondafstand tussen Dijken BV enerzijds en de gemeente Lievegem anderzijds, opgemaakt door notaris Jeroen Parmentier, geassocieerde notaris in BV NOTAS, voor 4 loten grond te Tuimelaar 7, 9930 Lievegem, met een totale oppervlakte volgens meting van 151,71 m² goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "e72eead0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium - akte kosteloze grondafstand Tuimelaar 7: goedkeuring" .
+

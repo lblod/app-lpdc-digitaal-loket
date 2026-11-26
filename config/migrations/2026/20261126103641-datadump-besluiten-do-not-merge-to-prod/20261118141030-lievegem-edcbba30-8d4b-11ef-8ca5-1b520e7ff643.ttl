@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/a475ad5f-6791-4297-b104-79b3c207fb16> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/066e2ed1-d9f6-493c-9c6f-4f18e5ab7658>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40881b55-0d07-4b9c-8159-1126726726c8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4c93144e-5a19-470b-93d1-7e2659266b01>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/72e3a1c9-366e-4989-9414-3d302437f58d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85a89a89-4741-4921-9222-96054c5df5f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b409ab7a-e18e-4363-aa87-5a90fcc43155>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4219de6-3f0a-40e3-b839-fe356c608d46>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e6c5218a-0543-416e-b1cb-38efde0f155e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4b04b57-aa85-4dd8-ad0e-2255f5e9d903> ;
+    ns1:geplandeStart "2021-02-24T20:00:00+01:00"^^xsd:dateTime,
+        "2021-02-24T20:10:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/aef4a100-7c5a-43bb-ad04-e15ab2f79936> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2832f3bc-d9ee-461a-b6bf-1931195b87b8> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/94ff0768-e35c-4879-93c9-b68206f2669e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "edcea060-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-02-24T21:05:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-02-24T20:10:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e6c5218a-0543-416e-b1cb-38efde0f155e> ;
+    ns1:openbaar true ;
+    ns2:uuid "f132da00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/524205b0-9ac4-477d-a35d-f37ddf02551f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/524205b0-9ac4-477d-a35d-f37ddf02551f> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de ontwerpakte en het bijhorend plan goed van de kosteloze grondafstand  aan de verkaveling te Laagland 36 -voetweg nr 55 Kadastrale afdeling : 44452 - LIEVEGEM 2 AFD - Sectie: B - deel van nummer 303BP0000 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Laagland 36 - Voetweg nr 55 - akte kosteloze grondafstand: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11° 
+                                                            Besluit van het college van burgemeester en schepenen van Lovendegem van 14 januari 2019 waarbij de verkavelingsvergunning OMV_2018111500 werd afgeleverd voor het verkavelen van gronden van verkaveling 35/1 voor het aanleggen van één extra woonkavel en aanpassingswerken van wegel nr. 55 in functie van de toegang te Laagland 36A(Nieuwstraat 36A) 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De verkavelingsvergunning werd afgeleverd op voorwaarde dat de zone met de wegel nr. 55 inclusief de verbreding (lot 10) volgens het verkavelingsplan kosteloos wordt afgestaan aan de gemeente. De verkavelaar dient de kosten te dragen voor deze kosteloze grondafstand.Op 26 januari 2021 bezorgde het notariaat Vanderplaetsen en Redel, Diepestraat 4/0001 te 9920 Lievegem, aan de gemeente een ontwerp van de akte van grondafstand en bijhorend opmetingsplan van 8 april 2020 en het Precadnummer. De over te dragen zone bestaat uit 1 lot met een oppervlakte van 241 m² (gereserveerd PINr B3030h).Er werd voor het perceel afdeling 2, sectie B, nr 0303B (Laagland 36) een blanco bodemattest afgeleverd op 14 december 2020.Er zijn over deze ontwerpakte en het bijhorend plan verder geen opmerkingen. Beide kunnen worden goedgekeurd. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Dit besluit heeft geen financiële impact op het budget van de gemeente Lievegem. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "edcbba30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad keurt de ontwerpakte en het bijhorend plan goed van de kosteloze grondafstand  aan de verkaveling te Laagland 36 -voetweg nr 55 - Kadastrale afdeling : 44452 - LIEVEGEM 2 AFD - Sectie: B - deel van nummer 303BP0000 met een oppervlakte volgens meting van 241 m² goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f12f3080-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Laagland 36 - Voetweg nr 55 - akte kosteloze grondafstand: goedkeuring" .
+

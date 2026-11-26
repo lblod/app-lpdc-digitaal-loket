@@ -1,0 +1,526 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/5fdd2257-fedf-47af-9ec8-c96f9ca4b3ea> a ns3:Zitting ;
+    ns3:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/491506b3-03fc-46c8-82b0-c14c23846bb4> ;
+    ns3:geplandeStart "2025-03-10T14:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/66f85871-6d49-4276-8282-10d66e6a40c6> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "3824efa0-d9d7-5496-ab9d-0bd292bdea09" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-10T12:50:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/491506b3-03fc-46c8-82b0-c14c23846bb4> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/30b5bc44-4cb1-4744-918a-67764fed49a5> ;
+    ns3:openbaar false ;
+    ns1:uuid "d3171fa0-bb38-572d-b27e-1c202ddb6f86" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/491506b3-03fc-46c8-82b0-c14c23846bb4> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/491506b3-03fc-46c8-82b0-c14c23846bb4> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/491506b3-03fc-46c8-82b0-c14c23846bb4> a ns3:Besluit ;
+    ns2:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de wielerwedstrijd op 11 mei 2025 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Politieverordening: Omloop Markvallei - 11 mei 2025" ;
+    ns3:motivering """ 
+                            """@nl ;
+    ns1:uuid "45618fd8-2362-53e3-b2c5-fd3594874061" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van een wielerwedstrijd op 11 mei 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf tussen 8u en 20u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 09/05/2025 06.00 uur tot 12/05/2024 16.00 uur:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Marktplein
+                                        Stilstaan en parkeren verboden uitgezonderd organisatie (fig E3) op het Marktplein (parking ter hoogte van kerk / aankomstzone) af te sluiten met nadars en/of lint.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 10/05/2025 06.00 uur tot 11/05/2024 14.00 uur:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hernekouter
+                                     
+                                    
+                                        Stilstaan en parkeren verboden (fig E3) Hernekouter op de parking rechts bij binnenrijden Hernekouter
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        11/05/2025: Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 06.00 uur tot 14.00 uur in volgende straat:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hernekouter
+                                     
+                                    
+                                        Stilstaan en parkeren verboden uitgezonderd organisatie (fig E3) Hernekouter op de parkings sporthal
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Parking NMBS
+                                     
+                                    
+                                        Stilstaan en parkeren verboden uitgezonderd organisatie (fig E3) Station Herne op de parkings NMBS
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 11.00 uur tot 14.00 uur in volgende straten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Spoorwegstraat Stilstaan en parkeren verboden (fig E3) op het Spoorwegstraat vanaf het kruispunt met de Hernekouter tot het kruispunt met de Scherpstraat.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Scherpstraat Stilstaan en parkeren verboden (fig E3) op de Scherpstraat vanaf het kruispunt met de Spoorwegstraat tot de Hernestraat.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 06.00 uur tot 20.00 uur in volgende straten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Nieuwstraat (N272) Stilstaan en parkeren verboden (fig E3) op de Nieuwstraat vanaf het kruispunt met de Tollembeekstraat tot het kruispunt met de Bergstraat (aankomstzone)
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Kammeersweg Stilstaan en parkeren verboden uitgezonderd organisatie (fig E3) op het Kammeersweg
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Parking Gemeentehuis Galmaarden Stilstaan en parkeren verboden uitgezonderd organisatie (fig E3) op het parking Gemeentehuis.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 10.00 uur tot 18.00 uur in volgende straten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan en parkeren verboden (fig E3) op de Bergstraat vanaf het kruispunt met de Nieuwstraat tot het kruispunt met de Watermolenstraat.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Watermolenstraat Stilstaan en parkeren verboden (fig E3) op de Watermolenstraat vanaf het kruispunt met de Bergstraat tot het kruispunt met de Steenbakkerijstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Steenbakkerijstraat (N272) Stilstaan en parkeren verboden (fig E3) op de Steenbakkerijstraat vanaf het kruispunt met de Watermolenstraat tot de Geraardsbergsestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Geraardsbergsestraat (N272) Stilstaan en parkeren verboden (fig E3) op de Geraardsbergsestraat vanaf de Steenbakkerijstraat tot het kruispunt met de Kapelledreef
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Kapelledreef (N272) Stilstaan en parkeren verboden (fig E3) op de Kapelledreef vanaf het kruispunt met de Geraardsbergsestraat tot de Paulusstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Paulusstraat Stilstaan en parkeren verboden (fig E3) op de Paulusstraat vanaf de Kapelledreef tot de Wilderstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Wilderstraat Stilstaan en parkeren verboden (fig E3) op de Wilderstraat vanaf de Paulusstraat tot het kruispunt met de Waterschaapstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Waterschaapstraat Stilstaan en parkeren verboden (fig E3) op de Waterschaapstraat vanaf het kruispunt met de Wilderstraat tot het kruispunt met de Bruinsbroekstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Bruinsbroekstraat Stilstaan en parkeren verboden (fig E3) op de Bruinsbroekstraat vanaf het kruispunt met de Waterschaapstraat tot het kruispunt met de Heirbaan
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Heirbaan Stilstaan en parkeren verboden (fig E3) op de Heirbaan vanaf het kruispunt met de Bruinsbroekstraat tot het kruispunt met de Dorekensstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Dorekensstraat Stilstaan en parkeren verboden (fig E3) op de Dorekensstraat vanaf het kruispunt met de Heirbaan tot het kruispunt met de Wallestraat (Geraardsbergen)
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hoogstraat Stilstaan en parkeren verboden (fig E3) op de Hoogstraat vanaf de Dorekensstraat tot het kruispunt met het Marktplein
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Marktplein (N272) Stilstaan en parkeren verboden (fig E3) op Het Marktplein vanaf het kruispunt met de Hoogstraat tot het kruispunt met de Baljuwstraat. (Parkeren wel toegelaten op middenplein)
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Baljuwstraat Stilstaan en parkeren verboden (fig E3) op de Baljuwstraat vanaf het kruispunt met het Marktplein tot de Hollestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hollestraat Stilstaan en parkeren verboden (fig E3) op de Hollestraat vanaf de Baljuwstraat tot het kruispunt met de Waterstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Waterstraat (N272) Stilstaan en parkeren verboden (fig E3) op de Waterstraat vanaf het kruispunt met de Hollestraat tot de Plaats
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Plaats (N272) Stilstaan en parkeren verboden (fig E3) op de Plaats vanaf de Waterstraat tot de Plaatsstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Plaatsstraat (N272) Stilstaan en parkeren verboden (fig E3) op de Plaatsstraat vanaf de Plaats tot de Tollembeekstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Tollembeekstraat (N272) Stilstaan en parkeren verboden (fig E3) op de Tollembeekstraat vanaf de Plaatsstraat tot het kruispunt met de Nieuwstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hernestraat Stilstaan en parkeren verboden (fig E3) op de Hernestraat vanaf de Scherpstraat tot het kruispunt met de Plaats.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verboden toegang in beide richtingen uitgezonderd wedstrijdorganisatie (fig C3 + onderbord) wordt ingelast van 08.00 uur tot 18.00 uur in volgende straat:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Nieuwstraat (N272) Verboden toegang in beide richtingen uitgezonderd wedstrijdorganisatie voor ieder bestuurder (fig C3 + UITGEZONDERD WEDSTRIJD) op de Nieuwstraat vanaf het kruispunt met de Bergstraat tot het kruispunt met de Tollembeekstraat.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verboden toegang in beide richtingen voor iedere bestuurder uitgezonderd bewoners/wedstrijdorganisatie (fig C3 + onderbord) wordt ingelast van 09.00 uur tot 13.30 uur in volgende straat:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hernekouter Verboden toegang in beide richtingen voor ieder bestuurder uitgezonderd bewoners/wedstrijdorganisatie (fig C3 + onderbord) op de Hernekouter vanaf het kruispunt met de Spoorwegstraat. Verkeersborden op nadar bemand door minstens 2 stewards organisatie!
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 12.00 uur tot 18.00 uur in volgende straten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Marktplein Verboden richting voor ieder bestuurder (fig C1) op het Marktplein vanaf het huisnummer 17 (Gemeentehuis) tot het kruispunt met de Hoogstraat.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Bergstraat Verboden richting voor ieder bestuurder (fig C1) op de Bergstraat vanaf het kruispunt met de Watermolenstraat tot het kruispunt met de Nieuwstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Watermolenstraat Verboden richting voor ieder bestuurder (fig C1) op de Watermolenstraat vanaf het kruispunt met de Steenbakkerijstraat tot het kruispunt met de Bergstraat.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Kapelledreef Verboden richting voor ieder bestuurder (fig C1) op de Kapelledreef vanaf de Paulusstraat tot het kruispunt met de Geraardsbergsestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Paulusstraat Verboden richting voor ieder bestuurder (fig C1) op de Paulusstraat vanaf de Wilderstraat tot de Kapelledreef.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Wilderstraat Verboden richting voor ieder bestuurder (fig C1) op de Wilderstraat vanaf het kruispunt met de Waterschaapstraat tot de Paulusstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Waterschaapstraat Verboden richting voor ieder bestuurder (fig C1) op de Waterschaapstraat vanaf het kruispunt met de Bruinsbroekstraat tot het kruispunt met de Wilderstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Bruinsbroekstraat Verboden richting voor ieder bestuurder (fig C1) op de Bruinsbroekstraat vanaf het kruispunt met de Heirbaan tot het kruispunt met de Waterschaapstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Dorekensstraat Verboden richting voor ieder bestuurder (fig C1) op de Dorekensstraat vanaf het kruispunt met de Wallestraat (Geraardsbergen) tot het kruispunt met de Heirbaan
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Baljuwstraat Verboden richting voor ieder bestuurder (fig C1) op de Baljuwstraat vanaf de Hollestraat tot het kruispunt met het Marktplein
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hollestraat Verboden richting voor ieder bestuurder (fig C1) op de Hollestraat vanaf het kruispunt met de Waterstraat tot de Baljuwstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 09.00 uur tot 13.30 uur op volgende kruispunten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hernekouter Spoorwegstraat / Hernekouter
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 08.00 uur tot 18.00 uur op volgende kruispunten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Nieuwstraat Marktplein / Nieuwstraat Tollembeekstraat / Nieuwstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 12.00 uur tot 18.00 uur op volgende kruispunten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Bergstraat Bolwerkstraat / Bergstraat Watermolenstraat / Bergstraat Stationsstraat / Bergstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Watermolenstraat Watermolenstraat / Watermolenstraat Molenwijk / Watermolenstraat Steenbakkerijstraat / Watermolenstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Kapelledreef Paulusstraat (grindweg) / Kapelledreef Paulusstraat / Kapelledreef
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Paulusstraat Paulusstraat / Paulusstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Wilderstraat Driesweg / Wilderstraat Waterschaapstraat / Wilderstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Waterschaapstraat Bruinsbroekstraat / Waterschaapstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Bruinsbroekstraat Noremansberg / Bruinsbroekstraat Heirbaan / Bruinsbroekstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Dorekensstraat Dorekensstraat / Dorekensstraat Papenstraat / Dorekensstraat Wallestraat / Dorekensstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Baljuwstraat Hollebeekstraat / Baljuwstraat Munkbaan / Hollestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hollestraat Molenveldbaan / Hollestraat Sint-Leonardus / Hollestraat Nemerkendries / Hollestraat Modrielaan / Hollestraat Meidoornstraat / Hollestraat Meloketse / Hollestraat Smeedries / Hollestraat Hollestraat / Hollestraat Hollestraat / Hollestraat Smeedries / Hollestraat Waterstraat / Hollestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Omleidingen: Omleidingen "DE LIJN"
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Nieuwstraat (N272): - richting Pepingen via Bergstraat - Stationstraat - Nieuwstraat - richting Geraardsbergen via Nieuwstraat - Stationstraat - Watermolenstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Omleidingen "DOORGAAND VERKEER" Omleiding zal voorzien worden (fig F39 - fig F41):
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Nieuwstraat (N272): richting Pepingen via Bergstraat - Stationsstraat -
+                                     
+                                    
+                                        Nieuwstraat richting Geraardsbergen via Nieuwstraat - Stationstraat - Watermolenstraat 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Wilderstraat / Paulusstraat / Kapelledreef vanaf Waterschaapstraat via Waterschaapstraat - Hoogstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Waterschaapstraat vanaf Bruinsbroekstraat via Bruinsbroekstraat - Hoogstraat - Wilderstraat - Bruinsbroekstraat vanaf Heirbaan via Heirbaan - Dorekensstraat  Hoogstraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Hollestraat vanaf Waterstraat via N272
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                             
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                        De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen. 
+                                        Alle tijdelijk  voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/491506b3-03fc-46c8-82b0-c14c23846bb4> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/491506b3-03fc-46c8-82b0-c14c23846bb4> a ns3:Agendapunt ;
+    ns1:uuid "27082f98-409c-5cb5-9f3e-5f2a3039232d" .
+

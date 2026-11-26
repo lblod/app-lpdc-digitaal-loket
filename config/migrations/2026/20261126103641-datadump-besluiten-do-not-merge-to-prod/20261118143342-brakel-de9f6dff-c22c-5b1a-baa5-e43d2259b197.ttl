@@ -1,0 +1,92 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5afd0928-c253-41e7-af39-ad98c34d0fcd> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/002d8258-6db2-4643-a230-ddf6d2066d93>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/00458c40-2fd2-4635-9996-c16fc09d86de>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0534f6b0-745e-434b-8f38-2ad72c4cb80d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/078ec042-d47a-4fc0-82da-50f46147e73c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0cdbf2bc-91e4-4a45-bfd2-5943d289ec76>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/242194c0-d3e8-4741-8206-cc6e072e32ad>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3a5be618-36f2-499e-8277-3b5f62c98b6d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/46efa108-fdfa-49b1-a9a2-f8c1004c8050>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/48aeb379-fd0b-4380-a05f-7cc158cda529>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6ed8c030-c48b-4f7b-b1fc-bace368e9370>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/96c450d6-43b8-4891-9271-77d677ff27fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a1140b3d-0866-460c-9163-c182c0184407>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/b1a42438-502b-4e38-a65b-9f8eb5ba88b9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e0961336-2398-4d65-ac65-c04960b14198>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e6f0060e-4b07-43a1-a36a-2bfecc36576b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f2579736-bcbe-4cc0-9f35-29b4a7c306ef>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fd53c75d-262b-42cb-b3d1-1d37f91eade2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/ff088b72-2ba3-41d9-b9a1-3f27ec835e4b> ;
+    ns1:geplandeStart "2025-04-07T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/86608a14-4d26-4661-b33f-52f512590e7f> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/481c036d-38d7-4134-80ac-2d50bc0ddac5> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/5843b39f-f9e0-4378-b098-f415daf495f6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:uuid "620e2014-dae6-54b7-8788-24fcdb42159f" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-04-07T19:57:00+02:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/48aeb379-fd0b-4380-a05f-7cc158cda529> ;
+    ns1:openbaar true ;
+    ns3:uuid "98a56ec9-e4d2-5667-819f-52e432c1ff22" ;
+    dcterms:description """ 
+                                                             
+                                                                Het aangetekend schrijven d.d. 10 maart 2025 en de mail d.d. 11 mei 2025 vanwege IVLA waarbij de gemeente Brakel wordt uitgenodigd om deel te nemen aan de Algemene Vergadering d.d. 06 mei 2025. 
+                                                                
+                                                                     
+                                                                 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/248501d3-e7a9-40f3-9eaa-b1ab921229dd> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/248501d3-e7a9-40f3-9eaa-b1ab921229dd> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:title "Samenwerkingsverbanden. IVLA. Uitnodiging Algemene Vergadering d.d. 06 mei 2025. Goedkeuring." ;
+    ns1:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Het Decreet Lokaal Bestuur van 22 december 2017; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    - Het Raadsbesluit d.d. 03 februari 2025 betreffende de aanstelling vertegenwoordiger en plaatsvervanger voor de Algemene Vergadering; 
+                                                                    - Het aangetekend schrijven d.d. 10 maart 2025 vanwege IVLA waarbij de gemeente Brakel wordt uitgenodigd om deel te nemen aan de Algemene Vergadering d.d. 06 mei 2025 
+                                                                      
+                                                                    De bijgevoegde agenda van voormelde vergadering zijnde: 
+                                                                     
+                                                                        Benoeming bestuurder Kruisem 
+                                                                        Aanstelling commissaris-revisor 
+                                                                     
+                                                                    -Het College van Burgemeester en Schepenen d.d. 17 maart 2025 nam kennis van de uitnodiging en de agenda met bijhorende stukken van de Algemene Vergadering van IVLA d.d. 06 mei 2025. 
+                                                                 
+                                                            """@nl ;
+    ns3:uuid "de9f6dff-c22c-5b1a-baa5-e43d2259b197" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Art. 1: De agenda en alle bijhorende stukken van de Algemene vergadering van IVLA d.d. 06 mei 2025 wordt goedgekeurd. 
+                                                                    Art. 2: De vertegenwoordiger van de gemeente die zal deelnemen aan de algemene vergadering wordt opgedragen haar stemgedrag af te stemmen op de beslissing genomen zoals in artikel 1 van dit besluit.  
+                                                                    Art. 3: Afschrift van deze beslissing zal toegestuurd worden aan het secretariaat van IVLA. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "86830185-c9e9-5a21-84df-8d558d794eab" ;
+    dcterms:title "Samenwerkingsverbanden. IVLA. Uitnodiging Algemene Vergadering d.d. 06 mei 2025. Goedkeuring." .
+

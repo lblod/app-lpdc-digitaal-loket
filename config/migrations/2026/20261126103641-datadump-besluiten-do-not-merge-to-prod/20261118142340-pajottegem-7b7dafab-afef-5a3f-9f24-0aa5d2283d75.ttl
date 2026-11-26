@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/874a64e4-caca-4a9c-908f-2ec7938eb48b> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0cf0530d-af84-48fb-8b83-8231ec44cd0e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/15918205-72af-473b-a6c2-3b28138f4ff9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/432d4372-7150-45cf-a0e1-36a3805adb3b>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5157f243-4410-4746-a46b-451bf31060e2>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b575e88a-23fb-4dca-a41a-5b09b526acbc>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/cbdc789f-3513-4c65-a10e-133f5a74d91f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/edaa540e-00e0-433e-8427-5a86daa1fea7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f9721908-2712-4d32-bb85-c6411db536e9> ;
+    ns1:geplandeStart "2025-05-12T14:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/283fcec7-18c8-435d-bcab-ee4021b3f0e9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "41ff24fe-ee8a-57f4-893f-318a9e5df267" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-12T14:00:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5157f243-4410-4746-a46b-451bf31060e2> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cbdc789f-3513-4c65-a10e-133f5a74d91f> ;
+    ns1:openbaar false ;
+    ns2:uuid "a310d726-8bca-526d-9048-bcf8f4bd3539" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5157f243-4410-4746-a46b-451bf31060e2> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/5157f243-4410-4746-a46b-451bf31060e2> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/5157f243-4410-4746-a46b-451bf31060e2> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor het Buurtfeest Mgr. Abbeloosstraat op zaterdag 24 mei 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Buurtfeest - zaterdag 24 mei 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "7b7dafab-afef-5a3f-9f24-0aa5d2283d75" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Buurtfeest Mgr. Abbeloosstraat op zaterdag 24 mei 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf van 8u tot 20u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op de Mgr. Abbeloosstraat geldt:
+                                     
+                                     
+                                        de toegang is verboden in beide richtingen, voor iedere bestuurder, uitgezonderd plaatselijk verkeer. Dit wordt gesignaleerd door:- verkeersborden C3 
+                                        Op de Mgr. Abbeloosstraat en de Kerkhofstraat ter afbakening van het kruispunt Mgr. Abbeloosstraat en Kerkhofstraat geldt: 
+                                        de toegang is verboden in beide richtingen, voor iedere bestuurder.Dit wordt gesignaleerd door:- verkeersborden C3 
+                                        Op het kruispunt Mgr. Abbeloosstraat en de Kerkhofstraat langs de zijde van de grot geldt: 
+                                        het stilstaan en parkeren is verboden;  het begin van de parkeerreglementering wordt aangeduid;  de parkeerreglementering geldt over een afstand van meer dan 300 meter. Dit wordt gesignaleerd door:- verkeersborden E3 - de verkeersborden worden aangevuld met x-borden Xa, Xd 
+                                     
+                                    
+                                        Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                     
+                                     
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5157f243-4410-4746-a46b-451bf31060e2> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5157f243-4410-4746-a46b-451bf31060e2> a ns1:Agendapunt ;
+    ns2:uuid "26c65b84-4cf1-5eac-9e85-ceef9fb15231" .
+

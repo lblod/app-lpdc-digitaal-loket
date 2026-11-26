@@ -1,0 +1,94 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/64292094-595b-43a4-87fa-09b39de60c51> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3472ca46-17f4-4ac4-bd1f-9f96df40b42d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a8cb143-3660-4108-a22b-fa9ccdb124b7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5b259916-7445-4ace-b484-f7c83b7b4d8a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75e16e88-e441-46f3-b8fe-bfdc72375379>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ae3c8f2-fc63-403e-8535-13b5cdcdb902>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a88d3ed-3f9b-4dc5-911c-38aa5e088748>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c05f1264-5942-4187-9224-9611ce20f0e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c16dfd27-97d3-4aa3-917f-c99224ff85c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c25bee23-625c-4d41-bea7-565cba2c4a2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d550a5d5-70d8-4776-868e-a39ef5e49f13>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcc9faaa-6e3f-4a5b-897c-ceda838cc838>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de0eac1d-0c61-4d20-bde6-470901747aa6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de80fa75-f898-4125-93ac-28e4f6de06ff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e8a52fa2-bcac-4c32-8674-97e0bdca0810>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ede466d9-ba19-4838-a580-83f40ae2e2aa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee9535bc-5a7a-4dac-bc37-9c391d909286> ;
+    ns1:geplandeStart "2023-11-29T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e98f8837-bfd3-4adf-80c6-42ebe89cecfb> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04ef3b86-39d8-42fe-8c76-639f769cbf39> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4baf8289-60b0-4a35-82d9-c5435a9aa3dc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ead18d00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-11-29T22:20:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-11-29T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c16dfd27-97d3-4aa3-917f-c99224ff85c1> ;
+    ns1:openbaar true ;
+    ns3:uuid "f2605d80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/121dfcb5-3ec1-4700-8cca-d7102942f14e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/121dfcb5-3ec1-4700-8cca-d7102942f14e> a ns1:Besluit ;
+    ns2:description """ 
+                                                    Het college van burgemeester en schepenen keurt de samenwerkingsovereenkomst tussen Energiehuis Veneco en het lokaal bestuur Lievegem goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Samenwerkingsovereenkomst tussen Energiehuis Veneco en het lokaal bestuur Lievegem: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Vincent Laroy, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 40BVR Energiehuizen gepubliceerd in het BS van 11 januari 2019 en in werking getreden op 21 januari 2019Vlaamse Codex Wonen 2021 en heruitvoeringsbesluitenBesluit Raad van Bestuur 1 december 2021 over de goedkeuring van Plan van Aanpak 2022-2025Samenwerkingsovereenkomst VEKA met addendum Plan van Aanpak EH Veneco 2022-2025Besluit van de administrateur-generaal van het VEKA van 29 maart 2022 tot toekenning van een subsidie aan de energiehuizen voor de uitvoering van de basistaken in 2022Verzamelbesluit Energie (VZB IX) van 16 juni 2023Gemeenteraadsbesluit van 18 december 2019 over de samenwerkingsovereenkomst Energiehuis VenecoBeslissing van het college van burgemeester en schepenen van 7 november 2023 over de principiële goedkeuring van de aangepaste samenwerkingsovereenkomst tussen Energiehuis Veneco en het lokaal bestuur Lievegem 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De huidige samenwerkingsovereenkomst tussen Energiehuis Veneco en het lokaal bestuur Lievegem is inhoudelijk achterhaald. De redenen hiervoor zijn de recente uitbreidingen van het takenpakket van de Vlaamse Energiehuizen. Deze hadden een wijziging van de wetgeving tot gevolg.De samenwerkingsovereenkomst tussen Energiehuis Veneco en de gemeenten is een belangrijk instrument dat alle afspraken tussen de partners vastlegt, in functie van een performante uitvoering van het meerjarenplan 2022-2025 zoals goedgekeurd door het Vlaams Energie- en Klimaatagentschap (VEKA).Een goede uitvoering en opvolging van alle acties uit het meerjarenplan is essentieel voor het verkrijgen van de basisfinanciering, toegekend door het VEKA aan Energiehuis Veneco.‘Actualisering van de samenwerkingsovereenkomsten met de aangesloten gemeenten’ is een specifieke actie die werd opgenomen in dit meerjarenplan.Omwille van een aantal recente wijzigingen (zie hieronder) wordt het nodig geacht om de samenwerkingsovereenkomsten te herwerken en opnieuw ter goedkeuring voor te leggen aan de gemeenten in het werkingsgebied van het Energiehuis.De samenwerkingsovereenkomst tussen Energiehuis Veneco en de gemeenten moet worden herwerkt omwille van o.a. volgende redenen:-    Inkanteling van SOM vzw bij Veneco, dit heeft een integratie van de dienstverlening Wonen en Energie tot gevolg;-    Invoering van de MijnVerbouwLening als vervanger voor de Vlaamse Energielening;-    Invoering van de MijnVerbouwpremie;-    Wijziging/uitbreiding van de basistaken van het Energiehuis, o.a. de verplichte integratie van de woon- en energieloketwerking;-    Invoering van het nieuwe meerjarenplan 2022-2025, dat als bijlage bij de nieuwe samenwerkingsovereenkomst zal worden gevoegd. 
+                                                            Advies van 27 oktober 2023 van Bart Kerkhof, financieel directeur: 
+                                                            In het gemeenteraadbesluit van 2019 werd voor Energiehuis Veneco inderdaad een globaal budget van 122.000 euro naar voor geschoven.Vanaf 2021 werd dit budget verhoogd naar 143.873 euro (zie blz. 33 van PDF “Plan van Aanpak 2022-2025 – Addendum samenwerkingsovereenkomst”). Deze subsidie gingen ze als volgt inzetten : 
+                                                             
+                                                            Van het budget van 66.300 euro voor energieloketwerking zou 4.918 euro worden besteed voor het lokaal energieloket voor Lievegem (blz. 34 PDF) : 
+                                                             
+                                                            Cfr. blz. 35 van de PDF vraagt Energiehuis Veneco aan VEKA om te overwegen de subsidie voor de uitvoering van de basistaken te verhogen met 25% voor de periode 2022-2025 (cfr. Bisnota ‘Aanvraag aanpassing basisfinanciering Energiehuizen - Overleg Energiehuizen 07/09/2021). Op die manier zou een budget van 179.823 euro worden bekomen dat Energiehuis Veneco dan als volgt zou willen inzetten : 
+                                                             
+                                                            In de samenwerkingsovereenkomst die is vervat in het GR-besluit van 2019 was o.a. volgende passage opgenomen : “Hoofdstuk 5. FinancieelArtikel 12. Vergoeding EnergieloketVoor de uitvoering van de in artikel 10 beschreven opdracht ontvangt het lokale bestuur financiële ondersteuning van het Energiehuis. De financiële bijdragen worden vastgelegd in de meerjarenplanning die als addendum wordt ingediend bij de overeenkomst met het Vlaamse Energieagentschap.Deze financiering wordt vastgelegd voor een periode van 3 jaar (duurtijd meerjarenplanning). Vervolgens wordt de financiering herbekeken, afhankelijk van de samenwerkingsovereenkomst van het Energiehuis Veneco met het Vlaamse Energieagentschap en binnen de begrotingskredieten van de Vlaamse Regering.In voorkomende gevallen wordt de uitvoering van de in artikel 10 beschreven opdracht toegevoegd aan de opdracht het intergemeentelijk samenwerkingsverband ter ondersteuning van het lokaal woonbeleid: SOM vzw. De financiële bijdragen per gemeente, zoals bepaald in het meerjarenplan, worden toegekend aan de projectuitvoerder van het intergemeentelijk samenwerkingsverband.Artikel 13. Vergoeding inbreng expertiseIn voorkomende gevallen worden andere financiële bijdragen aan partners, onder andere voor inbreng van expertise, verder bepaald en vastgelegd in het meerjarenplan. De expertise wordt ten dienste gesteld van de deelnemende gemeenten en de voorwaarden worden vastgelegd in een afsprakenkader.” 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Het Vlaams Energieagentschap stelt jaarlijks 179.823 euro ter beschikking aan Veneco voor het realiseren van energieloketten in de aangesloten gemeenten. Dit bedrag wordt als volgt ingezet:-  Organisatie en coördinatie (EH Veneco) – 86.023 euro-  Inbreng externe Expertise  – 7.500 euro-  Energieloketverwerking -  66.300 euro -  Diverse versterkende communicatiecampagnes - 5.000 euro-  Uitbouw interactieve website en hostingkost - 10.000 euro-  Datamangementsysteem voor monitoring klantencontacten - 5.000 euroVanuit het bedrag van 66.300 euro voor energieloketwerking wordt aan de gemeente Lievegem jaarlijks 4.918 euro toegekend voor het inrichten van het energieloket. Deze financiële bijdrage wordt toegekend aan de projectuitvoerder van het intergemeentelijk samenwerkingsverband (en dus niet aan de gemeente Lievegem zelf). 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ead29e70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad keurt de samenwerkingsovereenkomst tussen Energiehuis Veneco en het lokaal bestuur Lievegem goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f10672d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Samenwerkingsovereenkomst tussen Energiehuis Veneco en het lokaal bestuur Lievegem: goedkeuring" .
+

@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4c0bdc0f-48b6-43c1-8ef9-b02201ba9bc5> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14c37684-9bc5-474f-b20a-5e7b73ff9b58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4188cb7c-52d1-476e-952a-bd05402f6fb4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a8f7849-e7fd-4cbc-bf2f-8eb0566b8676>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9692cc2-e793-456e-ad1f-cd86b0df4c4d> ;
+    ns1:geplandeStart "2025-08-26T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/f179943d-5dbb-4175-84a0-0f083583e5c1> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "1b530f75-f107-587c-9191-45e1312274aa" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-08-26T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4188cb7c-52d1-476e-952a-bd05402f6fb4> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4a8f7849-e7fd-4cbc-bf2f-8eb0566b8676> ;
+    ns1:openbaar false ;
+    ns2:uuid "59701ffd-dcd1-55c0-90e6-c68012e2ae19" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4188cb7c-52d1-476e-952a-bd05402f6fb4> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4188cb7c-52d1-476e-952a-bd05402f6fb4> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4188cb7c-52d1-476e-952a-bd05402f6fb4> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Septemberkermis Waarschoot 2025' van maandag 8 september 2025 8.00 uur tot en met dinsdag 16 september 2025 12.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Septemberkermis Waarschoot 2025' - gemeente Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 26 augustus 2025 over de aanvraag evenement Septemberkermis Waarschoot - Kermiscommissie Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 26 augustus 2025 over de aanvraag inname van openbaar domein - plein achter Sint-Ghislenuskerk, Waarschootdorp, 9950 Lievegem voor Septemberkermis Waarschoot 2025 - Kermiscommissie Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 26 augustus 2025 over de aanvraag Septemberkermis Waarschoot 2025 - organisatie kinderuurtje - standplaatsen spektakelattracties en kermisgastronomie: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen - gemeente Lievegem organiseert 'Septemberkermis Waarschoot 2025' vanaf vrijdag 12 september 2025 tot en met maandag 15 september 2025.Er werd op 29 juli 2025 een aanvraag ingediend door team evenementen - gemeente Lievegem om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    Het betreft het plaatsen van attracties op het dorpsplein voor de kerk (opbouw vanaf woensdag 10 september 2025 8.00 tot afbouw dinsdag 16 september 2025 12.00 uur) en de inname van (een deel van) de parking aan de begraafplaats te Hovingen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Deze inname is in GIPOD geregistreerd met het nummer 18573732. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns2:uuid "6956d958-88a0-57c1-a3e3-51288dd0fbdb" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Septemberkermis Waarschoot 2025' van maandag 8 september 2025 8.00 uur tot en met dinsdag 16 september 2025 12.00 uur wordt vastgesteld als volgt: 
+                                    1. Van woensdag 10 september 2025 8.00 uur tot en met dinsdag 16 september 2025 12.00 uur:- inname dorpsplein voor de kerk voor het plaatsen van de kermisattracties, inclusief fietspad aan de kant van Waarschootdorp. Fietsers die afslaan richting Schoolstraat komen hierbij even op de rijbaan.- Het fietspad aan de kant van Stationsstraat blijft vrij voor de fietsers.- Omleiding voor de fietsers via Nieuwstraat - wegel langs parking kerk/kerk            + Invoeren 'fietsen in beide richtingen toegestaan' in Waarschootdorp van nummer 8 tot 14.- Zone 30 vanaf kruispunt Nieuwstraat/Stationsstraat tot en met Kerkstraat 4, 9950 Lievegem- Zone 30 vanaf Kerkstraat 5B tot en met het kruispunt Stationsstraat/Metaalstraat, 9950 Lievegem 
+                                      
+                                    2. Van maandag 8 september 2025 8.00 uur tot en met dinsdag 16 september 2025 12.00 uur:- stilstaan- en parkeerverbod op de parking aan de begraafplaats in Hovingen, uitgezonderd foorkramers op de aangeduide plaatsen. Er blijven nog enkele parkeerplaatsen vrij voor bezoekers van de begraafplaats.- De parkeerplaatsen voor personen met een handicap en voorbehouden voor elektrisch laden moeten vrij blijven. 
+                                      
+                                    3. Op donderdag 11 september 2025 van 13.30 uur tot en met 18.00 uur:- bijkomende parkeerverbod op de parking aan de begraafplaats in Hovingen, voor ambulante handel Steyaert Vishandel. Er blijven daarnaast nog enkele parkeerplaatsen vrij voor bezoekers van de begraafplaats. 
+                                      
+                                    4. Op zaterdag 13 september 2025 van 7.00 uur tot en met 13.30 uur:- bijkomend parkeerverbod op de parking aan de begraafplaats in Hovingen, voor ambulante handel Joma BVBA. Er blijven daarnaast nog enkele parkeerplaatsen vrij voor bezoekers van de begraafplaats. 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Nadar + D1 + bord 'fietsers op de rijbaan' op de plaats waar het fietspad onderbroken is + borden 'evenement' op de 3 invalswegen    Borden F41 (voor fietsers) aan volgende kruispunten: Stationsstraat/Nieuwstraat, Nieuwstraat/wegel langs parking kerk, Kerkstraat/Waarschootdorp    Borden F4a (begin zone 30) ter hoogte van Kerkstraat 5B, 9950 Lievegem en ter hoogte van kruispunt Nieuwstraat/Stationsstraat    Borden F4b (einde zone 30) ter hoogte van Kerkstraat 4, 9950 Lievegem en ter hoogte van kruispunt Stationsstraat/Metaalstraat    Afdekken bord F4b (einde zone 30) ter hoogte van kruispunt Waarschootdorp, 9950 Lievegem 
+                                    2. Borden E33. Borden E34. Borden E3 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4188cb7c-52d1-476e-952a-bd05402f6fb4> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4188cb7c-52d1-476e-952a-bd05402f6fb4> a ns1:Agendapunt ;
+    ns2:uuid "d1449abe-b71d-5f9b-a9a5-20290274b60d" .
+

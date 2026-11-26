@@ -1,0 +1,51 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/874a64e4-caca-4a9c-908f-2ec7938eb48b> a ns3:Zitting ;
+    ns3:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0cf0530d-af84-48fb-8b83-8231ec44cd0e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/15918205-72af-473b-a6c2-3b28138f4ff9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/432d4372-7150-45cf-a0e1-36a3805adb3b>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5157f243-4410-4746-a46b-451bf31060e2>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b575e88a-23fb-4dca-a41a-5b09b526acbc>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/cbdc789f-3513-4c65-a10e-133f5a74d91f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/edaa540e-00e0-433e-8427-5a86daa1fea7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f9721908-2712-4d32-bb85-c6411db536e9> ;
+    ns3:geplandeStart "2025-05-12T14:00:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/283fcec7-18c8-435d-bcab-ee4021b3f0e9> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "41ff24fe-ee8a-57f4-893f-318a9e5df267" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-12T14:00:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/edaa540e-00e0-433e-8427-5a86daa1fea7> ;
+    ns3:openbaar false ;
+    ns1:uuid "73ab5114-dcc2-5b03-b640-346e9c6699c8" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb> a ns3:Besluit ;
+    ns2:description """ 
+                                                    De opdracht “Onderhoud begraafplaatsen Herne” wordt gegund aan de economisch meest voordelige regelmatige bieder. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Onderhoud begraafplaatsen Herne - gunning." ;
+    ns3:motivering """ 
+                            """@nl ;
+    ns1:uuid "8a9deae8-159c-5c43-a612-1b7a5431bc5c" ;
+    prov:value """ 
+                                 
+                                    Artikel 1 - De opdracht “Onderhoud begraafplaatsen Herne” wordt gegund aan de economisch meest voordelige regelmatige bieder (op basis van de beste prijs-kwaliteitsverhouding), zijnde Vanderlinden Tim, Grotestraat 58 te 1540 Herne tegen het nagerekende offertebedrag van 29.750 euro excl. btw of 35.997,50 euro incl. 21% btw. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/dee3f92a-4a73-41d1-8242-1e3d64abf1eb> a ns3:Agendapunt ;
+    ns1:uuid "6bba94e4-4380-5779-9a4b-3ba2317adf21" .
+

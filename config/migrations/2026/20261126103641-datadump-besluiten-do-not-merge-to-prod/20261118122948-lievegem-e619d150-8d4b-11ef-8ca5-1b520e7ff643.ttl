@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/67813274-3b7a-49f9-b9c9-4340aed05429> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2371935b-7ad6-4871-af1c-8089e789c391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42299301-8db7-4bbf-ae43-b3b4e96ecd75>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50439503-35eb-4857-a55d-25da89a6089f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5856e334-1733-4d65-8957-97a405084cb7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65fdb4dd-4ccc-4e03-957b-90fcc179cde0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/99120f73-d62d-48c9-b773-7826c5491feb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fabf93-37f3-4314-807c-752f83afa18b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc17426a-5ef8-46a5-9063-831499691106>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0e68f3f-8930-4481-a410-e168d0bf59e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns1:geplandeStart "2024-01-31T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d806425-9a34-4095-988a-05678b76355f> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0682f2be-d210-4ac2-9225-4ac8a0eeb628> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3369f7d3-24df-47ea-acab-50b627f1e882> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e6273ed0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-01-31T21:22:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-31T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7> ;
+    ns1:openbaar true ;
+    ns3:uuid "e616eb20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/20da2d5c-17ba-46c0-94b0-62e363690426> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/20da2d5c-17ba-46c0-94b0-62e363690426> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt het ontwerp plan-MER van het gemeentelijk ruimtelijk beleidsplan Lievegem voorlopig vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Ontwerp plan-MER gemeentelijk ruimtelijk beleidsplan Lievegem: voorlopige vaststelling" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De Vlaamse Codex Ruimtelijke Ordening, artikels 2.1.11 tem 2.1.19Het decreet van 5 april 1995 houdende algemene bepalingen inzake milieubeleidHet decreet lokaal bestuur van 22 december 2017, artikel 56Het besluit van het college van burgemeester en schepenen van 10 mei 2022 over de gunning opmaak plan-MER gemeentelijk ruimtelijk beleidsplanHet besluit van het college van burgemeester en schepenen van 4 april 2023 betreffende de goedkeuring van de kennisgevingsnota milieueffectenrapport voor het gemeentelijk ruimtelijk beleidsplan 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Verloop opmaak ontwerp plan-MER 
+                                                            De opmaak van een strategisch plan MER bij ruimtelijke beleidsplannen is noodzakelijk, ook al staat het wettelijk niet verankerd in de wetgeving. 
+                                                            De eerste stap in de procedure van de milieueffectrapportage voor het beleidsplan ruimte van Lievegem was de opmaak van een kennisgeving, die in essentie als doelstelling had het onderzoek aan te kondigen, en te beschrijven wat zou onderzocht worden (welke effecten, welke beoordelingscriteria, …) en hoe dat zou gebeuren (welke methodes). De kennisgeving lag ter inzage van het publiek van 1 juni tot en met 1 juli 2023.Op basis van de ontvangen inspraakreacties en adviezen stelde het Team Mer vervolgens richtlijnen op, die het kader vormen waarbinnen de MER-deskundigen hebben gewerkt bij de totstandkoming van het MER. De richtlijnen werden vastgesteld op 14 september 2023. 
+                                                            Het plan-MER werd zo optimaal mogelijk ingepast in de procedure voor het ruimtelijk beleidsplan. De wisselwerking hield tot nu toe in dat het voorliggend ontwerp plan-MER opgesteld is op basis van het voorontwerp van het gemeentelijk ruimtelijk beleidsplan Lievegem en de input uit de adviesronde over het voorontwerp beleidsplan ruimte meegenomen werd in de opmaak van het ontwerp plan-MER. 
+                                                            Dit betekent dat de milieueffectbeoordeling parallel verloopt aan het totstandkomingsproces van het ruimtelijk beleidsplan en het planningsproces informeert. 
+                                                            Het ontwerp plan-MER is thans opgemaakt en wordt ter goedkeuring voorgelegd aan de gemeenteraad, tegelijkertijd met het ontwerp van het gemeentelijk ruimtelijk beleidsplan. 
+                                                            Deze documenten zullen samen in openbaar onderzoek worden voorgelegd aan het publiek en ter advies worden voorgelegd 
+                                                            De goedkeuring van het definitief plan-MER gebeurt na afloop van het openbaar onderzoek en vóór de definitieve vaststelling van het beleidsplan ruimte. 
+                                                            Doel plan-MER 
+                                                            De bedoeling van de milieueffectbeoordeling is de effecten op het milieu (in de brede zin van het woord) van het beleidsplan in kaart te brengen, met als bedoeling de positieve effecten zoveel mogelijk te versterken en de eventuele negatieve effecten zoveel mogelijk te vermijden of te milderen. Kenmerkend aan deze beoordeling is dat ze niet pas is uitgevoerd als het plan al ‘af’ was, maar in tegendeel tot stand is gekomen via wisselwerking tussen de opstellers van het beleidsplan enerzijds en de MER-deskundigen anderzijds. Het beleidsplan heeft dus in de loop van zijn totstandkoming een aantal aandachtspunten die vanuit de MER-deskundigen werden geformuleerd, geïncorporeerd. Het resultaat is een beleidsplan dat de milieubekommernissen maximaal integreert. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e619d150-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad stelt het ontwerp plan-MER van het gemeentelijk ruimtelijk beleidsplan Lievegem voorlopig vast. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e6184ab0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Ontwerp plan-MER gemeentelijk ruimtelijk beleidsplan Lievegem: voorlopige vaststelling" .
+

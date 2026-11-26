@@ -1,0 +1,158 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns1:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514> ;
+    ns1:openbaar true ;
+    ns2:uuid "505dc16c-b2e9-5ca7-8c02-f6fea2efb229" ;
+    dcterms:description """ 
+                             
+                                De mail d.d. 26 september 2025 vanwege Fluvius omtrent de actualisatie van het retributiereglement voor de periode 2026 - 2028. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                De mail d.d. 26 september 2025 vanwege Fluvius omtrent de actualisatie van het retributiereglement voor de periode 2026 - 2028. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/bd0166ee-55a9-4607-9b2b-20d69d6996bf> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/bd0166ee-55a9-4607-9b2b-20d69d6996bf> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Samenwerkingsverbanden. Fluvius. Retributiereglement 2026 - 2028." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Decreet Lokaal Bestuur; 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    -Gelet op het feit dat de gemeente en de burgers voortdurend geconfronteerd worden met de plaatsing van en/of onderhoud aan verschillende nutsvoorzieningen op gemeentelijk grondgebied; 
+                                    -Gelet op het feit dat deze nutsvoorzieningen werkzaamheden vergen langs de gemeentelijke wegen en aldus een impact hebben op het openbaar domein; 
+                                    -Gelet op de goedkeuring door de gemeente van de Code voor Infrastructuur- en Nutswerken langs gemeentewegen die tot doel heeft een snelle en vlotte uitvoering van de werken te bevorderen, teneinde de hinder en de duur van de werken tot een minimum te herleiden; 
+                                    -Gelet op het feit dat deze Code werd opgemaakt door een overlegplatform bestaande uit een delegatie van nutsbedrijven en een delegatie van de gemeenten; 
+                                    -Gelet op het feit dat er op het vlak van het onderhoud en de herstellingen ook geregeld dringende werken moeten worden uitgevoerd die verband houden met de continuïteit van de dienstverlening en dat er daarnaast een aantal werken zijn zoals aansluitingswerken, herstellingen en andere kleine onderhoudswerken die omzeggens constant een impact hebben op het openbaar domein; 
+                                    -Gelet op de actualisatie van de code naar aanleiding van meer aandacht voor minder hinder, meer oog voor het totaal concept en het gebruik van nieuwe e-instrumenten GIPOD, KLIP...; 
+                                      
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet Lokaal Bestuur; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    -Gelet op het feit dat de gemeente en de burgers voortdurend geconfronteerd worden met de plaatsing van en/of onderhoud aan verschillende nutsvoorzieningen op gemeentelijk grondgebied; 
+                                                                    -Gelet op het feit dat deze nutsvoorzieningen werkzaamheden vergen langs de gemeentelijke wegen en aldus een impact hebben op het openbaar domein; 
+                                                                    -Gelet op de goedkeuring door de gemeente van de Code voor Infrastructuur- en Nutswerken langs gemeentewegen die tot doel heeft een snelle en vlotte uitvoering van de werken te bevorderen, teneinde de hinder en de duur van de werken tot een minimum te herleiden; 
+                                                                    -Gelet op het feit dat deze Code werd opgemaakt door een overlegplatform bestaande uit een delegatie van nutsbedrijven en een delegatie van de gemeenten; 
+                                                                    -Gelet op het feit dat er op het vlak van het onderhoud en de herstellingen ook geregeld dringende werken moeten worden uitgevoerd die verband houden met de continuïteit van de dienstverlening en dat er daarnaast een aantal werken zijn zoals aansluitingswerken, herstellingen en andere kleine onderhoudswerken die omzeggens constant een impact hebben op het openbaar domein; 
+                                                                    -Gelet op de actualisatie van de code naar aanleiding van meer aandacht voor minder hinder, meer oog voor het totaal concept en het gebruik van nieuwe e-instrumenten GIPOD, KLIP...; 
+                                                                      
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "6fcbcbbd-3ed3-59bf-b450-058de511eadc" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 - Algemeen 
+                                    Er wordt aan de eigenaar van elke nutsvoorziening een retributie aangerekend op de gemeentelijke dienstverlening en het gebruik van het gemeentelijk openbaar domein naar aanleiding van werken aan permanente nutsvoorzieningen op het gemeentelijk openbaar domein, in uitvoering en met toepassing van de Code voor Infrastructuur- en Nutswerken langs gemeentewegen. 
+                                      
+                                    Permanente nutsvoorzieningen omvatten: 
+                                    -     alle installaties (zoals kabels, leidingen, buizen, …), inclusief hun aanhorigheden (zoals kabel-, ver­deel-, aansluit-, e.a. kasten, palen, masten, toezichts-, verbindings-, e.a. putten, …) dienstig voor het transport van elektriciteit, gas, gasachtige producten, stoom, drink-, hemel- en afvalwater, warm water, brandstof; 
+                                    -     alle trein- en tramsporen die zich bevinden op de openbare weg. Deze worden eveneens aanzien als nuts­voorzieningen. 
+                                      
+                                    De retributie is niet verschuldigd indien de werken worden uitgevoerd samen met of onmiddellijk voor­af­gaand aan wegen- of rioleringswerken uitgevoerd door de stad/gemeente of indien het werken zijn die uitgevoerd worden op verzoek van de stad/gemeente. 
+                                    Deze retributie sluit elke andere heffing, semi-heffing, of waarborgstelling in het kader van werken aan permanente nutsvoorzieningen door de gemeente uit zowel in hoofde van de distributienetbeheerder als van haar werkmaatschappij en ongeacht of voorgenoemden deze werken uitvoeren in eigen naam, dan wel laten uitvoeren door derden in naam en voor rekening van de distributienetbeheerder of de werkmaatschappij. 
+                                    Onderhavig retributiereglement gaat in vanaf 1 januari 2026 voor een termijn eindigend op 31 de­cember 2028. 
+                                       
+                                    Artikel 2  - Retributie naar aanleiding van sleufwerken 
+                                    De retributie naar aanleiding van sleufwerken is verschuldigd per dag en per meter open­lig­gende sleuflengte voor alle sleufwerken. Zij bedraagt per meter sleuflengte voor werken in rijwegen 10,24 euro, voor werken in voet­paden 7,88 euro en voor werken in aardewegen 4,73 euro.  
+                                    Op deze basisbedragen wordt een indexatie toegepast, naar analogie met de door de VNR goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus. 
+                                    Indexatie gebeurt aan het begin van een nieuwe cyclus van 3 jaar. 
+                                    Een begonnen dag geldt voor een volledige dag. 
+                                       
+                                    Artikel 3 - Retributie voor dringende werken, aansluitingswerken, herstellingen, kleine onder­­­­houdswerken en ter compensatie van diverse heffingen en belastingen 
+                                     Voor de hinder veroorzaakt door de dringende werken, aan­sluitingswerken, herstellingen en kleine onder­­­houdswerken met een sleufoppervlakte van maxi­mum 3m², wordt per kalenderjaar een retributie geheven van 1,00 euro per op het grond­gebied van de gemeente aanwezig aansluitingspunt. 
+                                    Ter compensatie van diverse heffingen en belastingen in hoofde van zowel de distributienetbeheerder als zijn werkmaatschappij wordt een retributie voorzien van 0,5 euro per aanwezig aansluitingspunt op het grondgebied van de gemeente. 
+                                    Op deze basisbedragen wordt een indexatie toegepast., naar analogie met de door de VNR goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus. 
+                                    Deze retributies zijn verschuldigd vóór het einde van ieder jaar. In dit kader doet iedere nutsmaatschappij vóór 15 december van ieder jaar opgave van het aantal aansluitings­punten op het grondgebied van de stad/gemeente. 
+                                      
+                                    Artikel 4 – Inning 
+                                     De retributie dient te worden betaald binnen de 30 kalenderdagen na toezending van de facturen.  
+                                      
+                                    Artikel 5 – Definitief karakter 
+                                    Dit retributiereglement wordt toegezonden aan de toezichthoudende overheid. 
+                                    Het retributiereglement wordt overeenkomstig artikel 286 van het Decreet Lokaal Bestuur afgekondigd en bekendgemaakt. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Artikel 1 - Algemeen 
+                                                                    Er wordt aan de eigenaar van elke nutsvoorziening een retributie aangerekend op de gemeentelijke dienstverlening en het gebruik van het gemeentelijk openbaar domein naar aanleiding van werken aan permanente nutsvoorzieningen op het gemeentelijk openbaar domein, in uitvoering en met toepassing van de Code voor Infrastructuur- en Nutswerken langs gemeentewegen. 
+                                                                      
+                                                                    Permanente nutsvoorzieningen omvatten: 
+                                                                    -     alle installaties (zoals kabels, leidingen, buizen, …), inclusief hun aanhorigheden (zoals kabel-, ver­deel-, aansluit-, e.a. kasten, palen, masten, toezichts-, verbindings-, e.a. putten, …) dienstig voor het transport van elektriciteit, gas, gasachtige producten, stoom, drink-, hemel- en afvalwater, warm water, brandstof; 
+                                                                    -     alle trein- en tramsporen die zich bevinden op de openbare weg. Deze worden eveneens aanzien als nuts­voorzieningen. 
+                                                                      
+                                                                    De retributie is niet verschuldigd indien de werken worden uitgevoerd samen met of onmiddellijk voor­af­gaand aan wegen- of rioleringswerken uitgevoerd door de stad/gemeente of indien het werken zijn die uitgevoerd worden op verzoek van de stad/gemeente. 
+                                                                    Deze retributie sluit elke andere heffing, semi-heffing, of waarborgstelling in het kader van werken aan permanente nutsvoorzieningen door de gemeente uit zowel in hoofde van de distributienetbeheerder als van haar werkmaatschappij en ongeacht of voorgenoemden deze werken uitvoeren in eigen naam, dan wel laten uitvoeren door derden in naam en voor rekening van de distributienetbeheerder of de werkmaatschappij. 
+                                                                    Onderhavig retributiereglement gaat in vanaf 1 januari 2026 voor een termijn eindigend op 31 de­cember 2028. 
+                                                                       
+                                                                    Artikel 2  - Retributie naar aanleiding van sleufwerken 
+                                                                    De retributie naar aanleiding van sleufwerken is verschuldigd per dag en per meter open­lig­gende sleuflengte voor alle sleufwerken. Zij bedraagt per meter sleuflengte voor werken in rijwegen 10,24 euro, voor werken in voet­paden 7,88 euro en voor werken in aardewegen 4,73 euro.  
+                                                                    Op deze basisbedragen wordt een indexatie toegepast, naar analogie met de door de VNR goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus. 
+                                                                    Indexatie gebeurt aan het begin van een nieuwe cyclus van 3 jaar. 
+                                                                    Een begonnen dag geldt voor een volledige dag. 
+                                                                       
+                                                                    Artikel 3 - Retributie voor dringende werken, aansluitingswerken, herstellingen, kleine onder­­­­houdswerken en ter compensatie van diverse heffingen en belastingen 
+                                                                     Voor de hinder veroorzaakt door de dringende werken, aan­sluitingswerken, herstellingen en kleine onder­­­houdswerken met een sleufoppervlakte van maxi­mum 3m², wordt per kalenderjaar een retributie geheven van 1,00 euro per op het grond­gebied van de gemeente aanwezig aansluitingspunt. 
+                                                                    Ter compensatie van diverse heffingen en belastingen in hoofde van zowel de distributienetbeheerder als zijn werkmaatschappij wordt een retributie voorzien van 0,5 euro per aanwezig aansluitingspunt op het grondgebied van de gemeente. 
+                                                                    Op deze basisbedragen wordt een indexatie toegepast., naar analogie met de door de VNR goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus. 
+                                                                    Deze retributies zijn verschuldigd vóór het einde van ieder jaar. In dit kader doet iedere nutsmaatschappij vóór 15 december van ieder jaar opgave van het aantal aansluitings­punten op het grondgebied van de stad/gemeente. 
+                                                                      
+                                                                    Artikel 4 – Inning 
+                                                                     De retributie dient te worden betaald binnen de 30 kalenderdagen na toezending van de facturen.  
+                                                                      
+                                                                    Artikel 5 – Definitief karakter 
+                                                                    Dit retributiereglement wordt toegezonden aan de toezichthoudende overheid. 
+                                                                    Het retributiereglement wordt overeenkomstig artikel 286 van het Decreet Lokaal Bestuur afgekondigd en bekendgemaakt. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e7ac6c62-57a7-5859-a32e-f029ee1dd725" ;
+    dcterms:title "Samenwerkingsverbanden. Fluvius. Retributiereglement 2026 - 2028." .
+

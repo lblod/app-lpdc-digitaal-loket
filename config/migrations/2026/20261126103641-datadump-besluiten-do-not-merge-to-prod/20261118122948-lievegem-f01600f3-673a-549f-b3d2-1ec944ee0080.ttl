@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/dba41c7a-a856-4ec3-a3d0-28cfb62cb732> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2994f852-d59a-453c-94e0-69919d136715>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4fb9f544-ae13-4651-92dd-699aa367d759>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76fca1d9-769b-4cff-9287-ab6fbe072059>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6fb393b-7e72-48bc-bd5c-230e71704b81> ;
+    ns2:geplandeStart "2026-04-21T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bf397672-3431-4cc4-b4d6-5130de73aff3> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "4e543832-f1c6-563d-b9a5-fbd6d26a4b61" ;
+    prov:atLocation "'t Leiken, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-04-21T14:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/76fca1d9-769b-4cff-9287-ab6fbe072059> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2994f852-d59a-453c-94e0-69919d136715> ;
+    ns2:openbaar false ;
+    ns1:uuid "388b192a-a13b-5c0c-a6ae-eae11f4750a5" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76fca1d9-769b-4cff-9287-ab6fbe072059> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/76fca1d9-769b-4cff-9287-ab6fbe072059> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/76fca1d9-769b-4cff-9287-ab6fbe072059> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Schieting met boog' op zaterdag 20 juni 2026 van 7.30 uur tot en met 22.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Schieting met boog' - Café Ambiance': vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 21 april 2026 over de aanvraag evenement Schieting met boog - Café Ambiance: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Cindy Van Kerschaver, namens Café Ambiance, organiseert 'Schieting met boog' op zaterdag 20 juni 2026 van 8.00 uur tot en met 21.30 uur.Er werd op 15 maart 2026 een aanvraag ingediend door Cindy Van Kerschaver, namens Café Ambiance, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "f01600f3-673a-549f-b3d2-1ec944ee0080" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement voor het evenement 'Schieting met boog' op 20 juni 2026 van 7.30 uur tot en met 22.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod in Tuinbouwstraat 
+                                        Afsluiten Tuinbouwstraat voor alle verkeer 
+                                        Wegomlegging via Nijverheidsstraat - Stationsplein - Stationsstraat 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Borden E32. Nadar + C3 ter hoogte van de kruispunten Stationsstraat/Tuinbouwstraat en Nijverheidsstraat/Tuinbouwstraat3. Borden F41  en C31a - C3b aan de kruispunten Nijverheidsstraat/Tuinbouwstraat en Stationsplein/Stationsplein 
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/76fca1d9-769b-4cff-9287-ab6fbe072059> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76fca1d9-769b-4cff-9287-ab6fbe072059> a ns2:Agendapunt ;
+    ns1:uuid "fd00bfb5-0b7f-573a-8794-62ea7f87dbc2" .
+

@@ -1,0 +1,87 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/b89f118e-2091-41c1-a6bf-65d234c6fbae> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/30325ff1-46d0-4883-adc8-1d9a57dfee60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92fdade3-455b-4506-9529-bb4f2dec8743>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e150eb1e-3040-403c-8d1d-767bcecfb342>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fb841645-ccfc-40b7-9752-3e4911266cc7> ;
+    ns1:geplandeStart "2026-05-12T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c361b4df-4500-40e7-b7f7-0df843072a8c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "0fdb9a9d-80e5-5510-a3c3-f97cca00ed75" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-05-12T13:37:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fb841645-ccfc-40b7-9752-3e4911266cc7> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e150eb1e-3040-403c-8d1d-767bcecfb342> ;
+    ns1:openbaar false ;
+    ns3:uuid "5f622ae8-b944-5b5c-bca8-7c95540e7832" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fb841645-ccfc-40b7-9752-3e4911266cc7> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/fb841645-ccfc-40b7-9752-3e4911266cc7> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/fb841645-ccfc-40b7-9752-3e4911266cc7> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Kanaalfeesten 2026' op 24 mei 2026 van 9.00 uur tot en met 20.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Kanaalfeesten 2026' - Schipdonkcomité vzw: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 12 mei 2026 over de aanvraag evenement Kanaalfeesten 2026 - Schipdonkcomité vzw: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Martin De Clercq, namens Schipdonkcomité vzw, organiseert 'Kanaalfeesten 2026' van 23 mei 2026 16.00 uur tot en met 24 mei 2026 22.00 uur.Er werd op 11 december 2025 een aanvraag ingediend door Martin De Clercq, namens Schipdonkcomité vzw, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    De Vlaamse Waterweg. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "da83d703-0226-5e2d-8c1e-4982a01c7a57" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Kanaalfeesten 2026' op 24 mei 2026 van 9.00 uur tot en met 20.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Snelheidsbeperking van max. 50 km/u op 200 m (richting Zomergem) en zone 30 op 100 m voor en na Durmstraat 66A, 9930 Lievegem 
+                                        Zone 30 op 100 m voor en na Lindekensbrug, 9930 Lievegem 
+                                        In Stoktevijver tussen Eikendreef en Daalmen is al een zone 30 geplaatst. Er worden extra waarschuwingsborden bijgeplaatst. 
+                                        Snelheidsbeperking van max. 50km/u op 200 m en zone 30 op 100 m voor en na Stoktevijverbrug/Stoktevijver 50, 9930 Lievegem 
+                                     
+                                      
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                         
+                                            Borden F4a en F4b + borden A51 en 'evenement' op 100 m voor en na Durmstraat 66A, Lindekensbrug en Stoktevijverbrug/Stoktevijver 50 
+                                            Bord C43 '50' + 'evenement' op 200 m voor Durmstraat 66A (richting Zomergem) en Stoktevijver (richting Zomergem) 
+                                            Borden A51 en 'evenement' op 100 m voor en na Stoktevijver 14 
+                                            tegenstrijdige borden in Durmstraat en Stoktevijver worden afgedekt 
+                                         
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fb841645-ccfc-40b7-9752-3e4911266cc7> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fb841645-ccfc-40b7-9752-3e4911266cc7> a ns1:Agendapunt ;
+    ns3:uuid "105c768d-7aca-5512-ba4d-d64f7f83f641" .
+

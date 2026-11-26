@@ -1,0 +1,109 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/defba549-28f6-4651-9433-399dda856695> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/443664ac-a188-469a-9a07-517412b3700a>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5c61630a-6ab8-4b6c-b656-110a4777c70d> ;
+    ns2:geplandeStart "2025-06-24T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/89d25427-38ba-4ceb-af68-151230201f74> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "1d932b57-a3a0-5c09-a440-7525b26fbe73" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-06-24T20:08:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/443664ac-a188-469a-9a07-517412b3700a> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/632f959e-a414-45ef-bfc2-548acf5a7315> ;
+    ns2:openbaar true ;
+    ns3:uuid "71b3274c-4467-5f7e-a6ee-9b063ae1ef03" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/443664ac-a188-469a-9a07-517412b3700a> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/443664ac-a188-469a-9a07-517412b3700a> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/443664ac-a188-469a-9a07-517412b3700a> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:title "Tijdelijk verkeersreglement Kimpelberg speelstraat juli - augustus 2025" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De bewoners van Kimpelberg 19A, 23 en 21A vragen een speelstraat aan voor de maanden juli en augustus. Dit voor (een stukje van) de Kimpelberg in Puurs. Deze straat voldoet aan de eisen voor een speelstraat : er staan 12 huizen en in bijlage werden 12 handtekeningen gevoegd. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond 
+                                             
+                                                De Nieuwe Gemeentewet, artikel 130 bis; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            Gemeenteraadsbeslissing van 27 januari 2020: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen 
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 3. 
+                                    Een straat komt in aanmerking als speelstraat  als: 
+                                     
+                                        de straat in een woonzone ligt. 
+                                        de snelheid in de straat beperkt is tot 50 km/uur. 
+                                        er geen openbaar vervoer door de straat rijdt. 
+                                        er geen belangrijk doorgaand verkeer door de straat rijdt. 
+                                        de omliggende straten na de invoering van de speelstraat bereikbaar blijven. 
+                                        voldoende bewoners van de straat akkoord gaan om een speelstraat te organiseren. 
+                                     
+                                     Een geldige aanvraag bestaat uit een: 
+                                     
+                                        geschreven of digitale aanvraag gericht aan het college van burgemeester en schepenen 
+                                        vermelding van: 
+                                         
+                                            straat 
+                                            minstens 3 straatverantwoordelijken en hun contactgegevens 
+                                            gewenste vakantieperiode voor de speelstraat 
+                                         
+                                        lijst met handtekeningen van de buurtbewoners of straatbewoners 
+                                     
+                                     De straatverantwoordelijken zijn ook de aanvragers (Kimpelberg 21a, 23 en 19A) van deze speelstraat (zie aanvraagformulier). 
+                                 
+                            """@nl ;
+    ns3:uuid "d5be29e1-d1d9-54ab-940f-beb714ad794a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: In de Kimpelberg van huisnummer 17 tot aan huisnummer 33 (klein straatje/zie plan in bijlage) wordt volgende maatregel ingevoerd: 
+                                    de onderstaande maatregel is periodiek. Elke dag vanaf 1 juli tot en met 31 augustus geldt: 
+                                    de toegang is verboden in beide richtingen, voor iedere bestuurder; 
+                                    het verbod geldt van 8u tot 18u. 
+                                    Dit wordt gesignaleerd door: 
+                                    - verkeersborden C3 
+                                    - de verkeersborden worden aangevuld met onderborden Type V met vermelding 'speelstraat'. 
+                                      
+                                    Artikel 2: Dit aanvullend reglement wordt ter kennisgeving overgemaakt aan de afdeling Vlaams Huis voor de Verkeersveiligheid.       
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/443664ac-a188-469a-9a07-517412b3700a> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/443664ac-a188-469a-9a07-517412b3700a> a ns2:Agendapunt ;
+    ns3:uuid "070e2ae6-5ee5-52e9-a043-b5a16cff1142" .
+

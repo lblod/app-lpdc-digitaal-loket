@@ -1,0 +1,107 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns1:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70> ;
+    ns1:openbaar true ;
+    ns3:uuid "ffdf69b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/afc20f71-589f-4f06-8bfc-5e2739269971> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/afc20f71-589f-4f06-8bfc-5e2739269971> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4673d472-8dbc-4cea-b3ab-f92df3807eb3> ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt het arbeidsreglement voor gemeente en OCMW Lievegem - deel arbeidsduur, uurregelingen en reglement tijdsregistratie - vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Personeel - Arbeidsreglement gemeente en OCMW Lievegem - Deel arbeidsduur, uurregelingen en reglement tijdsregistratie: vaststelling" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur artikel 40, §3 en 286 
+                                                            Wet van 19 december 1974 tot regeling van de betrekkingen tussen de overheid en de vakbonden van haar personeel 
+                                                            Besluit van de gemeenteraad van 3 juli 2019 over Rechtspositieregeling gemeente Lievegem: goedkeuring, gewijzigd door de besluiten van 1 juli 2020 en 18 november 2020 
+                                                            Besluit van de raad voor maatschappelijk welzijn van 3 juli 2019 over Rechtspositieregeling gemeente Lievegem: goedkeuring, gewijzigd door de besluiten van 1 juli 2020 en 18 november 2020 
+                                                            Agendapunt van het college van burgemeester en schepenen van 2 juni 2020 over Personeel - Ontwerp arbeidsreglement, uurregelingen en reglement tijdsregistratie: bespreking 
+                                                            Besluit van het college van burgemeester en schepenen van 24 november 2020 over Personeel - Ontwerp arbeidsreglement, uurregelingen en reglement tijdsregistratie: principiële goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Team personeel is bezig met de opmaak van het arbeidsreglement. Prioritair is alles wat met de implementatie van ons nieuw tijdsregistratiesysteem te maken heeft. Dit gaat voor op het volledige arbeidsreglement. In concreto gaat dit over het hoofdstuk arbeidsduur, bijlage uurregelingen (zowel vaste als glijdende) en bijlage reglement tijdsregistratie. 
+                                                            Er werd geopteerd voor één arbeidsreglement voor gemeente en OCMW samen. Een eerste voorontwerp werd besproken op de zitting van het College van 2 juni 2020. Het aangepaste voorontwerp werd bezorgd aan alle personeelsleden via e-mail van 12 juni 2020. Dit voorontwerp werd besproken op een informeel vakbondsoverleg van 3 juli 2020 (verslag in bijlage). 
+                                                            Het tweede voorontwerp houdt rekening met de opmerkingen die geformuleerd werden door de teamleiders en tijdens het informeel vakbondsoverleg. Verder werden de ontbrekende uurregelingen van een aantal teams toegevoegd. Enkel de uurregelingen voor de begeleiders BKO ontbreken nog; zij behouden voorlopig hun bestaande uurregeling. Het tweede voorontwerp principieel goedgekeurd op de zitting van het College van 24 november 2020. Het aangepaste voorontwerp werd bezorgd aan alle personeelsleden via e-mail van 30 november 2020. 
+                                                            In bijlage ook een vergelijkingstabel. Hierbij wordt vertrokken van het ontwerp Lievegem en daarnaast wat er eventueel in de prefusiebesturen hieromtrent was bepaald. 
+                                                            Het ontwerp van arbeidsreglement werd voorgelegd aan het bijzonder onderhandelingscomité van 4 december 2020 (verslag in bijlage). Bij de bespreking werd bevestigd dat het uitvoerend personeel van team infrastructuur hun middagpauze niet moet registreren. Zij nemen immers hun middagpauze op de plaats waar ze op dat moment aan het werk zijn. Dit kan dus buiten het magazijn zijn waardoor ze niet kunnen badgen. Dit is bij vergetelheid niet opgenomen in het ontwerp van arbeidsreglement; de tekst wordt bijgestuurd bij artikel 10 in bijlage I. 
+                                                            Er kon met het ACV - Openbare diensten geen akkoord bereikt worden over de uurregeling van de bibliotheekmedewerkers. Ook de vakbondsafgevaardigde van het ACOD - Openbare diensten had geen mandaat om al dan niet een akkoord te sluiten. Om die reden werd een tweede bijzonder onderhandelingscomité gehouden op 7 december 2020 (verslag in bijlage). Er is een protocol van akkoord met beide vakorganisaties onder de voorwaarde dat de uurregeling van de bibliotheekmedewerkers - met overuren op zaterdag of zondag via een beurtrolsysteem - wordt geëvalueerd na een termijn van vier maanden. Tegen 30 april 2021 hebben de medewerkers enkele weekenddiensten (ongeveer driewekelijks) gedaan en kan er nagegaan worden of de gepresteerde overuren binnen de termijn van vier maanden kunnen gerecupereerd worden. Tegen dan zijn ook de nieuwe openingsuren al vier maanden in voege evenals het nieuwe tijdsregistratiesysteem met glijtijdregeling voor alle bibliotheekmedewerkers. 
+                                                            Dit beperkte luik van het arbeidsreglement wordt nu ter goedkeuring voorgelegd aan de raad. We starten sowieso met het nieuwe tijdsregistratiesysteem SynCore en SynMobile (de mobiele app) vanaf 1 januari 2021. Team personeel is volop bezig met inbrengen van de diverse uurregelingen en ook het testen is begonnen. De huidige systemen Protime (Waarschoot) en Primetime (Lovendegem) kunnen niet meer gebruikt worden vanaf 2021. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ffdfdee0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad stelt het arbeidsreglement voor gemeente en OCMW Lievegem - deel arbeidsduur, uurregelingen en reglement tijdsregistratie - vast. De uurregeling voor de bibliotheekmedewerkers (artikel 9 in bijlage I) wordt geëvalueerd na vier maanden. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e8043c30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Personeel - Arbeidsreglement gemeente en OCMW Lievegem - Deel arbeidsduur, uurregelingen en reglement tijdsregistratie: vaststelling" .
+

@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5839f11c-9453-46b8-8fdc-a3c0c9153952> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/242e29ae-0b9a-4fa0-9a0b-4340583a3446>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/79efb925-1993-4c6f-8f85-eb289faa1035>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c27173f-759b-4a24-84c2-ead8fca60314>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e01ab31-05c9-47fc-9031-38954954c8bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/90e936b3-ae6c-4a35-aff6-48edea1da3b4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d97f750f-42f1-4636-aa28-20234af76186> ;
+    ns1:geplandeStart "2026-07-07T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e4f3b4e7-0006-42a7-947a-a4a9936f07ed> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "d5bdc640-4713-5bf7-9181-693207719034" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-07-07T13:46:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7c27173f-759b-4a24-84c2-ead8fca60314> ;
+    ns1:openbaar false ;
+    ns2:uuid "00f1d805-9e94-5e46-81c0-ae1868827836" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van terugkomst kamp op 11 juli 2026 van 14.00 uur tot en met 17.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van terugkomst kamp - KSA Oepites Zomergem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Op 11 juli 2026 tussen 14.00 uur en 17.00 uur komen de leden van KSA Oepites terug van kamp.Graag willen ze een deel van Hofbouwstraat afzetten voor het uitladen van de bussen en vrachtwagen en de ontvangst van de ouders.Er werd op 20 mei 2026 een aanvraag ingediend door Lieselotte Georges, namens KSA Oepites Zomergem, om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "1245edd7-8678-564f-81c8-a9f6fb0b24fb" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van terugkomst kamp op 11 juli 2026 van 14.00 uur tot en met 17.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Afsluiten van Hofbouwstraat vanaf kruispunt Luitenant Dobbelaerestraat/Hofbouwstraat tot en met kruispunt Kruisdreef/Hofbouwstraat 
+                                        Omleiding via Luitenant Dobbelaerestraat - Markt - Dreef - Kruisdreef - Hofbouwstraat - Tulpenlaan - Den Boer 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Nadar + C3 op de kruispunten Luitenant Dobbelaerestraat/Hofbouwstraat en Kruisdreef/HofbouwstraatNadar + C3 + F45 + 'uitgezonderd plaatselijk verkeer' op het kruispunt Hofbouwstraat/Tulpenlaan 
+                                        Borden F41 op volgende kruispunten: Luitenant Dobbelaerestraat/Hofbouwstraat, Markt/Dreef, Dreef/Kruisdreef, Kruisdreef/Hofbouwstraat, Hofbouwstraat/Tulpenlaan, Tulpenlaan/Den Boer en Den Boer/Luitenant Dobbelaerestraat 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37> a ns1:Agendapunt ;
+    ns2:uuid "adf2a086-4e20-5fd5-a781-4abf0c5563ca" .
+

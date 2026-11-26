@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4f58f9f2-7e36-4286-912c-71911e3827c8> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47339979-2bce-4780-9ddf-2779e12ea0bb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6351146d-79a7-475b-8d33-3e6f2f086e57>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8888d687-20fe-4d34-8c9f-a113201f04f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b0cc5bec-27ee-4ede-988e-8197da864396>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b228826a-81ca-4ed9-8af3-61472ca20a9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bcf0280f-6977-48e1-abbc-9cc519c0ade6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5952146-37b7-4e7c-be07-c00de69716b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7c6f5fc-c065-4f9e-a000-7ca51c56645d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d85cfaf3-80e6-4ae9-96ed-e0db3280de12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4e7fc5c-ca3e-44c9-96c4-c391254b016e> ;
+    ns1:geplandeStart "2025-06-17T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/92945e55-df84-492e-9588-2ace4efc835e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "1bdec71a-97b1-5797-a638-9c1f26c3f3f0" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-06-17T13:39:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/47339979-2bce-4780-9ddf-2779e12ea0bb> ;
+    ns1:openbaar false ;
+    ns2:uuid "14845b7a-31ae-55dc-a378-cb90319fd89d" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d17bf848-75a4-4510-9f5b-869672c3585c> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d17bf848-75a4-4510-9f5b-869672c3585c> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement voor het 'Souper Darts' op 12 juli 2025 van 14.00 uur tot en met 23.45 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Souper Darts' - Café Ambiance: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 17 juni 2025 over de aanvraag evenement Souper Darts - Café Ambiance: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Cindy Van Kerschaver, namens Café Ambiance, organiseert 'Souper Darts' op 12 juli 2025 van 15.00 uur tot en met 23.00 uur naar aanleiding van het tweejarig bestaan van het café.Er werd op 30 april 2025 een aanvraag ingediend door Cindy Van Kerschaver, namens Café Ambiance, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns2:uuid "f47324d6-702b-53cb-9a5b-bec3c9b20b49" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement voor het 'Souper Darts' op 12 juli 2025 van 14.00 uur tot en met 23.45 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod in Tuinbouwstraat 
+                                        Afsluiten Tuinbouwstraat voor alle verkeer 
+                                        Wegomlegging via Nijverheidsstraat - Stationsplein - Stationsstraat 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                        Nadar + C3 ter hoogte van het kruispunt Stationsstraat/Tuinbouwstraat en kruispunt Nijverheidstraat/Tuinbouwstraat 
+                                        Borden F41 en C31a - C31b aan kruispunt Nijverheidstraat/Tuinbouwstraat en bord F41 aan kruispunt Stationsplein/Stationsplein 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c> a ns1:Agendapunt ;
+    ns2:uuid "1bb9ad58-be1d-57f3-8ca8-ee929a4e9e7e" .
+

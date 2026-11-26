@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns1:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b> ;
+    ns1:openbaar true ;
+    ns3:uuid "e445d4a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d18b79c0-32ac-48b9-8e4a-63595359a82b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d18b79c0-32ac-48b9-8e4a-63595359a82b> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De dadingsovereenkomst wordt goedgekeurd 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Wegenis- en rioleringswerken Bloemetjeswijk Lovendegem (fase 1) - dadingsovereenkomst betonklinkers: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet lokaal bestuur van 22 december 2017 en latere wijzigingen, artikel 41, 17° 
+                                                            Het besluit van het college van 29 april 2019 over Bloemetjeswijk noordelijke as - aanleg gescheiden riolering en heraanleg wegenis: goedkeuring proces-verbaal van voorlopige oplevering 
+                                                            Het besluit van het college van 25 mei 2021 inzake de goedkeuring van het PV van weigering van definitieve oplevering 
+                                                            Het besluit van het college van 8 juni 2021 inzake het voorstel van minnelijke schikking voor de schade aan de betonklinkers 
+                                                            Het besluit van het college van 30 november 2021 inzake het voorstel van minnelijke schikking voor de schade aan de betonklinkers 
+                                                            Het besluit van het college van 17 mei 2022 met de principiële goedkeuring van het dadingsvoorstel (minnelijke schikking voor de schade aan de betonklinkers) voor de werken in de Bloemetjeswijk (fase 1) 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            In opdracht van Aquafin en Farys (Aquario en Intervia) werden er wegenis- en rioleringswerken uitgevoerd in de Bloemetjeswijk (fase 1). 
+                                                            De ingebruikname van 6 juli 2017 geldt als aanvaarding zoals voorzien in de relevante artikels van het burgerlijk wetboek, met uitzondering van de in het proces-verbaal van ingebruikname uitgesloten delen en opmerkingen. Voor deze delen geldt voorliggend proces-verbaal als aanvaarding. 
+                                                            Op 8 april 2019 werden de werken voorlopig aanvaard. Er werden verschillende opmerkingen gemaakt. 
+                                                            Op 29 april 2019 werd door het college het PV van voorlopige aanvaarding goedgekeurd. 
+                                                            Voorafgaand aan de definitieve oplevering op 30 maart 2021 werd er een inventaris gemaakt van opritten/voetpaden/parkeerplaatsen waar de gebruikte betonstraatstenen te grote tekenen van afschilfering vertonen. 
+                                                            Op 30 maart 2021 werd er een PV van weigering van definitieve oplevering opgemaakt door het studiebureau. De redenen van weigering zijn (samengevat):    afschilfering poreuze betonstraatstenen    onvoldoende voegvulling in parkeervakken    attest 10-jarige garantie rioolherstellingen ontbreekt 
+                                                            Op 25 mei 2021 werd dit PV van weigering van definitieve oplevering goedgekeurd door het college. 
+                                                            Door de aannemer werd een voorstel gedaan om ter compensatie van de afschilferende betonklinkers een bedrag te betalen aan de gemeente waarbij de problematiek van de klinkers definitief wordt afgesloten. Dit betekent dat er geen herstellingen van de bestaande schade zullen gebeuren door de aannemer. De gemeente kan dit bedrag gebruiken om zelf herstellingen te doen waar nodig / gewenst. Tussen Farys / gemeente en aannemer bestaat er geen discussie over het feit dat er schade is. Het twistpunt is de grootte (aantal vierkante meters) van de schade aangezien er zones zijn die minder duidelijk zijn beschadigd dan anderen. Er is ook geen duidelijk beeld over mogelijke schade in de toekomst. Het voorgestelde bedrag zal zeker volstaan om de meest aangetaste zones te vernieuwen, maar kan mogelijks onvoldoende zijn in de toekomst. Daarnaast kan ook het aspect van de bijkomende hinder voor de inwoners bij een (volledige) heraanleg van alle voetpaden/opritten in overweging worden genomen aangezien de schade niet overal aanwezig is en een opbraak van een op vandaag (voldoende) goed voetpad enkel hinder zal veroorzaken. 
+                                                            Na overleg met alle betrokken partijen werd een voorstel gedaan om de geleden schade te compenseren met een éénmalige vergoeding van 50.000 euro. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Na goedkeuring van de dadingsovereenkomst zal er een bedrag van 50.000 euro worden gestort op rekening BE18 0910 2193 5365 van de gemeente. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e4458680-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De dadingsovereenkomst tussen de gemeente Lievegem, Aquafin NV, TMVW, Willemen Infra NV, en Bleijko Roeselare nv, zoals gevoegd in bijlage en als dusdanig deel uitmakend van dit besluit wordt goedgekeurd. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e44649d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Wegenis- en rioleringswerken Bloemetjeswijk Lovendegem (fase 1) - dadingsovereenkomst betonklinkers: goedkeuring" .
+

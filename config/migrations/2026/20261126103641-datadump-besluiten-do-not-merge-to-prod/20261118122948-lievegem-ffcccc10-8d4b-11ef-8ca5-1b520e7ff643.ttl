@@ -1,0 +1,95 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns1:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34> ;
+    ns1:openbaar true ;
+    ns2:uuid "ffb880c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/27ff93e8-c856-4a52-95a9-b6f07e90c955> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/27ff93e8-c856-4a52-95a9-b6f07e90c955> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de vooropgestelde beoordelingscriteria, de hieraan gekoppelde vraagstelling, de toe te kennen scores en beoordelingsprocedure m.b.t het formuleren van een advies door het lokaal bestuur inzake aanvraag van gemeentelijke opvanginitiatieven naar (bijkomende) overheidssubsidiëring goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Beoordelingscriteria en -procedure inzake advies lokaal bestuur bij uitbreidingsronde kinderopvang voor baby's en peuters: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Caroline Fredrick, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet Lokaal Bestuur van 22 december 2017, art. 40, §2Besluit van de Vlaamse Regering van 9 mei 2014 (BS 25 juli 2014) houdende de procedures voor de aanvraag en de toekenning van de vergunning en de subsidies voor gezinsopvang en groepsopvang van baby’s en peuters (Uitbreidingsronden voor kinderopvang)Besluit van de Vlaamse Regering van 24 mei 2013 (BS 18 juni 2013) houdende het lokaal beleid kinderopvang. Artikel 7 bepaalt dat het lokaal bestuur advies kan geven aan Kind en Gezin over de uitbreiding van kinderopvang binnen het eigen grondgebied. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De Vlaamse Regering maakt deze legislatuur iets meer dan 27 miljoen euro vrij voor minstens 2500 nieuwe plaatsen met inkomenstarief (trap 2 A). De Vlaamse regering wil hiermee vooral nieuwe plaatsen creëren in die gemeenten waar de nood het hoogst is. Er wordt gewerkt met een meerjarenprogrammatie. De oproep zal zich vooral richten op groepsopvang, maar ook aanvragen gezinsopvang zullen mogelijk zijn.Tijdspad:-  2021:     * Oproep aan de organisatoren voor meerjarenprogrammatie: 90 % van het budget (30 % voorafnames grootsteden + 60 % voor de rest van Vlaanderen)    * Opgroeien voorziet uiterlijk 30 juni 2021 te beslissen over de ingediende aanvragen    * Lievegem komt in aanmerking voor 10 nieuwe plaatsen kinderopvang baby’s en peuters met de subsidie inkomenstarief-  2022:    * Oproep naar lokale besturen die de nood aan bijkomende opvangplaatsen aantonen op basis van cijfers van Lokaal Loket Kinderopvang (5% van het budget)-  2023:     * Eerste jaarhelft: tussentijdse evaluatie (van de meerjarenprogrammatie voor de herinzet van eventuele vrije middelen (bv uit stopgezette plaatsen en niet-   gerealiseerde subsidiebeloftes). Er zal bekeken worden hoe de eventuele vrijgekomen middelen op basis van deze evaluatie opnieuw ingezet kunnen worden.    * Tweede jaarhelft: oproep naar lokale besturen die de nood aan bijkomende opvangplaatsen aantonen op basis van het Lokaal Loket Kinderopvang (5 % van het budget)-  2024: toekenning plaatsen op basis van oproep 2023Het budget wordt zo verdeeld dat tegemoet kan worden gekomen aan de lokale verschillen in nood aan bijkomende kinderopvangplaatsen.Het is de bedoeling om bijkomende middelen eerst toe te kennen in gemeenten waar de nood aan bijkomende plaatsen het grootst is, zodat Opgroeien verder kan inzetten op een evenwichtige spreiding van het aanbod waar ouders betalen naar inkomen.Daarnaast is het minstens even belangrijk dat ook binnen de gemeente plaatsen gerealiseerd worden waar de nood het hoogst is, daar kan het lokaal bestuur via zijn adviesrol een rol in spelen.Rol van het lokaal bestuurHet lokaal bestuur heeft als lokale regisseur een belangrijke inbreng bij de ontwikkeling van het lokale kinderopvangaanbod.Het lokaal bestuur kan over elke aanvraag in zijn gemeente een negatief of positief advies uitbrengen. Een goed opgesteld advies is een meerwaarde bij de beoordeling van aanvraagdossiers. Dit advies is vaak mee bepalend in wie de subsidie toegekend krijgt.-  Als het lokaal bestuur geen advies uitbrengt, dan beslist Opgroeien over de aanvragen op basis van criteria opgenomen in het beslissingskader-  Een negatief advies kan ertoe leiden dat een aanvraag uitgesloten wordt en dus niet in aanmerking komt voor de subsidie.Een negatief advies is enkel mogelijk:-  Als de aanvraag niet tegemoetkomt aan de lokale behoeften aan kinderopvang van baby’s en peuters. -  Als de organisator, ondanks herhaaldelijk verzoek van het lokaal loket, weigert samen te werken met het lokaal loket. Als een lokaal bestuur een positief advies uitbrengt, dan kent het ook een score toe op basis van vooraf vastgelegde criteria. Een positief advies met score bepaalt mee welke aanvraag in de gemeente subsidie toegekend krijgt.Om een zorgvuldig advies te kunnen formuleren, moet het lokaal bestuur uiterlijk op 31 december 2020 de criteria bekend maken waarop ze zich zullen baseren om hun advies te formuleren. Zo kan men daar rekening mee houden op het moment dat men een aanvraag wenst in te dienen. De criteria moeten relevant, objectief en transparant zijn. 
+                                                            Er is een gunstig advies verleend door het LOK op 2 december 2020. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ffcccc10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad keurt de vooropgestelde beoordelingscriteria, de hieraan gekoppelde vraagstelling, de toe te kennen scores en beoordelingsprocedure m.b.t het formuleren van een advies door het lokaal bestuur inzake aanvraag van gemeentelijke opvanginitiatieven naar (bijkomende) overheidssubsidiëring goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e8006ba0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Beoordelingscriteria en -procedure inzake advies lokaal bestuur bij uitbreidingsronde kinderopvang voor baby's en peuters: goedkeuring" .
+

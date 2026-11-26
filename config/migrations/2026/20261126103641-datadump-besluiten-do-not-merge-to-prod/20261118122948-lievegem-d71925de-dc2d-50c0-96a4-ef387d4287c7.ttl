@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/0ca3449a-f256-4aad-bad1-eccc26164e1e> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/324b8c61-5508-43c5-aac5-680e72028a3c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6b3d3489-e857-49d2-aa75-11acd8d44591>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> ;
+    ns3:geplandeStart "2025-07-22T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/18c2d4dd-12e4-4ed6-852f-18ab3ff042ba> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "86f80d74-54c6-5d8a-9a32-4f8b7aae8515" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-07-22T13:34:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9> ;
+    ns3:openbaar false ;
+    ns2:uuid "a1d45630-c36c-5e2e-a387-583006a4c9a8" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement voor een vaste voorbehouden plaats voor het busje van Mobitwin op parking Nieuwstraat, 9950 Lievegem wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement - plaatsen bord E9a 'parkeren toegelaten' + onderbord met nummerplaat voor busje Mobitwin op parking Nieuwstraat, 9950 Lievegem: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Omdat het niet altijd even gemakkelijk is een goede en veilige parkeerplaats te vinden voor het busje van Mobitwin, werd door team welzijn de vraag gesteld een vaste voorbehouden plaats te voorzien. 
+                                    Er werd samen met de vrijwilliger van Mobitwin een geschikte locatie gezocht en gevonden op parking Nieuwstraat, 9950 Lievegem. Er wordt voorgesteld om deze regeling in te laten gaan voor de periode van 28 juli 2025 tot en met 31 december 2026 (te herbekijken na ingebruikname van het Huis van Lievegem). 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Team wegen 
+                                 
+                            """@nl ;
+    ns2:uuid "d71925de-dc2d-50c0-96a4-ef387d4287c7" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement voor een vaste voorbehouden plaats voor het busje van Mobitwin op parking Nieuwstraat, 9950 Lievegem wordt vastgesteld voor de periode van 28 juli 2025 tot en met 31 december 2026. 
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        bord E9a 'parkeren toegelaten' + onderbord met nummerplaat 1-WSG-125 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588> a ns3:Agendapunt ;
+    ns2:uuid "ec9d4f54-e13f-594e-b5f4-528b2940415a" .
+

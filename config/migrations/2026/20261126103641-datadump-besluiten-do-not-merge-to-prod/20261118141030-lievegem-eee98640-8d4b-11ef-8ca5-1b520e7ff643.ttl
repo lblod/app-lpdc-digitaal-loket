@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6219e70b-a11d-41ee-932f-1de6fab63f66> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/056ce378-80ad-465c-a6ff-9e7f427b43dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06808dec-0883-41a9-932f-4e1dbfce464f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/21dd7ca5-0fbf-4795-80c5-34655d129dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5e8d9624-6fc9-4220-acdb-affac1d4f5bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b55312b-f388-42d7-913b-1b7fa2fe03d4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc1d2c8-5d20-4607-ab4b-a96ad7d3adc2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b50e7bb5-a505-44ae-8207-2fb21ca780d5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c251bdc4-9793-405e-8b78-c3e0ee673f9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c451ff4b-94fa-477b-8baa-81e0be4bd852>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cec759f6-1f78-4c21-8314-2aff4bd2401f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4c0bf94-9863-4204-bf32-7c7993067dae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0d592ac-a567-4638-9ba8-411d725bfa74>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2855dc5-1bda-4127-9e37-67f9c96edd0c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ff83b9b0-0723-48bf-9870-b6fa200fc786> ;
+    ns1:geplandeStart "2023-09-14T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a816a351-bad7-4bdf-893d-8c0a30fd5f67> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3477a3ff-0a8d-4b85-bf05-16027e5dd5f5> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fcf42403-2747-4b3b-a2b4-cffcfa393785> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e72ca0e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-09-14T21:26:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-09-14T20:01:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167> ;
+    ns1:openbaar true ;
+    ns3:uuid "eee9d460-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3c887814-196c-4d14-8103-1b4b9b9f3ad2> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3c887814-196c-4d14-8103-1b4b9b9f3ad2> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de ontwerpakte voor de kosteloze grondafstand tussen NV Huysman Promoties, Stationsstraat 83, 9900 Eeklo; NV Roger Wille, Oostveld Kouter 74, 9920 Lievegem; Freddy Haesaert & Linda Van Vooren, Verkortingsweg 36, 9920 Lievegem enerzijds en de gemeente Lievegem, Kasteeldreef 72, 9920 Lievegem anderzijds, opgemaakt door de geassocieerde notarissen Vanderplaetsen & Redel, Grote Baan 222 te 9920 Lievegem, voor de wegenis van Robunder te 9920 Lievegem, kadastraal gekend als Lievegem 2e afdeling, sectie B, nrs. 394K3, 395D3, 395M3, 400S en 401V met een totale oppervlakte volgens meting van 2.161,19 m² goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Patrimonium - akte kosteloze grondafstand wegenis Robunder: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepenGuy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°De gemeenteraad van Lovendegem besliste op 28 juni 2012 dat het ontwerp van wegeniswerken voor de nieuw aan te leggen weg in de verkaveling palend aan de Verkortingsweg wordt goedgekeurd mits voldaan wordt aan de volgende voorwaarde: kosteloze grondafstand van de volledige bedding van de weg met de bijhorende nutsleidingen ten voordele van de gemeenteHet college van burgemeester en schepenen van Lovendegem verleende op 12 september 2012 de verkavelingsvergunning (VK 351.1) voor Verkortingsweg ZN, thans Robunder kadastraal gekend als Lievegem 2e afdeling/Lovendegem, sectie B, nr. 0394L2, 0395R2, 0395S2, 0398L, 0398M, 0400G, 0400K, 0401D, 0401E, 0402D, 0402E, 0403C, 0403G onder de voorwaarden vermeld in het besluit van de gemeenteraad van 28 juni 2012Het college van burgemeester en schepenen van Lievegem keurde in de zitting van 7 juni 2022 het proces-verbaal van definitieve oplevering van 7 maart 2022 voor de aanleg van voetpaden en beplantingswerken voor de verkaveling Robunder goed 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            BV Wille-Caus maakte op 15 maart 2023 een opmetingsplan van de kosteloze grondafstand voor de verkaveling Robunder (zie bijlage). 
+                                                            Geassocieerde notarissen Vanderplaetsen & Redel, Grote Baan 222 te 9920 Lievegem, maakten een ontwerpakte voor deze kosteloze grondafstand op (zie bijlage). De over te dragen zone te Robunder bestaat uit 3 loten: 1) Lot A, kadastraal gekend als afdeling 2, sectie B, nrs. 400S en 401V, met een globale oppervlakte volgens huidig kadaster van 1.318 m² en met een oppervlakte volgens meting 1.335,87 m².  
+                                                            2) Lot B, kadastraal gekend als afdeling 2, sectie B, deel van nr. 395K3, met een oppervlakte volgens meting 222,35 m², met het gereserveerd perceelsidentificatienummer: 44452 B 395 M3 P0000.3) Lot C, kadastraal gekend als afdeling 2, sectie B, nrs. 394K3 en 395D3, met een globale oppervlakte volgens huidig kadaster van 610 m² en met een oppervlakte volgens meting 602,97 m².De kosteloze grondafstand met een totale gemeten oppervlakte van 2.161,19 m² is conform de bepalingen van de voormelde verkavelingsvergunning en wordt ter goedkeuring aan de gemeenteraad voorgelegd. 
+                                                            De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "eee98640-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad keurt de ontwerpakte voor de kosteloze grondafstand tussen NV Huysman Promoties, Stationsstraat 83, 9900 Eeklo; NV Roger Wille, Oostveld Kouter 74, 9920 Lievegem; Freddy Haesaert & Linda Van Vooren, Verkortingsweg 36, 9920 Lievegem enerzijds en de gemeente Lievegem, Kasteeldreef 72, 9920 Lievegem anderzijds, opgemaakt door de geassocieerde notarissen Vanderplaetsen & Redel, Grote Baan 222 te 9920 Lievegem, voor de wegenis van Robunder te 9920 Lievegem, kadastraal gekend als Lievegem 2e afdeling, sectie B, nrs. 394K3, 395D3, 395M3, 400S en 401V met een totale oppervlakte volgens meting van 2.161,19 m² goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e72b1a40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium - akte kosteloze grondafstand wegenis Robunder: goedkeuring" .
+

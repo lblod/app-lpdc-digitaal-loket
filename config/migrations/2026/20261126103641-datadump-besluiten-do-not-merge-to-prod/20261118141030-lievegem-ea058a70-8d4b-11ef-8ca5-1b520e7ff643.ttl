@@ -1,0 +1,68 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/73b7e76a-0840-4805-ae11-e6012c441c79> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/56ed746e-e764-4f78-9b95-5f011a4fa9d8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5b3d3ac-aaa3-4faf-9623-f7e34ae0479c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3028b72-a1a0-4f32-b126-c470119b0dbb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c7b3ef3f-c54f-484b-b2e9-3f183540d3c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2d569a7-0c11-415e-8b4b-06dece66fd7b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ed252c03-10d2-495b-ba14-27f52f8f60b3> ;
+    ns1:geplandeStart "2023-01-25T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5458d7db-c1ee-4ee8-bb32-2b3a696674f1> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/197aa676-a148-4d3c-8340-7a4255ce2f67> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bb1db3b9-1012-4bab-a033-06938b2369a6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ea073820-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-01-25T20:31:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-01-25T20:01:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65> a ns1:BehandelingVanAgendapunt ;
+    ns1:openbaar true ;
+    ns2:uuid "e9fde950-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/561c0922-92f1-4429-84ef-6c3a88bd1f65> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/561c0922-92f1-4429-84ef-6c3a88bd1f65> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de notulen en het zittingsverslag van de gemeenteraadszitting van 21 december 2022 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Goedkeuren notulen en zittingsverslag van de vorige zitting" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Nicholas Spinel, Voorzitter 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 32Gemeenteraadsbesluit van 29 mei 2019 houdende goedkeuring huishoudelijk reglement gemeenteraad, artikel 31 en 32 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De notulen en het zittingsverslag van de vergadering van de gemeenteraad worden onder de verantwoordelijkheid van de algemeen directeur opgesteld.Behalve in spoedeisende gevallen worden de notulen en het zittingsverslag van de vorige vergadering ten minste acht dagen voor de dag van de vergadering ter beschikking gesteld van de gemeenteraadsleden. Elk gemeenteraadslid heeft het recht tijdens de vergadering opmerkingen te maken over de redactie van de notulen en het zittingsverslag van de vorige vergadering. Als die opmerkingen door de gemeenteraad worden aangenomen, worden de notulen en het zittingsverslag in die zin aangepast.Als er geen opmerkingen worden gemaakt over de notulen en het zittingsverslag van de vorige vergadering worden de notulen en het zittingsverslag als goedgekeurd beschouwd en worden ze ondertekend door de voorzitter van de gemeenteraad en de algemeen directeur. 
+                                                            Het zittingsverslag is te bekijken op https://youtu.be/5DT6m9_D_CE 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ea058a70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            De gemeenteraad keurt de notulen en het zittingsverslag van de gemeenteraadszitting van 21 december 2022 goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ea05ffa0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Goedkeuren notulen en zittingsverslag van de vorige zitting" .
+

@@ -1,0 +1,79 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/2949d729-29a9-4559-be6c-5c79e94bdbfb> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05b066ec-e5e7-42e2-9798-0e5ce8bd5bc5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f04077b-c176-432e-8293-f5906af404c3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7a5584a4-cfaf-48d0-8dfb-3f46b3f9fab1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b23cc094-213e-4243-9cb5-bca3fda9fee7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e1273d0f-a995-48a0-949f-20d5425775ad> ;
+    ns1:geplandeStart "2026-03-03T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ede77cc0-9d69-46e0-8a24-e1605b9596e4> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "ed9a9651-78fe-5b5d-a0af-598c99a0ccff" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-03-03T13:32:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b23cc094-213e-4243-9cb5-bca3fda9fee7> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/05b066ec-e5e7-42e2-9798-0e5ce8bd5bc5> ;
+    ns1:openbaar false ;
+    ns2:uuid "057c360e-d681-5881-8a40-0b743743e163" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b23cc094-213e-4243-9cb5-bca3fda9fee7> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b23cc094-213e-4243-9cb5-bca3fda9fee7> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b23cc094-213e-4243-9cb5-bca3fda9fee7> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' op 4 april 2026 van 13.00 uur tot en met 17.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' - Gezinsbond Waarschoot: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 3 maart 2026 over de aanvraag evenement Activiteiten voor kinderen tijdens Paaskermis Waarschoot - Gezinsbond Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 3 maart 2026 over de aanvraag Paaskermis Waarschoot 2026 - kinderuurtje en toewijzing standplaatsen spektakelattracties en kermisgastronomie: goedkeuringHet besluit van het college van burgemeester en schepenen van 3 maart 2026 over het tijdelijk politiereglement naar aanleiding van 'Attracties Paaskermis Waarschoot 2026' - team evenementen gemeente Lievegem: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nico Buysse, namens Gezinsbond Waarschoot, organiseert 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' op 4 april 2026 van 13.00 uur tot en met 17.00 uur.Er werd op 20 januari 2026 een aanvraag ingediend door Nico Buysse, namens Gezinsbond Waarschoot, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "e7573727-20fe-5e95-a797-b5c04f6ca91e" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' op 4 april 2026 van 13.00 uur tot en met 17.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod aan de achterzijde links en rechts van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                        Afsluiten van de parkeerplaatsen net voor de achterzijde van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 aan de achterzijde links en rechts van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                        Nadars + C3 ter hoogte van de parkeerplaatsen net voor de achterzijde van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b23cc094-213e-4243-9cb5-bca3fda9fee7> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b23cc094-213e-4243-9cb5-bca3fda9fee7> a ns1:Agendapunt ;
+    ns2:uuid "e063caa9-d30e-5a92-823a-2a35e1ba3c52" .
+

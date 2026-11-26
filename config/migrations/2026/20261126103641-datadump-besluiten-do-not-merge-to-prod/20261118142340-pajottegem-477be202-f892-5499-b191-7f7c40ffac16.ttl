@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/47d6558f-2c18-476c-bc0d-499db1d97de5> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/09ba5502-0a69-4007-88d6-d2bc2553dbe6>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a5d6cfba-79b5-4ad2-b95a-2bd70924d289>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d2980546-7251-46c6-9db1-281ef68b2f6f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f16116de-a475-42a9-af34-1c4804ed0b67>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f187a815-bbc0-49ac-aa30-8d036a045b6e> ;
+    ns1:geplandeStart "2025-05-05T14:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/6eb9fd25-cfa9-4612-866e-246940a48d9a> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "89fe870c-63dc-5388-9404-75562d5847ce" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-05T13:29:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a5d6cfba-79b5-4ad2-b95a-2bd70924d289> ;
+    ns1:openbaar false ;
+    ns3:uuid "6698d4fb-b174-5d2b-b9e8-5387dc04a3e2" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de randactiviteiten Kermis op 9/05 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Politieverordening: Avondmarkt Centrum Herne - 9 mei 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns3:uuid "477be202-f892-5499-b191-7f7c40ffac16" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van randactiviteiten Kermis op 9/05 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf vrijdag 9/05 van 17u tot 22u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        De avondmarkt vindt plaats op het kaatsplein te Centrum 17.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verboden stilstaan en parkeren (E3) op 9/05 tussen 15u en 23u op parking Kaatsplein 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433> a ns1:Agendapunt ;
+    ns3:uuid "1faad989-5d60-5dce-8e92-fabdaf55637d" .
+

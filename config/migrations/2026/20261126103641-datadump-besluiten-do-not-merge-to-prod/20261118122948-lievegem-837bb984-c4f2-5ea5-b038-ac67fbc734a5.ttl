@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/818903b8-a100-4bf0-b08d-6a5c06c82943> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/00173824-2f84-4408-b4f7-286675cd5426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f5d1058-1d45-4cac-a005-b7c147be0110>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/962293e7-6935-424f-a98d-adbcbb7c0ab3> ;
+    ns1:geplandeStart "2026-02-17T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c263392e-1fca-4b47-a8a5-10730bafe5b2> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "c7cc2179-0605-5f95-8b4e-d26bac27b20a" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-02-17T13:35:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/962293e7-6935-424f-a98d-adbcbb7c0ab3> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2f5d1058-1d45-4cac-a005-b7c147be0110> ;
+    ns1:openbaar false ;
+    ns3:uuid "37d3982f-e5a3-554d-97c6-be19defd67a6" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/962293e7-6935-424f-a98d-adbcbb7c0ab3> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/962293e7-6935-424f-a98d-adbcbb7c0ab3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/962293e7-6935-424f-a98d-adbcbb7c0ab3> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'VRCB Autocross' van 2 mei 2026 10.00 uur tot en met 3 mei 2026 20.00 uur wordt vastgesteld als volgt: 
+                                                             
+                                                                Stilstaan- en parkeerverbod in Arisdonkstraatje (vanaf Arisdonkstraatje 9 tot en met hoek Arisdonkstraatje/Arisdonk) 
+                                                             
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van VRCB Autocross - VRCB Autosportspektakel: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 17 februari 2026 over de aanvraag evenement VRCB Autocross - VRCB AUTOSPORTSPEKTAKEL: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Gunther Van den Broeck, namens VRCB Autosportspektakel organiseert 'VRCB Autocross' van 2 mei 2026 10.00 uur tot en met 3 mei 2026 20.00 uur.Er werd op 18 januari 2026 een aanvraag ingediend door Gunther Van den Broeck, namens VRCB Autosportspektakel om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van de werken per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "837bb984-c4f2-5ea5-b038-ac67fbc734a5" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'VRCB Autocross' van 2 mei 2026 10.00 uur tot en met 3 mei 2026 20.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod in Arisdonkstraatje (vanaf Arisdonkstraatje 9 tot en met hoek Arisdonkstraatje/Arisdonk) 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 met onderborden Xa, Xb en Xd 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/962293e7-6935-424f-a98d-adbcbb7c0ab3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/962293e7-6935-424f-a98d-adbcbb7c0ab3> a ns1:Agendapunt ;
+    ns3:uuid "54a122fe-19e6-5148-a731-12146de4a5cd" .
+

@@ -1,0 +1,124 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/58a0825c-bf85-47da-bfdd-cfb876a6ed60> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0123b139-0793-4d70-aa54-bc826557bba6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/70e7c733-8431-4151-9bc0-738b03e80c64>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/94fdb18e-8f7a-4172-81ce-534185f0eeae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ca2737c1-4ca2-469d-875f-1aa52d8a7d93>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e710d8aa-4d1d-436d-a1a7-53f9e684bc46> ;
+    ns1:geplandeStart "2025-05-13T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a5b9dd2a-df60-4e21-9710-fdea240ca763> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "08c85a1d-fa45-55b8-b1ee-f2416378ffcc" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-05-13T13:32:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/94fdb18e-8f7a-4172-81ce-534185f0eeae> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/789a109f-19da-4f8d-bbc5-61ab0e04407a> ;
+    ns1:openbaar false ;
+    ns2:uuid "cd477c74-98ad-5d01-849b-61045bc5d01e" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/94fdb18e-8f7a-4172-81ce-534185f0eeae> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/94fdb18e-8f7a-4172-81ce-534185f0eeae> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/94fdb18e-8f7a-4172-81ce-534185f0eeae> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Oostmoerkermis 2025' wordt vastgesteld als volgt: 
+                                                            1. Van zaterdag 2 augustus 2025 van 14.00 uur tot en met dinsdag 5 augustus 2025 2.00 uur: 
+                                                             
+                                                                Afsluiten van Ververij, uitgezonderd plaatselijk verkeer 
+                                                                Stilstaan- en parkeerverbod in Ververij 
+                                                             
+                                                            2. Op maandag 4 augustus 2025 van 6.00 uur tot en met 17.00 uur voor de straatrommelmarkt: 
+                                                             
+                                                                Afsluiten van Oostmoer vanaf het kruispunt met Eikelstraat tot aan het rondpunt Oostmoer, inclusief Oostmoer Tuinwijk en in Akkerstraat tot kruispunt met Olmenstraat. 
+                                                                Stilstaan- en parkeerverbod in Oostmoer vanaf het kruispunt met Eikelstraat tot aan het rondpunt Oostmoer, inclusief Oostmoer Tuinwijk. 
+                                                                Er wordt een omleiding voorzien via Stationsstraat - Hoekje - Bellebargie - Oostmoer en omgekeerd. 
+                                                             
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Oostmoerkermis 2025 - Wijkfeestcomité Oostmoer: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 13 mei 2025 over de aanvraag evenement Oostmoerkermis - Wijkfeestcomité Oostmoer: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Karel Nuytinck, namens Wijkfeestcomité Oostmoer organiseert 'Oostmoerkermis 2025' van vrijdag 1 augustus 2025 20.00 uur tot en met dinsdag 5 augustus 2025 2.00 uur.Er werd op 23 maart 2025 een aanvraag ingediend door Karel Nuytinck, namens Wijkfeestcomité Oostmoer om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "1331027c-8e82-5af0-a054-a73a0e4fa674" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Oostmoerkermis 2025' wordt vastgesteld als volgt: 
+                                    1. Van zaterdag 2 augustus 2025 van 14.00 uur tot en met dinsdag 5 augustus 2025 2.00 uur: 
+                                     
+                                        Afsluiten van Ververij, uitgezonderd plaatselijk verkeer 
+                                        Stilstaan- en parkeerverbod in Ververij 
+                                     
+                                    2. Op maandag 4 augustus 2025 van 6.00 uur tot en met 17.00 uur voor de straatrommelmarkt: 
+                                     
+                                        Afsluiten van Oostmoer vanaf het kruispunt met Eikelstraat tot aan het rondpunt Oostmoer, inclusief Oostmoer Tuinwijk en in Akkerstraat tot kruispunt met Olmenstraat. 
+                                        Stilstaan- en parkeerverbod in Oostmoer vanaf het kruispunt met Eikelstraat tot aan het rondpunt Oostmoer, inclusief Oostmoer Tuinwijk. 
+                                        Er wordt een omleiding voorzien via Stationsstraat - Hoekje - Bellebargie - Oostmoer en omgekeerd. 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Van zaterdag 2 augustus 2025 van 14.00 uur tot en met dinsdag 5 augustus 2025 2.00 uur: 
+                                      
+                                     
+                                        Nadar + C3 + onderbord 'uitgezonderd plaatselijk verkeer' aan kruispunt Ververij/Oostmoer 
+                                        Borden E3 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Op maandag 4 augustus 2025 van 6.00 uur tot en met 17.00 uur voor de straatrommelmarkt:
+                                     
+                                    
+                                        
+                                     
+                                     
+                                         
+                                            Nadar + C3 op de kruispunten van Oostmoer met Eikelstraat, Lagebilk en Oostmoer (aan het rondpunt) en op het kruispunt Akkerstraat/Olmenstraat. 
+                                         
+                                           F45 + C3 + onderbord 'uitgezonderd plaatselijk verkeer' op de kruispunten Stationsstraat/Stationsstraat (aan afslag richting Oostmoer), Vlinderstraat/Hoekje,        Akkerstraat/Hoekje 
+                                         
+                                             
+                                                Borden E3 vanaf het kruispunt met Eikelstraat tot aan het rondpunt Oostmoer + Oostmoer Tuinwijk 
+                                             
+                                         
+                                         
+                                            Borden F41  
+                                         
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/94fdb18e-8f7a-4172-81ce-534185f0eeae> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/94fdb18e-8f7a-4172-81ce-534185f0eeae> a ns1:Agendapunt ;
+    ns2:uuid "46ed5ace-3d61-5bac-8ed3-11b76b1e0424" .
+

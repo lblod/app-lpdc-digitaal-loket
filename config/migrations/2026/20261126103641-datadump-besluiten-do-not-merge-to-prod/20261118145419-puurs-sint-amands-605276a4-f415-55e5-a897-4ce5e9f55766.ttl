@@ -1,0 +1,106 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/b4b8c01f-20c8-459b-9664-03f528db1854> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2d63b25e-07b0-4248-aea6-eaaaa3272a82>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2f6a7fa0-82f3-4ddc-94c7-eeedb5721d9f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a00d1e01-de54-4acc-82b6-d2c14c6d1d51> ;
+    ns1:geplandeStart "2025-12-22T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/8cd8e0f4-4ba3-487b-ad1e-351efd56f574> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "ce19c8ba-33fb-559d-970c-29c2d0298c5c" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-12-22T20:09:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a00d1e01-de54-4acc-82b6-d2c14c6d1d51> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/39b6d09e-2f0f-47a3-8593-477842e13271> ;
+    ns1:openbaar false ;
+    ns2:uuid "338215b1-b6cb-5231-902e-e7623bfbb368" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a00d1e01-de54-4acc-82b6-d2c14c6d1d51> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/a00d1e01-de54-4acc-82b6-d2c14c6d1d51> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/a00d1e01-de54-4acc-82b6-d2c14c6d1d51> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Zone betalend parkeren - Puurs" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Voor de zone van het betalend parkeren wordt er een kleine uitbreiding gedaan zodat zij evenredig met de visuele infrastructuur wordt aangepast. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                             
+                                                Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56, §2 
+                                                Het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens, artikel 5; 
+                                                Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Voor de zone van het betalend parkeren wordt er een kleine uitbreiding gedaan zodat zij evenredig met de visuele infrastructuur wordt aangepast. 
+                                 
+                            """@nl ;
+    ns2:uuid "605276a4-f415-55e5-a897-4ce5e9f55766" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Artikel 1 : Het parkeren is toegelaten; het parkeren is betalend; het betalend parkeren geldt niet voor personen in het bezit van een parkeerkaart voor mindervalide;  
+                                            Artikel 2: De parkeerzone wordt afgebakend op volgende locaties: 
+                                            Hoek H.Hartplaats - Kerkplein 3 
+                                            Kerkplein 15 - Kerkplein 22 
+                                            R. Verbelenstraat 1 - H.Hartplaats 10 
+                                            R. Verbelenstraat 43 - R Verbelenstraat 38A 
+                                            Dorpshart 10 - 16 
+                                            Hondsmarkt (eerste 36 plaatsen) 
+                                            Palingstraat 14-17 
+                                            hoek Palingstraat 27 - hoek Palingstraat 41 
+                                            Dorpshart 32 - Dorpshart 34 Dit wordt aangeduid door verkeerstekens met zonale geldigheid: 
+                                             
+                                                 Verkeersbord ZE9a - onderbord GVIIb (parkeerschijf)  
+                                             
+                                         
+                                     
+                                    
+                                        Artikel 3: het parkeren is beperkt in tijd: deze maatregel geldt alle dagen tussen 09.00u en 18.00u, uitgezonderd op zon- en feestdagen
+                                     
+                                    Artikel 4: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a00d1e01-de54-4acc-82b6-d2c14c6d1d51> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a00d1e01-de54-4acc-82b6-d2c14c6d1d51> a ns1:Agendapunt ;
+    ns2:uuid "79b63890-dde0-5eea-8dd3-679565053b3b" .
+

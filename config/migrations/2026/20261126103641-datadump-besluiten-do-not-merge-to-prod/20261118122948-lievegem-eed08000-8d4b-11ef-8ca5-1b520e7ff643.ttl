@@ -1,0 +1,164 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4010cba7-ac3e-4e54-af4c-9a5828598f1e> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05fc1ce9-eb6f-4d97-b96a-f583a4d10a91>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23efc5ed-2b22-4cfe-892b-710c27710215>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2bda4302-a2f0-4ee9-ac2c-941a747e166f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b87beb0-cde9-4088-bd3f-9205a514c17d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d8ab414-f71f-455c-a075-4fda295554f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6439560f-0948-4cd1-844d-55cb9e76b432>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9883a87a-ecc7-4ad9-ab41-efd5ffc255bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f166014-8d22-4799-b171-94518fb79761>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c2c15d69-adda-4088-a9b2-3999b1eef99d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c89a991b-94e8-4a40-953c-7d829f519713>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dbdb15f3-f665-4862-a4bf-46afa519a2a3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcd173fa-0d50-4d5a-b7e4-c25f82be8b6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e104a52b-1f78-4289-bb34-3d0cbf2ea06d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f214ebf7-c8fe-4d5b-8376-caa9fee36016> ;
+    ns2:geplandeStart "2023-05-31T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/91baaf1c-5178-4180-89f8-2c255c6c530d> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/cb3181ac-0ddd-44ff-9873-5bf122ea65c7> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/1a092372-3466-442e-a65b-1a751d777e48> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "eecd72c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-05-31T21:28:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-31T20:02:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c89a991b-94e8-4a40-953c-7d829f519713> ;
+    ns2:openbaar true ;
+    ns3:uuid "f0b25f60-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2c7bc0c6-51dd-46fe-916c-ac36421f713a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2c7bc0c6-51dd-46fe-916c-ac36421f713a> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns1:description """ 
+                                                    De gemeenteraad stelt het retributiereglement op retributie op vastgoedinformatie via het Vastgoedinformatieplatform vast als volgt: 
+                                                     
+                                                         
+                                                             
+                                                                 Voorwerp aanvraag   
+                                                                 Retributiebedrag   
+                                                             
+                                                             
+                                                                 Vastgoeddossier 
+                                                                 50 EUR 
+                                                             
+                                                         
+                                                     
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Retributiereglement vastgoedinformatie voor opzoekingen via het Vastgoedinformatieplatform: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Guy De Neve, schepen 
+                                    Kim Martens, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur, artikel 40  §3 en 41, 14°  Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteitOmzendbrief BB 2018/02 van 20 juni 2018 over de budgetten en de éénjarige meerjarenplannenDe Vlaamse Codex Ruimtelijke Ordening, artikelen 5.2.1, 5.2.5 tem 5.2.7Besluit van de gemeenteraad van 16 oktober 2019 over de goedkeuring van de belasting op het afleveren van omgevingsvergunningen, attesten en vastgoedinformatie door de omgevingsdienst 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Notarissen en vastgoedmakelaars kunnen informatie aanvragen over onroerende goederen bij de gemeente. De gemeente vindt het belangrijk dat potentiële kopers met kennis van zaken een beslissing kunnen nemen over een onroerend goed. 
+                                    Gemeenten zijn op zoek naar mogelijkheden om informatie over onroerende goederen efficiënter en veiliger te delen. 
+                                    Gemeenten werken samen met het agentschap Digitaal Vlaanderen om een Vastgoedinformatieplatform te ontwikkelen en om in een testfase te onderzoeken hoe informatie over onroerende goederen op een efficiënte wijze kan worden ter beschikking gesteld. 
+                                    Het Vastgoedinformatieplatform is een elektronisch informatiesysteem voor de ontsluiting, samenvoeging en veilige gegevensdeling van vastgoedinformatie en vastgoeddossiers tussen bronhouders en aanvragers, zoals in eerste instantie notarissen en vastgoedmakelaars. 
+                                    De gemeente kan via het Vastgoedinformatieplatform de door aanvragers, zoals in eerste instantie notarissen en vastgoedmakelaars, aangevraagde vastgoedinformatie verzamelen en de vastgoeddossiers ontsluiten. 
+                                    Het verzamelen en ontsluiten, via het Vastgoedinformatieplatform, van vastgoeddossiers op verzoek van aanvragers, zoals in eerste instantie notarissen en vastgoedmakelaars, brengt voor de gemeente een administratieve last en bijhorende kost met zich mee. 
+                                    De gemeente Lievegem wenst de kost voor het verzamelen van vastgoedinformatie via het Vastgoedinformatieplatform en het ontsluiten van vastgoeddossiers op de aanvrager ervan te verhalen. 
+                                    De huidige kostprijs voor deze vastgoeddossiers, zoals voorzien in het belastingreglement van 16 oktober 2019, blijft behouden in het retributiereglement vastgoedinformatie voor opzoekingen via het Vastgoedinformatieplatform. 
+                                    De, door het college goed te keuren, verwerkingsovereenkomst in bijlage is voorgelegd aan onze functionaris gegevensbescherming en is voor hem in orde. 
+                                 
+                                 
+                                    Financiële impact 
+                                    De inkomsten worden geregistreerd onder jaarbudgetrekening   xxxx/GBB-OMG/0600-00/7020004/GEMEENTE/CBS/IP-GEEN (Verstrekken van stedenbouwkundige inlichtingen)  
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Retributiereglement op vastgoedinformatie via vastgoedinformatieplatform 
+                                    Artikel 1 - Definities 
+                                    Voor de toepassing van dit reglement wordt verstaan onder:1° vastgoedinformatie: gebouw-, grond- of omgevingsgebonden gegevens inzake een onroerend goed, inclusief informatie met betrekking tot het juridische, administratieve of fysieke statuut van dit onroerend goed;2° lokale gegevensbron: vastgoedinformatie die een gemeente of de rechtspersonen die ervan afhangen, beheert;3° centrale gegevensbron: vastgoedinformatie die een Vlaamse instantie of een externe overheid beheert; 4° Vastgoedinformatieplatform of VIP: elektronisch informatiesysteem voor de ontsluiting, samenvoeging en veilige gegevensdeling van vastgoedinformatie tussen aanleverende entiteiten en aanvragers;5° vastgoeddossier: de combinatie van verschillende datasets, samengesteld uit vastgoedinformatie met betrekking tot een perceel, of een onderdeel, die op aanvraag wordt ontsloten door de aanleverende entiteit, door Digitaal Vlaanderen wordt samengevoegd en door de lokale overheid ter beschikking wordt gesteld aan de aanvrager;6° externe overheid: overheidsinstanties, vermeld in artikel I.3, 8° van het Bestuursdecreet van 7 december 2018;7° Vlaamse instantie: elk van de volgende overheidsinstanties: a)    de instanties van de Vlaamse overheid, vermeld in artikel I.3, 1°, van het Bestuursdecreet van 7 december 2018; b)    de instellingen met een publieke taak, vermeld in artikel I.3, 6°, van het Bestuursdecreet van 7 december 2018, voor zover ze afhangen van de Vlaamse overheid of van een of meer andere instellingen met een publieke taak die afhangen van de Vlaamse overheid;c)    de instanties van de Vlaamse overheid, vermeld in artikel I.3, 7°, van het Bestuursdecreet van 7 december 2018;8° aanvrager: de notaris of vastgoedmakelaar die in het kader van zijn beroepsactiviteiten of taken van algemeen belang die bij of krachtens een supranationale of wetskrachtige norm bepaalde vastgoedinformatie nodig heeft en daartoe een aanvraag via het VIP doet; 9° algemene verordening gegevensbescherming: Verordening (EU) 2016/679 van het Europees Parlement en de Raad van 27 april 2016 betreffende de bescherming van natuurlijke personen in verband met de verwerking van persoonsgegevens en betreffende het vrije verkeer van die gegevens en tot intrekking van Richtlijn 95/46/EG;10° persoonsgegevens: de gegevens, vermeld in artikel 4, 1), van de algemene verordening gegevensbescherming;11° verwerking: een verwerking als vermeld in artikel 4, 2), van de algemene verordening gegevensbescherming;12° verwerkingsverantwoordelijke: een verwerkingsverantwoordelijke als vermeld in artikel 4, 7), van de algemene verordening gegevensbescherming;13° betrokkene: een betrokkene als vermeld in artikel 4, 1), van de algemene verordening gegevensbescherming. 
+                                    Artikel 2 - AlgemeenDe gemeente Lievegem verzamelt de opgevraagde vastgoedinformatie uit lokale gegevensbronnen. De gemeente Lievegem doet een beroep op het VIP om vastgoedinformatie uit centrale gegevensbronnen op te halen en samen te voegen met het vastgoeddossier. De gemeente Lievegem stelt het vastgoeddossier via het Vastgoedinformatieplatform aan de aanvrager ter beschikking.In de mate dat persoonsgegevens zouden worden verwerkt in het kader van het vastgoeddossier, verwerkt de gemeente die gegevens met als doeleinde om aanvragers samengevoegde vastgoedinformatie uit centrale en lokale gegevensbronnen ter beschikking te stellen in het kader van hun beroepsactiviteiten of in het kader van taken van algemeen belang die bij of krachtens een supranationale of wetskrachtige norm zijn bepaald.Met ingang van 27 juni 2023 wordt ten voordele van gemeente Lievegem een retributie geheven op aanvragen, gedaan via het Vastgoedinformatieplatform, tot het verkrijgen van het vastgoeddossier. 
+                                    Artikel 3 - VerschuldigdeDe retributie is verschuldigd door de aanvrager.Artikel 4 - BedragHet bedrag van de retributie wordt vastgelegd als volgt: 
+                                     
+                                         
+                                             
+                                                 Voorwerp aanvraag   
+                                                 Retributiebedrag   
+                                             
+                                             
+                                                 Vastgoeddossier 
+                                                 50 EUR 
+                                             
+                                         
+                                     
+                                    De aflevertermijn voor het vastgoeddossier bedraagt maximum 30 dagen. Artikel 5 - InvorderingswijzeDe retributie is te betalen binnen de dertig dagen na verzending van de factuur. 
+                                    Bij gebrek aan betaling in der minne zal de invordering van de retributie gebeuren overeenkomstig de bepalingen van artikel 177 van het decreet lokaal bestuur voor onbetwiste en opeisbare niet-fiscale ontvangsten of via wetsbepalingen betreffende de burgerlijke procedure voor betwiste niet-fiscale ontvangsten. Betwistingen van de factuur dienen te gebeuren binnen de dertig dagen volgend op de verzending van de factuur ter attentie van het college van burgemeester en schepenen.De betwiste en opeisbare retributie wordt bij niet-betaling burgerrechtelijk ingevorderd. 
+                                    Artikel 6 - Verwerking van persoonsgegevens§1. In de mate dat persoonsgegevens zouden worden verwerkt in het kader van het vastgoeddossier, treedt de gemeente Lievegem voor de doeleinden omschreven in artikel 2 op als verwerkingsverantwoordelijke.§2. De gemeente verwerkt voor de doeleinden omschreven in artikel 2 persoonsgegevens met betrekking tot de volgende categorieën van betrokkenen:1.    aanvragers; en2.    houders van rechten op een perceel, of een onderdeel, waarvoor het vastgoeddossier wordt aangevraagd.§3. De gemeente verwerkt voor de doeleinden omschreven in artikel 2 volgende categorieën van persoonsgegevens:1.    contact- en identificatiegegevens;2.    financiële gegevens;3.    het identificatienummer van het Rijksregister/KBO-nummer;4.    vastgoedinformatie;5.    gegevens in het kader van openbare onderzoeken en overtredingen.§4. De gemeente Lievegem bewaart de persoonsgegevens die het verwerkt, niet langer dan noodzakelijk is om de doeleinden, vermeld in artikel 2, te bereiken en conform artikel III.87, §1 van het Bestuursdecreet van 7 december 2018, of tot de betrokkene vraagt om de persoonsgegevens die gemeente Lievegem verwerkt, te verwijderen, conform de voorwaarden, vermeld in de algemene verordening gegevensbescherming. De archiveringstermijn van de persoonsgegevens bij de gemeente Lievegem bedraagt 3 jaar overeenkomstig de bepalingen van de Selectielijst voor Vlaamse gemeentearchieven.§5. De gemeente Lievegem doet een beroep op agentschap Digitaal Vlaanderen voor de doeleinden omschreven in artikel 2. Agentschap Digitaal Vlaanderen treedt in dit kader op als verwerker van de gemeente Lievegem, die de verwerkingsverantwoordelijke is. De modaliteiten van de verwerking zijn geregeld in de verwerkingsovereenkomst die te vinden is in Bijlage 1. 
+                                    Artikel 7 – OndertekeningDe vastgoeddossiers die de gemeente Lievegem via het Vastgoedinformatieplatform ter beschikking stelt, worden niet ondertekend aangezien het vastgoeddossier een louter informatief document betreft dat geen beleidsmatige stellingname inhoudt en niet kwalificeert als stuk of briefwisseling in de zin van artikel 279 van het Decreet lokaal bestuur. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt opgestuurd naar team financiën, team omgeving en team ITBekendmaking op de website.Naar ABB via digitaal loket. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur, artikel 40  §3 en 41, 14°  Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteitOmzendbrief BB 2018/02 van 20 juni 2018 over de budgetten en de éénjarige meerjarenplannenDe Vlaamse Codex Ruimtelijke Ordening, artikelen 5.2.1, 5.2.5 tem 5.2.7Besluit van de gemeenteraad van 16 oktober 2019 over de goedkeuring van de belasting op het afleveren van omgevingsvergunningen, attesten en vastgoedinformatie door de omgevingsdienst 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Notarissen en vastgoedmakelaars kunnen informatie aanvragen over onroerende goederen bij de gemeente. De gemeente vindt het belangrijk dat potentiële kopers met kennis van zaken een beslissing kunnen nemen over een onroerend goed. 
+                                                            Gemeenten zijn op zoek naar mogelijkheden om informatie over onroerende goederen efficiënter en veiliger te delen. 
+                                                            Gemeenten werken samen met het agentschap Digitaal Vlaanderen om een Vastgoedinformatieplatform te ontwikkelen en om in een testfase te onderzoeken hoe informatie over onroerende goederen op een efficiënte wijze kan worden ter beschikking gesteld. 
+                                                            Het Vastgoedinformatieplatform is een elektronisch informatiesysteem voor de ontsluiting, samenvoeging en veilige gegevensdeling van vastgoedinformatie en vastgoeddossiers tussen bronhouders en aanvragers, zoals in eerste instantie notarissen en vastgoedmakelaars. 
+                                                            De gemeente kan via het Vastgoedinformatieplatform de door aanvragers, zoals in eerste instantie notarissen en vastgoedmakelaars, aangevraagde vastgoedinformatie verzamelen en de vastgoeddossiers ontsluiten. 
+                                                            Het verzamelen en ontsluiten, via het Vastgoedinformatieplatform, van vastgoeddossiers op verzoek van aanvragers, zoals in eerste instantie notarissen en vastgoedmakelaars, brengt voor de gemeente een administratieve last en bijhorende kost met zich mee. 
+                                                            De gemeente Lievegem wenst de kost voor het verzamelen van vastgoedinformatie via het Vastgoedinformatieplatform en het ontsluiten van vastgoeddossiers op de aanvrager ervan te verhalen. 
+                                                            De huidige kostprijs voor deze vastgoeddossiers, zoals voorzien in het belastingreglement van 16 oktober 2019, blijft behouden in het retributiereglement vastgoedinformatie voor opzoekingen via het Vastgoedinformatieplatform. 
+                                                            De, door het college goed te keuren, verwerkingsovereenkomst in bijlage is voorgelegd aan onze functionaris gegevensbescherming en is voor hem in orde. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De inkomsten worden geregistreerd onder jaarbudgetrekening   xxxx/GBB-OMG/0600-00/7020004/GEMEENTE/CBS/IP-GEEN (Verstrekken van stedenbouwkundige inlichtingen)  
+                                                         
+                                                    """@nl ;
+    ns3:uuid "eed08000-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1De gemeenteraad stelt het retributiereglement op vastgoedinformatie via het Vastgoedinformatieplatform vast.Artikel 2Het retributiereglement treedt vanaf 27 juni 2023 in werking. 
+                                    Dit reglement vervangt vanaf 27 juni 2023 het huidig belastingreglement (het besluit van de gemeenteraad van 16 oktober 2019 over de goedkeuren van de belasting op het afleveren van omgevingsvergunningen, attesten en vastgoedinformatie door de omgevingsdienst) dat betrekking heeft op vastgoeddossiers, die vanaf de bekendmaking van dit reglement kunnen worden aangevraagd via het Vastgoedinformatieplatform. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad stelt het retributiereglement op vastgoedinformatie via het Vastgoedinformatieplatform vast.Artikel 2Het retributiereglement treedt vanaf 27 juni 2023 in werking. 
+                                                            Dit reglement vervangt vanaf 27 juni 2023 het huidig belastingreglement (het besluit van de gemeenteraad van 16 oktober 2019 over de goedkeuren van de belasting op het afleveren van omgevingsvergunningen, attesten en vastgoedinformatie door de omgevingsdienst) dat betrekking heeft op vastgoeddossiers, die vanaf de bekendmaking van dit reglement kunnen worden aangevraagd via het Vastgoedinformatieplatform. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "f0ac6bf0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Retributiereglement vastgoedinformatie voor opzoekingen via het Vastgoedinformatieplatform: vaststelling" .
+

@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/cfac9fe0-dda5-4de0-b1c2-39b27f3f80f1> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0ee02025-5d9c-4796-9dd6-9f38172fd725>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/333c870c-3f92-4939-b448-28d9c05e757c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ebad252-450b-40d8-ad97-e286160d9935> ;
+    ns2:geplandeStart "2025-07-15T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/18d97a28-d07b-4de7-a6c3-f5f4c34afe5a> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "b9a9e1e7-accf-52f5-aa2c-05163e12f134" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45, 9920 Lovendegem" ;
+    prov:startedAtTime "2025-07-15T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8ebad252-450b-40d8-ad97-e286160d9935> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/333c870c-3f92-4939-b448-28d9c05e757c> ;
+    ns2:openbaar false ;
+    ns1:uuid "cd41467e-e4ee-5e29-9dae-51ed033df1c0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ebad252-450b-40d8-ad97-e286160d9935> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8ebad252-450b-40d8-ad97-e286160d9935> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8ebad252-450b-40d8-ad97-e286160d9935> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 8 augustus 2025 10.00 uur tot en met 10 augustus 10.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Uhlsportcup & jeugdtornooi - Koninklijke Sportkring De Jeugd Lovendegem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 15 juli 2025 over de aanvraag evenement Uhlsportcup & jeugdtornooi - Koninklijke Sportkring De Jeugd Lovendegem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Thomas De Craene, namens Koninklijke Sportkring De Jeugd Lovendegem organiseert 'Uhlsportcup & jeugdtornooi' van 8 augustus 2025 10.00 uur tot en met 10 augustus 2025 10.00 uur.Er werd op 21 mei 2025 een aanvraag ingediend door Thomas De Craene, namens Koninklijke Sportkring De Jeugd Lovendegem om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisator per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "063c467e-c5c6-5586-88c2-0c07ed761a50" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Uhlsportcup & Jeugdtornooi van 8 augustus 2025 10.00 uur tot en met 10 augustus 2025 10.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod in Sportstraat, vanaf kruispunt met Molendreef tot toegang sporthal 
+                                        Stilstaan- en parkeerverbod in Tennisstraat, tussen Sportstraat en Warandestraat 
+                                        Toelating tot parkeren op de middenberm in Tennisstraat 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                        Borden E3 
+                                        Borden E9b en bestaande parkeerverbodsborden worden afgedekt 
+                                     
+                                      
+                                    Artikel 3 
+                                    De organisatie plaatst de nodige waarschuwingsborden en voorziet stewards die controles uitvoeren in de omliggende straten om foutparkeren op bermen tegen te gaan. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8ebad252-450b-40d8-ad97-e286160d9935> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ebad252-450b-40d8-ad97-e286160d9935> a ns2:Agendapunt ;
+    ns1:uuid "31b9cf47-adc3-5aad-a180-712aac6aad13" .
+

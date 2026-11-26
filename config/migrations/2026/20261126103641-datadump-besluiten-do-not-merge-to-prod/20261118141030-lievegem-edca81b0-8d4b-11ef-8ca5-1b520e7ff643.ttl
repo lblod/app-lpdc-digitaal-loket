@@ -1,0 +1,130 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/9521dea5-31f4-4bb4-bc44-087899d3c0bd> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/30f3f8f5-b7c4-4f30-ba86-1c38be1f30f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3df9afb1-8386-4705-bcff-62b323d08f0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5c6bc86b-cd11-4d19-aaaf-fac80b4a54e4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/60d96337-cc83-4989-9408-bc19594476be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76115cd7-7143-48fd-89a1-6beb0c73090e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/79de3e84-6123-43d3-8a8a-84b3e1878996>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85c99b89-adf2-43ee-9312-1059410dba4a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/928370a2-86c4-4e59-a30e-5e777535a11a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a53c0c7b-03a9-493b-a1aa-78a63ee12f16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab91cddc-68d0-46fd-b19e-11d466cc758d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae6a9c92-dce9-42aa-9e6c-ac7ed5b32b69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6af2315-1c94-45e0-a0aa-142acaa20587>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cc62f7c2-3a15-4d8b-8103-e69dc605e357>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4663237-9099-4028-aefa-c50af9dd748d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d48685aa-fcf1-4439-83be-dc3d514483cd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ea0f7b83-f8fb-41a0-8211-da53720f4ce6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eb398e70-fe70-45c2-9b9e-bd8cac610ba2> ;
+    ns1:geplandeStart "2022-11-23T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4c793cd8-a915-4098-95a2-e9043a5114d0> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/879fd2a7-d621-4ce3-8272-392fddf5ea33> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04281ae9-1053-423a-a8cf-50f40d82016d> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "edc5edd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-11-23T21:29:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-11-23T20:03:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5c6bc86b-cd11-4d19-aaaf-fac80b4a54e4> ;
+    ns1:openbaar true ;
+    ns2:uuid "fb38c500-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/97d1f572-c502-4e40-96c8-e9d6c13abad3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/97d1f572-c502-4e40-96c8-e9d6c13abad3> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt het retributiereglement op werken aan nutsvoorzieningen op gemeentelijk openbaar domein vast. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Retributiereglement op werken aan nutsvoorzieningen op gemeentelijk openbaar domein: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepenFreddy Haegeman, schepenKim Martens, burgemeester 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur, artikel 40  §3 en 41, 14°  Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteitOmzendbrief BB 2018/02 van 20 juni 2018 betreffende de budgetten en de éénjarige meerjarenplannen 2019Het besluit van de gemeenteraad van 18 december 2019 over het retributiereglement op werken aan nutsvoorzieningen op gemeentelijk openbaar domein: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De gemeente en de burgers worden voortdurend geconfronteerd met de plaatsing van en/of onderhoud aan verschillende nutsvoorzieningen op gemeentelijk grondgebied.Deze nutsvoorzieningen vergen werkzaamheden langs de gemeentelijke wegen en hebben een impact op het openbaar domein.De gemeenten keurden de Code voor Infrastructuur- en Nutswerken langs gemeentewegen die tot doel heeft een snelle en vlotte uitvoering van de werken te bevorderen goed, teneinde de hinder en de duur van de werken tot een minimum te herleiden.Deze Code werd opgemaakt door een overlegplatform bestaande uit een delegatie van nutsbedrijven en een delegatie van de gemeenten.Op het vlak van het onderhoud en de herstellingen moeten geregeld dringende werken uitgevoerd worden die verband houden met de continuïteit van de dienstverlening.  Daarnaast zijn er een aantal werken zoals aansluitingswerken, herstellingen en andere kleine onderhoudswerken die regelmatig een impact hebben op het openbaar domein.De actualisatie van de code heeft naar aanleiding van meer aandacht voor minder hinder, meer oog voor het totaal concept en het gebruik van nieuwe e-instrumenten GIPOD, KLIP. 
+                                    Het huidige retributiereglement van Lievegem en de financiële regeling in dit verband vervalt op 31 december 2022. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Op basis van dit nieuwe retributiereglement voor de periode 2023 - 2025 worden de inkomsten als volgt geraamd : 
+                                     
+                                        Jaarbudgetrekening 2023-2025/GBB-FIN/0640-00/7060999/GEMEENTE/CBS/IP-GEEN (werken aan nutsvoorzieningen betreffende elektriciteit) : € 53.746 / jaar 
+                                        Jaarbudgetrekening 2023-2025/GBB-FIN/0650-00/7060999/GEMEENTE/CBS/IP-GEEN (werken aan nutsvoorzieningen betreffende gas) : € 15.118 / jaar 
+                                     
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt opgestuurd naar Team financiën en team mobiliteit.Een uittreksel wordt opgestuurd naar Fluvius.Bekendmaking op de website.Naar ABB via digitaal loket. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepenFreddy Haegeman, schepenKim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur, artikel 40  §3 en 41, 14°  Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteitOmzendbrief BB 2018/02 van 20 juni 2018 betreffende de budgetten en de éénjarige meerjarenplannen 2019Het besluit van de gemeenteraad van 18 december 2019 over het retributiereglement op werken aan nutsvoorzieningen op gemeentelijk openbaar domein: vaststelling 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente en de burgers worden voortdurend geconfronteerd met de plaatsing van en/of onderhoud aan verschillende nutsvoorzieningen op gemeentelijk grondgebied.Deze nutsvoorzieningen vergen werkzaamheden langs de gemeentelijke wegen en hebben een impact op het openbaar domein.De gemeenten keurden de Code voor Infrastructuur- en Nutswerken langs gemeentewegen die tot doel heeft een snelle en vlotte uitvoering van de werken te bevorderen goed, teneinde de hinder en de duur van de werken tot een minimum te herleiden.Deze Code werd opgemaakt door een overlegplatform bestaande uit een delegatie van nutsbedrijven en een delegatie van de gemeenten.Op het vlak van het onderhoud en de herstellingen moeten geregeld dringende werken uitgevoerd worden die verband houden met de continuïteit van de dienstverlening.  Daarnaast zijn er een aantal werken zoals aansluitingswerken, herstellingen en andere kleine onderhoudswerken die regelmatig een impact hebben op het openbaar domein.De actualisatie van de code heeft naar aanleiding van meer aandacht voor minder hinder, meer oog voor het totaal concept en het gebruik van nieuwe e-instrumenten GIPOD, KLIP. 
+                                                            Het huidige retributiereglement van Lievegem en de financiële regeling in dit verband vervalt op 31 december 2022. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Op basis van dit nieuwe retributiereglement voor de periode 2023 - 2025 worden de inkomsten als volgt geraamd : 
+                                                             
+                                                                Jaarbudgetrekening 2023-2025/GBB-FIN/0640-00/7060999/GEMEENTE/CBS/IP-GEEN (werken aan nutsvoorzieningen betreffende elektriciteit) : € 53.746 / jaar 
+                                                                Jaarbudgetrekening 2023-2025/GBB-FIN/0650-00/7060999/GEMEENTE/CBS/IP-GEEN (werken aan nutsvoorzieningen betreffende gas) : € 15.118 / jaar 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns2:uuid "edca81b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 - AlgemeenEr wordt aan de eigenaar van elke nutsvoorziening een retributie aangerekend op de gemeentelijke dienstverlening en het gebruik van het gemeentelijk openbaar domein naar aanleiding van werken aan permanente nutsvoorzieningen op het gemeentelijk openbaar domein, in uitvoering en met toepassing van de Code voor Infrastructuur- en Nutswerken langs gemeentewegen. Permanente nutsvoorzieningen omvatten:-    alle installaties (zoals kabels, leidingen, buizen, …), inclusief hun aanhorigheden (zoals kabel-, verdeel-, aansluit-, e.a. kasten, palen, masten, toezichts-, verbindings-, e.a. putten, …) dienstig voor het transport van elektriciteit, gas, gasachtige producten, stoom, drink-, hemel- en afvalwater, warm water, brandstof;-    alle trein- en tramsporen die zich bevinden op de openbare weg. Deze worden eveneens aanzien als nutsvoorzieningen.De retributie is niet verschuldigd indien de werken worden uitgevoerd samen met of onmiddellijk voorafgaand aan wegen- of rioleringswerken uitgevoerd door de gemeente of indien het werken zijn die uitgevoerd worden op verzoek van de gemeente.Deze retributie sluit elke andere heffing, semiheffing, of waarborgstelling in het kader van werken aan permanente nutsvoorzieningen door de gemeente uit zowel in hoofde van de distributienetbeheerder als van haar werkmaatschappij en ongeacht of voorgenoemden deze werken uitvoeren in eigen naam, dan wel laten uitvoeren door derden in naam en voor rekening van de distributienetbeheerder of de werkmaatschappij. Onderhavig retributiereglement gaat in vanaf 1 januari 2023 voor een termijn eindigend op 31 december 2025.Artikel 2  - Retributie naar aanleiding van sleufwerkenDe retributie naar aanleiding van sleufwerken is verschuldigd per dag en per meter openliggende sleuflengte voor alle sleufwerken. Zij bedraagt per meter sleuflengte voor werken in rijwegen 10,24 euro, voor werken in voetpaden 7,88 euro en voor werken in aardewegen 4,73 euro.  Op deze basisbedragen wordt een indexatie toegepast, naar analogie met de door de VREG goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus.Indexatie gebeurt aan het begin van een nieuwe cyclus van 3 jaar.Een begonnen dag geldt voor een volledige dag.Artikel 3 - Retributie voor dringende werken, aansluitingswerken, herstellingen, kleine onderhoudswerken en ter compensatie van diverse heffingen en belastingenVoor de hinder veroorzaakt door de dringende werken, aansluitingswerken, herstellingen en kleine onderhoudswerken met een sleufoppervlakte van maximum 3 m², wordt per kalenderjaar een retributie geheven van 1,00 euro per op het grondgebied van de stad/gemeente aanwezig aansluitingspunt. Ter compensatie van diverse heffingen en belastingen in hoofde van zowel de distributienetbeheerder als zijn werkmaatschappij wordt een retributie voorzien van 0,5 euro per aanwezig aansluitingspunt op het grondgebied van de stad/gemeente.Op deze basisbedragen wordt een indexatie toegepast, naar analogie met de door de VREG goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus. Deze retributies zijn verschuldigd vóór het einde van ieder jaar. In dit kader doet iedere nutsmaatschappij vóór 15 december van ieder jaar opgave van het aantal aansluitingspunten op het grondgebied van de gemeente. Artikel 4 – InningDe retributie dient te worden betaald binnen de 30 kalenderdagen na toezending van de facturen.   
+                                    Betwistingen van de factuur dienen te gebeuren binnen de dertig dagen volgend op de verzending van de factuur ter attentie van het college van burgemeester en schepenen. 
+                                      
+                                    Artikel 5 - Invordering betwiste en onbetwiste opeisbare retributie§1. Met het oog op de invordering van de onbetwiste en opeisbare retributie kan de financieel directeur een dwangbevel uitvaardigen. Een dergelijk dwangbevel wordt betekend bij gerechtsdeurwaardersexploot.§2. Met het oog op de invordering van de betwiste en opeisbare retributie kan beroep worden gedaan op de burgerrechtelijke invorderingsprocedure. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 - AlgemeenEr wordt aan de eigenaar van elke nutsvoorziening een retributie aangerekend op de gemeentelijke dienstverlening en het gebruik van het gemeentelijk openbaar domein naar aanleiding van werken aan permanente nutsvoorzieningen op het gemeentelijk openbaar domein, in uitvoering en met toepassing van de Code voor Infrastructuur- en Nutswerken langs gemeentewegen. Permanente nutsvoorzieningen omvatten:-    alle installaties (zoals kabels, leidingen, buizen, …), inclusief hun aanhorigheden (zoals kabel-, verdeel-, aansluit-, e.a. kasten, palen, masten, toezichts-, verbindings-, e.a. putten, …) dienstig voor het transport van elektriciteit, gas, gasachtige producten, stoom, drink-, hemel- en afvalwater, warm water, brandstof;-    alle trein- en tramsporen die zich bevinden op de openbare weg. Deze worden eveneens aanzien als nutsvoorzieningen.De retributie is niet verschuldigd indien de werken worden uitgevoerd samen met of onmiddellijk voorafgaand aan wegen- of rioleringswerken uitgevoerd door de gemeente of indien het werken zijn die uitgevoerd worden op verzoek van de gemeente.Deze retributie sluit elke andere heffing, semiheffing, of waarborgstelling in het kader van werken aan permanente nutsvoorzieningen door de gemeente uit zowel in hoofde van de distributienetbeheerder als van haar werkmaatschappij en ongeacht of voorgenoemden deze werken uitvoeren in eigen naam, dan wel laten uitvoeren door derden in naam en voor rekening van de distributienetbeheerder of de werkmaatschappij. Onderhavig retributiereglement gaat in vanaf 1 januari 2023 voor een termijn eindigend op 31 december 2025.Artikel 2  - Retributie naar aanleiding van sleufwerkenDe retributie naar aanleiding van sleufwerken is verschuldigd per dag en per meter openliggende sleuflengte voor alle sleufwerken. Zij bedraagt per meter sleuflengte voor werken in rijwegen 10,24 euro, voor werken in voetpaden 7,88 euro en voor werken in aardewegen 4,73 euro.  Op deze basisbedragen wordt een indexatie toegepast, naar analogie met de door de VREG goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus.Indexatie gebeurt aan het begin van een nieuwe cyclus van 3 jaar.Een begonnen dag geldt voor een volledige dag.Artikel 3 - Retributie voor dringende werken, aansluitingswerken, herstellingen, kleine onderhoudswerken en ter compensatie van diverse heffingen en belastingenVoor de hinder veroorzaakt door de dringende werken, aansluitingswerken, herstellingen en kleine onderhoudswerken met een sleufoppervlakte van maximum 3 m², wordt per kalenderjaar een retributie geheven van 1,00 euro per op het grondgebied van de stad/gemeente aanwezig aansluitingspunt. Ter compensatie van diverse heffingen en belastingen in hoofde van zowel de distributienetbeheerder als zijn werkmaatschappij wordt een retributie voorzien van 0,5 euro per aanwezig aansluitingspunt op het grondgebied van de stad/gemeente.Op deze basisbedragen wordt een indexatie toegepast, naar analogie met de door de VREG goedgekeurde niet-periodieke tarieven, zoals  jaarlijks gepubliceerd in augustus. Deze retributies zijn verschuldigd vóór het einde van ieder jaar. In dit kader doet iedere nutsmaatschappij vóór 15 december van ieder jaar opgave van het aantal aansluitingspunten op het grondgebied van de gemeente. Artikel 4 – InningDe retributie dient te worden betaald binnen de 30 kalenderdagen na toezending van de facturen.   
+                                                            Betwistingen van de factuur dienen te gebeuren binnen de dertig dagen volgend op de verzending van de factuur ter attentie van het college van burgemeester en schepenen. 
+                                                              
+                                                            Artikel 5 - Invordering betwiste en onbetwiste opeisbare retributie§1. Met het oog op de invordering van de onbetwiste en opeisbare retributie kan de financieel directeur een dwangbevel uitvaardigen. Een dergelijk dwangbevel wordt betekend bij gerechtsdeurwaardersexploot.§2. Met het oog op de invordering van de betwiste en opeisbare retributie kan beroep worden gedaan op de burgerrechtelijke invorderingsprocedure. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "fb35b7c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Retributiereglement op werken aan nutsvoorzieningen op gemeentelijk openbaar domein: vaststelling" .
+

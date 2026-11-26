@@ -1,0 +1,170 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/3eacf95f-c615-435a-afb2-4e09f6ce753d> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/164e0894-fdef-4554-a1b0-248dbd03e90c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2a9946b6-a439-4632-91c6-aa8ab0f9a05a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/57521252-5353-4002-9f0e-f81953928189>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/816c0985-4100-4fde-9b2f-9cbf37118a8e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/820acd86-7f8c-4d7b-83e8-0fa82259cc99>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/88df4786-ce31-45d8-8118-b1415cdf6dc8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/97ac18fd-8e6f-4bd2-99db-a78a89043813>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9c6b9ddb-e654-41a9-9e8a-d90702bbe137>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/eb17bf5e-9540-44b0-85f7-02f3018030a8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f5bc4eb3-166a-40c7-ad99-ffeb7b3fce4c> ;
+    ns1:geplandeStart "2026-06-08T14:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/de583c7f-afac-4106-b216-dcfb95db0a8f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "c92494d7-4d42-5cee-b621-26af04c40ab9" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-06-08T14:12:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/164e0894-fdef-4554-a1b0-248dbd03e90c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5> ;
+    ns1:openbaar false ;
+    ns2:uuid "27647737-68df-5c5a-a591-fe9c10d0ad19" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/164e0894-fdef-4554-a1b0-248dbd03e90c> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/164e0894-fdef-4554-a1b0-248dbd03e90c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/164e0894-fdef-4554-a1b0-248dbd03e90c> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de wielerwedstrijd op 14 juni 2026 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: wielerwedstrijd: Wielerwedstrijd Meerbeke - U17+E2/U23 te Woestijnstraat/Drie Egyptenbaan Gooik - 14 juni 2026" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "715e701c-f242-50b0-9961-1e5c144548ae" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van wielerwedstrijd op 14 juni 2026 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 10.00 uur tot 20.00 uur in volgende straten: 
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Drie Egyptenbaan vanaf het kruispunt met de Woestijnstraat tot de Brusselseheerweg (grondgebied Ninove) 
+                                            Woestijnstraat vanaf het kruispunt met de Drie-Egyptenbaan tot het kruispunt met Berchembos (grondgebied Roosdaal) 
+                                         
+                                     
+                                    
+                                        Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 12.00 uur tot 19.30 uur in volgende straten: 
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Drie Egyptenbaan: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Woestijnstraat tot de Brusselseheerweg (grondgebied Ninove) 
+                                            Woestijnstraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met Berchembos (grondgebied Roosdaal) tot het kruispunt met de Drie-Egyptenbaan 
+                                         
+                                     
+                                    
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 12.00 uur tot 19.30 uur op volgende kruispunten: 
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Drie-Egyptenbaan:  
+                                             
+                                                Kroonstraat / Drie-Egyptenbaan  
+                                                Bettestraat / Drie-Egyptenbaan  
+                                                Woestijnstraat / Drie-Egyptenbaan  
+                                                Ekelendriesstraat / Drie-Egyptenbaan 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Woestijnstraat:  
+                                             
+                                                Bettestraat / Woestijnstraat  
+                                                Neerstraat / Woestijnstraat  
+                                                Wijngaardbosstraat / Woestijnstraat 
+                                             
+                                         
+                                        
+                                            Verboden toegang "UITGEZONDERD PLAATSELIJK VERKEER" (Fig C3 + onderbord type IV) + doodlopende weg (fig F45) wordt ingelast van 12.00 uur tot 19.30 uur in volgende straten:
+                                         
+                                        
+                                            
+                                         
+                                         
+                                             
+                                                Stuivenbergstraat / Drie Egyptenbaan vanaf het kruispunt met de Edingsesteenweg (N285) tot het kruispunt met de Woestijnstraat (te herhalen na ieder kruispunt, kruispunt N285/Stuivenbergstraat op nadar 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Plaatsen aankondigingsbord "Geen doorgang richting Neigem op 14/06/2026 tussen 12.00 en 19.00 uur" aan kruispunt N285 / Stuivenbergstraat vanaf maandag 08/06/2026. (in berm, dag van wedstrijd op rijbaan)
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Omleiding:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Omleiding vanaf het kruispunt Edingsesteenweg (N285) via N285-N28 richting Ninove.  
+                                         
+                                        Alle vaste en mobiele verkeersinfrastructuur op het parcours dient beschermd/verwijderd te worden. Alle betrokken verkeerssignalisatie dient tevens afgedekt/verwijderd te worden. Tijdelijke signalisatie dient onmiddellijk na de wedstrijd verwijderd te worden!
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/164e0894-fdef-4554-a1b0-248dbd03e90c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/164e0894-fdef-4554-a1b0-248dbd03e90c> a ns1:Agendapunt ;
+    ns2:uuid "b3953bb9-07ae-5efa-8e74-d17a986cb8c3" .
+

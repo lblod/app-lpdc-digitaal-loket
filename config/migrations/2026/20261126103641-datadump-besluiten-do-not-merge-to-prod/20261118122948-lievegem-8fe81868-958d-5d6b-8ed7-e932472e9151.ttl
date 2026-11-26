@@ -1,0 +1,110 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/70680d7c-ace9-407e-9673-14b95deb57d9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f611c70-3a49-4734-bfb1-577166ed4967>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1586fbd9-8e00-48e9-95a4-593a86852cc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> ;
+    ns1:geplandeStart "2025-05-20T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/af7839ff-765b-4860-87bb-d70026a12e10> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "2db56d79-e448-5e76-b9a8-b2ee20555a62" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-05-20T13:31:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1586fbd9-8e00-48e9-95a4-593a86852cc9> ;
+    ns1:openbaar false ;
+    ns3:uuid "65d96e84-6385-5bb2-b461-e6ffaa07a40a" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Beke Loopt' op vrijdag 27 juni 2024 van 13.00 uur tot en met 24.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Beke Loopt' - Beke Loopt: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 20 mei 2025 over de aanvraag evenement Beke loopt: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Jelle Wylin, namens Beke Loopt, organiseert 'Beke Loopt' op vrijdag 27 juni 2025 van 17.00 uur tot en met 23.00 uur. 
+                                    Er werd op 8 maart 2025 een aanvraag ingediend door Jelle Wylin, namens Beke Loopt, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Agentschap Wegen en Verkeer 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "8fe81868-958d-5d6b-8ed7-e932472e9151" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Beke Loopt' wordt vastgesteld als volgt: 
+                                    1. op vrijdag 27 juni 2025 van 13.00 uur tot en 24.00 uur: 
+                                     
+                                        Parkeerverbod op de parking voor en rechts van de kerk, ter hoogte van Oude Staatsbaan 66, 9930 Lievegem- De Priemwegel blijft vrij voor voetgangers en fietsers 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. op vrijdag 27 juni 2025 van 17.00 uur tot en met 23.15 uur omwille van jogging:
+                                     
+                                     
+                                         
+                                            afsluiten van Oude Staatsbaan/Beke tussen Oude Staatsbaan 64 en Grote Baan, De Stijne, Paterstraat vanaf De Stijne tot vóór kruispunt met Korteboeken, De Baetsstraat en De Vijf Eiken. 
+                                            Oude Staatsbaan/Beke wordt doodlopend vanaf kruispunt met Tuimelaar 
+                                            Langeboeken wordt doodlopend vanaf kruispunt met Kruisstraat 
+                                            wegomlegging vanuit Waarschoot/Lovendegem wordt voorzien via Leeuw Van Vlaanderenlaan - Beke 
+                                            wegomlegging vanuit Zomergem wordt voorzien via Kruisstraat - Korteboeken - Tuimelaar - Oude Staatsbaan/Beke 
+                                         
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. vrijdag 27 juni 2025 van 13.00 uur tot en met 24.00 uur: 
+                                     
+                                        Borden E3 aan de parkeerplaatsen 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. vrijdag 27 juni 2025 van 17.00 uur tot en met 23.15 uur omwille van de jogging:
+                                     
+                                     
+                                         
+                                            nadar + C3 + M2 ter hoogte van Oude Staatsbaan 64, kruispunt Oude Staatsbaan-Beke/Grote Baan, vóór kruispunt Paterstraat/De Stijne, kruispunt Korteboeken/Paterstraat 
+                                            Borden C3 + 'uitgezonderd plaatselijk verkeer' + F45 op het kruispunt Oude Staatsbaan-Beke/Tuimelaar 
+                                            Borden C3 + 'uitgezonderd plaatselijk verkeer' + F45 op de kruispunten Kruisstraat/Langeboeken, Langeboeken/zijweg zonder naam (x3), Langeboeken/Langeboeken 
+                                            Borden F41 
+                                            Bord A51 + 'evenement' in Korteboeken 
+                                         
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> a ns1:Agendapunt ;
+    ns3:uuid "fbfaf9cb-3260-5ee6-af1c-f122450d7732" .
+

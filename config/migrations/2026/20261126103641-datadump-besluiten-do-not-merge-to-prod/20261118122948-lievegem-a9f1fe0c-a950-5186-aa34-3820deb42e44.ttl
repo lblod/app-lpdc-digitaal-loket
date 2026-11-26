@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5839f11c-9453-46b8-8fdc-a3c0c9153952> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0dbdc86e-8afb-4756-ae65-fd4e7de65f37>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/242e29ae-0b9a-4fa0-9a0b-4340583a3446>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/79efb925-1993-4c6f-8f85-eb289faa1035>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c27173f-759b-4a24-84c2-ead8fca60314>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e01ab31-05c9-47fc-9031-38954954c8bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/90e936b3-ae6c-4a35-aff6-48edea1da3b4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d97f750f-42f1-4636-aa28-20234af76186> ;
+    ns1:geplandeStart "2026-07-07T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e4f3b4e7-0006-42a7-947a-a4a9936f07ed> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "d5bdc640-4713-5bf7-9181-693207719034" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-07-07T13:46:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7c27173f-759b-4a24-84c2-ead8fca60314> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/90e936b3-ae6c-4a35-aff6-48edea1da3b4> ;
+    ns1:openbaar false ;
+    ns3:uuid "7e4e0ee2-56d8-534f-9fb5-40fd118cd6af" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c27173f-759b-4a24-84c2-ead8fca60314> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7c27173f-759b-4a24-84c2-ead8fca60314> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7c27173f-759b-4a24-84c2-ead8fca60314> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement op het wegverkeer wordt als volgt vastgesteld voor de periode van 8 juli 2026 tot en met 30 september 2026: 
+                                                             
+                                                                parkeerplaatsen die voorbehouden zijn voor het opladen van elektrische personenwagens op de volgende locaties: Parking Huis van Lievegem: 5 plaatsen 
+                                                                parkeerplaatsen die voorbehouden zijn voor het opladen van elektrische deelpersonenwagens op de volgende locaties: Parking Huis van Lievegem: 1 plaats 
+                                                                de parkeerplaats voorbehouden voor het opladen van elektrische deelpersonenwagens op de parking 'de dreef' wordt opgeheven vanaf 8 juli 2026 
+                                                             
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement - parkeerplaatsen voorbehouden voor het opladen van elektrische personenwagens en deelwagen - Parking Huis van Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van de gemeenteraad van 23 oktober 2024: Aanvullend reglement op het verkeer - parkeerplaatsen voorbehouden voor het opladen van elektrische personenwagens - aanpassing: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Op de parking 'Parking Huis van Lievegem' worden eind juli 2026 de laadpalen in dienst gesteld. Voor deze laadpalen moet een aanvullend reglement worden opgemaakt zodat het parkeren op deze plaatsen wordt voorbehouden aan elektrische voertuigen en waarbij één plaats wordt gereserveerd voor de elektrische deelwagen. De goedkeuring van dit aanvullend reglement zal worden voorgelegd aan de gemeenteraad op 17 september 2026. In afwachting van deze beslissing zal het parkeren op die locatie geregeld worden via dit tijdelijk politiereglement. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                 
+                            """@nl ;
+    ns3:uuid "a9f1fe0c-a950-5186-aa34-3820deb42e44" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het college van burgemeester en schepenen beslist volgend tijdelijk politiereglement op het wegverkeer vast te stellen van 8 juli tot en met 30 september 2026: parkeerplaatsen die voorbehouden zijn voor het opladen van elektrische personenwagens op de volgende locaties: Parking Huis van Lievegem: 5 plaatsen 
+                                    Artikel 2 
+                                    De verkeersmaatregel zoals vermeld in artikel 1 wordt als volgt gesignaleerd: verkeersbord E9a met een onderbord voorzien van een symbool “elektrische personenwagen” 
+                                    Artikel 3 
+                                    Het college van burgemeester en schepenen beslist volgend tijdelijk politiereglement op het wegverkeer vast te stellen van 8 juli 2026 tot en met 30 september 2026: parkeerplaatsen die voorbehouden zijn voor het opladen van elektrische deelpersonenwagens op de volgende locaties: Parking Huis van Lievegem: 1 plaats 
+                                    Artikel 4 
+                                    De verkeersmaatregel zoals vermeld in artikel 3 wordt als volgt gesignaleerd: verkeersbord E9a met een onderbord voorzien van een symbool “elektrische personenwagen + autodelen” 
+                                    Artikel 5 
+                                    De parkeerplaats voorbehouden voor het opladen van elektrische deelpersonenwagens op de parking 'de dreef' wordt opgeheven vanaf 8 juli 2026. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7c27173f-759b-4a24-84c2-ead8fca60314> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c27173f-759b-4a24-84c2-ead8fca60314> a ns1:Agendapunt ;
+    ns3:uuid "9a8a6b7b-5eb5-55be-a84c-a0d9e825535b" .
+

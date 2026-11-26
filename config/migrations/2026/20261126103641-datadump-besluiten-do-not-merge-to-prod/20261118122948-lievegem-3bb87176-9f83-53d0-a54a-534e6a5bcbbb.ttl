@@ -1,0 +1,74 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/0ca3449a-f256-4aad-bad1-eccc26164e1e> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/324b8c61-5508-43c5-aac5-680e72028a3c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6b3d3489-e857-49d2-aa75-11acd8d44591>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> ;
+    ns3:geplandeStart "2025-07-22T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/18c2d4dd-12e4-4ed6-852f-18ab3ff042ba> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "86f80d74-54c6-5d8a-9a32-4f8b7aae8515" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-07-22T13:34:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> ;
+    ns3:openbaar false ;
+    ns1:uuid "bf6eb0eb-4765-5271-b1ac-aa9e67a47c80" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/884248bb-ea06-40bd-a294-a02e43eb4525> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/884248bb-ea06-40bd-a294-a02e43eb4525> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van Strapdag GBS Lievegem - Vinderhoute op 19 september 2025 van 9.00 uur tot en met 15.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van Strapdag - GBS Lievegem - Vinderhoute: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 22 juli 2025 over de aanvraag evenement Strapdag - GBS Lievegem - Vinderhoute: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Lode Wytynck, namens GBS Lievegem - Vinderhoute, organiseert 'Strapdag GBS Lievegem - Vinderhoute' op 19 september 2025 van 9.00 uur tot en met 15.00 uur.Er werd op 13 juni 2025 een aanvraag ingediend door Lode Wytynck, namens GBS Lievegem - Vinderhoute, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "3bb87176-9f83-53d0-a54a-534e6a5bcbbb" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement van 'Strapdag GBS Lievegem - Vinderhoute' op 19 september 2025 van 9.00 uur tot en met 15.00 uur wordt vastgesteld als volgt: 
+                                    1. Stilstaan- en parkeerverbod vanaf oprit Vredesdreef 18 tot net voor oprit Vredesdreef 24, 9921 Lievegem2. Afsluiten van de rijweg tussen Vredesdreef 18 en oprit Vredesdreef 24, 9921 Lievegem3. Wegomlegging via Dorsweg - Drongense Steenweg - Schouwbroekstraat en omgekeerd 
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Borden E32. - Nadar + C3 aan beide zijden van de af te sluiten zone tussen oprit Vredesdreef 18 en net voor oprit Vredesdreef 24, 9921 Lievegem 
+                                        - Nadar + C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45 op de kruispunten Dorsweg/Vredesdreef en Schouwbroekstraat/Vredesdreef3. Borden F41 op de kruispunten Dorsweg/Vredesdreef, Dorsweg/Drongense Steenweg, Drongense Steenweg/Schouwbroekstraat en Schouwbroekstraat/Vredesdreef 
+                                     
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden en terug bij aanvang en einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525> a ns3:Agendapunt ;
+    ns1:uuid "f7db1eb1-c5b4-567a-b460-832e58db661b" .
+

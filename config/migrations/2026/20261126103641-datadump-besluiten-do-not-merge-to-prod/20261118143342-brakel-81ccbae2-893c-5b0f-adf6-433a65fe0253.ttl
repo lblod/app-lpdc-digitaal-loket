@@ -1,0 +1,322 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5afd0928-c253-41e7-af39-ad98c34d0fcd> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/002d8258-6db2-4643-a230-ddf6d2066d93>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/00458c40-2fd2-4635-9996-c16fc09d86de>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0534f6b0-745e-434b-8f38-2ad72c4cb80d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/078ec042-d47a-4fc0-82da-50f46147e73c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0cdbf2bc-91e4-4a45-bfd2-5943d289ec76>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/242194c0-d3e8-4741-8206-cc6e072e32ad>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3a5be618-36f2-499e-8277-3b5f62c98b6d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/46efa108-fdfa-49b1-a9a2-f8c1004c8050>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/48aeb379-fd0b-4380-a05f-7cc158cda529>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6ed8c030-c48b-4f7b-b1fc-bace368e9370>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/96c450d6-43b8-4891-9271-77d677ff27fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a1140b3d-0866-460c-9163-c182c0184407>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/b1a42438-502b-4e38-a65b-9f8eb5ba88b9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e0961336-2398-4d65-ac65-c04960b14198>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e6f0060e-4b07-43a1-a36a-2bfecc36576b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f2579736-bcbe-4cc0-9f35-29b4a7c306ef>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fd53c75d-262b-42cb-b3d1-1d37f91eade2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/ff088b72-2ba3-41d9-b9a1-3f27ec835e4b> ;
+    ns1:geplandeStart "2025-04-07T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/86608a14-4d26-4661-b33f-52f512590e7f> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/481c036d-38d7-4134-80ac-2d50bc0ddac5> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/5843b39f-f9e0-4378-b098-f415daf495f6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "620e2014-dae6-54b7-8788-24fcdb42159f" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-04-07T19:57:00+02:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b1a42438-502b-4e38-a65b-9f8eb5ba88b9> ;
+    ns1:openbaar true ;
+    ns2:uuid "5420dfdc-e3fa-5138-ba9e-b8e45ec5c51f" ;
+    dcterms:description """ 
+                             
+                                De organisatie van een gemeentelijke speelpleinwerking. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                De organisatie van een gemeentelijke speelpleinwerking. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/552fc061-503c-4c21-b2c9-5764af6fe8e9> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/552fc061-503c-4c21-b2c9-5764af6fe8e9> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/a8486fa3-6375-494d-aa48-e34289b87d5b> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Huishoudelijke reglement en afsprakennota gemeentelijke speelpleinwerking Brakel." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Decreet van 22 december 2017 over het lokaal bestuur en latere wijzigingen 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Artikel 1:Het huishoudelijk reglement betreffende de gemeentelijke speelpleinwerking wordt vastgesteld, zoals hieronder opgenomen. 
+                                    HUISHOUDELIJK REGLEMENT OP DE GEMEENTELIJKE SPEELPLEINWERKING 
+                                    Artikel 1: De gemeentelijke speelpleinwerking Brakel wordt georganiseerd door de gemeente Brakel. 
+                                    Artikel 2: De gemeentelijke speelpleinwerking gaat door in de gemeentelijke basisschool. 
+                                    Artikel 3 De speelpleinwerking gaat door op werkdagen in de maanden juli en augustus.  
+                                    De exacte openingsperiodes worden elk jaar vastgesteld door het college van burgemeester en schepenen. 
+                                    Artikel 4: De gemeentelijke speelpleinwerking wordt georganiseerd voor kinderen tussen 6 en 12 jaar. 
+                                    Artikel 5: Begeleiding 
+                                    Alle animatoren zijn minstens 16 jaar op het moment dat ze als animator actief zijn voor de gemeente. De taken van elke animator zijn (niet-limitatief): de kinderen te begeleiden, te animeren en hen een onvergetelijke speelpleindag te bezorgen. Andere functies naast de animator zijn:  
+                                     
+                                         
+                                             
+                                                 
+                                                     
+                                                        De hulpanimator 
+                                                      
+                                                 Deze animator heeft (nog) geen attest in het jeugdwerk maar komt als hulp meewerken op het speelplein.   
+                                             
+                                             
+                                                 
+                                                     
+                                                        De stagiair 
+                                                      
+                                                 Deze animator heeft een cursus gevolgd in het jeugdwerk en komt zijn/haar stage doen op het speelplein. De animator wordt beoordeeld door de hoofdanimator en het hele monitorenteam.   
+                                             
+                                             
+                                                 
+                                                     
+                                                        De animator 
+                                                      
+                                                 Deze animator heeft zijn stage succesvol volbracht en is dus in het bezit van het attest ‘Animator in het jeugdwerk’. Hij/zij is verantwoordelijk voor het organiseren en uitvoeren van bepaalde activiteiten met de kinderen. Hij/zij is dan ook het eerste aanspreekpunt voor de kinderen en de ouders.   
+                                             
+                                             
+                                                 
+                                                     
+                                                        De hoofdanimator 
+                                                      
+                                                 Deze animator is 18 jaar of ouder en is het bezit van een attest ‘Hoofdanimator in het jeugdwerk’. Deze animator heeft dus een speciale cursus gevolgd om hoofdanimator te worden en heeft zijn stage hierin succesvol volbracht. Bovendien heeft deze persoon reeds ervaring binnen het speelpleinwerk.  Wat is de taak van de hoofdanimator? Hij/zij zorgt ervoor dat de weekplanning goed georganiseerd is en dat alles vlot verloopt. De hoofdanimator beoordeelt ook de stagiairs en heeft de eindverantwoordelijkheid over de week. Hij/zij is daarnaast het eerste aanspreekpunt voor animatoren indien er vragen of problemen zijn.  
+                                             
+                                         
+                                     
+                                    De verloningen worden elk jaar vastgesteld door het college van burgemeester en schepenen. 
+                                    Artikel 6 Inschrijven kan via de gemeentelijke website (www.brakel.be). 
+                                    Om de veiligheid en gezelligheid voor kinderen te garanderen wordt een maximum van 50 kinderen per dag ingesteld. 
+                                    Het aantal toegelaten kinderen hangt af van het aantal beschikbare animatoren. 
+                                    Het is mogelijk een kind de dag zelf nog in te schrijven - indien nog beschikbare plaatsen - op het speelplein zelf en daar cash te betalen. 
+                                    De prijzen zijn vastgelegd in het algemeen retributiereglement. 
+                                    Artikel 7: Dagindeling. 
+                                     
+                                         
+                                             
+                                                 8 uur – 9 uur  
+                                                 De kinderen komen aan en mogen vrij spelen.  
+                                             
+                                             
+                                                 9 uur – 12 uur  
+                                                 Om 9 uur gaan de eerste activiteiten met de animatoren van start. Deze duren tot 12 uur, met een pauze om 10 uur waar de kinderen een tienuurtje (koekje, drankje of een stuk fruit) krijgen.  
+                                             
+                                             
+                                                 12 uur – 13 uur  
+                                                 Middagmaal. Nadat de kinderen klaar zijn met eten, kunnen ze nog even vrij spelen.  
+                                             
+                                             
+                                                 13 uur – 16 uur  
+                                                 Om 13 uur start de tweede ronde aan activiteiten met animatoren. Deze duren tot 16 uur. Daarna krijgen de kinderen een vieruurtje.  
+                                             
+                                             
+                                                 16 uur – 17 uur  
+                                                 Vrij spel. Ouders komen hun kind(eren) ophalen. Iedereen is moe maar voldaan van een super dagje speelplein!   
+                                             
+                                         
+                                     
+                                    In functie van een goed verloop van de activiteiten is het niet mogelijk om kinderen tijdens de activiteiten af te zetten of op te halen. 
+                                    Artikel 8: Indien er uitstappen met een bus worden gemaakt, wordt dit op voorhand gecommuniceerd. Op een uitstap kunnen de uren van de dagindeling afwijken. 
+                                    Artikel 9: Afhankelijk van de dag en het weer kan een speelpleindag volgende activiteiten bevatten (niet-limitatief): 
+                                     
+                                         
+                                            Knutsel- of kookactiviteiten 
+                                            Groot geleid spel 
+                                            Keuzeactiviteit waarbij de kinderen uit verschillende mogelijkheden kunnen kiezen, bijvoorbeeld dansen, voetbal, knutselen,… 
+                                            Rustige activiteiten zoals een film kijken 
+                                            Spel op de Rijdt 
+                                         
+                                     
+                                    Artikel 10: Ziekte en ongevallen 
+                                    Indien een kind in de loop van de dag ziek wordt, wordt contact genomen met de ouders in functie van het zoeken naar een passende oplossing. Wanneer de ouders niet bereikbaar zijn of in het geval van hoogdringendheid, wordt beroep gedaan op een arts uit de buurt. Indien er medische kosten moeten gemaakt worden om het kind de juiste zorgen te geven, vallen deze ten laste van de ouders. 
+                                    Bij een ongeval wordt een arts of de spoedafdeling van het ziekenhuis geraadpleegd. De ouders worden verwittigd en vullen een verzekeringsformulier voor ongevalsaangifte in. 
+                                    Artikel 11 Verzekering en aansprakelijkheid 
+                                    De gemeentelijke speelpleinwerking heeft een verzekering ‘burgerlijke aansprakelijkheid’ afgesloten ten gunste van de aanwezige vrijwilligers en kinderen. Dit betekent dat elk kind en elke animator verzekerd is voor burgerlijke aansprakelijkheid, rechtsbijstand en lichamelijk ongeval. En dit vanaf het ogenblik dat het kind ingeschreven en op het speelplein aanwezig is. Ook wanneer er een uitstap georganiseerd wordt, is elk kind en elke animator verzekerd. 
+                                    De verplaatsing van en naar het speelplein is niet verzekerd. 
+                                    De gemeentelijke speelpleinwerking is ook niet verantwoordelijk voor verlies en/of schade van persoonlijke voorwerpen. Deze zijn niet verzekerd. Kostbare spullen worden niet meegebracht naar de gemeentelijke speelpleinwerking. 
+                                    Wanneer kinderen met opzet schade toebrengen aan ons materiaal of aan andere kinderen, worden de kosten aangerekend aan de ouders. 
+                                    Artikel 12 Portretrecht 
+                                    Bij ondertekening van de gegevensfiche verklaren de ouders akkoord te gaan met het gebruik van foto’s van de kinderen. Deze foto’s worden enkel voor speelpleindoeleinden gebruikt (het maken van folders, publicatie en promotie op de website, Facebook,…). Indien er bezwaar tegen is, vragen wij aan de ouders ons hierover te informeren en dan houden wij er rekening mee. 
+                                    Artikel 2: De afsprakennota betreffende de gemeentelijke speelpleinwerking wordt vastgesteld, zoals hieronder opgenomen. 
+                                    AFSPRAKENNOTA GEMEENTELIJKE SPEELPLEINWERKING 
+                                    Mogen wij vragen dat de kinderen hun eigen (technologisch) speelgoed, zoals gsm’s, Nintendo‘s, iPad’s, skateboards en dergelijke, thuis laten. Wij zijn in de eerste plaats een speelplein waar de kinderen horen samen te spelen en niet alleen in een hoekje kruipen met hun digitale vriend.  Daarnaast zijn wij ook niet verantwoordelijk voor eventuele schade of verlies. Waardevolle voorwerpen riskeren immers kapot te gaan tijdens het spelen. 
+                                    Wanneer wij zien dat er een kind toch technologisch speelgoed meebrengt naar het speelplein, zullen wij dit bijhouden tot de dag voorbij is. 
+                                    Op het speelplein spelen wij graag buiten, in het gras, in het zonnetje,… Mogen wij vragen de kinderen steeds in de gepaste speelkleren af te zetten. Vuile speelkledij op het einde van de dag betekent dat wij GOED GESPEELD hebben. 
+                                    Bij mooi weer spelen we buiten. Daarom vragen wij om de kinderen ’s morgens in te smeren. Ook op het speelplein is er zonnecrème om dikke lagen te smeren. Een pet of hoedje tegen de zon helpt zeker ook. 
+                                    Bij warm weer spelen we al eens met water. Dus zwemkledij / reservekledij en een handdoek zijn welkom. 
+                                    Ook is het al eens moeilijk om kleren / rugzakken uit elkaar te houden. Schrijf steeds de naam in de kleren van je kind. 
+                                    Wanneer u uw kind komt halen, kan het al eens gebeuren dat u een tikkeltje gehaast bent. Bijna te laat voor de voetbaltraining of voor een andere afspraak. Belangrijk is wel dat u bij het weggaan niet vergeet onze aanwezigheidslijst af te tekenen. Zo kunnen wij een goed overzicht houden op welke kinderen al naar huis zijn en welke nog op het speelplein zijn. 
+                                    Mogen wij u vragen dat, wanneer u de toestemming geeft aan uw kind om het speelplein op zelfstandige basis te verlaten, u ons hiervan een schriftelijke toestemming bezorgt. Wij kunnen geen kinderen individueel laten vertrekken zonder deze toestemming. 
+                                    Mogen wij u vragen indien u kind niet op voorhand is ingeschreven op de website van Brakel een gegevensfiche in te vullen en af te geven aan een animator bij het begin dat uw kind naar het speelplein komt. 
+                                    Automatische akkoordverklaring? 
+                                    Door uw kind in te schrijven op het speelplein verklaart u zich automatisch akkoord met het huishoudelijk reglement en deze afsprakennota. 
+                                    Wij, maar ook u, kan in alle gevallen beroep doen op dit reglement via de gemeentelijke website www.brakel.be 
+                                    Bemerkingen en vragen 
+                                    Voor vragen of bemerkingen kunt u steeds terecht bij de jeugdambtenaar. Maar aarzel niet om de animatoren zelf aan te spreken, zij kennen uw kind immers het beste. 
+                                    U kan ons ook altijd op de hoogte brengen van belangrijke zaken of bemerkingen door een telefoontje, via onze facebook-pagina/website of via een gesprek. Wij bekijken dit zeker samen met onze ploeg en zoeken naar een oplossing/verbetering. Wij staan ten alle tijde open voor constructieve feedback en dialoog! 
+                                    Artikel 3, §1 Het huishoudelijk reglement treedt in werking vanaf 1 mei 2025. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet van 22 december 2017 over het lokaal bestuur en latere wijzigingen 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Artikel 1:Het huishoudelijk reglement betreffende de gemeentelijke speelpleinwerking wordt vastgesteld, zoals hieronder opgenomen. 
+                                                                    HUISHOUDELIJK REGLEMENT OP DE GEMEENTELIJKE SPEELPLEINWERKING 
+                                                                    Artikel 1: De gemeentelijke speelpleinwerking Brakel wordt georganiseerd door de gemeente Brakel. 
+                                                                    Artikel 2: De gemeentelijke speelpleinwerking gaat door in de gemeentelijke basisschool. 
+                                                                    Artikel 3 De speelpleinwerking gaat door op werkdagen in de maanden juli en augustus.  
+                                                                    De exacte openingsperiodes worden elk jaar vastgesteld door het college van burgemeester en schepenen. 
+                                                                    Artikel 4: De gemeentelijke speelpleinwerking wordt georganiseerd voor kinderen tussen 6 en 12 jaar. 
+                                                                    Artikel 5: Begeleiding 
+                                                                    Alle animatoren zijn minstens 16 jaar op het moment dat ze als animator actief zijn voor de gemeente. De taken van elke animator zijn (niet-limitatief): de kinderen te begeleiden, te animeren en hen een onvergetelijke speelpleindag te bezorgen. Andere functies naast de animator zijn:  
+                                                                     
+                                                                         
+                                                                             
+                                                                                 
+                                                                                     
+                                                                                        De hulpanimator 
+                                                                                      
+                                                                                 Deze animator heeft (nog) geen attest in het jeugdwerk maar komt als hulp meewerken op het speelplein.   
+                                                                             
+                                                                             
+                                                                                 
+                                                                                     
+                                                                                        De stagiair 
+                                                                                      
+                                                                                 Deze animator heeft een cursus gevolgd in het jeugdwerk en komt zijn/haar stage doen op het speelplein. De animator wordt beoordeeld door de hoofdanimator en het hele monitorenteam.   
+                                                                             
+                                                                             
+                                                                                 
+                                                                                     
+                                                                                        De animator 
+                                                                                      
+                                                                                 Deze animator heeft zijn stage succesvol volbracht en is dus in het bezit van het attest ‘Animator in het jeugdwerk’. Hij/zij is verantwoordelijk voor het organiseren en uitvoeren van bepaalde activiteiten met de kinderen. Hij/zij is dan ook het eerste aanspreekpunt voor de kinderen en de ouders.   
+                                                                             
+                                                                             
+                                                                                 
+                                                                                     
+                                                                                        De hoofdanimator 
+                                                                                      
+                                                                                 Deze animator is 18 jaar of ouder en is het bezit van een attest ‘Hoofdanimator in het jeugdwerk’. Deze animator heeft dus een speciale cursus gevolgd om hoofdanimator te worden en heeft zijn stage hierin succesvol volbracht. Bovendien heeft deze persoon reeds ervaring binnen het speelpleinwerk.  Wat is de taak van de hoofdanimator? Hij/zij zorgt ervoor dat de weekplanning goed georganiseerd is en dat alles vlot verloopt. De hoofdanimator beoordeelt ook de stagiairs en heeft de eindverantwoordelijkheid over de week. Hij/zij is daarnaast het eerste aanspreekpunt voor animatoren indien er vragen of problemen zijn.  
+                                                                             
+                                                                         
+                                                                     
+                                                                    De verloningen worden elk jaar vastgesteld door het college van burgemeester en schepenen. 
+                                                                    Artikel 6 Inschrijven kan via de gemeentelijke website (www.brakel.be). 
+                                                                    Om de veiligheid en gezelligheid voor kinderen te garanderen wordt een maximum van 50 kinderen per dag ingesteld. 
+                                                                    Het aantal toegelaten kinderen hangt af van het aantal beschikbare animatoren. 
+                                                                    Het is mogelijk een kind de dag zelf nog in te schrijven - indien nog beschikbare plaatsen - op het speelplein zelf en daar cash te betalen. 
+                                                                    De prijzen zijn vastgelegd in het algemeen retributiereglement. 
+                                                                    Artikel 7: Dagindeling. 
+                                                                     
+                                                                         
+                                                                             
+                                                                                 8 uur – 9 uur  
+                                                                                 De kinderen komen aan en mogen vrij spelen.  
+                                                                             
+                                                                             
+                                                                                 9 uur – 12 uur  
+                                                                                 Om 9 uur gaan de eerste activiteiten met de animatoren van start. Deze duren tot 12 uur, met een pauze om 10 uur waar de kinderen een tienuurtje (koekje, drankje of een stuk fruit) krijgen.  
+                                                                             
+                                                                             
+                                                                                 12 uur – 13 uur  
+                                                                                 Middagmaal. Nadat de kinderen klaar zijn met eten, kunnen ze nog even vrij spelen.  
+                                                                             
+                                                                             
+                                                                                 13 uur – 16 uur  
+                                                                                 Om 13 uur start de tweede ronde aan activiteiten met animatoren. Deze duren tot 16 uur. Daarna krijgen de kinderen een vieruurtje.  
+                                                                             
+                                                                             
+                                                                                 16 uur – 17 uur  
+                                                                                 Vrij spel. Ouders komen hun kind(eren) ophalen. Iedereen is moe maar voldaan van een super dagje speelplein!   
+                                                                             
+                                                                         
+                                                                     
+                                                                    In functie van een goed verloop van de activiteiten is het niet mogelijk om kinderen tijdens de activiteiten af te zetten of op te halen. 
+                                                                    Artikel 8: Indien er uitstappen met een bus worden gemaakt, wordt dit op voorhand gecommuniceerd. Op een uitstap kunnen de uren van de dagindeling afwijken. 
+                                                                    Artikel 9: Afhankelijk van de dag en het weer kan een speelpleindag volgende activiteiten bevatten (niet-limitatief): 
+                                                                     
+                                                                         
+                                                                            Knutsel- of kookactiviteiten 
+                                                                            Groot geleid spel 
+                                                                            Keuzeactiviteit waarbij de kinderen uit verschillende mogelijkheden kunnen kiezen, bijvoorbeeld dansen, voetbal, knutselen,… 
+                                                                            Rustige activiteiten zoals een film kijken 
+                                                                            Spel op de Rijdt 
+                                                                         
+                                                                     
+                                                                    Artikel 10: Ziekte en ongevallen 
+                                                                    Indien een kind in de loop van de dag ziek wordt, wordt contact genomen met de ouders in functie van het zoeken naar een passende oplossing. Wanneer de ouders niet bereikbaar zijn of in het geval van hoogdringendheid, wordt beroep gedaan op een arts uit de buurt. Indien er medische kosten moeten gemaakt worden om het kind de juiste zorgen te geven, vallen deze ten laste van de ouders. 
+                                                                    Bij een ongeval wordt een arts of de spoedafdeling van het ziekenhuis geraadpleegd. De ouders worden verwittigd en vullen een verzekeringsformulier voor ongevalsaangifte in. 
+                                                                    Artikel 11 Verzekering en aansprakelijkheid 
+                                                                    De gemeentelijke speelpleinwerking heeft een verzekering ‘burgerlijke aansprakelijkheid’ afgesloten ten gunste van de aanwezige vrijwilligers en kinderen. Dit betekent dat elk kind en elke animator verzekerd is voor burgerlijke aansprakelijkheid, rechtsbijstand en lichamelijk ongeval. En dit vanaf het ogenblik dat het kind ingeschreven en op het speelplein aanwezig is. Ook wanneer er een uitstap georganiseerd wordt, is elk kind en elke animator verzekerd. 
+                                                                    De verplaatsing van en naar het speelplein is niet verzekerd. 
+                                                                    De gemeentelijke speelpleinwerking is ook niet verantwoordelijk voor verlies en/of schade van persoonlijke voorwerpen. Deze zijn niet verzekerd. Kostbare spullen worden niet meegebracht naar de gemeentelijke speelpleinwerking. 
+                                                                    Wanneer kinderen met opzet schade toebrengen aan ons materiaal of aan andere kinderen, worden de kosten aangerekend aan de ouders. 
+                                                                    Artikel 12 Portretrecht 
+                                                                    Bij ondertekening van de gegevensfiche verklaren de ouders akkoord te gaan met het gebruik van foto’s van de kinderen. Deze foto’s worden enkel voor speelpleindoeleinden gebruikt (het maken van folders, publicatie en promotie op de website, Facebook,…). Indien er bezwaar tegen is, vragen wij aan de ouders ons hierover te informeren en dan houden wij er rekening mee. 
+                                                                    Artikel 2: De afsprakennota betreffende de gemeentelijke speelpleinwerking wordt vastgesteld, zoals hieronder opgenomen. 
+                                                                    AFSPRAKENNOTA GEMEENTELIJKE SPEELPLEINWERKING 
+                                                                    Mogen wij vragen dat de kinderen hun eigen (technologisch) speelgoed, zoals gsm’s, Nintendo‘s, iPad’s, skateboards en dergelijke, thuis laten. Wij zijn in de eerste plaats een speelplein waar de kinderen horen samen te spelen en niet alleen in een hoekje kruipen met hun digitale vriend.  Daarnaast zijn wij ook niet verantwoordelijk voor eventuele schade of verlies. Waardevolle voorwerpen riskeren immers kapot te gaan tijdens het spelen. 
+                                                                    Wanneer wij zien dat er een kind toch technologisch speelgoed meebrengt naar het speelplein, zullen wij dit bijhouden tot de dag voorbij is. 
+                                                                    Op het speelplein spelen wij graag buiten, in het gras, in het zonnetje,… Mogen wij vragen de kinderen steeds in de gepaste speelkleren af te zetten. Vuile speelkledij op het einde van de dag betekent dat wij GOED GESPEELD hebben. 
+                                                                    Bij mooi weer spelen we buiten. Daarom vragen wij om de kinderen ’s morgens in te smeren. Ook op het speelplein is er zonnecrème om dikke lagen te smeren. Een pet of hoedje tegen de zon helpt zeker ook. 
+                                                                    Bij warm weer spelen we al eens met water. Dus zwemkledij / reservekledij en een handdoek zijn welkom. 
+                                                                    Ook is het al eens moeilijk om kleren / rugzakken uit elkaar te houden. Schrijf steeds de naam in de kleren van je kind. 
+                                                                    Wanneer u uw kind komt halen, kan het al eens gebeuren dat u een tikkeltje gehaast bent. Bijna te laat voor de voetbaltraining of voor een andere afspraak. Belangrijk is wel dat u bij het weggaan niet vergeet onze aanwezigheidslijst af te tekenen. Zo kunnen wij een goed overzicht houden op welke kinderen al naar huis zijn en welke nog op het speelplein zijn. 
+                                                                    Mogen wij u vragen dat, wanneer u de toestemming geeft aan uw kind om het speelplein op zelfstandige basis te verlaten, u ons hiervan een schriftelijke toestemming bezorgt. Wij kunnen geen kinderen individueel laten vertrekken zonder deze toestemming. 
+                                                                    Mogen wij u vragen indien u kind niet op voorhand is ingeschreven op de website van Brakel een gegevensfiche in te vullen en af te geven aan een animator bij het begin dat uw kind naar het speelplein komt. 
+                                                                    Automatische akkoordverklaring? 
+                                                                    Door uw kind in te schrijven op het speelplein verklaart u zich automatisch akkoord met het huishoudelijk reglement en deze afsprakennota. 
+                                                                    Wij, maar ook u, kan in alle gevallen beroep doen op dit reglement via de gemeentelijke website www.brakel.be 
+                                                                    Bemerkingen en vragen 
+                                                                    Voor vragen of bemerkingen kunt u steeds terecht bij de jeugdambtenaar. Maar aarzel niet om de animatoren zelf aan te spreken, zij kennen uw kind immers het beste. 
+                                                                    U kan ons ook altijd op de hoogte brengen van belangrijke zaken of bemerkingen door een telefoontje, via onze facebook-pagina/website of via een gesprek. Wij bekijken dit zeker samen met onze ploeg en zoeken naar een oplossing/verbetering. Wij staan ten alle tijde open voor constructieve feedback en dialoog! 
+                                                                    Artikel 3, §1 Het huishoudelijk reglement treedt in werking vanaf 1 mei 2025. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "81ccbae2-893c-5b0f-adf6-433a65fe0253" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    De gemeenteraad keurt het huishoudelijk reglement en de afsprakennota goed. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    De gemeenteraad keurt het huishoudelijk reglement en de afsprakennota goed. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "6ba83af7-ff5a-5dfc-8915-7bb7ca9e145c" ;
+    dcterms:title "Huishoudelijke reglement en afsprakennota gemeentelijke speelpleinwerking Brakel." .
+

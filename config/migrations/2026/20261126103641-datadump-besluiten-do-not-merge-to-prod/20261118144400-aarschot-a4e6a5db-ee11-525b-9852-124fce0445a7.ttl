@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/zittingen/29579a16-432c-4ef0-a4e8-6d970436aa66> a ns2:Zitting ;
+    ns2:behandelt <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/cb40909c-741a-4a0a-a84a-6a7184adc940> ;
+    ns2:geplandeStart "2026-10-22T15:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://aarschot-echo.cipalschaubroeck.be/id/documenten/b27699df-aa9f-4cd8-8f66-bc9bed6e963a> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/4256fc054914087c9cf37c9e7fb35e4a614ed7b74f45c55ce39772f12c7cd9a8> ;
+    ns1:uuid "70fe7f49-f1e7-5959-b90d-8c34e0a98227" ;
+    prov:atLocation "diverse" ;
+    prov:startedAtTime "2026-10-22T15:00:00+02:00"^^xsd:dateTime .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cb40909c-741a-4a0a-a84a-6a7184adc940> a ns2:BehandelingVanAgendapunt ;
+    ns2:openbaar false ;
+    ns1:uuid "538efcd5-bab1-50f2-8f11-bfbe285f8bce" ;
+    dcterms:description """ 
+                             
+                                De burgemeester wnd. besluit het stadspark en park Elzenhof te sluiten voor het publiek op  
+                                 
+                                    vrijdag 23 oktober van 13 uur tot zaterdag 24 oktober om 8 uur ’s ochtends en  
+                                    zaterdag 24 oktober van 20 uur tot zondag 25 oktober om 12 uur ‘s middag 
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/cb40909c-741a-4a0a-a84a-6a7184adc940> ;
+    prov:generated <https://aarschot-echo.cipalschaubroeck.be/id/besluiten/cb40909c-741a-4a0a-a84a-6a7184adc940> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/besluiten/cb40909c-741a-4a0a-a84a-6a7184adc940> a ns2:Besluit ;
+    ns3:description """ 
+                                                    De burgemeester wnd. besluit het stadspark en park Elzenhof te sluiten voor het publiek op  
+                                                     
+                                                        vrijdag 23 oktober van 13 uur tot zaterdag 24 oktober om 8 uur ’s ochtends en  
+                                                        zaterdag 24 oktober van 20 uur tot zondag 25 oktober om 12 uur ‘s middag 
+                                                     
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/4256fc054914087c9cf37c9e7fb35e4a614ed7b74f45c55ce39772f12c7cd9a8> ;
+    ns3:title "Sluiting van het stadspark en park Elzenhof omwille van het aangekondigde stormweer op vrijdag 23 oktober van 13 uur tot zaterdag 24 oktober om 8 uur ’s ochtends en op zaterdag 24 oktober van 20 uur tot zondag 25 oktober om 12 uur ‘s middag" ;
+    ns2:motivering """ 
+                                 
+                                    Regelgeving 
+                                     
+                                        het decreet van 22.12.2017 over het lokaal bestuur en de bijhorende besluiten en omzendbrieven van de Vlaamse regering; 
+                                        de wet van 29.07.1991 betreffende de uitdrukkelijke motivering van bestuurshandelingen; 
+                                        de wet van 11.04.1994 betreffende de openbaarheid van bestuur; 
+                                        het bestuursdecreet van 7.12.2018; 
+                                        het Besluit van de Vlaamse Regering d.d. 30.03.2018 betreffende de beleids- en beheerscyclus van de lokale besturen; 
+                                        het decreet lokaal bestuur, artikelen 63 tot en met 67, en de artikelen 133, 134ter en 135 van de nieuwe Gemeentewet; 
+                                     
+                                 
+                                 
+                                    Feiten, context en motivering 
+                                    Het KMI voorspelt hevig stormweer, dat kan evolueren naar code geel. Er wordt wind van een uitzonderlijk hoge snelheid verwacht met felle rukwinden. Hierdoor kunnen bomen omwaaien en takken afbreken en is het uiterst gevaarlijk om parken te betreden. 
+                                    Vanaf morgenmiddag, vrijdag 23 oktober, geldt voor onze provincie dan ook waarschuwingscode geel voor wind.  
+                                 
+                            """@nl ;
+    ns1:uuid "a4e6a5db-ee11-525b-9852-124fce0445a7" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Op basis van deze overwegingen besluit de burgemeester wnd. het stadspark en park Elzenhof te sluiten voor het publiek op  
+                                     
+                                        vrijdag 23 oktober van 13 uur tot zaterdag 24 oktober om 8 uur ’s ochtends en  
+                                        zaterdag 24 oktober van 20 uur tot zondag 25 oktober om 12 uur ‘s middag. 
+                                     
+                                    Elke toegang is in die zin verboden. Bij betreding kan de stad Aarschot niet aansprakelijk gesteld worden voor eventuele schade of ongevallen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cb40909c-741a-4a0a-a84a-6a7184adc940> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/cb40909c-741a-4a0a-a84a-6a7184adc940> a ns2:Agendapunt ;
+    ns1:uuid "c4a776a9-56a2-531e-b75d-30b674f64796" .
+

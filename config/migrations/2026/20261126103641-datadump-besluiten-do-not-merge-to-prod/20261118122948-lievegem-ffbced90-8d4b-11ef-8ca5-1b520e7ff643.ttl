@@ -1,0 +1,149 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns2:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8> ;
+    ns2:openbaar true ;
+    ns1:uuid "ffbc9f70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/eeae90fe-dcc6-4351-ac06-90d9158f3671> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/eeae90fe-dcc6-4351-ac06-90d9158f3671> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/d7060f97-c417-474c-abc6-ef006cb61f41> ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de wijzigingen aan de modaliteiten goed, enerzijds voor toekenning van een cultuurtoelage aan zorginstellingen en anderzijds voor toekenning van een toelage aan handelaarsverenigingen en Horeca Meetjesland voor het organiseren van een actie ter ondersteuning van de lokale economie.  
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Coronacrisis COVID-19 - Uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 3): goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De nieuwe gemeentewet, artikel 135 § 2, 5°Het decreet lokaal bestuur van 22 december 2017, en latere wijzigingen artikel 40 §1 : onder voorbehoud van andere wettelijke of decretale bepalingen, beschikt de gemeenteraad over de volheid van bevoegdheid ten aanzien van de aangelegenheden, vermeld in artikel 2 van het Decreet over het Lokaal Bestuur; Het decreet lokaal bestuur van 22 december 2017, en latere wijzigingen artikel 40 §3 : de gemeenteraad stelt de gemeentelijke reglementen vast. Met behoud van de toepassing van de federale wetgeving in verband met de bevoegdheid van de gemeenteraad om politieverordeningen vast te stellen, kunnen de reglementen onder meer betrekking hebben op het gemeentelijk beleid, de gemeentelijke belastingen en retributies, en op het inwendige bestuur van de gemeente; Het decreet lokaal bestuur van 22 december 2017, en latere wijzigingen artikel 41 §1 23° : volgende bevoegdheden worden uitdrukkelijk aan de gemeenteraad toevertrouwd: het vaststellen van subsidiereglementen en het toekennen van nominatieve subsidies;Ministerieel besluit van 23 maart 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperken, en latere wijzigingen van 24 maart, 27 maart, 3 april, 17 april, 30 april, 8 mei, 15 mei, 27 mei, 30 mei, 2 juni en 5 juni, 30 juni, 22 augustus, 25 september, 8, 18 en 28 oktober, en 1 november 2020.Gemeenteraadsbesluit van 29 april 2020 waarin het ondersteuningsplan Lievegem n.a.v. de coronacrisis werd besproken en toegelichtGemeenteraadsbesluit van 1 juli 2020 houdende Coronacrisis COVID-19 - Collegebesluit van 16 juni 2020 over de goedkeuring van de uitvoeringsmaatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem : bekrachtigingGemeenteraadsbesluit van 18 november 2020 houdende Coronacrisis COVID-19 - collegebesluit van 27 oktober 2020 over de uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 2): bekrachtigingBesluit van het college van burgemeester en schepenen van 13 maart 2020 over de beslissingen omtrent Coronavirus - federale en bijkomende maatregelen - weerslag en uitwerking op gemeentelijke vlakBesluit van het college van burgemeester en schepenen van 18 maart 2020 over de beslissingen omtrent Coronavirus - federale maatregelen - weerslag en uitwerking op gemeentelijke vlakBesluit van het college van burgemeester en schepenen van 16 juni 2020 over de coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem: goedkeuringBesluit van het college van burgemeester en schepenen van 27 oktober 2020 over de coronacrisis COVID-19 meer bepaald de uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 2) 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Algemeen 
+                                                            Door de aanhoudende coronacrisis en de verstrengde maatregelen die sinds 19 oktober 2020 van kracht zijn, is het wenselijk om voor enkele maatregelen uit het ondersteuningsplan de modaliteiten te wijzigen.Niet-nominatieve subsidies 
+                                                            In het collegebesluit van 16 juni 2020 over de coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem: goedkeuring (zoals bekrachtigd door de gemeenteraad in zitting van 1 juli 2020), werd voorzien in een éénmalige subsidie voor sociale voorzieningen op het grondgebied van Lievegem voor het organiseren van een culturele activiteit waarbij beroep wordt gedaan op een Lievegemse artiest of culturele organisatie uit de evenementensector. Hiervoor werd een bedrag van 4.000 euro gereserveerd (vanuit het noodfonds voor de sectoren sport, cultuur en jeugd). 
+                                                            In het collegebesluit van 27 oktober 2020 over de coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (deel 2): goedkeuring (zoals bekrachtigd door de gemeenteraad in zitting van 18 november 2020), werd ter ondersteuning van de lokale economie voor elke actieve handelaarsvereniging een bijkomend krediet ter beschikking gesteld voor het organiseren van een winkelactie in de periode december 2020 – januari 2021. Hiervoor zou een gemeentelijke tussenkomst worden verleend voor de gemaakte onkosten en beperkt tot maximaal 8.000 euro (geraamde kostprijs: 32.000 euro). 
+                                                            Gezien aan de toekenning van beide subsidies voorwaarden werden gekoppeld die op heden niet meer kunnen worden nagekomen omwille van de verstrengde coronamaatregelen, wordt voorgesteld om zowel de periode van uitvoering als de deadline voor het indienen van een subsidieaanvraag voor beide steunmaatregelen op te schuiven in de tijd. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Dit besluit brengt geen bijkomende financiële impact met zich mee. 
+                                                            Wel zal een deel van de hiervoor ter beschikking gestelde middelen naderhand moeten worden hernomen in boekjaar 2021. Dit zal worden geregeld bij een eerstvolgende meerjarenplanaanpassing in 2021 eens concreet zicht is op het krediet dat hiervoor effectief opnieuw moet worden voorzien. 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "ffbced90-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            In artikel 4 van het collegebesluit van 16 juni 2020 worden de uitvoeringsmodaliteiten voor toekenning van een cultuurtoelage voor zorginstellingen gewijzigd waardoor dit artikel met betrekking tot de cultuurtoelage voor zorginstellingen als volgt wordt aangepast : 
+                                                            Als bijkomende ondersteuning voor de culturele sector beslist het college van burgemeester en schepenen om volgende subsidies toe te kennen : 
+                                                             
+                                                                Cultuurtoelage voor zorginstellingen voor het organiseren van een culturele activiteit voor hun bewoners waarbij beroep wordt gedaan op een Lievegemse artiest of culturele organisatie uit de evenementensector, onder volgende voorwaarden : 
+                                                             
+                                                             
+                                                                 
+                                                                    De aanvraag wordt ingediend per mail of brief gericht aan het college van burgemeester en schepenen tegen uiterlijk 30 juni 2021 met opgave van het bankrekeningnummer waarop de premie kan worden overgemaakt; 
+                                                                 
+                                                             
+                                                             
+                                                                 
+                                                                    Beperkt tot één aanvraag per zorginstelling en ten belope van maximaal 500 euro; 
+                                                                 
+                                                             
+                                                             
+                                                                 
+                                                                    Bewijsstuk voorleggen van de gemaakte kosten (factuur van de Lievegemse artiest of organisatie) en een korte beschrijving van de culturele activiteit (soort activiteit, datum, doelgroep).  
+                                                                 
+                                                             
+                                                            Artikel 2 
+                                                            In artikel 5 van het collegebesluit van 27 oktober 2020 worden de modaliteiten voor toekenning van een bijkomende toelage ter ondersteuning van de lokale economie gewijzigd waardoor dit artikel als volgt wordt aangepast :Inzake ondersteuning van de lokale economie beslist het college van burgemeester en schepenen om volgende bijkomende niet-nominatieve subsidie toe te kennen: 
+                                                             
+                                                                Een toelage voor de gemaakte onkosten en beperkt tot maximaal 8.000 euro voor elke actieve handelaarsvereniging voor het organiseren van een (winkel)actie in 2021, onder volgende voorwaarden: 
+                                                             
+                                                             
+                                                                 
+                                                                    Aanvraag in te dienen tegen uiterlijk 30 juni 2021 met opgave van het bankrekeningnummer waarop de toelage kan worden overgemaakt; 
+                                                                 
+                                                             
+                                                             
+                                                                 
+                                                                    Bestemd voor actieve handelaarsverenigingen in Lievegem; 
+                                                                 
+                                                             
+                                                             
+                                                                 
+                                                                    Actie kunnen voorleggen ter ondersteuning van de lokale economie; 
+                                                                 
+                                                             
+                                                             
+                                                                 
+                                                                    Na afloop van de actie de nodige bewijsstukken van de gemaakte onkosten voorleggen voor uitbetaling van de toelage. 
+                                                                 
+                                                             
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "e8065f10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Coronacrisis COVID-19 - Uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 3): goedkeuring" .
+

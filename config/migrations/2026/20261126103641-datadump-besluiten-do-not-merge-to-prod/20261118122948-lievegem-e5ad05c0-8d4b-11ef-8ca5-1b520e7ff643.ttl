@@ -1,0 +1,139 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5703eba8-de15-4461-97ae-e592ebd507e5> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/00ceab3a-06fa-4b05-a749-25a14fb89458>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0359b9ae-8505-4fd4-93d7-3f67d572305a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/127f08cd-0e46-4457-9e38-e48b8aab1f98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/136ffc0d-bb0a-4825-96f5-ce7d9ccbc3f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/15f0772d-180e-4634-9aa0-cdf149dd2b5f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/22694331-edef-4fa2-891a-f9fbd24c5c40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/298c73c0-60f2-4021-b2dc-0dce80eee130>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4d52b7c8-b9bf-4d1e-b4f5-ba8fe44284ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6c05caf7-52bc-4ee5-a4fd-cdbf70e05078>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78fd637f-7097-4041-b89f-4f824f6e13a2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82518cc2-75a2-4e0e-8a42-c669a2a5d01e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8628618f-f1d8-416b-9c6e-e1276d35422b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87152125-012a-4773-b498-c8b9320cf562>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ddc34dc-f54a-4977-9ffd-d2c22f0c9768>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1cbde80-ee7e-4ad9-b894-0076282b9d12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1ef4fea-fc00-4a8c-bcd5-89b3b69d3b4b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a2b94ff0-fae3-4359-a7bf-531b9c6ea935>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a749ecd6-c616-43f8-8459-b0f3ddf00642>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab8b3858-4ee0-4278-9647-3c3622b8dd7f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad5faac4-2765-434c-8e0c-b1f4fece0c90>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b2351ab8-74de-4ff8-a3f9-34548a06b8c5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b26c1418-dfc4-4281-a293-209d85fc0eac>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b587ffc2-19bb-4ffd-9e65-abc08cb1e7aa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b7757670-dc3b-415f-a283-380ae7cf7a87>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b8687c47-db0b-4b08-9f0f-543842d07be6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc253c99-4653-4f96-a67e-70378326f8ba>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc339857-a353-48dc-beda-c1953574463a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e57a195b-8988-49d0-a97c-4024237ffa91>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eb1078d5-3d55-4110-bdd5-122e469f28ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f181c6bf-8d6c-4e9c-b78b-8b8430bb5b2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f31eddc7-5f8c-439f-befd-a383f5648f19> ;
+    ns1:geplandeStart "2020-11-18T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/923d38b7-8381-45c8-99fc-16d55fd72cb1> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3305e0f4-32e9-4816-84cc-7a9a1754abae> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3aff381c-78e9-4fa9-aab3-37b18df4710e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e5aae2e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-11-18T21:50:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-11-18T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/15f0772d-180e-4634-9aa0-cdf149dd2b5f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b8687c47-db0b-4b08-9f0f-543842d07be6> ;
+    ns1:openbaar true ;
+    ns3:uuid "02cb3f00-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/15f0772d-180e-4634-9aa0-cdf149dd2b5f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/15f0772d-180e-4634-9aa0-cdf149dd2b5f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/15f0772d-180e-4634-9aa0-cdf149dd2b5f> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad wijzigt het aanvullend pensioenstelsel in voor zijn contractuele personeelsleden. De pensioentoelage bedraagt vanaf 2020 2,5% van het pensioengevend jaarloon en 3% vanaf 2021. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Personeel - Aanvullend pensioenstelsel voor de contractuele personeelsleden - wijziging pensioentoelage: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, artikel 41 
+                                                            Wet van 28 april 2003 betreffende de aanvullende pensioenen en het belastingstelsel van die pensioenen en van sommige aanvullende voordelen inzake sociale zekerheid 
+                                                            Sectoraal akkoord 2008-2013 voor het personeel van de lokale en provinciale besturen, afgesloten in het Vlaamse onderhandelingscomité C1 van 19 november 2008 
+                                                            Toewijzing van 29 juli 2010 van de opdracht door RSZPPO aan een samenwerking tussen Dexia Verzekeringen en Ethias in de vorm van een tijdelijke handelsvennootschap 
+                                                            Wet van 30 maart 2018 met betrekking tot het niet in aanmerking nemen van diensten gepresteerd als nietvastbenoemd personeelslid voor een pensioen van de overheidssector, tot wijziging van de individuele responsabilisering van de provinciale en lokale overheden binnen het Gesolidariseerde pensioenfonds, tot aanpassing van de reglementering inzake aanvullende pensioenen, tot wijziging van de modaliteiten van de financiering van het Gesolidariseerde pensioenfonds van de provinciale en plaatselijke besturen en tot bijkomende financiering van het Gesolidariseerde pensioenfonds van de provinciale en plaatselijke besturen 
+                                                            Beslissing van het Vlaams onderhandelingscomité C1 van 14 oktober 2018 tot goedkeuring van het kaderreglement tweede pensioenpijler contractanten van toepassing vanaf 1 januari 2019 
+                                                            Besluit van de gemeenteraad van 27 maart 2019 over Personeel - invoering aanvullend pensioenstelsel voor de contractuele personeelsleden - toetreding tot het tweede pensioenpijlerplan van de Federale Pensioendienst: goedkeuring 
+                                                            Het sectoraal akkoord lokale en provinciale besturen 2020 van 8 april 2020 
+                                                            Wet van 7 mei 2020 houdende uitzonderlijke maatregelen in het kader van de COVID-19-pandemie inzake pensioenen, aanvullende pensioenen en andere aanvullende voordelen inzake sociale zekerheid 
+                                                            Omzendbrief KB/ABB 2020/2 van 28 mei 2020 over sectoraal akkoord 2020 voor het personeel van de lokale en provinciale besturen 
+                                                            Besluit van het college van burgemeester en schepenen van 20 oktober 2020 over Personeel - Toepassing sectoraal akkoord 2020 - Ontwerp wijzigingen rechtspositieregeling: principiële goedkeuring 
+                                                            Besluit van de gemeenteraad van 18 november 2020 over Rechtspositieregeling gemeente Lievegem - Toepassing sectoraal akkoord 2020 - wijziging: goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Op 8 april 2020 werd een nieuw sectoraal akkoord voor het personeel van de lokale en provinciale besturen goedgekeurd. Dit sectoraal akkoord bestaat uit drie luiken. Eén daarvan is de verhoging van de minimale bijdragevoet tweede pensioenpijler voor het contractueel personeel. 
+                                                            Vanaf 1 januari 2020 wordt de minimale bijdragevoet van de tweede pensioenpijler voor het contractuele personeel opgetrokken naar 2,5%. De bijdragevoet van de tweede pensioenpijler bedraagt momenteel en sinds 1 januari 2019 2%. 
+                                                            Volgens de wet van 30 maart 2018 kunnen lokale besturen een korting op hun responsabiliseringsbijdrage krijgen wanneer ze een tweede pensioenpijler aan hun contractueel personeel toekennen die aan de wettelijke voorwaarden voldoet. De responsabiliseringsbijdrage is de aanvullende werkgeversbijdrage die een bestuur moet betalen als de pensioenlasten van dat bestuur van een bepaald jaar groter zijn dan de basispensioenbijdrage die het bestuur voor dat jaar betaalt. 
+                                                            Het OCMW Lievegem is voor het jaar 2019 een responsabiliseringsbijdrage verschuldigd; de gemeente nog niet. Voldoet het bestuur aan de wettelijke voorwaarden dan komt het bestuur in aanmerking voor een korting op zijn responsabiliseringsbijdrage met betrekking tot het jaar 2019. Het OCMW heeft de korting gekregen (er werd nog geen minimumpercentage opgelegd). Vanaf 2020 wordt er wel een minimumpercentage opgelegd, namelijk 2% en vanaf 1 januari 2021 minstens 3%. 
+                                                            Om die reden stelt het College voor om het sectoraal akkoord strikt toe te passen en vanaf 1 januari 2020 een pensioentoelage van 2,5% van het pensioengevend jaarloon toe te kennen en dit vanaf 1 januari 2021 te verhogen naar 3% om van een eventuele korting op de responsabiliseringsbijdrage te kunnen genieten en een boete te vermijden. Bovendien draagt dit bij tot het verkleinen van de kloof tussen een ambtenarenpensioen en een werknemerspensioen en kunnen we ons meer profileren als een aantrekkelijke werkgever. 
+                                                            Vanaf oktober 2020 wordt de pensioenbijdrage automatisch geïnd via de DMFAPPL-aangifte. Voor de periode vanaf 1 januari 2020 tot de realisatie van de minimumbijdrage van 2,5% wordt een inhaaltoelage betaald. 
+                                                            Begin juli ontving het bestuur een brief van de pensioeninstelling in verband met een recente wetswijziging (zie bijlage). De periode van tijdelijke werkloosheid wordt normaal gezien niet gelijkgesteld met een gewerkte periode voor de opbouw van het aanvullend pensioen. Bijgevolg zijn de dekkingen voor het aanvullend pensioen niet meer verworven wanneer de arbeidsovereenkomst geschorst is. 
+                                                            In tegenstelling tot dit algemene principe voorziet de wet van 7 mei 2020 in een automatische voortzetting zonder administratieve formaliteiten, van de aanvullende pensioentoezeggingen en verzekeringscontracten ten voordele van de werknemers in tijdelijke werkloosheid wegens de COVID-19-crisis. Voorwaarde hierbij is dat de premie doorbetaald wordt en dat het lokaal bestuur niet afziet van deze gelijkstelling. Verder moet het bestuur het kaderpensioenreglement wijzigen tegen 31 december 2021. De pensioeninstellingen Belfius Insurance en Ethias werken momenteel nog een concreet tekstvoorstel uit. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Voor de personeelsleden die behoren tot de zogenaamde VIA-diensten worden de koopkrachtmaatregelen gefinancierd door Vlaanderen in uitvoering van het VIA5-akkoord van 8 juni 2018.  De VIA-diensten zijn alle door Vlaanderen erkende, vergunde of gesubsidieerde diensten, vallend onder publiek recht,  die behoren tot de volgende sectoren: ouderenzorg, thuiszorg, kinderopvang, zorg voor personen met een handicap, jeugdzorg, sociale economie en lokale diensteneconomie, vrije tijd (cultuur, jeugd en sport), integratie en inburgering .  Besturen met VIA-diensten, waaronder ook Lievegem, zullen een bedrag ontvangen om  de koopkrachtmaatregelen uit dit sectoraal akkoord op te vangen 
+                                                            De gegevens voor de verdeling van de middelen zullen opgevraagd worden bij de RSZ via de DMFA-aangifte. Elk bestuur moet hiervoor sinds 2019 een bijkomende code invullen voor het VIA-personeel. Op basis van deze gegevens kunnen de nodige berekeningen gemaakt worden.  Het totale pakket aan middelen zal over alle rechthebbende besturen verdeeld worden op basis van een verdeelsleutel, gebaseerd op de inspanning per VTE die elk bestuur zal moeten leveren. Op 23 oktober 2020 hebben we van de VIA-coördinator een communicatie ontvangen met daarin het bedrag waar ons bestuur recht op heeft. De toelage voor de gemeente voor de uitvoering van de maatregelen vastgelegd in het sectoraal akkoord bedraagt voor 2020 € 14.996,37. Een toename van de bijdragevoet voor de 2de pensioenpijler voor contractueel personeel met 0,50% betekent een bijkomende financiële impact van 37.200 euro per jaar voor gemeente en OCMW samen (onderhevig aan indexatie). 
+                                                            Voor het financieren van de verhoging van de bijdragevoet in 2020 van 2% naar 2,50% kan beroep worden gedaan op resterende personeelskredieten, bvb. voor personeelsleden die uiteindelijk niet op pas later in dienst traden of voor personeelsleden die de organisatie verlieten en waarvoor de vacature niet tijdig opnieuw werd ingevuld. 
+                                                            Voor de verhoging van de bijdragevoet tot 3% vanaf boekjaar 2021 is het benodigd krediet opgenomen in het voorontwerp van meerjarenplanaanpassing 1 2020 - 2025 zoals ter goedkeuring zal worden voorgelegd aan de gemeenteraad van december. 
+                                                            Overeenkomstig art. 266 van het decreet lokaal bestuur wordt hiervoor bijgevolg een visum verleend, onder voorbehoud van goedkeuring van de meerjarenplanaanpassing 1 2020 - 2025 door de gemeenteraad in zitting van 16 december 2020 
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                                 Visum financieel beheerderEen toename van de bijdragevoet voor de 2de pensioenpijler voor contractueel personeel met 0,50% betekent een bijkomende financiële impact van 37.200 euro per jaar (onderhevig aan indexatie).  Voor het financieren van de verhoging van de bijdragevoet in 2020 van 2% naar 2,50% kan beroep worden gedaan op resterende personeelskredieten, bvb. voor personeelsleden die uiteindelijk niet op pas later in dienst traden of voor personeelsleden die de organisatie verlieten en waarvoor de vacature niet tijdig opnieuw werd ingevuld. Voor de verhoging van de bijdragevoet tot 3% vanaf boekjaar 2021 is het benodigd krediet opgenomen in het voorontwerp van meerjarenplanaanpassing 1 2020 - 2025 zoals ter goedkeuring zal worden voorgelegd aan de gemeenteraad van december. Overeenkomstig art. 266 van het decreet lokaal bestuur wordt hiervoor bijgevolg een visum verleend, onder voorbehoud van goedkeuring van de meerjarenplanaanpassing 1 2020 - 2025 door de gemeenteraad in zitting van 16 december 2020. Gunstig visum FD/2020/002 van Bart Kerkhof van 30 oktober 2020  
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e5ad05c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                              
+                                                            Artikel 1 
+                                                            Het aanvullend pensioenstelsel voor de contractuele personeelsleden, ingevoerd vanaf 1 januari 2019, wordt gewijzigd. 
+                                                            De pensioentoelage bedraagt: 
+                                                            - Vanaf 1 januari 2019 2% van het pensioengevend jaarloon;- Vanaf 1 januari 2020 2,5% van het pensioengevend jaarloon;- Vanaf 1 januari 2021 3% van het pensioengevend jaarloon. 
+                                                            Artikel 2 
+                                                            De gemeenteraad gaat akkoord met het kaderreglement tweede pensioenpijler contractanten van de Federale Pensioendienst, zoals vervangen vanaf 1 januari 2019. Dit kaderreglement maakt integraal deel uit van dit besluit. 
+                                                            Het bestuur gaat akkoord om de periode van tijdelijke werkloosheid ten gevolge van de corona-epidemie te valideren voor de pensioentoezegging. Er wordt gewacht op een concreet tekstvoorstel van de pensioeninstellingen vooraleer het kaderpensioenreglement aan te passen. 
+                                                             
+                                                            Artikel 3 
+                                                            Het college van burgemeester en schepenen wordt belast met de verdere uitvoering van dit besluit, inzonderheid het op de hoogte brengen van de pensioenverzekeraar, met name de samenwerking tussen Belfius Insurance NV en Ethias NV in de vorm van een tijdelijk handelsvennootschap. 
+                                                              
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/15f0772d-180e-4634-9aa0-cdf149dd2b5f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/15f0772d-180e-4634-9aa0-cdf149dd2b5f> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "02d2e020-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Personeel - Aanvullend pensioenstelsel voor de contractuele personeelsleden - wijziging pensioentoelage: goedkeuring" .
+

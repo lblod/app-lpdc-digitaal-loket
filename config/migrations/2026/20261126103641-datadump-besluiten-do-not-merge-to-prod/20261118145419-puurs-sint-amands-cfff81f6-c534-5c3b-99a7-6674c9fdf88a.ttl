@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/441f7b1c-d9d8-4a0e-824e-23eb295eb46c> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0f8b6d85-0529-4ad0-9bfe-37f30355938c>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/ba79aeeb-2353-4b72-9d02-8f839e414c5d> ;
+    ns1:geplandeStart "2026-05-05T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/12911b4f-3f13-4f9e-b035-2924ff04b8d8> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "028d81b9-79d5-5c4b-abb8-0f551ee4c7e3" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-05-05T20:06:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ba79aeeb-2353-4b72-9d02-8f839e414c5d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0f8b6d85-0529-4ad0-9bfe-37f30355938c> ;
+    ns1:openbaar false ;
+    ns3:uuid "435645db-3a76-51b4-b249-e98fbdaa8260" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/ba79aeeb-2353-4b72-9d02-8f839e414c5d> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/ba79aeeb-2353-4b72-9d02-8f839e414c5d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/ba79aeeb-2353-4b72-9d02-8f839e414c5d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Tijdelijke politieverordening op het wegverkeer - Parking Kloosterhof" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Op vraag van Sjabi - campus Hof-ten-Berglaan - Buitengewoon secundair onderwijs werd er in samenspraak met politie een regeling opgesteld om de bussen veilig te laten parkeren op de parking Kloosterhof. 
+                                 
+                                 
+                                    Juridische grond 
+                                    Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                    Bevoegdheidsgrond 
+                                     
+                                        Decreet Lokaal Bestuur, artikel 56 §2 in samenhang met de Nieuwe Gemeentewet van 24 juni 1988, artikel 130 bis 
+                                     
+                                    Toepasselijke regelgeving:   
+                                     
+                                        De wet van 16 maart 1968 betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk bestuur van 16 maart 1968; 
+                                        Het koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer, en latere wijzigingen; 
+                                        Het koninklijk besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens, en latere wijzigingen; 
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                    positief advies van de gemeentelijke verkeerscel 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Op vraag van Sjabi - campus Hof-ten-Berglaan - Buitengewoon secundair onderwijs werd er in samenspraak met politie een regeling opgesteld om de bussen veilig te laten parkeren op de parking Kloosterhof. Deze regeling werd besproken op de gemeentelijke verkeerscel van  5 december 2025 en werd nadien goedgekeurd op het college van 22 december. 
+                                    De regeling geldt enkel op woensdag na school wanneer er meerdere bussen op een korte periode leerlingen dienen op te halen. Tijdens dit piekmoment is er te weinig plaats voor de bussen om op een reglementaire manier te parkeren in de Hof-ten-Berglaan, daarom wijken we uit naar deze zone. 
+                                 
+                            """@nl ;
+    ns3:uuid "cfff81f6-c534-5c3b-99a7-6674c9fdf88a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Het college van burgemeester en schepenen keurt de tijdelijke politieverordening “Parking Kloosterhof” goed te Puurs vanaf 01/05/2026 tot en met 31/12/2026. 
+                                    Artikel 2: Parking Kloosterhof : een deel van de parking is voorbehouden voor autobussen en autocars; de maatregel geldt op woensdag tussen 11.50u tot 12.20u 
+                                     
+                                        Verkeersbord E9d met onderbord GV   
+                                     
+                                    Artikel 3: Overtreding van dit reglement wordt bestraft overeenkomstig de verkeerswet. 
+                                    Artikel 4: Dit reglement wordt bekendgemaakt overeenkomstig artikel 286 van het decreet over het lokaal bestuur. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ba79aeeb-2353-4b72-9d02-8f839e414c5d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/ba79aeeb-2353-4b72-9d02-8f839e414c5d> a ns1:Agendapunt ;
+    ns3:uuid "aaf3e2d6-2b54-5964-a05e-f4380c234ecf" .
+

@@ -1,0 +1,127 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns1:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0778dda2-835e-4438-aeef-c460a716255b> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243> ;
+    ns1:openbaar true ;
+    ns3:uuid "e4656a90-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0778dda2-835e-4438-aeef-c460a716255b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0778dda2-835e-4438-aeef-c460a716255b> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e8aee49e-8762-4db2-acfe-2d5dd3c37619> ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt het evaluatiereglement van de Gemeenteschool Lievegem vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Gemeenteschool Lievegem - evaluatiereglement: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Caroline Fredrick, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet van 27 maart 1991 over de rechtspositie van sommige personeelsleden van het gesubsidieerd onderwijs en de gesubsidieerde centra voor leerlingenbegeleiding, de hoofdstukken Vbis en Vter 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 40§3 
+                                    Het besluit van het college van burgemeester en schepenen van 14 juni 2022 over het evaluatiereglement van de gemeenteschool 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De gemeenteraad stelt de reglementen vast.De Scholengemeenschap maakte het evaluatiereglement over de algemene afspraken functiebeschrijving en evaluatie, voor o.a. de Gemeenteschool Lievegem, op.Protocol van 14 juni 2022 van het lokaal comité op het niveau van de scholengemeenschap Meetjesland 
+                                 
+                                 
+                                    Financiële impact 
+                                     
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    EVALUATIEREGLEMENTalgemene afspraken functioneringsgesprekken en evaluatie 
+                                    Art. 1    §1    De directeur wordt aangeduid als eerste evaluator voor alle gesubsidieerde personeelsleden aangesteld in een wervingsambt in zijn instelling.§2    De algemeen directeur wordt aangeduid als tweede evaluator voor alle gesubsidieerde personeelsleden in wervingsambten.§3    De directeur wordt aangeduid als eerste evaluator voor alle gesubsidieerde personeelsleden aangesteld in een ander bevorderingsambt of in een selectieambt.§4    De algemeen directeur wordt aangeduid als tweede evaluator voor alle gesubsidieerde personeelsleden in een ander bevorderingsambt dan dat van directeur of in een selectieambt.§5    De algemeen directeur wordt aangeduid als de evaluator van de directeur(s).Art.2    De tweede evaluator bewaakt het proces, bewaakt de kwaliteit en waakt over de objectiviteit en de eenvormigheid van de evaluaties over de personeelsleden heen. Art.3    Voor de evaluatoren wordt in het kader van het voeren van functionerings- en evaluatiegesprekken een opleiding voorzien zodat de evaluator voldoende competent is om met kennis van zaken en op een objectieve evenwichtige manier een oordeel uit te spreken over het presteren van het personeelslid. Daartoe wordt bij OVSG of POV ingeschreven voor de opleiding voor evaluatoren. Art.4     §1    De (eerste) evaluator nodigt het personeelslid (mondeling/per brief/per email) uit voor een eerste formeel functioneringsgesprek. Hij kondigt dit minimaal 10 werkdagen op voorhand aan.§2    Het personeelslid kan (mondeling/per brief/per email) een functioneringsgesprek vragen. Het gesprek vindt plaats binnen een redelijke termijn na de vraag. De datum van het gesprek wordt bepaald door de (eerste) evaluator.  §3    Van het eerste formeel functioneringsgesprek wordt door de (eerste) evaluator een verslag opgemaakt conform het model van OVSG.  In dit verslag worden persoons- en ontwikkelingsgerichte doelstellingen opgenomen. Dit verslag wordt ondertekend door de (eerste) evaluator en ter ondertekening voor ontvangst aan het personeelslid voorgelegd. Het verslag wordt bewaard in het evaluatiedossier dat beheerd wordt door de (eerste) evaluator.  §4    De (eerste) evaluator houdt de coachinghistoriek bij.  Art.5    §1     De evaluatie wordt uitgevoerd op basis van de evaluatiecriteria die zijn opgenomen in de functiebeschrijving.§2    De (eerste) evaluator bepaalt het tijdstip van het evaluatiegesprek en deelt dit minimaal 10 werkdagen op voorhand (mondeling/per brief/per mail) mee. §3    De (eerste) evaluator stelt het evaluatieverslag op conform het model van OVSG. Dit verslag wordt bewaard in het evaluatiedossier.Art.6    De (eerste) evaluator zorgt voor de informatiedoorstroming naar het schoolbestuur en desgevallend naar de tweede evaluator. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt opgestuurd naar de Scholengemeenschap Meetjesland en de Gemeenteschool LievegemBekendmaking op de website.Naar ABB via digitaal loket. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Caroline Fredrick, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 27 maart 1991 over de rechtspositie van sommige personeelsleden van het gesubsidieerd onderwijs en de gesubsidieerde centra voor leerlingenbegeleiding, de hoofdstukken Vbis en Vter 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 40§3 
+                                                            Het besluit van het college van burgemeester en schepenen van 14 juni 2022 over het evaluatiereglement van de gemeenteschool 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad stelt de reglementen vast.De Scholengemeenschap maakte het evaluatiereglement over de algemene afspraken functiebeschrijving en evaluatie, voor o.a. de Gemeenteschool Lievegem, op.Protocol van 14 juni 2022 van het lokaal comité op het niveau van de scholengemeenschap Meetjesland 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e469d760-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1De gemeenteraad stelt het het evaluatiereglement over de algemene afspraken functiebeschrijving en evaluatie van de Gemeenschool Lievegem vast.Artikel 2Het reglement treedt vanaf 1 september 2022 in werking. 
+                                      
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad stelt het het evaluatiereglement over de algemene afspraken functiebeschrijving en evaluatie van de Gemeenschool Lievegem vast.Artikel 2Het reglement treedt vanaf 1 september 2022 in werking. 
+                                                              
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0778dda2-835e-4438-aeef-c460a716255b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e44e8730-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Gemeenteschool Lievegem - evaluatiereglement: vaststelling" .
+

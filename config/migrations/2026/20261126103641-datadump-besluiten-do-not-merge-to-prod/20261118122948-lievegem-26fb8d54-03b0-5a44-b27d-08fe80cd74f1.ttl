@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/85f2691f-7be4-460f-952b-f2b00829cb79> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0bcb96ae-5b8f-41ad-b06b-ce7f182a425c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0e864e04-7bad-4126-a4b4-5f8d0b28eabc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5c5723f6-81a2-4293-9c61-feb5833566f4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b1af390-529c-4ddc-a16f-00dbe406cbec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b878ce66-22f1-4c2e-bee0-a6427a423bfa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e2377c45-8ef1-449d-8019-370e3d11b85d> ;
+    ns1:geplandeStart "2025-06-24T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/85b10f20-f616-44e2-a8fe-94a843581005> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "e767ad18-5b78-5817-a23f-d120296daa38" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-06-24T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e2377c45-8ef1-449d-8019-370e3d11b85d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0bcb96ae-5b8f-41ad-b06b-ce7f182a425c> ;
+    ns1:openbaar false ;
+    ns2:uuid "c2e00fac-3080-555b-8343-2bf177902d2d" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e2377c45-8ef1-449d-8019-370e3d11b85d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/e2377c45-8ef1-449d-8019-370e3d11b85d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/e2377c45-8ef1-449d-8019-370e3d11b85d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Rijvers 2025' van 14 augustus 2025 11.00 uur tot en met 18 augustus 2025 8.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Rijvers 2025' - Rijvers VZW: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 24 juni 2025 over de aanvraag evenement Rijvers Festival - Rijvers VZW: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Pascal Halsberghe, namens Rijvers VZW organiseert 'Rijvers 2025' van 14 augustus 2025 12.00 uur tot en met 18 augustus 2025 2.00 uur.Er werd op 20 februari 2025 een aanvraag ingediend door Pascal Halsberghe, namens Rijvers VZW om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    In samenwerking met de firma Scelta Mobility werd door Rijvers VZW een nieuw mobiliteitsplan met signalisatieplan opgemaakt. De circulatie voor gemotoriseerd verkeer werd aangepast ten opzichte van vorige jaren. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                     
+                                    Op 18 juni 2025 werd aan gemeente Maldegem goedkeuring gevraagd voor het plaatsen van signalisatie op hun grondgebied. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Gemeente Maldegem (mobiliteit@maldegem.be) 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "26fb8d54-03b0-5a44-b27d-08fe80cd74f1" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Rijvers 2025' van 14 augustus 2025 11.00 uur tot en met 18 augustus 2025 8.00 uur wordt vastgesteld als volgt: 
+                                    1. De zones Bauwerwaan - Bouaerdsdreef - Rijvers - Keigatstraat (Maldegem) en Diepenbeek - Vlamingstraat (Maldegem) - St Jansstraat - Panthaagstraat (Maldegem) - Veldhoek - Mostmolen - Moststraat worden autoluw gemaakt. Hier wordt enkel plaatselijk verkeer toegelaten. 
+                                     
+                                        In het begin van Mostmolen en Moststraat worden de nieuwe parkings voorzien: bezoekers kunnen inrijden tot aan de parking, daarna wordt enkel plaatselijk verkeer toegelaten. 
+                                     
+                                    
+                                        2. Eénrichtingsverkeer in Diepenbeek, komende van St Jansstraat richting Leischoot. Dit is enkel voor bewoners van Mostmolen en Moststraat en eventuele wagens die toch verkeerdelijk zijn doorgereden.
+                                     
+                                    
+                                        3. Eénrichtingsverkeer in Bouaerdsdreef, komende van Bauwerwaan richting Rijvers. Het verkeer voor de VIP- en crewparkings, Kiss & Ride en shuttlebus worden via Bauwerwaan naar Bouaerdsdreef geleid. Wegrijden gebeurt via Rijvers naar Zomerlaan. De bewoners kunnen nog steeds naar hun woning rijden.
+                                     
+                                    4. Stilstaan- en parkeerverbod in Rijvers vanaf Diepenbeek tot Daalmstraat 
+                                    5. Stilstaan- en parkeerverbod in Diepenbeek vanaf Rijvers tot Mostmolen 
+                                      
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Borden C3 + 'uitgezonderd plaatselijk verkeer' op de kruispunten Zwepe/Vlamingstraat (Maldegem), Panthaagstraat/Kruipuit (Maldegem), Velhoek/Oostwinkeldorp, Mostmolen/Leischoot, Mostmolen/Diepenbeek, St-KJansstraat/Diepenbeek, Moststraat/Leischoot, Moststraat/Diepenbeek, Bauwerwaan/Bouaerdsdreef, Rijvers/Bouaerdsdreef, Rijvers/Daalmstraat en Keigatstraat/Veldkruisstraat (Maldegem). 
+                                    + de nodige vooraankondiging en op de cruciale kruispunten wordt een steward voorzien door de organisatie. 
+                                    2. - Bord F19 + M4 op het kruispunt St Jansstraat/Diepenbeek 
+                                        - Borden F19 + M4, C1 + M2 en C31b op de kruispunten Mostmolen/Diepenbeek en Moststraat/Diepenbeek 
+                                        - Borden C1 + M2 en C31a + M2 en C31b + M2 op het kruispunt Diepenbeek/Leischoot 
+                                    3. - Bord F19 + M4 op het kruispunt Bauwerwaan/Bouaerdsdreef 
+                                        - Borden C1 + M2 en C31a + M2 en C31b + M2 op het kruispunt Rijvers/Bouaerdsdreef 
+                                    4. Borden E3 
+                                    5. Borden E3 
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten, met uitzondering van de oranje vooraankondigingsborden (7 stuks) en de bewegwijzeringsborden. Deze vooraankondigingsborden en bewegwijzering worden door de organisatie zelf voorzien en geplaatst. 
+                                    De rest van de nodige signalisatie zal op voorhand klaargezet worden door de gemeentediensten (ook op grondgebied Maldegem) en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e2377c45-8ef1-449d-8019-370e3d11b85d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e2377c45-8ef1-449d-8019-370e3d11b85d> a ns1:Agendapunt ;
+    ns2:uuid "78ed91a0-ab27-5ada-9e36-6f9815c6f755" .
+

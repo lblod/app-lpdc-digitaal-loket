@@ -1,0 +1,163 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3bbe50aa-c3e8-4b7c-bb7c-4682052a4673> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06f1f332-650a-4d40-a99c-0c733ffa85d1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c0f89c5-baa1-4637-811c-23ba8ba0c6be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/143b01fe-df79-4464-a86e-9f3331c41dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/19777059-5d19-4c19-aa75-c9728f3c1f7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1a496b2e-cf0d-4492-81c2-1b83c32841ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b6e8646-0e53-4476-873e-8ca4b5d87f79>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5039459f-5883-4417-bf07-a5cb8f922dff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5824b498-b950-4a56-91f6-1756c8e16615>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d9d3cf3-2cc8-49f0-bc97-86d52713181a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bcb7c92-bded-425b-bb57-1dcf51a32ec4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6deb0f16-50f3-4267-8661-88276e847e60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/739e24ab-2ffe-4fa2-b120-e9f780b542b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7db1854b-eea1-4071-8222-2fa3573c65ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/881bd7fd-6ec4-4882-9a14-15458378f51e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c65b0e5-e5ef-4730-988c-87d06b6a3993>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9314a642-ce70-4a85-ab4f-027dddbfb7ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9384f2b2-5078-47d0-a1e8-5f572f245831>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1970aac-3846-476f-9089-3c9b90d2cebc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a82e01d6-03ea-4b9f-9b5a-9a4e48d048f2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce690ef6-529c-465b-8bc2-0a504cb16e40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e447ed51-ca89-4f26-aec4-4b20f2adbbfb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee301e9c-da25-478b-9b4a-3c795b77db7a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2fb6d2d-2bb1-461a-bced-cbe1f05eb6db> ;
+    ns1:geplandeStart "2024-10-23T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ae70f37b-eb96-4735-833b-ce97bceb51f6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bd4fa978-f012-49c2-acc4-4646b86642e0> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fe261bc2-7e58-4536-8439-b9dedda822ba> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ed05ab10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-10-23T21:17:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-10-23T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06> ;
+    ns1:openbaar true ;
+    ns3:uuid "8b105050-a8d4-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de gewijzigde dotaties voor het dienstjaar 2024 als volgt goed:Voor exploitatie: € 969.378Voor investeringen: € 94.445Bijdrage voor de pensioenen: € 3.504,75 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Hulpverleningszone Centrum - exploitatie- en investeringsdotatie - budgetwijziging voor het dienstjaar 2024: goedkeuring" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Kim Martens, burgemeester 
+                                 
+                                 
+                                    Regelgeving 
+                                    Wet van 15 mei 2007 betreffende de civiele veiligheid, artikelen 67 en 68Koninklijk Besluit van 19 april 2014 houdende het algemeen reglement op de boekhouding van de hulpverleningszonesDecreet lokaal bestuur van 22 december 2017, artikel 40, § 1-2 en artikel 41, 23°Gemeenteraadsbesluit van 23 november 2022 over de goedkeuring van de exploitatie- en investeringsdotatie voor het dienstjaar 2023 van de Hulpverleningszone CentrumGemeenteraadsbesluit van 28 juni 2023 over de goedkeuring van de gewijzigde exploitatie- en investeringsdotatie voor het dienstjaar 2023 van de Hulpverleningszone CentrumGemeenteraadsbesluit van 18 oktober 2023 over de goedkeuring van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone CentrumGemeenteraadsbesluit van 26 juni 2024 over de goedkeuring van de wijziging van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone Centrum 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Mail van 31 mei 2024 van de Hulpverleningszone centrum over de goedkeuring van de dotatie 2023 aan de Hulpverleningszone Centrum 
+                                    De zoneraad van Hulpverleningszone Centrum heeft op 25 oktober 2023 de begroting voor het dienstjaar 2024 goedgekeurd. Voor Lievegem waren de in de begroting van de zone opgenomen dotaties als volgt:Voor exploitatie: € 987.220Voor investeringen: € 92.368Bijdrage voor de pensioenen: € 3.504,75Net als de vorige jaren wordt de initiële begroting van de hulpverleningszone bijgestuurd. Na de bespreking ervan in de begrotingscommissie op 29 mei 2024 keurde het college van de hulpverleningszone op 29 mei 2024 het ontwerp van de begrotingswijziging voor het dienstjaar 2024 goed.Een belangrijke aanpassing van de begroting betreft het verwerken van het begrotingsresultaat van het vorig dienstjaar. Het begrotingsresultaat van 2023 van in totaal 2,9 miljoen euro wordt in deze budgetwijziging geristorneerd naar de verschillende gemeenten volgens het aandeel van iedere gemeente in dit resultaat, m.a.w. volgens de verdeelsleutel voor het jaar 2023. Het ristorno zal verwerkt worden via de uitgavenkredieten van de zone en staat bijgevolg los van de hieronder vermelde gewijzigde dotatie(s).Een andere belangrijk element betreft de aanpassing van de personeelsbegroting. Naast de laatste prognose inzake de evolutie van de wedde-index werd het personeelskrediet grondig bijgestuurd inzake de verwachte bezetting en invulling van de huidige vacante plaatsen op de personeelsplanning. In totaal worden de personeelskredieten met 1,1 miljoen euro verlaagd. Net als in de huidige begroting wordt er rekening gehouden met het aantal VTE dat in dienst is maar om diverse redenen (gedeeltelijk) onbetaald afwezig is.Het totale investeringskrediet voor 2024 wordt in de voorliggende begrotingswijziging verhoogd. Globaal beschouwd verschuift een deel van het krediet voor aankopen van speciale voertuigen naar de kredieten voor aankopen van machines, interventiematerieel en uitrusting. De overige aanpassingen vinden we voornamelijk terug in het investeringsbudget voor ICT, waar het in de begroting opgenomen bedrag wordt opgetrokken. De bijsturing heeft betrekking op enerzijds de deelname van de zone aan een door de FOD Economie gesubsidieerd project inzake innovatieve 5G-toepassingen; anderzijds wordt het krediet voor ICT-investeringen bijgestuurd voor bijkomende ontwikkelingen en aanpassingen aan het huidige tijdsregistratiesysteem.Bovenstaande aanpassingen hebben tot gevolg dat de gemeentelijke dotaties, dewelke als sluitpost van de begroting van de hulpverleningszone dienen, herberekend worden. Het gevolg is dat de gemeentelijke exploitatiedotaties dalen, en dat de investeringsdotaties beperkt stijgen. De bijdragen van de gemeenten voor de financiering van de pensioenen wijzigen niet.Reden waarom deze beslissing wordt genomenDe gewijzigde dotaties van de gemeenten aan de hulpverleningszone dienen goedgekeurd te worden door de gemeenteraad. In functie van het ontwerp van de begrotingswijziging en de door de gemeenten aanvaarde verdeelsleutel worden voor het jaar 2024 door Lievegem volgende dotaties toegekend aan de Hulpverleningszone Centrum:Voor exploitatie: € 969.378,00 Voor investeringen: € 94.445,00 Bijdrage voor de pensioenen: € 3.504,75 De definitieve goedkeuring van de begrotingswijziging 2024 door de zoneraad was op op 26 juni 2024. 
+                                      
+                                    Via brief van 24 juli 2024 van de federale dienst van de gouverneur van Oost-Vlaanderen kregen wij de melding dat er administratieve fout ingeslopen was in het gemeenteraadsbesluit van 26 juni 2024 over de goedkeuring van de wijziging van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone Centrum:In het tekstvak besluit werd €987.220 goedgekeurd voor exploitatie en €92.368 goedgekeurd voor investeringen, terwijl dit €969.378 en €94.445 moest zijn. 
+                                      
+                                 
+                                 
+                                    Financiële impact 
+                                    De exploitatiebijdrage van € 969.378,00 wordt, via bugdetwijzigng, in het meerjarenplan 2020 - 2025 opgenomen in het exploitatiebudget onder jaarbudgetrekening 2024/GBB-SSC/0410-00/6494000/GEMEENTE/CBS/IP-GEEN.De bijdrage voor de pensioenen ten bedrage van € 3.504,75 is in het meerjarenplan 2020 - 2025 opgenomen in het exploitatiebudget onder jaarbudgetrekening 2024/GBB-SSC/0410-00/6494001/GEMEENTE/CBS/IP-GEEN.De investeringsbijdrage van € 94.445,00  wordt, via budgetwijziging, in het meerjarenplan 2020 - 2025 opgenomen in het investeringsbudget onder jaarbudgetrekening 2024/GBB-SSC/0410-00/6640000/GEMEENTE/CBS/IP-GEEN. 
+                                 
+                                 
+                                    Adviezen 
+                                     
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                     
+                                         Visum financieel beheerderDe exploitatiebijdrage daalt met € 17.842 terwijl de investeringstoelage toeneemt met € 2.077. Globaal genomen is er door deze budgetwijziging een positief effect op de gemeentelijke begroting van € 15.765.Voor de budgetwijziging van hulpverleningszone Centrum wordt bijgevolg een gunstig advies verleend. Gunstig visum FD/2024/015 van Bart Kerkhof van 06 juni 2024  
+                                     
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de website. 
+                                    Dit besluit wordt gemaild en opgestuurd naar de Hulpverleningszone Centrum (zonesecretariaat@bwzc.be - Hulpverleningszone Centrum, Roggestraat 70,9000 Gent)Dit besluit wordt opgestuurd voor toezicht naar de Gouverneur Oost-Vlaanderen (Federale diensten van de gouverneur, Kalandeberg 1, 9000 Gent) 
+                                    ABB via digitaal loket 
+                                    Team financiën 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Wet van 15 mei 2007 betreffende de civiele veiligheid, artikelen 67 en 68Koninklijk Besluit van 19 april 2014 houdende het algemeen reglement op de boekhouding van de hulpverleningszonesDecreet lokaal bestuur van 22 december 2017, artikel 40, § 1-2 en artikel 41, 23°Gemeenteraadsbesluit van 23 november 2022 over de goedkeuring van de exploitatie- en investeringsdotatie voor het dienstjaar 2023 van de Hulpverleningszone CentrumGemeenteraadsbesluit van 28 juni 2023 over de goedkeuring van de gewijzigde exploitatie- en investeringsdotatie voor het dienstjaar 2023 van de Hulpverleningszone CentrumGemeenteraadsbesluit van 18 oktober 2023 over de goedkeuring van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone CentrumGemeenteraadsbesluit van 26 juni 2024 over de goedkeuring van de wijziging van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone Centrum 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Mail van 31 mei 2024 van de Hulpverleningszone centrum over de goedkeuring van de dotatie 2023 aan de Hulpverleningszone Centrum 
+                                                            De zoneraad van Hulpverleningszone Centrum heeft op 25 oktober 2023 de begroting voor het dienstjaar 2024 goedgekeurd. Voor Lievegem waren de in de begroting van de zone opgenomen dotaties als volgt:Voor exploitatie: € 987.220Voor investeringen: € 92.368Bijdrage voor de pensioenen: € 3.504,75Net als de vorige jaren wordt de initiële begroting van de hulpverleningszone bijgestuurd. Na de bespreking ervan in de begrotingscommissie op 29 mei 2024 keurde het college van de hulpverleningszone op 29 mei 2024 het ontwerp van de begrotingswijziging voor het dienstjaar 2024 goed.Een belangrijke aanpassing van de begroting betreft het verwerken van het begrotingsresultaat van het vorig dienstjaar. Het begrotingsresultaat van 2023 van in totaal 2,9 miljoen euro wordt in deze budgetwijziging geristorneerd naar de verschillende gemeenten volgens het aandeel van iedere gemeente in dit resultaat, m.a.w. volgens de verdeelsleutel voor het jaar 2023. Het ristorno zal verwerkt worden via de uitgavenkredieten van de zone en staat bijgevolg los van de hieronder vermelde gewijzigde dotatie(s).Een andere belangrijk element betreft de aanpassing van de personeelsbegroting. Naast de laatste prognose inzake de evolutie van de wedde-index werd het personeelskrediet grondig bijgestuurd inzake de verwachte bezetting en invulling van de huidige vacante plaatsen op de personeelsplanning. In totaal worden de personeelskredieten met 1,1 miljoen euro verlaagd. Net als in de huidige begroting wordt er rekening gehouden met het aantal VTE dat in dienst is maar om diverse redenen (gedeeltelijk) onbetaald afwezig is.Het totale investeringskrediet voor 2024 wordt in de voorliggende begrotingswijziging verhoogd. Globaal beschouwd verschuift een deel van het krediet voor aankopen van speciale voertuigen naar de kredieten voor aankopen van machines, interventiematerieel en uitrusting. De overige aanpassingen vinden we voornamelijk terug in het investeringsbudget voor ICT, waar het in de begroting opgenomen bedrag wordt opgetrokken. De bijsturing heeft betrekking op enerzijds de deelname van de zone aan een door de FOD Economie gesubsidieerd project inzake innovatieve 5G-toepassingen; anderzijds wordt het krediet voor ICT-investeringen bijgestuurd voor bijkomende ontwikkelingen en aanpassingen aan het huidige tijdsregistratiesysteem.Bovenstaande aanpassingen hebben tot gevolg dat de gemeentelijke dotaties, dewelke als sluitpost van de begroting van de hulpverleningszone dienen, herberekend worden. Het gevolg is dat de gemeentelijke exploitatiedotaties dalen, en dat de investeringsdotaties beperkt stijgen. De bijdragen van de gemeenten voor de financiering van de pensioenen wijzigen niet.Reden waarom deze beslissing wordt genomenDe gewijzigde dotaties van de gemeenten aan de hulpverleningszone dienen goedgekeurd te worden door de gemeenteraad. In functie van het ontwerp van de begrotingswijziging en de door de gemeenten aanvaarde verdeelsleutel worden voor het jaar 2024 door Lievegem volgende dotaties toegekend aan de Hulpverleningszone Centrum:Voor exploitatie: € 969.378,00 Voor investeringen: € 94.445,00 Bijdrage voor de pensioenen: € 3.504,75 De definitieve goedkeuring van de begrotingswijziging 2024 door de zoneraad was op op 26 juni 2024. 
+                                                              
+                                                            Via brief van 24 juli 2024 van de federale dienst van de gouverneur van Oost-Vlaanderen kregen wij de melding dat er administratieve fout ingeslopen was in het gemeenteraadsbesluit van 26 juni 2024 over de goedkeuring van de wijziging van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone Centrum:In het tekstvak besluit werd €987.220 goedgekeurd voor exploitatie en €92.368 goedgekeurd voor investeringen, terwijl dit €969.378 en €94.445 moest zijn. 
+                                                              
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De exploitatiebijdrage van € 969.378,00 wordt, via bugdetwijzigng, in het meerjarenplan 2020 - 2025 opgenomen in het exploitatiebudget onder jaarbudgetrekening 2024/GBB-SSC/0410-00/6494000/GEMEENTE/CBS/IP-GEEN.De bijdrage voor de pensioenen ten bedrage van € 3.504,75 is in het meerjarenplan 2020 - 2025 opgenomen in het exploitatiebudget onder jaarbudgetrekening 2024/GBB-SSC/0410-00/6494001/GEMEENTE/CBS/IP-GEEN.De investeringsbijdrage van € 94.445,00  wordt, via budgetwijziging, in het meerjarenplan 2020 - 2025 opgenomen in het investeringsbudget onder jaarbudgetrekening 2024/GBB-SSC/0410-00/6640000/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                                 Visum financieel beheerderDe exploitatiebijdrage daalt met € 17.842 terwijl de investeringstoelage toeneemt met € 2.077. Globaal genomen is er door deze budgetwijziging een positief effect op de gemeentelijke begroting van € 15.765.Voor de budgetwijziging van hulpverleningszone Centrum wordt bijgevolg een gunstig advies verleend. Gunstig visum FD/2024/015 van Bart Kerkhof van 06 juni 2024  
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "59da5b20-9394-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    De gemeenteraad keurt de aanpassingen van de dotaties voor het dienstjaar 2024 als volgt goed: 
+                                    Voor exploitatie: € 969.378Voor investeringen: € 94.445Bijdrage voor de pensioenen: € 3.504,75 
+                                    Artikel 2 
+                                    Het gemeenteraadsbesluit van 26 juni 2024 over de goedkeuring van de wijziging van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone Centrum wordt ingetrokken. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad keurt de aanpassingen van de dotaties voor het dienstjaar 2024 als volgt goed: 
+                                                            Voor exploitatie: € 969.378Voor investeringen: € 94.445Bijdrage voor de pensioenen: € 3.504,75 
+                                                            Artikel 2 
+                                                            Het gemeenteraadsbesluit van 26 juni 2024 over de goedkeuring van de wijziging van de exploitatie- en investeringsdotatie voor het dienstjaar 2024 van de Hulpverleningszone Centrum wordt ingetrokken. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "ed0535e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Hulpverleningszone Centrum - exploitatie- en investeringsdotatie - budgetwijziging voor het dienstjaar 2024: goedkeuring" .
+

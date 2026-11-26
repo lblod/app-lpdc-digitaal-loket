@@ -1,0 +1,230 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/16675630-f774-4613-a076-8e19b17acd25> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a33874b9-1619-4049-a3c8-59c5526134a5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aace772e-01d3-444f-b4e8-218d78e5e928>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b8bfc6ea-bd6b-4b9d-b7a8-467b8ab13273> ;
+    ns1:geplandeStart "2026-07-28T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4c9feb4e-5c06-4a8f-bc73-5edfed508b24> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "9e13bca8-6986-567e-81b5-48c11083bca4" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-07-28T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b8bfc6ea-bd6b-4b9d-b7a8-467b8ab13273> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/aace772e-01d3-444f-b4e8-218d78e5e928> ;
+    ns1:openbaar false ;
+    ns2:uuid "7a45dc68-a3ad-5f6a-9a9b-af488c2efbad" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b8bfc6ea-bd6b-4b9d-b7a8-467b8ab13273> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b8bfc6ea-bd6b-4b9d-b7a8-467b8ab13273> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b8bfc6ea-bd6b-4b9d-b7a8-467b8ab13273> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van Gemeentekermis Lovendegem van dinsdag 4 augustus 2026 8.00 uur tot en met dinsdag 11 augustus 2026 18.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Gemeentekermis Lovendegem 2026: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 28 juli 2026 over de aanvraag evenement Gemeentekermis Lovendegem 2026 - Feestcomité Lovendegem Centrum: goedkeuring 
+                                    Het besluit van het college van burgemeester en schepenen van 28 juli 2026 over de aanvraag Gemeentekermis Lovendegem 2026 - organisatie kinderuurtje - standplaatsen spektakelattracties en kermisgastronomie: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Gemeente Lievegem organiseert in samenwerking met Feestcomité Lovendegem Centrum 'Gemeentekermis Lovendegem 2026' van vrijdag 7 augustus 2026 13.00 uur tot en met maandag 10 augustus 2026 24.00 uur.Er werd op 29 mei 2026 een aanvraag ingediend door Gemeente Lievegem en Feestcomité Lovendegem Centrum om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisator per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "8bc8f1d4-b632-55e3-8c3f-a7dcca9ad528" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: 
+                                     Het tijdelijk politiereglement voor Gemeentekermis Lovendegem wordt vastgesteld als volgt: 
+                                     
+                                    Van woensdag 5 augustus 2026 6.00 uur tot en met dinsdag 11 augustus 2025 18.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod op de volledige parking 'De Dreef' ter hoogte van Kasteeldreef 90 
+                                     
+                                     
+                                    Van dinsdag 4 augustus 2026 8.00 uur tot en met dinsdag 11 augustus 2026 12.00 uur: 
+                                    1.    Stilstaan- en parkeerverbod in Dorp: Van nummer 20 tot nummer 31 aan beide zijden 
+                                    2.    Inrijverbod (uitgezonderd bewoners) in Dorp tijdens sluitingsuren kermisattracties: Van nummer 20 tot nummer 31. Omleiding via Centrumstraat – Kasteeldreef – Dorp 
+                                    3.    Stilstaan- en parkeerverbod op 2 parkeerplaatsen voor en 3 parkeerplaatsen achter de haag ter hoogte van Centrumstraat 45 (voor frituur + voorraad en aanhangwagen) 
+                                    4.    Extra parkeermaatregelen: 
+                                     
+                                        3 parkeerplaatsen voor personen met een handicap voorzien ter hoogte van Golfstraat 23 
+                                        Parkeerstrook voor kortparkeren voorzien met maximum tijdsduur van 30 minuten ter hoogte van Golfstraat 19 - 21 
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        Van vrijdag 7 augustus 2026 tot en met maandag 10 augustus 2026 tijdens de openingsuren kermisattracties:
+                                     
+                                    
+                                        •    vrijdag 7 augustus 2026 van 17.00 uur tot 24.00 uur
+                                        •    zaterdag 8 augustus 2026 van 16.00 uur tot 24.00 uur
+                                        •    zondag 9 augustus 2026 van 15.00 uur tot 24.00 uur
+                                        •    maandag 10 augustus 2026 van 16.00 uur tot 24.00 uur
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        1.   Bijkomend stilstaan- en parkeerverbod in volgende straten:
+                                     
+                                     
+                                         
+                                            Centrumstraat (volledige straat) 
+                                            Kerkelare aan 1 zijde van de straat (even nummers) 
+                                         
+                                        
+                                            2.   Bijkomend inrijverbod in Dorp en Centrumstraat (tussen Diepestraat en Kasteeldreef). Dorp en Centrumstraat zijn tijdens de openingsuren van de kermisattracties volledig afgesloten. De inrit naar parking De Speelboom blijft bereikbaar via Kasteeldreef.
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            3.   Kerkelare wordt doodlopend vanaf Larestraat
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        
+                                            Op vrijdag 7 augustus 2026 van 13.00 uur tot 24.00 uur, zaterdag 8 augustus 2026 van 17.00 uur tot 24.00 uur, zondag 9 augustus 2026 van 10.30 uur tot 24.00 uur en maandag 10 augustus 2026 van 10.00 uur tot 24.00 uur:
+                                         
+                                        
+                                             
+                                         
+                                         
+                                             
+                                                Eénrichtingsverkeer in Kasteeldreef vanaf Appensvoordestraat/Larestraat tot Molendreef/Dorp (rijrichting naar Molendreef/Dorp) 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op zaterdag 8 augustus 2026 van 6.00 uur tot en met 17.00 uur voor de rommelmarkt:
+                                     
+                                    1.    Bijkomend stilstaan- en parkeerverbod in volgende straten: 
+                                     
+                                        Kasteeldreef: Vanaf huisnummer 14 tot en met huisnummer 86 aan beide zijden 
+                                        Centrumstraat (volledige straat) 
+                                     
+                                    2.    Bijkomend inrijverbod in volgende straten: 
+                                     
+                                        Centrumstraat (volledige straat) 
+                                        Kasteeldreef vanaf huisnummer 14 tot en met huisnummer 86. Er wordt wel een doorsteek voorzien vanuit Larestraat naar Appensvoordestraat en omgekeerd. 
+                                        Omleiding via Koning Leopoldstraat – Lobrug – Diepestraat – Dorp en omgekeerd 
+                                        Omleiding via Schachterijstraat – Kerkelare – Larestraat – Vaartstraat  
+                                     
+                                      
+                                    
+                                        Op maandag 10 augustus 2026 van 20.00 uur tot en met 24.00 uur voor het vuurwerk:
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        1.   Bijkomend parkeerverbod in Larestraat (tussen Vaartstraat en Kasteeldreef)
+                                        
+                                     
+                                    
+                                        2.   Uitgezonderd plaatselijk verkeer in Vaartstraat en Larestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    Van woensdag 5 augustus 2026 6.00 uur tot en met dinsdag 11 augustus 2026 18.00 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                    Van dinsdag 4 augustus 2026 8.00 uur tot en met dinsdag 11 augustus 2026 12.00 uur: 
+                                    1.    - Borden E32.    - Nadar + C3 ter hoogte van Dorp nummer 20 en 31 + onderbord 'uitgezonderd bewoners' ter hoogte van nummer 31       - Borden F41 op de volgende kruispunten: Dorp/Centrumstraat, Centrumstraat/Kasteeldreef en Kasteeldreef/Dorp 
+                                    3.    - Borden E3 
+                                    4.    - Borden E9a + GVIIc 30 minuten 
+                                           - Borden E9a mindervalide 
+                                    Van vrijdag 7 augustus 2026 tot en met maandag 10 augustus 2026 tijdens de openingsuren kermisattracties: 
+                                    1.    - Borden E3 
+                                    2.    - Nadar + C3 op de kruispunten Diepestraat/Dorp, Centrumstraat/Schachterijstraat en net voorbij de inrit naar parking De Speelboom in Centrumstraat 
+                                           - Bord F41 op het kruispunt Diepestraat/Dorp 
+                                    3.    - Bord C3 + F45 + 'uitgezonderd plaatselijk verkeer' op kruispunt Larestraat/Kerkelare  
+                                      
+                                    Op vrijdag 7 augustus 2026 van 13.00 uur tot 24.00 uur, zaterdag 8 augustus 2026 van 17.00 uur tot 24.00 uur, zondag 9 augustus 2026 van 10.30 uur tot 24.00 uur en maandag 10 augustus 2026 van 10.00 uur tot 24.00 uur: 
+                                    - Borden F19 + M18 op de kruispunten Kasteeldreef/Appensvoordestraat en Kasteeldreef/Centrumstraat- Bord C1 + M12 op de kruispunten Kasteeldreef/Centrumstraat en Kasteeldreef/Dorp  
+                                    - Borden C31a en C31b op kruispunt Kasteeldreef/Dorp 
+                                    - Bord C31b op kruispunt Kasteeldreef/Centrumstraat 
+                                    - Borden F41 op volgende kruispunten: Kasteeldreef/Dorp, Lobrug/Vellare, Koning Leopoldstraat/Lobrug en Kasteeldreef/Koning Leopoldstraat 
+                                    
+                                         
+                                        
+                                     
+                                    
+                                        Op zaterdag 8 augustus 2026 van 6.00 uur tot 17.00 uur voor de rommelmarkt:
+                                     
+                                    
+                                        1.    - Borden E3
+                                        
+                                     
+                                    
+                                        2.    - Nadar + C3 + F45 + ‘Uitgezonderd plaatselijk verkeer’ op de kruispunten Diepestraat/Vaartstraat, Diepestraat/Dorp, Dorp/Kasteeldreef en Koning Leopoldstraat/Kasteeldreef
+                                        
+                                     
+                                    
+                                               - Nadar + C3 ter hoogte van Centrumstraat 11, Kasteeldreef 84, aan het kruispunt Larestraat/Kasteeldreef (2x) en ter hoogte van Kasteeldreef 14
+                                        
+                                     
+                                    
+                                               - Borden F41 op volgende kruispunten: Koning Leopoldstraat/Kasteeldreef, Koning Leopoldstraat/Lobrug (2x), Lobrug ter hoogte van oprit brug (2x), Lobrug/Vaartstraat (2x), Diepestraat/Dorp, Dorp/Kasteeldreef, Centrumstraat/Schachterijstraat en Kerkelare/Larestraat
+                                     
+                                      
+                                    Op maandag 10 augustus 2026 van 20.00 uur tot en met 24.00 uur voor het vuurwerk: 
+                                    1.    - Borden E3 
+                                    2.    - Nadar + C3 + 'Uitgezonderd plaatselijk verkeer' op de kruispunten Diepestraat/Vaartstraat en Larestraat/Kasteeldreef 
+                                           - Borden F41 op volgende kruispunten: Koning Leopoldstraat/Kasteeldreef (2x), Koning Leopoldstraat/Lobrug (2x), Lobrug ter hoogte van oprit brug (2x), Diepestraat/Vaartstraat, Diepestraat/Dorp, Larestraat/Kasteeldreef 
+                                      
+                                    Artikel 3Op parking De Warande wordt de beperkte parkeerduur opgeheven van 4 augustus 2026 tot en met 11 augustus 2026, er worden wel 10 plaatsen voorbehouden voor voertuigen met bewonerskaarten. 
+                                    Artikel 4 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en zal door het Feestcomité Lovendegem op straat geplaatst worden bij aanvang en terug bij einde van de activiteiten. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b8bfc6ea-bd6b-4b9d-b7a8-467b8ab13273> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b8bfc6ea-bd6b-4b9d-b7a8-467b8ab13273> a ns1:Agendapunt ;
+    ns2:uuid "2c15a6b1-920e-5e44-be3d-9077c6cc7062" .
+

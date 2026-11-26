@@ -1,0 +1,72 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/91c3bbaf-81e2-4d72-a028-1ecea3111b8a> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98ee8bbb-1cf2-46c5-8f73-2aa0a1c3e4eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c09486e9-2e99-438f-8da3-40fbbc2a0258> ;
+    ns1:geplandeStart "2026-11-03T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4d691866-4059-43ef-bd80-5e8b297ac16f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "8705d8cc-814d-5690-a562-f21956810d7d" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-11-03T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98ee8bbb-1cf2-46c5-8f73-2aa0a1c3e4eb> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c12473d9-3b20-4889-b8df-9a7c1a653ad4> ;
+    ns1:openbaar false ;
+    ns2:uuid "58872e58-6f3d-5469-acef-906b84eb2920" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98ee8bbb-1cf2-46c5-8f73-2aa0a1c3e4eb> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/98ee8bbb-1cf2-46c5-8f73-2aa0a1c3e4eb> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/98ee8bbb-1cf2-46c5-8f73-2aa0a1c3e4eb> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Thé Dansant' op 20 november 2026 van 13.30 uur tot en met 17.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Thé Dansant - team senioren: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 3 november 2026 over de aanvraag evenement Thé Dansant - Team senioren: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Eva Bruynooghe, namens team senioren - gemeente Lievegem, organiseert 'Thé Dansant' op 20 november 2026 van 13.30 uur tot en met 17.00 uur.Er werd op 15 oktober 2026 een aanvraag ingediend door Eva Bruynooghe , namens team senioren - gemeente Lievegem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "89065314-87d1-52a6-a063-bb3487fbe81a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Thé Dansant' op 20 november 2026 van 13.30 uur tot en met 17.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        kortparkeren voor een maximale parkeerduur van 15 minuten ter hoogte van de ingang van De Kring, Patronagiestraat 3, 9950 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E9a 'parkeren toegelaten' + onderbord GVIIc '15 minuten' en een bijkomend onderbord met de dag en uren waarbinnen deze maatregel van toepassing is + borden GXa begin en GXb einde van de reglementering. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98ee8bbb-1cf2-46c5-8f73-2aa0a1c3e4eb> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98ee8bbb-1cf2-46c5-8f73-2aa0a1c3e4eb> a ns1:Agendapunt ;
+    ns2:uuid "e3cd6fb8-777e-5365-a8af-fc89a6fdf8b8" .
+

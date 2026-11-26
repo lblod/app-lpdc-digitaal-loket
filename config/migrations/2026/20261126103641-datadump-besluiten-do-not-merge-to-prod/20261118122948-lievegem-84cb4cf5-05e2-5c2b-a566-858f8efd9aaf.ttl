@@ -1,0 +1,121 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/147bc410-56ca-479d-8c5b-6d097f1d4b30> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a7b986a3-6354-496a-8685-98d2cb9a2606>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d590095d-eebf-4e95-b1f4-0adff035a9fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc3d3935-6ff1-4bcf-a4a8-cb3d40aa293a> ;
+    ns2:geplandeStart "2026-06-09T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bad7219c-3446-4d4a-991f-ede84b5fcb3a> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "7c98a062-7af9-5735-ad62-bb34833a925c" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-06-09T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d590095d-eebf-4e95-b1f4-0adff035a9fe> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a7b986a3-6354-496a-8685-98d2cb9a2606> ;
+    ns2:openbaar false ;
+    ns1:uuid "113b2658-c761-5fb9-8571-956e30045e8b" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d590095d-eebf-4e95-b1f4-0adff035a9fe> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d590095d-eebf-4e95-b1f4-0adff035a9fe> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d590095d-eebf-4e95-b1f4-0adff035a9fe> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van Zomergem On The Move - reclamestoet en stoet 2026 op zondag 28 juni 2026 wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Zomergem On The Move - reclamestoet en stoet 2026 - Feestcomité Centrum Zomergem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 2 juni 2026 over het tijdelijk politiereglement naar aanleiding van Zomerkermis Zomergem: vaststellingHet besluit van het college van burgemeester en schepenen van 9 juni 2026 over de aanvraag evenement Stoet Zomergem On The Move - Feestcomité Centrum Zomergem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Ghis Reyniers, namens Feestcomité Centrum Zomergem organiseert een reclamestoet met aansluitend stoet 'Zomergem On The Move' op zondag 28 juni 2026 van 14.00 uur tot en met 17.00 uur.Er werd op 5 januari 2026 een aanvraag ingediend door Ghis Reyniers, namens Feestcomité Centrum Zomergem om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Er worden voldoende seingevers langs het parcours voorzien om de stoet te begeleiden. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van de werken per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "84cb4cf5-05e2-5c2b-a566-858f8efd9aaf" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Zomergem On The Move - reclamestoet en stoet 2026 op zondag 28 juni 2026 wordt vastgesteld als volgt: 
+                                     
+                                        Op 28 juni 2026 vanaf 10.00 uur tot en met 19.00 uur: 
+                                     
+                                    
+                                        1. Stilstaan- en parkeerverbod in de straten voor opbouw van de reclamestoet en stoet: Luitenant Dobbelaerestraat (van Azaleastraat tot en met kruispunt Den Boer), Sportlaan, Tennislaan, Begonialaan, Tulpenlaan en Den Boer. 
+                                     
+                                     
+                                         
+                                            Op 28 juni 2026 vanaf 12.00 uur tot en met 19.00 uur: 
+                                         
+                                        
+                                            1. Stilstaan- en parkeerverbod op de grote parkings voor sportcentrum Den Boer en aan de tennisterreinen en bibliotheek.
+                                         
+                                        
+                                            2. Afsluiten van de straten voor opbouw van de reclamestoet en stoet: Luitenant Dobbelaerestraat (van Azaleastraat tot en met kruispunt Den Boer), Sportlaan, Tennislaan, Begonialaan, Tulpenlaan en Den Boer.
+                                         
+                                        
+                                            3. Stilstaan- en parkeerverbod in alle straten langs het parcours: volledige Luitenant Dobbelaerestraat, Hofbouwstraat, Azaleastraat (tussen Hofbouwstraat en Motje), Dreef, Kloosterstraat, Kerkhofstraat (tussen Dreef en Kloosterstraat en Markt.
+                                         
+                                     
+                                     
+                                         
+                                            Op 28 juni 2026 vanaf 13.00 uur tot en met 19.00 uur: 
+                                         
+                                        
+                                            1. Afsluiten van alle straten langs het parcours voor alle verkeer: volledige Luitenant Dobbelaerestraat, Hofbouwstraat, Dreef, Kloosterstraat, Kerkhofstraat (tussen Dreef en Kloosterstraat en Markt.
+                                         
+                                        
+                                            2. Azaleastraat zal niet de volledige duur van de stoet afgesloten worden door middel van verkeersborden. De passage van de stoet langs het gedeelte Azaleastraat zal volledig geregeld worden door de politie. Zij zullen voldoende manschappen voorzien om de cruciale kruispunten te bemannen. Eens de stoet weg is uit Azaleastraat, zal deze straat terug opengesteld worden voor het verkeer.
+                                         
+                                        
+                                             
+                                         
+                                     
+                                     
+                                         
+                                            Omleiding tijdens de stoet:  
+                                         
+                                        
+                                            1. Voertuigen komende van Kruisstraat/Langeboeken en rijdend richting Brugge worden omgeleid via Moerstraat, Durmstraat, Ter Wal en Guido Gezellestraat.
+                                            2. Voertuigen komende van Kruisstraat en rijdend richting Eeklo worden omgeleid via Azaleastraat. Tijdens de passage van de stoet in Azaleastraat zal de politie het doorgaand verkeer tegenhouden en/of omleiden.
+                                            3. Voertuigen komende van Koning Leopold III laan en rijdend richting Gent worden omgeleid via Guido Gezellestraat, Ter Wal en Durmstraat.
+                                            4. Voertuigen komende van Koning Leopold III laan en rijdend richting Eeklo worden omgeleid via Guido Gezellestraat, Ter Wal, Boven, Hendrick Claeysstraat, Zandstraat, Motje en Azaleastraat. Tijdens de passage van de stoet in Azaleastraat zal de politie het doorgaand verkeer tegenhouden en/of omleiden.
+                                            5. Voertuigen komende van Burg. Henri Ryckaertstraat en rijdend richting Gent worden omgeleid via Daalmstraat, Azaleastraat, Motje. Tijdens de passage van de stoet in Azaleastraat zal de politie het doorgaand verkeer tegenhouden en/of omleiden.
+                                         
+                                        
+                                            6. Voertuigen komende van Nekke rijdend richting Oostwinkel worden omgeleid via Bauwerwaan, Bouaerdsdreef, Rijvers en Daalmstraat.
+                                         
+                                     
+                                    
+                                        7. Tegenstrijdige borden worden afgedekt.
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt gesignaleerd volgens plannen in bijlage. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d590095d-eebf-4e95-b1f4-0adff035a9fe> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d590095d-eebf-4e95-b1f4-0adff035a9fe> a ns2:Agendapunt ;
+    ns1:uuid "5496fe0b-7d1d-5c57-b7b5-c2d8ab2fa89f" .
+

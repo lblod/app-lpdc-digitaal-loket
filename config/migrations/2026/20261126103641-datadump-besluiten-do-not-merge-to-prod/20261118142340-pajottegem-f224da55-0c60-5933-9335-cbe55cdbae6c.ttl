@@ -1,0 +1,78 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/48d8bba5-b2c9-422a-9a9f-aed9b3225fd5> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/03c3f511-c208-43d7-b76f-18221c4a9482>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0c3e9d73-0710-47ad-9e25-c2f32c112e7d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/14918f94-1bd1-4a13-a9a8-3d93f38d21de>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/15aed687-be35-426c-ac8a-1076795663a9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2b9f5fe1-ffa5-432a-abdf-2704935c273d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2d325458-3c75-4154-bc2d-ab7eec42d2c1>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3c860352-7fe5-4928-872d-85b6a4d90028>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/bd4ab788-2c45-413c-8427-d39c8e9a5c0e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/e85d8986-a4fe-4dc7-af02-fcb41c41be37> ;
+    ns1:geplandeStart "2025-07-14T14:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/a4aed90c-5cca-429b-9f34-b2db28216313> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "2b087126-eb31-5aaa-9e21-a00dc6c42a3c" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-07-14T12:56:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3c860352-7fe5-4928-872d-85b6a4d90028> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/03c3f511-c208-43d7-b76f-18221c4a9482> ;
+    ns1:openbaar false ;
+    ns2:uuid "261b9e01-c2be-5c96-a1ff-e052205af28a" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3c860352-7fe5-4928-872d-85b6a4d90028> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/3c860352-7fe5-4928-872d-85b6a4d90028> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/3c860352-7fe5-4928-872d-85b6a4d90028> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor het verjaardagsfeest op 9/08 t.e.m. 10/08 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Verjaardag DJ Mars - 9/08 t.e.m. 10/08 " ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "f224da55-0c60-5933-9335-cbe55cdbae6c" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van verjaardagsfeest op 9/08 t.e.m. 10/08 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Verboden stil te staan en te parkeren (E3) op 8 parkeerplaatsen t.h.v. JH GUUK met geldigheid 9/08 12u t.e.m. 18u 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3c860352-7fe5-4928-872d-85b6a4d90028> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3c860352-7fe5-4928-872d-85b6a4d90028> a ns1:Agendapunt ;
+    ns2:uuid "117e5f79-e2e8-5ea2-9fd0-f67c413edcab" .
+

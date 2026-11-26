@@ -1,0 +1,587 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5431859e-9f14-4e49-b6c8-5b80b7d4e481> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/012dd980-fcd7-4668-9913-47074894f812>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0fca32d7-4054-42c6-951e-b96d869c702b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/2d9dc155-1b93-4953-a28a-3a6a84cf2af0>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/325c2f66-67e1-43b5-85c2-088d4e50e68c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3d196578-c957-4887-bc28-793d29ade565>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/42f857a5-ab10-49a9-a503-aca851e77663>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/44b4f21a-4b58-4a54-92bb-0368a40eec78>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/486101ec-f076-4712-aa1e-95e9a185a47a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/51f59054-46f0-4426-a625-985dd7703ace>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5981905c-1ae2-446d-a3a8-2e7c8d04a342>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5caf5b90-2c88-4a27-878b-e16fded7f548>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/84db1bee-f8ce-47d1-adc9-98f9f5077511>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8c376a9d-e08b-4a54-a27d-9f82afe0c2fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a0527502-7cd6-4579-95c1-69053ed1b4f7>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bc13be7e-86c1-4650-b86e-7d53feebec9b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/cc1b6fbb-657d-407b-aeac-951558ee15e2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d33e9543-8f40-49b0-a2d5-2320f9f4522b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d5a94fe9-97f4-463e-bcb6-862733fc0afc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d76620a1-57d5-462e-8c74-d64731bbe054>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f135efdc-477c-455a-9277-82c44a6ed805> ;
+    ns1:geplandeStart "2025-01-06T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/75d79944-710b-4df7-8240-a7b3d8159f99> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/665255d0-7d5a-46c7-b8c6-3456470b9f56> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/27d6213e-b091-444c-b7a5-43982e84ce70> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:uuid "63ffd230-c830-11ef-9218-6931664218fe" ;
+    prov:atLocation "Gemeentelijke bibliotheek" ;
+    prov:startedAtTime "2025-01-06T20:00:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bc13be7e-86c1-4650-b86e-7d53feebec9b> ;
+    ns1:openbaar true ;
+    ns3:uuid "be888f40-ce79-11ef-9218-6931664218fe" ;
+    dcterms:description """ 
+                             
+                                Naar aanleiding van de vernieuwing van de gemeenteraad wordt een nieuw huishoudelijk reglement aan de raad voorgelegd. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                Naar aanleiding van de vernieuwing van de gemeenteraad wordt een nieuw huishoudelijk reglement aan de raad voorgelegd. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/1aa4108c-b361-4615-a64e-2fe20348d360> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/1aa4108c-b361-4615-a64e-2fe20348d360> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/a8486fa3-6375-494d-aa48-e34289b87d5b> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:title "Gemeenteraad. Huishoudelijk reglement." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Decreet Lokaal Bestuur. 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Het college van burgemeester en schepenen stelt voor het huishoudelijk reglement goed te keuren. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet Lokaal Bestuur. 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Het college van burgemeester en schepenen stelt voor het huishoudelijk reglement goed te keuren. 
+                                                                 
+                                                            """@nl ;
+    ns3:uuid "be8a6400-ce79-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel: Onderstaand ontwerp van huishoudelijk reglement wordt goedgekeurd. 
+                                    HUISHOUDELIJK REGLEMENT GEMEENTERAAD  
+                                    BIJEENROEPING 
+                                    Art. 1.  
+                                    De gemeenteraad vergadert zo dikwijls als de zaken die tot zijn bevoegdheid behoren het vereisen en dit ten minste tienmaal per jaar.  
+                                    Art. 2, §1.  
+                                    De voorzitter van de gemeenteraad beslist tot bijeenroeping van de gemeenteraad en stelt de agenda van de vergadering op.  
+                                    §2.  
+                                    De oproeping wordt verzonden via  e-mail. De dossiers die betrekking hebben op de agenda worden ter beschikking gesteld op de wijze bepaald in art. 9, §1 van dit reglement.  
+                                    §3.  
+                                    De voorzitter van de gemeenteraad moet de gemeenteraad bijeenroepen op verzoek van:   
+                                    1° een derde van de zittinghebbende leden;   
+                                    2° een vijfde van de zittinghebbende leden als zes weken na de datum van de vorige gemeenteraad nog geen bijeenroeping is gebeurd. De periode van zes weken wordt geschorst van 11 juli tot en met 15 augustus;  
+                                    3° het college van burgemeester en schepenen;   
+                                    4° de burgemeester voor zover het verzoek uitsluitend betrekking heeft op de eigen bevoegdheden van de burgemeester.  
+                                    In hun schriftelijke aanvraag aan de algemeen directeur moeten de aanvragers de agenda vermelden met voor elk punt een toegelicht voorstel van beslissing, de datum en het uur van de beoogde vergadering. De algemeen directeur bezorgt vervolgens de voorstellen aan de gemeenteraadsvoorzitter. De aanvraag moet ondertekend zijn door minstens het vereiste aantal raadsleden en moet tijdig ingediend worden zodat de voorzitter de oproepingstermijnen, bepaald in art. 2, §4 van dit reglement, kan nakomen.   
+                                    De voorzitter roept de vergadering bijeen op de voorgestelde datum en het aangewezen uur en met de voorgestelde agenda. De voorzitter kan punten aan de agenda toevoegen.  
+                                    §4.   
+                                    De oproeping wordt minstens acht dagen vóór de dag van de vergadering bezorgd aan de gemeenteraadsleden. In spoedeisende gevallen kan gemotiveerd van deze oproepingsperiode worden afgeweken. Het is de bevoegdheid van de raadsvoorzitter om die spoedeisendheid vast te stellen.  
+                                    §5.    
+                                    De oproeping vermeldt in elk geval de plaats, de dag, het tijdstip en de agenda van de vergadering. De agendapunten moeten voldoende duidelijk omschreven zijn. Voor elk punt dat ter stemming voorligt moet een toegelicht voorstel van beslissing toegevoegd zijn. Minstens één dergelijk punt moet op de agenda staan.  
+                                    Art. 3.  
+                                    Gemeenteraadsleden kunnen uiterlijk vijf dagen vóór de vergadering punten aan de agenda van de gemeenteraad toevoegen. Hiertoe bezorgen ze hun toegelicht voorstel van beslissing aan de algemeen directeur, die de voorstellen bezorgt aan de gemeenteraadsvoorzitter. Een lid van het college van burgemeester en schepenen, noch het college als orgaan, kan van deze mogelijkheid gebruik maken.  
+                                    De algemeen directeur deelt de aanvullende agendapunten, zoals vastgesteld door de voorzitter van de gemeenteraad, onmiddellijk mee aan de gemeenteraadsleden, samen met de bijbehorende toegelichte voorstellen.  
+                                      
+                                    FYSIEK OF DIGITAAL VERGADEREN 
+                                    Art. 4, §1.  
+                                    De gemeenteraad kan enkel digitaal vergaderen in volgende uitzonderlijke omstandigheden:   
+                                     
+                                        Een gezondheidscrisis, milieuramp of andere ernstige crisissituatie waarbij het de burgers afgeraden of verboden wordt om samen te komen;  
+                                     
+                                     
+                                        Een ernstige verstoring van de openbare orde waardoor het voor de raadsleden onmogelijk gemaakt wordt om fysiek te vergaderen;  
+                                        Een dringende noodzakelijke of spoedeisende beslissing van de raad die niet kan wachten en wanneer een fysieke vergadering niet tijdig georganiseerd kan worden. 
+                                     
+                                    Pas nadat de raadsvoorzitter vastgesteld heeft dat een dergelijke uitzonderlijke omstandigheid zich effectief voordoet, wordt overgegaan tot een digitale vergadering van de gemeenteraad.  
+                                    Dezelfde voorwaarden voor de oproeping gelden als in art. 2 van dit reglement, met daarbij de duidelijk vermelding dat het om een digitale vergadering gaat, inclusief de link met de toegang tot de digitale vergadering.  
+                                    Is de oproeping voor vergadering reeds verstuurd, dan blijft die geldig, maar wordt op dezelfde wijze een aanvulling gestuurd die duidelijk maakt dat de vergadering enkel digitaal zal doorgaan, inclusief de link met de toegang tot de digitale vergadering. Van die aanvulling kan geen gebruik gemaakt worden om nog bijkomende punten aan de agenda toe te voegen. Ook de bekendmaking voor het publiek wordt op dezelfde wijze als in art. 8, §1 van dit reglement aangevuld.   
+                                    OPENBAAR OF GESLOTEN 
+                                    Art. 5, §1.  
+                                    De vergaderingen van de gemeenteraad zijn in principe openbaar.  
+                                    §2.  
+                                    De vergadering is niet openbaar als:  
+                                    1° het om aangelegenheden gaat die de persoonlijke levenssfeer raken. Zodra een dergelijk punt aan de orde is, beveelt de voorzitter de behandeling in besloten vergadering;  
+                                    2° de gemeenteraad met twee derde van de aanwezige leden en op gemotiveerde wijze beslist tot behandeling in besloten vergadering, in het belang van de openbare orde of op grond van ernstige bezwaren tegen de openbaarheid.  
+                                    De vergaderingen over de beleidsrapporten (= het meerjarenplan, de aanpassingen van het meerjarenplan en de jaarrekening) zijn in elk geval openbaar. 
+                                    Art. 6.  
+                                    De besloten vergadering kan enkel plaatsvinden na de openbare vergadering, uitgezonderd in tuchtzaken.   
+                                    Bij een gezamenlijke oproeping opent de voorzitter eerst de openbare zitting van de gemeenteraad, waarbij de voorzitter de vergadering van de gemeenteraad schorst nadat de agenda van het openbare deel afgewerkt is. Tijdens deze schorsing van de gemeenteraad opent de voorzitter de openbare zitting van de OCMW-raad, gevolgd door de eventuele besloten zitting van de OCMW-raad. Na het sluiten van de vergadering van de OCMW-raad, opent de voorzitter het besloten deel van de gemeenteraad.   
+                                    Als tijdens de openbare vergadering van de gemeenteraad blijkt dat de behandeling van een punt in besloten zitting moet worden voortgezet, kan de openbare vergadering van de gemeenteraad, enkel met dit doel, worden onderbroken.   
+                                    Als tijdens de besloten vergadering van de gemeenteraad blijkt dat de behandeling van een punt in openbare zitting moet gebeuren, dan wordt dat punt opgenomen op de agenda van de eerstvolgende gemeenteraad. In geval van dringende noodzakelijkheid van het punt, of in geval van de eedaflegging van een personeelslid kan de besloten zitting, enkel met dat doel, worden onderbroken.  
+                                    Art. 7.  
+                                    De gemeenteraadsleden, alsmede alle andere personen die krachtens de wet of het decreet de besloten vergaderingen van de gemeenteraad bijwonen, zijn tot geheimhouding verplicht.   
+                                    INFORMATIE VOOR HET PUBLIEK 
+                                    Art. 8.  
+                                    Plaats, dag, uur en agenda van de gemeenteraadsvergadering en de agenda ervan worden openbaar bekend gemaakt op de website en sociale mediakanalen van de gemeente. Dit gebeurt uiterlijk acht dagen voor de vergadering.  
+                                    Indien raadsleden punten aan agenda toevoegen, wordt de aangepaste agenda binnen de 24 uur nadat hij is vastgesteld, op dezelfde wijze bekendgemaakt  
+                                    In spoedeisende gevallen wordt de agenda uiterlijk 24 uur nadat hij is vastgesteld, en uiterlijk vóór de aanvang van de vergadering, op dezelfde wijze bekendgemaakt.   
+                                    INFORMATIE VOOR RAADSLEDEN 
+                                    Art. 9, §1.  
+                                    Vanaf de verzending van de oproeping worden via het notuleringspakket van de gemeente voor de raadsleden alle stukken ter beschikking gesteld die horen bij de agenda. In het bijzonder gaat het over de verklarende nota's, de feitelijke gegevens, de eventueel verleende adviezen en de gemotiveerde ontwerpen van beslissing.   
+                                    Ook de nog goed te keuren notulen en het nog goed te keuren zittingsverslag van de vorige vergadering worden op dezelfde wijze ter beschikking gesteld.  
+                                    §2. De ontwerpen van meerjarenplan, aanpassingen van het meerjarenplan en jaarrekening worden op zijn minst veertien dagen vóór de vergadering waarop ze besproken worden aan ieder lid van de gemeenteraad bezorgd.  
+                                    Vanaf het ogenblik dat het ontwerp van het beleidsrapport bezorgd is aan de raadsleden, wordt aan hen ook de bijbehorende documentatie ter beschikking gesteld.  
+                                    Deze stukken worden op dezelfde wijze bezorgd aan de raadsleden zoals in art. 9, §1 van dit reglement.  
+                                    Art. 10.   
+                                    Aan de raadsleden moet, op hun verzoek, door de algemeen directeur of de door hem aangewezen personeelsleden technische toelichting worden verstrekt over de stukken in de dossiers voor de vergadering van de gemeenteraad.   
+                                    Onder technische toelichting wordt verstaan het verstrekken van inlichtingen ter verduidelijking van de feitelijke gegevens die in de dossiers voorkomen en van het verloop van de procedure.  
+                                    De raadsleden richten hun verzoek mondeling of per e-mail aan de algemeen directeur. Vragen worden op dezelfde wijze beantwoord als ze gesteld worden, tenzij het raadslid en de algemeen directeur (of het aangewezen personeelslid) anders overeenkomen.  
+                                    Art. 11, §1.  
+                                    De gemeenteraadsleden hebben, ongeacht de drager, het recht van inzage, uitleg en afschrift in alle dossiers, stukken en akten betreffende het bestuur van de gemeente.  
+                                    §2.  
+                                    De briefwisseling gericht aan de voorzitter van de gemeenteraad en die bestemd is voor de gemeenteraad, wordt op de eerstvolgende gemeenteraad meegedeeld aan de gemeenteraadsleden.  
+                                    Art. 12.  
+                                    Raadsleden hebben het recht de gemeentelijke instellingen, en diensten die de gemeente opricht en beheert, te bezoeken.  
+                                    Om de algemeen directeur in de mogelijkheid te stellen dit bezoekrecht praktisch te organiseren, delen de raadsleden minstens drie dagen vooraf schriftelijk mee welke instellingen of diensten ze willen bezoeken en welke dag en welk uur hun voorkeur heeft.  
+                                    Tijdens het bezoek van een inrichting of dienst van de gemeente mogen de raadsleden zich niet mengen in de werking. De raadsleden zijn op bezoek en gedragen zich als een bezoeker.  
+                                    Art. 13.   
+                                    Raadsleden hebben het recht om schriftelijke en mondelinge vragen op de gemeenteraad te stellen aan het college van burgemeester en schepenen over gemeentelijke aangelegenheden. Daarvoor is geen toegelicht voorstel van beslissing nodig.  
+                                    Schriftelijke vragen 
+                                    Raadsleden stellen hun schriftelijke vragen via een e-mail aan de algemeen directeur. Deze schriftelijke vraag wordt behandeld op een volgende zitting van het college van burgemeester en schepenen. 
+                                    Mondelinge vragen 
+                                    Tot 12.00 van de dag van de raadsvergadering kunnen de raadsleden via een e-mail aan de raadsvoorzitter en de algemeen directeur hun mondelinge vragen bezorgen. In dat geval kan het raadslid de vragen mondeling stellen op de gemeenteraad en antwoordt de burgemeester of een schepen meteen.  
+                                    Die mondelinge vragen waarvan de opgevraagde info reeds beschikbaar is via het recht op inzake of afschrift, zal de voorzitter gemotiveerd afwijzen. 
+                                    De mondelinge vragen worden gesteld na afhandeling van de agendapunten van de openbare vergadering van de gemeenteraad waarover gestemd moet worden. Is het conform art. 5, §2 van dit reglement niet mogelijk de vraag te behandelen in het openbare deel van de vergadering, dan wordt die behandeld bij de start van het besloten deel.    
+                                    Na het stellen van een mondelinge vraag wordt eerst het antwoord gegeven aan het raadslid/vraagsteller. Deze krijgt hierop als eerste de kans te reageren. Pas hierna kunnen andere raadsleden het woord krijgen om tussen te komen. 
+                                    QUORUM 
+                                    Art. 14, §1.  
+                                    Vooraleer aan de vergadering van de gemeenteraad deel te nemen, tekenen de leden de aanwezigheidslijst. De namen van de leden die deze lijst tekenden, worden in de notulen vermeld.  
+                                    §2.  
+                                    De gemeenteraad kan enkel beraadslagen of beslissen als de meerderheid van de zittinghebbende leden aanwezig is.   
+                                    Indien een kwartier na het vastgestelde uur niet voldoende leden aanwezig zijn om geldig te kunnen beraadslagen, stelt de voorzitter vast dat de vergadering niet kan doorgaan.  Indien tijdens de vergadering het quorum niet meer gehaald wordt, schorst de voorzitter de vergadering voor een kwartier. Stelt de voorzitter na de heropening vast dat er nog steeds niet voldoende leden aanwezig zijn om geldig te vergaderen, dan sluit de voorzitter de vergadering.  
+                                    De agendapunten die niet afgehandeld zijn, worden hernomen bij de start van de eerstvolgende raadsvergadering. Ze worden ook op die wijze opgenomen in de agenda. 
+                                    §3.  
+                                    De gemeenteraad kan echter, als hij eenmaal bijeengeroepen is zonder dat het vereiste aantal leden aanwezig is, na een tweede oproeping, ongeacht het aantal aanwezige leden, op geldige wijze beraadslagen en beslissen over de onderwerpen die voor de tweede maal op de agenda voorkomen.  
+                                    In de oproeping wordt vermeld dat het om een tweede oproeping gaat. In de tweede oproeping worden de bepalingen van artikel 26 van het decreet over het lokaal bestuur overgenomen.   
+                                    VERGADEREN 
+                                    Art. 15, §1.  
+                                    De raadsvoorzitter zit de vergaderingen van de gemeenteraad voor, en opent en sluit de vergaderingen.  
+                                    §2.  
+                                    Het laten deelnemen van derden aan de vergadering is slechts toegelaten in de gevallen bepaald in het decreet over het lokaal bestuur en de reglementen van de gemeenteraad.   
+                                    Buiten deze gevallen kunnen derden bij de behandeling van een bepaald agendapunt slechts toegelaten worden met het oog op het verstrekken van informatie, toelichtingen en/of technische adviezen inzake materies, waarin zij uit hoofde van hun vorming, kwalificatie en/of beroepservaring als deskundig worden erkend.   
+                                    De voorzitter kan derden uitnodigen. Derden kunnen in geen geval deelnemen aan de besluitvorming en mogen het besloten deel van de vergadering enkel bijwonen gedurende de toelichting die ze geven. De voorzitter bepaalt wanneer een derde tijdens de raad het woord krijgt.  
+                                    §3.  
+                                    De voorzitter van de gemeenteraad geeft bij het begin van de raad kennis van de tot de raad gerichte verzoeken en doet alle mededelingen die de raad aanbelangen.  
+                                    De gemeenteraad vat daarna de behandeling aan van de punten die vermeld staan op de agenda, in de daardoor bepaalde volgorde, tenzij de raad er anders over beslist.  
+                                    §4.  
+                                    Een punt dat niet op de agenda van de gemeenteraad voorkomt, mag niet in bespreking worden gebracht, behalve in spoedeisende gevallen.  
+                                    Tot spoedbehandeling kan enkel worden besloten door ten minste twee derde van de aanwezige leden. De namen van die leden en de motivering van de spoedeisendheid worden in de notulen vermeld.  
+                                    Art. 16, §1.  
+                                    Nadat het agendapunt werd toegelicht, vraagt de voorzitter van de gemeenteraad of er amendementen zijn op het voorstel van beslissing en welk lid aan het woord wenst te komen over het voorstel. Als er amendementen zijn, worden deze schriftelijk bezorgd aan de voorzitter. Ze worden mondeling toegelicht door de indiener wanneer die het woord krijgt.   
+                                    Een amendement is een voorstel tot wijziging van de voorgestelde beslissing bij een agendapunt, zonder dat de voorgestelde beslissing daardoor fundamenteel verandert. 
+                                    De voorzitter verleent het woord in volgorde van de aanvragen en, in geval van gelijktijdige aanvraag, op basis van de rangorde van de raadsleden.  
+                                    §2.   
+                                    De voorzitter kan op elk moment in de vergadering het woord geven aan de algemeen directeur 
+                                    §3.  
+                                    Geen enkel raadslid mag meer dan tweemaal het woord nemen over hetzelfde onderwerp, tenzij de voorzitter er anders over beslist.  
+                                    §4.  
+                                    Het woord kan door de voorzitter niet geweigerd worden voor een rechtzetting van beweerde feiten.  
+                                    §5.   
+                                    Niemand mag onderbroken worden wanneer hij/zij spreekt, behalve door de voorzitter voor een verwijzing naar het reglement of voor een terugroeping tot de orde.  
+                                    Als een gemeenteraadslid, aan wie het woord werd verleend, afdwaalt van het onderwerp, kan alleen de voorzitter hem tot de behandeling van het onderwerp terugbrengen. Indien na een eerste verwittiging het lid verder van het onderwerp blijft afdwalen, kan het woord door de voorzitter ontnomen worden. Elk lid, dat in weerwil van de beslissing van de voorzitter, tracht aan het woord te blijven, wordt geacht de orde te verstoren.  
+                                    Dit geldt eveneens voor zij die het woord nemen zonder het te hebben gevraagd en gekregen, en die aan het woord blijven in weerwil van het bevel van de voorzitter.  
+                                    Elk scheldwoord, elke beledigende uitdrukking en elke persoonlijke aantijging worden geacht de orde te verstoren.   
+                                    §6. Nadat de leden voldoende aan het woord zijn geweest, sluit de voorzitter de bespreking.  
+                                    Art. 17, §1.  
+                                    De voorzitter is belast met de handhaving van de orde in de raadsvergadering. Van de handelingen die de voorzitter in dit verband stelt, wordt melding gemaakt in het zittingsverslag.  
+                                    §2.  
+                                    Elk raadslid dat de orde verstoort, wordt door de voorzitter tot de orde teruggeroepen. Elk lid dat tot de orde werd teruggeroepen, mag zich verantwoorden, waarna de voorzitter beslist of de terugroeping tot de orde gehandhaafd of ingetrokken wordt.  
+                                    §3.  
+                                    De voorzitter kan, na een voorafgaande waarschuwing, elke toehoorder die openlijk tekens van goedkeuring of van afkeuring geeft of die op een andere wijze wanorde veroorzaakt, uit de zaal doen verwijderen.  
+                                    De voorzitter kan bovendien een proces-verbaal opmaken tegen die persoon en dat proces-verbaal bezorgen aan het openbaar ministerie met het oog op de eventuele vervolging van de betrokkene.  
+                                    §4.  Wanneer de vergadering rumoerig wordt, en daardoor het normale verloop van de bespreking in het gedrang wordt gebracht, kondigt de voorzitter aan dat hij/zij, bij voortzetting van het rumoer, de vergadering zal schorsen of sluiten.   
+                                    Indien de wanorde toch aanhoudt, schorst of sluit de voorzitter de vergadering. De raadsleden en de toehoorders moeten dan onmiddellijk de zaal verlaten.   
+                                    STEMMEN 
+                                    Art. 18, §1.  
+                                    Voor elke stemming in de gemeenteraad omschrijft de voorzitter het voorwerp van de stemming waarover de vergadering zich moet uitspreken.  
+                                    De amendementen worden vóór de hoofdvraag ter stemming gelegd.  
+                                    §2. De beslissingen worden bij volstrekte meerderheid van de geldig uitgebrachte stemmen genomen. De volstrekte meerderheid is gelijk aan meer dan de helft van de stemmen, onthoudingen, blanco en ongeldige stemmen niet meegerekend. Bij staking van stemmen is het voorstel verworpen.   
+                                    §3.  
+                                    De gemeenteraadsleden stemmen niet geheim, behalve in de volgende gevallen:  
+                                    1° de vervallenverklaring van het mandaat van gemeenteraadslid en van schepen;  
+                                    2° het aanwijzen van de leden en het beëindigen van deze aanwijzing van de gemeentelijke bestuursorganen en van de vertegenwoordigers van de gemeente in overlegorganen en in de organen van andere rechtspersonen en feitelijke verenigingen;  
+                                    3° individuele personeelszaken.  
+                                    §4.  
+                                    De voorzitter stemt als laatste, behalve bij geheime stemming.   
+                                    Art. 19, §1.  
+                                    De gemeenteraadsleden stemmen bij handopsteking behalve als een derde van de aanwezige leden de mondelinge stemming vraagt.   
+                                    §2. De stemming bij handopsteking geschiedt als volgt: Nadat de voorzitter het voorwerp van de stemming heeft omschreven zoals bepaald in art. 18, § 1 van dit reglement vraagt de voorzitter achtereenvolgens welke gemeenteraadsleden ‘ja’ stemmen, welke ‘neen’ stemmen en welke zich onthouden.  
+                                    Elk gemeenteraadslid kan per stemming slechts eenmaal zijn hand opsteken om zijn keuze duidelijk te maken.  
+                                    §3. De mondelinge stemming geschiedt door elk raadslid ‘ja’, ‘neen’ of ‘onthouding’ te laten uitspreken. Zij doen dat (met uitzondering van de voorzitter) in volgorde van de fracties.  
+                                    Art. 20.  
+                                    Bij een geheime stemming worden voorbereide stembriefjes gebruikt en wordt uniform schrijfmateriaal ter beschikking gesteld, zodat het niet mogelijk is om aan de stembriefjes te zien welke pen er gebruikt is  
+                                    De raadsleden stemmen ‘ja’, ‘neen’ of onthouden zich. De onthouding gebeurt bij een geheime stemming door het afgeven van een blanco stembriefje.  
+                                    Voor de stemming en de stemopneming is het bureau samengesteld uit de voorzitter en de jongste twee raadsleden. Ieder raadslid is gemachtigd de regelmatigheid van de stemopnemingen na te gaan.   
+                                    Vooraleer tot de stemopneming over te gaan, wordt het aantal stembriefjes geteld. Stemt dit aantal niet overeen met het aantal raadsleden die aan de stemming hebben deelgenomen, dan worden de stembriefjes vernietigd en wordt elk raadslid uitgenodigd opnieuw te stemmen.  
+                                    Art. 21.  
+                                    Voor elke benoeming tot ambten, elke contractuele aanstelling, elke verkiezing en elke voordracht van kandidaten wordt tot een afzonderlijke stemming overgegaan. 
+                                    Als bij de benoeming, de contractuele aanstelling, de verkiezing of de voordracht van kandidaten de vereiste meerderheid niet wordt verkregen bij de eerste stemming, wordt opnieuw gestemd over de twee kandidaten die de meeste stemmen hebben behaald.   
+                                    Als bij de eerste stemming sommige kandidaten een gelijk aantal stemmen behaald hebben, dan wordt de jongste kandidaat tot de herstemming toegelaten. Personen worden benoemd, aangesteld, verkozen of voorgedragen bij volstrekte meerderheid van stemmen. Bij staking van stemmen heeft de jongste kandidaat de voorkeur.   
+                                    Art. 22, §1.  
+                                    De gemeenteraad stemt over het eigen deel van elk beleidsrapport.   
+                                    Nadat zowel de gemeenteraad als de OCMW-raad elk hun deel van het beleidsrapport hebben vastgesteld, keurt de gemeenteraad het deel van het beleidsrapport goed zoals vastgesteld door de OCMW-raad. Door die goedkeuring wordt het beleidsrapport in zijn geheel geacht definitief vastgesteld te zijn. De gemeenteraad kan het deel van het beleidsrapport zoals vastgesteld door de OCMW-raad niet goedkeuren als dat de financiële belangen van de gemeente bedreigt. In dat geval vervalt de eventuele vaststelling van het deel van het beleidsrapport zoals vastgesteld door de gemeenteraad.   
+                                    §2.  
+                                    De gemeenteraad stemt telkens over het geheel van het eigen deel van het beleidsrapport.   
+                                    In afwijking daarvan kan elk gemeenteraadslid de afzonderlijke stemming eisen over een of meer onderdelen die hij/zij aanwijst in het gemeentelijke deel van het beleidsrapport.  In dat geval mag de gemeenteraad pas over het geheel van zijn deel van het beleidsrapport stemmen na de afzonderlijke stemming.   
+                                    Als deze afzonderlijke stemming tot gevolg heeft dat het ontwerp van beleidsrapport moet worden gewijzigd, wordt de stemming over het geheel verdaagd tot een volgende vergadering van de gemeenteraad.    
+                                    Is er in de OCMW-raad een afzonderlijke stemming geweest, waardoor de stemming over het geheel verdaagd is naar een volgende vergadering van de OCMW-raad en had de gemeenteraad ervoor zijn deel van het beleidsrapport al vastgesteld, dan vervalt die vaststelling en stelt de gemeenteraad het gewijzigde ontwerp van beleidsrapport vast op een volgende vergadering.   
+                                    NOTULEN, ZITTINGSVERSLAG EN ONDERTEKENING 
+                                    Art 23, §1 
+                                    Is er in de OCMW-raad een afzonderlijke stemming geweest, waardoor de stemming over het geheel verdaagd is naar een volgende vergadering van de OCMW-raad en had de gemeenteraad ervoor zijn deel van het beleidsrapport al vastgesteld, dan vervalt die vaststelling en stelt de gemeenteraad het gewijzigde ontwerp van beleidsrapport vast op een volgende vergadering.  
+                                    De notulen en het zittingsverslag van de vergadering van de gemeenteraad worden onder de verantwoordelijkheid van de algemeen directeur opgesteld overeenkomstig de bepalingen van artikel 277 en 278 van het decreet over het lokaal bestuur.   
+                                    §2.  
+                                    De zittingsverslagen van de vergaderingen van de gemeenteraad vermelden, in chronologische volgorde, alle besproken onderwerpen, de essentie van de tussenkomsten en van de mondeling en schriftelijk gestelde vragen en antwoorden.    
+                                    Een raadslid kan vragen om in het zittingsverslag de rechtvaardiging van zijn stemgedrag op te nemen.  
+                                    §3.  
+                                    Als de gemeenteraad een aangelegenheid overeenkomstig artikel 5, §2 en artikel 6 van dit reglement in besloten vergadering behandelt, vermelden de notulen alleen de beslissingen en wordt over die aangelegenheid geen zittingsverslag opgesteld.   
+                                    §4. Tijdens de vergaderingen van de gemeenteraad mogen geen audio- of audiovisuele opnames gemaakt worden, behalve door wie verantwoordelijk is voor het opmaken van de notulen en het zittingsverslag. Deze opnames zijn geen bestuursdocumenten, maar louter een administratief hulpmiddel. Ze mogen enkel gebruikt en geraadpleegd worden ter ondersteuning van de opmaak van het ontwerpzittingsverslag en de ontwerpnotulen. 
+                                    Art. 24, §1.  
+                                    De nog goed te keuren notulen en het nog goed te keuren zittingsverslag van de vorige raadsvergadering worden ter beschikking gesteld van de raadsleden zoals bepaald in art. 9, §1 van dit reglement.  
+                                    Elk gemeenteraadslid heeft het recht tijdens de vergadering opmerkingen te maken over de redactie van de notulen en het zittingsverslag van de vorige vergadering. Als die opmerkingen door de gemeenteraad worden aangenomen, worden de notulen en het zittingsverslag in die zin aangepast.   
+                                    Als er geen opmerkingen worden gemaakt, worden de notulen en het zittingsverslag als goedgekeurd beschouwd en worden ze door de voorzitter van de gemeenteraad en de algemeen directeur ondertekend. In het geval de gemeenteraad bij spoedeisendheid werd samengeroepen, kan de gemeenteraad beslissen om opmerkingen toe te laten op de eerstvolgende vergadering daarna.  
+                                    §2.  
+                                    Als de gemeenteraad het wenselijk acht, worden de notulen geheel of gedeeltelijk staande de vergadering opgemaakt en ter plekke door de algemeen directeur en een meerderheid van de aanwezige raadsleden ondertekend 
+                                    Art. 25.  
+                                    De reglementen, beslissingen, akten, brieven en alle andere stukken worden ondertekend zoals bepaald in artikel 279 tot 283 van het decreet over het lokaal bestuur 
+                                    De stukken, die niet vermeld worden in artikel 279, §1 tot §3 en §5 van het decreet over het lokaal bestuur, worden ondertekend door de burgemeester en medeondertekend door de algemeen directeur. Zij kunnen deze bevoegdheid overdragen conform artikel 280 en artikel 283 van het decreet over het lokaal bestuur.    
+                                    FRACTIES 
+                                    Art. 26, §1.  
+                                    Het gemeenteraadslid of de gemeenteraadsleden die op eenzelfde lijst verkozen zijn, vormen één fractie. Enkel wanneer voldaan is aan artikel 71, vijfde lid, van het Lokaal en Provinciaal Kiesdecreet van 8 juli 2011 kunnen de kandidaten van een lijst twee aparte fracties vormen.   
+                                    RAADSCOMISSIES 
+                                    Art. 28, §1.  
+                                    De gemeenteraad richt commissies op die zijn samengesteld uit gemeenteraadsleden. De commissies hebben als taak het voorbereiden van de besprekingen in de gemeenteraadszittingen, het verlenen van advies en het formuleren van voorstellen over de wijze waarop vorm wordt gegeven aan de inspraak van de bevolking telkens als dat voor de beleidsvoering wenselijk wordt geacht. De commissies kunnen steeds deskundigen en belanghebbenden horen.  
+                                    §2.  
+                                    De gemeenteraad bepaalt het aantal leden per gemeenteraadscommissie. De mandaten in iedere commissie worden door de gemeenteraad evenredig verdeeld overeenkomstig de samenstelling van het bijzonder comité voor de sociale dienst. 
+                                    Elke fractie wijst de mandaten toe, die haar overeenkomstig de voormelde berekeningswijze toekomen, met een voordracht, gericht aan de voorzitter van de gemeenteraad. Als de voorzitter van de gemeenteraad voordrachten ontvangt voor meer kandidaten dan er mandaten te begeven zijn voor een fractie, worden de mandaten toegewezen in de volgorde waarin de kandidaten vermeld staan op de akte van voordracht.   
+                                    Als ten gevolge van de toepassing van de evenredige vertegenwoordiging een fractie niet vertegenwoordigd is in een commissie, kan de fractie een raadslid aanwijzen dat als lid met raadgevende stem in de commissie zetelt.    
+                                    Tot de eerstvolgende volledige vernieuwing van de gemeenteraad wordt een fractie geacht hetzelfde aantal leden in de commissies te behouden. Als een lid uit de fractie stapt, of gezet wordt, dan kan dat lid niet meer zetelen in een raadscommissie. Dat kan noch als lid van deze fractie, noch als lid van een andere fractie. Niettemin behouden die fracties het oorspronkelijke aantal leden in de commissie. Deze regel geldt niet voor raadscommissies waarvan alle raadsleden lid zijn.  
+                                    De commissies worden echter opnieuw samengesteld na de aanname van een collectieve of een individuele constructieve motie van wantrouwen als daardoor het aantal mandaten dat toekomt aan de fracties waarvan leden deel uitmaken van het college van burgemeester en schepenen niet hoger is dan de som van het aantal mandaten dat toekomt aan de andere fracties.   
+                                    §3. Om ontvankelijk te zijn, moet de akte van voordracht voor elk van de kandidaat-commissieleden ten minste ondertekend zijn door een meerderheid van de leden van de fractie waarvan het kandidaat-commissielid deel uitmaakt. Als de fractie van het kandidaat-commissielid maar uit twee verkozenen bestaat, volstaat de handtekening van een van hen.   
+                                    Niemand kan meer dan één akte ondertekenen per beschikbaar mandaat voor de fractie.   
+                                    Raadsleden die op basis van art. 12 van het DLB tijdelijk in de raad zetelen ter vervanging van een verhinderd raadslid, vervangen dat raadslid tijdens de periode van verhindering ook in de commissies waar het verhinderd lid normaal gezien zetelt.   
+                                    §4. Elke commissie wordt voorgezeten door een gemeenteraadslid dat gekozen is door en onder de leden van de commissie. De leden van het college van burgemeester en schepenen kunnen geen voorzitter zijn van een commissie.   
+                                    §5.  
+                                    De commissies vergaderen in principe fysiek, tenzij de voorzitter in de bijeenroeping aangeeft dat het om een digitale vergadering gaat. Bij een fysieke vergadering kan de voorzitter bij het begin van de vergadering ook de toelating geven aan een of meer leden die erom verzoeken om digitaal deel te nemen. De commissievoorzitter zelf kan nooit digitaal deelnemen aan een fysieke of hybride vergadering van een commissie.    
+                                    De commissie wordt door de voorzitter van de gemeenteraad bijeengeroepen op dezelfde wijze als de raad bijeengeroepen wordt in art. 2, §2 (en eventueel art. 4, §1 en §2) van dit reglement. De stukken die bij de agenda horen, worden op dezelfde wijze bekend gemaakt aan de raadsleden. De oproepingsbrief vermeldt de agenda en wordt naar alle raadsleden gestuurd. Deze informatie wordt eveneens bekendgemaakt aan het publiek door publicatie op de webtoepassing van de gemeente.    
+                                    De vergaderingen van de commissies zijn openbaar volgens dezelfde regels als die voor de gemeenteraad.  
+                                    De commissies kunnen geldig vergaderen, ongeacht het aantal aanwezige leden.  
+                                    De leden van de commissies stemmen nooit geheim, behalve in de gevallen bepaald in art. 18, §3 van dit reglement.   
+                                    Raadsleden die geen lid van de commissie zijn, of geen lid zijn met raadgevende stem, kunnen zonder stemrecht en zonder recht op presentiegeld de vergaderingen van de commissies bijwonen. Ze hebben er ook spreekrecht.   
+                                    Vooraleer aan de vergadering deel te nemen, tekenen de leden van elke commissie een aanwezigheidslijst, die aan de algemeen directeur wordt bezorgd.  
+                                    Het ambt van secretaris van een raadscommissie wordt waargenomen door de algemeen directeur of door een daartoe door de algemeen directeur aangewezen personeelslid.  
+                                    §6.  
+                                    De deontologische commissie is geen commissie zoals bedoeld in dit artikel. De samenstelling, werking en bevoegdheid van de deontologische commissie wordt geregeld in de deontologische code voor mandatarissen.    
+                                    VERGOEDING RAADSLEDEN 
+                                    Art. 29, §1.  
+                                    Aan de gemeenteraadsleden, met uitzondering van de burgemeester en de schepenen, wordt presentiegeld verleend voor de volgende vergaderingen waarop zij aanwezig zijn:  
+                                    1° de vergaderingen van de gemeenteraad;  
+                                    2° de vergaderingen van de gemeenteraadscommissies (incl. deze waarvoor raadsleden overeenkomstig art. 37, §3, vierde lid van het decreet over het lokaal bestuur zijn aangewezen als leden met raadgevende stem) ;  
+                                    3° de vergadering waarvoor men in principe recht op presentiegeld heeft, maar waarvoor het aanwezigheidsquorum niet werd bereikt;  
+                                    4° de vergaderingen die slechts gedeeltelijk werden bijgewoond;   
+                                    5° de vergaderingen die werden hervat op een andere dag;  
+                                    6° de vergaderingen van de deontologische commissie.  
+                                    §2. Het presentiegeld bedraagt 250 euro voor de vergaderingen van de gemeenteraad.   
+                                    Voor de volgende andere vergaderingen bedraagt het:  175 euro  
+                                    Vanaf januari 2026 wordt het presentiegeld voor de gemeenteraad en andere vergaderingen geïndexeerd overeenkomstig de indexering die door de Vlaamse overheid op de zitpenningen wordt toegepast. 
+                                    Art. 31, §1.  
+                                    Gemeenteraadsleden kunnen de kosten van studiedagen of vormingscursussen, (ingericht door overheidsinstanties, onderwijsinstellingen of de VVSG), terugvorderen van het gemeentebestuur, voor zover deze cycli of studiedagen noodzakelijk of verrijkend zijn voor de uitoefening van hun mandaat. Deze kosten moeten worden verantwoord met bewijsstukken.  
+                                    De terugvorderbare kosten mogen niet buitensporig zijn en moeten vergelijkbaar zijn met deze van vormingsinitiatieven voor gemeente- en OCMW-personeel. Ze betreffen in principe enkel vormingscycli of studiedagen in het binnenland. Voor buitenlandse bezoeken geeft het bureau van de raad een voorafgaand advies.  
+                                    Er worden geen kosten vergoed voor het behalen van bijkomende diploma’s.  
+                                    De relevantie en de kostprijs van de vorming worden beoordeeld door de algemeen directeur 
+                                    §2.  
+                                    Terugbetaling van bijkomende kosten veroorzaakt door een specifieke gezinssituatie wegens aanwezigheid op een raads- of commissievergadering, is mogelijk. Een verzoek tot terugbetaling met verantwoordingsstukken kan worden ingediend bij de algemeen directeur.   
+                                    Verplaatsingskosten van raadsleden, noodzakelijk voor de uitoefening van hun mandaat, worden door het gemeentebestuur terugbetaald na voorlegging van bewijsstukken, op basis van de wettelijk vastgestelde tarieven.   
+                                    Jaarlijks wordt een overzicht gemaakt van de terugbetaling van de kosten van de mandatarissen. Dat document is openbaar 
+                                    §3.  
+                                    De gemeente sluit een verzekering af om de burgerlijke aansprakelijkheid, met inbegrip van de rechtsbijstand, te dekken die bij de normale uitoefening van hun mandaat persoonlijk ten laste komt van de gemeenteraadsleden.   
+                                    De gemeente sluit naast de verzekering, vermeld in het eerste lid, de volgende verzekeringen af:  
+                                     
+                                        een verzekering om de bestuurdersaansprakelijkheid te dekken die persoonlijk ten laste komt van gemeenteraadsleden bij de normale uitoefening van hun mandaat, als ze de gemeente vertegenwoordigen als lid van de raad van bestuur of als dagelijks bestuurder in een rechtspersoon indien die rechtspersoon geen bestuurdersaansprakelijkheidsverzekering heeft afgesloten voor de vertegenwoordigende mandataris;  
+                                     
+                                     
+                                        een verzekering voor ongevallen die de gemeenteraadsleden overkomen in het kader van de normale uitoefening van hun mandaat.  
+                                     
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Enig artikel: Onderstaand ontwerp van huishoudelijk reglement wordt goedgekeurd. 
+                                                                    HUISHOUDELIJK REGLEMENT GEMEENTERAAD  
+                                                                    BIJEENROEPING 
+                                                                    Art. 1.  
+                                                                    De gemeenteraad vergadert zo dikwijls als de zaken die tot zijn bevoegdheid behoren het vereisen en dit ten minste tienmaal per jaar.  
+                                                                    Art. 2, §1.  
+                                                                    De voorzitter van de gemeenteraad beslist tot bijeenroeping van de gemeenteraad en stelt de agenda van de vergadering op.  
+                                                                    §2.  
+                                                                    De oproeping wordt verzonden via  e-mail. De dossiers die betrekking hebben op de agenda worden ter beschikking gesteld op de wijze bepaald in art. 9, §1 van dit reglement.  
+                                                                    §3.  
+                                                                    De voorzitter van de gemeenteraad moet de gemeenteraad bijeenroepen op verzoek van:   
+                                                                    1° een derde van de zittinghebbende leden;   
+                                                                    2° een vijfde van de zittinghebbende leden als zes weken na de datum van de vorige gemeenteraad nog geen bijeenroeping is gebeurd. De periode van zes weken wordt geschorst van 11 juli tot en met 15 augustus;  
+                                                                    3° het college van burgemeester en schepenen;   
+                                                                    4° de burgemeester voor zover het verzoek uitsluitend betrekking heeft op de eigen bevoegdheden van de burgemeester.  
+                                                                    In hun schriftelijke aanvraag aan de algemeen directeur moeten de aanvragers de agenda vermelden met voor elk punt een toegelicht voorstel van beslissing, de datum en het uur van de beoogde vergadering. De algemeen directeur bezorgt vervolgens de voorstellen aan de gemeenteraadsvoorzitter. De aanvraag moet ondertekend zijn door minstens het vereiste aantal raadsleden en moet tijdig ingediend worden zodat de voorzitter de oproepingstermijnen, bepaald in art. 2, §4 van dit reglement, kan nakomen.   
+                                                                    De voorzitter roept de vergadering bijeen op de voorgestelde datum en het aangewezen uur en met de voorgestelde agenda. De voorzitter kan punten aan de agenda toevoegen.  
+                                                                    §4.   
+                                                                    De oproeping wordt minstens acht dagen vóór de dag van de vergadering bezorgd aan de gemeenteraadsleden. In spoedeisende gevallen kan gemotiveerd van deze oproepingsperiode worden afgeweken. Het is de bevoegdheid van de raadsvoorzitter om die spoedeisendheid vast te stellen.  
+                                                                    §5.    
+                                                                    De oproeping vermeldt in elk geval de plaats, de dag, het tijdstip en de agenda van de vergadering. De agendapunten moeten voldoende duidelijk omschreven zijn. Voor elk punt dat ter stemming voorligt moet een toegelicht voorstel van beslissing toegevoegd zijn. Minstens één dergelijk punt moet op de agenda staan.  
+                                                                    Art. 3.  
+                                                                    Gemeenteraadsleden kunnen uiterlijk vijf dagen vóór de vergadering punten aan de agenda van de gemeenteraad toevoegen. Hiertoe bezorgen ze hun toegelicht voorstel van beslissing aan de algemeen directeur, die de voorstellen bezorgt aan de gemeenteraadsvoorzitter. Een lid van het college van burgemeester en schepenen, noch het college als orgaan, kan van deze mogelijkheid gebruik maken.  
+                                                                    De algemeen directeur deelt de aanvullende agendapunten, zoals vastgesteld door de voorzitter van de gemeenteraad, onmiddellijk mee aan de gemeenteraadsleden, samen met de bijbehorende toegelichte voorstellen.  
+                                                                      
+                                                                    FYSIEK OF DIGITAAL VERGADEREN 
+                                                                    Art. 4, §1.  
+                                                                    De gemeenteraad kan enkel digitaal vergaderen in volgende uitzonderlijke omstandigheden:   
+                                                                     
+                                                                        Een gezondheidscrisis, milieuramp of andere ernstige crisissituatie waarbij het de burgers afgeraden of verboden wordt om samen te komen;  
+                                                                     
+                                                                     
+                                                                        Een ernstige verstoring van de openbare orde waardoor het voor de raadsleden onmogelijk gemaakt wordt om fysiek te vergaderen;  
+                                                                        Een dringende noodzakelijke of spoedeisende beslissing van de raad die niet kan wachten en wanneer een fysieke vergadering niet tijdig georganiseerd kan worden. 
+                                                                     
+                                                                    Pas nadat de raadsvoorzitter vastgesteld heeft dat een dergelijke uitzonderlijke omstandigheid zich effectief voordoet, wordt overgegaan tot een digitale vergadering van de gemeenteraad.  
+                                                                    Dezelfde voorwaarden voor de oproeping gelden als in art. 2 van dit reglement, met daarbij de duidelijk vermelding dat het om een digitale vergadering gaat, inclusief de link met de toegang tot de digitale vergadering.  
+                                                                    Is de oproeping voor vergadering reeds verstuurd, dan blijft die geldig, maar wordt op dezelfde wijze een aanvulling gestuurd die duidelijk maakt dat de vergadering enkel digitaal zal doorgaan, inclusief de link met de toegang tot de digitale vergadering. Van die aanvulling kan geen gebruik gemaakt worden om nog bijkomende punten aan de agenda toe te voegen. Ook de bekendmaking voor het publiek wordt op dezelfde wijze als in art. 8, §1 van dit reglement aangevuld.   
+                                                                    OPENBAAR OF GESLOTEN 
+                                                                    Art. 5, §1.  
+                                                                    De vergaderingen van de gemeenteraad zijn in principe openbaar.  
+                                                                    §2.  
+                                                                    De vergadering is niet openbaar als:  
+                                                                    1° het om aangelegenheden gaat die de persoonlijke levenssfeer raken. Zodra een dergelijk punt aan de orde is, beveelt de voorzitter de behandeling in besloten vergadering;  
+                                                                    2° de gemeenteraad met twee derde van de aanwezige leden en op gemotiveerde wijze beslist tot behandeling in besloten vergadering, in het belang van de openbare orde of op grond van ernstige bezwaren tegen de openbaarheid.  
+                                                                    De vergaderingen over de beleidsrapporten (= het meerjarenplan, de aanpassingen van het meerjarenplan en de jaarrekening) zijn in elk geval openbaar. 
+                                                                    Art. 6.  
+                                                                    De besloten vergadering kan enkel plaatsvinden na de openbare vergadering, uitgezonderd in tuchtzaken.   
+                                                                    Bij een gezamenlijke oproeping opent de voorzitter eerst de openbare zitting van de gemeenteraad, waarbij de voorzitter de vergadering van de gemeenteraad schorst nadat de agenda van het openbare deel afgewerkt is. Tijdens deze schorsing van de gemeenteraad opent de voorzitter de openbare zitting van de OCMW-raad, gevolgd door de eventuele besloten zitting van de OCMW-raad. Na het sluiten van de vergadering van de OCMW-raad, opent de voorzitter het besloten deel van de gemeenteraad.   
+                                                                    Als tijdens de openbare vergadering van de gemeenteraad blijkt dat de behandeling van een punt in besloten zitting moet worden voortgezet, kan de openbare vergadering van de gemeenteraad, enkel met dit doel, worden onderbroken.   
+                                                                    Als tijdens de besloten vergadering van de gemeenteraad blijkt dat de behandeling van een punt in openbare zitting moet gebeuren, dan wordt dat punt opgenomen op de agenda van de eerstvolgende gemeenteraad. In geval van dringende noodzakelijkheid van het punt, of in geval van de eedaflegging van een personeelslid kan de besloten zitting, enkel met dat doel, worden onderbroken.  
+                                                                    Art. 7.  
+                                                                    De gemeenteraadsleden, alsmede alle andere personen die krachtens de wet of het decreet de besloten vergaderingen van de gemeenteraad bijwonen, zijn tot geheimhouding verplicht.   
+                                                                    INFORMATIE VOOR HET PUBLIEK 
+                                                                    Art. 8.  
+                                                                    Plaats, dag, uur en agenda van de gemeenteraadsvergadering en de agenda ervan worden openbaar bekend gemaakt op de website en sociale mediakanalen van de gemeente. Dit gebeurt uiterlijk acht dagen voor de vergadering.  
+                                                                    Indien raadsleden punten aan agenda toevoegen, wordt de aangepaste agenda binnen de 24 uur nadat hij is vastgesteld, op dezelfde wijze bekendgemaakt  
+                                                                    In spoedeisende gevallen wordt de agenda uiterlijk 24 uur nadat hij is vastgesteld, en uiterlijk vóór de aanvang van de vergadering, op dezelfde wijze bekendgemaakt.   
+                                                                    INFORMATIE VOOR RAADSLEDEN 
+                                                                    Art. 9, §1.  
+                                                                    Vanaf de verzending van de oproeping worden via het notuleringspakket van de gemeente voor de raadsleden alle stukken ter beschikking gesteld die horen bij de agenda. In het bijzonder gaat het over de verklarende nota's, de feitelijke gegevens, de eventueel verleende adviezen en de gemotiveerde ontwerpen van beslissing.   
+                                                                    Ook de nog goed te keuren notulen en het nog goed te keuren zittingsverslag van de vorige vergadering worden op dezelfde wijze ter beschikking gesteld.  
+                                                                    §2. De ontwerpen van meerjarenplan, aanpassingen van het meerjarenplan en jaarrekening worden op zijn minst veertien dagen vóór de vergadering waarop ze besproken worden aan ieder lid van de gemeenteraad bezorgd.  
+                                                                    Vanaf het ogenblik dat het ontwerp van het beleidsrapport bezorgd is aan de raadsleden, wordt aan hen ook de bijbehorende documentatie ter beschikking gesteld.  
+                                                                    Deze stukken worden op dezelfde wijze bezorgd aan de raadsleden zoals in art. 9, §1 van dit reglement.  
+                                                                    Art. 10.   
+                                                                    Aan de raadsleden moet, op hun verzoek, door de algemeen directeur of de door hem aangewezen personeelsleden technische toelichting worden verstrekt over de stukken in de dossiers voor de vergadering van de gemeenteraad.   
+                                                                    Onder technische toelichting wordt verstaan het verstrekken van inlichtingen ter verduidelijking van de feitelijke gegevens die in de dossiers voorkomen en van het verloop van de procedure.  
+                                                                    De raadsleden richten hun verzoek mondeling of per e-mail aan de algemeen directeur. Vragen worden op dezelfde wijze beantwoord als ze gesteld worden, tenzij het raadslid en de algemeen directeur (of het aangewezen personeelslid) anders overeenkomen.  
+                                                                    Art. 11, §1.  
+                                                                    De gemeenteraadsleden hebben, ongeacht de drager, het recht van inzage, uitleg en afschrift in alle dossiers, stukken en akten betreffende het bestuur van de gemeente.  
+                                                                    §2.  
+                                                                    De briefwisseling gericht aan de voorzitter van de gemeenteraad en die bestemd is voor de gemeenteraad, wordt op de eerstvolgende gemeenteraad meegedeeld aan de gemeenteraadsleden.  
+                                                                    Art. 12.  
+                                                                    Raadsleden hebben het recht de gemeentelijke instellingen, en diensten die de gemeente opricht en beheert, te bezoeken.  
+                                                                    Om de algemeen directeur in de mogelijkheid te stellen dit bezoekrecht praktisch te organiseren, delen de raadsleden minstens drie dagen vooraf schriftelijk mee welke instellingen of diensten ze willen bezoeken en welke dag en welk uur hun voorkeur heeft.  
+                                                                    Tijdens het bezoek van een inrichting of dienst van de gemeente mogen de raadsleden zich niet mengen in de werking. De raadsleden zijn op bezoek en gedragen zich als een bezoeker.  
+                                                                    Art. 13.   
+                                                                    Raadsleden hebben het recht om schriftelijke en mondelinge vragen op de gemeenteraad te stellen aan het college van burgemeester en schepenen over gemeentelijke aangelegenheden. Daarvoor is geen toegelicht voorstel van beslissing nodig.  
+                                                                    Schriftelijke vragen 
+                                                                    Raadsleden stellen hun schriftelijke vragen via een e-mail aan de algemeen directeur. Deze schriftelijke vraag wordt behandeld op een volgende zitting van het college van burgemeester en schepenen. 
+                                                                    Mondelinge vragen 
+                                                                    Tot 12.00 van de dag van de raadsvergadering kunnen de raadsleden via een e-mail aan de raadsvoorzitter en de algemeen directeur hun mondelinge vragen bezorgen. In dat geval kan het raadslid de vragen mondeling stellen op de gemeenteraad en antwoordt de burgemeester of een schepen meteen.  
+                                                                    Die mondelinge vragen waarvan de opgevraagde info reeds beschikbaar is via het recht op inzake of afschrift, zal de voorzitter gemotiveerd afwijzen. 
+                                                                    De mondelinge vragen worden gesteld na afhandeling van de agendapunten van de openbare vergadering van de gemeenteraad waarover gestemd moet worden. Is het conform art. 5, §2 van dit reglement niet mogelijk de vraag te behandelen in het openbare deel van de vergadering, dan wordt die behandeld bij de start van het besloten deel.    
+                                                                    Na het stellen van een mondelinge vraag wordt eerst het antwoord gegeven aan het raadslid/vraagsteller. Deze krijgt hierop als eerste de kans te reageren. Pas hierna kunnen andere raadsleden het woord krijgen om tussen te komen. 
+                                                                    QUORUM 
+                                                                    Art. 14, §1.  
+                                                                    Vooraleer aan de vergadering van de gemeenteraad deel te nemen, tekenen de leden de aanwezigheidslijst. De namen van de leden die deze lijst tekenden, worden in de notulen vermeld.  
+                                                                    §2.  
+                                                                    De gemeenteraad kan enkel beraadslagen of beslissen als de meerderheid van de zittinghebbende leden aanwezig is.   
+                                                                    Indien een kwartier na het vastgestelde uur niet voldoende leden aanwezig zijn om geldig te kunnen beraadslagen, stelt de voorzitter vast dat de vergadering niet kan doorgaan.  Indien tijdens de vergadering het quorum niet meer gehaald wordt, schorst de voorzitter de vergadering voor een kwartier. Stelt de voorzitter na de heropening vast dat er nog steeds niet voldoende leden aanwezig zijn om geldig te vergaderen, dan sluit de voorzitter de vergadering.  
+                                                                    De agendapunten die niet afgehandeld zijn, worden hernomen bij de start van de eerstvolgende raadsvergadering. Ze worden ook op die wijze opgenomen in de agenda. 
+                                                                    §3.  
+                                                                    De gemeenteraad kan echter, als hij eenmaal bijeengeroepen is zonder dat het vereiste aantal leden aanwezig is, na een tweede oproeping, ongeacht het aantal aanwezige leden, op geldige wijze beraadslagen en beslissen over de onderwerpen die voor de tweede maal op de agenda voorkomen.  
+                                                                    In de oproeping wordt vermeld dat het om een tweede oproeping gaat. In de tweede oproeping worden de bepalingen van artikel 26 van het decreet over het lokaal bestuur overgenomen.   
+                                                                    VERGADEREN 
+                                                                    Art. 15, §1.  
+                                                                    De raadsvoorzitter zit de vergaderingen van de gemeenteraad voor, en opent en sluit de vergaderingen.  
+                                                                    §2.  
+                                                                    Het laten deelnemen van derden aan de vergadering is slechts toegelaten in de gevallen bepaald in het decreet over het lokaal bestuur en de reglementen van de gemeenteraad.   
+                                                                    Buiten deze gevallen kunnen derden bij de behandeling van een bepaald agendapunt slechts toegelaten worden met het oog op het verstrekken van informatie, toelichtingen en/of technische adviezen inzake materies, waarin zij uit hoofde van hun vorming, kwalificatie en/of beroepservaring als deskundig worden erkend.   
+                                                                    De voorzitter kan derden uitnodigen. Derden kunnen in geen geval deelnemen aan de besluitvorming en mogen het besloten deel van de vergadering enkel bijwonen gedurende de toelichting die ze geven. De voorzitter bepaalt wanneer een derde tijdens de raad het woord krijgt.  
+                                                                    §3.  
+                                                                    De voorzitter van de gemeenteraad geeft bij het begin van de raad kennis van de tot de raad gerichte verzoeken en doet alle mededelingen die de raad aanbelangen.  
+                                                                    De gemeenteraad vat daarna de behandeling aan van de punten die vermeld staan op de agenda, in de daardoor bepaalde volgorde, tenzij de raad er anders over beslist.  
+                                                                    §4.  
+                                                                    Een punt dat niet op de agenda van de gemeenteraad voorkomt, mag niet in bespreking worden gebracht, behalve in spoedeisende gevallen.  
+                                                                    Tot spoedbehandeling kan enkel worden besloten door ten minste twee derde van de aanwezige leden. De namen van die leden en de motivering van de spoedeisendheid worden in de notulen vermeld.  
+                                                                    Art. 16, §1.  
+                                                                    Nadat het agendapunt werd toegelicht, vraagt de voorzitter van de gemeenteraad of er amendementen zijn op het voorstel van beslissing en welk lid aan het woord wenst te komen over het voorstel. Als er amendementen zijn, worden deze schriftelijk bezorgd aan de voorzitter. Ze worden mondeling toegelicht door de indiener wanneer die het woord krijgt.   
+                                                                    Een amendement is een voorstel tot wijziging van de voorgestelde beslissing bij een agendapunt, zonder dat de voorgestelde beslissing daardoor fundamenteel verandert. 
+                                                                    De voorzitter verleent het woord in volgorde van de aanvragen en, in geval van gelijktijdige aanvraag, op basis van de rangorde van de raadsleden.  
+                                                                    §2.   
+                                                                    De voorzitter kan op elk moment in de vergadering het woord geven aan de algemeen directeur 
+                                                                    §3.  
+                                                                    Geen enkel raadslid mag meer dan tweemaal het woord nemen over hetzelfde onderwerp, tenzij de voorzitter er anders over beslist.  
+                                                                    §4.  
+                                                                    Het woord kan door de voorzitter niet geweigerd worden voor een rechtzetting van beweerde feiten.  
+                                                                    §5.   
+                                                                    Niemand mag onderbroken worden wanneer hij/zij spreekt, behalve door de voorzitter voor een verwijzing naar het reglement of voor een terugroeping tot de orde.  
+                                                                    Als een gemeenteraadslid, aan wie het woord werd verleend, afdwaalt van het onderwerp, kan alleen de voorzitter hem tot de behandeling van het onderwerp terugbrengen. Indien na een eerste verwittiging het lid verder van het onderwerp blijft afdwalen, kan het woord door de voorzitter ontnomen worden. Elk lid, dat in weerwil van de beslissing van de voorzitter, tracht aan het woord te blijven, wordt geacht de orde te verstoren.  
+                                                                    Dit geldt eveneens voor zij die het woord nemen zonder het te hebben gevraagd en gekregen, en die aan het woord blijven in weerwil van het bevel van de voorzitter.  
+                                                                    Elk scheldwoord, elke beledigende uitdrukking en elke persoonlijke aantijging worden geacht de orde te verstoren.   
+                                                                    §6. Nadat de leden voldoende aan het woord zijn geweest, sluit de voorzitter de bespreking.  
+                                                                    Art. 17, §1.  
+                                                                    De voorzitter is belast met de handhaving van de orde in de raadsvergadering. Van de handelingen die de voorzitter in dit verband stelt, wordt melding gemaakt in het zittingsverslag.  
+                                                                    §2.  
+                                                                    Elk raadslid dat de orde verstoort, wordt door de voorzitter tot de orde teruggeroepen. Elk lid dat tot de orde werd teruggeroepen, mag zich verantwoorden, waarna de voorzitter beslist of de terugroeping tot de orde gehandhaafd of ingetrokken wordt.  
+                                                                    §3.  
+                                                                    De voorzitter kan, na een voorafgaande waarschuwing, elke toehoorder die openlijk tekens van goedkeuring of van afkeuring geeft of die op een andere wijze wanorde veroorzaakt, uit de zaal doen verwijderen.  
+                                                                    De voorzitter kan bovendien een proces-verbaal opmaken tegen die persoon en dat proces-verbaal bezorgen aan het openbaar ministerie met het oog op de eventuele vervolging van de betrokkene.  
+                                                                    §4.  Wanneer de vergadering rumoerig wordt, en daardoor het normale verloop van de bespreking in het gedrang wordt gebracht, kondigt de voorzitter aan dat hij/zij, bij voortzetting van het rumoer, de vergadering zal schorsen of sluiten.   
+                                                                    Indien de wanorde toch aanhoudt, schorst of sluit de voorzitter de vergadering. De raadsleden en de toehoorders moeten dan onmiddellijk de zaal verlaten.   
+                                                                    STEMMEN 
+                                                                    Art. 18, §1.  
+                                                                    Voor elke stemming in de gemeenteraad omschrijft de voorzitter het voorwerp van de stemming waarover de vergadering zich moet uitspreken.  
+                                                                    De amendementen worden vóór de hoofdvraag ter stemming gelegd.  
+                                                                    §2. De beslissingen worden bij volstrekte meerderheid van de geldig uitgebrachte stemmen genomen. De volstrekte meerderheid is gelijk aan meer dan de helft van de stemmen, onthoudingen, blanco en ongeldige stemmen niet meegerekend. Bij staking van stemmen is het voorstel verworpen.   
+                                                                    §3.  
+                                                                    De gemeenteraadsleden stemmen niet geheim, behalve in de volgende gevallen:  
+                                                                    1° de vervallenverklaring van het mandaat van gemeenteraadslid en van schepen;  
+                                                                    2° het aanwijzen van de leden en het beëindigen van deze aanwijzing van de gemeentelijke bestuursorganen en van de vertegenwoordigers van de gemeente in overlegorganen en in de organen van andere rechtspersonen en feitelijke verenigingen;  
+                                                                    3° individuele personeelszaken.  
+                                                                    §4.  
+                                                                    De voorzitter stemt als laatste, behalve bij geheime stemming.   
+                                                                    Art. 19, §1.  
+                                                                    De gemeenteraadsleden stemmen bij handopsteking behalve als een derde van de aanwezige leden de mondelinge stemming vraagt.   
+                                                                    §2. De stemming bij handopsteking geschiedt als volgt: Nadat de voorzitter het voorwerp van de stemming heeft omschreven zoals bepaald in art. 18, § 1 van dit reglement vraagt de voorzitter achtereenvolgens welke gemeenteraadsleden ‘ja’ stemmen, welke ‘neen’ stemmen en welke zich onthouden.  
+                                                                    Elk gemeenteraadslid kan per stemming slechts eenmaal zijn hand opsteken om zijn keuze duidelijk te maken.  
+                                                                    §3. De mondelinge stemming geschiedt door elk raadslid ‘ja’, ‘neen’ of ‘onthouding’ te laten uitspreken. Zij doen dat (met uitzondering van de voorzitter) in volgorde van de fracties.  
+                                                                    Art. 20.  
+                                                                    Bij een geheime stemming worden voorbereide stembriefjes gebruikt en wordt uniform schrijfmateriaal ter beschikking gesteld, zodat het niet mogelijk is om aan de stembriefjes te zien welke pen er gebruikt is  
+                                                                    De raadsleden stemmen ‘ja’, ‘neen’ of onthouden zich. De onthouding gebeurt bij een geheime stemming door het afgeven van een blanco stembriefje.  
+                                                                    Voor de stemming en de stemopneming is het bureau samengesteld uit de voorzitter en de jongste twee raadsleden. Ieder raadslid is gemachtigd de regelmatigheid van de stemopnemingen na te gaan.   
+                                                                    Vooraleer tot de stemopneming over te gaan, wordt het aantal stembriefjes geteld. Stemt dit aantal niet overeen met het aantal raadsleden die aan de stemming hebben deelgenomen, dan worden de stembriefjes vernietigd en wordt elk raadslid uitgenodigd opnieuw te stemmen.  
+                                                                    Art. 21.  
+                                                                    Voor elke benoeming tot ambten, elke contractuele aanstelling, elke verkiezing en elke voordracht van kandidaten wordt tot een afzonderlijke stemming overgegaan. 
+                                                                    Als bij de benoeming, de contractuele aanstelling, de verkiezing of de voordracht van kandidaten de vereiste meerderheid niet wordt verkregen bij de eerste stemming, wordt opnieuw gestemd over de twee kandidaten die de meeste stemmen hebben behaald.   
+                                                                    Als bij de eerste stemming sommige kandidaten een gelijk aantal stemmen behaald hebben, dan wordt de jongste kandidaat tot de herstemming toegelaten. Personen worden benoemd, aangesteld, verkozen of voorgedragen bij volstrekte meerderheid van stemmen. Bij staking van stemmen heeft de jongste kandidaat de voorkeur.   
+                                                                    Art. 22, §1.  
+                                                                    De gemeenteraad stemt over het eigen deel van elk beleidsrapport.   
+                                                                    Nadat zowel de gemeenteraad als de OCMW-raad elk hun deel van het beleidsrapport hebben vastgesteld, keurt de gemeenteraad het deel van het beleidsrapport goed zoals vastgesteld door de OCMW-raad. Door die goedkeuring wordt het beleidsrapport in zijn geheel geacht definitief vastgesteld te zijn. De gemeenteraad kan het deel van het beleidsrapport zoals vastgesteld door de OCMW-raad niet goedkeuren als dat de financiële belangen van de gemeente bedreigt. In dat geval vervalt de eventuele vaststelling van het deel van het beleidsrapport zoals vastgesteld door de gemeenteraad.   
+                                                                    §2.  
+                                                                    De gemeenteraad stemt telkens over het geheel van het eigen deel van het beleidsrapport.   
+                                                                    In afwijking daarvan kan elk gemeenteraadslid de afzonderlijke stemming eisen over een of meer onderdelen die hij/zij aanwijst in het gemeentelijke deel van het beleidsrapport.  In dat geval mag de gemeenteraad pas over het geheel van zijn deel van het beleidsrapport stemmen na de afzonderlijke stemming.   
+                                                                    Als deze afzonderlijke stemming tot gevolg heeft dat het ontwerp van beleidsrapport moet worden gewijzigd, wordt de stemming over het geheel verdaagd tot een volgende vergadering van de gemeenteraad.    
+                                                                    Is er in de OCMW-raad een afzonderlijke stemming geweest, waardoor de stemming over het geheel verdaagd is naar een volgende vergadering van de OCMW-raad en had de gemeenteraad ervoor zijn deel van het beleidsrapport al vastgesteld, dan vervalt die vaststelling en stelt de gemeenteraad het gewijzigde ontwerp van beleidsrapport vast op een volgende vergadering.   
+                                                                    NOTULEN, ZITTINGSVERSLAG EN ONDERTEKENING 
+                                                                    Art 23, §1 
+                                                                    Is er in de OCMW-raad een afzonderlijke stemming geweest, waardoor de stemming over het geheel verdaagd is naar een volgende vergadering van de OCMW-raad en had de gemeenteraad ervoor zijn deel van het beleidsrapport al vastgesteld, dan vervalt die vaststelling en stelt de gemeenteraad het gewijzigde ontwerp van beleidsrapport vast op een volgende vergadering.  
+                                                                    De notulen en het zittingsverslag van de vergadering van de gemeenteraad worden onder de verantwoordelijkheid van de algemeen directeur opgesteld overeenkomstig de bepalingen van artikel 277 en 278 van het decreet over het lokaal bestuur.   
+                                                                    §2.  
+                                                                    De zittingsverslagen van de vergaderingen van de gemeenteraad vermelden, in chronologische volgorde, alle besproken onderwerpen, de essentie van de tussenkomsten en van de mondeling en schriftelijk gestelde vragen en antwoorden.    
+                                                                    Een raadslid kan vragen om in het zittingsverslag de rechtvaardiging van zijn stemgedrag op te nemen.  
+                                                                    §3.  
+                                                                    Als de gemeenteraad een aangelegenheid overeenkomstig artikel 5, §2 en artikel 6 van dit reglement in besloten vergadering behandelt, vermelden de notulen alleen de beslissingen en wordt over die aangelegenheid geen zittingsverslag opgesteld.   
+                                                                    §4. Tijdens de vergaderingen van de gemeenteraad mogen geen audio- of audiovisuele opnames gemaakt worden, behalve door wie verantwoordelijk is voor het opmaken van de notulen en het zittingsverslag. Deze opnames zijn geen bestuursdocumenten, maar louter een administratief hulpmiddel. Ze mogen enkel gebruikt en geraadpleegd worden ter ondersteuning van de opmaak van het ontwerpzittingsverslag en de ontwerpnotulen. 
+                                                                    Art. 24, §1.  
+                                                                    De nog goed te keuren notulen en het nog goed te keuren zittingsverslag van de vorige raadsvergadering worden ter beschikking gesteld van de raadsleden zoals bepaald in art. 9, §1 van dit reglement.  
+                                                                    Elk gemeenteraadslid heeft het recht tijdens de vergadering opmerkingen te maken over de redactie van de notulen en het zittingsverslag van de vorige vergadering. Als die opmerkingen door de gemeenteraad worden aangenomen, worden de notulen en het zittingsverslag in die zin aangepast.   
+                                                                    Als er geen opmerkingen worden gemaakt, worden de notulen en het zittingsverslag als goedgekeurd beschouwd en worden ze door de voorzitter van de gemeenteraad en de algemeen directeur ondertekend. In het geval de gemeenteraad bij spoedeisendheid werd samengeroepen, kan de gemeenteraad beslissen om opmerkingen toe te laten op de eerstvolgende vergadering daarna.  
+                                                                    §2.  
+                                                                    Als de gemeenteraad het wenselijk acht, worden de notulen geheel of gedeeltelijk staande de vergadering opgemaakt en ter plekke door de algemeen directeur en een meerderheid van de aanwezige raadsleden ondertekend 
+                                                                    Art. 25.  
+                                                                    De reglementen, beslissingen, akten, brieven en alle andere stukken worden ondertekend zoals bepaald in artikel 279 tot 283 van het decreet over het lokaal bestuur 
+                                                                    De stukken, die niet vermeld worden in artikel 279, §1 tot §3 en §5 van het decreet over het lokaal bestuur, worden ondertekend door de burgemeester en medeondertekend door de algemeen directeur. Zij kunnen deze bevoegdheid overdragen conform artikel 280 en artikel 283 van het decreet over het lokaal bestuur.    
+                                                                    FRACTIES 
+                                                                    Art. 26, §1.  
+                                                                    Het gemeenteraadslid of de gemeenteraadsleden die op eenzelfde lijst verkozen zijn, vormen één fractie. Enkel wanneer voldaan is aan artikel 71, vijfde lid, van het Lokaal en Provinciaal Kiesdecreet van 8 juli 2011 kunnen de kandidaten van een lijst twee aparte fracties vormen.   
+                                                                    RAADSCOMISSIES 
+                                                                    Art. 28, §1.  
+                                                                    De gemeenteraad richt commissies op die zijn samengesteld uit gemeenteraadsleden. De commissies hebben als taak het voorbereiden van de besprekingen in de gemeenteraadszittingen, het verlenen van advies en het formuleren van voorstellen over de wijze waarop vorm wordt gegeven aan de inspraak van de bevolking telkens als dat voor de beleidsvoering wenselijk wordt geacht. De commissies kunnen steeds deskundigen en belanghebbenden horen.  
+                                                                    §2.  
+                                                                    De gemeenteraad bepaalt het aantal leden per gemeenteraadscommissie. De mandaten in iedere commissie worden door de gemeenteraad evenredig verdeeld overeenkomstig de samenstelling van het bijzonder comité voor de sociale dienst. 
+                                                                    Elke fractie wijst de mandaten toe, die haar overeenkomstig de voormelde berekeningswijze toekomen, met een voordracht, gericht aan de voorzitter van de gemeenteraad. Als de voorzitter van de gemeenteraad voordrachten ontvangt voor meer kandidaten dan er mandaten te begeven zijn voor een fractie, worden de mandaten toegewezen in de volgorde waarin de kandidaten vermeld staan op de akte van voordracht.   
+                                                                    Als ten gevolge van de toepassing van de evenredige vertegenwoordiging een fractie niet vertegenwoordigd is in een commissie, kan de fractie een raadslid aanwijzen dat als lid met raadgevende stem in de commissie zetelt.    
+                                                                    Tot de eerstvolgende volledige vernieuwing van de gemeenteraad wordt een fractie geacht hetzelfde aantal leden in de commissies te behouden. Als een lid uit de fractie stapt, of gezet wordt, dan kan dat lid niet meer zetelen in een raadscommissie. Dat kan noch als lid van deze fractie, noch als lid van een andere fractie. Niettemin behouden die fracties het oorspronkelijke aantal leden in de commissie. Deze regel geldt niet voor raadscommissies waarvan alle raadsleden lid zijn.  
+                                                                    De commissies worden echter opnieuw samengesteld na de aanname van een collectieve of een individuele constructieve motie van wantrouwen als daardoor het aantal mandaten dat toekomt aan de fracties waarvan leden deel uitmaken van het college van burgemeester en schepenen niet hoger is dan de som van het aantal mandaten dat toekomt aan de andere fracties.   
+                                                                    §3. Om ontvankelijk te zijn, moet de akte van voordracht voor elk van de kandidaat-commissieleden ten minste ondertekend zijn door een meerderheid van de leden van de fractie waarvan het kandidaat-commissielid deel uitmaakt. Als de fractie van het kandidaat-commissielid maar uit twee verkozenen bestaat, volstaat de handtekening van een van hen.   
+                                                                    Niemand kan meer dan één akte ondertekenen per beschikbaar mandaat voor de fractie.   
+                                                                    Raadsleden die op basis van art. 12 van het DLB tijdelijk in de raad zetelen ter vervanging van een verhinderd raadslid, vervangen dat raadslid tijdens de periode van verhindering ook in de commissies waar het verhinderd lid normaal gezien zetelt.   
+                                                                    §4. Elke commissie wordt voorgezeten door een gemeenteraadslid dat gekozen is door en onder de leden van de commissie. De leden van het college van burgemeester en schepenen kunnen geen voorzitter zijn van een commissie.   
+                                                                    §5.  
+                                                                    De commissies vergaderen in principe fysiek, tenzij de voorzitter in de bijeenroeping aangeeft dat het om een digitale vergadering gaat. Bij een fysieke vergadering kan de voorzitter bij het begin van de vergadering ook de toelating geven aan een of meer leden die erom verzoeken om digitaal deel te nemen. De commissievoorzitter zelf kan nooit digitaal deelnemen aan een fysieke of hybride vergadering van een commissie.    
+                                                                    De commissie wordt door de voorzitter van de gemeenteraad bijeengeroepen op dezelfde wijze als de raad bijeengeroepen wordt in art. 2, §2 (en eventueel art. 4, §1 en §2) van dit reglement. De stukken die bij de agenda horen, worden op dezelfde wijze bekend gemaakt aan de raadsleden. De oproepingsbrief vermeldt de agenda en wordt naar alle raadsleden gestuurd. Deze informatie wordt eveneens bekendgemaakt aan het publiek door publicatie op de webtoepassing van de gemeente.    
+                                                                    De vergaderingen van de commissies zijn openbaar volgens dezelfde regels als die voor de gemeenteraad.  
+                                                                    De commissies kunnen geldig vergaderen, ongeacht het aantal aanwezige leden.  
+                                                                    De leden van de commissies stemmen nooit geheim, behalve in de gevallen bepaald in art. 18, §3 van dit reglement.   
+                                                                    Raadsleden die geen lid van de commissie zijn, of geen lid zijn met raadgevende stem, kunnen zonder stemrecht en zonder recht op presentiegeld de vergaderingen van de commissies bijwonen. Ze hebben er ook spreekrecht.   
+                                                                    Vooraleer aan de vergadering deel te nemen, tekenen de leden van elke commissie een aanwezigheidslijst, die aan de algemeen directeur wordt bezorgd.  
+                                                                    Het ambt van secretaris van een raadscommissie wordt waargenomen door de algemeen directeur of door een daartoe door de algemeen directeur aangewezen personeelslid.  
+                                                                    §6.  
+                                                                    De deontologische commissie is geen commissie zoals bedoeld in dit artikel. De samenstelling, werking en bevoegdheid van de deontologische commissie wordt geregeld in de deontologische code voor mandatarissen.    
+                                                                    VERGOEDING RAADSLEDEN 
+                                                                    Art. 29, §1.  
+                                                                    Aan de gemeenteraadsleden, met uitzondering van de burgemeester en de schepenen, wordt presentiegeld verleend voor de volgende vergaderingen waarop zij aanwezig zijn:  
+                                                                    1° de vergaderingen van de gemeenteraad;  
+                                                                    2° de vergaderingen van de gemeenteraadscommissies (incl. deze waarvoor raadsleden overeenkomstig art. 37, §3, vierde lid van het decreet over het lokaal bestuur zijn aangewezen als leden met raadgevende stem) ;  
+                                                                    3° de vergadering waarvoor men in principe recht op presentiegeld heeft, maar waarvoor het aanwezigheidsquorum niet werd bereikt;  
+                                                                    4° de vergaderingen die slechts gedeeltelijk werden bijgewoond;   
+                                                                    5° de vergaderingen die werden hervat op een andere dag;  
+                                                                    6° de vergaderingen van de deontologische commissie.  
+                                                                    §2. Het presentiegeld bedraagt 250 euro voor de vergaderingen van de gemeenteraad.   
+                                                                    Voor de volgende andere vergaderingen bedraagt het:  175 euro  
+                                                                    Vanaf januari 2026 wordt het presentiegeld voor de gemeenteraad en andere vergaderingen geïndexeerd overeenkomstig de indexering die door de Vlaamse overheid op de zitpenningen wordt toegepast. 
+                                                                    Art. 31, §1.  
+                                                                    Gemeenteraadsleden kunnen de kosten van studiedagen of vormingscursussen, (ingericht door overheidsinstanties, onderwijsinstellingen of de VVSG), terugvorderen van het gemeentebestuur, voor zover deze cycli of studiedagen noodzakelijk of verrijkend zijn voor de uitoefening van hun mandaat. Deze kosten moeten worden verantwoord met bewijsstukken.  
+                                                                    De terugvorderbare kosten mogen niet buitensporig zijn en moeten vergelijkbaar zijn met deze van vormingsinitiatieven voor gemeente- en OCMW-personeel. Ze betreffen in principe enkel vormingscycli of studiedagen in het binnenland. Voor buitenlandse bezoeken geeft het bureau van de raad een voorafgaand advies.  
+                                                                    Er worden geen kosten vergoed voor het behalen van bijkomende diploma’s.  
+                                                                    De relevantie en de kostprijs van de vorming worden beoordeeld door de algemeen directeur 
+                                                                    §2.  
+                                                                    Terugbetaling van bijkomende kosten veroorzaakt door een specifieke gezinssituatie wegens aanwezigheid op een raads- of commissievergadering, is mogelijk. Een verzoek tot terugbetaling met verantwoordingsstukken kan worden ingediend bij de algemeen directeur.   
+                                                                    Verplaatsingskosten van raadsleden, noodzakelijk voor de uitoefening van hun mandaat, worden door het gemeentebestuur terugbetaald na voorlegging van bewijsstukken, op basis van de wettelijk vastgestelde tarieven.   
+                                                                    Jaarlijks wordt een overzicht gemaakt van de terugbetaling van de kosten van de mandatarissen. Dat document is openbaar 
+                                                                    §3.  
+                                                                    De gemeente sluit een verzekering af om de burgerlijke aansprakelijkheid, met inbegrip van de rechtsbijstand, te dekken die bij de normale uitoefening van hun mandaat persoonlijk ten laste komt van de gemeenteraadsleden.   
+                                                                    De gemeente sluit naast de verzekering, vermeld in het eerste lid, de volgende verzekeringen af:  
+                                                                     
+                                                                        een verzekering om de bestuurdersaansprakelijkheid te dekken die persoonlijk ten laste komt van gemeenteraadsleden bij de normale uitoefening van hun mandaat, als ze de gemeente vertegenwoordigen als lid van de raad van bestuur of als dagelijks bestuurder in een rechtspersoon indien die rechtspersoon geen bestuurdersaansprakelijkheidsverzekering heeft afgesloten voor de vertegenwoordigende mandataris;  
+                                                                     
+                                                                     
+                                                                        een verzekering voor ongevallen die de gemeenteraadsleden overkomen in het kader van de normale uitoefening van hun mandaat.  
+                                                                     
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "63fc01a0-c830-11ef-9218-6931664218fe" ;
+    dcterms:title "Gemeenteraad. Huishoudelijk reglement." .
+

@@ -1,0 +1,88 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/1f41139a-30b6-4aed-a765-5c128dfe8396> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0ae4e8f1-b59d-4a4d-8797-6451e3888bf9>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4b656034-90ac-471b-9a88-e7d97e64656f> ;
+    ns2:geplandeStart "2025-11-25T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/695744ea-7fbb-4623-9e53-cc86132e1b3d> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "49c3b00f-7e22-5c66-bb0b-231e57626963" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-11-25T20:16:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4b656034-90ac-471b-9a88-e7d97e64656f> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0ae4e8f1-b59d-4a4d-8797-6451e3888bf9> ;
+    ns2:openbaar false ;
+    ns3:uuid "6c096415-400b-5557-8106-ce6d6a796d2e" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4b656034-90ac-471b-9a88-e7d97e64656f> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/4b656034-90ac-471b-9a88-e7d97e64656f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/4b656034-90ac-471b-9a88-e7d97e64656f> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:title "Aanvullend verkeersreglement Tulpenlaan 1 - parkeerplaatsen voor elektrisch laden" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Door Vlaanderen wordt er een concrete doelstelling van 35.000 bijkomende (semi)publieke CPE (Charging Point Equivalent of laadpuntequivalenten) te realiseren tegen 2025 voorop gesteld. 
+                                    Op 5 november 2021 heeft minister Somers voorgesteld om vanaf 2022 die doelstelling op te trekken naar anderhalf laadpunt per 100 inwoners om zo 99.000 laadpunten tegen 2030 te hebben. 
+                                    Vanuit Vlaanderen is de oefening gemaakt in hoeveel laadpunten de doelstelling zich vertaalt: voor Puurs-Sint-Amands komt dit op 197 CPE’s, op basis van inwoners en oppervlak, tegen 2025. 
+                                    De plaatsing van dit laadpunt valt onder 'Paal volgt wagen' die zijn aangevraagd aan MOW-Vlaanderen. 
+                                    Charge Point Operator voor dit project is Engie. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straat het statuut kregen van lokale wegen type 3. 
+                                 
+                            """@nl ;
+    ns3:uuid "441f76f4-6174-555d-8d7b-d59bfe54a176" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Op de parking t.h.v. Tulpenlaan 1 komen twee extra parkeerplaatsen voor elektrisch laden. 
+                                    Artikel 2: Deze regeling wordt aangeduid met verkeersbord E9a met onderbord voor elektrische of hybride elektrische voertuigen (of toegevoegd rechtsonder het verkeersbord E9a). 
+                                    Artikel 3: Dit aanvullend reglement wordt ter kennisgeving overgemaakt aan de afdeling Vlaams Huis voor de Verkeersveiligheid. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4b656034-90ac-471b-9a88-e7d97e64656f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4b656034-90ac-471b-9a88-e7d97e64656f> a ns2:Agendapunt ;
+    ns3:uuid "344ed8d3-87ad-5aa4-b1c7-c17becb5e8d0" .
+

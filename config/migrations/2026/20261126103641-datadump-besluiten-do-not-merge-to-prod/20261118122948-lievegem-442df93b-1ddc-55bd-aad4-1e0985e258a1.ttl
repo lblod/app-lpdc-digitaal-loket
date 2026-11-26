@@ -1,0 +1,117 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/0ca3449a-f256-4aad-bad1-eccc26164e1e> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/324b8c61-5508-43c5-aac5-680e72028a3c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6b3d3489-e857-49d2-aa75-11acd8d44591>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> ;
+    ns2:geplandeStart "2025-07-22T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/18c2d4dd-12e4-4ed6-852f-18ab3ff042ba> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "86f80d74-54c6-5d8a-9a32-4f8b7aae8515" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-07-22T13:34:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/aca1eaea-0325-4c50-a12a-a0610e85f9c1> ;
+    ns2:openbaar false ;
+    ns3:uuid "44254ebb-2c28-5227-83a6-75d19b3eb51a" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d7d08d2a-0cab-4871-86e4-682429229271> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d7d08d2a-0cab-4871-86e4-682429229271> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Leestjeskermis' van zondag 14 september 2025 20.00 uur tot en met donderdag 18 september 2025 12.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Leestjeskermis' - Dekenij Leest en Kerkstraat: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 22 juli 2025 over de aanvraag evenement Leestjeskermis - Dekenij Leest en Kerkstraat: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Patrick Bruggeman, namens Dekenij Leest en Kerkstraat organiseert 'Leestjeskermis' van woensdag 17 september 2025 7.00 uur tot en met donderdag 18 september 2025 1.00 uur.Er werd op 8 juni 2025 een aanvraag ingediend door Patrick Bruggeman, namens Dekenij Leest en Kerkstraat om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                     
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns3:uuid "442df93b-1ddc-55bd-aad4-1e0985e258a1" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Leestjeskermis' wordt vastgesteld als volgt: 
+                                     
+                                    - van zondag 14 september 2025 20.00 uur tot en met donderdag 18 september 2025 11.00 uur: 
+                                    Stilstaan- en parkeerverbod ter hoogte van Leest 34 -44 voor plaatsing tent en drankcontainer 
+                                     
+                                    - van maandag 15 september 2025 8.00 uur tot en met donderdag 18 september 2025 12.00 uur: 
+                                    1. Stilstaan- en parkeerverbod ter hoogte van Leest 39 - 41 voor plaatsing podium2. plaatsen nodige signalisatie aan het podium voor beurtelings verkeer (zolang het podium er staat) 
+                                     
+                                    - van woensdag 17 september 2025 6.00 uur tot en met donderdag 18 september 2025 1.00 uur: 
+                                    1. Afsluiten van Renning, Leest en Kerkstraat tussen N9 en Waarschootdorp2. Omleiding voorzien via Schoolstraat - N9 en omgekeerd3. Afsluiten van Gastelstraat aan het kruispunt met Leest4. Omleiding voorzien via Metaalstraat5. Stilstaan- en parkeerverbod in Renning, Leest, Kerkstraat en eerste deel Lejourstraat (vanaf kruispunt met Kerkstraat tot zijbaantjes met garages) 
+                                    
+                                        - van woensdag 17 september 2025 17.00 uur tot en met donderdag 18 september 2025 1.00 uur:
+                                     
+                                    
+                                        Volledig afsluiten van Leest ter hoogte van huisnummer 40
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        Artikel 2
+                                     
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                    - van zondag 14 september 2025 20.00 uur tot en met donderdag 18 september 2025 11.00 uur: 
+                                    Borden E3 
+                                     
+                                    - van dinsdag 16 september 2025 8.00 uur tot en met donderdag 18 september 2025 12.00 uur: 
+                                    1. Borden E3 
+                                    2. - Borden D1c en D1d + knipperlicht aan beide zijden van het podium 
+                                        - Bord A51 + beurtelings verkeer B19 en B21 
+                                      
+                                    - van woensdag 17 september 2025 6.00 uur tot en met donderdag 18 september 2025 1.00 uur: 
+                                    1. Nadar + C3 + M2 op de volgende kruispunten: Renning/N9, Renning/Beke Tuinwijk, Renning/Renning Tuinwijk, Leest/Weverstraat, Leest/Notelaarstraat, Kerkstraat/Lejourstraat, Kerkstraat/Jaspaertstede en Kerkstraat/Waarschootdorp.2. - Borden F41 op de volgende kruispunten: Renning/N9, N9/Schoolstraat (2x), Kerkstraat/Waarschootdorp 
+                                        - Bord C31a op het kruispunt N9/Renning (richting Eeklo - Gent) 
+                                        - Bord C31b op het kruispunt N9/Renning (richting Gent  Eeklo) 
+                                    3. - Nadar + C3 + M2 op het kruispunt Leest/Gastelstraat 
+                                        - Nadar + C3 + M2 + F45b op de volgende kruispunten: Hovingen/Vinkenstraat, Hovingen/Merelstraat, Hovingen/Bovenmeers en Hovingen/Metaalstraat 
+                                    4. Borden F41 op de volgende kruispunten: Hovingen/Bovenmeers, Hovingen/Metaalstraat (2x) en Metaalstraat/Stationsstraat 
+                                    5. Borden E3 
+                                      
+                                    - van woensdag 17 september 2025 17.00 uur tot en met donderdag 18 september 2025 1.00 uur: 
+                                    Nadarhekkens + C3 
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> a ns2:Agendapunt ;
+    ns3:uuid "4fd54ecf-4db8-555e-9595-22934b7b60b8" .
+

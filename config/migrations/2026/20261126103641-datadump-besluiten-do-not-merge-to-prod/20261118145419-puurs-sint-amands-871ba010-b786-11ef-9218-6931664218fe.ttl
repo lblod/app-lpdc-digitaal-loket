@@ -1,0 +1,95 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/2dd76646-5e40-48c8-b43e-7842193e1978> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/14baeea6-5478-47a7-82b6-6512c232b3d3>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/1f09715f-1af9-48cb-a7d6-a8e6cb6cd953>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5bd576f6-2bdd-45ea-b312-b5d177facb78>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a80f66e7-5992-4964-9557-48bc2ded493f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b5737492-dca4-4b11-9652-d2e4948261e2>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/bfa39c4e-69f0-4dda-a06c-47e744cb1855>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/eccbace7-353f-4829-97b5-b6b7c5037f0f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f6059f31-d048-422e-989d-61e90752918d> ;
+    ns1:geplandeStart "2024-12-05T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/202781c9-0bb5-4c2a-b8c8-d69f42507db9> ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/b4deebea-2ea5-4f9a-ac56-57634bd4b19f> ;
+    ns1:heeftNotulen <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/86dc7303-5ba9-4fba-bc42-6ef7ed4122e5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns2:uuid "506ce550-b13d-11ef-9218-6931664218fe" ;
+    prov:atLocation "Raadzaal" ;
+    prov:startedAtTime "2024-12-05T20:00:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04> a ns1:BehandelingVanAgendapunt ;
+    ns1:openbaar true ;
+    ns2:uuid "84248d90-bdd0-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/b4c828e4-bcb8-46ff-8abf-5fde227d2459> ;
+    ns3:description """ 
+                                                                    De gemeenteraad neemt kennis van de definitieve verkiezingsuitslag. 
+                                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns3:title "Kennisname van de definitieve verkiezingsuitslag" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De gemeenteraadsverkiezingen van 13 oktober 2024 
+                                 
+                                 
+                                    Juridische grond 
+                                    Bevoegdheid 
+                                     
+                                         decreet over het lokaal bestuur, Artikel 6.  
+                                     
+                                    Juridische context 
+                                     
+                                         het Lokaal en Provinciaal Kiesdecreet van 8 juli 2011 , Art. 203, tweede en derde lid.  
+                                         decreet betreffende de organisatie en de rechtspleging van sommige Vlaamse bestuursrechtscolleges , Art. 28.  
+                                         decreet over het lokaal bestuur, Art. 6.  
+                                         Omzendbrief KBBJ/ABB 2024/2 over de start van de lokale en provinciale bestuursperiode  
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De resultaten van de gemeenteraadsverkiezingen van 13 oktober 2024, zoals afgekondigd door het gemeentelijk hoofdbureau in het proces-verbaal van zondag 13 oktober 2024 zijn definitief.Er is op het moment van de installatievergadering geen informatie voorhanden dat er een bezwaar is ingediend bij de Raad voor Verkiezingsbetwistingen. 
+                                 
+                            """@nl,
+        """ 
+                                                                         
+                                                                            
+                                                                                Toelichting
+                                                                             
+                                                                            De gemeenteraad neemt kennis van de definitieve verkiezingsuitslag. 
+                                                                         
+                                                                    """@nl ;
+    ns2:uuid "871ba010-b786-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    De gemeenteraad neemt kennis van de definitieve verkiezingsuitslag zoals die is afgekondigd door het gemeentelijk hoofdbureau in het proces-verbaal van zondag 13 oktober 2024. 
+                                 
+                            """,
+        """ 
+                                                                         
+                                                                            
+                                                                                Besluit
+                                                                             
+                                                                            De gemeenteraad neemt kennis van de definitieve verkiezingsuitslag zoals die is afgekondigd door het gemeentelijk hoofdbureau in het proces-verbaal van zondag 13 oktober 2024.  
+                                                                         
+                                                                    """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "506d3370-b13d-11ef-9218-6931664218fe" ;
+    dcterms:description " De gemeenteraad neemt kennis van de definitieve verkiezingsuitslag. " ;
+    dcterms:title "Kennisname van de definitieve verkiezingsuitslag" .
+

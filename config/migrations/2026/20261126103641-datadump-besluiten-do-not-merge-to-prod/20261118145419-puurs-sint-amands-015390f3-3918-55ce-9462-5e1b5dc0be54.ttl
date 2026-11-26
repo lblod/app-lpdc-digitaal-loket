@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/1b6a6404-676b-4705-8561-5895fb489ac3> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0521d4c5-3f6e-4307-bb56-b5e5f5928fdf>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/6437eb38-f291-475f-80fa-863d9cd37f86>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/738579b0-f026-444a-9e80-555ef94f7e17> ;
+    ns1:geplandeStart "2025-06-17T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/54501cb7-c5f1-4a0d-b5b0-de08d9915fa8> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "467f6efc-9eba-5590-99ff-9b6db14ee04c" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-06-17T20:26:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0521d4c5-3f6e-4307-bb56-b5e5f5928fdf> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9f3bf1ef-6a95-4741-a90f-3f9ca67e7c1a> ;
+    ns1:openbaar false ;
+    ns2:uuid "249d29af-094f-5314-acdf-8aed7aac7b64" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0521d4c5-3f6e-4307-bb56-b5e5f5928fdf> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/0521d4c5-3f6e-4307-bb56-b5e5f5928fdf> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/0521d4c5-3f6e-4307-bb56-b5e5f5928fdf> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Reststraat" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Ter hoogte van de parking Reststraat wordt er één plaats voorzien voor een elektrische deelwagen. De plaats is de meest linkse aan de kant Begijnhofstraat. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 3. 
+                                 
+                            """@nl ;
+    ns2:uuid "015390f3-3918-55ce-9462-5e1b5dc0be54" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Van de parkeerplaatsen voor elektrisch laden op de parking in de Reststraat wordt er één voorbehouden voor een elektrische deelwagen thv kant Begijnhofstraat. 
+                                    Artikel 2: Deze regeling wordt gesignaleerd door verkeersbord E9a elektrisch parkeren (bestaande situatie) en onderbord type III 'autodelen'. 
+                                    Artikel 3: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0521d4c5-3f6e-4307-bb56-b5e5f5928fdf> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0521d4c5-3f6e-4307-bb56-b5e5f5928fdf> a ns1:Agendapunt ;
+    ns2:uuid "2a94e2e0-27d4-5465-83a1-1a8eb49c40a1" .
+

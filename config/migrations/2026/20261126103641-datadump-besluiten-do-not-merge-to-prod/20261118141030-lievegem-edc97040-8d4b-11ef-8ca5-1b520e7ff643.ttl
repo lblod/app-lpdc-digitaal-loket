@@ -1,0 +1,100 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/9521dea5-31f4-4bb4-bc44-087899d3c0bd> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/30f3f8f5-b7c4-4f30-ba86-1c38be1f30f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3df9afb1-8386-4705-bcff-62b323d08f0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5c6bc86b-cd11-4d19-aaaf-fac80b4a54e4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/60d96337-cc83-4989-9408-bc19594476be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76115cd7-7143-48fd-89a1-6beb0c73090e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/79de3e84-6123-43d3-8a8a-84b3e1878996>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85c99b89-adf2-43ee-9312-1059410dba4a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/928370a2-86c4-4e59-a30e-5e777535a11a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a53c0c7b-03a9-493b-a1aa-78a63ee12f16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab91cddc-68d0-46fd-b19e-11d466cc758d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae6a9c92-dce9-42aa-9e6c-ac7ed5b32b69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6af2315-1c94-45e0-a0aa-142acaa20587>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cc62f7c2-3a15-4d8b-8103-e69dc605e357>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4663237-9099-4028-aefa-c50af9dd748d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d48685aa-fcf1-4439-83be-dc3d514483cd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ea0f7b83-f8fb-41a0-8211-da53720f4ce6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eb398e70-fe70-45c2-9b9e-bd8cac610ba2> ;
+    ns2:geplandeStart "2022-11-23T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4c793cd8-a915-4098-95a2-e9043a5114d0> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/879fd2a7-d621-4ce3-8272-392fddf5ea33> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04281ae9-1053-423a-a8cf-50f40d82016d> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "edc5edd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-11-23T21:29:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-11-23T20:03:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/60d96337-cc83-4989-9408-bc19594476be> ;
+    ns2:openbaar true ;
+    ns3:uuid "fb403f10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/82e19a2a-7ea0-45dc-875c-45672274cf12> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/82e19a2a-7ea0-45dc-875c-45672274cf12> a ns2:Besluit ;
+    ns1:description """ 
+                                                    Vragen en antwoorden omtrent 
+                                                    Schriftelijke vragen 
+                                                    Wouter Ryckaert1. Visie op het invoeren van de 'Gele doos'2. Visie op deelauto's3. Doven openbare verlichting 
+                                                    Didier Garré4. Fusiegesprekken in het Meetjesland 
+                                                    Wouter De Muynck5. Belgische vlag strooiweide begraafplaats Waarschoot 
+                                                    Mondelinge vragen: 
+                                                    Patrick Dossche6. Snelheidsborden 
+                                                    Lut Van der Spurt7. Gevaarlijk bladeren op fietspaden 
+                                                      
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Nicholas Spinel, Voorzitter 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 31 en 278 
+                                                            Gemeenteraadsbesluit van 14 september 2022 houdende goedkeuring huishoudelijk reglement gemeenteraad, artikel 11 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraadsleden hebben het recht aan het college van burgemeester en schepenen mondelinge en schriftelijke vragen te stellen. Voor het stellen van een vraag is geen toegelicht voorstel van beslissing nodig. Op schriftelijke vragen van raadsleden wordt binnen de maand na ontvangst schriftelijk geantwoord. Een kopie van de vraag en het antwoord worden per e-mail bezorgd aan de raadsleden.  Na afhandeling van de agenda van de openbare vergadering van de gemeenteraad kunnen de raadsleden mondelinge vragen stellen over gemeentelijke aangelegenheden, die niet op de agenda van de gemeenteraad staan.  Op deze mondelinge vragen wordt ten laatste tijdens de volgende zitting geantwoord. De behandeling van een mondelinge vraag beperkt zich tot vraag en antwoord en kan geen aanleiding geven tot een discussie tussen raadsleden. In de notulen van de zitting wordt melding gemaakt van de naam van de vraagsteller, aan wie de vraag is gericht en het onderwerp. Het zittingsverslag van de vergadering van de gemeenteraad vermeldt de mondelinge en schriftelijk gestelde vragen en antwoorden. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "edc97040-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Vragen en antwoorden omtrent : 
+                                                            Schriftelijke vragen 
+                                                            1. Wouter Ryckaert 
+                                                            1.1) Visie op het invoeren van de 'Gele doos'De gele doos. Waarom deze vraag? Omdat we in de verslagen van het college gelezen hebben dat dit project niet wordt ingevoerd.Wat en nut?  Kadert in langer thuis wonen, zorgzame buurt. Dan lijkt gele doos een zinvol instrument te zijn. Mensen stoppen de gele doos in hun koelkast met alle informatie die artsen, politie of brandweer nodig hebben in crisissituaties: contactgegevens, medische fiche, vermissingsfiche.  Gent, Brugge maar ook Deinze en nog meer dan 30 andere gemeenten zijn hier reeds mee gestart.In de verslagen van het college op 25 oktober 22 staat dat het schepencollege beslist heeft om niet in te stappen in het project. In het verslag van het college staat:-    Ouderenadviesraad Lievegem is meer dan vragende partij. Je hebt dus een draagvlak en ‘trekkers’-    Kostprijs? Nog geen 3.000€ voor onze gemeente, wat haalbaar is-    Voorwaarde dat omliggende gemeentes meedoen. o    Deinze doet al mee (zelfde politiezone), ook buurgemeente Gent heeft het ingevoerdo    Fusie: we zijn één van de grootste gemeentes; schaalgrootte moet grotere initiatieven mogelijk maken, we hebben het recht en zelfs de plicht om initiatiefnemer & trekker te zijn in Meetjesland. Lievegem heeft een belangrijke stem – hier steken we onze kop in het zand.-    Personeelsinzet lijkt barrière te zijn. o    Misschien nog wat verhoogde werkdruk van een fusie maar anderzijds zou schaalgrootte meer en ambitieuzere projecten moeten mogelijk maken. Invoeren binnen de 2 maanden is misschien wat veel gevraagd maar daarvoor keur je een project niet af. Zeg desnoods ja, maar tegen een concrete datumo    En dit lijkt me een voorbeeld om te laten uitwerken i.s.m. hogeschoolo    Vrijwilligers zijn bereid werk op te nemen! Kijk wat we bereikt hebben met vaccinatiecentra.-    Een aantal risico’s van het project zijn niet afgedekt: het up-to-date houden en niet iedereen staat achter het project. Dit is vaag in het verslag.Wat zijn de doorslaggevende elementen om niet te participeren?Antwoord schepen Martine Lataire-Gyssels:Dank voor uw vraag en bezorgdheid i.v.m. onze senioren. Uiteraard delen wij eveneens absoluut deze bezorgdheid. Alle initiatieven om onze senioren maximaal te beschermen en te ondersteunen zijn uitermate belangrijk voor ons en worden met bijzondere aandacht onderzocht.De gele doos is een initiatief waarover reeds verschillende overlegmomenten werden gevoerd en onderzocht of dit haalbaar is en gedragen wordt door de hulpverleners. Naar aanleiding van de vraag van EersteLijnsZone (30 september 2022) en van schrijven, namens het RPO Meetjesland (29 september 2022) en het burgemeestersoverleg werd de vraag in verband met het project de Gele doos inderdaad nogmaals uitvoerig besproken op het college van 25 oktober 2022 en werd uiteindelijk besloten om niet deel te nemen om reden van een aantal bemerkingen en bezorgdheden : De motivatie waarom kon je reeds lezen. Het betreft hier een zeer groot project waarvan de uitrol en opvolging niet te onderschatten valt :- Het is voor de gemeentelijke teams op dit moment niet haalbaar om het project lokaal te dragen (personeel) in alle aspecten van het project (voorbereiding, opstart/uitrol en nazorg).- Een aantal risico’s aan het project zijn niet afgedekt:o    Het up-to-date houden van gegevens.o    Niet alle betrokken hulpverleners staan achter het project.o    Het initiatief heeft alleen maar kans op slagen als het door de verschillende betrokken actoren wordt gedragen.o    Alle partners moeten de meerwaarde inzien.o    Een ruim draagvlak bepaalt mee het welslagen van het project. Hierdoor heeft het college dus beslist om actueel niet mee in te stappen in het project van de Gele doos.In overleg en in samenwerking met de Ouderenadviesraad en team welzijn wordt gekeken om een gedegen en waardig alternatief uit te werken met dezelfde doelstelling dat tegemoetkomt aan de vraag tot analoge communicatie en verbindend kan werken.De burgemeester vult aan dat dit dossier al een lange weg is gegaan waarbij de Eerstelijnszone eerst negatief was en nu wel en laatst is dit dus ook besproken op het Burgemeestersoverleg Meetjesland en daar werd gezamenlijk afgesproken om hierop niet in te gaan.  Essentie is de hulp aan senioren, de gele doos is enkel een middel, we kijken uit naar een alternatief.Raadslid Patrick Dossche stelt niet te begrijpen waarom dit niet kan, in heel wat regio's heeft men het wel ingevoerd. Geen alternatief want dit is de bal misslaan, ga na waarom het elders wel lukt. We zitten in de politiezone en brandweerzone Gent en Deinze, laat ons daar naar kijken. Gent en Deinze doen het wel.Op vraag zal het verslag van het burgemeestersoverleg worden opgevraagd.1.2) Visie op deelauto'sTijdens deze gemeenteraad is het lokaal energie- en klimaatpact2 besproken, waaronder het plaatsen van laadpalen.Het is nu hoogtijd om in te zetten op deelvervoer. Op dit moment zijn er de volgende mogelijkheden:-    Cambio: 1 locatie-    Dégage en analoge aanbieders (o.a. Batt-mobility): 4 locaties Dit is een zeer pover aanbod. Nochtans zit hier heel veel potentieel.•    Autorijden is heel duur. Voor wie geen bedrijfswagen heeft is wagenbezit de laatste jaren nog duurder geworden. •    In deelsystemen zit potentieel om vooral de tweede wagen overbodig te maken. •    Systeem is nog onvoldoende bekend. Zo zijn er werkgevers die aan personeelsleden de mogelijkheid geven om voor dienstverplaatsingen een autodeelsysteem te gebruiken, waar ook in het land. Dit biedt voor vele mensen perspectieven.Vragen:Stand van zaken van het autodeelactieplan (Act018)?-    Doelstellingen die meetbaar en ambitieus zijn om extra aanbod creëren (ruimtelijk beleid, parkeerbeleid, …)-    Het inzetten van stimuleringsacties: informeren, ondersteunen,…Antwoord door schepen Vincent Laroy:Team omgeving is samen met autodelen.net al een tijd bezig met de opmaak van een actieplan gedeelde mobiliteit. Binnenkort wordt dit afgerond en komen we hier met terug. Er zijn reeds een aantal particuliere deelinitiatieven met Dégage en Batt mobility, maar deze zijn vooral terug te vinden in Lovendegem.Het is wel de bedoeling om elektrische deelwagens te voorzien in Lievegem.  Hiervoor zullen wel nog een aantal stappen moeten gezet worden vooraleer dit in uitvoering kan komen.  We horen van sommige steden en gemeenten dat aanbieders zoals Cambio, niet altijd interesse hebben in landelijke gemeenten omdat de vraag naar deelwagens veel minder is dan in een stad.  Cambio heeft inderdaad één voertuig in Lovendegem. We kregen toch af en toe wel al de vraag van burgers naar de mogelijkheden om een deelwagen te kunnen gebruiken en verwijzen dan steeds naar de particuliere aanbieders via Dégage.  Er zijn ondertussen heel wat spelers op de markt. Het is ook de bedoeling om de 3 elektrische wagens, die nu vooral door de administratieve diensten worden gebruikt tijdens de kantooruren, ook te gaan delen met de burgers buiten de kantooruren en in het weekend.  Dit moet echter nog verder worden uitgewerkt en moet er gezocht worden naar een systeem dat praktisch is voor de gebruikers en voor de gemeente.We staan hier zeker voor open, maar het moet nog verder worden uitgewerkt1.3) Doven openbare verlichting: sommige straten worden reeds om 22u00 gedoofd?.De communicatie van Fluvius klopt niet dat er reeds om 22u00 gedimd wordt. Er mag slechts gedimd worden om 0u00. Nochtans is de verlichting Neerstraat-Speybrug ’s avonds vaak gedimd.Is dit de enige locatie in Lievegem waar er problemen zijn met het tijdstip van het doven van de OV?Antwoord schepen Chris De Wispelaere: Er was een kabeldefect in de Neerstraat, defect is gemeld, en op Fluvius stond een verkeerde communicatie op hun website dat het vanaf 22 u uit was.  Maar als men nu kijkt is het in orde: dan is het nu wel degelijk van 24 u tot 5 u.  
+                                                            2. Didier Garré 
+                                                            2.1) Fusiegesprekken in het Meetjesland.Is het juist dat de Meetjeslandse gemeenten die een fusie aangegaan zijn nu terug spreken met andere gemeentebesturen om opnieuw een fusie aan te gaan? Zijn er in Lievegem gesprekken met onze buurtgemeenten om opnieuw een nog grotere fusie aan te gaan ?Antwoord Burgemeester:  In ieder geval wij als bestuur spelen geen actieve rol in het fusieverhaal.  Nu willen we vooral focussen op het realiseren van onze fusie.  Het heeft immers een grote impact op personeel en inwoners.  Er is eenmaal een gesprek geweest tussen het college en een studiebureau op vraag van een studiebureau dat was aangesteld door een buurgemeente om een studie hierover te maken.  En dat is het.  Dat we nooit nog zullen fusioneren dat kunnen we natuurlijk niet zeggen, maar nu is dit zeker niet ter sprake. 
+                                                            3. Wouter De Muynck 
+                                                            3.1) Belgische vlag strooiweide begraafplaats WaarschootWij hebben de vraag gekregen om de Belgische vlag op de strooiweide van de begraafplaats te Waarschoot te laten verwijderen op basis van het neutraliteitsbeginsel. Kan dit bekeken worden?Ondertussen al een antwoord gekregen via vraag gesteld aan de VVSG dat dit niet het neutraliteitsbeginsel schendt, bedankt voor het antwoord.Antwoord Burgemeester: we hebben je inderdaad al schriftelijk beantwoord.  Ook ik zie daar echt weinig problemen in. Vlaggetjes worden altijd tijdelijk geplaatst door de oudstrijdersverenigingen n.a.v. 11 november en daarna weer verwijderd. 
+                                                              
+                                                            Mondelinge vragen: 
+                                                            4. Patrick Dossche: snelheidsborden Nog niet alle 30 km aanduidingen zijn geplaatst.  Wat als er in een straat een ongeval zou gebeuren op het ogenblik dat in die straat niet alle borden zijn geplaatst, juridisch probleem?Op de vraag welke straat blijkt het de Weldadigheidsstraat te zijn.  Antwoord schepen Chris De Wispelaere: zou me verwonderen dat dit zo zou zijn in een straat.  Concreet?  Gaan we zeker doornemen. Maar als ik nu hoor dat het de Weldadigheidsstraat is dan zal er inderdaad bij het binnenrijden vanuit de Durmstraat maar 1 bord staan en niet aan het andere einde omdat je een Zone 30 binnenrijdt en het blijft dus 30 zolang je geen bord tegenkomt dat deze zone wordt beëindigd en dat zal dan in een andere straat zijn.   Wordt niet beëindigd zolang geen bord einde zone ook al passeer je een dwarsstraat. 5. Lut Van der Spurt: gevaarlijk bladeren op fietspadenHet is gevaarlijk glad op de fietspaden bvb langs de trekweg door afgevallen bladeren, bvb aan de Speybrug.Antwoord schepen Chris De Wispelaere: We kuisen de fietspaden heel regelmatig, ook het gemeentelijk deel langs het kanaal.  De Waterweg doet dit maar driemaal per jaar, wij doen dat veel regelmatiger.  Er is trouwens ook een strooiplan, een deel besteden we uit, ook voor de fietspaden.  Wat de bladeren betreft, we gaan dit doorgeven.  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "fb354290-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" .
+

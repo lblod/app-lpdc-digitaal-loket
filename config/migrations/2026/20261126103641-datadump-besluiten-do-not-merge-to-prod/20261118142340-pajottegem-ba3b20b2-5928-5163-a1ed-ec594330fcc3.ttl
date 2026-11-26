@@ -1,0 +1,122 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/000d80ac-be60-48e0-ad27-c06a22600f53> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0a5a007c-fb17-4a23-a065-454e2e4fdf41>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5f243214-b148-4b17-8380-5ad85a15e978>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7928caa8-0ecc-4beb-86ba-9e1ed594b223>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b2461d80-32da-4724-a430-978db06afc30>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b58d39dd-9fb8-44a6-8a00-8bb3cf627996>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/db5ebefc-1246-48fa-9747-850d7e3235d3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f48cbf2b-04b0-4577-b69b-bab91efc0c5a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fbe06e1f-0382-4f93-a00c-fb4cb58d239c> ;
+    ns1:geplandeStart "2025-05-19T17:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/95c356e8-8f0f-4f5f-ac9b-89ff4dbd2255> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "e0b51ac0-832d-55e0-b5e3-cd07cfcb7a09" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-19T16:34:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/82f151c1-b201-4463-9b75-750782dc3e29> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/db5ebefc-1246-48fa-9747-850d7e3235d3> ;
+    ns1:openbaar false ;
+    ns3:uuid "cf8cf72e-e654-5462-a982-aa457aafe866" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/82f151c1-b201-4463-9b75-750782dc3e29> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/82f151c1-b201-4463-9b75-750782dc3e29> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Kermis Kester op van 13 tot 18 juni 2025 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Politieverordening: Kermis Kester - van 13 tot 18 juni 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns3:uuid "ba3b20b2-5928-5163-a1ed-ec594330fcc3" ;
+    prov:value """ 
+                                 
+                                     
+                                        Artikel 1.- Ter gelegenheid van opstellen, verblijven en afbreken kermis wagens te Kester van dinsdag 10 t.e.m. woensdag 18 juni 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen: 
+                                        Stilstaan en parkeren verboden (E3) over het volledige plein voor de kerk te Kester en parking Oude Molenstraat. 
+                                        Omleiding fietsers via Raoul Merckxsstraat in beide richting. 
+                                        Versmalling rijbaan volgens signalisatie categorie 3 weinig hinder op de Oude Molenstraat (N272) tussen Bruneaustraat en Raoul Merckxstraat.  
+                                        Artikel 2.- Ter gelegenheid van de kermis te Kester van vrijdag 13 juni 2025 10u tot woensdag 18 juni 2025 5u worden volgende beperkingsmaatregelen voor het verkeer genomen: 
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast in volgende straten: 
+                                        Bruneaustraat (N272) in beide richtingen vanaf het kruispunt met de Raoul Merckxstraat tot het kruispunt met de Oude Molenstraat (N272). 
+                                        Oude Molenstraat (N272) in beide richtingen vanaf het kruispunt met de Bruneaustraat (N272) tot het kruispunt met de Raoul Merckxstraat. 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3) wordt ingelast in volgende straat: 
+                                        Oude Molenstraat (N272) vanaf het kruispunt met de Bruneaustraat (N272) tot het kruispunt met de Raoul Merckxstraat. Verkeerssignalisatie (bord op telkens 4 nadars met de nodige verlichting) te voorzien op volgende kruispunten Oude Molenstraat (N272) / Bruneaustraat (N272) en Oude Molenstraat (N272) / Raoul Merckxstraat 
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) op volgende kruispunten: 
+                                        Oude Molenstraat (N272): Bruneaustraat (N272) / Molenstraat (N272) - Bruneaustraat / Molenstraat (N272) - Raoul Merckxstraat / Molenstraat (N272) 
+                                        Verboden toegang in beide richtingen voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer in volgende straten: 
+                                        Oude Molenstraat (N272) vanaf de Kestersesteenweg (N272) (grondgebied Pepingen) tot het kruispunt met de Raoul Merckxstraat.Raoul Merckxstraat vanaf het kruispunt met de Bruneaustraat (N272) tot het kruispunt met de Oude Molenstraat (N272). 
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b); uitgezonderd plaatselijk verkeer op volgende kruispunten: 
+                                        Oude Molenstraat (N272): Zwaantje / Oude Molenstraat (N272) - Ter Mollekenstraat / Oude Molenstraat (N272) - Raoul Merckxstraat / Oude Molenstraat (N272) 
+                                        
+                                            Bruneaustraat (N272): Raoul Merckxstraat / Bruneaustraat (N272)
+                                             
+                                            Doodlopende weg (fig F45) op de: 
+                                         
+                                        
+                                            Raoul Merckxstraat vanaf het kruispunt met de Bruneaustraat (N272) tot het kruispunt met de Oude Molenstraat (N272)
+                                            
+                                            Oude Molenstraat (N272) vanaf de Kestersesteenweg (N272) (grondgebied Pepingen) tot het kruispunt met de Raoul Merckxstraat
+                                            
+                                            
+                                            Plaatsing van borden “Bruisend Gooik – KERMIS” op volgende straten:
+                                         
+                                        
+                                            Bruneaustraat (kruispunt Edingsesteenweg/Bruneaustraat)
+                                            
+                                            Kesterweg (kruispunt Edingsesteenweg/Kesterweg
+                                            
+                                            Bruneaustraat (kruispunt Edingsesteenweg/Bruneaustraat)
+                                            
+                                            Oude Molenstraat (kruispunt Molenstraat/Zwaantje)
+                                            
+                                            Cypriaan Verhavertstraat (kruispunt Edingsesteenweg/Cypriaan Verhavertstraat)
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Verboden toegang in beide richtingen voor ieder bestuurder (fig C3) uitgezonderd plaatselijk verkeer in volgende straten:
+                                            Bruneaustraat (N272) (kruispunt Edingsesteenweg/Bruneaustraat)
+                                            Kesterweg (kruispunt Edingsesteenweg/Kesterweg
+                                            Bruneaustraat (kruispunt Edingsesteenweg/Bruneaustraat)
+                                            Cypriaan Verhavertstraat (kruispunt Edingsesteenweg/Cypriaan Verhavertstraat)
+                                            Verkeerssignalisatie (bord op telkens 1 nadar met de nodige verlichting) te voorzien.
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Artikel 3 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de l3okale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                     
+                                     
+                                        Artikel 4 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/82f151c1-b201-4463-9b75-750782dc3e29> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29> a ns1:Agendapunt ;
+    ns3:uuid "e560faec-1bdb-528a-8382-1671425ebca4" .
+

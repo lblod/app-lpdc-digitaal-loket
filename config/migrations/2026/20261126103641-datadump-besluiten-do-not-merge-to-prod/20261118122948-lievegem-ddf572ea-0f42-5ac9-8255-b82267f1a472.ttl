@@ -1,0 +1,74 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6b60ab21-289e-47e6-b774-aee9858e4db8> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9c456c7a-8741-479a-8381-2cfe8178d92e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/feaf13a6-0ae1-48cd-b567-90aaa801c763> ;
+    ns1:geplandeStart "2025-11-04T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/207189bc-17d1-402c-953e-73b392455ac2> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "c2ff5933-e580-5fd7-afe9-630a51405650" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-11-04T13:39:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/feaf13a6-0ae1-48cd-b567-90aaa801c763> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9c456c7a-8741-479a-8381-2cfe8178d92e> ;
+    ns1:openbaar false ;
+    ns2:uuid "86ccb713-abf0-5743-9f33-79e44bb2375d" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/feaf13a6-0ae1-48cd-b567-90aaa801c763> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/feaf13a6-0ae1-48cd-b567-90aaa801c763> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/feaf13a6-0ae1-48cd-b567-90aaa801c763> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Katogentocht' op 8 november 2025 van 17.00 uur tot en met 24.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Katogentocht - Landelijke Gilde Zomergem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van de burgemeester en schepenen van 21 oktober 2025 over de aanvraag evenement Katogentocht - Landelijke Gilde Zomergem: goedkeuring        
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Dirk Onderbeke, namens Landelijke Gilde Zomergem, organiseert 'Katogentocht' op 8 november 2025.Er werd op 20 oktober 2025 een aanvraag ingediend door Dirk Onderbeke, namens Landelijke Gilde Zomergem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "ddf572ea-0f42-5ac9-8255-b82267f1a472" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Katogentocht' op 8 november 2025 van 17.00 uur tot en met 24.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Waarschuwingsborden ter hoogte van Rostraat 5 en Rostraat 35, 9930 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden A51 + 'evenement' ter hoogte van Rostraat 5 en Rostraat 35, 9930 Lievegem 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/feaf13a6-0ae1-48cd-b567-90aaa801c763> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/feaf13a6-0ae1-48cd-b567-90aaa801c763> a ns1:Agendapunt ;
+    ns2:uuid "babe747f-eaff-5b76-9c33-f06624387a0a" .
+

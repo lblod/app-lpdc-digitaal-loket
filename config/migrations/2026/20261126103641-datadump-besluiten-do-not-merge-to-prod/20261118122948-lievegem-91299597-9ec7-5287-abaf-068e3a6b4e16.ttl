@@ -1,0 +1,92 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5661ab7b-eec4-4908-b781-c78184a257a1> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/01214901-c792-4eaa-b470-0ca37cb5d5f5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/026e8f51-8caf-48b2-b12a-8148dcfd296a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2cea85e1-91c1-4bc1-a409-4fa3cced0f7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9b5698ed-40aa-4d96-9ada-263568628b59>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aecd7e66-c897-4e5d-8951-a5d1f49a90bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/af1eb8e8-82c1-4009-93b7-e4bd22e5da0b> ;
+    ns1:geplandeStart "2026-03-24T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/92fff828-7a64-43ca-a891-c305a3183814> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "9dec4440-676b-5620-afe0-5aaa9a70e4a1" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-03-24T13:33:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2cea85e1-91c1-4bc1-a409-4fa3cced0f7d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/af1eb8e8-82c1-4009-93b7-e4bd22e5da0b> ;
+    ns1:openbaar false ;
+    ns3:uuid "68c7551b-7351-5e38-87c8-ff4a0312cad8" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2cea85e1-91c1-4bc1-a409-4fa3cced0f7d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2cea85e1-91c1-4bc1-a409-4fa3cced0f7d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2cea85e1-91c1-4bc1-a409-4fa3cced0f7d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement voor het inrichten van een speelstraat in Meersstraat, 9920 Lievegem vanaf 4 april 2026 tot en met 19 april 2026 en dit telkens vanaf 10.00 uur tot 20.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van het inrichten van een speelstraat in Meersstraat, 9920 Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet gemeenteraadsbesluit van 27 maart 2019 inzake de inrichting van speelstraten.Het besluit van het college van burgemeester en schepenen van 24 maart 2026 over de aanvraag tot het inrichten van een speelstraat in Meersstraat, van 4 april tot en met 19 april: goedkeuringHet besluit van het college van burgemeester en schepenen van 24 maart 2026 over de aanvraag vergunning tot toegang speelstraten voor ophalen restafval, PMD - papier en karton en glas: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Er werd op 27 februari 2026 een aanvraag ingediend bij team jeugd gemeente Lievegem om in Meersstraat, 9920 Lievegem een speelstraat in te richten vanaf 4 april 2026 tot en met 19 april 2026 en dit telkens vanaf 10.00 uur tot 20.00 uur. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    De straat voldoet aan alle voorwaarden om in aanmerking te komen voor een speelstraat: 
+                                     
+                                        Meersstraat is een straat of wijk met een overheersend woonkarakter, zonder doorgaand verkeer, met een snelheidsbeperking van 30km/u en zonder openbaar vervoer. In deze straat zijn geen publieke parkings of handelszaken (tenzij er een schriftelijk akkoord is met de betreffende handelaar). 
+                                        De aangevraagde uren bevinden zich binnen het toegestane tijdslot (10.00 - 20.00 uur). 
+                                        Na controle van de bewonersenquête bleek 100% van de bewoonde huizen akkoord met de inrichting van een speelstraat, wat hoger ligt dan de gevraagde 75% uit het reglement rond de inrichting van de speelstraten. 
+                                        De politie gaf positief advies op 17 maart 2026. 
+                                     
+                                    Deze speelstraat werd ingebracht in GIPOD met nummer 19747211. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo en LVZ 
+                                    Team jeugd 
+                                    De inwoners en betrokken handelaars (via team jeugd) 
+                                 
+                            """@nl ;
+    ns3:uuid "91299597-9ec7-5287-abaf-068e3a6b4e16" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement voor het inrichten van een speelstraat in Meersstraat, 9920 Lievegem vanaf 4 april 2026 tot en met 19 april 2026 en dit telkens vanaf 10.00 uur tot 20.00 uur wordt vastgesteld als volgt 
+                                     
+                                        inrichten van een speelstraat in Meersstraat, 9920 Lievegem: afsluiten van de volledige straat 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        inrichten speelstraat: 
+                                     
+                                     
+                                         
+                                            Nadar + C3 + 'Speelstraat' + onderbord met de speelstraaturen aan de 2 kruispunten Meersstraat/Beiaard 
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2cea85e1-91c1-4bc1-a409-4fa3cced0f7d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2cea85e1-91c1-4bc1-a409-4fa3cced0f7d> a ns1:Agendapunt ;
+    ns3:uuid "df6ffb7d-b7a5-5f9e-8aca-415b8e6f774c" .
+

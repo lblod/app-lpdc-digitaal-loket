@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/29ddeb65-f299-41f9-9bad-30e151ea3102> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/237cb7e5-a5ba-4f7f-a8ae-6a7e3599528e>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/c88d04ff-53b5-41ee-814d-dab130586b3d> ;
+    ns1:geplandeStart "2025-01-28T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/4b861e3b-23a3-4d27-845c-8b7c17b7b2b3> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "042da616-c6c9-5919-9d66-2cf72d9905ce" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-01-28T20:00:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c88d04ff-53b5-41ee-814d-dab130586b3d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/237cb7e5-a5ba-4f7f-a8ae-6a7e3599528e> ;
+    ns1:openbaar false ;
+    ns2:uuid "f7862d24-d1f9-512a-bf3e-80906e56861d" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/c88d04ff-53b5-41ee-814d-dab130586b3d> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/c88d04ff-53b5-41ee-814d-dab130586b3d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/c88d04ff-53b5-41ee-814d-dab130586b3d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Borgstraat: oversteekplaats voor voetgangers" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    We bespraken met de gemachtigd opzichter van de lagere school 'De zonnebloem' enkele punten die voor verbetering vatbaar zijn. Een van de punten is een zebrapad aanleggen thv de steeg die een verbinding maakt met De Livien Van der Looystraat. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                             
+                                                Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56, §2 
+                                                Het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens, artikel 4; 
+                                                Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                    Gunstig advies van de gemeentelijke verkeerscel van september 2024 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    We bespraken met de gemachtigd opzichter van de lagere school De Zonnebloem enkele punten die voor verbetering vatbaar zijn. Een van de punten is een zebrapad aanleggen thv de steeg die een verbinding maakt met De Livien Van der Looystraat. 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                 
+                            """@nl ;
+    ns2:uuid "a9e14740-5d47-52e0-936c-feada695ced6" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Thv Borgstraat nr.119 wordt volgende maatregel ingevoerd: een oversteekplaats voor voetgangers 
+                                    Artikel 2: De oversteekplaats voor voetgangers wordt aangeduid voor verkeerstekens: 
+                                    -       WM76.3 (zebrapad) 
+                                    Artikel 3: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c88d04ff-53b5-41ee-814d-dab130586b3d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/c88d04ff-53b5-41ee-814d-dab130586b3d> a ns1:Agendapunt ;
+    ns2:uuid "d288ceb1-673d-5512-98cc-648676610a92" .
+

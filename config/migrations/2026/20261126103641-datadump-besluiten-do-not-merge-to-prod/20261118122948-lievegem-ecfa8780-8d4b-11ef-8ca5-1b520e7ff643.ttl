@@ -1,0 +1,138 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns1:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f> ;
+    ns1:openbaar true ;
+    ns3:uuid "fe8b2450-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/23ac9a53-7024-429f-a003-c86ba05666cf> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/23ac9a53-7024-429f-a003-c86ba05666cf> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt het retributiereglement op toeristische producten vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Retributiereglement op toeristische producten - aanpassing: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Vincent Laroy, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur van 22 december 2017, artikelen 40 en 41 inzake de bevoegdheden van de gemeenteraad De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen en latere wijzigingen 
+                                    Gemeenteraadsbesluit van Lievegem van 18 december 2019 over de vaststelling van een retributiereglement op toeristische producten 
+                                    Besluit van het college van burgemeester en schepenen van 20 september 2022 over retributiereglement op toeristische producten aanpassing: principiële goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen van Lievegem besliste in zitting van 4 november 2019 geen relatiegeschenken meer te verkopen, maar wel diverse toeristische producten, zoals wandel- en fietsroutekaarten, boeken, postkaarten, … Door de verkoop van toeristische producten wenst de gemeente Lievegem een service te leveren aan bezoekers, toeristen en bewoners. 
+                                    Het retributiereglement op toeristische producten werd vastgesteld op de gemeenteraad van Lievegem van 18 december 2019.Waarom aanpassing reglementDe gemeente Lievegem beschikt over verschillende toeristische producten die via verschillende diensten aangeboden worden.In de maand maart 2022 werden deze producten verzameld bij team omgeving - toerisme om een beter overzicht te hebben van alle toeristische producten, zowel de gratis als betalende producten.De gratis aangeboden toeristische producten werden opnieuw verdeeld onder team onthaal en het Rap op Stap  kantoor en zijn ook digitaal beschikbaar op de website van gemeente Lievegem en via team omgeving – toerisme.Voor de betalende toeristische producten beschikt gemeente Lievegem over verschillende producten die ondertussen verouderd zijn en bijgevolg niet meer verkocht mogen worden.Als de betalende toeristische producten verouderd zijn kunnen deze binnen de 4 maanden na melding van Toerisme Oost-Vlaanderen op kosten van de gemeente geretourneerd worden en vervangen door hetzelfde aantal nieuwe producten. Het aantal geretourneerde producten bedraagt maximum 50% van de laatst uitgevoerde order van dit product en mogen enkel de laatste versies betreffen.We beschikken op dit moment over 161 betalende toeristische producten die verouderd zijn en 94 producten die niet meer geretourneerd of omgeruild kunnen worden.De gemeente Lievegem streeft geen commerciële doeleinden na. Daardoor worden de betalende toeristische producten verkocht aan aankoopprijs.Sinds de fusie in 2019 werden ± 7 toeristische producten verkocht.Het verkopen en het verzenden van betalende toeristische producten brengt kosten met zich mee zoals administratieve verwerking, verzendkosten, aanmaak- en aankoopkosten, …Op basis van deze vaststelling stelt het college voor om geen nieuwe betalende toeristische producten aan te kopen en enkel volgende toeristische producten aan te bieden via team onthaal tot einde voorraad:- Fietsnetwerk Meetjesland: € 6,00- Wandelnetwerk Meetjeslandse kreken: € 6,00- Wandelnetwerk Meetjeslandse bossen: € 6,00+ volgende toeristische producten aan te bieden via team onthaal Waarschoot tot einde voorraad:- De priorij van Waarschoot: € 6,20- Postkaarten Waarschoot: € 6,00- Geschiedenis van Waarschoot deel 1&2: € 50,00- Fietsen en wandelen langs eeuwenoude kapelletjes in Waarschoot: € 2,00Ook stelt het college voor om het verzenden van betalende toeristische producten niet meer aan te bieden, het afprinten van gratis toeristische producten blijft wel behouden onder volgende voorwaarden: voor het afprinten van gratis toeristische brochures zal geen kostprijs aangerekend worden, het maximaal aantal prints ligt vast op 3 gratis toeristische producten en betalende toeristische producten kunnen niet geprint worden. 
+                                 
+                                 
+                                    Financiële impact 
+                                    De inkomsten worden geregistreerd onder jaarbudgetrekening XXXX/GBB-OMG/0520-00/7000008/GEMEENTE/CBS/IP-GEEN 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Artikel 1 
+                                    Volgende toeristische producten worden aangeboden aan de loketten van team onthaal te Lovendegem, Waarschoot en Zomergem tot einde voorraad: -    Fietsnetwerk Meetjesland: € 6,00 -    Wandelnetwerk Meetjeslandse kreken: € 6,00 -    Wandelnetwerk Meetjeslandse bossen: € 6,00 
+                                    Volgende toeristische producten worden enkel aangeboden aan het loket van team onthaal te Waarschoot tot einde voorraad: 
+                                    -    De priorij van Waarschoot: € 6,20 -    Postkaarten Waarschoot: € 6,00 -    Geschiedenis van Waarschoot deel 1&2: € 50,00 -    Fietsen en wandelen langs eeuwenoude kapelletjes in Waarschoot: € 2,00 
+                                    Artikel 2 
+                                    Betalende en gratis toeristische producten kunnen niet verzonden worden. 
+                                      
+                                    Artikel 3 
+                                    Gratis toeristische producten kunnen geprint worden aan de loketten van team onthaal te Lovendegem, Waarschoot of Zomergem of bij team omgeving - toerisme. 
+                                    Het maximaal aantal prints per persoon ligt vast op 3 gratis toeristische producten. 
+                                    Betalende toeristische producten kunnen niet geprint worden. 
+                                    Artikel 4Het college van burgemeester en schepenen wordt gemachtigd om tariefwijzigingen vast te stellen of de productenlijst aan te passen. De tarieven mogen jaarlijks ten belope van 25% aangepast worden. Voor ruimere aanpassingen blijft de gemeenteraad exclusief bevoegd.  
+                                    Artikel 5De retributie is hoofdelijk verschuldigd door de aanvrager.De betaling gebeurt contant of binnen de dertig dagen na verzending van de factuur.Betwistingen van de factuur dienen te gebeuren binnen de dertig dagen volgend op de verzending van de factuur ter attentie van het college van burgemeester en schepenen.Artikel 6 
+                                    §1. Met het oog op de invordering van de onbetwiste en opeisbare retributie kan de financieel directeur een dwangbevel uitvaardigen. Een dergelijk dwangbevel wordt betekend bij gerechtsdeurwaardersexploot.§2. Met het oog op de invordering van de betwiste en opeisbare retributie kan beroep worden gedaan op de burgerrechtelijke invorderingsprocedure. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    De gemeentelijke reglementen worden bekendgemaakt aan ABB via het digitaal loket en via de gemeentelijke website.Team communicatie, team onthaal en team financiën. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Vincent Laroy, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikelen 40 en 41 inzake de bevoegdheden van de gemeenteraad De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen en latere wijzigingen 
+                                                            Gemeenteraadsbesluit van Lievegem van 18 december 2019 over de vaststelling van een retributiereglement op toeristische producten 
+                                                            Besluit van het college van burgemeester en schepenen van 20 september 2022 over retributiereglement op toeristische producten aanpassing: principiële goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het college van burgemeester en schepenen van Lievegem besliste in zitting van 4 november 2019 geen relatiegeschenken meer te verkopen, maar wel diverse toeristische producten, zoals wandel- en fietsroutekaarten, boeken, postkaarten, … Door de verkoop van toeristische producten wenst de gemeente Lievegem een service te leveren aan bezoekers, toeristen en bewoners. 
+                                                            Het retributiereglement op toeristische producten werd vastgesteld op de gemeenteraad van Lievegem van 18 december 2019.Waarom aanpassing reglementDe gemeente Lievegem beschikt over verschillende toeristische producten die via verschillende diensten aangeboden worden.In de maand maart 2022 werden deze producten verzameld bij team omgeving - toerisme om een beter overzicht te hebben van alle toeristische producten, zowel de gratis als betalende producten.De gratis aangeboden toeristische producten werden opnieuw verdeeld onder team onthaal en het Rap op Stap  kantoor en zijn ook digitaal beschikbaar op de website van gemeente Lievegem en via team omgeving – toerisme.Voor de betalende toeristische producten beschikt gemeente Lievegem over verschillende producten die ondertussen verouderd zijn en bijgevolg niet meer verkocht mogen worden.Als de betalende toeristische producten verouderd zijn kunnen deze binnen de 4 maanden na melding van Toerisme Oost-Vlaanderen op kosten van de gemeente geretourneerd worden en vervangen door hetzelfde aantal nieuwe producten. Het aantal geretourneerde producten bedraagt maximum 50% van de laatst uitgevoerde order van dit product en mogen enkel de laatste versies betreffen.We beschikken op dit moment over 161 betalende toeristische producten die verouderd zijn en 94 producten die niet meer geretourneerd of omgeruild kunnen worden.De gemeente Lievegem streeft geen commerciële doeleinden na. Daardoor worden de betalende toeristische producten verkocht aan aankoopprijs.Sinds de fusie in 2019 werden ± 7 toeristische producten verkocht.Het verkopen en het verzenden van betalende toeristische producten brengt kosten met zich mee zoals administratieve verwerking, verzendkosten, aanmaak- en aankoopkosten, …Op basis van deze vaststelling stelt het college voor om geen nieuwe betalende toeristische producten aan te kopen en enkel volgende toeristische producten aan te bieden via team onthaal tot einde voorraad:- Fietsnetwerk Meetjesland: € 6,00- Wandelnetwerk Meetjeslandse kreken: € 6,00- Wandelnetwerk Meetjeslandse bossen: € 6,00+ volgende toeristische producten aan te bieden via team onthaal Waarschoot tot einde voorraad:- De priorij van Waarschoot: € 6,20- Postkaarten Waarschoot: € 6,00- Geschiedenis van Waarschoot deel 1&2: € 50,00- Fietsen en wandelen langs eeuwenoude kapelletjes in Waarschoot: € 2,00Ook stelt het college voor om het verzenden van betalende toeristische producten niet meer aan te bieden, het afprinten van gratis toeristische producten blijft wel behouden onder volgende voorwaarden: voor het afprinten van gratis toeristische brochures zal geen kostprijs aangerekend worden, het maximaal aantal prints ligt vast op 3 gratis toeristische producten en betalende toeristische producten kunnen niet geprint worden. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De inkomsten worden geregistreerd onder jaarbudgetrekening XXXX/GBB-OMG/0520-00/7000008/GEMEENTE/CBS/IP-GEEN 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ecfa8780-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel 
+                                    De gemeenteraad stelt het retributiereglement op toeristische producten met ingang van 1 november 2022 vast.Het voorafgaande reglement van Lievegem van 18 december 2019 houdende retributiereglement op toeristische producten wordt met ingang van 1 november 2022 opgeheven. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad stelt het retributiereglement op toeristische producten met ingang van 1 november 2022 vast.Het voorafgaande reglement van Lievegem van 18 december 2019 houdende retributiereglement op toeristische producten wordt met ingang van 1 november 2022 opgeheven. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f22417d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Retributiereglement op toeristische producten - aanpassing: vaststelling" .
+

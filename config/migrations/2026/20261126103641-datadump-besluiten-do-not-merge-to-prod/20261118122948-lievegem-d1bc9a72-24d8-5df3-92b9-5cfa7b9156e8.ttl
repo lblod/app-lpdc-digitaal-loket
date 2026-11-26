@@ -1,0 +1,116 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/80181dcb-4f7f-4f00-b490-168e5ac1dec9> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4f44afd-b589-4d55-815f-f45a068217ee> ;
+    ns2:geplandeStart "2025-11-18T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/826bdf78-953d-4442-ae99-7f5374d5c7c9> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "bf963494-d455-5a11-ba1f-0e2b4d6daf60" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-11-18T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f4f44afd-b589-4d55-815f-f45a068217ee> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f8a7cdc1-3f5b-4554-ba58-3db7d5d1b19f> ;
+    ns2:openbaar false ;
+    ns3:uuid "d5ab72f0-5971-5881-ab78-d8e393874d72" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4f44afd-b589-4d55-815f-f45a068217ee> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/f4f44afd-b589-4d55-815f-f45a068217ee> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/f4f44afd-b589-4d55-815f-f45a068217ee> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Nieuwjaarsreceptie Lovendegem 2026' op 4 januari 2026 wordt vastgesteld als volgt: 
+                                                            1. Van 7.00 uur tot en met 15.00 uur: 
+                                                             
+                                                                stilstaan- en parkeerverbod ter hoogte van Dorp 27 - 31 
+                                                                stilstaan- en parkeerverbod op het kerkplein tegenover Dorp 27 - 31 en Dorp 2 - 4 
+                                                             
+                                                            
+                                                                2. Van 11.00 uur tot en met 13.00 uur:
+                                                             
+                                                             
+                                                                 
+                                                                    Afsluiten van Dorp tussen huisnummers 26 en 31 
+                                                                    Omleiding via Centrumstraat - Kasteeldreef - Dorp 
+                                                                    Bord éénrichtingsverkeer tegenover Dorp 20 wordt afgedekt, zodat die parkeerplaatsen beschikbaar blijven 
+                                                                 
+                                                             
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van Nieuwjaarsreceptie Lovendegem 2026 - team evenementen: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 18 november 2025 over de aanvraag evenement Nieuwjaarsreceptie Lovendegem - team evenementen: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen - gemeente Lievegem organiseert 'Nieuwjaarsreceptie Lovendegem 2026' op 4 januari 2026 van 11.00 uur tot en met 13.00 uur.Er werd op 23 oktober 2025 een aanvraag ingediend door team evenementen - gemeente Lievegem om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "d1bc9a72-24d8-5df3-92b9-5cfa7b9156e8" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Nieuwjaarsreceptie Lovendegem 2026' op 4 januari 2026 wordt vastgesteld als volgt: 
+                                    1. Van 7.00 uur tot en met 15.00 uur: 
+                                     
+                                        stilstaan- en parkeerverbod ter hoogte van Dorp 27 - 31 
+                                        stilstaan- en parkeerverbod op het kerkplein tegenover Dorp 27 - 31 en Dorp 2 - 4 
+                                     
+                                    
+                                        2. Van 11.00 uur tot en met 13.00 uur:
+                                     
+                                     
+                                         
+                                            Afsluiten van Dorp tussen huisnummers 26 en 31 
+                                            Omleiding via Centrumstraat - Kasteeldreef - Dorp 
+                                            Bord éénrichtingsverkeer tegenover Dorp 20 wordt afgedekt, zodat die parkeerplaatsen beschikbaar blijven 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Van 7.00 uur tot en met 15.00 uur: 
+                                     
+                                        Borden E3 
+                                        Borden E3 
+                                     
+                                    
+                                        2. Van 11.00 uur tot en met 13.00 uur:
+                                     
+                                     
+                                         
+                                            Nadar + C3 aan kruispunt Dorp 31/Centrumstraat en Dorp 26 
+                                            Borden F41 aan volgende kruispunten: Dorp 31/Centrumstraat, Centrumstraat/Kasteeldreef en Kasteeldreef/Dorp 
+                                         
+                                          
+                                        Artikel 3 
+                                        De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en zal door team evenementen op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f4f44afd-b589-4d55-815f-f45a068217ee> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4f44afd-b589-4d55-815f-f45a068217ee> a ns2:Agendapunt ;
+    ns3:uuid "5cb6d698-0811-54ae-8b9a-c147b74c7e42" .
+

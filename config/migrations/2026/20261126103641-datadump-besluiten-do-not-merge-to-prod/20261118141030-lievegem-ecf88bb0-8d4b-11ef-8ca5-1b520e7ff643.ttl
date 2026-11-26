@@ -1,0 +1,138 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns2:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e505485-0bc1-489b-a69c-29c873956a65> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf> ;
+    ns2:openbaar true ;
+    ns3:uuid "fe8f1bf0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4e505485-0bc1-489b-a69c-29c873956a65> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4e505485-0bc1-489b-a69c-29c873956a65> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/d7060f97-c417-474c-abc6-ef006cb61f41> ;
+    ns1:description """ 
+                                                    De gemeenteraad gaat akkoord met de wijzigingen en stelt het aangepast subsidiereglement sport vast. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Subsidiereglement sport - wijziging: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Caroline Fredrick, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet van 22 december 2017 over het lokaal bestuur, inzonderheid artikel 41 - 2° 
+                                    Subsidiereglement sport vastgesteld in de gemeenteraad van 3 juni 2020 en wijziging vastgesteld in de gemeenteraad van 30 juni 2021.Collegebeslissing van 4 oktober 2022 over de wijziging van het subsidiereglement 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het verdelen van de toelages voor de sportverenigingen moet vastgelegd worden in een subsidiereglement sport. 
+                                    In de werkgroep evaluatie subsidies sport van 19 april 2022 en vervolgens in het sport- en beweegplatform van 5 september 2022, werd het volgende beslist om te wijzigen: 
+                                    Een subsidiereglement is een beleidsinstrument welke een lokaal bestuur kan toepassen om een vereniging financieel te ondersteunen, het is een keuze.Een belangrijke doelstelling welke het sport & beweegplatform voor ogen heeft  is om het lokaal bestuur te adviseren om zoveel mogelijk Lievegemnaars aan het sporten te krijgen in een gezonde, veilige omgeving waarbij voldoende en aangepaste sportinfrastructuur en open ruimte ter beschikking is.    
+                                    Na de fusie werd in 2019 een werkgroep omtrent opmaak van een nieuw subsidiereglement opgericht waarbij alle sportclubs de kans hebben gekregen om hierin te participeren. Een perfect reglement bestaat niet dus wordt dit reglement jaarlijks geëvalueerd  door dergelijke werkgroep. Vanuit het sport & beweegplatform worden drie wijzigingen voorgesteld. 1) -10% basissubsidies voor clubs met eigen cafetaria afschaffen 
+                                    reden:  Deze clubs hebben ook moeite om boven water te blijven- stijging kosten nutsvoorzieningen aangezien deze clubs instaan voor hun eigen energiekosten- andere clubs krijgen in sommige gevallen ook nog extra via subsidiereglement subsidies bij grootschalige sportevenementen Waarschoot of percent voor drankverbruik in Den Boer via het pre-paid-kaartsysteem 
+                                    - voor olympische clubs kan dit een verschil opleveren van 400 euro wat niet de wereld is, maar alle beetjes kunnen wel helpen.2) duurzaam criterium als criterium bij categorie brons toevoegen 
+                                    'De club kan minstens 1 duurzame actie voorleggen' 
+                                    In tijden waarbij energie besparen een ontzettend belangrijk thema is geworden, vinden we dat de clubs hier ook een voorbeeld mogen in zijn en dat het sensibiliseren van hun leden hieromtrent zeker haalbare kaart moet zijn. 
+                                    3) sportgerelateerde evenementen: verduidelijken van de beschrijving: promotie van de ‘eigen’ sport en reguliere werking vervangen door ‘normale’ werking 
+                                     
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Subsidiereglement voor sportverenigingen in LievegemArtikel 1: GrondslagDe subsidiëring van de erkende sportverenigingen heeft tot doel de sportverenigingen de mogelijkheid te geven om de werking verder uit te bouwen, zowel kwantitatief als kwalitatief.Het beleid stimuleert hiermee het sportieve verenigingsleven met als één van de kerntaken ‘zoveel mogelijk inwoners van de gemeente Lievegem op een gezonde manier aan te zetten tot sport en bewegen’.De erkenning en subsidiëring als sportvereniging gebeuren daarom volgens de voorwaarden die in dit reglement zijn vastgelegd.Erkenningsvoorwaarden als sportverenigingArtikel 2 Om erkend te worden als Lievegemse sportvereniging dient een sportvereniging blijvend te voldoen aan volgende voorwaarden: a.    Een erkende Lievegemse vereniging zijnb.    sportactiviteiten organiseren die individueel of in ploegverband worden beoefend met een competitief of recreatief karakter en waarbij de fysieke inspanning centraal staatc.    minimum 1 jaar actieve sportwerking kunnen bewijzenErkende verenigingen kunnen slechts subsidies ontvangen via één gemeentelijk kanaal.    Erkenningsaanvraag sportverenigingArtikel 3De vereniging dient een aanvraag tot erkenning in via het (online) aanvraagformulier op de gemeentelijke website.  Bij de aanvraag moeten de volgende documenten zitten:-    activiteitenverslag van het voorbije sportwerkingsjaarArtikel 4Elke aanvraag tot erkenning wordt door het college van burgemeester en schepenen voor advies voorgelegd aan het sport- en beweegplatform.  Artikel 5Het college van burgemeester en schepenen kan, na advies van het sport- en beweegplatform, een erkenning onmiddellijk beëindigen wanneer de vereniging niet langer voldoet aan de voorwaarden vermeld in artikel 2. Artikel 6Het team sport kan, op advies van het sport- en beweegplatform of op eigen initiatief, op elk tijdstip een erkende sportvereniging vragen via de nodige documenten aan te tonen dat nog steeds voldaan wordt aan de erkenningsvoorwaarden. Wanneer een vereniging niet meer voldoet aan de erkenningsvoorwaarden, de procedures niet correct naleeft, bewust foutieve gegevens bezorgt of geen gevolg geeft aan een oproep tot indienen van extra informatie, kan het college van burgemeester en schepenen, na advies van het sport- en beweegplatform, de erkenning intrekken.Subsidievoorwaarden en beschikbare subsidie voor sportverenigingenArtikel 7De subsidie wordt toegekend binnen de perken van het daartoe voorziene budget in het gemeentelijk meerjarenplan.Artikel 8De subsidiëring van de erkende sportverenigingen heeft tot doel het sportieve leven in de gemeente te bevorderen en de activiteiten die verenigingen organiseren te waarderen. De subsidiëring kan bestaan uit: A.    Een basissubsidie op basis van vier categorieënB.    Een plussubsidie voor de terugbetaling aan vorming en het organiseren van sportgerelateerde evenementen, op voorwaarde dat de sportclub behoort tot één van de vier categorieën.Artikel 9Voor de toepassing van dit reglement wordt verstaan onder:-    sport: activiteiten die individueel of in ploegverband worden beoefend met een competitief of recreatief karakter en waarbij de fysieke inspanning centraal staat.-    sportvereniging: een groepering van mensen die zich structureel en duurzaam heeft georganiseerd met als primaire doelstelling de beoefening van sport.-    Aantal leden: het aantal leden op de officiële ledenlijst die geldig is op de laatste dag van het werkingsjaar.-    sportbegeleider: een sporttechnisch begeleider die actief is in de sportvereniging (bv een wegkapitein, een seingever en een parcoursbouwer).-    VTS-trainer: een trainer opgeleid en gediplomeerd door de Vlaamse Trainersschool.-    Gelijkgestelde VTS-trainer:  de Vlaamse Trainersschool (VTS) hanteert een assimilatietabel die geregeld geactualiseerd wordt. Hierop staan heel wat buitenlandse en binnenlandse kwalificaties vermeld die binnen de VTS aanleiding geven tot een assimilatie (= gelijkstelling) met één van de bestaande VTS-kwalificaties.-    jeugdwerking: sportwerking voor kinderen en jongeren die bij aanvang van het werkingsjaar nog geen 18 jaar zijn.-    G-sportwerking: de begeleiding van sportparticipatie uitgeoefend door G-sportleden, met name personen met een auditieve, fysieke, verstandelijke of visuele handicap, psychische kwetsbaarheid of autisme-    Ervaringsdeskundige G-lesgever: iemand die ervaring heeft in het lesgeven aan een specifieke doelgroep. De kennis van de persoon is niet gebaseerd op studie maar wel op eigen ervaring. Om als ervaringsdeskundige lesgever erkend te worden, moet je aantonen dat je minstens 3 jaar aaneensluitend lesgever was:- voor een specifieke sport, - aan een specifieke doelgroep ( auditief, visueel, fysiek, psychisch of verstandelijk , -en dit minimaal 1 uur per week-    sportgerelateerde evenementen: bijzondere evenementen met sportief karakter los van de normale werking, georganiseerd door de sportvereniging ter promotie van de eigen sport. Komen niet in aanmerking: reguliere trainingen, reguliere competitie, reguliere sportkampen/stages, eetfestijnen.-    Duurzame actie: sensibilisatie- actie: sensibiliseren rond energieverbruik, afval verzamelen, mobiliteit, strappen, lokale handelaar (korte keten)… via affiches, nieuwsbrieven, …of actieve actie: meehelpen aan zwerfvuilactie, verkoop of geven van herbruikbare verpakkingen, herbruikbare drinkfles, oproep tot carpoolen, opvolgen eigen energieverbruik, …Artikel 10  verdeling en berekening van de subsidieA.    BASISSUBSIDIE65.000 euro van de subsidies worden toegekend op basis van de indeling in categorieën. De verdeling van dit bedrag gebeurt a rato van punten per categorie waarbij de waarde van een punt kan variëren afhankelijk van de goedgekeurde dossiers.-    Categorie brons: 1 punt-    Categorie zilver: 2 punten-    Categorie goud: 6 punten-    Categorie olympisch: 20 puntenDe sportverenigingen die in aanmerking komen voor financiële ondersteuning worden onderverdeeld in 4 categorieën:1.    CATEGORIE BRONSEen erkende sportvereniging behoort tot categorie brons als ze voldoet aan de volgende voorwaarden:1)    De club moet een sport beoefenen zoals beschreven in artikel 9 volgens de definitie sport.2)    De club heeft een regelmatige actieve werking van minimum 25 weken per jaar waarin minimaal 1 sportactiviteit per week georganiseerd wordt.3)    De club dient een verzekering af te sluiten voor burgerlijke aansprakelijkheid en lichamelijke ongevallen conform de wettelijke regelingen.4)    De club heeft minimaal 10 leden.5)    De club kan minstens 1 duurzame actie voorleggen.2.    CATEGORIE ZILVEREen erkende sportvereniging behoort tot categorie zilver als ze bijkomend voldoet aan de volgende voorwaarden:1)    De club is aangesloten bij een erkende sportfederatie/bond.2)    De club heeft minimaal 20 leden. 3)    De sportactiviteit die de club organiseert moet telkens onder begeleiding staan van een lesgever/trainer/sportbegeleider.4)    De club is actief op de sociale media of heeft een actieve website met als doel zijn zichtbaarheid en bekendheid binnen de gemeente te onderhouden.3.    CATEGORIE GOUDEen erkende sportvereniging behoort tot categorie goud als ze bijkomend voldoet aan de volgende voorwaarden:1)    De club werkt met minimum 1 sportgediplomeerde VTS-trainer (of gelijkgesteld) of 1 ervaringsdeskundige G-lesgever.2)    De club heeft een aparte jeugdwerking of G-sportwerking.3)    De club heeft een jeugdwerking met minimum 25 jeugdleden en/of 5 G-sportleden.4)    De club organiseert minimum 2 trainingsmomenten per week o.l.v. een trainer gedurende het sportseizoen.5)    De club en zijn leden nemen deel aan erkende wedstrijden en competitie.4.    CATEGORIE OLYMPISCHEen erkende sportvereniging behoort tot categorie olympisch als ze bijkomend voldoet aan de volgende voorwaarden:1)    De club heeft een jeugdwerking met minimum 75 jeugdleden en/of 15 G-sportleden waarvan minstens 50% van Lievegem of de club heeft een jeugdwerking met minimum 100 jeugdleden van Lievegem. 2)    De club heeft minstens 3 sportgediplomeerde VTS- trainers (of gelijkgesteld) of 3 ervaringsdeskundige G-lesgevers. 3)    De club heeft minstens 3 officiële scheidsrechters/juryleden, tenzij niet van toepassing volgens de reglementering van de uitgevoerde sporttak.4)    De club kan minstens 3 sportgerelateerde bijscholingen voorleggen (trainers, bestuursleden, vrijwilligers, begeleiders,…)B.    PLUSSUBSIDIEDe basissubsidie kan aangevuld worden met een plussubsidie.1.    Terugbetaling aan vorming3.700 euro van de subsidies worden toegekend voor de terugbetaling aan vorming.75% van het opleidingsbedrag zal worden terugbetaald aan de sportvereniging met een maximum van 200 euro per opleiding/bijscholing per persoon en met een maximum van 600 euro per sportvereniging.Indien het subsidiebedrag onvoldoende blijkt te zijn om tegemoet te komen aan de totaliteit van de aanvragen, wordt een procentuele verdeelsleutel toegepast. Indien het subsidiebedrag te groot blijkt, zal het saldo toegevoegd worden aan het gedeelte basissubsidie.-    Terugbetaling voor deelname aan sportspecifieke opleidingen georganiseerd of erkend door de Vlaamse Trainersschool (VTS) of erkende sportfederaties:•    De cursist eindigt in de loop van het jaar waarop de subsidie betrekking heeft.•    De cursist is geslaagd.•    De deelnemer is op het moment van de aanvraag tot terugbetaling van de cursus actief als sportbegeleider/sportbestuurder in de sportvereniging.•    De opleiding werd door de sportvereniging betaald.-    Terugbetaling voor deelname aan sportspecifieke bijscholingen georganiseerd of erkend door VTS of georganiseerd door erkende sportfederaties, team sport, een erkende adviesraad, burensportdienst,…•    De bijscholing vond plaats in de loop van het jaar waarop de subsidie betrekking heeft.•    Een attest kan worden voorgelegd.•    De deelnemer is op het moment van de aanvraag tot terugbetaling van de bijscholing actief als sportbegeleider/sportbestuurder in de sportvereniging.•    De opleiding werd door de sportvereniging betaald.2.    Terugbetaling organiseren sportgerelateerde evenementen8000 euro van de subsidies worden toegekend als tegemoetkoming in de kosten voor het organiseren van sportgerelateerde evenementen.Enkel de kosten die rechtstreeks gelinkt zijn aan de uitoefening van de sport of de promotie ervan kunnen worden ingediend.De helft van de ingebrachte kosten zal worden terugbetaald aan de sportvereniging met een maximum van 500 euro per evenement en met een maximum van 1000 euro per sportvereniging.Indien het subsidiebedrag onvoldoende blijkt te zijn om tegemoet te komen aan de totaliteit van de aanvragen, wordt een procentuele verdeelsleutel toegepast. Indien het subsidiebedrag te groot blijkt, zal het saldo toegevoegd worden aan het gedeelte basissubsidie. Artikel 11Een werkingsjaar loopt van 1 september tot 31 augustus.  Artikel 12Het College van burgemeester en schepenen beslist rond de goedkeuring van de aanvragen, na advies van het sport- en beweegplatform Subsidie-aanvraag voor sportverenigingenArtikel 13Om de subsidie aan te vragen dienen de erkende sportverenigingen hun subsidieaanvraag jaarlijks voor 30 september in via het (online)subsidieformulier op de gemeentelijke website. Artikel 14Het team sport kan, op advies van het sport- en beweegplatform of op eigen initiatief, op elk tijdstip een erkende sportvereniging vragen om via de nodige documenten aan te tonen dat de ingediende activiteiten voldoen aan de voorwaarden gesteld in dit reglement. Wanneer misbruik wordt vastgesteld, kan het college van burgemeester  en schepenen, na advies van het sport- en beweegplatform de subsidies van het betreffende jaar terugvorderen BetwistingArtikel 15Bij betwisting over de erkenning of toekenning van subsidies kan de vereniging een bezwaarschrift richten aan het college van Burgemeester en Schepenen. Die vraagt op haar beurt advies van het sport- en beweegplatform. Indien van dit advies wordt afgeweken, motiveert het college van Burgemeester en Schepenen zijn beslissing.UitbetalingArtikel 16Na goedkeuring door het college van burgemeester en schepenen, wordt de subsidie uitbetaald op het rekeningnummer, vermeld op het aanvraagformulier. De aanvrager verbindt zich ertoe elke wijziging van zijn rekeningnummer onmiddellijk en schriftelijk mee te delen aan de gemeente.SlotbepalingenArtikel 17Dit reglement is goedgekeurd door de gemeenteraad van 19 oktober 2022 met als start de startdatum van de referteperiode 1 november 2022.Dit reglement blijft gelden totdat een vervangend reglement wordt goedgekeurd door de gemeenteraad. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    De gemeentelijke reglementen worden bekendgemaakt aan ABB via het digitaal loket en via de gemeentelijke website.Team communicatie, team onthaal en team financiën. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Caroline Fredrick, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, inzonderheid artikel 41 - 2° 
+                                                            Subsidiereglement sport vastgesteld in de gemeenteraad van 3 juni 2020 en wijziging vastgesteld in de gemeenteraad van 30 juni 2021.Collegebeslissing van 4 oktober 2022 over de wijziging van het subsidiereglement 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het verdelen van de toelages voor de sportverenigingen moet vastgelegd worden in een subsidiereglement sport. 
+                                                            In de werkgroep evaluatie subsidies sport van 19 april 2022 en vervolgens in het sport- en beweegplatform van 5 september 2022, werd het volgende beslist om te wijzigen: 
+                                                            Een subsidiereglement is een beleidsinstrument welke een lokaal bestuur kan toepassen om een vereniging financieel te ondersteunen, het is een keuze.Een belangrijke doelstelling welke het sport & beweegplatform voor ogen heeft  is om het lokaal bestuur te adviseren om zoveel mogelijk Lievegemnaars aan het sporten te krijgen in een gezonde, veilige omgeving waarbij voldoende en aangepaste sportinfrastructuur en open ruimte ter beschikking is.    
+                                                            Na de fusie werd in 2019 een werkgroep omtrent opmaak van een nieuw subsidiereglement opgericht waarbij alle sportclubs de kans hebben gekregen om hierin te participeren. Een perfect reglement bestaat niet dus wordt dit reglement jaarlijks geëvalueerd  door dergelijke werkgroep. Vanuit het sport & beweegplatform worden drie wijzigingen voorgesteld. 1) -10% basissubsidies voor clubs met eigen cafetaria afschaffen 
+                                                            reden:  Deze clubs hebben ook moeite om boven water te blijven- stijging kosten nutsvoorzieningen aangezien deze clubs instaan voor hun eigen energiekosten- andere clubs krijgen in sommige gevallen ook nog extra via subsidiereglement subsidies bij grootschalige sportevenementen Waarschoot of percent voor drankverbruik in Den Boer via het pre-paid-kaartsysteem 
+                                                            - voor olympische clubs kan dit een verschil opleveren van 400 euro wat niet de wereld is, maar alle beetjes kunnen wel helpen.2) duurzaam criterium als criterium bij categorie brons toevoegen 
+                                                            'De club kan minstens 1 duurzame actie voorleggen' 
+                                                            In tijden waarbij energie besparen een ontzettend belangrijk thema is geworden, vinden we dat de clubs hier ook een voorbeeld mogen in zijn en dat het sensibiliseren van hun leden hieromtrent zeker haalbare kaart moet zijn. 
+                                                            3) sportgerelateerde evenementen: verduidelijken van de beschrijving: promotie van de ‘eigen’ sport en reguliere werking vervangen door ‘normale’ werking 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ecf88bb0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    De gemeenteraad stelt het aangepast subsidiereglement sport vast. 
+                                     
+                                    Artikel 2 
+                                    Dit reglement gaat in vanaf 1 november 2022 en heft het reglement van 30 juni 2021 op. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad stelt het aangepast subsidiereglement sport vast. 
+                                                             
+                                                            Artikel 2 
+                                                            Dit reglement gaat in vanaf 1 november 2022 en heft het reglement van 30 juni 2021 op. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e505485-0bc1-489b-a69c-29c873956a65> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "f2274c20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Subsidiereglement sport - wijziging: vaststelling" .
+

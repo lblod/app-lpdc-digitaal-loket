@@ -1,0 +1,98 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/bea6591e-42e7-49d2-8273-6504f86f8f3d> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/15765661-4caf-4ec2-acf7-1493bac248e7>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/488fb105-b2e2-441a-a7ab-772ee31a85fa>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/c713e39d-5423-45bc-bdf5-25a5d81764a6> ;
+    ns1:geplandeStart "2025-07-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/1a369750-aec5-49df-9f01-020d28b89d13> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "7f4ae595-78a4-5370-9419-1b3ed6152f96" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-07-29T20:10:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/488fb105-b2e2-441a-a7ab-772ee31a85fa> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/418bbe84-e7c2-4791-b483-fbcd921fbcef> ;
+    ns1:openbaar false ;
+    ns2:uuid "48120bad-9866-5e17-a6b8-01610f86814e" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/488fb105-b2e2-441a-a7ab-772ee31a85fa> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/488fb105-b2e2-441a-a7ab-772ee31a85fa> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/488fb105-b2e2-441a-a7ab-772ee31a85fa> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Tijdelijke politieverordening op het wegverkeer - R.Verbelenstraat - A.Tersagostraat" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De wegenwerken op R. Verbelenstraat en A.Tersagostraat zorgen voor een aangepaste verkeersafwikkeling. Er wordt een omleiding voorzien via Hof-ten-Berglaan - Molenstraat - G.Gezellelaan - Merkenveld voor centrum. Voor doorgaand verkeer wordt er een omleiding voorzien via Hof-ten-Berglaan - Molenstraat - G.Gezellelaan - L. Van Kerckhovenstraat - Kleine Amer - N16.Zeutestraat wordt afgesloten voor gemotoriseerd verkeer d.m.v. een tijdelijke traktorsluis om sluipverkeer te weren. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond 
+                                             
+                                                Decreet Lokaal Bestuur, artikel 56 §2 in samenhang met de Nieuwe Gemeentewet van 24 juni 1988, artikel 130 bis 
+                                             
+                                         
+                                     
+                                     
+                                        Toepasselijke regelgeving:  
+                                         
+                                            De wet van 16 maart 1968 betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk bestuur van 16 maart 1968; 
+                                            Het koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer, en latere wijzigingen; 
+                                            Het koninklijk besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens, en latere wijzigingen; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 3. 
+                                 
+                            """@nl ;
+    ns2:uuid "2fc97a4c-1170-5b6b-a776-a89d8a258be9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Het college van burgemeester en schepenen keurt de tijdelijke politieverordening “R. Verbelenstraat - A. Tersagostraat” te Puurs goed tot vermoedelijke einddatum 12/07/2026 
+                                    Artikel 2: 
+                                    Scheeveld 8 : traktorsluis 
+                                    Klein-Mechelen 60A : traktorsluis 
+                                    
+                                        
+                                        
+                                         
+                                         
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 F45B - A51 - GIV traktorsluis  
+                                             
+                                         
+                                     
+                                     
+                                         
+                                            
+                                                Artikel 3: Overige werfsignalisatie wordt goedgekeurd via Eagelbe
+                                             
+                                         
+                                     
+                                     Artikel 4: Dit reglement wordt bekendgemaakt overeenkomstig artikel 286 van het decreet over het lokaal bestuur. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/488fb105-b2e2-441a-a7ab-772ee31a85fa> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/488fb105-b2e2-441a-a7ab-772ee31a85fa> a ns1:Agendapunt ;
+    ns2:uuid "4ea21e17-f129-5f19-adc2-a559a5a62b09" .
+

@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns2:Zitting ;
+    ns2:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns2:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns2:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns2:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc> ;
+    ns2:openbaar true ;
+    ns3:uuid "3fd28fb1-4b6f-5da7-86bd-13f255993e28" ;
+    dcterms:description """ 
+                                                             
+                                                                De e-mail d.d. 23 september 2025 van de coördinator van Variant betreffende de vraag tot verlening van de duur van de projectvereniging VARIANT tot en met 31 december 2026. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/6485052c-84f9-4954-8cfc-87129b6a8afd> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/6485052c-84f9-4954-8cfc-87129b6a8afd> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns1:title "Samenwerkingsverbanden. Variant. Vraag verlenging van de duur van de projectvereniging VARIANT tot en met 31 december 2026. Goedkeuring." ;
+    ns2:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Artikel 41, 2de lid 4° van het decreet over het lokaal bestuur van 22 december 2017. 
+                                                                    Het besluit van de Vlaamse Regering houdende de uitvoering van het Cultureelerfgoeddecreet van 24 februari 2017. 
+                                                                    De statuten en het huishoudelijk reglement van het intergemeentelijk samenwerkingsverband projectvereniging VARIANT. 
+                                                                    Oprichtingsakte en de statuten van de projectvereniging VARIANT op datum 14/11/2019, zoals goedgekeurd bij beslissing van de gemeenteraad van Brakel op 30 september 2019. 
+                                                                    Gelet op artikel 34, tweede lid, van het Cultureelerfgoeddecreet van 24 februari 2017; 
+                                                                    Gelet op de beslissing van de Vlaamse Regering van 9 oktober 2020 om 21 intergemeentelijke samenwerkingsverbanden te ondersteunen voor het opnemen van een dienstverlenende rol voor cultureel erfgoed op een regionaal niveau; 
+                                                                    Gelet op de cultureel erfgoedconvenant afgesloten tussen de Vlaamse gemeenschap en VARIANT; 
+                                                                    Gelet het Het Onroerend erfgoeddecreet van 12 juli 2013; 
+                                                                    Gelet het Onroerend erfgoedbesluit van 16 mei 2014 (en latere wijzigingen) waarin uitvoering gegeven wordt aan het decreet, waaronder art. 10.1.1 e.v. over samenwerkings-overeenkomsten en subsidies aan erkende IOED’s; 
+                                                                    Gelet de erkenningsovereenkomst en samenwerkingsovereenkomst met de Vlaamse Overheid (via het agentschap Onroerend Erfgoed) als IOED Vlaamse Ardennen; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Het lokaal bestuur Brakel maakt deel uit van de projectvereniging VARIANT die werd opgericht bij oprichtingsakte d.d. 14 november 2019, ondertekend door 13 lokale besturen: Brakel, Geraardsbergen, Herzele, Horebeke, Kluisbergen, Kruisem, Lierde, Maarkedal, Oudenaarde, Ronse, Wortegem-Petegem, Zottegem en Zwalm. 
+                                                                    De projectvereniging heeft een maximale decretale duur van 6 jaar, i.e. tot en met 13 november 2025. Omdat de huidige beleidsperiode van de deelwerkingen loopt tot eind 2026 dient de projectvereniging tot eind 2026 verlengd te worden. 
+                                                                    Volgens de statuten is de projectvereniging VARIANT een platform voor samenwerking rond cultuur en erfgoed in de Vlaamse Ardennen. De projectvereniging VARIANT realiseert haar doelstellingen door de uitbouw van regionale deelwerkingen binnen het brede erfgoed- en cultuurdomein. 
+                                                                    De deelwerkingen van VARIANT zijn: 1) Cultureel Erfgoedcel; 2) Intergemeentelijke Onroerenderfgoeddienst (IOED) en 3) Bibliotheken Vlaamse Ardennen. 
+                                                                    Alle dertien lokale besturen nemen op heden deel aan de Cultureel Erfgoedcel. Op heden is er een cultureel erfgoedconvenant afgesloten tussen de Vlaamse gemeenschap en VARIANT betreffende de uitvoering van een dienstverlenende rol op regionaal niveau. Het cultureel-erfgoedconvenant werd gesloten voor een beleidsperiode van zes jaar, die start op 1 januari 2021 en eindigt op 31 december 2026. 
+                                                                    De verlenging van de projectvereniging betekent een inbreng van elk deelnemend lokaal bestuur van € 0,30 per inwoner voor lidmaatschap van de Cultureel Erfgoedcel. 
+                                                                    Alle dertien lokale besturen nemen op heden deel aan de Intergemeentelijke Onroerend Erfgoeddienst (IOED). Voor de IOED heeft VARIANT een erkenningsovereenkomst en samenwerkingsovereenkomst met de Vlaamse Overheid (via het agentschap Onroerend Erfgoed) als IOED Vlaamse Ardennen.  
+                                                                    Zes lokale besturen nemen op heden deel aan de deelwerking Bibliotheken Vlaamse Ardennen 
+                                                                    Het gaat over de gemeenten Brakel, Maarkedal, Ronse, Oudenaarde, Wortegem-Petegem en Kluisbergen. Deze werking verloopt ook volgens een beleidsperiode 2021-2026. Deze werking ontvangt op heden geen Vlaamse subsidies. 
+                                                                    Om de huidige projecten binnen de samenwerking van de Bibliotheken ook in 2026 te kunnen verderzetten wordt voorgesteld om akkoord te gaan met de verlenging van VARIANT. 
+                                                                    De verlenging van de projectvereniging betekent een inbreng van elk lokaal bestuur van € 0,30 per inwoner voor lidmaatschap van de Bibliotheken Vlaamse Ardennen. 
+                                                                    - Het college d.d. 20 oktober 2025 nam kennis van de e-mail d.d. 23 september 2025 van de coördinator van Variant betreffende de vraag tot verlening van de duur van de projectvereniging VARIANT tot en met 31 december 2026 en stelt voor dit goed te keuren. 
+                                                                 
+                                                            """@nl ;
+    ns3:uuid "ae7caf03-e927-5c19-b371-146a6b87f191" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Artikel 1. De Gemeenteraad keurt de verlenging van de duur van de projectvereniging VARIANT tot en met 31 december 2026 goed. 
+                                                                    Artikel 2. De Gemeenteraad gaat akkoord met de bijdrage voor een bedrag van 0,60 euro per inwoner voor de duur van de verlenging van de projectvereniging VARIANT, zoals bepaald in artikel 1. 
+                                                                    Artikel 3. Dit besluit treedt pas in werking wanneer alle deelnemende lokale besturen en de Raad van Bestuur van VARIANT hun goedkeuring hebben gegeven omtrent de verlenging van de duur van de projectvereniging VARIANT. 
+                                                                    Artikel 4. Er wordt aan de Raad van Bestuur van VARIANT de opdracht gegeven de nodige stappen te ondernemen van zodra alle deelnemende lokale besturen hun goedkeuring hebben bezorgd. 
+                                                                    Artikel 5. Een afschrift van dit besluit zal overgemaakt worden aan de projectvereniging VARIANT. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "aba63970-2c45-5347-9486-f9ff5f414a82" ;
+    dcterms:title "Samenwerkingsverbanden. Variant. Vraag verlenging van de duur van de projectvereniging VARIANT tot en met 31 december 2026. Goedkeuring." .
+

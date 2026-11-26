@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5d008620-7af5-4054-9535-61c7b38df098> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7311e75d-b97e-4fd1-9d17-81961bb709bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/93cf2ea3-71f3-4e3f-b592-84cc87bc0781>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de33f862-329e-4b6c-85ff-e7afe24ca463> ;
+    ns2:geplandeStart "2025-04-08T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/f4f5b916-dabe-4bd2-afea-a106f7cae012> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "02e79ba1-7086-5250-8617-8a22105ca20c" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-04-08T14:10:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7311e75d-b97e-4fd1-9d17-81961bb709bc> ;
+    ns2:openbaar false ;
+    ns3:uuid "6722a833-217f-5984-9914-85d849d85ec0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement naar aanleiding van 'herdenking V-dag' op 10 mei 2025 van 14.45 uur tot en met 15.45 uur wordt vastgesteld als volgt: 
+                                                            1. Afsluiten van Zomerlaan vanaf Zomerlaan 1 tot en met kruispunt met Markt/Maarten Steyaertplein2. Omleiding via Guido Gezellestraat - Ter Wal - Hendrik Claeysstraat - Dekenijstraat - Maarten Steyaertplein en via Maarten Steyaertplein - Alfons Sifferstraat en Guido Gezellestraat 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van herdenking V-dag - NSB Zomergem-Ronsele-Oostwinkel: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 8 april 2025 over de aanvraag evenement Herdenking V-dag - NSB Zomergem-Ronsele-Waarschoot: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Freddy De Vlieger, namens NSB Zomergem-Ronsele-Oostwinkel organiseert 'herdenking V-dag' op 10 mei 2025.Er werd op 10 maart 2025 een aanvraag ingediend door Freddy De Vlieger, namens NSB Zomergem-Ronsele-Oostwinkel, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisator per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "c8b8685f-a6ab-5e99-91bd-ffb47b650714" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement naar aanleiding van 'herdenking V-dag' op 10 mei 2025 van 14.45 uur tot en met 15.45 uur wordt vastgesteld als volgt: 
+                                    1. Afsluiten van Zomerlaan vanaf Zomerlaan 1 tot en met kruispunt met Markt/Maarten Steyaertplein2. Omleiding via Guido Gezellestraat - Ter Wal - Hendrik Claeysstraat - Dekenijstraat - Maarten Steyaertplein en via Maarten Steyaertplein - Alfons Sifferstraat en Guido Gezellestraat 
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd:1. - Nadar + C3 ter hoogte van Zomerlaan 1 en op het kruispunt Zomerlaan/Markt    - Nadar + C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45b op de kruispunten Koning Leopold III laan/Guido Gezellestraat, Koning Leopold III laan/Rijvers en Zomerlaan/Adolf Lievensstraat2. Borden F41 
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en zal door de aanwezige collega's van team evenementen op straat geplaatst worden bij aanvang en terug verwijderd worden bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f> a ns2:Agendapunt ;
+    ns3:uuid "73fd6874-683d-5de0-a5a5-8c9994bce87f" .
+

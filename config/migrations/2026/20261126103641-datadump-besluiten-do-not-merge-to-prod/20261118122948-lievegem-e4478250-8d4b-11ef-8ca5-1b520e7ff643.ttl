@@ -1,0 +1,178 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns1:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2> ;
+    ns1:openbaar true ;
+    ns3:uuid "e447f780-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8c24b56-3c39-4dcf-8196-e17248a76e76> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8c24b56-3c39-4dcf-8196-e17248a76e76> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad is akkoord met de tariefbepaling van de jeugdlokalen.De gemeenteraad keurt de kwijtschelding van de huur van de jeugdverenigingen voor de periode van 1 juli 2021 tot en met 30 juni 2022 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Huurgelden Lievegemse jeugdverenigingen - tariefbepaling jeugdlokalen - kwijtschelding huurgelden: goedkeuring" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Caroline Frederick, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Het decreet lokaal bestuur van 22 december 2017, artikel 40. 
+                                    Gebruiksovereenkomst jeugdlokalen tussen het Gemeentebestuur Waarschoot en de permanente gebruikers van de gemeentelijke jeugdlokalen, goedgekeurd door gemeenteraad van Waarschoot op 15 mei 2014. 
+                                    Gebruikersovereenkomst jeugdlokalen Haantjesstraat tussen het Gemeentebestuur Lovendegem en de KLJ Lovendegem, goedgekeurd op de Gemeenteraad van 26 juni 2014. 
+                                    Gebruikersovereenkomst jeugdlokalen Kort Eindeken tussen het Gemeentebestuur Lovendegem en de chiro Lovendegem vzw, goedgekeurd op de Gemeenteraad van 26 juni 2014. 
+                                    Lokalennota jeugdlokalen Hofbouwstraat 1 tussen het Gemeentebestuur Zomergem en de gebruikers, goedgekeurd op de Gemeenteraad van 23 maart 2005. 
+                                    Gebruikersovereenkomst jeugdlokalen Hofbouwstraat 1 tussen het Gemeentebestuur Zomergem en de regionale jeugddienst Meetjesland, goedgekeurd op de Gemeenteraad van 23 maart 2005. 
+                                    Gebruikersovereenkomst jeugdlokalen Hofbouwstraat-Oepites tussen het Gemeentebestuur Zomergem en KSJ Zomergem, goedgekeurd op de Gemeenteraad van 27 november 2013. 
+                                    Besluit van het college van 26 april 2022 over het principieel akkoord met de huurgelden Lievegemse jeugdverenigingen - tariefbepaling - kwijtschelding huurgeldenLievegemse jeugdverenigingen. 
+                                    Besluit van het college van 7 juni 2022 en het gemeenteraadsbesluit van heden over de algemene gebruikersovereenkomst jeugdlokalen Lievegem. 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Tot op heden hanteert men een verschillende werkwijze in het aanrekenen van huurgelden en energiekosten voor de jeugdlokalen van de Lievegemse jeugdverenigingen. Een uniforme regeling dringt zich op. 
+                                    Huidige situatie over het aanrekenen van huurgelden voor het gebruik van de gemeentelijke infrastructuur: 
+                                    5 jeugdverenigingen betalen huurgelden, 6 jeugdverenigingen betalen geen huurgelden. Bovendien stelt men een grote ongelijkheid vast in locaties en de aangerekende huur. 
+                                     
+                                    Voorstel uniforme regeling Lievegem: de jeugdverenigingen betalen geen huur voor het gebruik van de gemeentelijke infrastructuur (lees: jeugdlokalen), maar de energiekosten (elektriciteit, gas en water) zijn ten laste van de jeugdverenigingen. 
+                                      
+                                    Verhuren van de jeugdlokalen door de jeugdverenigingen:  In préfusiebestuur Lovendegem was het toegestaan aan de jeugdverenigingen om hun jeugdlokaal te verhuren aan derden en mocht men hiervan de huuropbrengsten innen. In préfusiebestuur Waarschoot was dit niet toegelaten. 
+                                    Pro/contra verhuur jeugdlokalen aan derden: extra belasting van de buurt, niet alle lokalen zijn dermate uitgerust en dus geschikt om verder te verhuren, verlies van huurgelden voor vereniging. 
+                                    Ook hier dringt een uniforme regeling zich op. 
+                                    Voorstel over verhuren aan derden: Het verhuren van de jeugdlokalen door jeugdverenigingen aan derden wordt niet langer toegestaan met uitzondering van Oepites. Ter compensatie zal Oepites: 
+                                    1. aan verminderd tarief hun lokalen verhuren aan Lievegemse jeugdverenigingen. 
+                                    2. deel van de inkomsten laten terugvloeien naar de gemeente (50%). 
+                                     
+                                    Er moet opgemerkt worden dat jeugdverenigingen in Lovendegem niet langer gebruik kunnen maken van de jaarlijks ophaling van grofvuil (container) door de gemeentelijke diensten, het kosteloos ophalen van restafval door de gemeentelijke diensten en het ter beschikking krijgen van gratis vuilniszakken. 
+                                    Kwijtschelden huur voor de periode van 1 juli 2021 tot en met 31 december 2021: inkomstenverlies van €2.330,04 
+                                    Kwijtschelden huur voor de periode van 1 januari 2022 tot en met 30 juni 2022: inkomstenverlies van €2.330,04 
+                                    Het besluit van het college van burgemeester en schepenen van 26 april werd ter advies voorgelegd aan de vrijetijdsteams en werd gunstig geadviseerd. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Inkomsten worden geïnd in het meerjarenplan 2020-2025 op volgende jaarbudgetrekeningen:xxxx/GBB-JGDBKO/0050-00/7050001/GEMEENTE/CBS/IP-GEEN. 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                      
+                                      
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en aan de Lievegemse jeugdverenigingen.Team financiën. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Caroline Frederick, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet lokaal bestuur van 22 december 2017, artikel 40. 
+                                                            Gebruiksovereenkomst jeugdlokalen tussen het Gemeentebestuur Waarschoot en de permanente gebruikers van de gemeentelijke jeugdlokalen, goedgekeurd door gemeenteraad van Waarschoot op 15 mei 2014. 
+                                                            Gebruikersovereenkomst jeugdlokalen Haantjesstraat tussen het Gemeentebestuur Lovendegem en de KLJ Lovendegem, goedgekeurd op de Gemeenteraad van 26 juni 2014. 
+                                                            Gebruikersovereenkomst jeugdlokalen Kort Eindeken tussen het Gemeentebestuur Lovendegem en de chiro Lovendegem vzw, goedgekeurd op de Gemeenteraad van 26 juni 2014. 
+                                                            Lokalennota jeugdlokalen Hofbouwstraat 1 tussen het Gemeentebestuur Zomergem en de gebruikers, goedgekeurd op de Gemeenteraad van 23 maart 2005. 
+                                                            Gebruikersovereenkomst jeugdlokalen Hofbouwstraat 1 tussen het Gemeentebestuur Zomergem en de regionale jeugddienst Meetjesland, goedgekeurd op de Gemeenteraad van 23 maart 2005. 
+                                                            Gebruikersovereenkomst jeugdlokalen Hofbouwstraat-Oepites tussen het Gemeentebestuur Zomergem en KSJ Zomergem, goedgekeurd op de Gemeenteraad van 27 november 2013. 
+                                                            Besluit van het college van 26 april 2022 over het principieel akkoord met de huurgelden Lievegemse jeugdverenigingen - tariefbepaling - kwijtschelding huurgeldenLievegemse jeugdverenigingen. 
+                                                            Besluit van het college van 7 juni 2022 en het gemeenteraadsbesluit van heden over de algemene gebruikersovereenkomst jeugdlokalen Lievegem. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Tot op heden hanteert men een verschillende werkwijze in het aanrekenen van huurgelden en energiekosten voor de jeugdlokalen van de Lievegemse jeugdverenigingen. Een uniforme regeling dringt zich op. 
+                                                            Huidige situatie over het aanrekenen van huurgelden voor het gebruik van de gemeentelijke infrastructuur: 
+                                                            5 jeugdverenigingen betalen huurgelden, 6 jeugdverenigingen betalen geen huurgelden. Bovendien stelt men een grote ongelijkheid vast in locaties en de aangerekende huur. 
+                                                             
+                                                            Voorstel uniforme regeling Lievegem: de jeugdverenigingen betalen geen huur voor het gebruik van de gemeentelijke infrastructuur (lees: jeugdlokalen), maar de energiekosten (elektriciteit, gas en water) zijn ten laste van de jeugdverenigingen. 
+                                                              
+                                                            Verhuren van de jeugdlokalen door de jeugdverenigingen:  In préfusiebestuur Lovendegem was het toegestaan aan de jeugdverenigingen om hun jeugdlokaal te verhuren aan derden en mocht men hiervan de huuropbrengsten innen. In préfusiebestuur Waarschoot was dit niet toegelaten. 
+                                                            Pro/contra verhuur jeugdlokalen aan derden: extra belasting van de buurt, niet alle lokalen zijn dermate uitgerust en dus geschikt om verder te verhuren, verlies van huurgelden voor vereniging. 
+                                                            Ook hier dringt een uniforme regeling zich op. 
+                                                            Voorstel over verhuren aan derden: Het verhuren van de jeugdlokalen door jeugdverenigingen aan derden wordt niet langer toegestaan met uitzondering van Oepites. Ter compensatie zal Oepites: 
+                                                            1. aan verminderd tarief hun lokalen verhuren aan Lievegemse jeugdverenigingen. 
+                                                            2. deel van de inkomsten laten terugvloeien naar de gemeente (50%). 
+                                                             
+                                                            Er moet opgemerkt worden dat jeugdverenigingen in Lovendegem niet langer gebruik kunnen maken van de jaarlijks ophaling van grofvuil (container) door de gemeentelijke diensten, het kosteloos ophalen van restafval door de gemeentelijke diensten en het ter beschikking krijgen van gratis vuilniszakken. 
+                                                            Kwijtschelden huur voor de periode van 1 juli 2021 tot en met 31 december 2021: inkomstenverlies van €2.330,04 
+                                                            Kwijtschelden huur voor de periode van 1 januari 2022 tot en met 30 juni 2022: inkomstenverlies van €2.330,04 
+                                                            Het besluit van het college van burgemeester en schepenen van 26 april werd ter advies voorgelegd aan de vrijetijdsteams en werd gunstig geadviseerd. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Inkomsten worden geïnd in het meerjarenplan 2020-2025 op volgende jaarbudgetrekeningen:xxxx/GBB-JGDBKO/0050-00/7050001/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e4478250-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1De gemeenteraad is akkoord met de tariefbepaling van de Lievegemse jeugdlokalen:- de jeugdverenigingen betalen geen huur voor het gebruik van de gemeentelijke infrastructuur (lees: jeugdlokalen), maar de energiekosten (elektriciteit, gas en water)   zijn ten laste van de jeugdverenigingen.- Het verhuren van de jeugdlokalen door jeugdverenigingen aan derden wordt niet langer toegestaan met uitzondering van Oepites.   Ter compensatie zal Oepites: 
+                                     
+                                        aan verminderd tarief hun lokalen verhuren aan Lievegemse jeugdverenigingen. 
+                                        deel van de inkomsten laten terugvloeien naar de gemeente (50%). 
+                                     
+                                    Artikel 2De gemeenteraad keurt de kwijtschelding van de huur van de jeugdverenigingen voor de periode van 1 juli 2021 tot en met 30 juni 2022 goed. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad is akkoord met de tariefbepaling van de Lievegemse jeugdlokalen:- de jeugdverenigingen betalen geen huur voor het gebruik van de gemeentelijke infrastructuur (lees: jeugdlokalen), maar de energiekosten (elektriciteit, gas en water)   zijn ten laste van de jeugdverenigingen.- Het verhuren van de jeugdlokalen door jeugdverenigingen aan derden wordt niet langer toegestaan met uitzondering van Oepites.   Ter compensatie zal Oepites: 
+                                                             
+                                                                aan verminderd tarief hun lokalen verhuren aan Lievegemse jeugdverenigingen. 
+                                                                deel van de inkomsten laten terugvloeien naar de gemeente (50%). 
+                                                             
+                                                            Artikel 2De gemeenteraad keurt de kwijtschelding van de huur van de jeugdverenigingen voor de periode van 1 juli 2021 tot en met 30 juni 2022 goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e44845a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Huurgelden Lievegemse jeugdverenigingen - tariefbepaling jeugdlokalen - kwijtschelding huurgelden: goedkeuring" .
+

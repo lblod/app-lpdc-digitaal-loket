@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/zittingen/95f43710-aabf-4384-8811-7a2b07f91812> a ns1:Zitting ;
+    ns1:behandelt <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0025a6cd-dfda-4ac3-a215-4c660870271a>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/00b27913-17a9-4f24-80a0-4ae4a8c40e52>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/035d0ca8-135c-451d-acd1-39ebf0443d31>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0677fa2b-cbb8-4691-8efb-513e9bc4aa67>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0be86f1b-2e38-4028-b3eb-68a6717f340b>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/14dfb0f4-dd74-4166-a7a2-68398650b27f>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/150bf33f-2e02-4021-a50f-f183b72a79d5>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/15c34963-a37c-4598-9f4f-cb56fe3ec6b7>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/1a181251-c271-4f9f-870b-61509d7d773c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/1e9d43f2-84e3-46b9-a2df-8212cefc6bc6>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/20cce5b7-fd26-4007-b6a8-368b404860b8>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/2a2ae9b8-15b5-42d3-96fa-1e680f354788>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/2cc59843-fa78-4f93-bf5b-48a8a0af1701>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/2e4435b0-05c3-4e6f-af4d-8ccb5658aa92>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/3db8c9d7-16ac-4c7a-a55c-c5fc841bc874>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/495606e7-808c-421f-b546-5ee79b65acdd>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/565b91da-85f5-4612-a7ea-dd2ca2b431ee>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/58118e6b-f7d9-4f12-9593-6ded732535d9>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/5caa1a09-c97a-4d7d-bb76-d54cf4cc177b>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/745dae90-e012-4a63-8d3a-7c2bf89a000c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/75b18e1b-1bc1-459d-ba10-c980f1be388c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/80ad89d1-ccb6-4564-bbec-6ce3e6090466>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/86a48461-ad35-452a-8d0d-6ed3e04ab022>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/8aea333d-7f6e-4182-bb64-47ea0d06c9d3>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/8c8b2e79-fc49-4853-b9da-79dd76c913cd>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/935656fd-ad10-4a66-b93e-057443f61470>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/9a66de90-9ee4-465c-b324-db60df226626>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/9c5de763-5452-4099-92a0-5fa75e4ea51c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a0dfacf3-9bad-45d4-8893-a9bb897279b6>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a3275198-0b26-4fec-a1ec-33784665ec20>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a5decb7d-997b-47c8-a17a-93e5538cc382>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/ab3110f8-0a8e-4e1f-a9e4-c52b8a4327e7>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/ab42b54c-8905-4679-be26-4e89b8adb7f9>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c167db39-26db-4b91-a7c9-ee068b892a72>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c7de7afa-86b4-4e7d-a942-b42b40a390bd>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/cc96452f-4141-4d07-b36b-93d724a693f3>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d15407cd-4cf8-4685-9605-3de38a45a0d9>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d648b096-814e-4266-97d0-3ed317cc700b>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/db2f5561-9400-4c05-bfe1-68f6d42fe652>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/e148ef48-26b4-48c6-af70-8809bb3cffe0>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/e2535df5-6ff0-4d9a-b150-05dcd2b2e50d>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/e33cc52d-b865-43de-abf9-ca0ce9ed3e08>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/f6113aaf-3188-4e37-b156-854cc04d73cd>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/fd55da49-5226-4ab7-abfb-7b2cd56645df> ;
+    ns1:geplandeStart "2025-04-24T17:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://aarschot-echo.cipalschaubroeck.be/id/documenten/f4e9b10d-dfda-4e53-8169-9a5ab8e2f48c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/5e6b3a6d7e4548297a0373f68bc9ba93c9d4155e3e50afef2bbb1de1a3e824ef> ;
+    ns3:uuid "25925b57-24dd-5bf3-94f5-030a896df457" ;
+    prov:atLocation "Vergaderlokaal 1ste verdieping stadhuis" ;
+    prov:startedAtTime "2025-04-24T17:54:00+02:00"^^xsd:dateTime .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/80ad89d1-ccb6-4564-bbec-6ce3e6090466> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e2535df5-6ff0-4d9a-b150-05dcd2b2e50d> ;
+    ns1:openbaar false ;
+    ns3:uuid "fc0466fd-e3c8-5c19-91db-9fba4219b4fc" ;
+    dcterms:subject <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/80ad89d1-ccb6-4564-bbec-6ce3e6090466> ;
+    prov:generated <https://aarschot-echo.cipalschaubroeck.be/id/besluiten/80ad89d1-ccb6-4564-bbec-6ce3e6090466> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/besluiten/80ad89d1-ccb6-4564-bbec-6ce3e6090466> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college gaat akkoord met de tijdelijke verordening op het wegverkeer op 06.09.2025 en op 07.09.2025 - Beukenweg 1-7, 3200 Aarschot - Straatfeest Beukenweg 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/5e6b3a6d7e4548297a0373f68bc9ba93c9d4155e3e50afef2bbb1de1a3e824ef> ;
+    ns2:title "Tijdelijke verordening op het wegverkeer op 06.09.2025 en op 07.09.2025 - Beukenweg 1-7, 3200 Aarschot - Straatfeest Beukenweg" ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving 
+                                     
+                                        de nieuwe gemeentewet, gewijzigd bij de wet van 12.01.2006 (BS 31.01.2007 - erratum BS 02.02.2007) tot wijziging van de nieuwe gemeentewet, artikel 119 en 130bis; 
+                                        in toepassing van de hoger genoemde wet is het college van burgemeester en schepenen bevoegd voor de tijdelijke politieverordeningen op het wegverkeer; 
+                                        de gecoördineerde wetten van 16.03.1968 betreffende de politie over het wegverkeer en alle latere wijzigingen; 
+                                        het koninklijk besluit van 01.12.1975 houdende algemeen reglement op de politie van het wegverkeer en alle latere wijzigingen; 
+                                        het ministerieel besluit van 11.10.1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                        het ministerieel rondschrijven van 14.11.1977 betreffende de aanvullende reglementen en de plaatsing van verkeerstekens; 
+                                     
+                                 
+                                 
+                                    Feiten, context en motivering 
+                                    Gelet op de aanvraag van FV Straatfeest Beukenweg, Beukenweg 1, 3200 Aarschot;Overwegende dat de verder genoemde weg(en) behoort/behoren tot de wegen onder toezicht van de stad;Overwegende dat de verkeersveiligheid moet worden gegarandeerd tijdens Straatfeest Beukenweg op 06.09.2025 van 8 uur tot 23.59 uur en op 07.09.2025 van 8 uur tot 12 uur in Beukenweg 1-7, 3200 Aarschot. 
+                                 
+                            """@nl ;
+    ns3:uuid "9af32797-90ba-5189-b3aa-d68cb19d9e04" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Op 06.09.2025 van 8 uur tot 23.59 uur en op 07.09.2025 van 8 uur tot 12 uur geldt er te Beukenweg 1-7, 3200 Aarschot rijverbod tijdens een straatfeest. Een fietsomleiding wordt ingelast via Sparrenweg en Dennenlaan. 
+                                      
+                                    Artikel 2 
+                                    De in Art. 1 genoemde verkeerssituatie wordt als volgt aangeduid: 
+                                     
+                                        Op Beukenweg ter hoogte van huisnummer 7 door middel van verkeershekken voorzien van verlichting en teken C3 
+                                        Op Beukenweg ter hoogte van de aansluiting met Liersesteenweg door middel van een verkeershek voorzien van verlichting en teken C3 (bestaand onderbord M12 wordt afgedekt) 
+                                        Op Beukenweg ter hoogte van de aansluiting met Bloemsehoeve door middel van een verkeershek voorzien van verlichting, teken C3 en onderbord 'uitgezonderd plaatselijk verkeer' 
+                                     
+                                    
+                                        De in Art. 1 genoemde fietsomleiding wordt aangeduid door middel van tekens F41 (fietsers)
+                                     
+                                      
+                                    Artikel 3 
+                                    Afschrift van deze beslissing wordt opgestuurd naar de Griffie van de Rechtbank van Eerste Aanleg, Politierechtbank, Smoldersplein 3, 3000 Leuven. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/80ad89d1-ccb6-4564-bbec-6ce3e6090466> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/80ad89d1-ccb6-4564-bbec-6ce3e6090466> a ns1:Agendapunt ;
+    ns3:uuid "1eb2e60a-0857-5a2a-97fa-5c7af8f5547d" .
+

@@ -1,0 +1,107 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns1:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/599c0456-02cd-4477-b778-ae2408de18fa> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab> ;
+    ns1:openbaar true ;
+    ns3:uuid "4e0f06c9-3a09-5103-a17c-e0d15d27d0e7" ;
+    dcterms:description """ 
+                                                             
+                                                                De brief van het departement Werk & Sociale Economie betreffende de werkingssubsidie voor aanvullende lokale diensten (ALD). 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/599c0456-02cd-4477-b778-ae2408de18fa> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/599c0456-02cd-4477-b778-ae2408de18fa> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:title "Werkingssubsidie aanvullende lokale diensten." ;
+    ns1:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet Lokaal Bestuur d.d. 22.12.2017. 
+                                                                    Decreet van 14 januari 2022 over maatwerk bij individuele inschakeling. 
+                                                                    Besluit van de Vlaamse Regering van 15 juli 2022 tot uitvoering van het decreet van 14 januari 2022 over maatwerk bij individuele inschakeling. 
+                                                                    Uitvoeringsbesluit van de Vlaamse Regering van 26 mei 2023 waarmee 4,24 miljoen euro toegekend kan worden aan lokale besturen voor de organisatie van het aanvullende lokale dienstenaanbod zoals bepaald in het uitvoeringsbesluit bij het decreet " maatwerk bij individuele inschakeling ". 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Vanaf 01.07.2023 ging de nieuwe maatregel " maatwerk bij individuele inschakeling " in voege ter vervanging van 4 maatregelen die zullen verdwijnen: 
+                                                                    - De Vlaamse Ondersteuningspremie ( VOP ) 
+                                                                    - De Sociale Inschakelingseconomie ( SINE ) 
+                                                                    - De Lokale Diensteneconomie ( LDE ) 
+                                                                    - Maatwerkafdelingen ( MWA ) 
+                                                                    Lokale diensten met een opdracht voor het lokaal bestuur Brakel zijn de volgende: 
+                                                                    - Familiehulp Goed Wonen 
+                                                                    - Natuurpunt Beheer, vereniging voor natuurbeheer en landschapszorg in Vlaanderen 
+                                                                    De werkingssubsidie waarover sprake geldt enkel voor de lokale diensten met een opdracht voor het lokaal bestuur Brakel. 
+                                                                    De huidige LDE-initiatieven schakelden dus vanaf 01.07.2023 over naar een individueel maatwerkbedrijf. Het is de bedoeling dat alle opgestarte trajecten van doelgroepmedewerkers worden voltooid. 
+                                                                    Op 28.02.2025 keurde de Vlaamse Regering het besluit goed voor de toekenning van de subsidie voor het werkingsjaar 2025. 
+                                                                    Het aanvullend lokaal dienstenaanbod wil enerzijds lokale besturen aanmoedigen om verder in te zetten op de diensten van algemeen economisch belang ( DAEB ) waarde LDE-ondernemingen vandaag op geënt zijn en wil anderzijds garanderen dat de lokale dienstverlening binnen iedere individuele LDE-onderneming, na het wegvallen van de SINE-subsidies op 1 juli 2023, verder gezet kan worden. Om die reden, wordt in lijn met het engagement in het Vlaams regeerakkoord, aan de lokale besturen uitdrukkelijk gevraagd om deze middelen tijdens de overgangsfase toe te kennen binnen de bestaande samenwerkingsverbanden met de LDE-ondernemingen ( zie boven ). 
+                                                                    De werkingsmiddelen die aan het lokaal bestuur Brakel zijn toegekend voor het werkingsjaar 2025 zijn: € 16.900,60. 
+                                                                    De verdeling is al volgt: 
+                                                                     
+                                                                         
+                                                                             
+                                                                                 Naam Individueel maatwerkbedrijf met ALD  
+                                                                                 Volgens nieuwe regeling  
+                                                                             
+                                                                             
+                                                                                 Familiehulp Goed Wonen 
+                                                                                 € 7.988,39 
+                                                                             
+                                                                             
+                                                                                 Natuurpunt 
+                                                                                 € 8.912,21 
+                                                                             
+                                                                             
+                                                                                 TOTAAL 
+                                                                                 € 16.900,60 
+                                                                             
+                                                                         
+                                                                     
+                                                                    Deze middelen zijn geoormerkt en kunnen uitsluitend worden aangewend voor het opzetten en organiseren van aanvullende lokale diensten. Daarom dient er bij de BBC-rapportering gebruik te worden gemaakt van de externe rapporteringscode WSE-ALD ' Werk en Sociale Economie - Aanvullend Lokaal Dienstenaanbod. 
+                                                                 
+                                                            """@nl ;
+    ns3:uuid "2bd37e0d-62cb-5a22-b11a-132ac7ed745e" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Artikel 1 
+                                                                    De werkingssubsidie aanvullend lokaal dienstenaanbod van het departement WSE wordt aangewend om toe te kennen aan de huidige LDE-ondernemingen met een opdracht van de gemeente voor de periode van 2023-2025. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/599c0456-02cd-4477-b778-ae2408de18fa> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "b8a0109c-76e9-506f-8ccb-c64031ff3822" ;
+    dcterms:title "Werkingssubsidie aanvullende lokale diensten." .
+

@@ -1,0 +1,130 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/b03077a6-d50e-46e5-9e89-0ff3b20d36bb> a ns3:Zitting ;
+    ns3:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5309b023-ef86-4933-895d-ec7c46f5c38f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/778173d8-0bcf-4592-81d0-77f2d4e78113> ;
+    ns3:geplandeStart "2025-11-18T20:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/4374cd65-cf39-429b-9453-c6da9352a012> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "8489fcd6-92ca-5cd7-a975-9334a4449b99" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-11-18T20:33:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5309b023-ef86-4933-895d-ec7c46f5c38f> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/778173d8-0bcf-4592-81d0-77f2d4e78113> ;
+    ns3:openbaar false ;
+    ns2:uuid "6dec80e8-fdf8-5208-bdab-71ecd016dca1" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5309b023-ef86-4933-895d-ec7c46f5c38f> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5309b023-ef86-4933-895d-ec7c46f5c38f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5309b023-ef86-4933-895d-ec7c46f5c38f> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:title "Aanvullend verkeersreglement - Palingstraat" ;
+    ns3:motivering """ 
+                                 
+                                    Aanleiding 
+                                    We krijgen vaak de mondelinge melding van burgers over hinderlijk parkeergedrag in de Palingstraat ter hoogte van de huisartsenpraktijk. Wanneer je uit de straat van de ondergrondse parking naar het dorpshart wil rijden verhinderen de geparkeerde wagens een goed zicht op het aankomend verkeer. Bovendien is de ruimte om de straat in te rijden beperkt waardoor je direct naast de geparkeerde wagens moet rijden, dit heeft vaak het gevolg dat je kop aan kop komt te staan. Vanwege de frequentie van het verkeer is het niet altijd mogelijk om achteruit te rijden. Achteruit rijden in een zone waar veel fietsers langs rijden is ook niet zonder gevaar. 
+                                    Als bijkomende reden voor een verlenging van het parkeerverbod willen we op die manier het toekomstig werfverkeer voor de werken aan de dekenij en de Hondsmarkt op een veiligere en overzichtelijke manier laten verlopen. 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                      
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    We krijgen vaak de mondelinge melding van burgers over hinderlijk parkeergedrag in de Palingstraat ter hoogte van de huisartsenpraktijk. Wanneer je uit de straat van de ondergrondse parking naar het dorpshart wil rijden verhinderen de geparkeerde wagens een goed zicht op het aankomend verkeer. Bovendien is de ruimte om de straat in te rijden beperkt waardoor je direct naast de geparkeerde wagens moet rijden, dit heeft vaak het gevolg dat je kop aan kop komt te staan. Vanwege de frequentie van het verkeer is het niet altijd mogelijk om achteruit te rijden. Achteruit rijden in een zone waar veel fietsers langs rijden is ook niet zonder gevaar. 
+                                    Als bijkomende reden voor het parkeerverbod willen we op die manier het toekomstig werfverkeer voor de werken aan de dekenij en de Hondsmarkt op een veiligere manier laten verlopen. 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Financiële weerslag 
+                                      
+                                    
+                                         
+                                     
+                                 
+                            """@nl ;
+    ns2:uuid "4960bbe8-527b-5cf7-8169-643085f66306" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                      
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Artikel 1: Palingstraat 23-27: het parkeren is verboden; het begin van de parkeerreglementering wordt aangeduid. 
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Verkeersbord E1  
+                                                 Onderbord GXa  
+                                             
+                                         
+                                     
+                                    Artikel 2: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                    
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5309b023-ef86-4933-895d-ec7c46f5c38f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5309b023-ef86-4933-895d-ec7c46f5c38f> a ns3:Agendapunt ;
+    ns2:uuid "fc6325f0-233d-58fc-9ae4-9a843b53b6b6" .
+

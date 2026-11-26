@@ -1,0 +1,215 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/64292094-595b-43a4-87fa-09b39de60c51> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3472ca46-17f4-4ac4-bd1f-9f96df40b42d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a8cb143-3660-4108-a22b-fa9ccdb124b7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5b259916-7445-4ace-b484-f7c83b7b4d8a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75e16e88-e441-46f3-b8fe-bfdc72375379>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ae3c8f2-fc63-403e-8535-13b5cdcdb902>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a88d3ed-3f9b-4dc5-911c-38aa5e088748>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c05f1264-5942-4187-9224-9611ce20f0e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c16dfd27-97d3-4aa3-917f-c99224ff85c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c25bee23-625c-4d41-bea7-565cba2c4a2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d550a5d5-70d8-4776-868e-a39ef5e49f13>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcc9faaa-6e3f-4a5b-897c-ceda838cc838>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de0eac1d-0c61-4d20-bde6-470901747aa6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de80fa75-f898-4125-93ac-28e4f6de06ff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e8a52fa2-bcac-4c32-8674-97e0bdca0810>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ede466d9-ba19-4838-a580-83f40ae2e2aa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee9535bc-5a7a-4dac-bc37-9c391d909286> ;
+    ns1:geplandeStart "2023-11-29T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e98f8837-bfd3-4adf-80c6-42ebe89cecfb> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04ef3b86-39d8-42fe-8c76-639f769cbf39> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4baf8289-60b0-4a35-82d9-c5435a9aa3dc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ead18d00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-11-29T22:20:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-11-29T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ee9535bc-5a7a-4dac-bc37-9c391d909286> ;
+    ns1:openbaar true ;
+    ns2:uuid "f25d9e60-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0aa73acd-e771-4544-9769-ee1387d1d651> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0aa73acd-e771-4544-9769-ee1387d1d651> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt het retributiereglement op parkeren in de blauwe zone vast. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Retributiereglement op parkeren in de blauwe zone: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                    Kim Martens, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur, artikel 40  §3 en 41, 14°  
+                                    Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteit 
+                                    Omzendbrief BB 2018/02 van 20 juni 2018 betreffende de budgetten en de éénjarige meerjarenplannen 2019 
+                                    De gemeenteraadsbeslissing van 18 december 2019 over het vaststellen van het retributiereglement op parkeren in de blauwe zoneDe gemeenteraadsbeslissing van 30 januari 2019 over het retributiereglement voor het aanrekenen van administratiekosten bij openstaande fiscale en niet fiscale ontvangsten 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De mail van 29 september 2023 van het parkeerbedrijf met de vraag het retributiereglement aan te passen als gevolg van een nieuwe wet van 04 mei 2023 betreffende schulden van de consument opgenomen in het Wetboek Economisch Recht. De belangrijkste richtlijnen binnen deze wet bepalen dat de minnelijke invorderingsprocedure voor consumenten nog enkel bestaat uit 2 aanmaningen: de eerste aanmaning dient verstuurd te worden zonder extra kosten, in de 2de aanmaning zijn de extra kosten naast de hoofdsom beperkt tot €20. Hier vallen ook de parkeerretributies onder, meer bepaald alle parkeerretributies uitgeschreven vanaf 1 september 2023. 
+                                    Voormelde betekent een aanpassing van artikel 4 waarbij volgende tarieven waren voorzien: 
+                                     
+                                         
+                                            eerste herinnering: uitgeschreven retributie + 0 euro (geen bijkomende kost op de retributie) 
+                                            tweede herinnering: uitgeschreven retributie + 5 euro 
+                                            derde herinnering: uitgeschreven retributie + kostprijs van tweede herinnering (5 euro) + 7 euro 
+                                         
+                                        Er wordt voorgesteld om de tarieven toe te passen zoals vastgesteld in de gemeenteraadsbeslissing van 30 januari 2019 over het retributiereglement voor het aanrekenen van administratiekosten bij openstaande fiscale en niet fiscale ontvangsten:-    Kosteloos voor de opmaak en verzending van de eerste aanmaning-    € 15 voor de opmaak en verzending de laatste aanmaning 
+                                     
+                                 
+                                 
+                                    Financiële impact 
+                                    De inkomsten worden geregistreerd onder jaarbudgetrekening xxxx/GBB-WEGEN/0220-00/7020999/GEMEENTE/CBS/IP-GEEN. 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Retributiereglement op parkeren in de blauwe zone 
+                                    Artikel 1 
+                                    Voor het parkeren in de blauwe zone worden volgende retributies aangerekend: 
+                                    §1 Voor het parkeren van motorvoertuigen op plaatsen in de blauwe zone waar het parkeren is toegelaten wordt er een retributie geheven van €15. 
+                                    §2 Deze retributie wordt aangerekend in de volgende gevallen: 
+                                     
+                                        het motorvoertuig is langer geparkeerd dan de tijd die wordt toegelaten door de verkeersborden 
+                                        de parkeerschijf is niet duidelijk leesbaar achter de voorruit van het motorvoertuig geplaatst 
+                                        de pijl van de parkeerschijf staat niet op het streepje dat volgt op het tijdstip van aankomst 
+                                        de gebruiker wijzigt de aanduidingen zonder dat het voertuig de parkeerplaats heeft verlaten 
+                                     
+                                      
+                                    Artikel 2 
+                                    De retributie is hoofdelijk verschuldigd door de houder van de nummerplaat van het voertuig. Indien de houder van de nummerplaat niet de bestuurder is, zijn de houder van de nummerplaat en de bestuurder hoofdelijk gehouden tot betaling van de retributie 
+                                      
+                                    Artikel 3 
+                                    §1 Vrijgesteld van deze retributie zijn: 
+                                     
+                                        inwoners met een officiële bewonerskaart van de gemeente Lievegem die duidelijk leesbaar achter de voorruit van het geparkeerde voertuig is aangebracht 
+                                        personen met een officiële en niet vervallen parkeerkaart voor personen met een handicap. Deze kaart moet duidelijk leesbaar achter de voorruit van het geparkeerde voertuig zijn aangebracht 
+                                        voertuigen van het gemeentebestuur Lievegem 
+                                     
+                                    
+                                        §2 Er worden geen retributies geheven op zon- en feestdagen (incl. 11 juli)
+                                        
+                                        
+                                     
+                                    
+                                        Artikel 4
+                                     
+                                    
+                                        De betaling van de retributie gebeurt op basis van een uitnodiging tot betaling die door het, door het gemeentebestuur aangestelde, parkeerbedrijf wordt aangebracht op de voorruit van het voertuig.
+                                     
+                                    
+                                        Aanmaningen en invorderingen met betrekking tot onbetaald gebleven retributies gebeuren overeenkomstig de wijze en de tarieven zoals hierna bepaald .
+                                        De retributie die niet betaald wordt volgens de richtlijnen vermeld staande op de retributieheffing ( afgeleverd door de parkeerwachter op de wagen, of toegestuurd per post ) volgt de minnelijke aanmaningsprocedure ( hetzij B2B, hetzij B2C ), met administratieve kosten ten laste van de wanbetaler : 
+                                         
+                                         
+                                            tav ondernemingen en buitenlandse nummerplaathouders : 
+                                             
+                                                Eerste betaalherinnering: kosteloos 
+                                                Tweede betaalaanmaning: + €15,00 
+                                                Minnelijke aanmaning gerechtsdeurwaarder: tarief burgerlijke en handelszaken K.B. 30 november 1976 (niet limitatief onder andere aanmaning met dreiging – inlichting – postzegel –dossierkost – kostprijs inlichtingen - kwijtings-en inningsrecht) 
+                                             
+                                            tav consumenten en conform de wetgeving consumentenschulden (Boek XIX – W.E.R. art 4.2 ea ) 
+                                             
+                                                Eerste betaalherinnering: kosteloos + wettelijke wachtperiode 
+                                                Ingebrekestelling door advocaat of gerechtsdeurwaarder met verhoging van een forfaitaire vergoeding voor de invorderingskosten: + € 15,00Dit ligt in lijn met de wettelijk bepaalde plafonds : 
+                                                 
+                                                    €20,00 als het verschuldigde saldo lager dan of gelijk is aan €150,00 
+                                                    €30,00 vermeerderd met 10% van het verschuldigde bedrag op de schijf tussen €150,01 en €500,00 als het verschuldigde saldo tussen €150,01 en €500,00 is 
+                                                    €65,00 vermeerderd met 5% van het verschuldigde bedrag op de schijf boven €500,00 met een maximum van €2000,00 als het verschuldigde saldo hoger is dan €500,00 
+                                                 
+                                             
+                                         
+                                     
+                                    
+                                        De gevorderde verwijlintresten worden gerekend vanaf de ingebrekestelling op de nog te betalen som tegen de referentie-intrestvoet vermeerderd met acht procentpunten bedoeld in art 5, lid 2 van de Wet van 2 augustus 2002 betreffende de bestrijding van de betaalachterstand bij handelstransacties. (zie ook: Art XIX.4, 1° WER).
+                                     
+                                    
+                                        Met het oog op de invordering van de onbetwiste en opeisbare retributie kan de financieel directeur een dwangbevel uitvaardigen. Een dergelijk dwangbevel wordt betekend bij gerechtsdeurwaardersexploot.
+                                     
+                                    
+                                        Met het oog op de invordering van de betwiste en opeisbare retributie kan beroep worden gedaan op de burgerrechtelijke invorderingsprocedure.
+                                     
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt opgestuurd naar: 
+                                     
+                                        VANNESTE Kristof <kristof.vanneste@group-indigo.com> 
+                                        Team financiën 
+                                     
+                                    Bekendmaking op de website. 
+                                    Naar ABB via digitaal loket. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur, artikel 40  §3 en 41, 14°  
+                                                            Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteit 
+                                                            Omzendbrief BB 2018/02 van 20 juni 2018 betreffende de budgetten en de éénjarige meerjarenplannen 2019 
+                                                            De gemeenteraadsbeslissing van 18 december 2019 over het vaststellen van het retributiereglement op parkeren in de blauwe zoneDe gemeenteraadsbeslissing van 30 januari 2019 over het retributiereglement voor het aanrekenen van administratiekosten bij openstaande fiscale en niet fiscale ontvangsten 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De mail van 29 september 2023 van het parkeerbedrijf met de vraag het retributiereglement aan te passen als gevolg van een nieuwe wet van 04 mei 2023 betreffende schulden van de consument opgenomen in het Wetboek Economisch Recht. De belangrijkste richtlijnen binnen deze wet bepalen dat de minnelijke invorderingsprocedure voor consumenten nog enkel bestaat uit 2 aanmaningen: de eerste aanmaning dient verstuurd te worden zonder extra kosten, in de 2de aanmaning zijn de extra kosten naast de hoofdsom beperkt tot €20. Hier vallen ook de parkeerretributies onder, meer bepaald alle parkeerretributies uitgeschreven vanaf 1 september 2023. 
+                                                            Voormelde betekent een aanpassing van artikel 4 waarbij volgende tarieven waren voorzien: 
+                                                             
+                                                                 
+                                                                    eerste herinnering: uitgeschreven retributie + 0 euro (geen bijkomende kost op de retributie) 
+                                                                    tweede herinnering: uitgeschreven retributie + 5 euro 
+                                                                    derde herinnering: uitgeschreven retributie + kostprijs van tweede herinnering (5 euro) + 7 euro 
+                                                                 
+                                                                Er wordt voorgesteld om de tarieven toe te passen zoals vastgesteld in de gemeenteraadsbeslissing van 30 januari 2019 over het retributiereglement voor het aanrekenen van administratiekosten bij openstaande fiscale en niet fiscale ontvangsten:-    Kosteloos voor de opmaak en verzending van de eerste aanmaning-    € 15 voor de opmaak en verzending de laatste aanmaning 
+                                                             
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De inkomsten worden geregistreerd onder jaarbudgetrekening xxxx/GBB-WEGEN/0220-00/7020999/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ead361c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1De gemeenteraad stelt het retributiereglement op parkeren in de blauwe zone vast.Artikel 2Het retributiereglement treedt vanaf 1 december 2023 in werking. 
+                                    Artikel 3De gemeenteraadsbeslissing van 18 december 2019 over het vaststellen van het retributiereglement op parkeren in de blauwe zone wordt, per 1 december 2023, opgeheven. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad stelt het retributiereglement op parkeren in de blauwe zone vast.Artikel 2Het retributiereglement treedt vanaf 1 december 2023 in werking. 
+                                                            Artikel 3De gemeenteraadsbeslissing van 18 december 2019 over het vaststellen van het retributiereglement op parkeren in de blauwe zone wordt, per 1 december 2023, opgeheven. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f1095900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Retributiereglement op parkeren in de blauwe zone: vaststelling" .
+

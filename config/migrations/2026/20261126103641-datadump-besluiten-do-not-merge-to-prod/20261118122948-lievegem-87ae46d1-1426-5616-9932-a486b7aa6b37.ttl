@@ -1,0 +1,84 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/dba41c7a-a856-4ec3-a3d0-28cfb62cb732> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2994f852-d59a-453c-94e0-69919d136715>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4fb9f544-ae13-4651-92dd-699aa367d759>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76fca1d9-769b-4cff-9287-ab6fbe072059>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6fb393b-7e72-48bc-bd5c-230e71704b81> ;
+    ns2:geplandeStart "2026-04-21T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bf397672-3431-4cc4-b4d6-5130de73aff3> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "4e543832-f1c6-563d-b9a5-fbd6d26a4b61" ;
+    prov:atLocation "'t Leiken, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-04-21T14:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4fb9f544-ae13-4651-92dd-699aa367d759> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f6fb393b-7e72-48bc-bd5c-230e71704b81> ;
+    ns2:openbaar false ;
+    ns3:uuid "fe5e06b9-bc85-5421-82c3-b9f6499f1853" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4fb9f544-ae13-4651-92dd-699aa367d759> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4fb9f544-ae13-4651-92dd-699aa367d759> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4fb9f544-ae13-4651-92dd-699aa367d759> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Lievegem Trail 26' op zondag 6 september 2026 van 7.00 uur tot en met 17.30 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Lievegem Trail 26' - EC-Running: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van dinsdag 21 april 2026 over de aanvraag evenement Lievegem Trail 26’ - EC-Running: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Kurt Van de Velde, namens EC-Running, organiseert 'Lievegem Trail 26' op zondag 6 september 2026 van 7.00 uur tot en met 17.30 uur.Er werd op 9 januari 2026 een aanvraag ingediend door Kurt Van de Velde, namens EC-Running, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "87ae46d1-1426-5616-9932-a486b7aa6b37" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Lievegem Trail 26' op zondag 6 september 2026 van 7.00 uur tot en met 17.30 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod in Bauwerwaan vanaf huisnummer 50 tot 66 aan beide zijden van de straat. 
+                                        Eénrichtingsverkeer in Bouaerdsdreef (van Bauwerwaan richting Rijvers). 
+                                        Wegomlegging via Rijvers, Koning Leopold III laan en Bauwerwaan 
+                                        Waarschuwingsborden op de invalswegen naar de looproute 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                        Borden F19 + M4 op kruispunt Bauwerwaan/Bouardsdreef en C1 + M2 - C31a - C31b op kruispunt Bouaerdsdreef/Rijvers  
+                                        Borden F41 
+                                        Borden 'evenement' en A51 net voor de kruispunten Bauwerwaan/Bouaerdsdreef, Rijvers/Bouaerdsdreef, Diepenbeek/St Jansstraat en Vlamingstraat/Veldhoek 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4fb9f544-ae13-4651-92dd-699aa367d759> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4fb9f544-ae13-4651-92dd-699aa367d759> a ns2:Agendapunt ;
+    ns3:uuid "ab436b28-9911-5012-9200-930404376148" .
+

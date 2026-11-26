@@ -1,0 +1,159 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5431859e-9f14-4e49-b6c8-5b80b7d4e481> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/012dd980-fcd7-4668-9913-47074894f812>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0fca32d7-4054-42c6-951e-b96d869c702b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/2d9dc155-1b93-4953-a28a-3a6a84cf2af0>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/325c2f66-67e1-43b5-85c2-088d4e50e68c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3d196578-c957-4887-bc28-793d29ade565>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/42f857a5-ab10-49a9-a503-aca851e77663>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/44b4f21a-4b58-4a54-92bb-0368a40eec78>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/486101ec-f076-4712-aa1e-95e9a185a47a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/51f59054-46f0-4426-a625-985dd7703ace>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5981905c-1ae2-446d-a3a8-2e7c8d04a342>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5caf5b90-2c88-4a27-878b-e16fded7f548>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/84db1bee-f8ce-47d1-adc9-98f9f5077511>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8c376a9d-e08b-4a54-a27d-9f82afe0c2fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a0527502-7cd6-4579-95c1-69053ed1b4f7>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bc13be7e-86c1-4650-b86e-7d53feebec9b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/cc1b6fbb-657d-407b-aeac-951558ee15e2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d33e9543-8f40-49b0-a2d5-2320f9f4522b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d5a94fe9-97f4-463e-bcb6-862733fc0afc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d76620a1-57d5-462e-8c74-d64731bbe054>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f135efdc-477c-455a-9277-82c44a6ed805> ;
+    ns1:geplandeStart "2025-01-06T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/75d79944-710b-4df7-8240-a7b3d8159f99> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/665255d0-7d5a-46c7-b8c6-3456470b9f56> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/27d6213e-b091-444c-b7a5-43982e84ce70> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "63ffd230-c830-11ef-9218-6931664218fe" ;
+    prov:atLocation "Gemeentelijke bibliotheek" ;
+    prov:startedAtTime "2025-01-06T20:00:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/51f59054-46f0-4426-a625-985dd7703ace> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d33e9543-8f40-49b0-a2d5-2320f9f4522b> ;
+    ns1:openbaar true ;
+    ns2:uuid "5973a443-703a-5424-822c-76ee5c4f62f2" ;
+    dcterms:description """ 
+                                                             
+                                                                De gemeenteraad kan commissies oprichten die zijn samengesteld uit gemeenteraadsleden. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/51f59054-46f0-4426-a625-985dd7703ace> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/51f59054-46f0-4426-a625-985dd7703ace> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/51f59054-46f0-4426-a625-985dd7703ace> a ns1:Besluit ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Gemeenteraad. Commissie grondgebiedszaken, mobiliteit en omgeving. Oprichting en samenstelling." ;
+    ns1:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet Lokaal Bestuur, artikel 37 
+                                                                    Het huishoudelijk reglement van de gemeenteraad Brakel, artikel 28 
+                                                                    Het college van burgemeester en schepenen stelt voor een commissie grondgebiedszaken, mobiliteit en omgeving op te richten. 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Bij toepassing van de berekeningswijze overeenkomstig artikel 28, §2 wordt een raadscommissie van 13 leden samengesteld uit: 
+                                                                    
+                                                                         
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                         
+                                                                         
+                                                                             
+                                                                                Lijsten 
+                                                                                Gemeenteraadszetels 
+                                                                                Formule 
+                                                                                Rechtstreek verkozen 
+                                                                                Restsaldo 
+                                                                                Totaal aantal zetels 
+                                                                             
+                                                                             
+                                                                                  
+                                                                                  
+                                                                                13/25 * zetels 
+                                                                                  
+                                                                                Ifv grootste resterende breuk 
+                                                                                  
+                                                                             
+                                                                             
+                                                                                Open Vld (3556) 
+                                                                                13 
+                                                                                169 
+                                                                                6 (150(4*25)) 
+                                                                                1(19/25) 
+                                                                                7 
+                                                                             
+                                                                             
+                                                                                Broakel 2,0 (1976) 
+                                                                                6 
+                                                                                78 
+                                                                                3 (75(3*25) 
+                                                                                3 
+                                                                                3 
+                                                                             
+                                                                             
+                                                                                Vooruit (625) 
+                                                                                1 
+                                                                                13 
+                                                                                0 
+                                                                                13 
+                                                                                0 
+                                                                             
+                                                                             
+                                                                                Vlaamse Belang (1441) 
+                                                                                4 
+                                                                                52 
+                                                                                2 (50(2*25) 
+                                                                                2 
+                                                                                2 
+                                                                             
+                                                                             
+                                                                                Groen (642) 
+                                                                                1 
+                                                                                13 
+                                                                                0 
+                                                                                1(13/25) grootste stemcijfer 
+                                                                                1 
+                                                                             
+                                                                             
+                                                                                Totaal aantal zetels 
+                                                                                25 
+                                                                                  
+                                                                                11 
+                                                                                2 
+                                                                                13 
+                                                                             
+                                                                         
+                                                                     
+                                                                      
+                                                                    Als een fractie niet vertegenwoordigd is (in casu Vooruit), kan de fractie een lid met raadgevende stem aanduiden. Dit geeft ook recht op eenzelfde presentiegeld als voor de andere leden. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "c01fd110-ce79-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    De oprichting en samenstelling van de commissie grondgebiedzsaken, mobiliteit en omgeving wordt goedgekeurd. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/51f59054-46f0-4426-a625-985dd7703ace> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/51f59054-46f0-4426-a625-985dd7703ace> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "63fdaf50-c830-11ef-9218-6931664218fe" ;
+    dcterms:title "Gemeenteraad. Commissie grondgebiedszaken, mobiliteit en omgeving. Oprichting en samenstelling." .
+

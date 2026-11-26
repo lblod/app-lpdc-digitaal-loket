@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/9c3b2ca2-c376-4f13-8ccb-6cbaebb4c215> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6764a370-de4b-44a1-aa54-e27b098f10cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/715072f0-a2f4-46fa-82f2-e63921668d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f75d37f-4196-4742-84f0-a8e5a5e09194>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd178f6e-0345-4e50-b781-f313f2b66e97>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> ;
+    ns1:geplandeStart "2025-03-04T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/13c96b1d-823f-4d31-a447-a9065b3591e0> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "2f9755bd-55ae-5d40-9ca0-3f6480e156a1" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-03-04T13:35:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/715072f0-a2f4-46fa-82f2-e63921668d7d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/dcbc04b7-e01d-4b03-a5b0-f6cc31e89b7a> ;
+    ns1:openbaar false ;
+    ns3:uuid "a7a04528-e549-5135-a66e-55befd794c00" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/715072f0-a2f4-46fa-82f2-e63921668d7d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/715072f0-a2f4-46fa-82f2-e63921668d7d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/715072f0-a2f4-46fa-82f2-e63921668d7d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Lammetjesdag' op 20 april 2025 van 10.00 uur tot en met 19.00 uur wordt vastgesteld als volgt: 
+                                                             
+                                                                parkeerverbod in Binnenslag en Verbindingsweg (vanaf Bredestraat tot Lindestraat), 9920 Lievegem - enkel aan zijde oneven nummers 
+                                                                éénrichtingsverkeer in Verbindingsweg (van Binnenslag richting Oostveld Kouter) 
+                                                                wegomlegging via Oostveld Kouter - Grote Baan - Binnenslag 
+                                                             
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Lammetjesdag' - De Grazer vzw: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 4 maart 2025 over de aanvraag evenement Lammetjesdag - De Grazer vzw: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nils Mouton, namens De Grazer vzw, organiseert 'Lammetjesdag' op 20 april 2025 van 10.00 uur tot en met 19.00 uur.Er werd op 23 januari 2025 een aanvraag ingediend door Nils Mouton, namens De Grazer vzw, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "90615095-3e44-5b2c-b367-a7af57d57726" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Lammetjesdag' op 20 april 2025 van 10.00 uur tot en met 19.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        parkeerverbod in Binnenslag en Verbindingsweg (vanaf Bredestraat tot Lindestraat), 9920 Lievegem - enkel aan zijde oneven nummers 
+                                        éénrichtingsverkeer in Verbindingsweg (van Binnenslag richting Oostveld Kouter) 
+                                        wegomlegging via Oostveld Kouter - Grote Baan - Binnenslag 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. borden E3 
+                                    2. - Bord F19 op het kruispunt Verbindingsweg/Binnenslag 
+                                        - Bord F19 + C1 + C31a op het kruispunt Verbindingsweg/Lindestraat 
+                                        - Bord C1 + C31a + C31b op het kruispunt Verbindingsweg/Oostveld Kouter 
+                                    3. borden F41 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                      
+                                      
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/715072f0-a2f4-46fa-82f2-e63921668d7d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/715072f0-a2f4-46fa-82f2-e63921668d7d> a ns1:Agendapunt ;
+    ns3:uuid "5a3e47a8-489f-5bdc-add9-6d2028d5c6b4" .
+

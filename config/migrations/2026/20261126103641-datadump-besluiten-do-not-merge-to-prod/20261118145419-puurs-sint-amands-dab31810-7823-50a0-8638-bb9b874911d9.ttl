@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/c9e5ae39-2dc9-46a8-be78-8425255470e6> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/037aa6dc-065e-4b38-b73d-e217f725b141>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/abf306df-b197-433e-99fa-c4147cfbdd33> ;
+    ns2:geplandeStart "2025-09-08T22:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/ceb98d0d-7020-492b-90e3-b478bdb47724> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:uuid "87a3b16d-22f7-58c0-b8e0-4639db711155" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-09-08T20:22:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/abf306df-b197-433e-99fa-c4147cfbdd33> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/037aa6dc-065e-4b38-b73d-e217f725b141> ;
+    ns2:openbaar false ;
+    ns1:uuid "3ae1c094-ab40-541f-b14c-5a77159d10b8" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/abf306df-b197-433e-99fa-c4147cfbdd33> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/abf306df-b197-433e-99fa-c4147cfbdd33> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/abf306df-b197-433e-99fa-c4147cfbdd33> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement -Heikant - aanpassing voorrangsregeling Hemelrijken" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    In het kader van het circulatieplan Sint-Amands werd de voorrangsregeling op het kruispunt Heikant - Hemelrijken opnieuw vormgegeven zodat het doorgaand verkeer uit het centrum van Sint-Amands geweerd wordt. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                             
+                                                Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56, §2 
+                                                Het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens, artikel 4; 
+                                                Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    In het kader van het circulatieplan Sint-Amands werd de voorrangsregeling op het kruispunt Heikant - Hemelrijken opnieuw vormgegeven zodat het doorgaand verkeer uit het centrum van Sint-Amands geweerd wordt. 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                 
+                            """@nl ;
+    ns1:uuid "dab31810-7823-50a0-8638-bb9b874911d9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Thv Heikant nr.8F wordt volgende maatregel ingevoerd: bestuurders moeten stoppen en voorrang verlenen 
+                                    Dit wordt aangeduid voor verkeerstekens: 
+                                     
+                                        Verkeersbord B5 
+                                        wegmarkering WM76.1 
+                                        verkeersbord B15c - onderbord GVIII 
+                                        verkeersbord B15f - onderbord GVIII 
+                                     
+                                    Artikel 3: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/abf306df-b197-433e-99fa-c4147cfbdd33> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/abf306df-b197-433e-99fa-c4147cfbdd33> a ns2:Agendapunt ;
+    ns1:uuid "fca4c229-81c0-5562-bb3d-549d8cce6cb1" .
+

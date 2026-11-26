@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/b331680a-5744-4aa2-be1e-9cdc1ecbfba3> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/601a7cd8-089b-4b2b-ab12-749d72ee6616>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e274d3a7-89d7-4222-ad50-4ad021970fda> ;
+    ns3:geplandeStart "2025-02-25T13:30:00+01:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/73fe7741-9db3-4d3a-abc9-9121111170bf> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "fd20a3cf-dd77-5112-a7e8-ba902f4d89c6" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-02-25T13:38:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/601a7cd8-089b-4b2b-ab12-749d72ee6616> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b66b581c-045a-4243-bd12-c45b6e66a5ee> ;
+    ns3:openbaar false ;
+    ns2:uuid "20969c16-d322-586b-8aa1-0aad5f692d3c" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/601a7cd8-089b-4b2b-ab12-749d72ee6616> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/601a7cd8-089b-4b2b-ab12-749d72ee6616> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/601a7cd8-089b-4b2b-ab12-749d72ee6616> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' op 19 april 2025 van 13.00 uur tot en met 17.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' - Gezinsbond Waarschoot: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag evenement activiteiten voor kinderen tijdens Paaskermis Waarschoot - Gezinsbond Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag evenement Paaskermis Waarschoot - Kermiscommissie Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag Paaskermis Waarschoot 2025 - kinderuurtje en toewijzing standplaatsen spektakelattracties en kermisgastronomie: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over de aanvraag inname van openbaar domein - plein achter Sint-Ghislenuskerk, Waarschootdorp, 9950 Lievegem voor Paaskermis 2025 - Kermiscommissie Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 februari 2025 over het tijdelijk politiereglement naar aanleiding van 'Attracties Paaskermis Waarschoot 2025' - team evenementen - gemeente Lievegem: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nico Buysse, namens Gezinsbond Waarschoot, organiseert 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' op 19 april 2025 van 13.00 uur tot en met 17.00 uur.Er werd op 27 januari 2025 een aanvraag ingediend door Nico Buysse, namens Gezinsbond Waarschoot, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "c80198d2-e2fd-5c8c-8a82-39971b699dc9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Activiteiten voor kinderen tijdens Paaskermis Waarschoot' op 19 april 2025 van 13.00 uur tot en met 17.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod aan de achterzijde links en rechts van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                        Afsluiten van de parkeerplaatsen net voor de achterzijde van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 aan de achterzijde links en rechts van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                        Nadars + C3 ter hoogte van de parkeerplaatsen net voor de achterzijde van parking Centrum, Nieuwstraat, 9950 Lievegem 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden en terug bij aanvang en einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/601a7cd8-089b-4b2b-ab12-749d72ee6616> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/601a7cd8-089b-4b2b-ab12-749d72ee6616> a ns3:Agendapunt ;
+    ns2:uuid "6d46e2a1-226a-5aa7-9e59-0d267c16c9bb" .
+

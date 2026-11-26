@@ -1,0 +1,74 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/64914e43-fb8c-4a86-8e74-8481964b03a4> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/722c760c-d1e4-4b8e-afc1-3fbdf459c5eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7d6f7481-dfde-4a47-8aa8-a3c21180fa19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e98dd7a9-e4b6-4a89-9db7-06fc8c7db416> ;
+    ns2:geplandeStart "2025-01-21T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/dff69c83-f4c1-47b3-b8b9-f00754104b99> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "5fd07f82-fca3-54a8-8728-340b560c0602" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-01-21T14:15:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7d6f7481-dfde-4a47-8aa8-a3c21180fa19> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/56e952a0-d9f7-45d1-a02b-23ddc0766b89> ;
+    ns2:openbaar true ;
+    ns1:uuid "a10587c4-1cc4-5e16-b2b0-e6a81d56bf5d" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7d6f7481-dfde-4a47-8aa8-a3c21180fa19> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7d6f7481-dfde-4a47-8aa8-a3c21180fa19> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7d6f7481-dfde-4a47-8aa8-a3c21180fa19> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e8afe7c5-9640-4db8-8f74-3f023bec3241> ;
+    ns3:description """ 
+                                                            Het tijdelijk reglement op het verkeer voor het invoeren van 'zone 30' ter hoogte van het kruispunt Daalmstraat - Rijvers wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement op het verkeer - zone 30 ter hoogte van Rijvers - Daalmstraat: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bis 
+                                    Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeer 
+                                    Koninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                    Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 286 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college  van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Na verschillende meldingen van buurtbewoners uit de woonkern Rijvers-Daalmstraat over te snel en te veel (zwaar) verkeer werd in overleg met de buurt gezocht naar een oplossing om voormelde hinder aan te pakken. Hierbij werd met de buurt afgesproken om de (ruime) omgeving van het kruispunt Rijvers-Daalmstraat in te richten als een 'zone 30'. Om de overgang van zone 50 naar zone 30 te accentueren worden er ter hoogte van Rijvers 51 en Rijvers 67-67B wegversmallingen met bijhorende rijbaankussens geplaatst. 
+                                    Deze maatregel wordt ingevoerd voor een beperkte periode (22 januari - 1 maart 2025). De beslissing om deze tijdelijke maatregel al dan niet definitief te maken zal worden voorgelegd aan de gemeenteraad op 22 februari 2025. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Lievo, Bpost, IVM, de inwoners en betrokken handelaars.ABB via digitaal loket 
+                                 
+                            """@nl ;
+    ns1:uuid "304acdf9-4ef7-5071-b4ea-4f1d2f893821" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het college  van burgemeester en schepenen beslist volgend tijdelijk politiereglement op het wegverkeer vast te stellen: Zone 30 ter hoogte van het kruispunt Daalmstraat - Rijvers. 
+                                    Artikel 2Deze verkeersmaatregel wordt als volgt gesignaleerd: 
+                                     
+                                        borden begin en einde zone 30 ter hoogte van Rijvers 51, Rijvers 67-67B en Daalmstraat 40 
+                                     
+                                    Artikel 3Dit tijdelijk politiereglement gaat in voege vanaf 22 januari 2025 en duurt tot 1 maart 2025. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7d6f7481-dfde-4a47-8aa8-a3c21180fa19> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7d6f7481-dfde-4a47-8aa8-a3c21180fa19> a ns2:Agendapunt ;
+    ns1:uuid "35e7c50e-362e-5f25-a4f9-2eb5da391467" .
+

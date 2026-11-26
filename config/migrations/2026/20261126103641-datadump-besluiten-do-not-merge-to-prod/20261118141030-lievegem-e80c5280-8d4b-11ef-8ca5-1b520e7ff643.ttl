@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/998e950f-4a6f-407e-acc8-21f0454943be> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/126b5d00-e069-4e28-b529-cf0f3ac3fa4f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/165c23ef-46b9-458f-b9b0-5dbc73c379b2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/17387b65-ced4-4251-8c34-51cf19d58f12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1fc6887a-ce70-4ba4-ac9e-ee961ef6ac02>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/381c20a3-8080-42a8-9221-7cdcbfd8ca0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38d10030-92e0-4af2-8eef-0118f76f76eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/433715a9-1e9a-40af-b0d8-613899c834ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a87114f-e4ab-4cac-91ab-92033fd684e5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dd9427a-ecad-4d8f-8bde-403db3d87d60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f9a9ccd-7a00-4b11-b963-ea9d49ce9bc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52c0136d-8a66-47f6-a824-301f44e5bfa2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ae7b9a5-ca72-4215-86e4-15dae2cf1794>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7af75996-5356-499b-8094-de17d5f0f4e1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87785798-6639-4c6f-bfa4-260ee7647588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9e41e560-e2c4-46f4-9e22-4608f5957da1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f6ee797-2c73-4fb4-9bba-d13a543c7b62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b218d9dc-8bae-4b81-bba1-70375cce2307>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be9900d6-a624-438d-bd99-063b4ea93f41>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c45d5bbb-1ee0-4518-8198-c4675b746bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8f55e5a-ccdf-47cf-bff8-0e38acb72112>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9156811-9d61-455c-a63b-8b086125c7ec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9ec27d7-f5aa-4dd6-a42b-e9679c4d8326>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1cb10c6-2945-49fd-9b6c-1f2711281a68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4f56cb2-2c2b-4fc7-9f65-01a4d1da85f5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5dd5bd3-73dd-4c59-a91b-954ae172da6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd2b8423-4c83-48a5-a7cb-405b6d4dc153>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5f26532-dc4e-42f0-9a15-74038fc65044> ;
+    ns2:geplandeStart "2023-12-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e0ffeb14-446f-4b4c-a17d-9f5791fa2dae> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d1612c76-4d4d-4b68-9053-0c49145eadf9> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4b578639-cd04-4965-be39-ac33532e8409> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e8104a20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-12-20T21:42:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-12-20T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a> ;
+    ns2:openbaar true ;
+    ns3:uuid "f7ea0f30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350> a ns2:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad keurt het ontwerp rooilijnplan en de ontwerp onteigeningsplannen Ronselestraat - Leischoot goed. Deze plannen worden voorlopig vastgesteld. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Ronselestraat-Leischoot - voorlopige vaststelling onteigenings- en rooilijnplan: goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 24 februari 2017 betreffende onteigening voor het algemeen nutDecreet van 3 mei 2019 houdende de gemeentewegenDecreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Decreet van 19 december 2014 over de Vlaamse Vastgoedcodex, waarbij de bevoegdheid van de Vlaamse commissarissen werd vastgelegd tot het uitvoeren van bepaalde vermogensrechterlijke verrichtingen in naam en voor rekening van het Vlaamse Gewest, de Vlaamse Gemeenschap, de Vlaamse gemeenschaps- en gewestinstellingen en bepaalde entiteiten zoals de gemeentenGemeenteraadsbesluit van 18 december 2019 over de Meerjarenplan 2020 - 2025 deel gemeente Lievegem: vaststelling waarbij de nominatieve investeringen werden goedgekeurd, inzonderheid ACT-135 'Fietspad Ronselestraat - Leischoot'.Gemeenteraadsbesluit van 23 november 2022 over de goedkeuring van de grondinnemingsplannen en de opdracht tot het opmaken van de koopakten voor fietspad Ronselestraat - LeischootCollegebesluit van 12 januari 2021 waarbij studiebureel Goegebeur - Van Den Bulcke BVBA, Herbakkersplein 5 te 9900 Eeklo werd aangesteld als ontwerperCollegebesluit van 14 december 2021 met het principieel akkoord voor het ontwerpplan en de bijhorende innemingsplannen voor het aan te leggen fietspad on de Ronselestraat en Leischoot.Collegebesluit van 17 mei 2022 over de goedkeuring van de aanvraag tot schattingsverslag voor de grondinnemingen voor fietspad Ronselestraat - Leischoot Collegebesluit van 25 oktober 2022 waarbij kennis werd genomen van het schattingsverslag en principieel werd beslist opdracht te geven aan Vastgoedtransacties om de aankoop van de gronden voor de realisatie van fietspad Ronselestraat - Leischoot voor te bereidenCollegebesluit van 8 augustus 2023 over de gunning van de opmaak van onteigeningsdossier en rooilijnplan voor het fietspad Ronselestraat - Leischoot 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Er werd een ontwerpversie voor de aanleg van het fietspad in de Ronselestraat en Leischoot opgemaakt door het studiebureau Goegebeur - Van Den Bulcke BVBA, Herbakkersplein 5 te 9900 Eeklo. Dit ontwerp werd principieel goedgekeurd door het college. In uitvoering van dit ontwerpplan werden 24 individuele innemingsplannen opgemaakt door Studiebureel Goegebeur - Van Den Bulcke BVBA. De gemeenteraad de innemingsplannen goed en gaf opdracht aan de dienst Vastgoedtransacties om alle handelingen te stellen die nodig zijn om deze grondstroken, ten behoeve van de gemeente en onder voorbehoud van goedkeuring door de gemeenteraad, minnelijk te verwerven.De commissaris van de dienst Vastgoedtransacties meldde dat er 21 van de 24 innemingen in der minne kunnen gebeuren. Voor de overige drie innemingen: inname 1 (125,88 m²), inname 6 (81,04 m²) en 22 (437,48 m²) moet de onteigeningsprocedure opgestart worden, waarbij ook een nieuw rooilijnplan voor de Ronselestraat en Leischoot moet worden goedgekeurd. De procedures voor de onteigening en het rooilijnplan (beiden met een openbaar onderzoek) lopen best samen. Het decreet op de gemeentewegen maakt dit mogelijk. 
+                                                            De opmaak van de onteigeningsplannen en het rooilijnplan werden door het college gegund aan Studiebureau Goegebeur - Van Den Bulcke BVBA. Deze plannen zijn opgenomen in bijlage. De onteigeningsplannen en het rooilijnplan dienen voorzien van de wettelijk verplichte motiveringsdocumenten aan de gemeenteraad te worden voorgelegd. Dit besluit integreert 2 procedures:1. De voorlopige vaststelling van het ontwerp rooilijnplan heeft betrekking op de wijziging van de gemeentewegen Ronselestraat - Leischoot.2. Het voorlopig onteigeningsbesluit en de ontwerp onteigeningsplannen voor innames 1, 6 en 22 hebben betrekking op het opstarten van de bestuurlijke fase voor het onteigenen van gronden. 
+                                                            Beide procedures zijn nodig voor de realisatie van dit fietspad.Overeenkomstig art. 17 van het het gemeentewegendecreet moet de gemeenteraad het ontwerp van rooilijnplan voorlopig vaststellen. Hierna moet het college van burgemeester en schepenen, voor een termijn van 30 dagen een openbaar onderzoek organiseren dat binnen een ordetermijn van 30 dagen na de voorlopige vaststelling van het rooilijnplan wordt aangekondigd. Daarna zal, binnen een termijn van 60 dagen na het einde van het openbaar onderzoek, het gemeentelijk rooilijnplan ter definitieve vaststelling worden voorgelegd aan de gemeenteraad.Overeenkomstig art. 17 van het onteigeningsdecreet moet de gemeenteraad over de voorgenomen onteigeningen een openbaar onderzoek organiseren dat 30 dagen duurt. Daarna zullen, binnen een termijn van 90 of 160 dagen na het einde van het openbaar onderzoek, de onteigeningsplannen ter definitieve vaststelling worden voorgelegd aan de gemeenteraad.In toepassing van art. 33 van het onteigeningsdecreet wordt het openbaar onderzoek van de onteigeningsplannen geïntegreerd in het openbaar onderzoek van het rooilijnplan.De bijgevoegde motivaties (voorlopig onteigeningsbesluit en motiveringsnota ontwerp rooilijnplan), integraal deel uitmakend van dit besluit, geven meer toelichting naar problematiek en het algemeen belang van dit project.De bijgevoegde projectnota, integraal deel uitmakend van dit besluit, beschrijft het project en de te realiseren werken evenals de voorziene termijnen, realisatievoorwaarden en beheersmodaliteiten. 
+                                                            Visum werd gegeven op 23.11.2023 door Bart Van Petegem, adjunct financieel directeur. 
+                                                             
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            In het meerjarenplan 2020 - 2025 is voor de grondverwerving voor de realisatie van het fietspad Ronselestraat - Leischoot een krediet voorzien van € 300.000,00 onder jaarbudgetrekening 2023/ACT-135G/0200-00/2200000/GEMEENTE/CBS/IP-GEEN.  
+                                                            De raming voor de voorgestelde onteigeningen bedraagt in totaal 11.600 euro. 
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                                 Gunstig visum AFD/2023/125 van Bart Van Petegem van 23 november 2023  
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e80c5280-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1Het ontwerp rooilijnplan Ronselestraat - Leischoot, opgemaakt door studiebureel Goegebeur - Van Den Bulcke BVBA, dat werd opgesteld in overeenstemming met art. 11 van het gemeentewegendecreet van 3 mei 2019, wordt voorlopig vastgesteld.Artikel 2 Het voorlopig onteigeningsbesluit Ronselestraat - Leischoot, dat werd opgesteld in overeenstemming met art. 10 van het decreet betreffende onteigening van algemeen nut van 24 februari 2017, wordt goedgekeurd.Artikel 3De drie individuele ontwerp onteigeningsplannen Ronselestraat - Leischoot, opgemaakt door studiebureel Goegebeur - Van Den Bulcke BVBA, die werden opgesteld overeenkomstig de artikelen 11 en 12 van het decreet betreffende onteigening van algemeen nut van 24 februari 2017, worden goedgekeurd.Artikel 4 Over het ontwerp rooilijnplan en de ontwerp onteigeningsplannen Ronselestraat - Leischoot zal een openbaar onderzoek worden georganiseerd in overeenstemming met de artikelen 17 e.v. van het decreet betreffende onteigening van algemeen nut van 24 februari 2017.Artikel 5 Na het openbaar onderzoek worden zowel het rooilijnplan als de onteigeningsplannen voor definitieve vaststelling aan de gemeenteraad voorgelegd.  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "f0990b00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Ronselestraat-Leischoot - voorlopige vaststelling onteigenings- en rooilijnplan: goedkeuring" .
+

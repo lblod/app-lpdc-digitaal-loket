@@ -1,0 +1,79 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/a475ad5f-6791-4297-b104-79b3c207fb16> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/066e2ed1-d9f6-493c-9c6f-4f18e5ab7658>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40881b55-0d07-4b9c-8159-1126726726c8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4c93144e-5a19-470b-93d1-7e2659266b01>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/72e3a1c9-366e-4989-9414-3d302437f58d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85a89a89-4741-4921-9222-96054c5df5f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b409ab7a-e18e-4363-aa87-5a90fcc43155>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4219de6-3f0a-40e3-b839-fe356c608d46>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e6c5218a-0543-416e-b1cb-38efde0f155e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4b04b57-aa85-4dd8-ad0e-2255f5e9d903> ;
+    ns2:geplandeStart "2021-02-24T20:00:00+01:00"^^xsd:dateTime,
+        "2021-02-24T20:10:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/aef4a100-7c5a-43bb-ad04-e15ab2f79936> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2832f3bc-d9ee-461a-b6bf-1931195b87b8> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/94ff0768-e35c-4879-93c9-b68206f2669e> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "edcea060-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-02-24T21:05:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-02-24T20:10:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f> ;
+    ns2:openbaar true ;
+    ns1:uuid "f12ee260-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/92e77576-213f-47ae-8c6d-5f46b9b68c9a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/92e77576-213f-47ae-8c6d-5f46b9b68c9a> a ns2:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de akte van gratis grondafstand met repertoriumnummer 2021/0037 van 6 januari 2021 voor een grondverwerving in de Appensvoordestraat goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Patrimonium – grondverwerving perceel Appensvoordestraat noodzakelijk voor de realisatie van wegen- en rioleringswerken - akte gratis grondafstand: goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Decreet van 19 december 2014 over de Vlaamse Vastgoedcodex, waarbij de bevoegdheid van de Vlaamse commissarissen werd vastgelegd tot het uitvoeren van bepaalde vermogensrechterlijke verrichtingen in naam en voor rekening van het Vlaamse Gewest, de Vlaamse Gemeenschap, de Vlaamse gemeenschaps- en gewestinstellingen en bepaalde entiteiten zoals de gemeentenBesluit van de gemeenteraad van 3 juni 2020 met de definitieve goedkeuring van het onteigeningsplan Appensvoordestraat opgemaakt door het ontwerpbureau Plantec nv, Nieuwpoortsesteenweg 399 te 8400 Oostende 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De grondverwervingen, een 45-tal, gebeuren in de Appensvoordestraat, 9920 Lievegem om reden van openbaar nut, meer bepaald om de geplande wegenis- en rioleringswerken te kunnen uitvoeren inclusief de aanleg van fietspaden en de herprofilering van de grachten.Het betreft de grondinname met nr. 27 van het definitief goedgekeurde onteigeningsplan Appensvoordestraat opgemaakt door het ontwerpbureau Plantec nv, Nieuwpoortsesteenweg 399 te 8400 Oostende.De afdeling Vastgoedtransacties heeft onderhandeld met de eigenaars en de akte van gratis grondafstand met repertoriumnummer 2021/0037 op 6 januari 2021 (inname 27) in der minne en onder voorbehoud van goedkeuring door de gemeenteraad opgemaakt.Als bijlage de akte van gratis grondafstand voor de grondinneming nr. 27 in de Appensvoordestraat te 9920 Lievegem.De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Er is geen financiële impact voor de gemeente.Inname 27 is een kosteloze grondafstand conform de bepalingen van de op 16 juni 2016 goedgekeurde verkavelingsvergunning met referentie 44036/5799/V/00365/1. 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "edcc5670-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 De gemeenteraad keurt de akte van gratis grondafstand met repertoriumnummer 2021/0037 van 6 januari 2021 (inname 27) tussen Mestach Maria en Mestach Anna enerzijds en de gemeente Lievegem anderzijds, opgemaakt door Dirk Van Bockstal, Vlaams commissaris bij de afdeling Vastgoedtransacties, ter hoogte van de percelen in de Beiaard, 9920 Lievegem, kadastraal gekend als tweede afdeling, sectie B, nr. 1256/A met een in te nemen oppervlakte volgens het onteigeningsplan van 127,89 m². 
+                                                            Artikel 2De gemeente verwerft het in artikel 1 bedoeld goed:- kosteloos.- onder de voorwaarden vastgelegd in de bij deze beslissing en als dusdanig deel uitmakend van deze beslissing gevoegde akte van gratis grondafstand van 6 januari 2021 met repertoriumnummer 2021/0037 verleden door Dirk Van Bockstal, Vlaams commissaris bij de afdeling Vastgoedtransacties. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "f13264d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium – grondverwerving perceel Appensvoordestraat noodzakelijk voor de realisatie van wegen- en rioleringswerken - akte gratis grondafstand: goedkeuring" .
+

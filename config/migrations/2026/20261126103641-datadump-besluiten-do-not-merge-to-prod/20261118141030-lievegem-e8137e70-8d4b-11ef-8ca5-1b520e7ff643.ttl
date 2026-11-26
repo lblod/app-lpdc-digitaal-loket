@@ -1,0 +1,289 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/998e950f-4a6f-407e-acc8-21f0454943be> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/126b5d00-e069-4e28-b529-cf0f3ac3fa4f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/165c23ef-46b9-458f-b9b0-5dbc73c379b2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/17387b65-ced4-4251-8c34-51cf19d58f12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1fc6887a-ce70-4ba4-ac9e-ee961ef6ac02>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/381c20a3-8080-42a8-9221-7cdcbfd8ca0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38d10030-92e0-4af2-8eef-0118f76f76eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/433715a9-1e9a-40af-b0d8-613899c834ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a87114f-e4ab-4cac-91ab-92033fd684e5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dd9427a-ecad-4d8f-8bde-403db3d87d60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f9a9ccd-7a00-4b11-b963-ea9d49ce9bc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52c0136d-8a66-47f6-a824-301f44e5bfa2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ae7b9a5-ca72-4215-86e4-15dae2cf1794>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7af75996-5356-499b-8094-de17d5f0f4e1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87785798-6639-4c6f-bfa4-260ee7647588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9e41e560-e2c4-46f4-9e22-4608f5957da1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f6ee797-2c73-4fb4-9bba-d13a543c7b62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b218d9dc-8bae-4b81-bba1-70375cce2307>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be9900d6-a624-438d-bd99-063b4ea93f41>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c45d5bbb-1ee0-4518-8198-c4675b746bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8f55e5a-ccdf-47cf-bff8-0e38acb72112>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9156811-9d61-455c-a63b-8b086125c7ec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9ec27d7-f5aa-4dd6-a42b-e9679c4d8326>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1cb10c6-2945-49fd-9b6c-1f2711281a68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4f56cb2-2c2b-4fc7-9f65-01a4d1da85f5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5dd5bd3-73dd-4c59-a91b-954ae172da6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd2b8423-4c83-48a5-a7cb-405b6d4dc153>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5f26532-dc4e-42f0-9a15-74038fc65044> ;
+    ns1:geplandeStart "2023-12-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e0ffeb14-446f-4b4c-a17d-9f5791fa2dae> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d1612c76-4d4d-4b68-9053-0c49145eadf9> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4b578639-cd04-4965-be39-ac33532e8409> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e8104a20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-12-20T21:42:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-12-20T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1fc6887a-ce70-4ba4-ac9e-ee961ef6ac02> ;
+    ns1:openbaar true ;
+    ns3:uuid "f7f273a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3b6a6f8d-90bf-421c-afe5-49c159511a9f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3b6a6f8d-90bf-421c-afe5-49c159511a9f> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt het retributiereglement voor huwelijken goed: 
+                                                    Artikel 1 
+                                                    §1 -Huwelijksvoltrekking op maandag -zaterdag, zonder receptie: 
+                                                     
+                                                         
+                                                             
+                                                                  
+                                                                 Locatie binnen of buiten (zelf klaarzetten)  
+                                                                 Locatie buiten (klaarzetten vrijwilligers*)  
+                                                             
+                                                             
+                                                                Prijs ongeacht aantal aanwezigen 
+                                                                € 20,00 
+                                                                € 55,00 
+                                                             
+                                                         
+                                                     
+                                                    § 2 -Huwelijksvoltrekking maandag t.e.m. vrijdag, met receptie 
+                                                     
+                                                         
+                                                             
+                                                                  
+                                                                 Locatie binnen of buiten (zelf klaarzetten) 
+                                                                 Locatie buiten (klaarzetten vrijwilligers*) 
+                                                             
+                                                             
+                                                                t.e.m. 30 personen 
+                                                                € 50,00 
+                                                                € 85,00 
+                                                             
+                                                             
+                                                                t.e.m. 60 personen 
+                                                                € 75,00 
+                                                                € 110,00 
+                                                             
+                                                             
+                                                                Vanaf 60 personen                      
+                                                                € 100,00 
+                                                                € 135,00 
+                                                             
+                                                         
+                                                     
+                                                                                                                                                             § 3 - Huwelijksvoltrekking zaterdag, met receptie 
+                                                     
+                                                         
+                                                             
+                                                                  
+                                                                 Locatie binnen of buiten (zelf klaarzetten) 
+                                                                 Locatie buiten (klaarzetten vrijwilligers*) 
+                                                             
+                                                             
+                                                                t.e.m. 30 personen                     
+                                                                € 100,00 
+                                                                € 135,00 
+                                                             
+                                                             
+                                                                t.e.m. 60 personen 
+                                                                € 125,00 
+                                                                € 160,00 
+                                                             
+                                                             
+                                                                Vanaf 60 personen 
+                                                                € 150,00 
+                                                                € 185,00 
+                                                             
+                                                         
+                                                     
+                                                    Locatie binnen = huwelijksvoltrekkingen die doorgaan in een gemeentehuis of contactpunt. Deze plechtigheden worden altijd klaargezet door het gemeentebestuur. 
+                                                    Locatie buiten = huwelijksvoltrekkingen die doorgaan in openlucht. 
+                                                    Hiervoor zijn er 2 opties:1.    Bruidspaar staat zelf in voor het klaarzetten van de plechtigheid2.    Gemeentebestuur staat in voor het klaarzetten van de plechtigheid. Hiervoor wordt een meerprijs aangerekend van 35 euro (vrijwilligersvergoeding). 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Retributiereglement huwelijken: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Kim Martens, burgemeester 
+                                 
+                                 
+                                    Regelgeving 
+                                    Het Decreet Lokaal Bestuur van 22 december 2017, inzonderheid artikel 40, §3, artikel 41, §1, 14° en artikel 177 
+                                    Het Burgerlijk Wetboek wet van 18 juni 2018, inzonderheid artikel 75, artikel 76 en de artikelen 143 t.e.m. 167 
+                                    Het besluit van de gemeenteraad van 28 april 2021 over de locaties voor huwelijksvoltrekking: goedkeuring 
+                                    Het besluit van de gemeenteraad van 24 november 2021 over het retributiereglement huwelijken: goedkeuring 
+                                    Het besluit van het college van burgemeester en schepenen van 28 november 2023 over het retributiereglement huwelijken: principiële goedkeuring. 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De retributie voor het voltrekken van huwelijken in de gemeente Lievegem werd vastgesteld op 24 november 2021 en moet geactualiseerd worden aan de huidige werking. 
+                                    Er wordt de mogelijkheid aangeboden om te kiezen tussen een huwelijksplechtigheid met of zonder receptie. 
+                                    Zoals beslist in reglement 'locaties voor huwelijksvoltrekking' waar huwen met of zonder receptie mogelijk is. 
+                                    Indien er gekozen wordt voor een receptie worden de prijzen vastgelegd naargelang het aantal aanwezigen bij de plechtigheid. 
+                                    Bij een huwelijk op een buitenlocatie kan het huwelijkspaar kiezen of ze zelf de locatie klaarzetten of een beroep doen op vrijwilligers. Het verschil in prijs hiervoor dient duidelijk omschreven te worden in het nieuwe reglement. 
+                                 
+                                 
+                                    Financiële impact 
+                                    De inkomsten worden geregistreerd in het meerjarenplan onder jaarbudgetrekening: xxxx/GBB-BURGER/0130-00/7020999/GEMEENTE/CBS/IP-GEEN 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Retributiereglement voor huwelijken 
+                                    Artikel 1 
+                                    §1 -Huwelijksvoltrekking op maandag -zaterdag, zonder receptie: 
+                                     
+                                         
+                                             
+                                                  
+                                                 Locatie binnen of buiten (zelf klaarzetten)  
+                                                 Locatie buiten (klaarzetten vrijwilligers*)  
+                                             
+                                             
+                                                Prijs ongeacht aantal aanwezigen 
+                                                € 20,00 
+                                                € 55,00 
+                                             
+                                         
+                                     
+                                    § 2 -Huwelijksvoltrekking maandag t.e.m. vrijdag, met receptie 
+                                     
+                                         
+                                             
+                                                  
+                                                 Locatie binnen of buiten (zelf klaarzetten) 
+                                                 Locatie buiten (klaarzetten vrijwilligers*) 
+                                             
+                                             
+                                                t.e.m. 30 personen 
+                                                € 50,00 
+                                                € 85,00 
+                                             
+                                             
+                                                t.e.m. 60 personen 
+                                                € 75,00 
+                                                € 110,00 
+                                             
+                                             
+                                                Vanaf 60 personen                      
+                                                € 100,00 
+                                                € 135,00 
+                                             
+                                         
+                                     
+                                                                                                                                             § 3 - Huwelijksvoltrekking zaterdag, met receptie 
+                                     
+                                         
+                                             
+                                                  
+                                                 Locatie binnen of buiten (zelf klaarzetten) 
+                                                 Locatie buiten (klaarzetten vrijwilligers*) 
+                                             
+                                             
+                                                t.e.m. 30 personen                     
+                                                € 100,00 
+                                                € 135,00 
+                                             
+                                             
+                                                t.e.m. 60 personen 
+                                                € 125,00 
+                                                € 160,00 
+                                             
+                                             
+                                                Vanaf 60 personen 
+                                                € 150,00 
+                                                € 185,00 
+                                             
+                                         
+                                     
+                                      
+                                    Locatie binnen = huwelijksvoltrekkingen die doorgaan in een gemeentehuis of contactpunt. Deze plechtigheden worden altijd klaargezet door het gemeentebestuur. 
+                                    Locatie buiten = huwelijksvoltrekkingen die doorgaan in openlucht. 
+                                    Hiervoor zijn er 2 opties:1.    Bruidspaar staat zelf in voor het klaarzetten van de plechtigheid2.    Gemeentebestuur staat in voor het klaarzetten van de plechtigheid. Hiervoor wordt een meerprijs aangerekend van 35 euro (vrijwilligersvergoeding).Artikel 2Afgifte duplicaat trouwboekje - € 25Artikel 3De retributie is hoofdelijk verschuldigd door de aanvrager.Artikel 4De betaling gebeurt op het ogenblik van de aangifte van het huwelijk. 
+                                    Artikel 5§1. Met het oog op de invordering van de onbetwiste en opeisbare retributie kan de financieel directeur een dwangbevel uitvaardigen. Een dergelijk dwangbevel wordt betekend bij gerechtsdeurwaardersexploot.§2. Met het oog op de invordering van de betwiste en opeisbare retributie kan beroep worden gedaan op de burgerrechtelijke invorderingsprocedure. 
+                                     
+                                 
+                                 
+                                    Bekendmaking 
+                                    Het besluit wordt overgemaakt aan team Burger en team Financiën. 
+                                    Afschrift van dit besluit wordt via het digitaal loket bezorgd aan ABB. 
+                                    Dit besluit wordt gepubliceerd op de gemeentelijke website. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, inzonderheid artikel 40, §3, artikel 41, §1, 14° en artikel 177 
+                                                            Het Burgerlijk Wetboek wet van 18 juni 2018, inzonderheid artikel 75, artikel 76 en de artikelen 143 t.e.m. 167 
+                                                            Het besluit van de gemeenteraad van 28 april 2021 over de locaties voor huwelijksvoltrekking: goedkeuring 
+                                                            Het besluit van de gemeenteraad van 24 november 2021 over het retributiereglement huwelijken: goedkeuring 
+                                                            Het besluit van het college van burgemeester en schepenen van 28 november 2023 over het retributiereglement huwelijken: principiële goedkeuring. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De retributie voor het voltrekken van huwelijken in de gemeente Lievegem werd vastgesteld op 24 november 2021 en moet geactualiseerd worden aan de huidige werking. 
+                                                            Er wordt de mogelijkheid aangeboden om te kiezen tussen een huwelijksplechtigheid met of zonder receptie. 
+                                                            Zoals beslist in reglement 'locaties voor huwelijksvoltrekking' waar huwen met of zonder receptie mogelijk is. 
+                                                            Indien er gekozen wordt voor een receptie worden de prijzen vastgelegd naargelang het aantal aanwezigen bij de plechtigheid. 
+                                                            Bij een huwelijk op een buitenlocatie kan het huwelijkspaar kiezen of ze zelf de locatie klaarzetten of een beroep doen op vrijwilligers. Het verschil in prijs hiervoor dient duidelijk omschreven te worden in het nieuwe reglement. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De inkomsten worden geregistreerd in het meerjarenplan onder jaarbudgetrekening: xxxx/GBB-BURGER/0130-00/7020999/GEMEENTE/CBS/IP-GEEN 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e8137e70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1De gemeenteraad stelt het retributiereglement op huwelijksvoltrekkingen vast.Artikel 2Het retributiereglement treedt vanaf 1 januari 2024 in werking. Het retributiereglement van 24 november 2021 wordt opgeheven. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad stelt het retributiereglement op huwelijksvoltrekkingen vast.Artikel 2Het retributiereglement treedt vanaf 1 januari 2024 in werking. Het retributiereglement van 24 november 2021 wordt opgeheven. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f0931790-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Retributiereglement huwelijken: vaststelling" .
+

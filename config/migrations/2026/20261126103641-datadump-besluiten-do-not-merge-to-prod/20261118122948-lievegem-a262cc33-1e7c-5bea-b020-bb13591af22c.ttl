@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6172bd79-0aa2-45e1-8f68-77e43a084256> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27dbc2eb-455f-4d5a-995c-4c513ac970a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/438dd478-ec69-41cb-abb8-a9a5ec70c5cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e62ea52-5b0c-446a-b520-7f2d11e7034a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5c8f7227-7ebd-4add-819c-eb94b252048b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5fdd425f-37f9-4399-8d71-d780488b1d6f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61e52099-3daa-4f9b-9889-7204d1a0a0f0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7d1217f3-6db7-434b-9f3b-6a175e66d00b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/891703dc-29ca-453d-b460-0e0356259b69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae060643-d5fb-4a2a-93e5-3466eeaf557e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b018ddb6-4f1a-4fba-b247-8fd90f77e301>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fa1658-a712-4054-b8b9-54437aca429e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc7ae8bf-f480-44c9-b0b0-d2e7183acda1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e416a3ae-feca-4e3f-ab5a-6b0da272b028>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eafb0b0e-dbe6-45f2-9562-042c5cdf1ceb> ;
+    ns2:geplandeStart "2026-06-16T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d015f40e-7903-4062-bd23-1384df40d0ff> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "74bc76bf-df9e-5b31-b515-9fcaeedf763a" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-06-16T13:36:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/61e52099-3daa-4f9b-9889-7204d1a0a0f0> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b9fa1658-a712-4054-b8b9-54437aca429e> ;
+    ns2:openbaar false ;
+    ns3:uuid "bd4098cb-156b-5785-aef8-560250f813f6" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61e52099-3daa-4f9b-9889-7204d1a0a0f0> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/61e52099-3daa-4f9b-9889-7204d1a0a0f0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/61e52099-3daa-4f9b-9889-7204d1a0a0f0> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement voor het inrichten van een speelstraat in de zone tussen Pastoor Moernautstraat 29 en 47, 9921 Lievegem elke zaterdag en zondag tussen 1 juli 2026 en 31 augustus 2026 en dit telkens vanaf 10.00 uur tot 20.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van het inrichten van een speelstraat in Pastoor Moernautstraat vanaf huisnummer 29 tot en met 47, 9921 Lievegem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet gemeenteraadsbesluit van 27 maart 2019 inzake de inrichting van speelstraten.Het besluit van het college van burgemeester en schepenen van 16 juni 2026 over de aanvraag tot het inrichten van een speelstraat in de Pastoor Moernautstraat vanaf huisnummer 29 tot en met 47, elk weekend van 1 juli tot en met 31 augustus: goedkeuringHet besluit van het college van burgemeester en schepenen van 16 juni 2026 over de aanvraag vergunning tot toegang speelstraten voor ophalen restafval, GFT, PMD - papier en karton en glas: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Er werd op 24 mei 2025 een aanvraag ingediend bij team jeugd in de zone tussen Pastoor Moernautstraat 29 en 47, 9921 Lievegem een speelstraat in te richten elke zaterdag en zondag tussen 1 juli 2026 en 31 augustus 2026 en dit telkens vanaf 10.00 uur tot 20.00 uur. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    De straat voldoet aan alle voorwaarden om in aanmerking te komen voor een speelstraat: 
+                                     
+                                        Pastoor Moernautstraat is een straat of wijk met een overheersend woonkarakter, zonder doorgaand verkeer, met een snelheidsbeperking van 30km/u en zonder openbaar vervoer. In deze straat zijn geen publieke parkings of handelszaken (tenzij er een schriftelijk akkoord is met de betreffende handelaar). 
+                                        De aangevraagde uren bevinden zich binnen het toegestane tijdslot (10.00 - 20.00 uur). 
+                                        Na controle van de bewonersenquête bleek 100% van de bewoonde huizen akkoord met de inrichting van een speelstraat, wat hoger ligt dan de gevraagde 75% uit het reglement rond de inrichting van de speelstraten. 
+                                        De politie gaf positief advies op 1 juni 2026. 
+                                     
+                                    Deze speelstraat werd ingebracht in GIPOD met nummer 20185380. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo en LVZ 
+                                    Team jeugd 
+                                    De inwoners en betrokken handelaars (via team jeugd) 
+                                 
+                            """@nl ;
+    ns3:uuid "a262cc33-1e7c-5bea-b020-bb13591af22c" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement voor het inrichten van een speelstraat in de zone tussen Pastoor Moernautstraat 29 en 47, 9921 Lievegem elke zaterdag en zondag tussen 1 juli 2026 en 31 augustus 2026 en dit telkens vanaf 10.00 uur tot 20.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        inrichten van een speelstraat in de zone tussen Pastoor Moernautstraat 29 en 47, 9921 Lievegem: afsluiten van het deel van de straat 
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        inrichten speelstraat: 
+                                     
+                                     
+                                         
+                                            Nadar + C3 + 'Speelstraat' + onderbord met de speelstraaturen ter hoogte van Pastoor Moernautstraat 29 en Pastoor Moernautstraat 47. 
+                                            Nadar + C3 + F45 + 'uitgezonderd plaatselijk verkeer' ter hoogte van kruispunt Dorsweg/Pastoor Moernautstraat en Neerstraat/Pastoor Moernautstraat 
+                                            Borden F41 ter hoogte van kruispunt Dorsweg/Pastoor Moernautstraat, Neerstraat/Dorsweg (2x) en Neerstraat/Pastoor Moernautstraat 
+                                         
+                                     
+                                     
+                                        Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van de dagen waarop de speelstraat werd aangevraagd. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/61e52099-3daa-4f9b-9889-7204d1a0a0f0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61e52099-3daa-4f9b-9889-7204d1a0a0f0> a ns2:Agendapunt ;
+    ns3:uuid "c26e5e15-7683-5fa1-ad03-f478071b373b" .
+

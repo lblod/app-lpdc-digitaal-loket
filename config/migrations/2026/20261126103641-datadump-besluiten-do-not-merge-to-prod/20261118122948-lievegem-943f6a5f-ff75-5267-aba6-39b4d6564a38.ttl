@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5e124d3f-bda8-48b5-8e0f-bcf09a3e4f01> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f9a4756-9b37-4625-b182-f83e9f6bf1e4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5babe2a2-a602-491e-9614-e22e3164a07b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8d299162-0e01-45aa-88a2-20549d64b1da>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c2958dab-5c89-4033-9787-86042f69703b> ;
+    ns3:geplandeStart "2026-03-31T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e107d757-e39f-4c81-b07f-b5881e4c2de2> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "ab1a3ca6-516b-538d-9324-d2c3fd1740a2" ;
+    prov:atLocation "'t Leiken, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-03-31T13:38:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0f9a4756-9b37-4625-b182-f83e9f6bf1e4> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5babe2a2-a602-491e-9614-e22e3164a07b> ;
+    ns3:openbaar false ;
+    ns1:uuid "112888a5-7aa9-5176-8f1a-f4548c0813db" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f9a4756-9b37-4625-b182-f83e9f6bf1e4> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0f9a4756-9b37-4625-b182-f83e9f6bf1e4> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0f9a4756-9b37-4625-b182-f83e9f6bf1e4> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Awake' op 4 april 2026 van 18.30 uur tot en met 21.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Awake' - Jeugdhuis Dino: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 3 maart 2026 over de aanvraag evenement Awake - Jeugdhuis Dino: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Lennert Bekaert, namens Jeugdhuis Dino, organiseert 'Awake' van 4 april 2026 19.00 uur tot en met 5 april 2026 5.00 uur.Er werd op 17 december 2025 een aanvraag ingediend door Lennert Bekaert, namens Jeugdhuis Dino, om tijdens deze organisatie verkeersmaatregelen te treffen tijdens de rondrit met de praalwagen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "943f6a5f-ff75-5267-aba6-39b4d6564a38" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Awake' op 4 april 2026 van 18.30 uur tot en met 21.00 uur wordt vastgesteld als volgt: 
+                                    1. Stilstaan- en parkeerverbod: 
+                                     
+                                        ter hoogte van volgende kruispunten om voldoende draaicirkel te voorzien voor de vrachtwagen: Voetbalstraat/Sportstraat 3, Tennisstraat 35, Kasteeldreef 85-87/Voetbalstraat 1 en Tennisstraat 1/Voetbalstraat 
+                                        ter hoogte van Sportstraat 9 tot en met 17 (aan oneven zijde voor opstelling vrachtwagen) 
+                                     
+                                    2. Afsluiten straat voor alle gemotoriseerde verkeer ter hoogte van volgende kruispunten: Sportstraat/Voetbalstraat, Sportstraat/Tennisstraat, Warandestraat/Kasteeldreef en Kasteeldreef/Voetbalstraat. 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Borden E3 
+                                    2. - Nadar + C3 + ter hoogte van kruispunten Sportstraat/Voetbalstraat, Sportstraat/Tennisstraat, Warandestraat/Kasteeldreef en Kasteeldreef/Voetbalstraat    - Bord C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45 op kruispunten Molendreef/Sportstraat, Molendreef/Kasteeldreef, Warandestraat/Korfbalstraat, Warandestraat/Golfstraat en Warandestraat/Vellare    - Borden F45  
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0f9a4756-9b37-4625-b182-f83e9f6bf1e4> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f9a4756-9b37-4625-b182-f83e9f6bf1e4> a ns3:Agendapunt ;
+    ns1:uuid "7ff0466e-f667-5370-b8d7-82040da96a15" .
+

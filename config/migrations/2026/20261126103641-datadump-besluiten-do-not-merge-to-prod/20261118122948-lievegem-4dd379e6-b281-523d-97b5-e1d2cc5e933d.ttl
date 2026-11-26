@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/66bd1259-c7f4-4b83-9025-c6bb55b56a16> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31751f59-283e-4186-bc02-0c788139a849>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9790db7d-ec42-4896-8a95-a29d421fed57> ;
+    ns2:geplandeStart "2025-09-30T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9f1014c1-8416-4d21-9870-9267c84a95e7> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "a310e119-53a4-548e-840b-2b5c53d87712" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-09-30T13:34:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/31751f59-283e-4186-bc02-0c788139a849> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fcfd27e0-0e72-4d88-97c3-2fff76d57a25> ;
+    ns2:openbaar true ;
+    ns3:uuid "6c1d0290-5b51-5fbf-ab16-c17c0f3b8359" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31751f59-283e-4186-bc02-0c788139a849> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/31751f59-283e-4186-bc02-0c788139a849> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/31751f59-283e-4186-bc02-0c788139a849> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/efa4ec5a-b006-453f-985f-f986ebae11bc> ;
+    ns1:description """ 
+                                                            Het college van burgemeester en schepenen beslist principieel om de kostprijs voor de reispas voor Belgen via de gewone procedure aan te passen en de prijzen voor de superdringende procedure voor staatslozen en vluchtelingen voor volwassenen en minderjarigen toe te voegen. Dit wordt ter bekrachtiging voorgelegd op de gemeenteraad. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Belasting op het afleveren van administratieve stukken burgerzaken: principiële aanpassing" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Kim Martens, burgemeester 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 41 14°, 285-288, 330Omzendbrief KB ABB 2019/2 over de gemeentefiscaliteitWetgeving specifiek voor het afleveren van documenten van de dienst bevolking en burgelijke stand:De wet van 19 juli 1991 betreffende de bevolkingsregisters en de identiteitskaarten en tot wijziging van de wet van 8 augustus 1983 tot regeling van een rijksregister van de natuurlijke personen en de opeenvolgende wijzigingen;Het Koninklijk Besluit van 1 september 2004 houdende de beslissing om de elektronische identiteitskaart veralgemeend in te voeren;Het Koninklijk besluit van 28 april 2011 dat de omzetting beoogt van richtlijn 2006/126/EG van het Europees Parlement en de Raad van 20 december 2006 betreffende het rijbewijs, o.a. de invoering van bankkaartmodel;Het MB van 15 maart 2013 werd gewijzigd door het MB van 28 oktober 2019 tot vaststelling van het tarief van de vergoedingen ten laste van de gemeenten voor de uitreiking van de elektronische identiteitskaarten voor Belgen, de elektronische identiteitsdocumenten voor Belgische kinderen onder de twaalf jaar, de elektronische kaarten en elektronische verblijfsdocumenten afgeleverd aan vreemde onderdanen en de biometische kaarten en biometrische verblijfstitels afgeleverd aan vreemde onderdanen van derde landen. Dit Ministerieel Besluit van 28 oktober 2019 legt de tarieven vast die vanaf 1 januari 2020 van toepassing zullen zijn voor de vergoedingen ten laste van de gemeenten voor de uitreiking van de verschillende categorieën van elektronische identiteitskaarten en elektronische identiteitsdocumenten die in het besluit worden opgesomd.De omzendbrief betreffende procedures en leveringstermijnen van paspoorten en reisdocumenten in België (gewoon, dringend en superdringend)Het gemeenteraadsbesluit van 18 september 2025 over belasting op het afleveren van administratieve stukken burgerzakenHet besluit van het college van burgemeester en schepenen van 1 juli 2025 over het afleveren van administratieve stukken burgerzaken 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Op de gemeenteraad van 18 september 2025 werd de belasting op het afleveren van administratieve stukken burgerzaken goedgekeurd.Bij nazicht bleek dat het besluit een typefout had. De gewone procedure Belg minderjarig voor een reispas bedraagt 40,00 € in plek van 46,00 €.Volgende prijzen moeten nog toegevoegd worden aan het besluit. De prijs voor de superdringende procedure levering Brussel voor erkende vluchtelingen/staatslozen volwassenen voor een reispas bedraagt € 305.De prijs voor de superdringende procedure levering Brussel voor erkende vluchtelingen/staatslozen minderjarigen voor een reispas bedraagt € 285. 
+                                 
+                                 
+                                    Financiële impact 
+                                    De ontvangsten zullen geboekt worden in het meerjarenplan op volgende jaarbudgetrekeningen: 
+                                    xxxx/GBB-BURGER/0020-00/7315000/GEMEENTE/CBS/IP-GEEN : Identiteitsbewijzen/paspoorten/ uittreksels 
+                                    xxxx/GBB-BURGER/0020-00/7318999/GEMEENTE/CBS/IP-GEEN : Rijbewijzen 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Team burger, communicatie en financiën. ABB via digitaal loket. Op de gemeentelijke website. 
+                                 
+                            """@nl ;
+    ns3:uuid "4dd379e6-b281-523d-97b5-e1d2cc5e933d" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het college van burgemeester en schepenen keurt de aanpassing principieel goed zodat deze in werking kan treden op 1 oktober 2025. Reispas Belgen -18j    € 40,00Reispas erkende vluchtelingen/staatslozen superdringende procedure -18j € 285 Reispas erkende vluchtelingen/staatslozen superdringende procedure +18j € 305 
+                                     
+                                    Artikel 2Deze aanpassing wordt ter bekrachtiging voorgelegd aan de gemeenteraad van 23 oktober 2025. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/31751f59-283e-4186-bc02-0c788139a849> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31751f59-283e-4186-bc02-0c788139a849> a ns2:Agendapunt ;
+    ns3:uuid "c90012ab-3e40-5f3e-9cc4-863e14baf82f" .
+

@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/22f02618-9328-46d0-b137-fae65785b7f8> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f1d17b2-8e0c-487f-a375-fb5fab6b6c33>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/271d522f-12ac-4756-b928-93cf00720033>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/51e9ea59-9ecf-4607-9c97-36e7d154e341>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63daef90-fac2-4d95-a917-0a92c0eb730c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9c935e73-776e-40ad-b76b-6293b3458046>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a577a714-08f9-4e04-bc9d-f2d87c930391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bf4c5745-40fc-4378-8cee-4ac64ac00cc0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e827e0fd-0a93-464f-870a-63d55e07f444>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2947940-b634-4eb8-aab0-9019e581c343> ;
+    ns1:geplandeStart "2025-05-27T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e998b65d-b0ac-4c24-a12e-1f48e7addd55> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "b8d183b8-4b9b-5522-93b9-ffea2e01b397" ;
+    prov:atLocation "Grote raadzaal, Kasteeldreef 72, 9920 Lievegem" ;
+    prov:startedAtTime "2025-05-27T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/63daef90-fac2-4d95-a917-0a92c0eb730c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/357b5980-a429-41f5-bcc6-6fa94a04efce> ;
+    ns1:openbaar false ;
+    ns3:uuid "40207ec1-2f7c-56d4-adc5-d2e66d0ecd61" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63daef90-fac2-4d95-a917-0a92c0eb730c> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/63daef90-fac2-4d95-a917-0a92c0eb730c> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/63daef90-fac2-4d95-a917-0a92c0eb730c> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Jumping Fokkerij Baeckeland' op 2 augustus 2025 van 8.00 uur tot en met 24.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Jumping Fokkerij Baeckeland' - Vedetten: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 27 mei 2025 over de aanvraag evenement Jumping Fokkerij Baeckeland - Vedetten: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Ria Blomme, namens Vedetten, organiseert 'Jumping Fokkerij Baeckeland' op 2 augustus 2025 van 8.00 uur tot en met 23.45 uur.Er werd op 22 april 2025 een aanvraag ingediend door Ria Blomme, namens Vedetten, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                     
+                                    Op 20 mei 2025 ontvingen we het akkoord van gemeente Maldegem voor het plaatsen van signalisatie op grondgebied Maldegem. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Gemeentebestuur en politiezone Maldegem. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. Ook de omwonenden op grondgebied Maldegem moeten een brief krijgen. 
+                                 
+                            """@nl ;
+    ns3:uuid "17507a18-cded-53c8-baea-fa56a1c63236" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Jumping Fokkerij Baeckeland' op 2 augustus 2025 van 8.00 uur tot en met 24.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Er wordt éénrichtingsverkeer in tegenwijzerzin ingevoerd in volgende straten: Vlamingstraat (Maldegem), St Jansstraat, Veldhoek, Diepenbeek (tussen St Jansstraat en Mostmolen) en Mostmolen. 
+                                        Stilstaan- en parkeerverbod in St Jansstraat (volledige straat) 
+                                        Omleiding via St Jansstraat, Diepenbeek, Mostmolen, Leischoot en Oostwinkeldorp 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        - Borden C1 + M2 en F19 + M4 aan de kruispunten Vlamingstraat/Panthaagstraat (Maldegem), St Jansstraat/Veldhoek, St Jansstraat/Diepenbeek, Diepenbeek/Mostmolen, Mostmolen/Mostmolen.- C1 + M2 aan het kruispunt Leischoot/Mostmolen- F19 + M4 aan de kruispunten Zwepe/Vlamingstraat (Maldegem) en Veldhoek/Oostwinkeldorp- D1e aan de kruispunten Vlamingstraat/Panthaagstraat (Maldegem), Veldhoek/St Jansstraat en Mostmolen/Mostmolen- D1f aan het kruispunt Diepenbeek/Mostmolen- C31a aan de kruispunten Veldhoek/St Jansstraat, Diepenbeek/St Jansstraat en Leischoot/Mostmolen- C31b aan Leischoot/Mostmolen 
+                                        Borden E3 in St Jansstraat (volledige straat) 
+                                        Borden F41 aan de kruispunten Veldhoek/St Jansstraat, Diepenbeek/St Jansstraat, Diepenbeek/Mostmolen, Mostmolen/Mostmolen en Mostmolen/Leischoot 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/63daef90-fac2-4d95-a917-0a92c0eb730c> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63daef90-fac2-4d95-a917-0a92c0eb730c> a ns1:Agendapunt ;
+    ns3:uuid "09a715f2-7f0a-5fcb-8ce0-718964b2d68b" .
+

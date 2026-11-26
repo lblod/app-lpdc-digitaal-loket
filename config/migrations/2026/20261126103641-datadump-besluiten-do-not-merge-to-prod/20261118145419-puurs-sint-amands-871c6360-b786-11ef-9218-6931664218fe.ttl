@@ -1,0 +1,128 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/2dd76646-5e40-48c8-b43e-7842193e1978> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/14baeea6-5478-47a7-82b6-6512c232b3d3>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/1f09715f-1af9-48cb-a7d6-a8e6cb6cd953>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5bd576f6-2bdd-45ea-b312-b5d177facb78>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a80f66e7-5992-4964-9557-48bc2ded493f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b5737492-dca4-4b11-9652-d2e4948261e2>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/bfa39c4e-69f0-4dda-a06c-47e744cb1855>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/eccbace7-353f-4829-97b5-b6b7c5037f0f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f6059f31-d048-422e-989d-61e90752918d> ;
+    ns1:geplandeStart "2024-12-05T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/202781c9-0bb5-4c2a-b8c8-d69f42507db9> ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/b4deebea-2ea5-4f9a-ac56-57634bd4b19f> ;
+    ns1:heeftNotulen <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/86dc7303-5ba9-4fba-bc42-6ef7ed4122e5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns2:uuid "506ce550-b13d-11ef-9218-6931664218fe" ;
+    prov:atLocation "Raadzaal" ;
+    prov:startedAtTime "2024-12-05T20:00:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bfa39c4e-69f0-4dda-a06c-47e744cb1855> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b5737492-dca4-4b11-9652-d2e4948261e2> ;
+    ns1:openbaar true ;
+    ns2:uuid "8db87ce0-bdd0-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/bfa39c4e-69f0-4dda-a06c-47e744cb1855> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/bfa39c4e-69f0-4dda-a06c-47e744cb1855> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/bfa39c4e-69f0-4dda-a06c-47e744cb1855> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/b4c828e4-bcb8-46ff-8abf-5fde227d2459> ;
+    ns3:description """ 
+                                                                    De gemeenteraad verkiest op basis van een akte van voordracht een voorzitter onder de gemeenteraadsleden van Belgische nationaliteit. 
+                                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns3:title "Verkiezing van de voorzitter van de gemeenteraad" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    
+                                        De gemeenteraad verkiest op basis van een akte van voordracht een voorzitter onder de gemeenteraadsleden van Belgische nationaliteit. 
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                    Bevoegdheid 
+                                     
+                                         Het decreet van 22 december 2017 over het lokaal bestuur (DLB), artikel 6en Artikel 7.  
+                                     
+                                    Juridische context 
+                                     
+                                         Het decreet van 22 december 2017 over het lokaal bestuur (DLB), artikel 6en Artikel 7.  
+                                         Het Besluit van de Vlaamse Regering van 21 juni 2024 tot vaststelling van de modellen van akte van voordracht en akte van opvolging in het kader van de installatie en samenstelling van de lokale bestuursorganen  
+                                         Omzendbrief KBBJ/ABB 2024/2 over de start van de lokale en provinciale bestuursperiode  
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Er is een akte van voordracht van kandidaat-voorzitter op naam van Els Goedgezelschap bezorgd aan de algemeen directeur op vrijdag 25 oktober 2024.  
+                                    De algemeen directeur heeft de akte van voordracht van kandidaat-voorzitter ter zitting overhandigd aan de voorzitter van de installatievergadering.  
+                                    De voorzitter van de installatievergadering heeft vastgesteld dat de akte van voordracht:  
+                                     
+                                         Een gemeenteraadslid voordraagt dat de Belgische nationaliteit heeft;    
+                                     
+                                     
+                                         Gedaan is op de modelakte die de Vlaamse Regering bij besluit van 21 juni 2024 heeft vastgesteld en die op de dag van de verkiezingen door het Agentschap Binnenlands Bestuur met de datumstempel van die dag ter beschikking is gesteld;    
+                                     
+                                     
+                                         Ondertekend is door meer dan de helft van de verkozenen op de lijsten die aan de verkiezingen deelnamen en die geïnstalleerd zijn als raadslid;     
+                                     
+                                     
+                                         Ondertekend is door de meerderheid van de personen die op dezelfde lijst als de voorgedragen kandidaat zijn verkozen en die geïnstalleerd zijn als raadslid;    
+                                     
+                                     
+                                         Uiterlijk drie dagen voor de installatievergadering van de gemeenteraad aan de algemeen directeur is bezorgd.   
+                                     
+                                    De voorzitter heeft vastgesteld dat de akte van voordracht ontvankelijk is.  
+                                    De kandidaat-voorzitter heeft de eed als gemeenteraadslid afgelegd.  
+                                     
+                                         
+                                            De akte van voordracht van kandidaat-voorzitter vermeldt geen einddatum van het mandaat van kandidaat-voorzitter.  
+                                            De voorgedragen kandidaat-voorzitter kan verkozen worden verklaard. 
+                                         
+                                     
+                                 
+                            """@nl,
+        """ 
+                                                                         
+                                                                            
+                                                                                Toelichting
+                                                                             
+                                                                            De gemeenteraad verkiest op basis van een akte van voordracht een voorzitter onder de gemeenteraadsleden van Belgische nationaliteit. 
+                                                                         
+                                                                    """@nl ;
+    ns2:uuid "871c6360-b786-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel: 
+                                     
+                                        De gemeenteraad neemt kennis van de ontvankelijkheid van de akte van voordracht en verklaart de voorgedragen kandidaat-voorzitter Els Goedgezelschap verkozen als voorzitter van de gemeenteraad.  Els Goedgezelschap neemt overeenkomstig artikel 6, § 2 van het decreet over het lokaal bestuur het voorzitterschap over van de uittredende voorzitter van de gemeenteraad. 
+                                     
+                                 
+                            """,
+        """ 
+                                                                         
+                                                                            
+                                                                                Besluit
+                                                                             
+                                                                            Enig artikel: 
+                                                                             
+                                                                                De gemeenteraad neemt kennis van de ontvankelijkheid van de akte van voordracht en verklaart de voorgedragen kandidaat-voorzitter Els Goedgezelschap verkozen als voorzitter van de gemeenteraad.  Els Goedgezelschap neemt overeenkomstig artikel 6, § 2 van het decreet over het lokaal bestuur het voorzitterschap over van de uittredende voorzitter van de gemeenteraad. 
+                                                                             
+                                                                         
+                                                                    """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bfa39c4e-69f0-4dda-a06c-47e744cb1855> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/bfa39c4e-69f0-4dda-a06c-47e744cb1855> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "506d8190-b13d-11ef-9218-6931664218fe" ;
+    dcterms:description " De gemeenteraad verkiest op basis van een akte van voordracht een voorzitter onder de gemeenteraadsleden van Belgische nationaliteit. " ;
+    dcterms:title "Verkiezing van de voorzitter van de gemeenteraad" .
+

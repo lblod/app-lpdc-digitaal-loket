@@ -1,0 +1,360 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/2dd76646-5e40-48c8-b43e-7842193e1978> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/14baeea6-5478-47a7-82b6-6512c232b3d3>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/1f09715f-1af9-48cb-a7d6-a8e6cb6cd953>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/20c1f589-5f2f-495d-bdbb-77e4b18a8e04>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5bd576f6-2bdd-45ea-b312-b5d177facb78>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a80f66e7-5992-4964-9557-48bc2ded493f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b5737492-dca4-4b11-9652-d2e4948261e2>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/bfa39c4e-69f0-4dda-a06c-47e744cb1855>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/eccbace7-353f-4829-97b5-b6b7c5037f0f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f6059f31-d048-422e-989d-61e90752918d> ;
+    ns1:geplandeStart "2024-12-05T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/202781c9-0bb5-4c2a-b8c8-d69f42507db9> ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/b4deebea-2ea5-4f9a-ac56-57634bd4b19f> ;
+    ns1:heeftNotulen <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/86dc7303-5ba9-4fba-bc42-6ef7ed4122e5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns2:uuid "506ce550-b13d-11ef-9218-6931664218fe" ;
+    prov:atLocation "Raadzaal" ;
+    prov:startedAtTime "2024-12-05T20:00:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5bd576f6-2bdd-45ea-b312-b5d177facb78> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/14baeea6-5478-47a7-82b6-6512c232b3d3> ;
+    ns1:openbaar true ;
+    ns2:uuid "82a01070-bdd0-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5bd576f6-2bdd-45ea-b312-b5d177facb78> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5bd576f6-2bdd-45ea-b312-b5d177facb78> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5bd576f6-2bdd-45ea-b312-b5d177facb78> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/b4c828e4-bcb8-46ff-8abf-5fde227d2459> ;
+    ns3:description """ 
+                                                                    De gemeenteraad stelt de rangorde van de gemeenteraadsleden vast. 
+                                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns3:title "Bepaling van de rangorde van de gemeenteraadsleden" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    
+                                        De gemeenteraad stelt de rangorde van de gemeenteraadsleden vast.
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                    Bevoegdheid 
+                                     
+                                         Het decreet van 22 december 2017 over het lokaal bestuur (DLB), artikel 6  
+                                     
+                                    Juridische context 
+                                     
+                                         Het decreet van 22 december 2017 over het lokaal bestuur (DLB), artikel 6  
+                                         Omzendbrief KBBJ/ABB 2024/2 over de start van de lokale en provinciale bestuursperiode  
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De rangorde van de gemeenteraadsleden wordt vastgesteld aan de hand van de anciënniteit van de raadsleden. De anciënniteit omvat de hele tijdsduur waarin een gemeenteraadslid deel heeft uitgemaakt van de gemeenteraad. 
+                                    Bij gelijke anciënniteit neemt het gemeenteraadslid dat bij de laatste vernieuwing van de gemeenteraad het hoogste aantal naamstemmen heeft behaald een hogere rang in. 
+                                 
+                            """@nl,
+        """ 
+                                                                         
+                                                                            
+                                                                                Toelichting
+                                                                             
+                                                                            De gemeenteraad stelt de rangorde van de gemeenteraadsleden vast. 
+                                                                         
+                                                                    """@nl ;
+    ns2:uuid "871bee30-b786-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    De rangorde van de gemeenteraadsleden is als volgt vastgesteld: 
+                                     
+                                         
+                                            
+                                                 
+                                                     
+                                                     
+                                                 
+                                                 
+                                                    
+                                                         Gemeenteraadslid 
+                                                         Rang 
+                                                     
+                                                     
+                                                         Koen Van den Heuvel  
+                                                         Eerste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Yvo Van Damme  
+                                                         Tweede gemeenteraadslid  
+                                                     
+                                                     
+                                                         Hilde Van der Poorten  
+                                                         Derde gemeenteraadslid  
+                                                     
+                                                     
+                                                         Raf De Blaiser  
+                                                         Vierde gemeenteraadslid  
+                                                     
+                                                     
+                                                         Ronny Tourné  
+                                                         Vijfde gemeenteraadslid  
+                                                     
+                                                     
+                                                         Els De Smedt  
+                                                         Zesde gemeenteraadslid  
+                                                     
+                                                     
+                                                         Anne De Ron  
+                                                         Zevende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Els Goedgezelschap  
+                                                         Achtste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Jan Van Camp  
+                                                         Negende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Patrick Pauwels  
+                                                         Tiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Jürgen Buyst  
+                                                         Elfde gemeenteraadslid  
+                                                     
+                                                     
+                                                         Willem Geeroms  
+                                                         Twaalfde gemeenteraadslid  
+                                                     
+                                                     
+                                                         Sophie Van Praet  
+                                                         Dertiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Luk Ceurvelt  
+                                                         Veertiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Peggy Seeuws  
+                                                         Vijftiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Reinhilde Goossens  
+                                                         Zestiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Linda Caluwaerts  
+                                                         Zeventiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Robbe Cooremans  
+                                                         Achttiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Giselle Vissers  
+                                                         Negentiende gemeenteraadslid  
+                                                     
+                                                     
+                                                         Ine Schokkaert  
+                                                         Twintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Sander Schokkaert  
+                                                         Eenentwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Jorden Dewachter  
+                                                         Tweeëntwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Eva Peleman  
+                                                         Drieëntwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Jelien De Laet  
+                                                         Vierentwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Marleen Vos  
+                                                         Vijfentwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Joos Wauters  
+                                                         Zesentwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Erwin Mertens  
+                                                         Zevenentwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Marc Van Aken  
+                                                         Achtentwintigste gemeenteraadslid  
+                                                     
+                                                     
+                                                         Kristina Galestian  
+                                                         Negenentwintigste gemeenteraadslid  
+                                                     
+                                                 
+                                             
+                                         
+                                     
+                                 
+                            """,
+        """ 
+                                                                         
+                                                                            
+                                                                                Besluit
+                                                                             
+                                                                            De rangorde van de gemeenteraadsleden is als volgt vastgesteld: 
+                                                                            
+                                                                                 
+                                                                                     
+                                                                                     
+                                                                                 
+                                                                                 
+                                                                                    
+                                                                                         Gemeenteraadslid 
+                                                                                         Rang 
+                                                                                     
+                                                                                     
+                                                                                         Koen Van den Heuvel  
+                                                                                         Eerste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Yvo Van Damme  
+                                                                                         Tweede gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Hilde Van der Poorten  
+                                                                                         Derde gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Raf De Blaiser  
+                                                                                         Vierde gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Ronny Tourné  
+                                                                                         Vijfde gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Els De Smedt  
+                                                                                         Zesde gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Anne De Ron  
+                                                                                         Zevende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Els Goedgezelschap  
+                                                                                         Achtste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Jan Van Camp  
+                                                                                         Negende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Patrick Pauwels  
+                                                                                         Tiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Jürgen Buyst  
+                                                                                         Elfde gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Willem Geeroms  
+                                                                                         Twaalfde gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Sophie Van Praet  
+                                                                                         Dertiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Luk Ceurvelt  
+                                                                                         Veertiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Peggy Seeuws  
+                                                                                         Vijftiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Reinhilde Goossens  
+                                                                                         Zestiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Linda Caluwaerts  
+                                                                                         Zeventiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Robbe Cooremans  
+                                                                                         Achttiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Giselle Vissers  
+                                                                                         Negentiende gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Ine Schokkaert  
+                                                                                         Twintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Sander Schokkaert  
+                                                                                         Eenentwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Jorden Dewachter  
+                                                                                         Tweeëntwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Eva Peleman  
+                                                                                         Drieëntwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Jelien De Laet  
+                                                                                         Vierentwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Marleen Vos  
+                                                                                         Vijfentwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Joos Wauters  
+                                                                                         Zesentwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Erwin Mertens  
+                                                                                         Zevenentwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Marc Van Aken  
+                                                                                         Achtentwintigste gemeenteraadslid  
+                                                                                     
+                                                                                     
+                                                                                         Kristina Galestian  
+                                                                                         Negenentwintigste gemeenteraadslid  
+                                                                                     
+                                                                                 
+                                                                             
+                                                                            
+                                                                                 
+                                                                             
+                                                                         
+                                                                    """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5bd576f6-2bdd-45ea-b312-b5d177facb78> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5bd576f6-2bdd-45ea-b312-b5d177facb78> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "506dcfb0-b13d-11ef-9218-6931664218fe" ;
+    dcterms:description " De gemeenteraad stelt de rangorde van de gemeenteraadsleden vast. " ;
+    dcterms:title "Bepaling van de rangorde van de gemeenteraadsleden" .
+

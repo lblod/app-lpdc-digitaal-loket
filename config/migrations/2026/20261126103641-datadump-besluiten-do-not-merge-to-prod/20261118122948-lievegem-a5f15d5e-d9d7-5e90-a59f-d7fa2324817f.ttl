@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/87794e7d-543f-4da0-9ada-caa9aa48b82b> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a557c9d4-3385-4a58-9c06-bc5b4da174a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> ;
+    ns1:geplandeStart "2026-08-18T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0d228c5a-442c-4117-9fea-caadaa3b5deb> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "12b86113-a84b-5600-a2c0-27659982b41b" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-08-18T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/93bc451b-0cd1-4c0d-bc55-3cd43bcd8dc0> ;
+    ns1:openbaar false ;
+    ns3:uuid "68b6ac68-3f7d-5674-bb0e-79964a3c41dd" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement naar aanleiding van de 'Rommelmarkt Oostwinkel' op 20 september 2026 van 6.00 uur tot en met 18.00 uur wordt vastgesteld: 
+                                                             
+                                                                Afsluiten van Leendreef vanaf huisnummer 6 tot en met huisnummer 46 
+                                                                Omleiding voorzien via Leendreef - Langestraat - Oostwinkeldorp en omgekeerd 
+                                                                Stilstaan- en parkeerverbod in Leendreef vanaf huisnummer 6 tot en met huisnummer 46 
+                                                             
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Rommelmarkt Oostwinkel' - BC De Kastelein: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 18 augustus 2026 over de goedkeuring van de aanvraag evenement Rommelmarkt Oostwinkel - BC De Kastelein: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Roland Smolderen, namens BC De Kastelein organiseert 'Rommelmarkt Oostwinkel' op 20 september 2026 van 7.00 uur tot en met 17.00 uur.Er werd op 11 juni 2026 een aanvraag ingediend door Roland Smolderen, namens BC De Kastelein om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    Leendreef zal afgesloten worden voor de rommelmarkt. Bewoners zullen, onder begeleiding, wel tot aan hun woningen kunnen. Aangezien de verkopers de bewoners zelf zijn, zal dit echter beperkt blijven. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns3:uuid "a5f15d5e-d9d7-5e90-a59f-d7fa2324817f" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Rommelmarkt Oostwinkel' op 20 september 2026 van 6.00 uur tot en met 18.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Afsluiten van Leendreef vanaf huisnummer 6 tot en met huisnummer 46 
+                                        Omleiding voorzien via Leendreef - Langestraat - Oostwinkeldorp en omgekeerd 
+                                        Stilstaan- en parkeerverbod in Leendreef vanaf huisnummer 6 tot en met huisnummer 46 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. - Nadar + C3 + M2  ter hoogte van Leendreef 6 en Leendreef 46    - Nadar + C3 + M2 + F45 + 'uitgezonderd plaatselijk verkeer' op de volgende kruispunten: Leendreef/Leendreef en Oostwinkeldorp/Leendreef 
+                                    2. Borden F41 op de volgende kruispunten: Leendreef/Leendreef, Leendreef/Langestraat (2x), Langestraat/Oostwinkeldorp (2x) en Oostwinkeldorp/Leendreef 
+                                    3. Borden E3 
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c72bf9ef-7ffd-4a67-817b-aea154fa85a9> a ns1:Agendapunt ;
+    ns3:uuid "4b1c11a7-0e04-5aa8-8935-1c1873901d7a" .
+

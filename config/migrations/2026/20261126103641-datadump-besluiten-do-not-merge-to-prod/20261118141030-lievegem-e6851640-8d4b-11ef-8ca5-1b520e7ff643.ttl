@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3027bbce-6e1b-47b4-bc0b-f53c72f1f9d2> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1b0c2c7b-0314-444b-ba38-6b1f25637bc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27e0c4db-269e-409a-8d55-33db7daf7c9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aac60983-db3c-4247-b27f-4860f02157a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ba5489da-e01f-4521-be10-56c4a038e97d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d6f26eb7-74ad-4e5a-bcb3-b89aa65ac7b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d84d3931-b8bf-4253-ad24-7fabe8331040>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6446375-946b-4c3d-9dcc-c3cf171303a1> ;
+    ns3:geplandeStart "2020-09-09T20:00:00+02:00"^^xsd:dateTime ;
+    ns3:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e04bbeb0-1e3c-48c6-86c0-2e3a8995ae98> ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/619a64f0-35fa-41f1-9895-5360cd9bf16b> ;
+    ns3:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2cf19f34-4e9d-4ca2-9af9-b8280d2d4efc> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e687ae50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-09-09T23:00:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-09-09T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef> ;
+    ns3:openbaar true ;
+    ns2:uuid "efe0de90-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/727e49d0-e835-41b7-a845-a99d752ce10a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/727e49d0-e835-41b7-a845-a99d752ce10a> a ns3:Besluit ;
+    ns1:description """ 
+                                                    Vragen en antwoorden omtrent1. terrasuitbreiding in wintermaanden (Maikel Parmentier) 
+                                                    2. plasticfolie recyclagepark (Didier Garré) 
+                                                    3. leerlingen met migratieachtergrond in Lievegemse scholen en gemeenteschool (Didier Garré) 
+                                                    4. aanvullende hulp/dienstverlening door coronacrisis (Patrick Dossche) 
+                                                    5. gebruik van app 'MyBEnefits' (Patrick Dossche) 
+                                                    6. bewonersoverleg Den Boer (Patrick Dossche) 
+                                                    7. wanneer komen Gemina en mobiliteitsraad samen? (Annemie De Bie) 
+                                                    8. Voetpaden (Annemie De Bie) 
+                                                    9. bomenkap Bauwerwaan (Annemie De Bie) 
+                                                    10.  inventarisatie bouwrisico's corona in scholen (Wouter De Muynck) 
+                                                     
+                                                     
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" ;
+    ns3:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepenGerrit Van Brabandt, schepenCaroline Fredrick, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 31 en 278 
+                                                            Gemeenteraadsbesluit van 29 mei 2019 houdende goedkeuring huishoudelijk reglement gemeenteraad, artikel 11 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraadsleden hebben het recht aan de burgemeester en aan het college van burgemeester en schepenen mondelinge en schriftelijke vragen te stellen.  Voor het stellen van een vraag is geen toegelicht voorstel van beslissing vereist. 
+                                                            De zittingsverslagen van de vergadering van de gemeenteraad vermelden de mondelinge en schriftelijk gestelde vragen en antwoorden. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "e6851640-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Vragen en antwoorden omtrent :1. Schriftelijke vraag van raadslid Maikel Parmentier: terrasuitbreiding in wintermaanden 
+                                                            Vraag aan schepen Guy De Neve over terrasuitbreiding in wintermaanden:Het is ondertussen al lang duidelijk dat we nog even met het coronavirus zullen moeten leven. Is er, net zoals in verschillende naburige gemeenten, al een regeling voor terrasuitbreiding in de wintermaanden? Dit zou verschillende uitbaters en inwoners perspectief bieden voor de aankomende koude wintermaanden.Antwoord schepen Guy De Neve:We zijn er al een tijdje met bezig.  Ons dorp heeft geleefd met de zomerterrassen.Je hebt een schriftelijke vraag gesteld, ik ga je dan ook schriftelijk antwoorden. Maar ik kan je wel vertellen hoe we dit aanpakken. Gisteren met alle betrokkenen, onze werkgroep, overleg gepleegd en we weten, we hebben een reglement openbare terrassen van in 2019 en we moeten dit aanpassen en we zullen dit voorleggen aan de gemeenteraad van oktober.  Volgende week gaan we ons voorstel voorleggen aan de werkgroep horeca.Maar wees zeker de terrassen zullen er staan.Team lokale economie: in overleg met schepen De Neve een antwoord formuleren aan het raadslid/GR.  Vermoedelijk zal dit pas kunnen na het overleg, zie hierboven. 
+                                                            2. Schriftelijke vraag van raadslid Didier Garré: plasticfolie recyclageparkVraag aan schepen Van Brabandt over het recyclagepark:Hoe komt het dat op het recyclagepark geen plasticfolie meer aanvaard wordt, plasticfolie moet nu in de blauwe zak gestoken worden, met andere woorden: plasticafval wordt betalend. Nochtans lijkt ons dit niet opgenomen in de politieverordening afvalstoffen (artikel 1.6 over de aanbieding van afvalstoffen). In de overeenkomst betreffende de exploitatie van het recyclagepark staat duidelijk vermeld in Artikel 2 “De lijst van de afval- en materiaalstromen die dienen aanvaard te worden op het recyclagepark, wordt bepaald door IVM in overleg met de gemeente Lievegem. Deze lijst wordt opgenomen in het politiereglement/huishoudelijk reglement van de gemeente Lievegem”. In welk reglement werd deze regeling opgenomen? In onze gemeente is het sluikstorten een groot probleem, door het niet toelaten of betalend maken van plasticfolie wordt het sluikstorten alleen maar aangemoedigd, wij vragen dan ook om deze maatregel te herbekijken.Antwoord schepen Van Brabandt:Is inderdaad zo dat men geen plasticfolie meer toelaat op het recyclagepark, maar dat is geen beslissing van de gemeente maar van Fostplus.  De schepen geeft toelichting over wie Fostplus is en hoe die werkt, en dat ze logischerwijs inspraak wil in de werking van recyclageparken en in die zin dan ook opdracht geeft aan IVM dat die plasticfolies niet meer naar de recyclageparken mogen en in de P+MD-zak moet, maar niet in de witte zak.Maar dit kost niet meer geld voor de inwoner: PMD-zakken mochten al lang niet meer naar het park, grote folies konden wel nog aanvaard worden, maar in de praktijk staken de mensen die in de witte zak. Door de invoering van de P+MD-zak mochten er plots heel wat plastic verpakkingen die vroeger in de restafvalzak van € 1,50 moesten in de goedkopere P+MD-zak van € 0,125. Zo wordt er meer materiaal gerecycleerd, komt dit goedkoper uit voor de inwoners en worden er veel minder PMD-zakken geweigerd. Ik sta hier alleszins achter.Wat betreft de lijst van de niet-aanvaarde afvalstoffen en de aanvaarde afvalstoffen. Beide lijsten zijn opgenomen in de politieverordening voor afvalstoffen van 18.12.2019, respectievelijk in art 1.6 en art 6.6.Plastic folie hoort nog steeds thuis op de lijst met de aanvaarde afvalstoffen (art 6.6), alleen de sorteer- en recyclagemodaliteiten (m.a.w. de acceptatiecriteria) zijn gewijzigd. Dergelijke wijzigingen zijn ook voorzien in art 6.6:Bovenstaande lijst en de specificaties kunnen door het college van burgemeester en schepenen worden aangepast in functie van wettelijke wijzigingen of wijzigingen inzake de sorteer- en recyclagemodaliteiten. 
+                                                             3. Schriftelijke vraag van raadslid Didier Garré: leerlingen met migratieachtergrond in Lievegemse scholen en gemeenteschool 
+                                                            Vraag aan schepen Fredrick over discriminatie op school:Waarschijnlijk heeft u als schepen ook het artikel 'kleuterscholen discrimineren bij de inschrijving van nieuwe leerlingen' in de krant gelezen. Het gaat echter niet alleen over de kleuters maar ook over leerlingen van het lager onderwijs. Is het mogelijk om ons de gegevens te bezorgen hoeveel leerlingen met migratieachtergrond er naar de Lievegemse scholen gaan en hoeveel daarvan er in onze gemeenteschool ingeschreven zijn?Antwoord schepen Fredrick:Er zijn momenteel 157 leerlingen in Lievegem basisonderwijs uit een gezin niet Nederlandssprekend en daarvan gaan er 33 naar de gemeentescholen.  
+                                                            4. Mondelinge vraag van raadslid Patricke Dossche: aanvullende hulp/dienstverlening door coronacrisis 
+                                                            Vraag aan schepen De Graeve: Door de coronacrisis komen meer mensen in de problemen. In sommige gemeenten geeft men aanvullende hulp/steunverlening.  Is dat in Lievegem ook? En wat is hier de ervaring mee? 
+                                                            Antwoord schepen De Graeve: We geven inderdaad extra financiële steun omwille van corona. Hiervoor zijn vanuit de hogere overheden en in het eigen relanceplan tal van budgetten vrijgemaakt.  We hebben dit ook voorgelegd aan het Bijzonder ComitéSD en gekeken waar kunnen we  financiële steun geven of ingrijpen.  Hiervoor zijn verschillende standpunten en ook diverse (maandelijkse en structurele) mogelijkheden die we beiden hebben toegepast: sommige leefloon opgetrokken,  consumptiebudget via lievegembonnen opgetrokken, maar dus ook gekeken naar structurele maatregelen zoals de digitale achterstand en vooral dan ook bij kinderen die opgroeien in kansarme gezinnen helpen bij afstandsonderwijs.  Samen met Eeklo bekijken we dit om heel snel te kunnen schakelen om die digitale vaardigheden zowel van de kinderen als hun ouders te verhogen samen met de scholen.Ook in ons relanceplan: voor zelfstandigen in moeilijkheden gaan we samenwerken met interregionale verenigingen. En tenslotte hebben we ook al afgesproken om het sociaal verslag minder streng te maken, rechten nog niet automatisch toekennen, maar wel soepeler.   Bedoeling is ook om nu de 'nieuwe' armen meer binnen te trekken binnen het ocmw, we hebben inderdaad meer mensen in de problemen, maar niet zo exponentieel zoals men wel zou verwachten. 
+                                                              
+                                                            5. Mondelinge vraag van raadslid Patrick Dossche: gebruik van app 'MyBEnefits' Vraag aan schepen De Graeve: er is een app ontwikkeld voor mensen uit kwetsbare groepen 'MyBEnefits' om gemakkelijker voordelen en kortingen te kunnen krijgen.  In september/oktober is dit kort in Lievelink verschenen.  Minister De Block vraagt dat ook de lagere overheden hier mee aan de slag gaan.  Gaan jullie hier meer rond communiceren? Doen jullie iets met die app en gebruikt men dit in de gemeentelijke diensten?En wanneer een persoon die app niet kan gebruiken (kunnen niet goed omspringen met digitale tools, in welke mate helpt men binnen het ocmw of gaat men op zoek om hiermee te helpen? 
+                                                            Antwoord schepen De Graeve: Dit sluit ook aan bij het vorig punt, we werken sterk op digitale ondersteuning. Hierbij is het steeds belangrijk om het totale plaatje te bekijken. Maar ik zou het moeten navragen bij team welzijn hoe het gebruik van de app verloopt?   
+                                                            Team welzijn: in welke mate wordt de app 'MyBEnefits' door jullie team gebruikt, ondersteund en bekendgemaakt?   
+                                                            6. Mondelinge vraag van raadslid Patrick Dossche: bewonersoverleg Den Boer 
+                                                            Vraag aan schepen Van Acker: op de vorige raad was er gezegd dat er een bewonersoverleg zou plaatsvinden in de loop van juli omtrent de plannen in Den Boer, maar dat is niet gebeurd, waarom niet? 
+                                                            Antwoord schepen Van Acker:  Sinds eind juni hebben we ook naar andere pistes gekeken en in die zin zou het mogelijk kunnen zijn dat het  niet meer nodig zal zijn om samen te komen.  
+                                                            7. Mondelinge vraag van raadslid Annemie De Bie: wanneer Gemina en mobiliteitsraad samenkomen? 
+                                                            Vraag aan schepen De Wispelaere: het is een terugkerende bezorgdheid: adviesraden wanneer weer samenkomen, corona mag geen excuus blijven, vooral dan de Gemina en de mobiliteitsraad.  Heel belangrijk dat die raden geïnformeerd worden, zie ook de vooruitgang van het mobiliteitsplan. 
+                                                            Antwoord door de burgemeester bij afwezigheid van schepen De Wispelaere: vorige week vergadering gehad omtrent het mobiliteitsplan, algemeen proberen we weer fysiek samen te komen, maar de organisatie van de adviesraad ligt bij de voorzitter, niet bij het college.  Nu wat het mobiliteitsplan betreft: Veneco zal met een firma dit plan opmaken samen met onze mobiliteitsambtenaar, we gaan iets experimenteel doen.  Er zal een platform komen waar je per straat een actie kan voorstellen.  Bedoeling zou zijn dat mensen actief voorstellen kunnen doen en anderen daar kunnen op reageren.  Daarnaast ook andere kanalen dan digitaal.We hebben nu een snelheidsplan zoals in Lovendegem, maar wel nog onder voorbehoud gezien nog politiek af te toetsen en bedoeling dat nu al te implementeren op die kaart.  En we zouden dit platform ook kunnen uitwerken als meldingsmodule van verkeersproblemen of opmerkingen omtrent het wegdek.   
+                                                            8. Mondelinge vraag van raadslid Annemie De Bie: voetpaden 
+                                                            Vraag aan schepen De Wispelaere en Haegeman: de voetpaden in Lievegem zijn soms heel smal of liggen er niet goed bij: rollators en rolstoelen problemen o.a. Keerstraatjes, Kleitstraat, Zandstraat, Dreef .... 
+                                                            Antwoord door de burgemeester: Momenteel zijn we nog bezig met de uitbouw van team infrastructuur.  Na twee jaar een openstaande vacature van deskundige wegen zal dit eindelijk binnenkort kunnen worden opgevuld en staat de teamleider infra wegen/mobiliteit er niet meer alleen voor.  We hebben inderdaad veel smalle voetpaden zoals de Dreef, hiervoor zijn geen werken voorzien in MJP, wel voor de andere straten in dorpscentrum Zomergem zoals Dekenijstraat en aanliggende met het rioproject.  We kunnen wel punctuele punten aanpassen zoals nu in de Dreef ter hoogte van een winkel door vervanging autoparkeerplaats door fietsenstalling en hierdoor meer ruimte op voetpad.  Of in de Kleitstraat: door een bouwproject wordt een breder voetpad aangelegd. 
+                                                            Schepen Haegeman vult aan: er is niks verwerkt in MJP voor Keerstraatje, er is me geen probleem bekend, maar je mag dit doorgeven, we zullen het nakijken. 
+                                                              
+                                                            9. Mondelinge vraag van raadslid Annemie De Bie: bomenkap Bauwerwaan 
+                                                            Vraag aan schepen Haegeman: er zouden daar 81 platanen gekapt worden?  Inderdaad problemen met opritten, maar tegenwoordig moeten we volwassen gezonde bomen koesteren, straks wordt het erfgoed.  Graag de stand van zaken. 
+                                                            Antwoord door schepen Haegeman: inderdaad een probleem door bomen barsten in huizen en opritten. Aanvankelijk gepland alle bomen te kappen, maar nu beperkter bekijken en beperken tot de 6 bomen die dringend moeten gekapt worden om die schade te vermijden. En voor de andere zal een plan van aanpak worden opgemaakt, ook al om een homogeen straat beeld te geven 10. Mondelinge vraag van raadslid Wouter De Muynck: inventarisatie bouwrisico's corona in scholen 
+                                                            Vraag aan schepen Fredrick: hier in deze locatie is er ventilatie, wat een goede zaak is, en nu kunnen de ramen nog open staan, het is aan aangename zomeravond.   Ik stel me de vraag of er al een inventarisatie is gebeurd van de situatie in de scholen, herfst/winter staat voor de deur voor de deur, dan is het minder vanzelfsprekend dat de ramen open staan. Ik vraag dus als er al een inventarisatie is gebeurd van de risico's in de scholen en de eventuele bijkomende investeringen en oplijsting ervan die misschien noodzakelijk zullen zijn om dat te kunnen tewerkstellen.Antwoord door schepen Fredrick: ik zal dit moeten navragen.  We hebben wel een risico-analyse gemaakt omtrent de werking van de school in corona, maar niet specifiek in die zin.Team infra patrimonium/directeur school in overleg met schepen Fredrick n.a.v. vraag raadslid Wouter De Muynck: 'in het raadzaal Kasteeldreef 72 is er ventilatie, wat een goede zaak is, en nu kunnen de ramen nog open staan, het is aan aangename zomeravond.   Ik stel me de vraag of er al een inventarisatie is gebeurd van de situatie in de scholen, herfst/winter staat voor de deur voor de deur, dan is het minder vanzelfsprekend dat de ramen open staan. Ik vraag dus als er al een inventarisatie is gebeurd van de risico's in de scholen en de eventuele bijkomende investeringen en oplijsting ervan die misschien noodzakelijk zullen zijn om dat te kunnen tewerkstellen.'  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a> a ns3:Agendapunt ;
+    ns3:geplandOpenbaar true ;
+    ns2:uuid "efe28c40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" .
+

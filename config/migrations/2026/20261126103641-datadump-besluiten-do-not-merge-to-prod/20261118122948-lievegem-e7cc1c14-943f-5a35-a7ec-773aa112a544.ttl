@@ -1,0 +1,79 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5c8359d9-ca98-4398-94a1-09d22851416f> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0fd9dfd4-266e-4942-93cc-62bd161a269e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2cfbe131-2f70-463d-93e2-ef7cb2e845ba>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/55373a14-5942-4ca3-9565-1340caf7d45a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1b2c269-b17e-4615-9202-f86af016c08b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a6a6e64e-707e-4790-9e6c-9570884476ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b2826de5-5f04-4b22-85c6-6cce73d5b093>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e10f28b5-14fb-4081-b80e-fecbd5d43462> ;
+    ns1:geplandeStart "2025-06-10T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/75948179-3599-41c9-81bc-8a05d8cf5cee> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "ce9b0fc2-665c-5a41-bd0c-0b981a3adbc4" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-06-10T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0fd9dfd4-266e-4942-93cc-62bd161a269e> ;
+    ns1:openbaar false ;
+    ns2:uuid "d63b12a1-f356-5d6b-906d-157ebcdd42c0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/238ec36f-be32-4d96-ae2c-f9936d23cd9b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/238ec36f-be32-4d96-ae2c-f9936d23cd9b> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van Stopzetting Beenhouwerij Versavel-Poelman' van 17 juni 2025 van 7.30 uur tot en met 25 juni 2025 21.30 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Stopzetting Beenhouwerij Versavel-Poelman': vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 10 juni 2205 over de aanvraag evenement Stopzetting Beenhouwerij Versavel-Poelman - Beenhouwerij Versavel-Poelman: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Lieven Versavel organiseert een receptie naar aanleiding van stopzetting Beenhouwerij Versavel-Poelman op 21 juni 2025 van 8.00 uur tot en met 21.00 uur.Er werd op 21 mei 2025 een aanvraag ingediend door Lieven Versavel, om tijdens deze organisatie verkeersmaatregelen te treffen. Er zal een tent geplaatst worden en er is extra tijd nodig voor de op- en afbouw.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "e7cc1c14-943f-5a35-a7ec-773aa112a544" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Stopzetting Beenhouwerij Versavel-Poelman' van 17 juni 2025 van 7.30 uur tot en met 25 juni 2025 21.30 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod ter hoogte van Zandstraat 54, 9930 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                     
+                                    Van zodra de tent afgebroken is, zullen de parkeerverbodsborden aan de kant geplaatst worden. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/238ec36f-be32-4d96-ae2c-f9936d23cd9b> a ns1:Agendapunt ;
+    ns2:uuid "263aa1d3-b152-5a3a-82d9-368d5267689e" .
+

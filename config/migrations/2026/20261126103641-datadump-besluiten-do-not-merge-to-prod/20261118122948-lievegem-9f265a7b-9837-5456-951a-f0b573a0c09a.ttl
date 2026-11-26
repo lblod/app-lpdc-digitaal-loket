@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/9c3b2ca2-c376-4f13-8ccb-6cbaebb4c215> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6764a370-de4b-44a1-aa54-e27b098f10cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/715072f0-a2f4-46fa-82f2-e63921668d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f75d37f-4196-4742-84f0-a8e5a5e09194>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd178f6e-0345-4e50-b781-f313f2b66e97>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> ;
+    ns3:geplandeStart "2025-03-04T13:30:00+01:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/13c96b1d-823f-4d31-a447-a9065b3591e0> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "2f9755bd-55ae-5d40-9ca0-3f6480e156a1" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-03-04T13:35:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bd178f6e-0345-4e50-b781-f313f2b66e97> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> ;
+    ns3:openbaar false ;
+    ns1:uuid "b45e2b52-a2c9-5dde-8372-47ba532dda8e" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd178f6e-0345-4e50-b781-f313f2b66e97> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/bd178f6e-0345-4e50-b781-f313f2b66e97> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/bd178f6e-0345-4e50-b781-f313f2b66e97> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Schoolfeest Vinderhoute' op 17 mei 2025 wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Schoolfeest Vinderhoute' - GBS Lievegem - Vinderhoute: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 14 januari 2025 over de aanvraag signalisatievergunning Ondernemingen N. Vindevogel nv - Schouwbroekstraat, 9921 Lievegem: goedkeuringHet besluit van het college van burgemeester en schepenen van 4 maart 2025 over de aanvraag evenement Schoolfeest Vinderhoute - GBS Lievegem - Vinderhoute: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Lode Wytynck, namens GBS Lievegem - Vinderhoute, organiseert 'Schoolfeest Vinderhoute' op 17 mei 2025 van 12.00 uur tot en met 20.00 uur.Er werd op 21 januari 2025 een aanvraag ingediend door Lode Wytynck, namens GBS Lievegem - Vinderhoute, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    De wegeniswerken in Schouwbroekstraat zullen nog niet afgerond zijn wanneer het schoolfeest plaatsvindt. Er dient rekening gehouden te worden met de wegomlegging voor deze werken. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns1:uuid "9f265a7b-9837-5456-951a-f0b573a0c09a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement van 'Schoolfeest Vinderhoute' op 17 mei 2025 wordt vastgesteld als volgt: 
+                                    1. Vanaf 9.00 uur tot en met 20.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod vanaf oprit Vredesdreef 18 tot en met kruispunt Vredesdreef/Schouwbroekstraat, 9921 Lievegem 
+                                     
+                                     2. Vanaf 12.00 uur tot en met 20.00 uur: 
+                                     
+                                        Afsluiten van de rijweg vanaf Vredesdreef 18 tot en met kruispunt Vredesdreef/Schouwbroekstraat, 9921 Lievegem 
+                                        Wegomlegging van wegeniswerken Schouwbroekstraat te volgen, via Pastoor Moernautstraat - Neerstraat - Speystraat 
+                                     
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Vanaf 9.00 uur tot en met 20.00 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                    2. Vanaf 12.00 uur tot en met 20.00 uur: 
+                                     
+                                        Nadar + C3 aan beide zijden van de af te sluiten zone: aan oprit Vredesdreef 18 en aan kruispunt Vredesdreef/Schouwbroekstraat, 9921 Lievegem 
+                                        Nadar + C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45 op kruispunt Dorsweg/Vredesdreef 
+                                        Bord F41 op kruispunt Dorsweg/Vredesdreef 
+                                     
+                                     
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bd178f6e-0345-4e50-b781-f313f2b66e97> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd178f6e-0345-4e50-b781-f313f2b66e97> a ns3:Agendapunt ;
+    ns1:uuid "45dec24e-6797-5fdc-ba52-98e8ff672d5f" .
+

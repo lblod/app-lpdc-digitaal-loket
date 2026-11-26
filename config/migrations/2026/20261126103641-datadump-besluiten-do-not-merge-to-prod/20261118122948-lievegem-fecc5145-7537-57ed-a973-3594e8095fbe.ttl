@@ -1,0 +1,84 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/890546c3-5054-48b6-bff8-dc34d423b6a0> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2ea57039-cfcf-4fb0-aca1-2beb34992c1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d52b6b9-1e34-4503-a203-3afd3769ec8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/884e8fdb-8702-4a9f-b2ec-e5fabe2e998e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f3502d69-475c-47f5-b7da-ea7ab54845f9> ;
+    ns1:geplandeStart "2026-05-26T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/756d2298-914d-414b-bf0c-8283361912e9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "5686b9fa-9b51-59be-9e7e-94da26ba15a3" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-05-26T13:32:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2ea57039-cfcf-4fb0-aca1-2beb34992c1f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/521a4077-4dff-45f8-8eac-f3a1a0e13d18> ;
+    ns1:openbaar false ;
+    ns2:uuid "3b0720b2-dd45-59bd-aa4a-4d4ca34a7387" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2ea57039-cfcf-4fb0-aca1-2beb34992c1f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2ea57039-cfcf-4fb0-aca1-2beb34992c1f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2ea57039-cfcf-4fb0-aca1-2beb34992c1f> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Martinus zomer VTT - Les Collines' op 13 juni 2026 van 6.30 uur tot en met 18.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Martinus zomer VTT - Les Collines' - Sportvereniging Zomergem VZW: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 26 mei 2026 over de aanvraag evenement veldtoertocht Martinus zomer VTT en cyclotocht Les Collines - Sportvereniging Zomergem Vzw: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Chris De Neve, namens Sportvereniging Zomergem VZW organiseert 'Martinus zomer VTT - Les Collines' op 13 juni 2026 van 6.30 uur tot en met 18.00 uur.Er werd op 12 november 2025 een aanvraag ingediend door Chris De Neve, namens Sportvereniging Zomergem VZW om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                    Aan de aanvrager wordt gevraagd om op hun reclame, website, facebookpagina,... ook alternatieve parkings te vermelden en/of aan te duiden. 
+                                 
+                            """@nl ;
+    ns2:uuid "fecc5145-7537-57ed-a973-3594e8095fbe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Martinus zomer VTT - Les Collines' op 13 juni 2026 van 6.30 uur tot en met 18.00 uur wordt vastgesteld als volgt: 
+                                    1. Parkeerverbod in volgende straten: 
+                                     
+                                        Tennislaan: kant van de even nummers + aan de overzijde ter hoogte van de sportsite (tegenover huisnummers 10 tot 36). De dwarse parkeerplaatsen aan de sporthal blijven beschikbaar 
+                                        Den Boer en Tulpenlaan: kant van de even huisnummers 
+                                        Sportlaan en Begonialaan: kant van de oneven huisnummers 
+                                     
+                                    
+                                        2. Uitgezonderd plaatselijk verkeer in Tennislaan.
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Borden E3 
+                                    2. nadar + C3 + 'uitgezonderd plaatselijk verkeer' ter hoogte van kruispunt Tennislaan/Den Boer en ter hoogte van Tennislaan/Azaleastraat. 
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. Parkeerverbodsborden mogen wel blijven staan. 
+                                    Artikel 4 
+                                    Aan de aanvrager wordt gevraagd om op hun reclame, website, facebookpagina,... ook alternatieve parkings te vermelden en/of aan te duiden. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2ea57039-cfcf-4fb0-aca1-2beb34992c1f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2ea57039-cfcf-4fb0-aca1-2beb34992c1f> a ns1:Agendapunt ;
+    ns2:uuid "74a5f3c1-63e7-569e-8c7f-deb75a082284" .
+

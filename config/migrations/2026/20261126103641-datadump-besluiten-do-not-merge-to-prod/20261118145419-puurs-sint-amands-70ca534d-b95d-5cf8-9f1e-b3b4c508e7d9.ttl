@@ -1,0 +1,246 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/035dd634-3ca5-40ee-87e2-93176f8113e2> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/112d513a-bf2a-4818-a34a-8633890f0a10>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2b822a59-5b79-46cc-8a46-9f3656b59e78> ;
+    ns2:geplandeStart "2026-06-16T20:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/29d16505-3a56-4e99-a9d0-649276b186f5> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "527ce5e3-f1e8-5a38-8023-6744420464b2" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-06-16T20:37:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2b822a59-5b79-46cc-8a46-9f3656b59e78> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/112d513a-bf2a-4818-a34a-8633890f0a10> ;
+    ns2:openbaar false ;
+    ns3:uuid "75510012-fe24-5db5-a4ea-f569e4ff189a" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2b822a59-5b79-46cc-8a46-9f3656b59e78> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/2b822a59-5b79-46cc-8a46-9f3656b59e78> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/2b822a59-5b79-46cc-8a46-9f3656b59e78> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:title "Aanpassing Protocolakkoord GAS2 en GAS3  - Goedkeuring",
+        "Aanpassing Protocolakkoord GAS2 en GAS3 - Goedkeuring" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    In februari 2024 werden er belangrijke wijzigingen doorgevoerd in het strafwetboek, die eveneens een invloed hebben op de GAS-wetgeving en de Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands. Het nieuwe strafwetboek zal in werking treden op 1 september 2026. Om te vermijden dat bepaalde gedragingen ongestraft zouden kunnen blijven, wordt de Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands aangepast.  
+                                    Op basis van de aanpassingen in de ABP dient ook het protocolakkoord GAS2 en GAS3 met de procureur des Konings aangepast te worden, om de afspraken met betrekking tot de behandeling van de gemengde inbreuken aan de passen aan de nieuwe bepalingen van het strafwetboek.  
+                                    Het College van Burgemeester en Schepenen dient bijgevolg het aangepaste protocolakkoord goed te keuren en te ondertekenen. Dit protocolakkoord zal – na ondertekening door het parket en de politiezone – worden voorgelegd aan de gemeenteraad ter bekrachtiging. 
+                                 
+                                 
+                                    Juridische grond 
+                                    Volgende bevoegdheidsgrond en regelgeving is van toepassing:   
+                                    Bevoegdheidsgrond  
+                                     
+                                        het Decreet over het lokaal bestuur van 22 december 2017, artikel 56  
+                                     
+                                    Toepasselijke regelgeving 
+                                     
+                                        artikelen 119bis, 123, 133ter en 135 §2 van de Nieuwe Gemeentewet 
+                                        de Wet van 24 juni 2013 betreffende de gemeentelijke administratieve sancties (hierna “GAS-wet” genoemd), inclusief latere wijzigingen, in het bijzonder de artikelen 3 en 23, §1 
+                                        de Wet van 15 januari 2024 betreffende de gemeentelijke bestuurlijke handhaving, de instelling van een gemeentelijk integriteitsonderzoek en houdende oprichting van een Directie Integriteitsboordeling voor Openbare Besturen (hierna “Wet Bestuurlijke Handhaving” genoemd), in het bijzonder artikel 45 
+                                        het KB van 21 december 2013 tot vaststelling van de nadere voorwaarden en het model van het protocolakkoord in uitvoering van artikel 23 van de wet betreffende de gemeentelijke administratieve sancties 
+                                        het protocolakkoord betreffende de gemeentelijke administratieve sancties GAS2 en GAS3, zoals bekrachtigd door de gemeenteraad van 29 april 2024 
+                                        de Algemene Bestuurlijke Politieverordening Puurs-Sint-Amands, waarvan een aangepaste versie ter goedkeuring zal worden voorgelegd op de gemeenteraad van 29 juni 2026. 
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Artikel 3, 1° en 2° van de GAS-wet bepaalt dat de gemeenteraad in zijn reglementen of verordeningen kan voorzien in een administratieve sanctie voor verschillende inbreuken op het Strafwetboek (de zogenaamde ‘gemengde inbreuken’). Hiervoor dient een protocolakkoord te worden afgesloten tussen de bevoegde Procureur des Konings en het college van burgemeester en schepenen. Dit protocol legt op voorhand de afspraken vast onder welke voorwaarden een PV gemengde inbreuk ofwel dient te worden behandeld door het parket ofwel door de sanctionerend ambtenaar. Het protocol respecteert alle wettelijke bepalingen betreffende de voorziene procedures voor de overtreders en mag niet afwijken van hun rechten.  
+                                    Op basis van deze bepaling werd in november 2015 een protocolakkoord GAS2 en GAS3 opgesteld tussen de gemeente Puurs-Sint-Amands en de Procureur des Konings van Antwerpen. Dit protocolakkoord werd de laatste keer aangepast in maart 2025 en bekrachtigd door de gemeenteraad op 29 april 2024.  
+                                    Gelet op de inwerkingtreding van het nieuwe strafwetboek op 1 september 2026, dient de tekst van het protocolakkoord te worden aangepast aan de nieuwe omschrijvingen van de gemengde inbreuken.  
+                                    De tekst van het protocolakkoord werd reeds afgestemd met de procureur, hij gaf hieraan zijn goedkeuring.  
+                                    Aan het college wordt gevraagd om het bijgevoegde protocolakkoord goed te keuren. 
+                                 
+                            """@nl ;
+    ns3:uuid "70ca534d-b95d-5cf8-9f1e-b3b4c508e7d9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Het protocolakkoord GAS2 en GAS3, zoals bekrachtigd door de gemeenteraad van Puurs-Sint-Amands in de zitting van 29 april 2024, wordt, met ingang van 1 september 2026, vervangen door het onderstaande protocolakkoord GAS2 en GAS3.  
+                                    PROTOCOLAKKOORD 
+                                     BETREFFENDE DE GEMEENTELIJKE ADMINISTRATIEVE SANCTIES  
+                                    GAS 2 EN GAS 3  
+                                    I. PARTIJEN 
+                                    De gemeente Puurs-Sint-Amands, vertegenwoordigd door haar College van Burgemeester en Schepenen, vertegenwoordigd door de heer Koen VAN DEN HEUVEL, burgemeester en mevrouw Ellen DE VOS, algemeen directeur 
+                                    De procureur des Konings van het gerechtelijk arrondissement Antwerpen, vertegenwoordigd door de heer Franky De Keyzer 
+                                    De korpschef van de politiezone Rivierenland, de heer Yves Bogaerts.  
+                                    II. JURIDISCHE GROND 
+                                    Artikel 23, §1, eerste lid van de wet van 24 juni 2013 betreffende de gemeentelijke administratieve sancties (hierna de ‘GAS-wet’), gepubliceerd in het Belgisch Staatsblad op 1 juli 2013, bepaalt dat een protocolakkoord kan worden afgesloten tussen de procureur des Konings en het college van burgemeester en schepenen, voor wat de gemengde inbreuken betreft (uitgezonderd verkeersinbreuken). 
+                                    Artikel 3, 1° en 2°, van de GAS-wet bepaalt dat de gemeenteraad in zijn reglementen of verordeningen kan voorzien in een administratieve sanctie voor volgende inbreuken op het Strafwetboek: 
+                                     
+                                        Artikel 194 
+                                        Artikel 198, 1° 
+                                        Artikel 244 
+                                        Artikel 463 
+                                        Artikel 423 
+                                        Artikel 424 
+                                        Artikel 465 
+                                        Artikel 466, 2° 
+                                        Artikel 514 
+                                        Artikel 515 
+                                        Artikel 516 
+                                        Artikel 517 
+                                        Artikel 666 
+                                     
+                                    Artikel 18 van de wet van 10 november 2006 betreffende de openingsuren in handel, ambacht en dienstverlening voor wat betreft de voorafgaande vergunning die kan worden opgelegd bij gemeentelijk reglement 
+                                    Artikelen 119bis en 135, § 2 van de Nieuwe Gemeentewet en artikel 57, § 2 van het Gemeentedecreet 
+                                    De Algemene Bestuurlijke Politieverordening (ABP) Puurs-Sint-Amands, goedgekeurd door de gemeenteraad op 4 maart 2024 en latere wijzigingen.    
+                                    III. TOEPASSINGSGEBIED 
+                                    De bepalingen van de GAS-wetgeving en van dit protocolakkoord zijn van toepassing op meerderjarigen en op minderjarigen, die op het ogenblik van de feiten de volle leeftijd van 14 jaar hebben bereikt. 
+                                    De GAS-procedure wordt enkel toegepast indien conform de wettelijke voorwaarden de gemengde inbreuken zich voordoen als een vorm van openbare overlast. 
+                                    Dit impliceert dat de GAS-procedure niet zal worden toegepast voor gemengde inbreuken waarvan de gevolgen zich enkel situeren binnen de privésfeer van de entiteit (bv. de woning, kantoor) waar de inbreuk plaatsvond. Kan niet beschouwd worden als “privésfeer”: de openbare wegen, openbaar of publiek toegankelijke plaatsen of openbare en publiek toegankelijke gebouwen. 
+                                    Dit protocol respecteert alle wettelijke bepalingen inzake de voorziene procedures voor de overtreders en mag niet afwijken van hun rechten.  
+                                    IV. IN DIT PROTOCOLAKKOORD WORDT OVEREENGEKOMEN HETGEEN VOLGT 
+                                    Artikel 1 – Uitwisseling van informatie 
+                                    a. Alle partijen verbinden zich ertoe samen te werken en elkaar te informeren binnen de grenzen van hun bevoegdheden en zij verzekeren de vertrouwelijkheid van deze uitwisseling. 
+                                    Daartoe duidt de procureur des Konings één of meer magistraten van zijn arrondissement aan, hierna “referentiemagistraten GAS” genoemd (een referentiemagistraat gemeen recht en een referentiemagistraat jeugd). De referentiemagistraten kunnen door de gemeente Puurs-Sint-Amands gecontacteerd worden in geval van moeilijkheden bij het toepassen van de wet of onderhavig akkoord of om informatie te verkrijgen over het gevolg gegeven aan bepaalde processen-verbaal. 
+                                    b.. De partijen verbinden zich ertoe om iedere wijziging van de contactgegevens van voornoemde personen onverwijld aan elkaar te melden. 
+                                    De sanctionerend ambtenaren worden aangesteld door de gemeenteraad. 
+                                    c. Indien de gemeente Puurs-Sint-Amands beslist om een politieverordening of een politiereglement op te stellen of bestaande verordeningen of reglementen te wijzigen en aan hun schending de mogelijkheid van een administratieve sanctie te koppelen, verbindt zij zich ertoe om binnen de termijn van één maand na publicatie en bekendmaking op de website van de gemeente Puurs-Sint-Amands een elektronische versie van deze verordeningen of reglementen over te maken aan de procureurs des Konings én aan de referentiemagistraten.  
+                                    Artikel 2 – Behandeling van de gemengde inbreuken, zoals bedoeld in artikel 3, 1° en 2°, van de GAS-wet 
+                                    a. Afspraken bij de behandeling van de gemengde inbreuken 
+                                    1. De processen-verbaal ten laste van meerderjarigen of minderjarigen vanaf 14 jaar die betrekking hebben op de inbreuken, zoals bedoeld in bijlage 2, worden door de procureur des Konings behandeld overeenkomstig zijn vervolgingsbeleid, zonder tussenkomst van de sanctionerend ambtenaar. 
+                                    2. De procureur des Konings verbindt zich ertoe om, onder de voorwaarden en modaliteiten bepaald in artikel 2.b van dit protocolakkoord, aan de processen-verbaal ten laste van meerderjarigen en minderjarigen vanaf 14 jaar, die betrekking hebben op inbreuken zoals bedoeld in bijlage 1, geen gevolg te geven.  De gemeente Puurs-Sint-Amands verbindt zich ertoe deze af te handelen, onverminderd de soevereine beoordelingsvrijheid van de behandelende sanctionerend ambtenaar. 
+                                    Afschrift van deze processen-verbaal zullen (bij geïdentificeerde daders) rechtstreeks aan de sanctionerend ambtenaren worden overgemaakt. 
+                                    De klassieke processen-verbaal lastens minderjarigen worden in origineel overgemaakt aan het parket (sectie jeugd en gezin) en een afschrift ervan aan de sanctionerend ambtenaar die ten gepaste tijde het parket bevraagt of dat de GAS-procedure kan worden opgestart of niet. Het parket zal zijn beslissing, buiten de hieronder vermelde voorwaarden die reeds politioneel werden gecontroleerd, laten afhangen van het gegeven of de betrokken minderjarige reeds onder toezicht staat van de jeugdrechter of niet.  
+                                    3. De procureur des Konings verbindt zich ertoe om, onder de voorwaarden en modaliteiten bepaald in artikel 2.b van dit protocolakkoord, aan de processen-verbaal ten laste van  minderjarigen vanaf 14 jaar, die betrekking hebben op inbreuken zoals bedoeld in bijlage 3, geen gevolg te geven.  De gemeente Puurs-Sint-Amands verbindt zich ertoe deze af te handelen, onverminderd de soevereine beoordelingsvrijheid van de behandelende sanctionerend ambtenaar. 
+                                    De klassieke processen-verbaal lastens minderjarigen worden in origineel overgemaakt aan het parket (sectie jeugd en gezin) en een afschrift ervan aan de sanctionerend ambtenaar die ten gepaste tijde het parket bevraagt of dat de GAS-procedure kan worden opgestart of niet. Het parket zal zijn beslissing, buiten de hieronder vermelde voorwaarden die reeds politioneel werden gecontroleerd, laten afhangen van het gegeven of de betrokken minderjarige reeds onder toezicht staat van de jeugdrechter of niet. 
+                                    4. De partijen verbinden zich ertoe bij de afhandeling de herstelgerichte gedachte maximaal te benutten. 
+                                    5. De in de wet voorziene kennisgevingen zoals voorzien in artikel 23, §2, van de GAS-wet worden opgevangen door  de gemaakte afspraak om geen gevolg te geven aan de processen-verbaal, zoals bepaald in huidig protocol. De sanctionerend ambtenaar dient het verstrijken van de termijn van twee maanden dus niet af te wachten. De sanctionerend ambtenaar kan vanaf ontvangst van het afschrift van het proces-verbaal de GAS-procedure opstarten.  
+                                    b. Algemene modaliteiten bij de behandeling van de gemengde inbreuken 
+                                    Voor de feiten in de zin van artikel 423 SWB en artikel 424 SWB  (gezicht geheel of gedeeltelijk bedekken of verbergen, zodat men niet herkenbaar is) en artikel 666 SWB (zegelverbreking) wordt de GAS-procedure altijd opgestart. 
+                                    Voor de overige feiten zoals bedoeld in bijlage 1 wordt een proces-verbaal enkel onder de volgende voorwaarden niet behandeld door de procureur des Konings en wordt de GAS-procedure opgestart: 
+                                     
+                                        het materiële nadeel is op het ogenblik van de aangifte kleiner of gelijk aan 1.000 euro, zoals blijkt uit hetzij de aanvankelijke aangifte, hetzij de gevoegde stukken (facturen, kastickets, bestekken,…), hetzij een initiële raming; 
+                                        de feiten lijken niet te kaderen in een ruimere strafrechtelijke problematiek en/of context zoals intrafamiliaal geweld, het georganiseerd karakter van de feiten,…; 
+                                        de dader van het feit heeft geen gelijkaardige voorgaanden in de afgelopen twee jaar (blijkens Algemene Nationale Gegevensbank bij de Politie), zoals blijkt uit de vaststelling van de politie. 
+                                     
+                                    Indien feiten bedoeld in dit protocolakkoord samenhangen met andere feiten die niet in aanmerking komen voor administratieve sancties en die volgens het instroombeleid van het parket verstuurd moeten worden naar het parket, worden deze feiten behandeld door de procureur des Konings en wordt de GAS-procedure niet opgestart.  
+                                    c. Bijzondere modaliteiten bij de behandeling van de gemengde inbreuken 
+                                    1. De feiten dienen op grond van de vaststellingen vast te staan. De sanctionerend ambtenaar beschikt over de mogelijkheid om bijkomende informatie op te vragen bij de vaststellers indien hij dit noodzakelijk acht na lezing van het proces-verbaal of na verweer van de overtreder. Deze modaliteit laat de soevereine beoordeling van de sanctionerend ambtenaar inzake de bewezenverklaring, toerekening en kwalificatie van de feiten onverlet. 
+                                    2. Indien de bevoegde sanctionerend ambtenaar, tijdens het toepassen van de procedure tot het opleggen van een gemeentelijke administratieve geldboete, vaststelt dat de verdachte zich ook schuldig heeft gemaakt aan andere misdrijven, draagt hij het dossier over aan de Procureur des Konings, overeenkomstig artikel 29 van het Wetboek van Strafvordering. 
+                                    Rekening houdend met de aard van de aangegeven feiten beslist de procureur des Konings of hij zich verbindt tot het geven van een gevolg voor het geheel van de feiten, met inbegrip van het feit waarvoor de administratieve procedure werd ingesteld. Hij brengt de sanctionerend ambtenaar daarvan op de hoogte binnen de termijn van 2 maanden na ontvangst van het dossier. 
+                                    3. Als het gaat om vaststellingen met een onbekende verdachte, zal er geen afschrift van het proces-verbaal worden overgemaakt aan de sanctionerend ambtenaar.  
+                                    Artikel 3 – Wijzigingen 
+                                    Elke wijziging aan huidig protocolakkoord kan worden aangebracht bij wijze van addendum, behoorlijk te dagtekenen en te ondertekenen door alle partijen vermeld in de aanhef van huidig protocolakkoord.  
+                                    Dit protocolakkoord treedt in werking op 1 september 2026. 
+                                    Opgemaakt te Puurs-Sint-Amands, op 16 juni 2026.  
+                                    Voor de gemeente Puurs-Sint-Amands, namens het College van Burgemeester en Schepenen  
+                                    Koen VAN DEN HEUVEL                                                            Ellen DE VOS                                    
+                                    Burgemeester                                                                             Algemeen Directeur                                                                                  
+                                      
+                                      
+                                    Voor het parket Antwerpen                                                      Voor de politiezone Rivierenland  
+                                    Franky DE KEYZER                                                                       Yves BOGAERTS 
+                                    Procureur des Konings                                                               Korpschef 
+                                      
+                                    Bijlage 1 – Inbreuken waaraan geen gevolg zal worden gegeven door de procureur des Konings en waarvan het afschrift van het proces-verbaal rechtstreeks aan de sanctionerend ambtenaren mag worden bezorgd 
+                                     
+                                        Art 194 SWB                     (Gewelddaden met een integriteitsaantasting van de eerste graad of zonder integriteitsaantasting tot gevolg) 
+                                     
+                                    Gewelddaden die een integriteitsaantasting van de eerste graad tot gevolg hebben, dan wel niet resulteren in een integriteitsaantasting, worden bestraft met een straf van niveau 1. 
+                                     
+                                        Art 198, 1° SWB               (Voorbedachte gewelddaden) 
+                                     
+                                    Gewelddaden met een integriteitsaantasting van de eerste graad of zonder integriteitsaantasting tot gevolg worden bestraft met een straf van niveau 2 
+                                     
+                                        Art 244 SWB                     (Belediging) 
+                                     
+                                    Belediging is het met kwaadwillig opzet en met welk middel ook in het openbaar beledigen van een bepaald persoon. Dit misdrijf wordt bestraft met een straf van niveau 1. 
+                                     
+                                        Art 423 SWB                     (Verbod van gezichtsbedekking in de publieke ruimte) 
+                                     
+                                    Het verbod van gezichtsbedekking in de publieke ruimte is het zich opzettelijk, behoudens andersluidende wetsbepalingen, in de voor het publiek toegankelijke plaatsen begeven met het gezicht geheel of gedeeltelijk bedekt of verborgen, zodat men niet herkenbaar is. Dit misdrijf wordt bestraft met een straf van niveau 1. 
+                                     
+                                        Art 424 SWB                     (Rechtvaardigingsgrond) 
+                                     
+                                    Er is geen misdrijf wanneer diegenen die zich op plaatsen die voor het publiek toegankelijk zijn begeven met hun gezicht geheel of gedeeltelijk bedekt of verborgen, zodanig dat ze niet kunnen worden geïdentificeerd, dit doen op grond van arbeidsreglementen of een politieverordening naar aanleiding van feestactiviteiten. 
+                                     
+                                        Art 514 SWB                     (Definitie van vandalisme) 
+                                     
+                                    Vandalisme is alle opzettelijk op enig goed dat aan een ander toebehoort gestelde gedraging die bestaat in het vernielen, het beschadigen, het onbruikbaar maken of het aanbrengen van graffiti zonder toestemming. 
+                                     
+                                        Art 515 SWB                     (Vandalisme) 
+                                     
+                                    Vandalisme wordt bestraft met een straf van niveau 1. 
+                                     
+                                        Art 516 SWB                     (Vandalisme met ernstige schade) 
+                                     
+                                    Vandalisme met ernstige schade tot gevolg wordt bestraft met een straf van niveau 2. 
+                                     
+                                        Art 517 SWB                     (Vandalisme aan een goed met een bijzonder belang) 
+                                     
+                                    Vandalisme aan een goed met een bijzonder belang is het vandalisme aan een gebouw, maatschappelijke infrastructuur, een vervoermiddel, één of meer bomen, een bos, een natuurgebied, een boomgaard of een akker. Dit misdrijf wordt bestraft met een straf van niveau 2. Indien het misdrijf ernstige schade tot gevolg heeft, wordt het bestraft met een straf van niveau 3. 
+                                     
+                                        Art 666 SWB                     (Zegelverbreking) 
+                                     
+                                    Zegelverbreking is het opzettelijk verbreken van zegels die gelegd werden op bevel van het openbaar gezag. Dit misdrijf wordt bestraft met een straf van niveau 2. 
+                                     
+                                        Art. 18 van de wet van 10 november 2006 betreffende de openingsuren in handel, ambacht en dienstverlening 
+                                     
+                                    § 1. Een gemeentelijk reglement kan ieder ontwerp van nachtwinkel, privaat bureau voor telecommunicatie, van één van de vestigingseenheden bedoeld in artikel 16, § 2, eerste lid, a) en b), of seksuitbating voor volwassenen onderwerpen aan een voorafgaande vergunning verleend door het college van burgemeester en schepenen van de gemeente waar de geplande nachtwinkel, privaat bureau voor telecommunicatie, één van de vestigingseenheden bedoeld in artikel 16, § 2, eerste lid, a) en b), of seksuitbating voor volwassenen zal worden uitgebaat. 
+                                    Deze vergunning kan worden geweigerd op basis van criteria : 
+                                     
+                                         
+                                            die niet-discriminatoir zijn; 
+                                            die gerechtvaardigd zijn om een dwingende reden van algemeen belang, namelijk de ruimtelijke ligging van de vestigingseenheid, de handhaving van de openbare orde, veiligheid en rust; 
+                                            die duidelijk, ondubbelzinnig en objectief zijn; 
+                                            die vooraf openbaar bekendgemaakt worden; 
+                                            en die transparant en toegankelijk zijn. 
+                                         
+                                     
+                                    Deze criteria worden verduidelijkt in een gemeentelijk reglement. 
+                                    § 2. Dit reglement kan ook, op grond van de ruimtelijke ligging en van de handhaving van de openbare orde, veiligheid en rust of ter bescherming van kwetsbaardere burgers, de vestiging en de uitbating, inclusief de openings- en sluitingsuren, van nachtwinkels, private bureaus voor telecommunicatie, vestigingseenheden bedoeld in artikel 16, § 2, eerste lid, a) en b), en seksuitbatingen voor volwassenen tot een gedeelte van het grondgebied van de gemeente beperken, zonder dat dit kan leiden tot een algemeen verbod of een kwantitatieve beperking op dit soort vestigingen op het grondgebied van de gemeente. 
+                                    § 3. De burgemeester kan de sluiting bevelen van de nachtwinkels, private bureaus voor telecommunicatie en vestigingseenheden bedoeld in artikel 16, § 2, eerste lid, a) en b), die worden uitgebaat in overtreding op het gemeentelijk reglement of de beslissing van het college van burgemeester en schepenen genomen in uitvoering §§ 1 en 2. 
+                                    § 4. De vestigingseenheden bedoeld in artikel 16, § 2, eerste lid, a) en b), zijn niet onderworpen aan de bepalingen van dit artikel wanneer de toegang van de consument tot de vestigingseenheid en de verkoop van producten aan de consumenten enkel na 5 uur en vóór 21 uur plaatsvinden. 
+                                      
+                                      
+                                    Bijlage 2 – Inbreuken (gesteld door meerderjarigen) die worden behandeld door de procureur des Konings, zonder tussenkomst van de sanctionerend ambtenaar 
+                                     
+                                        Art 463 SWB                     (Diefstal) 
+                                     
+                                    Diefstal is het bedrieglijk wegnemen, zelfs kortstondig, van een zaak die aan een ander toebehoort. 
+                                     
+                                        Art 465 SWB                     (Diefstal zonder geweld of bedreiging) 
+                                     
+                                    Diefstal zonder geweld of bedreiging wordt bestraft met een straf van niveau 2. 
+                                     
+                                        Art 466, 2° SWB                              (Verzwaarde diefstal zonder geweld of bedreiging) 
+                                     
+                                    Diefstal zonder geweld of bedreiging wordt bestraft met een straf van niveau 3 indien de diefstal werd gepleegd ten nadele van een minderjarige of een persoon in een kwetsbare toestand. 
+                                      
+                                    Bijlage 3 – Inbreuken (gesteld door minderjarigen vanaf 14 jaar) waaraan geen gevolg zal worden gegeven door de procureur des Konings 
+                                     
+                                        Art 463 SWB                     (Diefstal) 
+                                     
+                                    Diefstal is het bedrieglijk wegnemen, zelfs kortstondig, van een zaak die aan een ander toebehoort. 
+                                     
+                                        Art 465 SWB                     (Diefstal zonder geweld of bedreiging) 
+                                     
+                                    Diefstal zonder geweld of bedreiging wordt bestraft met een straf van niveau 2. 
+                                     
+                                        Art 466, 2° SWB                              (Verzwaarde diefstal zonder geweld of bedreiging) 
+                                     
+                                    Diefstal zonder geweld of bedreiging wordt bestraft met een straf van niveau 3 indien de diefstal werd gepleegd ten nadele van een minderjarige of een persoon in een kwetsbare toestand. 
+                                       
+                                    Artikel 2: Het college geeft opdracht aan de Dienst Integrale Veiligheid om het gewijzigd protocolakkoord voor te leggen aan de procureur des Konings en de korpschef voor ondertekening.  
+                                    Artikel 3: Het ondertekende protocolakkoord wordt ter bekrachtiging voorgelegd op de eerstvolgende gemeenteraad.  
+                                    Artikel 4: De inhoud van het protocolakkoord wordt bekendgemaakt overeenkomstig artikel 23 §1 van de Wet van 24 juni 2013 betreffende de gemeentelijke administratieve sancties, inclusief latere wijzingen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2b822a59-5b79-46cc-8a46-9f3656b59e78> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/2b822a59-5b79-46cc-8a46-9f3656b59e78> a ns2:Agendapunt ;
+    ns3:uuid "0f7314dd-363d-543b-aa05-34be1459e226" .
+

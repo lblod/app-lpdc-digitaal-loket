@@ -1,0 +1,115 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/2ec82901-a94c-42b0-8b61-6ed32a05de92> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/00d92536-5897-4be6-b092-9b5df869bddf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/090eca6d-836b-4b24-9d7e-7c39bed6f77b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c9443d6-5000-4daf-8fd8-db18aecbbe65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0cc70a5c-0df3-4ec7-af3c-662c1c2b2c07>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0d76ab97-f84d-437c-b5e3-efe23e215da0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/353cfdfa-b574-4ff8-96f2-71726b6efea5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5063a856-701d-4c8c-9e51-0dac7e35bb94>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52db49ba-707a-4b4c-a785-2edec5ffa451>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5b6d64d2-fd0d-468a-a774-78d2725f3240>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5db94b9f-2797-49ed-a26d-1641f63f4e12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a8edb6d-412c-4d18-adfb-f509e4bdcea6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/77aef472-952b-4bb6-aaf7-ff0ceaa12d68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/852be256-4fd4-42c0-8617-8f5e5edc319c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/866df99b-69bc-4e98-becf-59409d6aff6e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8aececad-e18d-49c5-b5e4-eb49440af3c3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ac37c149-e932-4f99-a8a8-27c6b32ef710>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce82ec5c-35c4-4296-9a87-48bf7c2b172a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e48814ec-5c65-497c-a849-23b1d61f2427>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e6450a31-5680-42da-bbfb-98179ff9b0d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f64091af-bade-4bc3-b009-ca3491b51483>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fb83b77d-671b-47d5-a08e-dff99bbbdc3a> ;
+    ns2:geplandeStart "2024-04-24T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/74394c5f-49e8-45dc-92e0-9e44b0d6eaca> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e831143c-0877-4cbd-9bb8-0aecf04bb6e2> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/66c94526-a25d-4bb2-9979-23a16d34f7ff> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "00aca4c0-8d4c-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-04-24T20:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-04-24T19:59:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0cc70a5c-0df3-4ec7-af3c-662c1c2b2c07> ;
+    ns2:openbaar true ;
+    ns1:uuid "05f7ede0-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/79414af4-4f57-4ca3-aaa4-f8f1e015e71c> ;
+    ns3:description """ 
+                                                    De gemeenteraad verleent gunstig advies over de jaarrekening 2023 van de kerkfabriek Sint-Bavo Vinderhoute. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Kerkfabriek Sint Bavo Vinderhoute - jaarrekening 2023: advies" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Martine Lataire-Gyssels, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Eredienstendecreet van 7 mei 2004, artikel 54 en 55Gemeenteraadsbesluit van 14 september 2022 over de Kerkfabriek Sint Bavo Vinderhoute - Budget 2023: kennisnameGemeenteraadsbesluit van 14 september 2022 over de Kerkfabriek Sint Bavo Vinderhoute - Meerjarenplan 2020 - 2025 - wijziging 2022/1: goedkeuringGemeenteraadsbesluit van 14 september 2022 over de Kerkfabriek Sint Bavo Vinderhoute - Budgetwijziging 2022/1: kennisnameCollegebesluit van 2 april over de jaarrekeningen 2023 van de Lievegemse kerkfabrieken 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De kerkraad stelt jaarlijks de rekening van de kerkfabriek van het voorgaande jaar vast en dient deze voor 1 maart in bij het centraal kerkbestuur.De rekeningen worden jaarlijks voor 1 mei bij het gemeentebestuur ingediend door het centraal kerkbestuur.Het centraal kerkbestuur diende op 17 maart 2024 de jaarrekening 2023 van de kerkfabriek Sint Bavo Vinderhoute.De gemeenteraad is bevoegd om advies te verlenen over de jaarrekening van een kerkfabriek. De gouverneur is bevoegd om de jaarrekening goed te keuren.De financieel directeur heeft op 28  maart 2024 gunstig advies verleend bij het agenderen van de jaarrekeningen voor het college van 2 april 2024. 
+                                 
+                                 
+                                    Financiële impact 
+                                    De exploitatietoelage zoals vermeld in de jaarrekening, stemt overeen met het bedrag van de toelage die in de gemeenteboekhouding werd geregistreerd onder jaarbudgetrekening 2023/GBB-SSC/0790-00/6494000/GEMEENTE/CBS/IP-GEE 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Team financiënReligiopointABB via digitaal loket 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Martine Lataire-Gyssels, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Eredienstendecreet van 7 mei 2004, artikel 54 en 55Gemeenteraadsbesluit van 14 september 2022 over de Kerkfabriek Sint Bavo Vinderhoute - Budget 2023: kennisnameGemeenteraadsbesluit van 14 september 2022 over de Kerkfabriek Sint Bavo Vinderhoute - Meerjarenplan 2020 - 2025 - wijziging 2022/1: goedkeuringGemeenteraadsbesluit van 14 september 2022 over de Kerkfabriek Sint Bavo Vinderhoute - Budgetwijziging 2022/1: kennisnameCollegebesluit van 2 april over de jaarrekeningen 2023 van de Lievegemse kerkfabrieken 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De kerkraad stelt jaarlijks de rekening van de kerkfabriek van het voorgaande jaar vast en dient deze voor 1 maart in bij het centraal kerkbestuur.De rekeningen worden jaarlijks voor 1 mei bij het gemeentebestuur ingediend door het centraal kerkbestuur.Het centraal kerkbestuur diende op 17 maart 2024 de jaarrekening 2023 van de kerkfabriek Sint Bavo Vinderhoute.De gemeenteraad is bevoegd om advies te verlenen over de jaarrekening van een kerkfabriek. De gouverneur is bevoegd om de jaarrekening goed te keuren.De financieel directeur heeft op 28  maart 2024 gunstig advies verleend bij het agenderen van de jaarrekeningen voor het college van 2 april 2024. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De exploitatietoelage zoals vermeld in de jaarrekening, stemt overeen met het bedrag van de toelage die in de gemeenteboekhouding werd geregistreerd onder jaarbudgetrekening 2023/GBB-SSC/0790-00/6494000/GEMEENTE/CBS/IP-GEE 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "03cdbae0-8d4c-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikelDe gemeenteraad verleent gunstig advies over de jaarrekening 2023 van de kerkfabriek Sint-Bavo Vinderhoute. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad verleent gunstig advies over de jaarrekening 2023 van de kerkfabriek Sint-Bavo Vinderhoute. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "00ab4530-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Kerkfabriek Sint Bavo Vinderhoute - jaarrekening 2023: advies" .
+

@@ -1,0 +1,166 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/efbe9271-e6ca-4263-9d0c-0afb8d5ff2df> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3454ff49-0f9a-489d-ac08-47138ac39a3c> ;
+    ns1:geplandeStart "2025-04-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/7f177c04-1238-4c0c-ade9-7240e8d68fea> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "cac74fc2-76c7-5672-ae55-a0703ad5557d" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-04-29T20:32:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3454ff49-0f9a-489d-ac08-47138ac39a3c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3d452b5f-2b5d-4996-8a47-0878fa015d8b> ;
+    ns1:openbaar false ;
+    ns3:uuid "85c4031b-7f26-5e09-a87a-1969d0cfe57e" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3454ff49-0f9a-489d-ac08-47138ac39a3c> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/3454ff49-0f9a-489d-ac08-47138ac39a3c> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/3454ff49-0f9a-489d-ac08-47138ac39a3c> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Aanvullend verkeersreglement - Hof-ten-Berglaan" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Vanwege de heraanleg van de site rondom het nieuw gemeentehuis werd de verkeersafwikkeling aangepast. Fietsers voor Sjabi - Campus Begijnhof moeten nu via Hof-ten-Berglaan naar de fietsenparking rijden. De bouw van project Nobile, de heraanleg van de Hondsmarkt in de nabije toekomst en de ontwikkeling van de nieuwe lagere school binnen 3 jaar indachtig zorgen we voor een aansluiting van de zone 30 tussen Begijnhofstraat en de 30/km/u ter hoogte van de Sjabi - Campus Hof-ten Berglaan. 
+                                    Deze AVR beschrijft aanpassingen tussen Hof-ten-Berglaan nr.16/nr.61 tot Begijnhofstraat 46 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                      
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Vanwege de heraanleg van de site rondom het nieuw gemeentehuis werd de verkeersafwikkeling aangepast. Fietsers voor Sjabi - Campus Begijnhof moeten nu via Hof-ten-Berglaan naar de fietsenparking rijden. De bouw van project Nobile, de heraanleg van de Hondsmarkt in de nabije toekomst en de ontwikkeling van de nieuwe lagere school binnen 3 jaar indachtig zorgen we voor een aansluiting van de zone 30 tussen Begijnhofstraat en de 30/km/u ter hoogte van de Sjabi - Campus Hof-ten Berglaan. 
+                                    Deze AVR geeft de aanpassingen tussen Hof-ten-Berglaan nr.16/nr.61 tot Begijnhofstraat nr.46 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 1. 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Financiële weerslag 
+                                      
+                                    
+                                         
+                                     
+                                 
+                            """@nl ;
+    ns3:uuid "b4b2e3be-2e52-5d30-ab14-ce009a864faa" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Hof-ten-Berglaan nr.16 / nr.61: de zone 30 wordt afgebakend. Het begin van de zone 30 wordt aangeduid; ook het einde van de zone 30 wordt aangeduid. 
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Verkeersbord F4a  
+                                                 Verkeersbord F4b  
+                                             
+                                         
+                                     
+                                    Artikel 2: Begijnhofstraat nr.46 ter hoogte van brug Grote Molenbeek: de zone 30 wordt afgebakend. Het begin van de zone 30 wordt aangeduid; ook het einde van de zone 30 wordt aangeduid. 
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Verkeersbord F4a  
+                                                 Verkeersbord F4b  
+                                             
+                                         
+                                     
+                                    Artikel 3: Zone 30 sluit aan op bestaande zone 30 die voorheen werd afgebakend op Begijnhofstraat nr.39 / nr.40 
+                                    Artikel 4: Forum 1: de bestuurders moeten voorrang verlenen aan iedere bestuurder die rijdt op de openbare weg of de rijbaan die ze oprijden.  
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Verkeersbord B1  
+                                             
+                                            
+                                                Artikel 5: Hof-ten-Berglaan nr. 15: fietsers en bestuurders van tweewielige bromfietsen moeten de oversteekplaats volgen om de rijbaan over te steken. 
+                                                 
+                                                     
+                                                        Dit wordt aangeduid door verkeerstekens: 
+                                                         
+                                                             Wegmarkering WM76.4  
+                                                         
+                                                     
+                                                 
+                                             
+                                         
+                                     
+                                    Artikel 6: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                    
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3454ff49-0f9a-489d-ac08-47138ac39a3c> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3454ff49-0f9a-489d-ac08-47138ac39a3c> a ns1:Agendapunt ;
+    ns3:uuid "0394ee32-2916-5883-bd00-b7109d489055" .
+
