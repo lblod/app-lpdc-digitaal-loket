@@ -31,6 +31,8 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly bewerktOpHeader: Locator;
     readonly geldigVanafHeader: Locator;
     readonly geldigTotHeader: Locator;
+    readonly beschikbaarVanafHeader: Locator;
+    readonly beschikbaarTotHeader: Locator;
     readonly statusHeader: Locator;
 
     readonly herzieningNodigAlert: Alert;
@@ -47,6 +49,9 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly omzettenNaarDeJeVormButton: Locator
     readonly inhoudIsAlInDeJeVormButton: Locator
     readonly draftInstanceConversionAlert: Alert
+
+    readonly geldigVanafInput: Locator;
+    readonly geldigTotInput: Locator;
 
     readonly titelInput: Locator;
     readonly titelConceptWijzigingenOvernemenLink: Locator;
@@ -128,6 +133,7 @@ export class InstantieDetailsPage extends AbstractPage {
     readonly contactpuntHeading: Locator;
     readonly voegContactpuntToeButton: Locator;
     readonly verwijderContactpuntButton: (order?: number) => Locator;
+    readonly contactpuntNaamInput: (order?: number) => Locator;
     readonly contactpuntEmailSelect: (order?: number) => SelectWithCreate;
     readonly contactpuntEmailReadonly: (childOrder?: number, parentOrder?: number) => Locator;
     readonly contactpuntTelefoonSelect: (order?: number) => SelectWithCreate;
@@ -233,8 +239,10 @@ export class InstantieDetailsPage extends AbstractPage {
         this.productTypeHeader = page.locator('dl div').filter({ hasText: 'Producttype' }).getByRole('definition');
         this.aangemaaktOpHeader = page.locator('dl div').filter({ hasText: 'Aangemaakt op' }).getByRole('definition');
         this.bewerktOpHeader = page.locator('dl div').filter({ hasText: 'Bewerkt op' }).getByRole('definition');
-        this.geldigVanafHeader = page.locator('dl div').filter({ hasText: 'Geldig vanaf' }).getByRole('definition');
-        this.geldigTotHeader = page.locator('dl div').filter({ hasText: 'Geldig tot' }).getByRole('definition');
+        this.geldigVanafHeader = page.locator('dl div').filter({ hasText: 'Aanvraagbaar van' }).getByRole('definition');
+        this.geldigTotHeader = page.locator('dl div').filter({ hasText: 'Aanvraagbaar tot' }).getByRole('definition');
+        this.beschikbaarVanafHeader = page.locator('dl div').filter({ hasText: 'Geldig vanaf' }).getByRole('definition');
+        this.beschikbaarTotHeader = page.locator('dl div').filter({ hasText: 'Geldig tot en met' }).getByRole('definition');
         this.statusHeader = page.locator('dl div').filter({ hasText: 'Status' }).getByRole('definition');
 
         this.titelInput = this.inputBelow('Titel').first();
@@ -317,6 +325,7 @@ export class InstantieDetailsPage extends AbstractPage {
         this.voegContactpuntToeButton = page.getByRole('button', { name: 'Voeg contactpunt toe' });
         this.verwijderContactpuntButton = (order: number = 0) => this.buttonFor('Verwijder contactpunt', 'Contactpunten', "h1").nth(order);
         this.contactpuntHeading = page.getByRole('heading', { name: 'Contactpunt', exact: true });
+        this.contactpuntNaamInput = (order: number = 0) => this.inputBelow('Naam').nth(order);
         this.contactpuntEmailSelect = (order: number = 0) => new SelectWithCreate(page, 'Email', order);
         this.contactpuntEmailReadonly = (childOrder: number = 0, parentOrder: number = 0) => this.nestedLocator(this.inputBelow('Email'), childOrder, 'Contactpunt', 'h2', parentOrder);
         this.contactpuntTelefoonSelect = (order: number = 0) => new SelectWithCreate(page, 'Telefoon', order);
@@ -351,6 +360,8 @@ export class InstantieDetailsPage extends AbstractPage {
         this.productOfDienstGeldigVanafInput = this.inputBelow('Product of dienst geldig vanaf').first();
         this.productOfDienstGeldigVanafConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Product of dienst geldig vanaf'));
         this.productOfDienstGeldigTotInput = this.inputBelow('Product of dienst geldig tot').first();
+        this.geldigVanafInput = this.inputBelow('Geldig vanaf').first();
+        this.geldigTotInput = this.inputBelow('Geldig tot en met').first();
         this.productOfDienstGeldigTotConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.inputBelowLocator('Product of dienst geldig tot'));
         this.productTypeSelect = new Select(page, 'Producttype', undefined, undefined, 'div.au-c-main-container__content');
         this.productTypeConceptWijzigingenOvernemenLink = this.conceptWijzigingenOvernemenLinkAbove(this.productTypeSelect.selectDivLocatorString);

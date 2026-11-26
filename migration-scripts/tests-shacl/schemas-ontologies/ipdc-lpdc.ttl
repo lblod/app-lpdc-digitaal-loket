@@ -140,6 +140,8 @@ schemas:WebSite a rdfs:Class;
     schemas:startDate,
     schemas:openingHours,
     schemas:endDate,
+    schemas:availabilityStarts,
+    schemas:availabilityEnds,
     schemas:email,
     <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#yourEuropeCategory>,
     <https://productencatalogus.data.vlaanderen.be/ns/ipdc-lpdc#targetAudience>,
@@ -323,6 +325,12 @@ dcat:keyword a rdf:Property;
 
 schemas:email a rdf:Property;
   rdfs:label "hasEmail"@nl .
+
+schemas:availabilityEnds a rdf:Property;
+  rdfs:label "availabilityEnds"@nl .
+
+schemas:availabilityStarts a rdf:Property;
+  rdfs:label "availabilityStarts"@nl .
 
 schemas:endDate a rdf:Property;
   rdfs:label "endDate"@nl .

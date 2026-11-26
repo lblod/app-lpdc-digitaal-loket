@@ -661,6 +661,31 @@ test.describe('Update an instance and verify edits are working', () => {
         expect(await instantieDetailsPage.productOfDienstGeldigVanafInput.inputValue()).toEqual('');
         expect(await instantieDetailsPage.productOfDienstGeldigTotInput.inputValue()).toEqual('');
 
+        const newGeldigVanaf = '13-04-2019';
+        await instantieDetailsPage.geldigVanafInput.clear();
+        await page.keyboard.type(newGeldigVanaf);
+
+        const newGeldigTot = '27-11-2026';
+        await instantieDetailsPage.geldigTotInput.clear();
+        await page.keyboard.type(newGeldigTot);
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.geldigVanafInput.inputValue()).toEqual('13-04-2019');
+        expect(await instantieDetailsPage.geldigTotInput.inputValue()).toEqual('27-11-2026');
+        await expect(instantieDetailsPage.beschikbaarVanafHeader).toContainText('13-04-2019');
+        await expect(instantieDetailsPage.beschikbaarTotHeader).toContainText('27-11-2026');
+
+        await instantieDetailsPage.geldigVanafInput.clear();
+        await instantieDetailsPage.geldigTotInput.clear();
+
+        await instantieDetailsPage.wijzigingenBewarenButton.click();
+        await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();
+
+        expect(await instantieDetailsPage.geldigVanafInput.inputValue()).toEqual('');
+        expect(await instantieDetailsPage.geldigTotInput.inputValue()).toEqual('');
+
         await instantieDetailsPage.productTypeSelect.selectValue('Infrastructuur en materiaal');
         await instantieDetailsPage.wijzigingenBewarenButton.click();
         await expect(instantieDetailsPage.wijzigingenBewarenButton).toBeDisabled();

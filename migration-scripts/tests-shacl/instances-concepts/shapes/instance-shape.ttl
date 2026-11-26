@@ -98,6 +98,18 @@ oss:InstancePublicServiceShape
           shacl:name "endDate"@nl;
           shacl:path schema:endDate
       ], [
+          shacl:datatype xsd:dateTime;
+          shacl:description "Datum vanaf wanneer het product aangeboden wordt of beschikbaar is"@nl;
+          shacl:maxCount 1;
+          shacl:name "availabilityStarts"@nl;
+          shacl:path schema:availabilityStarts
+      ], [
+          shacl:datatype xsd:dateTime;
+          shacl:description "Datum tot en met wanneer het product aangeboden wordt of beschikbaar is"@nl;
+          shacl:maxCount 1;
+          shacl:name "availabilityEnds"@nl;
+          shacl:path schema:availabilityEnds
+      ], [
           shacl:datatype rdf:langString;
           shacl:description "Tekstveld waarin uitzondering op procedures, kostprijzen, ... kunnen aangegeven worden"@nl;
           shacl:maxCount 4; # one for each language allowed

@@ -59,6 +59,8 @@ test.describe('Contact point form fields', () => {
         await instantieDetailsPage.expectToBeVisible();
 
         await instantieDetailsPage.voegContactpuntToeButton.click();
+        const contactpuntNaam = `Contactpunt ${uuid()}`;
+        await instantieDetailsPage.contactpuntNaamInput().fill(contactpuntNaam);
         const email = `${uuid()}@example.com`
         await instantieDetailsPage.contactpuntEmailSelect().insertNewValue(email);
         const telefoon = '0499123123';
