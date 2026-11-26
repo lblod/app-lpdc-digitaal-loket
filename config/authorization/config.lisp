@@ -109,8 +109,6 @@
   ("besluit:Agendapunt" -> _)
   ("besluit:BehandelingVanAgendapunt" -> _)
   ("besluit:Artikel" -> _)
-  ("besluit:Bestuursorgaan" -> _)
-  ("ext:BestuursorgaanClassificatieCode" -> _)
   ("besluit:Besluit" -> _)
   ("besluit:Zitting" -> _)
   ("foaf:OnlineAccount" -> _)) ;; only this is needed for login
