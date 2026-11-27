@@ -1,0 +1,10 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX generiek: <https://data.vlaanderen.be/ns/generiek#>
+PREFIX mandaat: <http://data.vlaanderen.be/ns/mandaat#>
+
+CONSTRUCT {
+  ?s mandaat:isTijdspecialisatieVan ?o .
+} WHERE {
+  ?s a besluit:Bestuursorgaan ;
+    generiek:isTijdspecialisatieVan ?o .
+}

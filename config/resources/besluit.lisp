@@ -124,4 +124,4 @@
                       )
   :resource-base (s-url "http://data.lblod.info/id/zittingen/")
   :features '(include-uri)
-  :on-path "sessions")
+  :on-path "zittingen")

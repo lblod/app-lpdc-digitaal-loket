@@ -1,0 +1,95 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+PREFIX generiek: <https://data.vlaanderen.be/ns/generiek#>
+PREFIX mandaat: <http://data.vlaanderen.be/ns/mandaat#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+PREFIX organisatie: <http://lblod.data.gift/vocabularies/organisatie/>
+PREFIX org: <http://www.w3.org/ns/org#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s a besluit:Bestuursorgaan ;
+      mu:uuid ?uuid ;
+      mandaat:bindingStart ?start ;
+      mandaat:bindingEinde ?end ;
+      skos:prefLabel ?label .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/landing-zone/op-public> {
+    ?s a besluit:Bestuursorgaan ;
+      mu:uuid ?uuid .
+
+    OPTIONAL { ?s mandaat:bindingStart ?start }
+    OPTIONAL { ?s mandaat:bindingEinde ?end }
+    OPTIONAL { ?s skos:prefLabel ?label }
+  }
+}
+;
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s besluit:classificatie ?classification ;
+      org:classification ?classification .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/landing-zone/op-public> {
+    ?s a besluit:Bestuursorgaan ;
+      org:classification ?classification .
+  }
+}
+;
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s mandaat:isTijdspecialisatieVan ?abstract .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/landing-zone/op-public> {
+    ?s a besluit:Bestuursorgaan ;
+      generiek:isTijdspecialisatieVan ?abstract .
+  }
+}
+;
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s besluit:bestuurt ?administrativeUnit .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/landing-zone/op-public> {
+    ?s a besluit:Bestuursorgaan ;
+      besluit:bestuurt ?administrativeUnit .
+  }
+}
+;
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s a ext:BestuursorgaanClassificatieCode, skos:Concept .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/landing-zone/op-public> {
+    ?s a organisatie:BestuursorgaanClassificatieCode .
+  }
+}
+;
+INSERT {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    ?s ?p ?o .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/landing-zone/op-public> {
+    ?s a organisatie:BestuursorgaanClassificatieCode ;
+      ?p ?o .
+  }
+
+  FILTER (?p IN (
+    mu:uuid,
+    skos:prefLabel,
+    skos:inScheme,
+    skos:topConceptOf
+  ))
+}

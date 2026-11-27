@@ -1,0 +1,8 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+
+CONSTRUCT {
+  ?s besluit:bestuurt ?o .
+} WHERE {
+  ?s a besluit:Bestuursorgaan ;
+    besluit:bestuurt ?o .
+}

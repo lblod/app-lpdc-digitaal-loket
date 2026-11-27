@@ -1,0 +1,11 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+CONSTRUCT {
+  ?s skos:prefLabel ?labelString .
+} WHERE {
+  ?s a besluit:Bestuursorgaan ;
+    skos:prefLabel ?label .
+
+  BIND(STR(?label) AS ?labelString)
+}

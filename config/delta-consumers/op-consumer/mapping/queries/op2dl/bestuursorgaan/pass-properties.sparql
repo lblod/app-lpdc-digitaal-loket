@@ -1,0 +1,16 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX mandaat: <http://data.vlaanderen.be/ns/mandaat#>
+PREFIX mu: <http://mu.semte.ch/vocabularies/core/>
+
+CONSTRUCT {
+  ?s ?p ?o .
+} WHERE {
+  ?s a besluit:Bestuursorgaan ;
+    ?p ?o .
+
+  FILTER (?p IN (
+    mu:uuid,
+    mandaat:bindingStart,
+    mandaat:bindingEinde
+  ))
+}
