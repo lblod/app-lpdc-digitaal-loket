@@ -1,0 +1,88 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns2:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb> ;
+    ns2:openbaar true ;
+    ns3:uuid "fe8bc090-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020> a ns2:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad duidt een toegetreden lid, een effectieve vertegenwoordiger in de algemene vergadering en een lid van raad bestuur aan van de VZW Regionaal landschap Meetjesland Leievallei.  
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "VZW Regionaal Landschap Meetjesland Leievallei - vertegenwoordiger in de algemene vergadering, lid raad van bestuur en toegetreden lid vanuit de administratie: aanduiding" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Vincent Laroy, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur, in het bijzonder artikel 34-2°Wet van 27 juni 1921 betreffende de verenigingen zonder winstoogmerk (vzw's)Statuten van Regionaal Landschap MeetjeslandGemeenteraadsbesluit van 30 januari 2019 over de aanduiding van vertegenwoordigers in de algemene vergadering van de VZW Regionaal Landschap MeetjeslandDe beslissing van het college van burgemeester en schepenen van 18 maart 2019 over de aanduiding van een lid in de raad van bestuur van de VZW Regionaal Landschap MeetjeslandGemeenteraadsbesluit van 14 september 2022 over het ontslag van Gerrit Van Brabandt als schepen en raadslid 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad is bevoegd om de vertegenwoordigers in intergemeentelijke samenwerkingsverbanden aan te duiden.De gemeente Lievegem is lid van de VZW Regionaal landschap Meetjesland LeievalleiIngevolge het ontslag van Gerrit Van Brabandt moet een nieuwe vertegenwoordiger aangeduid worden.De vertegenwoordigers kunnen voor de volledige legislatuur aangeduid worden.De stemming over het aanwijzen van vertegenwoordigers van de gemeente in overlegorganen, in de organen van ander rechtspersonen en feitelijke verenigingen moeten geschieden bij geheime stemming.Gaat over tot geheime stemming.Over de aanduiding van een effectieve vertegenwoordiger voor de algemene vergadering (geheime stemming):  
+                                                            De vijf bestuursleden voor de Raad van Bestuur voor Regionaal landschap Meetjesland worden in onderling overleg tussen de gemeenten aangeduid. 
+                                                            Bij het aanduiden van de 5 vertegenwoordigers wordt een ruimtelijke spreiding nagestreefd. Aangezien Lievegem een groot deel van het werkingsgebied beslaat, is het, conform de vertegenwoordigers van de verschillende gemeenten in het werkingsgebied van Regionaal Landschap Meetjesland Leivallei, opportuun dat de gemeente Lievegem mee aan het stuur zit van de vereniging RLML en kan in vervanging van Gerrit Van Brabandt een bestuurslid aangeduid worden.Gaat over tot geheime stemming.Over de voordracht van een lid voor de raad van bestuur (geheime stemming):  
+                                                            De vraag vanuit team omgeving om Hannelore Scheire in de plaats van Rudy Van hove in de algemene vergadering op te nemen als toegetreden lid vanuit de administratie. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ecf61ab0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad duidt raadslid Nik Braeckman, wonende te 9950 Lievegem, Stationsstraat 16, aan als effectieve vertegenwoordiger voor de algemene vergadering van de VZW Regionaal landschap Meetjesland Leievallei.Artikel 2De gemeenteraad draagt raadslid Christophe Huysman wonende te 9931 Lievegem, Oostwinkeldorp 34, voor als lid voor de raad van bestuur van de VZW Regionaal landschap Meetjesland Leievallei. 
+                                                             
+                                                            Artikel 3De gemeenteraad beslist Hannelore Scheire toe te voegen als toegetreden lid vanuit de administratie in de algemene vergadering van de VZW Regionaal landschap Meetjesland Leievallei. 
+                                                             
+                                                            Artikel 4Deze aanduidingen zijn geldig voor de resterende duur van de legislatuur 2019-2024 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "f221cde0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "VZW Regionaal Landschap Meetjesland Leievallei - vertegenwoordiger in de algemene vergadering, lid raad van bestuur en toegetreden lid vanuit de administratie: aanduiding" .
+

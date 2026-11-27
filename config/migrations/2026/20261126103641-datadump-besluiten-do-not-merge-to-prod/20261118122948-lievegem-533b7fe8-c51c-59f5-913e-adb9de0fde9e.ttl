@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/75e7fd73-1c53-412b-9dd0-68005acac98b> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0521c3e7-4cee-4257-bfd6-2b2c13addca0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f33c71f-6e13-4e88-afb7-c11303258316>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3d330a03-4bff-436a-bdd5-a221787343ab>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9966750a-3db9-4855-be4a-82aead2963de> ;
+    ns1:geplandeStart "2026-01-13T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/8aa86a87-e7a7-4c0b-b5c6-ea5473041825> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "02d96a70-c8bc-515d-a774-7f72ae4cd971" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-01-13T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0521c3e7-4cee-4257-bfd6-2b2c13addca0> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9966750a-3db9-4855-be4a-82aead2963de> ;
+    ns1:openbaar false ;
+    ns2:uuid "7625bb8d-020f-5f0b-aea7-98068dd71b7f" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0521c3e7-4cee-4257-bfd6-2b2c13addca0> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0521c3e7-4cee-4257-bfd6-2b2c13addca0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0521c3e7-4cee-4257-bfd6-2b2c13addca0> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van Lokale Markt Beke op 16 januari 2026, 20 februari 2026, 20 maart 2026, 17 april 2026, 15 mei 2026, 19 juni 2026, 18 september 2026, 16 oktober 2026, 20 november 2026 en 18 december 2026 telkens van 10.00 uur tot en met 21.00 uur  wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Lokale Markt Bekekerk 2026 - vzw Beke Ons Dorp: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet burgemeesterbesluit van 12 januari 2026 over de aanvraag toestemming private markt op privé-initiatief - Beke kerk 2026: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Frederick Hurtekant, namens Vzw Beke ons Dorp, organiseert elke 3e vrijdag van de maand (met uitzondering van de maanden juli en augustus) Lokale Markt Beke van 15.00 uur tot en met 18.00 uur ter hoogte van Oude Staatsbaan 66, 9930 Lievegem. Deze vindt plaats in de kerk en op de parking voor de kerk. 
+                                    Er werd op 23 december 2025 een aanvraag ingediend door Frederick Hurtekant, namens Vzw Beke ons Dorp om tijdens deze organisaties verkeersmaatregelen te treffen. 
+                                    Om de op- en afbouw vlot te laten verlopen en voor de plaatsing van enkele kramen wordt een parkeerverbod op de parking gevraagd op volgende data: 
+                                    16 januari 2026, 20 februari 2026, 20 maart 2026, 17 april 2026, 15 mei 2026, 19 juni 2026, 18 september 2026, 16 oktober 2026, 20 november 2026 en 18 december 2026 telkens van 10.00 uur tot en met 21.00 uur. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Deze inname is in GIPOD geregistreerd met het nummer 19321585. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners, dan worden deze minstens één week voor de aanvang van het evenement per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "533b7fe8-c51c-59f5-913e-adb9de0fde9e" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Lokale Markt Beke op 16 januari 2026, 20 februari 2026, 20 maart 2026, 17 april 2026, 15 mei 2026, 19 juni 2026, 18 september 2026, 16 oktober 2026, 20 november 2026 en 18 december 2026 telkens van 10.00 uur tot en met 21.00 uur  wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod op de parking voor de kerk, ter hoogte van Oude Staatsbaan 66, 9930 Lievegem. 
+                                        De Priemwegel blijft vrij voor voetgangers en fietsers. 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 aan de parkeerplaatsen. 
+                                     
+                                    Artikel 3 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners, dan worden deze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0521c3e7-4cee-4257-bfd6-2b2c13addca0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0521c3e7-4cee-4257-bfd6-2b2c13addca0> a ns1:Agendapunt ;
+    ns2:uuid "69651057-d804-5cf3-b0e2-2d5723882dce" .
+

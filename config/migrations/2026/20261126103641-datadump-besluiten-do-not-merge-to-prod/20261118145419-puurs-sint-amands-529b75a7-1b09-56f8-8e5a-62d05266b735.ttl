@@ -1,0 +1,96 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/01b5f89a-0e5e-4ba2-b3ca-8df1c051eab8> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/cdaf6c12-4acf-4514-b80e-8382f459c45f> ;
+    ns2:geplandeStart "2026-07-13T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/e56aa93c-0903-412f-9ea7-bd8a1c81d489> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:uuid "c2e178c5-c55c-57b9-a581-84059c33c1cd" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-07-13T20:05:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cdaf6c12-4acf-4514-b80e-8382f459c45f> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d83f7c75-c8b4-45f7-8087-1fcee254fe88> ;
+    ns2:openbaar false ;
+    ns1:uuid "87b4daf6-1e8e-50b7-b9b5-f52c706a543a" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/cdaf6c12-4acf-4514-b80e-8382f459c45f> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/cdaf6c12-4acf-4514-b80e-8382f459c45f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/cdaf6c12-4acf-4514-b80e-8382f459c45f> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Molenheide - zebrapad" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    We ontvingen de vraag voor een oversteekplaats voor voetgangers in Molenheide. De aanvraag werd besproken op de gemeentelijke verkeerscel en positief geadviseerd. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                    Positief advies van de gemeentelijke verkeerscel van februari 2026. 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    
+                                        Het betreft een lokale ontsluitingsweg volgens de gehanteerde wegencategorisering.
+                                        De straat kent weinig parkeerdruk, er zijn steeds voldoende parkeerplaatsen beschikbaar. Het zebrapad zorgt ervoor dat er vanuit het centrum een veilige wandelroute wordt gemaakt richting Steenbossen
+                                     
+                                 
+                            """@nl ;
+    ns1:uuid "529b75a7-1b09-56f8-8e5a-62d05266b735" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Ter hoogte van Molenheide 3 -4 wordt volgende maatregel ingevoerd: een oversteekplaats voor voetgangers:  Dit wordt aangeduid door verkeerstekens: 
+                                    - WM76.3 (zebrapad) 
+                                    Artikel 2: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cdaf6c12-4acf-4514-b80e-8382f459c45f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/cdaf6c12-4acf-4514-b80e-8382f459c45f> a ns2:Agendapunt ;
+    ns1:uuid "d47dcd15-6333-5f47-a4bb-5d015fcb41ba" .
+

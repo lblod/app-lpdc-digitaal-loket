@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/9521dea5-31f4-4bb4-bc44-087899d3c0bd> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/30f3f8f5-b7c4-4f30-ba86-1c38be1f30f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3df9afb1-8386-4705-bcff-62b323d08f0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5c6bc86b-cd11-4d19-aaaf-fac80b4a54e4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/60d96337-cc83-4989-9408-bc19594476be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76115cd7-7143-48fd-89a1-6beb0c73090e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/79de3e84-6123-43d3-8a8a-84b3e1878996>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85c99b89-adf2-43ee-9312-1059410dba4a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/928370a2-86c4-4e59-a30e-5e777535a11a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a53c0c7b-03a9-493b-a1aa-78a63ee12f16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab91cddc-68d0-46fd-b19e-11d466cc758d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae6a9c92-dce9-42aa-9e6c-ac7ed5b32b69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6af2315-1c94-45e0-a0aa-142acaa20587>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cc62f7c2-3a15-4d8b-8103-e69dc605e357>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4663237-9099-4028-aefa-c50af9dd748d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d48685aa-fcf1-4439-83be-dc3d514483cd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ea0f7b83-f8fb-41a0-8211-da53720f4ce6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eb398e70-fe70-45c2-9b9e-bd8cac610ba2> ;
+    ns3:geplandeStart "2022-11-23T20:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4c793cd8-a915-4098-95a2-e9043a5114d0> ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/879fd2a7-d621-4ce3-8272-392fddf5ea33> ;
+    ns3:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04281ae9-1053-423a-a8cf-50f40d82016d> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "edc5edd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-11-23T21:29:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-11-23T20:03:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/928370a2-86c4-4e59-a30e-5e777535a11a> ;
+    ns3:openbaar true ;
+    ns2:uuid "fb3e6a50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/330859f2-63fa-423b-ab0d-1f5b270c7d17> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/330859f2-63fa-423b-ab0d-1f5b270c7d17> a ns3:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad duidt een vertegenwoordiger aan in het Regionaal Adviescomité  Secundaire Diensten van de ov TMVW. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Opdrachthoudende vereniging Tussengemeentelijke Maatschappij voor Watervoorziening (TMVW): aanduiden van vertegenwoordiger voor het adviescomité Secundaire Diensten" ;
+    ns3:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur, in het bijzonder artikel 34-2° en artikel 431 en 432 (opdrachthoudende vereniging)Gemeenteraadsbesluit van 27 februari 2019 over o.a. de aanduiding van een vertegenwoordiger voor het adviescomité Secundaire Diensten van TMVWStatuten van TMVW 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad is bevoegd om de vertegenwoordigers in intergemeentelijke samenwerkingsverbanden aan te duiden.De gemeente Lievegem is lid van de ov TMVW.Kim Martens, burgemeester, wenst het mandaat van vertegenwoordiger voor het Adviescomité Secundaire Diensten niet langer op te nemen.Er moet dus een nieuwe vertegenwoordiger aangeduid worden.De stemming over het aanwijzen van vertegenwoordigers van de gemeente in overlegorganen, in de organen van ander rechtspersonen en feitelijke verenigingen moeten geschieden bij geheime stemming. 
+                                                            Gaat over tot geheime stemming.Caroline Fredrick bekomt 17 stemmenWouter Ryckaert bekomt 7 stemmenCaroline Fredrick bekomt de meerderheid van de stemmen 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "edc837c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad duidt Caroline Fredrick, schepen, wonende te 9920 Lievegem, Appensvoordestraat 22b, aan als vertegenwoordiger voor het Adviescomité Secundaire Diensten van de ov TMVW. 
+                                                            Artikel 2Deze aanduiding is geldig voor de resterende duur van de legislatuur 2019-2024. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17> a ns3:Agendapunt ;
+    ns3:geplandOpenbaar true ;
+    ns2:uuid "fb378c80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Opdrachthoudende vereniging Tussengemeentelijke Maatschappij voor Watervoorziening (TMVW): aanduiden van vertegenwoordiger voor het adviescomité Secundaire Diensten" .
+

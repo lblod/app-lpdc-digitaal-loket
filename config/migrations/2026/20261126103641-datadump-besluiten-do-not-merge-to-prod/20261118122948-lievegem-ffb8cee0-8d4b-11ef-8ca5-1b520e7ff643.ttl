@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns3:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns3:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955> ;
+    ns3:openbaar true ;
+    ns2:uuid "ffb832a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d32f4130-eadf-44fa-9bef-82ff9512fc70> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d32f4130-eadf-44fa-9bef-82ff9512fc70> a ns3:Besluit ;
+    ns1:description """ 
+                                                    Het globaal preventieplan 2021-2026 en het jaaractieplan 2021 worden goedgekeurd. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Interne Dienst Preventie en Bescherming  - globaal preventieplan Lievegem 2021-2026: goedkeuring.",
+        "Interne Dienst Preventie en Bescherming - globaal preventieplan Lievegem 2021-2026: goedkeuring." ;
+    ns3:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 4 augustus 1996 betreffende het welzijn van de werknemers bij de uitvoering van hun werkDe wet van 28 februari 2014 tot aanvulling van de wet van  augustus  1996 betreffende het welzijn van de werknemers bij de uitvoering van hun werkDe wet van 28 maart 2014 tot wijziging van het Gerechtelijk Wetboek en de wet van 4 augustus 1996 betreffende het welzijn van de werknemers bij de uitvoering van hun werk wat de gerechtelijke procedures betreftHet koninklijk besluit van 27 maart 1998 betreffende de modaliteiten voor de oprichting van een Interne Dienst voor Preventie en Bescherming op het Werk;Het koninklijk besluit van 27 maart 1998 betreffende het beleid inzake het welzijn van de werknemers bij de uitvoering van hun werkHet koninklijk besluit van 28 mei 2003 betreffende het gezondheidstoezicht op de werknemersHet koninklijk besluit van 10 april 2014 betreffende de preventie van psychosociale risico’s op het werkHet koninklijk besluit van 24 april 2014 betreffende de wijziging van diverse bepalingen in het kader van het welzijn van de werknemers bij de uitvoering van hun werkHet decreet van 22 december 2017 over het lokaal bestuur 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Elke werkgever is verantwoordelijk voor de structurele planmatige aanpak van preventie, door middel van een dynamisch risicobeheersingssysteem.Het dynamisch risicobeheersingssysteem is gesteund op de algemene preventiebeginselen en heeft betrekking op de volgende domeinen:1° de arbeidsveiligheid;2° de bescherming van de gezondheid van de werknemer op het werk;3° de psychosociale aspecten van het werk;4° de ergonomie;5° de arbeidshygiëne;6° de verfraaiing van de arbeidsplaatsen;7° de maatregelen van de onderneming inzake leefmilieu, wat betreft hun invloed op depunten 1° tot 6°. 
+                                                            Het dynamisch risicobeheersingssysteem heeft tot doel de planning van de preventie en de uitvoering van het beleid met betrekking tot het welzijn van de werknemers bij de uitvoering van hun werk mogelijk te maken.Dit beleid heeft tot doel arbeidsongevallen en beroepsziekten te voorkomen en de verhouding tussen mens en werk nader te bepalen, zodat beter rekening gehouden wordt met de mens in zijn totaliteit. Dit preventiebeleid dient rekening te houden met een aantal specifieke wettelijke en reglementaire bepalingen, die door de overheid werdenuitgevaardigd om het kader aan te geven waarbinnen dit preventiebeleid kan tot stand komen.De veruitwendiging van dit dynamisch risicobeheersingssysteem is het globaal preventieplan (GPP) dat de werkgever in overleg met de leden van de hiërarchische lijn en  team voor Preventie en Bescherming op het werk opstelt. Dit GPP wordt opgesteld voor een termijn van vijf jaar maar dient minstens jaarlijks herzien te worden in functie van de wijzigende risico’s, prioriteiten en veranderingen in de organisatie.Het bestuur legt de noodzakelijke middelen, de taakverdeling, eventuele fasering en de doelstellingen vast.Uit het globaal preventieplan (GPP) wordt het jaaractieplan (JAP) getrokken. Dit jaaractieplan bepaalt de acties voor 1 jaar. Dit jaaractieplan dient steeds door het collegevan burgemeester en schepenen, het vast bureau en het HOC BOC te worden goedgekeurd, voor 1 november voorafgaand aan het jaar van het JAP. 
+                                                            Het globaal preventieplan en jaaractieplan 2021 werden behandeld in het comité preventie en bescherming van het werk van het vakbondsoverleg op 8 oktober 2020. 
+                                                            Gegevens en bronnen waaruit het GPP kan worden opgemaaktDe resultaten van de risicoanalyses:Risicoanalyses dienen te worden uitgevoerd over gans de organisatie, per functie, per werkpost, per taak.De preventiemaatregelen die nodig zijn om de vastgestelde risico’s in te dekken, worden  opgenomen in het GPP.De bevindingen van de arbeidsongevallenanalyse:Elk arbeidsongeval wordt geanalyseerd om maatregelen te kunnen treffen om dergelijke ongevallen in de toekomst te vermijden.Indien deze maatregelen niet onmiddellijk uitgevoerd kunnen worden, zullen deze opgenomen worden in het GPP.De werkplaatsbezoeken:Werkplaatsbezoeken kunnen worden uitgevoerd door verschillende diensten: brandweer, politie, Inspectie Toezicht Welzijn op het Werk (TWW), onderwijsinspectie, Kind & Gezin, de verzekeraar en de interne en externe preventiedienst (Securex). Opmerkingen van deze inspecties worden opgenomen in het GPP of in een aparte actietabel, die een onderdeel vormt van het GPP.De resultaten van de audit:indien het bestuur kiest om een audit te laten doen, zullen opmerkingen betreffende welzijn op het werk worden opgenomen in het GPP.De adviezen van het HOC BOC:De maandverslagen van de interne dienst voor preventie op het werk worden besproken op het HOC BOC en de opmerkingen op die vergaderingenworden opgenomen in het GPP.De te bereiken doelstelling:De werkgever streeft naar een veilige, aangename werkomgeving voor zijn werknemers. 
+                                                            Dit plan is een dynamisch gegeven dat elk jaar kan bijgestuurd worden, ook in functie van invulling formatie en mensen en middelen die beschikbaar zijn.Er werd ook overeengekomen dat voor de implementatie van de GPP de volgorde is waarin we best te werk gaan de volgende is:-    Inventariseren;-    risico analyse opdracht – toestel – omgeving -    opmaak instructie kaartenHet is de overtuiging dat er wel al heel wat aanwezig is maar dat dit op niveau van Lievegem nog moet in kaart gebracht worden. 
+                                                            Voor de risico analyses (RA) werd volgende verduidelijking gegeven. Een algemene RA zal vooral in overzicht de organisatie bekijken en de risico’s in het algemeen benaderen. Dit vraagt ook meestal organisatorische maatregelen.Een RA per functie is eigenlijk een taakrisicoanalyse. Die ontleedt in detail elke taak die een medewerker in zijn functie uitvoert.RA’s worden opgemaakt op niveau organisatie, op niveau afdeling en op niveau medewerker. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ffb8cee0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            Het Globaal Preventie Plan (GPP) 2021–2026 wordt goedgekeurd. 
+                                                            Artikel 2 
+                                                            De gemeenteraad neemt akte van het Jaar Actie Plan (JAP) 2021. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70> a ns3:Agendapunt ;
+    ns3:geplandOpenbaar true ;
+    ns2:uuid "e7fbb0b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Interne Dienst Preventie en Bescherming - globaal preventieplan Lievegem 2021-2026: goedkeuring." .
+

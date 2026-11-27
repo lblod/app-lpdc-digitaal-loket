@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/be6b92cc-6ab5-40f9-9f87-f543e6e03175> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a77699-b47c-4735-83be-5f8aad1a3f0d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/02970818-7dfc-4286-8824-4fa3bf82d98f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0af69fb1-46f3-4aef-939a-6a511b03f81c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1849a454-f27d-49b4-ab39-464d7ea1c920>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1a8f7ce6-2f30-4ae7-bbe5-2542f776d266>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/238a0588-55f4-4b85-b49c-dd003db28008>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/246d381a-83e8-4204-9e89-b9a488489900>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/265e1fb5-7c13-4e00-ba96-7775301c6e41>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/31f5687f-aefa-4e13-8e28-19b18bf7896c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/37b73eb5-47e5-4b73-8b8c-3a544eb78ae9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3a37373a-2faa-4d84-a290-4850442c5ee9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3e0ff05d-dd75-4947-9eeb-4309746cf8bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/445cb7a4-b6f7-42aa-803f-7b5f6d69b4f1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/466942ef-3d08-4ba7-9ab5-e2ce76de3a69>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/46b08bee-652a-4d2e-80b6-c01ca1502b8c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/522ec7db-d4ae-4853-8627-2d42689e3f37>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5cca0358-62ed-423a-b101-5960e5b4b41f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6522b2d7-9bb3-4d35-805a-12c3b3b2c137>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6bba2d8e-8410-4b9c-ba6a-c7695fdadd0a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6fc931ea-46c5-4549-9431-d835b8ddc26c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/76e72c2c-3d0a-4246-bf99-5856cc0f2925>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/78f96d2d-8cc9-451a-8e0c-685583a5295f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8651c3b8-6c12-4d8c-9199-2010f407b653>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/86a7991d-af8b-4b80-89ee-95cfda105f42>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8b8c2beb-d409-46ca-9a63-f31c9869c325>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8daeb30e-528d-44d5-9dd6-3de30ae81636>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8e3e9af8-5e86-4797-982c-05ba884403c3>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/94cfdd03-4728-44da-a1be-3a05ea9ece02>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/9a978c62-b12e-4e0e-b9c2-d36059d63fb9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/9ca8367a-1932-45a1-85b2-46e119855852>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a1cbdcf3-dc90-4da2-a508-16382d0bacde>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a27b40cd-11c3-4f08-9fe4-de482e19dcaf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a574b7c5-cfb3-459c-bbd0-841ac7d213b8>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c526df24-0339-4172-b29a-d8222cc9d506>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d978f0ce-a8c8-47ab-becd-c94528b890dc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e332765b-0a25-4ca2-b8ca-444288303be3>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e6b965c1-63ec-4ea2-814d-7ead2061746e>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/eb42cebe-17b2-4149-89d6-5434bd508e0a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/eb69aaf3-3053-48df-82a6-8c179df4e4d4>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fba9cc63-1b20-40f8-9092-3c263a7fb8cf> ;
+    ns1:geplandeStart "2024-12-02T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/a726418d-3a19-4a99-8d7e-a778fecbfe2d> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/a763993a-e9bf-4a99-83c6-9f3e07591307> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/862cf823-47dc-4010-8b70-1f503efda002> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "3da21b50-ab1d-11ef-9218-6931664218fe" ;
+    prov:atLocation "Sporthal" ;
+    prov:startedAtTime "2024-12-02T20:00:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6bba2d8e-8410-4b9c-ba6a-c7695fdadd0a> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/238a0588-55f4-4b85-b49c-dd003db28008> ;
+    ns1:openbaar true ;
+    ns2:uuid "c33352a0-ce79-11ef-9218-6931664218fe" ;
+    dcterms:description """ 
+                             
+                                De kennisname door de raad van de verhindering tot het uitoefenen van het ambt van aangewezen-burgemeester door raadslid Alexander De Croo. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                De kennisname door de raad van de verhindering tot het uitoefenen van het ambt van aangewezen-burgemeester door raadslid Alexander De Croo. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6bba2d8e-8410-4b9c-ba6a-c7695fdadd0a> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/6bba2d8e-8410-4b9c-ba6a-c7695fdadd0a> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/6bba2d8e-8410-4b9c-ba6a-c7695fdadd0a> a ns1:Besluit ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Aanduiding en eedaflegging waarnemend aangewezen burgemeester." ;
+    ns1:motivering """ 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Als na de eedaflegging als aangewezen-burgemeester blijkt dat deze verkozene lid is van een regering of de deputatie, dan kan deze verkozene niet als aangewezen-burgemeester de bevoegdheden uitoefenen. Deze verkozene zal dan titelvoerend aangewezen-burgemeester zijn.  
+                                    In dit geval zal de verkozene met het tweede meeste naamstemmen van de grootste coalitiefractie de eed afleggen als waarnemend aangewezen-burgemeester.  
+                                    Die situatie kan zich voordoen als de verkozene met de meeste naamstemmen van de grootste coalitiefractie bijvoorbeeld minister in de Vlaamse Regering is. In dat geval bestaat er een wettelijke verhindering. Om ervoor te zorgen dat de verkozene met de meeste naamstemmen op het einde van de wettelijke verhindering het mandaat als burgemeester weer kan opnemen, is het van belang dat hij op de installatievergadering als aangewezen-burgemeester de eed aflegt. Pas na de eedaflegging bevindt hij zich daadwerkelijk in de situatie van wettelijke verhindering en kan de gemeenteraad die situatie van wettelijke verhindering vaststellen.  
+                                    Na de vaststelling van de wettelijke verhindering door de gemeenteraad zal de verkozene met het tweede meeste naamstemmen van de grootste coalitiefractie de eed afleggen als waarnemend aangewezen-burgemeester. De waarnemend aangewezen-burgemeester oefent alle functies uit die aan de burgemeester worden toevertrouwd. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Als na de eedaflegging als aangewezen-burgemeester blijkt dat deze verkozene lid is van een regering of de deputatie, dan kan deze verkozene niet als aangewezen-burgemeester de bevoegdheden uitoefenen. Deze verkozene zal dan titelvoerend aangewezen-burgemeester zijn.  
+                                                                    In dit geval zal de verkozene met het tweede meeste naamstemmen van de grootste coalitiefractie de eed afleggen als waarnemend aangewezen-burgemeester.  
+                                                                    Die situatie kan zich voordoen als de verkozene met de meeste naamstemmen van de grootste coalitiefractie bijvoorbeeld minister in de Vlaamse Regering is. In dat geval bestaat er een wettelijke verhindering. Om ervoor te zorgen dat de verkozene met de meeste naamstemmen op het einde van de wettelijke verhindering het mandaat als burgemeester weer kan opnemen, is het van belang dat hij op de installatievergadering als aangewezen-burgemeester de eed aflegt. Pas na de eedaflegging bevindt hij zich daadwerkelijk in de situatie van wettelijke verhindering en kan de gemeenteraad die situatie van wettelijke verhindering vaststellen.  
+                                                                    Na de vaststelling van de wettelijke verhindering door de gemeenteraad zal de verkozene met het tweede meeste naamstemmen van de grootste coalitiefractie de eed afleggen als waarnemend aangewezen-burgemeester. De waarnemend aangewezen-burgemeester oefent alle functies uit die aan de burgemeester worden toevertrouwd. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "c333eee0-ce79-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel, §1: Raadslid Marleen Gyselinck wordt aangeduid als waarnemend aangewezen-burgemeester. 
+                                    §2 Kennis wordt genomen dat betrokkene de eed "Ik zweer de verplichtingen van mijn mandaat trouw na te komen" heeft afgelegd in handen van de voorzitter van de Gemeenteraad. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Enig artikel, §1: Raadslid Marleen Gyselinck wordt aangeduid als waarnemend aangewezen-burgemeester. 
+                                                                    §2 Kennis wordt genomen dat betrokkene de eed "Ik zweer de verplichtingen van mijn mandaat trouw na te komen" heeft afgelegd in handen van de voorzitter van de Gemeenteraad. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6bba2d8e-8410-4b9c-ba6a-c7695fdadd0a> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6bba2d8e-8410-4b9c-ba6a-c7695fdadd0a> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "3d98f390-ab1d-11ef-9218-6931664218fe" ;
+    dcterms:title "Aanduiding en eedaflegging waarnemend aangewezen burgemeester." .
+

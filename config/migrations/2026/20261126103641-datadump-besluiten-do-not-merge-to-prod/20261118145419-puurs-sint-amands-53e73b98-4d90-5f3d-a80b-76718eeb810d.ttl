@@ -1,0 +1,84 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/ad3cc40a-9fcf-4392-bd33-39bb79295f9c> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3cd55168-f009-4657-9d42-c891356624f2> ;
+    ns2:geplandeStart "2025-02-04T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/91f71d96-e302-4d46-9426-2d280be6fe13> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:uuid "b27a6c6a-32e3-503a-94dc-0a63ef5e309b" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-02-04T20:02:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3cd55168-f009-4657-9d42-c891356624f2> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/09f4bf3a-09f2-4961-b374-ca22d949f5ca> ;
+    ns2:openbaar false ;
+    ns1:uuid "b6d00303-6f05-57e4-917e-79a767bec8b4" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3cd55168-f009-4657-9d42-c891356624f2> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/3cd55168-f009-4657-9d42-c891356624f2> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/3cd55168-f009-4657-9d42-c891356624f2> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Hekkestraat" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    We ontvingen van een leerkracht van lagere school 'De zonnebloem' de vraag om een een tijdsframe aan te brengen bij de 'kiss&ride'-strook aan de overkant van de school. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2028: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                    We bespraken met de gemachtigd opzichter van de lagere school 'De zonnebloem' enkele punten die voor verbetering vatbaar zijn. Een van de punten is het aanbrengen van een tijdsframe voor de 'kiss&ride'-strook aan de overkant van de school. 
+                                 
+                            """@nl ;
+    ns1:uuid "53e73b98-4d90-5f3d-a80b-76718eeb810d" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Hekkestraat nr.4 tot nr.10: het parkeren is toegelaten; de parkeerreglementering is beperkt in de tijd op maandag, dinsdag, donderdag en vrijdag tussen 8.00u en 8.30u en tussen 15.20u en 15.50u en op woensdag 8.00u en 8.30u en tussen 12.00u en 12.30u en geldt 5 minutenDit wordt aangeduid door verkeerstekens:  - E9a - GVIIC (Maximum 5 minuten op Ma-di-do-vr van 08.00u tot 08.30u en van 15.20u tot 15.50u; op woe van 08.00u tot 08.30u en van 12.00u tot 12.30u) - XC : 20m 
+                                      
+                                    Artikel 2: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3cd55168-f009-4657-9d42-c891356624f2> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3cd55168-f009-4657-9d42-c891356624f2> a ns2:Agendapunt ;
+    ns1:uuid "5b212a99-ce9a-59b1-b949-54743c796fc4" .
+

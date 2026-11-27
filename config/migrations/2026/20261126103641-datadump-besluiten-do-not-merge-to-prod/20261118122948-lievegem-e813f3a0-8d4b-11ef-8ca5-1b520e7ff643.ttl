@@ -1,0 +1,100 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/998e950f-4a6f-407e-acc8-21f0454943be> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/126b5d00-e069-4e28-b529-cf0f3ac3fa4f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/165c23ef-46b9-458f-b9b0-5dbc73c379b2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/17387b65-ced4-4251-8c34-51cf19d58f12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1fc6887a-ce70-4ba4-ac9e-ee961ef6ac02>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/381c20a3-8080-42a8-9221-7cdcbfd8ca0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38d10030-92e0-4af2-8eef-0118f76f76eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/433715a9-1e9a-40af-b0d8-613899c834ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a87114f-e4ab-4cac-91ab-92033fd684e5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dd9427a-ecad-4d8f-8bde-403db3d87d60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f9a9ccd-7a00-4b11-b963-ea9d49ce9bc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52c0136d-8a66-47f6-a824-301f44e5bfa2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ae7b9a5-ca72-4215-86e4-15dae2cf1794>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7af75996-5356-499b-8094-de17d5f0f4e1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87785798-6639-4c6f-bfa4-260ee7647588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9e41e560-e2c4-46f4-9e22-4608f5957da1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f6ee797-2c73-4fb4-9bba-d13a543c7b62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b218d9dc-8bae-4b81-bba1-70375cce2307>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be9900d6-a624-438d-bd99-063b4ea93f41>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c45d5bbb-1ee0-4518-8198-c4675b746bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8f55e5a-ccdf-47cf-bff8-0e38acb72112>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9156811-9d61-455c-a63b-8b086125c7ec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9ec27d7-f5aa-4dd6-a42b-e9679c4d8326>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1cb10c6-2945-49fd-9b6c-1f2711281a68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4f56cb2-2c2b-4fc7-9f65-01a4d1da85f5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5dd5bd3-73dd-4c59-a91b-954ae172da6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd2b8423-4c83-48a5-a7cb-405b6d4dc153>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5f26532-dc4e-42f0-9a15-74038fc65044> ;
+    ns1:geplandeStart "2023-12-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e0ffeb14-446f-4b4c-a17d-9f5791fa2dae> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d1612c76-4d4d-4b68-9053-0c49145eadf9> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4b578639-cd04-4965-be39-ac33532e8409> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e8104a20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-12-20T21:42:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-12-20T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/52c0136d-8a66-47f6-a824-301f44e5bfa2> ;
+    ns1:openbaar true ;
+    ns2:uuid "f7e13590-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de ontwerpakte pachtbeëindiging onder opschortende voorwaarde voor grondinnemingen nrs. 19 en 20 te Ronselestraat goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Patrimonium – grondverwerving Ronselestraat-Leischoot noodzakelijk voor de realisatie van wegenwerken - ontwerpakte pachtbeëindiging inname 19-20: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11° en artikel 56Decreet van 19 december 2014 over de Vlaamse Vastgoedcodex, waarbij de bevoegdheid van de Vlaamse commissarissen werd vastgelegd tot het uitvoeren van bepaalde vermogensrechterlijke verrichtingen in naam en voor rekening van het Vlaamse Gewest, de Vlaamse Gemeenschap, de Vlaamse gemeenschaps- en gewestinstellingen en bepaalde entiteiten zoals de gemeentenDe wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen Het besluit van de gemeenteraad van 21 december 2022 over de Meerjarenplan 2020 - 2025 aanpassing 3 deel gemeente Lievegem: vaststelling waarbij de nominatieve investeringen werden goedgekeurd, inzonderheid ACT-135-G 'Fietspad Ronselestraat - Leischoot'Het collegebesluit van 12 januari 2021 waarbij Studiebureel Goegebeur - Van Den Bulcke BVBA, Herbakkersplein 5 te 9900 Eeklo werd aangesteld als ontwerperHet collegebesluit van 14 december 2021 met het principieel akkoord voor het ontwerpplan en de bijhorende innemingsplannen voor het aan te leggen fietspad on de Ronselestraat en LeischootHet collegebesluit van 17 mei 2022 waarbij de aanvraag voor de opmaak van het schattingsverslag voor de in te nemen percelen voor de realisatie van het fietspad in de  Ronselestraat en Leischoot werd goedgekeurdHet collegebesluit van 25 oktober 2022 waarbij kennis werd genomen van het schattingsverslag en principieel werd beslist opdracht te geven aan Vastgoedtransacties om de aankoop van de gronden voor de realisatie van het fietspad in de Ronselestraat en Leischoot voor te bereidenHet gemeenteraadsbesluit van 23 november 2022 met de goedkeuring van de grondinnemingsplannen en de opdracht aan Vastgoedtransacties tot onderhandeling en opmaak van de koopakten om deze gronden minnelijk te verwervenHet besluit van de gemeenteraad van 20 december 2023 over de goedkeuring van de ontwerpakte voor de inname 19 en 20 te Ronselestraat 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Er werd een ontwerpversie voor de aanleg van het fietspad in de Ronselestraat en Leischoot opgemaakt door het studiebureau Goegebeur - Van Den Bulcke BVBA, Herbakkersplein 5 te 9900 Eeklo. Dit ontwerp werd besproken met en principieel goedgekeurd door het college en de projectstuurgroep. In uitvoering van dit ontwerpplan werden ook bijhorende innemingsplannen (24 innemingen) en overzichtsplannen opgemaakt door Studiebureel Goegebeur - Van Den Bulcke BVBA.Het betreft de grondinnames nrs. 19 en 20 van het goedgekeurde grondinnemingsplan fietspad Ronselestraat-Leischoot opgemaakt door het Studiebureel Goegebeur - Van Den Bulcke BVBA, Herbakkersplein 5 te 9900 Eeklo op 9 maart 2023. De dienst Vastgoedtransacties heeft onderhandeld met de pachter en de ontwerpakte pachtbeëindiging onder opschortende voorwaarde met dossiernummer 14257-013A onder voorbehoud van goedkeuring van de gemeenteraad opgemaakt.Het betreft 2 stroken grond van:- 156,26 m² met het gereserveerd perceelsidentificatienummer afdeling 6, sectie A, nr 43B (inname 19)- 180,36 m² met het gereserveerd perceelsidentificatienummer afdeling 6, sectie A, nr 44B (inname 20)Als bijlage de pachtbeëindiging voor de grondinnemingen nrs. 19 en 20 in Ronselestraat te 9931 Lievegem.De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De kosten voor deze pachtbeëindiging bedragen in totaal 1.100,00 euro voor innames 19 en 20. 
+                                                            In het meerjarenplan 2020 - 2025 is voor de realisatie van het fietspad Ronselestraat - Leischoot een krediet voorzien van 300.000 euro onder jaarbudgetrekening 2023/ACT-135-G/0200-00/2200000/GEMEENTE/CBS/IP-GEEN. 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns2:uuid "e813f3a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 De gemeenteraad keurt de ontwerpakte pachtbeëindiging onder opschortende voorwaarde voor innemingen nrs. 19 en 20 tussen Joris Damme enerzijds en de gemeente Lievegem anderzijds, opgemaakt door Nele Droesbeke, Vlaams commissaris bij de dienst Vastgoedtransacties, ter hoogte van de percelen Ronselestraat, 9931 Lievegem, kadastraal gekend als afdeling 6, sectie A, nr 43B en 44B met een in te nemen oppervlakte volgens het grondinnemingsplan van 156,26 m² en 180,36 m². 
+                                                            Artikel 2De gemeente beëindigt het pachtrecht op het in artikel 1 bedoelde goed:- voor de prijs van in totaal 1.100,00 euro.- onder de voorwaarden vastgelegd in de bij deze beslissing en als dusdanig deel uitmakend van deze beslissing gevoegde ontwerpakte pachtbeëindiging onder opschortende voorwaarde met dossiernummer 14257-013A opgemaakt door Nele Droesbeke, Vlaams commissaris bij de dienst Vastgoedtransacties.  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f09f4c90-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium – grondverwerving Ronselestraat-Leischoot noodzakelijk voor de realisatie van wegenwerken - ontwerpakte pachtbeëindiging inname 19-20: goedkeuring" .
+

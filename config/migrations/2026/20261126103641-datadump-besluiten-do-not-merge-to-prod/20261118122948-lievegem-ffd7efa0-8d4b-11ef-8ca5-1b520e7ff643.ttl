@@ -1,0 +1,130 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns1:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e0619127-972d-4e72-94da-584e031779d2> ;
+    ns1:openbaar true ;
+    ns2:uuid "ffd77a70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b9560f04-0264-4507-963a-e85c4f1f2eb2> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b9560f04-0264-4507-963a-e85c4f1f2eb2> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt het gemeentelijk actieprogramma aangaande het inzetten van gronden van Vlaamse besturen voor sociale woningbouw goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Gemeentelijk actieprogramma aangaande inzetten gronden van Vlaamse besturen voor sociale woningbouw: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet lokaal bestuur van 22 december 2017, artikel 56 
+                                                            Het decreet grond- en pandenbeleid, artikel 4.1.7 
+                                                            De Vlaamse Codex Wonen, artikel 2.6 
+                                                            Het besluit van de Vlaamse Regering over het lokaal woonbeleid van 16 november 2018 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Situering 
+                                                            Het gemeentelijk actieprogramma moet verplicht worden opgemaakt door alle gemeenten. Het actieprogramma vormt een overzicht van alle onbebouwde bouwgronden in eigendom van Vlaamse besturen, die kunnen worden ingezet voor de sociale woningbouw, zoals bedoeld in het decreet grond- en pandenbeleid (hierna: DGPB). 
+                                                            De gemeente Lievegem heeft conform het DGPB een register van onbebouwde percelen en daarin een module voor de gronden in handen van Vlaamse besturen. 
+                                                            Er geldt een activeringsplicht voor deze gronden in eigendom van Vlaamse besturen. Concreet houdt dit in dat minstens 25% van deze gronden moet worden aangewend voor de realisatie van een sociaal woonaanbod.  Als de gemeente haar BSO bereikt, vervalt de verplichting om 25% te activeren. De activatie van het actieprogramma blijft wel een verplichting, als de gemeente er niet in slaagt het BSO te realiseren tegen 31 december 2025. 
+                                                            Het actieprogramma is bindend voor de gemeente zelf: een engagement om de geselecteerde gronden te proberen te laten ontwikkelen met sociale woonprojecten. In principe moeten de Vlaamse besturen die eigenaar zijn meewerken. Doen die dat niet, dan kan de Vlaamse overheid in 2025 art. 5.107 van de Vlaamse Codex toepassen en activeringstoezicht uitoefenen. Dat activeringstoezicht komt erop neer dat de Vlaamse regering in de plaats van die besturen kan treden en de gronden alsnog laten ontwikkelen. 
+                                                            De opmaak en het actualiseren van het actieprogramma werd ingeschreven in het besluit van de Vlaamse Regering van van 16 november 2018. Binnen de prioriteit waarin de gemeente voorziet in een divers en betaalbaar woonaanbod in functie van de woonnoden, worden enkele concrete opdrachten opgelijst. Artikel 6, 5°, c) bevat een specifieke activiteit dat door de gemeente uitgevoerd moet worden waarin het actieprogramma zit vervat. Het gaat om het voeren van een gecoördineerd lokaal sociaal woonbeleid, met volgend aspect: “een beleid voeren rond de activering van gronden en panden voor sociaal wonen”. 
+                                                            Deze actieprogramma's waren in het verleden door de deelgemeenten opgemaakt. In principe ligt het actieprogramma eenmaal goedgekeurd verder vast voor de periode tot 2025. In het licht van de fusie is de opmaak van een nieuw actieprogramma voor de gemeente Lievegem wenselijk. 
+                                                            Het gemeentelijk actieprogramma dient uiterlijk eind 2020 te zijn opgemaakt en goedgekeurd door de gemeenteraad. Deze verplichting wordt vanaf 2021 overgenomen in artikel 2.6 van de Vlaamse Codex Wonen. 
+                                                            Opmaak gemeentelijk actieprogramma Lievegem 2020 
+                                                            Woonwijzer heeft de lijst met alle onbebouwde gronden in eigendom van Vlaamse besturen gefilterd en alle eigendommen van semi-publieke rechtspersonen eruit gehaald en naast het actieprogramma van de deelgemeenten van 2013 gelegd. Woonwijzer heeft ons deze info bezorgd op 16 november 2020. 
+                                                            De percelen in eigendom van semi-publieke rechtspersonen (meer bepaald Meetjeslandse Bouwmaatschappij en Volkshaard) hoeven niet opgenomen te worden in het actieprogramma. Dit is geen verplichting en de keuze ligt bij het bestuur. 
+                                                            Vervolgens heeft Team Omgeving deze lijst onderzocht op de bestaande toestand en een stedenbouwkundige beoordeling gemaakt van de ontwikkelingsmogelijkheden. 
+                                                            Deze lijst is uitgebreider dan de wettelijke minimumvereisten voorschrijven. De vraag is dan natuurlijk welke percelen wel wettelijk verplicht op te nemen zijn in het actieprogramma. Het betreft onbebouwde percelen, meer specifiek bouwgronden en kavels in eigendom van Vlaamse besturen. Heel concreet: de gronden, die verplicht dienen opgenomen te worden in het actieprogramma, voldoen aan de volgende voorwaarden: 
+                                                            - zijn gelegen in een woongebied of woonuitbreidingsgebied dat reeds voor bebouwing in aanmerking komt blijkens een principiële beslissing- palend aan een voldoende uitgeruste weg; en- er is geen uitsluitingsgrond van toepassing.Met andere woorden moeten de onbebouwde percelen of woonuitbreidingsgebieden die nog niet aangesneden zijn en waarover nog geen principiële beslissing werd genomen, niet verplicht opgenomen worden in de totale berekening van het actieprogramma. 
+                                                            De suggestie van Woonwijzer is enkel de intentie weer te geven, indien deze gekend is, en te beargumenteren dat deze niet verplicht dienen opgenomen te worden, zodoende een vertekend beeld te voorkomen en een overschatting van het totaal te ontwikkelen oppervlakte voor sociale huisvesting tegen te gaan. Het is aangewezen de percelen, die niet opgenomen worden in de totale berekening, toch te inventariseren vanuit het idee dat wanneer er wel een beslissing wordt genomen omtrent de bestemming van het perceel, deze makkelijk kunnen worden opgenomen. Dit in het kader van de actualisatie/ periodiek bijsturen van het actieprogramma bij een niet behaald BSO (evaluatie om de twee jaar). De keuze hiervoor ligt hiervoor bij het bestuur. 
+                                                            De percelen in eigendom van Vlaamse publieke besturen, andere dan de eigen gemeente/OCMW, moeten verplicht worden opgenomen in de totale te berekenen oppervlakte voor sociale woningbouw, voor zover ze voldoen aan de voormelde voorwaarden. De beslissing omtrent de intenties ligt niet bij het bestuur van Lievegem. In de toekomst zullen dan ook de intenties van deze besturen worden opgevraagd, maar de duidelijke uitsluitingsgronden worden reeds weergegeven. 
+                                                            De gemeente zal haar regisseursrol moeten opnemen om met alle betrokkenen te onderhandelen zodat de sociale woonprojecten gerealiseerd worden. De gemeente kan via VCRO art. 4.3.1, §3 de vergunningen toetsen aan haar actieprogramma en de vergunning weigeren, maar ze heeft geen dwangmiddelen om effectief een project te laten uitvoeren. In 2025 kan de Vlaamse Overheid wel optreden. 
+                                                            Het goedgekeurde actieprogramma wordt om de twee jaar geëvalueerd. De opvolging van het actieprogramma gebeurt op het lokaal woonoverleg en op het College van Burgemeester en Schepenen. 
+                                                            Beslissing 
+                                                            1) Oplijsting percelen 
+                                                            De wettelijk op te nemen percelen van zowel de gemeente/OCMW als van publieke rechtspersonen, andere dan de eigen gemeente/OCMW moeten opgenomen worden in het actieprogramma (onbebouwde percelen van de gemeente en OCMW gelegen in woongebied of woonuitbreidingsgebied dat voor bebouwing in aanmerking komt blijkens principiële beslissing, palend aan een uitgeruste weg) 
+                                                            De percelen van de semi-publieke rechtspersonen (percelen MBV en Volkshaard) worden niet opgenomen in de lijst, aangezien deze ook niet meetellen bij de berekening van de oppervlakte. 
+                                                            De percelen die niet gelegen zijn in woonuitgebied of geordend woonuitbreidingsgebied en niet gelegen zijn aan een uitgeruste weg, werden in de lijst in bijlage in rood gezet als niet in aanmerking komende percelen. 
+                                                            2) Vrijgestelde percelen 
+                                                            Van deze opgelijste percelen komen percelen in aanmerking voor vrijstelling (zoals opgenomen in art. 3.2.1, 1° van het Decreet Grond- en Pandenbeleid). 
+                                                            Artikel 3.2.1, 1° Decreet Grond- en Pandenbeleid bepaalt het volgende: 
+                                                            Indien het bindend sociaal objectief, vermeld in artikel 4.1.2, in een gemeente niet is verwezenlijkt binnen de daartoe voorziene termijn, kan de Vlaamse Regering maatregelen van activeringstoezicht treffen ten aanzien van Vlaamse besturen die voldoen aan beide hiernavolgende voorwaarden :1° zij zijn op het grondgebied van die gemeente eigenaar van onbebouwde bouwgronden of kavels die niet beantwoorden aan één of meer van volgende bijzondere karakteristieken :a) zij zijn kennelijk rechtstreeks dienstig voor de uitoefening van de taak van de betrokken rechtspersoon;b) zij zijn ingericht als collectieve voorzieningen, met inbegrip van hun aanhorigheden;c) zij zijn het voorwerp van een recht van erfpacht, van opstal, van vruchtgebruik of van gebruik;d) zij worden verpacht ingevolge de Pachtwet van 4 november 1969, waarbij het bewijs van de pacht door alle middelen rechtens mag worden geleverd;e) zij zijn in het kalenderjaar voorafgaand aan het heffingsjaar geregistreerd in het Geïntegreerd Beheers- en Controlesysteem;f) zij zijn onderworpen aan een bouwverbod of aan enige andere erfdienstbaarheid tot openbaar nut die woningbouw onmogelijk maakt;g) de onmogelijkheid om woningen op te richten vloeit voort uit een vreemde oorzaak die het Vlaamse bestuur niet kan worden toegerekend, zoals de beperkte omvang van de bouwgronden of kavels, of hun ligging, vorm of fysieke toestand;h) zij zullen blijkens een ten minste reeds voorlopig vastgesteld of voorlopig aangenomen ruimtelijk uitvoeringsplan of plan van aanleg een met wonen onverenigbare bestemming krijgen; 
+                                                            De eerste screening hiervan is gebeurd door team Omgeving, waardoor gekende parkjes, speelterreinen, voetwegen, parking ..., alsook percelen met een rare vorm waarop ontwikkeling stedenbouwkundig niet mogelijk wordt geacht, in de lijst in het bruin aangeduid,t. 
+                                                            De vrijgestelde gronden worden tevens niet opgenomen in de berekening. 
+                                                            3) Overblijvende percelen 
+                                                             Van de overgebleven percelen wordt dan de totale oppervlakte berekend om zo de te ontwikkelen oppervlakte voor sociale huisvesting te berekenen (25%). 
+                                                            In de lijst staat in de kolom bestaande toestand reeds een korte beoordeling/beschrijving van de percelen. In de kolom "bestemming" staat de beoordeling van het college aangaande haar eigen intenties en de mogelijkheid tot ontwikkeling sociale woningbouw.  
+                                                            In de lijst zijn in het groen de 25% van de berekende gezamenlijk oppervlakte aangeduid die geschikt zijn voor de ontwikkeling van sociale huisvesting. De overblijvende witte rijen zijn de percelen die als niet geschikt worden geacht voor de realisatie van sociale huisvesting. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ffd7efa0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad keurt het gemeentelijk actieprogramma aangaande het inzetten van gronden van Vlaamse besturen voor sociale woningbouw goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e802dca0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Gemeentelijk actieprogramma aangaande inzetten gronden van Vlaamse besturen voor sociale woningbouw: goedkeuring" .
+

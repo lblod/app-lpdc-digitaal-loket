@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/68d15233-c58f-4b8b-aed2-6b834d9e4627> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85b62563-dcbf-4cbc-9542-be3aae8a11fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ccddc7c9-4563-4fb2-8fbd-72539627bcc7> ;
+    ns1:geplandeStart "2026-09-01T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/beafc91e-f79b-483b-a88f-9864e3ce8185> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "a4bbd44b-ec83-5363-a074-a4ce93065fa6" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-09-01T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/12b7bd29-3c3b-497f-994c-e89798509a9f> ;
+    ns1:openbaar false ;
+    ns3:uuid "0696e361-bb77-5912-8851-c3a8162fa64e" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'HIPPOcrite' van zaterdag 10 oktober 2026 21.30 uur tot en met zondag 11 oktober 2026 4.30 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'HIPPOcrite' - KLJ Lovendegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 1 september 2026 over de aanvraag evenement HIPPOcrite - KLJ Lovendegem 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Jitse Van Kerckvoorde, namens KLJ Lovendegem, organiseert 'HIPPOcrite' vanaf zaterdag 10 oktober 2026 22.00 uur tot en met zondag 11 oktober 2026 4.00 uur.Er werd op 9 juni 2026 een aanvraag ingediend door Jitse Van Kerckvoorde, namens KLJ Lovendegem om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "ddc6b71b-8172-5a37-b790-88f1f2774943" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement van 'HIPPOcrite' van zaterdag 10 oktober 2026 21.30 uur tot en met zondag 11 oktober 2026 4.30 uur wordt vastgesteld als volgt: 
+                                     
+                                        Parkeerverbod 300 m voor en na de ingang van de fuif ter hoogte van Eeksken 4 (in Eeksen en Boterhoek). 
+                                        Snelheidsbeperking: max. 50 km/u 300 m voor en na de ingang van de fuif ter hoogte van Eeksken 4. 
+                                        Snelheidsbeperking: max. 30 km/u 100 m voor en na de ingang van de fuif ter hoogte van Eeksken 4. 
+                                        Plaatsing wegversmallingen (chicanes) om de snelheid van het verkeer ook fysiek te remmen, ter hoogte van de snelheidsbeperkingen max. 30 km/u in beide richtingen 
+                                     
+                                    
+                                         
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 met onderborden Xa, Xb en Xd 
+                                        Borden C43 '50' en C45 '50' + borden 'evenement' 
+                                        Borden C43 '30' en C45 '30' 
+                                     
+                                      
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec> a ns1:Agendapunt ;
+    ns3:uuid "dd78643d-dad5-5115-a45f-b93a52284691" .
+

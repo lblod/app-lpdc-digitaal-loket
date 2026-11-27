@@ -1,0 +1,257 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns3:Zitting ;
+    ns3:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns3:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns3:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns3:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns1:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd> ;
+    ns3:openbaar true ;
+    ns1:uuid "96700d2e-0847-5bde-a5ae-d002b40163a9" ;
+    dcterms:description """ 
+                             
+                                Het schrappen van politieke, ideologische en filosofische strekkingen uit het huishoudelijk reglement omdat deze niet meer van toepassing zijn. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                Het schrappen van politieke, ideologische en filosofische strekkingen uit het huishoudelijk reglement omdat deze niet meer van toepassing zijn (artikel 4, 6°). 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/c779e2f9-d5df-4b3f-bced-0dc134c4d514> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/c779e2f9-d5df-4b3f-bced-0dc134c4d514> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/a8486fa3-6375-494d-aa48-e34289b87d5b> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:title "Adviesraden. Huishoudelijk reglement culturele raad." ;
+    ns3:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Decreet over het Lokaal Bestuur van 22 december 2017 en latere wijzigingen. 
+                                    Gemeentelijk algemeen reglement houdende de werking en organisatie van de gemeentelijke adviesraden van 10 maart 2025. 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    - Het schrappen van politieke, ideologische en filosofische strekkingen uit het huishoudelijk reglement omdat deze niet meer van toepassing zijn. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet over het Lokaal Bestuur van 22 december 2017 en latere wijzigingen. 
+                                                                    Gemeentelijk algemeen reglement houdende de werking en organisatie van de gemeentelijke adviesraden van 10 maart 2025. 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    - Het schrappen van politieke, ideologische en filosofische strekkingen uit het huishoudelijk reglement omdat deze niet meer van toepassing zijn (artikel 4, 6°). 
+                                                                 
+                                                            """@nl ;
+    ns1:uuid "c54f53fa-890b-52fc-b750-4b22cfa34679" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    De algemene vergadering van de culturele raad beslist onderstaand ontwerp van het huishoudelijk reglement goed te keuren en voor te leggen aan de gemeenteraad. 
+                                      
+                                    HUISHOUDELIJK REGLEMENT CULTURELE RAAD 
+                                      
+                                    Titel 1: Grondslag 
+                                    Artikel 1 
+                                    Dit reglement bepaalt hoe de Culturele Raad van Brakel intern werkt. Het legt vast hoe de algemene vergadering verloopt, het dagelijks bestuur vergadert en eventuele werkgroepen werken. Alles gebeurt volgens het algemeen reglement voor adviesraden. 
+                                      
+                                    Titel 2: Engagementsverklaring 
+                                    Artikel 2 
+                                    Alle stemgerechtigde leden (algemene vergadering) en bestuursleden (dagelijks bestuur) wordt gevraagd akkoord te gaan met volgende engagementsverklaring: 
+                                    1° Akkoord gaan met de doelstellingen zoals beschreven in het algemeen reglement van adviesraden en dit huishoudelijk reglement en actief willen meewerken aan de realisering ervan. 
+                                    2° De Algemene Vergadering en/of Dagelijks Bestuur bijwonen. Indien dit onmogelijk is, wordt het lid van de algemene vergadering uitdrukkelijk verzocht zich te verontschuldigen en zijn of haar plaatsvervanger hiervan op de hoogte te brengen en wordt het bestuurslid van het dagelijks bestuur verzocht zich te verontschuldigen. 
+                                    3° Zich informeren over het beleid binnen het domein van de adviesraad door lectuur, bijscholing, vorming en contacten met betrokkenen bij het beleid. 
+                                    4° De ‘Universele verklaring van de rechten van de mens’ onderschrijven. 
+                                    5° Spreekrecht en stemrecht in de Algemene Vergadering en/of Dagelijks Bestuur. 
+                                    6° Inzagerecht, recht op uitleg en recht op afschrift overeenkomstig de wettelijke en decretale bepalingen. 
+                                    7° De vereniging die hen heeft aangesteld regelmatig op de hoogte te houden van de werkzaamheden van de culturele raad en ook geregeld overleg plegen met hun achterban in functie van het opsporen van behoeften, ideeën en verwachtingen betreffende het beleid. 
+                                    Artikel 3 
+                                    De gemeentelijke culturele raad adviseert het gemeentebestuur inzake de voorbereiding en de uitvoering van het gemeentelijk cultuurbeleid. Als culturele aangelegenheden worden begrepen die punten in de opsomming van art. 4 van de wet van 8 augustus 1980 betreffende de bijzonder wet tot hervorming van de instellingen; met name bescherming en verheffing van de taal, stimuleren van onderzoek en vorming van onderzoekers, schone kunsten (esthetische of kunstzinnige expressie), cultureel erfgoed, musea en wetenschappelijk-culturele instellingen (met uitzondering van monumenten en landschappen), bibliotheken en vergelijkbare diensten, permanente volwasseneneducatie en culturele animatie. 
+                                    Artikel 4 
+                                    De culturele raad heeft bovendien als opdracht: 
+                                    1° het inzamelen van informatie en documentatie over het cultureel leven en de culturele behoeften in het werkingsgebied. 
+                                    2° het bevorderen en het organiseren van overleg, coördinatie en samenwerking tussen de culturele organisaties. 
+                                    3° het stimuleren van de inspraak van de brede bevolking bij de opbouw van het gemeentelijk cultuurbeleid. 
+                                    4° het bevorderen van de deelname van de ruimere bevolking – en inzonderheid van groepen in achterstandssituaties – aan het cultureel werk. 
+                                    5° het mogelijk maken en het zelf nemen van initiatieven in de culturele sector. 
+                                    6° Het deelnemen aan het beheer van de gemeentelijke culturele instellingen overeenkomstig art. 8 en 9 van de wet van 16 juli 1973 ter bescherming van de ideologische en filosofische strekkingen. 
+                                    Titel 3: Algemene Vergadering 
+                                    Artikel 5: Samenstelling 
+                                    §1 De Algemene Vergadering is samengesteld uit:  
+                                    1° 1 stemgerechtigd lid per erkende culturele vereniging. 
+                                    2° Gecoöpteerde leden aangeduid door de algemene vergadering. Het aantal stemgerechtigde leden onder art. 5, 2° mag niet meer bedragen dan 1/5 van het aantal leden in art. 5, 1°. Indien het aantal kandidaten voor coöptatie het maximum uit dit punt overschrijdt, kan de algemene vergadering beslissen om de extra kandidaten als waarnemer toe te voegen overeenkomstig art. 5, 3°. 
+                                    3° Waarnemers. Zij hebben spreekrecht en geen stemrecht. 
+                                    4° 1 waarnemer per politieke fractie in de gemeenteraad. Deze hebben spreekrecht en geen stemrecht. 
+                                    §2 Een vereniging die lid wenst te worden van de culturele raad voldoet aan alle onderstaande voorwaarden: 
+                                    1° Activiteiten uitoefenen overeenkomstig art. 3 van dit huishoudelijk reglement. 
+                                    2° Samen met de kandidatuur wordt een werkingsverslag ingediend, waaruit blijkt dat zij in het recente verleden regelmatig culturele activiteiten hebben ingericht. In dit verslag wordt ook de samenstelling van het bestuur meegedeeld, alsook het aantal leden van de vereniging en/of de omvang van het beoogde doelpubliek.  
+                                    §3 Gecoöpteerde leden en waarnemers worden aangesteld op basis van: 
+                                    1° de culturele deskundigheid of de persoonlijke interesse van de betrokken persoon. 
+                                    2° het ondervertegenwoordigd zijn van een bevolkings- of leeftijdscategorie. 
+                                    3° het ondervertegenwoordigd zijn van deelgemeenten in de gemeente.  
+                                    Kandidaten voor coöptatie dienen een schriftelijke aanvraag in bij het dagelijks bestuur van de culturele raad. 
+                                    Artikel 6: Vernieuwing van de algemene vergadering 
+                                    §1 Met het oog op een algemene vernieuwing van de algemene vergadering naar aanleiding van de vernieuwing van de gemeenteraad start het dagelijks bestuur ten laatste in de loop van de maand oktober in het jaar van de lokale verkiezingen de procedure. Elke oproep tot kandidaatstelling bevat minstens: 
+                                    1° de uiterste indiendatum van kandidaturen. 
+                                    2° de elementen waaruit de kandidaatstelling voor verenigingen dient te bestaan (naam vereniging, naam kandidaat, adres kandidaat, functie van de kandidaat in de vereniging en de keuze om als stemgerechtigd of als plaatsvervanger te zetelen). 
+                                    3° de keuze als stemgerechtigd kandidaat voor kandidaatstelling voor een plaats in het dagelijks bestuur. 
+                                    4° de keuze als stemgerechtigd lid voor kandidaatstelling voor een bestuursfunctie (Voorzitter, Ondervoorzitter, Secretaris, Penningmeester) in het dagelijks bestuur. 
+                                    5° de datum, uur en plaats van de installatievergadering.  
+                                    §2 Aan het college van burgemeester en schepenen wordt ook gevraagd de oproep op te nemen in het eerstkomend gemeentelijk informatiemagazine. 
+                                    §3 Ieder kandidaat-lid van de algemene vergadering kan slecht door 1 vereniging voorgedragen worden. 
+                                    §4 Na het afsluiten van de periode tot kandidaatstelling, onderzoekt het uittredende dagelijks bestuur de ontvangen kandidaturen en stelt hiervan een schriftelijk verslag op ten behoeve van de eerstvolgende algemene vergadering (=de installatievergadering). De ontvangen kandidaturen worden o.a. onderzocht overeenkomstig de bepalingen van het algemeen reglement betreffende de gemeentelijke adviesraden en dit huishoudelijk reglement.  
+                                    §5 Op de installatievergadering wordt overgegaan tot de installatie van de nieuwe algemene vergadering. Eerst spreekt de installatievergadering zich uit over de geldigheid van de kandidaat-verenigingen en de geldigheid van de door hen voorgedragen vertegenwoordigers. 
+                                    Artikel 7 
+                                    Op schriftelijke vraag van 1/10 van de stemgerechtigde leden dient binnen de maand – met uitzondering van de maanden juli en augustus - een algemene vergadering belegd te worden met op de agenda minstens die punten die werden voorgesteld.  
+                                      
+                                    Titel 4: Dagelijks Bestuur  
+                                    Artikel 8: Vernieuwing van het dagelijks bestuur 
+                                    §1 Op de installatievergadering wordt door het uittredend dagelijks bestuur ook meegedeeld welke kandidaturen voor het dagelijks bestuur (bestuurslid en/of bestuursfunctie) zijn ontvangen en welke geldig zijn. Er kan overgegaan worden tot de verkiezing van de bestuursleden van het dagelijks bestuur. 
+                                    §2 Indien op de installatievergadering niet is overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur wordt op de eerstvolgende algemene vergadering na de installatievergadering overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur. 
+                                    §3 Een wijziging in de samenstelling van de algemene vergadering geeft geen aanleiding tot het vernieuwen van de samenstelling van het dagelijks bestuur. Een vernieuwing van het dagelijks bestuur kan enkel na een algemene vernieuwing van de algemene vergadering of naar aanleiding van een tussentijdse vernieuwing van de algemene vergadering overeenkomstig de bepalingen van het algemeen reglement betreffende de gemeentelijke adviesraden. 
+                                    Artikel 9: Beraadslagen 
+                                    Om geldig te kunnen beraadslagen, moet de meerderheid der stemgerechtigde leden aanwezig zijn op de algemene vergadering. De algemene vergadering kan echter, als hij eenmaal bijeengeroepen is zonder dat het vereiste aantal stemgerechtigde leden aanwezig is, na een tweede oproeping, ongeacht het aantal aanwezige leden, op geldige wijze beraadslagen of beslissen over onderwerpen die voor de tweede maal op de agenda voorkomen. 
+                                    Artikel 10: Verkiezing 
+                                    §1 Het aantal leden van het dagelijks bestuur wordt bepaald door de algemene vergadering. 
+                                    §2 Bestuursfuncties binnen het dagelijks bestuur zijn: één voorzitter, één ondervoorzitter, één secretaris en één penningmeester. 
+                                    §3 Om lid te kunnen zijn van het dagelijks bestuur moet men effectief (lees: geen vervanger) stemgerechtigd lid zijn van de algemene vergadering. 
+                                    §4 Binnen het dagelijks bestuur kan men zich niet laten vervangen indien men niet kan aanwezig zijn op een bijeenkomst. 
+                                    §5 Er wordt eerst overgegaan tot het verkiezen van de leden van het dagelijks bestuur door de algemene vergadering. Hierna verkiest de algemene vergadering uit de verkozen leden van het dagelijks bestuur de bestuursfuncties. 
+                                    Artikel 11: Vergaderritme 
+                                    §1 Het dagelijks bestuur vergadert minstens driemaandelijks; met uitzondering van de maanden juli en augustus. 
+                                    §2 Op schriftelijke vraag van 1/5 van de leden van het dagelijks bestuur dient binnen de 14 dagen – met uitzondering van de maanden juli en augustus - een dagelijks bestuur belegd te worden met op de agenda minstens die punten die werden voorgesteld. 
+                                      
+                                    Titel 5: Werkgroepen 
+                                    Artikel 12 
+                                    §1 In iedere werkgroep zetelt minstens één lid van het dagelijks bestuur. 
+                                    §2 Ook personen, geen lid van de algemene vergadering of het dagelijks bestuur, kunnen lid zijn van een werkgroep. 
+                                    §3 Indien de werkgroep gelden vanwege de culturele raad ontvangt, wordt jaarlijks een (financieel) werkingsverslag voor het voorbije jaar ingediend, waaruit blijkt dat de werkgroep actief is geweest. In dit verslag wordt ook de samenstelling van de werkgroep meegedeeld. 
+                                    Titel 6: Toezicht 
+                                    Artikel 13 
+                                    Conform de Europese privacywetgeving (GDPR) beschikt gemeente Brakel over een privacyverklaring. Deze kan geraadpleegd worden op de gemeentelijke website en aan het loket. Gemeente Brakel verbindt er zich toe de privacygegevens maximaal te beschermen. Ook de culturele raad handelt volgens de privacyverklaring. 
+                                    Artikel 14 
+                                    Dit huishoudelijk reglement wordt ter bekrachtiging voorgelegd aan de gemeenteraad. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    De algemene vergadering van de culturele raad beslist onderstaand ontwerp van het huishoudelijk reglement goed te keuren en voor te leggen aan de gemeenteraad. 
+                                                                      
+                                                                    HUISHOUDELIJK REGLEMENT CULTURELE RAAD 
+                                                                      
+                                                                    Titel 1: Grondslag 
+                                                                    Artikel 1 
+                                                                    Dit reglement bepaalt hoe de Culturele Raad van Brakel intern werkt. Het legt vast hoe de algemene vergadering verloopt, het dagelijks bestuur vergadert en eventuele werkgroepen werken. Alles gebeurt volgens het algemeen reglement voor adviesraden. 
+                                                                      
+                                                                    Titel 2: Engagementsverklaring 
+                                                                    Artikel 2 
+                                                                    Alle stemgerechtigde leden (algemene vergadering) en bestuursleden (dagelijks bestuur) wordt gevraagd akkoord te gaan met volgende engagementsverklaring: 
+                                                                    1° Akkoord gaan met de doelstellingen zoals beschreven in het algemeen reglement van adviesraden en dit huishoudelijk reglement en actief willen meewerken aan de realisering ervan. 
+                                                                    2° De Algemene Vergadering en/of Dagelijks Bestuur bijwonen. Indien dit onmogelijk is, wordt het lid van de algemene vergadering uitdrukkelijk verzocht zich te verontschuldigen en zijn of haar plaatsvervanger hiervan op de hoogte te brengen en wordt het bestuurslid van het dagelijks bestuur verzocht zich te verontschuldigen. 
+                                                                    3° Zich informeren over het beleid binnen het domein van de adviesraad door lectuur, bijscholing, vorming en contacten met betrokkenen bij het beleid. 
+                                                                    4° De ‘Universele verklaring van de rechten van de mens’ onderschrijven. 
+                                                                    5° Spreekrecht en stemrecht in de Algemene Vergadering en/of Dagelijks Bestuur. 
+                                                                    6° Inzagerecht, recht op uitleg en recht op afschrift overeenkomstig de wettelijke en decretale bepalingen. 
+                                                                    7° De vereniging die hen heeft aangesteld regelmatig op de hoogte te houden van de werkzaamheden van de culturele raad en ook geregeld overleg plegen met hun achterban in functie van het opsporen van behoeften, ideeën en verwachtingen betreffende het beleid. 
+                                                                    Artikel 3 
+                                                                    De gemeentelijke culturele raad adviseert het gemeentebestuur inzake de voorbereiding en de uitvoering van het gemeentelijk cultuurbeleid. Als culturele aangelegenheden worden begrepen die punten in de opsomming van art. 4 van de wet van 8 augustus 1980 betreffende de bijzonder wet tot hervorming van de instellingen; met name bescherming en verheffing van de taal, stimuleren van onderzoek en vorming van onderzoekers, schone kunsten (esthetische of kunstzinnige expressie), cultureel erfgoed, musea en wetenschappelijk-culturele instellingen (met uitzondering van monumenten en landschappen), bibliotheken en vergelijkbare diensten, permanente volwasseneneducatie en culturele animatie. 
+                                                                    Artikel 4 
+                                                                    De culturele raad heeft bovendien als opdracht: 
+                                                                    1° het inzamelen van informatie en documentatie over het cultureel leven en de culturele behoeften in het werkingsgebied. 
+                                                                    2° het bevorderen en het organiseren van overleg, coördinatie en samenwerking tussen de culturele organisaties. 
+                                                                    3° het stimuleren van de inspraak van de brede bevolking bij de opbouw van het gemeentelijk cultuurbeleid. 
+                                                                    4° het bevorderen van de deelname van de ruimere bevolking – en inzonderheid van groepen in achterstandssituaties – aan het cultureel werk. 
+                                                                    5° het mogelijk maken en het zelf nemen van initiatieven in de culturele sector. 
+                                                                    Titel 3: Algemene Vergadering 
+                                                                    Artikel 5: Samenstelling 
+                                                                    §1 De Algemene Vergadering is samengesteld uit:  
+                                                                    1° 1 stemgerechtigd lid per erkende culturele vereniging. 
+                                                                    2° Gecoöpteerde leden aangeduid door de algemene vergadering. Het aantal stemgerechtigde leden onder art. 5, 2° mag niet meer bedragen dan 1/5 van het aantal leden in art. 5, 1°. Indien het aantal kandidaten voor coöptatie het maximum uit dit punt overschrijdt, kan de algemene vergadering beslissen om de extra kandidaten als waarnemer toe te voegen overeenkomstig art. 5, 3°. 
+                                                                    3° Waarnemers. Zij hebben spreekrecht en geen stemrecht. 
+                                                                    4° 1 waarnemer per politieke fractie in de gemeenteraad. Deze hebben spreekrecht en geen stemrecht. 
+                                                                    §2 Een vereniging die lid wenst te worden van de culturele raad voldoet aan alle onderstaande voorwaarden: 
+                                                                    1° Activiteiten uitoefenen overeenkomstig art. 3 van dit huishoudelijk reglement. 
+                                                                    2° Samen met de kandidatuur wordt een werkingsverslag ingediend, waaruit blijkt dat zij in het recente verleden regelmatig culturele activiteiten hebben ingericht. In dit verslag wordt ook de samenstelling van het bestuur meegedeeld, alsook het aantal leden van de vereniging en/of de omvang van het beoogde doelpubliek.  
+                                                                    §3 Gecoöpteerde leden en waarnemers worden aangesteld op basis van: 
+                                                                    1° de culturele deskundigheid of de persoonlijke interesse van de betrokken persoon. 
+                                                                    2° het ondervertegenwoordigd zijn van een bevolkings- of leeftijdscategorie. 
+                                                                    3° het ondervertegenwoordigd zijn van deelgemeenten in de gemeente.  
+                                                                    Kandidaten voor coöptatie dienen een schriftelijke aanvraag in bij het dagelijks bestuur van de culturele raad. 
+                                                                    Artikel 6: Vernieuwing van de algemene vergadering 
+                                                                    §1 Met het oog op een algemene vernieuwing van de algemene vergadering naar aanleiding van de vernieuwing van de gemeenteraad start het dagelijks bestuur ten laatste in de loop van de maand oktober in het jaar van de lokale verkiezingen de procedure. Elke oproep tot kandidaatstelling bevat minstens: 
+                                                                    1° de uiterste indiendatum van kandidaturen. 
+                                                                    2° de elementen waaruit de kandidaatstelling voor verenigingen dient te bestaan (naam vereniging, naam kandidaat, adres kandidaat, functie van de kandidaat in de vereniging en de keuze om als stemgerechtigd of als plaatsvervanger te zetelen). 
+                                                                    3° de keuze als stemgerechtigd kandidaat voor kandidaatstelling voor een plaats in het dagelijks bestuur. 
+                                                                    4° de keuze als stemgerechtigd lid voor kandidaatstelling voor een bestuursfunctie (Voorzitter, Ondervoorzitter, Secretaris, Penningmeester) in het dagelijks bestuur. 
+                                                                    5° de datum, uur en plaats van de installatievergadering.  
+                                                                    §2 Aan het college van burgemeester en schepenen wordt ook gevraagd de oproep op te nemen in het eerstkomend gemeentelijk informatiemagazine. 
+                                                                    §3 Ieder kandidaat-lid van de algemene vergadering kan slecht door 1 vereniging voorgedragen worden. 
+                                                                    §4 Na het afsluiten van de periode tot kandidaatstelling, onderzoekt het uittredende dagelijks bestuur de ontvangen kandidaturen en stelt hiervan een schriftelijk verslag op ten behoeve van de eerstvolgende algemene vergadering (=de installatievergadering). De ontvangen kandidaturen worden o.a. onderzocht overeenkomstig de bepalingen van het algemeen reglement betreffende de gemeentelijke adviesraden en dit huishoudelijk reglement.  
+                                                                    §5 Op de installatievergadering wordt overgegaan tot de installatie van de nieuwe algemene vergadering. Eerst spreekt de installatievergadering zich uit over de geldigheid van de kandidaat-verenigingen en de geldigheid van de door hen voorgedragen vertegenwoordigers. 
+                                                                    Artikel 7 
+                                                                    Op schriftelijke vraag van 1/10 van de stemgerechtigde leden dient binnen de maand – met uitzondering van de maanden juli en augustus - een algemene vergadering belegd te worden met op de agenda minstens die punten die werden voorgesteld.  
+                                                                      
+                                                                    Titel 4: Dagelijks Bestuur  
+                                                                    Artikel 8: Vernieuwing van het dagelijks bestuur 
+                                                                    §1 Op de installatievergadering wordt door het uittredend dagelijks bestuur ook meegedeeld welke kandidaturen voor het dagelijks bestuur (bestuurslid en/of bestuursfunctie) zijn ontvangen en welke geldig zijn. Er kan overgegaan worden tot de verkiezing van de bestuursleden van het dagelijks bestuur. 
+                                                                    §2 Indien op de installatievergadering niet is overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur wordt op de eerstvolgende algemene vergadering na de installatievergadering overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur. 
+                                                                    §3 Een wijziging in de samenstelling van de algemene vergadering geeft geen aanleiding tot het vernieuwen van de samenstelling van het dagelijks bestuur. Een vernieuwing van het dagelijks bestuur kan enkel na een algemene vernieuwing van de algemene vergadering of naar aanleiding van een tussentijdse vernieuwing van de algemene vergadering overeenkomstig de bepalingen van het algemeen reglement betreffende de gemeentelijke adviesraden. 
+                                                                    Artikel 9: Beraadslagen 
+                                                                    Om geldig te kunnen beraadslagen, moet de meerderheid der stemgerechtigde leden aanwezig zijn op de algemene vergadering. De algemene vergadering kan echter, als hij eenmaal bijeengeroepen is zonder dat het vereiste aantal stemgerechtigde leden aanwezig is, na een tweede oproeping, ongeacht het aantal aanwezige leden, op geldige wijze beraadslagen of beslissen over onderwerpen die voor de tweede maal op de agenda voorkomen. 
+                                                                    Artikel 10: Verkiezing 
+                                                                    §1 Het aantal leden van het dagelijks bestuur wordt bepaald door de algemene vergadering. 
+                                                                    §2 Bestuursfuncties binnen het dagelijks bestuur zijn: één voorzitter, één ondervoorzitter, één secretaris en één penningmeester. 
+                                                                    §3 Om lid te kunnen zijn van het dagelijks bestuur moet men effectief (lees: geen vervanger) stemgerechtigd lid zijn van de algemene vergadering. 
+                                                                    §4 Binnen het dagelijks bestuur kan men zich niet laten vervangen indien men niet kan aanwezig zijn op een bijeenkomst. 
+                                                                    §5 Er wordt eerst overgegaan tot het verkiezen van de leden van het dagelijks bestuur door de algemene vergadering. Hierna verkiest de algemene vergadering uit de verkozen leden van het dagelijks bestuur de bestuursfuncties. 
+                                                                    Artikel 11: Vergaderritme 
+                                                                    §1 Het dagelijks bestuur vergadert minstens driemaandelijks; met uitzondering van de maanden juli en augustus. 
+                                                                    §2 Op schriftelijke vraag van 1/5 van de leden van het dagelijks bestuur dient binnen de 14 dagen – met uitzondering van de maanden juli en augustus - een dagelijks bestuur belegd te worden met op de agenda minstens die punten die werden voorgesteld. 
+                                                                      
+                                                                    Titel 5: Werkgroepen 
+                                                                    Artikel 12 
+                                                                    §1 In iedere werkgroep zetelt minstens één lid van het dagelijks bestuur. 
+                                                                    §2 Ook personen, geen lid van de algemene vergadering of het dagelijks bestuur, kunnen lid zijn van een werkgroep. 
+                                                                    §3 Indien de werkgroep gelden vanwege de culturele raad ontvangt, wordt jaarlijks een (financieel) werkingsverslag voor het voorbije jaar ingediend, waaruit blijkt dat de werkgroep actief is geweest. In dit verslag wordt ook de samenstelling van de werkgroep meegedeeld. 
+                                                                    Titel 6: Toezicht 
+                                                                    Artikel 13 
+                                                                    Conform de Europese privacywetgeving (GDPR) beschikt gemeente Brakel over een privacyverklaring. Deze kan geraadpleegd worden op de gemeentelijke website en aan het loket. Gemeente Brakel verbindt er zich toe de privacygegevens maximaal te beschermen. Ook de culturele raad handelt volgens de privacyverklaring. 
+                                                                    Artikel 14 
+                                                                    Dit huishoudelijk reglement wordt ter bekrachtiging voorgelegd aan de gemeenteraad. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514> a ns3:Agendapunt ;
+    ns3:geplandOpenbaar true ;
+    ns1:uuid "9fe0a38d-df14-50b2-92fa-daf171304301" ;
+    dcterms:title "Adviesraden. Huishoudelijk reglement culturele raad." .
+

@@ -1,0 +1,133 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/998e950f-4a6f-407e-acc8-21f0454943be> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/126b5d00-e069-4e28-b529-cf0f3ac3fa4f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/165c23ef-46b9-458f-b9b0-5dbc73c379b2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/17387b65-ced4-4251-8c34-51cf19d58f12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1fc6887a-ce70-4ba4-ac9e-ee961ef6ac02>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/381c20a3-8080-42a8-9221-7cdcbfd8ca0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38d10030-92e0-4af2-8eef-0118f76f76eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/433715a9-1e9a-40af-b0d8-613899c834ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a87114f-e4ab-4cac-91ab-92033fd684e5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dd9427a-ecad-4d8f-8bde-403db3d87d60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f9a9ccd-7a00-4b11-b963-ea9d49ce9bc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52c0136d-8a66-47f6-a824-301f44e5bfa2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ae7b9a5-ca72-4215-86e4-15dae2cf1794>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7af75996-5356-499b-8094-de17d5f0f4e1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87785798-6639-4c6f-bfa4-260ee7647588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9e41e560-e2c4-46f4-9e22-4608f5957da1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f6ee797-2c73-4fb4-9bba-d13a543c7b62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b218d9dc-8bae-4b81-bba1-70375cce2307>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be9900d6-a624-438d-bd99-063b4ea93f41>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c45d5bbb-1ee0-4518-8198-c4675b746bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8f55e5a-ccdf-47cf-bff8-0e38acb72112>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9156811-9d61-455c-a63b-8b086125c7ec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9ec27d7-f5aa-4dd6-a42b-e9679c4d8326>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1cb10c6-2945-49fd-9b6c-1f2711281a68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4f56cb2-2c2b-4fc7-9f65-01a4d1da85f5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5dd5bd3-73dd-4c59-a91b-954ae172da6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd2b8423-4c83-48a5-a7cb-405b6d4dc153>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5f26532-dc4e-42f0-9a15-74038fc65044> ;
+    ns2:geplandeStart "2023-12-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e0ffeb14-446f-4b4c-a17d-9f5791fa2dae> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d1612c76-4d4d-4b68-9053-0c49145eadf9> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4b578639-cd04-4965-be39-ac33532e8409> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e8104a20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-12-20T21:42:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-12-20T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594> ;
+    ns2:openbaar true ;
+    ns3:uuid "f7ec5920-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3000bdd7-2a8f-4ca7-a609-2cb687da286a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3000bdd7-2a8f-4ca7-a609-2cb687da286a> a ns2:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad stelt het reglement 'hondenlosloopweide Lievegem' vast.   
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Reglement hondenlosloopweide Lievegem: goedkeuring" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Vincent Laroy, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur van 22 december 2017, artikelen 40 en 41 inzake de bevoegdheden van de gemeenteraadHet besluit van college van burgemeester en schepenen van 8 februari 2022 over het voorstel aanleg van 3 hondenlosloopweides in de deelgemeenten van Lievegem: principiële goedkeuringHet besluit van college van burgemeester en schepenen van 21 november 2023 over het reglement hondenlosloopweide Lievegem: principiële goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    ANB schrijft op hun website: In bossen en natuurgebieden horen honden altijd aan de leiband. In hondenlosloopzones kunnen honden wel vrij rondlopen. Hondenlosloopzones zijn speciaal afgebakende groene zones waar honden vrij kunnen loslopen onder het toezicht van hun baasje. 
+                                    De hondenlosloopweide heeft een sociale functie voor dier én mens: de honden leren andere dieren in hun buurt verdragen en baasjes hebben meteen een onderwerp om een gesprek met elkaar aan te knopen. Omdat de dieren hier vrij kunnen lopen, daalt de overlast op speelpleinen en in parken door loslopende honden en hun uitwerpselen. 
+                                    Het lokaal bestuur Lievegem heeft plannen voor één of meerdere hondenlosloopweides in de gemeente. 
+                                    Op dit moment zitten de 2 voorziene hondenlosloopweides in de laatste fase van uitvoering. Locaties: -heraangelegde sportsite te Lovendegem (in beheer van Farys)-Ververij Waarschoot 
+                                    Het reglement zelf zal terug te vinden zijn op de website van onze gemeente. Op de locaties zelf zal een infobord met pictogrammen staan, met verwijzing naar het reglement op de website. 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Reglement 'hondenlosloopweide Lievegem 
+                                    Artikel 1        Doel 
+                                    De hondenlosloopweide is bedoeld voor honden en hun begeleider. Honden kunnen er vrij rondlopen, zonder aangelijnd te worden. De hondenlosloopweide mag niet gebruikt worden voor andere evenementen.Artikel 2        ToegankelijkheidArtikel 2.1        TijdstipDe losloopweide is toegankelijk van zonsopgang tot zonsondergang.Artikel 2.2        HondenElke hond is toegelaten tot de hondenlosloopweide, uitgezonderd agressieve en/of bijtende, onverzorgde, loopse en gekwetste honden. Honden met een duidelijk waarneembare ziekte en/of honden die drager zijn van een besmettelijke ziekte (vb. kennelhoest), vlooien of andere parasieten worden evenmin toegelaten.Artikel 3        Halsband of gelijkaardig harnas verplichtElke hond is verplicht drager van een halsband of gelijkaardig harnas, zodat de hond op elk ogenblik door de begeleider bij zich kan worden genomen.Artikel 4        MuilbandEen muilband is niet verplicht. Elke begeleider oordeelt zelf of het aangewezen is zijn hond te muilbanden. Artikel 5        AansprakelijkheidArtikel 5.1        BegeleiderElke begeleider is verantwoordelijk/aansprakelijk voor de hond onder zijn begeleiding en voor de schade die zijn hond aanricht aan infrastructuur, derden of andere honden.Artikel 5.2         Lokaal bestuurHet lokaal bestuur kan op geen enkele manier aansprakelijk worden gesteld voor de eventuele door honden aan derden of aan andere honden aangerichte schade.Artikel 6        KinderenOuders blijven steeds verantwoordelijk voor hun kinderen. De losloopweide is geen kinderspeeltuin. Artikel 7        GeluidsoverlastAls begeleider vermijd je onnodig blaffen van je hond en probeer je hem tot bedaren te brengen. Geluidsoverlast door dieren kan beboet worden volgens artikel 13 van hoofdstuk II uit de algemene zonale politieverordening (GAS-inbreuk). Artikel 8        Orde en netheidDe uitwerpselen worden door de begeleider onmiddellijk opgeruimd en kunnen gedeponeerd worden in de vuilnisbak. Begeleiders zijn verplicht om altijd een opruimmiddel (zakje) bij zich te hebben. Het achterlaten van afval kan gesanctioneerd worden volgens artikel 36 van hoofdstuk IV uit de algemene zonale politieverordening (GAS-inbreuk).Artikel 9        Roken niet toegelatenRoken op de losloopweide is verboden. Een achtergelaten sigarettenpeuk oogt niet alleen slordig als zwerfvuil: het kan bij jonge honden een ernstige vergiftiging veroorzaken.Artikel 10        Verlaten weideLijn je hond aan bij het verlaten van de hondenlosloopweide. Let er bij het verlaten van de weide op dat er geen andere honden mee naar buiten glippen.Artikel 11        Bekendmaking reglementDit reglement wordt aangebracht aan de toegang van de hondenlosloopweide en op de website van het lokaal bestuur. Wie zijn hond uitlaat op de losloopweide wordt geacht akkoord te gaan met bovenstaand reglement en dit na te leven.Artikel 12        IngangsdatumDit reglement treedt in werking op 1 januari 2024. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt doorgestuurd naar de betrokken teams: team communicatie en team sport.De gemeentelijke reglementen worden bekendgemaakt aan ABB via het digitaal loket en via de gemeentelijke website. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Vincent Laroy, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikelen 40 en 41 inzake de bevoegdheden van de gemeenteraadHet besluit van college van burgemeester en schepenen van 8 februari 2022 over het voorstel aanleg van 3 hondenlosloopweides in de deelgemeenten van Lievegem: principiële goedkeuringHet besluit van college van burgemeester en schepenen van 21 november 2023 over het reglement hondenlosloopweide Lievegem: principiële goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            ANB schrijft op hun website: In bossen en natuurgebieden horen honden altijd aan de leiband. In hondenlosloopzones kunnen honden wel vrij rondlopen. Hondenlosloopzones zijn speciaal afgebakende groene zones waar honden vrij kunnen loslopen onder het toezicht van hun baasje. 
+                                                            De hondenlosloopweide heeft een sociale functie voor dier én mens: de honden leren andere dieren in hun buurt verdragen en baasjes hebben meteen een onderwerp om een gesprek met elkaar aan te knopen. Omdat de dieren hier vrij kunnen lopen, daalt de overlast op speelpleinen en in parken door loslopende honden en hun uitwerpselen. 
+                                                            Het lokaal bestuur Lievegem heeft plannen voor één of meerdere hondenlosloopweides in de gemeente. 
+                                                            Op dit moment zitten de 2 voorziene hondenlosloopweides in de laatste fase van uitvoering. Locaties: -heraangelegde sportsite te Lovendegem (in beheer van Farys)-Ververij Waarschoot 
+                                                            Het reglement zelf zal terug te vinden zijn op de website van onze gemeente. Op de locaties zelf zal een infobord met pictogrammen staan, met verwijzing naar het reglement op de website. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e80dd920-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel 
+                                    De gemeenteraad stelt het reglement 'hondenlosloopweide Lievegem' vast.  
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad stelt het reglement 'hondenlosloopweide Lievegem' vast.  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "f09ba310-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Reglement hondenlosloopweide Lievegem: goedkeuring" .
+

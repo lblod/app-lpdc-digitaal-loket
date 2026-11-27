@@ -1,0 +1,107 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/f6057b4d-cc4e-4ec8-867b-28b7895b6591> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3960fc17-9e21-46cd-ad8c-276523240ed7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bf294fb8-2b4b-4e33-8418-d2e0a640018b> ;
+    ns1:geplandeStart "2025-04-15T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ea8e623b-3509-407d-8857-6e231aa31011> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "d43d8ad3-d912-59c4-9a76-c0c656e155e5" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-04-15T13:29:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bf294fb8-2b4b-4e33-8418-d2e0a640018b> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d43dd876-c873-454b-9448-5e0b32f892dd> ;
+    ns1:openbaar false ;
+    ns3:uuid "269e43dd-b43f-5008-9eb8-34549f2e9d7c" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bf294fb8-2b4b-4e33-8418-d2e0a640018b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/bf294fb8-2b4b-4e33-8418-d2e0a640018b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/bf294fb8-2b4b-4e33-8418-d2e0a640018b> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van Oostwinkel kermis wordt vastgesteld als volgt: 
+                                                            1. Van donderdag 3 juli 2025 8.00 uur tot en met maandag 7 juli 2025 20.00 uur: 
+                                                             
+                                                                Stilstaan- en parkeerverbod op de parkeervakken ter hoogte van Oostwinkeldorp 3 - 13, 9931 Lievegem 
+                                                                Inname voetpad en fietspad ter hoogte van Oostwinkeldorp 4, 9931 voor plaatsing vrachtwagen 
+                                                             
+                                                            2. Tijdens de festiviteiten: 
+                                                            op 5 juli 2025 van 10.00 uur tot en met 24.00 uurop 6 juli 2025 van 10.00 uur tot en met 24.00 uur 
+                                                             
+                                                                Afsluiten van Oostwinkeldorp vanaf kruispunt met Veldhoek tot aan kruispunt met Leendreef 
+                                                                omleiding komende van Zomergem: via Langestraat - Leendreef - Kruipuit 
+                                                                omleiding komende van Maldegem: via Veldhoek - St Jansstraat - Diepenbeek - Mostmolen 
+                                                                éénrichtingsverkeer in Veldhoek - St Jansstraat - Diepenbeek - Mostmolen 
+                                                             
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van Oostwinkel Kermis - Café Friends: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 18 maart 2025 over de aanvraag Café Friends inname van openbaar domein Oostwinkeldorp 9, 9931 Lievegem - plaatsen seizoensgebonden terras: goedkeuringHet besluit van het college van burgemeester en schepenen van 15 april 2025 over de aanvraag evenement Oostwinkel Kermis - Café Friends: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Gert De Ruyter, namens Café Friends, organiseert Oostwinkel Kermis van vrijdag 4 juli 2025 18.00 uur tot en met zondag 6 juli 2025 24.00 uur.Er werd op 4 februari 2025 een aanvraag ingediend door Gert De Ruyter, namens Café Friends om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Tijdens deze kermis wordt de zone van het seizoensgebonden terras bij Café Friends mee opgenomen in de kermiszone. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "074145de-cc9b-521e-8bfb-3d5df6c6804a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Oostwinkel kermis wordt vastgesteld als volgt: 
+                                    1. Van donderdag 3 juli 2025 8.00 uur tot en met maandag 7 juli 2025 20.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod op de parkeervakken ter hoogte van Oostwinkeldorp 3 - 13, 9931 Lievegem 
+                                        Inname voetpad en fietspad ter hoogte van Oostwinkeldorp 4, 9931 voor plaatsing vrachtwagen 
+                                     
+                                    2. Tijdens de festiviteiten: 
+                                    op 5 juli 2025 van 10.00 uur tot en met 24.00 uurop 6 juli 2025 van 10.00 uur tot en met 24.00 uur 
+                                     
+                                        Afsluiten van Oostwinkeldorp vanaf kruispunt met Veldhoek tot aan kruispunt met Leendreef 
+                                        omleiding komende van Zomergem: via Langestraat - Leendreef - Kruipuit 
+                                        omleiding komende van Maldegem: via Veldhoek - St Jansstraat - Diepenbeek - Mostmolen 
+                                        éénrichtingsverkeer in Veldhoek - St Jansstraat - Diepenbeek - Mostmolen 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1.  - Borden E3 
+                                         - Borden A51, D1, verlichting + borden 'Fietsers op de rijweg' en 'Voetgangers oversteken' aan vrachtwagen op voet- en fietspad, buiten de uren van de festiviteiten. De rijweg moet hierbij steeds vrij blijven. 
+                                    2.  - Nadar + C3 + M2 op de kruispunten Oostwinkeldorp/Veldhoek en Oostwinkeldorp/Leendreef 
+                                         - borden 'Evenement' op de invalswegen, net voor Veldhoek en net voor Langestraat 
+                                         - Borden C3 + 'uitgezonderd plaatselijk verkeer' + M2 + F45R op het kruispunt Oostwinkeldorp/Langestraat 
+                                         - borden F41 op de volgende kruispunten: Oostwinkeldorp/Langestraat, Langestraat/Leendreef, Leendreef/Leendreef, Leendreef/Kruipuit en Oostwinkeldorp/Veldhoek, Veldhoek/St Jansstraat, St Jansstraat/Diepenbeek, Diepenbeek/Mostmolen, Diepenbeek/Leischoot 
+                                         - Borden F19 + M4 op het kruispunt Oostwinkeldorp/Veldhoek 
+                                         - Borden F19 + M4, C1 + M2 en C31a op de kruispunten Veldhoek/St Jansstraat en St Jansstraat/Diepenbeek 
+                                         - Borden F19 + M4 en C1 + M2 op het kruispunt Diepenbeek/Mostmolen 
+                                         - Borden C1 + M2 op het kruispunt Mostmolen/Leischoot 
+                                      
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van elk deel van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bf294fb8-2b4b-4e33-8418-d2e0a640018b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bf294fb8-2b4b-4e33-8418-d2e0a640018b> a ns1:Agendapunt ;
+    ns3:uuid "53163294-4a72-5dcf-a781-7eda1d541dfa" .
+

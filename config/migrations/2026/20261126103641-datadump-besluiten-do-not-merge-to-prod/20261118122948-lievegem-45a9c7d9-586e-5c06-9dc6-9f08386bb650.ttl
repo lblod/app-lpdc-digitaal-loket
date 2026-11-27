@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/ba985330-4da7-4b04-a88f-b66850a6476a> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/43bedb31-57bc-400e-9598-d092423f6f16> ;
+    ns1:geplandeStart "2025-09-16T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ca7d2748-31b0-4cac-afba-07ef4e825dde> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "2fba803b-bec4-50b2-9915-f11e91b06247" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-09-16T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/43bedb31-57bc-400e-9598-d092423f6f16> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8db51b73-e402-4c8d-ae15-e7bfa2361e53> ;
+    ns1:openbaar false ;
+    ns2:uuid "0ce17079-a4a6-516a-a50a-cac38c0e487c" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/43bedb31-57bc-400e-9598-d092423f6f16> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/43bedb31-57bc-400e-9598-d092423f6f16> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/43bedb31-57bc-400e-9598-d092423f6f16> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Dwars Door Lievegem' van 27 september 2025 8.00 uur tot en met 28 september 2025 17.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Dwars Door Lievegem': vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 16 september 2025 over de aanvraag evenement Dwars Door Lievegem - VZW Lievegem Loopt: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Rino Versluys namens VZW Lievegem Loopt, organiseert 'Dwars Door Lievegem' op 28 september 2025 van 8.00 uur tot 13.00 uur.Er werd op 1 oktober 2024 een aanvraag ingediend door Rino Versluys, namens VZW Lievegem Loopt, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "45a9c7d9-586e-5c06-9dc6-9f08386bb650" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Dwars Door Lievegem' op 28 september 2025 wordt vastgesteld als volgt: 
+                                    1. van 27 september 2025 8.00 uur tot en met 28 september 2025 17.00 uur: 
+                                     
+                                        stilstaan- en parkeerverbod in Hofbouwstraat (tussen Luitenant Dobbelaerestraat en Tulpenlaan) aan beide zijden van de rijweg en op de dwarse parkeervakken ter hoogte van 't Schaapstuk en Hofbouwstraat 2B. 
+                                     
+                                    
+                                        2. op 28 september 2025 van 7.00 uur tot en met 14.00 uur:
+                                     
+                                     
+                                         
+                                            bijkomend stilstaan- en parkeerverbod in Tulpenlaan (tussen Hofbouwstraat en parking Den Boer), Luitenant Dobbelaerestraat van huisnummer 15 tot en met 29 aan beide zijden ven de rijweg (dwarse parkeerplaatsen aan de school en appartementsgebouw blijven beschikbaar) en op de parking aan 't Schaapstuk. 
+                                         
+                                        
+                                            3. op 28 september 2025 van 8.00 uur tot en met 13.00 uur:
+                                         
+                                         
+                                             
+                                                afsluiten van Hofbouwstraat voor alle verkeer tussen Luitenant Dobbelaerestraat en Kruisdreef 
+                                                éénrichtingsverkeer in Hofbouwstraat tussen Kruisdreef en Tulpenlaan (wagens uit Kruisdreef kunnen wegrijden richting Azaleastraat - zone voor lopers wordt afgebakend) 
+                                                wegomlegging via Luitenant Dobbelaerestraat - Markt - Dreef - Azaleastraat en omgekeerd 
+                                                waarschuwingsborden op de invalswegen naar het loopparcours 
+                                             
+                                         
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. van 27 september 2025 8.00 uur tot en met 28 september 2025 17.00 uur: 
+                                     
+                                        borden E3 
+                                     
+                                    
+                                        2. op 28 september 2025 van 7.00 uur tot en met 14.00 uur:
+                                     
+                                     
+                                         
+                                            borden E3 
+                                         
+                                        
+                                            3. op 28 september 2025 van 8.00 uur tot en met 13.00 uur:
+                                         
+                                         
+                                             
+                                                nadar + bord C3 op volgende kruispunten: Hofbouwstraat/Luitenant Dobbelaerestraat en Hofbouwstraat/Kruisdreef 
+                                                nadar + bord C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45 op volgende kruispunten: Azaleastraat/Hofbouwstraat, Azaleastraat/Chrysantenstraat en Chrysantenstraat/Hofbouwstraat 
+                                                Borden C31a en C31b op het kruispunt Hofbouwstraat/Luitenant Dobbelaerestraat 
+                                                Bord F19 op het kruispunt Hofbouwstraat/Kruisdreef 
+                                                Bord C1 + C31b op het kruispunt Hofbouwstraat/Tulpenlaan 
+                                                Borden F41 
+                                                Borden A51 + 'evenement' op een honderdtal meter voor de kruispunten Motje/Azaleastraat, Kleitstraat/Daalmstraat, Burg. Henri Ryckaertstraat/Daalmstraat en Stoktevijver/Daalmen 
+                                             
+                                         
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/43bedb31-57bc-400e-9598-d092423f6f16> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/43bedb31-57bc-400e-9598-d092423f6f16> a ns1:Agendapunt ;
+    ns2:uuid "61133242-9fc8-54f8-853f-784e11249346" .
+

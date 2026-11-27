@@ -1,0 +1,244 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3bbe50aa-c3e8-4b7c-bb7c-4682052a4673> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06f1f332-650a-4d40-a99c-0c733ffa85d1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c0f89c5-baa1-4637-811c-23ba8ba0c6be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/143b01fe-df79-4464-a86e-9f3331c41dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/19777059-5d19-4c19-aa75-c9728f3c1f7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1a496b2e-cf0d-4492-81c2-1b83c32841ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b6e8646-0e53-4476-873e-8ca4b5d87f79>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5039459f-5883-4417-bf07-a5cb8f922dff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5824b498-b950-4a56-91f6-1756c8e16615>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d9d3cf3-2cc8-49f0-bc97-86d52713181a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bcb7c92-bded-425b-bb57-1dcf51a32ec4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6deb0f16-50f3-4267-8661-88276e847e60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/739e24ab-2ffe-4fa2-b120-e9f780b542b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7db1854b-eea1-4071-8222-2fa3573c65ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/881bd7fd-6ec4-4882-9a14-15458378f51e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c65b0e5-e5ef-4730-988c-87d06b6a3993>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9314a642-ce70-4a85-ab4f-027dddbfb7ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9384f2b2-5078-47d0-a1e8-5f572f245831>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1970aac-3846-476f-9089-3c9b90d2cebc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a82e01d6-03ea-4b9f-9b5a-9a4e48d048f2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce690ef6-529c-465b-8bc2-0a504cb16e40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e447ed51-ca89-4f26-aec4-4b20f2adbbfb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee301e9c-da25-478b-9b4a-3c795b77db7a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2fb6d2d-2bb1-461a-bced-cbe1f05eb6db> ;
+    ns1:geplandeStart "2024-10-23T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ae70f37b-eb96-4735-833b-ce97bceb51f6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bd4fa978-f012-49c2-acc4-4646b86642e0> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fe261bc2-7e58-4536-8439-b9dedda822ba> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ed05ab10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-10-23T21:17:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-10-23T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744> ;
+    ns1:openbaar true ;
+    ns2:uuid "8b308280-a8d4-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7f7c17a8-0561-4b5d-a292-936fa3605216> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7f7c17a8-0561-4b5d-a292-936fa3605216> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:description """ 
+                                                    Het aangepaste aanvullend reglement op de beperking van het autoverkeer in Rohoek en Haagstraat wordt vastgesteld. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Aanvullend reglement op het verkeer - beperking van het autoverkeer in Rohoek en Haagstraat - aanpassing verkeersregeling: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Kim Martens, burgemeester 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 40 § 3 en 286 
+                                    Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeer 
+                                    Koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                    Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                    Het besluit van de Gemeenteraad van 14 september 2022 waarbij beslist werd het volgende aanvullend reglement op het wegverkeer vast te stellen: 
+                                     
+                                        Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P. 
+                                        Haagstraat: tussen Spinhoutstraat en Uitgem: verboden voor alle verkeer uitgezonderd landbouwverkeer, plaatselijk verkeer, fietsers en bromfietsers klasse A+P 
+                                     
+                                    Het collegebesluit van 27 februari 2024 over de bespreking van de vraag van de buurtbewoners en de bijhorende petitie en waarbij beslist wordt om toegang te verlenen voor het plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat. Op basis hiervan zal het politiereglement worden aangepast. 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De gemeenteraad is bevoegd om politiereglementen op de gemeentewegen vast te stellen. 
+                                    Door de inwoners van Rohoek en omgeving werd een petitie ingediend met de vraag om plaatselijk autoverkeer toe te laten langs het jaagpad. 
+                                    Deze petitie werd besproken door het college van burgemeester en schepenen op 27 februari 2024 waarbij het college beslist om toegang te verlenen voor het plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat. 
+                                    Daartegenover staat de vraag van enkele buurtbewoners om de bestaande situatie (afsluiten voor alle doorgaand en plaatselijk verkeer uitgezonderd landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P"  ) te behouden. Deze vraag werd versterkt door een op 26 juni 2024 ingediende petitie met als titel 'ja voor een veilig jaagpad'. 
+                                    Omwille van de collegebeslissing van 27 februari 2024 wordt voorgesteld om het goedgekeurde aanvullende reglement te wijzigen:  
+                                    "Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P"  
+                                    wordt vervangen door  
+                                    "Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P". 
+                                     
+                                    Bijkomend wordt het jaagpad ingericht als fietszone. In een fietszone is de snelheid beperkt tot 30 km/u. Dat geldt voor al het verkeer, ook voor de fietsers zelf dus. De snelheidslimiet geldt altijd, dus ook als er geen fietser te zien is. Fietsers mogen er de hele breedte van de rijbaan gebruiken als het een eenrichtingsstraat is. Is er verkeer toegelaten in beide richtingen, dan mogen fietsers de helft van de breedte aan de rechterzijde gebruiken. Auto’s en moto’s mogen fietsers niet inhalen, ook niet als de weg daarvoor breed genoeg is. Verder blijven alle andere regels gelden in een fietszone. Zo moet er bijvoorbeeld nog steeds voorrang verleend worden aan het verkeer dat van rechts komt.Deze regeling wordt versterkt door een, op 26 juni 2024, ingediende petitie met als titel 'ja voor een veilig jaagpad'. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Lievo, Bpost, IVM, de inwoners en betrokken handelaars. 
+                                    De Vlaamse Waterweg 
+                                    ABB via digitaal loket 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 40 § 3 en 286 
+                                                            Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeer 
+                                                            Koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                                            Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                                            Het besluit van de Gemeenteraad van 14 september 2022 waarbij beslist werd het volgende aanvullend reglement op het wegverkeer vast te stellen: 
+                                                             
+                                                                Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P. 
+                                                                Haagstraat: tussen Spinhoutstraat en Uitgem: verboden voor alle verkeer uitgezonderd landbouwverkeer, plaatselijk verkeer, fietsers en bromfietsers klasse A+P 
+                                                             
+                                                            Het collegebesluit van 27 februari 2024 over de bespreking van de vraag van de buurtbewoners en de bijhorende petitie en waarbij beslist wordt om toegang te verlenen voor het plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat. Op basis hiervan zal het politiereglement worden aangepast. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad is bevoegd om politiereglementen op de gemeentewegen vast te stellen. 
+                                                            Door de inwoners van Rohoek en omgeving werd een petitie ingediend met de vraag om plaatselijk autoverkeer toe te laten langs het jaagpad. 
+                                                            Deze petitie werd besproken door het college van burgemeester en schepenen op 27 februari 2024 waarbij het college beslist om toegang te verlenen voor het plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat. 
+                                                            Daartegenover staat de vraag van enkele buurtbewoners om de bestaande situatie (afsluiten voor alle doorgaand en plaatselijk verkeer uitgezonderd landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P"  ) te behouden. Deze vraag werd versterkt door een op 26 juni 2024 ingediende petitie met als titel 'ja voor een veilig jaagpad'. 
+                                                            Omwille van de collegebeslissing van 27 februari 2024 wordt voorgesteld om het goedgekeurde aanvullende reglement te wijzigen:  
+                                                            "Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P"  
+                                                            wordt vervangen door  
+                                                            "Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P". 
+                                                             
+                                                            Bijkomend wordt het jaagpad ingericht als fietszone. In een fietszone is de snelheid beperkt tot 30 km/u. Dat geldt voor al het verkeer, ook voor de fietsers zelf dus. De snelheidslimiet geldt altijd, dus ook als er geen fietser te zien is. Fietsers mogen er de hele breedte van de rijbaan gebruiken als het een eenrichtingsstraat is. Is er verkeer toegelaten in beide richtingen, dan mogen fietsers de helft van de breedte aan de rechterzijde gebruiken. Auto’s en moto’s mogen fietsers niet inhalen, ook niet als de weg daarvoor breed genoeg is. Verder blijven alle andere regels gelden in een fietszone. Zo moet er bijvoorbeeld nog steeds voorrang verleend worden aan het verkeer dat van rechts komt.Deze regeling wordt versterkt door een, op 26 juni 2024, ingediende petitie met als titel 'ja voor een veilig jaagpad'. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "59d922a0-9394-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    De gemeenteraad beslist het aanvullend reglement op het wegverkeer voor Rohoek en Haagstraat te wijzigen en vast te stellen als volgt: 
+                                     
+                                        Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P. 
+                                        Haagstraat: tussen Spinhoutstraat en Uitgem: verboden voor alle verkeer uitgezonderd landbouwverkeer, plaatselijk verkeer, fietsers en bromfietsers klasse A+P 
+                                     
+                                    Artikel 2 
+                                    Deze verkeersmaatregel wordt als volgt gesignaleerd: 
+                                     
+                                        Rohoek:  
+                                         
+                                            ter hoogte van Rohoek 7/22: 
+                                             
+                                                C3 met onderbord ‘uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg' en bord M12 
+                                             
+                                            ter hoogte van de Durmstraat/Duivekeetbrug: 
+                                             
+                                                C3 met onderbord ‘uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg' en bord M12 
+                                             
+                                            ter hoogte van Rohoek 18: 
+                                             
+                                                bord doodlopend (met doorgang fietsers en voetgangers)  
+                                                C3 met onderbord ‘uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg', bord M12 én onderbord '250 meter' 
+                                             
+                                         
+                                        Haagstraat:  
+                                         
+                                            ter hoogte van Spinhoutstraat 1 (kant Haagstraat): C3 met onderbord ‘uitgezonderd landbouwverkeer en plaatselijk verkeer' en bord M12  
+                                            ter hoogte van Haagstraat 14a: C3 met onderbord ‘uitgezonderd landbouwverkeer en plaatselijk verkeer' en bord M12 en  
+                                         
+                                     
+                                      
+                                    Artikel 3 
+                                    Het jaagpad (deel tussen Durmstraat/Duivekeetbrug en Rohoek 7/22 wordt ingericht als fietszone. 
+                                      
+                                    Artikel 4 
+                                    Deze verkeersmaatregel wordt als volgt gesignaleerd: 
+                                     
+                                        Durmstraat/Duivekeetbrug: bord F111 (begin fietszone) bij het oprijden van het jaagpad richting Rohoek 
+                                        Durmstraat/Duivekeetbrug: bord F113 (einde fietszone) bij het verlaten van het jaagpad komende van Rohoek 
+                                        Rohoek/jaagpad: bord F111 (begin fietszone) bij het oprijden van het jaagpad richting Durmstraat/Duivekeetbrug 
+                                        Rohoek/jaagpad: bord F113 (einde fietszone) bij het verlaten van het jaagpad richting Durmstraat/Duivekeetbrug 
+                                     
+                                    Artikel 5 
+                                    Dit aanvullend reglement op het verkeer gaat in voege vanaf 1 november 2024. 
+                                    Artikel 6 
+                                    Het besluit van de gemeenteraad van 14 september 2022 wordt opgeheven. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad beslist het aanvullend reglement op het wegverkeer voor Rohoek en Haagstraat te wijzigen en vast te stellen als volgt: 
+                                                             
+                                                                Rohoek (pad langs kanaal vanaf Durmstraat (Duivekeetbrug) tot Rohoek 7/22): verboden voor alle verkeer uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg, fietsers en bromfietsers klasse A+P. 
+                                                                Haagstraat: tussen Spinhoutstraat en Uitgem: verboden voor alle verkeer uitgezonderd landbouwverkeer, plaatselijk verkeer, fietsers en bromfietsers klasse A+P 
+                                                             
+                                                            Artikel 2 
+                                                            Deze verkeersmaatregel wordt als volgt gesignaleerd: 
+                                                             
+                                                                Rohoek:  
+                                                                 
+                                                                    ter hoogte van Rohoek 7/22: 
+                                                                     
+                                                                        C3 met onderbord ‘uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg' en bord M12 
+                                                                     
+                                                                    ter hoogte van de Durmstraat/Duivekeetbrug: 
+                                                                     
+                                                                        C3 met onderbord ‘uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg' en bord M12 
+                                                                     
+                                                                    ter hoogte van Rohoek 18: 
+                                                                     
+                                                                        bord doodlopend (met doorgang fietsers en voetgangers)  
+                                                                        C3 met onderbord ‘uitgezonderd plaatselijk verkeer voor Rohoek, Rostraat en Schipdonckstraat, landbouwverkeer, toelatingen Vlaamse Waterweg', bord M12 én onderbord '250 meter' 
+                                                                     
+                                                                 
+                                                                Haagstraat:  
+                                                                 
+                                                                    ter hoogte van Spinhoutstraat 1 (kant Haagstraat): C3 met onderbord ‘uitgezonderd landbouwverkeer en plaatselijk verkeer' en bord M12  
+                                                                    ter hoogte van Haagstraat 14a: C3 met onderbord ‘uitgezonderd landbouwverkeer en plaatselijk verkeer' en bord M12 en  
+                                                                 
+                                                             
+                                                              
+                                                            Artikel 3 
+                                                            Het jaagpad (deel tussen Durmstraat/Duivekeetbrug en Rohoek 7/22 wordt ingericht als fietszone. 
+                                                              
+                                                            Artikel 4 
+                                                            Deze verkeersmaatregel wordt als volgt gesignaleerd: 
+                                                             
+                                                                Durmstraat/Duivekeetbrug: bord F111 (begin fietszone) bij het oprijden van het jaagpad richting Rohoek 
+                                                                Durmstraat/Duivekeetbrug: bord F113 (einde fietszone) bij het verlaten van het jaagpad komende van Rohoek 
+                                                                Rohoek/jaagpad: bord F111 (begin fietszone) bij het oprijden van het jaagpad richting Durmstraat/Duivekeetbrug 
+                                                                Rohoek/jaagpad: bord F113 (einde fietszone) bij het verlaten van het jaagpad richting Durmstraat/Duivekeetbrug 
+                                                             
+                                                            Artikel 5 
+                                                            Dit aanvullend reglement op het verkeer gaat in voege vanaf 1 november 2024. 
+                                                            Artikel 6 
+                                                            Het besluit van de gemeenteraad van 14 september 2022 wordt opgeheven. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ed097ba0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Aanvullend reglement op het verkeer - beperking van het autoverkeer in Rohoek en Haagstraat - aanpassing verkeersregeling: vaststelling" .
+

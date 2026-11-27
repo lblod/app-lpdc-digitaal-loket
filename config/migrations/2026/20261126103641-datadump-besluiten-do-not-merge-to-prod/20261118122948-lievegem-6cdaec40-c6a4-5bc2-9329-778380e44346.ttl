@@ -1,0 +1,172 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/f2709e26-1e74-4e2e-99d1-2611293cd281> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63d94650-b618-4e07-a2e4-e92306eddf8b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc2c78ab-9386-4bcf-9299-3c8d3e5e07fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> ;
+    ns2:geplandeStart "2026-04-07T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/74103a52-2c11-4b34-91e1-ca922c513e88> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "8ce1d4c2-564c-5311-a748-01fa39adeea3" ;
+    prov:atLocation "'t Leiken, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-04-07T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e> ;
+    ns2:openbaar false ;
+    ns3:uuid "43066383-e80a-5896-950d-5971ab97fc42" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van BMW De Mey - Stromar Triatlon Lievegem op 10 mei 2026 wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van BMW De Mey - Stromar Triatlon Lievegem - Bro.Go Sportevents VZW: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 7 april 2026 over de aanvraag vergunning wielerwedstrijd BMW De Mey - Stromar Triatlon Lievegem - Bro.Go Sportevents VZW: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Sam Govaert, namens Bro.Go Sportevents VZW, organiseert BMW De Mey - Stromar Triatlon Lievegem op 10 mei 2026 van 11.30 uur tot en met 19.00 uur.Er werd op 27 januari 2026 een aanvraag ingediend door Sam Govaert, namens Bro.Go Sportevents VZW, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    De triatlon vindt plaats op zowel grondgebied Lievegem, Deinze als Aalter. De start en aankomst is aan Duivekeetbrug (Durmstraat) te 9930 Lievegem. 
+                                     
+                                        Fietsparcours grondgebied Lievegem: start ter hoogte van Duivekeetbrug (Schipdonkkanaal - Durmstraat), Durmstraat en Durmenbrug richting Merendree (Deinze). Daarna grondgebied Deinze en Aalter. Terugkomend op grondgebied Lievegem via het jaagpad langs het kanaal Gent-Brugge, via het jaagpad langs Schipdonkkanaal, Rohoek, Rostraat, Molenbergstraat en via Durmstraat terug naar Duivekeetbrug. 
+                                        Loopparcours grondgebied Lievegem: start tussen Durmstraat 66A en 68 via Durmstraat naar de Zomergemstraat/Durmstraat. Daarna grondgebied Deinze en terug via Zomergemstraat/Durmstraat naar Peperhoek en via jaagpad langs Schipdonkkanaal naar Duivekeetbrug. 
+                                     
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    De Vlaamse Waterweg: arw.district5@vlaamsewaterweg.bePieterjan.VanLandschoot@Deinze.be/ Sarah.Cornelis@Deinze.beevenementen@aalter.be 
+                                      
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "6cdaec40-c6a4-5bc2-9329-778380e44346" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Stromar - De Decker halve triatlon" op 10 mei 2026 wordt vastgesteld als volgt: 
+                                    1. Van 10.00 uur tot en met 19.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod over de gehele omloop van het loopparcours (grondgebied Lievegem) aan beide zijden van de rijweg, met uitzondering van Peperhoek. 
+                                        Stilstaan- en parkeerverbod in Moerstraat aan beide zijden van de rijweg, tussen Durmstraat en Doorenmeers. 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Van 11.00 uur tot en met 19.00 uur wordt de omloop van het loopparcours afgesloten voor alle verkeer.
+                                     
+                                     
+                                         
+                                            Uitzondering op de afgesloten omloop is Durmstraat ter hoogte van de brug over het kanaal waar éénrichtingsverkeer over één rijstrook mogelijk zal zijn voor het verkeer komende van Merendree richting Lievegem. De organisatie zorgt dat er bakens in het midden van de straat geplaatst worden, om de lopers afgescheiden te houden van het gemotoriseerd verkeer. 
+                                            Omleiding wordt voorzien via Lobrug - Vellare - Kruisstraat - Grote Steenweg - Motje - Dreef - Markt - Zomerlaan - Koning Leopold III laan en omgekeerd 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        3. Van 10.00 uur tot en met 15.00 uur:
+                                     
+                                     
+                                         
+                                            Stilstaan- en parkeerverbod over de bijkomende zone van het fietsparcours (grondgebied Lievegem) aan beide zijden van de rijweg. 
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            4. Van 11.00 uur tot en met 15.00 uur wordt de bijkomende zone van het fietsparcours afgesloten voor alle verkeer.
+                                         
+                                         
+                                             
+                                                Uitzondering op de volledig afgesloten omloop is Durmstraat (tussen Hulsemstraat en Molenbergstraat) waar de bewoners in één richting zullen kunnen wegrijden naar Boven. De organisatie zorgt dat er bakens in het midden van de straat geplaatst worden, om de fietsers afgescheiden te houden van het gemotoriseerd verkeer. Er kan enkel weggereden worden vanaf de rechterkant van de straat (zijde Hulsemstraat). Wie links woont, dient zijn wagen op een andere plaats te parkeren. 
+                                                Omleiding wordt voorzien via Lobrug - Vellare - Kruisstraat - Grote Steenweg - Motje - Dreef - Markt - Zomerlaan - Koning Leopold III laan - Nekke - Spinhoutstraat en omgekeerd. 
+                                             
+                                         
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Van 10.00 uur tot en met 19.00 uur: 
+                                     
+                                        Borden E3 
+                                        Borden E3 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Van 11.00 uur tot en met 19.00 uur:
+                                     
+                                     
+                                        Nadar + C3 op volgende kruispunten: Durmstraat/Vaart Links (ter hoogte van Duivekeetbrug), Rohoek/Vaart Links, Lobrug/Koning Leopoldstraat, Durmstraat/Durmstraat (richting Zomergemstraat), Durmstraat/Peperhoek en Durmstraat/Moerstraat. 
+                                        Nadar + C3 + F45 (doodlopende straat) op volgende kruispunten: Moerstraat/Doorenmeers, Moerstraat/Overdam, Moerstraat/Kruisstraat (2x), Vellare/Vellare, Kruisstraat/Kruisstraat, Durmstraat/Durmstraat, Durmstraat/Hulsemstraat, Durmstraat/Molenstraatje, Durmstraat/Weldadigheidsstraat, Boven/Molenbergstraat, Ter Wal/Hendrik Claeysstraat, Guido Gezellestraat/Alfons Sifferstraat, Guido Gezellestraat/Adolf Lievensstraat en Koning Leopold III laan/Guido Gezellestraat. 
+                                        Bord D1f en C1 (2x) op kruispunt Durmstraat/Moerstraat voor aanduiding éénrichtingsverkeer vanuit Merendree (op grondgebied Lievegem). 
+                                        Borden F41 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        3. Van 10.00 uur tot en met 15.00 uur:
+                                     
+                                     
+                                        Borden E3 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        4. Van 11.00 uur tot en met 15.00 uur wordt de bijkomende zone van het fietsparcours afgesloten voor alle verkeer.
+                                     
+                                     
+                                         
+                                            Nadar + C3 op volgende kruispunten: Rohoek/Rostraat, Rostraat/Rostraat, Uitgem/Molenbergstraat/Rohoek (2x), Molenbergstraat/Molenbergstraat, Molenbergstraat/Kattestraatje, Molenbergstraat/Molenpark (2x), Molenbergstraat/Durmstraat, Durmstraat/Molenstraatje en Durmstraat/Durmstraat 
+                                            Bord D1f op volgende kruispunten: Durmstraat/Hulsemstraat en Durmstraat/Weldadigheidstraat 
+                                            Nadar + C3 + F45 (doodlopende straat) op volgende kruispunten: Spinhoutstraat/Rostraat, Spinhoutstraat/Haagstraat, Rostraat/Rostraat, Nekke/Haagstraat en Haagstraat/Uitgem 
+                                            De nadars met C3 op kruispunten Durmstraat/Vaart Links en Rohoek/Vaart Links worden gedurende het fietsgedeelte tijdelijk aan de kant geplaatst. 
+                                            Borden F41 
+                                         
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisatie Bro.Go Sportevents vzw op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. Borden die tegenstrijdig zijn met onderhavig verkeersreglement dienen te worden afgedekt. 
+                                    Artikel 4 
+                                    De kruispunten zullen bezet worden door signaalgevers of politieagenten, die de nodige richtlijnen aan de weggebruikers zullen geven. De weggebruikers dienen de richting van de wielrenners te volgen en mogen niet in tegengestelde richting de rijbaan volgen (tenzij anders aangegeven). 
+                                    Artikel 5De organisatie Bro.Go Sportevents vzw staat zelf in voor hekken en rood/wit bakens. Op diverse plaatsen worden er hekken of rood/wit bakens geplaatst om de deelnemers te begeleiden. Deze worden geplaatst en verwijderd door de organisatie Bro.Go Sportevents vzw. De gemeente kan niet verantwoordelijk gesteld worden voor het fout plaatsen van de signalisatie. 
+                                    Artikel 6 
+                                    De organisatie Bro.Go voorziet de nodige omleidingsroutes voor fietsers die langs de jaagpaden komen aangereden. Er zullen op de knooppunten (brug Vaartstraat/Rostraat Lobrug en Merendreebrug (Deinze) vooraankondigingsborden geplaatst worden met uitleg over de alternatieve routes. Vanaf de brug Vaartstraat/Rostraat zal het ook mogelijk zijn een stuk mee te rijden met de renners langs het jaagpad richting Gent. 
+                                    Artikel 7 
+                                    De organisatie moet alle langsheen het traject wonenden ten minste één week op voorhand op de hoogte te brengen van de geplande manifestatie en van de tijdelijke verkeerssituatie. 
+                                    Artikel 8 
+                                    De beheerder van de openbare weg kan niet aansprakelijk worden gesteld voor ongevallen te wijten aan de staat van de wegverharding bij gebruik ervan voor de inrichting van deze manifestatie. 
+                                    Artikel 9Indien er schade aan het openbaar domein (weg en aanhorigheden) wordt vastgesteld, rechtstreeks of onrechtstreeks voortkomende uit de hier bovenvermelde manifestatie, moet deze hersteld worden tot voldoening van het gemeentebestuur. 
+                                    Artikel 10 
+                                    De signalisatie die nodig is voor het fietsparcours op grondgebied Deinze moet aangevraagd worden bij Stad Deinze zelf. Zij zullen de signalisatie gegroepeerd in Merendree en Hansbeke brengen en terug.  
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> a ns2:Agendapunt ;
+    ns3:uuid "70e2a2c1-d5e5-5bce-b72e-6cda08f11edd" .
+

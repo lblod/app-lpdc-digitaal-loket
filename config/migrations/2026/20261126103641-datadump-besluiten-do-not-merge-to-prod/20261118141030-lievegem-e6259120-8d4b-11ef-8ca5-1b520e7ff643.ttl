@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/67813274-3b7a-49f9-b9c9-4340aed05429> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2371935b-7ad6-4871-af1c-8089e789c391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42299301-8db7-4bbf-ae43-b3b4e96ecd75>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50439503-35eb-4857-a55d-25da89a6089f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5856e334-1733-4d65-8957-97a405084cb7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65fdb4dd-4ccc-4e03-957b-90fcc179cde0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/99120f73-d62d-48c9-b773-7826c5491feb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fabf93-37f3-4314-807c-752f83afa18b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc17426a-5ef8-46a5-9063-831499691106>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0e68f3f-8930-4481-a410-e168d0bf59e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns2:geplandeStart "2024-01-31T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d806425-9a34-4095-988a-05678b76355f> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0682f2be-d210-4ac2-9225-4ac8a0eeb628> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3369f7d3-24df-47ea-acab-50b627f1e882> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e6273ed0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-01-31T21:22:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-31T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f> ;
+    ns2:openbaar true ;
+    ns3:uuid "e625df40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f> a ns2:Besluit ;
+    ns1:description """ 
+                                                    Vragen en antwoorden omtrent: 
+                                                    1. Raadslid Didier Garré: hoe zit het met de werken in Waarschoot aan de Kring?2. Raadslid Wouter Ryckaert: problematiek facturatie en energieleveranciers3. Raadslid Wouter Ryckaert: vervanging Speybrug : uitvoeringsdatum?4. Raadslid Wouter De Muynck: begeleider schoolstraat Waarschoot is er niet meer? 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Nicholas Spinel, voorzitter 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 31 en 278 
+                                                            Gemeenteraadsbesluit van 14 september 2022 over de goedkeuring huishoudelijk reglement gemeenteraad, artikel 11 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraadsleden hebben het recht aan het college van burgemeester en schepenen mondelinge en schriftelijke vragen te stellen. Voor het stellen van een vraag is geen toegelicht voorstel van beslissing nodig. Op schriftelijke vragen van raadsleden wordt binnen de maand na ontvangst schriftelijk geantwoord. Een kopie van de vraag en het antwoord worden per e-mail bezorgd aan de raadsleden.  Na afhandeling van de agenda van de openbare vergadering van de gemeenteraad kunnen de raadsleden mondelinge vragen stellen over gemeentelijke aangelegenheden, die niet op de agenda van de gemeenteraad staan.  Op deze mondelinge vragen wordt ten laatste tijdens de volgende zitting geantwoord. De behandeling van een mondelinge vraag beperkt zich tot vraag en antwoord en kan geen aanleiding geven tot een discussie tussen raadsleden. In de notulen van de zitting wordt melding gemaakt van de naam van de vraagsteller, aan wie de vraag is gericht en het onderwerp. Het zittingsverslag van de vergadering van de gemeenteraad vermeldt de mondelinge en schriftelijk gestelde vragen en antwoorden. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e6259120-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Vragen en antwoorden over:Er werden geen schriftelijke vragen gesteld.Mondelinge vragen:1. Raadslid Didier Garré: hoe zit het met de werken in Waarschoot aan de Kring?Antwoord schepen Chris De Wispelaere: het gaat vooruit, ik geef meer detail in geheime zitting.2. Raadslid Wouter Ryckaert: problematiek facturatie en energieleveranciersIn aansluiting met mijn vorige vraag omtrent de problematiek van de complexiteit voor senioren en andere doelgroepen van facturatie en keuze energieleveranciers heb ik een antwoord gekregen, maar ik heb nog een paar aanvullende vragen:   - Hoeveel inwoners komen af op die wekelijkse zitdag van Wooneco (het woon- en energieloket)? Antwoord schepen Martine Gyssels: kunnen we niet direct op antwoorden, zal ik navragen en je bezorgen.- Wat is het advies geweest of uitkomst overleg ouderenadviesraad?Antwoord schepen Martine Gyssels: Ze willen daar een rol in opnemen.  De werkgroepen zijn bereid om hun verantwoordelijkheid te nemen en via Veneco als er extra vragen zouden zijn om die mensen door te verwijzen. 
+                                                             - Is het geen idee om iemand op te leiden, bij voorkeur uit de doelgroep, en naar de verschillende seniorenverenigingen te gaan?Antwoord burgemeester Kim Martens: Alle suggesties zijn welkom en dit is zeker een goede.  We gaan navragen of we dit kunnen doen.  Er zijn veel activiteiten van en voor senioren en ze zijn soms vragende partij om toelichting te komen geven.  
+                                                            3. Raadslid Wouter Ryckaert: vervanging Speybrug : uitvoeringsdatum? Antwoord Schepen Chris De Wispelere: De Vlaamse Gemeenschap heeft geld vrijgemaakt voor 60 bruggen te renoveren en die moeten er allemaal liggen voor 2030.  Maar de Speybrug, gezien de slechte staat, staat als een van de eerste prioriteiten.  Ik veronderstel dat dit binnen de twee jaar zal gebeuren. Startnota is nu opgemaakt.  - Is dit gekoppeld aan fietsbrug over N9?Antwoord schepen Chris De Wispelaere: Dit staat los van elkaar, eerst was er hiervoor samenwerking met Evergem.  Maar nu zijn we maar de enige partij meer. We hebben voor de ontwerper 25.000 voorzien, maar mogelijks interessant om dezelfde ontwerper als de Speybrug te nemen.4. Raadslid Wouter De Muynck: begeleider schoolstraat Waarschoot is er niet meer?Zou eventueel al zijn sinds de straat autovrij is? Is dat tijdelijk? 
+                                                            Antwoord burgemeester Kim Martens: zullen we navragen. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "e6267b80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" .
+

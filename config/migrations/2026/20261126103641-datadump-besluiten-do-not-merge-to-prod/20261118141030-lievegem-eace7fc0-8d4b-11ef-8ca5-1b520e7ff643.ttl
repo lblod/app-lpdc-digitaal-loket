@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/64292094-595b-43a4-87fa-09b39de60c51> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3472ca46-17f4-4ac4-bd1f-9f96df40b42d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a8cb143-3660-4108-a22b-fa9ccdb124b7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5b259916-7445-4ace-b484-f7c83b7b4d8a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75e16e88-e441-46f3-b8fe-bfdc72375379>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ae3c8f2-fc63-403e-8535-13b5cdcdb902>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a88d3ed-3f9b-4dc5-911c-38aa5e088748>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c05f1264-5942-4187-9224-9611ce20f0e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c16dfd27-97d3-4aa3-917f-c99224ff85c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c25bee23-625c-4d41-bea7-565cba2c4a2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d550a5d5-70d8-4776-868e-a39ef5e49f13>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcc9faaa-6e3f-4a5b-897c-ceda838cc838>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de0eac1d-0c61-4d20-bde6-470901747aa6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de80fa75-f898-4125-93ac-28e4f6de06ff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e8a52fa2-bcac-4c32-8674-97e0bdca0810>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ede466d9-ba19-4838-a580-83f40ae2e2aa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee9535bc-5a7a-4dac-bc37-9c391d909286> ;
+    ns1:geplandeStart "2023-11-29T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e98f8837-bfd3-4adf-80c6-42ebe89cecfb> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04ef3b86-39d8-42fe-8c76-639f769cbf39> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4baf8289-60b0-4a35-82d9-c5435a9aa3dc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ead18d00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-11-29T22:20:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-11-29T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c25bee23-625c-4d41-bea7-565cba2c4a2d> ;
+    ns1:openbaar true ;
+    ns2:uuid "f25b7b80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad neemt kennis van het verslag van de algemene vergadering van de welzijnsvereniging Audio op 29 september 2023. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Welzijnsvereniging Audio - algemene vergadering 29 september 2023 - verslag: kennisname" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Steven Lambert, raadslid 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur, van 22 december 2017 in het bijzonder artikel 477 (De statuten van de welzijnsvereniging) 
+                                                            Het besluit van de gemeenteraad van 9 september 2020 over de vereniging van publiek recht Welzijnsvereniging Audio: aanduiden van vertegenwoordigers 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente Lievegem is lid van de Welzijnsvereniging  Audio. Audio is een vereniging van publiek recht onderworpen aan deel 3, titel 4, hoofdstuk 2 van het decreet over het lokaal bestuur.Conform artikel 20 van de statuten zijn de afgevaardigden van de deelgenoten verantwoordelijk voor kennisgeving van het verslag van de algemene vergadering aan de gemeenteraad.De algemene vergadering van Audio vond plaats op 29 september 2023. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "eace7fc0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad neemt kennis van het verslag van de algemene vergadering van de welzijnsvereniging Audio op 29 september 2023. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f10a1c50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Welzijnsvereniging Audio - algemene vergadering 29 september 2023 - verslag: kennisname" .
+

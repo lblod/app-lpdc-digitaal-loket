@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/47d6558f-2c18-476c-bc0d-499db1d97de5> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/09ba5502-0a69-4007-88d6-d2bc2553dbe6>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9592b47b-e6e7-4e36-b2a8-4f9cb9833433>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a5d6cfba-79b5-4ad2-b95a-2bd70924d289>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d2980546-7251-46c6-9db1-281ef68b2f6f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f16116de-a475-42a9-af34-1c4804ed0b67>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f187a815-bbc0-49ac-aa30-8d036a045b6e> ;
+    ns1:geplandeStart "2025-05-05T14:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/6eb9fd25-cfa9-4612-866e-246940a48d9a> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "89fe870c-63dc-5388-9404-75562d5847ce" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-05T13:29:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f187a815-bbc0-49ac-aa30-8d036a045b6e> ;
+    ns1:openbaar false ;
+    ns2:uuid "655e76fe-432b-5e36-9989-2174c185465d" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Lente op Paddenbroek op zondag 18 mei 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Lente op Paddenbroek - zondag 18 mei 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "41d44088-faf0-5508-9c80-8fccf35db092" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Lente op Paddenbroek op zondag 18 mei 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 6u tot 23u:
+                                     
+                                     
+                                        Op de Paddenbroekstraat van de Koekoekstraat tot de Lombergstraat in de richting van de Zwartschaapstraat geldt:  verboden rijrichting voor iedere bestuurder;  de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A en speed pedelecs .Op de Paddenbroekstraat vanaf de Lombergstraat in de richting van de Koekoekstraat geldt:  toegelaten rijrichting op de openbare weg met eenrichtingsverkeer;  fietsers, bestuurders van tweewielige bromfietsen klasse A en speed pedelecs mogen in de twee richtingen rijden.Dit wordt gesignaleerd door:- verkeersborden C1- de verkeersborden worden aangevuld met onderborden M12- verkeersborden F19- de verkeersborden worden aangevuld met onderborden M18 
+                                        Op de Paddenbroekstraat van de Lombergstraat tot de Koekoekstraat langs beide zijden van de weg geldt: 
+                                        Op de Koekoekstraat tussen de Paddenbroekstraat en de Zijpstraat langs de zijde met even huisnummers geldt: 
+                                          het stilstaan en parkeren is verboden;  het einde van de parkeerreglementering wordt aangeduid;  het begin van de parkeerreglementering wordt aangeduid;  de parkeerreglementering geldt over een afstand van meer dan 300 meter.Dit wordt gesignaleerd door:- verkeersborden E3- de verkeersborden worden aangevuld met x-borden Xb, Xa, Xd  
+                                        Op de Koekoekstraat tussen de Zijpstraat en de Paddenbroekstraat langs de zijde met oneven huisnummers geldt:het parkeren is verplicht op de berm of op het trottoir;Dit wordt gesignaleerd door:- verkeersborden E9e 
+                                        Op de Paddenbroekstraat ter hoogte van de Breedeveldstraat, het plattelandscentrum Paddenbroek (huisnr. 12) en zijweg voor huisnr. 10 geldt:  de bestuurders zijn verplicht rechts af te slaan;  de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A en speed pedelecs .Dit wordt gesignaleerd door:- verkeersborden D1- de verkeersborden worden aangevuld met onderborden M12 
+                                     
+                                    
+                                        Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                     
+                                     
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/cb88dd9e-b50b-4f18-bc96-6bae6ad0e4c4> a ns1:Agendapunt ;
+    ns2:uuid "3254728d-b694-5082-a2fe-855f131d6397" .
+

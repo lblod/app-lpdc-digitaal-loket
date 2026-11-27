@@ -1,0 +1,119 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/9c3b2ca2-c376-4f13-8ccb-6cbaebb4c215> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6764a370-de4b-44a1-aa54-e27b098f10cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/715072f0-a2f4-46fa-82f2-e63921668d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f75d37f-4196-4742-84f0-a8e5a5e09194>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd178f6e-0345-4e50-b781-f313f2b66e97>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> ;
+    ns1:geplandeStart "2025-03-04T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/13c96b1d-823f-4d31-a447-a9065b3591e0> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "2f9755bd-55ae-5d40-9ca0-3f6480e156a1" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-03-04T13:35:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8f75d37f-4196-4742-84f0-a8e5a5e09194> ;
+    ns1:openbaar false ;
+    ns3:uuid "aadf0dbe-8fe2-5180-8a6b-d0c5880a7bf2" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/dd85ed0e-52d7-4564-8fef-d5971c749094> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/dd85ed0e-52d7-4564-8fef-d5971c749094> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Schoolfeest Twinkel' op 25 mei 2025 wordt vastgesteld: 
+                                                            1. Van 8.00 uur tot en met 20.00 uur: 
+                                                             
+                                                                Parkeerverbod op de volledige parkeerstrook ter hoogte van Basisschool Twinkel, Veldhoek 4 en op parking Veldhoek, 9931 Lievegem 
+                                                             
+                                                            
+                                                                 
+                                                             
+                                                            
+                                                                2. Van 9.00 uur tot en met 18.00 uur:
+                                                             
+                                                             
+                                                                Afsluiten van Veldhoek vanaf kruispunt met Oostwinkeldorp tot aan Veldhoek 8A. 
+                                                                Omleiding via Oostwinkeldorp - Panthaagstraat - Vlamingstraat en omgekeerd 
+                                                             
+                                                             
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Schoolfeest Twinkel' - Basisschool Twinkel: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 4 maart 2025 over aanvraag evenement Schoolfeest Twinkel - Basisschool Twinkel 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Pieter Van Hecke, namens Basisschool Twinkel organiseert 'Schoolfeest Twinkel' op 25 mei 2025 vanaf 13.00 uur tot en met 18.00 uur.Er werd op 14 januari 2025 een aanvraag ingediend door Pieter Van Hecke, namens Basisschool Twinkel om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Er werd op 25 februari 2025 toestemming ontvangen van gemeente Maldegem voor het plaatsen van signalisatie op hun grondgebied. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Gemeente Maldegem 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns3:uuid "358e02d7-d235-5982-a092-147aa03b0d63" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Schoolfeest Twinkel' op 25 mei 2025 wordt vastgesteld als volgt: 
+                                    1. Van 8.00 uur tot en met 20.00 uur: 
+                                     
+                                        Parkeerverbod op de volledige parkeerstrook ter hoogte van Basisschool Twinkel, Veldhoek 4 en op parking Veldhoek, 9931 Lievegem 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Van 9.00 uur tot en met 18.00 uur:
+                                     
+                                     
+                                        Afsluiten van Veldhoek vanaf kruispunt met Oostwinkeldorp tot aan Veldhoek 8A. 
+                                        Omleiding via Oostwinkeldorp - Panthaagstraat - Vlamingstraat en omgekeerd 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                    1. Van 8.00 uur tot en met 20.00 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Van 9.00 uur tot en met 18.00 uur:
+                                     
+                                     
+                                        Nadars + C3 ter hoogte van het kruispunt met Oostwinkeldorp en huisnummer 8A 
+                                        Nadars + C3 + F45 + 'uitgezonderd plaatselijk verkeer' op het kruispunt Veldhoek/Vlamingstraat 
+                                        Borden F41 op volgende kruispunten: Veldhoek/Oostwinkeldorp, Panthaagstraat/Kruipuit, Vlamingstraat/Panthaagstraat en Vlamingstraat/Veldhoek 
+                                     
+                                     
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd85ed0e-52d7-4564-8fef-d5971c749094> a ns1:Agendapunt ;
+    ns3:uuid "b83e0655-d6ad-53b0-82a7-f33dfc3f5548" .
+

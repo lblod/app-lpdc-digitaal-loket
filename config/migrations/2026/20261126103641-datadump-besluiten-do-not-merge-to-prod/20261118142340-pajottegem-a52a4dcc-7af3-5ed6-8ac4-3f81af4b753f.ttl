@@ -1,0 +1,53 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/6534182e-3d3f-4b86-881b-b3eda20d5bdd> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b83025c0-2f10-41ba-92bf-e656aefcdd10>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c52205e9-2216-4905-8e25-6d6e6a437926> ;
+    ns2:geplandeStart "2026-03-02T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/9171e6b9-ebac-47dc-bb8e-a0db194384e5> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "f42810a7-4367-5709-8c89-4adfa7541c2e" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-03-02T13:27:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c52205e9-2216-4905-8e25-6d6e6a437926> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3224c426-1f79-424e-a75e-181f1e9e922f> ;
+    ns2:openbaar false ;
+    ns3:uuid "ea24659b-c640-5452-8ea0-976b29ab7780" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c52205e9-2216-4905-8e25-6d6e6a437926> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/c52205e9-2216-4905-8e25-6d6e6a437926> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/c52205e9-2216-4905-8e25-6d6e6a437926> a ns2:Besluit ;
+    ns1:description """ 
+                                                    Het college van burgemeester en schepenen neemt kennis van het verslag van het adviesplatform Mondiaal op 28 januari 2026. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Kennisname verslag van adviesplatform Mondiaal op 28 januari 2026" ;
+    ns2:motivering """ 
+                                 
+                                     
+                                 
+                            """@nl ;
+    ns3:uuid "a52a4dcc-7af3-5ed6-8ac4-3f81af4b753f" ;
+    prov:value """ 
+                                 
+                                    Artikel 1 - Het college van burgemeester en schepenen neemt kennis van het verslag van het adviesplatform Mondiaal op 28 januari 2026. 
+                                    Artikel  2 - Het college neemt kennis van volgende geformuleerde adviezen en neemt er volgend standpunt over in: 
+                                     
+                                        Goedkeuring van het huishoudelijk reglement: Akkoord met het geformuleerde advies. Dit reglement dient ter goedkeuring te worden voorgelegd aan de gemeenteraad. 
+                                        Positief advies voor noodhulp aan Sri Lanka (VZW Martin De Kegel): Akkoord om dit initiatief met 2.000 euro te ondersteunen, vraag om de communicatie hierover breder te voeren in 2026. 
+                                        Aanvragen studenten: De aanvragen zullen conform het reglement verlopen. In een overgangsfase of in geval van conflict omwille van inwerkingtredingsdatum zullen de vragen individueel onderzocht worden door het college van burgemeester en schepenen. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c52205e9-2216-4905-8e25-6d6e6a437926> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c52205e9-2216-4905-8e25-6d6e6a437926> a ns2:Agendapunt ;
+    ns3:uuid "62330b75-2456-5b51-9022-360df3f5a280" .
+

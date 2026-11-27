@@ -1,0 +1,117 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/26cf701b-dd74-4a2d-8b59-bc9af94c3e58> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2d842e4e-6f1d-49c7-a33f-97a398303150>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5a5fe7b2-7905-4d6d-a997-914cca36425b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/726e1622-908e-4f73-8512-9faa17300c1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> ;
+    ns3:geplandeStart "2026-09-08T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0471fbe5-6e20-4dc9-863c-5c99895b72e8> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "4d7b4d66-40db-5e6f-ad09-383f8e7905c5" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-09-08T14:10:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/726e1622-908e-4f73-8512-9faa17300c1f> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> ;
+    ns3:openbaar false ;
+    ns2:uuid "b067570b-d98e-5b33-8246-1778c1334e9e" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/726e1622-908e-4f73-8512-9faa17300c1f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/726e1622-908e-4f73-8512-9faa17300c1f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/726e1622-908e-4f73-8512-9faa17300c1f> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Attracties septemberkermis 2026' van vrijdag 11 september 2026 10.00 uur tot en met maandag 14 september 2026 12.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Activiteiten septemberkermis Waarschoot 2026' - team evenementen: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 1 september 2026 over de aanvraag Septemberkermis Waarschoot 2026 - organisatie kinderuurtje - standplaatsen spektakelattracties en kermisgastronomie: goedkeuringHet besluit van het college van burgemeester en schepenen van 1 september 2026 over het tijdelijk politiereglement naar aanleiding van 'Septemberkermis Waarschoot 2026' - gemeente Lievegem: vaststellingHet besluit van het college van burgemeester en schepenen van 8 september 2026 over de aanvraag evenement Septemberkermis Waarschoot - team evenementen: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen - gemeente Lievegem organiseert 'Activiteiten septemberkermis Waarschoot 2026' van vrijdag 11 september 2026 19.00 uur tot en met maandag 14 september 2026 18.00 uur.Er werd op 27 augustus 2026 een aanvraag ingediend door team evenementen - gemeente Lievegem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                    De Lijn: Omleidingen.vvrgentstreek@delijn.be 
+                                 
+                            """@nl ;
+    ns2:uuid "1287131f-0d2d-528c-a4da-900ba5191842" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Activiteiten septemberkermis Waarschoot 2026' van vrijdag 11 september 2026 19.00 uur tot en met  maandag 14 september 2026 12.00 uur wordt vastgesteld als volgt: 
+                                    1. Vanaf 11 september 2026 10.00 uur tot en met 14 september 2026 12.00 uur: 
+                                     
+                                        inname zone voor gemeentehuis voor plaatsing mobiel podium en barcontainer, Waarschootdorp 1, 9920 Lievegem. 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Op 11 september 2026 van 18.30 uur (na passage van de laatste bus lijn 562 rond 18.24 uur) tot en met 23.30 uur en op 13 september 2026 van 9.00 uur tot en met 14.00 uur:
+                                     
+                                     
+                                         
+                                            Stilstaan- en parkeerverbod ter hoogte van Waarschootdorp 1 tot en met Stationsstraat 18, 9950 Lievegem aan beide zijden van de weg 
+                                            Afsluiten voor doorgaand verkeer vanaf Waarschootdorp 1 tot en met Stationsstraat 18 (hoek Metaalstraat). De fietspaden blijven langer toegankelijk tot start van het evenement op zondag 13 september 2026 tot en met 10.30 uur 
+                                            wegomlegging via Gastelstraat - Hovingen - Kouterweg en Molenstraat 
+                                            wegomlegging via Nijverheidsstraat en Stationsplein 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Vanaf 11 september 2026 10.00 uur tot en met 14 september 2026 12.00 uur: 
+                                     
+                                        geen signalisatie nodig 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Op 11 september 2026 van 18.30 uur (na passage van de laatste bus lijn 562 rond 18.24 uur) tot en met 23.30 uur en op 13 september 2026 van 9.00 uur tot en met 14.00 uur:
+                                     
+                                     
+                                         
+                                            Borden E3 
+                                            Nadar + C3 aan volgende kruispunten: Waarschootdorp/Kerkstraat en Stationsstraat/Metaalstraat 
+                                            Borden F41 aan volgende kruispunten: Waarschootdorp/Kerkstraat, Kerkstraat/Gastelstraat, Hovingen/Kouterweg, Kouterweg/Molenstraat en Stationsstraat/Molenstraat 
+                                            Afdekken borden 'verboden +3,5 ton' in Gastelstraat en Kouterweg 
+                                            Bord F45L + 'verboden +3,5 ton' op kruispunt Kerkstraat/Gastelstraat 
+                                            Nadar + C3 + F45L + 'uitgezonderd plaatselijk verkeer' aan het kruispunt Stationsstraat/Molenstraat 
+                                            Borden F41 aan volgende kruispunten: Waarschootdorp/Kerkstraat, Schoolstraat/Nijverheidsstraat, Stationsplein/Stationsstraat 
+                                            Afdekken borden 'verboden +3,5 ton' in Nieuwstraat, Tuinbouwstraat en Stationsplein 
+                                            Borden 'evenement' op de invalswegen 
+                                         
+                                     
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden.  
+                                    De borden voor parkeerverbod en wegomlegging worden al op de juiste plaats gezet door de gemeentediensten. Bij aanvang en einde van het evenement zullen de organisaties zelf de overige borden voor het afsluiten van de feestzone op straat plaatsen en terug.  
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/726e1622-908e-4f73-8512-9faa17300c1f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/726e1622-908e-4f73-8512-9faa17300c1f> a ns3:Agendapunt ;
+    ns2:uuid "b15519bb-7e55-5087-bd42-7f1bfd183897" .
+

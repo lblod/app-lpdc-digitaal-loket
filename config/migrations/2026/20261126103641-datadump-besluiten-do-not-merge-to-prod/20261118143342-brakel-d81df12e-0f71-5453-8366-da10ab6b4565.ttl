@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/73ba18aa-ea9a-4aae-a765-c733e1397d52> a ns2:Zitting ;
+    ns2:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/003a94af-d762-4da4-a7bc-f73299c947cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/04b745cc-2195-49e6-aaab-284a94f9447b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/051dca70-fc5a-4c63-a142-f7ca0a358a6f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/2520d3dd-7478-4a6e-aa97-d05b711a7154>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/30551822-c500-49d1-bc0a-094708fed392>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/4790ad5b-4205-4fe5-b632-1845388e2f55>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6552a2a8-faad-4c90-9409-4e8d9ae5a485>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6921eddd-d348-43dc-ac06-475aa923ffeb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/7311839b-54d7-4337-9a49-2c950437c1f7>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8969185e-c436-4328-8275-415bf8d52f76>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8a178447-7f3c-4c94-9993-a9e69eed5527>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8ed10e0c-075c-4a1e-b61e-6a498c0c4acf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a23f6dc1-ad3b-4d96-8413-c59ba67b0f7d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/ad282140-1c95-4ea2-9b4e-74bf4f1377ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bc8ddb0c-1538-4cce-8f0b-2c753dd77a0d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c6b4e8d9-8e2f-4384-99ca-53a38468a1d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d8b1af31-ab1e-489e-86d7-32eecd4f48ea>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/daef299c-44c2-445a-a914-a9c8337f1df9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e3f3081e-24b7-4759-98ab-a3e0df2226a6>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f735f1d3-65e0-40f9-b177-a823ea9ed9f6> ;
+    ns2:geplandeStart "2025-06-02T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/084040f8-b9f4-4105-975a-ec2447bbed1f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/documenten/e8c27808-fe9d-4882-b411-f828f302c1c0> ;
+    ns2:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/ac1e1acd-4f44-42eb-8e73-377721d3a797> ;
+    ns2:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/1a9e0d2a-8c2e-432d-9ba0-e61ebcf0ed93> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns1:uuid "2ec43509-b4e2-5e4f-818b-bc033a4cf7ce" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-06-02T20:00:00+02:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/04b745cc-2195-49e6-aaab-284a94f9447b> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8969185e-c436-4328-8275-415bf8d52f76> ;
+    ns2:openbaar true ;
+    ns1:uuid "eafa9c31-b43f-5b15-8b2e-42ccc4e546e6" ;
+    dcterms:description """ 
+                                                             
+                                                                De mail d.d. 12 mei 2025 van CIPAL waarbij de gemeente Brakel wordt uitgenodigd om deel te nemen aan de Algemene Vergadering d.d. 24 juni 2025; 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/04b745cc-2195-49e6-aaab-284a94f9447b> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/04b745cc-2195-49e6-aaab-284a94f9447b> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/04b745cc-2195-49e6-aaab-284a94f9447b> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Samenwerkingsverbanden. Cipal dv. Uitnodiging Algemene Vergadering d.d. 24 juni 2025. Goedkeuring." ;
+    ns2:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Het decreet lokaal bestuur van 22 december 2017 (“DLB”) en in het bijzonder art. 40 inzake de bevoegdheid van de gemeenteraad; 
+                                                                    Het raadsbesluit d.d. 03 februari 2025 omtrent de aanduiding van een vertegenwoordiger en plaatsvervanger voor de Algemene Vergadering; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Gelet op het feit dat de gemeente deelnemer is van de dienstverlenende vereniging Cipal (“Cipal”); 
+                                                                    Gelet op de statuten van Cipal; 
+                                                                    Gelet op het raadsbesluit d.d. 03 februari 2025 omtrent de aanduiding van een vertegenwoordiger en plaatsvervanger voor de Algemene Vergadering; 
+                                                                    Gelet op de oproepingsbrief tot deelname aan de algemene vergadering van Cipal van 24 juni 2025 met de volgende agendapunten:  
+                                                                     
+                                                                        Toetreding en aanvaarding van nieuwe deelnemer(s) 
+                                                                        Kennisname van het jaarverslag van de raad van bestuur en het verslag van de commissaris over de enkelvoudige jaarrekening van Cipal over het boekjaar 2024 
+                                                                        Goedkeuring van de enkelvoudige jaarrekening van Cipal over het boekjaar 2024 met bestemming van het resultaat 
+                                                                        Kennisname van het jaarverslag van de raad van bestuur en het verslag van de commissaris over de geconsolideerde jaarrekening van Cipal over het boekjaar 2024 
+                                                                        Kennisname van de geconsolideerde jaarrekening van Cipal over het boekjaar 2024 
+                                                                        Kwijting te verlenen afzonderlijk aan de bestuurders en aan de commissaris van Cipal voor de uitoefening van hun mandaat tijdens het boekjaar 2024 
+                                                                        Benoeming commissaris en vaststelling van vergoeding 
+                                                                        Bepaling presentiegeld en reisvergoeding voor de leden van de raad van bestuur 
+                                                                        Goedkeuring van het evaluatierapport 2019-2024 met inbegrip van het ondernemingsplan 2025-2030 
+                                                                        Goedkeuring van het verslag, staande de vergadering 
+                                                                     
+                                                                      
+                                                                    Gelet op de documenten en de toelichtende nota van Cipal betreffende de agendapunten van deze algemene vergadering; 
+                                                                    Gelet op de voorstellen van de raad van bestuur van Cipal; 
+                                                                    Overwegende dat geen redenen voorhanden zijn om goedkeuring van de agendapunten te weigeren; 
+                                                                    Het College van Burgemeester en Schepenen d.d. 19 mei 2025 nam kennis van de uitnodiging, de agenda en alle bijhorende stukken van de Algemene Vergadering van Cipal d.d. 24 juni 2025. 
+                                                                 
+                                                            """@nl ;
+    ns1:uuid "d81df12e-0f71-5453-8366-da10ab6b4565" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Artikel 1: Op basis van de bekomen documenten en de toelichtende nota worden de agendapunten van de algemene vergadering van Cipal van 24 juni 2025 goedgekeurd. 
+                                                                    Artikel 2: De vertegenwoordiger van de gemeente wordt gemandateerd om op de algemene vergadering van Cipal van 24 juni 2025 te handelen en te beslissen conform dit besluit. Indien deze algemene vergadering niet geldig zou kunnen beraadslagen of indien deze algemene vergadering om welke reden dan ook zou worden verdaagd, dan blijft de vertegenwoordiger van de gemeente gemachtigd om deel te nemen aan elke volgende vergadering met dezelfde agenda. 
+                                                                    Artikel 3: Het college van burgemeester en schepenen wordt gelast met de uitvoering van onderhavig besluit en in het bijzonder met het in kennis stellen daarvan aan Cipal. 
+                                                                      
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/04b745cc-2195-49e6-aaab-284a94f9447b> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/04b745cc-2195-49e6-aaab-284a94f9447b> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "bf860c28-17ac-523d-a8ed-1a6cc7a2c029" ;
+    dcterms:title "Samenwerkingsverbanden. Cipal dv. Uitnodiging Algemene Vergadering d.d. 24 juni 2025. Goedkeuring." .
+

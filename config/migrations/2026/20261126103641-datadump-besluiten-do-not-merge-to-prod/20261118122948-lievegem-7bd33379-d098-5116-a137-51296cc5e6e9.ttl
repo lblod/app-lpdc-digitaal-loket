@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/70680d7c-ace9-407e-9673-14b95deb57d9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f611c70-3a49-4734-bfb1-577166ed4967>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1586fbd9-8e00-48e9-95a4-593a86852cc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a5cf154-f0b5-4025-a872-a41db0eeaa12> ;
+    ns1:geplandeStart "2025-05-20T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/af7839ff-765b-4860-87bb-d70026a12e10> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "2db56d79-e448-5e76-b9a8-b2ee20555a62" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-05-20T13:31:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0f611c70-3a49-4734-bfb1-577166ed4967> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/880e5a07-1a51-4ef8-b7f1-41192f36dcf1> ;
+    ns1:openbaar false ;
+    ns2:uuid "f34c3ebc-bc6e-58b3-9d41-dd7f7dc191ec" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f611c70-3a49-4734-bfb1-577166ed4967> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0f611c70-3a49-4734-bfb1-577166ed4967> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0f611c70-3a49-4734-bfb1-577166ed4967> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement 'parkeren met beperkte tijdsduur ter hoogte van Dreef 51 (lengte 50 meter)' wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement - parkeren met beperkte tijdsduur ter hoogte van Dreef 51 (lengte 50 meter): vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bis 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 286 
+                                    Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeer 
+                                    Koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                    Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                    Het burgemeesterbesluit van 29 augustus 2024 over het Tijdelijk politiereglement - parkeren met beperkte tijdsduur ter hoogte van Dreef 51 (lengte 50 meter): vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    In overleg met de schooldirectie en enkele zelfstandigen die een zaak hebben ter hoogte van Dreef 51 wordt afgesproken een parkeerregeling met beperkte parkeertijd in te voeren om zo een beter evenwicht te vinden tussen langparkeerders (school en bewoners) en kortparkeerders (bezoekers handelszaken). De regeling omvat de parkeerstrook ter hoogte van Dreef 51 over een lengte van bijna 50 meter. Hierbij wordt voorgesteld het gebruik van de parkeerschijf te verplichten van 9 uur tot 18 uur, alle dagen behalve op zon- en feestdagen. De parkeertijd wordt beperkt tot 2 uur parkeren, te rekenen vanaf het uur dat werd aangeduid op de schijf. 
+                                    Op 29 augustus 2024 werd door de burgemeester het tijdelijk politiereglement 'parkeren met beperkte tijdsduur ter hoogte van Dreef 51 (lengte 50 meter)' voor de periode maandag 02.09.2024 tot en met 31.12.2024 vastgesteld. 
+                                    Op 17 december 2024 werd door het college van burgemeester en schepenen beslist deze maatregel te verlengen tot en met 28 februari 2025. 
+                                    Aangezien de huidige regeling eerder als positief wordt ervaren wordt voorgesteld de bestaande regeling te verlengen tot eind 2025. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    parkeerbedrijf: VANNESTE Kristof <kristof.vanneste@group-indigo.com> 
+                                      
+                                 
+                            """@nl ;
+    ns2:uuid "7bd33379-d098-5116-a137-51296cc5e6e9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement 'parkeren met beperkte tijdsduur ter hoogte van Dreef 51 (lengte 50 meter)' wordt vastgesteld voor de periode 02.09.2024 tot en met 31.12.2025 
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        E9a + pictogram parkeerschijf met opwaartse pijl vlak voorbij het verkeersplateau aan de Kloosterstraat 
+                                        E9a + pictogram parkeerschijf met neerwaartse pijl valk vóór de uitrit van de ondergrondse garage Dreef 51 (lengte: 50 meter) 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0f611c70-3a49-4734-bfb1-577166ed4967> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f611c70-3a49-4734-bfb1-577166ed4967> a ns1:Agendapunt ;
+    ns2:uuid "84f8451f-3652-5e08-b807-baaeb27b0833" .
+

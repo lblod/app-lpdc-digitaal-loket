@@ -1,0 +1,117 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/f2709e26-1e74-4e2e-99d1-2611293cd281> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63d94650-b618-4e07-a2e4-e92306eddf8b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc2c78ab-9386-4bcf-9299-3c8d3e5e07fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> ;
+    ns1:geplandeStart "2026-04-07T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/74103a52-2c11-4b34-91e1-ca922c513e88> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "8ce1d4c2-564c-5311-a748-01fa39adeea3" ;
+    prov:atLocation "'t Leiken, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-04-07T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87> ;
+    ns1:openbaar false ;
+    ns2:uuid "2251a608-4b5c-5c33-b577-5ea83fd7d818" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/171edebf-5a69-42e0-837c-c8f83d472e9e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/171edebf-5a69-42e0-837c-c8f83d472e9e> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van Eeksken Feesten 2026 op 4 juni 2026 tot en met 7 juni 2026 wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Eeksken Feesten 2026 - Feestcomité Eeksken: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 7 april 2026 over de aanvraag evenement Eeksken feesten - Feestcomité Eeksken: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nico De Leeuw, namens Feestcomité Eeksken, organiseert 'Eeksken Feesten 2026' van 4 juni 2026 15.00 uur tot en met 8 juni 2026 18.00 uur.Er werd op 8 februari 2026 een aanvraag ingediend door Nico De Leeuw, namens Feestcomité Eeksken, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Gemeente Evergem (marjolein.hens@evergem.be en sylvie.lippens@evergem.be) 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "5d9d7f5c-91a7-57ba-8b9c-c15e9ef7f1a5" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement voor 'Eeksken Feesten 2026' wordt vastgesteld als volgt:1. Van 4 juni 2026 14.00 uur tot en met 7 juni 2026 22.00 uur: 
+                                     
+                                        Snelheidsbeperking: max. 30 km/u 100m voor en na het feestterrein ter hoogte van Eeksken 77, 9920 Lievegem 
+                                        Plaatsing wegversmallingen (chicanes) om de snelheid van het verkeer ook fysiek te remmen, ter hoogte van Eeksken 13 en 65 en ter hoogte van 89 en 24. 
+                                        Stilstaan- en parkeerverbod in Eeksken vanaf Eeksken 83 tot en met het kruispunt met Grensweg (zijde grondgebied Lievegem - Gemeente Evergem voorziet een parkeerverbod aan de overzijde van de straat) 
+                                     
+                                    2. Op 5 juni 2026 van 18.00 uur tot en met 21.00 uur naar aanleiding van de jogging: 
+                                     
+                                        Bijkomend stilstaan- en parkeerverbod ter hoogte van Eeksken 51 - 53 en Grensweg 1 - 9 (zijde grondgebied Lievegem - Gemeente Evergem voorziet een parkeerverbod op eigen grondgebied) 
+                                        Afsluiten voor gemotoriseerd verkeer in Eeksken, Grensweg, Linde (Evergem), Meistraat (Evergem) en Haantjen (gedeelte op grondgebied Evergem wordt door gemeente Evergem voorzien) 
+                                        Omleiding vanuit Evergem: via Linde – Weegse – Langendam - Mithremstraat – Daasdonk (Evergem) (deze omleiding wordt door gemeente Evergem voorzien) 
+                                        Omleiding vanuit Lovendegem: Bredestraat - Grote Baan - Renning - Leest - Kerkstraat - Stationsstraat - Molenstraat - 't Hand 
+                                     
+                                    3. Op 7 juni 2026 van 6.30 uur tot en met 19.00 uur naar aanleiding van de rommelmarkt: 
+                                     
+                                         
+                                            Afsluiten voor alle verkeer met uitzondering van plaatselijk verkeer en fietsers in Eeksken vanaf de spoorweg tot en met kruispunt Eeksken/Grensweg 
+                                            Stilstaan- en parkeerverbond in Eeksken vanaf de spoorweg tot en met kruispunt Eeksken/Grensweg 
+                                            Omleiding via grondgebied Evergem: via Eeksken – Linde – Weegse – Langendam - Mithremstraat – Daasdonk en omgekeerd (deze omleiding wordt door gemeente Evergem voorzien) 
+                                         
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt al volgt gesignaleerd:1. Van 4 juni 2026 14.00 uur tot en met 7 juni 2026 22.00 uur: 
+                                     
+                                        Borden C43 '30' en C45 '30' + borden 'evenement' 
+                                        Borden E3 
+                                     
+                                    2. Op 5 juni 2026 van 18.00 uur tot en met 21.00 uur naar aanleiding van de jogging: 
+                                     
+                                        Borden E3 
+                                        Nadar met bord C3 + M12 ter hoogte van Eeksken 77 (feestterrein), kruispunt Eeksken/Eeksken, Grensweg/Linde, Grensweg/Haantjen en Haantjen/Lievetragel 
+                                        Nadar met bord C3 + F45b + 'uitgezonderd plaatselijk verkeer' ter hoogte van kruispunt 't Hand/Daasdonk, Eeksken/Kerkenlanddreef, Meienbroek/Boterhoek, Pyramidestraat/Boterhoek (x2) en Grote Baan/Bredestraat 
+                                        Borden F41 
+                                     
+                                     
+                                        
+                                             
+                                         
+                                        
+                                            4. Op 7 juni 2026 van 6.30 uur tot en met 19.00 uur naar aanleiding van de rommelmarkt:
+                                         
+                                     
+                                     
+                                        Nadar + C3 + 'uitgezonderd plaatselijk verkeer' + M12 ter hoogte van de spoorweg en kruispunt Eeksken/Grensweg 
+                                        Nadar + C3 + F45b + 'uitgezonderd plaatselijk verkeer' ter hoogte rondpunt 't Hand/Daasdonk 
+                                        Borden E3 
+                                        Borden F41 
+                                     
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten, in samenspraak met gemeente Evergem. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het activiteiten. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e> a ns1:Agendapunt ;
+    ns2:uuid "3f8184bb-6c5f-5807-9832-a327d52701ac" .
+

@@ -1,0 +1,129 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/95dbc1a1-d62c-48a1-8260-c6e3de42bc7a> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/24de6323-dd23-4126-af9e-de6bdf7c9199>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> ;
+    ns1:geplandeStart "2026-01-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/5ea7f311-1236-4fac-b2d3-d2654e49a56f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "513db5ae-2c98-5473-bd45-758b6903d6d1" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-01-20T20:16:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/df325023-4e4d-41ae-b17d-08ec17608125> ;
+    ns1:openbaar false ;
+    ns3:uuid "c57abfdb-283f-5330-af81-9b7155efc76d" ;
+    dcterms:description """ 
+                             
+                                  
+                                
+                                     
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/a8a5ee56-66f9-429d-a374-3bd447e2efa9> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/a8a5ee56-66f9-429d-a374-3bd447e2efa9> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Aanvullend verkeersreglement - Neerlichter - Woonerf" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Na enkele meldingen over foutief parkeergedrag in Neerlichter werd er bekeken hoe we dit beter kunnen structureren. Omdat de straat geen doorgaand gemotoriseerd verkeer heeft komt ze in aanmerking om een woonerf te maken, dit laat ons toe om op een efficiënte manier te laten zien waar er parkeermogelijkheden zijn (parkeervakken gemarkeerd met een 'P') 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                    Positief advies van de gemeentelijke verkeerscel 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Neerlichter is een straat waar bewoners en bezoekers overal kunnen parkeren, er geldt geen echte parkeerregeling m.u.v. enkele parkeervakken. De huidige regelgeving laat parkeren toe,maar de straatbreedte is niet voorzien om tegemoet te komen aan de alsmaar breder wordende auto's waardoor de 3 meter vrije ruimte niet altijd kan gegarandeerd worden. 
+                                    De straat is doodlopend voor gemotoriseerd verkeer maar biedt wel doorgang voor fietsers en voetgangers richting de KMO-zone via de oversteekplaats onder de N16.In een woonerf geldt een maximum snelheid van 20 km/u en mogen voetgangers de hele breedte van de weg gebruiken. Bestuurders mogen voetgangers niet in gevaar brengen en ze niet hinderen, en indien nodig stoppen. Bestuurders moeten dubbel zo voorzichtig zijn ten opzichte van kinderen. 
+                                    Daarom wordt Neerlichter aangepast naar woonerf. In een woonerf is parkeren verboden behalve op parkeerplaatsen aangeduid met een P, of daar waar een verkeersbord het toelaat (bvb. mindervalideplaats). 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 3. 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Financiële weerslag 
+                                      
+                                    
+                                         
+                                     
+                                 
+                            """@nl ;
+    ns3:uuid "fd221308-f653-5277-aa85-3d8c88854213" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                      
+                                     
+                                        
+                                             
+                                         
+                                         
+                                            Artikel 1: Neerlicher: het woonerf wordt afgebakend. Het begin van het woonerf wordt aangeduid; ook het einde van het woonerf wordt aangeduid t.h.v. de hoek met Rijweg 138 - Lichterstraat 91 en Neerlichter 36 
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 Verkeersbord F12a  
+                                                 Verkeersbord F12b  
+                                             
+                                         
+                                     
+                                    Artikel 2: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                    
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9> a ns1:Agendapunt ;
+    ns3:uuid "5f951b66-23a3-59d6-8e99-4f34d28412e4" .
+

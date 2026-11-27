@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/22f8cb4c-d36b-48c2-b994-a9ba32a94ed9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/130dac83-f056-4daa-95ae-b3eaac725f3f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a9a4858a-296a-43bd-8806-c5ab09207579> ;
+    ns1:geplandeStart "2026-09-22T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7338b117-5dd8-4fef-bcf5-8e3363731024> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "5519d0e0-f6d0-5009-9233-b7f3aff517d4" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-09-22T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/130dac83-f056-4daa-95ae-b3eaac725f3f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8c7a614b-7bf9-483b-a81b-464b8eaa51b2> ;
+    ns1:openbaar false ;
+    ns3:uuid "0b7b67d4-7d39-5999-8384-0af6a3ee81ca" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/130dac83-f056-4daa-95ae-b3eaac725f3f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/130dac83-f056-4daa-95ae-b3eaac725f3f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/130dac83-f056-4daa-95ae-b3eaac725f3f> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Dreeffeest 2026' van 3 oktober 2026 10.00 uur tot en met 4 oktober 2026 12.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Dreeffeest 2026': vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 22 september 2026 over de aanvraag buurtfeest Dreeffeest 2026 - Kristof De Kerpel: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Kristof De Kerpel organiseert 'Dreeffeest 2026' van 3 oktober 2026 15.00 uur tot en met 4 oktober 2026 2.00 uur.Er werd op 18 augustus 2026 een aanvraag ingediend door Kristof De Kerpel, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "2606e0df-7fa7-5910-bd98-85bbd7e9c597" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Dreeffeest 2026' wordt vastgesteld als volgt: 
+                                    1. van 3 oktober 2026 10.00 uur tot en met 4 oktober 2026 12.00 uur 
+                                     
+                                        afsluiten wegel (ook voor fietsers) tussen Pastoor Moernautstraat 49 en 51 
+                                     
+                                    2. van 3 oktober 2026 15.00 uur tot en met 4 oktober 2026 2.00 uur 
+                                     
+                                        Bijkomend afsluiten van Pastoor Moernautstraat tussen huisnummers 50 en 56 
+                                        Wegomlegging wordt voorzien via Brugstraat-Neerstraat en omgekeerd 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. van 3 oktober 2026 10.00 uur tot en met 4 oktober 2026 12.00 uur 
+                                     
+                                        nadar + bord C3 aan beide zijden van de wegel, in Pastoor Moernautstraat en Neerstraat 
+                                     
+                                    2. van 3 oktober 2026 15.00 uur tot en met 4 oktober 2026 2.00 uur 
+                                     
+                                        nadar + bord C3 aan Pastoor Moernautstraat 50, aan Pastoor Moernautstraat 56 en aan het einde van de wegel in Neerstraat 
+                                        nadar + bord C3 + 'uitgezonderd plaatselijk verkeer' + F45 aan volgende kruispunten: Brugstraat/Pastoor Moernautstraat en Neerstraat/Pastoor Moernautstraat 
+                                        borden F41 op volgende kruispunten: Brugstraat/Pastoor Moernautstraat, Brugstraat/Neerstraat en Neerstraat/Pastoor Moernautstraat 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/130dac83-f056-4daa-95ae-b3eaac725f3f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/130dac83-f056-4daa-95ae-b3eaac725f3f> a ns1:Agendapunt ;
+    ns3:uuid "40392b65-24af-5d46-bb6f-30ff9afa5da7" .
+

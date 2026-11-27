@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/48d8bba5-b2c9-422a-9a9f-aed9b3225fd5> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/03c3f511-c208-43d7-b76f-18221c4a9482>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0c3e9d73-0710-47ad-9e25-c2f32c112e7d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/14918f94-1bd1-4a13-a9a8-3d93f38d21de>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/15aed687-be35-426c-ac8a-1076795663a9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2b9f5fe1-ffa5-432a-abdf-2704935c273d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2d325458-3c75-4154-bc2d-ab7eec42d2c1>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3c860352-7fe5-4928-872d-85b6a4d90028>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/bd4ab788-2c45-413c-8427-d39c8e9a5c0e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/e85d8986-a4fe-4dc7-af02-fcb41c41be37> ;
+    ns2:geplandeStart "2025-07-14T14:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/a4aed90c-5cca-429b-9f34-b2db28216313> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "2b087126-eb31-5aaa-9e21-a00dc6c42a3c" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-07-14T12:56:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2b9f5fe1-ffa5-432a-abdf-2704935c273d> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/15aed687-be35-426c-ac8a-1076795663a9> ;
+    ns2:openbaar false ;
+    ns1:uuid "823e80d9-a063-54a5-aca2-4a7986b43e81" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2b9f5fe1-ffa5-432a-abdf-2704935c273d> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/2b9f5fe1-ffa5-432a-abdf-2704935c273d> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/2b9f5fe1-ffa5-432a-abdf-2704935c273d> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Sportevenement op 17 augustus 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Brillanttochten - 17 augustus 2025" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns1:uuid "4878d444-ea8b-57df-9b74-06e3416bd984" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van een sportevenement op 17 augustus 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 6.00 uur tot en met 18.00 uur:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op de Steenstraat vanaf het kruispunt met de Hulstraat in de richting van de Bakkerstraat geldt:
+                                     
+                                    
+                                        verboden rijrichting voor iedere bestuurder
+                                     
+                                    
+                                        In de tegenovergestelde richting geldt:
+                                     
+                                    
+                                        toegelaten rijrichting op de openbare weg met éénrichtingsverkeer
+                                     
+                                    
+                                        Dit wordt gesignaleerd door:
+                                         
+                                         
+                                            verkeersborden C1 
+                                            verkeersborden F19 
+                                         
+                                     
+                                     
+                                        
+                                            Op de Coppenslaan ter hoogte van kruispunt met de Steenstraat geldt:
+                                         
+                                         
+                                            
+                                                Op de Steenstraat ter hoogte van kruispunt met de Hulstraat geldt:
+                                             
+                                         
+                                        
+                                            verboden links af te slaan
+                                         
+                                        
+                                            Dit wordt gesignaleerd door:
+                                         
+                                         
+                                             
+                                                verkeersborden C31a 
+                                             
+                                            
+                                                Op de Repekouter ter hoogte van het kruispunt met de Steenstraat geldt:
+                                             
+                                         
+                                        
+                                            verboden rechts af te slaan
+                                         
+                                        
+                                            Dit wordt gesignaleerd door:
+                                         
+                                         
+                                             
+                                                verkeersborden C31b 
+                                             
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Lokale omleiding via Vollezeelsesteenweg - Oudstrijdersplein
+                                         
+                                        
+                                            Dit wordt gesignaleerd door:
+                                         
+                                         
+                                             
+                                                verkeersborden F41 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                             
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2b9f5fe1-ffa5-432a-abdf-2704935c273d> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2b9f5fe1-ffa5-432a-abdf-2704935c273d> a ns2:Agendapunt ;
+    ns1:uuid "9f3b7b70-53b4-509b-a7a4-109af94f0cc5" .
+

@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4f58f9f2-7e36-4286-912c-71911e3827c8> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47339979-2bce-4780-9ddf-2779e12ea0bb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6351146d-79a7-475b-8d33-3e6f2f086e57>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8888d687-20fe-4d34-8c9f-a113201f04f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b0cc5bec-27ee-4ede-988e-8197da864396>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b228826a-81ca-4ed9-8af3-61472ca20a9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bcf0280f-6977-48e1-abbc-9cc519c0ade6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5952146-37b7-4e7c-be07-c00de69716b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7c6f5fc-c065-4f9e-a000-7ca51c56645d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d85cfaf3-80e6-4ae9-96ed-e0db3280de12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4e7fc5c-ca3e-44c9-96c4-c391254b016e> ;
+    ns2:geplandeStart "2025-06-17T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/92945e55-df84-492e-9588-2ace4efc835e> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "1bdec71a-97b1-5797-a638-9c1f26c3f3f0" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-06-17T13:39:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8888d687-20fe-4d34-8c9f-a113201f04f3> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c> ;
+    ns2:openbaar false ;
+    ns3:uuid "dd867e21-8a6c-5bd1-b6f3-5d89af1a694a" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8888d687-20fe-4d34-8c9f-a113201f04f3> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8888d687-20fe-4d34-8c9f-a113201f04f3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8888d687-20fe-4d34-8c9f-a113201f04f3> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van Memorial Albert Verheeke van 2 augustus 2025 7.00 uur tot en met 3 augustus 2025 18.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van Memorial Albert Verheeke - WTC De Ratjes: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 17 juni 2025 over de aanvraag veldtoertocht en cyclotocht Memorial Albert Verheeke - WTC de ratjes: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Karine Verheeke, namens WTC De Ratjes organiseert 'Memorial Albert Verheeke' op 2 en 3 augustus 2025 van 7.00 uur tot en met 18.00 uur.Er werd op 19 mei 2025 een aanvraag ingediend door Karine Verheeke, namens WTC De Ratjes om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    Er wordt een parkeerverbod gevraagd op een deel van de parking bij het sportcentrum Waarschoot voor de plaatsing van een fietsenstalling.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "ddfb8317-aea4-5ced-92f7-b71ecf4dced0" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Memorial Albert Verheeke van 2 augustus 2025 7.00 uur tot en met 3 augustus 2025 18.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod op 2 parkeerstroken aan linkerzijde van parking sportcentrum Waarschoot, Kleine Weg 3, 9950 Lievegem voor plaatsing fietsenstalling. 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8888d687-20fe-4d34-8c9f-a113201f04f3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8888d687-20fe-4d34-8c9f-a113201f04f3> a ns2:Agendapunt ;
+    ns3:uuid "4d3c18db-5abc-5428-82ad-61bfefc7d323" .
+

@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/a475ad5f-6791-4297-b104-79b3c207fb16> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/066e2ed1-d9f6-493c-9c6f-4f18e5ab7658>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40881b55-0d07-4b9c-8159-1126726726c8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4c93144e-5a19-470b-93d1-7e2659266b01>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/72e3a1c9-366e-4989-9414-3d302437f58d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85a89a89-4741-4921-9222-96054c5df5f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b409ab7a-e18e-4363-aa87-5a90fcc43155>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4219de6-3f0a-40e3-b839-fe356c608d46>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e6c5218a-0543-416e-b1cb-38efde0f155e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4b04b57-aa85-4dd8-ad0e-2255f5e9d903> ;
+    ns1:geplandeStart "2021-02-24T20:00:00+01:00"^^xsd:dateTime,
+        "2021-02-24T20:10:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/aef4a100-7c5a-43bb-ad04-e15ab2f79936> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2832f3bc-d9ee-461a-b6bf-1931195b87b8> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/94ff0768-e35c-4879-93c9-b68206f2669e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "edcea060-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-02-24T21:05:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-02-24T20:10:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/72e3a1c9-366e-4989-9414-3d302437f58d> ;
+    ns1:openbaar true ;
+    ns2:uuid "f12d82d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad neemt akte van de installatie als gemeenteraadslid van Veronique Mussche. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Installatie van een gemeenteraadslid: onderzoek geloofsbrieven en eedaflegging" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Nicholas Spinel, voorzitter 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Lokaal en provinciaal kiesdecreet van 8 juli 2011, artikel 8, 58 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, artikel 6, 7, 10, 11, 13, 14 
+                                                            Omzendbrief KB / ABB 2018 / 3 van 26 oktober 2018 — Start van de lokale en provinciale bestuursperiode 
+                                                            Het besluit van de gemeenteraad van 2 januari 2019 installatie gemeenteraadsleden: afstand van mandaat, onderzoek geloofsbrieven en eedaflegging en bepaling rangorde gemeenteraadsleden 
+                                                            Het besluit van de gemeenteraad van heden over de kennisname van het ontslag als raadslid van Maikel Parmentier 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De resultaten van de gemeenteraadsverkiezingen van 14 oktober 2018 werden door de Raad voor Verkiezingsbetwistingen goedgekeurd op datum van 5 december 2018 
+                                                            Maikel Parmentier neemt ontslag als gemeenteraadslid, zoals meegedeeld via brief van 29 januari 2021. 
+                                                            Ingevolge de verzaking van Magda Van Acker werd de 1ste opvolger Didier Garré geïnstalleerd als raadslid bij de installatievergadering op 2 januari 2019. 
+                                                            Daarom werd zijn tweede opvolger Véronique Mussche uitgenodigd om de eed te af te leggen als nieuw raadslid. 
+                                                            De geloofsbrieven op naam van Véronique Mussche werden tijdig ingediend en lagen ter inzage conform de decretale bepalingen ter zake.Uit het onderzoek van haar geloofsbrieven blijkt dat zij voldoet aan de verkiesbaarheidsvoorwaarden. 
+                                                            Véronique Mussche wordt opgeroepen om de eed af te leggen, en legt volgende eed af in handen van de voorzitter: 
+                                                            "Ik zweer de verplichtingen van mijn mandaat trouw na te komen". 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "edd15f80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad keurt de geloofsbrieven van de tweede opvolger Véronique Mussche goed. 
+                                                            Artikel 2 De gemeenteraad neemt akte van de eedaflegging en de voorzitter verklaart Veronique Mussche aangesteld als gemeenteraadslid. 
+                                                            Artikel 3Gemeenteraadslid Veronique Mussche neemt de laatste plaats in in de rangorde van de gemeenteraadsleden.  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f13523f0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Installatie van een gemeenteraadslid: onderzoek geloofsbrieven en eedaflegging" .
+

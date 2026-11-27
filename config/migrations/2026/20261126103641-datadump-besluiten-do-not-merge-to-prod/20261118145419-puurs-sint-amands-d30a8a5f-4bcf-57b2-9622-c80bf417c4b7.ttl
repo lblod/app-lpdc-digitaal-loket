@@ -1,0 +1,791 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/a151a338-882f-4f5f-9202-8919efe8b0c5> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/16a7f6f1-950b-4364-9d9d-8e326b3dc1d9> ;
+    ns1:geplandeStart "2026-05-19T22:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/558d4865-63e6-458f-8a63-e06d25efde33> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "0fea4a54-c1ac-53e4-b079-11ab17b72fd8" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-05-19T21:56:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/16a7f6f1-950b-4364-9d9d-8e326b3dc1d9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6e762517-5b50-4336-87d9-3c40c892ce64> ;
+    ns1:openbaar false ;
+    ns2:uuid "da836ee5-4ae2-5b19-806a-65d9c5d43b7c" ;
+    dcterms:description """ 
+                             
+                                Op 16 december 2025 keurde het college van burgemeester en schepenen de tarieven van het retributiereglement voor gebruik van culturele en jeugdinfrastructuur voor de periode van 1 augustus 2026 tot en met 31 december 2031 goed. Bij de implementatie van de tarieven kwamen er door de afrondingen naar 0,25 EUR enkele anomalieën naar boven waardoor gecumuleerde reservaties van verschillende lokalen niet gelijk is aan de optelsom van de tarieven indien deze lokalen afzonderlijk gereserveerd worden.  Om dit te voorkomen wordt een beperkt aantal tarieven aangepast.  Aan college van burgemeester en schepenen wordt gevraagd de aangepaste tarieven voor de periode van 1 augustus 2026 tot en met 31 december 2031 vast te stellen. 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/16a7f6f1-950b-4364-9d9d-8e326b3dc1d9> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/16a7f6f1-950b-4364-9d9d-8e326b3dc1d9> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/16a7f6f1-950b-4364-9d9d-8e326b3dc1d9> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Tarieven retributiereglement voor gebruik van culturele en jeugdinfrastructuur (1/8/2026 - 31/12/2031)" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De gemeenteraad heeft in vergadering van 24 november 2025 het kaderreglement voor gebruik van culturele en jeugdinfrastructuur, vastgesteld voor de periode van 1 augustus 2026 tot en met 31 december 2031.   
+                                    Ingevolge artikel 8 van dit reglement werd bepaald dat het college van burgemeester en schepenen gemachtigd is om de tarieven vast te stellen. De argumentatie tot differentiatie in de tarieven werd opgenomen in het kaderreglement van de gemeenteraad.  
+                                 
+                                 
+                                    Juridische grond 
+                                    Volgende bevoegdheidsgrond en regelgeving is van toepassing:  Bevoegdheidsgrond 
+                                     
+                                        Het decreet over het lokaal bestuur van 22 december 2017, artikelen 56 en 177 en latere wijzigingen; 
+                                     
+                                    Toepasselijke regelgeving 
+                                     
+                                        De beslissing van de gemeenteraad van 24 november 2025, waarbij het retributiereglement m.b.t. het gebruik van de culturele en jeugdinfrastructuur werd vastgesteld; 
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Op 16 december 2025 keurde het college van burgemeester en schepenen de tarieven van het retributiereglement voor gebruik van culturele en jeugdinfrastructuur voor de periode van 1 augustus 2026 tot en met 31 december 2031 goed.  
+                                    Bij de implementatie van de tarieven kwamen er door de afrondingen naar 0,25 EUR enkele anomalieën naar boven waardoor gecumuleerde reservaties van verschillende lokalen niet gelijk is aan de optelsom van de tarieven indien deze lokalen afzonderlijk gereserveerd worden.  Om dit te voorkomen wordt een beperkt aantal tarieven aangepast.  Aan college van burgemeester en schepenen wordt gevraagd de aangepaste tarieven voor de periode van 1 augustus 2026 tot en met 31 december 2031 vast te stellen. 
+                                 
+                                 
+                                    Financiële weerslag 
+                                    De inkomsten zijn voorzien in de meerjarenbegroting op volgende budgetsleutels:  
+                                    G-10-0601 0752-00 70403000 
+                                    G-10-0601 0705-00 70403000 
+                                    G-05-0203 0710-00 70061000 
+                                    G-05-0402 0752-00 74501000 
+                                    G-10-0105 0705-00 74501000 
+                                    G-05-0402 0752-00 70060000 
+                                    G-05-0401 0705-00 70060000 
+                                    G-05-0401 0820-00 70060010 
+                                    G-05-0402 0750-00 70203000 
+                                 
+                            """@nl ;
+    ns2:uuid "d30a8a5f-4bcf-57b2-9622-c80bf417c4b7" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel: Het college van burgemeester en schepenen stelt de tarieven van het retributiereglement voor gebruik van culturele en jeugdinfrastructuur vast: 
+                                    Artikel 1: Opheffing   Het besluit van het college van burgemeester en schepenen van 16 december 2025 van Puurs-Sint-Amands met betrekking tot de vaststelling van de tarieven voor culturele-, jeugd- en sportinfrastructuur, wordt opgeheven met ingang van 1 augustus 2026.   Artikel 2: Tarieven Voor de periode van 1 augustus 2026  tot en met 31 december 2031 worden de retributies voor het gebruik van culturele- en jeugdinfrastructuur en bijhorende diensten als volgt vastgesteld:   
+                                     
+                                         
+                                             
+                                                 
+                                                     
+                                                         
+                                                            Tariefgroepen   
+                                                         
+                                                      
+                                                 
+                                                     
+                                                         
+                                                            Wie/wat   
+                                                         
+                                                      
+                                             
+                                             
+                                                 
+                                                     
+                                                         
+                                                            A  (= basis)   
+                                                         
+                                                      
+                                                 
+                                                     
+                                                         
+                                                            A.1. Inwoners Puurs-Sint-Amands  A.2. Personeel lokaal bestuur Puurs-Sint-Amands  
+                                                         
+                                                      
+                                             
+                                             
+                                                 
+                                                     
+                                                         
+                                                            B  (= basis -25%)   
+                                                         
+                                                      
+                                                 
+                                                     
+                                                         
+                                                            B.1. Jeugd-, cultuur-, sport- en ouderenverenigingen /organisaties/ organisatoren Puurs-Sint-Amands B.2. Scholen Puurs-Sint-Amands voor activiteiten buiten het leerplan  B.3. Welzijnsvoorzieningen Puurs-Sint-Amands    
+                                                         
+                                                      
+                                             
+                                             
+                                                 
+                                                     
+                                                         
+                                                            C  (= basis -40%)   
+                                                         
+                                                      
+                                                 
+                                                     
+                                                         
+                                                            C.1. Jeugd-, cultuur en sportverenigingen/organisaties Puurs-Sint-Amands voor sport- en culturele activiteiten voor jongeren < 18j. C.2. Verenigingen/organisaties Puurs-Sint-Amands voor activiteiten voor mensen met een beperking  C.3. Scholen Puurs-Sint-Amands voor activiteiten binnen het leerplan  C.4. Personen met een EDC-kaart voor sport- en culturele activiteiten   C.5. Verenigingen/organisaties Puurs-Sint-Amands voor activiteiten in kader van armoedebestrijding, fairtrade, duurzaamheid, ontwikkeling   
+                                                         
+                                                      
+                                             
+                                             
+                                                 
+                                                     
+                                                         
+                                                            D  (= basis +50%)   
+                                                         
+                                                      
+                                                 
+                                                     
+                                                         
+                                                            D.1. Niet-inwoners Puurs-Sint-Amands  D.2. Verenigingen/organisaties/organisatoren niet Puurs-Sint-Amands D.3. Bedrijven Puurs-Sint-Amands en niet-Puurs-Sint-Amands  
+                                                         
+                                                      
+                                             
+                                             
+                                                 
+                                                     
+                                                         
+                                                            E (= 8xbasis/week)  
+                                                         
+                                                      
+                                                 
+                                                     
+                                                         
+                                                            E.1. Enkel voor makersplaatsen. Dit met een minimum van 2 weken en maximum van 1 jaar  
+                                                         
+                                                      
+                                             
+                                         
+                                     
+                                    De prijzen worden, tenzij anders aangeduid, aangerekend in euro per gebruiksuur. Het maximumtarief per dag is het uurtarief dat moet betaald worden voor 8 uren.  
+                                    2.1. Lokalen:In de retributies voor de lokalen zit vervat: het gebruik van de infrastructuur, verlichting, verwarming en elektriciteit, gebruik van het aanwezige meubilair/apparatuur en de billijke vergoeding. De retributies voor de lokalen worden als volgt vastgesteld in euro: 
+                                    A. CULTURELE INFRASTRUCTUUR 1.       Gemeenschapscentrum de Nieuwe Ark, Kerkstraat 34, 2870 Ruisbroek   
+                                     
+                                         
+                                             
+                                                 Tarief A (basistarief)  
+                                                 Vanaf 1/8/2026  
+                                                 Vanaf 1/8/2027  
+                                                 Vanaf 1/8/2028  
+                                                 Vanaf 1/8/2029  
+                                                 Vanaf 1/8/2030  
+                                                 Vanaf 1/8/2031  
+                                             
+                                             
+                                                 Vergaderzaal gelijkvloers    
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Vergaderzaal  (1ste verdieping)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Zaal naast cafetaria    
+                                                 18,75  
+                                                 19,00  
+                                                 19,25  
+                                                 19,75  
+                                                 20,00  
+                                                 20,25  
+                                             
+                                             
+                                                 Cafetaria  (zonder zaal)  
+                                                 18,75  
+                                                 19,00  
+                                                 19,25  
+                                                 19,75  
+                                                 20,00  
+                                                 20,25  
+                                             
+                                             
+                                                 Cafetaria + zaal   
+                                                 37,50  
+                                                 38,00  
+                                                 38,50  
+                                                 39,50  
+                                                 40,00  
+                                                 40,50  
+                                             
+                                             
+                                                 Leskeuken  (inclusief tafelruimte)  
+                                                 18,75  
+                                                 19,00  
+                                                 19,25  
+                                                 19,75  
+                                                 20,00  
+                                                 20,25  
+                                             
+                                         
+                                     
+                                    2.       Gemeenschapscentrum Paepenheide, Beenhouwersstraat 3, 2870 Breendonk   
+                                     
+                                         
+                                             
+                                                 Tarief A- Basistarief  
+                                                 Vanaf 1/8/2026  
+                                                 Vanaf 1/8/2027  
+                                                 Vanaf 1/8/2028  
+                                                 Vanaf 1/8/2029  
+                                                 Vanaf 1/8/2030  
+                                                 Vanaf 1/8/2031  
+                                             
+                                             
+                                                 Poly 2    
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Poly 3   
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Cafetaria    
+                                                 25,00  
+                                                 25,50  
+                                                 25,75  
+                                                 26,25  
+                                                 26,50  
+                                                 27,00  
+                                             
+                                             
+                                                 Cafetaria + Poly 1   
+                                                 37,50  
+                                                 38,25  
+                                                 38,75  
+                                                 39,25  
+                                                 40  
+                                                 40,5  
+                                             
+                                         
+                                     
+                                    3.       De Leest, Buisstraat 19c, 2890 Sint-Amands   
+                                     
+                                         
+                                             
+                                                 Tarief A - Basistarief  
+                                                 Vanaf 1/8/2026  
+                                                 Vanaf 1/8/2027  
+                                                 Vanaf 1/8/2028  
+                                                 Vanaf 1/8/2029  
+                                                 Vanaf 1/8/2030  
+                                                 Vanaf 1/8/2031  
+                                             
+                                             
+                                                 Danszaal    
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Repetitielokaal    
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                         
+                                     
+                                    4.       Dorpshuis De Baronie, Oppuursdorp 48, 2890 Oppuurs   
+                                     
+                                         
+                                             
+                                                 Tarief A - Basistarief  
+                                                 Vanaf 1/8/2026  
+                                                 Vanaf 1/8/2027  
+                                                 Vanaf 1/8/2028  
+                                                 Vanaf 1/8/2029  
+                                                 Vanaf 1/8/2030  
+                                                 Vanaf 1/8/2031  
+                                             
+                                             
+                                                 Feestzaal (inclusief keuken)  
+                                                 31,25  
+                                                 31,75  
+                                                 32,25  
+                                                 32,75  
+                                                 33,25  
+                                                 33,75  
+                                             
+                                         
+                                     
+                                    5.       Brede Schoolgebouw Academie Forum 11, Forum 11, 2870 Puurs 
+                                     
+                                         
+                                             
+                                                 Tarief A - Basistarief  
+                                                 Vanaf 1/8/2026  
+                                                 Vanaf 1/8/2027  
+                                                 Vanaf 1/8/2028  
+                                                 Vanaf 1/8/2029  
+                                                 Vanaf 1/8/2030  
+                                                 Vanaf 1/8/2031  
+                                             
+                                             
+                                                 Club Kick (E021)  
+                                                 12,50  
+                                                 12,75  
+                                                 13,00  
+                                                 13,00  
+                                                 13,25  
+                                                 13,50  
+                                             
+                                             
+                                                 Studio 3 (E018)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Kobalt (E012)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Amarillo (E011)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Emeraude (E010)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Saffraan (E005)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Terra (E117)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Aubergine (E116)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Mahonie (E115)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Ivoor (E114)  
+                                                 18,75  
+                                                 19,00  
+                                                 19,25  
+                                                 19,75  
+                                                 20,00  
+                                                 20,25  
+                                             
+                                             
+                                                 Indigo (E113)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Koraal (E112)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Vermiljoen (E110)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Ultramarijn (E105)  
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Sportzaal (E207)  
+                                                 12,50  
+                                                 12,75  
+                                                 13,00  
+                                                 13,00  
+                                                 13,25  
+                                                 13,50  
+                                             
+                                         
+                                     
+                                    6.       Brede Schoolgebouw Klauterpark Sint-Amands, Kouterpark 19, 2890 Sint-Amands 
+                                     
+                                         
+                                             
+                                                 Tarief A - Basistarief  
+                                                 Vanaf 1/8/2026  
+                                                 Vanaf 1/8/2027  
+                                                 Vanaf 1/8/2028  
+                                                 Vanaf 1/8/2029  
+                                                 Vanaf 1/8/2030  
+                                                 Vanaf 1/8/2031  
+                                             
+                                             
+                                                 Turnzaal  
+                                                 8,75  
+                                                 9,00  
+                                                 9,00  
+                                                 9,25  
+                                                 9,25  
+                                                 9,50  
+                                             
+                                         
+                                     
+                                    B. JEUGDINFRASTRUCTUUR 1.       Jeugdontmoetingscentrum WIJland, Fortbaan 1, 2870 Puurs  
+                                     
+                                         
+                                             
+                                                 Tarief A - Basistarief    
+                                                 Vanaf 1/8/2026  
+                                                 Vanaf 1/8/2027  
+                                                 Vanaf 1/8/2028  
+                                                 Vanaf 1/8/2029  
+                                                 Vanaf 1/8/2030  
+                                                 Vanaf 1/8/2031  
+                                             
+                                             
+                                                 Polyzaal groot    
+                                                 50,25  
+                                                 51,00  
+                                                 51,75  
+                                                 52,50  
+                                                 53,25  
+                                                 54,00  
+                                             
+                                             
+                                                 Polyzaal  klein   
+                                                 37,50  
+                                                 38,25  
+                                                 38,75  
+                                                 39,25  
+                                                 40,00  
+                                                 40,50  
+                                             
+                                             
+                                                 Polyzaal extra klein    
+                                                 31,25  
+                                                 31,75  
+                                                 32,25  
+                                                 32,75  
+                                                 33,25  
+                                                 33,75  
+                                             
+                                             
+                                                 DJ Ruimte  
+                                                 44,00  
+                                                 44,50  
+                                                 45,25  
+                                                 46,00  
+                                                 46,50  
+                                                 47,25  
+                                             
+                                             
+                                                 Polyvalent lokaal   
+                                                 12,50  
+                                                 12,75  
+                                                 13,00  
+                                                 13,00  
+                                                 13,25  
+                                                 13,50  
+                                             
+                                             
+                                                 Keuken   
+                                                 18,75  
+                                                 19,00  
+                                                 19,25  
+                                                 19,75  
+                                                 20,00  
+                                                 20,25  
+                                             
+                                             
+                                                 Repetitielokaal   
+                                                 6,25  
+                                                 6,25  
+                                                 6,50  
+                                                 6,50  
+                                                 6,75  
+                                                 6,75  
+                                             
+                                             
+                                                 Bergruimte repetitielokaal : Tarief per maand  
+                                                 12,50  
+                                                 12,75  
+                                                 13,00  
+                                                 13,00  
+                                                 13,25  
+                                                 13,50  
+                                             
+                                         
+                                     
+                                    2.2: Gemeentelijke diensten, dranken en waarborgen   
+                                    Indien op aangeven van de afdeling beleven extra uren worden gepresteerd door gemeentelijk logistiek- of onderhoudspersoneel omdat afspraken niet werden nageleefd worden deze als volgt gefactureerd: 
+                                     
+                                         
+                                             
+                                                  Jaar  
+                                                 2026  
+                                                 2027  
+                                                 2028  
+                                                 2029  
+                                                 2030  
+                                                 2031  
+                                             
+                                             
+                                                 vóór 22u./uur/persoon  
+                                                 52  
+                                                 53  
+                                                 54  
+                                                 54  
+                                                 55  
+                                                 56  
+                                             
+                                             
+                                                 van 22u. tot 06u./uur/persoon   
+                                                 65  
+                                                 66  
+                                                 67  
+                                                 68  
+                                                 69  
+                                                 70  
+                                             
+                                             
+                                                 op zaterdag/uur/persoon  
+                                                 78  
+                                                 79  
+                                                 80  
+                                                 82  
+                                                 83  
+                                                 84  
+                                             
+                                             
+                                                 op zondag/uur/persoon  
+                                                 104  
+                                                 106  
+                                                 107  
+                                                 109  
+                                                 110  
+                                                 112  
+                                             
+                                         
+                                     
+                                    Wie gebruik maakt van het securitysysteem dat de gemeente organiseert in JOC WIJland, is hiervoor een retributie verschuldigd. De bezetting wordt bepaald na advies van Dienst Beleven. De retributie bedraagt:   
+                                     
+                                         
+                                             
+                                                    
+                                                 2026  
+                                                 2027  
+                                                 2028  
+                                                 2029  
+                                                 2030  
+                                                 2031  
+                                             
+                                             
+                                                 Gebruiker PSA  
+                                                 Gebruiker Niet-PSA  
+                                                 Gebruiker PSA  
+                                                 Gebruiker niet-PSA  
+                                                 Gebruiker PSA  
+                                                 Gebruiker Niet-PSA  
+                                                 Gebruiker PSA  
+                                                 Gebruiker niet-PSA  
+                                                 Gebruiker PSA  
+                                                 Gebruiker niet-PSA  
+                                                 Gebruiker PSA  
+                                                 Gebruiker niet-PSA  
+                                             
+                                             
+                                                 2 security-agenten gedurende de volledige tijd van het muziekevenement met een maximum van 9u  
+                                                 650  
+                                                 900  
+                                                 650  
+                                                 900  
+                                                 650  
+                                                 900  
+                                                 650  
+                                                 900  
+                                                 650  
+                                                 950  
+                                                 700  
+                                                 950  
+                                             
+                                             
+                                                 3 security-agenten gedurende de volledige tijd van het muziekevenement met een maximum van 9u  
+                                                 1.000  
+                                                 1.300  
+                                                 1.000  
+                                                 1.350  
+                                                 1.050  
+                                                 1.350  
+                                                 1.050  
+                                                 1.400  
+                                                 1.050  
+                                                 1.400  
+                                                 1.100  
+                                                 1.400  
+                                             
+                                             
+                                                 4 security-agenten gedurende de volledige tijd van het muziekevenement met een maximum van 9u  
+                                                 1.250  
+                                                 1.750  
+                                                 1.250  
+                                                 1.800  
+                                                 1.300  
+                                                 1.800  
+                                                 1.300  
+                                                 1.850  
+                                                 1.350  
+                                                 1.850  
+                                                 1.350  
+                                                 1.900  
+                                             
+                                             
+                                                 5 security-agenten gedurende de volledige tijd van het muziekevenement met een maximum van 9u  
+                                                 1.650  
+                                                 2.200  
+                                                 1.650  
+                                                 2.250  
+                                                 1.700  
+                                                 2.250  
+                                                 1.700  
+                                                 2.300  
+                                                 1.750  
+                                                 2.350  
+                                                 1.750  
+                                                 2.350  
+                                             
+                                             
+                                                 7 security-agenten gedurende de volledige tijd van het muziekevenement met een maximum van 9u  
+                                                 2.300  
+                                                 2.650  
+                                                 2.350  
+                                                 2.650  
+                                                 2.400  
+                                                 2.700  
+                                                 2.450  
+                                                 2.750  
+                                                 2.450  
+                                                 2.800  
+                                                 2.500  
+                                                 2.850  
+                                             
+                                         
+                                     
+                                    Een organisator kan bijkomende securitymensen en/of -prestaties aanvragen. Voor elke bijkomende persoon wordt een retributie aangerekend van 40 euro/uur.De dranken worden geleverd en gefactureerd door de concessiehouder of de gemeente volgens werkelijk verbruik aan inkoopprijs + 21% BTW verhoogd met 25%.  
+                                    2.3: Overige:•    Bij het beschadigen of verlies van een badge wordt de aankoopprijs aangerekend plus 5,00 euro administratiekost;•    Bij het beschadigen of verlies van een sleutel wordt de aankoopprijs aangerekend plus 5,00 euro administratiekost;•    Bij beschadiging van de infrastructuur of materiaal en bij verlies van materiaal wordt de kostprijs of herstellingskost aangerekend plus 5,00 euro administratiekost;•    Voor het beschadigen of verlies van herbruikbare bekers wordt 1,00 euro per beker aangerekend;•    Voor gebruik van de PSA webwinkel voor de verkoop van producten betalen organisatoren:  
+                                     
+                                         
+                                             
+                                                 Jaar  
+                                                 2026  
+                                                 2027  
+                                                 2028  
+                                                 2029  
+                                                 2030  
+                                                 2031  
+                                             
+                                             
+                                                 Puurs-Sint-Amands: euro/per product  
+                                                 1,5  
+                                                 1,5  
+                                                 1,5  
+                                                 1,6  
+                                                 1,6  
+                                                 1,6  
+                                             
+                                             
+                                                 Niet- Puurs-Sint-Amands en commerciële organisatoren: euro/per product  
+                                                 2,5  
+                                                 2,6  
+                                                 2,6  
+                                                 2,6  
+                                                 2,7  
+                                                 2,7  
+                                             
+                                         
+                                     
+                                    Artikel 3: BekendmakingDeze beslissing wordt bekendgemaakt overeenkomstig de artikelen 285 t.e.m. 288 van het decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen.De bekendmaking van dit reglement wordt aan de toezichthoudende overheid ter kennis gebracht overeenkomstig artikel 330 van het Decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/16a7f6f1-950b-4364-9d9d-8e326b3dc1d9> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/16a7f6f1-950b-4364-9d9d-8e326b3dc1d9> a ns1:Agendapunt ;
+    ns2:uuid "1b448ec4-c317-5994-91cc-80e8738e3118" .
+

@@ -1,0 +1,119 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/6534182e-3d3f-4b86-881b-b3eda20d5bdd> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b83025c0-2f10-41ba-92bf-e656aefcdd10>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c52205e9-2216-4905-8e25-6d6e6a437926> ;
+    ns1:geplandeStart "2026-03-02T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/9171e6b9-ebac-47dc-bb8e-a0db194384e5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "f42810a7-4367-5709-8c89-4adfa7541c2e" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-03-02T13:27:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b83025c0-2f10-41ba-92bf-e656aefcdd10> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fd3ca72d-d3fd-49a8-b0f2-a73c46b9f2ab> ;
+    ns1:openbaar false ;
+    ns2:uuid "8721e967-c4bf-5f02-884c-9c5d281a29b8" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b83025c0-2f10-41ba-92bf-e656aefcdd10> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/b83025c0-2f10-41ba-92bf-e656aefcdd10> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/b83025c0-2f10-41ba-92bf-e656aefcdd10> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de wielerwedstrijd op 25 april 2026 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Wielerwedstrijd Tollembeek Sportief - 25 april 2026" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "31f6e3ae-7bcd-5387-b1df-bf22b7f1b452" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van wielerwedstrijd op 25 april 2026 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 08.00 uur tot 19.30 uur in volgende straten: 
+                                         
+                                            Plaats (N272)Stilstaan en parkeren verboden (fig E3) op de Plaats (N272) vanaf het kruispunt met de Plaatsstraat (N272) tot de Waterstraat (N272) (vertrek- en aankomstzone). 
+                                            Waterstraat (N272)Stilstaan en parkeren verboden (fig E3) op de Waterstraat (N272) vanaf huisnummer 27 tot de Plaats (N272) (vertrek- en aankomstzone). 
+                                         
+                                          
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 13.00 uur tot 18.30 uur in volgende straten: 
+                                         
+                                            Plaatsstraat (N272)Stilstaan en parkeren verboden (fig E3) op de Plaatsstraat (N272) vanaf het kruispunt met de Plaats tot het kruispunt met de Modrielaan. 
+                                            ModrielaanStilstaan en parkeren verboden (fig E3) op de Modrielaan vanaf het kruispunt met de Plaatsstraat (N272) tot het kruispunt met de Hollestraat. 
+                                            HollestraatStilstaan en parkeren verboden (fig E3) op de Hollestraat vanaf het kruispunt met Modrielaan tot het kruispunt met de Meidoornstraat. 
+                                            MeidoornstraatStilstaan en parkeren verboden (fig E3) op de Meidoornstraat vanaf het kruispunt met de Hollestraat tot het kruispunt met de Gaubergstraat. 
+                                            GaubergstraatStilstaan en parkeren verboden (fig E3) op de Gaubergstraat vanaf het kruispunt met de Meidoornstraat tot het kruispunt met de Ezelveldstraat. 
+                                            EzelveldstraatStilstaan en parkeren verboden (fig E3) op de Ezelveldstraat vanaf het kruispunt met de Gaubergstraat tot het kruispunt met de Errebekstraat. 
+                                            ErrebekstraatStilstaan en parkeren verboden (fig E3) op de Errebekstraat vanaf het kruispunt met de Ezelveldstraat tot het kruispunt met de Huismanstraat. 
+                                            HuismanstraatStilstaan en parkeren verboden (fig E3) op de Huismanstraat vanaf het kruispunt met de Errebekstraat tot het kruispunt met de Congobergstraat. 
+                                            CongobergstraatStilstaan en parkeren verboden (fig E3) op de Congobergstraat vanaf het kruispunt met de Huismanstraat tot het kruispunt met de Repingestraat. 
+                                            RepingestraatStilstaan en parkeren verboden (fig E3) op de Repingestraat vanaf het kruispunt met de Congobergstraat tot het kruispunt met de Repingestraat (N272). 
+                                            Repingestraat (N272)Stilstaan en parkeren verboden (fig E3) op de Repingestraat (N272) vanaf het kruispunt met de Repingestraat tot de Waterstraat (N272). 
+                                            Waterstraat (N272)Stilstaan en parkeren verboden (fig E3) op de Waterstraat (N272) vanaf de Repingestraat (N272) tot huisnummer 27. 
+                                         
+                                          
+                                        Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 14.00 uur tot 18.00 uur in volgende straten: 
+                                         
+                                            Plaats (N272)Verboden richting voor ieder bestuurder (fig C1) op de Plaats (N272) vanaf het kruispunt met de Hernestraat tot de Waterstraat (N272). 
+                                            Waterstraat (N272)Verboden richting voor ieder bestuurder (fig C1) op de Waterstraat (N272) vanaf het kruispunt met de Plaats (N272) tot het kruispunt met de Hollestraat. 
+                                            ModrielaanVerboden richting voor ieder bestuurder (fig C1) op de Modrielaan vanaf het kruispunt met de Hollestraat tot het kruispunt met de Plaatsstraat (N272). 
+                                            HollestraatVerboden richting voor ieder bestuurder (fig C1) op de Hollestraat vanaf het kruispunt met de Meidoornstraat tot het kruispunt met de Modrielaan. 
+                                            MeidoornstraatVerboden richting voor ieder bestuurder (fig C1) op de Meidoornstraat vanaf het kruispunt met de Gaubergstraat tot het kruispunt met de Hollestraat. 
+                                            GaubergstraatVerboden richting voor ieder bestuurder (fig C1) op de Gaubergstraat vanaf het kruispunt met de Ezelveldstraat tot het kruispunt met de Meidoornstraat. 
+                                            EzelveldstraatVerboden richting voor ieder bestuurder (fig C1) op de Ezelveldstraat vanaf het kruispunt met de Errebekstraat tot het kruispunt met de Gaubergstraat. 
+                                            ErrebekstraatVerboden richting voor ieder bestuurder (fig C1) op de Errebekstraat vanaf het kruispunt met de Huismanstraat tot het kruispunt met de Ezelveldstraat. 
+                                            HuismanstraatVerboden richting voor ieder bestuurder (fig C1) op de Huismanstraat vanaf het kruispunt met de Congobergstraat tot het kruispunt met de Errebekstraat. 
+                                            CongobergstraatVerboden richting voor ieder bestuurder (fig C1) op de Congobergstraat vanaf het kruispunt met de Repingstraat tot het kruispunt met de Huismanstraat. 
+                                            RepingestraatVerboden richting voor ieder bestuurder (fig C1) op de Repingestraat vanaf het kruispunt met de Repingestraat (N272) tot het kruispunt met de Congobergstraat. 
+                                         
+                                          
+                                          
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 14.00 uur tot 18.00 uur op volgende kruispunten: 
+                                         
+                                            PlaatsHernestraat / Plaats 
+                                            ModrielaanKwadestraat / ModrielaanHollestraat / Modrielaan 
+                                            HollestraatMeidoornstraat / Hollestraat 
+                                            MeidoornstraatGaubergstraat / MeidoornstraatGaubergstraatEzelveldstraat / Gaubergstraat 
+                                            EzelveldstraatErrebekstraat / Ezelveldstraat 
+                                            ErrebekstraatHuismanstraat / Errebekstraat 
+                                            HuismanstraatCongobergstraat / Huismanstraat 
+                                            CongobergstraatRepingestraat / Congobergstraat 
+                                         
+                                         
+                                        WegomleggingPlaats richting Vollezele via Hernestraat-Scherpstraat-N255Hollestraat richting Galmaarden vanaf kruispunt met Waterstraat via N272 
+                                          
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                             
+                                             
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b83025c0-2f10-41ba-92bf-e656aefcdd10> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b83025c0-2f10-41ba-92bf-e656aefcdd10> a ns1:Agendapunt ;
+    ns2:uuid "038f3aea-ff7f-5488-990b-3cdc4a865148" .
+

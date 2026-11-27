@@ -1,0 +1,121 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/zittingen/9110e79a-a037-45f3-a8d5-2b3c1bb074a1> a ns1:Zitting ;
+    ns1:behandelt <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/02f66b43-3473-49b3-aff7-670e4186bd43>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/04a6e3cb-3500-4e9c-ac0f-44f9bf1f7296>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/07052ad8-ef23-420e-9d60-1ea7050f28dc>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0845c24b-b887-45db-ad1c-b169c048be79>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/08838895-5c02-4111-bd98-c420e7e1c89c>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/0df07d8d-9e5e-4869-9247-2ef5f94689e4>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/12f13af4-2ae0-4af6-96ef-a2ee7c5893ab>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/1b0901e2-e56a-48b0-b6a6-afada8209bfb>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/1c0e6a7a-dcd2-4332-816a-5e5d6665c6a7>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/1f52565c-56a6-4160-9e82-f2510b5dd81a>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/25f088fb-3793-484d-8c89-a03c1ecdc1d2>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/26cc859c-c0c1-47ee-b930-57c8567d376a>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/28a44e98-acb5-4215-abda-696d06c83e65>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/2bb27105-96de-4f66-bce2-ab3f09238c88>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/2f8e9294-8aca-4140-ae9e-ea263930651e>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/304119a1-c828-48b2-abbe-b4f11c9ad33e>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/428370a6-3607-444c-907b-3c2911e4b7b0>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/4b4e869e-8a5e-4dfa-9fe0-3221fa5ea8ce>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/4f81a91f-e9c0-448d-b46a-92ae6789ad79>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/51163fa2-3df6-42d2-8ede-5b081903b6dd>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/62346e5f-0386-403b-b920-d425624f84d6>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/64331424-e1c2-4721-9b8b-20dbe5e14e26>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/66b21f66-18a4-4269-adda-857889fc98a1>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/6a17dcce-ce36-440e-8772-24191481c7b5>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/6bb5947c-e971-4fb7-8e58-9597bd4e7717>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/6c91c011-ce34-478b-9ea3-6f935411b4c9>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/72ddb194-9d5d-437a-942b-a12eacd9fa93>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/7cc75ff8-1684-4186-9646-26153b693ed4>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/7fb617db-6a05-4ead-a186-b056b841d159>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/86d8b96b-c0c0-4c1e-b998-7fa315fc145d>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/8a62028f-dbcc-4cb4-800b-2aacf57ede7b>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/8c41d5f6-48ed-492f-9c6b-acde6fcf067f>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/8e60117b-459b-4bc0-908a-f5f1d6c0c703>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/98962ec5-2b78-415e-8d35-65d3581869f1>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/9c3a041a-d048-423b-ae8f-f6f670ea1260>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/a7f4c3d1-2175-4ff8-95b8-866df5d797ed>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/bd27d4bd-d38f-497f-b707-1306c285580e>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/bd895cc4-6cf4-402e-a4b5-77a118ac7e7f>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c1ef0445-0be4-4a6f-b2ed-89d55b0ea7e2>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c41b43c7-2201-4df5-83cf-4776b16635af>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c52888f3-4528-40e2-8157-d266f9e82f35>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/c90def77-3cf3-45b8-80bd-9a8c7c517230>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/cf29d572-d419-4135-860d-a0ef9be06681>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d2c8ba09-560a-4232-a2fc-1aa8324fd5a4>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d8c963b8-66ca-4c74-9078-08f7063cc6c5>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/daf12ee0-b168-4d54-a0a6-d8a54a7380a4>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/dc8f1cec-e477-482c-933b-41388395c293>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/e114e01c-ee03-4141-8ac4-b013821ed5c1>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/e87c30eb-8e6f-4397-bd79-270d26484753>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/e9754abf-f9ce-46fd-b285-8f10a6a080d0>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/ef4490b3-826f-4d42-b98a-193401bac531>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/f0da8408-9c52-4ed3-b232-31bbd5cd07ae>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/f56c322e-6c1b-4baa-8d5f-24123fef6435>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/f9dba99d-c8e1-4873-8789-dfad87321bc3>,
+        <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/faae5ad6-bfdb-4aa2-b38c-781bf51e5832> ;
+    ns1:geplandeStart "2025-02-07T09:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://aarschot-echo.cipalschaubroeck.be/id/documenten/b034b933-82e7-47eb-abef-df8735267996> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/5e6b3a6d7e4548297a0373f68bc9ba93c9d4155e3e50afef2bbb1de1a3e824ef> ;
+    ns3:uuid "850ca3b4-1607-5d76-86d6-c0ddf0f41ce7" ;
+    prov:atLocation "Vergaderlokaal 1ste verdieping stadhuis" ;
+    prov:startedAtTime "2025-02-07T10:34:00+01:00"^^xsd:dateTime .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8c963b8-66ca-4c74-9078-08f7063cc6c5> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e87c30eb-8e6f-4397-bd79-270d26484753> ;
+    ns1:openbaar false ;
+    ns3:uuid "c8090e96-57ae-590f-bbd2-ae20d04546a5" ;
+    dcterms:subject <https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d8c963b8-66ca-4c74-9078-08f7063cc6c5> ;
+    prov:generated <https://aarschot-echo.cipalschaubroeck.be/id/besluiten/d8c963b8-66ca-4c74-9078-08f7063cc6c5> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/besluiten/d8c963b8-66ca-4c74-9078-08f7063cc6c5> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college gaat akkoord met de tijdelijke verordening op het wegverkeer op 12.02.2025 - Telefoonstraat 4-6, 3200 Aarschot - Verhuiswerken 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/5e6b3a6d7e4548297a0373f68bc9ba93c9d4155e3e50afef2bbb1de1a3e824ef> ;
+    ns2:title "Tijdelijke verordening op het wegverkeer op 12.02.2025 - Telefoonstraat 4-6, 3200 Aarschot - Verhuiswerken" ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving 
+                                     
+                                        de nieuwe gemeentewet, gewijzigd bij de wet van 12.01.2006 (BS 31.01.2007 - erratum BS 02.02.2007) tot wijziging van de nieuwe gemeentewet, artikel 119 en 130bis; 
+                                        in toepassing van de hoger genoemde wet is het college van burgemeester en schepenen bevoegd voor de tijdelijke politieverordeningen op het wegverkeer; 
+                                        de gecoördineerde wetten van 16.03.1968 betreffende de politie over het wegverkeer en alle latere wijzigingen; 
+                                        het koninklijk besluit van 01.12.1975 houdende algemeen reglement op de politie van het wegverkeer en alle latere wijzigingen; 
+                                        het ministerieel besluit van 11.10.1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                        het ministerieel rondschrijven van 14.11.1977 betreffende de aanvullende reglementen en de plaatsing van verkeerstekens; 
+                                     
+                                 
+                                 
+                                    Feiten, context en motivering 
+                                    Gelet op de aanvraag van B. A., Telefoonstraat 6, 3200 Aarschot;Overwegende dat de verder genoemde weg(en) behoort/behoren tot de wegen onder toezicht van de stad;Overwegende dat de verkeersveiligheid moet worden gegarandeerd tijdens verhuiswerken op 12.02.2025 om 8 uur tot 17 uur in Telefoonstraat 4-6, 3200 Aarschot. 
+                                 
+                            """@nl ;
+    ns3:uuid "30490a76-ef74-58d9-99c9-e367ca96f490" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Op 12.02.2025 om 8 uur tot 17 uur geldt er te Telefoonstraat 4-6, 3200 Aarschot parkeerverbod over een afstand van 15 meter voor de plaatsing van een vrachtwagen bij het leveren van meubels. 
+                                      
+                                    Artikel 2 
+                                    Het parkeerverbod wordt aangeduid door middel van het teken E1. 
+                                      
+                                    Artikel 3 
+                                    Afschrift van deze beslissing wordt opgestuurd naar de Griffie van de Rechtbank van Eerste Aanleg, Politierechtbank, Smoldersplein 3, 3000 Leuven. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://aarschot-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8c963b8-66ca-4c74-9078-08f7063cc6c5> .
+
+<https://aarschot-echo.cipalschaubroeck.be/id/agendapunten/d8c963b8-66ca-4c74-9078-08f7063cc6c5> a ns1:Agendapunt ;
+    ns3:uuid "ca96111a-c314-58af-9636-3777e8b88efc" .
+

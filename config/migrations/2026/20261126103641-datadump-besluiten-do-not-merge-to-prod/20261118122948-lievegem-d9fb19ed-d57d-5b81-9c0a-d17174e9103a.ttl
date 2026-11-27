@@ -1,0 +1,75 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/0ead36f8-612c-4755-8f02-5c035cc69895> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1d5f9d46-aad0-4feb-a3b5-502241cfa8fb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3d3096ce-9c10-45ee-a326-b997a6bd438d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ca5e353a-b998-496b-8df9-162dcdf5014c> ;
+    ns2:geplandeStart "2026-06-23T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9ff49c66-c8e6-44df-8707-ebaa9629733f> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "11ea0f35-a83b-55e0-b64e-53a589b83d43" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-06-23T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3d3096ce-9c10-45ee-a326-b997a6bd438d> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ca5e353a-b998-496b-8df9-162dcdf5014c> ;
+    ns2:openbaar false ;
+    ns1:uuid "6d3b6e7c-473a-5191-a389-7efeb2d404e3" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3d3096ce-9c10-45ee-a326-b997a6bd438d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3d3096ce-9c10-45ee-a326-b997a6bd438d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3d3096ce-9c10-45ee-a326-b997a6bd438d> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Dekenij10' van 26 juni 2026 16.00 uur tot en met 28 juni 2026 21.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Dekenij10 - Aftervibe vzw: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van 7 april 2026 over de aanvraag evenement Dekenij10 - Aftervibe vzw: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Anthony Van Hyfte organiseert, namens Aftervibe vzw, 'Dekenij10' van 26 juni 2026 17.00 uur tot en met 28 juni 2026 20.00 uur.Er werd op 3 maart 2026 een aanvraag ingediend door Anthony Van Hyfte, namens Aftervibe vzw, om tijdens deze organisatie verkeersmaatregelen te treffen, namelijk een parkeerverbod in Dekenijstraat over de lengte van de muur rond de dekenij. 
+                                    Op moment van de aanvraag was in de planning voorzien dat de wegeniswerken in Dekenijstraat ondertussen afgerond zouden zijn en dan is er geen mogelijkheid meer om zomaar op straat te parkeren (met uitzondering van de voorziene parkeervakken). Maar ondertussen blijkt dat de asfalteringswerken niet tijdig afgerond zullen zijn. Momenteel wordt er veel geparkeerd in Dekenijstraat. Om ervoor te zorgen dat hulpdiensten voldoende plaats hebben om door te rijden richting evenement 'Dekenij10' en bij uitbreiding de feestelijkheden in Maarten Steyaertplein, zullen we toch de nodige parkeerverbodsborden voorzien. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "d9fb19ed-d57d-5b81-9c0a-d17174e9103a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Dekenij10' van 26 juni 2026 16.00 uur tot en met 28 juni 2026 21.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod in Dekenijstraat vanaf huisnummer 8 tot en met 18, aan één zijde van de rijweg 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3d3096ce-9c10-45ee-a326-b997a6bd438d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3d3096ce-9c10-45ee-a326-b997a6bd438d> a ns2:Agendapunt ;
+    ns1:uuid "9369f2ea-1c31-5cfb-978a-38942b21ec0c" .
+

@@ -1,0 +1,210 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5afd0928-c253-41e7-af39-ad98c34d0fcd> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/002d8258-6db2-4643-a230-ddf6d2066d93>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/00458c40-2fd2-4635-9996-c16fc09d86de>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0534f6b0-745e-434b-8f38-2ad72c4cb80d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/078ec042-d47a-4fc0-82da-50f46147e73c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0cdbf2bc-91e4-4a45-bfd2-5943d289ec76>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/242194c0-d3e8-4741-8206-cc6e072e32ad>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/248501d3-e7a9-40f3-9eaa-b1ab921229dd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3a5be618-36f2-499e-8277-3b5f62c98b6d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/46efa108-fdfa-49b1-a9a2-f8c1004c8050>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/48aeb379-fd0b-4380-a05f-7cc158cda529>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/552fc061-503c-4c21-b2c9-5764af6fe8e9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6ed8c030-c48b-4f7b-b1fc-bace368e9370>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/96c450d6-43b8-4891-9271-77d677ff27fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a1140b3d-0866-460c-9163-c182c0184407>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/b1a42438-502b-4e38-a65b-9f8eb5ba88b9>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e0961336-2398-4d65-ac65-c04960b14198>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e6f0060e-4b07-43a1-a36a-2bfecc36576b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f2579736-bcbe-4cc0-9f35-29b4a7c306ef>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fd53c75d-262b-42cb-b3d1-1d37f91eade2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/ff088b72-2ba3-41d9-b9a1-3f27ec835e4b> ;
+    ns1:geplandeStart "2025-04-07T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/86608a14-4d26-4661-b33f-52f512590e7f> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/481c036d-38d7-4134-80ac-2d50bc0ddac5> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/5843b39f-f9e0-4378-b098-f415daf495f6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "620e2014-dae6-54b7-8788-24fcdb42159f" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-04-07T19:57:00+02:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e0961336-2398-4d65-ac65-c04960b14198> ;
+    ns1:openbaar true ;
+    ns2:uuid "749688b4-84c3-5286-9bfd-1e746ba8927f" ;
+    dcterms:description """ 
+                             
+                                Het voorstel tot aanpassing van het huidig huishoudelijk reglement van de sportraad. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                Het voorstel tot aanpassing van het huidig huishoudelijk reglement van de sportraad. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/1d881d5b-10e8-4e31-adda-f2643c66fffc> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/1d881d5b-10e8-4e31-adda-f2643c66fffc> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/a8486fa3-6375-494d-aa48-e34289b87d5b> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Adviesraden. Huishoudelijk reglement sportraad." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Decreet Lokaal Bestuur, artikel 41, 13°. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet Lokaal Bestuur, artikel 41, 13°. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "e5bfa433-c483-534c-a005-07a8bde71c5e" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel, §1: Onderstaand huishoudelijk reglement van de ondernemersraad wordt goedgekeurd. 
+                                    HUISHOUDELIJK REGLEMENT SPORTRAAD 
+                                    Titel 1: Grondslag 
+                                    Artikel 1 Dit huishoudelijk reglement regelt de inwendige aangelegenheden van de gemeentelijke sportraad door het organiseren van de algemene vergadering, dagelijks bestuur en de eventueel opgerichte werkgroepen, conform het algemeen reglement van de adviesraden. 
+                                    Titel 2: Engagementsverklaring 
+                                    Artikel 2 Alle stemgerechtigde leden (algemene vergadering) en bestuursleden wordt uitdrukkelijk gevraagd akkoord te gaan met volgende engagementsverklaring: 
+                                    1° Akkoord gaan met de doelstellingen zoals beschreven in het algemeen reglement van adviesraden en dit huishoudelijk reglement en actief willen meewerken aan de realisering ervan 
+                                    2° De algemene vergadering en/of dagelijks bestuur bijwonen. Indien dit onmogelijk is, wordt het lid van uitdrukkelijk verzocht zich te verontschuldigen. 
+                                    3° Zich informeren over het beleid binnen het domein van de adviesraad door lectuur, bijscholing, vorming en contacten met betrokkenen bij het beleid 
+                                    4° De ‘Universele verklaring van de rechten van de mens’ onderschrijven 
+                                    5° Spreekrecht en stemrecht in de Algemene Vergadering en/of dagelijks bestuur. 
+                                    6° Inzagerecht, recht op uitleg en recht op afschrift overeenkomstig de wettelijke en decretale bepalingen 
+                                    7° Gebruik maken van het budget van de adviesraad voor het volgen van studiedagen en vormingscursussen in functie van het verbeteren van de werking van de adviesraad indien hiertoe in de schoot van de algemene vergadering een reglement is goedgekeurd. 
+                                    8° De sportraad behandelt alle sportieve kwesties op lokaal vlak. De sportraad bevordert ook de samenwerking tussen de sportverenigingen en kan zelf activiteiten organiseren. 
+                                    9° De vereniging die heeft heeft aangesteld regelmatig op de hoogte houden over de werkzaamheden van de sportraad en ook geregeld overleg plegen met hun achterban in functie van het opsporen van behoeften, ideeën en verwachtingen betreffende het beleid. 
+                                    Titel 3: Algemene Vergadering 
+                                    Artikel 3: Samenstelling 
+                                    §1 De algemene vergadering is samengesteld uit: 
+                                    1° stemgerechtigde leden aangeduid door de sportverenigingen. 
+                                    2° niet-stemgerechtigde leden gecoöpteerd door de algemene vergadering. 
+                                    §2 Een lokale vereniging die lid wenst te worden van de sportraad voldoet aan alle onderstaande voorwaarden: 
+                                    1° Jaarlijks wordt een werkingsverslag voor het voorbije jaar ingediend, waaruit blijkt dat zij in die periode regelmatig activiteiten hebben ingericht. In dit verslag wordt ook de samenstelling van het bestuur meegedeeld.  
+                                    2° De vereniging moet een op sport gerichte werking ontplooien op het grondgebied van Brakel en haar maatschappelijke zetel hebben te Brakel. 
+                                    §3 Iedere sportvereniging erkent door de algemene vergadering heeft recht op 1 stemgerechtigd lid in de algemene vergadering.  
+                                    §4 Alle stemgerechtigde leden voldoen aan alle onderstaande voorwaarden: 
+                                    1° Gedomicilieerd zijn in de gemeente Brakel 
+                                    2° Geen deel uitmaken van gemeenteraad, provincieraad, het Vlaamse Parlement, de Kamer van Volksvertegenwoordigers of de Senaat. 
+                                    §5 Het aantal verenigingen dat kan toetreden tot de adviesraad is niet limitatief. 
+                                    Artikel 4: Vernieuwing van de algemene vergadering 
+                                    §1 Met het oog op een algemene vernieuwing van de algemene vergadering naar aanleiding van de vernieuwing van de gemeenteraad start het uittredend dagelijks bestuur ten laatste in de loop van de maand oktober in het jaar van de lokale verkiezingen de procedure. Elke oproep tot kandidaatstelling bevat minstens: 
+                                    1° de uiterste indiendatum van kandidaturen 
+                                    2° de elementen waaruit de kandidaatstelling dient te bestaan (naam vereniging, naam kandidaat, adres kandidaat, functie van de kandidaat in de vereniging en de keuze om als stemgerechtigd of als plaatsvervanger te zetelen).  
+                                    3° de keuze voor kandidaat stelling voor een plaats in het dagelijks bestuur.  
+                                    4° de keuze voor kandidaatstelling voor een bestuursfunctie (Voorzitter, Ondervoorzitter, Secretaris, Penningmeester) in het dagelijks bestuur. 
+                                    5° de keuze hoe men de briefwisseling in de toekomst wenst te ontvangen (op papier of elektronisch) 
+                                    6° de datum, uur en plaats van de installatievergadering. 
+                                    7° de keuze als kandidaat-vereniging om zich te bekennen tot één van de door Sport Vlaanderen erkende sporten/sportfederaties. 
+                                    §2 Aan het college van burgemeester en schepenen wordt ook gevraagd de oproep op te nemen in het eerstkomend gemeentelijk informatiemagazine. 
+                                    §3 Na het afsluiten van de periode tot kandidaatstelling, onderzoekt het uittredend dagelijks bestuur de ontvangen kandidaturen en stelt hiervan een schriftelijk verslag op ten behoeve van de eerstvolgende algemene vergadering (=de installatievergadering). De ontvangen kandidaturen worden o.a. onderzocht overeenkomstig art. 7 van het algemeen reglement betreffende de gemeentelijke adviesraden en de bepalingen van dit huishoudelijk reglement. 
+                                    §4 Op de installatievergadering die wordt voorgezeten door de uittredende voorzitter wordt overgegaan tot de installatie van de nieuwe algemene vergadering. Eerst spreekt de installatievergadering zich uit over de geldigheid van de kandidaat-verenigingen en de geldigheid van de door hen voorgedragen vertegenwoordigers. 
+                                    §5 Ieder kandidaat-lid van de algemene vergadering kan slechts door 1 vereniging voorgedragen worden. 
+                                    Artikel 5:Vernieuwing van het dagelijks bestuur 
+                                    §1 Op de installatievergadering wordt door het uittredend dagelijks bestuur ook meegedeeld welke kandidaturen voor het dagelijks bestuur (bestuurslid en/of bestuursfunctie) zijn ontvangen en welke geldig zijn. 
+                                    Op de installatievergadering kan overgegaan worden tot de verkiezing van de bestuursleden van het dagelijks bestuur. 
+                                    §2 Indien op de installatievergadering niet is overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur wordt op de eerstvolgende algemene vergadering na de installatievergadering overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur.  
+                                    §3 Een wijziging in de samenstelling van de algemene vergadering geeft geen aanleiding tot het vernieuwen van de samenstelling van het dagelijks bestuur. Een vernieuwing van het dagelijks bestuur kan enkel na een algemene vernieuwing van de algemene vergadering overeenkomstig art. 4 van dit huishoudelijk reglement of naar aanleiding van een tussentijdse vernieuwing van de algemene vergadering overeenkomstig art. 4; lid 6 van het algemeen reglement betreffende de gemeentelijke adviesraden. 
+                                    Artikel 6 Beraadslagen 
+                                    Om geldig te kunnen beraadslagen, moet de meerderheid der stemgerechtigde leden aanwezig zijn op de algemene vergadering. De algemene vergadering kan echter, als hij eenmaal bijeengeroepen is zonder dat het vereiste aantal stemgerechtigde leden aanwezig is, na een tweede oproeping, ongeacht het aantal aanwezige leden, op geldige wijze beraadslagen of beslissen over onderwerpen die voor de tweede maal op de agenda voorkomen. 
+                                    Titel 4: Dagelijks Bestuur 
+                                    Artikel 7: Verkiezing  
+                                    §1 Het dagelijks bestuur bestaat uit maximaal 16 leden en is samengesteld uit:  
+                                    1° maximum 2 stemgerechtigde leden per sport/federatie overeenkomstig artikel 4, §1, 7°. 
+                                    2° niet-stemgerechtigde gecoöpteerde leden overeenkomstig artikel 3, §1, 2°. In het dagelijks bestuur zijn deze ook stemgerechtigd. 
+                                    §2 Bestuursfuncties binnen het dagelijks bestuur zijn: voorzitter, één ondervoorzitter, één secretaris en één penningmeester. De bestuursfuncties worden verkozen binnen de schoot van de algemene vergadering. 
+                                    §3 Om lid te kunnen zijn van het dagelijks bestuur, moet men effectief (lees: geen plaatsvervanger) stemgerechtigd lid zijn of een niet-stemgerechtigd gecoöpteerd lid zijn van de algemene vergadering. 
+                                    §4 Binnen het dagelijks bestuur kan men zich niet laten vervangen indien men niet kan aanwezig zijn op een bijeenkomst. 
+                                    Artikel 8: Vergaderritme. 
+                                    De algemene vergadering en het dagelijks bestuur vergaderen minstens tweemaandelijks; met uitzondering van de maanden juli en augustus. 
+                                    §2 Dit reglement treedt in werking op 14 april 2025. 
+                                    Het besluit van de gemeenteraad dd. 4 februari 2013 betreffende het huishoudelijk reglement sportraad wordt dd. 14 april 2025 opgeheven. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Enig artikel, §1: Onderstaand huishoudelijk reglement van de ondernemersraad wordt goedgekeurd. 
+                                                                    HUISHOUDELIJK REGLEMENT SPORTRAAD 
+                                                                    Titel 1: Grondslag 
+                                                                    Artikel 1 Dit huishoudelijk reglement regelt de inwendige aangelegenheden van de gemeentelijke sportraad door het organiseren van de algemene vergadering, dagelijks bestuur en de eventueel opgerichte werkgroepen, conform het algemeen reglement van de adviesraden. 
+                                                                    Titel 2: Engagementsverklaring 
+                                                                    Artikel 2 Alle stemgerechtigde leden (algemene vergadering) en bestuursleden wordt uitdrukkelijk gevraagd akkoord te gaan met volgende engagementsverklaring: 
+                                                                    1° Akkoord gaan met de doelstellingen zoals beschreven in het algemeen reglement van adviesraden en dit huishoudelijk reglement en actief willen meewerken aan de realisering ervan 
+                                                                    2° De algemene vergadering en/of dagelijks bestuur bijwonen. Indien dit onmogelijk is, wordt het lid van uitdrukkelijk verzocht zich te verontschuldigen. 
+                                                                    3° Zich informeren over het beleid binnen het domein van de adviesraad door lectuur, bijscholing, vorming en contacten met betrokkenen bij het beleid 
+                                                                    4° De ‘Universele verklaring van de rechten van de mens’ onderschrijven 
+                                                                    5° Spreekrecht en stemrecht in de Algemene Vergadering en/of dagelijks bestuur. 
+                                                                    6° Inzagerecht, recht op uitleg en recht op afschrift overeenkomstig de wettelijke en decretale bepalingen 
+                                                                    7° Gebruik maken van het budget van de adviesraad voor het volgen van studiedagen en vormingscursussen in functie van het verbeteren van de werking van de adviesraad indien hiertoe in de schoot van de algemene vergadering een reglement is goedgekeurd. 
+                                                                    8° De sportraad behandelt alle sportieve kwesties op lokaal vlak. De sportraad bevordert ook de samenwerking tussen de sportverenigingen en kan zelf activiteiten organiseren. 
+                                                                    9° De vereniging die heeft heeft aangesteld regelmatig op de hoogte houden over de werkzaamheden van de sportraad en ook geregeld overleg plegen met hun achterban in functie van het opsporen van behoeften, ideeën en verwachtingen betreffende het beleid. 
+                                                                    Titel 3: Algemene Vergadering 
+                                                                    Artikel 3: Samenstelling 
+                                                                    §1 De algemene vergadering is samengesteld uit: 
+                                                                    1° stemgerechtigde leden aangeduid door de sportverenigingen. 
+                                                                    2° niet-stemgerechtigde leden gecoöpteerd door de algemene vergadering. 
+                                                                    §2 Een lokale vereniging die lid wenst te worden van de sportraad voldoet aan alle onderstaande voorwaarden: 
+                                                                    1° Jaarlijks wordt een werkingsverslag voor het voorbije jaar ingediend, waaruit blijkt dat zij in die periode regelmatig activiteiten hebben ingericht. In dit verslag wordt ook de samenstelling van het bestuur meegedeeld.  
+                                                                    2° De vereniging moet een op sport gerichte werking ontplooien op het grondgebied van Brakel en haar maatschappelijke zetel hebben te Brakel. 
+                                                                    §3 Iedere sportvereniging erkent door de algemene vergadering heeft recht op 1 stemgerechtigd lid in de algemene vergadering.  
+                                                                    §4 Alle stemgerechtigde leden voldoen aan alle onderstaande voorwaarden: 
+                                                                    1° Gedomicilieerd zijn in de gemeente Brakel 
+                                                                    2° Geen deel uitmaken van gemeenteraad, provincieraad, het Vlaamse Parlement, de Kamer van Volksvertegenwoordigers of de Senaat. 
+                                                                    §5 Het aantal verenigingen dat kan toetreden tot de adviesraad is niet limitatief. 
+                                                                    Artikel 4: Vernieuwing van de algemene vergadering 
+                                                                    §1 Met het oog op een algemene vernieuwing van de algemene vergadering naar aanleiding van de vernieuwing van de gemeenteraad start het uittredend dagelijks bestuur ten laatste in de loop van de maand oktober in het jaar van de lokale verkiezingen de procedure. Elke oproep tot kandidaatstelling bevat minstens: 
+                                                                    1° de uiterste indiendatum van kandidaturen 
+                                                                    2° de elementen waaruit de kandidaatstelling dient te bestaan (naam vereniging, naam kandidaat, adres kandidaat, functie van de kandidaat in de vereniging en de keuze om als stemgerechtigd of als plaatsvervanger te zetelen).  
+                                                                    3° de keuze voor kandidaat stelling voor een plaats in het dagelijks bestuur.  
+                                                                    4° de keuze voor kandidaatstelling voor een bestuursfunctie (Voorzitter, Ondervoorzitter, Secretaris, Penningmeester) in het dagelijks bestuur. 
+                                                                    5° de keuze hoe men de briefwisseling in de toekomst wenst te ontvangen (op papier of elektronisch) 
+                                                                    6° de datum, uur en plaats van de installatievergadering. 
+                                                                    7° de keuze als kandidaat-vereniging om zich te bekennen tot één van de door Sport Vlaanderen erkende sporten/sportfederaties. 
+                                                                    §2 Aan het college van burgemeester en schepenen wordt ook gevraagd de oproep op te nemen in het eerstkomend gemeentelijk informatiemagazine. 
+                                                                    §3 Na het afsluiten van de periode tot kandidaatstelling, onderzoekt het uittredend dagelijks bestuur de ontvangen kandidaturen en stelt hiervan een schriftelijk verslag op ten behoeve van de eerstvolgende algemene vergadering (=de installatievergadering). De ontvangen kandidaturen worden o.a. onderzocht overeenkomstig art. 7 van het algemeen reglement betreffende de gemeentelijke adviesraden en de bepalingen van dit huishoudelijk reglement. 
+                                                                    §4 Op de installatievergadering die wordt voorgezeten door de uittredende voorzitter wordt overgegaan tot de installatie van de nieuwe algemene vergadering. Eerst spreekt de installatievergadering zich uit over de geldigheid van de kandidaat-verenigingen en de geldigheid van de door hen voorgedragen vertegenwoordigers. 
+                                                                    §5 Ieder kandidaat-lid van de algemene vergadering kan slechts door 1 vereniging voorgedragen worden. 
+                                                                    Artikel 5:Vernieuwing van het dagelijks bestuur 
+                                                                    §1 Op de installatievergadering wordt door het uittredend dagelijks bestuur ook meegedeeld welke kandidaturen voor het dagelijks bestuur (bestuurslid en/of bestuursfunctie) zijn ontvangen en welke geldig zijn. 
+                                                                    Op de installatievergadering kan overgegaan worden tot de verkiezing van de bestuursleden van het dagelijks bestuur. 
+                                                                    §2 Indien op de installatievergadering niet is overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur wordt op de eerstvolgende algemene vergadering na de installatievergadering overgegaan tot de verkiezing van de bestuursleden van het dagelijks bestuur.  
+                                                                    §3 Een wijziging in de samenstelling van de algemene vergadering geeft geen aanleiding tot het vernieuwen van de samenstelling van het dagelijks bestuur. Een vernieuwing van het dagelijks bestuur kan enkel na een algemene vernieuwing van de algemene vergadering overeenkomstig art. 4 van dit huishoudelijk reglement of naar aanleiding van een tussentijdse vernieuwing van de algemene vergadering overeenkomstig art. 4; lid 6 van het algemeen reglement betreffende de gemeentelijke adviesraden. 
+                                                                    Artikel 6 Beraadslagen 
+                                                                    Om geldig te kunnen beraadslagen, moet de meerderheid der stemgerechtigde leden aanwezig zijn op de algemene vergadering. De algemene vergadering kan echter, als hij eenmaal bijeengeroepen is zonder dat het vereiste aantal stemgerechtigde leden aanwezig is, na een tweede oproeping, ongeacht het aantal aanwezige leden, op geldige wijze beraadslagen of beslissen over onderwerpen die voor de tweede maal op de agenda voorkomen. 
+                                                                    Titel 4: Dagelijks Bestuur 
+                                                                    Artikel 7: Verkiezing  
+                                                                    §1 Het dagelijks bestuur bestaat uit maximaal 16 leden en is samengesteld uit:  
+                                                                    1° maximum 2 stemgerechtigde leden per sport/federatie overeenkomstig artikel 4, §1, 7°. 
+                                                                    2° niet-stemgerechtigde gecoöpteerde leden overeenkomstig artikel 3, §1, 2°. In het dagelijks bestuur zijn deze ook stemgerechtigd. 
+                                                                    §2 Bestuursfuncties binnen het dagelijks bestuur zijn: voorzitter, één ondervoorzitter, één secretaris en één penningmeester. De bestuursfuncties worden verkozen binnen de schoot van de algemene vergadering. 
+                                                                    §3 Om lid te kunnen zijn van het dagelijks bestuur, moet men effectief (lees: geen plaatsvervanger) stemgerechtigd lid zijn of een niet-stemgerechtigd gecoöpteerd lid zijn van de algemene vergadering. 
+                                                                    §4 Binnen het dagelijks bestuur kan men zich niet laten vervangen indien men niet kan aanwezig zijn op een bijeenkomst. 
+                                                                    Artikel 8: Vergaderritme. 
+                                                                    De algemene vergadering en het dagelijks bestuur vergaderen minstens tweemaandelijks; met uitzondering van de maanden juli en augustus. 
+                                                                    §2 Dit reglement treedt in werking op 14 april 2025. 
+                                                                    Het besluit van de gemeenteraad dd. 4 februari 2013 betreffende het huishoudelijk reglement sportraad wordt dd. 14 april 2025 opgeheven. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1d881d5b-10e8-4e31-adda-f2643c66fffc> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "1458a496-e84a-5ef7-9d09-96be2c2662e0" ;
+    dcterms:title "Adviesraden. Huishoudelijk reglement sportraad." .
+

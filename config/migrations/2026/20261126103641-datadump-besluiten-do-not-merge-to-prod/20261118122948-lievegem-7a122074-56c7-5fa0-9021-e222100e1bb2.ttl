@@ -1,0 +1,73 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/97c40671-41b3-4f23-9663-df70ecd4c616> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/188dbad9-93f7-4db3-ad4f-00daedd12cf5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2620ff7f-fb77-4d42-9050-c09ef5998235>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6e6e0e8b-655d-41e2-9649-6f6290e04377>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ea3f468-6c4f-4836-95af-2f7465766058>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e1e44471-ced4-4f3c-89da-c7cf773f0b79> ;
+    ns1:geplandeStart "2025-10-21T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/89e89c1b-533a-40ad-a870-44221e505169> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "12281dfc-e7ea-5667-865c-3e97d83e9128" ;
+    prov:atLocation "zaal De Inslag, gemeentehuis Waarschoot, Waarschootdorp 1, 9950 Lievegem" ;
+    prov:startedAtTime "2025-10-21T13:33:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6e6e0e8b-655d-41e2-9649-6f6290e04377> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2620ff7f-fb77-4d42-9050-c09ef5998235> ;
+    ns1:openbaar false ;
+    ns2:uuid "8ebd7858-e3be-5e0b-98ed-88377124a9fa" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6e6e0e8b-655d-41e2-9649-6f6290e04377> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6e6e0e8b-655d-41e2-9649-6f6290e04377> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6e6e0e8b-655d-41e2-9649-6f6290e04377> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van de Plechtigheden november op 7 november 2025 van 9.00 uur tot en met 10.45 uur en op 11 november 2025 van 10.30 uur tot en met 12.15 uur wordt vastgesteld als volgt:1. Afsluiten van Zomerlaan vanaf Zomerlaan 1 tot en met kruispunt met Markt/Maarten Steyaertplein2. omleiding via Guido Gezellestraat - Ter Wal - Hendrik Claeysstraat - Dekenijstraat - Maarten Steyaertplein en via Maarten Steyaertplein - Alfons Sifferstraat en Guido Gezellestraat 
+                                                             
+                                                             
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van plechtigheden november - gemeente Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 21 oktober 2025 over de aanvraag evenement plechtigheden november 2025 - team evenementen: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen - gemeente Lievegem organiseert een aantal plechtigheden naar aanleiding van Allerheiligen en Wapenstilstand.Er werd op 13 oktober 2025 een aanvraag ingediend door Ian Smaele, namens team evenementen - gemeente Lievegem, om tijdens de organisatie van de vieringen voor Wapenstilstand in Zomergem verkeersmaatregelen te treffen.Deze plechtigheden vinden plaats op vrijdag 7 november 2025 van 9.00 uur tot en met 10.45 uur en op dinsdag 11 november 2025 van 10.30 uur tot en met 12.15 uur. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede.Er werd ook politiebegeleiding aangevraagd ter ondersteuning. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars.PZ.DeinzeZulteLievegem.Verkeer@police.belgium.eu 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "7a122074-56c7-5fa0-9021-e222100e1bb2" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement naar aanleiding van plechtigheden november op 7 november 2025 van 9.00 uur tot en met 10.45 uur en op 11 november 2025 van 10.30 uur tot en met 12.15 uur wordt vastgesteld als volgt: 
+                                    1. Afsluiten van Zomerlaan vanaf Zomerlaan 1 tot en met kruispunt met Markt/Maarten Steyaertplein2. Omleiding via Guido Gezellestraat - Ter Wal - Hendrik Claeysstraat - Dekenijstraat - Maarten Steyaertplein en via Maarten Steyaertplein - Alfons Sifferstraat en Guido Gezellestraat 
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd:1. - Nadar + C3 ter hoogte van Zomerlaan 1 en op het kruispunt Zomerlaan/Markt    - Nadar + C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45b op de kruispunten Koning Leopold III laan/Guido Gezellestraat, Koning Leopold III laan/Rijvers en Zomerlaan/Adolf Lievensstraat2. Borden F41 
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en zal door de aanwezige collega's van team evenementen op straat geplaatst worden bij aanvang en terug verwijderd worden bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6e6e0e8b-655d-41e2-9649-6f6290e04377> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6e6e0e8b-655d-41e2-9649-6f6290e04377> a ns1:Agendapunt ;
+    ns2:uuid "e4c6ab70-e4c0-54e9-a5a7-678f1aa3b00c" .
+

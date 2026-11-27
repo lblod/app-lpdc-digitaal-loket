@@ -1,0 +1,135 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/58a0825c-bf85-47da-bfdd-cfb876a6ed60> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0123b139-0793-4d70-aa54-bc826557bba6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/70e7c733-8431-4151-9bc0-738b03e80c64>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/94fdb18e-8f7a-4172-81ce-534185f0eeae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ca2737c1-4ca2-469d-875f-1aa52d8a7d93>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e710d8aa-4d1d-436d-a1a7-53f9e684bc46> ;
+    ns1:geplandeStart "2025-05-13T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a5b9dd2a-df60-4e21-9710-fdea240ca763> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "08c85a1d-fa45-55b8-b1ee-f2416378ffcc" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-05-13T13:32:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0123b139-0793-4d70-aa54-bc826557bba6> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/94fdb18e-8f7a-4172-81ce-534185f0eeae> ;
+    ns1:openbaar false ;
+    ns2:uuid "4359078d-23aa-5897-8e96-8e691909bb01" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0123b139-0793-4d70-aa54-bc826557bba6> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0123b139-0793-4d70-aa54-bc826557bba6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0123b139-0793-4d70-aa54-bc826557bba6> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van Eeksken Feesten 2025 en schoolfeest Eeksken van 24 mei 2025 tot en met 1 juni 2025 wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Eeksken Feesten 2025 en Schoolfeest Eeksken: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 13 mei 2025 over de aanvraag evenement Schoolfeest Eeksken - GBS Lievegem - Eeksken: goedkeuringHet besluit van het college van burgemeester en schepenen van 13 mei 2025 over de aanvraag evenement Eekskenfeesten - Feestcomité Eeksken: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nico De Leeuw, namens vzw Feestcomité Eeksken organiseert 'Eeksken Feesten 2025' van 28 mei 2025 tot en met 1 juni 2025. Daarnaast organiseert Lode Wytynck, namens GBS Lievegem - afdeling Eeksken 'Schoolfeest Eeksken' op 24 mei 2025 op de terreinen van Eeksken Feesten. 
+                                    Er werd op 18 februari 2025 een aanvraag ingediend door Nico De Leeuw namens vzw Feestcomité Eeksken en op 17 januari 2025 door Lode Wytynck, namens GBS Lievegem - afdeling Eeksken om tijdens deze organisaties verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Gemeente Evergem (marjolein.hens@evergem.be en sylvie.lippens@evergem.be) 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns2:uuid "ca49ad87-530c-5f1e-9e87-c817dc81797b" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement voor Eeksken Feesten 2025 en schoolfeest Eeksken wordt vastgesteld als volgt:1. Van 24 mei 2025 11.00 uur tot en met 1 juni 2025 23.45 uur: 
+                                     
+                                        Snelheidsbeperking: max. 30 km/u 100 m voor en na het feestterrein ter hoogte van Eeksken 77, 9920 Lievegem 
+                                        Plaatsing wegversmallingen (chicanes) om de snelheid van het verkeer ook fysiek te remmen, ter hoogte van Eeksken 13 en 65 en ter hoogte van 89 en 24. 
+                                     
+                                      
+                                    2. Van 28 mei 2025 18.00 uur tot en met 1 juni 2025 23.45 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod in Eeksken vanaf Eeksken 83 tot en met het kruispunt met Grensweg (zijde grondgebied Lievegem - Gemeente Evergem voorziet een parkeerverbod aan de overzijde van de straat) 
+                                     
+                                     
+                                    3. Op 30 mei 2025 van 18.00 uur tot en met 21.00 uur naar aanleiding van de jogging: 
+                                     
+                                        Bijkomend stilstaan- en parkeerverbod ter hoogte van Eeksken 51 - 53 en Grensweg 1 - 9 (zijde grondgebied Lievegem - Gemeente Evergem voorziet een parkeerverbod op eigen grondgebied) 
+                                        Afsluiten voor gemotoriseerd verkeer in Eeksken, Grensweg, Linde (Evergem), Meistraat (Evergem) en Haantjen (gedeelte op grondgebied Evergem wordt door gemeente Evergem voorzien) 
+                                        Omleiding vanuit Evergem: via Linde – Weegse – Langendam - Mithremstraat – Daasdonk (Evergem) (deze omleiding wordt door gemeente Evergem voorzien) 
+                                        Omleiding vanuit Lovendegem: Bredestraat - Grote Baan - Leest - Renning - Kerkstraat - Stationsstraat - Molenstraat - 't Hand 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        4. Op 1 juni 2025 van 6.30 uur tot en met 19.00 uur naar aanleiding van de rommelmarkt:
+                                     
+                                     
+                                         
+                                            Afsluiten voor alle verkeer met uitzondering van plaatselijk verkeer en fietsers in Eeksken vanaf de spoorweg tot en met kruispunt Eeksken/Grensweg 
+                                            Stilstaan- en parkeerverbond in Eeksken vanaf de spoorweg tot en met kruispunt Eeksken/Grensweg 
+                                            Omleiding via grondgebied Evergem: via Eeksken – Linde – Weegse – Langendam - Mithremstraat – Daasdonk en omgekeerd (deze omleiding wordt door gemeente Evergem voorzien) 
+                                         
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt al volgt gesignaleerd:1. Van 24 mei 2025 11.00 uur tot en met 1 juni 2025 23.45 uur: 
+                                     
+                                        Borden C43 '30' en C45 '30' + borden 'evenement' 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Van 28 mei 2025 18.00 uur tot en met 1 juni 2025 23.45 uur:
+                                     
+                                     
+                                         
+                                            Borden E3 
+                                         
+                                     
+                                    3. Op 30 mei 2025 van 18.00 uur tot en met 21.00 uur naar aanleiding van de jogging: 
+                                     
+                                        Borden E3 
+                                        Nadar met bord C3 + M12 ter hoogte van Eeksken 77 (feestterrein), kruispunt Eeksken/Eeksken, Grensweg/Linde, Grensweg/Haantjen en Haantjen/Lievetragel 
+                                        Nadar met bord C3 + F45b + 'uitgezonderd plaatselijk verkeer' ter hoogte van kruispunt 't Hand/Daasdonk, Eeksken/Kerkenlanddreef, Meienbroek/Boterhoek, Pyramidestraat/Boterhoek (x2) en Grote Baan/Bredestraat 
+                                        Borden F41 
+                                     
+                                     
+                                        
+                                             
+                                         
+                                        
+                                            4. Op 1 juni 2025 van 6.30 uur tot en met 19.00 uur naar aanleiding van de rommelmarkt:
+                                         
+                                     
+                                     
+                                        Nadar + C3 + 'uitgezonderd plaatselijk verkeer' + M12 ter hoogte van de spoorweg en kruispunt Eeksken/Grensweg 
+                                        Nadar + C3 + F45b + 'uitgezonderd plaatselijk verkeer' ter hoogte rondpunt 't Hand/Daasdonk 
+                                        Borden E3 
+                                        Borden F41 
+                                     
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten, in samenspraak met gemeente Evergem. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van de activiteiten. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0123b139-0793-4d70-aa54-bc826557bba6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0123b139-0793-4d70-aa54-bc826557bba6> a ns1:Agendapunt ;
+    ns2:uuid "a2ada578-8896-5c2a-8c40-a3fc3edb9732" .
+

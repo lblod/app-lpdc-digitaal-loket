@@ -1,0 +1,104 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns2:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1> ;
+    ns2:openbaar true ;
+    ns3:uuid "fe8a6100-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/57ed44f2-72d5-4266-8859-c70adb4be31f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/57ed44f2-72d5-4266-8859-c70adb4be31f> a ns2:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad neemt kennis van de kwartaalrapportering over het 1ste en 2de kwartaal 2022 zoals gevoegd in bijlage. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Kwartaalrapportering eerste en tweede kwartaal 2022: kennisname" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017 over het voorontwerp van de beleidsrapporten en de opvolgingsrapportering, inzonderheid artikelen 171 §4, 176 en 263Decreet lokaal bestuur van 22 december 2017 over de voorafgaande krediet- en wetmatigheidscontrole, het debiteurenbeheer, de thesaurietoestand, de liquiditeitsprognose, de beheerscontrole, de evolutie van de budgetten en de financiële risico's, artikel 177Decreet lokaal bestuur van 22 december 2017 over het systeem van klachtenbehandeling, artikel 302 en 303Decreet lokaal bestuur van 22 december 2017 over de jaarlijkse rapportering over de organisatiebeheersing, artikel 219  Besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale besturen van 30 maart 2018, inzonderheid de artikelen 6, 29 en 108Ministerieel besluit van 26 juni 2018 tot vaststelling van de modellen en de nadere voorschriften van de beleidsrapporten, de rekeningenstelsels en de digitale rapportering van de beleids- en beheerscyclus van de lokale besturen, inzonderheid artikel 5Gemeenteraadsbesluit van 18 december 2019 tot vaststelling van het meerjarenplan 2020-2025Gemeenteraadsbesluit van 16 december 2020 tot vaststelling van de meerjarenplanaanpassing 2020-2025 - aanpassing 1Gemeenteraadsbesluit van 22 december 2021 tot vaststelling van de meerjarenplanaanpassing 2020-2025 - aanpassing 2 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Overeenkomstig artikel 263 van het decreet lokaal bestuur bepalen de gemeenteraad en de raad voor maatschappelijk welzijn wanneer hen een opvolgingsrapportering, met een stand van zaken van de uitvoering van het meerjarenplan, wordt voorgelegd. Hierbij wordt minstens voor het einde van het derde kwartaal een opvolgingsrapportering over het eerste semester van het boekjaar voorgelegd.Volgens artikel 29 van het besluit van de Vlaamse Regering over de beleids- en beheerscyclus van de lokale besturen hoort de opvolgingsrapportering minstens volgende elementen te bevatten: 
+                                                             
+                                                                stand van zaken van de prioritaire acties of actieplannen van het meerjarenplan (voor Lievegem geopteerd voor acties) 
+                                                                overzicht van de geraamde en de gerealiseerde ontvangsten en uitgaven voor het lopende jaar 
+                                                                in voorkomend geval, de wijzigingen in de assumpties die gekozen werden bij de opmaak van het meerjarenplan of de aanpassing ervan 
+                                                                in voorkomend geval, de wijzigingen in de financiële risico's. 
+                                                             
+                                                            In functie van de rapportering over het meerjarenplan 2020-2025 werd geopteerd voor een rapportering op actieniveau.Overeenkomstig artikel 171 van het decreet lokaal bestuur staat de financieel directeur in volle onafhankelijkheid in voor: 
+                                                             
+                                                                de voorafgaande krediet- en wetmatigheidscontrole van de beslissingen van de gemeente en van het openbaar centrum voor maatschappelijk welzijn met budgettaire en financiële impact, overeenkomstig de voorwaarden, zoals vermeld in artikel 266 en 267; 
+                                                                het debiteurenbeheer, in het bijzonder de invordering van de fiscale en niet-fiscale ontvangsten en het verlenen van kwijting. 
+                                                             
+                                                            De financieel directeur rapporteert in volle onafhankelijkheid over de volgende aangelegenheden aan de gemeenteraad, aan de raad voor maatschappelijk welzijn, aan het college van burgemeester en schepenen, en aan het vast bureau: 
+                                                             
+                                                                de vervulling van de opdrachten, zoals vermeld in artikel 171 
+                                                                de thesaurietoestand, de liquiditeitsprognose, de beheerscontrole en de evolutie van de budgetten 
+                                                                de financiële risico's. 
+                                                             
+                                                              
+                                                            Overeenkomstig artikel 303, §3 rapporteert de algemeen directeur jaarlijks aan de gemeenteraad over de klachten ingediend tegen de gemeente.Overeenkomstig artikel 219 rapporteert de algemeen directeur jaarlijks aan het college van burgemeester en schepenen, de gemeenteraad, de raad voor maatschappelijk welzijn en het vast bureau over de organisatiebeheersing. Die rapportering gebeurt jaarlijks uiterlijk voor 30 juni van het daaropvolgende jaar.Lokaal bestuur Lievegem wil de decretaal verplichte rapporteringen integreren tot één beleidsrapport en uitbreiden met informatie over de reguliere werking en dienstverlening. Aan de hand van dit beleidsrapport kan het beleid en het management gefundeerde beslissingen nemen en de werking op een goede manier sturen. Voor de concrete aanpak en uitwerking kwam een werkgroep samen bestaande uit een aantal pilootdiensten.De rapportering omvat onder meer per kwartaal:- De krediet- en wetmatigheidscontrole- Debiteurenbeheer- Thesaurietoestand- Beheerscontrole (opvolgingsrapportering)- Evolutie van de budgetten- Dienstverlening - Reguliere werking- Organisatiebeheersing- KlachtenbehandelingIn deze pilootversie ligt de focus op de financiële en decretaal verplichte rapporteringen. We breiden deze kwartaalrapportering na evaluatie geleidelijk aan uit, rekening houdende met de haalbaarheid voor de verschillende teams en de beschikbaarheid van data.Finaal willen we komen tot een rapportering per kwartaal en een jaarverslag van de werking van alle teams (rapportering kwartaal 4). 
+                                                         
+                                                         
+                                                            Tussenkomst 
+                                                            Raadslid Wouter Ryckaert maakt onder andere nog volgende opmerkingen en vragen:-    Recyclagepark. Kost 450.000 euro, inkomsten 80.000 euro. Wat zou de besparing zijn mocht er voor groenafval gekozen zijn voor het vroegere systeem van Lovendegem waarbij voor de eerste kg groenafval betaald moest worden? Het vervuiler-betaalt principe. -    Huis van Lievegem: “wordt bekeken” => betekent dit uitstel? 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ecfa1250-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad neemt kennis van de kwartaalrapportering over het 1ste en 2de kwartaal 2022 zoals gevoegd in bijlage. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "f226afe0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Kwartaalrapportering eerste en tweede kwartaal 2022: kennisname" .
+

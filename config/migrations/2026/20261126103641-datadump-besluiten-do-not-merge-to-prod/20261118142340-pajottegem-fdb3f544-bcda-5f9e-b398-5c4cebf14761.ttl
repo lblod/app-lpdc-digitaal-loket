@@ -1,0 +1,190 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/f5327685-a171-4f26-8879-b6a1f40de58e> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/306f7478-0007-4a23-afbe-d60a62c7ebf7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/742f914e-4950-4e95-9409-d4063675cf12> ;
+    ns2:geplandeStart "2026-02-16T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/f7324a9f-f33d-49bd-bec1-5b44e910439b> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "ff5bd322-b1a8-508c-a2b6-5d59aa411f40" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-02-16T12:47:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/742f914e-4950-4e95-9409-d4063675cf12> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/306f7478-0007-4a23-afbe-d60a62c7ebf7> ;
+    ns2:openbaar false ;
+    ns3:uuid "2b471e60-ac95-5a9c-ab4c-a5643c37b6ac" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/742f914e-4950-4e95-9409-d4063675cf12> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/742f914e-4950-4e95-9409-d4063675cf12> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/742f914e-4950-4e95-9409-d4063675cf12> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de wielerwedstrijd op 11 maart 2026 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: Ixina Leeuw Oetingen p/b Lotto - 11 maart 2026" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "fdb3f544-bcda-5f9e-b398-5c4cebf14761" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van een wielerwedstrijd op 11 maart 2026 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Stilstaan- en parkeerverbod (fig E3) wordt ingelast van maandag 09-03-2026 08.00 uur tot donderdag 12-03-2026 17.30 uur: 
+                                         
+                                     
+                                     
+                                         
+                                             
+                                                Kerkplein 
+                                             
+                                            Stilstaan- en parkeerverbod (fig E3) wordt ingelast op woensdag 11-03-2026 van 06.00 uur tot 19.30 uur: 
+                                             
+                                                Kerkstraat: vanaf het kruispunt met de Kloosterstraat tot het kruispunt met de Kasteeldreef (vertrek- en aankomstzone). 
+                                                Kloosterstraat: vanaf het kruispunt met de Vollezelestraat tot het kruispunt met de Kerkstraat (vertrek- en aankomstzone) 
+                                                Pastoriestraat: vanaf het kruispunt met de Kasteeldreef tot het kruispunt met het Kerkplein. (parking teams) 
+                                                Vollezelestraat: vanaf het kruispunt met de Vollezelestraat tot het kruispunt met het Kerkplein (zijarm Vollezelestraat, parking teams) 
+                                             
+                                            Stilstaan- en parkeerverbod (fig E3) wordt ingelast op 11-03-2026 van 10.00 uur tot 18.00 uur: 
+                                             
+                                                Lenniksestraat: vanaf de Kerkstraat tot het kruispunt met de Ninoofse Steenweg 
+                                                Ninoofse Steenweg: vanaf de gemeentegrens Pepingen tot de gemeentegrens NINOVE. 
+                                                Opperstebosstraat: vanaf het kruispunt met de Oude Heerbaan tot het kruispunt met de Blijkheerstraat 
+                                                Blijkheerstraat: vanaf het kruispunt met de Opperstebosstraat tot het kruispunt met de Zavelbergstraat 
+                                                Zavelbergstraat: vanaf het kruispunt met de Blijkheerstraat tot het kruispunt met de Vollezelestraat 
+                                                Vollezelestraat: vanaf de Molenstraat tot het kruispunt met de Kloosterstraat 
+                                                Frankrijkstraat: vanaf het kruispunt met de Vollezelestraat tot het kruispunt met de Goteringenstraat 
+                                                Kasteeldreef: vanaf het kruispunt met de Kerkstraat tot het kruispunt met de Frankrijkstraat 
+                                             
+                                            Stilstaan- en parkeerverbod (fig E3) wordt ingelast op 11-03-2026 van 11.00 uur tot 15.00 uur: 
+                                             
+                                                Repingestraat: vanaf de gemeentegrens Ninove tot het kruispunt met de Repingestraat (N272) 
+                                                Repingestraat: vanaf het kruispunt met de Repingestraat tot het kruispunt met de Vollezeelsesteenweg (N255 
+                                                Langestraat: t.h.v. huisnummer 127 (stroken voor de woning); t.h.v. huisnummers 106 t.e.m. 110 (stroken voor de woningen). 
+                                                Rensbergstraat: vanaf het kruispunt met de Langestraat tot het kruispunt met de Molenstraat 
+                                                Molenstraat: vanaf het kruispunt met de Rensbergstraat tot de Vollezelestraat 
+                                             
+                                            Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 12.00 uur tot 17.00 uur in volgende straten: 
+                                             
+                                                Kerkstraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Kasteelstraat tot het kruispunt met de Kervijnstraat 
+                                                Opperstebosstraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Blijkheerstraat tot het kruispunt met de Oude Heerbaan 
+                                                Blijkheerstraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Zavelberg tot het kruispunt met de Opperstebosstraat 
+                                                Zavelbergstraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Vollezelestraat tot het kruispunt met de Blijkheerstraat 
+                                                Kasteeldreef: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Frankrijkstraat tot het kruispunt met de Lenniksestraat 
+                                                Frankrijkstraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Goteringenstraat tot het kruispunt met de Frankrijkstraat (doodlopend gedeelte thv huisnr. 61) 
+                                             
+                                            Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 12.00 uur tot 17.00 uur op volgende kruispunten: 
+                                             
+                                                Kervijnstraat / Kerkstraat 
+                                                Kasteeldreef / Kerkstraat 
+                                                Blijkheerstraat / Opperstebosstraat 
+                                                Boomgaardstraat / Blijkheerstraat 
+                                                Kouterweg / Blijkheerstraat 
+                                                Blijkheerstraat / Opperstebosstraat 
+                                                Vollezelestraat / Zavelbergstraat 
+                                                Frankrijkstraat/ Kasteeldreef 
+                                                Eikenveldstraat / Vollezelestraat 
+                                                Hazelaarswijk / Vollezelestraat 
+                                                Vollezelestraat / Vollezelestraat 
+                                                Turkeyestraat / Kloosterstraat 
+                                                Kerkplein / Kloosterstraat 
+                                                Pastoriestraat / Kasteeldreef 
+                                                Goteringenstraat / Frankrijkstraat  
+                                             
+                                            Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast van 12.00 uur tot 15.00 uur in volgende straten: 
+                                             
+                                                Repingestraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Repingestraat (N272) tot de gemeentegrens Ninove 
+                                                Rensbergstraat: verboden richting voor ieder bestuurder (fig C1) vanaf het kruispunt met de Molenstraat tot het kruispunt met de Langestraat 
+                                             
+                                            Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast van 12.00 uur tot 15.00 uur op volgende kruispunten: 
+                                             
+                                                Repingestraat:  
+                                                 
+                                                    Congobergstraat / Repingestraat 
+                                                    Hulstraat / Repingestraat  
+                                                    Ezelveldstraat / Repingestraat  
+                                                    Repekouter / Repingestraat  
+                                                    Bakkerstraat / Repingestraat 
+                                                 
+                                                Rensbergstraat: Molenstraat / Rensbergstraat  
+                                             
+                                            Verboden toegang, in beide richtingen, voor ieder bestuurder UITGEZONDERD PLAATSELIJK VERKEER (fig C3 + Uitgezonderd plaatselijk verkeer) wordt ingelast van 12.00 uur tot 18.00 uur in volgende straten:  
+                                             
+                                                Lenniksestraat: verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer; vanaf het kruispunt met de Ninoofse Steenweg (N28) tot het kruispunt met de Kasteeldreef 
+                                                Vollezelestraat: verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer; vanaf de Molenstraat tot de Frankrijkstraat. (+ verkeersbord op nadar) 
+                                                Molenstraat: verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer; vanaf het kruispunt met de Heystraat tot de Vollezelestraat.  
+                                             
+                                            Verboden toegang, in beide richtingen, voor ieder bestuurder UITGEZONDERD PLAATSELIJK VERKEER (fig C3 + Uitgezonderd plaatselijk verkeer) wordt ingelast van 06.00 uur tot 18.00 uur in volgende straten: 
+                                             
+                                                Pastoriestraat: verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer; vanaf de Kasteeldreef tot het Kerkplein 
+                                                Vollezelestraat: verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer; vanaf de Frankrijkstraat tot het Kerkplein (zijarm inbegrepen).  
+                                             
+                                            Verboden toegang, in beide richtingen, voor ieder bestuurder UITGEZONDERD PLAATSELIJK VERKEER (fig C3 + Uitgezonderd plaatselijk verkeer) wordt ingelast van 06.00 uur tot 12.00 uur in volgende straten: 
+                                             
+                                                Kloosterstraat: verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer; vanaf de Vollezelestraat tot de Kerkstraat. (+ verkeersbord op nadar) 
+                                                Kerkstraat Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer; vanaf de Kloosterstraat tot de Kervijnstraat. (+ verkeersbord op nadar) 
+                                             
+                                            Verboden toegang, in beide richtingen, voor ieder bestuurder UITGEZONDERD WEDSTRIJD (fig C3 + Uitgezonderd wedstrijd) wordt ingelast van 12.00 uur tot 18.00 uur in volgende straten: 
+                                             
+                                                Kloosterstraat: verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijd; vanaf de Vollezelestraat tot de Kerkstraat. (+ verkeersbord op nadar) 
+                                                Kerkstraat Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijd; vanaf de Kloosterstraat tot de Kervijnstraat. (+ verkeersbord op nadar)  
+                                             
+                                            Plaatsen aanduidingsborden: "WIELERWEDSTRIJD - MOEILIJKE DOORGANG OP WOENSDAG 11-03-2026" ter hoogte van kruispunt N28 - Lenniksestraat en kruispunt N255 - Molenstraat minstens 1 week voor wedstrijd.  
+                                            De bloembakken op traject Oetingen - N28 dienen verwijderd te worden.  
+                                            Verkeersremmers Repingestraat dienen verwijderd te worden.  
+                                            Alle vaste en mobiele verkeersinfrastructuur op het parcours dient beschermd/verwijderd te worden.  
+                                            Alle betrokken verkeerssignalisatie dient tevens afgedekt/verwijderd te worden.  
+                                            Tijdelijke signalisatie dient onmiddellijk na de wedstrijd verwijderd te worden.  
+                                            Omleidingen: OETINGEN: 
+                                             
+                                                Omleidingen "DE LIJN" Voor kleinere bussen kan de lokale omleiding gevolgd worden, indien grotere (gelede) bussen ingepland zie omleiding "+3,5 ton"  
+                                                Omleidingen "+ 3,5 ton" en doorgaand verkeer Omleiding zal voorzien worden (fig F39 - fig F41)  
+                                                 
+                                                    vanuit de richting van Gooik (richting Galmaarden): N28 - N285 - N272 - N255 - Molenstraat 
+                                                    Vanuit de richting van Vollezele (richting Oetingen): N255 - N272 - N285 - N28 
+                                                 
+                                                Omleidingen "PLAATSELIJK VERKEER": omleiding zal voorzien worden (fig F39 - fig F41):  
+                                                 
+                                                    Vanuit de richting van Gooik (richting Vollezele): Kasteeldreef - Frankrijkstraat  
+                                                    Vanuit de richting Vollezele (richting Gooik): Frankrijkstraat - Goteringenstraat - Vierbergenstraat  
+                                                 
+                                             
+                                            Omleidingen: VOLLEZELE: 
+                                             
+                                                Voor het éénrichtingsverkeer van Repingestraat: omleiding via N272 - N255 - Rijstraat 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/742f914e-4950-4e95-9409-d4063675cf12> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/742f914e-4950-4e95-9409-d4063675cf12> a ns2:Agendapunt ;
+    ns3:uuid "d163b1b3-de79-5235-9eb5-5a2d6385d448" .
+

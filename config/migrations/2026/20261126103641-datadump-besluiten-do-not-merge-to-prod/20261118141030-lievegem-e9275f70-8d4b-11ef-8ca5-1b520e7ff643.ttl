@@ -1,0 +1,108 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/20d28bb5-807d-4186-9b8c-689e0489d460> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0d5a217c-c525-4e44-8013-3a8793791c88>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20b5e72e-9354-4170-98a3-c05c4e977881>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/37ce7e8a-c85d-431f-b3b1-4ef0d7cdfc5b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/39e4d294-dce8-4a6d-b36b-adab96e5b270>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/49410121-aef1-4042-b4f4-14aef82f264e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52422d96-ab04-4dae-aa8c-f8ea19b24f71>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/526a42ab-4198-41a6-9b39-98502758bf39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5a1c70ee-9069-4c19-bb17-7283f3198599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63b209a3-f5d7-4935-a37f-b64cb99e8f09>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/67c3237c-605e-4d1d-956b-38d93832a2af>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7355b519-e12c-412f-bdee-376d8a1dbac7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76c10515-311c-4a8e-97aa-b1383f959784>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bb5c221-724b-4edc-961b-b27f1cfddca6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/80391454-10c4-453b-9b8f-6e3f5eec2653>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8d722b2a-54c6-4cc1-ad13-058b5e6be17c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8fb7032d-2fa5-40f0-949b-e2fca027c07c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92755a1e-88d0-4d80-bf7f-05b9e7158bf5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/96f8b747-94cf-489d-93a8-36447215c1a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9dbbd1cc-1767-4669-88c7-c7c7c1678702>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a37a1dd9-22a8-45c9-8eff-269a0670589d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a522cfb9-9568-4db8-a6af-d0af935fb996>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5be802e-4cc9-4c38-977f-fdb6f3b04188>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a77b4fe2-987e-481c-8e85-a74f29837a69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aaf15f5e-c92c-4ddc-aceb-96527f71d48c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b451b262-4244-408b-b5c3-d83e0c8ef95e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd23b2fa-0997-43f2-8d2b-ed99b62d7ffb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd92fff3-77ca-41fb-a39d-3dbefc3df099>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d97b397e-04c9-4cee-a615-d87c20e939f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dbc8fd54-1dcb-4e9d-a8c1-2b2bbd70b039>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e53a82bc-8ac7-4963-a32c-d7afe35917ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f53ca798-c48a-41e7-9b15-c1f5daec8513>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f89c6e85-2216-4d01-a677-be26d437b23f> ;
+    ns2:geplandeStart "2021-09-15T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ab677b54-776e-4473-8db7-186edde3daab> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5b49bd77-10b9-4ede-a1cf-382ae765e5d9> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/21b852cd-eb6e-4187-9409-6b5402b5c378> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "e92563a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2021-09-15T20:43:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-09-15T20:02:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/63b209a3-f5d7-4935-a37f-b64cb99e8f09> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/39e4d294-dce8-4a6d-b36b-adab96e5b270> ;
+    ns2:openbaar true ;
+    ns1:uuid "e913d770-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63b209a3-f5d7-4935-a37f-b64cb99e8f09> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/63b209a3-f5d7-4935-a37f-b64cb99e8f09> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/63b209a3-f5d7-4935-a37f-b64cb99e8f09> a ns2:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de aankoopakte van 16 augustus 2021 met repertoriumnummer 2021/2655 voor grondverwervingen in de Appensvoordestraat goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Patrimonium – grondverwerving perceel Appensvoordestraat noodzakelijk voor de realisatie van wegen- en rioleringswerken- akte minnelijke onteigening: goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Decreet van 19 december 2014 over de Vlaamse Vastgoedcodex, waarbij de bevoegdheid van de Vlaamse commissarissen werd vastgelegd tot het uitvoeren van bepaalde vermogensrechterlijke verrichtingen in naam en voor rekening van het Vlaamse Gewest, de Vlaamse Gemeenschap, de Vlaamse gemeenschaps- en gewestinstellingen en bepaalde entiteiten zoals de gemeentenBesluit van de gemeenteraad van 3 juni 2020 met de definitieve goedkeuring van het onteigeningsplan en rooilijnplan Appensvoordestraat opgemaakt door het ontwerpbureau Plantec nv, Nieuwpoortsesteenweg 399 te 8400 Oostende 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De grondverwervingen, een 45-tal, gebeuren in de Appensvoordestraat, 9920 Lievegem om reden van openbaar nut, meer bepaald om de geplande wegenis- en rioleringswerken te kunnen uitvoeren inclusief de aanleg van fietspaden en de herprofilering van de grachten.Het betreft de grondinnames met nrs. 8, 9, 10, 11, 31, 32 en 33 van het definitief goedgekeurde onteigeningsplan en rooilijnplan Appensvoordestraat opgemaakt door het ontwerpbureau Plantec nv, Nieuwpoortsesteenweg 399 te 8400 Oostende.De afdeling Vastgoedtransacties heeft onderhandeld met de eigenaars en de aankoopakte van 16 augustus 2021 met repertoriumnummer 2021/2655 in der minne en onder voorbehoud van goedkeuring door de gemeenteraad opgemaakt.Als bijlage de aankoopakte voor de grondinnemingen nrs. 8, 9, 10, 11, 31, 32 en 33 in de Appensvoordestraat te 9920 Lievegem.De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De kosten voor deze grondinnames inclusief opstal bedragen € 47.000,00.Het meerjarenplan 2020-2025 bevat voldoende krediet onder jaarbudgetrekening 2021/ACT-174/0200-00/2200000/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                                 Gunstig visum AFD/2021/154 van Bart Van Petegem van 25 augustus 2021  
+                                                             
+                                                         
+                                                    """@nl ;
+    ns1:uuid "e9275f70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 De gemeenteraad keurt de aankoopakte van 16 augustus 2021 met repertoriumnummer 2021/2655 tussen Marie Julienne Staesens, Regine Aline De Beer, Herman Marie De Beer, Christiane Marie De Beer, Kathleen Nelly De Beer en Marc Herman De Beer enerzijds en de gemeente Lievegem anderzijds, opgemaakt door Jeroen De Corte, Vlaams commissaris bij de afdeling Vastgoedtransacties, ter hoogte van de percelen in de Appensvoordestraat, 9920 Lievegem, kadastraal gekend als tweede afdeling, sectie B:- nr. 1126 P0000 met een in te nemen oppervlakte volgens het onteigeningsplan van 4 m² (inneming 8)- nr. 1128/B P0001 met een in te nemen oppervlakte volgens het onteigeningsplan van 89 m² (inneming 9)- nr. 1127/K P0000 met een in te nemen oppervlakte volgens het onteigeningsplan van 41 m² (inneming 10)- nr. 1133/A P0000 met een in te nemen oppervlakte volgens het onteigeningsplan van 189 m² (inneming 11)- nr. 1327/D P0000 met een in te nemen oppervlakte volgens het onteigeningsplan van 278 m² (inneming 31)- nr. 1326 P0000 met een in te nemen oppervlakte volgens het onteigeningsplan van 240 m² (inneming 32)- nr. 1325 P0000 met een in te nemen oppervlakte volgens het onteigeningsplan van 247 m² (inneming 33) 
+                                                            Artikel 2De gemeente verwerft het in artikel 1 bedoeld goed:- voor de prijs van € 47.000,00.- onder de voorwaarden vastgelegd in de bij deze beslissing en als dusdanig deel uitmakend van deze beslissing gevoegde akte minnelijke onteigening van 16 augustus 2021 met repertoriumnummer 2021/2655 verleden door Jeroen De Corte, Vlaams commissaris bij de afdeling Vastgoedtransacties. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/63b209a3-f5d7-4935-a37f-b64cb99e8f09> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63b209a3-f5d7-4935-a37f-b64cb99e8f09> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "e9102df0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium – grondverwerving perceel Appensvoordestraat noodzakelijk voor de realisatie van wegen- en rioleringswerken- akte minnelijke onteigening: goedkeuring" .
+

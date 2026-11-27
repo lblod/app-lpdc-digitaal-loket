@@ -1,0 +1,138 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5431859e-9f14-4e49-b6c8-5b80b7d4e481> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/012dd980-fcd7-4668-9913-47074894f812>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0fca32d7-4054-42c6-951e-b96d869c702b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/2d9dc155-1b93-4953-a28a-3a6a84cf2af0>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/325c2f66-67e1-43b5-85c2-088d4e50e68c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3d196578-c957-4887-bc28-793d29ade565>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/42f857a5-ab10-49a9-a503-aca851e77663>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/44b4f21a-4b58-4a54-92bb-0368a40eec78>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/486101ec-f076-4712-aa1e-95e9a185a47a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/51f59054-46f0-4426-a625-985dd7703ace>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5981905c-1ae2-446d-a3a8-2e7c8d04a342>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5caf5b90-2c88-4a27-878b-e16fded7f548>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/84db1bee-f8ce-47d1-adc9-98f9f5077511>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8c376a9d-e08b-4a54-a27d-9f82afe0c2fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a0527502-7cd6-4579-95c1-69053ed1b4f7>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bc13be7e-86c1-4650-b86e-7d53feebec9b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/cc1b6fbb-657d-407b-aeac-951558ee15e2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d33e9543-8f40-49b0-a2d5-2320f9f4522b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d5a94fe9-97f4-463e-bcb6-862733fc0afc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d76620a1-57d5-462e-8c74-d64731bbe054>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f135efdc-477c-455a-9277-82c44a6ed805> ;
+    ns1:geplandeStart "2025-01-06T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/75d79944-710b-4df7-8240-a7b3d8159f99> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/665255d0-7d5a-46c7-b8c6-3456470b9f56> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/27d6213e-b091-444c-b7a5-43982e84ce70> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:uuid "63ffd230-c830-11ef-9218-6931664218fe" ;
+    prov:atLocation "Gemeentelijke bibliotheek" ;
+    prov:startedAtTime "2025-01-06T20:00:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/012dd980-fcd7-4668-9913-47074894f812> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2d9dc155-1b93-4953-a28a-3a6a84cf2af0> ;
+    ns1:openbaar true ;
+    ns3:uuid "c1f8fde0-ce79-11ef-9218-6931664218fe" ;
+    dcterms:description """ 
+                             
+                                Aanvraag omgevingsvergunning betreffende het uitbreiden van de Boembekemolen met referentie OMV_2024093747. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                Aanvraag omgevingsvergunning betreffende het uitbreiden van de Boembekemolen met referentie OMV_2024093747. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/012dd980-fcd7-4668-9913-47074894f812> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/012dd980-fcd7-4668-9913-47074894f812> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/012dd980-fcd7-4668-9913-47074894f812> a ns1:Besluit ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:title "Beslissing betreffende definitieve vastlegging rooilijnen naar aanleiding van de aanvraag tot omgevingsvergunning met referentie OMV_2024093747 betreffende het uitbreiden van de Boembekemolen." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Decreet Lokaal Bestuur van 22/12/2017. 
+                                    Decreet houdende de gemeentewegen. 
+                                    Vlaamse Codex Ruimtelijke Ordening, met bijhorende uitvoeringsbesluiten. 
+                                    Decreet betreffende de omgevingsvergunning, met bijhorende uitvoeringsbesluiten. 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Het dossier kadert in de aanvraag van de omgevingsvergunning met referentie OMV_2024093747 betreffende het uitbreiden van de Boembekemolen, gelegen Boembeke 18, 9660 Brakel. De site ligt op de grens van 3 gemeenten: Brakel, Zwalm en Zottegem. 
+                                    Gelet op het Decreet Lokaal Bestuur; 
+                                    Gelet op de Vlaamse Codex Ruimtelijke Ordening, met bijhorende uitvoeringsbesluiten; 
+                                    Gelet op het Decreet betreffende de omgevingsvergunning, met bijhorende uitvoeringsbesluiten; 
+                                    Gelet op het Decreet houdende de gemeentewegen; 
+                                    Bij de heraanleg van de straat Boembeke, welke in oorsprong voor de gevel van de molen liep, om met een korte en steile bocht aan te sluiten bij de brug over de Zwalm, werd er tijdens werken destijds beslist om de straat recht te trekken. De toenmalige wegenis verliep via het grondgebied van de gemeenten Brakel en Zwalm. 
+                                    Deze rechttrekking was niet administratief geregeld met een onteigening en of ruiling van gronden. Zo werd tijdens de werken overeengekomen de weg recht te trekken door de eigendom van de toenmalige familie Mulder die woonde op Boembeke 16. De vrijgekomen wegzate zou verder dienen als toegang voor de molen. 
+                                    De huidige reële ligging van de weg komt dus al jaren niet overeen met de juridische situatie en dit dient rechtgezet te worden. 
+                                    Om de situatie administratief naar behoren te regelen is een rooilijnplan opgesteld waarvan de goedkeuring wordt geïntegreerd in deze omgevingsaanvraag en ter goedkeuring wordt voorgelegd aan de gemeenteraden van Brakel en Zwalm. Het opgestelde rooilijnplan is toegevoegd als bijlage aan dit punt. 
+                                    Het aanpassen van de rooilijn, zorgt er voor dat een stuk van de parking niet langer officieel in de wegzate ligt, maar de gemeente heeft uitdrukkelijk aan dat het daarom nog geen eigendom is van Natuurpunt. De gemeente zal later bepalen hoe dit verder dient aangepakt en geregeld te worden. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet Lokaal Bestuur van 22/12/2017. 
+                                                                    Decreet houdende de gemeentewegen. 
+                                                                    Vlaamse Codex Ruimtelijke Ordening, met bijhorende uitvoeringsbesluiten. 
+                                                                    Decreet betreffende de omgevingsvergunning, met bijhorende uitvoeringsbesluiten. 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Het dossier kadert in de aanvraag van de omgevingsvergunning met referentie OMV_2024093747 betreffende het uitbreiden van de Boembekemolen, gelegen Boembeke 18, 9660 Brakel. De site ligt op de grens van 3 gemeenten: Brakel, Zwalm en Zottegem. 
+                                                                    Gelet op het Decreet Lokaal Bestuur; 
+                                                                    Gelet op de Vlaamse Codex Ruimtelijke Ordening, met bijhorende uitvoeringsbesluiten; 
+                                                                    Gelet op het Decreet betreffende de omgevingsvergunning, met bijhorende uitvoeringsbesluiten; 
+                                                                    Gelet op het Decreet houdende de gemeentewegen; 
+                                                                    Bij de heraanleg van de straat Boembeke, welke in oorsprong voor de gevel van de molen liep, om met een korte en steile bocht aan te sluiten bij de brug over de Zwalm, werd er tijdens werken destijds beslist om de straat recht te trekken. De toenmalige wegenis verliep via het grondgebied van de gemeenten Brakel en Zwalm. 
+                                                                    Deze rechttrekking was niet administratief geregeld met een onteigening en of ruiling van gronden. Zo werd tijdens de werken overeengekomen de weg recht te trekken door de eigendom van de toenmalige familie Mulder die woonde op Boembeke 16. De vrijgekomen wegzate zou verder dienen als toegang voor de molen. 
+                                                                    De huidige reële ligging van de weg komt dus al jaren niet overeen met de juridische situatie en dit dient rechtgezet te worden. 
+                                                                    Om de situatie administratief naar behoren te regelen is een rooilijnplan opgesteld waarvan de goedkeuring wordt geïntegreerd in deze omgevingsaanvraag en ter goedkeuring wordt voorgelegd aan de gemeenteraden van Brakel en Zwalm. Het opgestelde rooilijnplan is toegevoegd als bijlage aan dit punt. 
+                                                                    Het aanpassen van de rooilijn, zorgt er voor dat een stuk van de parking niet langer officieel in de wegzate ligt, maar de gemeente heeft uitdrukkelijk aan dat het daarom nog geen eigendom is van Natuurpunt. De gemeente zal later bepalen hoe dit verder dient aangepakt en geregeld te worden. 
+                                                                 
+                                                            """@nl ;
+    ns3:uuid "c02ca250-ce79-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1. 
+                                    De gemeenteraad geeft goedkeuring aan de ontworpen rooilijn van de Boembekestraat zoals opgenomen op het plan in bijlage. De nieuwe rooilijn zoals opgenomen in de plannen wordt definitief vastgelegd. 
+                                    Artikel 2. 
+                                    Een uittreksel van dit besluit wordt gevoegd bij de aanvraag van de omgevingsvergunning OMV_2024093747. 
+                                    Artikel 3. 
+                                    Het besluit van de gemeenteraad tot definitieve vaststelling van het gemeentelijk rooilijnplan wordt onmiddellijk na de definitieve vaststelling gepubliceerd op de gemeentelijke website, en aangeplakt bij het gemeentehuis en ter plaatse, minstens aan het begin- en eindpunt van het nieuwe, gewijzigde of verplaatste wegdeel. 
+                                    Artikel 4. 
+                                    Het rooilijnplan wordt samen met het besluit van de gemeenteraad tot definitieve vaststelling van het gemeentelijk rooilijnplan onmiddellijk na de definitieve vaststelling met een beveiligde zending bezorgd aan het departement Mobiliteit en Openbare Werken en aan de deputatie van de provincie Oost-Vlaanderen. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Artikel 1. 
+                                                                    De gemeenteraad geeft goedkeuring aan de ontworpen rooilijn van de Boembekestraat zoals opgenomen op het plan in bijlage. De nieuwe rooilijn zoals opgenomen in de plannen wordt definitief vastgelegd. 
+                                                                    Artikel 2. 
+                                                                    Een uittreksel van dit besluit wordt gevoegd bij de aanvraag van de omgevingsvergunning OMV_2024093747. 
+                                                                    Artikel 3. 
+                                                                    Het besluit van de gemeenteraad tot definitieve vaststelling van het gemeentelijk rooilijnplan wordt onmiddellijk na de definitieve vaststelling gepubliceerd op de gemeentelijke website, en aangeplakt bij het gemeentehuis en ter plaatse, minstens aan het begin- en eindpunt van het nieuwe, gewijzigde of verplaatste wegdeel. 
+                                                                    Artikel 4. 
+                                                                    Het rooilijnplan wordt samen met het besluit van de gemeenteraad tot definitieve vaststelling van het gemeentelijk rooilijnplan onmiddellijk na de definitieve vaststelling met een beveiligde zending bezorgd aan het departement Mobiliteit en Openbare Werken en aan de deputatie van de provincie Oost-Vlaanderen. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/012dd980-fcd7-4668-9913-47074894f812> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/012dd980-fcd7-4668-9913-47074894f812> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "63fc4fc0-c830-11ef-9218-6931664218fe" ;
+    dcterms:title "Beslissing betreffende definitieve vastlegging rooilijnen naar aanleiding van de aanvraag tot omgevingsvergunning met referentie OMV_2024093747 betreffende het uitbreiden van de Boembekemolen." .
+

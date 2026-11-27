@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/64292094-595b-43a4-87fa-09b39de60c51> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3472ca46-17f4-4ac4-bd1f-9f96df40b42d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a8cb143-3660-4108-a22b-fa9ccdb124b7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5b259916-7445-4ace-b484-f7c83b7b4d8a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75e16e88-e441-46f3-b8fe-bfdc72375379>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ae3c8f2-fc63-403e-8535-13b5cdcdb902>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a88d3ed-3f9b-4dc5-911c-38aa5e088748>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c05f1264-5942-4187-9224-9611ce20f0e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c16dfd27-97d3-4aa3-917f-c99224ff85c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c25bee23-625c-4d41-bea7-565cba2c4a2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d550a5d5-70d8-4776-868e-a39ef5e49f13>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcc9faaa-6e3f-4a5b-897c-ceda838cc838>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de0eac1d-0c61-4d20-bde6-470901747aa6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de80fa75-f898-4125-93ac-28e4f6de06ff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e8a52fa2-bcac-4c32-8674-97e0bdca0810>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ede466d9-ba19-4838-a580-83f40ae2e2aa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee9535bc-5a7a-4dac-bc37-9c391d909286> ;
+    ns1:geplandeStart "2023-11-29T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e98f8837-bfd3-4adf-80c6-42ebe89cecfb> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04ef3b86-39d8-42fe-8c76-639f769cbf39> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4baf8289-60b0-4a35-82d9-c5435a9aa3dc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ead18d00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-11-29T22:20:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-11-29T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/de80fa75-f898-4125-93ac-28e4f6de06ff> ;
+    ns1:openbaar true ;
+    ns3:uuid "f25b0650-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9a18d283-9ac3-4f70-a9fc-41e02baa388c> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9a18d283-9ac3-4f70-a9fc-41e02baa388c> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad gaat akkoord met de aankoop van deze camera's voor een geraamd bedrag van 42.819,44 euro incl. btw via het raamcontract opgesteld door de Stad Kortrijk. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Aankoop extra camera's (parking achter de kerk van Waarschoot) via raamcontract Kortrijk: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester, 
+                                                            Chris De Wispelaere, schepen patrimonium 
+                                                            Jeroen Van Acker, schepen IT 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Wet van 15 juni 2016 betreffende de overheidsopdrachten en bepaalde opdrachten voor werken; leveringen en diensten, inzonderheid de artikelen 2, 6° 43 en 47Decreet Lokaal Bestuur van 22 december 2017, inzonderheid artikel 41, 10° gemeenteraad is bevoegd voor het vaststellen van de plaatsingsprocedure en het vaststellen van de voorwaarden van overheidsopdrachten tenzij opdracht binnen dagelijks bestuur of nominatief aan het college toevertrouwd: opdracht past niet binnen dagelijks bestuur en is niet nominatief aan college toevertrouwd.Het decreet van 26 maart 2004 betreffende de openbaarheid van bestuur.Het Decreet lokaal bestuur, en latere wijzigingen, inzonderheid artikelen 326 tot en met 334  56, betreffende het bestuurlijk toezicht. 
+                                                            Collegebesluit stad Kortrijk van 19 september 2022 over raamovereenkomst levering, installatie en uitbreiding van het stedelijk camerabewakingssysteem en bijhorende data gerelateerde diensten - gunningHet besluit van de gemeenteraad van 22 december 2021 over de Meerjarenplan 2020 - 2025 deel gemeente Lievegem: MJP actie 416: over aankoop van vaste camera'sHet collegebesluit van 14 december 2021 over opname als potentiële afnemer in de raamovereenkomst van stad Kortrijk voor de levering, installatie en uitbreiding van het stedelijk camerabewakingssysteem en bijhorende datagerelateerde diensten: principiële toestemmingHet collegebesluit van 11 oktober 2022 over de toetreding raamovereenkomst stad Kortrijk (2022/2589) levering, installatie en uitbreiding van het stedelijk camerabewakingssysteem en bijhorende data gerelateerde diensten. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente Lievegem heeft op 11 oktober 2022 de beslissing genomen toe te treden tot de raamovereenkomst voor de levering, installatie en uitbreiding van het stedelijk camerabewakingssysteem en bijhorende data gerelateerde diensten van de stad Kortrijk. Op basis van deze overeenkomst werd de opdracht gegeven om tot uitvoering over te gaan voor het plaatsen van camera's op het recyclagepark Zomergem, jeugdlokalen Zomergem (Kwadrant), TTC Zomergem (Oepites), bibliotheek Zomergem, BKO De Speelboom, Chiro Lovendegem, jeugdlokalen Waarschoot en kerk Waarschoot. 
+                                                            Omdat er de laatste tijd heel wat vandalisme vastgesteld werd aan wagens die geparkeerd stonden op de parking achter de kerk in Waarschoot werd gevraagd om ook hiervoor een offerte op te maken. Op dinsdag 31 oktober werd er een rondgang gedaan op deze site met de firma RTS, team IT en team patrimonium. Op basis van die rondgang werd een offerte ingediend. Zonder dat daarbij de graafwerken inbegrepen zijn om de kosten te drukken. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De offerte voor het plaatsen van 9 camera's op de parking achter de kerk van Waarschoot bedraagt  35.387,97 euro excl. btw of 42.819,44 euro incl. btw. In deze offerte is exclusief de grondwerken, door deze werken te laten uitvoeren in eigen beheer besparen we een 4.500 euro. 
+                                                            Deze uitgave zal geboekt worden op jaarbudgetrekening 2023/ACT-416/0490-00/2300000/GEMEENTE/CBS/IP-GEEN waarop momenteel geen krediet meer beschikbaar is voor deze uitgave. Daarom zal bij de volgende meerjarenplanaanpassing 4 een extra krediet van 50.000 euro voorzien worden. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "eacecde0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad gaat akkoord met de aankoop van 9 camera's op de parking achter de kerk van Waarschoot voor een geraamd bedrag van 42.819,44 euro incl. btw via het raamcontract opgesteld door de Stad Kortrijk. De gunning zal voorgelegd worden aan het college. 
+                                                            Artikel 2 
+                                                            De gemeenteraad gaat akkoord om bij de volgende meerjarenplanaanpassing 4 het krediet te verhogen met 50.000 euro. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f1053a50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Aankoop extra camera's (parking achter de kerk van Waarschoot) via raamcontract Kortrijk: goedkeuring" .
+

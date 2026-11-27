@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/1d05ff61-f30d-4a9c-bc96-843f5b682f6f> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1ab620df-c385-456c-8588-c7866a71dbfa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1efb8923-5398-4031-9c98-f0b9644f98f1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5bfb334c-f14e-4aeb-9135-7788b04490ee>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/68528465-5f8a-4c45-aabe-81bf3f5540fe>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/731878bc-cc08-4786-8ae3-e0f0c20d7b9b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/74bfea29-0c8b-4125-bfd0-8b1025d34960>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/9286d7d1-b6b2-4066-981c-3bd95e523443>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a11ce0e1-2282-454d-8d34-63cfe9a1335e>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c9158810-1e83-4732-9899-efd3e028ba5f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/cf5df699-825a-43bc-931b-cf3df0ab4681>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/dc2c6ba3-3f27-488a-a3e1-631e2833acf5>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/df5b62d1-213a-4252-b660-b21201f8fc3c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e68f4472-800d-48d2-ab0a-c52c6721157b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e7defbaf-63e5-4a49-90f1-f262aa5f4f53>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/ed2d2b5b-9769-49ae-b4a3-85f0a908489f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fecd96f1-ef6d-4149-b595-ffc4368b2c15> ;
+    ns1:geplandeStart "2025-07-07T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/02d3a02b-3be9-4689-a7f3-b2e6517f8dc5> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/21be75e2-8fe9-459c-b1b6-e0e8b52047fa> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/3943587c-8057-4057-8d2b-b3d3186b1294> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:uuid "04c99566-fc1a-5845-93ad-f4d2fd0c8fb1" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-07-07T19:58:00+02:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1ab620df-c385-456c-8588-c7866a71dbfa> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/68528465-5f8a-4c45-aabe-81bf3f5540fe> ;
+    ns1:openbaar true ;
+    ns3:uuid "d32982d8-e10c-57e4-909d-6cecf1b345ec" ;
+    dcterms:description """ 
+                                                             
+                                                                Het aangetekend schrijven d.d. 12 juni 2025 vanwege advocatenkantoor DLA Piper UK LLP waarbij de gemeente Brakel wordt uitgenodigd om deel te nemen aan de Algemene Vergadering sluiting vereffening CVBA Gemeentedienst van België d.d. 07 juli 2025. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1ab620df-c385-456c-8588-c7866a71dbfa> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/1ab620df-c385-456c-8588-c7866a71dbfa> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/1ab620df-c385-456c-8588-c7866a71dbfa> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:title "Samenwerkingsverbanden. Uitnodiging Algemene Vergadering sluiting vereffening Gemeentedienst van België d.d. 07 juli 2025. Bekrachtiging." ;
+    ns1:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Het decreet Lokaal Bestuur van 22 december 2017; 
+                                                                    Het raadsbesluit d.d. 07 april 2025 omtrent de aanduiding van een vertegenwoordiger; 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    - De gemeente is deelnemer van de dienstverlenende vereniging Gemeentelijke Holding NV - in vereffening. 
+                                                                    - Het raadsbesluit d.d. 07/04/2025 omtrent de aanduiding van een vertegenwoordiger of plaatsvervanger voor de Algemene Vergadering voor de volledige legislatuur. 
+                                                                    - De aangetekend brief van 12 juni 2025 met de uitnodiging tot deelname aan de Algemene Vergadering sluiting vereffening CVBA Gemeentedienst van België met volgende agendapunten: 
+                                                                    1. Bespreking en goedkeuren van het verslag van de vereffenaar 
+                                                                    2. Kwijting van de vereffenaar 
+                                                                    3. Sluiting van de vereffening 
+                                                                    4. Varia 
+                                                                    - De vergadering zal fysiek en tevens virtueel doorgaan (via Teams) 
+                                                                    - Het college d.d. 23 juni 2025 nam kennis van de uitnodiging tot deelname aan de Algemene Vergadering betreffende de sluiting vereffening CVBA Gemeentedienst van België en stelde voor om de agenda goed te keuren. 
+                                                                 
+                                                            """@nl ;
+    ns3:uuid "7ca180df-b731-5ea6-98c6-c4112566dfcf" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Art. 1: Het voorstel van het College van Burgemeester en Schepenen om de agenda van de Algemene Vergadering sluiting vereffening CVBA Gemeentedienst van België d.d. 07 juli 2025 goed te keuren, wordt bekrachtigd. 
+                                                                    Art. 2: De vertegenwoordiger van de gemeente die zal deelnemen aan de jaarlijkse Algemene Vergadering wordt opgedragen het stemgedrag af te stemmen op de beslissing genomen zoals in artikel 1 van dit besluit.  
+                                                                    Art. 3: Afschrift van deze beslissing zal worden opgestuurd naar advocatenkantoor DLA Piper UK LLP: Wolstraat 70 - 1000 Brussel. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1ab620df-c385-456c-8588-c7866a71dbfa> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1ab620df-c385-456c-8588-c7866a71dbfa> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "d88b013d-2fbd-549d-978c-f7e159fbbe4d" ;
+    dcterms:title "Samenwerkingsverbanden. Uitnodiging Algemene Vergadering sluiting vereffening Gemeentedienst van België d.d. 07 juli 2025. Bekrachtiging." .
+

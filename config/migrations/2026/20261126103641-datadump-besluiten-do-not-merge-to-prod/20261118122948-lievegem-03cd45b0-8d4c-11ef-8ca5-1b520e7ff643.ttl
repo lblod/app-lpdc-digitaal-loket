@@ -1,0 +1,126 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/2ec82901-a94c-42b0-8b61-6ed32a05de92> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/00d92536-5897-4be6-b092-9b5df869bddf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0176e5f4-9b78-4e78-bd48-56d9e3e88ba1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/090eca6d-836b-4b24-9d7e-7c39bed6f77b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c9443d6-5000-4daf-8fd8-db18aecbbe65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0cc70a5c-0df3-4ec7-af3c-662c1c2b2c07>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0d76ab97-f84d-437c-b5e3-efe23e215da0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/353cfdfa-b574-4ff8-96f2-71726b6efea5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5063a856-701d-4c8c-9e51-0dac7e35bb94>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52db49ba-707a-4b4c-a785-2edec5ffa451>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5b6d64d2-fd0d-468a-a774-78d2725f3240>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5db94b9f-2797-49ed-a26d-1641f63f4e12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a8edb6d-412c-4d18-adfb-f509e4bdcea6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/77aef472-952b-4bb6-aaf7-ff0ceaa12d68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/852be256-4fd4-42c0-8617-8f5e5edc319c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/866df99b-69bc-4e98-becf-59409d6aff6e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8aececad-e18d-49c5-b5e4-eb49440af3c3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ac37c149-e932-4f99-a8a8-27c6b32ef710>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce82ec5c-35c4-4296-9a87-48bf7c2b172a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e48814ec-5c65-497c-a849-23b1d61f2427>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e6450a31-5680-42da-bbfb-98179ff9b0d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f64091af-bade-4bc3-b009-ca3491b51483>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fb83b77d-671b-47d5-a08e-dff99bbbdc3a> ;
+    ns2:geplandeStart "2024-04-24T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/74394c5f-49e8-45dc-92e0-9e44b0d6eaca> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e831143c-0877-4cbd-9bb8-0aecf04bb6e2> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/66c94526-a25d-4bb2-9979-23a16d34f7ff> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "00aca4c0-8d4c-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-04-24T20:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-04-24T19:59:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0c9443d6-5000-4daf-8fd8-db18aecbbe65> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f64091af-bade-4bc3-b009-ca3491b51483> ;
+    ns2:openbaar true ;
+    ns1:uuid "05fa5ee0-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c9443d6-5000-4daf-8fd8-db18aecbbe65> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0c9443d6-5000-4daf-8fd8-db18aecbbe65> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0c9443d6-5000-4daf-8fd8-db18aecbbe65> a ns2:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt de mandaten van de vertegenwoordigers voor de algemene vergadering van Imewo op 17 juni 2024, vast.De gemeenteraad keurt de agenda van de algemene vergadering, de individuele agendapunten goed.De gemeenteraad mandateert de vertegenwoordiger van de gemeente die zal deelnemen aan voormelde algemene vergadering om te stemmen zoals de gemeenteraad heeft beslist.Conform het decreet brengt de gemeentelijke vertegenwoordiger verslag uit over de bevoegdheden en taken en een toelichting geven het beleid van de dienstverlenende vereniging. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Opdrachthoudende vereniging lntercommunale maatschappij voor energievoorziening in West- en Oost-Vlaanderen (IMEWO) - gewone algemene vergadering 17 juni 2024 -  agenda en mandaat vertegenwoordiging: goedkeuring en vaststelling",
+        "Opdrachthoudende vereniging lntercommunale maatschappij voor energievoorziening in West- en Oost-Vlaanderen (IMEWO) - gewone algemene vergadering 17 juni 2024 - agenda en mandaat vertegenwoordiging: goedkeuring en vaststelling" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Steven Lambert, bestuurder raad van bestuur Oost Imewo 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur 22 december 2017, in het bijzonder artikel 432 (vaststelling mandatering)Energiedecreet van 8 mei 2009Gemeenteraadsbesluit van 30 januari 2019 over de aanduiding de vertegenwoordigers in de algemene vergaderingen aan en de voordracht van een bestuurder voor de raad van bestuur voor de ov Imewo Statuten van IMEWO 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente Lievegem is lid van de ov Imewo.De gemeenteraad duidde op 30 januari 2019 de vertegenwoordigers in de algemene vergaderingen aan en droeg een bestuurder voor de raad van bestuur voor de ov Imewo De gemeente werd op 2 april 2024 opgeroepen voor de gewone algemene vergadering van Imewo op 17 juni 2024.De gemeenteraad is bevoegd om het mandaat van de vertegenwoordigers in intergemeentelijke samenwerkingsverbanden vast te stellen en het standpunt te bepalen dat de gemeentelijke vertegenwoordigers moeten innemen op een algemene vergadering. 
+                                                            Omwille van het voorstel tot vrijwillige samenvoeging van de gemeente De Pinte en de gemeente Nazareth met ingangsdatum 1 januari 2025, heeft de gemeente Nazareth bij gemeenteraadsbeslissing van 18 december 2023, na een vergelijkend onderzoek, beslist om alle activiteiten die momenteel aan de Opdrachthoudende vereniging Gaselwest zijn toevertrouwd, met ingang van 1 januari 2025 – zijnde de inwerkingtredingsdatum van de nieuwe gemeente – toe te vertrouwen aan de Opdrachthoudende vereniging Imewo.Daarom stellen de Raden van Bestuur van Gaselwest en Imewo voor een partiële splitsing door overneming te realiseren waarbij de gemeente Nazareth voor de activiteiten elektriciteit, aardgas, Strategische Participaties (Publi-T en Publigas), openbare verlichting en openbare elektronische-communicatienetwerken uit de Opdrachthoudende vereniging Gaselwest zal treden en hiervoor zal toetreden bij de Opdrachthoudende vereniging Imewo. Door deze partiële splitsing zal de fusiegemeente Nazareth-De Pinte per 1 januari 2025 de randvoorwaarden kunnen respecteren. 
+                                                            Door het voorstel tot oprichting van de wachtstructuur TRANSCO ENERGY CV, beslist door de Raad van Bestuur van Imewo in zijn zitting van 20 maart 2024, en de beslissing om de oprichting, de inbreng in geld (2.000,00 euro), de goedkeuring van de ontwerpstatuten, het financieel plan, de motiveringsnota, de nota mogelijke aandeelhoudersovereenkomst en de gevraagde volmachtverlening, ter bekrachtiging voor te leggen aan de Algemene Vergadering van 17 juni 2024.De beslissing tot deelneming van een dienstverlenende of opdrachthoudende vereniging in een andere rechtspersoon moet genomen door de Algemene Vergadering op grond van een verslag dat de Raad van Bestuur heeft opgemaakt waarin de voor- en nadelen van de deelneming worden afgewogen en waarin wordt aangetoond dat de opdrachthoudende vereniging zelf niet die voordelen kan bieden. De Raad van Bestuur van Imewo keurde in voormelde zitting van 20 maart 2024 het verslag aan de Algemene Vergadering goed. Samengevat zijn de voordelen van de oprichting van TRANSCO ENERGY CV o.a. het bestendigen van de gemeentelijke controle en strategische verankering van Elia (via Publi-T) en Fluxys (via Publigas) zonder de gemeente financieel te belasten (een goedkeuring van deze oprichting impliceert geenszins onomkeerbare stappen, noch onomkeerbare financiële engagementen voor Imewo of de gemeente), het gegeven dat dergelijke structuur veel toegankelijker is voor, en gekend door, externe investeerders dan de publiekrechtelijke figuur van de opdrachthoudende vereniging, zonder daarbij de rechten en belangen van de gemeenten uit het oog te verliezen (waarbij Imewo recht heeft op minstens één bestuurder, die regelmatig verslag moet uitbrengen). Ook de gefaseerde aanpak in dit dossier heeft een aantal duidelijke voordelen zoals de eenvoudige mogelijkheid tot vereffening indien nodig, het sneller kunnen schakelen bij een eerstvolgende kapitaaloperatie van Elia/Publi-T (of Fluxys/Publigas), de creatie van een duidelijk afgelijnde overlegstructuur en het feit dat er nu nog geen verregaande akkoorden moeten worden gesloten met niet-gemeentelijke partners, waarbij nu enkel sprake is van een minimale cash-inbreng zonder het beleid van de nieuwe gemeenteraad in de volgende legislatuur of de toekomstige ontwikkeling van de financiën van de gemeente nodeloos te verstoren (geen substantiële financiële impact op het gemeentebestuur). 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "03cd45b0-8d4c-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad stelt het mandaat van Vincent Laroy, schepen, wonende te 9920 Lievegem, Varensbos 39, als effectieve vertegenwoordiger voor de gewone algemene vergadering van Imewo op 17 juni 2024, vast.Artikel 2De gemeenteraad stelt het mandaat van Freddy Haegeman, schepen, wonende te 9950 Lievegem, Renning 15, als plaatsvervangend vertegenwoordiger voor de gewone algemene vergadering van Imewo op 17 juni 2024, vast.Artikel 3De agenda van de gewone algemene vergadering op 17 juni 2024 bestaat uit volgende punten: 
+                                                            1. Realisatie van een partiële splitsing door overneming overeenkomstig de artikelen 12:8 en 12:59 en volgende WVV van de Opdrachthoudende vereniging Gaselwest (partieel te splitsen vereniging) om de activiteiten elektriciteit, aardgas, Strategische Participaties (Publi-T en Publigas), openbare verlichting en openbare elektronische- communicatienetwerken van de gemeente Nazareth, dewelke zij heeft toevertrouwd aan Gaselwest, over te brengen naar de Opdrachthoudende vereniging Imewo (overnemende vereniging): 
+                                                             
+                                                                Vaststelling van de in het splitsingsvoorstel opgenomen opschortende voorwaarden en tijdsbepaling 
+                                                                Kennisneming van het splitsingsvoorstel (art. 12:59 WVV), van het omstandig verslag van de Raad van Bestuur (art. 12:61 WVV) en van de Commissaris (art. 12:62 WVV) met betrekking tot het voorstel tot partiële splitsing door overneming en van eventuele belangrijke wijzigingen in activa en passiva van het vermogen (art. 12:63 WVV), met juridische, boekhoudkundige en fiscale uitwerking van de partiële splitsing per 1 januari 2025. De deelnemers kunnen één maand voor de Algemene Vergadering op de zetel van Imewo kennis nemen van het splitsingsvoorstel, voormelde verslagen en de overige stukken bedoeld in de artikelen 12:59, 12:61 en 12:62 WVV en kosteloos een kopie van deze stukken verkrijgen. 
+                                                                Goedkeuring van:i.    De partiële splitsing door overneming van de Opdrachthoudende vereniging Gaselwest (partieel te splitsen vereniging) om de activiteiten elektriciteit, aardgas, Strategische Participaties (Publi-T en Publigas), openbare verlichting en openbare elektronische-communicatienetwerken van de gemeente Nazareth, over te brengen naar de Opdrachthoudende vereniging Imewo (overnemende vereniging) omvattende alle activa en passiva en alle rechten en plichten, niets uitgezonderd, noch voorbehouden, en dit op basis van een balans afgesloten op 31 december 2023, met inwerkingtreding per 1 januari 2025 en dit op basis van de ruilverhouding (voorlopige) van de balans afgesloten op 31 december 2023 en een definitieve ruilverhouding vastgesteld op de balans per 31 december 2024;ii.    De overeenkomstige wijzigingen aan het eigen vermogen;iii.    De overeenkomstige wijzigingen aan het register van de deelnemers. 
+                                                                Aanvaarding van de toetreding voor de activiteiten elektriciteit, aardgas, Strategische Participaties (Publi-T en Publigas), openbare verlichting en openbare elektronische- communicatienetwerken van de gemeente Nazareth vanaf 1 januari 2025. 
+                                                                Vaststelling van de noodzakelijke uitvoeringsmaatregelen en verlenen van de desbetreffende machtiging naar aanleiding van de besluitvorming omtrent de partiële splitsing en wijzigingen aan het eigen vermogen en inzonderheid verlening van machtiging aan de Raad van Bestuur met mogelijkheid tot subdelegatie om:i.    De al dan niet vervulling van de opschortende voorwaarden die gelden ten aanzien van de partiële splitsing zoals vermeld onder punt 1.a vast te stellen;ii.    De verwezenlijking van de partiële splitsing vast te stellen;iii.    Het overgedragen vermogen exact te beschrijven, en desgevallend de Algemene Administratie van de Patrimoniumdocumentatie vrij te stellen van het nemen van een ambtshalve inschrijving;iv.    De definitieve ruilverhouding in het kader van de partiële splitsing vast te stellen op basis van de geactualiseerde netto actief-waarde van de partieel te splitsen vereniging en de overnemende vereniging per 31 december 2024, berekend volgens de principes vastgelegd in het partiële splitsingsvoorstel en de bijzondere verslagen over het partiële splitsingsvoorstel, dit na revisorale controle van de cijfers per 31 december 2024;v.    Daartoe alle akten en stukken te tekenen, woonplaats te kiezen en alles te doen wat nodig of nuttig kan zijn;vi.    Alle formaliteiten te vervullen met betrekking tot de neerlegging en publicatie van de beslissingen van de Algemene Vergadering en de uitvoering van de partiële splitsing in de meest brede zin. 
+                                                             
+                                                            
+                                                                2. Kennisneming verslagen van Imewo van de Raad van Bestuur en van de commissaris over het boekjaar 2023.
+                                                             
+                                                            
+                                                                3. Goedkeuring van de jaarrekening van Imewo afgesloten op 31 december 2023 (balans, resultatenrekening, winstverdeling, boekhoudkundige besluiten en waarderingsregels).
+                                                             
+                                                            
+                                                                4. Vaststelling uitkeringen overeenkomstig art. 6:114 en volgend WVV.
+                                                             
+                                                            
+                                                                5.  Kwijting te verlenen afzonderlijk aan de bestuurders, de leden van de regionale bestuurscomités en de commissaris van Imewo met betrekking tot het boekjaar 2023.
+                                                             
+                                                            
+                                                                6.  Voorstel oprichting onthaalstructuur voor belangen in Publi-T en Publigas
+                                                             
+                                                            
+                                                                7.  Desgevallend aanvaarding uitbreiding activiteiten gemeenten voor (neven)activiteiten.
+                                                             
+                                                            
+                                                                8.  Statutaire benoemingen.
+                                                             
+                                                            
+                                                                9.  Verlenen van machtiging aan de Secretaris van de Raad van Bestuur met de mogelijkheid tot subdelegatie voor de opmaak en finalisering van de nodige documenten en 
+                                                                     afhandeling van de formaliteiten met betrekking tot de agendapunten 1, 6 en desgevallend 7 en 8 te actualiseren en te finaliseren, en om de beslissingen genomen in de 
+                                                                     agendapunten 1, 6 en desgevallend 7 en 8 bij authentieke akte te doen vaststellen.
+                                                             
+                                                            
+                                                                10. Statutaire mededelingen.
+                                                             
+                                                            Artikel 4De gemeenteraad hecht zijn goedkeuring  aan het voorstel van partiële splitsing Gaselwest/Imewo door overneming inzake de overgang van Gaselwest naar Imewo van alle activiteiten verbonden aan de gemeente Nazareth.De Algemene Vergadering van Imewo wordt verzocht de toetreding van de gemeente Nazareth voor de activiteiten elektriciteit, aardgas, Strategische Participaties (Publi-T en Publigas), openbare verlichting en openbare elektronische-communicatienetwerken te willen aanvaarden. 
+                                                            Artikel 5De gemeenteraad hecht zijn goedkeuring aan het voorstel tot oprichting van de wachtstructuur TRANSCO ENERGY CV door Imewo.De Algemene Vergadering van Imewo wordt verzocht de oprichting, de inbreng in geld (2.000,00 euro), de ontwerpstatuten, het financieel plan, de motiveringsnota, de nota mogelijke aandeelhoudersovereenkomst en de gevraagde volmachtverlening te willen bekrachtigen. 
+                                                            Artikel 6De gemeenteraad mandateert de vertegenwoordiger van de gemeente die zal deelnemen aan de gewone algemene vergadering op 17 juni 2024, om te stemmen zoals de gemeenteraad heeft beslist. 
+                                                            Artikel 7De gemeentelijk vertegenwoordiger binnen de intergemeentelijke vereniging beantwoordt de eventuele vragen over de uitoefening van de bevoegdheden en taken van de raad van bestuur. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0c9443d6-5000-4daf-8fd8-db18aecbbe65> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c9443d6-5000-4daf-8fd8-db18aecbbe65> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "00aaf710-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Opdrachthoudende vereniging lntercommunale maatschappij voor energievoorziening in West- en Oost-Vlaanderen (IMEWO) - gewone algemene vergadering 17 juni 2024 - agenda en mandaat vertegenwoordiging: goedkeuring en vaststelling" .
+

@@ -1,0 +1,180 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/64292094-595b-43a4-87fa-09b39de60c51> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0aa73acd-e771-4544-9769-ee1387d1d651>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/121dfcb5-3ec1-4700-8cca-d7102942f14e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3472ca46-17f4-4ac4-bd1f-9f96df40b42d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a8cb143-3660-4108-a22b-fa9ccdb124b7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5b259916-7445-4ace-b484-f7c83b7b4d8a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75e16e88-e441-46f3-b8fe-bfdc72375379>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7e680f91-0eff-44ac-9eb1-9ea7463a5d9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ae3c8f2-fc63-403e-8535-13b5cdcdb902>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a88d3ed-3f9b-4dc5-911c-38aa5e088748>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c05f1264-5942-4187-9224-9611ce20f0e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c16dfd27-97d3-4aa3-917f-c99224ff85c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c25bee23-625c-4d41-bea7-565cba2c4a2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d550a5d5-70d8-4776-868e-a39ef5e49f13>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcc9faaa-6e3f-4a5b-897c-ceda838cc838>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de0eac1d-0c61-4d20-bde6-470901747aa6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de80fa75-f898-4125-93ac-28e4f6de06ff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e8a52fa2-bcac-4c32-8674-97e0bdca0810>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ede466d9-ba19-4838-a580-83f40ae2e2aa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee9535bc-5a7a-4dac-bc37-9c391d909286> ;
+    ns1:geplandeStart "2023-11-29T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e98f8837-bfd3-4adf-80c6-42ebe89cecfb> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04ef3b86-39d8-42fe-8c76-639f769cbf39> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4baf8289-60b0-4a35-82d9-c5435a9aa3dc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ead18d00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-11-29T22:20:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-11-29T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9a18d283-9ac3-4f70-a9fc-41e02baa388c> ;
+    ns1:openbaar true ;
+    ns3:uuid "f25adf40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4a97f293-a498-403d-a94c-85fd0ef269b5> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4a97f293-a498-403d-a94c-85fd0ef269b5> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad gaat akkoord dat er in het toewijsreglement een strengere woonbinding voorafgaand aan de langdurige woonbinding wordt opgenomen en dat het bestaande doelgoepenplan voor Kerkelare behouden blijft. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Toewijzingsreglement van de nieuwe huisvestingsmaatschappij Dimensa. Vastlegging strengere woonbinding, woonbinding met het werkingsgebied en doelgroepenplannen :  goedkeuring",
+        "Toewijzingsreglement van de nieuwe huisvestingsmaatschappij Dimensa. Vastlegging strengere woonbinding, woonbinding met het werkingsgebied en doelgroepenplannen : goedkeuring" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Hilde De Graeve, schepen sociale zaken 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur van 21 december 2017, artikel 40§1 en 56 
+                                    Het gecodificeerd decreet over het Vlaamse woonbeleid van 17 juli 2020, boek 6 
+                                    Het besluit van de Vlaamse regering van 11 september 2020 tot uitvoering van de Vlaamse Codex Wonen 2021, boek 6 
+                                    Het decreet van 9 juli 2021 houdende wijziging van diverse decreten met betrekking tot wonen (dat o.a. wijzigingen aanbrengt in de Vlaamse Codex Wonen van 2021)   Het besluit van de Vlaamse Regering van 17 december 2021 tot wijziging van verschillende besluiten over wonen (dat o.a. wijzigingen aanbrengt in het Besluit van de Vlaamse Codex Wonen van 2021) 
+                                    Beslissing van de gemeenteraad van 20 oktober 2021 tot goedkeuring van de afbakening van het werkingsgebied Zuidwestrand Gent en tot goedkeuring van het afsprakenkaderBeslissing van de gemeenteraad van 30 maart 2022 over de afbakening van het werkingsgebied van de woonmaatschappijen en het vastleggen onderlinge stemverhouding Beslissing van de gemeenteraad van 25 mei 2022 tot goedkeuring van de verduidelijking onderlinge stemverhouding voor het traject woonmaatschappijen. 
+                                    Beslissing van de gemeenteraad van 14 september 2022 tot goedkeuring van het advies aan de Vlaamse Regering omtrent de te vormen woonmaatschappij in het werkingsgebied Gent-Zuid en tot kennisname van de verlenging van de erkenning van de sociale huisvestingsmaatschappij Volkshaard BV tot 30 juni 2023 
+                                    Beslissing van het college van burgemeester en schepenen van 24 oktober 2023 over de principiële goedkeuring van het toewijzingsreglement van de nieuwe huisvestingsmaatschappij Dimensa, de vastlegging van een strengere woonbinding, een woonbinding met het werkingsgebied en doelgroepenplannen 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Om een woonbeleid op maat te realiseren wordt in de Vlaamse Codex Wonen de gemeente als regisseur van het lokaal woonbeleid aangeduid. De gemeente krijgt op die manier de mogelijkheid om het overleg tussen de verschillende woonorganisaties te coördineren en te organiseren met als doel een geïntegreerd en gedragen lokaal woonbeleid. 
+                                    De Vlaamse regering heeft beslist dat er per gemeente slechts één woonactor actief mag zijn. De gemeenten zijn aangeduid als regisseur van het lokaal woonbeleid. 
+                                    In het Besluit Vlaamse Codex Wonen Boek 6 (dit is het oude Kaderbesluit Sociale Huur) wordt ruimte gelaten om bij het vastleggen van de toewijzingsregels lokale accenten te leggen, uitgedrukt in een eigen toewijzingsreglement. 
+                                    Vrijdag 17 december keurde de Vlaamse regering definitief het besluit goed dat de regelgeving inzake sociale huur grondig wijzigt. Zo wordt vanaf 1 januari 2023 onder andere een nieuw toewijsmodel voor sociale woningen ingevoerd. 
+                                    Het nieuwe eengemaakte toewijsmodel is gebaseerd op vier pijlers: 
+                                    Pijler 1 De standaardtoewijzing die vooral gebeurt op basis van langdurige woonbinding 
+                                    Pijler 2  De versnelde toewijzing van kandidaat-huurders met een bijzondere nood of in precaire omstandigheden. Dit betreft verplicht contingent van 20% van de toewijzingen in het werkingsgebied. Binnen dit contingent geldt de lokale bindingsvoorwaarde niet. 
+                                    Pijler 3 Toewijzing van kandidaat-huurders die behoren tot een specifieke doelgroep. Een derde van het totale aantal sociale huurwoningen in de gemeente kan zo bij voorrang worden toegewezen aan of voorbehouden worden voor specifieke doelgroepen. 
+                                    Pijler 4 Toewijzing van kandidaat-huurders naar aanleiding van interne mutaties 
+                                    Het nieuwe model gaat sterk uit van een langdurige woonbinding. Gemeenten kunnen deze ook nog verstrengen. Het toewijsmodel bouwt een aantal mogelijkheden in voor meer kwetsbare doelgroepen in pijler twee en drie.  Zo kunnen gemeenten doelgroepen bepalen waaraan woningen – binnen maxima – met voorrang kunnen toegewezen worden. Voor de doorstroom uit noodwoningen, een belangrijk punt voor de werking van het noodwoningenbeleid van een lokaal bestuur, is aandacht binnen de tweede pijler. 
+                                    Het voorbije jaar werden de nodige stappen gezet om tot één woonmaatschappij te komen. De nieuwe woonmaatschappij voor het werkingsgebied waartoe Lievegem behoort heet Dimensa en is op 1 juli 2023 gestart. 
+                                    De toewijzingsraad van Dimensa Woonmaatschappij bereidt momenteel een ontwerp van toewijzingsreglement voor. Hierin kunnen dus bepalingen over de verstrenging van de langdurige woonbinding en bepalingen voor specifieke doelgroepen worden opgenomen. Voorafgaand aan de opmaak van dit toewijsreglement, vraagt Dimensa Woonmaatschappij om reeds een beslissing te maken over de eventuele strengere woonbinding, de woonbinding met het werkingsgebied en de doelgroepenplannen. 
+                                    1.    Strengere woonbinding  De gemeente kan voorafgaand aan de langdurige woonbinding (= tien jaar voor de toewijzing minstens vijf jaar ononderbroken in de gemeente wonen of gewoond hebben) een woonbinding toepassen die strenger is. De gemeente voegt in dat geval een voorrangsbepaling toe in het toewijzingsreglement. De voorrangsbepaling bepaalt het aantal jaar dat de kandidaat-huurder in de gemeente woont of gewoond heeft. 
+                                    voorstel : strengere woonbinding voorzien, voor de langdurige woonbinding: voorrang geven aan kandidaat-huurders die minimaal 10 jaar ononderbroken in Lievegem wonen of gewoond hebben. De woonmaatschappij zal hiervoor de 'historiek van woonst' opvragen via de Kruispuntbank Sociale Zekerheid. 
+                                     2.    Woonbinding met het werkingsgebied   De gemeenten uit het werkingsgebied van een woonmaatschappij kunnen bij consensus beslissen dat voorafgaand aan de toepassing van de binding voor mantelzorg in het volledige werkingsgebied rekening wordt gehouden met de langdurige woonbinding van kandidaat-huurders met het werkingsgebied van de woonmaatschappij. De gemeenten voegen in dat geval een voorrangsbepaling toe in het toewijzingsreglement. In alle gemeenten in het werkingsgebied zal vervolgens voorrang worden gegeven aan kandidaat-huurders die de afgelopen 10 jaar minstens 5 jaar ononderbroken wonen of gewoond hebben in een gemeente in het werkingsgebied. 
+                                    Voorstel : akkoord  gaan met deze bepaling inzake de lokale binding op het niveau van het werkingsgebied. 
+                                     3.    Doelgroepenplannen   1/3 van het patrimonium kan worden voorbehouden voor specifieke doelgroepen (op gemeenteniveau). De Vlaamse Overheid laat de woonmaatschappij toe om autonoom doelgroepenplannen op te maken voor volgende doelgroepen: 
+                                     
+                                            De kandidaat-huurder, vanaf 65 jaar; 
+                                            De kandidaat-huurder die als jongere met begeleiding zelfstandig woont of gaat wonen; 
+                                            De kandidaat-huurder met een fysieke of mentale beperking; 
+                                            De kandidaat-huurder in beschut wonen of een tewerkstellingsprogramma; 
+                                            De kandidaat-huurder met een geestelijke gezondheidsproblematiek; 
+                                            De kandidaat-huurder die dak- en thuisloos is of dat dreigt te worden. 
+                                     
+                                    De woonmaatschappij kan voor andere doelgroepen een plan uitwerken mits verdere onderbouwing. 
+                                    Voorstel : Omdat het aantal woningen opgenomen in een doelgroepenplan in Lievegem de grens van 1/3 van het patrimonium niet overschrijdt (rekening houdend met de overdracht van patrimonium en nieuwe projecten tegen 2028), wordt voorgesteld om het bestaande doelgroepenplan vanuit prefusiegemeente Lovendegem te behouden:  doelgroep ouderen (11 wooneenheden in wijk Kerkelare, 3 woningen in Kerkelare: Kerkelare 28, Kerkelare 30 en Kerkelare 32 en 8 woningen in de Larestraat). Dit vanuit de motivatie dat die woningen rond het lokaal dienstencentrum (LDC) liggen en de senioren dan ook makkelijk van de dienstverlening kunnen gebruik maken van dat LDC. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt aan team welzijn, team omgeving en Dimensa 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Hilde De Graeve, schepen sociale zaken 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 21 december 2017, artikel 40§1 en 56 
+                                                            Het gecodificeerd decreet over het Vlaamse woonbeleid van 17 juli 2020, boek 6 
+                                                            Het besluit van de Vlaamse regering van 11 september 2020 tot uitvoering van de Vlaamse Codex Wonen 2021, boek 6 
+                                                            Het decreet van 9 juli 2021 houdende wijziging van diverse decreten met betrekking tot wonen (dat o.a. wijzigingen aanbrengt in de Vlaamse Codex Wonen van 2021)   Het besluit van de Vlaamse Regering van 17 december 2021 tot wijziging van verschillende besluiten over wonen (dat o.a. wijzigingen aanbrengt in het Besluit van de Vlaamse Codex Wonen van 2021) 
+                                                            Beslissing van de gemeenteraad van 20 oktober 2021 tot goedkeuring van de afbakening van het werkingsgebied Zuidwestrand Gent en tot goedkeuring van het afsprakenkaderBeslissing van de gemeenteraad van 30 maart 2022 over de afbakening van het werkingsgebied van de woonmaatschappijen en het vastleggen onderlinge stemverhouding Beslissing van de gemeenteraad van 25 mei 2022 tot goedkeuring van de verduidelijking onderlinge stemverhouding voor het traject woonmaatschappijen. 
+                                                            Beslissing van de gemeenteraad van 14 september 2022 tot goedkeuring van het advies aan de Vlaamse Regering omtrent de te vormen woonmaatschappij in het werkingsgebied Gent-Zuid en tot kennisname van de verlenging van de erkenning van de sociale huisvestingsmaatschappij Volkshaard BV tot 30 juni 2023 
+                                                            Beslissing van het college van burgemeester en schepenen van 24 oktober 2023 over de principiële goedkeuring van het toewijzingsreglement van de nieuwe huisvestingsmaatschappij Dimensa, de vastlegging van een strengere woonbinding, een woonbinding met het werkingsgebied en doelgroepenplannen 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Om een woonbeleid op maat te realiseren wordt in de Vlaamse Codex Wonen de gemeente als regisseur van het lokaal woonbeleid aangeduid. De gemeente krijgt op die manier de mogelijkheid om het overleg tussen de verschillende woonorganisaties te coördineren en te organiseren met als doel een geïntegreerd en gedragen lokaal woonbeleid. 
+                                                            De Vlaamse regering heeft beslist dat er per gemeente slechts één woonactor actief mag zijn. De gemeenten zijn aangeduid als regisseur van het lokaal woonbeleid. 
+                                                            In het Besluit Vlaamse Codex Wonen Boek 6 (dit is het oude Kaderbesluit Sociale Huur) wordt ruimte gelaten om bij het vastleggen van de toewijzingsregels lokale accenten te leggen, uitgedrukt in een eigen toewijzingsreglement. 
+                                                            Vrijdag 17 december keurde de Vlaamse regering definitief het besluit goed dat de regelgeving inzake sociale huur grondig wijzigt. Zo wordt vanaf 1 januari 2023 onder andere een nieuw toewijsmodel voor sociale woningen ingevoerd. 
+                                                            Het nieuwe eengemaakte toewijsmodel is gebaseerd op vier pijlers: 
+                                                            Pijler 1 De standaardtoewijzing die vooral gebeurt op basis van langdurige woonbinding 
+                                                            Pijler 2  De versnelde toewijzing van kandidaat-huurders met een bijzondere nood of in precaire omstandigheden. Dit betreft verplicht contingent van 20% van de toewijzingen in het werkingsgebied. Binnen dit contingent geldt de lokale bindingsvoorwaarde niet. 
+                                                            Pijler 3 Toewijzing van kandidaat-huurders die behoren tot een specifieke doelgroep. Een derde van het totale aantal sociale huurwoningen in de gemeente kan zo bij voorrang worden toegewezen aan of voorbehouden worden voor specifieke doelgroepen. 
+                                                            Pijler 4 Toewijzing van kandidaat-huurders naar aanleiding van interne mutaties 
+                                                            Het nieuwe model gaat sterk uit van een langdurige woonbinding. Gemeenten kunnen deze ook nog verstrengen. Het toewijsmodel bouwt een aantal mogelijkheden in voor meer kwetsbare doelgroepen in pijler twee en drie.  Zo kunnen gemeenten doelgroepen bepalen waaraan woningen – binnen maxima – met voorrang kunnen toegewezen worden. Voor de doorstroom uit noodwoningen, een belangrijk punt voor de werking van het noodwoningenbeleid van een lokaal bestuur, is aandacht binnen de tweede pijler. 
+                                                            Het voorbije jaar werden de nodige stappen gezet om tot één woonmaatschappij te komen. De nieuwe woonmaatschappij voor het werkingsgebied waartoe Lievegem behoort heet Dimensa en is op 1 juli 2023 gestart. 
+                                                            De toewijzingsraad van Dimensa Woonmaatschappij bereidt momenteel een ontwerp van toewijzingsreglement voor. Hierin kunnen dus bepalingen over de verstrenging van de langdurige woonbinding en bepalingen voor specifieke doelgroepen worden opgenomen. Voorafgaand aan de opmaak van dit toewijsreglement, vraagt Dimensa Woonmaatschappij om reeds een beslissing te maken over de eventuele strengere woonbinding, de woonbinding met het werkingsgebied en de doelgroepenplannen. 
+                                                            1.    Strengere woonbinding  De gemeente kan voorafgaand aan de langdurige woonbinding (= tien jaar voor de toewijzing minstens vijf jaar ononderbroken in de gemeente wonen of gewoond hebben) een woonbinding toepassen die strenger is. De gemeente voegt in dat geval een voorrangsbepaling toe in het toewijzingsreglement. De voorrangsbepaling bepaalt het aantal jaar dat de kandidaat-huurder in de gemeente woont of gewoond heeft. 
+                                                            voorstel : strengere woonbinding voorzien, voor de langdurige woonbinding: voorrang geven aan kandidaat-huurders die minimaal 10 jaar ononderbroken in Lievegem wonen of gewoond hebben. De woonmaatschappij zal hiervoor de 'historiek van woonst' opvragen via de Kruispuntbank Sociale Zekerheid. 
+                                                             2.    Woonbinding met het werkingsgebied   De gemeenten uit het werkingsgebied van een woonmaatschappij kunnen bij consensus beslissen dat voorafgaand aan de toepassing van de binding voor mantelzorg in het volledige werkingsgebied rekening wordt gehouden met de langdurige woonbinding van kandidaat-huurders met het werkingsgebied van de woonmaatschappij. De gemeenten voegen in dat geval een voorrangsbepaling toe in het toewijzingsreglement. In alle gemeenten in het werkingsgebied zal vervolgens voorrang worden gegeven aan kandidaat-huurders die de afgelopen 10 jaar minstens 5 jaar ononderbroken wonen of gewoond hebben in een gemeente in het werkingsgebied. 
+                                                            Voorstel : akkoord  gaan met deze bepaling inzake de lokale binding op het niveau van het werkingsgebied. 
+                                                             3.    Doelgroepenplannen   1/3 van het patrimonium kan worden voorbehouden voor specifieke doelgroepen (op gemeenteniveau). De Vlaamse Overheid laat de woonmaatschappij toe om autonoom doelgroepenplannen op te maken voor volgende doelgroepen: 
+                                                             
+                                                                    De kandidaat-huurder, vanaf 65 jaar; 
+                                                                    De kandidaat-huurder die als jongere met begeleiding zelfstandig woont of gaat wonen; 
+                                                                    De kandidaat-huurder met een fysieke of mentale beperking; 
+                                                                    De kandidaat-huurder in beschut wonen of een tewerkstellingsprogramma; 
+                                                                    De kandidaat-huurder met een geestelijke gezondheidsproblematiek; 
+                                                                    De kandidaat-huurder die dak- en thuisloos is of dat dreigt te worden. 
+                                                             
+                                                            De woonmaatschappij kan voor andere doelgroepen een plan uitwerken mits verdere onderbouwing. 
+                                                            Voorstel : Omdat het aantal woningen opgenomen in een doelgroepenplan in Lievegem de grens van 1/3 van het patrimonium niet overschrijdt (rekening houdend met de overdracht van patrimonium en nieuwe projecten tegen 2028), wordt voorgesteld om het bestaande doelgroepenplan vanuit prefusiegemeente Lovendegem te behouden:  doelgroep ouderen (11 wooneenheden in wijk Kerkelare, 3 woningen in Kerkelare: Kerkelare 28, Kerkelare 30 en Kerkelare 32 en 8 woningen in de Larestraat). Dit vanuit de motivatie dat die woningen rond het lokaal dienstencentrum (LDC) liggen en de senioren dan ook makkelijk van de dienstverlening kunnen gebruik maken van dat LDC. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "eacdbc70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 De gemeenteraad gaat akkoord dat er met betrekking tot pijler 1 in het toewijsreglement een strengere woonbinding voorafgaand aan de langdurige woonbinding wordt opgenomen waarbij voorrang wordt gegeven aan: 
+                                     
+                                        kandidaat-huurders die minimaal 10 jaar ononderbroken in Lievegem wonen of gewoond hebben. De woonmaatschappij zal hiervoor de 'historiek van woonst' opvragen via de Kruispuntbank Sociale Zekerheid 
+                                     
+                                      Artikel 2 De gemeenteraad gaat akkoord dat de voorrangsbepaling ‘woonbinding met het werkingsgebied’ wordt toegevoegd in het toewijsreglement. 
+                                     Artikel 3 De gemeenteraad gaat principieel akkoord dat met betrekking tot pijler 3 het bestaande doelgroepenplan : doelgroep ouderen (11 wooneenheden in wijk Kerkelare: Kerkelare 28, 30 en 32 en 8 woningen in de Larestraat: Larestraat 32, 34, 36, 38, 40, 42, 44, 46) behouden blijft. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 De gemeenteraad gaat akkoord dat er met betrekking tot pijler 1 in het toewijsreglement een strengere woonbinding voorafgaand aan de langdurige woonbinding wordt opgenomen waarbij voorrang wordt gegeven aan: 
+                                                             
+                                                                kandidaat-huurders die minimaal 10 jaar ononderbroken in Lievegem wonen of gewoond hebben. De woonmaatschappij zal hiervoor de 'historiek van woonst' opvragen via de Kruispuntbank Sociale Zekerheid 
+                                                             
+                                                              Artikel 2 De gemeenteraad gaat akkoord dat de voorrangsbepaling ‘woonbinding met het werkingsgebied’ wordt toegevoegd in het toewijsreglement. 
+                                                             Artikel 3 De gemeenteraad gaat principieel akkoord dat met betrekking tot pijler 3 het bestaande doelgroepenplan : doelgroep ouderen (11 wooneenheden in wijk Kerkelare: Kerkelare 28, 30 en 32 en 8 woningen in de Larestraat: Larestraat 32, 34, 36, 38, 40, 42, 44, 46) behouden blijft. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a97f293-a498-403d-a94c-85fd0ef269b5> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f108e3d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Toewijzingsreglement van de nieuwe huisvestingsmaatschappij Dimensa. Vastlegging strengere woonbinding, woonbinding met het werkingsgebied en doelgroepenplannen : goedkeuring" .
+

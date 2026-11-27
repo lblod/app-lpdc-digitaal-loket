@@ -1,0 +1,240 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/ext/> .
+@prefix ns4: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://data.puurssintamands.be/id/zittingen/26.0818.6032.2662> a ns1:Zitting ;
+    ns1:behandelt <https://data.puurssintamands.be/id/agendapunten/26.0818.9569.0909>,
+        <https://data.puurssintamands.be/id/agendapunten/26.0929.5958.6014>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1008.2082.0074>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1008.8542.8365>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1009.4966.8501>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1012.8235.0013>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1012.9994.8073>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1013.2388.0406>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1013.4405.5574>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1013.4773.7588>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1013.6259.9684>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1013.6917.0242>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1013.8244.9537>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1014.1976.8139>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1014.4317.0347>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1014.5435.9609>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1014.5590.8843>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1014.6174.8637>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.0110.4920>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.1255.1442>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.2283.8495>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.2357.5647>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.2676.4992>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.2861.7921>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.3312.2162>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.3855.8769>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.4498.8223>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.5370.2981>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.5851.2061>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.6498.2652>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.7986.7121>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1015.8882.1386>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1016.0578.1759>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1016.2757.8848>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1016.6428.0026>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1019.2112.8389>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1019.8500.3188>,
+        <https://data.puurssintamands.be/id/agendapunten/26.1020.9265.4352> ;
+    ns1:geplandeStart "2026-10-20T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://data.puurssintamands.be/id/lblod/besluitenlijst/26.0818.6032.2662> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns4:uuid "82470c74-098b-54d6-b8f3-31da10ef1c3c" ;
+    ns3:behandelt <https://data.puurssintamands.be/id/behandelingen-van-agendapunten/26.1015.2861.7921>,
+        <https://data.puurssintamands.be/id/behandelingen-van-agendapunten/26.1020.9265.4352> ;
+    dcterms:title """
+                        Besluitenlijst 
+                        
+                            College van burgemeester en schepenen
+                            
+                                
+                            
+                        
+                    """ ;
+    prov:atLocation "2026-10-20 20:38:59.0",
+        "De Pit" ;
+    prov:endedAtTime "2026-10-21T16:49:50+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2026-10-20T20:38:59+02:00"^^xsd:dateTime .
+
+<https://data.puurssintamands.be/id/artikels/26.1015.0801.5580> a ns1:Artikel ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:number "Artikel 1" ;
+    ns4:uuid "325bf342-2655-5620-92c9-50c3d9c5913e" ;
+    prov:value """
+                Hof-ten-Berglaan (kruispunt Begijnhofstraat) Het parkeren is toegelaten; het parkeren is voorbehouden voor voertuigen die gebruikt worden door personen met een handicap. De maatregel geldt van maandag tot en met zaterdag, tussen 09.00u en 18.00u. Het begin van de parkeerregeling wordt aangeduidDit wordt aangeduid door verkeerstekens:Verkeersbord E9a-GVIIdOnderbord GVOnderbord Gxa
+            """ .
+
+<https://data.puurssintamands.be/id/artikels/26.1015.2698.7382> a ns1:Artikel ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:number "Artikel 2" ;
+    ns4:uuid "f4101f21-9b63-533f-a6c9-c26f4f55407d" ;
+    prov:value """
+                Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen.
+
+            """ .
+
+<https://data.puurssintamands.be/id/besluiten/26.1020.9265.4352> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34>,
+        <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a> ;
+    ns2:cites <https://codex.vlaanderen.be/doc/document/1029017> ;
+    ns2:description "2026_CBS_00585 - Aanvullend verkeersreglement Hof-ten-Berglaan - Goedkeuring" ;
+    ns2:has_part <https://data.puurssintamands.be/id/artikels/26.1015.0801.5580>,
+        <https://data.puurssintamands.be/id/artikels/26.1015.2698.7382> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "2026_CBS_00585 - Aanvullend verkeersreglement Hof-ten-Berglaan - Goedkeuring" ;
+    ns2:title_short "2026_CBS_00585 - Aanvullend verkeersreglement Hof-ten-Berglaan - Goedkeuring" ;
+    ns1:citeeropschrift "2026_CBS_00585" ;
+    ns1:motivering """
+                        Motivering
+                        
+                        
+                        
+                        
+                            Feiten, context en argumentatie
+                            Hof-ten-Berglaan behoort tot het dragend netwerk volgens Vlaamse wegencategorisering, subcategorie 'interlokale weg'.Op de parkeerstrook vlak voor het kruispunt met Begijnhofstraat komt er een parkeerplaats voor gehandicapten.
+                        
+                        
+                            Toepasselijke regelgeving
+                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen;de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968;het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg;het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald;het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens;het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens;de omzendbrief MOB/2009/1 van 3 april 2009;de nieuwe gemeentewet van 24 juni 1988;
+                        
+                        
+                        
+                            Regelgeving bevoegdheid
+                            
+                                
+                                    Artikel 56-57 van het decreet lokaal bestuur van 22 december 2017
+                                
+                                
+                                Het college van burgemeester en schepenen is bevoegd op basis van artikel 56-57 van het decreet lokaal bestuur.
+                            
+                        
+                        
+                        
+                        
+                    """@nl ;
+    ns4:uuid "191cbbab-02db-517f-8752-e1216db753b6" ;
+    prov:value """
+                                    
+        
+            Artikel 1
+            
+            
+                Hof-ten-Berglaan (kruispunt Begijnhofstraat) Het parkeren is toegelaten; het parkeren is voorbehouden voor voertuigen die gebruikt worden door personen met een handicap. De maatregel geldt van maandag tot en met zaterdag, tussen 09.00u en 18.00u. Het begin van de parkeerregeling wordt aangeduidDit wordt aangeduid door verkeerstekens:Verkeersbord E9a-GVIIdOnderbord GVOnderbord Gxa
+            
+        
+        
+    
+                                """,
+        """
+                                    
+        
+            Artikel 2
+            
+            
+                Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen.
+
+            
+        
+        
+    
+                                """ ;
+    prov:wasGeneratedBy <https://data.puurssintamands.be/id/behandelingen-van-agendapunten/26.1020.9265.4352> .
+
+<https://data.puurssintamands.be/id/agendapunten/26.1020.9265.4352> a ns1:Agendapunt ;
+    ns1:Agendapunt.type <http://lblod.data.gift/concepts/bdf68a65-ce15-42c8-ae1b-19eeb39e20d0> ;
+    ns1:aangebrachtNa <https://data.puurssintamands.be/id/agendapunten/26.1015.2861.7921> ;
+    ns1:geplandOpenbaar true ;
+    ns4:uuid "51e748af-b914-5e84-9ed6-7f494759a710" ;
+    dcterms:title "2026_CBS_00585 - Aanvullend verkeersreglement Hof-ten-Berglaan - Goedkeuring" .
+
+<https://data.puurssintamands.be/id/behandelingen-van-agendapunten/26.1020.9265.4352> a ns1:BehandelingVanAgendapunt ;
+    ns1:openbaar true ;
+    ns4:uuid "8a53c39d-738b-5345-83ac-8a13426af4d5" ;
+    ns3:aanwezigenTable """
+                    Samenstelling
+                    
+                    
+                        Aanwezig
+                        
+        
+            Yvo Van Damme, Schepen;
+        
+    
+        
+            Willem Geeroms, Schepen;
+        
+    
+        
+            Hilde Van der Poorten, Schepen;
+        
+    
+        
+            Els De Smedt, Schepen;
+        
+    
+        
+            Sophie Van Praet, Schepen;
+        
+    
+        
+            Raf De Blaiser;
+        
+    
+        
+            Ellen De Vos, Algemeen directeur;
+        
+    
+        
+            Koen Van den Heuvel, Burgemeester
+        
+    
+                    
+                    
+                    
+                        Verontschuldigd
+                        
+        
+            Anne De Ron, Schepen
+        
+    
+                    
+                    
+                        Secretaris
+                        
+        
+            Ellen De Vos, Algemeen directeur
+        
+    
+                    
+                    
+                        Voorzitter
+                        
+        
+            Koen Van den Heuvel, Burgemeester
+        
+    
+                    
+                """@nl ;
+    dcterms:subject <https://data.puurssintamands.be/id/agendapunten/26.1020.9265.4352> ;
+    dcterms:title """
+                        
+                            
+                                College van burgemeester en schepenen
+                                
+                                    
+                                
+                            
+                        
+                    """ ;
+    prov:generated <https://data.puurssintamands.be/id/besluiten/26.1020.9265.4352> .
+

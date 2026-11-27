@@ -1,0 +1,94 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns1:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f> ;
+    ns1:openbaar true ;
+    ns2:uuid "fe89c4c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/195dd6f6-6ad9-470a-b053-95af60d3b500> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/195dd6f6-6ad9-470a-b053-95af60d3b500> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt het algemene kader van het organisatiebeheersingssysteem goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Kader organisatiebeheersing: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017 over het algemene kader van het organisatiebeheersingssysteem, artikel 218 en 219 
+                                                            Het gemeenteraadsbesluit van 16 oktober 2019 over organisatiebeheersing - algemeen kader van het organisatiebeheersingssysteem: goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Overeenkomstig artikel 219 van het decreet lokaal bestuurd van 22 december 2017 stelt de algemeen directeur, na overleg met het managementteam, het organisatiebeheersingssysteem vast. Het algemene kader van het organisatiebeheersingssysteem en de elementen daarin die raken aan de rol en de bevoegdheden van de gemeenteraad en de raad voor maatschappelijk welzijn zijn onderworpen aan de goedkeuring van de gemeenteraad en de raad voor maatschappelijk welzijn. 
+                                                            Het organisatiebeheersingssysteem bepaalt op welke wijze de organisatiebeheersing van de gemeente en het openbaar centrum voor maatschappelijk welzijn wordt georganiseerd, met inbegrip van de te nemen controlemaatregelen, procedures en de aanwijzing van de personeelsleden en organen die ervoor verantwoordelijk zijn, en de rapporteringsverplichtingen van de personeelsleden die bij het organisatiebeheersingssysteem betrokken zijn.Het organisatiebeheersingssysteem beantwoordt minstens aan het principe van functiescheiding waar mogelijk en is verenigbaar met de continuïteit van de werking van de gemeentelijke diensten. 
+                                                            Het algemeen kader van het organisatiebeheersingssysteem werd voorgelegd op de gemeenteraad van 16 oktober 2019. Dit kader bleek niet volledig te zijn. 
+                                                            In 2021 voerde Audit Vlaanderen een fusieaudit uit bij lokaal bestuur Lievegem. Audit Vlaanderen formuleerde volgende aanbeveling: De organisatie vervolledigt haar kader voor organisatiebeheersing en legt dit opnieuw ter goedkeuring voor aan de raden en past dit toe. Naast het reeds bepaalde model, omvat het kader minstens: 
+                                                             
+                                                                met welke periodiciteit en op welke manier de organisatie stil wil staan bij haar eigen werking (via periodieke zelfevaluatie, een doorlichting door een externe partij, enz.) 
+                                                             
+                                                             
+                                                                hoe de algemeen directeur minstens jaarlijks rapporteert aan het politieke niveau over de mate waarin de risico’s beheerst zijn. 
+                                                             
+                                                              
+                                                            Het aangepaste kader wordt hier voorgelegd. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ecf94f00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad keurt het algemene kader van het organisatiebeheersingssysteem goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f2259e70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Kader organisatiebeheersing: goedkeuring" .
+

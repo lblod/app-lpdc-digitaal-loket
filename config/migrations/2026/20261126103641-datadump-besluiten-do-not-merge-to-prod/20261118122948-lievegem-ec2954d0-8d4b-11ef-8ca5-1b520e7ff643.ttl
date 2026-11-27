@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/13531b75-2b97-49e6-95b5-0130577929ca> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3087dcaf-8404-4313-8c4d-cf86d7068e89>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b11927eb-1bef-4718-bdb3-8a26d2d317a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e7de92-a36c-4219-9e13-c69071e37e4c> ;
+    ns1:geplandeStart "2022-03-30T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5072526b-b5d4-4d2b-ba68-1047063dac6e> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6062ed9f-3a18-4da2-b571-465c2cc37207> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6b4a4077-779d-4b4b-9f0b-f39d932e61c9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ec275900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-03-30T21:10:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-03-30T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670> ;
+    ns1:openbaar true ;
+    ns2:uuid "ed1d2ab0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1> a ns1:Besluit ;
+    ns3:description """ 
+                                                    Vragen en antwoorden omtrent1. Oekraïense vluchtelingen: STAVAZA in Lievegem2. My e-box - aansluiting gemeente Lievegem?3. Adviezen adviesraden die niet door het college gevolgd worden4. Bevoegdheden leden college bij wissel5. Onduidelijke situatie voorrang Stationsstraat/Schoolstraat6. Gele doos 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Hilde De Graeve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 31 en 278 
+                                                            Gemeenteraadsbesluit van 29 mei 2019 houdende goedkeuring huishoudelijk reglement gemeenteraad, artikel 11 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraadsleden hebben het recht aan het college van burgemeester en schepenen mondelinge en schriftelijke vragen te stellen. Voor het stellen van een vraag is geen toegelicht voorstel van beslissing nodig.Op schriftelijke vragen van raadsleden wordt binnen de maand na ontvangst schriftelijk geantwoord. Een kopie van de vraag en het antwoord worden per e-mail bezorgd aan de raadsleden. Na afhandeling van de agenda van de openbare vergadering van de gemeenteraad kunnen de raadsleden mondelinge vragen stellen over gemeentelijke aangelegenheden, die niet op de agenda van de gemeenteraad staan. Op deze mondelinge vragen wordt ten laatste tijdens de volgende zitting geantwoord.De behandeling van een mondelinge vraag beperkt zich tot vraag en antwoord en kan geen aanleiding geven tot een discussie tussen raadsleden.In de notulen van de zitting wordt melding gemaakt van de naam van de vraagsteller, aan wie de vraag is gericht en het onderwerp.Het zittingsverslag van de vergadering van de gemeenteraad vermeldt de mondelinge en schriftelijk gestelde vragen en antwoorden. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ec2954d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Vragen en antwoorden omtrent :Schriftelijke vraag: 
+                                                            1. Raadslid Didier Garré: Oekraïense vluchtelingen 
+                                                            Hoeveel Oekraïense vluchtelingen verblijven er in onze gemeente ?Hoeveel woningen (eigendom van de gemeente) zijn er voorbehouden voor de opvang ?Wat als er zich een calamiteit voordoet in onze gemeente, zoals een woningbrand, zijn we dan klaar om ook hiervoor eventuele slachtoffers op te vangen ? 
+                                                            Antwoord van schepen Hilde De Graeve: 
+                                                            Momenteel worden er een achttal gezinnen Oekraïense vluchtelingen opgevangen bij burgers in Lievegem. Deze gezinnen kwamen hier terecht als kennis of familie van Lievegemnaars. Sommigen werden aan de grens opgehaald door hun kennis of familie. Anderen kwamen met eigen vervoer of vliegtuig naar België.  Deze gezinnen werden dus niet toegewezen vanuit het nationaal crisiscentrum / Fedasil. OCMW Lievegem heeft ook vier noodwoningen (3 kleine appartementen en 1 studio ) vrijgesteld voor de opvang van Oekraïense gezinnen.  Die plaatsen zijn voorlopig nog niet ingenomen .Zolang een eigen noodwoning niet bezet is, kan die ook opnieuw geschrapt worden als crisisopvangplaats voor vluchtelingen. Mocht er dus een dringende individuele nood zijn in Lievegem (voor een gezin dat wordt geconfronteerd met een woningbrand), dan kunnen we alsnog een noodwoning hiervoor reserveren. Voor de zekerheid (wanneer de vier noodwoningen bezet zijn) wordt er ook 1 extra huisje in Kerkelare tijdelijk niet verhuurd om in nood opvang te kunnen bieden aan mensen met een dringende woonnood in Lievegem. Voor grotere calamiteiten (rampen) in eigen gemeente is de cel noodplanning van Lievegem bevoegd. Het opvangcentrum Den Boer in Zomergem wordt niet vrijgegeven voor collectieve crisisopvang van vluchtelingen.  Ook de back-up locatie: sporthal Waarschoot werd niet vrijgegeven voor de crisisopvang van vluchtelingen. Dit omdat deze locaties te allen tijde vrij zouden zijn als onthaalcentrum indien er plaatselijk een ramp wordt afgekondigd.  Afhankelijk van de aard en locatie van de ramp kan het gemeentelijk crisiscentrum beslissen welk gebouw het zal inzetten als onthaalcentrum.  
+                                                              
+                                                            Mondelinge vragen: 1. Raadslid Didier Garré: my e-boxWaarom is de gemeente nog niet aangesloten bij my e-box, al veel gemeenten zijn hier op aangesloten? Antwoord schepen Kim Martens:We zullen dit navragen.2. Raadslid Wouter Ryckaert: adviezen adviesraden die niet door het college gevolgd worden“Het dossier rond Beweging.net Lovendegem is afgerond, de meerderheid legt zich neer bij het advies van de cultuurpactcommissie en de koepelorganisatie verkrijgt geen subsidie/erkenning als socio-culturele vereniging. De commissie volgt aldus het advies van de cultuurraad. Het goedkeuren van de aanvraag door het CBS -na negatief advies van de cultuurraad- om de beslissing daags voor de gemeenteraad opnieuw in te trekken en advies in te winnen bij de cultuurpactcommissie roept vragen op. In het bijzonder bij de leden van de cultuurraad.Burgers stellen zich kandidaat om te zetelen in adviesraden en we kunnen dit alleen maar toejuichen. Het is belangrijk dat we hun expertise gebruiken en de leden voldoende consulteren en motiveren. Twee vragen rond adviesraden:1)    Wanneer een advies van een adviesraad niet gevolgd wordt vraagt de N-VA fractie om dit dossier te agenderen op de volgende gemeenteraad. 2)    We wensen – indien mogelijk- een overzicht te bekomen van het aantal adviezen die in deze legislatuur gevraagd zijn aan de verschillende adviesraden3)    We wensen een overzicht te bekomen van de adviezen die niet gevolgd zijn.”De burgemeester antwoordt: we hebben dit bij het advies over de erkenning van Beweging.net Lovendegem tweemaal gevolgd, de derde keer hebben we beslist om een neutraal advies te vragen.   En we hebben dit ook gevolgd, soms wel snel schakelen, we moeten binnen de 30 dagen antwoorden op een negatief advies. We (schepen Jeroen Van Acker en ik) zijn dit ook gaan toelichten naar de adviesraad.  En we hebben geen gemeenteraad binnen de 30 dagen, dus juridisch geen antwoord mogelijk.Vandaag is trouwens nog een detailtoelichting verstuurd naar alle raadsleden over  het procesverloop bij dit advies. Opnieuw beter hier de vraag schriftelijk te stemmen.Raadslid Wouter Ryckaert zegt hierbij zijn schriftelijke vraag die hij nog zal overmaken, nu eerst vooraf bij deze al mondeling te willen toelichten.  
+                                                            3. Raadslid Lut Van der Spurt: bevoegdheden leden college bij wisselWelke bevoegdheden zullen de leden van het college hebben bij de schepenwissel?De burgemeester antwoordt dat men dit pas officieel kan meedelen als het op een college is beslist en dat kan pas als de nieuwe schepen is geïnstalleerd, dus september. 
+                                                              
+                                                            4. Raadslid Gunther Lippens: onduidelijke situatie voorrang Stationsstraat/SchoolstraatHet is heel onduidelijk wie op het kruispunt Stationsstraat Schoolstraat voorrang heeft, de Stationsstraat is een voorrangsweg, recent is daar weer een ongeval gebeurd.  Waarom wordt er niet aangeduid dat er voorrang van rechts is? 
+                                                            De burgemeester antwoordt dat deze vraag zal bekeken worden in het mobiliteitsplan en daar zal beantwoord worden.Raadslid Nik Braekman en schepen Kim Martens vullen aan dat er algemene regeling van voorrang van rechts geldt, dus dit hoeft niet te worden aangeduid.  Die voorrangsregeling is destijds zo beslist in Waarschoot.  
+                                                              
+                                                            5. Raadslid Patrick Dossche: de gele doosIn de pers zagen we verschijnen dat Gent de gele doos gaat verdelen.  Meer en meer gemeenten gebruiken dit voor de bewoners, vraag is of jullie dit al hebben bekeken en wat die evaluatie inhoudt?Schepen Caroline Fredrick antwoordt dat men het er al vaak heeft over gehad, maar we gaan dit schriftelijk te beantwoorden.  
+                                                              
+                                                              
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ed18bde0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" .
+

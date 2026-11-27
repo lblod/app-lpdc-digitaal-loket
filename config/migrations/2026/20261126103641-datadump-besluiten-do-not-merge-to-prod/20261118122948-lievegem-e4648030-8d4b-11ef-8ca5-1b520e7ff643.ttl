@@ -1,0 +1,137 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns2:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c> ;
+    ns2:openbaar true ;
+    ns1:uuid "e4734d40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/f5e44759-8dc3-47f8-814c-6b8029d186a8> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/f5e44759-8dc3-47f8-814c-6b8029d186a8> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns3:description """ 
+                                                    Machtiging aan het college van burgemeester en schepenen om het retributiereglement voor het ter beschikking stellen van dranken door het gemeentebestuur op haar diverse locaties via frisdrankautomaten vast te stellen: goedkeuring 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Machtiging aan het college van burgemeester en schepenen om het retributiereglement voor het ter beschikking stellen van dranken door het gemeentebestuur op haar diverse locaties via frisdrankautomaten vast te stellen: goedkeuring" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepenKim Martens, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    De Grondwet, artikelen 41, 162 en 170 §4, eerste lidDe wet van 29 juli 1991 betreffende de uitdrukkelijke motivering van de bestuurshandelingen, zoals gewijzigdHet decreet lokaal bestuur van 22 december 2017, artikel 40 §3 en 41,tweede lid 14 °, mogelijkheid tot machtiging gemeenteraad aan het college tot vaststellen van de voorwaarden en de tarieven van retributiesHet bestuursdecreet van 7 december 2018 en latere wijzigingenDe omzendbrief KB ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteit 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De gemeente Lievegem moet over de nodige financiële middelen beschikken om de haar opgelegde taken naar behoren te kunnen vervullen en om het evenwicht van het budget te verzekeren. 
+                                    Het is gepast om inzake bepaalde dranken, die het gemeentebestuur aan haar personeel of in voorkomend geval ook aan haar bezoekers via een drankautomaat aanbiedt, een gematigde en billijke vergoeding aan te rekenen. 
+                                    Het is passend om dit op te nemen in een retributiereglement. 
+                                    In Lievegem staan op de volgende locaties frisdrankautomaten: 
+                                    - loods Lovendegem (exclusief voor gebruik personeel) 
+                                    - loods Waarschoot (exclusief voor gebruik personeel) 
+                                    - sporthal Lovendegem (gemengd voor gebruik personeel en bezoekers) 
+                                    - bijkomend te voorzien: loods Zomergem (exclusief voor gebruik personeel) 
+                                    Om snel te kunnen anticiperen op veranderende prijzen van de leverancier en wijzigende omstandigheden en te vermijden dat het voorstel telkens moet geagendeerd worden in de gemeenteraad, is het aangewezen dat de gemeenteraad machtiging verleend aan het college voor het vaststellen van de tarieven. Op die manier kan de gemeente efficiënter haar dienstverlening aanbieden aan de burger en het personeel. 
+                                    De prijszetting voor het bestuur volgt de reële prijszetting van de leverancier, zodat het bestuur geen winsten maar ook geen verliezen hoeft te maken. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Een budget van 4.500,00 EUR werd voorzien in het meerjarenplan 2020-2025 onder GBB-LOG/0119-03/7005003/GEMEENTE/CBS/IP-GEEN 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Deze beslissing wordt bekendgemaakt overeenkomstig artikels 286, 287 en 288 van het decreet lokaal bestuur. Er wordt melding gemaakt bij de toezichthoudende overheid overeenkomstig artikel 330 van het decreet lokaal bestuur. 
+                                    Deze beslissing wordt bezorgd aan team financiën en team communicatie. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepenKim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De Grondwet, artikelen 41, 162 en 170 §4, eerste lidDe wet van 29 juli 1991 betreffende de uitdrukkelijke motivering van de bestuurshandelingen, zoals gewijzigdHet decreet lokaal bestuur van 22 december 2017, artikel 40 §3 en 41,tweede lid 14 °, mogelijkheid tot machtiging gemeenteraad aan het college tot vaststellen van de voorwaarden en de tarieven van retributiesHet bestuursdecreet van 7 december 2018 en latere wijzigingenDe omzendbrief KB ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteit 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente Lievegem moet over de nodige financiële middelen beschikken om de haar opgelegde taken naar behoren te kunnen vervullen en om het evenwicht van het budget te verzekeren. 
+                                                            Het is gepast om inzake bepaalde dranken, die het gemeentebestuur aan haar personeel of in voorkomend geval ook aan haar bezoekers via een drankautomaat aanbiedt, een gematigde en billijke vergoeding aan te rekenen. 
+                                                            Het is passend om dit op te nemen in een retributiereglement. 
+                                                            In Lievegem staan op de volgende locaties frisdrankautomaten: 
+                                                            - loods Lovendegem (exclusief voor gebruik personeel) 
+                                                            - loods Waarschoot (exclusief voor gebruik personeel) 
+                                                            - sporthal Lovendegem (gemengd voor gebruik personeel en bezoekers) 
+                                                            - bijkomend te voorzien: loods Zomergem (exclusief voor gebruik personeel) 
+                                                            Om snel te kunnen anticiperen op veranderende prijzen van de leverancier en wijzigende omstandigheden en te vermijden dat het voorstel telkens moet geagendeerd worden in de gemeenteraad, is het aangewezen dat de gemeenteraad machtiging verleend aan het college voor het vaststellen van de tarieven. Op die manier kan de gemeente efficiënter haar dienstverlening aanbieden aan de burger en het personeel. 
+                                                            De prijszetting voor het bestuur volgt de reële prijszetting van de leverancier, zodat het bestuur geen winsten maar ook geen verliezen hoeft te maken. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Een budget van 4.500,00 EUR werd voorzien in het meerjarenplan 2020-2025 onder GBB-LOG/0119-03/7005003/GEMEENTE/CBS/IP-GEEN 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "e4648030-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel 
+                                    Met ingang van 1 juli 2022 en voor een termijn eindigend op 31 december 2025 machtigt de gemeenteraad het college van burgemeester en schepenen om een retributie en de voorwaarden ervan vast te stellen voor het aanbieden van diverse dranken door het gemeentebestuur aan haar personeel en in voorkomend geval aan haar bezoekers op diverse gemeentelijke locaties via frisdrankautomaten. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            Met ingang van 1 juli 2022 en voor een termijn eindigend op 31 december 2025 machtigt de gemeenteraad het college van burgemeester en schepenen om een retributie en de voorwaarden ervan vast te stellen voor het aanbieden van diverse dranken door het gemeentebestuur aan haar personeel en in voorkomend geval aan haar bezoekers op diverse gemeentelijke locaties via frisdrankautomaten. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "e4560140-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Machtiging aan het college van burgemeester en schepenen om het retributiereglement voor het ter beschikking stellen van dranken door het gemeentebestuur op haar diverse locaties via frisdrankautomaten vast te stellen: goedkeuring" .
+

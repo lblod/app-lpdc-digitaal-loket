@@ -1,0 +1,113 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/73b7e76a-0840-4805-ae11-e6012c441c79> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/56ed746e-e764-4f78-9b95-5f011a4fa9d8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5b3d3ac-aaa3-4faf-9623-f7e34ae0479c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3028b72-a1a0-4f32-b126-c470119b0dbb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c7b3ef3f-c54f-484b-b2e9-3f183540d3c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2d569a7-0c11-415e-8b4b-06dece66fd7b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ed252c03-10d2-495b-ba14-27f52f8f60b3> ;
+    ns1:geplandeStart "2023-01-25T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5458d7db-c1ee-4ee8-bb32-2b3a696674f1> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/197aa676-a148-4d3c-8340-7a4255ce2f67> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bb1db3b9-1012-4bab-a033-06938b2369a6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ea073820-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-01-25T20:31:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-01-25T20:01:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/56ed746e-e764-4f78-9b95-5f011a4fa9d8> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6> ;
+    ns1:openbaar true ;
+    ns2:uuid "ea008160-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/56ed746e-e764-4f78-9b95-5f011a4fa9d8> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/56ed746e-e764-4f78-9b95-5f011a4fa9d8> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/56ed746e-e764-4f78-9b95-5f011a4fa9d8> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de verhoging van de nominatieve toelage naar € 5000 voor feestcomité Waarschoot en feestcomité Zomergem voor de organisatie van nieuwjaarsreceptie 2023 goed en keurt de schrapping van de nominatieve toelage van € 4000 voor feestcomité Lovendegem 2023 goed. De gemeenteraad keurt de verhoging van de nominatieve toelage naar € 2000 voor Fietserbond voor deelname aan Bike for Live 2022 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Lijst met nominatieve subsidies 2022 en 2023 - toekenning verhoging en schrapping: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                            Jeroen Van Acker, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Wet van 14 november 1983 over de controle op de toekenning en op de aanwending van sommige toelagen 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 41, 23° 
+                                                            Besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale besturen 
+                                                            Bekrachtiging van de gemeenteraad van 19 oktober 2022 over het besluit van het college van burgemeester en schepenen van 6 september 2022 houdende principiële goedkeuring deelname aan Bike for Life 
+                                                            Besluit van de gemeenteraad van 21 december 2022 houdende goedkeuring van de lijst van de gemeentelijke nominatieve subsidie 2022 en 2023 
+                                                            Het besluit van het college van burgemeester en schepenen van 6 september 2022 over de principiële goedkeuring deelname aan Bike for Life 
+                                                            Het besluit van het college van burgemeester en schepenen van 15 november 2022 over de uitbetaling van subsidie voor Bike for Life 
+                                                            Het besluit van de gemeenteraad van 25 januari 2023 over de goedkeuring van de subsidies aan Bike Van Life 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Jaarlijks wordt de lijst met nominatieve subsidies opgenomen in het meerjarenplan en voorgelegd aan de gemeenteraad. 
+                                                            De lijst met nominatieve subsidies 2022 en 2023 werd voorgelegd aan de gemeenteraad van 21 december 2022. 
+                                                            Er zijn 4 bijkomende vragen voor wijziging aan subsidiebedragen die niet werden opgenomen in de nominatieve lijst. 
+                                                            Het voorstel is om deze wijziging toe te voegen. 
+                                                            Het betreft de volgende verzoeken: 
+                                                            Vraag tot verhoging bedrag nominatieve toelage: 
+                                                            Voor de organisatie van de nieuwjaarsreceptie inwoners in de 3 deelkernen op het grondgebied Lievegem is een toelage voorzien van € 4000 op jaarbudgetrekening 2023/GBB-EVENT/0710-00/6493000/GEMEENTE/CBS/IP-GEEN. 
+                                                            Deze nominatieve toelage van € 4000 is toegekend aan feestcomité Zomergem, feestcomité Waarschoot en feestcomité Lovendegem. Eenzelfde concept (drankbonnetje, hapje, soep..) wordt aangeboden op de 3 nieuwjaarsrecepties. De organiserende feestcomités geven aan dat gezien prijsstijgingen en bij behoud van eenzelfde concept het toegekende budget ontoereikend zal zijn. 
+                                                            Feestcomité Waarschoot en Feestcomité Zomergem centrum vragen een aanpassing van de nominatieve toelage  naar € 5000. 
+                                                            Vraag tot schrapping bedrag nominatieve toelage: 
+                                                            Feestcomité Lovendegem gaf aan de  nieuwjaarsreceptie inwoners Lovendegem niet te kunnen organiseren. Team evenementen zal instaan voor de organisatie.  De nominatieve toelage van € 4000 mag geschrapt worden voor 2023. 
+                                                            Vraag tot verhoging bedrag nominatieve toelage: 
+                                                             De gemeente Lievegem nam deel aan de activiteit Bike for Life in de periode 3 tot en met 31 oktober 2022. De medewerkers van de gemeente Lievegem zamelden € 786 in. De gemeenteraad van 19 oktober 2022 legde de maximumbegrenzing van de donatie aan de Fietserbond vast op € 2000. De vraag wordt gesteld om de toelage aan de Fietserbond te verhogen naar € 2000 en dit door een interne kredietverschuiving van 2022/ACT-014/0350/6159999/GEMEENTE/CBS/IP-GEEN naar 2022/ACT-014/0350-00/6493000/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Voor de uitgave van 10.000 euro voor de subsidies in het kader van de organisatie van nieuwjaarsreceptie inwoners gemeente Lievegem is het benodigd krediet voorzien onder jaarbudgetrekening 2023/GBB-EVENT/0710-00/6493000/GEMEENTE/CBS/IP-GEEN. 
+                                                            Voor de uitgave van 2.000 euro voor de toelage aan de Fietserbond in het kader van de deelname aan de activiteit Bike for Life is het benodigd krediet beschikbaar onder jaarbudgetrekening 2022/ACT-014/0350-00/6493000/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ea04ee30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad keurt de vraag tot verhoging van de nominatieve toelage naar € 5000 voor feestcomité Waarschoot en feestcomité Zomergem voor de organisatie nieuwjaarsreceptie 2023 goed. 
+                                                             Artikel 2 
+                                                            De gemeenteraad keurt de vraag tot schrapping van de nominatieve toelage van € 4000 voor feestcomité Lovendegem voor de organisatie nieuwjaarsreceptie goed. 
+                                                            Artikel 3 
+                                                            De gemeenteraad keurt de vraag tot verhoging van de nominatieve toelage naar € 2000 voor Fietserbond goed. 
+                                                            Artikel 4 
+                                                            Het gemeenteraadsbesluit van 21 december 2022 houdende goedkeuring van de lijst gemeentelijke nominatieve subsidies 2022 en 2023 wordt aangepast als volgt: 
+                                                            BI 0710-00/AR 6493000-Toegestane werkingssubsidies aan verenigingen: 
+                                                             
+                                                                Toelage feestcomité Zomergem (nieuwjaarsreceptie): 2023: € 5000 
+                                                                Toelage feestcomité Waarschoot (nieuwjaarsreceptie): 2023: € 5000 
+                                                                Toelage feestcomité Lovendegem (nieuwjaarsreceptie): 2023: € 0 
+                                                             
+                                                            
+                                                                BI 0350-00/AR 6493000-Toegestane werkingssubsidies aan verenigingen:
+                                                             
+                                                             
+                                                                Toelage Fietserbond (Bike for Life): 2022: € 2000 
+                                                             
+                                                             
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/56ed746e-e764-4f78-9b95-5f011a4fa9d8> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/56ed746e-e764-4f78-9b95-5f011a4fa9d8> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ea064dc0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Lijst met nominatieve subsidies 2022 en 2023 - toekenning verhoging en schrapping: goedkeuring" .
+

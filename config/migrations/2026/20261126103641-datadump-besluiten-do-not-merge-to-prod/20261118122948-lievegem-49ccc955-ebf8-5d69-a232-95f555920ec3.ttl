@@ -1,0 +1,62 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/501c60c5-278a-4baf-b38f-a5824f5984e8> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6e71319a-c528-40aa-8595-55f4afca63b3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aa21f832-7836-451a-bdf4-a23afa86014b> ;
+    ns1:geplandeStart "2026-02-03T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/126d05dc-3fed-4206-a192-e0732376b49b> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "731b3a6c-bd51-5aba-b977-80a80bcb3bf3" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-02-03T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6e71319a-c528-40aa-8595-55f4afca63b3> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8a0e2cfb-8c35-45b6-b613-395c0f4c0170> ;
+    ns1:openbaar false ;
+    ns3:uuid "3a7600ca-8039-52ee-a2a9-8bbcc788a180" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6e71319a-c528-40aa-8595-55f4afca63b3> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6e71319a-c528-40aa-8595-55f4afca63b3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6e71319a-c528-40aa-8595-55f4afca63b3> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/f56c645d-b8e1-4066-813d-e213f5bc529f> ;
+    ns2:description """ 
+                                                    Het college van burgemeester en schepenen keurt het erratum bij het meerjarenplan 2026-2031 principieel goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Erratum meerjarenplan 2026-2031: kennisname" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Kim Martens, burgemeesterSteven Lambert, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Het Decreet van 22 december 2017 over het lokaal bestuur, artikel 41, 3° en 10°, 249 t.e.m. 257  Het Besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale besturen  Het Ministerieel besluit van 26 juni 2018 tot vaststelling van de modellen en de nadere voorschriften van de beleidsrapporten, de rekeningenstelsels en de digitale rapportering van de beleids- en beheerscyclus van de lokale besturenHet Besluit van de Vlaamse Regering van 14 juli 2023 tot wijziging van het besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale en provinciale besturenHet Ministerieel besluit van 8 december 2023 tot wijziging van het ministerieel besluit van 26 juni 2018 tot vaststelling van de modellen en de nadere voorschriften van de beleidsrapporten, de rekeningenstelsels en de digitale rapportering van de beleids- en beheerscyclus van de lokale en de provinciale besturenOmzendbrief KBBJ/ABB 2025/1 van 18 juli 2025 betreffende de strategische meerjarenplannen 2026-2031 van de lokale en provinciale besturen volgens de beleids- en beheerscyclusGemeenteraadsbesluit van 17 december 2025 over Meerjarenplan 2026-2031 - deel gemeente LievegemGemeenteraadsbesluit van 17 december 2025 over Meerjarenplan 2026-2031 - deel OCMW Lievegem 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Op 17 december 2025 keurden de gemeenteraad en de OCMW-raad het meerjarenplan 2026-2031 goed.Op 15 januari 2026 wees het Agentschap Binnenlands Bestuur erop dat in het beleidsrapport van het meerjarenplan 2026-2031 het schema T3 (evolutie van de financiële schulden) verkeerd wordt voorgesteld. De voorstelling van de financiële schuld op het einde van elk boekjaar blijkt niet correct te zijn. Dit is een gevolg van het feit dat de begintoestand van de schuld op 1 januari 2026 verkeerdelijk niet werd ingebracht, een stap waarvoor een manuele tussenkomst is vereist. Een bijkomend gevolg van dit ontbrekend cijfer in het schema T3 is dat hierdoor ook de gecorrigeerde autofinancieringsmarge (GAFM), onderdeel van schema M2 (staat van het financieel evenwicht), verkeerd wordt voorgesteld. De gecorrigeerde aflossingen op basis van het boekjaar N-1 worden op die manier immers op een verkeerd bedrag berekend.De nodige aanpassingen zorgen louter voor een correcte visuele weergave van de schema's T3 en M2 en hebben dus geen enkele financiële impact op het meerjarenplan 2026-2031 zelf.De volledige en correcte schema’s T3 en M2 maken integraal deel uit van deze beslissing. Bij wijze van rechtzetting, worden deze correcte schema’s T3 en M2 bij wijze van erratum voorgelegd aan de gemeenteraad voor vaststelling.In theorie zou dit erratum aan beide raden moeten worden voorgelegd. In dit geval is het vooral belangrijk dat de raadsleden op de hoogte worden gebracht. Gezien de leden van de gemeenteraad ook de OCMW-raad vertegenwoordigen, kan volgens het Agentschap Binnenlands Bestuur een vaststelling door de gemeenteraad hier volstaan.Na goedkeuring door de gemeenteraad worden de gecorrigeerde, volledige schema’s T3 en M2 gepubliceerd op de website van Lokaal Bestuur Lievegem. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Publicatie op de gemeentelijke website. Deze publicatie wordt gemeld aan de toezichthoudende overheid en digitaal gerapporteerd aan de Vlaamse regering. 
+                                 
+                            """@nl ;
+    ns3:uuid "49ccc955-ebf8-5d69-a232-95f555920ec3" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het college van burgemeester en schepenen neemt kennis van het erratum bij het meerjarenplan 2026-2031 (zoals terug te vinden in bijlage).Artikel 2Het erratum bij het meerjarenplan 2026-2031 wordt voorgelegd aan de gemeenteraad voor vaststelling. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6e71319a-c528-40aa-8595-55f4afca63b3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6e71319a-c528-40aa-8595-55f4afca63b3> a ns1:Agendapunt ;
+    ns3:uuid "3783496b-bd5d-5227-b4c3-47419884c04a" .
+

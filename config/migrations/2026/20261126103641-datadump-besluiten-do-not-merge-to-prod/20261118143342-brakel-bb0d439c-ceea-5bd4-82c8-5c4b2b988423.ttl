@@ -1,0 +1,69 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns2:Zitting ;
+    ns2:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns2:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns2:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns2:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns1:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab> a ns2:BehandelingVanAgendapunt ;
+    ns2:openbaar true ;
+    ns1:uuid "3918c258-db99-549d-aa8b-cac99ae9fd49" ;
+    dcterms:description """ 
+                                                             
+                                                                De notulen en het zittingsverslag van de vorige gemeenteraad dd. 06 oktober 2025. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/0effaad7-541d-43f8-8ef2-82d5773629ab> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/0effaad7-541d-43f8-8ef2-82d5773629ab> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e96ec8af-6480-4b32-876a-fefe5f0a3793> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Goedkeuring notulen en zittingsverslag vorige gemeenteraad 06 oktober 2025" ;
+    ns2:motivering """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet lokaal bestuur, artikel 32. 
+                                                                    Het huishoudelijk reglement van de gemeenteraad van Brakel. 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Als er geen opmerkingen worden gemaakt over de notulen en het zittingsverslag van de vorige vergadering worden de notulen en het zittingsverslag als goedgekeurd beschouwd en worden ze ondertekend door de voorzitter en de algemeen directeur. 
+                                                                 
+                                                            """@nl ;
+    ns1:uuid "bb0d439c-ceea-5bd4-82c8-5c4b2b988423" ;
+    prov:value """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Enig artikel: De notulen en het zittingsverslag van de vergadering dd. 06 oktober 2025 worden goedgekeurd. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "9ddf3899-ab97-5ba7-8223-f3b2c7764e57" ;
+    dcterms:title "Goedkeuring notulen en zittingsverslag vorige gemeenteraad 06 oktober 2025" .
+

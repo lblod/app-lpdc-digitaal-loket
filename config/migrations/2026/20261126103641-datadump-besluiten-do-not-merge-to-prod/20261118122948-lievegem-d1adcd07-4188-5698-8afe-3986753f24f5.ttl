@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/80181dcb-4f7f-4f00-b490-168e5ac1dec9> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4f44afd-b589-4d55-815f-f45a068217ee> ;
+    ns2:geplandeStart "2025-11-18T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/826bdf78-953d-4442-ae99-7f5374d5c7c9> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "bf963494-d455-5a11-ba1f-0e2b4d6daf60" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-11-18T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f4f44afd-b589-4d55-815f-f45a068217ee> ;
+    ns2:openbaar false ;
+    ns1:uuid "5c80ba74-ff74-5e67-a820-abfdd53b5f9c" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'De intrede van Sinterklaas in Lievegem' op 29 november 2025 van 9.30 uur tot en met 18.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'De intrede van Sinterklaas in Lievegem' - team jeugd: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 18 november 2025 over de aanvraag evenement Intrede van Sinterklaas in Lievegem - team jeugd: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Myrthe De Brouwer, namens team jeugd - gemeente Lievegem, organiseert 'De intrede van Sinterklaas in Lievegem' op 29 november 2025 van 14.30 uur tot en met 16.30 uur.Er werd op 13 oktober 2025 een aanvraag ingediend door Myrthe De Brouwer, namens team jeugd - gemeente Lievegem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns1:uuid "d1adcd07-4188-5698-8afe-3986753f24f5" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'De intrede van Sinterklaas in Lievegem' wordt vastgesteld als volgt: 
+                                    1. op 29 november 2025 van 9.30 uur tot en met 18.00 uur: 
+                                     
+                                        stilstaan- en parkeerverbod op het volledige marktplein 
+                                     
+                                    
+                                        2. op 29 november 2025 van 13.00 uur tot en met 15.30 uur:
+                                     
+                                     
+                                         
+                                            afsluiten van Lamstraat voor gemotoriseerd verkeer, vanaf het kruispunt Lamstraat/Zomergemstraat (op grondgebied Deinze) 
+                                         
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Borden E32. Nadar + C3 + M2 op volgende kruispunt: Lamstraat/Zomergemstraat 
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                      
+                                    Artikel 4 
+                                    De verkeersmaatregelen aan Lamstraat kunnen enkel uitgevoerd worden als er ook toestemming is van De Vlaamse Waterweg en Stad Deinze. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/33ed5386-1860-4e97-9c33-dcaf4ca20ea1> a ns2:Agendapunt ;
+    ns1:uuid "2cc69ecb-8aad-55d4-97e1-347be4be2637" .
+

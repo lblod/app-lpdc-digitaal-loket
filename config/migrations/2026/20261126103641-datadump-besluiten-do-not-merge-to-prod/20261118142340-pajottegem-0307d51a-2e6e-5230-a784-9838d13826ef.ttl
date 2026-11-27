@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/ebec8ae7-38cb-46b2-a550-7a7f0a160555> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fb05a0e1-7246-4650-be4b-42800d13ddc5> ;
+    ns2:geplandeStart "2025-04-07T14:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/c330bb79-f4fd-4ba0-a1b6-7de5a3ddbf17> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "2e31a4e7-673b-5032-8b5b-0cbe1ee1b42b" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-04-07T14:29:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fb05a0e1-7246-4650-be4b-42800d13ddc5> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/995755ac-42d4-4341-a156-db22a4232cc7> ;
+    ns2:openbaar false ;
+    ns1:uuid "d2980e0b-c149-5e87-9ff6-10c886b5095c" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fb05a0e1-7246-4650-be4b-42800d13ddc5> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/fb05a0e1-7246-4650-be4b-42800d13ddc5> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/fb05a0e1-7246-4650-be4b-42800d13ddc5> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de rommelmarkt op 12/04/2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Rommelmarkt - 12/04/2025" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns1:uuid "0307d51a-2e6e-5230-a784-9838d13826ef" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van markt op 12/04/2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 8u t.e.m. 20u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verbod tot stilstaan en parkeren (E3) van zaterdag 11/04 om 18u t.e.m. zondag 12/04 om 22u op volgende locatie:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Kerkplein
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Bijkomend worden er nadars geplaatst om het plein af te bakenen. 
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/fb05a0e1-7246-4650-be4b-42800d13ddc5> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fb05a0e1-7246-4650-be4b-42800d13ddc5> a ns2:Agendapunt ;
+    ns1:uuid "16a43f4d-6b0f-505c-b0c3-3d7d82958f7f" .
+

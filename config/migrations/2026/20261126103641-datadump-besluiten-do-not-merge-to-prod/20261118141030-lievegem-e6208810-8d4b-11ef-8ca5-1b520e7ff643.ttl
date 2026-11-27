@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/67813274-3b7a-49f9-b9c9-4340aed05429> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2371935b-7ad6-4871-af1c-8089e789c391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42299301-8db7-4bbf-ae43-b3b4e96ecd75>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50439503-35eb-4857-a55d-25da89a6089f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5856e334-1733-4d65-8957-97a405084cb7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65fdb4dd-4ccc-4e03-957b-90fcc179cde0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/99120f73-d62d-48c9-b773-7826c5491feb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fabf93-37f3-4314-807c-752f83afa18b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc17426a-5ef8-46a5-9063-831499691106>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0e68f3f-8930-4481-a410-e168d0bf59e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns1:geplandeStart "2024-01-31T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d806425-9a34-4095-988a-05678b76355f> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0682f2be-d210-4ac2-9225-4ac8a0eeb628> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3369f7d3-24df-47ea-acab-50b627f1e882> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e6273ed0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-01-31T21:22:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-31T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d> ;
+    ns1:openbaar true ;
+    ns3:uuid "e620d630-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/50ec0f1b-e0e8-4906-b73d-2d6e32748752> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/50ec0f1b-e0e8-4906-b73d-2d6e32748752> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt het ontwerp rooilijnplan voor de gedeeltelijke wijziging (verlegging) van de buurtwegen (voetwegen) 61 en 64 Lovendegem, met name het deel tussen Meienbroek en de Bredestraat, definitief vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Voetwegen 61 en 64 Lovendegem - gedeeltelijke verplaatsing - rooilijnplan: definitieve vaststelling" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepenVincent Laroy, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingenHet decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Het decreet van 3 mei 2019 over de gemeentewegenHet besluit van de gemeenteraad Lovendegem van 28 augustus 2014 met de goedkeuring van het trage wegenplan LovendegemHet besluit van de gemeenteraad Lovendegem van 25 oktober 2018 met de voorlopige vaststelling van het rooilijnplan voor de gedeeltelijke verlegging van de buurtwegen 61 en 64Het besluit van het college van 27 december 2022 met de principiële goedkeuring van het ontwerp rooilijnplan en het grondinnemingsplan voor de verlegging en verbreding van de voetwegen 61 en 64 Het besluit van de gemeenteraad van 14 september 2023 met de voorlopige vaststelling van het ontwerp rooilijnplan en de goedkeuring van het grondinnemingsplan voor de verlegging en verbreding van de voetwegen 61 en 64 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad stelde op 14 september 2023 het ontwerp rooilijnplan voor de gedeeltelijke wijziging (verlegging) van de buurtwegen (voetwegen) 61 en 64 Lovendegem, met name het deel tussen Meienbroek en de Bredestraat voorlopig vast. Het grondinnemingsplan voor de realisatie van dit rooilijnplan werd in dezelfde zitting goedgekeurd. 
+                                                            Het rooilijnplan werd op 6 januari 2023 afgewerkt door landmeter Erik Biebuyck (zie deel noord en deel zuid in bijlage). 
+                                                            Het ontwerp rooilijnplan wordt als volgt gemotiveerd: 
+                                                            1. Het algemeen belang van de trageweggebruikers wordt niet geschonden. Door de voorgestelde verplaatsing ontstaat opnieuw een functionele tragewegverbinding tussen Meienbroek en de Bredestraat. Langs de Bredestraat loopt een lokale, functionele fietsroute. 
+                                                            2. De beoogde voetwegverplaatsing en verbreding maken het herstel (heropening) van een functionele tragewegverbinding tussen Meienbroek en de Bredestraat mogelijk. 
+                                                            3. De beoogde voetwegverplaatsing en verbreding zijn gunstig voor de verkeersveiligheid. Deze tragewegverbinding biedt immers een veilig alternatief traject voor fietsers en voetgangers voor de gewestweg N9 (Grote Baan). Fietsers en voetgangers komende van Meienbroek kunnen via deze tragewegverbinding, de Bredestraat, de Hazelaarstraat en Binnenslag de N9 veilig oversteken aan de verkeerslichten. 
+                                                            4. De betrokken voetwegen zijn als actuele gemeentewegen niet gemeentegrensoverschrijdend. 
+                                                            5. De actuele verbindings- en ontsluitingsfuncties van de voetwegen 61 en 64 en buurtweg 61 blijven behouden en de behoeften van de toekomstige generaties worden gevrijwaard.  
+                                                            Er werd een openbaar onderzoek georganiseerd van 5 november 2023 tot en met 4 december 2023. 
+                                                            De provinciale dienst Mobiliteit verstrekte op 27 augustus 2018 een gunstig preadvies en op 13 december 2022 een verslag met vermelding van de vaststellingen (zie bijlage). Tijdens het openbaar onderzoek van het voorlopig vastgesteld rooilijnplan werd geen formeel advies van de deputatie ontvangen.De provinciale dienst Mobiliteit verstrekte op 14 november 2023 een verslag met vermelding van de vaststellingen (zie bijlage). 
+                                                            Het departement mobiliteit en openbare werken heeft geen advies gegeven. 
+                                                            Er werd één bezwaarschrift ingediend.Het betreft een bezwaarschrift van de eigenaar van de aanpalende percelen 1ste afd. sec. A nrs. 1049, 1054 en 1055 (zie bijlage).Samenvatting inhoud van het bezwaarschrift:Het betreft een formeel bezwaar tegen het verleggen van de buurtweg 61 naar de oostelijke rand van de percelen 1050 (het betreft echter perceel 1051) en 1053.Het oorspronkelijk historisch traject van deze voetweg liep langs een dubbele rij bomen (deze bomen werden in 2002 geveld) op perceel 964.De bezwaarindiender wijst erop dat er meer stormen en hevige windvlagen dan vroeger voorkomen. Het beoogde traject ligt langs een lange knotbomenrij op de aanpalende percelen 1049, 1054 en 1055.Er wordt gewezen op een reëel gevaar voor ongevallen met ernstig lichamelijk letsel door uitwaaiende takken en openscheurende knotbomen. Er worden drie foto's bijgevoegd van uitgewaaide takken en een opengescheurde knotboom tijdens de stormen van 19 juni 2019 en 2 november 2023.Er wordt voorgesteld om de voetweg niet te verleggen naar de oostelijke rand van de percelen 1050 (te lezen als perceel 1051) en 1053. Dit zou door de bezwaarindiener beschouwd worden als een tragische vergissing. Er worden twee alternatieve trajecten zonder bomen voorgesteld:- de voetweg op het oorspronkelijk historisch traject laten liggen.- de voetweg verleggen naar de westelijke rand van perceel 965.Er is een overzichtsplan met de verschillende trajecten toegevoegd. 
+                                                            Beoordeling van het bezwaarschrift:Het bestuur wenst de heropening van deze buurtwegen (voetwegen) in der minne te regelen met de eigenaars. Uit het overleg met de betrokken eigenaars (landbouwers) bleek dat een heropening van deze voetwegen voor hen enkel aanvaardbaar is als de voetwegen verlegd worden naar de oostelijke rand van de percelen 1051 en 1053. Het bestuur koppelde aan deze verlegging een verbreding van 1 m naar 3 tot 3,5 m. De betrokken eigenaars stemden in met deze verbreding gekoppeld aan de verlegging naar de oostelijke rand. Het voorgestelde traject langs de oostelijke rand van de percelen 1051 en 1053 is dus de enige optie om deze heropening op een vrijwillige basis (zonder onteigeningen) te realiseren.  
+                                                            De voetweg liep inderdaad oorspronkelijk langs twee rijen populieren die in 2002 werden gerooid. Verder zuidwaarts (naar de Bredestraat) loopt het niet verlegde deel van deze voetweg nog steeds door een populierendreef van dezelfde eigenaar. 
+                                                            Er staan veel bomen langs voetwegen/gemeentewegen. Deze bomen maken deel uit van de landschapsbeleving en geven koelte in hitteperiodes. Maar bomen vormen inderdaad een risico bij stormweer of hevige windvlagen. Bij stormweer worden waarschuwingsberichten via de media verspreid. De weggebruikers worden gewaarschuwd voor afwaaiende takken en uitwaaiende bomen en moeten hun verantwoordelijkheid nemen als ze op weg gaan. Het risico bij stormweer is nog groter bij populieren dan bij knotbomen (hogere kruinen - populieren gekend voor takbreuk). Bij stormweer is het dus niet verantwoord om deze voetweg te gebruiken. 
+                                                            Als er zichtbare risico's aan bomen langs gemeentewegen zijn dan is er een snelle beslissingsprocedure om bomen te vellen of wegen tijdelijk af te sluiten om veiligheidsredenen (dit kan via een burgemeestersbesluit).Als de bomen een normaal onderhoud krijgen en er geen zichtbare risico's zijn (zoals dode takken, zwammen, scheuren,...) dan zijn afwaaiende takken en uitwaaiende bomen bij stormweer een geval van overmacht.Het onderhoud van knotbomen wordt al vele jaren gesubsidieerd door de gemeente. De knotbomenrij in kwestie wordt tot op heden goed en regelmatig onderhouden.Mocht er zich in de toekomst een probleem stellen met het onderhoud van deze knotbomen dan zal de gemeente, conform artikel 34 van het decreet op de gemeentewegen, de nodige maatregelen nemen om de publieke doorgang en de verkeersveiligheid op deze gemeenteweg te garanderen. Hierbij worden de zichtbare risico's weggenomen. Dit kan gaan van het snoeien van overhangende of gevaarlijke takken in eigen beheer, het sluiten van een beheersovereenkomst met derden over de uitvoering van de nodige beheerstaken tot het tijdelijk afsluiten van de voetweg bij stormweer.   
+                                                            In het voorgestelde traject van de voetweg aan de oostelijke rand van de percelen 1051 en 1053 loopt de voetweg niet vlak naast de stam van de knotbomen maar wordt er van gescheiden door een gracht. De voetweg zal worden aangelegd op ca. 1,5 m van het midden van die gracht (dus 2 tot 3 m van de stam van de knotwilgen). De voetweg ligt bovendien aan de westzijde van de knotbomen. Met de overwegende westenwinden is het risico op uitwaaiende takken het grootst aan de oostzijde van de knotbomen.   
+                                                            Conclusie: Het verleggen van deze voetweg naar de oostelijke rand van de percelen 1051 en 1053 is de enige mogelijkheid om deze voetweg in der minne te kunnen heropenen. De aanwezigheid van een rij knotbomen op een afstand van 2 tot 3 m van deze voetweg vormt geen groter risico dan andere bomen langs gemeentewegen. De publieke doorgang en de verkeersveiligheid op het voorgesteld tracé zijn voldoende gegarandeerd. Bovendien moeten weggebruikers hun verantwoordelijkheid nemen bij stormweer. 
+                                                            Het bezwaarschrift wordt om deze redenen als ongegrond beschouwd. 
+                                                            Er zijn dus geen gegronde formele bezwaren om deze rooilijn definitief goed te keuren. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e6208810-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelHet rooilijnplan voor de gedeeltelijke wijziging (verlegging) van de buurtwegen (voetwegen) 61 en 64 Lovendegem, met name het deel tussen Meienbroek en de Bredestraat, wordt definitief vastgesteld.  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e62283e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Voetwegen 61 en 64 Lovendegem - gedeeltelijke verplaatsing - rooilijnplan: definitieve vaststelling" .
+

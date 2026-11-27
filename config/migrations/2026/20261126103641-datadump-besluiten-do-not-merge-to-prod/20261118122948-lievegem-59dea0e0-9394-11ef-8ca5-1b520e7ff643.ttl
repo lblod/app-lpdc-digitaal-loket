@@ -1,0 +1,102 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3bbe50aa-c3e8-4b7c-bb7c-4682052a4673> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06f1f332-650a-4d40-a99c-0c733ffa85d1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c0f89c5-baa1-4637-811c-23ba8ba0c6be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/143b01fe-df79-4464-a86e-9f3331c41dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/19777059-5d19-4c19-aa75-c9728f3c1f7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1a496b2e-cf0d-4492-81c2-1b83c32841ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b6e8646-0e53-4476-873e-8ca4b5d87f79>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5039459f-5883-4417-bf07-a5cb8f922dff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5824b498-b950-4a56-91f6-1756c8e16615>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d9d3cf3-2cc8-49f0-bc97-86d52713181a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bcb7c92-bded-425b-bb57-1dcf51a32ec4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6deb0f16-50f3-4267-8661-88276e847e60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/739e24ab-2ffe-4fa2-b120-e9f780b542b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7db1854b-eea1-4071-8222-2fa3573c65ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/881bd7fd-6ec4-4882-9a14-15458378f51e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c65b0e5-e5ef-4730-988c-87d06b6a3993>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9314a642-ce70-4a85-ab4f-027dddbfb7ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9384f2b2-5078-47d0-a1e8-5f572f245831>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1970aac-3846-476f-9089-3c9b90d2cebc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a82e01d6-03ea-4b9f-9b5a-9a4e48d048f2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce690ef6-529c-465b-8bc2-0a504cb16e40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e447ed51-ca89-4f26-aec4-4b20f2adbbfb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee301e9c-da25-478b-9b4a-3c795b77db7a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2fb6d2d-2bb1-461a-bced-cbe1f05eb6db> ;
+    ns2:geplandeStart "2024-10-23T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ae70f37b-eb96-4735-833b-ce97bceb51f6> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bd4fa978-f012-49c2-acc4-4646b86642e0> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fe261bc2-7e58-4536-8439-b9dedda822ba> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "ed05ab10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-10-23T21:17:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-10-23T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a1970aac-3846-476f-9089-3c9b90d2cebc> ;
+    ns2:openbaar true ;
+    ns1:uuid "8b1fb9a0-a8d4-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/61d7619a-2afb-4580-9e5d-306853b5563e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/61d7619a-2afb-4580-9e5d-306853b5563e> a ns2:Besluit ;
+    ns3:description """ 
+                                                    Vragen en antwoorden omtrent1. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Nicholas Spinel, voorzitter 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 31 en 278 
+                                                            Gemeenteraadsbesluit van 14 september 2022 over de goedkeuring huishoudelijk reglement gemeenteraad, artikel 11 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraadsleden hebben het recht aan het college van burgemeester en schepenen mondelinge en schriftelijke vragen te stellen. Voor het stellen van een vraag is geen toegelicht voorstel van beslissing nodig. Op schriftelijke vragen van raadsleden wordt binnen de maand na ontvangst schriftelijk geantwoord. Een kopie van de vraag en het antwoord worden per e-mail bezorgd aan de raadsleden.  Na afhandeling van de agenda van de openbare vergadering van de gemeenteraad kunnen de raadsleden mondelinge vragen stellen over gemeentelijke aangelegenheden, die niet op de agenda van de gemeenteraad staan.  Op deze mondelinge vragen wordt ten laatste tijdens de volgende zitting geantwoord. De behandeling van een mondelinge vraag beperkt zich tot vraag en antwoord en kan geen aanleiding geven tot een discussie tussen raadsleden. In de notulen van de zitting wordt melding gemaakt van de naam van de vraagsteller, aan wie de vraag is gericht en het onderwerp. Het zittingsverslag van de vergadering van de gemeenteraad vermeldt de mondelinge en schriftelijk gestelde vragen en antwoorden. 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "59dea0e0-9394-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            1.Schriftelijke vragen: 
+                                                            Er waren geen schriftelijke vragen. 
+                                                              
+                                                            2. Mondelinge vragen: 
+                                                            2.1 Raadslid Patrick Dossche: Gemeentelijke basisschool Eeksken. 
+                                                            Een aantal ouders stellen zich de vraag om, wanneer de school af is, de ingang te kunnen bereiken via de brug over de Lieve. Deze brug is momenteel niet aangeduid of beschermd. Schepen Chris De Wispelaere: Dit is een privébrug. Dit wordt ter plaatste bekeken. De Klavertjesbrug is een alternatief.  
+                                                            2.2 Raadslid Patrick Dossche: Integrale toegankelijkheid van het Huis van Lievegem 
+                                                            Het Huis van Lievegem zal een toegankelijk huis volgens de verkiezingsfolders.  Bij de laatste verkiezingen kwamen 2 partijen op met kandidaten met een beperking. De integrale toegankelijkheid van het gebouw is belangrijk. 
+                                                            Het is raadzaam om deze toegankelijkheid in z'n ruimste vorm te bekijken, hetgeen graag wordt toegelicht in een volgende gemeenteraad. Het gebouw moet lang gebruikt worden en wordt best zo optimaal mogelijk uitgewerkt.  Denk aan de hoogte van de loketten en tafels die aangepast moeten zijn voor inwoners in een rolstoel (naar analogie van de inrichting in een ziekenhuis). Ook bij evacuatie (bijvoorbeeld bij brand) moet er hier aandacht aan gespendeerd worden. 
+                                                            Schepen Chris De Wispelaere: De plannen werden uitgewerkt in samenwerking met Inter. De gemaakte voorstellen worden alleszins bekeken.  
+                                                            2.3 Raadslid Wouter De Muynck: Wegversmallingen in de Weststraat  
+                                                            Zijn er sinds de opening van de Weststraat meer ongevallen gebeurd in deze straat? Er staan vaak auto's geparkeerd dicht bij de wegversmallingen. De wegversmalling is een strook van 30m en door de geparkeerde wagens wordt de ruimte om te overbruggen groter, hetgeen gevaarlijker lijkt. 
+                                                            Burgemeester Kim Martens: De cijfers van het aantal interventies van de politie worden opgevraagd. (Ongevallen zonder interventie is niet gekend). 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "ed0adb30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Schriftelijke en mondelinge vragen van raadsleden aan burgemeester en college van burgemeester en schepenen" .
+

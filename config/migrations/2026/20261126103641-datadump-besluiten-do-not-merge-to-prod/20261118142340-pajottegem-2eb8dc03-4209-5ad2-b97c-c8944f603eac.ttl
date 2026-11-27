@@ -1,0 +1,167 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/48d8bba5-b2c9-422a-9a9f-aed9b3225fd5> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/03c3f511-c208-43d7-b76f-18221c4a9482>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0c3e9d73-0710-47ad-9e25-c2f32c112e7d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/14918f94-1bd1-4a13-a9a8-3d93f38d21de>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/15aed687-be35-426c-ac8a-1076795663a9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2b9f5fe1-ffa5-432a-abdf-2704935c273d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2d325458-3c75-4154-bc2d-ab7eec42d2c1>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3c860352-7fe5-4928-872d-85b6a4d90028>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/bd4ab788-2c45-413c-8427-d39c8e9a5c0e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/e85d8986-a4fe-4dc7-af02-fcb41c41be37> ;
+    ns2:geplandeStart "2025-07-14T14:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/a4aed90c-5cca-429b-9f34-b2db28216313> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:uuid "2b087126-eb31-5aaa-9e21-a00dc6c42a3c" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-07-14T12:56:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/14918f94-1bd1-4a13-a9a8-3d93f38d21de> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bd4ab788-2c45-413c-8427-d39c8e9a5c0e> ;
+    ns2:openbaar false ;
+    ns1:uuid "50970c96-98d4-5b4c-8285-5ec0e3df86b5" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/14918f94-1bd1-4a13-a9a8-3d93f38d21de> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/14918f94-1bd1-4a13-a9a8-3d93f38d21de> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/14918f94-1bd1-4a13-a9a8-3d93f38d21de> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de wielerwedstrijd op 9 augustus 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Wielerwedstrijd G.P. Bolle - 9 augustus 2025" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns1:uuid "2eb8dc03-4209-5ad2-b97c-c8944f603eac" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van wielerwedstrijd GP Bolle op 9 augustus 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 6u tot 23u:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van vrijdag 08-08-2025 08.00 uur tot zondag 10-08-2025 11.00 uur in volgende straten: 
+                                        - Kerkplein 
+                                        Stilstaan en parkeren verboden (fig E3) op het Kerkplein vanaf het kruispunt met de Kerkstraat tot het kruispunt met de Pastoriestraat (vertrek- en aankomstzone) inclusief ook het plein zelf. 
+                                        - Kloosterstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Kloosterstraat op de parkeervakken vanaf het kruispunt met het Kerkplein tot het huisnummer 15 (vertrek- en aankomstzone). 
+                                          
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast op 09-08-2025 van 06.00 uur tot 23.00 uur in volgende straten: 
+                                        - Kerkstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Kerkstraat vanaf de Kloosterstraat tot het kruispunt met de Kasteeldreef (vertrek- en aankomstzone). 
+                                        - Kloosterstraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Kloosterstraat vanaf het kruispunt met de Vollezelestraat tot het kruispunt met de Kerkstraat inclusief parking ter hoogte van petanquevelden (vertrek- en aankomstzone). 
+                                          
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van op 09-08-2025 van 10.00 uur tot 22.00 uur in volgende straten: 
+                                        - Kasteeldreef 
+                                        Stilstaan en parkeren verboden (fig E3) op de Kasteeldreef vanaf het kruispunt met de Kerkstraat tot het kruispunt met de Pastoriestraat. 
+                                        - Pastoriestraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Pastoriestraat vanaf het kruispunt met de Kasteeldreef tot het kruispunt met de Vollezelestraat. 
+                                        - Vollezelestraat 
+                                        Stilstaan en parkeren verboden (fig E3) op de Vollezelestraat vanaf het kruispunt met de Pastoriestraat tot het kruispunt met de Kloosterstraat. 
+                                          
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijdvoertuigen V.Z.W. GOOIK SPORTIEF wordt ingelast op 09-08-2025 van 11.00 uur tot 22.00 uur in volgende straten: 
+                                        - Kerkstraat 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijdvoertuigen V.Z.W. GOOIK SPORTIEF op de Kerkstraat vanaf het kruispunt met de Kloosterstraat tot het kruispunt met de Kasteeldreef. 
+                                        Verkeerssignalisatie (bord op nadar) te voorzien op volgende kruispunten: 
+                                        Kervijnstraat / Kerkstraat 
+                                        Kerkstraat / Kasteeldreef 
+                                        - Kasteelstraat 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijdvoertuigen V.Z.W. GOOIK SPORTIEF op de Kasteelstraat vanaf het kruispunt met de Kerkstraat tot het kruispunt met de Pastoriestraat. 
+                                        Verkeerssignalisatie (bord op telkens nadar) te voorzien op volgende kruispunten: 
+                                        Kasteelstraat / Pastoriestraat 
+                                        - Pastoriestraat 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijdvoertuigen V.Z.W. GOOIK SPORTIEF op de Pastoriestraat vanaf het kruispunt met de Kasteeldreef tot het kruispunt met de Vollezelestraat. 
+                                        Verkeerssignalisatie (bord op nadar) te voorzien op volgende kruispunten: 
+                                        Kervijnstraat / Pastoriestraat 
+                                        Kerkplein / Pastoriestraat 
+                                        - Vollezelestraat 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijdvoertuigen V.Z.W. GOOIK SPORTIEF op de Vollezelestraat vanaf het kruispunt met de Pastoriestraat tot het kruispunt met de Kloosterstraat. 
+                                        Verkeerssignalisatie (bord op nadar) te voorzien op volgende kruispunten: 
+                                        Kerkplein / Vollezelestraat 
+                                        Vollezelestraat / Kloosterstraat 
+                                        - Kloosterstraat 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd wedstrijdvoertuigen V.Z.W. GOOIK SPORTIEF op de Kloosterstraat vanaf het kruispunt met de Vollezelestraat tot het kruispunt met de Kerkstraat. 
+                                        Verkeerssignalisatie (bord op nadar) te voorzien op volgende kruispunten: 
+                                        Turkeyestraat / Kloosterstraat 
+                                        Turkeyestraat / Kloosterstraat 
+                                        Kerkplein / Kloosterstraat 
+                                          
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer wordt ingelast op 09-08-2025 van 11.00 uur tot 22.00 uur in volgende straten: 
+                                        - Vollezelestraat 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer op de Vollezelestraat vanaf het kruispunt met de Blijkheerstraat tot het kruispunt met de Kloosterstraat. 
+                                        - Kasteeldreef 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer op de Kasteeldreef vanaf het kruispunt met de Frankrijkstraat tot het kruispunt met de Pastoriestraat. 
+                                        - Kerkstraat 
+                                        Verboden toegang, in beide richtingen, voor ieder bestuurder (fig C3); uitgezonderd plaatselijk verkeer op de Kerkstraat vanaf het kruispunt met de Kapellestraat tot het kruispunt met de Kasteeldreef. 
+                                          
+                                        Verboden toegang voor bestuurders van voertuigen waarvan de massa in beladen toestand hoger is dan de aangeduide massa (fig C21/+7,5 t); uitgezonderd plaatselijk verkeer wordt ingelast op 09-08-2025 van 11.00 uur tot 22.00 uur in volgende straten: 
+                                        - Lenniksestraat 
+                                        Verboden toegangvoor bestuurders van voertuigen waarvan de massa in beladen toestand hoger is dan de aangeduide massa (fig C21/+7,5 t); uitgezonderd plaatselijk verkeer op de Lenniksestraat vanaf het kruispunt met de Ninoofse Steenweg (N28). 
+                                        - Molenstraat (GALMAARDEN) 
+                                        Verboden toegangvoor bestuurders van voertuigen waarvan de massa in beladen toestand hoger is dan de aangeduide massa (fig C21/+7,5 t); uitgezonderd plaatselijk verkeer op de Molenstraat vanaf het kruispunt met de Vollezeelsesteenweg (N255). 
+                                          
+                                        Doodlopende weg (fig F45) wordt ingelast op 09-08-2025 van 11.00 uur tot 22.00 uur in volgende straten: 
+                                        - Kerkstraat 
+                                        Doodlopende weg (fig F45) op de Kerkstraat vanaf het kruispunt met de Kapelstraat tot het kruispunt met de Kasteeldreef. 
+                                        - Kasteeldref 
+                                        Doodlopende weg (fig F45) op de Kasteeldreef vanaf het kruispunt met de Frankrijkstraat tot het kruispunt met de Pastoriestraat. 
+                                        - Vollezelestraat 
+                                        Doodlopende weg (fig F45) op de Vollezelestraat vanaf het kruispunt met de Blijkheerstraat tot het kruispunt met de Kloosterstraat. 
+                                          
+                                        Omleidingen DE LIJN / DOORGAAND VERKEER: 
+                                        Omleiding zal voorzien worden (fig F39 - fig F41): 
+                                        Vanuit de richting van Gooik (richting Galmaarden): Opperstebosstraat - Blijkheerstraat - Vollezelestraat. 
+                                        Vanuit de richting van Galmaarden (richting Gooik): Blijkheerstraat - Opperstebosstraat. 
+                                        Verkeerssignalisatie te voorzien op volgende kruispunten: 
+                                        Vollezelestraat / Blijkheerstraat 
+                                          
+                                        Omleidingen +7,5 ton: 
+                                        Omleiding zal voorzien worden (fig F39 - fig F41): 
+                                        Vanuit de richting van Gooik (richting Galmaarden): Ninoofse Steenweg (N28) - Edingsesteenweg (N285) – Langestraat (N272) - Ninoofsesteenweg (N255). 
+                                        Vanuit de richting van Galmaarden (richting Gooik): Ninoofsesteenweg (N255 Galmaarden) - Langestraat (N272) - Edingsesteenweg (N285) - Ninoofse Steenweg (N28). 
+                                          
+                                        AANKONDIGINGSBORDEN: 
+                                        Plaatsen van aankondigingsborden CENTRUM OETINGEN ONDERBROKEN OP 09-08-2025 van 11.00 uur tot 22.00 uur. 
+                                        Deze borden worden bij voorkeur geplaatst vanaf 04-08-2025 op de kruispunten Ninoofse Steenweg/Lenniksestraat en Vollezeelsesteenweg/Molenstraat. 
+                                          
+                                        VOLGENDE BIJKOMENDE MAATREGELEN WORDEN INGEVOERD TENEINDE DE HINDER VOOR DE 
+                                        BEWONERS TE BEPERKEN: 
+                                        Versperringen op volgende kruispunten worden tussen de wedstrijden tijdelijk opgeheven tussen 17.00 uur en 18.00 uur: 
+                                        - Vollezelestraat / Kloosterstraat 
+                                        - Kerkstraat / Kervijnstraat 
+                                        - Kerkstraat / Kasteeldreef 
+                                        - Pastoriestraat / Kervijnstraat 
+                                        Op dat ogenblik zal het verkeer toegelaten worden voor de bewoners en hun bezoekers (GEEN DOORGAAND VERKEER!) met de richting van de wedstrijd mee. Aan deze kruispunten dient een extra stewart geplaatst te worden die grondig gebriefd is over deze maatregelen. Voor de start van elke wedstrijd zal gecontroleerd worden of de versperringen terug in plaats zijn gesteld en het parcours terug volledig vrij is. 
+                                          
+                                        Alle vaste en mobiele verkeersinfrastructuur op het parcours dient beschermd/verwijderd te worden. 
+                                        TIJDELIJKE SIGNALISATIE DIENT ONMIDDELLIJK NA DE WEDSTRIJD VERWIJDERD TE WORDEN!!! 
+                                          
+                                        Te voorzien door de organisatoren!!! 
+                                        Verwittigen van de bewoners op het parcours te Oetingen (brief) met duidelijke omschrijving van de uren waarop zij zich op het parcours kunnen begeven en onder welke voorwaarden. 
+                                          
+                                        Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                     
+                                     
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/14918f94-1bd1-4a13-a9a8-3d93f38d21de> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/14918f94-1bd1-4a13-a9a8-3d93f38d21de> a ns2:Agendapunt ;
+    ns1:uuid "51386897-dcee-5b53-ab1e-52d01ce1c6a5" .
+

@@ -1,0 +1,140 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns1:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/532ac830-9560-410b-b393-b17640f67b23> ;
+    ns1:openbaar true ;
+    ns2:uuid "ffbf85a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b183e1e8-9922-465b-8dd2-937d680b64bf> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/b183e1e8-9922-465b-8dd2-937d680b64bf> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/67378dd0-5413-474b-8996-d992ef81637a>,
+        <https://data.vlaanderen.be/id/concept/BesluitType/84121221-4217-40e3-ada2-cd1379b168e1> ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt het reglement voor noodhulp in het kader van ontwikkelingssamenwerking vast. Dit reglement gaat in werking op 1 januari 2021. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Lokaal mondiaal beleid - reglement voor noodhulp in het kader van ontwikkelingssamenwerking: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Hilde De Graeve, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 40 en 41 betreffende de bevoegdheid van de gemeenteraad. 
+                                    De beslissing van de gemeenteraad van 18 december 2019 betreffende de vaststelling van het meerjarenplan 2020-2025 waarin onder meer is beslist om jaarlijks € 3.000 te voorzien voor noodhulp. 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Met de vaststelling van het meerjarenplan 2020-2025 besliste de gemeenteraad op 18 december 2019 om jaarlijks € 3.000 te voorzien voor noodhulp. 
+                                    Tot op heden is hiervoor nog geen reglement voorzien. 
+                                    "Noodhulp is de hulp die door een organisatie geboden wordt aan slachtoffers van natuurrampen of gewapende conflicten. Het doel van noodhulp is het redden van levens, het verminderen van menselijk lijden en het bewaren en beschermen van menselijke waardigheid. Eigen aan noodhulp is dat deze hulp ad hoc aangeboden wordt bij rampen, conflicten die hoogdringende ondersteuning nodig hebben." 
+                                    De ambtenaar lokaal mondiaal beleid werkte in samenwerking met de Lokaal Mondiale Raad dit reglement voor noodhulp in het kader van ontwikkelingssamenwerking uit. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Het krediet is voorzien onder jaarbudgetrekening GBB-WELZYN/0160-00/6493000/GEMEENTE/CBS/IP-GEEN.         
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    REGLEMENT TOT SUBSIDIERING NOODHULPArtikel 1Er wordt voor een termijn aanvangend op 1 januari 2021 een subsidiereglement gevestigd voor het toekennen van subsidies voor noodhulp. Begripsomschrijving - definitiesArtikel 2Noodhulp is de hulp die door een organisatie geboden wordt aan slachtoffers van natuurrampen of gewapende conflicten. Het doel van noodhulp is het redden van levens, het verminderen van menselijk lijden en het bewaren en beschermen van menselijke waardigheid. Eigen aan noodhulp is dat deze hulp ad hoc aangeboden wordt bij rampen, conflicten die hoogdringende ondersteuning nodig hebben.De noodhulp situeert zich op minstens één van onderstaande domeinen: -    gezondheidszorg-    onderwijs-    landbouw-    voedselzekerheid-    basisinfrastructuur-    gemeenschapsopbouw-    leefmilieu-    basisbehoeften-    sociale economie-    gelijkberechtiging man-vrouwBegunstigdenArtikel 3De subsidie wordt toegekend aan de organisaties die dringende en onmiddellijke hulpacties organiseren in landen die geconfronteerd werden met natuurrampen en gewapende conflicten.  Bedrag van de subsidieArtikel 4Iedere aanvraag voor noodhulp wordt afzonderlijk behandeld en het bedrag is afhankelijk van situatie tot situatie. De Lokaal Mondiale Raad geeft advies aan het college over het bedrag van de noodhulp. Artikel 5Eenzelfde organisatie kan maar één keer per kalenderjaar een aanvraag tot financiële ondersteuning voor noodhulp indienen. 
+                                    Procedure (Aanvraag, beslissing)Aanvraag van de subsidieArtikel 6§1.Het subsidiebedrag voor noodhulp wordt toegekend naar aanleiding van een oproep van een organisatie tot financiële ondersteuning voor het realiseren van dringende hulpacties in landen en gebieden in nood volgens de definitie in artikel 2. §2.De noodhulp bestaat uit minstens één van volgende acties:-    psychologische en sociale ondersteuning en begeleiding-    medische hulp en ondersteuning-    belangenverdediging-    heropbouw en materiële ondersteuning-    voorzien in basisbehoeftenArtikel 7§1. Een aanvraag is gericht aan het college van burgemeester en schepenen, Kasteeldreef 72, 9920 Lievegem.§2. Een aanvraag wordt bij voorkeur elektronisch ingediend via het webformulier op onze website of door een aanvraagformulier te versturen naar college@lievegem.be en lokaalmondiaal@lievegem.be §3. Het webformulier en het aanvraagformulier zijn te vinden op de website https://www.lievegem.be/burger-en-welzijn/lokaal-mondiaal-beleid/subsidies-ontwikkelingssamenwerking§4. De ambtenaar lokaal mondiaal beleid legt de vraag voor noodhulp voor advies voor aan de Lokaal Mondiale Raad en maakt op basis van het advies een ontwerp van toekenning van de noodhulp. Dit ontwerp wordt voor definitieve goedkeuring voorgelegd aan het college van burgemeester en schepenen.  BetwistingenArtikel 8Alle betwistingen over de toepassing van onderhavig reglement worden beslecht door het college van burgemeester en schepenen. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekend gemaakt op de website, bij team Welzijn, team financiën en aan de Lokaal Mondiale Raad.ABB via digitaal loket 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Hilde De Graeve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 40 en 41 betreffende de bevoegdheid van de gemeenteraad. 
+                                                            De beslissing van de gemeenteraad van 18 december 2019 betreffende de vaststelling van het meerjarenplan 2020-2025 waarin onder meer is beslist om jaarlijks € 3.000 te voorzien voor noodhulp. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Met de vaststelling van het meerjarenplan 2020-2025 besliste de gemeenteraad op 18 december 2019 om jaarlijks € 3.000 te voorzien voor noodhulp. 
+                                                            Tot op heden is hiervoor nog geen reglement voorzien. 
+                                                            "Noodhulp is de hulp die door een organisatie geboden wordt aan slachtoffers van natuurrampen of gewapende conflicten. Het doel van noodhulp is het redden van levens, het verminderen van menselijk lijden en het bewaren en beschermen van menselijke waardigheid. Eigen aan noodhulp is dat deze hulp ad hoc aangeboden wordt bij rampen, conflicten die hoogdringende ondersteuning nodig hebben." 
+                                                            De ambtenaar lokaal mondiaal beleid werkte in samenwerking met de Lokaal Mondiale Raad dit reglement voor noodhulp in het kader van ontwikkelingssamenwerking uit. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Het krediet is voorzien onder jaarbudgetrekening GBB-WELZYN/0160-00/6493000/GEMEENTE/CBS/IP-GEEN.         
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ffc07000-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Eniq artikelDe gemeenteraad stelt het reglement voor noodhulp in het kader van ontwikkelingssamenwerking vast. Dit reglement gaat in werking op 1 januari 2021.  
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Eniq artikelDe gemeenteraad stelt het reglement voor noodhulp in het kader van ontwikkelingssamenwerking vast. Dit reglement gaat in werking op 1 januari 2021.  
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e804ff80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Lokaal mondiaal beleid - reglement voor noodhulp in het kader van ontwikkelingssamenwerking: vaststelling" .
+

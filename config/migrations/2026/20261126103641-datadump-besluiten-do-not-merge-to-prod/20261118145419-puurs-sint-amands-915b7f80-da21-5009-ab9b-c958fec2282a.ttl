@@ -1,0 +1,93 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/61e1efc0-a078-47ac-aa0c-5ee78b7db21b> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f46ebdd3-eaaf-433e-a33a-850c7033093d>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/fd53e791-8151-4a0b-b373-ac427ece79f2> ;
+    ns1:geplandeStart "2025-04-08T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/982150f2-5c77-4265-b92c-248fd7555213> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "d02d84da-b51f-5fe4-9bbd-55d64915b90d" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-04-08T20:37:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f46ebdd3-eaaf-433e-a33a-850c7033093d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7bb32c4a-ec6b-4eeb-bac8-583a843babd6> ;
+    ns1:openbaar false ;
+    ns2:uuid "c7a0905d-9a14-55b5-8378-49528a1b58e6" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f46ebdd3-eaaf-433e-a33a-850c7033093d> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/f46ebdd3-eaaf-433e-a33a-850c7033093d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/f46ebdd3-eaaf-433e-a33a-850c7033093d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement Koewei -  parkeerplaatsen voor elektrisch laden",
+        "Aanvullend verkeersreglement Koewei - parkeerplaatsen voor elektrisch laden" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Door Vlaanderen wordt er een concrete doelstelling van 35.000 bijkomende (semi)publieke CPE (Charging Point Equivalent of laadpuntequivalenten) te realiseren tegen 2025 voorop gesteld. 
+                                    Op 5 november 2021 heeft minister Somers voorgesteld om vanaf 2022 die doelstelling op te trekken naar anderhalf laadpunt per 100 inwoners om zo 99.000 laadpunten tegen 2030 te hebben. 
+                                    Vanuit Vlaanderen is de oefening gemaakt in hoeveel laadpunten de doelstelling zich vertaalt: voor Puurs-Sint-Amands komt dit op 197 CPE’s, op basis van inwoners en oppervlak, tegen 2025. 
+                                    De plaatsing van dit laadpunt valt onder 'paal volgt wagen' die zijn aangevraagd aan MOW-Vlaanderen.  
+                                    Charge Point Operator voor dit project is Engie. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straat het statuut kregen van lokale wegen type III 
+                                 
+                            """@nl ;
+    ns2:uuid "915b7f80-da21-5009-ab9b-c958fec2282a" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Op de parkeerstrook thv Koewei nr. 3 - 4 komen twee parkeerplaatsen voor elektrisch laden, de parkeerreglementering geldt over een afstand van 12 meter. 
+                                    Artikel 2: Deze regeling wordt aangeduid met verkeersborden: 
+                                     
+                                        E9a met onderbord voor elektrische of hybride elektrische voertuigen (of toegevoegd rechtsonder het verkeersbord E9a). 
+                                        Xc 12m 
+                                     
+                                    Artikel 3: Dit aanvullend reglement wordt ter kennisgeving overgemaakt aan de afdeling Vlaams Huis voor de Verkeersveiligheid. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f46ebdd3-eaaf-433e-a33a-850c7033093d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f46ebdd3-eaaf-433e-a33a-850c7033093d> a ns1:Agendapunt ;
+    ns2:uuid "01d84598-9ed4-580d-8b8a-6331aad71bd6" .
+

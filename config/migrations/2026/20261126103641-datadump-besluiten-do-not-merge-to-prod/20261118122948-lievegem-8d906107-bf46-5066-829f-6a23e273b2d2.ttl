@@ -1,0 +1,96 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/a61fb236-5d82-4c70-a769-5948b50e15c2> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4536c1a7-308b-4039-acdb-bf08106dc44d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/771545df-a5eb-4594-9947-82b6021ae79e> ;
+    ns1:geplandeStart "2025-09-09T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9f5bbe2f-fa71-4e13-886c-3205ee83b9e5> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "7c849e73-9a2a-503d-9fa9-d84befd4fcdd" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-09-09T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/771545df-a5eb-4594-9947-82b6021ae79e> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/88e8c089-293c-454c-a3e9-d5c10e4b2b32> ;
+    ns1:openbaar false ;
+    ns2:uuid "065d3d5d-6e89-59b1-a7fe-7d8db6a145c0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/771545df-a5eb-4594-9947-82b6021ae79e> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/771545df-a5eb-4594-9947-82b6021ae79e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/771545df-a5eb-4594-9947-82b6021ae79e> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Dag van de jeugdbeweging' van donderdag 16 oktober 2025 12.00 uur tot en met vrijdag 17 oktober 2025 16.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Dag van de jeugdbeweging 2025' - team jeugd gemeente Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 9 september 2025 over de aanvraag evenement Dag van de jeugdbeweging - Lokaal bestuur Lievegem - Team jeugd: goedkeuringHet besluit van het college van burgemeester en schepenen van 9 september 2025 over de aanvraag inname van openbaar domein - dorpsplein Waarschoot, kerkplein Lovendegem en voetpad voor kerk Vinderhoute voor 'Dag van de jeugdbeweging' - team jeugd gemeente Lievegem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Sara Van Acker, namens team jeugd gemeente Lievegem organiseert een ontbijt voor 'Dag van de jeugdbeweging' op 17 oktober 2025 van 6.00 uur tot en met 12.00 uur.Er werd op 16 juli 2025 een aanvraag ingediend door Sara Van Acker, namens team jeugd gemeente Lievegem om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Deze innames zijn in GIPOD geregistreerd met de nummers 18602210, 18602328 en 18602337. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "8d906107-bf46-5066-829f-6a23e273b2d2" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement van 'Dag van de jeugdbeweging'  wordt vastgesteld als volgt: 
+                                    1. van donderdag 16 oktober 2025 van 12.00 uur tot en met vrijdag 17 oktober 2025 16.00 uur: 
+                                     
+                                        stilstaan- en parkeerverbod op de linkerparkeerplaats aan het kerkplein te Lovendegem (tegenover Dorp 4) 
+                                     
+                                    2. op vrijdag 17 oktober 2025 van 6.00 uur tot en met 10.00 uur: 
+                                     
+                                        stilstaan- en parkeerverbod op de 2 rechtse parkeerplaatsen aan het kerkplein te Lovendegem (tegenover Dorp 4). Er wordt hierbij rekening gehouden met de inname voor de wekelijkse markt 
+                                        stilstaan- en parkeerverbod op het marktplein aan gemeentehuis Zomergem, met uitzondering van de parkeerstrook bereikbaar via Zomerlaan. 
+                                     
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. van donderdag 16 oktober 2025 van 12.00 uur tot en met vrijdag 17 oktober 2025 16.00 uur: 
+                                     
+                                        borden E3 
+                                     
+                                    2. op vrijdag 17 oktober 2025 van 6.00 uur tot en met 10.00 uur: 
+                                     
+                                        borden E3 
+                                        borden E3 
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        Artikel 3
+                                     
+                                    
+                                        Indien het politiereglement hinder met zich meebrengt voor de inwoners, dan worden deze één week voor de aanvang van de werken per brief verwittigd.
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/771545df-a5eb-4594-9947-82b6021ae79e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/771545df-a5eb-4594-9947-82b6021ae79e> a ns1:Agendapunt ;
+    ns2:uuid "b3185793-fe96-5e7a-aa20-35dd3dc97f16" .
+

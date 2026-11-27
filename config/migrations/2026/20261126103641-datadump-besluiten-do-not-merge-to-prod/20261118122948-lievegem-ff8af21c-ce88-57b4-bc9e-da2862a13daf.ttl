@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/2949d729-29a9-4559-be6c-5c79e94bdbfb> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05b066ec-e5e7-42e2-9798-0e5ce8bd5bc5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f04077b-c176-432e-8293-f5906af404c3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7a5584a4-cfaf-48d0-8dfb-3f46b3f9fab1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b23cc094-213e-4243-9cb5-bca3fda9fee7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e1273d0f-a995-48a0-949f-20d5425775ad> ;
+    ns1:geplandeStart "2026-03-03T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ede77cc0-9d69-46e0-8a24-e1605b9596e4> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "ed9a9651-78fe-5b5d-a0af-598c99a0ccff" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-03-03T13:32:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0f04077b-c176-432e-8293-f5906af404c3> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7a5584a4-cfaf-48d0-8dfb-3f46b3f9fab1> ;
+    ns1:openbaar false ;
+    ns2:uuid "12ed3b57-df87-51ae-ba7f-b17ede04f327" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f04077b-c176-432e-8293-f5906af404c3> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0f04077b-c176-432e-8293-f5906af404c3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0f04077b-c176-432e-8293-f5906af404c3> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Lammetjesdag' op 19 april 2026 van 10.00 uur tot en met 18.00 uur wordt vastgesteld als volgt: 
+                                                             
+                                                                parkeerverbod in Binnenslag en Verbindingsweg (vanaf Bredestraat tot Lindestraat), 9920 Lievegem - enkel aan zijde oneven nummers 
+                                                                éénrichtingsverkeer in Verbindingsweg (van Binnenslag richting Oostveld Kouter) 
+                                                                wegomlegging via Oostveld Kouter - Grote Baan - Binnenslag 
+                                                             
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Lammetjesdag' - De Grazer vzw: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 3 maart 2026 over de aanvraag evenement Lammetjesdag - De Grazer vzw: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nils Mouton, namens De Grazer vzw, organiseert 'Lammetjesdag' op 19 april 2026 van 10.00 uur tot en met 18.00 uur.Er werd op 20 januari 2026 een aanvraag ingediend door Nils Mouton, namens De Grazer vzw, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "ff8af21c-ce88-57b4-bc9e-da2862a13daf" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement van 'Lammetjesdag' op 19 april 2026 van 10.00 uur tot en met 18.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        parkeerverbod in Binnenslag en Verbindingsweg (vanaf Bredestraat tot Lindestraat), 9920 Lievegem - enkel aan zijde oneven nummers 
+                                        éénrichtingsverkeer in Verbindingsweg (van Binnenslag richting Oostveld Kouter) 
+                                        wegomlegging via Oostveld Kouter - Grote Baan - Binnenslag 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. borden E3 
+                                    2. - Bord F19 op het kruispunt Verbindingsweg/Binnenslag 
+                                        - Bord F19 + C1 + C31a op het kruispunt Verbindingsweg/Lindestraat 
+                                        - Bord C1 + C31a + C31b op het kruispunt Verbindingsweg/Oostveld Kouter 
+                                    3. borden F41 
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0f04077b-c176-432e-8293-f5906af404c3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f04077b-c176-432e-8293-f5906af404c3> a ns1:Agendapunt ;
+    ns2:uuid "b07bf770-a45a-566b-a6a8-6bb84eb1fd1d" .
+

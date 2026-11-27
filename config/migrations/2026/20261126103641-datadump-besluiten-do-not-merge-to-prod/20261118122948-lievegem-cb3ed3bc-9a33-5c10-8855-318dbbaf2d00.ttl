@@ -1,0 +1,179 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/22f02618-9328-46d0-b137-fae65785b7f8> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f1d17b2-8e0c-487f-a375-fb5fab6b6c33>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/271d522f-12ac-4756-b928-93cf00720033>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/51e9ea59-9ecf-4607-9c97-36e7d154e341>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63daef90-fac2-4d95-a917-0a92c0eb730c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9c935e73-776e-40ad-b76b-6293b3458046>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a577a714-08f9-4e04-bc9d-f2d87c930391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bf4c5745-40fc-4378-8cee-4ac64ac00cc0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e827e0fd-0a93-464f-870a-63d55e07f444>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2947940-b634-4eb8-aab0-9019e581c343> ;
+    ns1:geplandeStart "2025-05-27T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e998b65d-b0ac-4c24-a12e-1f48e7addd55> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "b8d183b8-4b9b-5522-93b9-ffea2e01b397" ;
+    prov:atLocation "Grote raadzaal, Kasteeldreef 72, 9920 Lievegem" ;
+    prov:startedAtTime "2025-05-27T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f2947940-b634-4eb8-aab0-9019e581c343> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bf4c5745-40fc-4378-8cee-4ac64ac00cc0> ;
+    ns1:openbaar false ;
+    ns2:uuid "40ff4d4d-8b7e-5740-92ea-1cc3eabb4af0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2947940-b634-4eb8-aab0-9019e581c343> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/f2947940-b634-4eb8-aab0-9019e581c343> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/f2947940-b634-4eb8-aab0-9019e581c343> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van Zomerkermis Zomergem vanaf dinsdag 17 juni 2025 13.00 uur tot en met woensdag 25 juni 2025 12.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Zomerkermis Zomergem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 27 mei 2025 over de aanvraag evenement Zomerkermis Zomergem - Feestcomité Centrum Zomergem: goedkeuringHet besluit van het college van burgemeester en schepenen van 27 mei 2025 over de aanvraag Zomerkermis Zomergem 2025 - kinderuurtje en toewijzing standplaatsen spektakelattracties en kermisgastronomie: goedkeuringHet besluit van het college van burgemeester en schepenen van 27 mei 2025 over het tijdelijk politiereglement naar aanleiding van Oldtimertreffen Zomergem: vaststellingHet besluit van het college van burgemeester en schepenen van 27 mei 2025 over het tijdelijk politiereglement naar aanleiding van Wielerwedstrijd Zomergem Koerst - De Vrolijke Velovrienden op 20 juni 2025: vaststellingHet besluit van het college van burgemeester en schepenen van 27 mei 2025 over het tijdelijk politiereglement naar aanleiding van Wielerwedstrijd 1.15 A Nat Vrouwen - IND - Koninklijke Wielerclub De Sportvrienden op 21 juni 2025: vaststellingHet besluit van het college van burgemeester en schepenen van 27 mei 2025 over het tijdelijk politiereglement naar aanleiding van Wielerwedstrijd 1.12B - ind.reg.wed. Elite 2/U23/U23CP - Koninklijke Wielerclub De Sportvrienden op 24 juni 2025: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Ronny Claeys, namens Feestcomité Centrum Zomergem organiseert in samenwerking met gemeente Lievegem 'Zomerkermis Zomergem' van vrijdag 20 juni 2025 tot en met dinsdag 24 juni 2025.Er werd op 21 maart 2025 een aanvraag ingediend door Ronny Claeys, namens Feestcomité Zomergem centrum en team evenementen - Gemeente Lievegem om tijdens de kermis verkeersmaatregelen te treffen. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    BKO De Vlinder 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "cb3ed3bc-9a33-5c10-8855-318dbbaf2d00" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Zomerkermis Zomergem vanaf dinsdag 17 juni 2025 13.00 uur tot en met woensdag 25 juni 2025 12.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Kermisactiviteiten op Maarten Steyaertplein 
+                                     
+                                     
+                                        Stilstaan- en parkeerverbod vanaf vrijdag 20 juni 2025 6.00 uur tot en met woensdag 25 juni 2025 12.00 uur in Maarten Steyaertplein, ter hoogte van Dekenijstraat 2-4 en 1-3 en ter hoogte van Alfons Sifferstraat 2-4. 
+                                        Afsluiten Maarten Steyaertplein voor alle verkeer vanaf vrijdag 20 juni 2024 6.00 uur tot en met woensdag 25 juni 2025 12.00 uur. 
+                                        Uitgezonderd plaatselijk verkeer in Dekenijstraat 
+                                        Omleiding tijdens sluitingsuren kermisattracties via Zandstraat - Kerkhofstraat - Dreef - Markt en omgekeerd 
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Kermisattracties: 
+                                         
+                                        
+                                            1. Stilstaan- en parkeerverbod vanaf dinsdag 17 juni 2025 13.00 uur tot en met woensdag 25 juni 2025 6.00 uur op het marktplein, de parking achter het gemeentehuis in Zomerlaan, de parkeerstrook ter hoogte van Markt 12, de parking aan Toursport ter hoogte van Bevrijdingstraat 25A en de parkeerstrook ter hoogte van Dreef 47 (tegenover huisnummers 72 - 80) + op een deel van de parking van Dreef 47.
+                                         
+                                        
+                                            2. Parkeerverbod 'uitgezonderd gebruikers BKO' aan de oprijlaan en 5 parkeerplaatsen ter hoogte van BKO De Vlinder, Lt. Dobbelaerestraat 42A, op 20 juni, 23 juni en 24 juni 2025 telkens van 6.00 uur tot en met 19.00 uur
+                                         
+                                        
+                                            3. Stilstaan- en parkeerverbod ter hoogte van Karel Lodewijk Ledeganckstraat 2-8 van 20 juni 2025 18.00 uur tot en met 24 juni 2025 23.00 uur
+                                            4. Afsluiten centrum Zomergem en Dreef (tussen Kerkhofstraat en Kloosterstraat) voor alle verkeer tijdens openingsuren kermisattracties en bijkomende evenementen:
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            - vrijdag 20 juni 2025 van 18.00 uur tot en met 23.00 uur
+                                         
+                                        
+                                            - zaterdag 21 juni 2025 van 15.00 uur tot en met 23.00 uur
+                                         
+                                        
+                                            - zondag 22 juni 2025 van 10.30 uur tot en met 23.00 uur
+                                         
+                                        
+                                            - maandag 23 juni 2025 van 15.00 uur tot en met 24.00 uur
+                                         
+                                        
+                                            - dinsdag 24 juni 2025 van 5.00 uur tot en met 13.00 uur en van 16.30 uur tot en met 23.00 uur
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        5. Tijdens sluitingsuren kermisattracties wordt er beurtelings verkeer voorzien aan de attracties in Dreef.
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Avondmarkt: 
+                                         
+                                     
+                                    
+                                        1. Stilstaan- en parkeerverbod op maandag 23 juni 2025 vanaf 15.00 uur tot en met 24.00 uur in Dreef (vanaf Markt tot kruispunt met Kloosterstraat).
+                                     
+                                    
+                                        2. Afsluiten Dreef voor alle verkeer vanaf 15.00 uur tot en met 24.00 uur
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Wekelijkse markt - aangepaste locatie naar aanleiding van kermis: 
+                                         
+                                     
+                                    
+                                        1. Stilstaan- en parkeerverbod op dinsdag 24 juni 2025 vanaf 5.00 uur tot en met 13.00 uur ter hoogte van Markt 3 - 6, Markt 17 - 18,
+                                     
+                                    
+                                        2. Afsluiten centrum Zomergem voor alle verkeer op dinsdag 24 juni 2025 vanaf 5.00 uur tot en met 13.00 uur.
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Omleiding tijdens openingsuren kermisattracties: 
+                                         
+                                        
+                                            1. Voertuigen komende van Kruisstraat/Langeboeken en rijdend richting Brugge worden omgeleid via Moerstraat, Durmstraat, Ter Wal en Guido Gezellestraat.
+                                            2. Voertuigen komende van Kruisstraat en rijdend richting Eeklo worden omgeleid via Azaleastraat.
+                                            3. Voertuigen komende van Koning Leopold III laan en rijdend richting Gent worden omgeleid via Guido Gezellestraat, Ter Wal en Durmstraat.
+                                            4. Voertuigen komende van Koning Leopold III laan en rijdend richting Eeklo worden omgeleid via Guido Gezellestraat, Ter Wal, Boven, Hendrick Claeysstraat, Zandstraat, Motje en Azaleastraat.
+                                            5. Voertuigen komende van Burg. Henri Ryckaertstraat en rijdend richting Gent worden omgeleid via Daalmstraat, Azaleastraat en Motje.
+                                         
+                                     
+                                    
+                                        6. Tegenstrijdige borden worden afgedekt.
+                                     
+                                    
+                                        7. Plaatsing van borden met voorsignalisatie (dagen + uren waarop centrum Zomergem is afgesloten) op de invalswegen en op het kruispunt Motje/Dreef en aan de kerk.
+                                     
+                                    
+                                        8. Informatiebord voor vervoer + 3,5 ton, ter hoogte van Lobrug/Koning Leopoldstraat en Durmstraat/Moerstraat.
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt gesignaleerd volgens plannen in bijlage. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f2947940-b634-4eb8-aab0-9019e581c343> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2947940-b634-4eb8-aab0-9019e581c343> a ns1:Agendapunt ;
+    ns2:uuid "10e0daaa-d1bb-5640-a3ae-63267a47619f" .
+

@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/9ea1cb68-510a-4030-87a7-3fb447fee86e> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6c33f273-98a0-4d67-8c3e-858f7eb6b829>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/72b59844-6948-4849-b31b-0fc145f1c187>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8b7f63a5-93ed-459e-a4c4-fe66552f8294>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fcc3dd8d-608b-4e68-9ca7-d1a664706c21> ;
+    ns1:geplandeStart "2026-04-27T12:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/f9e05e51-685a-4235-9ff4-8d15cd8cc47f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "897cd4bf-86cb-5673-984f-48f9e2724d15" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-04-27T13:06:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8b7f63a5-93ed-459e-a4c4-fe66552f8294> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2be39ae0-98aa-4dc2-a8a9-062b0052ed60> ;
+    ns1:openbaar false ;
+    ns2:uuid "87184ba2-8a32-5254-b09e-3d09b67e2ab5" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8b7f63a5-93ed-459e-a4c4-fe66552f8294> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/8b7f63a5-93ed-459e-a4c4-fe66552f8294> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/8b7f63a5-93ed-459e-a4c4-fe66552f8294> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college van burgemeester en schepenen keurt de politieverordening met tijdelijke verkeersmaatregelen voor de toertocht Dwars door het Pajottenland op 10 mei 2026 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Toertocht Dwars door het Pajottenland - 10 mei 2026" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "0867bc56-efeb-547d-8c8b-9c6681bbd6d2" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van de toertocht Dwars door het Pajottenland op 10 mei 2026 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 9 mei 2026 13.00 uur tot en met 10 mei 2026 16.00 uur:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op de Stationsstraat voor huisnummer 67, parkeerplaatsen rechts van de spoorweg geldt:
+                                     
+                                    
+                                        het stilstaan en parkeren is verboden
+                                        het einde van de parkeerreglementering wordt aangeduid
+                                        het begin van de parkeerreglementering wordt aangeduid
+                                     
+                                    
+                                         Dit wordt gesignaleerd door: 
+                                         
+                                            verkeersborden E3 
+                                            de verkeersborden worden aangevuld met x-borden Xb, Xa, Xd 
+                                         
+                                        
+                                             
+                                         
+                                        
+                                             
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                             
+                                             
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8b7f63a5-93ed-459e-a4c4-fe66552f8294> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8b7f63a5-93ed-459e-a4c4-fe66552f8294> a ns1:Agendapunt ;
+    ns2:uuid "f19a6d9a-d159-5528-955d-7deb4645af06" .
+

@@ -1,0 +1,70 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/ee2c6d54-7829-4b95-9c0a-e13acbd479f3> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2e08d042-5dac-414b-99a5-0c9330d1a521>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/604968cb-04d5-4a62-a791-699a8e8276fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/adb92f08-aed2-47d7-bb56-2830212b4777> ;
+    ns1:geplandeStart "2024-12-17T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e60816fd-d329-40dc-8a2a-1a487fc65218> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "3eb60730-bd43-11ef-9218-6931664218fe" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2024-12-17T13:34:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/adb92f08-aed2-47d7-bb56-2830212b4777> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/604968cb-04d5-4a62-a791-699a8e8276fd> ;
+    ns1:openbaar true ;
+    ns3:uuid "3126c190-c068-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/adb92f08-aed2-47d7-bb56-2830212b4777> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/adb92f08-aed2-47d7-bb56-2830212b4777> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/adb92f08-aed2-47d7-bb56-2830212b4777> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement reglement op het wegverkeer wordt vastgesteld voor de periode 1 november 2024 - 28 februari 2025 (in plaats van de initiële einddatum van 31 december 2024):Een tijdelijke parkeerplaats voor personen met een handicap ter hoogte van de inrit van de schoolparking op de hoek Dreef-Kruisdreef. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement op het verkeer - parkeerplaats voor personen met een handicap - Dreef 49 - verlenging: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald.Decreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 29 oktober 2024 over het tijdelijk politiereglement op het verkeer - parkeerplaats voor personen met een handicap - Dreef 49: vaststelling 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om tijdelijke politiereglementen op de gemeentewegen vast te stellen.  
+                                    Er is vraag voor een tijdelijke parkeerplaats voor personen met een handicap ter hoogte van de schoolparking op de hoek Dreef-Kruisdreef. Door de werken aan de school is de parking tijdelijk onbruikbaar waardoor er ook niet langer een parkeerplaats voor personen met een handicap is in die buurt. 
+                                    Omdat de werken nog niet geëindigd zijn, werd er gevraagd deze beslissing te laten hernemen tot en met 28 februari 2025 (in plaats van de initiële einddatum van 31 december 2024). 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Lievo, de inwoners en betrokken handelaars. 
+                                 
+                            """@nl ;
+    ns3:uuid "3eb7b4e0-bd43-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het college van burgemeester en schepenen beslist volgend tijdelijk politiereglement op het wegverkeer vast te stellen:Een tijdelijke parkeerplaats voor personen met een handicap ter hoogte van de inrit van de schoolparking op de hoek Dreef-Kruisdreef. 
+                                    Artikel 2 
+                                    Deze verkeersmaatregel wordt als volgt gesignaleerd:De parkeerplaats wordt aangeduid met het bord E9a. 
+                                    Artikel 3 
+                                    Dit tijdelijk politiereglement op het verkeer gaat in voege vanaf 1 november 2024 en is geldig tot 28 februari 2025 (in plaats van de initiële einddatum van 31 december 2024). 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/adb92f08-aed2-47d7-bb56-2830212b4777> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/adb92f08-aed2-47d7-bb56-2830212b4777> a ns1:Agendapunt ;
+    ns3:uuid "3fd09220-c068-11ef-9218-6931664218fe" .
+

@@ -1,0 +1,457 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3bbe50aa-c3e8-4b7c-bb7c-4682052a4673> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06f1f332-650a-4d40-a99c-0c733ffa85d1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c0f89c5-baa1-4637-811c-23ba8ba0c6be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/143b01fe-df79-4464-a86e-9f3331c41dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/19777059-5d19-4c19-aa75-c9728f3c1f7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1a496b2e-cf0d-4492-81c2-1b83c32841ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b6e8646-0e53-4476-873e-8ca4b5d87f79>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5039459f-5883-4417-bf07-a5cb8f922dff>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5824b498-b950-4a56-91f6-1756c8e16615>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d9d3cf3-2cc8-49f0-bc97-86d52713181a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ec00622-f854-4d66-a3d6-cd8653904744>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61d7619a-2afb-4580-9e5d-306853b5563e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bcb7c92-bded-425b-bb57-1dcf51a32ec4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6deb0f16-50f3-4267-8661-88276e847e60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/739e24ab-2ffe-4fa2-b120-e9f780b542b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7db1854b-eea1-4071-8222-2fa3573c65ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f7c17a8-0561-4b5d-a292-936fa3605216>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/881bd7fd-6ec4-4882-9a14-15458378f51e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c65b0e5-e5ef-4730-988c-87d06b6a3993>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9314a642-ce70-4a85-ab4f-027dddbfb7ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9384f2b2-5078-47d0-a1e8-5f572f245831>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1970aac-3846-476f-9089-3c9b90d2cebc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a82e01d6-03ea-4b9f-9b5a-9a4e48d048f2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae02f993-8ac9-4b6b-92c3-217ae1c725d6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ce690ef6-529c-465b-8bc2-0a504cb16e40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8ebeb75-42b5-4230-b9db-aab06688cc36>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e447ed51-ca89-4f26-aec4-4b20f2adbbfb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee301e9c-da25-478b-9b4a-3c795b77db7a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2fb6d2d-2bb1-461a-bced-cbe1f05eb6db> ;
+    ns1:geplandeStart "2024-10-23T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ae70f37b-eb96-4735-833b-ce97bceb51f6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bd4fa978-f012-49c2-acc4-4646b86642e0> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fe261bc2-7e58-4536-8439-b9dedda822ba> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ed05ab10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-10-23T21:17:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-10-23T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/06f1f332-650a-4d40-a99c-0c733ffa85d1> ;
+    ns1:openbaar true ;
+    ns2:uuid "8b26be80-a8d4-11ef-9218-6931664218fe" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3007b43d-c46c-46d8-8874-ba27436fdb06> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3007b43d-c46c-46d8-8874-ba27436fdb06> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:description """ 
+                                                    Het aangepast aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’ wordt vastgesteld. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Aanvullend reglement op het verkeer - snelheid 30-50-70: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 119 inzake de bevoegdheden van de gemeenteraad 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 40§3 en 41.2 inzake de bevoegdheden van de gemeenteraad en artikel 286 inzake de bekendmaking van de reglementen en verordeningen van de gemeenteraad. 
+                                    Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeer 
+                                    Koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                    Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                    Decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens 
+                                    Het besluit van de Vlaamse Regering van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens.  
+                                    De omzendbrief MOB/2009/01 van 3 april 2009 betreffende de gemeentelijke aanvullende reglementen op de politie over het wegverkeer. 
+                                    Het besluit van de gemeenteraad van 26 januari 2022 over de vaststelling van het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’. 
+                                    Het besluit van de gemeenteraad van 29 november 2023 over de vaststelling van een aanpassing in het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’. 
+                                    Het besluit van de gemeenteraad van 24 april 2024 over de vaststelling van een aanpassing in het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’. 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    In het kader van de opmaak van het nieuwe mobiliteitsplan werd er, door Veneco in samenwerking met studiebureau Mint, op basis van voorbereidend overleg tussen de gemeente en Veneco een nota opgemaakt aangaande de toekomstige snelheidsregimes binnen Lievegem. Deze nota formuleert de volgende uitgangspunten die zullen worden gehanteerd bij de verdere uitwerking van het mobiliteitsplan: 
+                                     
+                                        Lievegem kiest voor een uniform snelheidsbeleid op gans haar grondgebied van 30-50-70 
+                                        Binnen de bebouwde kom wordt 30km/h de norm waarbij 50km/h kan worden toegestaan op de belangrijkste verbindingswegen 
+                                        In elke schoolomgeving blijft 30km/u de norm 
+                                        Buiten de bebouwde kom wordt 50km/h de norm op niet verbindingswegen tussen de kernen 
+                                        Buiten de bebouwde kom kan 70 km/h enkel worden toegelaten op de verbindingswegen én bovendien enkel in het geval er vrijliggende fietspaden aanwezig zijn 
+                                        De N9 wordt ingedeeld in zones 50 daar waar woonwijken zijn gelegen en zones 70 buiten de bebouwde kom. 
+                                     
+                                    Deze nota werd op 14 juli 2020 goedgekeurd door het college van burgemeester en schepenen. 
+                                    Na de vaststelling van het aangepast aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’ werd door de Gemeenteraad op 12 september 2024 bij de definitieve vaststelling van het mobiliteitsplan Lievegem beslist dat Larestraat en Vaartstraat volledig 'zone 30' worden. 
+                                    Het aanvullend reglement 'snelheidsregimes 30-50-70' wordt bij artikel 2 aangepast: 
+                                    artikel 2 - deelgemeente Lovendegem: Vaartstraat (deel tussen Koning Leopoldstraat en Larestraat) én artikel 2 - deelgemeente Lovendegem: Kort Eindeken, Laagland, Bosleentje, Basketballstraat, Tussenwege, Holstraatje, Sportstraat, Voetbalstraat, Tennisstraat, Warandestraat, Korfbalstraat, Golfstraat, Kasteeldreef (deel tussen Larestraat en Warandestraat), Molendreef (deel tussen Kasteeldreef en Sportstraat), Diepestraat, Dorp, Centrumstraat, Schachterijstraat en Kerkelare  
+                                    worden vervangen door 
+                                    artikel 2 - deelgemeente Lovendegem: Kort Eindeken, Laagland, Bosleentje, Basketballstraat, Tussenwege, Holstraatje, Sportstraat, Voetbalstraat, Tennisstraat, Warandestraat, Korfbalstraat, Golfstraat, Kasteeldreef (deel tussen Larestraat en Warandestraat), Molendreef (deel tussen Kasteeldreef en Sportstraat), Diepestraat, Dorp, Centrumstraat, Schachterijstraat, Kerkelare, Vaartstraat en Larestraat. 
+                                    Dit betekent dat de zone 'Lovendegem centrum' wordt uitgebreid met de Larestraat en Vaartstraat (vanaf het kruispunt Larestraat/Kasteeldreef tot de kruispunten Vaartstraat/Koning Leopoldstraat, Vaartstraat/Diepestraat en Westerhofwegel/Lobrug).  
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de dienst ‘aanvullende reglementen’ van de afdeling Beleid Mobiliteit en Verkeersveiligheid, Departement Mobiliteit en Openbare Werken van de Vlaamse Overheid, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum, De Lijn, Bpost, IVM, Lievo 
+                                    ABB via digitaal loket. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Nieuwe gemeentewet, inzonderheid artikel 119 inzake de bevoegdheden van de gemeenteraad 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 40§3 en 41.2 inzake de bevoegdheden van de gemeenteraad en artikel 286 inzake de bekendmaking van de reglementen en verordeningen van de gemeenteraad. 
+                                                            Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeer 
+                                                            Koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                                            Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                                            Decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens 
+                                                            Het besluit van de Vlaamse Regering van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens.  
+                                                            De omzendbrief MOB/2009/01 van 3 april 2009 betreffende de gemeentelijke aanvullende reglementen op de politie over het wegverkeer. 
+                                                            Het besluit van de gemeenteraad van 26 januari 2022 over de vaststelling van het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’. 
+                                                            Het besluit van de gemeenteraad van 29 november 2023 over de vaststelling van een aanpassing in het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’. 
+                                                            Het besluit van de gemeenteraad van 24 april 2024 over de vaststelling van een aanpassing in het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’. 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            In het kader van de opmaak van het nieuwe mobiliteitsplan werd er, door Veneco in samenwerking met studiebureau Mint, op basis van voorbereidend overleg tussen de gemeente en Veneco een nota opgemaakt aangaande de toekomstige snelheidsregimes binnen Lievegem. Deze nota formuleert de volgende uitgangspunten die zullen worden gehanteerd bij de verdere uitwerking van het mobiliteitsplan: 
+                                                             
+                                                                Lievegem kiest voor een uniform snelheidsbeleid op gans haar grondgebied van 30-50-70 
+                                                                Binnen de bebouwde kom wordt 30km/h de norm waarbij 50km/h kan worden toegestaan op de belangrijkste verbindingswegen 
+                                                                In elke schoolomgeving blijft 30km/u de norm 
+                                                                Buiten de bebouwde kom wordt 50km/h de norm op niet verbindingswegen tussen de kernen 
+                                                                Buiten de bebouwde kom kan 70 km/h enkel worden toegelaten op de verbindingswegen én bovendien enkel in het geval er vrijliggende fietspaden aanwezig zijn 
+                                                                De N9 wordt ingedeeld in zones 50 daar waar woonwijken zijn gelegen en zones 70 buiten de bebouwde kom. 
+                                                             
+                                                            Deze nota werd op 14 juli 2020 goedgekeurd door het college van burgemeester en schepenen. 
+                                                            Na de vaststelling van het aangepast aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’ werd door de Gemeenteraad op 12 september 2024 bij de definitieve vaststelling van het mobiliteitsplan Lievegem beslist dat Larestraat en Vaartstraat volledig 'zone 30' worden. 
+                                                            Het aanvullend reglement 'snelheidsregimes 30-50-70' wordt bij artikel 2 aangepast: 
+                                                            artikel 2 - deelgemeente Lovendegem: Vaartstraat (deel tussen Koning Leopoldstraat en Larestraat) én artikel 2 - deelgemeente Lovendegem: Kort Eindeken, Laagland, Bosleentje, Basketballstraat, Tussenwege, Holstraatje, Sportstraat, Voetbalstraat, Tennisstraat, Warandestraat, Korfbalstraat, Golfstraat, Kasteeldreef (deel tussen Larestraat en Warandestraat), Molendreef (deel tussen Kasteeldreef en Sportstraat), Diepestraat, Dorp, Centrumstraat, Schachterijstraat en Kerkelare  
+                                                            worden vervangen door 
+                                                            artikel 2 - deelgemeente Lovendegem: Kort Eindeken, Laagland, Bosleentje, Basketballstraat, Tussenwege, Holstraatje, Sportstraat, Voetbalstraat, Tennisstraat, Warandestraat, Korfbalstraat, Golfstraat, Kasteeldreef (deel tussen Larestraat en Warandestraat), Molendreef (deel tussen Kasteeldreef en Sportstraat), Diepestraat, Dorp, Centrumstraat, Schachterijstraat, Kerkelare, Vaartstraat en Larestraat. 
+                                                            Dit betekent dat de zone 'Lovendegem centrum' wordt uitgebreid met de Larestraat en Vaartstraat (vanaf het kruispunt Larestraat/Kasteeldreef tot de kruispunten Vaartstraat/Koning Leopoldstraat, Vaartstraat/Diepestraat en Westerhofwegel/Lobrug).  
+                                                         
+                                                    """@nl ;
+    ns2:uuid "59dc08d0-9394-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    De gemeenteraad stelt het (aangepast) aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’ vast.Artikel 2Er wordt een zone 30 ingevoerd in de volgende straten: 
+                                     
+                                        Woonkern Beke: 
+                                         
+                                            De Stijne 
+                                            De Baetsstraat en De Vijf Eiken 
+                                            Oude Staatsbaan 54a – Beke 143 
+                                            Lousberglaan 
+                                         
+                                        Deelgemeente Lovendegem: 
+                                         
+                                            Lostraat (vanaf Vijverstraat tot Lovaart) 
+                                            Wielmakersveld 
+                                            Lostraat 152-158 
+                                            Liefkensweg en Rabothoek 
+                                            Leliestraat, Tulpenstraat, Asterstraat, Resedastraat, Lobeliastraat, Rozenhof, Violierstraat, Tempeliersdreef, Bremstraat, Eglantier, Jasmijnstraat, Salviastraat, Bloemenlus, Zonnebloemstraat, Begoniastraat, Dahliastraat, Mimosastraat en Lavendelstraat 
+                                            Neringen 
+                                            Beiaard en Meersstraat 
+                                            Lierstraat 
+                                            Acaciastraat 
+                                            Sparrestraat 
+                                            Verbindingsweg, Lindestraat, Roosweg, Binnenslag en Hazelaarstraat 
+                                            Beekstraat 
+                                            Eeksken (tussen Eeksken 36 en Eeksken 53) en Eeksken 47-51 
+                                            Eeksken 67-71 
+                                            Eeksken 77-81 
+                                            Eeksken 97-115 
+                                            Varensbos en Veldstraat 
+                                            Schoordam en Spaans Hof 
+                                            Kort Eindeken, Laagland, Bosleentje, Basketballstraat, Tussenwege, Holstraatje, Sportstraat, Voetbalstraat, Tennisstraat, Warandestraat, Korfbalstraat, Golfstraat, Kasteeldreef (deel tussen Larestraat en Warandestraat), Molendreef (deel tussen Kasteeldreef en Sportstraat), Diepestraat, Dorp, Centrumstraat, Schachterijstraat, Kerkelare, Vaartstraat en Larestraat. 
+                                            Kanunnik Triestlaan 
+                                            Oostveld Kouter (deel tussen Molendreef en N9) en Wijnzilver 
+                                            Verkortingswegen Robunder 
+                                            Kasteeldreef (deel tussen Koning Leopoldstraat en Larestraat) 
+                                            Waalken 
+                                         
+                                        Deelgemeente Oostwinkel: 
+                                         
+                                            Veldhoek 2 – Veldhoek 13a 
+                                            Leikant – Wagemakersstraat – De Boomgaard 
+                                         
+                                        Deelgemeente Ronsele: 
+                                         
+                                            Raymond Leersstraat 
+                                            Parklaan 
+                                            Ronselekouter 
+                                            Kerkplein en Eikendreef 1-5 
+                                            Stoktevijver 2-27 
+                                         
+                                        Deelgemeente Vinderhoute: 
+                                         
+                                            Schouwbroekstraat 62-64 en Speystraat vanaf Schouwbroekstraat 83 
+                                            Neerstraat (deel tussen Vinderhoutsendam en Trekweg (Mariakerke)) 
+                                            Zijdelingse oprit Speybrug tussen brug en jaagpad 
+                                            Neerstraat (deel tussen Neerstraat 1-3 en Neerstraat 10), Brugstraat (deel tussen Neerstraat en Rozenhoed), Rozenhoed, de fietsweg tussen Bierstalbrug en Brugstraat en de oostelijke toegangsweg naast Bierstalbrug naar en van het jaagpad (kant Vinderhoute) 
+                                            De westelijke toegangsweg naast Bierstalbrug naar en van het jaagpad (kant Vinderhoute) 
+                                            Ten Veldelaan 
+                                            Dorsweg, Kerkkouter, Kasteellaan (deel tussen Dorsweg en Drongensesteenweg), Vredesdreef, Brugstraat (deel tussen Pastoor Moernautstraat en Neerstraat) en Pastoor Moernautstraat 
+                                            Alonder, Kasteellaan (deel tussen Drongensesteenweg en Meirestraat), Meirestraat, Bergstraat, Korte Schouwbroekstraat en kruispunt ‘SintAnnakapel’ aan Molenslag/Poekstraat/Bergstraat/Meirestraat/SintAnnadreef 
+                                         
+                                        Deelgemeente Waarschoot: 
+                                         
+                                            Stuiver 1-13 
+                                            Stuiver 17-26 
+                                            Kere 62-103 
+                                            Zevenbunders 
+                                            Keerstraatje, Arsène De Preststraat, Varenstraat, Dillestraat, Zavelput, Berg 1-53/2-74, Bergkouter, Karis en Willemstraat 
+                                            Vlinderstaat 
+                                            Populierenstraat 
+                                            Berkenstraat 
+                                            Oostmoer Tuinwijk 
+                                            Lagebilk, Hogebilk en Olmenstraat 
+                                            Ververij 
+                                            Hoekje (tussen Kapellestraat en Hoekje 63-77) 
+                                            Priorijstraat 
+                                            Stationsplein, Vennegoedstraat, Tuinbouwstraat, Nijverheidsstraat, Kleine Weg, Guldensporenwijk, Nieuwstraat, Torenzicht, Brouwerspad, Patronagiestraat, Steenakker, Vossenpad, Hugo Verriestlaan, Schoolstraat, Toekomststraat en Waarschootdorp (deel tussen Kerkstraat en Schoolstraat) 
+                                            Metaalstraat, Brandweerplein, Merelstraat, Hovingen, Zonnestraat, Kleine Bovenmeers, Bovenmeers, Kouterweg, Krakeelhoek, Bliekput, Vinkenstraat en Gastelstraat 
+                                            Jaspaertstede 
+                                            Victor De Craenestraat, Lejourstraat, Guldeland, Notendonk en Notelaarstraat 
+                                            Leest 50-62 
+                                            Weverstraat 
+                                            Renning Tuinwijk 
+                                            BekeTuinwijk 
+                                         
+                                        Deelgemeente Zomergem: 
+                                         
+                                            Park Ter Daelmen 
+                                            Tennislaan, Den Boer, Sportlaan, Begonialaan, Tulpenlaan, Hofbouwstraat, Chrysantenstraat, Kruisdreef, Dreef 1-2/51-116 (inclusief kruispunt met Kloosterstraat), Kloosterstraat, Tuinwijk-Motje, Kerkhofstraat, Markt, Luitenant Dobbelaerestraat 2-21, Kleitstraat 2a-13, Zomerlaan (deel tussen Markt en Zomerlaan 25/26), Ter Straten, Adolf Lievensstraat, Westeling, Alfons Sifferstraat, Maarten Steyaertplein, Dekenijstraat, Blauwersstraat, Hendrik Claeysstraat, Boven 6-17, Molenbergstraat 2-42/1-59, Molenpark, Ter Wal, Guido Gezellestraat (vanaf Ter Wal tot en kruispunt met Adolf Lievenslaan), Zandstraat, ’t Lindeken, Bevrijdingsstraat, Weldadigheidstraat, Klein Amerika en André Claeyspark 
+                                            Hogenbrand 
+                                            Haagstraat (deel tussen Spinhoutstraat en Haagstraat 28/30) 
+                                            Nestevoorde, Zwaluwstraat en Beukenpark 
+                                            Reeuwstro, Calangebos, Prieelke, Vosbos, Schuthof, Rijversmeersen, Zomergemse Dijk, Geetdam, Biesbilkske en Rijvers (deel tussen Zomerlaan en Geetdam) 
+                                            Karel Lodewijk Ledeganckstraat 
+                                            Kleitstraat 71-89 
+                                            Peperhoek 
+                                         
+                                     
+                                    Artikel 3 
+                                    Er wordt een snelheidsbeperking van 50 km/uur ingevoerd in alle overige straten (deels of volledig) die niet gelegen zijn binnen een zone 30 zoals hiervoor vermeld of die niet gelegen zijn binnen de bebouwde kom. Artikel 4 
+                                    Er wordt een uitzondering gemaakt voor de hierna vermelde straten (deels of volledig). In deze straten, gelegen buiten de bebouwde kom, is er een maximale snelheid van 70 km/uur toegelaten. 
+                                     
+                                        Deelgemeente Lovendegem: 
+                                         
+                                            Lobrug: deel tussen Lostraat en Lobrug 2 
+                                            Koning Leopoldstraat: deel tussen N9 en Koning Leopoldstraat 44 
+                                            Koning Leopoldstraat: deel tussen Lobrug en de grens met Merendree/Deinze 
+                                            Vellare: vanaf Warandestraat tot Kruisstraat 
+                                            Boterhoek 
+                                            Eeksken (vanaf Boterhoek tot Eeksken 22) 
+                                         
+                                        Deelgemeente Ronsele: 
+                                         
+                                            Ronselestraat: vanaf Raymond Leersstraat tot Leischoot 
+                                         
+                                        Deelgemeente Oostwinkel 
+                                         
+                                            Leischoot : vanaf Ronselestraat tot 50 meter voor het kruispunt met de Langestraat 
+                                         
+                                        Deelgemeente Vinderhoute: 
+                                         
+                                            Bierstalbrug (vanaf N9 tot 100 meter vóór de rotonde Drongensesteenweg) 
+                                         
+                                        Deelgemeente Waarschoot: 
+                                         
+                                            ‘t Hand 
+                                         
+                                        Deelgemeente Zomergem: 
+                                         
+                                            Kruisstraat: vanaf Vellare tot Overdam met uitzondering van een zone van 2x50 meter vóór en na het kruispunt met Langeboeken en Moerstraat 
+                                            Moerstraat 
+                                            Stoktevijver 
+                                            Durmstraat: tussen Moerstraat en Schipdonkkanaal 
+                                         
+                                     
+                                    Artikel 5 
+                                    Op de gewestwegen N9 en N461 wordt een snelheidsbeperking van 70 km/uur voorzien met uitzondering voor de N9 in het deel vanaf Berg tot Hendrik Consciencelaan 14. Op die plaats wordt de snelheid beperkt tot 50 km/uur. 
+                                    Artikel 6 
+                                    Deze verkeersmaatregel zal worden gesignaleerd overeenkomstig de bepalingen van het Koninklijk Besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en het Ministerieel Besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald: 
+                                     
+                                        Zone 30: borden F4a en F4b aan alle toegangswegen naar de zones zoals vermeld in artikel 1. 
+                                        Snelheidsbeperking van 50 km/uur: borden C43 en C45 
+                                     
+                                    Artikel 7 
+                                    Dit aanvullend reglement op het verkeer gaat in voege vanaf 1 november 2024. 
+                                    Artikel 8 
+                                    Het besluit van de gemeenteraad van 12 september 2024 over de vaststelling van het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’ wordt opgeheven. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad stelt het (aangepast) aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’ vast.Artikel 2Er wordt een zone 30 ingevoerd in de volgende straten: 
+                                                             
+                                                                Woonkern Beke: 
+                                                                 
+                                                                    De Stijne 
+                                                                    De Baetsstraat en De Vijf Eiken 
+                                                                    Oude Staatsbaan 54a – Beke 143 
+                                                                    Lousberglaan 
+                                                                 
+                                                                Deelgemeente Lovendegem: 
+                                                                 
+                                                                    Lostraat (vanaf Vijverstraat tot Lovaart) 
+                                                                    Wielmakersveld 
+                                                                    Lostraat 152-158 
+                                                                    Liefkensweg en Rabothoek 
+                                                                    Leliestraat, Tulpenstraat, Asterstraat, Resedastraat, Lobeliastraat, Rozenhof, Violierstraat, Tempeliersdreef, Bremstraat, Eglantier, Jasmijnstraat, Salviastraat, Bloemenlus, Zonnebloemstraat, Begoniastraat, Dahliastraat, Mimosastraat en Lavendelstraat 
+                                                                    Neringen 
+                                                                    Beiaard en Meersstraat 
+                                                                    Lierstraat 
+                                                                    Acaciastraat 
+                                                                    Sparrestraat 
+                                                                    Verbindingsweg, Lindestraat, Roosweg, Binnenslag en Hazelaarstraat 
+                                                                    Beekstraat 
+                                                                    Eeksken (tussen Eeksken 36 en Eeksken 53) en Eeksken 47-51 
+                                                                    Eeksken 67-71 
+                                                                    Eeksken 77-81 
+                                                                    Eeksken 97-115 
+                                                                    Varensbos en Veldstraat 
+                                                                    Schoordam en Spaans Hof 
+                                                                    Kort Eindeken, Laagland, Bosleentje, Basketballstraat, Tussenwege, Holstraatje, Sportstraat, Voetbalstraat, Tennisstraat, Warandestraat, Korfbalstraat, Golfstraat, Kasteeldreef (deel tussen Larestraat en Warandestraat), Molendreef (deel tussen Kasteeldreef en Sportstraat), Diepestraat, Dorp, Centrumstraat, Schachterijstraat, Kerkelare, Vaartstraat en Larestraat. 
+                                                                    Kanunnik Triestlaan 
+                                                                    Oostveld Kouter (deel tussen Molendreef en N9) en Wijnzilver 
+                                                                    Verkortingswegen Robunder 
+                                                                    Kasteeldreef (deel tussen Koning Leopoldstraat en Larestraat) 
+                                                                    Waalken 
+                                                                 
+                                                                Deelgemeente Oostwinkel: 
+                                                                 
+                                                                    Veldhoek 2 – Veldhoek 13a 
+                                                                    Leikant – Wagemakersstraat – De Boomgaard 
+                                                                 
+                                                                Deelgemeente Ronsele: 
+                                                                 
+                                                                    Raymond Leersstraat 
+                                                                    Parklaan 
+                                                                    Ronselekouter 
+                                                                    Kerkplein en Eikendreef 1-5 
+                                                                    Stoktevijver 2-27 
+                                                                 
+                                                                Deelgemeente Vinderhoute: 
+                                                                 
+                                                                    Schouwbroekstraat 62-64 en Speystraat vanaf Schouwbroekstraat 83 
+                                                                    Neerstraat (deel tussen Vinderhoutsendam en Trekweg (Mariakerke)) 
+                                                                    Zijdelingse oprit Speybrug tussen brug en jaagpad 
+                                                                    Neerstraat (deel tussen Neerstraat 1-3 en Neerstraat 10), Brugstraat (deel tussen Neerstraat en Rozenhoed), Rozenhoed, de fietsweg tussen Bierstalbrug en Brugstraat en de oostelijke toegangsweg naast Bierstalbrug naar en van het jaagpad (kant Vinderhoute) 
+                                                                    De westelijke toegangsweg naast Bierstalbrug naar en van het jaagpad (kant Vinderhoute) 
+                                                                    Ten Veldelaan 
+                                                                    Dorsweg, Kerkkouter, Kasteellaan (deel tussen Dorsweg en Drongensesteenweg), Vredesdreef, Brugstraat (deel tussen Pastoor Moernautstraat en Neerstraat) en Pastoor Moernautstraat 
+                                                                    Alonder, Kasteellaan (deel tussen Drongensesteenweg en Meirestraat), Meirestraat, Bergstraat, Korte Schouwbroekstraat en kruispunt ‘SintAnnakapel’ aan Molenslag/Poekstraat/Bergstraat/Meirestraat/SintAnnadreef 
+                                                                 
+                                                                Deelgemeente Waarschoot: 
+                                                                 
+                                                                    Stuiver 1-13 
+                                                                    Stuiver 17-26 
+                                                                    Kere 62-103 
+                                                                    Zevenbunders 
+                                                                    Keerstraatje, Arsène De Preststraat, Varenstraat, Dillestraat, Zavelput, Berg 1-53/2-74, Bergkouter, Karis en Willemstraat 
+                                                                    Vlinderstaat 
+                                                                    Populierenstraat 
+                                                                    Berkenstraat 
+                                                                    Oostmoer Tuinwijk 
+                                                                    Lagebilk, Hogebilk en Olmenstraat 
+                                                                    Ververij 
+                                                                    Hoekje (tussen Kapellestraat en Hoekje 63-77) 
+                                                                    Priorijstraat 
+                                                                    Stationsplein, Vennegoedstraat, Tuinbouwstraat, Nijverheidsstraat, Kleine Weg, Guldensporenwijk, Nieuwstraat, Torenzicht, Brouwerspad, Patronagiestraat, Steenakker, Vossenpad, Hugo Verriestlaan, Schoolstraat, Toekomststraat en Waarschootdorp (deel tussen Kerkstraat en Schoolstraat) 
+                                                                    Metaalstraat, Brandweerplein, Merelstraat, Hovingen, Zonnestraat, Kleine Bovenmeers, Bovenmeers, Kouterweg, Krakeelhoek, Bliekput, Vinkenstraat en Gastelstraat 
+                                                                    Jaspaertstede 
+                                                                    Victor De Craenestraat, Lejourstraat, Guldeland, Notendonk en Notelaarstraat 
+                                                                    Leest 50-62 
+                                                                    Weverstraat 
+                                                                    Renning Tuinwijk 
+                                                                    BekeTuinwijk 
+                                                                 
+                                                                Deelgemeente Zomergem: 
+                                                                 
+                                                                    Park Ter Daelmen 
+                                                                    Tennislaan, Den Boer, Sportlaan, Begonialaan, Tulpenlaan, Hofbouwstraat, Chrysantenstraat, Kruisdreef, Dreef 1-2/51-116 (inclusief kruispunt met Kloosterstraat), Kloosterstraat, Tuinwijk-Motje, Kerkhofstraat, Markt, Luitenant Dobbelaerestraat 2-21, Kleitstraat 2a-13, Zomerlaan (deel tussen Markt en Zomerlaan 25/26), Ter Straten, Adolf Lievensstraat, Westeling, Alfons Sifferstraat, Maarten Steyaertplein, Dekenijstraat, Blauwersstraat, Hendrik Claeysstraat, Boven 6-17, Molenbergstraat 2-42/1-59, Molenpark, Ter Wal, Guido Gezellestraat (vanaf Ter Wal tot en kruispunt met Adolf Lievenslaan), Zandstraat, ’t Lindeken, Bevrijdingsstraat, Weldadigheidstraat, Klein Amerika en André Claeyspark 
+                                                                    Hogenbrand 
+                                                                    Haagstraat (deel tussen Spinhoutstraat en Haagstraat 28/30) 
+                                                                    Nestevoorde, Zwaluwstraat en Beukenpark 
+                                                                    Reeuwstro, Calangebos, Prieelke, Vosbos, Schuthof, Rijversmeersen, Zomergemse Dijk, Geetdam, Biesbilkske en Rijvers (deel tussen Zomerlaan en Geetdam) 
+                                                                    Karel Lodewijk Ledeganckstraat 
+                                                                    Kleitstraat 71-89 
+                                                                    Peperhoek 
+                                                                 
+                                                             
+                                                            Artikel 3 
+                                                            Er wordt een snelheidsbeperking van 50 km/uur ingevoerd in alle overige straten (deels of volledig) die niet gelegen zijn binnen een zone 30 zoals hiervoor vermeld of die niet gelegen zijn binnen de bebouwde kom. Artikel 4 
+                                                            Er wordt een uitzondering gemaakt voor de hierna vermelde straten (deels of volledig). In deze straten, gelegen buiten de bebouwde kom, is er een maximale snelheid van 70 km/uur toegelaten. 
+                                                             
+                                                                Deelgemeente Lovendegem: 
+                                                                 
+                                                                    Lobrug: deel tussen Lostraat en Lobrug 2 
+                                                                    Koning Leopoldstraat: deel tussen N9 en Koning Leopoldstraat 44 
+                                                                    Koning Leopoldstraat: deel tussen Lobrug en de grens met Merendree/Deinze 
+                                                                    Vellare: vanaf Warandestraat tot Kruisstraat 
+                                                                    Boterhoek 
+                                                                    Eeksken (vanaf Boterhoek tot Eeksken 22) 
+                                                                 
+                                                                Deelgemeente Ronsele: 
+                                                                 
+                                                                    Ronselestraat: vanaf Raymond Leersstraat tot Leischoot 
+                                                                 
+                                                                Deelgemeente Oostwinkel 
+                                                                 
+                                                                    Leischoot : vanaf Ronselestraat tot 50 meter voor het kruispunt met de Langestraat 
+                                                                 
+                                                                Deelgemeente Vinderhoute: 
+                                                                 
+                                                                    Bierstalbrug (vanaf N9 tot 100 meter vóór de rotonde Drongensesteenweg) 
+                                                                 
+                                                                Deelgemeente Waarschoot: 
+                                                                 
+                                                                    ‘t Hand 
+                                                                 
+                                                                Deelgemeente Zomergem: 
+                                                                 
+                                                                    Kruisstraat: vanaf Vellare tot Overdam met uitzondering van een zone van 2x50 meter vóór en na het kruispunt met Langeboeken en Moerstraat 
+                                                                    Moerstraat 
+                                                                    Stoktevijver 
+                                                                    Durmstraat: tussen Moerstraat en Schipdonkkanaal 
+                                                                 
+                                                             
+                                                            Artikel 5 
+                                                            Op de gewestwegen N9 en N461 wordt een snelheidsbeperking van 70 km/uur voorzien met uitzondering voor de N9 in het deel vanaf Berg tot Hendrik Consciencelaan 14. Op die plaats wordt de snelheid beperkt tot 50 km/uur. 
+                                                            Artikel 6 
+                                                            Deze verkeersmaatregel zal worden gesignaleerd overeenkomstig de bepalingen van het Koninklijk Besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en het Ministerieel Besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald: 
+                                                             
+                                                                Zone 30: borden F4a en F4b aan alle toegangswegen naar de zones zoals vermeld in artikel 1. 
+                                                                Snelheidsbeperking van 50 km/uur: borden C43 en C45 
+                                                             
+                                                            Artikel 7 
+                                                            Dit aanvullend reglement op het verkeer gaat in voege vanaf 1 november 2024. 
+                                                            Artikel 8 
+                                                            Het besluit van de gemeenteraad van 12 september 2024 over de vaststelling van het aanvullend reglement op het wegverkeer ‘snelheidsregimes 30-50-70’ wordt opgeheven. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3007b43d-c46c-46d8-8874-ba27436fdb06> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ed0a6600-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Aanvullend reglement op het verkeer - snelheid 30-50-70: vaststelling" .
+

@@ -1,0 +1,88 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/bcb47833-d0f3-4b19-bcb9-1f0c09d130f0> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/01e5c9d6-47e0-4c60-8584-0cf12a201075>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/021182bf-41dd-4991-b632-fec368a74290>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/09ad5ca4-84d9-4fb4-8fbb-ef14b53f914d>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0be9b405-c4c4-4bb4-8e2b-dc990f39f6c0>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0d84ce1f-b866-4ee9-8222-a9261a34475d>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/1278a9bf-575e-433c-b920-d8fdb6136261>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/19036c90-1dd8-444b-b679-f3330b358b55>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/195e2f93-519e-4540-9b78-f8dec66b3002>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/19ec7992-2c2f-4ce7-83ca-afdab289b722>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/1d440df2-49b9-4e3a-afd2-360d7f047d17>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/1eef64e4-ca44-4c0e-9ace-dbb3305bc6c9>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/209bb331-98fa-44eb-91d4-a11b710d07bd>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/20abe7bd-ff2e-45ab-8605-dd38833cd3b4>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/31b4e0c8-f5fb-41c4-836d-ec3c2d50308f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/36d7632e-9f1f-4acc-ba2f-85b5f5fad416>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3b822cf8-76f7-4f1b-bf8d-edc4ec6dc336>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3d46af28-0076-4ab4-aaab-22aa5c070c39>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3fed0c40-17b1-48dd-8012-f7cad24229f1>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/499570dd-facd-4006-92ad-237ac1a4d43f>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4a03f6b6-7292-4b09-beb3-f22cffcd286b>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/4a70888a-5ef6-472f-a60d-04f85f676e26>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/507a7b1b-ec5c-40ea-a711-8fe18694003e>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/59361007-0c56-4516-82af-bfd44f586faf>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5a2b3608-84c6-424d-8757-5fe025a9ac68>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/64127c70-b571-4c74-92df-4f500b5d7b5e>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/66226c0e-e86a-446b-aef8-601b1e696a39>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/66b5f5e6-260d-44e8-83ab-2400ca19552c>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/67e0cb41-5650-46f1-84a5-c28d0e5fbd67>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/77071ceb-1d9a-49c1-936e-6c84dbb3e11d>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/79e5acab-c01a-4345-9994-9639d0ffa525>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/82b2024f-4b52-47f3-9a9e-0cdcac190914>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/84b8f9be-f87c-4265-b25a-23ecb59f200a>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/84ce0f71-042f-4dac-ab42-5865266f105b>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/8cbcf672-73fc-48df-805f-a5c38abc5169>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/986452da-269f-4d53-97bb-257ab2f394e1>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a1c89b6b-211d-4461-ba16-1fffafd00076>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/aa0e8482-e680-4d32-8feb-c677f753e91b>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b3653cdf-8968-463e-911e-b2df2cbdbefd>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b3cef02a-1a06-40c5-9441-7886e4859e22>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b6d02028-c709-4908-a147-4fdde388e249>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/bb7377d5-47a7-4555-b724-3ba93622f2f9>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/c4d6f5d0-9606-4edb-988b-e9a6d6c388fe>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/d00b3e42-bbf3-4d04-9d50-539cdd5bbc99>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/db6ef93d-33f1-48c7-99e2-1c288094ff97>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/e1e155ba-be50-4145-b40d-610668ea76df>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/efc4e4f8-6518-4835-a125-02356ea0f9ec>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f2c118d4-b81f-4a31-adce-9ceef1302edb>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/f56aff67-96c1-45d3-a8ac-c778f4a58ad0> ;
+    ns1:geplandeStart "2025-02-24T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/f340a51b-f3a8-4662-8a39-0019919eabbb> ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/54ecdb51-39be-4a12-b4a1-6f53a0d9ed11> ;
+    ns1:heeftNotulen <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/45386a63-3139-4c17-84f6-b99374ac2c4f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns3:uuid "e1e6c2e4-fda0-5422-8987-a3f518dace77" ;
+    prov:atLocation "Raadzaal" ;
+    prov:startedAtTime "2025-02-24T20:00:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/195e2f93-519e-4540-9b78-f8dec66b3002> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5a2b3608-84c6-424d-8757-5fe025a9ac68> ;
+    ns1:openbaar true ;
+    ns3:uuid "6c5a26ab-cfe0-5275-b9bb-b78e3f5b27d9" ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/195e2f93-519e-4540-9b78-f8dec66b3002> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/195e2f93-519e-4540-9b78-f8dec66b3002> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/195e2f93-519e-4540-9b78-f8dec66b3002> a ns1:Besluit ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/36388ae98a37828ab71ad03056d13f996d43400b833a6b700ed395cd00d70b30> ;
+    ns2:title "Vragen" ;
+    ns1:motivering """ 
+                                                            """@nl ;
+    ns3:uuid "ce140c89-aac0-5429-b2fa-fe3bb6db9549" ;
+    prov:value """ 
+                                                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/195e2f93-519e-4540-9b78-f8dec66b3002> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/195e2f93-519e-4540-9b78-f8dec66b3002> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "4b4ca145-bbc3-562a-9f04-e110c327d885" ;
+    dcterms:title "Vragen" .
+

@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/73b7e76a-0840-4805-ae11-e6012c441c79> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/56ed746e-e764-4f78-9b95-5f011a4fa9d8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5b3d3ac-aaa3-4faf-9623-f7e34ae0479c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3028b72-a1a0-4f32-b126-c470119b0dbb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c7b3ef3f-c54f-484b-b2e9-3f183540d3c1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2d569a7-0c11-415e-8b4b-06dece66fd7b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ed252c03-10d2-495b-ba14-27f52f8f60b3> ;
+    ns1:geplandeStart "2023-01-25T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5458d7db-c1ee-4ee8-bb32-2b3a696674f1> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/197aa676-a148-4d3c-8340-7a4255ce2f67> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/bb1db3b9-1012-4bab-a033-06938b2369a6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ea073820-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-01-25T20:31:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-01-25T20:01:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/561c0922-92f1-4429-84ef-6c3a88bd1f65> ;
+    ns1:openbaar true ;
+    ns2:uuid "e9fd2600-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/44db2e13-fd3e-4921-bf39-31c72622bfc6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/44db2e13-fd3e-4921-bf39-31c72622bfc6> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad beslist het verschil van 1.214 euro tussen de maximumbijdrage zoals bepaald in de gemeenteraad van 19 oktober 2022 en de bijdrage die gefietst is door de medewerkers ook te doneren aan Bike for Life. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Subsidie voor Bike for Life: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 14 november 1983 betreffende de controle op de toekenning en op de aanwending van sommige toelagen. Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41,23° Het besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale besturen Bekrachtiging van de gemeenteraad van 19 oktober 2022 over het besluit van het college van burgemeester en schepenen van 6 september 2022 houdende principiële goedkeuring deelname aan Bike for LifeHet besluit van de gemeenteraad van 21 december 2022 over de lijst gemeentelijke nominatieve subsidies 2022 en 2023 en de vaststelling van het meerjarenplan 2020-2025 - aanpassing 3 deel gemeente LievegemHet besluit van het college van burgemeester en schepenen van 6 september 2022 over principiële goedkeuring deelname aan Bike for LifeHet besluit van het college van burgemeester en schepenen van 15 november 2022 over de uitbetaling van subsidie voor Bike for LifeHet besluit van de gemeenteraad van heden over de aanpassing van de lijst gemeentelijke nominatieve subsidies 2022 en 2023 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Wat is het?Tijdens Bike for Life kon je met je bedrijf, school, gemeente, stad of organisatie meefietsen ten voordele van ‘Een fiets voor iedereen’. Een gezin in Vlaanderen heeft gemiddeld 2,8 fietsen in huis. Toch kan naar schatting 15% van de bevolking zich geen fiets veroorloven. Dit belemmert mensen in hun bewegingsvrijheid, sociale contacten en kansen. Met ‘Een fiets voor iedereen’ helpt de Fietsersbond hen vooruit met een fiets. Alle info staat op https://www.fietsersbond.be/overtuig-je-werkgever-deelname-bikeforlife-2022.Van 3 t.e.m. 31 oktober sponsorde de gemeente Lievegem de gefietste woon-werkritten van haar werknemers. De werkgever kiest zelf welk sponsorbedrag er per rit gegeven wordt, en kunnen hier ook een platform voor instellen. De werknemers registreren hun ritten en kunnen zo ook zien zij al bij elkaar hebben gefietst. Elke rit voor woon-werkverkeer telt, dus als je heen en terug rijdt met de fiets naar het werk, dan zijn dat twee ritten. De gemeente Lievegem zal van het prikkloksysteem gebruik maken om het totaal aantal ritten in kaart te brengen.Resultaat en vervolgDe medewerkers van de gemeente Lievegem zamelden 786 euro in door 1.048 ritten met de fiets af te leggen in oktober. De maximumbegrenzing van de donatie werd in de gemeenteraad van 19 oktober 2022 vastgelegd op 2.000 euro. Na beraadslaging wenst het college van burgemeester en schepenen aan de gemeenteraad voor te stellen om het verschil tussen de maximumbijdrage en de bijdrage die gefietst is ook te doneren aan Bike for Life. Dit verschil doneren voldoet aan de voorwaarde van de gemeenteraad van Lievegem: een maximumbedrag van 2.000 euro.Het verschil bedraagt 1.214 euro.Het gemeentebestuur Lievegem gelooft dat een grotere bijdrage de impact voor mensen in armoede verhoogt. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Er waren kredieten voorzien in het meerjarenplan 2022 op jaarbudgetrekening 2022/ACT-014/0350-00/6159999/GEMEENTE/CBS/IP-GEEN 
+                                                            De bijkomende subsidie bedraagt 1.214 euro. 
+                                                            De subsidie die de gemeente zal geven aan de Fietsersbond boeken we op de algemene rekening voor subsidies 6493000 zodat de jaarbudgetrekening dan wordt: 2022/ACT-014/0350-00/6493000/GEMEENTE/CBS/IP-GEEN 
+                                                            Er zal dus via een interne kredietverschuiving een extra bedrag van 1.214 euro verplaatst worden van jaarbudgetrekening 2022/ACT-014/0350-00/6159999/GEMEENTE/CBS/IP-GEEN naar jaarbudgetrekening 2022/ACT-014/0350-00/6493000/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "e9fcd7e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad beslist het verschil van 1.214 euro tussen de maximumbijdrage zoals bepaald in de gemeenteraad van 19 oktober 2022 en de bijdrage die gefietst is door de medewerkers ook te doneren aan Bike for Life. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/44db2e13-fd3e-4921-bf39-31c72622bfc6> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e9fe3770-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Subsidie voor Bike for Life: goedkeuring" .
+

@@ -1,0 +1,72 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/f6f50fb9-6233-4f19-88e5-3977f11c0640> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a7774bf0-1ec7-4e7b-891e-b9476daae22a> ;
+    ns1:geplandeStart "2025-11-25T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a5854d09-a8b7-4e66-af97-7c5206d6bd7c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "b4006e7b-4c26-503d-9de7-332c79882999" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-11-25T13:32:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a7774bf0-1ec7-4e7b-891e-b9476daae22a> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/924f5e2c-e192-4c79-b748-754fdbe27a34> ;
+    ns1:openbaar false ;
+    ns2:uuid "238096bd-94d1-5d52-a2a1-27f2c36000e5" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a7774bf0-1ec7-4e7b-891e-b9476daae22a> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a7774bf0-1ec7-4e7b-891e-b9476daae22a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/a7774bf0-1ec7-4e7b-891e-b9476daae22a> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Kerstconcert Christoff' op 4 december 2025 van 15.00 uur tot en met 24.00 uur wordt vastgesteld als volgt: 
+                                                            Stilstaan- en parkeerverbod op 14 parkeerplaatsen ter hoogte van parking Nieuwstraat, 9950 Lievegem. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Kerstconcert Christoff': vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 25 november 2025 over de aanvraag evenement Kerstconcert Christoff: goedkeuringHet besluit van het college van burgemeester en schepenen van 25 november 2025 over de aanvraag inname van openbaar domein dorpsplein Waarschoot, 9950 Lievegem voor 'Kerstconcert Christoff': goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Filip Van Hecke organiseert 'Kerstconcert Christoff' op 4 december 2025 vanaf 20.00 uur tot en met 22.00 uur.Er werd op 16 september 2025 een aanvraag ingediend door Filip Van Hecke om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede.Er wordt gevraagd om 14 parkeerplaatsen te reserveren voor de wagens van de entourage van Christoff en dit van 15.00 uur tot en met 24.00 uur. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "bb6b7bf0-ba5a-5d2f-a5f1-78248d7771d7" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Kerstconcert Christoff' op 4 december 2025 van 15.00 uur tot en met 24.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod op 14 parkeerplaatsen ter hoogte van parking Nieuwstraat, 9950 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 aan de parkeerplaatsen 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a7774bf0-1ec7-4e7b-891e-b9476daae22a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a7774bf0-1ec7-4e7b-891e-b9476daae22a> a ns1:Agendapunt ;
+    ns2:uuid "68379492-7e77-5cfc-8d93-78fd7a5ea157" .
+

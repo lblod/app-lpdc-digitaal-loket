@@ -1,0 +1,97 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/67813274-3b7a-49f9-b9c9-4340aed05429> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2371935b-7ad6-4871-af1c-8089e789c391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42299301-8db7-4bbf-ae43-b3b4e96ecd75>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50439503-35eb-4857-a55d-25da89a6089f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5856e334-1733-4d65-8957-97a405084cb7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65fdb4dd-4ccc-4e03-957b-90fcc179cde0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/99120f73-d62d-48c9-b773-7826c5491feb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fabf93-37f3-4314-807c-752f83afa18b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc17426a-5ef8-46a5-9063-831499691106>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0e68f3f-8930-4481-a410-e168d0bf59e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns2:geplandeStart "2024-01-31T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d806425-9a34-4095-988a-05678b76355f> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0682f2be-d210-4ac2-9225-4ac8a0eeb628> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3369f7d3-24df-47ea-acab-50b627f1e882> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e6273ed0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-01-31T21:22:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-31T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e> ;
+    ns2:openbaar true ;
+    ns3:uuid "e6169d00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/865bd574-8170-44ee-a454-33dfaf2ab2ae> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/865bd574-8170-44ee-a454-33dfaf2ab2ae> a ns2:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad keurt het Algemene Zonale Politieverordening Deinze/Zulte/Lievegem goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Politiezone Deinze-Zulte-Lievegem - algemeen zonaal politiereglement: vaststelling" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Nieuwe gemeentewet, artikelen 119, 119bis, 133, 134sexies en 135 §2De Wet van 25 juni 1993 betreffende de uitoefening van ambulante activiteiten en de organisatie van openbare markten, gewijzigd bij wet van 4 juli 2005, van 20 juli 2006 en van 22 december 2009, 21 januari 2013 en decreet van 24 februari 2017, artikelen 8 tot en met 10.Het Wetboek van economisch recht van 28 februari 2013. Wet van 24 juni 2013 en latere wijzigingen over de gemeentelijke administratieve sancties, artikel 2 §2Het Koninklijk besluit van 23 september 1958 houdende algemeen reglement betreffende het fabriceren, opslaan, onder zich houden, verkopen, vervoeren en gebruiken van springstoffen;Het Koninklijk besluit van 24 september 2006 betreffende de uitoefening en organisatie van kermisactiviteiten en ambulante activiteiten in kermisgastronomie, artikelen 8 tot en met 24.Het Koninklijk besluit van 3 maart 2010 betreffende het in de handel brengen van pyrotechnische artikelen. Koninklijk besluit van 21 december 2013 en latere wijzigingen tot vaststelling van de minimumvoorwaarden inzake selectie, aanwerving, opleiding en bevoegdheid van de ambtenaren en personeelsleden die bevoegd zijn tot vaststelling van inbreuken die aanleiding kunnen geven tot de oplegging van een gemeentelijke administratieve sanctieKoninklijk besluit van 21 december 2013 tot vaststelling van de kwalificatie- en onafhankelijksvoorwaarden van de ambtenaar belast met de oplegging van de administratieve geldboete en tot inning van de boetes in uitvoering van de wet over de gemeentelijke administratieve sancties.Koninklijk besluit van 21 december 2013 tot vaststelling van de nadere voorwaarden en het model van het protocolakkoord in uitvoering van artikel 23 van de wet betreffende de gemeentelijke administratieve sanctiesKoninklijk besluit van 21 december 2013 tot vaststelling van de bijzondere voorwaarden over het register van de gemeentelijke administratieve sancties ingevoerd bij artikel 44 van de wet van 24 juni 2013 over de gemeentelijke administratieve sancties.Koninklijk besluit van 28 januari 2014 over de minimumvoorwaarden en modaliteiten voor de bemiddeling in het kader van de wet betreffende de gemeentelijke administratieve sanctiesHet Koninklijk besluit van 20 oktober 2015 betreffende het op de markt aanbieden van pyrotechnische artikelen.Het Koninklijk besluit van 12 april 2016 betreffende het op de markt aanbieden van en de controle op explosieven voor civiel gebruik.Het Koninklijk besluit van 12 juli 2016 betreffende het vervoer via de weg of per spoor van ontplofbare stoffen.Het Ministerieel besluit van 7 juni 2013 tot indeling van pyrotechnische artikelenDecreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen, artikelen 40 §3 en 41, 2°Bestuursdecreet van 7 december 2018Het gemeenteraadsbesluit van 26 februari 2020 over de vaststelling van het algemeen zonaal politiereglementHet besluit van het college van burgemeester en schepenen van 21 maart 2023 over de toevoeging van artikel 23§3 in het algemeen zonaal politiereglementHet besluit van het college van burgemeester en schepenen van 27 juni 2023 over de wijziging van artikel 24§5 in het algemeen zonaal politiereglementHet besluit van het college van burgemeester en schepenen van van Zulte van 12 oktober 2023 over de toevoeging van artikel 23§3 en de wijziging van artikel 24§5 in het algemeen zonaal politiereglementHet besluit van het college van burgemeester en schepenen van van Deinze van 24 oktober 2023 over de toevoeging van artikel 23§3 en de wijziging van artikel 24§5 in het algemeen zonaal politiereglementHet besluit van de politieraad van de politiezone Deinze-Zulte-Lievegem van 12 december 2023 over de aanpassing van het algemeen zonaal politiereglement 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            In een meergemeentenzone waar de gemeenteraden van de betrokken gemeenten na een overleg, waarvan de nadere regels door de Koning bepaald kunnen worden, beslist hebben een identiek algemeen politiereglement aan te nemen, nemen de gemeenteraden van de politiezone een identiek algemeen politiereglement voor de zone aan, na advies van de raad van de betrokken politiezone. Gemeenten die tot éénzelfde politiezone behoren kunnen dus beslissen om een identiek algemeen politiereglement aan te nemen dat geldig is op het grondgebied van de ganse zone. 
+                                                            Op vraag van de bestuurlijke overheden moet een wijziging doorgevoerd worden in het algemeen zonaal politiereglement: •    Toevoegen artikel 23 §3: "Tijdens evenementen, braderijen, feesten, markten, kermissen en openbare vergaderingen op openbare ruimte is het aan de foorkramers strikt verboden om vuurwerkartikelen, speelgoed(stink)bommetjes, voetzoekers en enig ander explosief materiaal te verkopen of als prijs te geven aan wie deelneemt aan een spel." 
+                                                            Motivatie Het is een maatschappelijke tendens dat foorkramers pyrotechnisch materiaal steeds vaker te koop of als prijs aanbieden aan wie deelneemt aan een spel. Het is wenselijk om te allen tijde de veiligheid en comfort van kermisbezoekers of bezoekers aan andere openbare manifestaties zoals openbare vergaderingen, evenementen, braderijen, feesten en markten  te garanderen. Daarnaast is er aan dergelijk pyrotechnisch materiaal ook een niet wenselijk afvalaspect verbonden, mat name dat na het 'afschieten' de restanten van een knalerwt, (rook)bom, piraat en dergelijke vaak verspreid raken en niet opgeruimd worden.•    Wijzigen artikel 24 §5: "Het is verboden private obstakels (zoals bijv. stenen, beplantingen, paaltjes ,..) aan te brengen op de openbare ruimte. Het is eveneens verboden om laadkabels, -matten, -goten, -sleuven of andere over de openbare weg te laten lopen. De gemeente kan hierop gemotiveerd verzoek een uitzondering toestaan. De aanvrager dient zijn verzoek te richten aan de gemeente." 
+                                                            MotivatieDe bepaling wordt uitgebreid vanuit de toenemende maatschappelijke nood aan private laadinfrastructuur.Omwille van de administratieve duidelijkheid wordt het reglement inclusief de aanpassingen volledig hernomen. De procedure tot wijziging van het Algemeen Zonaal Politiereglement: 
+                                                             
+                                                                In de colleges van burgemeester en schepenen van Deinze, Zulte en Lievegem werden de aanpassingen principieel goedgekeurd. 
+                                                                Voorleggen van de wijziging aan de politieraad voor advies. (12 december 2023) 
+                                                                Goedkeuring in de afzonderlijke gemeenteraden ter goedkeuring. (Voor Lievegem op heden) 
+                                                             
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De administratieve geldboetes zullen geïnd worden op xxxx/GBB-SSC/0480-00/7390000/GEMEENTE/CBS/IP-GEEN 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e61627d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad stelt het Algemeen Zonaal Politiereglement Deinze-Zulte-Lievegem vast. 
+                                                            Artikel 2 
+                                                            Het  Algemeen Zonaal Politiereglement Deinze-Zulte-Lievegem treedt in werking op 1 februari 2024. 
+                                                            Artikel 3 
+                                                            De gemeenteraad heft het besluit van 26 februari 2020 over de vaststelling van het algemeen zonaal politiereglement op. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "e6212450-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Politiezone Deinze-Zulte-Lievegem - algemeen zonaal politiereglement: vaststelling" .
+

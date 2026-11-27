@@ -1,0 +1,90 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/bede843a-584f-434c-be0f-bcdb4efd8096> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/196fc55d-5462-4ed8-8f0c-542c0d2258e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f4c469b-794e-4c10-b0e8-2e4e05dc8083>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/86630d55-32be-4604-a9ea-60b185722716> ;
+    ns1:geplandeStart "2025-09-02T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/f0f931b6-d43c-49b7-bf1d-2b9216382833> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "5edab32a-37e1-5542-9380-923a1919a0b3" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-09-02T13:32:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4f4c469b-794e-4c10-b0e8-2e4e05dc8083> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/86630d55-32be-4604-a9ea-60b185722716> ;
+    ns1:openbaar false ;
+    ns2:uuid "99d02abf-9117-5037-9872-3c5472ab6cd0" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f4c469b-794e-4c10-b0e8-2e4e05dc8083> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4f4c469b-794e-4c10-b0e8-2e4e05dc8083> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4f4c469b-794e-4c10-b0e8-2e4e05dc8083> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Nazomerfeest 2025' en 'Sound Of Summer' van vrijdag 19 september 2025 19.30 uur tot en met zaterdag 20 september 2025 3.00 uuren van zaterdag 20 september 2025 18.00 uur tot en met zondag 21 september 2025 5.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Nazomerfeest 2025' en 'Sound of Summer' - KLJ Waarschoot: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 2 september 2025 over de aanvraag evenement Nazomerfeest 2025, Sound of Summer en BBQ Septemberweekend 2025 - KLJ Waarschoot: goedkeuringHet besluit van het college van burgemeester en schepenen van 2 september 2025 over de aanvraag inname openbaar domein - plaatsen van aanhangwagen met reclame op dorpsplein Waarschoot voor 'Sound Of Summer' - KLJ Waarschoot: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Jelle D'hondt, namens KLJ Waarschoot, organiseert 'Nazomerfeest 2025' en 'Sound Of Summer'.Het nazomerfeest vindt plaats van vrijdag 19 september 2025 20.30 uur tot en met zaterdag 20 september 2025 2.00 uur en Sound Of Summer vindt plaats op dezelfde locatie van zaterdag 20 september 2025 19.00 uur tot en met zondag 21 september 2025 4.00 uur.Er werd op 1 juni 2025 een aanvraag ingediend door Jelle D'hondt, namens KLJ Waarschoot om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "64185dfb-78dd-5cf2-a398-4644404163f2" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Nazomerfeest 2025' en 'Sound Of Summer' wordt vastgesteld als volgt: 
+                                    van vrijdag 19 september 2025 19.30 uur tot en met zaterdag 20 september 2025 3.00 uur en van zaterdag 20 september 2025 18.00 uur tot en met zondag 21 september 2025 5.00 uur: 
+                                     
+                                        Afsluiten van Willemstraat 
+                                        Stilstaan- en parkeerverbod in Willemstraat 
+                                        invoeren van éénrichtingsverkeer in Berg en Zevenbunders (vanaf kruispunt Keerstraatje/Berg tot en met kruispunt Zevenbunders/Hendrik Consciencelaan) 
+                                        Stilstaan- en parkeerverbod in Berg en Zevenbunders langs de rijweg (vanaf kruispunt Keerstraatje/Berg tot en met kruispunt Zevenbunders/Hendrik Consciencelaan). De parkeervakken blijven beschikbaar 
+                                        Wegomlegging via Hendrik Consciencelaan - Berg 
+                                        Afsluiten van wegel van Weststraat (tussen huisnummer 39 en 41) naar Willemstraat 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    van vrijdag 19 september 2025 19.30 uur tot en met zaterdag 20 september 2025 3.00 uur en van zaterdag 20 september 2025 18.00 uur tot en met zondag 21 september 2025 5.00 uur: 
+                                    1. Nadar + C3 + bord 'uitgezonderd bewoners' + M2 aan kruispunt Willemstraat/Berg 
+                                    2. Borden E3 
+                                    3. - Bord F19 + M4 op volgende kruispunten: Keerstraatje/Berg, Berg/Willemstraat, Berg/Zevenbunders en Zevenbunders/Zevenbunders (2x)    - Bord C1 + M2  op volgende kruispunten: Berg/Willemstraat, Berg/Zevenbunders, Zevenbunders/Zevenbunders (2x) en Zevenbunders/Hendrik Consciencelaan 
+                                        - Bord C31a op volgende kruispunten: Bos/Berg, Zevenbunders/Zevenbunders en Hendrik Consciencelaan/Zevenbunders 
+                                        - Bord C31b op volgende kruispunten: Berg/Willemstraat en Hendrik Consciencelaan/Zevenbunders 
+                                    4. Borden E3 
+                                    5. Borden F41 
+                                    6. Nadar + C3 + M2 aan het begin van de wegel uit Weststraat richting Willemstraat (tussen huisnummer 39 en 41) 
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4f4c469b-794e-4c10-b0e8-2e4e05dc8083> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f4c469b-794e-4c10-b0e8-2e4e05dc8083> a ns1:Agendapunt ;
+    ns2:uuid "0b12d8e9-f2af-5c35-92e5-ff43244e700e" .
+

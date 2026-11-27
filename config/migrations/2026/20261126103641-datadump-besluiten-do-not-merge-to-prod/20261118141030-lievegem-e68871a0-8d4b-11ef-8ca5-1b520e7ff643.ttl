@@ -1,0 +1,144 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3027bbce-6e1b-47b4-bc0b-f53c72f1f9d2> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1b0c2c7b-0314-444b-ba38-6b1f25637bc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27e0c4db-269e-409a-8d55-33db7daf7c9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aac60983-db3c-4247-b27f-4860f02157a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ba5489da-e01f-4521-be10-56c4a038e97d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d6f26eb7-74ad-4e5a-bcb3-b89aa65ac7b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d84d3931-b8bf-4253-ad24-7fabe8331040>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6446375-946b-4c3d-9dcc-c3cf171303a1> ;
+    ns1:geplandeStart "2020-09-09T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e04bbeb0-1e3c-48c6-86c0-2e3a8995ae98> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/619a64f0-35fa-41f1-9895-5360cd9bf16b> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2cf19f34-4e9d-4ca2-9af9-b8280d2d4efc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e687ae50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-09-09T23:00:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-09-09T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997> ;
+    ns1:openbaar true ;
+    ns3:uuid "efea7b80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/74297a28-b422-4447-a55c-1b5a8a5c2d7d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/74297a28-b422-4447-a55c-1b5a8a5c2d7d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns2:description """ 
+                                                    De gemeenteraad stelt het retributiereglement vast voor het ophalen van asbestcementgolfplaten in containers bij land- en tuinbouwers. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Retributiereglement voor het ophalen van asbestcementgolfplaten in containers bij land- en tuinbouwers: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Gerrit Van Brabandt, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet Lokaal Bestuur van 22 december 2017, artikel 40 §3 en 41, 14° Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteitDecreet betreffende het duurzaam beheer van materiaalkringlopen en afvalstoffen (Materialendecreet) van 23 december 2011Besluit van de Vlaamse Regering tot vaststelling van het Vlaams reglement betreffende het duurzaam beheer van materiaalkringlopen en afvalstoffen (Vlarema) van 17 februari 2012Gemeenteraadsbesluit van 18 december 2019 met de retributie voor de recyclageparken en de afvalstoffen 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De bronophalingen van asbestcementgolfplaten bij particulieren via IVM waren al operationeel van voor de coronamaatregelen. Volgens de retributie vastgelegd door de gemeenteraad dient € 30 per zak te worden betaald. Daarbij zijn 2 beschermkits inbegrepen. 
+                                    Conform het door OVAM goedgekeurde IVM-asbestproject zal er nu ook een uitbreiding zijn met de ophaling van asbestcementgolfplaten in containers bij de land- en tuinbouwers. Dit project zou initieel opgestart zijn op 1 mei 2020 maar liep vertraging op. Dit project loopt tot 31 maart 2022.OVAM staat er op dat ook deze ophaling betalend wordt georganiseerd, ook al is de bijdrage van de land- en tuinbouwers beperkt en wordt quasi de hele verwerking (en een groot deel van het transport) gesubsidieerd via het 1,5 miljoen euro subsidiebedrag. 
+                                    De gemeente zal volgende procedure volgen: 
+                                    1. Een land- of tuinbouwer kan 1 of 2 containers van 15 m³ aanvragen voor het ophalen van zijn asbestcementgolfplaten (maximum 400 m²/30 m³) door IVM. Grotere dakoppervlakten moeten derhalve via professionele firma's opgehaald en verwerkt worden. Indien een land- of tuinbouwer van het IVM-project wil genieten, betaalt hij 170 euro per container via factuur aan de gemeente. 
+                                    2. De land- of tuinbouwer moet de aanvraag bij de gemeente indienen, niet bij IVM, gezien de IVM geen weet heeft van de hoedanigheid van de aanvrager. De gemeente bezorgt de aanvraag aan IVM die verder zal instaan voor de levering en ophaling van de containers, opsturen van verwerkingsattesten, bezorgen van overzichten aan de gemeente en OVAM. 
+                                    3. De land- of tuinbouwer moet aan volgende voorwaarden voldoen:  
+                                    - De aanvrager moet een landbouwnummer en/of exploitatienummer hebben - Het mag zowel gaan om actieve als inactieve land- en tuinbouwers- De betrokken asbestdaken moeten gelegen zijn de in de IVM-regio, ook al woont de aanvrager buiten de regio. De aanvragen voor het verwijderen van asbestdaken buiten de regio worden niet aanvaard. 
+                                    4. De aanvraag wordt door de land- of tuinbouwer ingediend bij de gemeente. De gemeente ontvangt het bedrag van 170 euro per geleverde container via factuur. Het mag gaan over maximum 2 containers per site/adres. De land- of tuinbouwer kan na betaling van de factuur zijn 2 gratis PBM-pakketten met veiligheidsinstructies ophalen in van de recyclageparken van de gemeente. Eénmaal de gemeente het aanvraagformulier en de betaling heeft ontvangen worden deze gegevens overgemaakt aan IVM. 
+                                    5. IVM neemt contact op met de door haar aangestelde ophaler. De ophaler neemt op zijn beurt contact op met de land- of tuinbouwer om een dag van levering en ophaling van de container(s) af te spreken. Indien 2 containers niet zouden volstaan om de asbestgolfplaten af te voeren, dient de land - of tuinbouwer zelf in te staan voor de volledige/werkelijke kost van bijkomende container(s) via een privé-ophaler.  
+                                    6. Na ophaling ontvangt IVM een overzicht van de adressen van ophaling, aantal containers en tonnages. 
+                                    7. IVM brengt de gemeente op de hoogte van het aantal opgehaalde containers en de tonnages. 
+                                    8. IVM bezorgt de land- of tuinbouwer een verwerkingsattest. 
+                                    In elke IVM-gemeente gebeurt dit op gelijke wijze. 
+                                      
+                                 
+                                 
+                                    Financiële impact 
+                                    De inkomsten die voortvloeien uit dit reglement zullen worden geregistreerd onder jaarbudgetrekening xxxx/GBB-OMG/0309-00/7000099/GEMEENTE/CBS/IP-GEEN. 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    Retributie op het ophalen van asbestcementgolfplaten in containers bij land- en tuinbouwers 
+                                    Artikel 1Voor de Retributie op het ophalen van asbestcementgolfplaten in containers bij land- en tuinbouwers wordt volgende retributie aangerekend: 
+                                    170 euro per container van 15 m³ (Brengen, ophalen en verwerken van de container inbegrepen). 
+                                    Er kunnen maximum twee containers per adres aangevraagd worden. De twee veiligheidskits zijn inbegrepen. Artikel 3De retributie is te betalen binnen de dertig dagen na verzending van de factuur.Betwistingen van de factuur dienen te gebeuren binnen de dertig dagen volgend op de verzending van de factuur ter attentie van het college van burgemeester en schepenen.Artikel 4§1. Met het oog op de invordering van de onbetwiste en opeisbare retributie kan de financieel directeur een dwangbevel uitvaardigen. Een dergelijk dwangbevel wordt betekend bij gerechtsdeurwaardersexploot.§2. Met het oog op de invordering van de betwiste en opeisbare retributie kan beroep worden gedaan op de burgerrechtelijke invorderingsprocedure. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt opgestuurd naar IVM, de teams financiën, omgeving, onthaal en communicatie en wordt bekendgemaakt via de website.Het besluit wordt via het digitaal loket verstuurd naar ABB. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Gerrit Van Brabandt, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet Lokaal Bestuur van 22 december 2017, artikel 40 §3 en 41, 14° Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteitDecreet betreffende het duurzaam beheer van materiaalkringlopen en afvalstoffen (Materialendecreet) van 23 december 2011Besluit van de Vlaamse Regering tot vaststelling van het Vlaams reglement betreffende het duurzaam beheer van materiaalkringlopen en afvalstoffen (Vlarema) van 17 februari 2012Gemeenteraadsbesluit van 18 december 2019 met de retributie voor de recyclageparken en de afvalstoffen 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De bronophalingen van asbestcementgolfplaten bij particulieren via IVM waren al operationeel van voor de coronamaatregelen. Volgens de retributie vastgelegd door de gemeenteraad dient € 30 per zak te worden betaald. Daarbij zijn 2 beschermkits inbegrepen. 
+                                                            Conform het door OVAM goedgekeurde IVM-asbestproject zal er nu ook een uitbreiding zijn met de ophaling van asbestcementgolfplaten in containers bij de land- en tuinbouwers. Dit project zou initieel opgestart zijn op 1 mei 2020 maar liep vertraging op. Dit project loopt tot 31 maart 2022.OVAM staat er op dat ook deze ophaling betalend wordt georganiseerd, ook al is de bijdrage van de land- en tuinbouwers beperkt en wordt quasi de hele verwerking (en een groot deel van het transport) gesubsidieerd via het 1,5 miljoen euro subsidiebedrag. 
+                                                            De gemeente zal volgende procedure volgen: 
+                                                            1. Een land- of tuinbouwer kan 1 of 2 containers van 15 m³ aanvragen voor het ophalen van zijn asbestcementgolfplaten (maximum 400 m²/30 m³) door IVM. Grotere dakoppervlakten moeten derhalve via professionele firma's opgehaald en verwerkt worden. Indien een land- of tuinbouwer van het IVM-project wil genieten, betaalt hij 170 euro per container via factuur aan de gemeente. 
+                                                            2. De land- of tuinbouwer moet de aanvraag bij de gemeente indienen, niet bij IVM, gezien de IVM geen weet heeft van de hoedanigheid van de aanvrager. De gemeente bezorgt de aanvraag aan IVM die verder zal instaan voor de levering en ophaling van de containers, opsturen van verwerkingsattesten, bezorgen van overzichten aan de gemeente en OVAM. 
+                                                            3. De land- of tuinbouwer moet aan volgende voorwaarden voldoen:  
+                                                            - De aanvrager moet een landbouwnummer en/of exploitatienummer hebben - Het mag zowel gaan om actieve als inactieve land- en tuinbouwers- De betrokken asbestdaken moeten gelegen zijn de in de IVM-regio, ook al woont de aanvrager buiten de regio. De aanvragen voor het verwijderen van asbestdaken buiten de regio worden niet aanvaard. 
+                                                            4. De aanvraag wordt door de land- of tuinbouwer ingediend bij de gemeente. De gemeente ontvangt het bedrag van 170 euro per geleverde container via factuur. Het mag gaan over maximum 2 containers per site/adres. De land- of tuinbouwer kan na betaling van de factuur zijn 2 gratis PBM-pakketten met veiligheidsinstructies ophalen in van de recyclageparken van de gemeente. Eénmaal de gemeente het aanvraagformulier en de betaling heeft ontvangen worden deze gegevens overgemaakt aan IVM. 
+                                                            5. IVM neemt contact op met de door haar aangestelde ophaler. De ophaler neemt op zijn beurt contact op met de land- of tuinbouwer om een dag van levering en ophaling van de container(s) af te spreken. Indien 2 containers niet zouden volstaan om de asbestgolfplaten af te voeren, dient de land - of tuinbouwer zelf in te staan voor de volledige/werkelijke kost van bijkomende container(s) via een privé-ophaler.  
+                                                            6. Na ophaling ontvangt IVM een overzicht van de adressen van ophaling, aantal containers en tonnages. 
+                                                            7. IVM brengt de gemeente op de hoogte van het aantal opgehaalde containers en de tonnages. 
+                                                            8. IVM bezorgt de land- of tuinbouwer een verwerkingsattest. 
+                                                            In elke IVM-gemeente gebeurt dit op gelijke wijze. 
+                                                              
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De inkomsten die voortvloeien uit dit reglement zullen worden geregistreerd onder jaarbudgetrekening xxxx/GBB-OMG/0309-00/7000099/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e68871a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Artikel 1Het gemeentebestuur stelt een retributie op het ophalen van asbestcementgolfplaten in containers bij land- en tuinbouwers vast.Artikel 2Dit reglement treedt in werking op 10 september 2020 en loopt tot 31 maart 2022 (einde van het asbestproject) 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1Het gemeentebestuur stelt een retributie op het ophalen van asbestcementgolfplaten in containers bij land- en tuinbouwers vast.Artikel 2Dit reglement treedt in werking op 10 september 2020 en loopt tot 31 maart 2022 (einde van het asbestproject) 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "efddf860-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Retributiereglement voor het ophalen van asbestcementgolfplaten in containers bij land- en tuinbouwers: vaststelling" .
+

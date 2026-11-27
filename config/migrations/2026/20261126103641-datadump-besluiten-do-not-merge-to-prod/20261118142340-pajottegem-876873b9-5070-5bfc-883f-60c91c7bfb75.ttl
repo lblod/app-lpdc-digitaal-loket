@@ -1,0 +1,115 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/000d80ac-be60-48e0-ad27-c06a22600f53> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0a5a007c-fb17-4a23-a065-454e2e4fdf41>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5f243214-b148-4b17-8380-5ad85a15e978>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7928caa8-0ecc-4beb-86ba-9e1ed594b223>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b2461d80-32da-4724-a430-978db06afc30>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b58d39dd-9fb8-44a6-8a00-8bb3cf627996>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/db5ebefc-1246-48fa-9747-850d7e3235d3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f48cbf2b-04b0-4577-b69b-bab91efc0c5a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fbe06e1f-0382-4f93-a00c-fb4cb58d239c> ;
+    ns1:geplandeStart "2025-05-19T17:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/95c356e8-8f0f-4f5f-ac9b-89ff4dbd2255> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "e0b51ac0-832d-55e0-b5e3-cd07cfcb7a09" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-19T16:34:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f48cbf2b-04b0-4577-b69b-bab91efc0c5a> ;
+    ns1:openbaar false ;
+    ns3:uuid "b047c076-d25d-5b03-a488-2037eae2da8a" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Inhuldiging beeld Paardenprocessie Kester op 31 mei 2025 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Politieverordening: Inhuldiging beeld Paardenprocessie Kester - 31 mei 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns3:uuid "876873b9-5070-5bfc-883f-60c91c7bfb75" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Inhuldiging beeld Paardenprocessie Kester op 31 mei 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op het volledige plein voor de kerk te Kester met uitzondering van het langs parkeren tussen huisnummers 80 en 74 geldt:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        het stilstaan en parkeren is verboden;
+                                        het begin van de parkeerreglementering wordt aangeduid;
+                                        Dit wordt gesignaleerd door:
+                                        - verkeersborden E3
+                                        - de verkeersborden worden aangevuld met x-borden Xa, Xd
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op de Bruneaustraat (N272) tussen de Edingsesteenweg (N272) en de Oude Molenstraat geldt:
+                                     
+                                    
+                                        de toegang is verboden in beide richtingen, voor iedere bestuurder, uitgezonderd plaatselijk verkeer.
+                                        Dit wordt gesignaleerd door:
+                                        - verkeersborden C3
+                                     
+                                    
+                                        - onderbord type IV
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        
+                                            Op de Bruneaustraat (N272) tussen de Cypriaan Verhavertstraat en de Oude Molenstraat geldt:
+                                         
+                                        
+                                            de toegang is verboden in beide richtingen, voor iedere bestuurder.
+                                            Dit wordt gesignaleerd door:
+                                            - verkeersborden C3
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                         
+                                     
+                                     
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8> a ns1:Agendapunt ;
+    ns3:uuid "6fbe4f04-a8b5-503a-90a9-c5ef360421df" .
+

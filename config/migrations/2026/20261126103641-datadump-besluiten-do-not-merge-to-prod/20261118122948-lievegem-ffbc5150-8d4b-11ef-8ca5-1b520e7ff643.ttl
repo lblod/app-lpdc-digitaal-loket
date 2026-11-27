@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns1:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3857eab8-1b72-420e-b519-be56da7e5271> ;
+    ns1:openbaar true ;
+    ns2:uuid "ffbb66f0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ada82eb4-e257-402d-9b30-2eb719ec6d34> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ada82eb4-e257-402d-9b30-2eb719ec6d34> a ns1:Besluit ;
+    ns3:description """ 
+                                                      
+                                                    De gemeenteraad keurt de toetreding goed tot het raamcontract 2011-2021 multifunctionals en beheersysteem waarbij Provincie Oost-Vlaanderen als aankoopcentrale fungeert en verleent aan het college van burgemeester en schepenen de bevoegdheid om dienstverlening van het raamcontract af te nemen binnen de afspraken bepaald in het meerjarenplan. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "ICT - Toetreding tot raamovereenkomst ",
+        "ICT - Toetreding tot raamovereenkomst \"multifunctionals\" van de aankoopcentrale Provincie Oost-Vlaanderen: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, en latere wijzigingenartikel 47 van de wet van 17 juni 2016 inzake overheidsopdrachten, dat bepaalt dat een aanbestedende overheid werken, leveringen en/of diensten verwerven van een aankoopcentrale die gecentraliseerde aankoopactiviteiten als bedoeld in artikel 2, 7° b) verrichtartikel 47 §2 van de wet van 17 juni 2016 inzake overheidsopdrachten, dat bepaalt dat de aanbestedende overheid die een beroep doet op een aankoopcentrale is vrijgesteld van de verplichting om zelf een plaatsingsprocedure te organiserenHet koninklijk besluit van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingenHet koninklijk besluit van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten en van de concessies voor openbare werken, en latere wijzigingenArtikel 40 §2 van het decreet lokaal bestuur van 22 december 2017, samen te lezen met artikel 41, 10°, waaruit voortvloeit dat de beslissing om toe te treden tot een aankoopcentrale toekomt aan de raadArtikel 266 van het decreet lokaal bestuur dat bepaalt dat de voorgenomen financiële verbintenissen die resulteren in een uitgaande nettokasstroom onderworpen zijn aan een voorafgaand visum van de financieel directeur in het kader van zijn opdracht zoals vermeld in artikel 177 van het decreet lokaal bestuur, voordat enige verbintenis kan worden aangegaan 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            ContextBesturen kunnen zelf optreden als aankoopcentrale. Daarnaast kunnen zij beroep doen op aankoopcentrales voor werken, leveringen en diensten. De beslissing om toe te treden tot een aankoopcentrale komt toe aan de raad. 
+                                                            Als de aankoopcentrale optreedt als tussenpersoon (artikel 47, §1, alinea 2), dan moet het lokaal bestuur zelf nog een overeenkomst te sluiten met de gekozen aannemer, leverancier of dienstverlener. Deze bevoegdheid komt toe aan het college (voor de gemeente,n op basis van artikel 56 §3, 4° Decreet over het Lokaal Bestuur) of het vast bureau (voor het OCMW, op basis van artikel 84, §3, 4° Decreet over het Lokaal Bestuur). 
+                                                            Het bestuur kan ook gebruik maken van de mogelijkheid tot delegatie en budgethouderschap conform de bepalingen in het Decreet over het Lokaal Bestuur. De gemeenteraad kan bij reglement bepalen dat de beslissingen omtrent toetredingen tot aankoopcentrales worden toevertrouwd aan het college van burgemeester en schepenen (toepassing van artikel 41, eerste lid DLB). Indien deze (algemene) delegatie niet is geregeld in een reglement, valt het bestuur terug op de bevoegdheid van de gemeenteraad. 
+                                                            MotiveringDe opdracht "multifunctionals en beheersysteem" van Provinciebestuur Oost-Vlaanderen is een raamovereenkomst waarbij Provinciebestuur Oost-Vlaanderen optreedt als aankoopcentrale in de zin van artikelen 2,6°en 47 van de wet van 17 juni 2016. De opdracht staat open voor alle Oost-Vlaamse gemeentebesturen en de Vlaamse Provinciebesturen.De Provincieraad van Oost-Vlaanderen keurde op 28 april 2010 het bestek goed met nr. ICT/2010/003 voor de opdracht 'Raamcontract multifunctionals en beheersysteem” met "algemene offerteaanvraag' als wijze van gunnen.De deputatie gunde de opdracht op 16 december 2010 aan de firma Canon Belgium NV. De raamovereenkomst is op 7 januari 2011 in werking getreden met een looptijd van 7 jaar, waarna ze nog driemaal kon worden verlengd met één jaar.In de deputatievergadering van 12 december 2019 is de overeenkomst verlengd tot en met 4 januari 2021, dit is de laatste mogelijke verlenging. 
+                                                            Om van de raamovereenkomst gebruik te kunnen maken, moet het lokaal bestuur Lievegem toetreden tot de opdrachtencentrale van Provinciebestuur Oost-Vlaanderen. Het lokaal bestuur Lievegem kan van de mogelijkheid tot afname van de raamovereenkomst via de opdrachtencentrale gebruik maken, waardoor zij krachtens artikel 47 §2 van de wet van 17 juni 2016 inzake overheidsopdrachten vrijgesteld is van de verplichting om zelf een volledige gunningsprocedure te organiseren. 
+                                                            Het is aangewezen dat de het lokaal bestuur Lievegem gebruik maakt van deze opdrachtencentrale om volgende redenen:- de in de opdrachtencentrale voorziene multifunctionals en beheersysteem voldoen aan de behoefte van het lokaal bestuur Lievegem;- het bestuur moet zelf geen gunningsprocedure voeren, wat een besparing aan tijd en geld betekent;- Provinciebestuur Oost-Vlaanderen beschikt over knowhow of de technische expertise inzake multifunctionals en beheersysteem door aanbestedende overheden- de raamovereenkomst is volledig vrijblijvend. Het lokaal bestuur Lievegem is niet verplicht tot enige afname van de raamovereenkomst (geen afname- of aankoopverplichting) en geen budgettaire impact- dankzij de samenwerking met partners kunnen vaak competitieve prijzen en/of extra service afgedwongen worden bij de leveranciers- de overeenkomst houdt geen exclusiviteit in 
+                                                            VoorstelAan de gemeenteraad wordt goedkeuring gevraagd om toe te reden tot het raamcontract 2011-2021 multifunctionals en beheersysteem waarbij Provincie Oost-Vlaanderen als opdrachtencentrale fungeert, zodat lokaal bestuur Lievegem producten/dienstverlening kan afnemen binnen de raamovereenkomst.Daarnaast wordt gevraagd om aan het college van burgemeester en schepenen de bevoegdheid toe te kennen om dienstverlening van het raamcontract af te nemen binnen de afspraken bepaald in het meerjarenplan. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ffbc5150-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad keurt de toetreding goed tot het raamcontract 2011-2021 multifunctionals en beheersysteem waarbij Provincie Oost-Vlaanderen als aankoopcentrale fungeert.   
+                                                            Artikel 2De gemeenteraad kent aan het college van burgemeester en schepenen de bevoegdheid toe om dienstverlening van het raamcontract af te nemen binnen de afspraken bepaald in het meerjarenplan. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e8048a50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "ICT - Toetreding tot raamovereenkomst \"multifunctionals\" van de aankoopcentrale Provincie Oost-Vlaanderen: goedkeuring" .
+

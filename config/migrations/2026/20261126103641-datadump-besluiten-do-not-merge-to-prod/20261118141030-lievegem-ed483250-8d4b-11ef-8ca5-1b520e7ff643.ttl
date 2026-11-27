@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5d5624e2-2689-4edf-b826-ed418eb8d726> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02e461d8-9457-4462-bcf3-ae9023038d39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/040ff837-f912-4527-be10-576e2c21a3a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31b086ce-f5b3-4d7b-a538-37d4d8dfcf50>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/773db485-658a-4e7b-be39-7eb511439f54>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/abf4bd6c-18b8-4950-b6ea-4a095b5588ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b7b1954e-16fc-4c28-90dc-447f69613bab>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be3ac6b4-2bd2-4c0b-8d37-55465a918a48>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d731f175-4cda-45fd-9950-b5a6ece1a56c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee440fb1-4741-4901-b091-77c89026b892> ;
+    ns1:geplandeStart "2021-01-27T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e450014f-53c6-44fd-bda7-4ddded313fd6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/02348813-41ac-4562-bf38-c82d5a645439> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0e90d608-db5c-42ea-a422-18032aca2b7a> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ed452510-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-01-27T21:08:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-01-27T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/be3ac6b4-2bd2-4c0b-8d37-55465a918a48> ;
+    ns1:openbaar true ;
+    ns2:uuid "f6852800-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6af5537a-b678-4ddc-9a1c-ef219245d66d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6af5537a-b678-4ddc-9a1c-ef219245d66d> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 12 januari 2021 over de goedkeuring van de de overeenkomst met het Vlaams Agentschap Zorg en gezondheid voor de elektronische uitwisseling van persoonsgegevens in het kader van de handhaving quarantaine Covid-19. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Coronacrisis COVID-19 - afsluiten overeenkomst met het Vlaams Agentschap Zorg en Gezondheid in het kader van handhaving quarantaine - collegebesluit van 12 januari 2021: bekrachtiging" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Tony Vermeire, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De nieuwe gemeentewet, artikel 135 § 2, 5°Het decreet lokaal bestuur van 27 december 2017, artikel 41 § 5Ministerieel besluit van 30 juni 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperken, wijziging 24 en 28 juli, 22 augustus, 25 september, 8 en 16 en 28 oktober 2020.Ministeriële besluiten van 28 november 2020 en 11, 19, 20, 21 en 24 december 2020 houdende wijziging van het ministerieel besluit van 28 oktober 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperken Politiebesluit van de gouverneur van de provincie Oost-Vlaanderen van 24 november 2020 betreffende aanvullende maatregelen in de strijd tegen het COVID-19 virus 
+                                                            Besluit van de Vlaamse Regering tot uitvoering van artikel 34/1, tweede lid, en artikel 47/1van het decreet van 21 november 2003 betreffende het preventieve gezondheidsbeleid en tot wijziging van het besluit van de Vlaamse Regering van 12 juni 2020 tot uitvoering van het decreet van 29 mei 2020 tot organisatie van de meldingsplicht en het contactonderzoek in het kader van COVID-19 
+                                                            Besluit van het college van burgemeester en schepenen van 12 januari 2021 over het afsluiten van de overeenkomst met het Vlaams Agentschap Zorg en Gezondheid 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het Vlaams Parlement keurde op 8 januari 2021 het besluit tot uitvoering van het decreet tot wiziging van het decreet van 21 november 2003 over het preventieve gezondheidsbeleid en van het decreet van 29 mei 2020 tot organisatie van de meldingsplicht en het contactonderzoek in het kader van COVID-19 goed. Deze regelgeving werd van kracht op maandag 11 januari 2021 
+                                                            De gemeente Lievegem gaat hiervoor een overeenkomst aan met het Vlaams Agentschap Zorg en Gezondheid voor de uitwisseling van elektronische persoonsgegevens. 
+                                                            Het Vlaamse preventiedecreet voorziet in een informatie-uitwisseling met de lokale besturen van de gegevens van de personen die in verplichte quarantaine moeten met het oog op de controle en de handhaving van de verplichte quarantaine.  Hierdoor krijgen de lokale besturen de tools in handen om deze controle en handhaving ook efficiënt te kunnen uitvoeren. 
+                                                            De gemeente Lievegem duidt de burgemeester aan als verantwoordelijke zoals voorgesteld door de Vlaamse Overheid i.h.k.v. diens bevoegdheid bestuurlijke politie. 
+                                                            Vanaf de inwerkingtreding van het wetgevend kader en de ondertekening van het protocol, krijgt de verantwoordelijke van de verwerking van het lokaal bestuur (zie hoger) de gegevens van de personen die verplicht in quarantaine moeten. 
+                                                            Controle of iemand zich aan de verplichte quarantaine houdt, kan gebeuren door: Personeelsleden van de gemeente of het ocmw (vb. maatschappelijk werkers, gemeenschapswachten, …) en/of agenten van politie en ambtenaren van de geïntegreerde politie. 
+                                                            Voor de controle zelf is géén politiebevoegdheid nodig wel voor de sanctionering (proces-verbaal nodig m.h.o. sanctie) 
+                                                            Bedoeling is om sensibiliserend op te treden, geen heksenjacht.  Suggestie werklastverdeling Vlaamse Overheid: 
+                                                            
+                                                                 
+                                                                    de aanvankelijke controles kunnen worden uitgeoefend door personeelsleden van de gemeente/OCMW die ook een zachte aanpak kunnen verzekeren, dit kan d.m.v. telefonie of fysiek langsgaan; 
+                                                                    zij geven aan de lokale politie de gegevens door van de personen die zij niet hebben bereikt of waar sprake is van flagrant overtreden van de quarantaineverplichting. VB: Wanneer tijdens de controle wordt vastgesteld dat : personen niet kunnen worden bereikt op het adres waarop zij feitelijk in quarantaine moeten verblijven en/of personen zich wetens en willens niet houden aan de verplichte quarantainemaatregelen kan overgaan worden tot handhaving/sanctionering. 
+                                                                    de lokale politie doet controles bij de personen op deze (verkorte) lijst m.h.o. op de handhaving en eventueel de sanctionering van de niet-naleving van de regels. 
+                                                                
+                                                             
+                                                            Het advies van de informatieveiligheidsconsulent van de gemeente Lievegem, Guido Suurmeijer van 11 januari 2021. 
+                                                            Het college van burgemeester en schepenen keurde de overeenkomst goed.  Deze beslissing moet bekrachtigd worden door de gemeenteraad. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ed483250-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 12 januari 2021 over de goedkeuring van de de overeenkomst met het Vlaams Agentschap Zorg en gezondheid voor de elektronische uitwisseling van persoonsgegevens in het kader van de handhaving quarantaine Covid-19. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f6868790-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Coronacrisis COVID-19 - afsluiten overeenkomst met het Vlaams Agentschap Zorg en Gezondheid in het kader van handhaving quarantaine - collegebesluit van 12 januari 2021: bekrachtiging" .
+

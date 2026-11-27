@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/66bd1259-c7f4-4b83-9025-c6bb55b56a16> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31751f59-283e-4186-bc02-0c788139a849>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9790db7d-ec42-4896-8a95-a29d421fed57> ;
+    ns2:geplandeStart "2025-09-30T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9f1014c1-8416-4d21-9870-9267c84a95e7> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "a310e119-53a4-548e-840b-2b5c53d87712" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-09-30T13:34:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9790db7d-ec42-4896-8a95-a29d421fed57> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/18e41690-80a7-437b-b5f7-711fe8f64740> ;
+    ns2:openbaar false ;
+    ns1:uuid "ba47832e-7d0f-5d5d-b81a-92c35ffc0cb3" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9790db7d-ec42-4896-8a95-a29d421fed57> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9790db7d-ec42-4896-8a95-a29d421fed57> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9790db7d-ec42-4896-8a95-a29d421fed57> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement op het wegverkeer wordt als volgt vastgesteld voor de periode van 1 oktober 2025 tot en met 31 januari 2026: 
+                                                             
+                                                                Een parkeerplaats voor personen met een handicap ter hoogte van Larestraat 32, 9920 Lievegem. 
+                                                             
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van parkeerplaats voor personen met een handicap - Larestraat 32, 9920 Lievegem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 8 april 2025 over de aanvraag parkeerplaats voor personen met een handicap - ter hoogte van Larestraat 32, 9920 Lievegem: principiële goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Marie-Madeleine Sergeant, vraagt een parkeerplaats voor personen met een handicap ter hoogte van Larestraat 32, 9920 Lievegem. Mevrouw is heel slecht te been en er is nooit parkeerplaats in de straat. 
+                                    Mevrouw Marie-Madeleine Sergeant heeft een invalidenparkeerkaart ontvangen omdat haar mobiliteitsbeperking definitief is en enkele meters stappen heel moeilijk is. 
+                                    Er werd op 8 april 2025 reeds een principiële goedkeuring gegeven door het college van burgemeester en schepenen, maar omdat dit nog op de agenda moet komen bij de mobiliteitsraad en de gemeenteraad willen we alvast een parkeerplaats laten plaatsen voor personen met een handicap van 1 oktober 2025 tot en met 31 januari 2026. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                 
+                            """@nl ;
+    ns1:uuid "0009a589-217e-523b-950d-168d97ba6e60" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het college van burgemeester en schepenen beslist volgend tijdelijk politiereglement op het wegverkeer vast te stellen van 1 oktober 2025 tot en met 31 januari 2026: 
+                                     
+                                        Een tijdelijke parkeerplaats voor personen met een handicap ter hoogte van Larestraat 32, 9920 Lievegem 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement van parkeerplaats voor personen met een handicap - ter hoogte van Larestraat 32, 9920 Lievegem van 1 oktober 2025 tot en met 31 januari 2026 wordt als volgt gesignaleerd: 
+                                     
+                                        Bord E9a 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9790db7d-ec42-4896-8a95-a29d421fed57> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9790db7d-ec42-4896-8a95-a29d421fed57> a ns2:Agendapunt ;
+    ns1:uuid "66385965-d396-523e-9c5c-1ecfe33643f8" .
+

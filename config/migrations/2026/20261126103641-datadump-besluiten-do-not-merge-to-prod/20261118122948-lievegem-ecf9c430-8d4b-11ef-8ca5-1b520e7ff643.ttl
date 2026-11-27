@@ -1,0 +1,112 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns1:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/206d6928-5356-4680-8768-4279f51175f3> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1> ;
+    ns1:openbaar true ;
+    ns2:uuid "fe902d60-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/206d6928-5356-4680-8768-4279f51175f3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/206d6928-5356-4680-8768-4279f51175f3> a ns1:Besluit ;
+    ns3:description """ 
+                                                    Het ontwerp, bestek en raming (aanbestedingsdossier) worden goedgekeurd. De raming bedraagt € 625.190,74 incl. BTW). De werken worden gegund via een openbare procedure. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Weststraat - heraanleg fietspad (onpare kant) en vernieuwen toplaag rijweg -  lastvoorwaarden en gunningswijze, aanbestedingsdossier: goedkeuring",
+        "Weststraat - heraanleg fietspad (onpare kant) en vernieuwen toplaag rijweg - lastvoorwaarden en gunningswijze, aanbestedingsdossier: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Freddy Haegeman, schepen openbare werken Waarschoot en Beke 
+                                                            Chris De Wispelaere, schepen mobiliteit 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikel 41, 10° waarbij wordt bepaald dat de gemeenteraad bevoegd is voor de vaststelling van de plaatsingsprocedure en de voorwaarden van overheidsopdrachten als het gaat om een opdracht die niet is opgenomen in de lijst van dagelijks bestuur. 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikels 326 tot en met 341 betreffende het bestuurlijk toezicht. 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen. 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 36 (openbare procedure). 
+                                                            Het KB van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het KB van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen. 
+                                                            Het decreet van 26 maart 2004 betreffende de openbaarheid van bestuur. 
+                                                            Het besluit van de gemeenteraad van 30 januari 2019 over de vaststelling van het begrip 'dagelijks bestuur' waarbij het college bevoegd is voor alle investeringskredieten die nominatief zijn opgenomen in de beleidsplanning. 
+                                                            Het besluit van de gemeenteraad van 22 december 2021 over de Meerjarenplan 2020 - 2025 deel gemeente Lievegem: vaststelling waarbij de nominatieve investeringen werden goedgekeurd, inzonderheid ACT-483: Weststraat/Stuiver - Heraanleg fietspad + vernieuwen toplaag asfalt 
+                                                            Het besluit van het college van 17 mei 2022 waarbij het ontwerp voor deze werken werd goedgekeurd. 
+                                                            Reglement met betrekking tot het toekennen van subsidies voor fietsvoorzieningen gelegen op het lokaal functioneel fietsroutenetwerk, goedgekeurd door de provincieraad van Oost-Vlaanderen op 29 april 2020 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Op 25 april 2022 werd tijdens een infovergadering in het gemeentehuis van Waarschoot het ontwerp toegelicht aan de bewoners. 
+                                                            Voor dit project werd een ontwerp met bestek en raming opgesteld door het studiebureau. Uit de raming blijkt dat de totale kostprijs van dit project wordt geraamd op € 526.047,70 excl. BTW: (of € 625.190,74 incl. BTW):•    Gemeente (zonder subsidie): € 158.091,85 excl. BTW (€ 191.291,14 incl. BTW)•    Gemeente (100% subsidie): € 314.017,85 excl. BTW (€ 379.961,60 incl. BTW)•    Gemeente (riolering): € 53.938 excl. BTW 
+                                                            Er wordt voorgesteld de opdracht te gunnen via een openbare procedure. 
+                                                            Dit dossier moet voorgelegd worden aan de gemeenteraad omdat het niet past binnen het decreet lokaal bestuur artikel 56 §3 6° (vaststelling van de plaatsingsprocedure en de voorwaarden van overheidsopdrachten voor de opdrachten die de gemeenteraad nominatief aan het college heeft toevertrouwd). Het budget van 400.000 euro zoals voorzien in de lijst voor het project ‘ACT-483: Weststraat/Stuiver - Heraanleg fietspad + vernieuwen toplaag asfalt’ wordt immers overschreden.  Dus voor deze overheidsopdracht is artikel 41 10° van toepassing waarbij het vaststellen van de plaatsingsprocedure en het vaststellen van de voorwaarden van overheidsopdrachten tot de bevoegdheid van de gemeenteraad behoort (tenzij de opdracht past binnen begrip dagelijks bestuur of nominatief aan het college heeft toevertrouwd, wat hier dus niet het geval is). 
+                                                            Het aanbestedingsdossier voor de wegeniswerken in de Weststraat is klaar voor goedkeuring. Dit dossier werd opgemaakt door studiebureau Goegebeur, Kestelstraat 2, 9880 Aalter. 
+                                                            De uitvoeringstermijn voor de werken is vastgelegd op 60 werkdagen. De werken worden uitgevoerd in 2 fasen. 
+                                                            De fietsvoorzieningen zijn gelegen op het provinciaal Bovenlokaal functioneel fietsroutenetwerk waardoor het project in aanmerking komt voor 100 % van de subsidieerbare kosten en werken. Het in de meetstaat voorziene gemeentelijk aandeel omvat de kosten waarvoor provinciale fietspadsubsidies kunnen worden aangevraagd. De aanvraag tot subsidiëring heeft als basis een college- of gemeenteraadsbesluit waarbij de subsidieaanvraag uitsluitend digitaal wordt ingediend bij de Provincie Oost-Vlaanderen. 
+                                                            Bij besluit van de Bestendige Deputatie van de provincie Oost-Vlaanderen werd, op basis van de raming horende bij het voorontwerp, de subsidie voorlopig bepaald op € 322.369,72 incl. BTW. De definitieve bepaling van het bedrag zal gebeuren op basis van de offerte van de te gunnen aannemer. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Voor deze opdracht is momenteel een krediet van 400.000 euro beschikbaar in het financieel meerjarenplan onder jaarbudgetrekening 2022/ACT-483/0200-00/2240007/GEMEENTE/CBS/IP-GEEN (ACT-483: Weststraat/Stuiver - Heraanleg fietspad + vernieuwen toplaag asfalt) op basis waarvan zowel de kosten voor de studie, de uitvoering als de BTW zouden moeten worden gefinancierd. Voor dit project is ook al een investeringstoelage van 150.000 euro voorzien onder jaarbudgetrekening 2022/ACT-483/0200-00/1500000/GEMEENTE/CBS/IP-GEEN, een bedrag dat inmiddels kan worden opgetrokken tot 322.369,27 euro op basis van een subsidiebelofte van de provincie Oost-Vlaanderen voor de aanleg van het fietspad.Het gemeentelijk aandeel in de kostenraming bedraagt op heden € 625.190,74 incl. BTW en excl. ontwerpkosten. Om uitvoering te kunnen geven aan dit project, zal het momenteel voorziene uitgavenkrediet onder actie 483 bijgevolg moeten worden verhoogd in een eerstvolgende aanpassing van het meerjarenplan. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ecf9c430-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad keurt het ontwerp 'Weststraat - heraanleg fietspad (onpare kant) en vernieuwen toplaag rijweg' met bestek en raming, opgesteld door Studiebureel Goegebeur, Kestelstraat 2, 9880 Aalter, goed. De lastvoorwaarden worden vastgesteld zoals voorzien in het bestek en zoals opgenomen in de algemene uitvoeringsregels van de overheidsopdrachten voor aannemingen van werken, leveringen en diensten. De raming bedraagt € 526.047,70 excl. BTW: (of € 625.190,74 incl. BTW):•    Gemeente (zonder subsidie): € 158.091,85 excl. BTW (€ 191.291,14 incl. BTW)•    Gemeente (100% subsidie): € 314.017,85 excl. BTW (€ 379.961,60 incl. BTW)•    Gemeente (riolering): € 53.938 excl. BTW 
+                                                             
+                                                            Artikel 2 
+                                                            De werken worden gegund via een openbare procedure. 
+                                                             
+                                                            Artikel 3 
+                                                            Het college wordt gemachtigd alle verdere beslissingen te nemen over de uitvoering van de gunningsprocedure. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/206d6928-5356-4680-8768-4279f51175f3> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f2285d90-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Weststraat - heraanleg fietspad (onpare kant) en vernieuwen toplaag rijweg - lastvoorwaarden en gunningswijze, aanbestedingsdossier: goedkeuring" .
+

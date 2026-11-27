@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/f2709e26-1e74-4e2e-99d1-2611293cd281> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/171edebf-5a69-42e0-837c-c8f83d472e9e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63d94650-b618-4e07-a2e4-e92306eddf8b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bd4b2a3-c64c-4440-9750-46092ba6be39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc2c78ab-9386-4bcf-9299-3c8d3e5e07fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ecd5612a-9b99-4e51-92c1-c7c7eb4a9826> ;
+    ns1:geplandeStart "2026-04-07T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/74103a52-2c11-4b34-91e1-ca922c513e88> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "8ce1d4c2-564c-5311-a748-01fa39adeea3" ;
+    prov:atLocation "'t Leiken, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-04-07T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98374dd9-cb6d-4903-a907-1e99fd9e8d2c> ;
+    ns1:openbaar false ;
+    ns3:uuid "48ddba4f-bc54-54c6-b4a9-66c2a294a295" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van Jogging Twinkel op 8 mei 2026 vanaf 17.30 uur tot en met 21.30 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Jogging Twinkel' - Basisschool Twinkel: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 7 april 2026 over de aanvraag evenement 'Jogging Twinkel' - Basisschool Twinkel: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Pieter Van Hecke, namens Basisschool Twinkel, organiseert  'Jogging Twinkel' op 8 mei 2026 vanaf 17.30 uur tot en met 21.30 uur.Er werd op 2 februari 2026 een aanvraag ingediend door Pieter Van Hecke, namens Basisschool Twinkel, om tijdens deze organisatie verkeersmaatregelen te treffen. Doordat er op het moment van het evenement wegeniswerken aan de gang zijn in Leischoot, zal de route van de jogging anders zijn dan andere jaren. In combinatie met de omleidingsroutes zal het op deze manier veiliger zijn voor de lopers.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                     
+                                    Er werd op 26 maart 2026 toestemming gegeven door gemeente Maldegem voor het aangepaste signalisatieplan en het plaatsen van signalisatie op hun grondgebied.  
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    mobiliteit@maldegem.be // evenementen@maldegem.be 
+                                      
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                      
+                                 
+                            """@nl ;
+    ns3:uuid "affb7080-a01b-535d-9057-241c28f0bcf1" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Jogging Twinkel' op 8 mei 2026 vanaf 17.30 uur tot en met 21.30 uur wordt vastgesteld als volgt: 
+                                     
+                                        Afsluiten van Veldhoek (volledige straat) 
+                                        Omleiding via Oostwinkeldorp - Kruipuit - Panthaagstraat - Vlamingstraat en omgekeerd 
+                                        Parkeerverbod op de volledige parkeerstrook ter hoogte van Basisschool Twinkel, Veldhoek 4, 9931 Lievegem 
+                                        De signalisatie voor de wegeniswerken in Leischoot op kruispunt Veldhoek/Oostwinkeldorp wordt verplaatst naar kruispunt Panthaagstraat/Kruipuit 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Nadars + C3 op de uiteindes van de straat 
+                                        Borden F41 op volgende kruispunten: Veldhoek/Oostwinkeldorp, Panthaagstraat/Kruipuit (2x), Vlamingstraat/Panthaagstraat(2x) en Vlamingstraat/VeldhoekBorden C31a op volgende kruispunten: Veldhoek/Oostwinkeldorp en Vlamingstraat/VeldhoekBorden C31b op volgende kruispunten: Veldhoek/Oostwinkeldorp en Vlamingstraat/Veldhoek 
+                                        Borden E3 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten, zowel op grondgebied Lievegem als grondgebied Maldegem. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/043b3f4b-53bb-4002-8a6f-30ec7f27ac87> a ns1:Agendapunt ;
+    ns3:uuid "c7ca0cd2-7e3f-5e79-951e-1f4da99e5c7d" .
+

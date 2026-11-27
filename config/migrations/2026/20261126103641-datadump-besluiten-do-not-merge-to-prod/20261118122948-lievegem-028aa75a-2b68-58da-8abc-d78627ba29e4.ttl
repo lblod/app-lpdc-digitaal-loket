@@ -1,0 +1,71 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/90917e65-8eda-4b04-9a3a-93db41c81967> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05d11b2c-187b-4ea2-b1ac-e7f73828f515>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b544124-fb96-4803-8f0e-7ec950af73b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4d01487-78bb-4a55-9d23-8f4c9e350610> ;
+    ns1:geplandeStart "2025-12-09T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/34850cfb-cc0b-4ff7-8b45-78577353943c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "b76035ed-a122-5927-82ed-ff06ca06f643" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-12-09T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3b544124-fb96-4803-8f0e-7ec950af73b9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/44294f8b-fb5f-43e7-99fe-febae1a59973> ;
+    ns1:openbaar false ;
+    ns2:uuid "7df2809e-d646-50eb-a562-b051dc4fbbca" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b544124-fb96-4803-8f0e-7ec950af73b9> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3b544124-fb96-4803-8f0e-7ec950af73b9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3b544124-fb96-4803-8f0e-7ec950af73b9> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e8afe7c5-9640-4db8-8f74-3f023bec3241> ;
+    ns3:description """ 
+                                                            Het tijdelijk reglement op het verkeer met een verbod voor verkeer +3.5 ton om de Eikelstraat in te rijden vanaf Oostmoer wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement op het verkeer - verboden inrijden voor verkeer +3.5 ton in Eikelstraat vanaf Oostmoer: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 56 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college  van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Er zijn verschillende meldingen dat het doorgaand verkeer in het kleine Eikelstraatje voor heel wat overlast, en vaak gevaarlijke situaties, zorgt voor de bewoners, zwakke weggebruikers, … omdat het straatje gebruikt wordt als ‘sluipweg’. Gewone personenwagens vallen nog mee qua overlast, maar het zwaar verkeer (vrachtwagens, grote camionetten,...) zorgen voor gevaarlijke situaties. Er zijn meldingen van paaltjes die worden uitgereden en dakgoten die worden geraakt. Om tegemoet te komen aan de vraag naar een oplossing wordt voorgesteld om éénrichtingsverkeer in te voeren voor verkeer +3.5 ton komende vanuit Hoekje richting Oostmoer (inrijden vanaf Oostmoer door verkeer +3.5 ton wordt dan niet meer toegestaan) 
+                                    Deze maatregel wordt ingevoerd voor een beperkte periode (10 december 2025 - 30 juni 2026). Indien deze maatregel als positief wordt ervaren zal na advies van de mobiliteitsraad deze verkeersmaatregel ter definitieve vaststelling worden voorgelegd aan de Gemeenteraad. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Lievo, Bpost, IVM, de inwoners en betrokken handelaars.ABB via digitaal loket 
+                                 
+                            """@nl ;
+    ns2:uuid "028aa75a-2b68-58da-8abc-d78627ba29e4" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het college  van burgemeester en schepenen beslist volgend tijdelijk politiereglement op het wegverkeer vast te stellen:verboden in te rijden voor verkeer +3.5 ton in de Eikelstraat vanaf Oostmoer. 
+                                    Artikel 2Deze verkeersmaatregel wordt als volgt gesignaleerd: 
+                                     
+                                        C21 op de hoek Eikelstraat - Oostmoer 
+                                     
+                                    Artikel 3Dit tijdelijk politiereglement gaat in voege vanaf 10 december 2025 - 30 juni 2026 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3b544124-fb96-4803-8f0e-7ec950af73b9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b544124-fb96-4803-8f0e-7ec950af73b9> a ns1:Agendapunt ;
+    ns2:uuid "55a8883c-c10f-541b-b487-842f9dca099c" .
+

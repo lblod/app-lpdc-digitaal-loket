@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/13531b75-2b97-49e6-95b5-0130577929ca> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3087dcaf-8404-4313-8c4d-cf86d7068e89>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b11927eb-1bef-4718-bdb3-8a26d2d317a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e7de92-a36c-4219-9e13-c69071e37e4c> ;
+    ns1:geplandeStart "2022-03-30T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5072526b-b5d4-4d2b-ba68-1047063dac6e> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6062ed9f-3a18-4da2-b571-465c2cc37207> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6b4a4077-779d-4b4b-9f0b-f39d932e61c9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ec275900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-03-30T21:10:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-03-30T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c> ;
+    ns1:openbaar true ;
+    ns2:uuid "ed151460-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/83a14952-629a-43a4-a2cb-b19f5696b3e9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/83a14952-629a-43a4-a2cb-b19f5696b3e9> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad keurt de akte voor de kosteloze grondafstand te Vaartstraat 13, 9920 Lievegem, kadastraal gekend als afdeling 2, sectie B, nrs. 1575D  met een oppervlakte volgens meting van 109,48 m² goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Patrimonium – grondverwerving Vaartstraat 13 - akte kosteloze grondafstand: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Besluit van de gemeenteraad van Lovendegem van 25 april 1973 houdende de goedkeuring van het rooilijnplan van de VaartstraatBesluit van het college van burgemeester en schepenen van 25 november 2019 met de goedkeuring van de omgevingsvergunning O/2019/00337- OMV_2019112279 voor het bouwen van drie aaneengesloten woningen in de Vaartstraat 13 te 9920 Lievegem 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                            In de omgevingsvergunning van 25 november 2019 werd de kosteloze overdracht van een strook grond aan de gemeente als voorwaarde opgenomen. Het betreft de zone voor de rooilijn zoals vastgelegd in het rooilijnplan van 25 april 1973.  
+                                                             Studiebureau Goegebeur maakte op 24 september 2021 het opmetingsplan van deze over te dragen strook grond op. 
+                                                            Op 21 december 2021 bezorgde het kantoor Notaris Vanderplaetsen en Redel, Grote Baan 222, 9920 Lievegem, aan de gemeente een ontwerp akte voor de kosteloze grondafstand en het PV van opmeting van 24 september  2021. De over te dragen zone bestaat uit een perceel gelegen ter hoogte van Vaartstraat 13 met een oppervlakte van 109,48 m². Het over te dragen perceel maakte deel uit van de percelen afdeling 2, sectie B nrs. 907E en 909C en kreeg volgend kadasternummer: afdeling 2, sectie B, nr. 1575D.  
+                                                            Deze kosteloze grondafstand is conform de bepalingen van de omgevingsvergunning van 25 november 2019. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Er is geen financiële impact voor de gemeente.  
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ec262080-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad keurt de akte voor de kosteloze grondafstand tussen de naamloze vennootschap NOVUS enerzijds en de gemeente Lievegem anderzijds, opgemaakt door kantoor Notaris Vanderplaetsen en Redel, Grote Baan 222, 9920 Lievegem, voor een perceel grond ter hoogte van de Vaarstraat 13 te 9920 Lievegem, kadastraal gekend als afdeling 2, sectie B, nr. 1575D, met een oppervlakte volgens meting van 109,48 m² goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ed1848b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium – grondverwerving Vaartstraat 13 - akte kosteloze grondafstand: goedkeuring" .
+

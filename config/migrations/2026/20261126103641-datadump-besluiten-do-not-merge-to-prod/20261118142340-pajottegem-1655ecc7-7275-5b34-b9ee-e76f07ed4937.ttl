@@ -1,0 +1,106 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/dd5eb060-b6d3-4780-86ac-1c46757ca81b> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6ad3b06d-cd23-40c9-aa3d-0bb3c9ae5a4d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b0fb0387-4c6e-40d1-8393-6add529ce799>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/bdd15279-676f-47c0-96f6-db348c42c0b6> ;
+    ns1:geplandeStart "2025-04-14T14:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2364b49d-3045-48c7-9b26-c79a0a017613> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "b10ed617-5898-5ad6-b4bb-87e12d301072" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-04-14T14:24:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b0fb0387-4c6e-40d1-8393-6add529ce799> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e3c8713-12a7-4f03-bfc6-ae8ae763f98d> ;
+    ns1:openbaar false ;
+    ns2:uuid "6c34d186-4d87-510d-868e-9898f41e5ebc" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b0fb0387-4c6e-40d1-8393-6add529ce799> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/b0fb0387-4c6e-40d1-8393-6add529ce799> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/b0fb0387-4c6e-40d1-8393-6add529ce799> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor het schoolfeest op 25/04 tussen 8u en 20u goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Schoolfeest dorpsschool Kester - 25/04 tussen 8u en 20u" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "1655ecc7-7275-5b34-b9ee-e76f07ed4937" ;
+    prov:value """ 
+                                 
+                                    
+                                         
+                                     
+                                    
+                                        Artikel 1 - Ter gelegenheid van schoolfeest op 25/04 tussen 8u en 20u worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf tussen 8u en 20u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Verboden toegang voor alle verkeer, uitgezonderd plaatselijk verkeer (C3 + type IV 'uitgezonderd plaatselijk verkeer' + F45):
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Kruispunt De Ham met Cypriaan Verhavertstraat 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Kruispunt De Ham met Bruneaustraat (tegenstrijdige signalisatie af te dekken)
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Afsluiten van de rijweg (nadars):
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        T.h.v. Gemeenteschool Kester over de volledige lengte.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b0fb0387-4c6e-40d1-8393-6add529ce799> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b0fb0387-4c6e-40d1-8393-6add529ce799> a ns1:Agendapunt ;
+    ns2:uuid "7173b5ca-072e-5f42-820d-42fbfba0d90e" .
+

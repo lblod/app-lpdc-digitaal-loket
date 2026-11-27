@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3027bbce-6e1b-47b4-bc0b-f53c72f1f9d2> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1b0c2c7b-0314-444b-ba38-6b1f25637bc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27e0c4db-269e-409a-8d55-33db7daf7c9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aac60983-db3c-4247-b27f-4860f02157a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ba5489da-e01f-4521-be10-56c4a038e97d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d6f26eb7-74ad-4e5a-bcb3-b89aa65ac7b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d84d3931-b8bf-4253-ad24-7fabe8331040>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6446375-946b-4c3d-9dcc-c3cf171303a1> ;
+    ns1:geplandeStart "2020-09-09T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e04bbeb0-1e3c-48c6-86c0-2e3a8995ae98> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/619a64f0-35fa-41f1-9895-5360cd9bf16b> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2cf19f34-4e9d-4ca2-9af9-b8280d2d4efc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e687ae50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-09-09T23:00:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-09-09T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb> ;
+    ns1:openbaar true ;
+    ns3:uuid "efda27d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/98504bc9-8262-4192-8cba-1fcd50f0800a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/98504bc9-8262-4192-8cba-1fcd50f0800a> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad duidt de effectieve en de plaatsvervangende vertegenwoordiger aan in de algemene vergadering van de vereniging van publiek recht Welzijnsvereniging Audio. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Vereniging van publiek recht Welzijnsvereniging Audio: aanduiden van vertegenwoordigers" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Tony Vermeire, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017over het lokaal bestuur:-    artikel 34-2° over de aanwijzing van de leden van de gemeentelijke bestuursorganen en van de vertegenwoordigers van de gemeente in overlegorganen en in de organen van andere rechtspersonen en feitelijke verenigingen-    artikel 41 tweede lid, 4° over het oprichten van en het toetreden tot rechtspersonen en het beslissen tot oprichting van, deelname aan of vertegenwoordiging in agentschappen, instellingen, verenigingen en ondernemingen-    artikel 217 t.e.m. 220 over de organisatiebeheersing-    artikel 475 en 484  over de welzijnsvereniging Gemeenteraadsbesluit van 16 oktober 2019 houdende Audio, vereniging van publiek recht - toetreding, interne auditcharter en oprichting plaatselijk auditcomité: goedkeuringArtikel 10 van de statuten van de welzijnsvereniging Audio waarin voorzien wordt dat elke deelgenoot één vertegenwoordiger heeft in de Algemene Vergadering 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad is bevoegd om de vertegenwoordigers in intergemeentelijke samenwerkingsverbanden aan te duiden.De gemeente Lievegem is lid van de vereniging van publiek recht Welzijnsvereniging Audio.De gemeente werd op 29 juli 2020 opgeroepen om de vertegenwoordigers aan te duiden. De vertegenwoordigers kunnen voor de volledige legislatuur aangeduid worden, mits de vertegenwoordigers voor iedere algemene vergadering gemandateerd worden.De stemming over het aanwijzen van vertegenwoordigers van de gemeente in overlegorganen, in de organen van ander rechtspersonen en feitelijke verenigingen moeten geschieden bij geheime stemming. 
+                                                            Gaat over tot geheime stemming. 
+                                                            StemmingOver de aanduiding van een effectieve vertegenwoordiger voor de algemene vergadering (geheime stemming): Steven Lambert bekomt 27stemmen1 blanco stemSteven Lambert bekomt de meerderheid van de stemmenOver de aanduiding van een plaatsvervangend vertegenwoordiger voor de algemene vergadering (geheime stemming): Jeroen Van Acker bekomt 26 stemmenStevenLambert bekomt 1 stem1 blanco stemJeroen Van Acker bekomt de meerderheid van de stemmen 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e688bfc0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad duidt Steven Lambert, wonende te 9930 Lievegem, Kleitstraat 21, aan als effectieve vertegenwoordiger voor de algemene vergadering van de vereniging van publiek recht Welzijnsvereniging Audio.Artikel 2De gemeenteraad duidt Jeroen Van Acker, wonende te 9920 Lovendedgem, Verbindingsweg 9, aan als plaatsvervangend vertegenwoordiger voor de algemene vergadering van de vereniging van publiek recht Welzijnsvereniging Audio. 
+                                                            Artikel 3Deze aanduiding is geldig voor de resterende duur van de legislatuur 2019-2024 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "efdaeb20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Vereniging van publiek recht Welzijnsvereniging Audio: aanduiden van vertegenwoordigers" .
+

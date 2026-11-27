@@ -1,0 +1,112 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/b9a47633-f7e5-4d1f-93b9-3d5455718580> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5cc0f964-3ca3-4d1a-8644-5bf783f4483c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/68eb808d-e46a-4d27-b305-89891a7390a8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8b36222b-e766-4a19-8e0a-8e78688a221c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c24a912f-1edb-40b5-9aba-7c4283704ef9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2782825-e30c-4a2a-89f6-8e5623c56008> ;
+    ns2:geplandeStart "2026-03-09T18:50:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2fb5aff5-f321-4b2a-bb97-886be1f30b9e> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "69ececc1-23f6-5ea6-92ec-f8919748f257" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-03-09T18:14:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c2782825-e30c-4a2a-89f6-8e5623c56008> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8b36222b-e766-4a19-8e0a-8e78688a221c> ;
+    ns2:openbaar false ;
+    ns3:uuid "606c1325-7629-5a8a-8bbd-94c7eaef45e6" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2782825-e30c-4a2a-89f6-8e5623c56008> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/c2782825-e30c-4a2a-89f6-8e5623c56008> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/c2782825-e30c-4a2a-89f6-8e5623c56008> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Wielerwedstrijd op 31 mei 2026 goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: Wielerwedstrijd Omloop Nieuwsblad U23 - 31 mei 2026" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "3cbf5902-79c9-5fde-b586-62e490407568" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van wielerwedstrijd op 31 mei 2026 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast van 30-05-2026 12.00 uur tot 31-05-2026 16.30 uur in volgende straat:
+                                     
+                                     
+                                         
+                                            Heirbaan 
+                                         
+                                     
+                                     
+                                        Stilstaan en parkeren verboden (fig E3) op de Heirbaan vanaf de Kapellestraat (grondgebied Geraardsbergen) tot het kruispunt met de Bruinsbroekstraat. 
+                                        Stilstaan- en parkeerverbod (fig E3) wordt ingelast op 31-05-2026 van 12.00 uur tot 18.00 uur in volgende straten: 
+                                         
+                                            Heirbaan 
+                                         
+                                        Stilstaan en parkeren verboden (fig E3) op de Heirbaan vanaf de Bruinsbroekstraat tot de Meidries (grondgebied Geraardsbergen). 
+                                         
+                                            Bruinsbroekstraat 
+                                         
+                                        Stilstaan en parkeren verboden (fig E3) op de Bruinsbroekstraat vanaf het kruispunt met de Waterschaapstraat tot het kruispunt met de Heirbaan. 
+                                          
+                                        Eénrichtingsverkeer (fig C1 + fig F19) wordt ingelast op 01-06-2025 van 14.30 uur tot 16.00 uur in volgende straten: 
+                                         
+                                            Bruinsbroekstraat 
+                                         
+                                        Verboden richting voor ieder bestuurder (fig C1) op de Bruinsbroekstraat vanaf het kruispunt met de Waterschaapstraat (verkeersbord + nadar!) tot het kruispunt met de Heirbaan. 
+                                          
+                                        Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven (fig C31a / fig C31b) wordt ingelast op 01-06-2025 van 14.30 uur tot 16.00 uur op volgende kruispunten: 
+                                         
+                                            Bruinsbroekstraat 
+                                         
+                                        Noremansberg / BruinsbroekstraatWaterschaapstraat / Bruinbroekstraat 
+                                          
+                                        NadarsNadars op de Heirbaan vanaf de top van de Bosberg (kruispunt Noremansberg inbegrepen) tot het kruispunt met de Bruinsbroekstraat. Deze dienen geplaatst te worden op de dag van de wedstrijd voor 12.00 uur, de nodige afspraken in verband met de plaatsing dienen gemaakt te worden tussen de organisator en de gemeente Pajottegem. Indien deze nadars niet geplaatst worden is het onmogelijk om de supporters van de rijbaan te houden en een veilige doortocht te garanderen! 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                             
+                                             
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c2782825-e30c-4a2a-89f6-8e5623c56008> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2782825-e30c-4a2a-89f6-8e5623c56008> a ns2:Agendapunt ;
+    ns3:uuid "aa95663e-85ae-514d-837d-730931e87a7b" .
+

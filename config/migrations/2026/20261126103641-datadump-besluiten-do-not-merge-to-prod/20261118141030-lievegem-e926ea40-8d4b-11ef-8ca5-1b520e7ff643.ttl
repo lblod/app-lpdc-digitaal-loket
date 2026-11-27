@@ -1,0 +1,149 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/20d28bb5-807d-4186-9b8c-689e0489d460> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0d5a217c-c525-4e44-8013-3a8793791c88>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20b5e72e-9354-4170-98a3-c05c4e977881>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/37ce7e8a-c85d-431f-b3b1-4ef0d7cdfc5b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/39e4d294-dce8-4a6d-b36b-adab96e5b270>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/49410121-aef1-4042-b4f4-14aef82f264e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52422d96-ab04-4dae-aa8c-f8ea19b24f71>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/526a42ab-4198-41a6-9b39-98502758bf39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5a1c70ee-9069-4c19-bb17-7283f3198599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/63b209a3-f5d7-4935-a37f-b64cb99e8f09>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/67c3237c-605e-4d1d-956b-38d93832a2af>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7355b519-e12c-412f-bdee-376d8a1dbac7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76c10515-311c-4a8e-97aa-b1383f959784>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7bb5c221-724b-4edc-961b-b27f1cfddca6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/80391454-10c4-453b-9b8f-6e3f5eec2653>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8d722b2a-54c6-4cc1-ad13-058b5e6be17c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8fb7032d-2fa5-40f0-949b-e2fca027c07c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92755a1e-88d0-4d80-bf7f-05b9e7158bf5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/96f8b747-94cf-489d-93a8-36447215c1a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9dbbd1cc-1767-4669-88c7-c7c7c1678702>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a37a1dd9-22a8-45c9-8eff-269a0670589d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a522cfb9-9568-4db8-a6af-d0af935fb996>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5be802e-4cc9-4c38-977f-fdb6f3b04188>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a77b4fe2-987e-481c-8e85-a74f29837a69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aaf15f5e-c92c-4ddc-aceb-96527f71d48c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b451b262-4244-408b-b5c3-d83e0c8ef95e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd23b2fa-0997-43f2-8d2b-ed99b62d7ffb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd92fff3-77ca-41fb-a39d-3dbefc3df099>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d97b397e-04c9-4cee-a615-d87c20e939f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dbc8fd54-1dcb-4e9d-a8c1-2b2bbd70b039>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e53a82bc-8ac7-4963-a32c-d7afe35917ca>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f53ca798-c48a-41e7-9b15-c1f5daec8513>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f89c6e85-2216-4d01-a677-be26d437b23f> ;
+    ns1:geplandeStart "2021-09-15T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ab677b54-776e-4473-8db7-186edde3daab> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5b49bd77-10b9-4ede-a1cf-382ae765e5d9> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/21b852cd-eb6e-4187-9409-6b5402b5c378> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e92563a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2021-09-15T20:43:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-09-15T20:02:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/96f8b747-94cf-489d-93a8-36447215c1a0> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/49410121-aef1-4042-b4f4-14aef82f264e> ;
+    ns1:openbaar true ;
+    ns2:uuid "e91f4920-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/96f8b747-94cf-489d-93a8-36447215c1a0> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/96f8b747-94cf-489d-93a8-36447215c1a0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/96f8b747-94cf-489d-93a8-36447215c1a0> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad bekrachtigt de collegebeslissing van 17 augustus 20021 waarbij vVoor het retributiereglement op het gebruik van de culturele gemeentelijke infrastructuur beslist is om een afwijking op het reglement toe te staan om voor Lievegemse (socio)-culturele verenigingen geen retributie in rekening te brengen voor de periode van 14 juni 2021 tot en met 31 december 2021. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Besluit van het college van 17 augustus 2021 over de coronacrisis COVID-19 - Uitvoering maatregelen over lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 5): bekrachtiging" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De nieuwe gemeentewet, artikel 135 § 2, 5°Het decreet lokaal bestuur van 22 december 2017, en latere wijzigingen artikel 40 §1 : onder voorbehoud van andere wettelijke of decretale bepalingen, beschikt de gemeenteraad over de volheid van bevoegdheid ten aanzien van de aangelegenheden, vermeld in artikel 2 van het Decreet over het Lokaal Bestuur; Het decreet lokaal bestuur van 22 december 2017, en latere wijzigingen artikel 40 §3 : de gemeenteraad stelt de gemeentelijke reglementen vast. Met behoud van de toepassing van de federale wetgeving in verband met de bevoegdheid van de gemeenteraad om politieverordeningen vast te stellen, kunnen de reglementen onder meer betrekking hebben op het gemeentelijk beleid, de gemeentelijke belastingen en retributies, en op het inwendige bestuur van de gemeente; Het decreet lokaal bestuur van 22 december 2017, en latere wijzigingen artikel 41 §1 23° : volgende bevoegdheden worden uitdrukkelijk aan de gemeenteraad toevertrouwd: het vaststellen van subsidiereglementen en het toekennen van nominatieve subsidies;Het decreet lokaal bestuur van 22 december 2017, en latere wijzigingen, artikel 269: in dezelfde omstandigheden en als het geringste uitstel onbetwistbare schade zou veroorzaken, kan het college van burgemeester en schepenen op eigen verantwoordelijkheid over de uitgaven beslissen. Het college van burgemeester en schepenen brengt de gemeenteraad daarvan onmiddellijk op de hoogte 
+                                                            Ministerieel besluit van 30 juni 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperken, wijziging 24 en 28 juli, 22 augustus, 25 september, 8 en 16 en 28 oktober 2020.Ministeriële besluiten van 28 november 2020 en 11, 19, 20, 21 en 24 december 2020 houdende wijziging van het ministerieel besluit van 28 oktober 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperken  
+                                                            Ministerieel besluit van 12, 26 en 29 januari, 6 februari, 6 en 20, 26 maart, 25, 27 april, 7 mei  en 4, 23 juni, 27 juli en 25 augustus 2021 houdende wijziging van het ministerieel besluit van 28 oktober 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperkenGemeenteraadsbesluit van 18 december 2019 betreffende het retributiereglement op het gebruik van de culturele gemeentelijke infrastructuurGemeenteraadsbesluit van 29 april 2020 waarin het ondersteuningsplan Lievegem n.a.v. de coronacrisis werd besproken en toegelichtGemeenteraadsbesluit van 1 juli 2020 houdende Coronacrisis COVID-19 - Collegebesluit van 16 juni 2020 over de goedkeuring van de uitvoeringsmaatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem : bekrachtigingGemeenteraadsbesluit van 18 november 2020 houdende Coronacrisis COVID-19 - collegebesluit van 27 oktober 2020 over de uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 2): bekrachtigingGemeenteraadsbesluit van 16 december 2020 houdende Coronacrisis COVID-19 - Uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 3): goedkeuringGemeenteraadsbesluit van 28 april 2021 houdende Coronacrisis COVID-19 - Collegebesluit van 30 maart 2021 over de goedkeuring van de uitvoeringsmaatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (deel 4): bekrachtigingBesluit van het college van burgemeester en schepenen van 13 maart 2020 houdende beslissingen omtrent Coronavirus - federale en bijkomende maatregelen - weerslag en uitwerking op gemeentelijke vlakBesluit van het college van burgemeester en schepenen van 18 maart 2020 houdende beslissingen omtrent Coronavirus - federale maatregelen - weerslag en uitwerking op gemeentelijke vlakBesluit van het college van burgemeester en schepenen van 16 juni 2020 houdende Coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem: goedkeuringBesluit van het college van burgemeester en schepenen van 27 oktober 2020 houdende Coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 2): goedkeuringBesluit van het college van burgemeester en schepenen van 30 maart 2021 houdende Coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 4): goedkeuringBesluit van het college van burgemeester en schepenen van 6 juli 2021 houdende voorstel gemeentelijke cultuurraad voor het Ondersteuningsplan Corona Lievegem: kennisname en goedkeuringBesluit van het college van burgemeester en schepenen van 17 augustus 2021 over de coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 5): goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Naar aanleiding van de coronacrisis is werk gemaakt van een ondersteuningsplan voor Lievegem wat inmiddels resulteerde in heel wat concrete maatregelen en initiatieven.Overeenkomstig artikel 56, §1 van het Decreet Lokaal Bestuur bereidt het college van burgemeester de beraadslagingen en de besluiten van de gemeenteraad voor en is het belast met de uitvoering van de gemeenteraadsbesluiten.Overeenkomstig artikel 269 van het Decreet Lokaal Bestuur kan het college van burgemeester en schepenen in dezelfde omstandigheden zoals bepaald voor de gemeenteraad en als het geringste uitstel onbetwistbare schade zou veroorzaken, op eigen verantwoordelijkheid over de uitgaven beslissen. Het college van burgemeester en schepenen brengt de gemeenteraad daarvan onmiddellijk op de hoogte. In dat geval worden de financiële gevolgen opgenomen in de eerstvolgende aanpassing van het meerjarenplan.Door middel van de besluiten van het college van burgemeester en schepenen van respectievelijk 16 juni 2020 houdende Coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem, 27 oktober 2020 houdende Coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 2) en 30 maart 2021 houdende Coronacrisis COVID-19 - Uitvoering maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 4) werd al uitvoering gegeven aan tal van coronamaatregelen ter ondersteuning van het verenigingsleven, de lokale economie en de inwoners (in het bijzonder de meest kwetsbare groepen).In een volgende fase werd het doorvoeren van deze maatregelen nogmaals bekrachtigd door de gemeenteraad op basis van de besluiten van respectievelijk 1 juli 2020 houdende Coronacrisis COVID-19 - Collegebesluit van 16 juni 2020 over de goedkeuring van de uitvoeringsmaatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem, 18 november 2020 houdende Coronacrisis COVID-19 - collegebesluit van 27 oktober 2020 over de uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 2) en 28 april 2021 houdende Coronacrisis COVID-19 - Collegebesluit van 30 maart 2021 over de goedkeuring van de uitvoeringsmaatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (deel 4).Finaal was er nog het gemeenteraadsbesluit van 16 december 2020 houdende Coronacrisis COVID-19 - Uitvoering van maatregelen inzake lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 3) op basis waarvan enkele uitvoeringsmodaliteiten van reeds eerder doorgevoerde coronamaatregelen werden gewijzigd.Om sneller te kunnen inspelen op de opeenvolgende en wijzigende maatregelen van de hogere overheden en gezien het ondersteuningsplan voor Lievegem (en de achterliggende gedachte ervan) al eens werd voorgelegd aan en unaniem goedgekeurd door de gemeenteraad in zitting van 29 april 2020 en de omstandigheden precair blijven, wordt door middel van dit collegebesluit wederom versneld uitvoering gegeven aan volgende, bijkomende maatregel :In overleg met het college werd het ondersteuningsplan voor Lievegem (n.a.v. de coronacrisis) op 19 maart 2021 geactualiseerd op basis waarvan ook een extra budget van 27.000 euro ter beschikking werd gesteld voor bijkomende maatregelen ter ondersteuning van de socio-culturele sector in Lievegem (onder impuls van de cultuurraad).Op vraag van het college van burgemeester en schepenen bezorgde het dagelijks bestuur van de cultuurraad een voorstel tot financiële ondersteuning van het (socio-)culturele verenigingsleven in Lievegem in haar heropstart na de culturele corona-lockdown. 
+                                                            In april/mei 2021 werd een corona-impactbevraging uitgevoerd bij de (socio-)culturele verenigingen. 39 verenigingen vulden de bevraging in: een respons van 57%. De resultaten van de bevraging (zie bijlage) werden besproken op de bestuursvergadering van 17 mei 2021 en 28 juni 2021 en de algemene vergadering van 7 juni 2021. Volgende voorstellen ter ondersteuning van het (socio-)culturele verenigingsveld werden voorgesteld aan het college van 6 juli 2021 en goedgekeurd:1.    Gratis gemeentelijke zalen voor bestuurs- en ledenactiviteiten voor de erkende (socio-)culturele verenigingen via aanpassing retributiereglement op de zalen tot einde 2021Achterliggende redenering: 
+                                                             
+                                                                financiële impuls voor het culturele verenigingsleven in hun opstartfase 
+                                                                door de coronamaatregelen moeten verenigingen uitwijken naar grotere zalen met hogere huurprijzen: deze hogere prijzen kunnen niet ondervangen worden door een verhoging van het aantal deelnemers 
+                                                                topidee volgens de bevraging 
+                                                             
+                                                            Raming: 
+                                                             
+                                                                2020: 10.940 euro (annulaties) + 2.155 euro (inkomsten) – afgetoetst bij team financiën 
+                                                                Geschatte kostprijs: 15.000 euro 
+                                                             
+                                                            2.    Tussenkomst in de huurprijs niet-gemeentelijke zalen voor (socio-)culturele verenigingen via tijdelijk coronareglement tot einde 2021 (percentage van de huurprijs- wordt nog verder uitgewerkt)Achterliggende redenering: 
+                                                             
+                                                                financiële impuls voor het culturele verenigingsleven in hun opstartfase 
+                                                                door de coronamaatregelen moeten verenigingen uitwijken naar grotere zalen met hogere huurprijzen: deze hogere prijzen kunnen niet ondervangen worden door een verhoging van het aantal deelnemers 
+                                                                niet alle verenigingen kunnen voor hun activiteiten of evenementen terecht in een gemeentelijke zaal of beschikken over een gemeentelijke zaal in hun deelkern 
+                                                                topidee volgens de bevraging 
+                                                             
+                                                            Raming: 
+                                                             
+                                                                Te voorzien budget: 9.000 euro 
+                                                             
+                                                            3.    Coronakits via de uitleendienst Achterliggende redenering: 
+                                                             
+                                                                Voorzien van coronamateriaal stimuleert verenigingen om de coronaregels ernstig te nemen en na te volgen 
+                                                                Financiële impuls voor het verenigingsleven 
+                                                                Signaal vanuit het gemeentebestuur naar verenigingsleven 
+                                                                topidee volgens de bevraging 
+                                                                gebeurt reeds in een aantal steden en gemeentes (vb. Gent) 
+                                                             
+                                                            Raming: 
+                                                             
+                                                                Te voorzien budget: 2.000 euro (aanvullingen inbegrepen, ev. nog openluchtspandoek) 
+                                                             
+                                                            
+                                                                 
+                                                             
+                                                            4.    Infobundel corona en organiserenAchterliggende redenering: 
+                                                             
+                                                                Informatiedoorstroom vanuit team cultuur wordt gesmaakt door de verenigingen 
+                                                                Interessant voor verenigingen om alle info op 1 plaats te vinden 
+                                                                topidee volgens de bevraging 
+                                                             
+                                                            Raming: 
+                                                             
+                                                                Te voorzien budget: 0 euro (digitaal en op eigen kracht) 
+                                                             
+                                                            Totaal budget: 
+                                                             
+                                                            Wijziging retributiereglementIn uitvoering van het besluit van het college van burgemeester en schepenen van 6 juli 2021, meer bepaald het eerste voorstel, werd bij wijze van afwijking dus voorgesteld om voor het retributiereglement op het gebruik van de culturele gemeentelijke infrastructuur geen vergoeding aan te rekenen aan Lievegemse (socio)-culturele verenigingen voor de periode van 14 juni 2021 t.e.m. 31 december 2021.Alle belanghebbenden zullen worden geïnformeerd over de uitvoering van deze bijkomende maatregel. 
+                                                             Deze maatregel is enkel voor erkende socio-culturele verenigingen. (Jeugd-, senioren- en sportverenigingen vallen hier niet onder.) 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De vooropgestelde afwijking van het retributiereglement op het gebruik van de culturele gemeentelijke infrastructuur (artikel 1) geeft in de begroting 2021 aanleiding tot circa 15.000 euro minder inkomsten op jaarbudgetrekening 2021/GBB-CULT/0705-00/7050001/GEMEENTE/CBS/IP-GEEN. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "e926ea40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad bekrachtigt de collegebeslissing van 17 augustus 20021 waarbij voor het retributiereglement op het gebruik van de culturele gemeentelijke infrastructuur beslist is om een afwijking op het reglement toe te staan om voor Lievegemse (socio)-culturele verenigingen geen retributie in rekening te brengen voor de periode van 14 juni 2021 tot en met 31 december 2021. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/96f8b747-94cf-489d-93a8-36447215c1a0> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/96f8b747-94cf-489d-93a8-36447215c1a0> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e925d8d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Besluit van het college van 17 augustus 2021 over de coronacrisis COVID-19 - Uitvoering maatregelen over lokale economie en het verenigingsleven ondersteuningsplan Lievegem (Deel 5): bekrachtiging" .
+

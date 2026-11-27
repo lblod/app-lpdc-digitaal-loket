@@ -1,0 +1,152 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns1:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd> ;
+    ns1:openbaar true ;
+    ns2:uuid "e4623640-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/5bd81705-73eb-45f9-bea5-43b54ac5d208> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/5bd81705-73eb-45f9-bea5-43b54ac5d208> a ns1:Besluit ;
+    ns3:description """ 
+                                                    Goedkeuring wordt verleend aan het gunningsbedrag van € 132.639,00 incl. 21% btw voor lot 3, containers. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Het uitbreiden van het magazijn van Zomergem d.m.v. containers en wijzigen aan de magazijnen en de site: Lot 3, containers - gunningsbedrag: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, Schepen van patrimonium 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen. 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen. 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 42, § 1, 1° a) (de goed te keuren uitgave excl. btw bereikt de drempel van € 140.000,00 niet). 
+                                                            Het KB van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het KB van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen, meer bepaald artikel 90, 1°. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikel 41, tweede lid, 10°. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikels 326 tot en met 341 betreffende het bestuurlijk toezicht. 
+                                                            Het Bestuursdecreet van 7 december 2018. 
+                                                            Het besluit van het college van burgemeester en schepenen van Lievegem van 7 september 2021 over het aanstellen van een architect voor de uitbreiding van het magazijn van Zomergem d.m.v. containers en wijzigingen aan de magazijnen en de site 
+                                                            Het besluit van het college van burgemeester en schepenen van Lievegem van 21 december 2021 over het aanstellen van een architect voor de uitbreiding van het magazijn van Zomergem d.m.v. containers en wijzigingen aan de magazijnen en de site- wijziging opdracht 
+                                                            Het besluit van de gemeenteraad van 30 maart 2022 houdende uitbreiden magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site - lot 3 containers - lastvoorwaarden en gunningswijze, veiligheids- en gezondheidsplan: goedkeuring 
+                                                            Het besluit van het college van burgemeester en schepenen van Lievegem van 12 april 2022 over het uitbreiden van het magazijn van Zomergem dmv containers en wijzigen aan de magazijnen en de site: Lot 3, containers- starten procedure en uit te nodigen firma's: goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            In het kader van de opdracht “Het uitbreiden van het magazijn van Zomergem dmv containers en wijzigen aan de magazijnen en de site: Lot 3, containers. ” werd een bestek opgesteld door de associatie Servaes Pieters.De uitgave voor deze opdracht wordt geraamd op € 87.107,44 excl. btw of €  105.400,00 incl. 21% btw.De gemeenteraad verleende in zitting van 30 januari 2022 goedkeuring aan de lastvoorwaarden, de raming en de plaatsingsprocedure van deze opdracht, met name de onderhandelingsprocedure zonder voorafgaande bekendmaking.Het college van burgemeester en schepenen besliste in zitting van 12 april 2022 om de plaatsingsprocedure te starten en volgende ondernemers uit te nodigen om deel te nemen aan de onderhandelingsprocedure:- De Meeuw nv, Koning Leopoldlaan 8 te 2830 Willebroek;- Jan Snel Belgium nv, Stationsplein 1 te 9100 Sint-Niklaas;- Gecima Waver, Av Vésale 24 te 1300 Waver.De offertes dienden het bestuur ten laatste op 13 mei 2022 om 12.00 uur te bereiken.De verbintenistermijn van 120 kalenderdagen eindigt op 10 september 2022.Er werd 1 offerte ontvangen van De Meeuw nv, Koning Leopoldlaan 8 te 2830 Willebroek (€ 110.204,01 excl. btw of € 133.346,85 incl. 21% btw).De associatie Servaes Pieters maakte een verslag van nazicht op en stelt voor om, rekening houdende met het voorgaande, deze opdracht te gunnen aan de firma met de enige offerte (op basis van de beste prijs-kwaliteitsverhouding), zijnde De Meeuw nv, Koning Leopoldlaan 8 te 2830 Willebroek tegen het nagerekende offertebedrag van € 132.639,00 incl. 21% btw. 
+                                                            Gezien het nagerekende offertebedrag het ramingsbedrag, zoals vastgesteld door de gemeenteraad van 30 maart 2022, overschrijdt, wordt aan de gemeenteraad gevraagd om het gunningsbedrag goed te keuren om het dossier daarna voor te leggen aan het college van burgemeester en schepenen om te gunnen. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Het algemeen totaal voor werken en erelonen was initieel geraamd op € 356.701,44. 
+                                                            Voor deze investeringsuitgave bevat het meerjarenplan in begrotingsjaar 2022 een krediet van 305.000 euro op jaarbudgetrekening 2022/ACT-473/0200-00/2210007/GEMEENTE/CBS/IP-GEEN (ACT-473: uitbreiding magazijn Zomergem). 
+                                                            Op basis van de initieel geraamde kostprijs en het voorziene krediet is er een tekort van € 51.701,44. 
+                                                            Voor actie 240 "Lokalen Vrije Tijd  Zomergem" is in het meerjarenplan 2020-2025 een krediet van 2.846.578 euro beschikbaar op jaarbudgetrekening 2022/ACT-240/0705-02/2210007/GEMEENTE/CBS/IP-006. De uitgaven voor dit project zullen lager uitvallen waardoor via een interne kredietverschuiving alvast een bedrag van € 52.000 euro kan worden verschoven van actie 240 naar actie 473. 
+                                                            Het gunningsbedrag voor lot 3 bedraagt € 109.619,01 excl. btw of € 132.639,00 incl. btw 
+                                                            Totaalbedrag voor de loten 1, 3 en 4 = € 384.803,78 
+                                                            10 % meerwerken = € 38.480,38 
+                                                            Algemeen totaal werken = € 423.284,16 
+                                                            Op actie 473 zijn inmiddels al volgende vastleggingen gebeurd voor het aanstellen van de architect: € 17.787,00 + € 4.840,00 = € 22.627,00. 
+                                                            Algemeen totaal werken en erelonen = € 445.911,16 
+                                                            Uit dit alles blijkt nog een bijkomend tekort van € 88.911,16 (bovenop initieel tekort van € 51.701,44). 
+                                                            Voor actie 476 "Aanpassen ontwijden kerken voor gebruik door gemeente" bevat het meerjarenplan 2020-2025 een krediet van € 120.000,00 op jaarbudgetrekening 2022/ACT-476/0705-00/2210007/GEMEENTE/CBS/IP-GEEN. De uitgaven voor dit project zullen lager uitvallen waardoor het mogelijk is om via een interne kredietverschuiving een bedrag van € 90.000 te verschuiven van actie 476 naar actie 473. 
+                                                         
+                                                    """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, Schepen van patrimonium 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen. 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen. 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 42, § 1, 1° a) (de goed te keuren uitgave excl. btw bereikt de drempel van € 140.000,00 niet). 
+                                                            Het KB van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het KB van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen, meer bepaald artikel 90, 1°. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikel 41, tweede lid, 10°. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikels 326 tot en met 341 betreffende het bestuurlijk toezicht. 
+                                                            Het Bestuursdecreet van 7 december 2018. 
+                                                            Het besluit van het college van burgemeester en schepenen van Lievegem van 7 september 2021 over het aanstellen van een architect voor de uitbreiding van het magazijn van Zomergem d.m.v. containers en wijzigingen aan de magazijnen en de site 
+                                                            Het besluit van het college van burgemeester en schepenen van Lievegem van 21 december 2021 over het aanstellen van een architect voor de uitbreiding van het magazijn van Zomergem d.m.v. containers en wijzigingen aan de magazijnen en de site- wijziging opdracht 
+                                                            Het besluit van de gemeenteraad van 30 maart 2022 houdende uitbreiden magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site - lot 3 containers - lastvoorwaarden en gunningswijze, veiligheids- en gezondheidsplan: goedkeuring 
+                                                            Het besluit van het college van burgemeester en schepenen van Lievegem van 12 april 2022 over het uitbreiden van het magazijn van Zomergem dmv containers en wijzigen aan de magazijnen en de site: Lot 3, containers- starten procedure en uit te nodigen firma's: goedkeuring 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            In het kader van de opdracht “Het uitbreiden van het magazijn van Zomergem dmv containers en wijzigen aan de magazijnen en de site: Lot 3, containers. ” werd een bestek opgesteld door de associatie Servaes Pieters.De uitgave voor deze opdracht wordt geraamd op € 87.107,44 excl. btw of €  105.400,00 incl. 21% btw.De gemeenteraad verleende in zitting van 30 januari 2022 goedkeuring aan de lastvoorwaarden, de raming en de plaatsingsprocedure van deze opdracht, met name de onderhandelingsprocedure zonder voorafgaande bekendmaking.Het college van burgemeester en schepenen besliste in zitting van 12 april 2022 om de plaatsingsprocedure te starten en volgende ondernemers uit te nodigen om deel te nemen aan de onderhandelingsprocedure:- De Meeuw nv, Koning Leopoldlaan 8 te 2830 Willebroek;- Jan Snel Belgium nv, Stationsplein 1 te 9100 Sint-Niklaas;- Gecima Waver, Av Vésale 24 te 1300 Waver.De offertes dienden het bestuur ten laatste op 13 mei 2022 om 12.00 uur te bereiken.De verbintenistermijn van 120 kalenderdagen eindigt op 10 september 2022.Er werd 1 offerte ontvangen van De Meeuw nv, Koning Leopoldlaan 8 te 2830 Willebroek (€ 110.204,01 excl. btw of € 133.346,85 incl. 21% btw).De associatie Servaes Pieters maakte een verslag van nazicht op en stelt voor om, rekening houdende met het voorgaande, deze opdracht te gunnen aan de firma met de enige offerte (op basis van de beste prijs-kwaliteitsverhouding), zijnde De Meeuw nv, Koning Leopoldlaan 8 te 2830 Willebroek tegen het nagerekende offertebedrag van € 132.639,00 incl. 21% btw. 
+                                                            Gezien het nagerekende offertebedrag het ramingsbedrag, zoals vastgesteld door de gemeenteraad van 30 maart 2022, overschrijdt, wordt aan de gemeenteraad gevraagd om het gunningsbedrag goed te keuren om het dossier daarna voor te leggen aan het college van burgemeester en schepenen om te gunnen. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Het algemeen totaal voor werken en erelonen was initieel geraamd op € 356.701,44. 
+                                                            Voor deze investeringsuitgave bevat het meerjarenplan in begrotingsjaar 2022 een krediet van 305.000 euro op jaarbudgetrekening 2022/ACT-473/0200-00/2210007/GEMEENTE/CBS/IP-GEEN (ACT-473: uitbreiding magazijn Zomergem). 
+                                                            Op basis van de initieel geraamde kostprijs en het voorziene krediet is er een tekort van € 51.701,44. 
+                                                            Voor actie 240 "Lokalen Vrije Tijd – Zomergem" is in het meerjarenplan 2020-2025 een krediet van 2.846.578 euro beschikbaar op jaarbudgetrekening 2022/ACT-240/0705-02/2210007/GEMEENTE/CBS/IP-006. De uitgaven voor dit project zullen lager uitvallen waardoor via een interne kredietverschuiving alvast een bedrag van € 52.000 euro kan worden verschoven van actie 240 naar actie 473. 
+                                                            Het gunningsbedrag voor lot 3 bedraagt € 109.619,01 excl. btw of € 132.639,00 incl. btw 
+                                                            Totaalbedrag voor de loten 1, 3 en 4 = € 384.803,78 
+                                                            10 % meerwerken = € 38.480,38 
+                                                            Algemeen totaal werken = € 423.284,16 
+                                                            Op actie 473 zijn inmiddels al volgende vastleggingen gebeurd voor het aanstellen van de architect: € 17.787,00 + € 4.840,00 = € 22.627,00. 
+                                                            Algemeen totaal werken en erelonen = € 445.911,16 
+                                                            Uit dit alles blijkt nog een bijkomend tekort van € 88.911,16 (bovenop initieel tekort van € 51.701,44). 
+                                                            Voor actie 476 "Aanpassen ontwijden kerken voor gebruik door gemeente" bevat het meerjarenplan 2020-2025 een krediet van € 120.000,00 op jaarbudgetrekening 2022/ACT-476/0705-00/2210007/GEMEENTE/CBS/IP-GEEN. De uitgaven voor dit project zullen lager uitvallen waardoor het mogelijk is om via een interne kredietverschuiving een bedrag van € 90.000 te verschuiven van actie 476 naar actie 473. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "e461c110-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            Goedkeuring wordt verleend aan het gunningsbedrag van € 109.619,01 excl. btw ofwel € 132.639,00 incl. 21% btw voor het uitbreiden van het magazijn van Zomergem d.m.v. containers en wijzigen aan de magazijnen en de site: lot 3, containers. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e45257c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Het uitbreiden van het magazijn van Zomergem d.m.v. containers en wijzigen aan de magazijnen en de site: Lot 3, containers - gunningsbedrag: goedkeuring" .
+

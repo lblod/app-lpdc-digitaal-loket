@@ -1,0 +1,54 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/ff3d90d1-04c1-44ae-8f35-cc6ac2dbe078> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/193e7b3f-eef2-405e-9c0f-35341784daae>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2ad181e9-d0e6-457d-a3b8-eae4e353fde6>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/345f1cb4-8bae-4367-aa78-8ab1f495921c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/498ee453-eec2-4d15-8ab6-32a3ed97258b>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/550113d9-fb66-4e5f-8ab4-2a6903494cc5>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/83826613-8202-4bbb-b1bd-319babc0e9e7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8a06ed90-e1b6-4a8e-8efe-6d6c6b484d88>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/ac3b9fde-3549-4618-9ad4-ca6d50c8c20d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/ff6b7bf0-d51a-4ea6-9519-4d80712dd19f> ;
+    ns1:geplandeStart "2026-05-18T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/80ddb841-7a1d-4122-94bc-7721e56a7c58> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "01c5632b-1f0a-5d85-a5de-af1762fc305e" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-05-18T13:23:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/345f1cb4-8bae-4367-aa78-8ab1f495921c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/550113d9-fb66-4e5f-8ab4-2a6903494cc5> ;
+    ns1:openbaar false ;
+    ns2:uuid "0087cb2e-e4d3-50f0-8f23-20132f7e2029" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/345f1cb4-8bae-4367-aa78-8ab1f495921c> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/345f1cb4-8bae-4367-aa78-8ab1f495921c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/345f1cb4-8bae-4367-aa78-8ab1f495921c> a ns1:Besluit ;
+    ns3:description """ 
+                                                    Het college van burgemeester en schepenen bekrachtigt de politieverordening bij hoogdringendheid, genomen door de burgemeester op 8 mei 2026 voor de organisatie van Carwash Scouts Gooik op 16 mei 2026 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Bekrachtiging politieverordening bij hoogdringendheid voor de organisatie van Carwash Scouts Gooik op 16 mei 2026" ;
+    ns1:motivering """ 
+                                 
+                                    Aan het college van burgemeester en schepenen wordt gevraagd de politieverordening bij hoogdringendheid, genomen door de burgemeester op 8 mei 2026, te bekrachtigen. 
+                                 
+                            """@nl ;
+    ns2:uuid "3df00682-6605-5269-ae4b-ad584369f07d" ;
+    prov:value """ 
+                                 
+                                    Artikel 1 - Het college van burgemeester en schepenen bekrachtigt de politieverordening bij hoogdringendheid, genomen door de burgemeester op 8 mei 2026 voor de organisatie van Carwash Scouts Gooik op 16 mei 2026. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/345f1cb4-8bae-4367-aa78-8ab1f495921c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/345f1cb4-8bae-4367-aa78-8ab1f495921c> a ns1:Agendapunt ;
+    ns2:uuid "1e1c7b8a-e814-59f5-90e4-aec90235a65b" .
+

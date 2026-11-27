@@ -1,0 +1,82 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6ec5bd26-77e0-4b75-a80a-f375cbf2ddce> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20e660e1-878a-4a1d-8e15-3083e934fa3a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/268093ec-78e6-4860-b2b1-88bc67ad5521>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2ed0fe0e-8fbc-4fff-acd9-57a7612fa053>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6bde08de-929d-4733-a4a9-ae503490051a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6f1f2184-fa85-4728-9bc7-15f372415150>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c65c9174-ee69-49e8-80eb-ac88826fe111> ;
+    ns2:geplandeStart "2026-08-11T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d4a5300e-af03-4fd5-a62a-1a147235b26a> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "7449da63-b1a1-58e7-9e67-277eb97cc26f" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-08-11T14:49:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c65c9174-ee69-49e8-80eb-ac88826fe111> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/040319cb-f2a0-4f12-bd65-a5835174bfc0> ;
+    ns2:openbaar false ;
+    ns3:uuid "af6b3e51-f3c3-5a94-9e7e-5ecab81573d2" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c65c9174-ee69-49e8-80eb-ac88826fe111> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c65c9174-ee69-49e8-80eb-ac88826fe111> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c65c9174-ee69-49e8-80eb-ac88826fe111> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Strapdag scholen 't Kersenpitje en De Lieve 2026' op 18 september 2026 van 8.00 uur tot en met 16.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Strapdag scholen 't Kersenpitje en De Lieve 2026' - VLS De Lieve: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 11 augustus 2026 over de aanvraag evenement Strapdag scholen 't Kersenpitje en De Lieve 2026 - VLS De Lieve: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Elise De Clercq, namens VLS De Lieve organiseert 'Strapdag scholen 't Kersenpitje en De Lieve 2026' op 18 september 2026 van 8.00 uur tot en met 16.00 uur.Er werd op 3 juli 2026 een aanvraag ingediend door Elise De Clercq, namens VLS De Lieve om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd. Gelieve deze brief ook te bezorgen aan de directie van WZC De Linde. 
+                                 
+                            """@nl ;
+    ns3:uuid "24bfdda1-42a6-53e8-80c8-d9a2bbb71ffa" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Strapdag van de scholen 't Kersenpitje en De Lieve 2026' op 18 september 2026 van 8.00 uur tot en met 16.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Afsluiten Toekomststraat vanaf kruispunt met Schoolstraat tot voorbij het sportveldje van de school. De uitrit van de parking van WZC De Linde blijft hierbij vrij 
+                                        Stilstaan- en parkeerverbod in Toekomststraat vanaf kruispunt met Schoolstraat tot voorbij het sportveldje van de school 
+                                        Omleiding via Schoolstraat - Hendrik Consciencelaan 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Nadar + C3 aan het kruispunt Toekomststraat/Schoolstraat 
+                                        Borden E3 
+                                        Borden F41 aan de kruispunten Toekomststraat/Schoolstraat en Schoolstraat/Hendrik Consciencelaan 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c65c9174-ee69-49e8-80eb-ac88826fe111> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c65c9174-ee69-49e8-80eb-ac88826fe111> a ns2:Agendapunt ;
+    ns3:uuid "ca9790fb-a0f9-5116-ae2f-30430d80def7" .
+

@@ -28,6 +28,9 @@
                              :as "provincie")
              (bestuurseenheid-classificatie-code :via ,(s-prefix "besluit:classificatie")
                                                  :as "classificatie"))
+  :has-many `((governing-body :via ,(s-prefix "besluit:bestuurt")
+                              :inverse t
+                              :as "governing-bodies"))
 
   :resource-base (s-url "http://data.lblod.info/id/bestuurseenheden/")
   :features '(include-uri)

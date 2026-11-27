@@ -1,0 +1,75 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/555a4558-726f-43e6-8ee1-2a4b1b88a036> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/6828b5eb-12e9-4953-8239-def0deb17e9d> ;
+    ns1:geplandeStart "2026-03-03T21:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/9491567f-90de-4e7a-85c5-53643346e65f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "7b33ca59-1ee3-52cd-a629-6b9927ae9773" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-03-03T21:08:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6828b5eb-12e9-4953-8239-def0deb17e9d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a123539e-904e-41ba-a126-a1466b0c3e0d> ;
+    ns1:openbaar false ;
+    ns3:uuid "bc444724-3ab2-560e-9b47-4a4c9ce8d28c" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/6828b5eb-12e9-4953-8239-def0deb17e9d> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/6828b5eb-12e9-4953-8239-def0deb17e9d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/6828b5eb-12e9-4953-8239-def0deb17e9d> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Tijdelijke politieverordening op het wegverkeer - W. De Vochtstraat" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Voor de afbraakwerken aan het pand W. De Vochtstraat dient de straat afgesloten te worden voor gemotoriseerd verkeer. De afbraakwerken starten door een mobiele kraan vanop straat om zo richting het eigen perceel verder te werken. Er is geen mogelijkheid om de afbraakwerken vanuit het eigen perceel te laten starten. 
+                                 
+                                 
+                                    Juridische grond 
+                                    Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                    Bevoegdheidsgrond 
+                                     
+                                        Decreet Lokaal Bestuur, artikel 56 §2 in samenhang met de Nieuwe Gemeentewet van 24 juni 1988, artikel 130 bis 
+                                     
+                                    Toepasselijke regelgeving:   
+                                     
+                                        De wet van 16 maart 1968 betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk bestuur van 16 maart 1968; 
+                                        Het koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer, en latere wijzigingen; 
+                                        Het koninklijk besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens, en latere wijzigingen; 
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Voor de afbraakwerken aan het pand W. De Vochtstraat dient de straat afgesloten te worden voor gemotoriseerd verkeer. De afbraakwerken starten door een mobiele kraan vanop straat om zo richting het eigen perceel verder te werken. Er is geen mogelijkheid om de afbraakwerken vanuit het eigen perceel te laten starten. De straat dient afgesloten te worden omdat er geen doorgang mogelijk is omwille van de kraan, de veiligheidsperimeter en de inname voor containers voor afvalverwerking (cfr IOD 3359255). 
+                                    Aangezien het om een drukke verkeersstraat gaat dichtbij het station, wenst het college de duur tot een minimum te beperken.  
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                 
+                            """@nl ;
+    ns3:uuid "ba82d22c-186f-5840-ae1c-339392d5a903" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Het college van burgemeester en schepenen keurt de tijdelijke politieverordening “W. De Vochtstraat” goed te Puurs vanaf 09/03/2026 tot en met 14/03/2026 
+                                    Artikel 2: Willem de Vochtstraat 9 - 13 : De toegang is verboden in beide richtingen, voor iedere bestuurder; de maatregel geldt niet voor fietsers en bestuurders van speed pedelecs. 
+                                     Dit wordt aangeduid door verkeerstekens: 
+                                     
+                                        Verkeersbord C3 met onderbord M11   
+                                     
+                                    Artikel 3: Overtreding van dit reglement wordt bestraft overeenkomstig de verkeerswet. 
+                                    Artikel 4: Dit reglement wordt bekendgemaakt overeenkomstig artikel 286 van het decreet over het lokaal bestuur. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6828b5eb-12e9-4953-8239-def0deb17e9d> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/6828b5eb-12e9-4953-8239-def0deb17e9d> a ns1:Agendapunt ;
+    ns3:uuid "fc25b221-afdc-5e78-9197-d986474b056e" .
+

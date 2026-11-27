@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/31517b1e-b311-43ab-a365-9ef49b7ba94d> a ns3:Zitting ;
+    ns3:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5f6f4bf4-5d1c-4cbc-b557-b80262e5a284> ;
+    ns3:geplandeStart "2025-08-12T20:00:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/26e34547-49b1-4208-b9ed-60b51810864d> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "01d3d8a2-a784-581a-a037-8cae9cf2fb3c" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-08-12T19:56:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5f6f4bf4-5d1c-4cbc-b557-b80262e5a284> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/98bbda30-94a9-4448-9c3c-099ff5ea76a2> ;
+    ns3:openbaar false ;
+    ns2:uuid "18324804-635f-51d1-a578-fca75bc5dbb6" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5f6f4bf4-5d1c-4cbc-b557-b80262e5a284> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5f6f4bf4-5d1c-4cbc-b557-b80262e5a284> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/5f6f4bf4-5d1c-4cbc-b557-b80262e5a284> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:title "Tijdelijke politieverordening op het wegverkeer - Ooievaarsnest - tijdelijk openstellen afrit A12" ;
+    ns3:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Van 20 tot 29 augustus 2025 zijn er werken gepland aan de Rupelbrug. Net zoals vorige keer zal de afrit A12 naar Ooiveaarsnest worden opengesteld zodat bewoners van Ruisbroek niet via N16 moeten omrijden. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond 
+                                             
+                                                Decreet Lokaal Bestuur, artikel 56 §2 in samenhang met de Nieuwe Gemeentewet van 24 juni 1988, artikel 130 bis 
+                                             
+                                         
+                                     
+                                     
+                                        Toepasselijke regelgeving:  
+                                         
+                                            De wet van 16 maart 1968 betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk bestuur van 16 maart 1968; 
+                                            Het koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer, en latere wijzigingen; 
+                                            Het koninklijk besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens, en latere wijzigingen; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Van 20 tot 29 augustus 202  zijn er werken gepland aan de Rupelbrug. Net zoals vorige keer zal de afrit A12 naar Ooiveaarsnest worden opengesteld zodat bewoners van Ruisbroek niet via N16 moeten omrijden. 
+                                 
+                            """@nl ;
+    ns2:uuid "41cb9e18-afd5-52e6-b0f4-bf9269d4076d" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Het college van burgemeester en schepenen keurt de tijdelijke politieverordening “Ooievaarsnest - tijdelijk openstellen afrit A12” goed te Puurs-Sint-Amands voor de duur van de werken aan de Rupelbrug: vanaf 20/08/2025 tot 29/08/2025. 
+                                    Artikel 2: 
+                                     
+                                        Afwikkeling kruispunt afrit en Ooievaarsnest wordt geregeld met verkeerslichten, 
+                                        Inhaalverbod wordt gesignaleerd t.h.v. kruispunt d.m.v. bord C35 aan beide kanten op Ooivaarsnest 
+                                        Afrit wordt gesignaleerd op A12 d.m.v. voorsorteerstrook op A12 met verkeersbord C43 90km + onderbordGXI 
+                                        snelheidsverlaging wordt gesignaleerd op afrit d.m.v. verkeersbord C43 90km t.h.v. begin afrit + bord F7verkeersbord C43 70km verkeersbord C43 50kmverkeersbord C43 30km 
+                                        Enkelrichting wordt gesignaleerd t.h.v. afrit en Ooievaarsnest d.m.v. verkeersbord C1 aan beide kanten 
+                                        Enkelrichting wordt gesignaleerd t.h.v. A12 d.m.v. verkeersbord F19 aan beide kanten 
+                                     
+                                      
+                                    Artikel 3: Overtreding van dit reglement wordt bestraft overeenkomstig de verkeerswet. 
+                                    Artikel 4: Dit reglement wordt bekendgemaakt overeenkomstig artikel 286 van het decreet over het lokaal bestuur. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5f6f4bf4-5d1c-4cbc-b557-b80262e5a284> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/5f6f4bf4-5d1c-4cbc-b557-b80262e5a284> a ns3:Agendapunt ;
+    ns2:uuid "eca73174-3096-5384-89dc-6aa7c15e2fb4" .
+

@@ -1,0 +1,80 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/67813274-3b7a-49f9-b9c9-4340aed05429> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0420c8b3-f1fd-44d8-b3ae-1f108eeb6dbd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/20da2d5c-17ba-46c0-94b0-62e363690426>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2371935b-7ad6-4871-af1c-8089e789c391>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2f2e39c4-4397-49bb-9f65-be0e540b6db7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40bc18f5-9d9a-4acb-a285-5e5a40f5e01f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42299301-8db7-4bbf-ae43-b3b4e96ecd75>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50439503-35eb-4857-a55d-25da89a6089f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50ec0f1b-e0e8-4906-b73d-2d6e32748752>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5856e334-1733-4d65-8957-97a405084cb7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65b18321-528f-4e3b-a927-c135e83f1b5d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/65fdb4dd-4ccc-4e03-957b-90fcc179cde0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/865bd574-8170-44ee-a454-33dfaf2ab2ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/99120f73-d62d-48c9-b773-7826c5491feb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fabf93-37f3-4314-807c-752f83afa18b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bc17426a-5ef8-46a5-9063-831499691106>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c3f2a474-68e1-4e4a-b84c-9c6baa0f328f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cced2456-4981-4ba6-9b14-e3c867bb0a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0e68f3f-8930-4481-a410-e168d0bf59e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e14c1930-dcf0-4f9f-8ac1-4175bbf52d2c> ;
+    ns1:geplandeStart "2024-01-31T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d806425-9a34-4095-988a-05678b76355f> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0682f2be-d210-4ac2-9225-4ac8a0eeb628> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3369f7d3-24df-47ea-acab-50b627f1e882> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e6273ed0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2024-01-31T21:22:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2024-01-31T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6> a ns1:BehandelingVanAgendapunt ;
+    ns1:openbaar true ;
+    ns3:uuid "e61eb350-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de notulen en het zittingsverslag van de gemeenteraadszitting van 20 december 2023 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Goedkeuren notulen en zittingsverslag van de vorige zitting" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Nicholas Spinel, Voorzitter 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 32Gemeenteraadsbesluit van 29 mei 2019 houdende goedkeuring huishoudelijk reglement gemeenteraad, artikel 31 en 32 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De notulen en het zittingsverslag van de vergadering van de gemeenteraad worden onder de verantwoordelijkheid van de algemeen directeur opgesteld.Behalve in spoedeisende gevallen worden de notulen en het zittingsverslag van de vorige vergadering ten minste acht dagen voor de dag van de vergadering ter beschikking gesteld van de gemeenteraadsleden. Elk gemeenteraadslid heeft het recht tijdens de vergadering opmerkingen te maken over de redactie van de notulen en het zittingsverslag van de vorige vergadering. Als die opmerkingen door de gemeenteraad worden aangenomen, worden de notulen en het zittingsverslag in die zin aangepast.Als er geen opmerkingen worden gemaakt over de notulen en het zittingsverslag van de vorige vergadering worden de notulen en het zittingsverslag als goedgekeurd beschouwd en worden ze ondertekend door de voorzitter van de gemeenteraad en de algemeen directeur. 
+                                                            Het zittingsverslag is te bekijken op https://youtu.be/EfogFfx-E2Y 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e61e6530-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            De gemeenteraad keurt de notulen en het zittingsverslag van de gemeenteraadszitting van 20 december 2023 goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2a95a34a-18ee-4df4-af8a-bab0e7a70cf6> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e621e7a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Goedkeuren notulen en zittingsverslag van de vorige zitting" .
+

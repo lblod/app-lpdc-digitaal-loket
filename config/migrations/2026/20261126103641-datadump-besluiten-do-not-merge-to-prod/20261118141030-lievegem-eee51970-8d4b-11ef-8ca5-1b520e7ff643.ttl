@@ -1,0 +1,105 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6219e70b-a11d-41ee-932f-1de6fab63f66> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/056ce378-80ad-465c-a6ff-9e7f427b43dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06808dec-0883-41a9-932f-4e1dbfce464f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/21dd7ca5-0fbf-4795-80c5-34655d129dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5e8d9624-6fc9-4220-acdb-affac1d4f5bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b55312b-f388-42d7-913b-1b7fa2fe03d4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc1d2c8-5d20-4607-ab4b-a96ad7d3adc2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b50e7bb5-a505-44ae-8207-2fb21ca780d5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c251bdc4-9793-405e-8b78-c3e0ee673f9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c451ff4b-94fa-477b-8baa-81e0be4bd852>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cec759f6-1f78-4c21-8314-2aff4bd2401f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4c0bf94-9863-4204-bf32-7c7993067dae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0d592ac-a567-4638-9ba8-411d725bfa74>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2855dc5-1bda-4127-9e37-67f9c96edd0c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ff83b9b0-0723-48bf-9870-b6fa200fc786> ;
+    ns1:geplandeStart "2023-09-14T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a816a351-bad7-4bdf-893d-8c0a30fd5f67> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3477a3ff-0a8d-4b85-bf05-16027e5dd5f5> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fcf42403-2747-4b3b-a2b4-cffcfa393785> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e72ca0e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-09-14T21:26:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-09-14T20:01:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/afc1d2c8-5d20-4607-ab4b-a96ad7d3adc2> ;
+    ns1:openbaar true ;
+    ns2:uuid "eee56790-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad neemt kennis van de jaarrekening en jaarverslag 2022 van de Interlokale Vereniging Stedenband Lievegem Deinze/ KeMoPoDi en keurt deze goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "IV Stedenband - Jaarrekening en Jaarverslag 2022: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Martine Lataire-Gyssels, schepen lokaal mondiaal beleid 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 392 tot 395 over interlokale verenigingen 
+                                                            Statuten Interlokale Vereniging Lokaal Mondiaal Beleid LoWaZoNe, artikel 23 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Volgens artikel 23 van de statuten van de Interlokale Vereniging Stedenband Lievegem Deinze/ KeMoPoDi moet het beheerscomité de gemeenteraden van de leden van de IV jaarlijks op de hoogte brengen van haar werking van het voorbije werkingsjaar aan de hand van een jaarverslag en een financiële nota. 
+                                                            Door de financiële dienst van de Stad Deinze, die beherende gemeente is voor de IV, werd de financiële nota over werkingsjaar 2022 opgesteld en voorgesteld aan het beheerscomité van de IV op 01/06/2023. Het boekjaar van de IV loopt van 1 januari tot 31 december, de financiële nota werd vastgesteld en goedgekeurd door het beheerscomité, nu wordt deze ter kennisname voorgelegd aan de gemeenteraden van Lievegem en Deinze. 
+                                                            Het beheerscomité van de Interlokale Vereniging Stedenband Lievegem/Deinze/KeMoPoDi stelde de jaarrekening 2023 en het gecumuleerd overschot 2023 vast ten bedrage €14.381,74  en keurt deze goed die zal worden overgedragen naar het budget IV 2023. 
+                                                            Toelichting Jaarrekening 2022: 
+                                                            Ontvangsten 2022 = € 82397,15 : 
+                                                            De ontvangsten 2022 bedroegen € 82397,15 , zijnde intergemeentelijke bijdragen van Lievegem en Deinze (zoals beschreven in de statuten), € 5000 subsidie provincie, 10% loonkost Brigitte Noordwerking Lievegem, bijdrage maaltijdcheques, Federale subsidie afvalprogramma 
+                                                            Hierbij een detail van de ontvangsten 2022 :- Doorstorten sectorale subsidie Lievegem : € 13.854,38 - Bijdrage / inwoner Lievegem : € 3.169,68 - Doorstorten sectorale subsidie Deinze : € 9.236,25 - Bijdrage / inwoner Deinze : € 10.524,24 
+                                                            - Bijdrage maaltijdscheques: € 123,17 
+                                                            Tussentotaal gemeentelijke subsidies : € 36.907,72 
+                                                            - Provinciale subsidie : € 5.000,00- Subsidie federaal programma : € 33.410,53 
+                                                            Dit geeft een algemeen totaal ontvangsten voor de uitvoering programma IV : € 75.195,08. Dit komt overeen met de jaarrekening onder AR 740651. 
+                                                            - Bijdrage in loon door Lievegem voor noordwerking Lievegem (geen stedenbandwerking, maar wel geplaatst op beleidsitem IV) : € 7.078,90 Dit komt overeen met de jaarrekening onder AR 747025. 
+                                                            Totaal ontvangsten op beleidsitem IV Stedenband: € 82397,15  
+                                                            2. Uitgaven 2022 = € 87.385,31 
+                                                            - werkingsmiddelen: € 6.598,53 (€ 3.098,53 van het budget IV Stedenband en € 3500 van de federale subsidie).- personeelskost (60% VTE): € 41.622,25- subsidies aan partners (ngo GRAIM, school Keur Guilaye): € 39.164,53 
+                                                            De ontvangsten € 82397,15 euro – de uitgaven € 87.385,31 euro geeft voor 2022 een tekort van - 4.988,16 euro (Saldo budgettaire opbrengsten - kosten boekjaar 2022). 
+                                                            Van 2021 werd een overschot van € 19.369,90 overgedragen. 
+                                                            Dat betekent dat het gecumuleerd overschot van de IV Stedenband 2022 (19.369,90 - 4.988,16 – aanpassing vakantiegeld) € 14.381,74 euro bedraagt. Dat overschot wordt overgedragen naar budget 2023. 
+                                                            Door de indexering van het loon van Brigitte en het niet-indexeren van de toelagen (tenzij een beetje o.b.v. het stijgend inwonersaantal), slinken de reserves van de IV. De bijdragen (doorstorting van de sectorale subsidies én een bijdrage per inwoner van Deinze en Lievegem, in 2022 samen 36.785 euro) volstaan intussen niet meer om Brigitte haar brutoloonkosten te betalen (2022: € 41.618). De IV ontvangt ook wel nog projectsubsidies maar die zijn voornamelijk door te storten naar Senegal of naar de stedenbandraad. 2022 is afgesloten met een tekort van € 4.988 en met € 14.381,74 aan resterende reserves. 
+                                                            De loonkost zal komende jaren nog telkens met 2% stijgen, dat wil zeggen dat bij gelijkblijvende werkingsmiddelen van € 2000 de reserves zullen op zijn in 2025. Voor de fusie en net na de overgang naar de nieuwe IV waren er gemiddeld € 8000 werkingsmiddelen beschikbaar, voor activiteiten naar draagvlakverbreding, acties voor scholen, projectwerking in KeMoPoDi, werkreizen, ontvangst delegaties, … 
+                                                            Met de huidige 2000 euro werkingsmiddelen kan er geen stedenbandwerking uitgevoerd worden. De stedenband is intergemeentelijk, de bijdrage worden reeds verdeeld door 2 gemeenten, dus al lager dan gemeenten die een 1 op 1 stedenband hebben. Het budget aan jaarlijkse werkingsmiddelen van € 2000 ligt heel wat lager dan wat VVSG voorstelt als werkingsbudget, zijnde +/- € 15.000 per jaar vanuit eigen middelen, dit voor een 1 op 1 stedenband, en minstens 0,5 VTE voor de opvolging van het stedenbandprogramma. 
+                                                            Uit een vergelijkende studie van VVSG blijkt het werkingsbudget van andere stedenbanden te liggen tussen de€ 5000 euro - € 85 000. Het gaat hier enkel over een werkingsbudget, los van de personeelsmiddelen. 
+                                                            Er is afgesproken dat er een nota voor het CBS opgesteld wordt met een voorstel rond het budget voor de IV Stedenband voor een gezonde stedenbandwerking naar de toekomst toe. 
+                                                            Voornaamste realisaties 2022 (zie jaarverslag) 
+                                                            Eerste werkingsjaar Federaal Stedenbandprogramma 2022 - 2026Werkreis mei 2022Stedenbandhuisje bijna het jaar volgeboekt naar basisscholen in Lievegem en DeinzeRealisatie scholenproject met subsidie van provincie Oost-Vlaanderen "Bevloering 4 klassen en schoolmateriaal Keur Guilaye – Basisschool De Lieve - Stedenband Deinze/Lievegem – KeMoPoDi (Senegal)"Nieuw scholenproject "Schoolboetieken" met fonds Jan De Vos (stedenbandraad)Verdere uitvoering afvalproject 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "eee51970-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikelDe gemeenteraad neemt kennis van de jaarrekening en het jaarverslag 2022 van de Interlokale Vereniging Stedenband Lievegem Deinze/ KeMoPoDi en keurt deze goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e72e0070-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "IV Stedenband - Jaarrekening en Jaarverslag 2022: goedkeuring" .
+

@@ -1,0 +1,234 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/0ca3449a-f256-4aad-bad1-eccc26164e1e> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/324b8c61-5508-43c5-aac5-680e72028a3c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6b3d3489-e857-49d2-aa75-11acd8d44591>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/884248bb-ea06-40bd-a294-a02e43eb4525>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a73d9af4-eb47-4ea7-a9a6-6ee418ed2588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7d08d2a-0cab-4871-86e4-682429229271> ;
+    ns3:geplandeStart "2025-07-22T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/18c2d4dd-12e4-4ed6-852f-18ab3ff042ba> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "86f80d74-54c6-5d8a-9a32-4f8b7aae8515" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-07-22T13:34:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6b3d3489-e857-49d2-aa75-11acd8d44591> ;
+    ns3:openbaar false ;
+    ns1:uuid "9e7f0fda-fe45-5263-ad88-499ff4a2c855" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van Gemeentekermis Lovendegem van dinsdag 5 augustus 2025 8.00 uur tot en met dinsdag 12 augustus 2025 18.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van Gemeentekermis Lovendegem 2025: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 22 juli 2025 over de aanvraag evenement Gemeentekermis Lovendegem - Feestcomité Lovendegem Centrum: goedkeuringHet besluit van het college van burgemeester en schepenen van 22 juli 2025 over de gemeentekermis Lovendegem 2025 - organisatie kinderuurtje - standplaatsen spektakelattracties en kermisgastronomie: goedkeuring 
+                                     
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Gemeente Lievegem organiseert in samenwerking met Feestcomité Lovendegem Centrum 'Gemeentekermis Lovendegem' van vrijdag 8 augustus 2025 13.00 uur tot en met maandag 11 augustus 2025 24.00 uur.Er werd op 15 april 2025 een aanvraag ingediend door Gemeente Lievegem en Feestcomité Lovendegem Centrum om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Omdat het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisator per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "24fc27a4-e1d9-5110-9e6b-58a476ce29e1" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: 
+                                     Het tijdelijk politiereglement voor Gemeentekermis Lovendegem wordt vastgesteld als volgt: 
+                                     
+                                    Van woensdag 6 augustus 2025 6.00 uur tot en met dinsdag 12 augustus 2025 18.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod op de volledige parking 'De Dreef' ter hoogte van Kasteeldreef 90 
+                                     
+                                     
+                                    Van dinsdag 5 augustus 2025 8.00 uur tot en met dinsdag 12 augustus 2025 12.00 uur: 
+                                    1.    Stilstaan- en parkeerverbod in Dorp: Van nummer 20 tot nummer 31 aan beide zijden 
+                                    2.    Inrijverbod (uitgezonderd bewoners) in Dorp tijdens sluitingsuren kermisattracties: Van nummer 20 tot nummer 31. Omleiding via Centrumstraat – Kasteeldreef – Dorp 
+                                    3.    Extra parkeermaatregelen: 
+                                     
+                                        2 parkeerplaatsen voor kortparkeren voorzien met maximum tijdsduur van 30 minuten achter het gemeentehuis, Centrumstraat 45 
+                                        3 parkeerplaatsen voor personen met een handicap voorzien ter hoogte van Golfstraat 23 
+                                        Parkeerstrook voor kortparkeren voorzien met maximum tijdsduur van 30 minuten ter hoogte van Golfstraat 19 - 21 
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        Van vrijdag 8 augustus 2025 tot en met maandag 11 augustus 2025 tijdens de openingsuren kermisattracties:
+                                     
+                                    
+                                        •    vrijdag 8 augustus 2025 van 17.00 uur tot 24.00 uur
+                                        •    zaterdag 9 augustus 2025 van 16.00 uur tot 24.00 uur
+                                        •    zondag 10 augustus 2025 van 12.00 uur tot 24.00 uur
+                                        •    maandag 11 augustus 2025 van 16.00 uur tot 24.00 uur
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        1.   Bijkomend stilstaan- en parkeerverbod in volgende straten:
+                                     
+                                     
+                                         
+                                            Centrumstraat (volledige straat) 
+                                            Kerkelare aan 1 zijde van de straat (even nummers) 
+                                         
+                                        
+                                            2.   Bijkomend inrijverbod in Centrumstraat (tussen Kerkelare en Kasteeldreef)
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            3.   Eénrichtingsverkeer in Kerkelare (vanuit Centrumstraat richting Larestraat). Hierbij blijft Carrefour Market bereikbaar tijdens hun openingsuren. De eigenaar van Carrefour Market zorgt voor afsluiting kermiszone en signalisatie.
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op vrijdag 8 augustus 2025 van 15.00 uur tot en met 24.00 uur voor de braderie en op zaterdag 9 augustus 2025 van 6.00 uur tot en met 17.00 uur voor de rommelmarkt:
+                                     
+                                    1.    Bijkomend stilstaan- en parkeerverbod in volgende straten: 
+                                     
+                                        Kasteeldreef: Vanaf huisnummer 14 tot en met huisnummer 86 aan beide zijden 
+                                        Centrumstraat (volledige straat) 
+                                     
+                                    2.    Bijkomend inrijverbod in volgende straten: 
+                                     
+                                        Centrumstraat (volledige straat) 
+                                        Kasteeldreef vanaf huisnummer 14 tot en met huisnummer 86. Er wordt wel een doorsteek voorzien vanuit Larestraat naar Appensvoordestraat en omgekeerd. 
+                                        Omleiding via Koning Leopoldstraat – Lobrug – Diepestraat – Dorp en omgekeerd 
+                                        Omleiding via Schachterijstraat – Kerkelare – Larestraat – Vaartstraat voor de klanten van Carrefour Market 
+                                     
+                                      
+                                    
+                                        Op maandag 11 augustus 2025 van 20.00 uur tot en met 24.00 uur voor het vuurwerk:
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        1.    Bijkomend parkeerverbod in Larestraat (tussen Vaartstraat en Kasteeldreef)
+                                        
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        2.   Uitgezonderd plaatselijk verkeer in Vaartstraat en Larestraat
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Op zaterdag 9 augustus 2025 van 17.00 uur tot 24.00 uur, zondag 9 augustus 2025 van 12.00 uur tot 24.00 uur en maandag 11 augustus 2025 van 16.00 uur tot 24.00 uur:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Eénrichtingsverkeer in Kasteeldreef vanaf Appensvoordestraat/Larestraat tot Molendreef/Dorp (rijrichting naar Molendreef/Dorp) 
+                                         
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                    Van woensdag 6 augustus 2025 6.00 uur tot en met dinsdag 12 augustus 2025 18.00 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                     
+                                    Van dinsdag 5 augustus 2025 8.00 uur tot en met dinsdag 12 augustus 2025 12.00 uur: 
+                                    1.    - Borden E32.    - Nadar + C3 ter hoogte van Dorp nummer 20 en 31 + onderbord 'uitgezonderd bewoners' ter hoogte van nummer 31       - Borden F41 op de volgende kruispunten: Dorp/Centrumstraat, Centrumstraat/Kasteeldreef en Kasteeldreef/Dorp 
+                                     3.    - Borden E9a + GVIIc 30 minuten 
+                                           - Borden E9a mindervalide 
+                                    Van vrijdag 8 augustus 2025 tot en met maandag 11 augustus 2024 tijdens de openingsuren kermisattracties: 
+                                    1.    - Borden E3 
+                                    2.    - Nadar + C3 + F45 + ‘Uitgezonderd plaatselijk verkeer’ op het kruispunt Diepestraat/Dorp 
+                                           - Nadar + C3 op de kruispunten Schachterijstraat/Centrumstraat en Centrumstraat/Kasteeldreef 
+                                           - Bord F41 op het kruispunt Schachterijstraat/Centrumstraat 
+                                    3.    - Bord F19 op het kruispunt Schachterijstraat/Centrumstraat 
+                                           - Bord F19 + C1 + C31a op het kruispunt Schachterijstraat/Kerkelare 
+                                           - Bord C1 + C31a + C31b op het kruispunt Larestraat/Kerkelare 
+                                      
+                                    
+                                         
+                                        
+                                     
+                                    
+                                        Op vrijdag 8 augustus 2025 van 15.00 uur tot 24.00 uur voor de braderie en op zaterdag 9 augustus 2025 van 6.00 uur tot 17.00 uur voor de rommelmarkt:
+                                     
+                                    
+                                        1.    - Borden E3
+                                        
+                                     
+                                    
+                                        2.    - Nadar + C3 + F45 + ‘Uitgezonderd plaatselijk verkeer’ op de kruispunten Diepestraat/Vaartstraat, Diepestraat/Dorp, Dorp/Kasteeldreef en Koning Leopoldstraat/Kasteeldreef
+                                        
+                                     
+                                    
+                                               - Nadar + C3 ter hoogte van Centrumstraat 11, Kasteeldreef 84, aan het kruispunt Larestraat/Kasteeldreef (2x) en ter hoogte van Kasteeldreef 14
+                                        
+                                     
+                                    
+                                               - Borden F41 op volgende kruispunten: Koning Leopoldstraat/Kasteeldreef, Koning Leopoldstraat/Lobrug (2x), Lobrug ter hoogte van oprit brug (2x), Lobrug/Vaartstraat (2x), Diepestraat/Dorp, Dorp/Kasteeldreef, Centrumstraat/Schachterijstraat en Kerkelare/Larestraat
+                                     
+                                      
+                                    Op maandag 11 augustus 2025 van 20.00 uur tot en met 24.00 uur voor het vuurwerk: 
+                                    1.    - Borden E3 
+                                    2.    - Nadar + C3 + F45 + 'Uitgezonderd plaatselijk verkeer' op de kruispunten Diepestraat/Vaartstraat en Larestraat/Kasteeldreef 
+                                           - Borden F41 op volgende kruispunten: Koning Leopoldstraat/Kasteeldreef (2x), Koning Leopoldstraat/Lobrug (2x), Lobrug ter hoogte van oprit brug (2x), Diepestraat/Vaartstraat, Diepestraat/Dorp, Larestraat/Kasteeldreef 
+                                     
+                                    Op zaterdag 9 augustus 2025 van 17.00 uur tot 24.00 uur, zondag 9 augustus 2025 van 12.00 uur tot 24.00 uur en maandag 11 augustus 2025 van 16.00 uur tot 24.00 uur: 
+                                     
+                                        Bord F19 op het kruispunt Kasteeldreef/Appensvoordestraat en Kasteeldreef/Centrumstraat met onderbord ‘fietsers en bromfietsers in beide richtingen’ (M18)Bord C1 op het kruispunt Kasteeldreef/Dorp en Kasteeldreef/Centrumstraat met onderbord ‘uitgezonderd fietsers en bromfietsers A+P’ (M12)Borden F41 op volgende kruispunten: Kasteeldreef/Dorp, Lobrug/Vellare, Koning Leopoldstraat/Lobrug en Kasteeldreef/Koning Leopoldstraat 
+                                     
+                                     
+                                    Artikel 3Op parking De Warande wordt de beperkte parkeerduur opgeheven van 5 augustus 2025 tot en met 12 augustus 2025, er worden wel 10 plaatsen voorbehouden voor voertuigen met bewonerskaarten. 
+                                     
+                                    Artikel 4 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en zal door het Feestcomité Lovendegem op straat geplaatst te worden bij aanvang en terug bij einde van de activiteiten. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e59ff0d-f328-47c1-b7bf-593d7e9c74f9> a ns3:Agendapunt ;
+    ns1:uuid "a79264ed-3e56-52a0-a283-8f7e8b89b3d5" .
+

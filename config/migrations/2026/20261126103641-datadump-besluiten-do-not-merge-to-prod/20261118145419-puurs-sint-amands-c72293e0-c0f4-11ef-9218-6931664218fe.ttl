@@ -1,0 +1,89 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/bdab15b2-3e2e-42b1-b573-3bd390a07579> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/04fba627-49e9-485f-a80e-e27c9a6d2d64>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/e8ef9232-0907-4432-b8a6-9e4b8c914ca5> ;
+    ns1:geplandeStart "2024-12-17T20:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/b063fcf0-706b-4675-85a6-efb8d6270606> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "c70d1010-c0f4-11ef-9218-6931664218fe" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2024-12-17T20:39:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e8ef9232-0907-4432-b8a6-9e4b8c914ca5> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/04fba627-49e9-485f-a80e-e27c9a6d2d64> ;
+    ns1:openbaar false ;
+    ns3:uuid "d276d0d0-c0f4-11ef-9218-6931664218fe" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/e8ef9232-0907-4432-b8a6-9e4b8c914ca5> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/e8ef9232-0907-4432-b8a6-9e4b8c914ca5> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/e8ef9232-0907-4432-b8a6-9e4b8c914ca5> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Aanvullend verkeersreglement - Jan Hammeneckerstraat 2 - parkeerplaats voor elektrisch laden" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Door Vlaanderen wordt er een concrete doelstelling van 35.000 bijkomende (semi)publieke CPE (Charging Point Equivalent of laadpuntequivalenten) te realiseren tegen 2025 voorop gesteld. 
+                                    Op 5 november 2021 heeft minister Somers voorgesteld om vanaf 2022 die doelstelling op te trekken naar anderhalf laadpunt per 100 inwoners om zo 99.000 laadpunten tegen 2030 te hebben. 
+                                    Vanuit Vlaanderen is de oefening gemaakt in hoeveel laadpunten de doelstelling zich vertaalt: voor Puurs-Sint-Amands komt dit op 197 CPE’s, op basis van inwoners en oppervlak, tegen 2025. 
+                                    De plaatsing van dit laadpunt valt onder Paal volgt Paal. 
+                                    Charge Point Operator voor dit project is Engie. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56; 
+                                            Gemeenteraadsbeslissing van 27 januari 2020: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                         
+                                     
+                                     
+                                         
+                                            Toepasselijke regelgeving 
+                                             
+                                                de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                                het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                                het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                                het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                                de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                                de nieuwe gemeentewet van 24 juni 1988; 
+                                             
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Op de parking gelegen naast Jan Hammeckerstraat 2 komen twee extra parkeerplaatsen voor elektrisch laden. de capaciteit wordt uitgebreid naar 4 plaatsen. 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                 
+                            """@nl ;
+    ns3:uuid "c72293e0-c0f4-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Op de parking gelegen naast Jan Hammeneckerstraat 2 komen twee extra parkeerplaatsen voor elektrisch laden.  
+                                    Artikel 2 : Deze regeling wordt aangeduid met verkeersbord E9a met onderbord voor elektrische of hybride elektrische voertuigen (of toegevoegd rechtsonder het verkeersbord E9a) 
+                                    Artikel 3: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e8ef9232-0907-4432-b8a6-9e4b8c914ca5> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/e8ef9232-0907-4432-b8a6-9e4b8c914ca5> a ns1:Agendapunt ;
+    ns3:uuid "d2780950-c0f4-11ef-9218-6931664218fe" .
+

@@ -1,0 +1,187 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/9521dea5-31f4-4bb4-bc44-087899d3c0bd> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/30f3f8f5-b7c4-4f30-ba86-1c38be1f30f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/330859f2-63fa-423b-ab0d-1f5b270c7d17>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3df9afb1-8386-4705-bcff-62b323d08f0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5c6bc86b-cd11-4d19-aaaf-fac80b4a54e4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/60d96337-cc83-4989-9408-bc19594476be>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/76115cd7-7143-48fd-89a1-6beb0c73090e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/79de3e84-6123-43d3-8a8a-84b3e1878996>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82e19a2a-7ea0-45dc-875c-45672274cf12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85c99b89-adf2-43ee-9312-1059410dba4a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/928370a2-86c4-4e59-a30e-5e777535a11a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97d1f572-c502-4e40-96c8-e9d6c13abad3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a53c0c7b-03a9-493b-a1aa-78a63ee12f16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab91cddc-68d0-46fd-b19e-11d466cc758d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae6a9c92-dce9-42aa-9e6c-ac7ed5b32b69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6af2315-1c94-45e0-a0aa-142acaa20587>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cc62f7c2-3a15-4d8b-8103-e69dc605e357>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4663237-9099-4028-aefa-c50af9dd748d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d48685aa-fcf1-4439-83be-dc3d514483cd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ea0f7b83-f8fb-41a0-8211-da53720f4ce6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eb398e70-fe70-45c2-9b9e-bd8cac610ba2> ;
+    ns1:geplandeStart "2022-11-23T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4c793cd8-a915-4098-95a2-e9043a5114d0> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/879fd2a7-d621-4ce3-8272-392fddf5ea33> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/04281ae9-1053-423a-a8cf-50f40d82016d> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "edc5edd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-11-23T21:29:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-11-23T20:03:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/30f3f8f5-b7c4-4f30-ba86-1c38be1f30f3> ;
+    ns1:openbaar true ;
+    ns3:uuid "fb3f2da0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8a2994b6-8413-49d5-8921-78cf08153e2e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8a2994b6-8413-49d5-8921-78cf08153e2e> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad gaat akkoord om een wijziging op te nemen in de volgende wijziging van het organogram. Binnen team strategie, secretariaat en communicatie wijzigt de formatie van de deskundigen secretariaat. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Personeel - invulling van 0,5VTE deskundige secretariaat - wijziging van de formatie van deskundigen secretariaat in team strategie, secretariaat en communicatie bij een volgende wijziging van het organogram: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Hilde De Graeve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen en latere wijzigingen.Het Bestuursdecreet van 7 december 2018Decreet over het lokaal bestuur van 22 december 2017, 
+                                                             
+                                                                artikel 161 (de gemeenteraad en de raad voor maatschappelijk welzijn stellen het gezamenlijk organogram van de diensten van de gemeente en van het openbaar centrum voor maatschappelijk welzijn vast) 
+                                                                artikel 171 § 4 (de algemeen directeur zorgt in overleg met het managementteam voor de opmaak van het voorontwerp van het organogram) 
+                                                                artikel 184 (personeel kan in statutair of in contractueel dienstverband worden aangesteld) 
+                                                                het vaststellen van organogram en personeelsformatie is een bevoegdheid van de gemeenteraad maar kan gedelegeerd worden aan het college 
+                                                             
+                                                              
+                                                            Besluit van de Vlaamse regering van 7 december 2007 houdende de minimale voorwaarden voor de personeelsformatie, de rechtspositieregeling van het gemeentepersoneel en het provinciepersoneel en houdende enkele bepalingen betreffende de rechtspositie van de secretaris en de ontvanger van de openbare centra voor maatschappelijk welzijn, de bepalingen betreffende de opmaak van de personeelsformatie 
+                                                            Besluit van de Vlaamse Regering van 7 december 2007 houdende de minimale voorwaarden voor de personeelsformatie, de rechtspositieregeling en het mandaatstelsel van het gemeentepersoneel en het provinciepersoneel en houdende enkele bepalingen betreffende de rechtspositie van de secretaris en de ontvanger openbare centra voor maatschappelijk welzijn 
+                                                            Wet van 19 december 1974 tot regeling van de betrekkingen tussen de overheid en de vakbonden van haar personeel, artikel 2 
+                                                            Koninklijk besluit van 28 september 1984 tot uitvoering van de wet van 19 december 1974 tot regeling van de betrekkingen tussen de overheid en de vakbonden van haar personeel, artikel 6De beslissing van de gemeenteraad van 27 maart 2019 met als onderwerp 'Personeel - vaststelling organogram: goedkeuring’, gewijzigd bij beslissing van het college van 10 februari 2020 en de beslissing van de gemeenteraad van 01 juli 2020.De beslissing van het college van burgemeester en schepenen van 25 oktober 2022 over het principieel akkoord voor de aanwerving van een deskundige secretariaat - aanpassing organogram 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            1. Knelpunten en aanleiding1.1 AlgemeenDe gemeente Lievegem heeft een interne preventieadviseur via Sol-va, een GIDPW (Gemeenschappelijke Interne Diest voor preventie en bescherming op het werk) die grondige en gedegen adviezen schrijft voor het bestuur. Hij of zij adviseert de aangesloten besturen bij de uitvoering van hun beleid inzake preventie en bescherming op het werk door enerzijds de verplichte wettelijke administratie te ondersteunen en anderzijds door mee te werken aan de implementatie van het vooropgestelde preventiebeleid.Elk bestuur is als werkgever wettelijk verplicht het welzijn van zijn werknemers te behartigen. De GIDPBW SOL-VA ondersteunt en adviseert daarom de besturen bij het ontwikkelen en uitvoeren van hun welzijnsbeleid. Het doel hierbij is de arbeidsveiligheid en de gezondheid van hun werknemers te optimaliseren.Concreet adviseert de preventiedienst het bestuur in het nemen van de nodige preventiemaatregelen, het opsporen en reduceren van risico’s op de werkvloer, het opstellen van een preventiebeleid en het stellen van prioriteiten.De preventieadviseurs geven informatie, advies en opleidingen over allerlei topics van de verschillende welzijnsdomeinen o.a. arbeidsveiligheid, arbeidsgezondheid, ergonomie, arbeidshygiëne en psychosociale belasting veroorzaakt door het werk.Voor de gezondheid, veiligheid en welzijn op het werk werken we ook met een EDPBW (Externe Dienst voor Preventie en Bescherming op het werk). Deze focust op de gezondheid, de veiligheid en het welzijn op de werkvloer. De erkende externe dienst voor preventie en bescherming waar Lievegem bij aangesloten is Securex en zij ondersteunen ons bij al onze welzijnsverplichtingen op de werkplek.Vanaf de eerste werknemer is een werkgever verplicht om zich aan te sluiten op een EDPBW. Hun experts adviseren en ondersteunen de gemeente en OCMW dan bij alle wettelijke verplichtingen rond gezondheid, welzijn en veiligheid op de werkvloer. Een Externe Dienst voor Preventie en Bescherming op het werk organiseert het gezondheidstoezicht van de onderworpen werknemers. Zo plant een externe preventiedienst de onderzoeken door een arbeidsarts en volgt deze op.  Naast medisch toezicht helpt een EDPBW ook arbeidsrisico’s te beheersen en de werkplek veilig te houden voor al de medewerkers. Op deze vijf disciplines identificeert en analyseert een externe preventiedienst risico’s rond: veiligheid, gezondheid, ergonomie, arbeidshygiëne en psychosociale aspecten. 1.2 Historiek LievegemIn 2018 er was het voorstel van een werkgroep om vanaf 1 januari 2019 in te stappen bij Sol-va om wettelijk in orde te zijn, maar ook daar werd door de werkgroep al de aandacht gevestigd op het feit dat er intern voldoende tijd en mensen vrijgemaakt moeten worden om een goed preventiebeleid uit te werken. Het eerste luik van de nota werd uitgevoerd.1.3 Aandachtspunt uit auditUit de organisatieaudit van Audio van oktober 2021:Over fysieke veiligheid:Uitzonderlijk vinden er (verbale) agressie-incidenten plaats aan de onthaalbalies of loketten (bv. burgerzaken). Momenteel zijn er echter onvoldoende structurele maatregelen om de medewerkers te beveiligen tegen dergelijke verbale of fysieke incidenten. Zo is er geen procedure inzake ‘omgaan met agressie’ uitgewerkt, zijn er niet altijd vluchtwegen voorhanden en zijn er hiervoor nog geen opleidingen voor de medewerkers georganiseerd.Om de risico’s voor de medewerkers aan de onthaalbalies en loketten te verminderen, adviseren wij  om samen met de preventiedienst duidelijke richtlijnen uit te werken voor de medewerkers en dit voor de verschillende vormen van agressie (verbaal, fysiek, vandalisme). We raden aan maatregelen te onderzoeken, zoals plexiglas-schermen, mogelijkheid van vluchtwegen, afspraken rond een noodknop (bv. noodknop of verwittiging via teams), … We adviseren om voor alle balie– en loketmedewerkers opleidingen te organiseren over omgaan met agressie. Hierbij leren medewerkers agressie inschatten, leren ze professioneel omgaan met en aanpakken van verbale agressie, verwijten, bedreigingen, racisme, … Dit kan ervoor zorgen om escalatie van problemen tijdig te voorkomen en verhoogt de veiligheid van de medewerkers.In het actieplan dat uit de gesprekken rond organisatienoden en de verschillende audits vloeide staan concrete acties opgenomen over dit thema:Verder uitbouwen van de organisatiestructuur door het concretiseren of uitwerken van ondersteunende instrumenten:Aanpassen/optimaliseren organogram: Veiligheid en welzijn: 
+                                                             
+                                                                Coördinator bepalen en tijd voorzien in pakket voor opvolging 
+                                                             
+                                                              
+                                                            Lievegem heeft geen interne preventiemedewerker/coördinator op de vloer die : 
+                                                             
+                                                                De adviezen opvolgt en garandeert dat ze uitgevoerd worden. 
+                                                                Het (jaar)actieplan preventie opvolgt en mee helpt uitvoeren. 
+                                                                Nieuwe preventieve acties die nodig zijn tot uitvoering brengt. 
+                                                             
+                                                            1.4 Standpunt MATHet MAT is verder ook van oordeel dat de jaaractieplannen uitgevoerd moeten worden. Het actieplan kent een lage uitvoeringsgraad. Er is versnippering in de organisatie, en ook onze interne preventieadviseur van Solva maakt zich hier zorgen om.Het MAT stelde al verschillende keren vast dat er daarnaast geen beslissingen voorgesteld en uitgewerkt worden voor bvb. 
+                                                             
+                                                                De structurele operationele aanpak van beschermingsmiddelen (de GIDPW maakt een grondig advies op voor materiaal X of Y, maar het operationele luik hapert), 
+                                                                Coördinatie van brandoefeningen in gebouwen, 
+                                                                Structureel het thema veiligheid (ruimer dan enkel preventie) een plaats geven,… 
+                                                                … 
+                                                             
+                                                            1.5 ConclusieDeze argumenten leiden tot de conclusie dat er een grondige theoretische basis is via de interne preventieadviseur maar dat deze zichtbaar niet tot uiting komt op de werkvloer zelf. In verschillende actieplannen, rapporten en vergaderingen wordt hierop gewezen met de bedoeling of vraag om dit bij te sturen. Gedreven en welwillende collega’s zijn er, maar het volume werk kan er niet bijgenomen worden. 
+                                                            2. Doel van dit besluit 
+                                                            Hoofddoel: 
+                                                             
+                                                                Bepalen wat de beste weg voorwaarts is voor de gemeente Lievegem om tot het beste resultaat te komen. De inschatting maken we op basis van de antwoorden van de andere gemeentebesturen en de noden van de Lievegemse organisatie. 
+                                                             
+                                                            Subdoelen: 
+                                                             
+                                                                In kaart brengen wat de taakinhoud van een interne preventiemedewerker is. 
+                                                                In kaart brengen hoeveel VTE toegewezen wordt in andere besturen. 
+                                                             
+                                                              
+                                                            3. Inhoud benchmark3.1 Samenstellen van de vragen aan andere besturenDe gemeente Lievegem heeft op dit moment een interne preventieadviseur (via Solva) in dienst die het preventiebeleid uitwerkt, actieplannen opstelt en goede adviezen geeft aan het gemeentebestuur. Op dit moment merken we echter dat die goede theoretische basis soms uitvoering mist en enkele doelstellingen moeizaam bereikt worden.Concreet hebben we volgende vragen voor andere gemeentebesturen, bij wijze van benchmark: 
+                                                             
+                                                                Hebben zij een preventiemedewerker in dienst die voor de uitvoering van dergelijke beleids- en actieplannen zorgt? 
+                                                                Indien ja: Hoeveel VTE is dat? 
+                                                                Indien ja: Kunnen zij het document met de functieomschrijving van die functie overmaken? 
+                                                             
+                                                            3.2 Gemeentes voor benchmark 
+                                                             
+                                                                Eeklo 
+                                                                Aalter 
+                                                                Deinze 
+                                                                Maldegem 
+                                                                Evergem 
+                                                                Zelzate 
+                                                                Sint-Laureins 
+                                                             
+                                                              
+                                                            4. Resultaten van de benchmark 
+                                                            4.1 Overzicht van de VTE 
+                                                             
+                                                            4.2 TaakomschrijvingWe kregen de verschillende functieomschrijvingen van de besturen die antwoordden. Deze werden, net als de nota, als bijlage toegevoegd. De functieomschrijvingen van besturen die niet aangesloten zijn bij een GIDPW omschrijven dus ook de taken die Solva voor ons uitvoert. 
+                                                            5. Voorstel voor gemeentebestuur Lievegem5.1 Leidende principes 
+                                                            Dit voorstel komt er op basis van enkele leidende principes: 
+                                                             
+                                                                Gemeente Lievegem heeft een GIDPW die inhoudelijk en adviserend werk op zich neemt (adviezen, jaaractieplannen, rapportering,…) 
+                                                                De gemeente Lievegem wenst de GIDPW te behouden. 
+                                                                De gemeente Lievegem wil de uitvoering van de adviezen garanderen om de veiligheid op de werkvloer te verhogen. We willen de doelstellingen van de rapporten en actieplannen halen. 
+                                                             
+                                                            5.2 Plaats in de organisatieTeam SSC 5.3 Vaststelling VTE preventiewerk voor LievegemOnderstaand voorstel spreekt enkel over het ingeschatte VTE voor preventiewerk. 
+                                                             
+                                                                De GIDPW presteert op dit moment ongeveer 0.27 VTE voor het bestuur. 
+                                                                Om aan de nood van het gemeentebestuur Lievegem te voldoen schatten we dat er ongeveer 0,7 VTE B1-B3 nodig is om aan de noden te voldoen. Omdat er nog steeds gebruik gemaakt wordt van een interne preventiedienst via Solva stellen we geen volledige VTE voor, en richten we ons op een equivalent zoals we dat in omliggende besturen ook zien (zie hoger) 
+                                                             
+                                                            Het bestuur beschikt op die manier over 1 VTE die naar preventie gaat, vergelijkbaar met omliggende besturen.5.4 Andere knelpunten in de organisatieGeen structurele back-up voor noodplanningGeen geïntegreerd veiligheidsbeleid in Lievegem: 
+                                                             
+                                                                contact politie, 
+                                                                GAS, 
+                                                                camerabewaking (gunning, opvolging beelden), 
+                                                                overlast en bemiddeling 
+                                                             
+                                                            Deze taken kunnen aangevuld worden in het pakket voor de medewerker.5.5 Voorstel LievegemOm toekomstige uitdagingen aan te kunnen en bovenstaande taken op te nemen in team strategie secretariaat en communicatie, is het voorstel om de cel secretariaat uitbreiden naar 3 VTE deskundigen (B1-B3) in het organogram en een deskundige functie open verklaren. Nu heeft het team 2 VTE C4-C5 (historisch gegroeid), en 0,5 VTE noodplanningscoördinator (B1-B3).5.5.1 Argumenten en visie op termijn 
+                                                             
+                                                                De drie deskundigen zijn elkaars back-up voor noodplanning. Nu worstelen we al sinds het begin van de fusie met back-ups voor de noodplanningscoördinator. Dit is een risico. 
+                                                                Eén van de drie deskundigen krijgt in het takenpakket: preventie, noodplanning, contact politie en brandweer, GAS, camerabewaking (gunning, opvolging beelden), overlast, bemiddeling. Er is een vraag naar een structurele plaats voor geïntegreerd veiligheidsbeleid en dat is er nu niet. 
+                                                                De deskundige volgt indien nodig ook de beleidsvergaderingen op (nu is er een 1 op 1 back-up voor de beleidsvergaderingen, ook dat risico kan hier beperkt worden). 
+                                                                De twee deskundigen secretariaat ervaren een hoge werkdruk om de huidige taken tot een goed einde te brengen (anders zouden we geen knelpunten ervaren). Beide collega’s functioneren goed en werken aan een hoog tempo en efficiënt. Het volume werk is de flessenhals. Opportuniteiten zoals opleidingen aan collega’s geven, projectwerk, processen uitschrijven en evalueren kunnen moeilijk ingepland worden. 
+                                                             
+                                                            De werking van de deskundigen zou als volgt zijn: 
+                                                             
+                                                                1 leidend ambtenaar in de specifieke velden, bijvoorbeeld:- een leidend ambtenaar voor bestuurszaken van het college van burgemeester en schepenen- een leidend ambtenaar voor bestuurszaken van de gemeenteraad- een leidend ambtenaar voor de besluiten van de burgemeester- een leidend ambtenaar voor noodplanning- een leidend ambtenaar voor preventiewerk- een leidend ambtenaar voor veiligheidswerk- een leidend ambtenaar voor openbaarheid van bestuur- enz. 
+                                                             
+                                                             
+                                                                De andere ambtenaren hebben kennis van de taken van de collega’s als back-up. Alle collega’s helpen elkaar. 
+                                                             
+                                                             
+                                                            6. Voorliggende wijzigingWijzigingen aan het organogram behoren momenteel tot de bevoegdheid van de gemeenteraad. Aan de gemeenteraad van 23 november 2022 wordt gevraagd om 1 VTE deskundige secretariaat nu al aan te werven en bij een volgende wijziging van het organogram deze functies op te nemen. 
+                                                            Concreet gaat het om een aanpassing van de huidige formatie: 2 VTE deskundigen secretariaat C4-C5 en 0,5 VTE noodplanningscoördinator B1-B3, voor een totaal van 2,5 VTE.Naar een nieuwe formatie: 3 deskundigen bestuurszaken B1-B3.Het college van burgemeester en schepenen was op 25 oktober 2022 principieel akkoord met bovenstaande wijziging. Bovenstaande wijziging zal voorgelegd worden aan het vakbondsoverleg. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De financiële impact van deze beslissing komt neer op het bijkomend aanwerven van 0,5 VTE B1-B3 voor onbepaalde duur waarvoor momenteel nog geen krediet is voorzien in het meerjarenplan. De loonkost op jaarbasis wordt geraamd op € 29.555,46, voor 4 jaar betekent dit een loonkost van € 118.221,84 waarvan de brutoloonkost zal worden geregistreerd onder jaarbudgetrekening xxxx/GBB-PER/0110-00/6203000/GEMEENTE/CBS/IP-GEEN (Bezoldigingen contractueel personeel). 
+                                                            Aspecten die voor de nodige financiële ruimte kunnen zorgen met het oog op een budgetneutraliteit : 
+                                                             
+                                                                In de toekomst zullen alle aanwervingen binnen team secretariaat, strategie en communicatie contractueel worden ingevuld en niet langer statutair. Nu zijn er bvb. nog twee deskundigen in statutair dienstverband, beide collega's beschikken over een hoge gecumuleerde anciënniteit wat op middellange termijn voor meer financiële ademruimte zal zorgen. Zowel het type contract als de anciënniteit zullen bijgevolg een positieve impact hebben op de begroting. 
+                                                                Een personeelsoptimalisatie binnen de cluster interne organisatie kan ook voor de nodige financiële ruimte zorgen. 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "edc6d830-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad gaat akkoord om een aanpassing op te nemen in de eerstvolgende wijziging van het organogram. Binnen team strategie, secretariaat en communicatie wijzigt de formatie van de deskundigen. De huidige formatie bestaat uit 2 VTE deskundigen secretariaat C4-C5 en 0,5 VTE B1-B3 noodplanningscoördinator. Na het uitdoven van de huidige functie deskundige secretariaat C4-C5 zal de nieuwe formatie bestaan uit 3 deskundigen bestuurszaken B1-B3.Artikel 2De gemeenteraad gaat akkoord om de functie van deskundige bestuurszaken binnen team strategie, secretariaat en communicatie binnen de kortst mogelijke termijn vacant te verklaren en dit voor onbepaalde duur. De functie wordt ingeschaald op B-niveau en is voltijds.Artikel 3De gemeenteraad gaat akkoord om bij een eerstvolgende aanpassing van het meerjarenplan het hiertoe benodigd krediet te voorzien. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8a2994b6-8413-49d5-8921-78cf08153e2e> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "fb3605e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Personeel - invulling van 0,5VTE deskundige secretariaat - wijziging van de formatie van deskundigen secretariaat in team strategie, secretariaat en communicatie bij een volgende wijziging van het organogram: goedkeuring" .
+

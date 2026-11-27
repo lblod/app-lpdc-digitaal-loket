@@ -1,0 +1,233 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/29ddeb65-f299-41f9-9bad-30e151ea3102> a ns2:Zitting ;
+    ns2:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/237cb7e5-a5ba-4f7f-a8ae-6a7e3599528e>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/c88d04ff-53b5-41ee-814d-dab130586b3d> ;
+    ns2:geplandeStart "2025-01-28T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/4b861e3b-23a3-4d27-845c-8b7c17b7b2b3> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "042da616-c6c9-5919-9d66-2cf72d9905ce" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-01-28T20:00:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b3c4e693-e714-4e68-a7d2-c7107baebad7> ;
+    ns2:openbaar true ;
+    ns3:uuid "b786074e-4bbf-5020-891b-0b45e4c2a246" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/a8486fa3-6375-494d-aa48-e34289b87d5b> ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:title "Huishoudelijk reglement college van burgemeester en schepenen - Vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Het college van burgemeester en schepenen stelt bij de aanvang van de zittingsperiode een huishoudelijk reglement vast. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                         
+                                         
+                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 54; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Artikel 54 van het DLB bepaalt: 
+                                    " Het college van burgemeester en schepenen neemt bij de aanvang van de zittingsperiode een huishoudelijk reglement aan waarin het nadere regels vaststelt over zijn werking. Het huishoudelijk reglement regelt minstens of het college van burgemeester en schepenen digitaal of hybride kan vergaderen en de wijze waarop. De Vlaamse Regering kan de minimale voorwaarden voor digitale en hybride vergaderingen bepalen." 
+                                 
+                            """@nl ;
+    ns3:uuid "4f28fe7c-c94c-54ff-911c-29b777918f40" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel: Het college van burgemeester en schepenen stelt volgend huishoudelijk reglement vast: 
+                                    Huishoudelijk reglement voor het college van burgemeester en schepenen van Puurs-Sint-Amands  
+                                    BIJEENROEPING en AGENDA 
+                                     
+                                        Art. 1.  
+                                     
+                                     
+                                        Het college van burgemeester en schepenen vergadert zo dikwijls als de zaken die tot zijn bevoegdheid behoren, het vereisen. 
+                                        De burgemeester kan, in spoedeisende gevallen, op eigen initiatief of op vraag van een of meer leden van het college, buitengewone vergaderingen bijeenroepen op de dag en het uur die hij bepaalt. 
+                                        De vergaderingen vinden plaats, behoudens andersluidende afspraken, elke dinsdag om 20.00 u. in het gemeentehuis, Forum 6, 2870 Puurs-Sint-Amands. 
+                                        Het college van burgemeester en schepenen, het directiecomité van het autonoom gemeentebedrijf en het vast bureau vergaderen aaneensluitend, tenzij er een ernstige reden is om hiervan af te wijken. Voor het college, het directiecomité AGB en het vast bureau worden duidelijk onderscheiden agenda’s opgemaakt.  
+                                          
+                                     
+                                     
+                                         
+                                            Art. 2. 
+                                            De oproeping wordt verzonden via het persoonlijke e-mailadres dat door de gemeente aan elk lid van het college van burgemeester en schepenen ter beschikking gesteld wordt.    
+                                            Voor elk agendapunt worden de dossiers,  de feitelijke gegevens, de eventueel verleende adviezen en de ontwerpen van beslissing betreffende de op de agenda ingeschreven zaken, vanaf de verzending van de oproeping, elektronisch ter beschikking gesteld van de collegeleden via de digitale besluitvormingstoepassing. De documenten die niet elektronisch ter beschikking van de collegeleden kunnen worden gesteld, worden op het secretariaat tijdens de kantooruren ter beschikking van de collegeleden gehouden.  
+                                            Voor de gewone vergaderingen krijgen de collegeleden vooraf (voor een vergadering op dinsdag in principe in de loop van vrijdagnamiddag) een e-mail van het secretariaat met de agendapunten. Daar kunnen er nadien eventueel nog bijkomen, voor de collegeleden zichtbaar in de digitale besluitvormingstoepassing. 
+                                            Voor spoedeisende buitengewone vergaderingen gebeurt de oproeping via e-mail, eventueel ook telefonisch of via whatsapp. Indien beschikbaar zijn de dossiers voor deze te bespreken punten voor de collegeleden ook zichtbaar in de digitale besluitvormingstoepassing. 
+                                              
+                                            FYSIEK, DIGITAAL of HYBRIDE 
+                                         
+                                         
+                                            Art. 3. 
+                                            De collegezittingen vinden in beginsel fysiek plaats. 
+                                            Het college kan occasioneel of voor enige tijd digitaal of hybride vergaderen. 
+                                            De voorwaarden uit het besluit van de Vlaamse Regering van 10 september 2021 over de voorwaarden voor digitaal of hybride vergaderen voor de organen van de lokale besturen gelden onverminderd. 
+                                            Aan digitale vergaderingen nemen alle collegeleden deel via audiovisuele liveverbinding (MS Teams). 
+                                            Bij hybride vergaderingen doet één of een aantal van hen dat op die manier, waarbij hun deelname op scherm in de vergaderzaal getoond wordt en zij via hun verbinding het zaalgebeuren kunnen volgen.  
+                                              
+                                         
+                                         
+                                             
+                                                VERGADEREN 
+                                             
+                                             
+                                                 
+                                                 
+                                                    Art. 4. 
+                                                    De vergaderingen van het college van burgemeester en schepenen zijn niet openbaar, tenzij bepaalde wetgeving uitdrukkelijk de openbaarheid voorschrijft. 
+                                                 
+                                                 
+                                                 
+                                                    Buiten de leden van het college, de algemeen directeur en desgevallend andere personen met een specifieke zittingstaak, zijn geen anderen tot de vergaderzaal of desgevallend de digitale of hybride vergadering toegelaten. Wanneer bepaalde personen in hoorzitting gehoord moeten worden of door het college gevraagd worden om toelichting, uitleg of advies te komen geven met betrekking tot bepaalde dossiers, mogen die enkel daarvoor zolang als nodig aanwezig zijn. In geen geval mogen zij deelnemen aan de eigenlijke besluitvorming. 
+                                                    De burgemeester zit de collegevergaderingen voor en opent en sluit de vergaderingen. Indien de burgemeester tijdelijk afwezig is, wordt hij vervangen door de schepen aan wie hij zelf zijn vervanging heeft opgedragen. Heeft de burgemeester geen vervanger aangeduid, dan wordt hij vervangen door de eerste schepen en, indien deze in de onmogelijkheid zou zijn om de vervanging waar te nemen, door een andere schepen in afnemende rangorde. 
+                                                      
+                                                    Art. 5. 
+                                                    Het college van burgemeester en schepenen kan alleen beraadslagen of beslissen als de meerderheid van de leden aanwezig is. 
+                                                 
+                                                 
+                                                    Het is een lid van het college verboden om deel te nemen aan de bespreking en de stemming over aangelegenheden waarin hij/zij een rechtstreeks belang heeft, hetzij persoonlijk, hetzij als vertegenwoordiger, of waarbij de echtgeno(o)t(e) of bloed- of aanverwanten tot en met de vierde graad een persoonlijk en rechtstreeks belang hebben. Dat verbod strekt niet verder dan de bloed- of aanverwanten tot en met de tweede graad als het gaat om voordracht van kandidaten, benoemingen, ontslagen, afzettingen en schorsingen. Personen die een verklaring van wettelijke samenwoning als vermeld in artikel 1475 Burgerlijk Wetboek hebben afgelegd, worden voor de toepassing van deze bepaling met echtgenoten gelijkgesteld. 
+                                                    Men mag evenmin deelnemen aan de vaststelling of de goedkeuring van het meerjarenplan, het budget of de jaarrekening van een instantie waaraan men rekenschap verschuldigd is of waarvan men tot een uitvoerend orgaan behoort. Deze verbodsbepalingen zijn niet van toepassing op collegeleden die zich in een van de genoemde gevallen bevinden louter op grond van het feit dat zij als vertegenwoordiger van de gemeente zijn aangewezen in andere rechtspersonen.   
+                                                 
+                                                 
+                                                     
+                                                          
+                                                     
+                                                     
+                                                         
+                                                            STEMMEN 
+                                                             
+                                                                Art. 6. 
+                                                                Het college van burgemeester en schepenen beslist collegiaal. 
+                                                                De beslissingen worden in beginsel bij consensus genomen, met uitzondering van de aangelegenheden waarvoor wettelijk of decretaal een geheime stemming voorgeschreven is. Wanneer er geen consensus is, wordt er mondeling of bij handopsteking gestemd. 
+                                                                De besluiten worden genomen bij volstrekte meerderheid van stemmen, d.w.z. meer dan de helft van de uitgebrachte stemmen, onthoudingen niet meegerekend. 
+                                                                Bij staking van stemmen wordt de zaak verdaagd naar een volgende vergadering. Als evenwel de meerderheid van het college de zaak vóór de behandeling ervan spoedeisend heeft verklaard, is de stem van de voorzitter beslissend. Hetzelfde geldt als er op twee opeenvolgende vergaderingen over dezelfde zaak een staking van stemmen is. 
+                                                                Wanneer het college optreedt als tuchtoverheid is, in afwijking van het voorgaande lid, bij staking van stemmen het voorstel verworpen.  
+                                                             
+                                                             
+                                                                 
+                                                                     
+                                                                         
+                                                                              
+                                                                            NOTULEN 
+                                                                         
+                                                                     
+                                                                 
+                                                             
+                                                         
+                                                         
+                                                         
+                                                            Art. 7. 
+                                                            
+                                                                De notulen van de vergadering van het college van burgemeester en schepenen worden onder de verantwoordelijkheid van de algemeen directeur opgesteld overeenkomstig de bepalingen van artikel 277 en 278 van het decreet over het lokaal bestuur. 
+                                                                 
+                                                             
+                                                            
+                                                                
+                                                             
+                                                            
+                                                                De notulen van de vergaderingen van het college vermelden de beslissingen van het college.
+                                                             
+                                                            
+                                                                 
+                                                             
+                                                            
+                                                                De notulen worden goedgekeurd op de eerstvolgende gewone collegevergadering. Als niemand opmerkingen heeft ten aanzien van het ontwerp van notulen, worden zij geacht aldus goedgekeurd te zijn. Wanneer een lid van het college opmerkingen heeft, beslist het college of en in welke zin het ontwerp van notulen aan te passen is.
+                                                             
+                                                            
+                                                                
+                                                             
+                                                            
+                                                                De notulen van het college van burgemeester en schepenen worden, binnen de twee werkdagen na de vergadering van het college waarop de notulen werden goedgekeurd, via de digitale besluitvormingstoepassing (onder publicaties) ter beschikking gesteld aan de gemeenteraadsleden.
+                                                                 
+                                                             
+                                                             
+                                                                
+                                                                    
+                                                                 
+                                                                
+                                                                    De besluitenlijst van het college van burgemeester en schepenen wordt bekendgemaakt op de gemeentelijke website (raadpleegomgeving). Hierbij wordt rekening gehouden met de Algemene Verordening Gegevensbescherming (AVG).
+                                                                 
+                                                                
+                                                                     
+                                                                 
+                                                                
+                                                                     
+                                                                 
+                                                                
+                                                                     
+                                                                     
+                                                                        SLOTBEPALINGEN 
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                     
+                                                                        Art. 8. 
+                                                                     
+                                                                 
+                                                                
+                                                                    Het college heeft dezelfde deontologische code als die welke is aangenomen door de gemeenteraad.
+                                                                 
+                                                                
+                                                                    
+                                                                 
+                                                                
+                                                                     
+                                                                 
+                                                             
+                                                            
+                                                                Art. 9.
+                                                             
+                                                            
+                                                                De collegeleden spreken onderling af wanneer zij verlof zullen nemen, teneinde de goede werking van het college te verzekeren en ervoor te zorgen dat er steeds voldoende collegeleden beschikbaar zijn voor de vergaderingen van het college.
+                                                             
+                                                         
+                                                        
+                                                             
+                                                         
+                                                        
+                                                            De collegeleden geven tijdig hun verlof door aan de burgemeester en algemeen directeur zodat de nodige maatregelen genomen kunnen worden zoals vb. handtekendelegatie, ...
+                                                         
+                                                        
+                                                             
+                                                         
+                                                        
+                                                            Een lid van het college heeft geen handtekeningsbevoegdheid tenzij uitdrukkelijk mandaat.
+                                                         
+                                                     
+                                                 
+                                             
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/46d9c7f1-ff8a-47c3-8000-b3d34cd82a4a> a ns2:Agendapunt ;
+    ns3:uuid "478f6ce6-7753-5fa8-b7d1-20a3bddc2dbc" .
+

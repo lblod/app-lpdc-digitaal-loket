@@ -1,0 +1,291 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/da2cba85-6f33-41f4-b1e3-2fccf197935a> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/02f6e5f9-69a9-4d6c-a367-6936971227f2>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3a48c9cd-20fe-4749-b368-14aa2e222db1>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/81952368-0ac8-418e-88d1-844fcaf4b8ea>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/93008696-a202-4b8f-9100-25fcb82389f3>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/9f8afe0c-51a6-4b02-8c56-604f3dc26b5e>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/d3c27850-0be9-4c27-bd69-045081ebb499>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/d720336a-c17e-4a7f-9a08-d462b4911d8f> ;
+    ns1:geplandeStart "2025-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/afe2c7b0-dad2-4308-bf99-ed9cd1277fe9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "91c6b172-d888-51e4-86d1-f419000cdb13" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-12-16T20:38:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d3c27850-0be9-4c27-bd69-045081ebb499> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221> ;
+    ns1:openbaar true ;
+    ns2:uuid "c0cf7c31-057b-5eec-926d-e1e2f0fab116" ;
+    dcterms:description """ 
+                             
+                                De gemeenteraad heeft in vergadering van 15 december 2025 de machtiging tot het heffen van retributies voor het ontlenen en gebruiken van materialen van de gemeentelijke uitleendienst vastgesteld voor de periode van 1 januari 2026 tot en met 31 december 2031. Ingevolge artikel 7 van dit retributiereglement is het college van burgemeester en schepenen gemachtigd om de tarieven vast te stellen voor deze retributies. De argumentatie tot differentiatie in de tarieven is opgenomen in het besluit van de gemeenteraad.  
+                                Aan het college van burgemeester en schepenen wordt gevraagd de tarieven vast te stellen met ingang van 1 januari 2026. 
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/d3c27850-0be9-4c27-bd69-045081ebb499> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/d3c27850-0be9-4c27-bd69-045081ebb499> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/d3c27850-0be9-4c27-bd69-045081ebb499> a ns1:Besluit ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Tarieven voor het ontlenen en gebruik van materialen van de gemeentelijke uitleendienst - Vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De gemeenteraad heeft in vergadering van 15 december 2025 de machtiging tot het heffen van retributies voor het ontlenen en gebruiken van materialen van de gemeentelijke uitleendienst vastgesteld voor de periode van 1 januari 2026 tot en met 31 december 2031.  
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                        Volgende bevoegdheidsgrond en regelgeving is van toepassing: 
+                                        Bevoegdheidsgrond 
+                                     
+                                     
+                                         
+                                             Het Decreet over het lokaal bestuur van 22 december 2017, artikelen 56 en 177 en latere wijzigingen;  
+                                         Toepasselijke regelgeving 
+                                         
+                                         
+                                             De Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteit;  
+                                             De beslissing van de gemeenteraad van 15 december 2025 houdende de vaststelling van het retributiereglement voor het ontlenen en gebruik van materialen van de gemeentelijke uitleendienst;  
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De gemeenteraad heeft in vergadering van 15 december 2025 de machtiging tot het heffen van retributies voor het ontlenen en gebruiken van materialen van de gemeentelijke uitleendienst vastgesteld voor de periode van 1 januari 2026 tot en met 31 december 2031. Ingevolge artikel 7 van dit retributiereglement is het college van burgemeester en schepenen gemachtigd om de tarieven vast te stellen voor deze retributies. De argumentatie tot differentiatie in de tarieven is opgenomen in het besluit van de gemeenteraad.  
+                                    Aan het college van burgemeester en schepenen wordt gevraagd de tarieven vast te stellen met ingang van 1 januari 2026. 
+                                      
+                                 
+                                 
+                                    Financiële weerslag 
+                                    De inkomsten zijn opgenomen in het meerjarenplan onder budgetsleutel 0710-00/70061000.  
+                                 
+                            """@nl ;
+    ns2:uuid "8b3ae2d2-cb0d-55d6-9d80-31581445542c" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                     
+                                        Enig artikel: Het college voor burgemeester en schepenen stelt de tarieven van het retributiereglement voor het ontlenen en gebruik van materialen van de gemeentelijke uitleendienst vast: 
+                                        Artikel 1: Opheffing 
+                                        Het besluit van het college van burgemeester en schepenen van 17 december 2019 van Puurs-Sint-Amands met betrekking tot de vaststelling van de tarieven voor het uitlenen en gebruiken van materialen van de gemeentelijke uitleendienst, wordt opgeheven met ingang van 1 januari 2026.  
+                                        Artikel 2: Tarieven 
+                                        Voor een termijn van 1 januari 2026 tot en met 31 december 2031 worden de retributies voor het uitlenen en gebruiken van materialen van de gemeentelijke uitleendienst als volgt vastgesteld:  
+                                     
+                                     
+                                        2.1. Uitleenmateriaal met levering en ophaling door gemeente op locatie:  
+                                         
+                                             
+                                                 
+                                                     Aard    
+                                                     Tarief    
+                                                 
+                                                 
+                                                     Nadarwagen  2,2m aluminium   met 45 nadars      
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Nadarwagen  2,2m aluminium met 90 nadars   
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Nadar 2,5 m galvan.      
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Nadarwagen  2,2m aluminium  met 145 nadars    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Transportbok nadars (20 stuks)  
+                                                     Gratis  
+                                                 
+                                                 
+                                                     Kar met 50 stoelen (vouwstoelen)      
+                                                     Gratis       
+                                                 
+                                                 
+                                                     Pakket van 80 blauwe plastiek kuipstoelen      
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Podiumelementen   2 x 1 m (verstelbare poten tot van 0,6 m tot 1 m)    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Podiumelementen   2 x 1 m    (poten vast 60 cm)    
+                                                     Gratis       
+                                                 
+                                                 
+                                                     Trapje podium    
+                                                     Gratis      
+                                                 
+                                                 
+                                                     Kar met 7 staantafels    
+                                                     Gratis      
+                                                 
+                                                 
+                                                     Kar met 15 tafels  van  1,2 m lang en 0,7 breed    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Kar met 15 tafels van   1,8 m en 0,7 m breed    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Kar met 15 tafels van     2,2 m en  0,7 m breed    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Pakket van 10 tentoonstellingspanelen 2x1 m     
+                                                     Gratis    
+                                                 
+                                                 
+                                                     1 bak werfhekken+ sokkels   met 23 hekken en 24 sokkels    
+                                                     40 euro  
+                                                 
+                                                 
+                                                     Podiumwagen   Volledige opstelling  -          Erkende vereniging Puurs-Sint-Amands   -          Andere gemeenten    
+                                                      Bedrag    (jaar)   190 euro (2026 tot 2027) 200 euro (2028 tot 2031)   1.250 euro (2026) 1.270 euro (2027) 1.290 euro (2028) 1.310 euro (2029) 1.330 euro (2030) 1.350 euro (2031) (per beurt met inbegrip van vervoer en plaatsing)     
+                                                 
+                                                 
+                                                     Podiumwagen   2/3de opstelling     
+                                                     Bedrag     (jaar)  130 euro    (2026 tot 2028) 140 euro   (2029 tot 2031) (per beurt inclusief vervoer en plaatsing)       
+                                                 
+                                             
+                                         
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        2.2. Uitleenmateriaal af te halen door de aanvrager op locatie Gemeentelijke Technische Dienst, Lichterstraat 2, 2870 Puurs-Sint-Amands) tenzij anders afgesproken: 
+                                     
+                                    
+                                         
+                                         
+                                             
+                                                 
+                                                     Aard    
+                                                     Tarief    
+                                                 
+                                                 
+                                                     Noodverlichting    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Spreekgestoelte    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Uitschuifbare vlaggenmast  (aluminium)    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Verstralers 500 W  (bak met 4 spots)   
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Verdeelkasten elektriciteit   32A  
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Verdeelkasten elektriciteit   63A  
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Verlengkabels   (32 A - 3 fasen)    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Verlengkabels   (63 A - 3 fasen)    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Vlaggen    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Tentjes  3x2,5 m   (rood wit braderijtent)    
+                                                     Gratis   
+                                                 
+                                                 
+                                                     Tentjes 3 x3 m   (grijs)    
+                                                     Gratis       
+                                                 
+                                                 
+                                                     Brandblusapparaten    
+                                                     Gratis    
+                                                 
+                                                 
+                                                     Erepodium 1-2-3    
+                                                     Gratis     
+                                                 
+                                             
+                                         
+                                     
+                                    
+                                        
+                                     
+                                    
+                                        2.3. Uitleenmateriaal af te halen door de aanvrager op locatie:
+                                     
+                                    
+                                        
+                                     
+                                    
+                                         
+                                         
+                                             
+                                                 
+                                                     Aard    
+                                                     Tarief    
+                                                     afhaallocatie  
+                                                 
+                                                 
+                                                     Fuifkoffer + walkie talkieset    
+                                                     Gratis     
+                                                     Gemeentehuis Forum 6 - Puurs   
+                                                 
+                                                 
+                                                     Poten voor  podiumelementen  (20 – 40 – 80 – 100 cm)    
+                                                     Gratis   
+                                                     cc Binder Forum 9 Puurs  
+                                                 
+                                             
+                                         
+                                        
+                                     
+                                     
+                                        2.4. Laattijdige inlevering materialen: 
+                                         
+                                            Bij het niet terugbrengen van de materialen binnen de toegestane uitleentermijn zal een extra vergoeding betaald moeten worden van 25 euro per dag dat de uitleentermijn wordt overschreden.  
+                                         
+                                        Artikel 3: Bekendmaking 
+                                        Deze beslissing wordt bekendgemaakt overeenkomstig de artikelen 285 t.e.m. 288 van het decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen.  
+                                     
+                                     
+                                        De bekendmaking van dit reglement wordt aan de toezichthoudende overheid ter kennis gebracht overeenkomstig artikel 330 van het decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d3c27850-0be9-4c27-bd69-045081ebb499> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/d3c27850-0be9-4c27-bd69-045081ebb499> a ns1:Agendapunt ;
+    ns2:uuid "795a76bd-08fd-5cc8-a7e0-b40b9836ca9c" .
+

@@ -1,0 +1,104 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/13531b75-2b97-49e6-95b5-0130577929ca> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3087dcaf-8404-4313-8c4d-cf86d7068e89>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b11927eb-1bef-4718-bdb3-8a26d2d317a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e7de92-a36c-4219-9e13-c69071e37e4c> ;
+    ns1:geplandeStart "2022-03-30T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5072526b-b5d4-4d2b-ba68-1047063dac6e> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6062ed9f-3a18-4da2-b571-465c2cc37207> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6b4a4077-779d-4b4b-9f0b-f39d932e61c9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ec275900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-03-30T21:10:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-03-30T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81> ;
+    ns1:openbaar true ;
+    ns3:uuid "ed1d51c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7efebe89-fd26-4810-98b4-03f1fe2f3c03> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7efebe89-fd26-4810-98b4-03f1fe2f3c03> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt het bestek en de raming voor de opdracht “Uitbreiden magazijn van Zomergem dmv containers en verbouwen van de magazijnen en de site, lot 4 technieken.”, opgesteld door Architecten associatie Servaes Pieters en het veiligheids- en gezondheidsplan opgesteld door Vinco Engineering, goed. De lastvoorwaarden worden vastgesteld zoals voorzien in het bestek en zoals opgenomen in de algemene uitvoeringsregels van de overheidsopdrachten voor aannemingen van werken, leveringen en diensten. De raming bedraagt € 62.015,70 excl. btw of € incl. € 75.039,00 21% btw. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Uitbreiden magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site - lot 4  technieken - lastvoorwaarden en gunningswijze, veiligheids- en gezondheidsplan: goedkeuring",
+        "Uitbreiden magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site - lot 4 technieken - lastvoorwaarden en gunningswijze, veiligheids- en gezondheidsplan: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 42, § 1, 1° a (de goed te keuren uitgave excl. btw bereikt de drempel van 140.000,00 euro niet) 
+                                                            Het koninklijk besluit van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het koninklijk besluit van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen, meer bepaald artikel 90, 1° 
+                                                            Het decreet van 26 maart 2004 betreffende de openbaarheid van bestuur 
+                                                            Het Decreet lokaal bestuur van 22 december 2017, en latere wijzigingen, inzonderheid artikelen 326 tot en met 334,  betreffende het bestuurlijk toezicht 
+                                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 41, tweede lid, 10° 
+                                                            Besluit van het college van burgemeester en schepenen van Lievegem van 7 september 2021 over het aanstellen van een architect voor de uitbreiding van het magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site 
+                                                            Besluit van het college van burgemeester en schepenen van Lievegem van 21 december 2021 over het aanstellen van een architect voor de uitbreiding van het magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site- wijziging opdracht 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het dossier wordt voorgelegd aan de gemeenteraad omdat het college niet gemachtigd is gezien het niet kan gezien worden als een nominatieve investering omdat het totaalbedrag zoals voorzien in het overzicht nominatieve investeringen voor dit project overschreden wordt. 
+                                                            In het kader van de opdracht "Uitbreiden magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site, lot 4 technieken” werd een bestek opgesteld door de Architecten associatie Servaes Pieters en een veiligheids- en gezondheidsplan opgesteld door Vinco Engineering. 
+                                                            De uitgave voor deze opdracht wordt geraamd op € 62.015,70 excl. btw of € incl. € 75.039,00 21% btw. 
+                                                            Er wordt voorgesteld de opdracht te gunnen bij wijze van de onderhandelingsprocedure zonder voorafgaande bekendmaking. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De financiële impact voor dit lot 4 technieken bedraagt € 62.015,70 excl. btw of € incl. € 75.039,00 21% btw. 
+                                                            De financiële impact voor de andere loten bedraagt:                 Lot 1 verbouwingen :             € 123.265,04 incl BTW                Lot 3 containers:                   € 105.400,00 incl B 
+                                                            Totaal lot 1, 3 en 4 = € 303.704,04 
+                                                            10 % meerwerken = € 30.370,40 
+                                                            algemeen totaal werken = € 334.074,44 
+                                                            Op actie 473 zijn reeds volgende vastleggingen gebeurd voor het aanstellen van de architect: € 17.787,00 + € 4.840,00 = € 22.627,00. 
+                                                            algemeen totaal werken en erelonen = € 356.701,44 
+                                                              
+                                                            Deze investeringsuitgave is voorzien in het meerjarenplan in 2022 voor een bedrag van 305.000 euro op jaarbudgetrekening: 2022/ACT-473/0200-00/2210007/GEMEENTE/CBS/IP-GEEN. ACT-473 = uitbreiding magazijn Zomergem. 
+                                                            Er is een tekort van € 51.261,44. 
+                                                            Voor actie 240: Lokalen Vrije Tijd – Zomergem zijn in het meerjarenplan in 2020-2025 voor een bedrag van 2.846.578 euro beschikbaar op jaarbudgetrekening: 2022/ACT-240/0705-02/2210007/GEMEENTE/CBS/IP-006. De uitgaven voor dit project zullen lager zijn waardoor het mogelijk is om via een interne kredietverschuiving het bedrag van € 52.000,00 euro te verplaatsen van actie 240 naar actie 473. 
+                                                            Het bouwen van de verdieping in het magazijn achter de brandweerkazerne en de omgevingswerken worden verschoven naar 2023 en er zal budget gevraagd worden bij de volgende aanpassing van het meerjarenplan. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ec27ce30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 De gemeenteraad keurt het bestek en de raming voor de opdracht “Uitbreiden magazijn van Zomergem dmv containers en verbouwen van de magazijnen en de site, lot 4 technieken.”, opgesteld door Architecten associatie Servaes Pieters en het veiligheids- en gezondheidsplan opgesteld door Vinco Engineering, goed. De lastvoorwaarden worden vastgesteld zoals voorzien in het bestek en zoals opgenomen in de algemene uitvoeringsregels van de overheidsopdrachten voor aannemingen van werken, leveringen en diensten. De raming bedraagt € 62.015,70 excl. btw of € incl. € 75.039,00 21% btw. 
+                                                            Artikel 2 Bovengenoemde opdracht wordt gegund bij wijze van de onderhandelingsprocedure zonder voorafgaande bekendmaking. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "ed193310-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Uitbreiden magazijn van Zomergem dmv containers en wijzigingen aan de magazijnen en de site - lot 4 technieken - lastvoorwaarden en gunningswijze, veiligheids- en gezondheidsplan: goedkeuring" .
+

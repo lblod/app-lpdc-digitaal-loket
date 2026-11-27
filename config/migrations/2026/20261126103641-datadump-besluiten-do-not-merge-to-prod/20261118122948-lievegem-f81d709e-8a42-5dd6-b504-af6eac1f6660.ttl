@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6172bd79-0aa2-45e1-8f68-77e43a084256> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27dbc2eb-455f-4d5a-995c-4c513ac970a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/438dd478-ec69-41cb-abb8-a9a5ec70c5cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e62ea52-5b0c-446a-b520-7f2d11e7034a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5c8f7227-7ebd-4add-819c-eb94b252048b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5fdd425f-37f9-4399-8d71-d780488b1d6f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61e52099-3daa-4f9b-9889-7204d1a0a0f0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7d1217f3-6db7-434b-9f3b-6a175e66d00b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/891703dc-29ca-453d-b460-0e0356259b69>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ae060643-d5fb-4a2a-93e5-3466eeaf557e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b018ddb6-4f1a-4fba-b247-8fd90f77e301>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9fa1658-a712-4054-b8b9-54437aca429e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc7ae8bf-f480-44c9-b0b0-d2e7183acda1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e416a3ae-feca-4e3f-ab5a-6b0da272b028>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eafb0b0e-dbe6-45f2-9562-042c5cdf1ceb> ;
+    ns2:geplandeStart "2026-06-16T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d015f40e-7903-4062-bd23-1384df40d0ff> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "74bc76bf-df9e-5b31-b515-9fcaeedf763a" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-06-16T13:36:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/891703dc-29ca-453d-b460-0e0356259b69> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4e62ea52-5b0c-446a-b520-7f2d11e7034a> ;
+    ns2:openbaar false ;
+    ns1:uuid "307095f9-c7d1-54ef-a422-21dca5b9a28a" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/891703dc-29ca-453d-b460-0e0356259b69> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/891703dc-29ca-453d-b460-0e0356259b69> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/891703dc-29ca-453d-b460-0e0356259b69> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Buurtfeest Beekstraat 2026' op 28 juni 2026 van 10.00 uur tot 22.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Buurtfeest Beekstraat 2026' - Buurtcomité Beekstraat: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 16 juni 2026 over de aanvraag Buurtfeest Beekstraat 2026 - Buurtcomité Beekstraat: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nele De Keyser, namens buurtcomité Beekstraat, organiseert 'Buurtfeest Beekstraat 2026' op 28 juni 2026 van 10.00 uur tot en met 22.00 uur.Er werd op 7 mei 2026 een aanvraag ingediend door Nele De Keyser, namens buurtcomité Beekstraat, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    De inwoners van Beekstraat moeten één week voor de aanvang van het evenement door de organisatie per brief worden verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "f81d709e-8a42-5dd6-b504-af6eac1f6660" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Buurtfeest Beekstraat 2026' op 28 juni 2026 van 10.00 uur tot en met 22.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Afsluiten van Beekstraat, uitgezonderd plaatselijk verkeer 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Nadar + C3 + 'uitgezonderd fietsers' + 'uitgezonderd plaatselijk verkeer' aan kruispunt Beekstraat/Bredestraat 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/891703dc-29ca-453d-b460-0e0356259b69> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/891703dc-29ca-453d-b460-0e0356259b69> a ns2:Agendapunt ;
+    ns1:uuid "f726fceb-57cc-5766-851f-6b009606d5d4" .
+

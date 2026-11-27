@@ -1,0 +1,71 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/da205ae1-3974-47a5-bd98-a1fa697b17b3> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0056e73c-8846-4e9a-89c0-4c48e493907f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/25a7c877-6382-4e0a-b8d5-9500ce5d70a1>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/421b5958-5dda-4b91-a94f-a6fc1d3758d3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5adb9830-fa34-49cb-b422-d94306f3d082>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/93ad3997-29c8-43d7-8d9e-deeaffed1791> ;
+    ns1:geplandeStart "2025-06-02T14:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/a80d625b-7182-478b-8844-cb8349a87ac4> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "9fdb838b-3e04-5186-8fd4-fc4413603033" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-06-02T13:36:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/421b5958-5dda-4b91-a94f-a6fc1d3758d3> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/25a7c877-6382-4e0a-b8d5-9500ce5d70a1> ;
+    ns1:openbaar false ;
+    ns2:uuid "35e89fb4-9b7f-56bc-a5ad-e50b29f49d76" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/421b5958-5dda-4b91-a94f-a6fc1d3758d3> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/421b5958-5dda-4b91-a94f-a6fc1d3758d3> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/421b5958-5dda-4b91-a94f-a6fc1d3758d3> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de schoolfeest/opendeur op 15/06/2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Schoolfeest/Opendeur kleuterschool Het Nestje - 15/06/2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "fcba034c-dd34-518a-a0c9-6cc9e1d22e3d" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van schoolfeest/opendeur op 15/06/2025 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf tussen 12u en 20u:
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Verboden stil te staan/te parkeren (E3) op de parkeerplaatsen parking Omgevingshuis/Kleuterschool Het Nestje 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/421b5958-5dda-4b91-a94f-a6fc1d3758d3> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/421b5958-5dda-4b91-a94f-a6fc1d3758d3> a ns1:Agendapunt ;
+    ns2:uuid "38ef776a-e42a-513e-b8af-c0131d118006" .
+

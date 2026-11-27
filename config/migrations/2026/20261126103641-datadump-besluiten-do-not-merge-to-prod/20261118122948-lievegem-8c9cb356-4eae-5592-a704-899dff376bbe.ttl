@@ -1,0 +1,118 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/0369d2f2-1af3-4b79-907b-435c4df3c9b3> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/022068e7-555c-47b6-abce-755119a78609>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a2d5ef6-4dc3-4206-9dd4-4a0f4ab04a00>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0c52b0a3-92b4-4fdf-a838-e8e9c0913b52>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/32ddb21f-0b41-4d71-80ff-80a15eeafec4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5fd1aea5-bb2e-41e8-ac75-1358ec479fde>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e5025903-0cb9-4c53-a192-69a7f4c7c1e7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ed770fe5-e63e-453d-ac22-a34cc6a02feb> ;
+    ns1:geplandeStart "2026-06-30T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ca86a66a-f631-41eb-84ee-4bb5f62364fe> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "03df29b2-e57f-506c-b5ca-cee7810235d4" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-06-30T13:39:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0a2d5ef6-4dc3-4206-9dd4-4a0f4ab04a00> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0c52b0a3-92b4-4fdf-a838-e8e9c0913b52> ;
+    ns1:openbaar false ;
+    ns2:uuid "d8ade85c-fef1-5b35-84ef-586cd7ec5256" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a2d5ef6-4dc3-4206-9dd4-4a0f4ab04a00> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0a2d5ef6-4dc3-4206-9dd4-4a0f4ab04a00> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/0a2d5ef6-4dc3-4206-9dd4-4a0f4ab04a00> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Rijvers 2026' wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Rijvers 2026' - Rijvers VZW: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 30 juni 2026 over de aanvraag evenement Rijvers - Rijvers VZW: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Pascal Halsberghe, namens Rijvers VZW organiseert 'Rijvers 2026' van 13 augustus 2026 12.00 uur tot en met 17 augustus 2026 2.00 uur.Er werd op 3 april 2026 een aanvraag ingediend door Pascal Halsberghe, namens Rijvers VZW om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    In samenwerking met de firma Scelta Mobility werd door Rijvers VZW een mobiliteitsplan met signalisatieplan opgemaakt.  
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                     
+                                    Op 23 juni 2026 werd aan gemeente Maldegem goedkeuring gevraagd voor het plaatsen van signalisatie op hun grondgebied. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Gemeente Maldegem (mobiliteit@maldegem.be) 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns2:uuid "8c9cb356-4eae-5592-a704-899dff376bbe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Rijvers 2026' wordt vastgesteld als volgt: 
+                                    Van 27 juli 2026 7.00 uur tot en met 22 augustus 2026 20.00 uur: 
+                                    1. Stilstaan- en parkeerverbod op kruispunt Diepenbeek/Rijvers voor passage vrachtwagens bij opbouw en afbraak van het festival 
+                                    Van 13 augustus 2026 11.00 uur tot en met 17 augustus 2026 8.00 uur: 
+                                    1. De zones Bauwerwaan - Bouaerdsdreef - Rijvers - Keigatstraat (Maldegem) en Diepenbeek - Vlamingstraat (Maldegem) - St Jansstraat - Panthaagstraat (Maldegem) - Veldhoek - Mostmolen - Moststraat worden autoluw gemaakt. Hier wordt enkel plaatselijk verkeer toegelaten. 
+                                     
+                                        In het begin van Mostmolen en Moststraat worden de parkings voorzien: bezoekers kunnen inrijden tot aan de parking, daarna wordt enkel plaatselijk verkeer toegelaten. 
+                                     
+                                    
+                                        2. Eénrichtingsverkeer in Diepenbeek, komende van St Jansstraat richting Leischoot. Dit is enkel voor bewoners van Mostmolen en Moststraat en eventuele wagens die toch verkeerdelijk zijn doorgereden.
+                                        
+                                        
+                                     
+                                    
+                                        3. Eénrichtingsverkeer in Bouaerdsdreef, komende van Bauwerwaan richting Rijvers. Het verkeer voor de VIP- en crewparkings, Kiss & Ride en shuttlebus worden via Bauwerwaan naar Bouaerdsdreef geleid. De bewoners kunnen nog steeds naar hun woning rijden.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        4. Stilstaan- en parkeerverbod in St Jansstraat van Veldhoek tot Diepenbeek
+                                     
+                                    5. Stilstaan- en parkeerverbod in Rijvers vanaf Daalmstraat tot Diepenbeek 
+                                    6. Stilstaan- en parkeerverbod in Diepenbeek vanaf Rijvers tot Mostmolen 
+                                      
+                                      
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    van 27 juli 2026 7.00 uur tot en met 22 augustus 2026 20.00 uur: 
+                                    1. Borden E3 
+                                    van 13 augustus 2026 11.00 uur tot en met 17 augustus 2026 8.00 uur: 
+                                    1. Borden C3 + 'uitgezonderd plaatselijk verkeer' op de kruispunten Zwepe/Vlamingstraat (Maldegem), Panthaagstraat/Kruipuit (Maldegem), Velhoek/Oostwinkeldorp, Mostmolen/Leischoot, Mostmolen/Diepenbeek, St-Jansstraat/Diepenbeek, Moststraat/Leischoot, Moststraat/Diepenbeek, Bauwerwaan/Bouaerdsdreef, Rijvers/Bouaerdsdreef, Rijvers/Daalmstraat en Keigatstraat/Veldkruisstraat (Maldegem). 
+                                    + de nodige vooraankondiging en op de cruciale kruispunten wordt een steward voorzien door de organisatie. 
+                                    2. - Bord F19 + M4 op het kruispunt St Jansstraat/Diepenbeek 
+                                        - Borden F19 + M4, C1 + M2 en C31b op de kruispunten Mostmolen/Diepenbeek en Moststraat/Diepenbeek 
+                                        - Borden C1 + M2 en C31a + M2 en C31b + M2 op het kruispunt Diepenbeek/Leischoot 
+                                    3. - Bord F19 + M4 op het kruispunt Bauwerwaan/Bouaerdsdreef 
+                                        - Borden C1 + M2 en C31a + M2 en C31b + M2 op het kruispunt Rijvers/Bouaerdsdreef 
+                                    4. Borden E3 
+                                    5. Borden E3 
+                                    6. Borden E3 
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten, met uitzondering van de oranje vooraankondigingsborden (7 stuks) en de bewegwijzeringsborden. Deze vooraankondigingsborden en bewegwijzering worden door de organisatie zelf voorzien en geplaatst. 
+                                    De rest van de nodige signalisatie zal op voorhand klaargezet worden door de gemeentediensten (ook op grondgebied Maldegem) en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0a2d5ef6-4dc3-4206-9dd4-4a0f4ab04a00> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a2d5ef6-4dc3-4206-9dd4-4a0f4ab04a00> a ns1:Agendapunt ;
+    ns2:uuid "06aca30a-1994-5ec1-9e2d-188d31ab3b25" .
+

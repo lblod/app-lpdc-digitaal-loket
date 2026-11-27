@@ -1,0 +1,62 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/b9a47633-f7e5-4d1f-93b9-3d5455718580> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5cc0f964-3ca3-4d1a-8644-5bf783f4483c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/68eb808d-e46a-4d27-b305-89891a7390a8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8b36222b-e766-4a19-8e0a-8e78688a221c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c24a912f-1edb-40b5-9aba-7c4283704ef9>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c2782825-e30c-4a2a-89f6-8e5623c56008> ;
+    ns1:geplandeStart "2026-03-09T18:50:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/2fb5aff5-f321-4b2a-bb97-886be1f30b9e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "69ececc1-23f6-5ea6-92ec-f8919748f257" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-03-09T18:14:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d46e5612-019a-4ecf-8ad5-36fede0a5bd9> ;
+    ns1:openbaar true ;
+    ns2:uuid "ff72c87c-cba5-50cd-be24-f7dc99761a7e" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c> a ns1:Besluit ;
+    ns3:description """ 
+                                                    Het college van burgemeester en schepenen neemt kennis van het verslag van het adviesplatform Senioren op 09/01/2026. 
+                                                    Het college van burgemeester en schepenen behandelt de geformuleerde adviezen van het adviesplatform senioren. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Kennisname verslag van adviesplatform Senioren op 27/01/2026" ;
+    ns1:motivering """ 
+                                 
+                                    Het college volgt het advies van de dienst. 
+                                 
+                            """@nl ;
+    ns2:uuid "58624c9c-82bb-5920-bce7-350939a6fd50" ;
+    prov:value """ 
+                                 
+                                    Artikel 1 - Het college van burgemeester en schepenen neemt kennis van het verslag van het adviesplatform Senioren op 09/01/2026. 
+                                      
+                                    Artikel 2- Het college van burgemeester en schepenen neemt kennis van bovengenoemde adviezen van het adviesplatform senioren en beslist het volgende: 
+                                    1) Aangepast huishoudelijk reglement Adviesplatform Senioren Pajottegem 
+                                    Beslissing: Akkoord. Dit huishoudelijk reglement wordt ter goedkeuring voorgelegd aan de gemeenteraad. 
+                                    2) Abonnement afsluiten voor tijdschrift ACTUEEL 
+                                    Beslissing: Akkoord op voorwaarde dat het abonnement bekostigd wordt vanuit de werkingsmiddelen die jaarlijks maximaal 750 euro bedragen. 
+                                    3) Uitgave Seniorengids Pajottegem 
+                                    Beslissing: Het behoort niet tot de bevoegdheden van een adviesplatform om communicatiemiddelen van welke aard dan ook te publiceren. Het college staat open voor advies en voor overleg over de communicatie naar de doelgroep senioren. Het lokaal bestuur brengt dit jaar een informatiemagazine uit over de dienstverlening. Informatie voor senioren zal daar een onderdeel van uitmaken. Ook de dienst zorg voorziet in de nodige communicatie van de eigen dienstverlening. Advies bij de opmaak en inhoud van dit boekje is welkom. Het college zal elke adviesvraag gemotiveerd behandelen. 
+                                    4)  Verbouwlening in het Vlaams Parlement laten aankaarten via de burgemeester 
+                                    Beslissing: Deze vraag wordt doorgestuurd aan de burgemeester. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/4dd4d9b5-dc71-4dd4-890a-1246d774ee1c> a ns1:Agendapunt ;
+    ns2:uuid "c04aca42-5b35-5038-9b0d-403919feef1d" .
+

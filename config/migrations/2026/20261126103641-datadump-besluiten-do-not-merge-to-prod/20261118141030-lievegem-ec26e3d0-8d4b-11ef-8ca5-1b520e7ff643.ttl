@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/13531b75-2b97-49e6-95b5-0130577929ca> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3087dcaf-8404-4313-8c4d-cf86d7068e89>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b11927eb-1bef-4718-bdb3-8a26d2d317a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e7de92-a36c-4219-9e13-c69071e37e4c> ;
+    ns1:geplandeStart "2022-03-30T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5072526b-b5d4-4d2b-ba68-1047063dac6e> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6062ed9f-3a18-4da2-b571-465c2cc37207> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6b4a4077-779d-4b4b-9f0b-f39d932e61c9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ec275900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-03-30T21:10:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-03-30T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9> ;
+    ns1:openbaar true ;
+    ns2:uuid "ed14c640-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8c82efe5-4ef1-4543-9122-86d87b246e3d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8c82efe5-4ef1-4543-9122-86d87b246e3d> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad adviseert om voor de stemverhouding een eenvoudig systeem te hanteren. Hierbij wordt rekening gehouden met het aantal sociale huurwoningen in de gemeenten en met het aantal huishoudens. Aan de eerste indicator (aantal sociale huurwoningen) wordt een gewicht van 50/100ste toegekend. Aan de tweede (aantal huishoudens) een gewicht van 50/100ste. Omdat de betrokken gemeenten de woonmaatschappij als een samenwerking van partners-gemeenten beschouwen wordt in deze onderlinge verdeling van stemrechten de correctie ingebouwd dat een gemeente of stad nooit minder dan 5% van de stemrechten van de publieke sector kan bekomen. In deze situatie wordt dit opgetrokken tot 5%. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Traject woonmaatschappijen - afbakening werkingsgebied woonmaatschappijen - vastleggen onderlinge stemverhouding: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, SchepenHilde De Graeve, Schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, 41 4°Het decreet van 9 juli 2021 (B.S. 10 september 2021) over de wijziging van diverse decreten met betrekking tot wonen waarbij een regelgevend kader met betrekking tot de woonmaatschappijen wordt gecreëerdBesluit van het college van burgemeester en schepenen van 24 augustus 2021 over de Projectnota’s sociale huisvestingsmaatschappijen mbt overnamemodaliteiten seniorenwoningen KerkelareBesluit van het college van burgemeester en schepenen van 14 september 2021 over de afbakening van het werkingsgebiedBesluit van de gemeenteraad van 20 oktober 2021 over de afbakening van het werkingsgebied en het afsprakenkader 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Aanleiding 
+                                                            De brief van de Vlaamse minister van Financiën en Begroting, Wonen en Onroerend Erfgoed van 14 februari 2022 stelt dat de Vlaamse regering de onderlinge stemverhouding van de lokale besturen die deel uitmaken van het werkingsgebied, moet vaststellen. De Vlaamse regering heeft op 4 februari 2022 de werkingsgebieden in Vlaanderen definitief vastgelegd en heeft hierbij maximaal rekening gehouden met de talrijke adviezen. In een volgend besluit moet de Vlaamse regering zodoende de onderlinge stemverhouding vaststellen, zoals is vastgelegd in art. 4.39/2, §2 van de Vlaamse Codex Wonen van 2021. Dit artikel bepaalt ook dat de gemeentes en OCMW's die in het werkingsgebied van de woonmaatschappij liggen en aandeelhouder zijn van de woonmaatschappij, samen over altijd meer dan 50% van het totale aantal stemrechten beschikken die verbonden zijn aan de aandelen. 
+                                                            Op 20 december 2021 keurde de Vlaamse regering ook het besluit tot wijziging van verschillende besluiten over wonen goed. Dit besluit bepaalt dat de Vlaamse regering de stemverhouding vaststelt op basis van de volgende objectieve criteria: 
+                                                            1. de verhouding tussen het aantal sociale huurwoningen per gemeente;2. de verhouding tussen het aantal huishoudens per gemeente. 
+                                                            Het besluit bepaalt ook dat de Vlaamse regering rekening kan houden met andere criteria die vermeld zijn in een advies van de gemeenteraad van één of meerdere gemeentes uit het werkingsgebied. 
+                                                            In het gemeenteraadsbesluit van 20 oktober 2021 staat: 
+                                                            Wat de stemverdeling tussen de gemeenten onderling betreft, stellen de betrokken gemeenten een eerder eenvoudig systeem te hanteren. Hierbij wordt rekening gehouden met het aantal sociale huurwoningen in de gemeenten en met het aantal huishoudens. Aan de eerste indicator (aantal sociale huurwoningen) wordt een gewicht van 50/100ste toegekend, aan de tweede (aantal huishoudens) een gewicht van 50/100ste. Omdat de betrokken gemeenten de woonmaatschappij als een samenwerking van partners-gemeenten beschouwen wordt in deze onderlinge verdeling van stemrechten de correctie ingebouwd dat een gemeente of stad nooit minder dan 5% van de stemrechten van de publieke sector kan bekomen. In deze situatie wordt dit opgetrokken tot 5%. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ec26e3d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad adviseert om voor de stemverhouding een eenvoudig systeem te hanteren. Hierbij wordt rekening gehouden met het aantal sociale huurwoningen in de gemeenten en met het aantal huishoudens. 
+                                                            Aan de eerste indicator (aantal sociale huurwoningen) wordt een gewicht van 50/100ste toegekend. 
+                                                            Aan de tweede (aantal huishoudens) een gewicht van 50/100ste. 
+                                                            Omdat de betrokken gemeenten de woonmaatschappij als een samenwerking van partners-gemeenten beschouwen wordt in deze onderlinge verdeling van stemrechten de correctie ingebouwd dat een gemeente of stad nooit minder dan 5% van de stemrechten van de publieke sector kan bekomen. In deze situatie wordt dit opgetrokken tot 5%. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ed149f30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Traject woonmaatschappijen - afbakening werkingsgebied woonmaatschappijen - vastleggen onderlinge stemverhouding: goedkeuring" .
+

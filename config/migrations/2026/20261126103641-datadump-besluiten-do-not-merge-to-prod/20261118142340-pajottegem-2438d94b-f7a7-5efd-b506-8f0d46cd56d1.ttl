@@ -1,0 +1,133 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/b2a8d654-f324-42b0-8779-53bf7859ff36> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7de44ba3-d0a9-461f-a08f-a65e980501c6>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/85e39c88-0066-400b-bfad-116858fde2fa> ;
+    ns1:geplandeStart "2025-03-17T14:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/53dd25dc-7706-44ca-aa46-614727311c87> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "c45b2ab5-61e6-5366-ab4f-b830983e1493" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-17T13:58:00+01:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/85e39c88-0066-400b-bfad-116858fde2fa> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7de44ba3-d0a9-461f-a08f-a65e980501c6> ;
+    ns1:openbaar true ;
+    ns2:uuid "d076d3cc-3cfc-5c4e-8cbe-0903c9c8a587" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/85e39c88-0066-400b-bfad-116858fde2fa> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/85e39c88-0066-400b-bfad-116858fde2fa> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/85e39c88-0066-400b-bfad-116858fde2fa> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening voor de verkeersmaatregelen voor event Skihutte van vrijdag 28 maart 2025 tot zondag 30 maart 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening mobiliteit: Skihutte - Senecostraat 5 - 28 maart tot en met 30 maart 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "2438d94b-f7a7-5efd-b506-8f0d46cd56d1" ;
+    prov:value """ 
+                                 
+                                    Artikel 1- Ter gelegenheid van Skihutte op site Senecostraat 5 van vrijdag 28 maart 2025 van 18u tot 30 maart 2025 4u worden volgende beperkingsmaatregelen voor het verkeer genomen: 
+                                    §1 
+                                    Op de Senecostraat van de Sint-Elooistraat (grens Lennik) tot de Prof. Fr. Heymansstraat langs beide zijden van de weg geldt: 
+                                    Op de Prof. fr. Heymansstraat van de Hallebaan tot de Hutselenbergstraat langs beide zijden van de weg geldt: 
+                                    Op de Hutselenbergstraat van de Prof. Fr. Heymansstraat tot de Kwakenbeekstraat langs beide zijden van de weg geldt: 
+                                    Op de Kwakenbeekstraat van de Hutselenbergstraat tot de Hallebaan langs beide zijden van de weg geldt: 
+                                    Op de Hallebaan van de Kwakenbeekstraat tot de Prof. fr. Heymansstraat langs beide zijden van de weg geldt: 
+                                     
+                                          het stilstaan en parkeren is verboden; 
+                                          het einde van de parkeerreglementering wordt aangeduid; 
+                                          het begin van de parkeerreglementering wordt aangeduid; 
+                                          de parkeerreglementering geldt over een afstand van meer dan 300 meter. 
+                                     
+                                    Dit wordt gesignaleerd door: 
+                                     
+                                        verkeersborden E3 
+                                        de verkeersborden worden aangevuld met x-borden Xb, Xa, Xd  
+                                     
+                                      
+                                    §2 
+                                    Op de Senecostraat van de Prof. Fr. Heymansstraat tot de Sint-Elooistraat (grens Lennik) in de richting van de Sint-Elooistraat (grens Lennik) geldt: 
+                                    Op de Prof. Fr. Heymansstraat van de Hutselenbergstraat tot de Hallebaan in de richting van de Hallebaan geldt: 
+                                    Op de Hutselenbergstraat van de Kwakenbeekstraat tot de Prof. Fr. Heymansstraat in de richting van de Prof. Fr. Heymansstraat geldt: 
+                                    Op de Kwakenbeekstraat van de Hallebaaan tot de Hutselenbergstraat in de richting van de Hutselenbergstraat geldt: 
+                                    Op de Hallebaan van de Prof. fr. Heymansstraat tot de Kwakenbeekstraat in de richting van de Hutselenbergstraat geldt: 
+                                     
+                                          verboden rijrichting voor iedere bestuurder; 
+                                          de maatregel geldt niet voor fietsers 
+                                     
+                                      
+                                    §3 
+                                    Op de Senecostraat vanaf de Sint-Elooistraat tot de Prof. Fr. Heymansstraat in de richting de Prof. Fr. Heymansstraat geldt: 
+                                    Op de Prof. Fr. Heymansstraat van de Hallebaan tot de Hutselenbergstraat in de richting van de Hutselenbergstraat geldt: 
+                                    Op de Hutselenbergstraat van de Prof. Fr. Heymansstraat tot de Kwakenbeekstraat in de richting van de Kwakenbeekstraat geldt: 
+                                    Op de Kwakenbeekstraat van de Hutselenbergstraat tot de Hallebaan in de richting van de Hallebaan geldt: 
+                                    Op de Hallebaan van de Kwakenbeekstraat tot de Prof. Fr. Heymansstraat in de richting van de Prof. Fr. Heymansstraat geldt: 
+                                     
+                                          toegelaten rijrichting op de openbare weg met eenrichtingsverkeer;  
+                                          de maatregel geldt niet voor fietsers 
+                                     
+                                    Dit wordt gesignaleerd door: 
+                                     
+                                        verkeersborden C1  
+                                        de verkeersborden worden aangevuld met onderborden M2  
+                                        verkeersborden F19  
+                                        de verkeersborden worden aangevuld met onderborden M4  
+                                     
+                                    §4 
+                                    Op de Senecostraat ter hoogte van huisnummer 5 (site Skihutte) komende van de Sint-Elooistraat geldt: 
+                                     
+                                          de bestuurders zijn verplicht links af te slaan; 
+                                          de maatregel geldt niet voor fietsers 
+                                     
+                                    Dit wordt gesignaleerd door verkeersborden D1e 
+                                      
+                                    §5 
+                                    Op de Senecostraat ter hoogte van voetweg komende van de Sint-Kwintenbaan geldt: 
+                                    Op de Prof. Fr. Heymansstraat ter hoogte van huisnr. 19 bij het verlaten van de parking Skihutte geldt: 
+                                     
+                                          de bestuurders zijn verplicht rechts af te slaan; 
+                                          de maatregel geldt niet voor fietsers 
+                                     
+                                    Dit wordt gesignaleerd door verkeersborden D1f 
+                                      
+                                    §6 
+                                    Verbod aan het volgend kruispunt af te slaan in de richting door de pijl aangegeven: 
+                                     
+                                        Prof. Fr. Heymansstraat 
+                                     
+                                    Prof. Fr. Heymansstraat / Prof. Fr. Heymansstraat 
+                                    Prof. Fr. Heymansstraat / Hallebaan 
+                                     
+                                        Senecostraat 
+                                     
+                                    Senecostraat / Prof. Fr. Heymansstraat  
+                                     
+                                        Kwakenbeekstraat 
+                                     
+                                    Kwakenbeekstraat / Kwakenbeekstraat 
+                                    Kwakenbeekstraat / Hutselenbergstraat 
+                                    Dit wordt gesignaleerd door verkeersborden C31a/C31b 
+                                      
+                                    Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                      
+                                    Artikel 3 - De organisatoren worden verplicht: 
+                                     
+                                         De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, minstens 48 uur op voorhand schriftelijk op de hoogte te brengen van het evenement en van de verkeersmaatregelen.  
+                                         Alle tijdelijk  voorziene verkeersborden en hekken volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement te plaatsen en onmiddellijk na het evenement te verwijderen of af te dekken.  
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/85e39c88-0066-400b-bfad-116858fde2fa> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/85e39c88-0066-400b-bfad-116858fde2fa> a ns1:Agendapunt ;
+    ns2:uuid "a9a5dfc8-7e3d-5df6-8696-8399518fd2f4" .
+

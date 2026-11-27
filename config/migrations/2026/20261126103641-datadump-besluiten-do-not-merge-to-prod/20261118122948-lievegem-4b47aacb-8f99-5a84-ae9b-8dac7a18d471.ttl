@@ -1,0 +1,79 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/26cf701b-dd74-4a2d-8b59-bc9af94c3e58> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2d842e4e-6f1d-49c7-a33f-97a398303150>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5a5fe7b2-7905-4d6d-a997-914cca36425b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/726e1622-908e-4f73-8512-9faa17300c1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> ;
+    ns2:geplandeStart "2026-09-08T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0471fbe5-6e20-4dc9-863c-5c99895b72e8> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "4d7b4d66-40db-5e6f-ad09-383f8e7905c5" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-09-08T14:10:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ba1b142-dd5b-4945-8264-bb589fdca71b> ;
+    ns2:openbaar false ;
+    ns1:uuid "f1cdfbcc-538c-5ef0-b06e-132c604fcefa" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Strapdag Speelfontein 2026' op 18 september 2026 van 8.00 uur tot en met 15.30 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van Strapdag Speelfontein 2026 - Kleuterschool De Speelfontein: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 8 september 2026 over de aanvraag evenement Strapdag Speelfontein 2026 - Kleuterschool De Speelfontein: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Evelien Meirlaen, namens Kleuterschool De Speelfontein organiseert 'Strapdag Speelfontein 2026' op 18 september 2026 van 8.00 uur tot en met 16.00 uur.Er werd op 26 augustus 2026 een aanvraag ingediend door Evelien Meirlaen, namens Kleuterschool De Speelfontein, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners, dan worden deze één week voor de aanvang van het evenement per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "4b47aacb-8f99-5a84-ae9b-8dac7a18d471" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1Het tijdelijk politiereglement van 'Strapdag Speelfontein 2026' op 18 september 2026 van 8.00 uur tot en met 15.30 uur wordt vastgesteld als volgt: 
+                                     
+                                        Stilstaan- en parkeerverbod ter hoogte van Kasteellaan 1 tot 9, 9921 Lievegem 
+                                        Afsluiten van Kasteellaan voor alle verkeer van huisnumer 1 tot 9 
+                                        Omleiding via Dorsweg 
+                                     
+                                     
+                                    Artikel 2Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 ter hoogte van Kasteellaan 1 tot 9, 9921 Lievegem 
+                                        Nadar + C3 ter hoogte van het kruispunt Kasteellaan/Neerstraat/Drongense Steenweg en ter hoogte van Kasteellaan 1. 
+                                        Nadar + C3 + F45 + onderbord uitgezonderd plaatselijk verkeer + F41 ter hoogte van het kruispunt Kasteellaan/Dorsweg. 
+                                     
+                                     
+                                    Artikel 3De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal op voorhand klaargezet worden en dient door de organisator op straat geplaatst te worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d45b5c20-ada9-49ea-ac53-be4c5f27a3a1> a ns2:Agendapunt ;
+    ns1:uuid "9ab69293-fef4-53a1-b424-868dda46bc19" .
+

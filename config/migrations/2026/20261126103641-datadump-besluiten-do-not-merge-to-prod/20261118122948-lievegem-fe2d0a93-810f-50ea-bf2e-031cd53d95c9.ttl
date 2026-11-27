@@ -1,0 +1,81 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5d008620-7af5-4054-9535-61c7b38df098> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4197a154-9fa9-4350-95a8-4bbbc7fbd80f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7311e75d-b97e-4fd1-9d17-81961bb709bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/93cf2ea3-71f3-4e3f-b592-84cc87bc0781>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/de33f862-329e-4b6c-85ff-e7afe24ca463> ;
+    ns1:geplandeStart "2025-04-08T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/f4f5b916-dabe-4bd2-afea-a106f7cae012> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "02e79ba1-7086-5250-8617-8a22105ca20c" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-04-08T14:10:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7311e75d-b97e-4fd1-9d17-81961bb709bc> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/93cf2ea3-71f3-4e3f-b592-84cc87bc0781> ;
+    ns1:openbaar false ;
+    ns3:uuid "19ae8bf6-75a5-5b08-a4dc-b4d6f1a54d6c" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7311e75d-b97e-4fd1-9d17-81961bb709bc> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7311e75d-b97e-4fd1-9d17-81961bb709bc> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7311e75d-b97e-4fd1-9d17-81961bb709bc> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Paaseierenraap Beke Bar' op 19 april 2025 van 12.00 uur tot en met 18.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Paaseierenraap Beke Bar' - Beke Bar vzw: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 8 april 2025 over de aanvraag evenement Paaseierenraap Beke Bar - Beke Bar vzw: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Frederick Hurtekant, namens Beke Bar vzw, organiseert 'Paaseierenraap Beke Bar' op 19 april 2025 van 14.30 uur tot en met 17.00 uur. 
+                                    Er werd op 18 maart 2025 een aanvraag ingediend door Frederick Hurtekant, namens Beke Bar vzw, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "fe2d0a93-810f-50ea-bf2e-031cd53d95c9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Paaseierenraap Beke Bar' op 19 april 2025 van 12.00 uur tot en met 18.00 uur wordt vastgesteld als volgt: 
+                                     
+                                         
+                                            Stilstaan- en parkeerverbod op de parking voor en rechts van de kerk, ter hoogte van Oude Staatsbaan 66, 9930 Lievegem 
+                                            De Priemwegel blijft vrij voor voetgangers en fietsers (er zal hier een doorloopstelling staan voor dakwerken aan het schoolgebouw). Indien nodig, moeten voetgangers en fietsers wel nog langs de parking weg kunnen. 
+                                         
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                         
+                                            Borden E3 
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7311e75d-b97e-4fd1-9d17-81961bb709bc> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7311e75d-b97e-4fd1-9d17-81961bb709bc> a ns1:Agendapunt ;
+    ns3:uuid "93b78dba-98a6-5d50-860a-afa0eb371d65" .
+

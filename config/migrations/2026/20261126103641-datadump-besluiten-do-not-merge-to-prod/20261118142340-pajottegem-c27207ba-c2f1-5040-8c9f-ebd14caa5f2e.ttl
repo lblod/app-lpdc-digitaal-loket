@@ -1,0 +1,61 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/000d80ac-be60-48e0-ad27-c06a22600f53> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0a5a007c-fb17-4a23-a065-454e2e4fdf41>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5f243214-b148-4b17-8380-5ad85a15e978>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7928caa8-0ecc-4beb-86ba-9e1ed594b223>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b2461d80-32da-4724-a430-978db06afc30>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b58d39dd-9fb8-44a6-8a00-8bb3cf627996>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/db5ebefc-1246-48fa-9747-850d7e3235d3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f48cbf2b-04b0-4577-b69b-bab91efc0c5a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fbe06e1f-0382-4f93-a00c-fb4cb58d239c> ;
+    ns1:geplandeStart "2025-05-19T17:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/95c356e8-8f0f-4f5f-ac9b-89ff4dbd2255> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "e0b51ac0-832d-55e0-b5e3-cd07cfcb7a09" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-19T16:34:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3> ;
+    ns1:openbaar false ;
+    ns2:uuid "a9a5cbfc-66de-52b6-b1cd-d55059578d34" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/6e5f1a5a-eb66-4933-9224-af883fa707f7> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/6e5f1a5a-eb66-4933-9224-af883fa707f7> a ns1:Besluit ;
+    ns3:description """ 
+                                                    Het college van burgemeester en schepenen bekrachtigt de politieverordening bij hoogdringendheid, genomen door de burgemeester op 13/05 voor de organisatie van Carwash Scouts Gooik op 17/05 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Bekrachtiging politieverordening bij hoogdringendheid voor de organisatie van Carwash Scouts Gooik op17/05" ;
+    ns1:motivering """ 
+                                 
+                                    Aan het college van burgemeester en schepenen wordt gevraagd de politieverordening bij hoogdringendheid, genomen door de burgemeester op 13/05, te bekrachtigen. 
+                                 
+                            """@nl ;
+    ns2:uuid "c27207ba-c2f1-5040-8c9f-ebd14caa5f2e" ;
+    prov:value """ 
+                                 
+                                    Artikel 1 - Het college van burgemeester en schepenen bekrachtigt de politieverordening bij hoogdringendheid, genomen door de burgemeester op 13/05 voor de organisatie van Carwash Scouts Gooik op 17/05. 
+                                    Artikel 2 - Volgende verkeersmaatregelen worden getroffen op 17/5 tussen 7u en 17u:  
+                                    Parkeerverbod E3 op parking tussen rondpunt en Delhaize Gooik. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7> a ns1:Agendapunt ;
+    ns2:uuid "b4b52447-383b-5c66-a96b-b10fad376d39" .
+

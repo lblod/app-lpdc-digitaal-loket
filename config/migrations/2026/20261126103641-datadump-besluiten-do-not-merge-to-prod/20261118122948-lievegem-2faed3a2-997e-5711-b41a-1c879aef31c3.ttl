@@ -1,0 +1,76 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/90917e65-8eda-4b04-9a3a-93db41c81967> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05d11b2c-187b-4ea2-b1ac-e7f73828f515>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b544124-fb96-4803-8f0e-7ec950af73b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4d01487-78bb-4a55-9d23-8f4c9e350610> ;
+    ns1:geplandeStart "2025-12-09T13:30:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/34850cfb-cc0b-4ff7-8b45-78577353943c> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "b76035ed-a122-5927-82ed-ff06ca06f643" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lovendegem" ;
+    prov:startedAtTime "2025-12-09T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/05d11b2c-187b-4ea2-b1ac-e7f73828f515> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/650490f4-3368-4368-8643-f864492f35ad> ;
+    ns1:openbaar false ;
+    ns3:uuid "463d4e49-bd45-542e-bb1f-00e77cf48460" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05d11b2c-187b-4ea2-b1ac-e7f73828f515> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/05d11b2c-187b-4ea2-b1ac-e7f73828f515> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/05d11b2c-187b-4ea2-b1ac-e7f73828f515> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Nieuwjaarsreceptie Zomergem 2026' op 3 januari 2026 van 8.00 uur tot en met 4 januari 2026 12.00 uur wordt vastgesteld: stilstaan- en parkeerverbod op het volledige marktplein. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van Nieuwjaarsreceptie Zomergem 2026 - Feestcomité Centrum Zomergem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 9 december 2025 over de aanvraag evenement Nieuwjaarsreceptie Zomergem 2026 - Feestcomité Centrum Zomergem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Ronny Claeys, namens Feestcomité Centrum Zomergem organiseert 'Nieuwjaarsreceptie Zomergem 2026' op 3 januari 2026 vanaf 18.00 uur tot en met 20.00 uur.Er werd op 13 november 2025 een aanvraag ingediend door Ronny Claeys, namens Feestcomité Centrum Zomergem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Er wordt een parkeerverbod gevraagd op het marktplein vanaf 3 januari 2026 8.00 uur tot en met 4 januari 2026 12.00 uur voor de opbouw en afbraak van de tenten. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "2faed3a2-997e-5711-b41a-1c879aef31c3" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Nieuwjaarsreceptie Zomergem 2026' van 3 januari 2026 van 8.00 uur tot en met 4 januari 2026 12.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        stilstaan- en parkeerverbod op het volledige marktplein 
+                                     
+                                    
+                                        Artikel 2
+                                     
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden E3 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/05d11b2c-187b-4ea2-b1ac-e7f73828f515> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05d11b2c-187b-4ea2-b1ac-e7f73828f515> a ns1:Agendapunt ;
+    ns3:uuid "7ce7476a-a472-5cf3-8e1d-2b1bc79b43cf" .
+

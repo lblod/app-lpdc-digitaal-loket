@@ -1,0 +1,115 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/d47a8ea4-2137-4122-a870-a01160d405b4> a ns3:Zitting ;
+    ns3:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/615d5fc1-5200-4c72-b767-471aee496867>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a05b0f88-105e-4e59-ab6d-5d3a8317e70f> ;
+    ns3:geplandeStart "2025-12-02T20:00:00+01:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/25ed19b6-7312-4720-a21b-00e1d3ac425c> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns1:uuid "aedf7ef8-28ff-5470-9293-787271140f4e" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-12-02T19:44:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a05b0f88-105e-4e59-ab6d-5d3a8317e70f> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/403fd0d0-d3ed-4009-b109-9ca0e5f7703a> ;
+    ns3:openbaar false ;
+    ns1:uuid "e28cd8f4-c749-504d-a430-9496eab373b1" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a05b0f88-105e-4e59-ab6d-5d3a8317e70f> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/a05b0f88-105e-4e59-ab6d-5d3a8317e70f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/a05b0f88-105e-4e59-ab6d-5d3a8317e70f> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Aanvullend verkeersreglement - Zone met beperkte parkeertijd uitgezonderd bewonerskaart" ;
+    ns3:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Voor de zone met beperkte parkeertijd uitgezonderd bewonerskaart wordt er een kleine uitbreiding gedaan zodat er meer uniformiteit is in de kern van Puurs 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                             
+                                                Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56, §2 
+                                                Het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens, artikel 5; 
+                                                Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Voor de nieuwe parkeerconcessie werden de zones opnieuw onderzocht en geoptimaliseerd. Voor de zone met beperkte parkeertijd uitgezonderd bewonerskaart wordt er een kleine uitbreiding gedaan zodat er meer uniformiteit is in de kern van Puurs. 
+                                 
+                            """@nl ;
+    ns1:uuid "54112dcf-5989-5165-8a17-4450ac91ecd9" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                     
+                                         
+                                            Artikel 1 : het parkeren is toegelaten; de parkeertijd is beperkt en de parkeerschijf moet gebruikt worden; het gebruik van de schijf is voorgeschreven. De beperkte parkeertijd geldt niet voor personen in het bezit van een parkeerkaart voor mindervalide. De beperkte parkeertijd geldt niet voor personen in het bezit van een parkeerkaart voor bewoners; 
+                                            Artikel 2: De parkeerzone met parkeerschijfregeling wordt afgebakend op volgende locaties: 
+                                            Kerkplein 15 - Kerkplein 26 
+                                            Reststraat 23 - Kerkstraat 27 
+                                            Begijnhofstraat 38 - Begijnhofstraat 36 (hoek met Reststraat) 
+                                            R. Verbelenstraat 1 - H.Hartplaats 10 (hoek  Schuttershofstraat) 
+                                            Stationsstraat 7 - Stationsstraat 9 (hoek met Verbindingstraat) 
+                                            Stationsstraat 22  - Stationsstraat 26 
+                                            F. De Bondtststraat 1 - F De Bondtstraat 2 
+                                            F. De Bondtstraat 13 - F. De Bondtstraat 28 
+                                            Violetstraat 35 - Violetstraat 38 
+                                            Palingstraat 14 - Palingstraat 17 
+                                            Palingstraat 27 - Palingstraat 41  
+                                            Palingstraat 24 - Palingstraat 49 
+                                            Eeuwfeeststraat 11 - Eeuwfeeststraat 13 
+                                            Eeuwfeeststraat 27 - Eeuwfeeststraat 31 
+                                            Eeuwfeeststraat 32 - Eeuwfeeststraat 34 
+                                            Kerkhofstraat 24B  - Hoek met parking Kerkhofstraat 
+                                            Eeuwfeeststraat 69  - Kerkhofstraat 22 (hoek met Mantenhof) 
+                                            Hoogstraat 96 - G.Gezellelaan 4 (hoek met Kerkhofstraat) 
+                                            G.Gezellelaan 2 - G.Gezellelaan 4 
+                                            G.Gezellelaan 39 - G.Gezellelaan 28 
+                                              
+                                            Dit wordt aangeduid door verkeerstekens met zonale geldigheid: 
+                                             
+                                                 Verkeersbord ZE9a - onderbord GVIIb (parkeerschijf -uitgezonderd bewoners)  
+                                             
+                                         
+                                     
+                                    
+                                        Artikel 3: het parkeren is beperkt in tijd: deze maatregel geldt alle dagen tussen 09.00u en 18.00u, uitgezonderd op zon- en feestdagen
+                                     
+                                    Artikel 4: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a05b0f88-105e-4e59-ab6d-5d3a8317e70f> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a05b0f88-105e-4e59-ab6d-5d3a8317e70f> a ns3:Agendapunt ;
+    ns1:uuid "3711436e-e173-592c-a7c4-b05746d010f4" .
+

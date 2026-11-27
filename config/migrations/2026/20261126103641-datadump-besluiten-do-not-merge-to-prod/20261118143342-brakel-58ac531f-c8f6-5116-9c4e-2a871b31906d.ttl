@@ -1,0 +1,702 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/57990b48-78ad-4edf-a74f-dc225994ef02> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/01a8f876-04d7-4a33-94dd-cd47f6e730d2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0effaad7-541d-43f8-8ef2-82d5773629ab>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/128350ce-cef3-4746-a3fc-94abb96b71cc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/22d80fbe-4d9c-4c20-a2e5-b6baeea70a2a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/599c0456-02cd-4477-b778-ae2408de18fa>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6485052c-84f9-4954-8cfc-87129b6a8afd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8648e2a0-4bcb-471f-96fc-8d9c7700d571>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c779e2f9-d5df-4b3f-bced-0dc134c4d514>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/fde94319-a3b1-4e20-9c48-535e9dc40c1e> ;
+    ns1:geplandeStart "2025-11-03T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/3ecb0f6b-6be3-460a-b8f1-537146ca607c> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/7c5f9d5b-5c05-4ba4-ae44-745d66b87f7d> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/c8f80a40-3179-4417-9a40-a25d4dff2667> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:uuid "6e731a91-4757-527a-a77a-7d1bb446bc79" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-11-03T19:56:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/50ce7363-303c-41df-bb1f-348180f369d1> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bd0166ee-55a9-4607-9b2b-20d69d6996bf> ;
+    ns1:openbaar true ;
+    ns3:uuid "50a0a592-fdc6-576f-b2b6-9793ce7cc2ae" ;
+    dcterms:description """ 
+                             
+                                Het aanpassen van de locatie van de zondagsmarkt. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                Het aanpassen van de locatie van de zondagsmarkt. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/50ce7363-303c-41df-bb1f-348180f369d1> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/50ce7363-303c-41df-bb1f-348180f369d1> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/a8486fa3-6375-494d-aa48-e34289b87d5b> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:title "Lokale economie. Reglement met betrekking tot de ambulante activiteiten op de openbare markten en op het openbaar domein." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Het Decreet Lokaal Bestuur, meer bepaald artikel 40; 
+                                    De wet van 25 juni 1993 betreffende de uitoefening van ambulante activiteiten en de organisatie van openbare markten, gewijzigd bij wet van 4 juli 2005, van 20 juli 2006 en van 22 december 2009, 21 januari 2013 en decreet van 24 februari 2017 meer bepaald de artikelen 8 tot en met 10; 
+                                    Besluit van de Vlaamse Regering van 22/09/2023 tot wijziging van het koninklijk besluit van 22 juni 2003 betreffende de controletaak van de erkende ondernemingsloketten ter gelegenheid van de inschrijving van handels- of ambachtsondernemingen in de Kruispuntbank van Ondernemingen, het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten, het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van kermisactiviteiten en ambulante activiteiten in kermisgastronomie en tot opheffing van het koninklijk besluit van 24 september 2006 houdende vaststelling van de vergoeding van de erkende ondernemingsloketten voor het beheer van de machtigingen van ambulante activiteiten en van de machtigingen van kermisactiviteiten; 
+                                    Decreet van 3 maart 2023 tot afschaffing van de voorafgaande machtiging voor de uitoefening van ambulante of kermisactiviteiten en tot wijziging van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten;  
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Het Decreet Lokaal Bestuur, meer bepaald artikel 40; 
+                                                                    De wet van 25 juni 1993 betreffende de uitoefening van ambulante activiteiten en de organisatie van openbare markten, gewijzigd bij wet van 4 juli 2005, van 20 juli 2006 en van 22 december 2009, 21 januari 2013 en decreet van 24 februari 2017 meer bepaald de artikelen 8 tot en met 10; 
+                                                                    Besluit van de Vlaamse Regering van 22/09/2023 tot wijziging van het koninklijk besluit van 22 juni 2003 betreffende de controletaak van de erkende ondernemingsloketten ter gelegenheid van de inschrijving van handels- of ambachtsondernemingen in de Kruispuntbank van Ondernemingen, het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van ambulante activiteiten, het koninklijk besluit van 24 september 2006 betreffende de uitoefening en de organisatie van kermisactiviteiten en ambulante activiteiten in kermisgastronomie en tot opheffing van het koninklijk besluit van 24 september 2006 houdende vaststelling van de vergoeding van de erkende ondernemingsloketten voor het beheer van de machtigingen van ambulante activiteiten en van de machtigingen van kermisactiviteiten; 
+                                                                    Decreet van 3 maart 2023 tot afschaffing van de voorafgaande machtiging voor de uitoefening van ambulante of kermisactiviteiten en tot wijziging van de wet van 25 juni 1993 betreffende de uitoefening en de organisatie van ambulante en kermisactiviteiten;  
+                                                                 
+                                                            """@nl ;
+    ns3:uuid "58ac531f-c8f6-5116-9c4e-2a871b31906d" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel: Onderstaand reglement met betrekking tot ambulante activiteiten op de openbare markten en op het openbaar domein wordt als volgt vastgesteld: 
+                                    REGLEMENT MET BETREKKING TOT DE AMBULANTE ACTIVITEITEN OP DE OPENBARE MARKTEN EN OP HET OPENBAAR DOMEIN 
+                                    AFDELING 1: Organisatie van ambulante activiteiten op de openbare markten 
+                                    Artikel 1: Gegevens van openbare markten 
+                                    §1 De gemeente richt op het openbaar domein volgende openbare markten in: 
+                                    1° de gewone markt: 
+                                    Plaats: Marktplein, Serpentestraat, Hoog- en Neerstraat 
+                                    Dag: woensdag UUR: 8 tot 12u30 
+                                    Specialisatie: zie artikel 2, §3 
+                                    Met plan van de standplaatsen 
+                                    2° de jaarmarkt – verplaatste markt: 
+                                    Plaats: Hoog- en Neerstraat 
+                                    Dag: woensdag (tijdens de kermissen juli en september) UUR: 8 tot 12u30 
+                                    Specialisatie: zie artikel 2, §3 
+                                    Met plan van den standplaatsen. 
+                                    3° zondagsmarkt: 
+                                    Dag: zondag van 09u00 tot 13u00 
+                                    Plaats: Tirse of Marktplein 
+                                    Specialisatie: zie artikel 2, §3 
+                                    Met plan van standplaatsen 
+                                    §2 De gemeenteraad vertrouwt aan het College van Burgemeester en Schepenen de bevoegdheid toe om de markten te organiseren, in te delen, wijzigingen op te nemen en het marktplan aan te passen. Het College zal voor elke standplaats de ligging, de grootte en het gebruik bepalen.  
+                                    Aangezien de zondagsmarkt enkel een voedingsmarkt betreft, is het schepencollege bevoegd om de toewijzing (volgens chronologische volgorde van aanvraag en beperkt per type specialisatie), de plaatsopstelling en praktische organisatie ervan te regelen, in afwijking van de artikelen 2 tot 5 van dit reglement. 
+                                    Artikel 2: Voorwaarden betreffende toewijzing standplaatsen. 
+                                    §1 Een standplaats op de openbare markt kan enkel toegewezen worden aan: 
+                                    1° de natuurlijke personen die voor eigen rekening een ambulante activiteit uitoefenen houders van een “machtiging als werkgever” 
+                                    2° rechtspersonen die dezelfde activiteit uitoefenen. De standplaatsen worden toegekend door tussenkomst van een persoon verantwoordelijk voor het dagelijks 
+                                    bestuur van de vennootschap die houder is van de “machtiging als werkgever” 
+                                    3° de verantwoordelijken van verkoopacties zonder commercieel karakter, hiervoor toegelaten overeenkomstig artikel 7 van voornoemd KB, gewijzigd door BVR van 21 april 2017 
+                                    §2 De standplaatsen kunnen occasioneel ook toegewezen worden aan de verantwoordelijken van verkoopsacties zonder commercieel karakter. 
+                                    §3 Teneinde de diversiteit van het aanbod te waarborgen is de verhouding van het aantal standplaatsen (zowel per abonnement als los, conform het marktplan) bepaald op maximaal: 
+                                    Voor de markten conform artikel 1, §1, 1° en 2° 
+                                    1° 50 % voor textiel;  
+                                    2° 25 % voor voedingswaren;  
+                                    3° 5 % tuinartikelen 
+                                    4° 20 % allerlei (= andere dan de vorige categoriëen) 
+                                    Voor textiel is deze maximumnorm absoluut. Voor de overige specialisaties kan het schepencollege hiervan gemotiveerd afwijken, ten einde de verdere groei van de markt niet onmogelijk te maken. 
+                                    Voor de zondagsmarkt conform artikel 1, §1, 3° 
+                                    1° minimum 50% voedingswaren. 
+                                    Artikel 3: Verhouding abonnementen – losse plaatsen. 
+                                     
+                                        De standplaatsen op de openbare markt worden toegewezen: 
+                                        1° hetzij per abonnement (maximum 95% van het totaal aantal standplaatsen) EN/OF 
+                                        2° hetzij van dag tot dag (minimum 5% van het totaal aantal standplaatsen) 
+                                     
+                                    Artikel 4: Toewijzingsregels losse plaatsen. 
+                                     
+                                    De toewijzing van losse plaatsen gebeurt volgens de chronologische volgorde van aankomst op de markt, in voorkomend geval, op basis van de gevraagde standplaats en specialisatie. Wanneer de volgorde van aankomst op de markt tussen twee of meerdere kandidaten niet kan uitgemaakt worden, gebeurt de toekenning van de standplaats bij loting. 
+                                    De loting heeft plaats om 7u45 op de door de marktleider aangegeven plaats. De houder van de machtiging als werkgever moet bij de toewijzing van de standplaats aanwezig zijn. 
+                                    Artikel 5: Toewijzingsregels per abonnement op de openbare markten. 
+                                    §1 Vacature en kandidatuurstelling standplaats per abonnement 
+                                    Wanneer een standplaats die per abonnement toegewezen wordt, vrijkomt, gaat de gemeente na of er een geschikte kandidaat is in het register van kandidaturen, zoals omschreven in artikel 5, §2 
+                                    Als het register geen geschikte kandidaat bevat, wordt een vacature bekendgemaakt door publicatie van een kennisgeving. 
+                                    Deze kennisgeving zal gebeuren  door middel van een bericht aangeplakt op het gemeentelijk infobord  via de website www.Brakel.be en het informatieblad 
+                                    De kandidaturen kunnen ingediend worden na een melding van vacature (binnen de termijn voorzien in de kennisgeving van de vacature) of op elk ander tijdstip. 
+                                    De kandidaturen worden ingediend (hetzij bij aangetekend schrijven met ontvangstmelding, hetzij tegen ontvangstbewijs afgeven aan het college van burgemeester en schepenen, en binnen de termijn voorzien in de kennisgeving van de vacature.   
+                                    De kandidaturen tot het innemen van een standplaats met abonnement moeten volgende gegevens bevatten :  
+                                    1° volledige naam en adres van de aanvrager ; 
+                                    2° soort van producten die te koop worden aangeboden, of in voorkomend geval het soort aangeboden diensten; 
+                                    3° kopie van de machtiging of kaart ambulante handel ; 
+                                    4° ondernemingsnummer ; 
+                                    5° minimum en maximum gevraagd aantal meters ; 
+                                    6° Kandidaturen die hieraan niet voldoen, worden niet weerhouden. 
+                                    §2 Register van de kandidaturen. 
+                                    Alle kandidaturen worden naargelang hun ontvangst, in chronologische volgorde bijgehouden in een register. 
+                                    Deze kandidaturen worden geklasseerd :  
+                                    1° eerst volgens categorie zoals bepaald in punt 5.3. 
+                                    2° dan volgens de gevraagde standplaats en specialisatie 
+                                    3° tenslotte volgens datum (overhandiging, indiening per post, ontvangst op duurzame drager) 
+                                    Overeenkomstig het decreet 7 december 2018 betreffende de openbaarheid van bestuur kan dit register steeds geraadpleegd worden. 
+                                    De kandidaturen blijven geldig zolang ze niet werden nagekomen of ingetrokken door hun auteur. 
+                                    Om de twee jaar dienen de kandidaten opgenomen in het register hun kandidatuur te bevestigen om in het register opgenomen te blijven. 
+                                    §3 Volgorde van toekenning van de standplaatsen op basis van register (KB art 29 en 31). 
+                                    §1 Bij het vacant komen van een standplaats per abonnement worden met het oog op de toekenning ervan, de kandidaturen als volgt geklasseerd in het register: 
+                                    1° personen die een standplaats vragen als gevolg van de opheffing ervan die ze op één van de markten van de gemeente innamen of aan wie de gemeente een vooropzeg heeft gegeven omwille van definitieve opheffing van de markt of een deel van de standplaatsen; 
+                                    2° personen die een uitbreiding van hun standplaats vragen, de uitbreiding moet aansluiten bij de huidige standplaats; 
+                                    3° personen die een wijziging van hun standplaats vragen; 
+                                    4° de externe kandidaten. 
+                                    De standplaatsen worden binnen elke categorie, in voorkomend geval, volgens de gevraagde standplaats en specialisatie en tenslotte volgens datum chronologisch geordend. 
+                                    §2 Aan een ontbrekend artikel op de markt kan door het college voorrang worden verleend. 
+                                    1° en dan binnen elke categorie, in voorkomend geval, volgens de gevraagde standplaats en specialisatie, 
+                                    2° en tenslotte volgens datum. 
+                                    §3 Wanneer twee  of  meerdere  aanvragen  behorend  tot  dezelfde categorie tezelfdertijd ingediend worden, wordt als volgt voorrang gegeven: 
+                                    1° voorrang wordt gegeven (uitgezonderd de categorie externe kandidaten) aan de aanvrager die de hoogste anciënniteit op de markten van de gemeente heeft; wanneer de anciënniteit niet kan vergeleken worden, wordt de voorrang bepaald bij loting; 
+                                    2° voor de externe kandidaten wordt de voorrang bepaald bij loting. 
+                                    §4 Bekendmaking van de toewijzing van de standplaatsen. 
+                                    De toewijzing van de standplaats wordt bekend gemaakt aan de aanvrager per elektronische post tegen ontvangstbewijs. 
+                                    §5 Het register van de standplaatsen toegewezen per abonnement. 
+                                    Een register en plan worden bijgehouden waarin voor elke standplaats toegewezen per abonnement vermeld staat: 
+                                    1° de naam, voornaam, het adres van de persoon aan wie of door wiens tussenkomst de standplaats werd toegekend; 
+                                    2° in voorkomend geval, de handelsnaam van de rechtspersoon aan wie de standplaats toegekend werd en het adres van haar maatschappelijke zetel; 
+                                    3° het ondernemingsnummer; 
+                                    4° de producten en/of diensten die te koop aangeboden worden; 
+                                    5° de datum van de toewijzing van de standplaats en de duur van het gebruiksrecht; 
+                                    6° indien de activiteit seizoensgebonden is, de periode van activiteit; 
+                                    7° de prijs van de standplaats, behalve indien deze op een uniforme wijze vastgelegd is; 
+                                    8° desgevallend,  de  naam  en  het  adres  van  de  overlater  en  de  datum  van  de overdracht. 
+                                    De marktkramers die houder zijn van een abonnement zijn er toe gehouden elke wijziging schriftelijk mee te delen aan het college van burgemeester en schepenen. 
+                                    Overeenkomstig het decreet 7 december 2018 betreffende de openbaarheid van bestuur kan dit register steeds geraadpleegd worden. 
+                                    Artikel 6: Identificatievereiste bij uitoefenen ambulante activiteiten op openbare markt. 
+                                    Elke persoon die een ambulante activiteit uitoefent op de openbare markt, dient zich te identificeren aan de hand van een leesbaar uithangbord, zichtbaar geplaatst op het kraam of het voertuig, indien hij de activiteit aan het kraam of het voertuig uitoefent. Het bord moet eveneens door de aangestelden aangebracht worden wanneer deze alleen werken. 
+                                    Het bord bevat volgende vermeldingen: 
+                                    1° hetzij de naam, de voornaam van de persoon die een ambulante activiteit uitoefent als natuurlijk persoon voor eigen rekening of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; hetzij de naam, de voornaam van de persoon die het dagelijks bestuur binnen een rechtspersoon waarneemt of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; 
+                                    2° de firmanaam en/of de benaming van de onderneming; 
+                                    3° al naargelang het geval, de gemeente van haar maatschappelijke zetel of van de uitbatingzetel; en indien de onderneming niet in België gelegen is, het land en de gemeente waar deze zich bevindt; 
+                                    4° het inschrijvingsnummer in de Kruispuntbank van Ondernemingen (of een identificatie die deze vervangt, indien het om een buitenlands bedrijf gaat). 
+                                    Artikel 7: Abonnement. 
+                                    De abonnementen worden toegekend voor onbepaalde duur  
+                                    Artikel 8: Opschorting abonnement. 
+                                    De houder van een abonnement kan het abonnement opschorten voor een voorziene 
+                                    periode van tenminste één maand wanneer hij ongeschikt is zijn activiteit uit te oefenen: 
+                                    1° door ziekte of ongeval op grond van een medisch attest 
+                                    2° door overmacht op een verantwoorde wijze aangetoond. 
+                                    De opschorting gaat in de dag waarop de gemeente op de hoogte gebracht wordt van de ongeschiktheid en houdt op ten laatste vijf dagen na de melding van het hernemen van de activiteiten. Na afloop van de opschorting krijgt de geabonneerde zijn standplaats terug. 
+                                    De opschorting impliceert de opschorting van de wederzijdse verplichtingen die uit de overeenkomst voorkomen. Gedurende de periode van opschorting mag de standplaats toegewezen worden als losse plaats. 
+                                    Artikel 9: Afstand van het abonnement. 
+                                    De houder van een abonnement kan afstand doen van het abonnement 
+                                    1° bij stopzetting van de ambulante activiteiten mits een opzegtermijn van tenminste 30 dagen 
+                                    2° indien hij definitief ongeschikt is om zijn activiteit uit te oefenen omwille van redenen vermeld in artikel 8 van dit reglement. In dit geval is geen vooropzeg nodig. 
+                                    3° op ieder ogenblik mits een opzegtermijn van tenminste 30 kalenderdagen.   
+                                    De rechthebbenden van de natuurlijke persoon die voor eigen rekening zijn activiteit uitoefent kunnen bij zijn overlijden, zonder vooropzeg afstand doen van het abonnement waarvan hij de houder was. 
+                                    De aanvragen van opschorting, herneming of opzegging van een abonnement worden betekend bij elektronische post tegen ontvangstbewijs. 
+                                    Artikel 10: Schorsing en opzegging van abonnement. 
+                                    Het abonnement zal door het college van burgemeester en schepenen geschorst of ingetrokken worden in volgende gevallen:  
+                                     
+                                        1° bij afwezigheid gedurende drie opeenvolgende weken zonder de marktleider 
+                                        vooraf of tijdens zijn eerste week van afwezigheid ervan op de hoogte te stellen. Tevens wanneer een abonnementshouder op jaarbasis gedurende 1/3 van de marktdagen 
+                                        niet effectief aanwezig is geweest, zelfs mits verwittigen, tenzij er gegronde (medische) redenen werden aangetoond. 
+                                        2° bij overdracht van een abonnement aan een derde zonder te voldoen aan voorwaarden bepaald in artikel 13 van onderhavig gemeentelijk reglement. 
+                                        3° wanneer andere waren worden verkocht of andere diensten worden aangeboden dan diegene vermeld op zijn abonnement 
+                                        4° bij het herhaaldelijk niet respecteren van de instructies van de marktleider ondanks twee opeenvolgende schriftelijke aanmaningen 
+                                        Het bestuur zal hierbij rekening houden met de wettelijke bepalingen betreffende behoorlijk bestuur, informatie- en hoorplicht en de proportionaliteit van het voorval. 
+                                        De beslissing tot schorsing of opzegging wordt betekend per elektronische post tegen ontvangstbewijs. 
+                                        Artikel 11: Vooropzeg vanuit de gemeente. 
+                                        Wanneer de manifestatie of een deel van de standplaatsen definitief worden opgeheven, geldt een termijn van vooropzeg aan de houders van een standplaats per abonnement van zes maanden. In gevallen van absolute noodzakelijkheid kan hier van afgeweken worden. De minimumtermijn kan dan ingekort worden. 
+                                        Deze personen krijgen voorrang bij het toekennen van een vacante standplaats per abonnement (cf. artikel 5.3). 
+                                        Artikel 12: Inname standplaatsen. 
+                                        De standplaatsen op de openbare markt kunnen ingenomen worden door: 
+                                        1°   1- de natuurlijke personen die voor eigen rekening een ambulante activiteit uitoefenen houders van een “machtiging als werkgever”, aan wie een standplaats is toegewezen 
+                                        2- de verantwoordelijke voor het dagelijks bestuur van een rechtspersoon, aan wie de standplaats is toegewezen, houder van een “machtiging als werkgever” 
+                                        2° de feitelijke venno(o)t(en) van de natuurlijke persoon aan wie de standplaats werd toegewezen, houder van een “machtiging als werkgever” voor de uitoefening van een ambulante activiteit voor eigen rekening; 
+                                        3° de echtgenoot of echtgenote en wettelijk samenwonende van de natuurlijke persoon aan wie de standplaats werd toegewezen, houder van een “machtiging als werkgever” voor de uitoefening van een ambulante activiteit voor eigen rekening; 
+                                        4° door de personen die beschikken over een “machtiging als aangestelde A” of een “machtiging als aangestelde B”, die een ambulante activiteit uitoefenen voor rekening of in dienst van de natuurlijke persoon of rechtspersoon bedoeld in a) tot c) 
+                                        5° De personen die verkopen realiseren zonder commercieel karakter binnen het kader van de acties bedoeld afdeling 3 van dit reglement kunnen een standplaats innemen, toegewezen aan de verantwoordelijke van de actie. Desgevallend kunnen zij deze innemen buiten de aanwezigheid van deze. 
+                                     
+                                    Deze personen worden vrijgesteld van de loting indien zij schriftelijk acht dagen op voorhand een standplaats hebben aangevraagd. 
+                                    De standplaatsen kunnen echter maar toegewezen worden op voorwaarde dat ze geen belemmering vormen voor de kandidaat ambulante handelaars. Indien er geen genoeg losse standplaatsen overblijven wordt aan de personen die verkopen realiseren zonder commercieel karakter een locatie toegewezen in een aparte zone buiten de standplaatsen die deel uitmaken van het marktplan. 
+                                    De personen opgesomd in a) 2) tot e) kunnen de standplaatsen innemen, toegewezen of onderverhuurd aan de natuurlijke persoon of rechtspersoon voor wiens rekening of in wiens dienst zij de activiteit uitoefenen, buiten de aanwezigheid van de persoon aan wie of door middel van wie de standplaats werd toegewezen of onderverhuurd. 
+                                    Wie niet beroepsmatig producten of diensten met een niet-commercieel karakter verkoopt, te koop aanbiedt of uitstalt, kan, mits voorafgaande toelating van de gemeente, ook een standplaats innemen. 
+                                    Artikel 13: Overdracht standplaats. 
+                                    De overdracht van een standplaats is toegelaten onder de volgende voorwaarden: 
+                                    1° de overnemer is in de Kruispuntbank van Ondernemingen ingeschreven voor het uitoefenen van ambulante activiteiten zet de specialisatie van de overlater voort op de overgedragen standplaats. 
+                                     Een eventuele wijziging van de specialisatie KAN aangevraagd worden per aangetekend schrijven bij het college van burgemeester en schepenen. 
+                                     2° en de specialisatie van de overlater voortgezet wordt op de overgedragen standplaats. Een eventuele wijziging van de specialisatie KAN aangevraagd worden per aangetekend schrijven bij het college van burgemeester en schepenen. 
+                                    3° binnen het eerste jaar kan de standplaats NIET opnieuw overgedragen worden, behalve na expliciete goedkeuring van het college van burgemeester en schepenen.  
+                                    4° De onderneming van de overnemer mag door de overname over niet meer dan 2 standplaatsen beschikken. 
+                                     De overdracht is geldig voor de resterende geldigheidsduur van het abonnement van de overlater. Ingeval van overdracht wordt het abonnement eveneens stilzwijgend vernieuwd. 
+                                     De inname van de overgedragen standplaats is pas toegelaten als de gemeente heeft vastgesteld dat : 
+                                     1. de overnemer het bewijs levert van de inschrijving van de ambulante activiteit in de Kruispuntbank van On-dernemingen om dezelfde specialisatie als de overlater of de specialisaties die toegelaten zijn door de ge-meente, uit te oefenen. 
+                                     2. overnemer het aantal toegestane standplaatsen per onderneming (cf. artikel 1 van dit reglement) niet overschrijdt. 
+                                     3. de overnemer het bewijs levert waaruit blijkt dat hij voldoet aan de bijkomende voorwaarden, vermeld in artikel 2 van dit reglement. 
+                                    De overdracht impliceert ook de overdracht van het abonnement. 
+                                    Artikel 14: Dagelijkse leiding 
+                                    De marktleider wordt door het college van burgemeester en schepenen aangesteld voor de organisatie van de openbare markten en andere ambulante activiteiten op het 
+                                    openbaar domein. 
+                                    Bij de uitoefening van deze opdracht is hij bevoegd om identiteitspapieren en machtigingen te controleren van de personen die een ambulante activiteit uitoefenen op het grondgebied van de gemeente Brakel. 
+                                    De marktleider waakt over de stipte toepassing van dit reglement en bespreekt alle voorstellen in verband met de organisatie markten en de ambulante handel indien nodig met het college. 
+                                    Het college beslecht alle onvoorziene gevallen, na advies van de marktleider. Het college kan hiertoe vragen om de marktleider vooraf te horen. 
+                                     
+                                        Artikel 15: Praktische organisatie inname standplaats. 
+                                        §1 Opstellen kramen. 
+                                        De markthandelaars mogen 's morgens niet vroeger dan 5.30 uur hun standplaats bezetten noch in de straat en/of aanpalende straten komen stilstaan. Zij dienen hun plaatsen volledig en netjes opgeruimd te hebben om 13.30 uur ten laatste. 
+                                        De markt start om 8.00 uur en eindigt om 12.30  uur. De losse plaatsen worden door de marktleider toegewezen om 7.45 uur. De markthandelaars zullen ten laatste om 8.00 uur (jaarmarkt 7.15 uur) verkoopsklaar opgesteld staan. Markthandelaars die na dit uur aankomen, kunnen hun plaats geweigerd worden door de marktleider, zonder dat deze afwijzing hen recht geeft op enige vergoeding of schadeloosstelling. De verhuurde plaats die onbezet is door afwezigheid van de vergunningshouder, mag door de marktleider toegewezen worden aan een andere markthandelaar voor de duur van de marktdag volgens de wettelijke toewijzingsmodaliteiten omschreven in artikel 4 van dit reglement. De kramen moeten zo opgesteld zijn dat de voorbalk van het kraam niet buiten de rooilijn komt met uitzondering van luiken of een gedeelte van het kraam dat kan beschouwd worden als afdak, op voorwaarde dat het zich 2,10 meter boven de grond bevindt. Onder deze luiken of afdaken, mogen geen winkelwaren uitgestald of opgehangen worden. Bij het innemen van de standplaats moet stipt de aangegeven lijn worden gevolgd. 
+                                     
+                                    §2 Brandveiligheid. 
+                                    Elk kraam of winkelwagen moet uitgerust zijn met een goedgekeurd brandblusapparaat met een minimum inhoud van 5kg CO2. 
+                                    De marktkramers die gebruik maken van verwarmingstoestellen zijn verplicht een verzekering burgerlijke aansprakelijkheid evenals brand- en aanverwante gevaren af te sluiten. Op elk verzoek van de marktleider moet het bewijs voorgelegd worden dat aan deze verplichtingen werd voldaan. 
+                                    §3 Netheid. 
+                                    De kramen of winkelwagens moeten zo ingericht zijn dat geen schadelijke, hinderlijke of onwelriekende vloeistoffen op de grond kunnen druipen. Indien zulks onmogelijk blijkt, moeten de marktkramers zelf instaan voor de opvang van deze vloeistoffen. 
+                                    De marktkramers dienen hun plaats volledig en netjes op te ruimen. Er mag geen vuil achter gelaten worden noch op de standplaats noch in de omgeving. 
+                                    §4 Geluidstoestellen 
+                                    Het gebruik van geluidstoestellen is toegelaten, mits de beperking dat omliggende marktkramers of demonstreerders-standwerkers niet worden gestoord. 
+                                    §5 Voertuigen. 
+                                    De voertuigen waarmee de kramen, tenten en goederen worden aangevoerd, mogen op de marktplaats blijven staan, indien ze als kraam of stockplaats worden gebruikt. Ze moeten echter zodanig opgesteld staan, dat ze geen belemmering vormen voor het zicht, het verkeer, het verloop en de goede orde en de veiligheid in het algemeen, rekening houdend met de instructies van de marktleider. 
+                                    Het gemeentebestuur kan, noch voor diefstal, noch voor schade aan deze voertuigen verantwoordelijk gesteld worden. 
+                                    Het is verboden om tijdens de markturen (cfr art. 15.1) zich met een voertuig van of naar zijn standplaats te begeven. 
+                                     
+                                        §6 Elektriciteit. 
+                                        1° De gemeente stelt aan de marktkramers een vaste gemeentelijke aansluitkast ter beschikking voor elektriciteitsleveringen in laagspanning. De marktkramers mogen deze kast niet voor andere doeleinden, en ook niet ten behoeve van derden, aanwenden. 
+                                        2° De kandidaat-energiegebruiker richt de aanvraag aan de marktleider. Indien geen aansluiting meer mogelijk is, kan de aanvraag geweigerd worden. De aanvragen worden chronologisch toegekend. 
+                                        3° Er mogen geen marktinstallaties aangesloten worden die niet met een differentieelschakelaar met grote gevoeligheid uitgerust zijn. Deze installatie moet jaarlijks worden gekeurd door een erkend keuringsorganisme, differentieel inrichting en aftakkabel ingegrepen. 
+                                        4° alle aansluitingkabels en voeding van voertuigen en aanhangwagens moeten voldoen aan de bepalingen die voorzien zijn in het AREI. 
+                                        5° bij vaststelling van inbreuken kan de marktleider de toegang tot de markt weigeren. 
+                                        6° de gemeente kan niet aansprakelijk worden gesteld voor onderbrekingen en dient zij in dit geval geen schadevergoeding aan de marktkramer toe te staan. 
+                                     
+                                    7° de marktkramer dient de nodige schikkingen te treffen om iedere oorzaak van beschadiging te vermijden. Hij is aansprakelijk voor alle schade die hij door onoordeelkundig gebruik aan de aansluitkast veroorzaakt. Hij dient de marktleider onmiddellijk op de hoogte te stellen van elke beschadiging, afwijking of elke niet- conformiteit aan de wettelijke voorschriften die hij redelijkerwijze kan vaststellen. 
+                                    8° de marktkramer dient verzekerd te zijn voor schade die hij door het gebruik van de aansluitkast aan deze kast en aan derden kan veroorzaken. 
+                                    Artikel 16 Verplaatsen markt – wijzigen aanvangs- en sluitingsuur 
+                                    Het college van burgemeester en schepenen heeft het recht de markt tijdelijk te verplaatsen, te schorsen of het aanvangs- en sluitingsuur te wijzigen, telkens wanneer bijzondere omstandigheden dit vereisen zonder dat de houders van een abonnement hiervoor enige schadevergoeding kunnen eisen. 
+                                    Het college kan eveneens beslissen of enkele abonnementsplaatsen hun rechten op die plaats definitief verliezen door wijzigingen in de verkeerscirculatie, aanleg van nuts- of groenvoorzieningen, renovatie van het openbaar domein.  In deze gevallen krijgen de betrokkenen een voorlopige standplaats toegewezen en hebben voorrang op de chronologische wachtlijst voor een betere vaste standplaats. 
+                                    Het recht op de verworven standplaats kan ingetrokken worden als : 
+                                    1° betrokkene na twee schriftelijke aanmaningen de goede gang van zaken blijft storen, en tegen het marktreglement blijft handelen ; 
+                                    2° wanneer betrokkene niet langer beschikt over een machtiging tot het uitoefenen van ambulante activiteiten. 
+                                    Artikel 17: Inname van de ruimte voor andere doeleinden 
+                                    Gedurende de gemeentelijke kermissen of wanneer ingevolge feestelijkheden of andere omstandigheden het marktplein geheel of gedeeltelijk door andere instellingen zou bezet zijn, moeten de marktkramers voor het opstellen van hun inrichting zich schikken naar de onderrichtingen en bevelen van de marktleider of zijn plaatsvervanger. 
+                                    Artikel 18: Wettelijke controles 
+                                    De marktkramers zijn steeds onderworpen aan de wettelijke controles en moeten ten allen tijde het onderzoek van hun waren toelaten door de politiediensten en aangestelde ambtenaren en controleurs, die op de goede trouw van de verkoop en de goede kwaliteit van hun waren moeten letten. 
+                                    Artikel 19: Onderverhuur standwerkers (KB art. 36)  
+                                     De standwerkers, die een abonnement voor een standplaats verkregen hebben, kunnen hun tijdelijk gebruiksrecht op deze standplaats onderverhuren aan andere standwerkers namelijk:  
+                                     - rechtstreeks aan een andere standwerker; 
+                                     - via een vereniging om die voor alle standwerkers zonder discriminatie openstaat.  
+                                     Al naargelang, deelt de standwerker of de vereniging de lijst van standwerkers mee, aan wie het tijdelijk gebruiksrecht van de standplaats werd onderverhuurd. 
+                                     De prijs van de onderverhuring mag niet hoger zijn dan het deel van de abonnementprijs voor de duur van de onderverhuring.  
+                                    AFDELING 2: Organisatie van ambulante activiteiten op het openbaar domein buiten de openbare markten 
+                                    Artikel 19: Toepassingsgebied. 
+                                    Eenieder die een standplaats wenst in te nemen op één of meerdere plaatsen van het openbaar domein buiten de openbare markten om ambulante activiteiten uit te oefenen dient dit voorafgaand aan te vragen bij de gemeente. 
+                                    Artikel 20: Voorafgaande machtiging. 
+                                    §1 Aanvraag machtiging. 
+                                    Om een standplaats in te nemen zoals vermeld in artikel 19 dient men te beschikken over een machtiging. Deze machtiging dient voorafgaand aan het uitoefenen van de ambulante activiteit aangevraagd te worden aan het college van burgemeester en schepenen, Marktplein 1, 9660 Brakel. 
+                                    De aanvraag vermeldt: 
+                                    1° de identiteit van de aanvrager2° de juiste plaatsomschrijving van de private ingebruikneming3° de data en uren van de private ingebruikneming4° de in te nemen oppervlakte5° de juiste omschrijving van de producten die te koop zullen worden aangeboden 
+                                    §2 Beslissing machtiging 
+                                    In geval van positieve beslissing verkrijgt de aanvrager een machtiging met daarin vermeld : 
+                                    1° de identiteit van de aanvrager 
+                                    2° de aard van de producten of diensten die hij gemachtigd is te verkopen 
+                                    3° de plaats 
+                                    4° de datum en duur van de verkoop 
+                                    De gevraagde machtiging kan geweigerd worden omwille van één of meerdere van onderstaande redenen: 
+                                    1° redenen van openbare orde 
+                                    2° redenen van volksgezondheid 
+                                    3° bescherming van de consument 
+                                    4° wanneer de machtiging ambulante handel en bijbehorende documenten niet in orde zijn 
+                                    5° de modaliteiten van het gemeentelijk reglement niet gerespecteerd worden 
+                                    De gemeente zal deze reden(-en) motiveren in zijn kennisgeving van de negatieve beslissing aan de aanvrager en verwijst tevens naar rechtsmiddelen inzake beroep. 
+                                    Artikel 21 Voorwaarden inzake toewijzing en inname standplaatsen. 
+                                    De personen die voldoen aan de voorwaarden tot het verkrijgen (cf. supra Afdeling 1 artikel 2) en innemen van de standplaatsen op de openbare markt (cf. supra Afdeling 1 artikel 12) kunnen standplaatsen op het openbaar domein verkrijgen en innemen. 
+                                    Artikel 22 Toewijzingsregels losse standplaatsen. 
+                                    De toewijzing van losse plaatsen gebeurt volgens de chronologische volgorde van aanvragen en desgevallend in functie van de gevraagde plaats en specialisatie. 
+                                    Wanneer twee of meerdere aanvragen voor standplaatsen gelijktijdig ingediend worden, gebeurt de toewijzing via loting. 
+                                    Artikel 23: Toewijzingsregels per abonnement. 
+                                    Hier gelden dezelfde regels als voor de openbare markten (cf. supra). Voorwaarden inzake melding van vacature (cf. Afdeling 1 artikel 5.1 van dit reglement) geldt niet. 
+                                    Artikel 24 Identificatievereiste bij uitoefenen ambulante activiteiten. 
+                                     
+                                        Elke persoon die een ambulante activiteit uitoefent op het openbaar domein, dient zich te identificeren aan de hand van een leesbaar uithangbord, zichtbaar geplaatst op de kraam of het voertuig, indien hij de activiteit aan het kraam of het voertuig uitoefent. Het bord moet eveneens door de aangestelden aangebracht worden wanneer deze alleen 
+                                     
+                                    Het bord bevat volgende vermeldingen: 
+                                    1° hetzij de naam, de voornaam van de persoon die een ambulante activiteit uitoefent als natuurlijk persoon voor eigen rekening of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; hetzij de naam, de voornaam van de persoon die het dagelijks bestuur binnen een rechtspersoon waarneemt of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; 
+                                    2° de firmanaam en/of de benaming van de onderneming; 
+                                    3° al naargelang het geval, de gemeente van haar maatschappelijke zetel of van de uitbatingzetel; en indien de onderneming niet in België gelegen is, het land en de gemeente waar deze zich bevindt; 
+                                    4° het inschrijvingsnummer in de Kruispuntbank van Ondernemingen (of een identificatie die deze vervangt, indien het om een buitenlands bedrijf gaat). 
+                                    Artikel 25 Na te leven schikkingen 
+                                    De ingenomen plaats van de handelaar en die van zijn klanten mogen geen belemmering betekenen voor andere-door de gemeente goedgekeurde- georganiseerde activiteiten. 
+                                    Bovendien mag de handelaar noch zijn klanten enige verkeershinder veroorzaken. 
+                                    AFDELING 3: AMBULANTE ACTIVITEIT OP RONDTREKKENDE WIJZE 
+                                    Artikel 26 Toepassingsgebied 
+                                    Eenieder die op de openbare weg ambulante activiteiten wenst uit te oefenen, dient dit voorafgaand aan te vragen bij de gemeente. 
+                                    Artikel 27 Voorafgaande machtiging 
+                                    §1 Aanvraag machtiging 
+                                    Om een ambulante activiteit op de openbare weg uit te oefenen, zoals vermeld in artikel 26, moet voldaan zijn  aan de voorwaarden vermeld in artikel 2 en dient men te beschikken over een machtiging. Deze machtiging dient voorafgaand aan het uitoefenen van de ambulante activiteit aangevraagd te worden bij de gemeente (contactgegevens vermelden). 
+                                    §2 Beslissing machtiging 
+                                    In geval van positieve beslissing verkrijgt de aanvrager een machtiging met daarin vermeld : 
+                                    1° Identiteit van de aanvrager 
+                                    2° de aard van de producten of diensten die hij gemachtigd is te verkopen 
+                                    3° de toegestane route 
+                                    4° de datum en duur van de verkoop (beperkingen mogen betrekking hebben op de uren van uitoefening van het geheel of van een gedeelte van de activiteit) 
+                                    De gevraagde machtiging kan geweigerd worden omwille van één of meerdere van onderstaande redenen : 
+                                    1° redenen van openbare orde en veiligheid 
+                                    2° redenen van volksgezondheid 
+                                    3° bescherming van de consument 
+                                    4° wanneer de machtiging ambulante handel en bijbehorende documenten niet in orde zijn 
+                                    De gemeente zal deze reden(-en) objectief en grondig motiveren in zijn kennisgeving van de negatieve beslissing aan de aanvrager en verwijst tevens naar rechtsmiddelen inzake beroep. 
+                                    §3 Beperking 
+                                    De activiteiten aangeduid in artikel 26 mogen niet plaatsvinden in een straal van 50 meter rond elke in- en uitgang van gelijk welke school en dit vanaf 30 minuten  voor tot en met 15 minuten na het begin en het einde van de lessen en tussen 12.00 en 13.30 uur, telkens op schooldagen. 
+                                    AFDELING 4: VERKOPEN VAN PRODUCTEN OF DIENSTEN MET EEN NIET-COMMERCIEEL KARAKTER 
+                                    Artikel 28: Specifieke voorwaarden voor verkopen met niet-commercieel karakter 
+                                    De producten of diensten met een niet-commercieel karakter verkopen, te koop aanbieden of uitstallen is niet onderworpen aan de bepalingen van de wet indien deze activiteiten aan al de volgende voorwaarden voldoen: 
+                                    1° ze vinden plaats met één van volgende doelen 
+                                    a) menslievend doel, 
+                                    b) sociaal doel, 
+                                    c) cultureel doel, 
+                                    d) educatief doel, 
+                                    e) sportief doel 
+                                    f) de verdediging en promotie van de natuur, 
+                                    g) de verdediging en promotie van de dierenwereld, 
+                                    h) de verdediging en promotie van een ambacht 
+                                    i) de verdediging en promotie van streekproducten, 
+                                    j) steun bij een humanitaire catastrofe, 
+                                    k) steun bij een ramp of belangrijke schade; 
+                                    2° ze blijven occasioneel; occasioneel betekent niet periodiek, niet met een bepaalde regelmaat en maximaal drie keer per jaar. 
+                                    3° de burgemeester heeft vooraf toestemming verleend. 
+                                    4° als ze de grenzen van de gemeente overschrijdt en geen bijkomende toelating van de gemeente vereist is, dan heeft de organisatie een voorafgaande toelating gevraagd aan de Minister of de personeelsleden aan wie hij deze bevoegdheid heeft gedelegeerd (mailen naar reglementen@vlaio.be). 
+                                    De voorwaarde vermeld in het eerste lid, 3°, geldt niet ingeval toepassing wordt gemaakt van het eerste lid, 4°. 
+                                    Artikel 29: Identificatievereiste 
+                                    Tijdens de verkoop, te-koop-aanbieding of uitstalling met het oog op de verkoop van producten of diensten voor een niet-commercieel doel zoals vermeld in art 28 is elke verkoper herkenbaar via een kenmerk dat het mogelijk maakt om de operatie te identificeren. Op verzoek van de overheid die de toestemming heeft verleend, overhandigt de verantwoordelijke, binnen dertig dagen, het bewijs van de bestemming van de fondsen om het aangegeven doel te realiseren. 
+                                    Artikel 30: Aanvraag voorafgaande machtiging 
+                                    De aanvraag van een toestemming zoals vermeld in art. 28 is afhankelijk van de situatie, gericht aan  het college van burgemeester en schepenen of aan de Minister of aan de personeelsleden aan wie hij die bevoegdheid heeft gedelegeerd, op een duurzame drager tegen ontvangstbewijs. 
+                                    De aanvraag omvat : 
+                                    1° de verantwoordelijke van de actie, 
+                                    2° het doel van de actie, 
+                                    3° de plaats of plaatsen, 
+                                    4° de periode of periodes van verkoop, 
+                                    5° de te koop aangeboden producten of diensten en een schatting van de hoeveelheid. 
+                                    De toestemming, vermeld in 28, eerste lid, 3° of 4°, is beperkt tot één jaar. Ze is hernieuwbaar. Ze bevat de vermeldingen uit de aanvraag. 
+                                    Artikel 31: Weigering en intrekking machtiging 
+                                    De toestemming voor een specifiek niet-commercieel doel kan geweigerd worden en de actie kan verboden worden als de doelstelling niet overeenstemt met de toegestane doelen of als de voorgestelde verkopen een risico vormen voor de openbare orde, veiligheid, gezondheid of rust. 
+                                    Als de overheid die ervoor bevoegd is de toestemming te verlenen, argwaan heeft over de reële doelstellingen van de actie of over de moraliteit van de verantwoordelijke(n), kan ze een voorafgaand onderzoek laten uitvoeren. Ze kan ook van een of meer verantwoordelijken eisen dat ze een uittreksel uit het strafregister voorleggen. 
+                                    De toestemming, vermeld in art 28, eerste lid, 3° of 4°, kan ingetrokken worden of de actie kan verboden worden, tijdens de manifestatie, door de bevoegde overheid als vastgesteld wordt dat de voorwaarden van de toestemming of van de verklaring of de voorschriften van dit reglement niet worden nageleefd. 
+                                    Iedere nieuwe actie kan verboden worden voor een natuurlijke of rechtspersoon of een vereniging die de bepalingen van dit reglement niet naleeft, gedurende een periode van één jaar vanaf de vaststelling van de niet-naleving. In geval van recidive kan de duur van de voormelde periode op drie jaar worden gebracht. 
+                                    De weigering, het verbod of de intrekking wordt betekend per elektronische post tegen ontvangstbewijs. 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Enig artikel: Onderstaand reglement met betrekking tot ambulante activiteiten op de openbare markten en op het openbaar domein wordt als volgt vastgesteld: 
+                                                                    REGLEMENT MET BETREKKING TOT DE AMBULANTE ACTIVITEITEN OP DE OPENBARE MARKTEN EN OP HET OPENBAAR DOMEIN 
+                                                                    AFDELING 1: Organisatie van ambulante activiteiten op de openbare markten 
+                                                                    Artikel 1: Gegevens van openbare markten 
+                                                                    §1 De gemeente richt op het openbaar domein volgende openbare markten in: 
+                                                                    1° de gewone markt: 
+                                                                    Plaats: Marktplein, Serpentestraat, Hoog- en Neerstraat 
+                                                                    Dag: woensdag UUR: 8 tot 12u30 
+                                                                    Specialisatie: zie artikel 2, §3 
+                                                                    Met plan van de standplaatsen 
+                                                                    2° de jaarmarkt – verplaatste markt: 
+                                                                    Plaats: Hoog- en Neerstraat 
+                                                                    Dag: woensdag (tijdens de kermissen juli en september) UUR: 8 tot 12u30 
+                                                                    Specialisatie: zie artikel 2, §3 
+                                                                    Met plan van den standplaatsen. 
+                                                                    3° zondagsmarkt: 
+                                                                    Dag: zondag van 09u00 tot 13u00 
+                                                                    Plaats: Tirse of Marktplein 
+                                                                    Specialisatie: zie artikel 2, §3 
+                                                                    Met plan van standplaatsen 
+                                                                    §2 De gemeenteraad vertrouwt aan het College van Burgemeester en Schepenen de bevoegdheid toe om de markten te organiseren, in te delen, wijzigingen op te nemen en het marktplan aan te passen. Het College zal voor elke standplaats de ligging, de grootte en het gebruik bepalen.  
+                                                                    Aangezien de zondagsmarkt enkel een voedingsmarkt betreft, is het schepencollege bevoegd om de toewijzing (volgens chronologische volgorde van aanvraag en beperkt per type specialisatie), de plaatsopstelling en praktische organisatie ervan te regelen, in afwijking van de artikelen 2 tot 5 van dit reglement. 
+                                                                    Artikel 2: Voorwaarden betreffende toewijzing standplaatsen. 
+                                                                    §1 Een standplaats op de openbare markt kan enkel toegewezen worden aan: 
+                                                                    1° de natuurlijke personen die voor eigen rekening een ambulante activiteit uitoefenen houders van een “machtiging als werkgever” 
+                                                                    2° rechtspersonen die dezelfde activiteit uitoefenen. De standplaatsen worden toegekend door tussenkomst van een persoon verantwoordelijk voor het dagelijks 
+                                                                    bestuur van de vennootschap die houder is van de “machtiging als werkgever” 
+                                                                    3° de verantwoordelijken van verkoopacties zonder commercieel karakter, hiervoor toegelaten overeenkomstig artikel 7 van voornoemd KB, gewijzigd door BVR van 21 april 2017 
+                                                                    §2 De standplaatsen kunnen occasioneel ook toegewezen worden aan de verantwoordelijken van verkoopsacties zonder commercieel karakter. 
+                                                                    §3 Teneinde de diversiteit van het aanbod te waarborgen is de verhouding van het aantal standplaatsen (zowel per abonnement als los, conform het marktplan) bepaald op maximaal: 
+                                                                    Voor de markten conform artikel 1, §1, 1° en 2° 
+                                                                    1° 50 % voor textiel;  
+                                                                    2° 25 % voor voedingswaren;  
+                                                                    3° 5 % tuinartikelen 
+                                                                    4° 20 % allerlei (= andere dan de vorige categoriëen) 
+                                                                    Voor textiel is deze maximumnorm absoluut. Voor de overige specialisaties kan het schepencollege hiervan gemotiveerd afwijken, ten einde de verdere groei van de markt niet onmogelijk te maken. 
+                                                                    Voor de zondagsmarkt conform artikel 1, §1, 3° 
+                                                                    1° minimum 50% voedingswaren. 
+                                                                    Artikel 3: Verhouding abonnementen – losse plaatsen. 
+                                                                     
+                                                                        De standplaatsen op de openbare markt worden toegewezen: 
+                                                                        1° hetzij per abonnement (maximum 95% van het totaal aantal standplaatsen) EN/OF 
+                                                                        2° hetzij van dag tot dag (minimum 5% van het totaal aantal standplaatsen) 
+                                                                     
+                                                                    Artikel 4: Toewijzingsregels losse plaatsen. 
+                                                                     
+                                                                    De toewijzing van losse plaatsen gebeurt volgens de chronologische volgorde van aankomst op de markt, in voorkomend geval, op basis van de gevraagde standplaats en specialisatie. Wanneer de volgorde van aankomst op de markt tussen twee of meerdere kandidaten niet kan uitgemaakt worden, gebeurt de toekenning van de standplaats bij loting. 
+                                                                    De loting heeft plaats om 7u45 op de door de marktleider aangegeven plaats. De houder van de machtiging als werkgever moet bij de toewijzing van de standplaats aanwezig zijn. 
+                                                                    Artikel 5: Toewijzingsregels per abonnement op de openbare markten. 
+                                                                    §1 Vacature en kandidatuurstelling standplaats per abonnement 
+                                                                    Wanneer een standplaats die per abonnement toegewezen wordt, vrijkomt, gaat de gemeente na of er een geschikte kandidaat is in het register van kandidaturen, zoals omschreven in artikel 5, §2 
+                                                                    Als het register geen geschikte kandidaat bevat, wordt een vacature bekendgemaakt door publicatie van een kennisgeving. 
+                                                                    Deze kennisgeving zal gebeuren  door middel van een bericht aangeplakt op het gemeentelijk infobord  via de website www.Brakel.be en het informatieblad 
+                                                                    De kandidaturen kunnen ingediend worden na een melding van vacature (binnen de termijn voorzien in de kennisgeving van de vacature) of op elk ander tijdstip. 
+                                                                    De kandidaturen worden ingediend (hetzij bij aangetekend schrijven met ontvangstmelding, hetzij tegen ontvangstbewijs afgeven aan het college van burgemeester en schepenen, en binnen de termijn voorzien in de kennisgeving van de vacature.   
+                                                                    De kandidaturen tot het innemen van een standplaats met abonnement moeten volgende gegevens bevatten :  
+                                                                    1° volledige naam en adres van de aanvrager ; 
+                                                                    2° soort van producten die te koop worden aangeboden, of in voorkomend geval het soort aangeboden diensten; 
+                                                                    3° kopie van de machtiging of kaart ambulante handel ; 
+                                                                    4° ondernemingsnummer ; 
+                                                                    5° minimum en maximum gevraagd aantal meters ; 
+                                                                    6° Kandidaturen die hieraan niet voldoen, worden niet weerhouden. 
+                                                                    §2 Register van de kandidaturen. 
+                                                                    Alle kandidaturen worden naargelang hun ontvangst, in chronologische volgorde bijgehouden in een register. 
+                                                                    Deze kandidaturen worden geklasseerd :  
+                                                                    1° eerst volgens categorie zoals bepaald in punt 5.3. 
+                                                                    2° dan volgens de gevraagde standplaats en specialisatie 
+                                                                    3° tenslotte volgens datum (overhandiging, indiening per post, ontvangst op duurzame drager) 
+                                                                    Overeenkomstig het decreet 7 december 2018 betreffende de openbaarheid van bestuur kan dit register steeds geraadpleegd worden. 
+                                                                    De kandidaturen blijven geldig zolang ze niet werden nagekomen of ingetrokken door hun auteur. 
+                                                                    Om de twee jaar dienen de kandidaten opgenomen in het register hun kandidatuur te bevestigen om in het register opgenomen te blijven. 
+                                                                    §3 Volgorde van toekenning van de standplaatsen op basis van register (KB art 29 en 31). 
+                                                                    §1 Bij het vacant komen van een standplaats per abonnement worden met het oog op de toekenning ervan, de kandidaturen als volgt geklasseerd in het register: 
+                                                                    1° personen die een standplaats vragen als gevolg van de opheffing ervan die ze op één van de markten van de gemeente innamen of aan wie de gemeente een vooropzeg heeft gegeven omwille van definitieve opheffing van de markt of een deel van de standplaatsen; 
+                                                                    2° personen die een uitbreiding van hun standplaats vragen, de uitbreiding moet aansluiten bij de huidige standplaats; 
+                                                                    3° personen die een wijziging van hun standplaats vragen; 
+                                                                    4° de externe kandidaten. 
+                                                                    De standplaatsen worden binnen elke categorie, in voorkomend geval, volgens de gevraagde standplaats en specialisatie en tenslotte volgens datum chronologisch geordend. 
+                                                                    §2 Aan een ontbrekend artikel op de markt kan door het college voorrang worden verleend. 
+                                                                    1° en dan binnen elke categorie, in voorkomend geval, volgens de gevraagde standplaats en specialisatie, 
+                                                                    2° en tenslotte volgens datum. 
+                                                                    §3 Wanneer twee  of  meerdere  aanvragen  behorend  tot  dezelfde categorie tezelfdertijd ingediend worden, wordt als volgt voorrang gegeven: 
+                                                                    1° voorrang wordt gegeven (uitgezonderd de categorie externe kandidaten) aan de aanvrager die de hoogste anciënniteit op de markten van de gemeente heeft; wanneer de anciënniteit niet kan vergeleken worden, wordt de voorrang bepaald bij loting; 
+                                                                    2° voor de externe kandidaten wordt de voorrang bepaald bij loting. 
+                                                                    §4 Bekendmaking van de toewijzing van de standplaatsen. 
+                                                                    De toewijzing van de standplaats wordt bekend gemaakt aan de aanvrager per elektronische post tegen ontvangstbewijs. 
+                                                                    §5 Het register van de standplaatsen toegewezen per abonnement. 
+                                                                    Een register en plan worden bijgehouden waarin voor elke standplaats toegewezen per abonnement vermeld staat: 
+                                                                    1° de naam, voornaam, het adres van de persoon aan wie of door wiens tussenkomst de standplaats werd toegekend; 
+                                                                    2° in voorkomend geval, de handelsnaam van de rechtspersoon aan wie de standplaats toegekend werd en het adres van haar maatschappelijke zetel; 
+                                                                    3° het ondernemingsnummer; 
+                                                                    4° de producten en/of diensten die te koop aangeboden worden; 
+                                                                    5° de datum van de toewijzing van de standplaats en de duur van het gebruiksrecht; 
+                                                                    6° indien de activiteit seizoensgebonden is, de periode van activiteit; 
+                                                                    7° de prijs van de standplaats, behalve indien deze op een uniforme wijze vastgelegd is; 
+                                                                    8° desgevallend,  de  naam  en  het  adres  van  de  overlater  en  de  datum  van  de overdracht. 
+                                                                    De marktkramers die houder zijn van een abonnement zijn er toe gehouden elke wijziging schriftelijk mee te delen aan het college van burgemeester en schepenen. 
+                                                                    Overeenkomstig het decreet 7 december 2018 betreffende de openbaarheid van bestuur kan dit register steeds geraadpleegd worden. 
+                                                                    Artikel 6: Identificatievereiste bij uitoefenen ambulante activiteiten op openbare markt. 
+                                                                    Elke persoon die een ambulante activiteit uitoefent op de openbare markt, dient zich te identificeren aan de hand van een leesbaar uithangbord, zichtbaar geplaatst op het kraam of het voertuig, indien hij de activiteit aan het kraam of het voertuig uitoefent. Het bord moet eveneens door de aangestelden aangebracht worden wanneer deze alleen werken. 
+                                                                    Het bord bevat volgende vermeldingen: 
+                                                                    1° hetzij de naam, de voornaam van de persoon die een ambulante activiteit uitoefent als natuurlijk persoon voor eigen rekening of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; hetzij de naam, de voornaam van de persoon die het dagelijks bestuur binnen een rechtspersoon waarneemt of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; 
+                                                                    2° de firmanaam en/of de benaming van de onderneming; 
+                                                                    3° al naargelang het geval, de gemeente van haar maatschappelijke zetel of van de uitbatingzetel; en indien de onderneming niet in België gelegen is, het land en de gemeente waar deze zich bevindt; 
+                                                                    4° het inschrijvingsnummer in de Kruispuntbank van Ondernemingen (of een identificatie die deze vervangt, indien het om een buitenlands bedrijf gaat). 
+                                                                    Artikel 7: Abonnement. 
+                                                                    De abonnementen worden toegekend voor onbepaalde duur  
+                                                                    Artikel 8: Opschorting abonnement. 
+                                                                    De houder van een abonnement kan het abonnement opschorten voor een voorziene 
+                                                                    periode van tenminste één maand wanneer hij ongeschikt is zijn activiteit uit te oefenen: 
+                                                                    1° door ziekte of ongeval op grond van een medisch attest 
+                                                                    2° door overmacht op een verantwoorde wijze aangetoond. 
+                                                                    De opschorting gaat in de dag waarop de gemeente op de hoogte gebracht wordt van de ongeschiktheid en houdt op ten laatste vijf dagen na de melding van het hernemen van de activiteiten. Na afloop van de opschorting krijgt de geabonneerde zijn standplaats terug. 
+                                                                    De opschorting impliceert de opschorting van de wederzijdse verplichtingen die uit de overeenkomst voorkomen. Gedurende de periode van opschorting mag de standplaats toegewezen worden als losse plaats. 
+                                                                    Artikel 9: Afstand van het abonnement. 
+                                                                    De houder van een abonnement kan afstand doen van het abonnement 
+                                                                    1° bij stopzetting van de ambulante activiteiten mits een opzegtermijn van tenminste 30 dagen 
+                                                                    2° indien hij definitief ongeschikt is om zijn activiteit uit te oefenen omwille van redenen vermeld in artikel 8 van dit reglement. In dit geval is geen vooropzeg nodig. 
+                                                                    3° op ieder ogenblik mits een opzegtermijn van tenminste 30 kalenderdagen.   
+                                                                    De rechthebbenden van de natuurlijke persoon die voor eigen rekening zijn activiteit uitoefent kunnen bij zijn overlijden, zonder vooropzeg afstand doen van het abonnement waarvan hij de houder was. 
+                                                                    De aanvragen van opschorting, herneming of opzegging van een abonnement worden betekend bij elektronische post tegen ontvangstbewijs. 
+                                                                    Artikel 10: Schorsing en opzegging van abonnement. 
+                                                                    Het abonnement zal door het college van burgemeester en schepenen geschorst of ingetrokken worden in volgende gevallen:  
+                                                                     
+                                                                        1° bij afwezigheid gedurende drie opeenvolgende weken zonder de marktleider 
+                                                                        vooraf of tijdens zijn eerste week van afwezigheid ervan op de hoogte te stellen. Tevens wanneer een abonnementshouder op jaarbasis gedurende 1/3 van de marktdagen 
+                                                                        niet effectief aanwezig is geweest, zelfs mits verwittigen, tenzij er gegronde (medische) redenen werden aangetoond. 
+                                                                        2° bij overdracht van een abonnement aan een derde zonder te voldoen aan voorwaarden bepaald in artikel 13 van onderhavig gemeentelijk reglement. 
+                                                                        3° wanneer andere waren worden verkocht of andere diensten worden aangeboden dan diegene vermeld op zijn abonnement 
+                                                                        4° bij het herhaaldelijk niet respecteren van de instructies van de marktleider ondanks twee opeenvolgende schriftelijke aanmaningen 
+                                                                        Het bestuur zal hierbij rekening houden met de wettelijke bepalingen betreffende behoorlijk bestuur, informatie- en hoorplicht en de proportionaliteit van het voorval. 
+                                                                        De beslissing tot schorsing of opzegging wordt betekend per elektronische post tegen ontvangstbewijs. 
+                                                                        Artikel 11: Vooropzeg vanuit de gemeente. 
+                                                                        Wanneer de manifestatie of een deel van de standplaatsen definitief worden opgeheven, geldt een termijn van vooropzeg aan de houders van een standplaats per abonnement van zes maanden. In gevallen van absolute noodzakelijkheid kan hier van afgeweken worden. De minimumtermijn kan dan ingekort worden. 
+                                                                        Deze personen krijgen voorrang bij het toekennen van een vacante standplaats per abonnement (cf. artikel 5.3). 
+                                                                        Artikel 12: Inname standplaatsen. 
+                                                                        De standplaatsen op de openbare markt kunnen ingenomen worden door: 
+                                                                        1°   1- de natuurlijke personen die voor eigen rekening een ambulante activiteit uitoefenen houders van een “machtiging als werkgever”, aan wie een standplaats is toegewezen 
+                                                                        2- de verantwoordelijke voor het dagelijks bestuur van een rechtspersoon, aan wie de standplaats is toegewezen, houder van een “machtiging als werkgever” 
+                                                                        2° de feitelijke venno(o)t(en) van de natuurlijke persoon aan wie de standplaats werd toegewezen, houder van een “machtiging als werkgever” voor de uitoefening van een ambulante activiteit voor eigen rekening; 
+                                                                        3° de echtgenoot of echtgenote en wettelijk samenwonende van de natuurlijke persoon aan wie de standplaats werd toegewezen, houder van een “machtiging als werkgever” voor de uitoefening van een ambulante activiteit voor eigen rekening; 
+                                                                        4° door de personen die beschikken over een “machtiging als aangestelde A” of een “machtiging als aangestelde B”, die een ambulante activiteit uitoefenen voor rekening of in dienst van de natuurlijke persoon of rechtspersoon bedoeld in a) tot c) 
+                                                                        5° De personen die verkopen realiseren zonder commercieel karakter binnen het kader van de acties bedoeld afdeling 3 van dit reglement kunnen een standplaats innemen, toegewezen aan de verantwoordelijke van de actie. Desgevallend kunnen zij deze innemen buiten de aanwezigheid van deze. 
+                                                                     
+                                                                    Deze personen worden vrijgesteld van de loting indien zij schriftelijk acht dagen op voorhand een standplaats hebben aangevraagd. 
+                                                                    De standplaatsen kunnen echter maar toegewezen worden op voorwaarde dat ze geen belemmering vormen voor de kandidaat ambulante handelaars. Indien er geen genoeg losse standplaatsen overblijven wordt aan de personen die verkopen realiseren zonder commercieel karakter een locatie toegewezen in een aparte zone buiten de standplaatsen die deel uitmaken van het marktplan. 
+                                                                    De personen opgesomd in a) 2) tot e) kunnen de standplaatsen innemen, toegewezen of onderverhuurd aan de natuurlijke persoon of rechtspersoon voor wiens rekening of in wiens dienst zij de activiteit uitoefenen, buiten de aanwezigheid van de persoon aan wie of door middel van wie de standplaats werd toegewezen of onderverhuurd. 
+                                                                    Wie niet beroepsmatig producten of diensten met een niet-commercieel karakter verkoopt, te koop aanbiedt of uitstalt, kan, mits voorafgaande toelating van de gemeente, ook een standplaats innemen. 
+                                                                    Artikel 13: Overdracht standplaats. 
+                                                                    De overdracht van een standplaats is toegelaten onder de volgende voorwaarden: 
+                                                                    1° de overnemer is in de Kruispuntbank van Ondernemingen ingeschreven voor het uitoefenen van ambulante activiteiten zet de specialisatie van de overlater voort op de overgedragen standplaats. 
+                                                                     Een eventuele wijziging van de specialisatie KAN aangevraagd worden per aangetekend schrijven bij het college van burgemeester en schepenen. 
+                                                                     2° en de specialisatie van de overlater voortgezet wordt op de overgedragen standplaats. Een eventuele wijziging van de specialisatie KAN aangevraagd worden per aangetekend schrijven bij het college van burgemeester en schepenen. 
+                                                                    3° binnen het eerste jaar kan de standplaats NIET opnieuw overgedragen worden, behalve na expliciete goedkeuring van het college van burgemeester en schepenen.  
+                                                                    4° De onderneming van de overnemer mag door de overname over niet meer dan 2 standplaatsen beschikken. 
+                                                                     De overdracht is geldig voor de resterende geldigheidsduur van het abonnement van de overlater. Ingeval van overdracht wordt het abonnement eveneens stilzwijgend vernieuwd. 
+                                                                     De inname van de overgedragen standplaats is pas toegelaten als de gemeente heeft vastgesteld dat : 
+                                                                     1. de overnemer het bewijs levert van de inschrijving van de ambulante activiteit in de Kruispuntbank van On-dernemingen om dezelfde specialisatie als de overlater of de specialisaties die toegelaten zijn door de ge-meente, uit te oefenen. 
+                                                                     2. overnemer het aantal toegestane standplaatsen per onderneming (cf. artikel 1 van dit reglement) niet overschrijdt. 
+                                                                     3. de overnemer het bewijs levert waaruit blijkt dat hij voldoet aan de bijkomende voorwaarden, vermeld in artikel 2 van dit reglement. 
+                                                                    De overdracht impliceert ook de overdracht van het abonnement. 
+                                                                    Artikel 14: Dagelijkse leiding 
+                                                                    De marktleider wordt door het college van burgemeester en schepenen aangesteld voor de organisatie van de openbare markten en andere ambulante activiteiten op het 
+                                                                    openbaar domein. 
+                                                                    Bij de uitoefening van deze opdracht is hij bevoegd om identiteitspapieren en machtigingen te controleren van de personen die een ambulante activiteit uitoefenen op het grondgebied van de gemeente Brakel. 
+                                                                    De marktleider waakt over de stipte toepassing van dit reglement en bespreekt alle voorstellen in verband met de organisatie markten en de ambulante handel indien nodig met het college. 
+                                                                    Het college beslecht alle onvoorziene gevallen, na advies van de marktleider. Het college kan hiertoe vragen om de marktleider vooraf te horen. 
+                                                                     
+                                                                        Artikel 15: Praktische organisatie inname standplaats. 
+                                                                        §1 Opstellen kramen. 
+                                                                        De markthandelaars mogen 's morgens niet vroeger dan 5.30 uur hun standplaats bezetten noch in de straat en/of aanpalende straten komen stilstaan. Zij dienen hun plaatsen volledig en netjes opgeruimd te hebben om 13.30 uur ten laatste. 
+                                                                        De markt start om 8.00 uur en eindigt om 12.30  uur. De losse plaatsen worden door de marktleider toegewezen om 7.45 uur. De markthandelaars zullen ten laatste om 8.00 uur (jaarmarkt 7.15 uur) verkoopsklaar opgesteld staan. Markthandelaars die na dit uur aankomen, kunnen hun plaats geweigerd worden door de marktleider, zonder dat deze afwijzing hen recht geeft op enige vergoeding of schadeloosstelling. De verhuurde plaats die onbezet is door afwezigheid van de vergunningshouder, mag door de marktleider toegewezen worden aan een andere markthandelaar voor de duur van de marktdag volgens de wettelijke toewijzingsmodaliteiten omschreven in artikel 4 van dit reglement. De kramen moeten zo opgesteld zijn dat de voorbalk van het kraam niet buiten de rooilijn komt met uitzondering van luiken of een gedeelte van het kraam dat kan beschouwd worden als afdak, op voorwaarde dat het zich 2,10 meter boven de grond bevindt. Onder deze luiken of afdaken, mogen geen winkelwaren uitgestald of opgehangen worden. Bij het innemen van de standplaats moet stipt de aangegeven lijn worden gevolgd. 
+                                                                     
+                                                                    §2 Brandveiligheid. 
+                                                                    Elk kraam of winkelwagen moet uitgerust zijn met een goedgekeurd brandblusapparaat met een minimum inhoud van 5kg CO2. 
+                                                                    De marktkramers die gebruik maken van verwarmingstoestellen zijn verplicht een verzekering burgerlijke aansprakelijkheid evenals brand- en aanverwante gevaren af te sluiten. Op elk verzoek van de marktleider moet het bewijs voorgelegd worden dat aan deze verplichtingen werd voldaan. 
+                                                                    §3 Netheid. 
+                                                                    De kramen of winkelwagens moeten zo ingericht zijn dat geen schadelijke, hinderlijke of onwelriekende vloeistoffen op de grond kunnen druipen. Indien zulks onmogelijk blijkt, moeten de marktkramers zelf instaan voor de opvang van deze vloeistoffen. 
+                                                                    De marktkramers dienen hun plaats volledig en netjes op te ruimen. Er mag geen vuil achter gelaten worden noch op de standplaats noch in de omgeving. 
+                                                                    §4 Geluidstoestellen 
+                                                                    Het gebruik van geluidstoestellen is toegelaten, mits de beperking dat omliggende marktkramers of demonstreerders-standwerkers niet worden gestoord. 
+                                                                    §5 Voertuigen. 
+                                                                    De voertuigen waarmee de kramen, tenten en goederen worden aangevoerd, mogen op de marktplaats blijven staan, indien ze als kraam of stockplaats worden gebruikt. Ze moeten echter zodanig opgesteld staan, dat ze geen belemmering vormen voor het zicht, het verkeer, het verloop en de goede orde en de veiligheid in het algemeen, rekening houdend met de instructies van de marktleider. 
+                                                                    Het gemeentebestuur kan, noch voor diefstal, noch voor schade aan deze voertuigen verantwoordelijk gesteld worden. 
+                                                                    Het is verboden om tijdens de markturen (cfr art. 15.1) zich met een voertuig van of naar zijn standplaats te begeven. 
+                                                                     
+                                                                        §6 Elektriciteit. 
+                                                                        1° De gemeente stelt aan de marktkramers een vaste gemeentelijke aansluitkast ter beschikking voor elektriciteitsleveringen in laagspanning. De marktkramers mogen deze kast niet voor andere doeleinden, en ook niet ten behoeve van derden, aanwenden. 
+                                                                        2° De kandidaat-energiegebruiker richt de aanvraag aan de marktleider. Indien geen aansluiting meer mogelijk is, kan de aanvraag geweigerd worden. De aanvragen worden chronologisch toegekend. 
+                                                                        3° Er mogen geen marktinstallaties aangesloten worden die niet met een differentieelschakelaar met grote gevoeligheid uitgerust zijn. Deze installatie moet jaarlijks worden gekeurd door een erkend keuringsorganisme, differentieel inrichting en aftakkabel ingegrepen. 
+                                                                        4° alle aansluitingkabels en voeding van voertuigen en aanhangwagens moeten voldoen aan de bepalingen die voorzien zijn in het AREI. 
+                                                                        5° bij vaststelling van inbreuken kan de marktleider de toegang tot de markt weigeren. 
+                                                                        6° de gemeente kan niet aansprakelijk worden gesteld voor onderbrekingen en dient zij in dit geval geen schadevergoeding aan de marktkramer toe te staan. 
+                                                                     
+                                                                    7° de marktkramer dient de nodige schikkingen te treffen om iedere oorzaak van beschadiging te vermijden. Hij is aansprakelijk voor alle schade die hij door onoordeelkundig gebruik aan de aansluitkast veroorzaakt. Hij dient de marktleider onmiddellijk op de hoogte te stellen van elke beschadiging, afwijking of elke niet- conformiteit aan de wettelijke voorschriften die hij redelijkerwijze kan vaststellen. 
+                                                                    8° de marktkramer dient verzekerd te zijn voor schade die hij door het gebruik van de aansluitkast aan deze kast en aan derden kan veroorzaken. 
+                                                                    Artikel 16 Verplaatsen markt – wijzigen aanvangs- en sluitingsuur 
+                                                                    Het college van burgemeester en schepenen heeft het recht de markt tijdelijk te verplaatsen, te schorsen of het aanvangs- en sluitingsuur te wijzigen, telkens wanneer bijzondere omstandigheden dit vereisen zonder dat de houders van een abonnement hiervoor enige schadevergoeding kunnen eisen. 
+                                                                    Het college kan eveneens beslissen of enkele abonnementsplaatsen hun rechten op die plaats definitief verliezen door wijzigingen in de verkeerscirculatie, aanleg van nuts- of groenvoorzieningen, renovatie van het openbaar domein.  In deze gevallen krijgen de betrokkenen een voorlopige standplaats toegewezen en hebben voorrang op de chronologische wachtlijst voor een betere vaste standplaats. 
+                                                                    Het recht op de verworven standplaats kan ingetrokken worden als : 
+                                                                    1° betrokkene na twee schriftelijke aanmaningen de goede gang van zaken blijft storen, en tegen het marktreglement blijft handelen ; 
+                                                                    2° wanneer betrokkene niet langer beschikt over een machtiging tot het uitoefenen van ambulante activiteiten. 
+                                                                    Artikel 17: Inname van de ruimte voor andere doeleinden 
+                                                                    Gedurende de gemeentelijke kermissen of wanneer ingevolge feestelijkheden of andere omstandigheden het marktplein geheel of gedeeltelijk door andere instellingen zou bezet zijn, moeten de marktkramers voor het opstellen van hun inrichting zich schikken naar de onderrichtingen en bevelen van de marktleider of zijn plaatsvervanger. 
+                                                                    Artikel 18: Wettelijke controles 
+                                                                    De marktkramers zijn steeds onderworpen aan de wettelijke controles en moeten ten allen tijde het onderzoek van hun waren toelaten door de politiediensten en aangestelde ambtenaren en controleurs, die op de goede trouw van de verkoop en de goede kwaliteit van hun waren moeten letten. 
+                                                                    Artikel 19: Onderverhuur standwerkers (KB art. 36)  
+                                                                     De standwerkers, die een abonnement voor een standplaats verkregen hebben, kunnen hun tijdelijk gebruiksrecht op deze standplaats onderverhuren aan andere standwerkers namelijk:  
+                                                                     - rechtstreeks aan een andere standwerker; 
+                                                                     - via een vereniging om die voor alle standwerkers zonder discriminatie openstaat.  
+                                                                     Al naargelang, deelt de standwerker of de vereniging de lijst van standwerkers mee, aan wie het tijdelijk gebruiksrecht van de standplaats werd onderverhuurd. 
+                                                                     De prijs van de onderverhuring mag niet hoger zijn dan het deel van de abonnementprijs voor de duur van de onderverhuring.  
+                                                                    AFDELING 2: Organisatie van ambulante activiteiten op het openbaar domein buiten de openbare markten 
+                                                                    Artikel 19: Toepassingsgebied. 
+                                                                    Eenieder die een standplaats wenst in te nemen op één of meerdere plaatsen van het openbaar domein buiten de openbare markten om ambulante activiteiten uit te oefenen dient dit voorafgaand aan te vragen bij de gemeente. 
+                                                                    Artikel 20: Voorafgaande machtiging. 
+                                                                    §1 Aanvraag machtiging. 
+                                                                    Om een standplaats in te nemen zoals vermeld in artikel 19 dient men te beschikken over een machtiging. Deze machtiging dient voorafgaand aan het uitoefenen van de ambulante activiteit aangevraagd te worden aan het college van burgemeester en schepenen, Marktplein 1, 9660 Brakel. 
+                                                                    De aanvraag vermeldt: 
+                                                                    1° de identiteit van de aanvrager2° de juiste plaatsomschrijving van de private ingebruikneming3° de data en uren van de private ingebruikneming4° de in te nemen oppervlakte5° de juiste omschrijving van de producten die te koop zullen worden aangeboden 
+                                                                    §2 Beslissing machtiging 
+                                                                    In geval van positieve beslissing verkrijgt de aanvrager een machtiging met daarin vermeld : 
+                                                                    1° de identiteit van de aanvrager 
+                                                                    2° de aard van de producten of diensten die hij gemachtigd is te verkopen 
+                                                                    3° de plaats 
+                                                                    4° de datum en duur van de verkoop 
+                                                                    De gevraagde machtiging kan geweigerd worden omwille van één of meerdere van onderstaande redenen: 
+                                                                    1° redenen van openbare orde 
+                                                                    2° redenen van volksgezondheid 
+                                                                    3° bescherming van de consument 
+                                                                    4° wanneer de machtiging ambulante handel en bijbehorende documenten niet in orde zijn 
+                                                                    5° de modaliteiten van het gemeentelijk reglement niet gerespecteerd worden 
+                                                                    De gemeente zal deze reden(-en) motiveren in zijn kennisgeving van de negatieve beslissing aan de aanvrager en verwijst tevens naar rechtsmiddelen inzake beroep. 
+                                                                    Artikel 21 Voorwaarden inzake toewijzing en inname standplaatsen. 
+                                                                    De personen die voldoen aan de voorwaarden tot het verkrijgen (cf. supra Afdeling 1 artikel 2) en innemen van de standplaatsen op de openbare markt (cf. supra Afdeling 1 artikel 12) kunnen standplaatsen op het openbaar domein verkrijgen en innemen. 
+                                                                    Artikel 22 Toewijzingsregels losse standplaatsen. 
+                                                                    De toewijzing van losse plaatsen gebeurt volgens de chronologische volgorde van aanvragen en desgevallend in functie van de gevraagde plaats en specialisatie. 
+                                                                    Wanneer twee of meerdere aanvragen voor standplaatsen gelijktijdig ingediend worden, gebeurt de toewijzing via loting. 
+                                                                    Artikel 23: Toewijzingsregels per abonnement. 
+                                                                    Hier gelden dezelfde regels als voor de openbare markten (cf. supra). Voorwaarden inzake melding van vacature (cf. Afdeling 1 artikel 5.1 van dit reglement) geldt niet. 
+                                                                    Artikel 24 Identificatievereiste bij uitoefenen ambulante activiteiten. 
+                                                                     
+                                                                        Elke persoon die een ambulante activiteit uitoefent op het openbaar domein, dient zich te identificeren aan de hand van een leesbaar uithangbord, zichtbaar geplaatst op de kraam of het voertuig, indien hij de activiteit aan het kraam of het voertuig uitoefent. Het bord moet eveneens door de aangestelden aangebracht worden wanneer deze alleen 
+                                                                     
+                                                                    Het bord bevat volgende vermeldingen: 
+                                                                    1° hetzij de naam, de voornaam van de persoon die een ambulante activiteit uitoefent als natuurlijk persoon voor eigen rekening of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; hetzij de naam, de voornaam van de persoon die het dagelijks bestuur binnen een rechtspersoon waarneemt of voor wiens rekening of in wiens dienst de activiteit wordt uitgeoefend; 
+                                                                    2° de firmanaam en/of de benaming van de onderneming; 
+                                                                    3° al naargelang het geval, de gemeente van haar maatschappelijke zetel of van de uitbatingzetel; en indien de onderneming niet in België gelegen is, het land en de gemeente waar deze zich bevindt; 
+                                                                    4° het inschrijvingsnummer in de Kruispuntbank van Ondernemingen (of een identificatie die deze vervangt, indien het om een buitenlands bedrijf gaat). 
+                                                                    Artikel 25 Na te leven schikkingen 
+                                                                    De ingenomen plaats van de handelaar en die van zijn klanten mogen geen belemmering betekenen voor andere-door de gemeente goedgekeurde- georganiseerde activiteiten. 
+                                                                    Bovendien mag de handelaar noch zijn klanten enige verkeershinder veroorzaken. 
+                                                                    AFDELING 3: AMBULANTE ACTIVITEIT OP RONDTREKKENDE WIJZE 
+                                                                    Artikel 26 Toepassingsgebied 
+                                                                    Eenieder die op de openbare weg ambulante activiteiten wenst uit te oefenen, dient dit voorafgaand aan te vragen bij de gemeente. 
+                                                                    Artikel 27 Voorafgaande machtiging 
+                                                                    §1 Aanvraag machtiging 
+                                                                    Om een ambulante activiteit op de openbare weg uit te oefenen, zoals vermeld in artikel 26, moet voldaan zijn  aan de voorwaarden vermeld in artikel 2 en dient men te beschikken over een machtiging. Deze machtiging dient voorafgaand aan het uitoefenen van de ambulante activiteit aangevraagd te worden bij de gemeente (contactgegevens vermelden). 
+                                                                    §2 Beslissing machtiging 
+                                                                    In geval van positieve beslissing verkrijgt de aanvrager een machtiging met daarin vermeld : 
+                                                                    1° Identiteit van de aanvrager 
+                                                                    2° de aard van de producten of diensten die hij gemachtigd is te verkopen 
+                                                                    3° de toegestane route 
+                                                                    4° de datum en duur van de verkoop (beperkingen mogen betrekking hebben op de uren van uitoefening van het geheel of van een gedeelte van de activiteit) 
+                                                                    De gevraagde machtiging kan geweigerd worden omwille van één of meerdere van onderstaande redenen : 
+                                                                    1° redenen van openbare orde en veiligheid 
+                                                                    2° redenen van volksgezondheid 
+                                                                    3° bescherming van de consument 
+                                                                    4° wanneer de machtiging ambulante handel en bijbehorende documenten niet in orde zijn 
+                                                                    De gemeente zal deze reden(-en) objectief en grondig motiveren in zijn kennisgeving van de negatieve beslissing aan de aanvrager en verwijst tevens naar rechtsmiddelen inzake beroep. 
+                                                                    §3 Beperking 
+                                                                    De activiteiten aangeduid in artikel 26 mogen niet plaatsvinden in een straal van 50 meter rond elke in- en uitgang van gelijk welke school en dit vanaf 30 minuten  voor tot en met 15 minuten na het begin en het einde van de lessen en tussen 12.00 en 13.30 uur, telkens op schooldagen. 
+                                                                    AFDELING 4: VERKOPEN VAN PRODUCTEN OF DIENSTEN MET EEN NIET-COMMERCIEEL KARAKTER 
+                                                                    Artikel 28: Specifieke voorwaarden voor verkopen met niet-commercieel karakter 
+                                                                    De producten of diensten met een niet-commercieel karakter verkopen, te koop aanbieden of uitstallen is niet onderworpen aan de bepalingen van de wet indien deze activiteiten aan al de volgende voorwaarden voldoen: 
+                                                                    1° ze vinden plaats met één van volgende doelen 
+                                                                    a) menslievend doel, 
+                                                                    b) sociaal doel, 
+                                                                    c) cultureel doel, 
+                                                                    d) educatief doel, 
+                                                                    e) sportief doel 
+                                                                    f) de verdediging en promotie van de natuur, 
+                                                                    g) de verdediging en promotie van de dierenwereld, 
+                                                                    h) de verdediging en promotie van een ambacht 
+                                                                    i) de verdediging en promotie van streekproducten, 
+                                                                    j) steun bij een humanitaire catastrofe, 
+                                                                    k) steun bij een ramp of belangrijke schade; 
+                                                                    2° ze blijven occasioneel; occasioneel betekent niet periodiek, niet met een bepaalde regelmaat en maximaal drie keer per jaar. 
+                                                                    3° de burgemeester heeft vooraf toestemming verleend. 
+                                                                    4° als ze de grenzen van de gemeente overschrijdt en geen bijkomende toelating van de gemeente vereist is, dan heeft de organisatie een voorafgaande toelating gevraagd aan de Minister of de personeelsleden aan wie hij deze bevoegdheid heeft gedelegeerd (mailen naar reglementen@vlaio.be). 
+                                                                    De voorwaarde vermeld in het eerste lid, 3°, geldt niet ingeval toepassing wordt gemaakt van het eerste lid, 4°. 
+                                                                    Artikel 29: Identificatievereiste 
+                                                                    Tijdens de verkoop, te-koop-aanbieding of uitstalling met het oog op de verkoop van producten of diensten voor een niet-commercieel doel zoals vermeld in art 28 is elke verkoper herkenbaar via een kenmerk dat het mogelijk maakt om de operatie te identificeren. Op verzoek van de overheid die de toestemming heeft verleend, overhandigt de verantwoordelijke, binnen dertig dagen, het bewijs van de bestemming van de fondsen om het aangegeven doel te realiseren. 
+                                                                    Artikel 30: Aanvraag voorafgaande machtiging 
+                                                                    De aanvraag van een toestemming zoals vermeld in art. 28 is afhankelijk van de situatie, gericht aan  het college van burgemeester en schepenen of aan de Minister of aan de personeelsleden aan wie hij die bevoegdheid heeft gedelegeerd, op een duurzame drager tegen ontvangstbewijs. 
+                                                                    De aanvraag omvat : 
+                                                                    1° de verantwoordelijke van de actie, 
+                                                                    2° het doel van de actie, 
+                                                                    3° de plaats of plaatsen, 
+                                                                    4° de periode of periodes van verkoop, 
+                                                                    5° de te koop aangeboden producten of diensten en een schatting van de hoeveelheid. 
+                                                                    De toestemming, vermeld in 28, eerste lid, 3° of 4°, is beperkt tot één jaar. Ze is hernieuwbaar. Ze bevat de vermeldingen uit de aanvraag. 
+                                                                    Artikel 31: Weigering en intrekking machtiging 
+                                                                    De toestemming voor een specifiek niet-commercieel doel kan geweigerd worden en de actie kan verboden worden als de doelstelling niet overeenstemt met de toegestane doelen of als de voorgestelde verkopen een risico vormen voor de openbare orde, veiligheid, gezondheid of rust. 
+                                                                    Als de overheid die ervoor bevoegd is de toestemming te verlenen, argwaan heeft over de reële doelstellingen van de actie of over de moraliteit van de verantwoordelijke(n), kan ze een voorafgaand onderzoek laten uitvoeren. Ze kan ook van een of meer verantwoordelijken eisen dat ze een uittreksel uit het strafregister voorleggen. 
+                                                                    De toestemming, vermeld in art 28, eerste lid, 3° of 4°, kan ingetrokken worden of de actie kan verboden worden, tijdens de manifestatie, door de bevoegde overheid als vastgesteld wordt dat de voorwaarden van de toestemming of van de verklaring of de voorschriften van dit reglement niet worden nageleefd. 
+                                                                    Iedere nieuwe actie kan verboden worden voor een natuurlijke of rechtspersoon of een vereniging die de bepalingen van dit reglement niet naleeft, gedurende een periode van één jaar vanaf de vaststelling van de niet-naleving. In geval van recidive kan de duur van de voormelde periode op drie jaar worden gebracht. 
+                                                                    De weigering, het verbod of de intrekking wordt betekend per elektronische post tegen ontvangstbewijs. 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/50ce7363-303c-41df-bb1f-348180f369d1> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/50ce7363-303c-41df-bb1f-348180f369d1> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "ba844e61-71ba-5a0e-b39f-d6b923f83946" ;
+    dcterms:title "Lokale economie. Reglement met betrekking tot de ambulante activiteiten op de openbare markten en op het openbaar domein." .
+

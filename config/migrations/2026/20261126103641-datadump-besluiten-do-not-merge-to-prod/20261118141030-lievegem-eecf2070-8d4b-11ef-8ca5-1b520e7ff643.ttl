@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4010cba7-ac3e-4e54-af4c-9a5828598f1e> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/05fc1ce9-eb6f-4d97-b96a-f583a4d10a91>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23efc5ed-2b22-4cfe-892b-710c27710215>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2bda4302-a2f0-4ee9-ac2c-941a747e166f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4b87beb0-cde9-4088-bd3f-9205a514c17d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5d8ab414-f71f-455c-a075-4fda295554f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6439560f-0948-4cd1-844d-55cb9e76b432>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9883a87a-ecc7-4ad9-ab41-efd5ffc255bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f166014-8d22-4799-b171-94518fb79761>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c2c15d69-adda-4088-a9b2-3999b1eef99d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c89a991b-94e8-4a40-953c-7d829f519713>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dbdb15f3-f665-4862-a4bf-46afa519a2a3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dcd173fa-0d50-4d5a-b7e4-c25f82be8b6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e104a52b-1f78-4289-bb34-3d0cbf2ea06d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f214ebf7-c8fe-4d5b-8376-caa9fee36016> ;
+    ns2:geplandeStart "2023-05-31T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/91baaf1c-5178-4180-89f8-2c255c6c530d> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/cb3181ac-0ddd-44ff-9873-5bf122ea65c7> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/1a092372-3466-442e-a65b-1a751d777e48> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "eecd72c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-05-31T21:28:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-05-31T20:02:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6439560f-0948-4cd1-844d-55cb9e76b432> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2c7bc0c6-51dd-46fe-916c-ac36421f713a> ;
+    ns2:openbaar true ;
+    ns1:uuid "f0b1ea30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6439560f-0948-4cd1-844d-55cb9e76b432> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6439560f-0948-4cd1-844d-55cb9e76b432> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6439560f-0948-4cd1-844d-55cb9e76b432> a ns2:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt de mandaten van de vertegenwoordigers voor de algemene vergadering van IVM op op 7 juni 2023, vast.De gemeenteraad keurt de agenda van de algemene vergadering en de individuele agendapunten goed.De gemeenteraad mandateert de vertegenwoordiger van de gemeente die zal deelnemen aan voormelde algemene vergadering om te stemmen zoals de gemeenteraad heeft beslist. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Intergemeentelijke opdrachthoudende vereniging voor huisvuilverwerking Meetjesland (IVM)  - algemene vergadering van 7 juni 2023 - agenda en mandaat vertegenwoordiging: goedkeuring en vaststelling",
+        "Intergemeentelijke opdrachthoudende vereniging voor huisvuilverwerking Meetjesland (IVM) - algemene vergadering van 7 juni 2023 - agenda en mandaat vertegenwoordiging: goedkeuring en vaststelling" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Nick Braeckman, gemeenteraadslid 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur, in het bijzonder artikel 432 (vaststelling mandatering)Gemeenteraad van 30 januari 2019 over de aanduiding van de vertegenwoordigers in de algemene vergaderingen van IVM voor de duurtijd van de huidige legislatuurGemeenteraadsbesluit van 29 april 2020 over IVM - aanpassing vertegenwoordigers in de raad van bestuurGemeenteraadsbesluit van 25 november 2022 over IVM - aanpassing vertegenwoordiger in de algemene vergadering en in de raad van bestuurGemeenteraadsbesluit van 29 maart 2023 over IVM - aanpassing leden in de raad van bestuur 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeente Lievegem is lid van de ov IVM . De gemeente werd op 21 april 2022 opgeroepen voor de algemene vergadering van IVM op 7 juni 2023De gemeenteraad duidde op 30 januari 2019 en op 25 november 2022 vertegenwoordigers in de algemene vergaderingen van IVM aan.De gemeenteraad is bevoegd om het mandaat van de vertegenwoordigers in intergemeentelijke samenwerkingsverbanden vast te stellen en het standpunt te bepalen dat de gemeentelijke vertegenwoordigers moeten innemen op een algemene vergadering. 
+                                                         
+                                                         
+                                                            Tussenkomst 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns1:uuid "eecf2070-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad stelt het mandaat van Dirk De Poorter, gemeenteraadslid, wonende te 9932 Lievegem, Ronselekouter 11 Ivan Goethals, gemeenteraadslid, wonende te 9920 Lievegem, Oostveld Kouter 12Nik Braeckman, gemeenteraadslid, wonende te 9950 Lievegem, Stationsstraat 16als effectieve vertegenwoordigers voor de algemene vergadering van IVM op 7 juni 2023, vast.Artikel 2De gemeenteraad stelt het mandaat van Steven Lambert, gemeenteraadslid, wonende te Kleitstraat 21, 9930 Lievegem,Martine Gyssels, schepen, wonende te 9930 Lievegem, Kloosterstraat 21Christophe Huysman, gemeenteraadslid, wonende te 9930 Lievegem, Oostwinkelstraat 35,als plaatsvervangende vertegenwoordigers voor de algemene vergadering van IVM op 7 juni 2023, vast.Artikel 3De agenda van de algemene vergadering op 7 juni 2023 bestaat uit volgende punten:1. Jaarverslag/verslag raad van bestuur 2022 over de werking van de intergemeentelijke vereniging.2. Verslag van de raad van bestuur m.b.t. de jaarrekening 20223. Verslag van de commissaris.4. Goedkeuring jaarrekening per 31 december 2022.5. Verlenen van kwijting aan de bestuurders.6. Verlenen van kwijting aan de commissaris.7. Aanstelling bedrijfsrevisor/commissaris (bestek nr. 2023/08) – beslissing.8. Aanstelling vertegenwoordiger en plaatsvervangend vertegenwoordiger raad van bestuur (Lievegem) – beslissing.9. Aanstelling plaatsvervangend vertegenwoordiger raad van bestuur (Zulte) – beslissing. 
+                                                            De gemeenteraad keurt de agenda van de algemene vergadering en de individuele agendapunten goed.Artikel 4De gemeenteraad mandateert de vertegenwoordigers van de gemeente die zullen deelnemen aan voormelde algemene vergadering om te stemmen zoals de gemeenteraad heeft beslist. 
+                                                              
+                                                            Artikel 5In toepassing van artikel 30bis van de statuten van IVM, worden de stemmen van de gemeente (26.657 stemmen) waarover iedere vertegenwoordiger voor dit mandaat beschikt, evenredig verdeeld onder de verschillende vertegenwoordigers die aan de algemene vergadering van IVM van 7 juni 2023 deelnemen. 
+                                                              
+                                                            Artikel 6De gemeentelijk vertegenwoordiger binnen de intergemeentelijke vereniging beantwoordt de eventuele vragen over de uitoefening van de bevoegdheden en taken van de raad van bestuur 
+                                                              
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6439560f-0948-4cd1-844d-55cb9e76b432> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6439560f-0948-4cd1-844d-55cb9e76b432> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "f0ae19a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Intergemeentelijke opdrachthoudende vereniging voor huisvuilverwerking Meetjesland (IVM) - algemene vergadering van 7 juni 2023 - agenda en mandaat vertegenwoordiging: goedkeuring en vaststelling" .
+

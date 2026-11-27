@@ -1,0 +1,167 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/03c35acf-dcf6-4ad2-bf96-c645b562a2a0> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/570d0838-29af-46d1-b3ea-9b8a2e31f936>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/629b4fa6-395f-45fd-a72e-71af94c81051>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6c903bf8-ed8f-40b0-ac18-73e44e3f62e4>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8cfc3e24-1947-4a53-8eb0-a63afa8e8476> ;
+    ns1:geplandeStart "2025-06-30T14:20:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/6fbaf6cb-6e29-4595-9f60-4742b2bf0dd7> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "d8da3ee8-7755-59e2-8e1e-2fb12cdcf147" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-06-30T14:12:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8cfc3e24-1947-4a53-8eb0-a63afa8e8476> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6c903bf8-ed8f-40b0-ac18-73e44e3f62e4> ;
+    ns1:openbaar false ;
+    ns3:uuid "0286d0d8-6692-54b5-9d16-234271e55e4a" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8cfc3e24-1947-4a53-8eb0-a63afa8e8476> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/8cfc3e24-1947-4a53-8eb0-a63afa8e8476> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/8cfc3e24-1947-4a53-8eb0-a63afa8e8476> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Historisch kamp - rondritten op 4 juli 2025 tot en met 6 juli 2025 goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:title "Politieverordening: The White Star Division Pajot Camp 2025 - 4 juli 2025 tot en met 6 juli 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns3:uuid "08d074b0-75a9-5ec8-95ea-120ec7502208" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Historisch kamp - rondritten op 4 juli 2025 tot en met 6 juli 2025 worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        
+                                            Snelheidsbeperking tot 30 km/u C43 wordt ingelast in volgende straat op 4 juli 2025 van 10u tot en met 6 juli 2025 20.00 uur:
+                                         
+                                         
+                                             
+                                                Heirbaan - vanaf de Noremansberg tot de Bruinsbroekstraat 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod E3 dienen 48 uur op voorhand te worden ingelast op 5 juli 2025 van op volgende plaats:
+                                     
+                                     
+                                         
+                                            Heirbaan 1570 - parkeerstrook vanaf Noremansberg tot aan Bruinsbroekstraat - van 13.00 uur tot en met 23.00 uur 
+                                            Hernestraat 1570 - parking Urbanus - van 10.00 uur tot en met 14.00 uur 
+                                            Stationstraat 1570 - parking NMBS - van 10.00 uur tot en met 14.00 uur 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Stilstaan- en parkeerverbod dienen 48 uur op voorhand te worden ingelast op 6 juli 2025 van op volgende plaatsen:
+                                     
+                                     
+                                         
+                                            Centrum 1540 - alle parkeerplaatsen en kaatsplein/parking Gemeenteloket Herne - van 10.30 uur tot en met 14.00 uur 
+                                            Marktplein 1570 - alle parkeerplaatsen (midden/zijkanten) - van 13.00 tot en met 19.00 uur 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            
+                                                 
+                                             
+                                            
+                                                Door een verkeersbord C3 dient het Marktplein volledig te worden afgesloten op 6 juli 2025 vanaf 14.00 uur tot en met 19.00 uur vanaf het kruispunt met:
+                                             
+                                             
+                                                 
+                                                    de Bergstraat  
+                                                    de Baljuwstraat  
+                                                    Markplein - de uitgang (gezien vanuit de rijrichting naar het Marktplein toe) van de openbare parking gelegen achter het gemeentehuis, zodat deze ter beschikking blijft om te parkeren. 
+                                                 
+                                             
+                                             
+                                                
+                                                    Volgende straten dienen op 6 juli 2025 vanaf 14.00 uur tot en met 19.00 uur door een verkeersbord C3 volledig te worden afgesloten met uitzondering van het plaatselijk verkeer:
+                                                 
+                                                 
+                                                     
+                                                        de Bergstraat - het gedeelte van de Nieuwstraat vervat tussen het kruispunt met de Tollembeekstraat en het kruispunt met de Bergstraat en het Marktplein 
+                                                        de Steenbakkerijstraat - vanaf het kruispunt met de Watermolenstraat tot het kruispunt met de Hoogstraat  
+                                                        het Marktplein - van na de uitgang van de openbare parking achter het gemeentehuis tot het kruispunt met de Hoogstraat  
+                                                        de Hollestraat - vanaf het kruispunt met de Munkbaan tot het grondgebied van de deelgemeente Galmaarden  
+                                                        de Baljuwstraat 
+                                                     
+                                                 
+                                             
+                                            
+                                                
+                                             
+                                            
+                                                Eénrichtingsverkeer dient op 6 juli 2025 vanaf 14.00 uur tot en met 19.00 uur uur door een verkeersbord C1 te worden ingevoerd in de Munkbaan.
+                                             
+                                            
+                                                Verboden rijrichting voor ieder bestuurder rijdend vanaf de Plaatsstraat in de richting van de Hollestraat en dit om de omleiding mogelijk te maken. In dit geval dient de maatregel van "verbod voor alle verkeer in de Munkbaan" tijdelijk te worden opgeheven en worden vervangen door een éénrichtingsverkeer.
+                                             
+                                            
+                                                Op dat moment dienen dan ook de verkeersborden C3 afgedekt te worden, voor zolang de maatregel van éénrichtingsverkeer geldt.
+                                             
+                                            
+                                                 
+                                             
+                                            
+                                                 
+                                             
+                                         
+                                        
+                                            Een omleiding, aangeduid door een verkeersbord F41, wordt voorzien langsheen volgende straten:
+                                         
+                                         
+                                             
+                                                voor het verkeer komende van Moerbeke: omleiding via de Watermolenstraat, de Stationsstraat, de Nieuwstraat en de Tollembeekstraat  
+                                                voor het verkeer komende van Waarbeke: omleiding via de Steenbakkerijstraat, de Watermolenstraat, de Stationsstraat, de Nieuwstraat en de Tollembeekstraat  
+                                                voor het verkeer komende van Tollembeek: omleiding via de Nieuwstraat, de Stationsstraat en de Watermolenstraat  
+                                                voor het verkeer komende van de Hollestraat: omleiding via de Munkbaan, de Plaatsstraat en de Tollembeekstraat om dan aan te sluiten op de hierboven vermelde omleidingen  
+                                                voor het verkeer komende van de Baljuwstraat, Hollebeekstraat, Tasseniersstraat, Cardoenlaan en Avondvrede: omleiding via gedeelte van de Baljuwstraat, de Hollestraat, de Munkbaan, de Plaatsstraat en de Tollembeekstraat om dan aan te sluiten op de hierboven vermelde omleidingen 
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8cfc3e24-1947-4a53-8eb0-a63afa8e8476> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/8cfc3e24-1947-4a53-8eb0-a63afa8e8476> a ns1:Agendapunt ;
+    ns3:uuid "645eab71-29df-549e-a900-9ddd6a8d6633" .
+

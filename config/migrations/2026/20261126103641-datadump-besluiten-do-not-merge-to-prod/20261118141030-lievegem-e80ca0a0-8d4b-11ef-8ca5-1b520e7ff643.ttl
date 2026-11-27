@@ -1,0 +1,147 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/998e950f-4a6f-407e-acc8-21f0454943be> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/126b5d00-e069-4e28-b529-cf0f3ac3fa4f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/14f44265-5ffc-489c-9a40-7d20ffc3ff2a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/165c23ef-46b9-458f-b9b0-5dbc73c379b2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/17387b65-ced4-4251-8c34-51cf19d58f12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1fc6887a-ce70-4ba4-ac9e-ee961ef6ac02>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3000bdd7-2a8f-4ca7-a609-2cb687da286a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/381c20a3-8080-42a8-9221-7cdcbfd8ca0f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38d10030-92e0-4af2-8eef-0118f76f76eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b6a6f8d-90bf-421c-afe5-49c159511a9f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/433715a9-1e9a-40af-b0d8-613899c834ae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4a87114f-e4ab-4cac-91ab-92033fd684e5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dd9427a-ecad-4d8f-8bde-403db3d87d60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4f9a9ccd-7a00-4b11-b963-ea9d49ce9bc6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52c0136d-8a66-47f6-a824-301f44e5bfa2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5ae7b9a5-ca72-4215-86e4-15dae2cf1794>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ee12e08-5b68-4075-ae4f-8ad18216b594>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7af75996-5356-499b-8094-de17d5f0f4e1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87785798-6639-4c6f-bfa4-260ee7647588>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9a6fa636-287b-4bc9-a6d0-4f58ebc89350>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9e41e560-e2c4-46f4-9e22-4608f5957da1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9f6ee797-2c73-4fb4-9bba-d13a543c7b62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b218d9dc-8bae-4b81-bba1-70375cce2307>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be9900d6-a624-438d-bd99-063b4ea93f41>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c45d5bbb-1ee0-4518-8198-c4675b746bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8f55e5a-ccdf-47cf-bff8-0e38acb72112>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9156811-9d61-455c-a63b-8b086125c7ec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c9ec27d7-f5aa-4dd6-a42b-e9679c4d8326>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d1cb10c6-2945-49fd-9b6c-1f2711281a68>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4f56cb2-2c2b-4fc7-9f65-01a4d1da85f5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5dd5bd3-73dd-4c59-a91b-954ae172da6b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dd2b8423-4c83-48a5-a7cb-405b6d4dc153>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5f26532-dc4e-42f0-9a15-74038fc65044> ;
+    ns2:geplandeStart "2023-12-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e0ffeb14-446f-4b4c-a17d-9f5791fa2dae> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/d1612c76-4d4d-4b68-9053-0c49145eadf9> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/4b578639-cd04-4965-be39-ac33532e8409> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:uuid "e8104a20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-12-20T21:42:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-12-20T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/433715a9-1e9a-40af-b0d8-613899c834ae> ;
+    ns2:openbaar true ;
+    ns1:uuid "f7f0c5f0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6ef8679b-9cd1-41d0-8282-449246f3ef35> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/6ef8679b-9cd1-41d0-8282-449246f3ef35> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/f56c645d-b8e1-4066-813d-e213f5bc529f> ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt aanpassing 4 van het meerjarenplan 2020-2026, deel gemeente Lievegem, vast. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Meerjarenplan 2020-2026 -  aanpassing 4 deel gemeente Lievegem: vaststelling",
+        "Meerjarenplan 2020-2026 - aanpassing 4 deel gemeente Lievegem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Kim Martens, burgemeester 
+                                 
+                                 
+                                    Regelgeving 
+                                    Het Decreet van 22 december 2017 over het lokaal bestuur, artikel 41, 3° en 10°, 249 t.e.m. 257  Het Besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale besturen  Het Ministerieel besluit van 26 juni 2018 tot vaststelling van de modellen en de nadere voorschriften van de beleidsrapporten, de rekeningenstelsels en de digitale rapportering van de beleids- en beheerscyclus van de lokale besturen.  Het Ministerieel besluit van 13 november 2018 betreffende de gemeenten en de openbare centra voor maatschappelijk welzijn, de autonome gemeentebedrijven en de welzijnsverenigingen die de beleids- en beheerscyclus van de lokale en provinciale besturen toepassen vanaf 1 januari 2019, onder andere de gemeente Lievegem en het ocmw Lievegem  Omzendbrief KBBJ/ABB 2020/3 van 18 september 2020 over de aanpassing van de meerjarenplannen 2020-2025 van de lokale en provinciale besturen volgens de beleids- en beheerscyclusHet gemeenteraadsbesluit van 18 december 2019 houdende vaststelling meerjarenplan 2020-2025 deel gemeente LievegemHet gemeenteraadsbesluit van 16 december 2020 houdende vaststelling meerjarenplan 2020-2025 - aanpassing 1 deel gemeente LievegemHet gemeenteraadsbesluit van 22 december 2021 houdende vaststelling meerjarenplan 2020-2025 - aanpassing 2 deel gemeente LievegemHet gemeenteraadsbesluit van 21 december 2022 houdende vaststelling meerjarenplan 2020-2025 - aanpassing 3 deel gemeente Lievegem 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Minstens eenmaal per jaar wordt het meerjarenplan aangepast, waarbij in elk geval de kredieten voor het volgende boekjaar worden vastgesteld. Als dat nodig is, kunnen daarbij ook de kredieten voor het lopende boekjaar worden aangepast. Daarnaast kan het meerjarenplan ook worden aangepast om alleen de kredieten voor het lopende boekjaar aan te passen.Volgens artikel 257 van het decreet lokaal bestuur blijft de periode van het meerjarenplan altijd de periode zoals vermeld in artikel 254 van datzelfde decreet (in dit geval dus de periode 2020-2025) maar de financiële nota moet altijd de financiële consequenties beschrijven voor ten minste drie toekomstige boekjaren. Om die reden wordt nu voor het eerst ook boekjaar 2026 opgenomen in deze meerjarenplanaanpassing en wordt gesproken over de beleidsplanningsperiode 2020-2026.Bij elke aanpassing van het meerjarenplan wordt het resultaat van de intussen vastgestelde jaarrekening verwerkt.Een aanpassing van het meerjarenplan omvat minstens een aangepaste financiële nota, een toelichting en de eventuele wijzigingen van de strategische nota. 
+                                    Het decreet lokaal bestuur voorziet in een geïntegreerde planning van het beleid van de gemeente en het OCMW. Dit beleidsrapport omvat dus de beleidsdoelstellingen en ramingen van zowel de gemeente als het OCMW. Gezien beide entiteiten als aparte rechtspersonen blijven bestaan, stemmen de gemeente- en OCMW-raad in uitvoering van artikel 249 §3 van het decreet lokaal bestuur elk over hun deel van de aanpassing van het meerjarenplan 2020-2026 waarna de gemeenteraad het deel van de aanpassing van het meerjarenplan 2020 - 2026, zoals vastgesteld door de OCMW-raad, goedkeurt.Deze aanpassing van het meerjarenplan 2020-2026 is financieel in evenwicht (schema M2) gezien het geraamde beschikbaar budgettair resultaat (BBR) voor geen enkel van de onderliggende jaren negatief is en de autofinancieringsmarge (AFM) voor het boekjaar 2026, het laatste jaar van de meerjarenplanning, minstens gelijk is aan nul. Ook de gecorrigeerde autofinancieringsmarge voor 2026 is positief. Gezien de gemeente en het OCMW een geïntegreerd meerjarenplan 2020-2026 hebben opgesteld, wordt ook het financieel evenwicht beoordeeld voor gemeente en OCMW samen.De gemeenteraad stelt het deel van de gemeente van deze aanpassing van het meerjarenplan 2020 - 2026 vast.  
+                                 
+                                 
+                                    Financiële impact 
+                                    Beschikbaar budgettair resultaat 
+                                    Het beschikbaar budgettair resultaat (BBR) is de norm voor het toestandsevenwicht. 
+                                     
+                                    Evenwichtsvoorwaarde : het BBR moet voor elk jaar van de meerjarenplanning groter dan of gelijk aan nul zijn.  
+                                      
+                                    Autofinancieringsmarge 
+                                    De autofinancieringsmarge (AFM) is de indicator voor het structureel evenwicht. 
+                                     
+                                    Evenwichtsvoorwaarde : de AFM moet voor het laatste jaar van de meerjarenplanning groter dan of gelijk zijn aan nul. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Publicatie op de gemeentelijke website. Deze publicatie wordt gemeld aan de toezichthoudende overheid en digitaal gerapporteerd aan de Vlaamse regering.Beleidsrapport via digitaal loket van ABB. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet van 22 december 2017 over het lokaal bestuur, artikel 41, 3° en 10°, 249 t.e.m. 257  Het Besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale besturen  Het Ministerieel besluit van 26 juni 2018 tot vaststelling van de modellen en de nadere voorschriften van de beleidsrapporten, de rekeningenstelsels en de digitale rapportering van de beleids- en beheerscyclus van de lokale besturen.  Het Ministerieel besluit van 13 november 2018 betreffende de gemeenten en de openbare centra voor maatschappelijk welzijn, de autonome gemeentebedrijven en de welzijnsverenigingen die de beleids- en beheerscyclus van de lokale en provinciale besturen toepassen vanaf 1 januari 2019, onder andere de gemeente Lievegem en het ocmw Lievegem  Omzendbrief KBBJ/ABB 2020/3 van 18 september 2020 over de aanpassing van de meerjarenplannen 2020-2025 van de lokale en provinciale besturen volgens de beleids- en beheerscyclusHet gemeenteraadsbesluit van 18 december 2019 houdende vaststelling meerjarenplan 2020-2025 deel gemeente LievegemHet gemeenteraadsbesluit van 16 december 2020 houdende vaststelling meerjarenplan 2020-2025 - aanpassing 1 deel gemeente LievegemHet gemeenteraadsbesluit van 22 december 2021 houdende vaststelling meerjarenplan 2020-2025 - aanpassing 2 deel gemeente LievegemHet gemeenteraadsbesluit van 21 december 2022 houdende vaststelling meerjarenplan 2020-2025 - aanpassing 3 deel gemeente Lievegem 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Minstens eenmaal per jaar wordt het meerjarenplan aangepast, waarbij in elk geval de kredieten voor het volgende boekjaar worden vastgesteld. Als dat nodig is, kunnen daarbij ook de kredieten voor het lopende boekjaar worden aangepast. Daarnaast kan het meerjarenplan ook worden aangepast om alleen de kredieten voor het lopende boekjaar aan te passen.Volgens artikel 257 van het decreet lokaal bestuur blijft de periode van het meerjarenplan altijd de periode zoals vermeld in artikel 254 van datzelfde decreet (in dit geval dus de periode 2020-2025) maar de financiële nota moet altijd de financiële consequenties beschrijven voor ten minste drie toekomstige boekjaren. Om die reden wordt nu voor het eerst ook boekjaar 2026 opgenomen in deze meerjarenplanaanpassing en wordt gesproken over de beleidsplanningsperiode 2020-2026.Bij elke aanpassing van het meerjarenplan wordt het resultaat van de intussen vastgestelde jaarrekening verwerkt.Een aanpassing van het meerjarenplan omvat minstens een aangepaste financiële nota, een toelichting en de eventuele wijzigingen van de strategische nota. 
+                                                            Het decreet lokaal bestuur voorziet in een geïntegreerde planning van het beleid van de gemeente en het OCMW. Dit beleidsrapport omvat dus de beleidsdoelstellingen en ramingen van zowel de gemeente als het OCMW. Gezien beide entiteiten als aparte rechtspersonen blijven bestaan, stemmen de gemeente- en OCMW-raad in uitvoering van artikel 249 §3 van het decreet lokaal bestuur elk over hun deel van de aanpassing van het meerjarenplan 2020-2026 waarna de gemeenteraad het deel van de aanpassing van het meerjarenplan 2020 - 2026, zoals vastgesteld door de OCMW-raad, goedkeurt.Deze aanpassing van het meerjarenplan 2020-2026 is financieel in evenwicht (schema M2) gezien het geraamde beschikbaar budgettair resultaat (BBR) voor geen enkel van de onderliggende jaren negatief is en de autofinancieringsmarge (AFM) voor het boekjaar 2026, het laatste jaar van de meerjarenplanning, minstens gelijk is aan nul. Ook de gecorrigeerde autofinancieringsmarge voor 2026 is positief. Gezien de gemeente en het OCMW een geïntegreerd meerjarenplan 2020-2026 hebben opgesteld, wordt ook het financieel evenwicht beoordeeld voor gemeente en OCMW samen.De gemeenteraad stelt het deel van de gemeente van deze aanpassing van het meerjarenplan 2020 - 2026 vast.  
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Beschikbaar budgettair resultaat 
+                                                            Het beschikbaar budgettair resultaat (BBR) is de norm voor het toestandsevenwicht. 
+                                                             
+                                                            Evenwichtsvoorwaarde : het BBR moet voor elk jaar van de meerjarenplanning groter dan of gelijk aan nul zijn.  
+                                                              
+                                                            Autofinancieringsmarge 
+                                                            De autofinancieringsmarge (AFM) is de indicator voor het structureel evenwicht. 
+                                                             
+                                                            Evenwichtsvoorwaarde : de AFM moet voor het laatste jaar van de meerjarenplanning groter dan of gelijk zijn aan nul. 
+                                                         
+                                                    """@nl ;
+    ns1:uuid "e80ca0a0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 Aanpassing 4 van het meerjarenplan 2020-2026, deel gemeente Lievegem, wordt vastgesteld zoals terug te vinden in bijlage. 
+                                    Artikel 2De investeringen opgenomen in 'Overzicht nominatieve investeringen (schema D8)' worden overeenkomstig artikel 41, 10° van het decreet lokaal bestuur beschouwd als overheidsopdrachten waarvoor de raad de plaatsingsprocedure en het vaststellen van de voorwaarden voor die opdrachten nominatief aan het college van burgemeester en schepenen heeft toevertrouwd. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 Aanpassing 4 van het meerjarenplan 2020-2026, deel gemeente Lievegem, wordt vastgesteld zoals terug te vinden in bijlage. 
+                                                            Artikel 2De investeringen opgenomen in 'Overzicht nominatieve investeringen (schema D8)' worden overeenkomstig artikel 41, 10° van het decreet lokaal bestuur beschouwd als overheidsopdrachten waarvoor de raad de plaatsingsprocedure en het vaststellen van de voorwaarden voor die opdrachten nominatief aan het college van burgemeester en schepenen heeft toevertrouwd. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6ef8679b-9cd1-41d0-8282-449246f3ef35> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns1:uuid "f0a4a3c0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Meerjarenplan 2020-2026 - aanpassing 4 deel gemeente Lievegem: vaststelling" .
+

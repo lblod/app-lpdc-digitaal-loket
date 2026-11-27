@@ -1,0 +1,100 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns1:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7> ;
+    ns1:openbaar true ;
+    ns3:uuid "e462ab70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c59356dc-a09e-43bb-979d-b3953cd9ef78> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/c59356dc-a09e-43bb-979d-b3953cd9ef78> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad gaat akkoord dat Veneco vanaf 1 juli 2022 als initiatiefnemer en projectuitvoerder van het IGS-project wonen Aalter-Eeklo-Lievegem optreedt, een subsidiewijziging indient en twee aanvullende activiteiten aanvraagt binnen het IGS-project, zonder financiële gevolgen voor de gemeente. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Inkanteling SOM vzw (Woonwijzer Meetjesland) bij Veneco en subsidiewijziging intergemeentelijk samenwerkingsverband (IGS) wonen Aalter-Eeklo-Lievegem: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepenHilde De Graeve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 40 §2 en deel 3, titel 3 
+                                                            Besluit Vlaamse Codex Wonen 2021 Boek 2Artikel 2.2, §1, de gemeenten hebben de regierol voor het woonbeleid op hun grondgebied. Dat betekent dat ze binnen de grenzen van het subsidiariteitsbeginsel zorgen voor de uitwerking, sturing, afstemming en uitvoering van het lokaal woonbeleid.Artikel 2.10. de gemeenten kunnen voor de realisatie van de Vlaamse beleidsprioriteiten, vermeld in artikel 2.5, eerste lid, en de uitvoering van de daarmee verbonden activiteiten, vermeld in artikel 2.7 tot en met 2.9, een beroep doen op: - 1° het agentschap dat conform artikel 2.3 van de Vlaamse Codex Wonen van 2021 de gemeenten begeleidt en ondersteunt bij de uitwerking van het lokaal woonbeleid en het lokaal woonoverleg; - 2° intergemeentelijke projecten ter ondersteuning van het lokaal woonbeleid, die conform titel 4 van dit deel gesubsidieerd kunnen worden.Deel 2, Titel 4 bevat de subsidieregeling voor IGS-projecten lokaal woonbeleid voor de huidige periode 2020-2025, die periode stemt sindsdien voor alle projecten overeen met de BBC. Daarin staat beschreven dat het 1 keer per periode mogelijk is om de aanvullende activiteiten te wijzigen. De herzieningsaanvraag dient uiterlijk 30 juni 2022 ingediend te worden bij Wonen-Vlaanderen en geldt bij goedkeuring ervan voor de periode 2023-2025. 
+                                                            Besluit van de gemeenteraad van Lievegem van 11 september 2019 – Intergemeentelijke samenwerking Woonwijzer Meetjesland 2020-2025 Aalter-Eeklo-Lievegem – statuten interlokale vereniging ter ondersteuning van het lokaal woonbeleid – subsidieaanvraag intergemeentelijk samenwerkingsverband (IGS) 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Feiten en contextSOM vzw (Woonwijzer Meetjesland) kantelt in bij de kostendelende vereniging Veneco vanaf 1 juli 2022. Bij de publicatie van de fusionering zullen ook alle lopende overeenkomsten overgedragen worden naar Veneco, inclusief de IGS-projecten wonen. De dienstverlening wonen zal deel uitmaken van de afdeling streekontwikkeling bij Veneco. Samen met SOM vzw maakte Veneco een strategisch plan op om de dienstverlening rond klimaat-energie-wonen in de komende jaren op elkaar af te stemmen. Dit plan werd uitgebreid toegelicht op het algemeen directeursoverleg Meetjesland, het burgemeestersoverleg Meetjesland en een bijeenkomst met de schepenen bevoegd voor wonen op 5 oktober 2021. Met de Vlaamse subsidie voor IGS-projecten wonen wil de Vlaamse regering de gemeenten ondersteunen in hun regisseursrol en hen stimuleren om intergemeentelijk samen te werken met het oog op de realisatie van de drie Vlaamse beleidsprioriteiten voor het lokaal woonbeleid:1. De gemeente zorgt voor een divers en betaalbaar woonaanbod afhankelijk van de woonnoden -> lokaal woonoverleg2. De gemeente werkt aan de kwaliteit van het woningpatrimonium en de woonomgeving -> woningcontroles en opvolging procedure ongeschikt/onbewoonbaar/overbewoning3. De gemeente informeert, adviseert en begeleidt inwoners met vragen over wonen -> woonloket 
+                                                            De deelnemende gemeenten moeten een aantal verplichte activiteiten uitvoeren (woonloket, opvolging procedures woonkwaliteit) en ten minste tweemaal per werkingsjaar een lokaal woonoverleg organiseren waarop een aantal thema’s besproken worden. Zij kunnen op verzoek ook een aantal aanvullende activiteiten uitvoeren. Bij de uitvoering van het project moeten de gemeenten voor elk van de drie Vlaamse beleidsprioriteiten voor het lokaal woonbeleid bijzondere aandacht besteden aan de meest woonbehoeftige gezinnen en alleenstaanden en aan transversale en bovenlokale thema's die raakpunten hebben met wonen. 
+                                                            De gemeente Lievegem keurde op 11 september 2019 de deelname goed aan het IGS-project Aalter-Eeklo-Lievegem. 
+                                                            Op de stuurgroepen werd meegedeeld dat Wonen-Vlaanderen in de toekomst (timing nog niet gekend) de conformiteitscontroles in kader van de aanvragen voor een huursubsidie dvoor SVK-woningen zal doorgeven aan de lokale besturen/ IGS-projecten. Daarnaast werd ook meegedeeld dat samenwerken met het Vredegerecht en de deurwaarder in het kader van de procedure gerechtelijke uithuiszetting sinds de vorige subsidieaanvraag een verplichting is geworden.Daarom raadt Wonen-Vlaanderen aan om 2 extra aanvullende activiteiten op te nemen in het subsidiedossier:Aanvullende Activiteit 2.7: Een afsprakenkader met de minister en het sociaal verhuurkantoor dat actief is in de gemeente aanvragen en, als het afsprakenkader wordt gesloten, conformiteitsonderzoeken uitvoeren met het oog op de inhuurneming van woningen en kamers door het sociaal verhuurkantoor.Verantwoording van de keuzeDe nieuwe woningmaatschappijen zijn een belangrijke partner voor het samenwerkingsverband. Zowel voor de lokale besturen als voor het sociaal verhuren via het sociaal verhuurkantoorprincipe is het van belang dat de woningkwaliteit en het woonpatrimonium voldoen aan de huidige kwaliteitseisen. We willen de inspanningen die de maatschappij levert, versterken door een afsprakenkader op te maken om zo het beleid van te onderschrijven. Het al dan niet ten laste nemen van de kosten of een deel van de kosten voor het conformiteitsonderzoek door de woonmaatschappij/het SVK kan een onderdeel vormen van deze afsprakennota. Dit zal deel uitmaken van de voorbereidende gesprekken en bespreking op de stuurgroep. Zolang het afsprakenkader ministerieel niet werd ondertekend, verbindt het SVK/de woonmaatschappij zich er toe om een conformiteitsattest aan te vragen bij Wonen Vlaanderen/ lokaal bestuur. Het uitvoeren van de controles gebeurt na het maken van een afsprakenkader door de project- woningcontroleur. Acties 2023-2025Overleg wordt gevoerd tussen de gemeenten, het sociaal verhuurkantoor en het agentschap Wonen Vlaanderen om het ontwerp van het afsprakenkader te bespreken en de gewenste keuzes vast te leggen. Doel is om te beschikken over een ontwerp-afsprakenkader, dat afgestemd is met alle partijen. Deze aanvullende activiteit zal bijkomend ook besproken worden op het lokaal woonoverleg.Ten laatste eind 2024 hebben de gemeenten het afsprakenkader laten goedkeuren op de gemeenteraad. Het afsprakenkader wordt bezorgd aan de betrokken instanties voor ondertekening door de minister. Na goedkeuring van het afsprakenkader zal dit opgestart worden en volgt er een jaarlijkse rapportering op de stuurgroep.Aanvullende Activiteit 3.3: Samenwerken met het Vredegerecht en de deurwaarder in het kader van de procedure gerechtelijke uithuiszetting.Verantwoording keuzeElke uithuiszetting schaadt meer dan het baat, vandaar dat elke vorm van informatie- uitwisseling tussen Vredegerecht en deurwaarder met het sociaal huis/woonadviseur/gemeente van belang is. Het woninghuurdecreet (Goedkeuring Vlaamse Regering 18/05/2018) verplicht gerechtsdeurwaarders om de OCMW'S op de hoogte te brengen van elk vonnis tot uithuiszetting dat zij betekenen. Dit decreet is echter enkel van toepassing voor huurovereenkomsten afgesloten vanaf 01/01/2019, maar het IGS wenst een afsprakenkader te maken met de gerechtsdeurwaarders in het  arrondissement om dit ook te doen voor vonnissen bij oudere huurovereenkomsten. Dit maakt het voor mogelijk outreachend op te treden en de impact van de uitvoering van het vonnis zo laag mogelijk te houden. Vanuit het IGS willen we de afspraken verfijnen, met als doel vermijdbare uithuiszettingen te vermijden en maatschappelijke kosten te verlagen.Acties 2023-2025Het uitbouwen van een afsprakenkader tussen IGS, Vredegerecht en gerechtsdeurwaarders voor huurovereenkomsten ouder dan 2019 en toezien op de goede uitvoering ervan. Partners aantrekken, informeren en de huidige werkingen onder de loep nemen en ondersteunen (CAW, familiezorg, thuiszorg, …)MotiveringOmdat de beide aanvullende activiteiten de komende jaren moeten uitgevoerd worden door het IGS-project, raadt Wonen-Vlaanderen aan om deze dan ook op te nemen in de subsidieaanvraag en er zodoende ook een kleine extra Vlaamse subsidie voor te ontvangen als ze worden uitgevoerd. Veneco zal de subsidiewijziging indienen door de inkanteling van Woonwijzer Meetjesland/SOM vzw in de kostendelende vereniging Veneco. De nieuwe subsidieaanvraag heeft geen implicaties op de verplicht uit te voeren activiteiten en de eerder gekozen aanvullende activiteiten in het IGS-subsidiedossier.  
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            In 2018 werd door de toenmalige coördinator van SOM vzw een voorstel uitgewerkt voor alle deelnemende gemeentebesturen aan Woonwijzer Meetjesland. De gemeentelijke bijdrage aan Woonwijzer voor de basisdienstverlening (3 verplichte activiteiten) en de toen gekozen aanvullende activiteiten werd vastgelegd tot het einde van de werkingsperiode 2025. Bij de overname van SOM vzw/ Woonwijzer Meetjesland blijven dezelfde financiële engagementen van de deelnemende gemeentebesturen aan het IGS-project gelden.Deze wijziging aan de subsidieaanvraag heeft geen bijkomende financiële implicaties voor de gemeentelijke bijdragen aan het IGS-project, deze blijven dezelfde zoals goedgekeurd in 2019. Veneco engageerde zich om in de loop van 2025, bij de voorbereiding van een nieuwe projectperiode, de gemeentelijke bijdragen te evalueren en herbekijken. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e467b480-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad gaat akkoord dat Veneco optreedt als initiatiefnemer en projectuitvoerder van het IGS-project wonen Aalter-Eeklo-Lievegem vanaf 1 juli 2022 ten gevolge van de inkanteling van SOM vzw bij Veneco. 
+                                                            Artikel 2De gemeenteraad gaat akkoord dat Veneco een subsidiewijziging indient en twee extra aanvullende activiteiten aanvraagt binnen het IGS-project wonen Aalter-Eeklo-Lievegem. Deze subsidiewijziging heeft geen financiële gevolgen voor de gemeente. 
+                                                            De twee aanvullende activiteiten zijn: 
+                                                             
+                                                                Aanvullende Activiteit 2.7: Een afsprakenkader met de minister en het sociaal verhuurkantoor dat actief is in de gemeente aanvragen en, als het afsprakenkader wordt gesloten, conformiteitsonderzoeken uitvoeren met het oog op de inhuurneming van woningen en kamers door het sociaal verhuurkantoor. 
+                                                             
+                                                             
+                                                                Aanvullende Activiteit 3.3: Samenwerken met het Vredegerecht en de deurwaarder in het kader van de procedure gerechtelijke uithuiszetting. 
+                                                             
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "e4558c10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Inkanteling SOM vzw (Woonwijzer Meetjesland) bij Veneco en subsidiewijziging intergemeentelijk samenwerkingsverband (IGS) wonen Aalter-Eeklo-Lievegem: goedkeuring" .
+

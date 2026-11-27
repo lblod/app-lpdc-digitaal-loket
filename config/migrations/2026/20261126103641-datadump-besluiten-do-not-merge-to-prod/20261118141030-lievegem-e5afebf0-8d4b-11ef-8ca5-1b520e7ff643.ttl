@@ -1,0 +1,108 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5703eba8-de15-4461-97ae-e592ebd507e5> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/00ceab3a-06fa-4b05-a749-25a14fb89458>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0359b9ae-8505-4fd4-93d7-3f67d572305a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/127f08cd-0e46-4457-9e38-e48b8aab1f98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/136ffc0d-bb0a-4825-96f5-ce7d9ccbc3f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/15f0772d-180e-4634-9aa0-cdf149dd2b5f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/22694331-edef-4fa2-891a-f9fbd24c5c40>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/298c73c0-60f2-4021-b2dc-0dce80eee130>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4d52b7c8-b9bf-4d1e-b4f5-ba8fe44284ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6c05caf7-52bc-4ee5-a4fd-cdbf70e05078>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78fd637f-7097-4041-b89f-4f824f6e13a2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/82518cc2-75a2-4e0e-8a42-c669a2a5d01e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8628618f-f1d8-416b-9c6e-e1276d35422b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/87152125-012a-4773-b498-c8b9320cf562>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ddc34dc-f54a-4977-9ffd-d2c22f0c9768>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1cbde80-ee7e-4ad9-b894-0076282b9d12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a1ef4fea-fc00-4a8c-bcd5-89b3b69d3b4b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a2b94ff0-fae3-4359-a7bf-531b9c6ea935>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a749ecd6-c616-43f8-8459-b0f3ddf00642>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab8b3858-4ee0-4278-9647-3c3622b8dd7f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad5faac4-2765-434c-8e0c-b1f4fece0c90>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b2351ab8-74de-4ff8-a3f9-34548a06b8c5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b26c1418-dfc4-4281-a293-209d85fc0eac>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b587ffc2-19bb-4ffd-9e65-abc08cb1e7aa>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b7757670-dc3b-415f-a283-380ae7cf7a87>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b8687c47-db0b-4b08-9f0f-543842d07be6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc253c99-4653-4f96-a67e-70378326f8ba>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/dc339857-a353-48dc-beda-c1953574463a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e57a195b-8988-49d0-a97c-4024237ffa91>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eb1078d5-3d55-4110-bdd5-122e469f28ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f181c6bf-8d6c-4e9c-b78b-8b8430bb5b2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f31eddc7-5f8c-439f-befd-a383f5648f19> ;
+    ns1:geplandeStart "2020-11-18T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/923d38b7-8381-45c8-99fc-16d55fd72cb1> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3305e0f4-32e9-4816-84cc-7a9a1754abae> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3aff381c-78e9-4fa9-aab3-37b18df4710e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e5aae2e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-11-18T21:50:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-11-18T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8628618f-f1d8-416b-9c6e-e1276d35422b> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/127f08cd-0e46-4457-9e38-e48b8aab1f98> ;
+    ns1:openbaar true ;
+    ns3:uuid "02cb8d20-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8628618f-f1d8-416b-9c6e-e1276d35422b> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8628618f-f1d8-416b-9c6e-e1276d35422b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8628618f-f1d8-416b-9c6e-e1276d35422b> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad keurt de dotatie van de gemeente Lievegem, zoals berekend en ingeschreven in het budget 2021 van de politiezone Deinze, Zulte en Lievegem, voor een bedrag van :gewone ontvangsten :  € 2.438.371buitengewone ontvangsten : € 168.296goed. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Politiezone Deinze - Zulte - Lievegem - gemeentelijke dotatie 2021: goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Tony Vermeire, burgemeester 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 20 december 2017, artikel 40Wet van 07.12.1998 tot organisatie van een geïntegreerde politiedienst, gestructureerd op twee niveaus, meer bepaald artikel 40 en 71;Koninklijk besluit van 16.11.2001 over de nadere regels inzake de berekening en de verdeling van de gemeentelijke dotaties in de schoot van een meergemeentenpolitiezoneOmzendbrief PLP 51 betreffende de onderrichtingen voor het opstellen van de politiebegroting ten behoeve van de politiezonesPolitieraadsbesluit van 19 oktober 2020 over het goedkeuren van het politiebudget 2021 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Mail van 23 oktober 2020 van de PZ Deinze Zulte Lievegem met als bijlage de begrotingswijziging 2020/01 en de begroting 2021.De berekening van de dotatie gebeurt als volgt : Deinze 54,09%, Zulte 16,57 % en Lievegem 29,34 %De dotatie voor de gemeente Lievegem staat als volgt vermeld:gewone ontvangsten :  € 2.438.371buitengewone ontvangsten : € 168.296 
+                                                            Bart Van Petegem, adjunct financieel directeur geeft een positief advies. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De kredieten worden voorzien op2021/GBB-SSC/0400-00/6494000/GEMEENTE/CBS/IP-GEEN – exploitatietoelage (gewone)2021/GBB-SSC/0400-00/6640000/GEMEENTE/CBS/IP-GEEN – investeringstoelage (buitengewone) 
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                                 AdviesBart Van Petegem, adjunct financieel directeur geeft een positief visum voor de gemeentelijke dotatie gewone dienst/exploitatie 2021 aan de politiezone voor een bedrag van 2.438.371 euro die voorzien is in het MJP op 2021/GBB-SSC/0400-00/6494000/GEMEENTE/CBS/IP-GEEN en de gemeentelijke dotatie buitengewone dienst/investeringen 2021 aan de politiezone voor een bedrag van 168.296 euro die voorzien is in het MJP op 2021/GBB-SSC/0400-00/6640000/GEMEENTE/CBS/IP-GEEN. Advies ADV/2020/160 van Bart Van Petegem van 28 oktober 2020: Gunstig  
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e5afebf0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel  
+                                                            De gemeenteraad keurt de dotatie van de gemeente Lievegem, zoals berekend en ingeschreven in het budget 2021 van de politiezone Deinze, Zulte en Lievegem, voor een bedrag van :gewone ontvangsten :  € 2.438.371buitengewone ontvangsten : € 168.296goed. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8628618f-f1d8-416b-9c6e-e1276d35422b> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8628618f-f1d8-416b-9c6e-e1276d35422b> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "02d8d390-8d4c-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Politiezone Deinze - Zulte - Lievegem - gemeentelijke dotatie 2021: goedkeuring" .
+

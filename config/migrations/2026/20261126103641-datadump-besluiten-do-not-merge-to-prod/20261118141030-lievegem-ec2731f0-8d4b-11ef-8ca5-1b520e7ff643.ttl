@@ -1,0 +1,162 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/13531b75-2b97-49e6-95b5-0130577929ca> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3087dcaf-8404-4313-8c4d-cf86d7068e89>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b11927eb-1bef-4718-bdb3-8a26d2d317a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e7de92-a36c-4219-9e13-c69071e37e4c> ;
+    ns1:geplandeStart "2022-03-30T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5072526b-b5d4-4d2b-ba68-1047063dac6e> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6062ed9f-3a18-4da2-b571-465c2cc37207> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6b4a4077-779d-4b4b-9f0b-f39d932e61c9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ec275900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-03-30T21:10:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-03-30T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18> ;
+    ns1:openbaar true ;
+    ns3:uuid "ed17ac70-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/756d9ce0-0a90-4125-8bad-bf797fbf4599> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/756d9ce0-0a90-4125-8bad-bf797fbf4599> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/a8486fa3-6375-494d-aa48-e34289b87d5b> ;
+    ns2:description """ 
+                                                    De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 8 maart 2022 om de tijdelijke aanpassing van het huishoudelijk reglement rond het gebruik van de culturele gemeentelijke infrastructuur, vastgesteld op het college van burgemeester en schepenen van 1 februari 2022 en bekrachtigd door de gemeenteraad op 23 februari 2022, op te heffen en stelt het aangepaste huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem vast.  
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem - aanpassing: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Jeroen Van Acker, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Decreet van 22 december 2017 over het lokaal bestuur, inzonderheid artikel 40§3: de gemeenteraad stelt de gemeentelijke reglementen vast. 
+                                    Huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem, vastgesteld op de gemeenteraad van 27 januari 2021 - tijdelijk aangepast naar aanleiding van de coronacrisis op 1 februari 2022 en bekrachtigd door de gemeenteraad op 23 februari 2022: opheffing, vastgesteld op het college van burgemeester en schepenen van 8 maart 2022 
+                                    Besluit van het college van burgemeester en schepenen van 14 december 2021: huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem - aanpassing: principiële goedkeuring 
+                                     
+                                 
+                                 
+                                    Feiten en motivering 
+                                    opheffing tijdelijke aanpassing n.a.v. corona 
+                                    Ten gevolge van de coronacrisis en de veiligheidsmaatregelen die opgelegd worden werd het huishoudelijk reglement rond de verhuur van de gemeentelijke culturele infrastructuur diverse keren aangepast. Het Overlegcomité heeft op 4 maart 2022 beslist om vanaf 7 maart een verdere versoepeling door te voeren en een reeds beperkingen te schrappen, waaronder alle coronamaatregelen of – beperkingen voor evenementen en activiteiten. Gezien de aangepaste maatregelen door het Overlegcomité en de publicatie ervan in het nieuwe Koninklijk Besluit en gezien het college opteert om de gemeentelijke ruimtes zo snel mogelijk aan het verenigingsleven ter beschikking te stellen, is de tijdelijke aanpassing aan het huishoudelijk reglement rond de verhuur van de gemeentelijke culturele infrastructuur niet langer noodzakelijk en werd de tijdelijke aanpassing door het college op 8 maart 2022 opgeheven. 
+                                    Deze beslissing moet bekrachtigd worden door de gemeenteraad. 
+                                    aanpassing verhuurreglement: nieuwe zalen 
+                                    1. Het Huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur, vastgesteld op de gemeenteraad van 27 januari 2021, vereist een actualisatie gezien enkele bijkomende gemeentelijke zalen opengesteld worden voor verhuur aan verenigingen: 
+                                     
+                                        Passagezaal Waarschoot 
+                                        Zalen en speelplaats in de Gemeentelijke Basisschool Vinderhoute 
+                                     
+                                    
+                                        Bovenstaande zalen worden mee opgenomen in de prijstabel conform de grootte van de locatie. De zalen en speelplaats in de GBS Vinderhoute worden, gezien de specifieke aard en beperkte verhuurmogelijkheid, enkel verhuurd na specifieke aanvraag en collegebeslissing.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Verder wordt voorgesteld om in de nieuwe zalen geen dansfeesten/fuiven toe te laten en de verhuur niet open te stellen voor particulieren.
+                                     
+                                    
+                                         
+                                     
+                                    Na principieel akkoord van het college van burgemeester en schepenen werd officieel advies gevraagd bij de relevante adviesraad: beheersorgaan van de socio-culturele infrastructuur Lievegem. Het beheersorgaan van de socio-culturele infrastructuur Lievegem gaf op de vergadering van 15 februari 2022 positief advies rond deze voorgestelde aanpassingen. 
+                                 
+                                 
+                                    Bijlagen die integraal deel uitmaken van het besluit 
+                                    HUISHOUDELIJK REGLEMENT OP HET GEBRUIK VAN DE GEMEENTELIJKE CULTURELE INFRASTRUCTUUR IN LIEVEGEMArtikel 1Het gemeentebestuur Lievegem  stelt onderstaande gemeentelijke culturele accommodaties ter beschikking voor verhuur volgens onderstaande modaliteiten: -    Feestzaal De Kring, Patronagiestraat 5, 9950 Lievegem-    Zaal De Passage, Patronagiestraat 5, 9950 Lievegem-    Traiteurruimte De Kring/Passage, Patronagiestraat 5, 9950 Lievegem-    Cultureel Centrum, Nieuwstraat 8, 9950 Lievegem-    Zaal ’t Getouw, gemeentehuis Waarschoot,  Waarschootdorp 1, 9950 Lievegem-    Zaal A ’t Kwadrant, Hofbouwstraat 1, 9930 Lievegem-    Zaal B ’t Kwadrant, Hofbouwstraat 1, 9930 Lievegem-    Zaal dienstencentrum Kerkelare 21, 9920 Lievegem-    Polyvalente zaal Lovendegem, Sportstraat 24, 9920 Lievegem-    Grote raadzaal, Kasteeldreef 72, 9920 Lievegem-    Kleine raadzaal, Kasteeldreef 72, 9920 Lievegem-    Tempelhof, Tulpenstraat, 9920 Lievegem-    Polyvalente zaal en vergaderzaal Vinderhoute, Neerstraat 43, 9921 Lievegem-    Polyvalente zaal Gemeentelijke Basisschool Vinderhoute, Vredesdreef 18, 9921 Lievegem-    Refter Gemeentelijke Basisschool Vinderhoute, Vredesdreef 18, 9921 Lievegem-    Speelplaats Gemeentelijke Basisschool Vinderhoute, Vredesdreef 18, 9921 LievegemArtikel 2Het gemeentebestuur stelt aan de gebruiker enkel de accommodatie ter beschikking, maar kan niet als inrichter worden beschouwd. De gebruiker wordt in zijn verhouding tot de gemeente als inrichter beschouwd en is gehouden tot naleving van alle wettelijke en reglementaire bepalingen die op hem als inrichter rusten.Algemene bepalingenArtikel 3De gebruikers worden ingedeeld in volgende categorieën:- Cat A: gemeentelijke adviesraden, (andere) gemeenteteams en gemeentebestuur- Cat B: onderwijsinstellingen uit Lievegem- Cat C: erkende verenigingen uit Lievegem- Cat D: niet-erkende verenigingen uit Lievegem- Cat E: particulieren uit Lievegem- Cat F: verenigingen/ particulieren buiten Lievegem 
+                                    Artikel 4 
+                                    Onderstaande accommodaties kunnen gehuurd worden voor volgende activiteiten en door volgende categorieën: 
+                                     
+                                    Artikel 5Voor eenzelfde voorstelling kan een accommodatie maximum 3 opeenvolgende weekends (vrijdag, zaterdag, zondag) gehuurd worden. Het decor kan ten vroegste 2 weken voor de eerste voorstelling opgezet worden.Artikel 6Activiteiten hebben altijd voorrang op losse repetities (die niet in een aaneensluitende reeks gepland zijn) of op repetities die niet onmiddellijk gevolgd worden door een voorstelling.Artikel 7Wie een fuif wenst te organiseren in Polyvalente zaal Lovendegem of Zaal De Kring Waarschoot richt voorafgaandelijk een gemotiveerde aanvraag tot het college van burgemeester en schepenen, gevolgd door een afzonderlijke goedkeuring.Drank en maaltijdenArtikel 8In alle accommodaties is de drankafname en prijsbepaling bij drankverkoop vrij.Artikel 9Het bereiden van warme maaltijden is niet toegelaten in volgende accommodaties: Kerkelare en Grote Raadzaal Lovendegem. In de vergaderzalen is het aanbieden van koude of warme maaltijden niet toegelaten.Billijke vergoeding, Sabam Artikel 10In alle accommodaties wordt een jaartarief billijke vergoeding zonder dans betaald door de gemeente. In de accommodaties waar fuiven en dansfeesten zijn toegelaten wordt een jaartarief billijke vergoeding met dans betaald door de gemeente. Artikel 11Kosten inzake Sabam zijn steeds ten laste van de gebruiker. Ingebruikname en ontruimingArtikel 12De gebruiker contacteert het team evenementen (reservaties@lievegem.be) om nadere informatie te verkrijgen over de toegangsmodaliteiten van de gehuurde accommodatie.Artikel 13Het in gereedheid brengen van de aangevraagde accommodatie en techniek kan enkel tijdens de periode waarvoor het gebruik werd toegestaan.Artikel 14In de gehuurde accommodaties zijn volgende zaken niet toegelaten:•    timmeren, nagelen, plakken en nieten op muren, vensters, deuren•    het gebruik van het materiaal (horecamateriaal, meubilair, …) buiten de accommodatie •    parkeren binnen de omheining van de accommodatie, behoudens op de daartoe voorziene plaatsen. Bij gebrek aan parkeerplaatsen is tijdelijk parkeren binnen de omheining enkel toegelaten voor laden en lossen.•    materialen of toestellen die licht ontvlambaar zijn of verhoogd risico op ontploffing, brand of geluidsoverlast veroorzaken, worden niet toegelatenArtikel 15De gehuurde accommodatie mag niet onderverhuurd worden of ter beschikking gesteld worden aan derden.OpkuisArtikel 16Na elke activiteit wordt de accommodatie door vrijwilligers, aangestuurd door de gemeentelijke diensten gecontroleerd aan de hand van een checklijst. Artikel 17Bij het verlaten van de gehuurde accommodatie wordt deze door de huurder in een perfecte staat van onderhoud achtergelaten. Dit betekent dat de gebruiker minstens volgende zaken in orde brengt:•    alle tafels en stoelen worden schoongemaakt en teruggeplaatst volgens hun oorspronkelijke schikking (in de berging)•    alle gebruikte horecamateriaal wordt net en correct opgeruimd•    alle gebruikte ruimtes (incl. WC’s, gangen, keuken) worden uitgeveegd en gedweild•    alle vuilnis en vuilzakken worden onmiddellijk na de activiteit meegenomen door de gebruiker•    alle ramen en deuren worden correct afgesloten•    alle verlichting wordt gedoofd•    alle verwarming, kookapparaten… worden uitgeschakeldArtikel 18Bij alle inbreuken en / of beschadigingen worden de materiaalkost en / of de ingezette personeelsuren om alles in een correcte staat te herstellen door de gebruiker vereffend volgens de hem voorgelegde factuur.Muziek en burenhinderArtikel 19Burenhinder wordt zoveel mogelijk vermeden. Aan huurders wordt gevraagd om ramen en deuren gesloten te houden en de aanwezigen aan te manen om bij het verlaten van de zaal de nachtrust van de buurt niet te verstoren. Indien aangewezen kan het college van burgemeester en schepenen aan de huurder voorwaarden opleggen om de burenhinder tot een minimum te beperken. Artikel 20In volgende accommodaties is muziek enkel toegelaten tot 22.00 uur: Kerkelare en Tempelhof.AanvraagprocedureArtikel 21Een zaal reserveren kan ten vroegste 2 jaar voor aanvang van de activiteit door verenigingen en ten vroegste 6 maanden voor aanvang van de activiteit door particulieren.Artikel 22Een zaal reserveren kan via het digitale reservatiesysteem (https://reservaties.lievegem.be) of persoonlijk via het team evenementen. Artikel 23Aanvragen die neigen naar exclusief gebruik kunnen geweigerd worden. Geen enkele aanvrager kan bij het toekennen van de zaal aanspraak maken op verworven rechten.Artikel 24Aanvragen kunnen gedurende maximum 2 weken in optie gehouden worden. Indien binnen deze termijn geen officiële aanvraag tot reservatie ingediend wordt, vervalt de aanvraag automatisch.Artikel 25Betaling van de factuur impliceert het aanvaarden van het gebruikersreglement.Aansprakelijkheid en verzekeringArtikel 26Het gemeentebestuur sluit een brandverzekering af voor het gebouw en de eigen inboedel met afstand van verhaal t.o.v. de huurders. Artikel 27De gebruiker zorgt zelf voor een verzekering voor zaken die buiten de brandverzekering van het gemeentebestuur vallen (vb. eigen materiaal, …). De gebruiker dient te beschikken over een verzekering burgerlijke aansprakelijkheid voor schade aangebracht aan personen en goederen naar aanleiding van de uitgeoefende activiteiten.Artikel 28De huurder is aansprakelijk voor alle schade die tijdens het gebruik aan of in de gehuurde lokalen wordt aangericht. De huurdersaansprakelijkheid omvat ook de eventuele schade aangebracht aan de in het gehuurde goed aanwezige roerende goederen van het gemeentebestuur (vb. meubelen, geluidsinstallatie, ...). De huurder is niet aansprakelijk voor de schade als gevolg van normaal gebruik van het lokaal.Artikel 29Het gemeentebestuur kan niet verantwoordelijk gesteld worden voor diefstal of beschadiging van materiaal dat toebehoort aan de gebruiker of betrekking heeft op de activiteit die hij organiseert.Specifieke veiligheidsbepalingenArtikel 30In het kader van de brandveiligheid waakt de gebruiker over het niet overschrijden van de maximumcapaciteit van de zaal.Artikel 31De gebruiker dient er steeds op te letten dat alle nooduitgangen volledig worden vrijgehouden en de voorzieningen in verband met brandveiligheid volledig bereikbaar zijn.Artikel 32De veiligheid in en rond het gehuurde goed moet ten allen tijde verzekerd zijn. Indien nodig dienen op initiatief van het college van burgemeester en schepenen de nodige maatregelen getroffen te worden.Extra bepalingenArtikel 33De gebruiker is verplicht er voor te zorgen dat al diegenen die van de zaal gebruik maken, de gebruiksvoorwaarden stipt naleven, er voldoende toezicht uitgeoefend wordt, het publiek zich ordelijk gedraagt en de verbodsbepalingen worden nageleefd.Artikel 34Indien de gebruiker zijn verplichtingen niet nakomt, heeft het college van burgemeester en schepenen het recht de activiteit onmiddellijk stop te zetten en de gebruiker niet meer toe te laten zonder verhaal op enige schadevergoeding.Artikel 35In geval van omzeiling van de verplichtingen en/of verboden die in dit gebruikersreglement en de bijzondere bepalingen zijn opgenomen, kan het college van burgemeester en schepenen beslissen om, naast de aanrekening van de kosten voor schade, aan de huurder de huur van de gemeentelijke infrastructuur te ontzeggen.Artikel 36 - Non-discriminatieclausuleDe aanvrager verbindt er zich toe: •    geen enkele vorm van discriminatie op grond van het geslacht, nationaliteit, zogenaamd ras, huidskleur, afkomst, nationale of etnische afstamming, leeftijd, seksuele geaardheid, burgerlijke staat, geboorte, vermogen, geloof of levensbeschouwing, politieke overtuiging, taal, huidige of toekomstige gezondheidstoestand, handicap, fysieke of genetische eigenschap of sociale afkomst te dulden. •    Elk discriminerend gedrag te voorkomen en indien nodig te bestrijden en te bestraffen. •    De wetten en reglementen die de toepassing van de non-discriminatie en gelijke kansen bevorderen en verdedigen na te leven. •    Indien men een beroep doet op derden, onderhavige non-discriminatieclausule aan hen ter kennis te brengen en er voor te zorgen dat ook zij die naleven in de bijdrage die zij leveren in het kader van het toepasselijke reglement. Wanneer de non-discriminatieclausule niet nageleefd wordt, kan de gemeente Lievegem – rekening houdend met alle elementen – maatregelen nemen.Artikel 37Het college van burgemeester en schepenen wordt gelast met de uitvoering van dit reglement en wordt ertoe gemachtigd in alle onvoorziene gevallen de nodige beslissingen te nemen.  
+                                 
+                                 
+                                    Bekendmaking 
+                                    team evenementen en directeur vrijetijd, team communicatie (gemeentelijke website)ABB via digitaal loket 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Jeroen Van Acker, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, inzonderheid artikel 40§3: de gemeenteraad stelt de gemeentelijke reglementen vast. 
+                                                            Huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem, vastgesteld op de gemeenteraad van 27 januari 2021 - tijdelijk aangepast naar aanleiding van de coronacrisis op 1 februari 2022 en bekrachtigd door de gemeenteraad op 23 februari 2022: opheffing, vastgesteld op het college van burgemeester en schepenen van 8 maart 2022 
+                                                            Besluit van het college van burgemeester en schepenen van 14 december 2021: huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem - aanpassing: principiële goedkeuring 
+                                                             
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            opheffing tijdelijke aanpassing n.a.v. corona 
+                                                            Ten gevolge van de coronacrisis en de veiligheidsmaatregelen die opgelegd worden werd het huishoudelijk reglement rond de verhuur van de gemeentelijke culturele infrastructuur diverse keren aangepast. Het Overlegcomité heeft op 4 maart 2022 beslist om vanaf 7 maart een verdere versoepeling door te voeren en een reeds beperkingen te schrappen, waaronder alle coronamaatregelen of – beperkingen voor evenementen en activiteiten. Gezien de aangepaste maatregelen door het Overlegcomité en de publicatie ervan in het nieuwe Koninklijk Besluit en gezien het college opteert om de gemeentelijke ruimtes zo snel mogelijk aan het verenigingsleven ter beschikking te stellen, is de tijdelijke aanpassing aan het huishoudelijk reglement rond de verhuur van de gemeentelijke culturele infrastructuur niet langer noodzakelijk en werd de tijdelijke aanpassing door het college op 8 maart 2022 opgeheven. 
+                                                            Deze beslissing moet bekrachtigd worden door de gemeenteraad. 
+                                                            aanpassing verhuurreglement: nieuwe zalen 
+                                                            1. Het Huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur, vastgesteld op de gemeenteraad van 27 januari 2021, vereist een actualisatie gezien enkele bijkomende gemeentelijke zalen opengesteld worden voor verhuur aan verenigingen: 
+                                                             
+                                                                Passagezaal Waarschoot 
+                                                                Zalen en speelplaats in de Gemeentelijke Basisschool Vinderhoute 
+                                                             
+                                                            
+                                                                Bovenstaande zalen worden mee opgenomen in de prijstabel conform de grootte van de locatie. De zalen en speelplaats in de GBS Vinderhoute worden, gezien de specifieke aard en beperkte verhuurmogelijkheid, enkel verhuurd na specifieke aanvraag en collegebeslissing.
+                                                             
+                                                            
+                                                                 
+                                                             
+                                                            
+                                                                2. Verder wordt voorgesteld om in de nieuwe zalen geen dansfeesten/fuiven toe te laten en de verhuur niet open te stellen voor particulieren.
+                                                             
+                                                            
+                                                                 
+                                                             
+                                                            Na principieel akkoord van het college van burgemeester en schepenen werd officieel advies gevraagd bij de relevante adviesraad: beheersorgaan van de socio-culturele infrastructuur Lievegem. Het beheersorgaan van de socio-culturele infrastructuur Lievegem gaf op de vergadering van 15 februari 2022 positief advies rond deze voorgestelde aanpassingen. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ec2731f0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 8 maart 2022 om de tijdelijke aanpassing van het huishoudelijk reglement rond het gebruik van de culturele gemeentelijke infrastructuur, vastgesteld op het college van burgemeester en schepenen van 1 februari 2022 en bekrachtigd door de gemeenteraad op 23 februari 2022, op te heffen. 
+                                    Artikel 2 
+                                    De gemeenteraad stelt het aangepaste huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem vast. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 
+                                                            De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 8 maart 2022 om de tijdelijke aanpassing van het huishoudelijk reglement rond het gebruik van de culturele gemeentelijke infrastructuur, vastgesteld op het college van burgemeester en schepenen van 1 februari 2022 en bekrachtigd door de gemeenteraad op 23 februari 2022, op te heffen. 
+                                                            Artikel 2 
+                                                            De gemeenteraad stelt het aangepaste huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem vast. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "ed19f660-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Huishoudelijk reglement op het gebruik van de gemeentelijke culturele infrastructuur in Lievegem - aanpassing: vaststelling" .
+

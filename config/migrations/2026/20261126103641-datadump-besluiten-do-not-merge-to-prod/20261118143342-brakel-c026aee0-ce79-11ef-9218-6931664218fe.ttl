@@ -1,0 +1,1275 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/5431859e-9f14-4e49-b6c8-5b80b7d4e481> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/012dd980-fcd7-4668-9913-47074894f812>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/0fca32d7-4054-42c6-951e-b96d869c702b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1aa4108c-b361-4615-a64e-2fe20348d360>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/2d9dc155-1b93-4953-a28a-3a6a84cf2af0>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/325c2f66-67e1-43b5-85c2-088d4e50e68c>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/3d196578-c957-4887-bc28-793d29ade565>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/42f857a5-ab10-49a9-a503-aca851e77663>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/44b4f21a-4b58-4a54-92bb-0368a40eec78>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/486101ec-f076-4712-aa1e-95e9a185a47a>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/51f59054-46f0-4426-a625-985dd7703ace>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5981905c-1ae2-446d-a3a8-2e7c8d04a342>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/5caf5b90-2c88-4a27-878b-e16fded7f548>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/84db1bee-f8ce-47d1-adc9-98f9f5077511>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/8c376a9d-e08b-4a54-a27d-9f82afe0c2fb>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a0527502-7cd6-4579-95c1-69053ed1b4f7>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/bc13be7e-86c1-4650-b86e-7d53feebec9b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/cc1b6fbb-657d-407b-aeac-951558ee15e2>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d33e9543-8f40-49b0-a2d5-2320f9f4522b>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d5a94fe9-97f4-463e-bcb6-862733fc0afc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d76620a1-57d5-462e-8c74-d64731bbe054>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/f135efdc-477c-455a-9277-82c44a6ed805> ;
+    ns1:geplandeStart "2025-01-06T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/75d79944-710b-4df7-8240-a7b3d8159f99> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/665255d0-7d5a-46c7-b8c6-3456470b9f56> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/27d6213e-b091-444c-b7a5-43982e84ce70> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "63ffd230-c830-11ef-9218-6931664218fe" ;
+    prov:atLocation "Gemeentelijke bibliotheek" ;
+    prov:startedAtTime "2025-01-06T20:00:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0fca32d7-4054-42c6-951e-b96d869c702b> ;
+    ns1:openbaar true ;
+    ns2:uuid "c1f63ec0-ce79-11ef-9218-6931664218fe" ;
+    dcterms:description """ 
+                             
+                                Het opmaken van een (één) aanvullend verkeersreglement voor de gemeente Brakel. 
+                             
+                        """,
+        """ 
+                                                             
+                                                                Het opmaken van een (één) aanvullend verkeersreglement voor de gemeente Brakel. 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/206b1e47-7070-4de1-9949-502ffbea9ffe> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/206b1e47-7070-4de1-9949-502ffbea9ffe> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Algemeen aanvullend verkeersreglement." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    De Nieuwe Gemeentewet van 24 juni 1988, artikel 119. 
+                                    Decreet Lokaal Bestuur, artikel 42, 2° 
+                                    Decreet 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van verkeerstekens, artikel 4, §1, lid 2 en artikel 5, §1, lid 23. 
+                                    Wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968. 
+                                    Koninklijk Besluit van 1 december 1975 houdende  algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg. 
+                                    Ministerieel besluit waarbij van 11 oktober 1976 waarbij de de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald. 
+                                    Uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens. 
+                                    Omzendbrief MOB/2009/01 van 3 april 2009. 
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Teneinde een maximale transparantie te bereiken, is een nieuw ontwerp van algemeen aanvullend verkeersreglement opgesteld. 
+                                    In deze versie wordt voorgesteld om 
+                                     
+                                        de parkeerplaatsen elektrische voertuigen en het eenrichtingsverkeer in de St.-Pieterswijk (zone oud zwembad) te schrappen aangezien het zwembad verkocht is. 
+                                        Parkeerplaats voor mindervaliden in de Wielendaalstraat t.h.v. huisnummer 62. 
+                                     
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    De Nieuwe Gemeentewet van 24 juni 1988, artikel 119. 
+                                                                    Decreet Lokaal Bestuur, artikel 42, 2° 
+                                                                    Decreet 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van verkeerstekens, artikel 4, §1, lid 2 en artikel 5, §1, lid 23. 
+                                                                    Wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968. 
+                                                                    Koninklijk Besluit van 1 december 1975 houdende  algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg. 
+                                                                    Ministerieel besluit waarbij van 11 oktober 1976 waarbij de de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald. 
+                                                                    Uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens. 
+                                                                    Omzendbrief MOB/2009/01 van 3 april 2009. 
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Teneinde een maximale transparantie te bereiken, is een nieuw ontwerp van algemeen aanvullend verkeersreglement opgesteld. 
+                                                                    In deze versie wordt voorgesteld om 
+                                                                     
+                                                                        de parkeerplaatsen elektrische voertuigen en het eenrichtingsverkeer in de St.-Pieterswijk (zone oud zwembad) te schrappen aangezien het zwembad verkocht is. 
+                                                                        Parkeerplaats voor mindervaliden in de Wielendaalstraat t.h.v. huisnummer 62. 
+                                                                     
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "c026aee0-ce79-11ef-9218-6931664218fe" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    ALGEMEEN AANVULLEND VERKEERSREGLEMENT 
+                                    TITEL 1 - PARKEREN 
+                                    Hoofdstuk 1 - Parkeren gemeentewegen 
+                                    Artikel 1: Gemeentewegen 
+                                    §1 . BEURTELINGS PARKEREN : halfmaandelijks 
+                                    1° Sint-Martensstraat : gezien vanuit de richting kerk naar Vloesberg: 
+                                    a) rechts, vanaf huisnr 16 tot aan huisnr 36 en vanaf huisnr 40 tot aan huisnr 54;b) links, vanaf de aansluiting met de Zure Veldwegel tot aan de eigendom van huisnr 31 en vanaf huisnr 37 tot 15m vòòr de bushalte; 
+                                    2° Dr. De Drijverestraat3° Tenbossestraat4° Spoorwegstraat vanaf huisnummer 41 tot huisnummer 65 
+                                    §2 VERBODEN PARKEREN : Voor elke voertuig 
+                                    1° Tamelbroekstraat vanaf de Nestor De Beckstraat over een afstand van 15m; 
+                                    2° Groenstraat vanaf en langsheen huisnr 20 tot aan huisnr 30;3° Nestor De Beckstraat tussen Lessensestraat en Tamelbroekstraat langs beide zijden;4° Lessensestraat over een afstand van 40m vanaf de Nestor De Beckstraat langs beide zijden;5° Sint-Martensstraat 
+                                    a) tussen huisnr 36 en 40 langsheen beide zijden van de weg;b) vanaf huisnr 7 tot huisnr 9 links in de richting Vloesberg 
+                                    6° Stationsstraat: 
+                                    a) tussen huisnrs 71 en 81 op werkdagen tussen 8u en 17u30;b) vanaf de Hoogstraat langs de onpare huisnrs over een afstand van 16 
+                                    7° Hollebeekstraat langs de huisnrs 1 en 3;8° Serpentestraat vanaf kruispunt Wielendaalstraat langs zijkant huisnr Wielendaalstraat 30 over een afstand van 15m9° Sint-Sebastiaanplein ter hoogte van huisnr 410° Teirlinckstraat tussen huisnr 11 en 1711° Suttermeers op het einde langsheen het voetpad loodrecht op de straat12° Tenbossestraat : thv huisnrs 19 en 21, en 7 m vanaf huisnr 19 richting Dr. De Dryverestraat13° Kulkadetstraat op het verharde stuk openbaar domein buiten de rijbaan naast huisnr 614° Hul over een afstand van 80m. vanaf de Rovorst langs beide zijden;15° Kraaiestee ter hoogte van huisnummer 10 over een afstand van 30;16° Nieuwstraat langsheen huisnrs 67 en 69;17° Sint-Franciscusstraat rechts vanaf de Holenbroek tot aan en in de richting van de Opbrakelsestraat;18° Industrielaan, gezien vanaf Geraardsbergsestraat : 
+                                    a) links vanaf huisnummer 1 tot voorbij huisnummer 25 (pijpekop)    links vanaf huisnummer 54 tot huisnummer 58    links vanaf huisnummer 42 tot huisnummer 48 (pijpekop) 
+                                    b) rechts vanaf Geraardsbergsestraat vanaf huisnummer 4 tot huisnummer 8    1e zijweg over de volledige rechterzijderechts na 1e zijweg over een lengte van 25m  
+                                    c) pijpekoppen   
+                                    19° Baneike:  thv huisnr 29 over een lengte van 17 meter;20° Parking Tirse: Er wordt elke zondag van 7u tot 14u verboden parkeren en doorgang ingevoerd op de derde rij van parking Tirse. De maatregel wordt aangeduid met het bord E3 met onderbord “zondag van 7u tot 14u”21° Parkweg tussen huisnummer 6 en tot aan de voetbalkantine (aan de linkerzijde gezien vanuit de Rondweg) 
+                                    §3 STILSTAAN EN PARKEREN VERBODEN 
+                                    1° Everbeekplaats: tussen de achterzijde van de kerk en het vakantiehuis over een afstand van 25 meter langsheen beide zijden van de weg, alsmede rechts in de rijrichting van de kerk vanaf de Lessensestraat tot een 10-tal meter voorbij het daar aangelegd zebrapad. 
+                                    2° inrit recreatiedomein De Rijdt via parking Abeelpad (toegang verlenen voor brandweer) 
+                                    3° parking sporthal De Rijdt: doorgang aan de achterzijde van sporthal + doorgang naar jeugdhuis, IBO, speeltuin... 
+                                    §4  VOORBEHOUDEN PARKEERPLAATSEN 
+                                    1° Andersvaliden 
+                                    a) Deelgemeente Nederbrakel 
+                                    1) Markplein : parkeerplaatsen ter hoogte van woningen nr 2, 10 (parkeerplaats het dichts bij de bibliotheek), 12;2) parking Tirse : gezien vanuit de richting van het Marktplein* de laatste twee parkeerplaatsen van de parkeerstroken gelegen langs de service flats,* de eerste twee parkeerplaatsen op de derde rij van de parking,;3) Vierschaar : * de eerste twee parkeerplaatsen vanaf kruispunt met de Neerstraat, * de eerste twee parkeerplaatsen van de vierde rij op de parking, * de tweede parkeerplaats linkerzijde gezien vanaf ingang gebouw nummer 21, * 2 parkeerplaatsen rechts achteraan gezien vanaf ingang gebouw nummer 21, * 1 parkeerplaats op de rijweg t.h.v. huisnummer 254) Neerstraat : eerste parkeerplaats links vanaf uitrit Marktplein richting Brusselsestraat5) Stationsplein : eerste twee parkeerplaatsen op de 3de parkeerzone6) Dam : 1ste parkeerplaats rechts gezien vanaf Meerbeekstraat;7) parking sporthal : eerste twee parkeerplaatsen links naast ingang sporthal8) Hoogstraat : parkeerplaats ter hoogte van woning nr 39) Kerkhofstraat : parkeerplaats ter hoogte van woning nr 5110) Serpentestraat: parkeerplaats ter hoogte van woning nr 1411) Warande: parkeerplaats ter hoogte van woning nr 2112) verbindingsweg Tirse: parkeerplaats t.h.v. kinderdagverblijf Zwalmnestje13) Watermolenstraat: laatste parkeerplaats t.h.v. huisnummer 2414) Kruisstraat t.h.v. huisnummer 8015) Wielendaalstraat t.h.v. huisnummer 62 
+                                    b) Deelgemeente Parike 
+                                    1) Hollebeekstraat : eerste twee parkeerplaatsen rechts vanaf Steenweg; 
+                                    c) Deelgemeente Opbrakel 
+                                    1) Sint-Martensstraat : * laatste parkeerplaats op de parkeerstrook gelegen rechts vanaf de Ronsesestraat * parkeerplaats links van de ingang van de kerk; 
+                                    d) Deelgemeente Zegelsem 
+                                    1) Sint-Ursmarsstraat : parkeerplaats rechts ingang kerk2) Teirlinckstraat : parkeerplaats rechts en rechtover Buurthuis 
+                                    e) Deelgemeente Elst 
+                                    1) Sint-Apolloniaplein : eerste twee parkeerplaatsen rechts ingang kerk 
+                                    f) Deelgemeente Everbeek 
+                                    1) Everbeekplaats: 
+                                    * eerste twee parkeerplaatsen links ingang kerk, * laatste parkeerplaats van de parkeerstrook onmiddellijk rechts ingang kerk2) Muiterijstraat : * eerste links ingang kerk, * eerste parkeerplaats van laatste rij links ingang kerk 
+                                    g) Deelgemeente Michelbeke : 
+                                    1) Sint-Sebastiaanplein : eerste parkeerplaats naast de kerk,2) Guido Gezellestraat : parkeerplaats naast bushalte,3) Riedeplein : eerste twee parkeerplaatsen links vanaf Groenstraat4) Groenstraat: parkeerplaats t.h.v. huisnummer 39 
+                                    2° Bussen  
+                                    a)Groenstraat over een afstand van 20m vanaf ingang en langs Stella Matutina tijdens de schooldagen: 
+                                    1) van 7u30 tot 9u van maandag tot vrijdag;2) van 16u tot 17 van maandag tot vrijdag uitgezonderd op woensdag3) van 11u45 tot 12u30 op woensdag 
+                                    3° Cerenomiewagens 
+                                    a) Everbeekplaats voor de ingang van de kerk over een afstand van 15m;b) Muiterij voor de ingang van de kerk over een afstand van 15mc) Marktplein thv van de deur links van de kerk 
+                                    4° Alle voertuigen 
+                                    a) Industrielaan gezien uit de richting van de Geraardsbergsestraat: 
+                                    1) rechts vanaf 30m voorbij de eerste zijweg rechts tot 15m voor de bocht naar rechts2) buiten de rijbaan gelegen gedeelte rechtover ingang gebouw nr 28 
+                                    b) Lepelstraat gezien uit de richting van G.Gezellestraat: 
+                                    1) rechts tussen huisnummer 2 en 162) rechts tussen huisnummer 46 en 66 
+                                    5°  Personenwagens, auto’s dubbel gebruik en minibussen : 
+                                    a) Parking Tirseb) Everbeekplaats;c) Dam met inbegrip van parkingd) Muiterij op de parking thv gemeentelijke kleuterschoole) Sint-Sebastiaanpleinf) parking sporthalg) Vierschaarh) Sint-Pieterswijki) Peperendaalwijkj) Hovendaalk) Ruiterijl) Nederstenkouter + Veldstraatm) Theo Brakelstraatn) Brusselsestraat thv woning nr 38o) Neerstraat langs beide zijden van huisnummer 3 tot en met huisnummer 13 p) Serpentestraat, tussen Brugstraat en Theo Brakelstraatq) Edg. Tinelstraatr) Noordhoeks) uitgezonderd op woensdag tussen 5u en 14u,a. Marktpleinb. Serpentestraat tussen Marktplein en Brugstraatc. Hoogstraatt) H. De Coenestraatu) Suttermeersv) Bovenhoekw) Toepzichtx) Manitobastraaty) Parking Dam met uitzondering van de parkeerplaatsen voor mobilhomes en elektrische wagens 
+                                    6° Elektrische voertuigen : Oplaadplaatsen 
+                                    a) 2 parkeerplaatsen op de parking Vierschaarb) 2 parkeerplaatsen op de parking Tirsec) 2 parkeerplaatsen op de parking gemeentelijke sporthald) 2 parkeerplaatsen op de parking St.-Apolloniapleine) 2 parkeerplaatsen op de parking Muiterijf) 2 parkeerplaatsen op de parking in de Kerkhofstraat (t.h.v. het kerkhof)g) 2 parkeerplaatsen op de parking Everbeekplaatsh) 2 parkeerplaatsen op Steenweg t.h.v. de kerki) 2 parkeerplaatsen op Warande t.h.v. huisnummer 138j) 2 parkeerplaatsen op Warande t.h.v. huisnummer 20k) 2 parkeerplaatsen in de Dr. De Drijverestraat t.h.v. huisnummer 2l) 2 parkeerplaatsen in de Olifantstraat t.h.v. huisnummer 33m) 2 parkeerplaatsen in de St.-Martensstraat t.h.v. huisnummer 7n) 2 parkeerplaatsen in de St.-Martensstraat t.h.v. huisnummer 51o) 2 parkeerplaatsen in de Spoorwegstraat t.h.v. huisnummer 20p) 2 parkeerplaatsen in de Kasteelstraat t.h.v. huisnummer 79q) 2 parkeerplaatsen in de Driehoekstraat t.h.v. huisnummer 108r) 2 parkeerplaatsen in de Watermolenstraat (parking t.h.v. huisnummer 22)s) 2 parkeerplaatsen op de parking van het voetbalplein Michelbeket) 2 parkeerplaatsen in de G.Gezellestraatu) 2 parkeerplaatsen op het Riedepleinv) 2 parkeerplaatsen in de St.-Ursmarsstraat t.h.v. huisnummer 33w) 2 parkeerplaatsen op parking Dam 
+                                    7° Deelauto's: 
+                                    a) 2 parkeerplaatsen op de parking Stationsplein 
+                                     8° Mobilhomes: 
+                                    a) 4 parkeerplaatsen op de parking Dam met beperkte parkeerduur van 72u 
+                                    §5 BEPERKTE PARKEERTIJD max 30 min 
+                                    1° Buiten blauwe zone 
+                                    a) Brusselsestraat thv woning nr 38 
+                                    2° Binnen blauwe zone 
+                                    a) Hoogstraat, met uitzondering van de parkeerplaats voor andersvalidenb) Neerstraat van huisnr 5 tot 13 en van 24 tot 34, met uitzondering van de parkeerplaats voor andersvaliden 
+                                    §6  ZONALE REGELING 
+                                    1° Blauwe zone 
+                                    a) Neerstraat b) Stationsstraat;b) Wielendaalstraat;d) Serpentestraat;e) Brugstraat;f) Markplein;g) Tirse langs beide zijden van de rijweg gelegen tussen gebouw bibliotheek en T.Brakelstraat; h) Kasteelstraat vanaf kruispunt Stationsstraat-Hoogstraat-Wielendaalstraat tot en met woning nummer 26;i)  Vierschaar vanaf Neerstraat tot parking;j) Beekstraat: op de parking gelegen langsheen het handelspand ter hoogte van het kruispunt Beekstraat-Brusselsestraatk) Lindeplein: parkeerstrook op het Lindeplein  
+                                    §7 PARKEREN OP HET VOETPAD 
+                                    1° Wijnstraat gedeeltelijk langs de kant van de pare huisnummers 
+                                    §8 De in deze titel getroffen maatregelen worden als volgt gesignaleerd met 
+                                    §1. : verkeersborden E5 en E7 met de pijlen Type X a, b en d;§2.1 tot §2.5, §2.6b tot §2.12 : gele onderbroken lijn§2.13 : verkeersbord E1§2.6a, §2.14, §2.15, §2.16, §2.17, §2.19, §2.21 : verkeersbord E1 met onderborden Xa en Xb§2.18: verkeersborden E1 met onderborden Xa en Xb behalve de pijpekoppen met verkeersborden Z E1 en Z E1/§2.20: het bord E3 met onderbord “zondag van 7u tot 14u  §3: borden E3§4.1 : borden E9A met onderbord Type VIId (symbool voor andersvaliden)§4.2 : verkeersborden E9d met onderborden aanduiding uren + Xa en Xb§4.3 : het verkeersbord E9a (waar nodig met pijlen Xa en Xb) met onderbord type IV “uitgezonderd cerenomiewagens”§4.4 : verkeersbord E9 met onderborden Xa en Xb§4.5.a tot 4.5.r : verkeersbord E9b§4.5.s : verkeersbord E9b met onderbord "uitgezonderd op woensdag van 5u en 14"§4.5.u tot 4.5.x: verkeersbord E9b§4.6 : verkeersbord E9a met pictogram of onderbord “elektrische voertuigen” + onderbord VIIb§4.7: verkeersbord E9a met pictogram of onderbord "deelwagen" §5 : onderbord max 30 min§6.1 : de verkeersboren begin en einde blauwe zon met afbeelding E9a en parkeerschijf§7 : de verkeersborden E9f§8 : de verkeersborden E9h met pictogram en met onderbord type VIIc 'max 24u' 
+                                      
+                                    Hoofdstuk 2 - Parkeren gewestwegen 
+                                    Artikel 2: Enkel parkeren toegelaten voor personenauto's, auto's dubbel gebruik, minibus 
+                                    a) Geraardsbergsestraat tussen Rondplein en Industrielaan. De maatregelen wordt gesignaleerd met het verkeersborden E9e 
+                                    b) Ronsesestraat tussen Rondplein en St.-Martensstraat aan de rechterzijde gezien vanaf het Rondplein. De maatregelen worden gesignaleerd met de verkeersborden E9e. 
+                                    TITEL 2 - VERBODSBORDEN 
+                                    Hoofdstuk 1 - Eenrichtingsverkeer 
+                                    Artikel 3: 
+                                    §1 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van het verkeer van fietsers, bromfietsers klasse A en speed pedelecs (welke in beide richtingen mogen) in volgende straten: 
+                                    1° In de Warande vanaf het kruispunt met de Eikkouterweg tot aan en in de richting van de Kruisstraat 
+                                    2° Tirse vanaf het Marktplein en in de richting van de parking Tirse 
+                                    3° In de Serpentestraat vanaf de Theo Brakelstraat tot aan en in de richting van het Marktplein 
+                                    4° In de Wielendaalstraat vanaf het kruispunt met de Kasteelstraat tot aan en in de richting van Tirse 
+                                    5° In de Stationsstraat vanaf het kruispunt met het Stationsplein in de richting van de Kasteelstraat 
+                                    6° In de Brugstraat vanaf de Serpentestraat en in de richting van de Wielendaalstraat 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C1 en F19 met onderbord M12 “uitgezonderd + symbolen fietsers, bromfietsers klasse A en speed pedelecs". 
+                                    §2 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van het verkeer van fietsers in volgende straten: 
+                                    1° In de Teirlinckstraat tussen de Oudenaardsestraat en de Sint-Ursmarsstraat 
+                                    2° In de Gauwstraat vanaf het kruispunt met de Neerstraat in de richting van ringweg N8c 
+                                    3° In de Driestenbroekestraat vanaf huisnummer 8 tot 20 meter voor en in de richting van de Vunkstraat 
+                                    4° In de Schoolstraat vanaf huisnummer huisnummer 1 tot aan en in de richting van de Kunnenbergstraat 
+                                    5° In de Vierschaar vanaf huisnummer 23 tot aan en in de richting van de Gauwstraat 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden F19 met onderbord M4 en in tegenovergesteld richting C1 met onderbord M2. 
+                                    §3 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van het verkeer van fietsers, van voertuigen van geregelde openbare diensten en van voertuigen bestemd voor het ophalen van leerlingen in volgende straten: 
+                                    1° In de Watermolenstraat vanaf het kruispunt met de Neerstraat tot aan en in de richting van woning Watermolenstraat nr. 13 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden F17 waarin, in het rijvak waar de bussen en de fietsers worden toegelaten in de tegenstelde rijrichting, het symbool van een fiets en het woord "BUS". Ter hoogte van Watermolenstraat nr. 13 wordt een C1 met onderbord "uitgezonderd bus" en onderbord M2 (uitgezonderd fietsers) geplaatst. Aan de overzijde van woning Watermolenstraat nr. 13 wordt in de richting van de Beekstraat het bord A39 geplaatst.  
+                                    §4 Er wordt eenrichtingsverkeer ingevoerd in volgende straten: 
+                                    1° Op het kruispunt Hollebeekstraat / Matrouwstraat is het verboden links van de verkeersgeleider te rijden 
+                                    2° In de Ruiterij is het verboden links van de middenbermen te rijden (komende vanuit de Meierij). 
+                                    3° Op de parking Tirse in tegenwijzerszin komende vanuit de Theo Brakelstraat. 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C1 en D1d. 
+                                    4° Everbeekplaats in de richting van de Cordenuitstraat 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C1 en F19. 
+                                    Hoofdstuk 2 - Verboden doorgang 
+                                    Artikel 4 
+                                    §1 Verboden toegang, in beide richtingen, voor iedere bestuurder 
+                                    1° buurtweg n°33, Meersweg, vanaf de aansluiting met de weg n°11, Pullem, tot aan de afslag naar de enige woning in de Meersweg 
+                                    2° buurtweg n°28 te Everbeek, vanaf achter de woning n°7 in de Hayestraat richting Vloesberg tot aan de aansluiting met de voetweg n°37 
+                                    3° buurtweg n°37 te Everbeek, vanaf de aansluiting met buurtweg n° 172 en de grens met Vloesberg 
+                                    4° buurtweg n°172 te Everbeek, vanaf de Kroonstraat tot aan de Hayestraat 
+                                    5° buurtweg n°36 te Everbeek, tussen woning 11 Donkerstraat en Bergstraat 
+                                    6° voetweg n°85 vanaf de Pieter Hoelmanstraat tot aan de Meersweg 
+                                    Deze maatregel zal gesingaleerd worden met volgende verkeersborden C3 
+                                    §2 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd plaatselijk verkeer in volgende straten: 
+                                    1° Buurtweg n°5 Brakelbos 
+                                    2° Burgweg 
+                                    3° Voetwegel n°27 te Michelbeke tussen Groenstraat en Burgweg 
+                                    4° Kammeland 
+                                    5° Mijnwerkerspad over een strook van 25m vanaf de Molenhoekstraat richting Brusselsestraat 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 aangevuld met onderbord met de vermelding "Uitgezonderd plaatselijk verkeer". 
+                                    §3 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd fietsers in volgende straten: 
+                                    1° Torenpad 
+                                    2° H. De Coenestraat tussen Driehoekstraat en uiteinde H. Decoenestraat 
+                                    3° Sadonespad tussen Ronsesestraat en Sint-Martensstraat 
+                                    4° Vanaf het Stationsplein richting N8c 
+                                    5° Vanaf de N8c richting Tenbossestraat 
+                                    6° Voetweg n° 81 (tussen Toepweg en Toepkapelstraat) 
+                                    7° Voetweg n° 82 (tussen Toepweg en Kruisstraat) 
+                                    8° Voetweg n° 84 (deel Toepweg) 
+                                    9° Voetweg n° 86 (Zavelpad - tussen Kruisstraat, Warande en Tenbossestraat) 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 aangevuld met onderbord M2 (uitgezonderd fietsers). 
+                                    §4 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd plaatselijk verkeer, fietsers, bromfietsers klasse A en speed pedelecs in volgende straten: 
+                                    1° Kouterstraat 
+                                    2° Oorloge 
+                                    3° Kuiterlos 
+                                    4° Koestraat 
+                                    5° Abeelpad 
+                                    6° Parkweg 
+                                    7° Baneike 
+                                    8° Loofweg 
+                                    9° Galgestraat en het gedeelte van de Faytestraat in het verlengde van de Galgestraat tot het T-kruispunt thv huisnr. 4 
+                                    10° Kiekenstraat 
+                                    11° Kapittel 
+                                    12° Hogezavel 
+                                    13° Berendries zijstraat thv huisnummer 32 
+                                    14° Molenkouterweg 
+                                    15° Matrouwstraat, gedeelte tussen Matrouwstraat n°19 en Steenweg  
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 met onderbord met de vermelding "Uitgezonderd plaatselijk verkeer" + onderbord M12 
+                                    §5 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd fietsers en ruiters in volgende straten: 
+                                    1° Mijnwerkerspad tussen Boembeke en Livierenstraat 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersbroden C3 met onderbord M2 en onderbord uitgezonderd ruiters 
+                                    §6 Verboden toegang voor ruiters in volgende straten: 
+                                    1° Voetweg nr 71 deel tussen Livierenstraat en Tenbergen 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C13. 
+                                    §7 Verboden toegang met uitzondering van landbouwvoertuigen in volgende straten: 
+                                    1° ruilverkavelingsweg tussen de Steenstraat en tot op 40m voor de aansluiting met de Twaalfunderstraat 
+                                    2° buurtweg n°60 te Everbeek, tussen buurtweg n°36 en Plankkouter 
+                                    3° buurtweg n°15 te Zegelsem, tussen buurtweg n°16 en Kleine Gastenhoek 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 met onderbord type IV “uitgezonderd landbouwersgebruik” alsook een voorsignalisatie C3 met onderbord type IV “uitgezonderd landbouwersgebruik en onderbord type Ia “350m” en “40m” voor de ruilverkavelingsweg. 
+                                    §8 Verboden toegang voor motorvoertuigen met uitzondering van voertuigen van begrafenisondernemers en gemeentediensten. Andere voertuigen mits toelating gemeentelijke overheid: 
+                                    1° Kerkhoven gemeente Brakel  
+                                    2° Voor de begraafplaatsen van Nederbrakel en Opbrakel uitzondering voor personenauto's op woensdag van 13.00 uur tot 16.00 uur 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 aangebracht met onderbord: ”Behalve voertuigen begrafenisondernemers en gemeentediensten. Andere voertuigen mits toelating gemeentelijke overheid”. 
+                                    Voor de begraafplaatsen van Nederbrakel en Opbrakel wordt op het onderbord bijkomend vermeld "personenauto's op woensdag 13.00u tot 16.00u. 
+                                    §9 Verboden toegang voor motorvoertuigen met uitzondering van voertuigen van "De Lijn": 
+                                    1° Stationsplein op de in- en afritten van en op het terrein van het busstation van "De Lijn" 
+                                    Hoofdstuk 3 - Verboden rechts inslaan  
+                                    §1 Verboden rechts inslaan 
+                                    1° Kleistraat ter hoogte van het kruispunt met de Kleibergstraat 
+                                    Deze maatregel zal gesignaleerd worden met het verkeersbord C31b 
+                                    TITEL 3 - TONNAGEBEPERKING 
+                                    Artikel 5: 
+                                    §1 Er wordt een tonnagebeperking ingevoerd uitgezonderd laden en lossen, en bussen, voor voertuigen waarvan de massa in beladen toestand hoger is: 
+                                    1° 3,5 ton: 
+                                    a) Berendries 
+                                    b) Groenstraat 
+                                    c) Pontweg 
+                                    d) Strichtstraat 
+                                    e) Wijnstraat 
+                                    f) Zonale geldigheid 3,5 ton: Wielendaalstraat, Tirse, Serpentestraat, Brugstraat, Marktplein, Kasteelstraat, Hoogstraat, Neerstraat, Spoorwegstraat, St-Pieterswijk, Stationsstraat, Stationsplein, Gauwstraat, Brusselsestraat deel tussen Beekstraat en Neerstraat, en Watermolenstraat, deel tussen Beekstraat en Neerstraat, Rekestraat (aansluitend op stad Geraardsbergen) 
+                                    2° 7,5 ton: 
+                                    a) Lessensestraat 
+                                    b) Klaaie 
+                                    c) Priem 
+                                    d) Brouwierstraat 
+                                    e) Molenstraat 
+                                    f) Kloosterstraat 
+                                    g) Gelategemstraat 
+                                    §2 De in deze titel getroffen maatregelen worden gesignaleerd met de verkeersborden : - C21 (3,5 ton of 7,5 ton) met onderbord uitgezonderd laden en lossen, en bussen - zonale geldigheid type C21 (3,5 ton), met opschrift uitgezonderd laden en lossen, en bussen. 
+                                    TITEL 4 - SNELHEIDSBEPERKINGEN 
+                                    Artikel 6: 
+                                    §1 Op volgende gemeentewegen wordt in beide rijrichtingen een snelheidsbeperking van 50km/u ingevoerd: 
+                                    1° bebouwde kommen 
+                                    2° Kleistraat (tussen Langakkerstraat en Riebeke) en Riebeke 
+                                    3° Berendries 
+                                    4° Hauwstraat 
+                                    5° Gelategemstraat 
+                                    6° Brakelbosstraat 
+                                    7° Leinstraat, vanaf het kruispunt met de Sint-Liebertusdreef tot aan de aansluiting met Tenbergen 
+                                    8° Priemstraat, vanaf 200m voor de aansluiting met de Plankkouter tot aan de bebouwde kom van Everbeek-Boven 
+                                    9° Nieuwstraat, vanaf 200 m vóór het rustoord "De Vlaamse Ardennen" tot aan de aansluiting met Taalman 
+                                    10° Kruisstraat, vanaf de Lierenhoek (Lierde) tot aan bebouwde kom van Nederbrakel 
+                                    11° Heyveld, tussen de Lierenhoek en Holderbeke (Lierde) 
+                                    12° Matrouwstraat, vanaf de Stratendries (Lierde) tot aan de bebouwde kom van Parike 
+                                    13° Hollebekestraat, vanaf de Boshoekstraat (Lierde) tot aan de bebouwde kom van Parike 
+                                    14° Boekelstraat 
+                                    15° Arme Kleie 
+                                    16° Heuvelgem 
+                                    17° Rekelberg 
+                                    18° Steenland 
+                                    19° Lessensestraat 
+                                    20° Meierij tussen huisnummer 23 en huisnummer 57 (begin bebouwde kom) 
+                                    §2 Op volgende gewestwegen wordt een snelheidsbeperking van 50km/u ingevoerd: 
+                                    1° bebouwde kommen 
+                                    2° Langsheen de N8 vak Kleibergstraat, in beide richtingen, vanaf het einde van de bebouwde kom, klmpunt 43.500 tot aan de aansluiting met de Gentsestraat, klmpunt 45.150 
+                                    3° Langsheen de N462b vak Molenberg, Moriaanstraat, wordt in beide richtingen, vanaf klmpunt 1.000 tot aan het kruispunt met de Neerhofstraat, klmpunt 1.296 (begin bebouwde kom), een snelheidsbeperking van 50km/h ingevoerd 
+                                    4° Er wordt langsheen de N462 in de richting van Brakel, als aanloop, een snelheidsbeperking ingevoerd van 50 km/u vanaf 200m voor het variabel bord “begin 30 of 50km/u”, zijnde aan klmpunt 22.900 
+                                    5° Er wordt langsheen de N462b in de richting van Zottegem, als aanloop, een snelheidsbeperking ingevoerd van 50km/u vanaf 200m voor het variabel bord “begin 30 of 50km/u”, zijnde aan klmpunt 0.390 
+                                    6° Er wordt in de rijrichting Brakel, als aanloop, langsheen de N493, Steenweg een snelheidsbeperking ingevoerd van 50 km/u vanaf 200m voor het begin van het variabel bord Z30 zijnde aan klp 5.280 
+                                    §3 Volgende zone 30 worden ingevoerd: 
+                                    1° woonwijken: 
+                                    a) Sint-Pieterswijk 
+                                    b) Nederstenkouter en Veldstraat 
+                                    c) Suttermeers 
+                                    d) Vierschaar 
+                                    e) Ruiterij 
+                                    f) Hovendaal 
+                                    g) Peperendaalwijk 
+                                    h) Edgard Tinelstraat 
+                                    i) Noordhoek 
+                                    j) Bovenhoek 
+                                    k) Toepzicht 
+                                    l) Manitobastraat 
+                                    2° Schoolomgevingen / dorpscentrum: 
+                                    a) omgeving van de vrije lagere school in de Sint-Franciscusstraat : vanaf woning nr. 2 tot aan woning nr. 10 en in de Holenbroek vanaf de aansluiting met de Sint-Franciscusstraat tot aan woning nr. 5 
+                                    b) omgeving van de gemeentelijke kleuterschool in de deelgemeente Everbeek waarin een deel van de Muiterij (vanaf woning nr 17 tot woning nr 62) en een deel van de Maandagstraat (vanaf kruispunt Muiterij tot en met woning nr 18) 
+                                    c) dorpscentrum Nederbrakel : Meerbeekstraat, Vijfdagwandweg, Dam, Wielendaalstraat, Lindeplein, Kerkhofstraat tussen Lindeplein en huisnummer 63, Theo Brakelstraat, Tirse met uitzondering gedeelte Tirse tussen parking en Marktplein, Brusselsestraat tussen Beekstraat en Neerstraat, Serpentestraat tussen Theo Brakelstraat en Brugstraat, Kasteelstraat, Neerstraat, Gauwstraat, Driehoekstraat, Papestraat, Watermolenstraat tussen Brusselsestraat en Beekstraat, Herman De Coenestraat Kouterstraat tussen Meerbeekstraat en huisnummer 17,  Spoorwegstraat, Stationsstraat, Stationsplein  
+                                    d) omgeving van de vrije lagere school Lilare en de middelbare school Stella Matutina in de deelgemeente Michelbeke waarin de Groenstraat, Kammeland, Riedeplein, St-Sebastiaansplein, Guido Gezellestraat (bushalte), een deel van de Nieuwstraat (30m vanaf kruispunt met Meierij) en een deel van de Meierij (bushalte) (65m vanaf kruispunt met Nieuwstraat)  
+                                    e) omgeving van de de vrije lagere school Lilare in de deelgemeente Elst ter hoogte van Terwalle waarin een deel van Terwalle (vanaf kruispunt Ommegangstraat tot en met woning nr 22) en deel Ommegangstraat (vanaf kruispunt Terwalle tot woning nr 6), St-Appoloniastraat (bushalte) (vanaf Ommengangstraat tot woning nr 1) en het St-Apolloniaplein (vanaf Sint-Apolloniastraat tot en met woning nr 5)  
+                                    f) omgeving van de vrije lagere school in Lilare in de deelgemeente Michelbeke waarin een deel van de Teirlinckstraat en de St-Ursmarsstraat  
+                                    g) omgeving van de kleuterschool gelegen langsheen de Schoolstraat, waarin een deel van de Schoolstraat wordt in opgenomen 
+                                    h) omgeving van de vrije lagere school Lilare in de deelgemeente Zegelsem waarin de Teirlinckstraat vanaf kruispunt Oudenaardesestraat tot woning nr 28 en deel Sint-Ursmarsstraat (vanaf kruipunt Teirlinckstraat tot woning nr 18)  
+                                    i) omgeving van het buurthuis Cordenuit: Cordenuitstraat vanaf huisnummer 4 tot aan Everbeekplaats, Lessensestraat vanaf huisnummer 5 tot aan Everbeekplaats, Nestor Debeckstraat vanaf huisnummer 7 tot aan Everbeekplaats, Everbeekplaats, Reepstraat vanaf huisnummer 48 tot aan Everbeekplaats 
+                                    §4  Variabele zone 30km en 50 km/u 
+                                    1° rond de gemeenteschool van Parike gelegen langsheen de gewestweg N493, Steenweg, tussen klp 5.480 en klp 5.682 alsook in de gemeenteweg Rameiveld vanaf 50m voor de aansluiting met de Steenweg 
+                                    2° rond het St-Franciscusinstituut gelegen langsheen de gewestweg N462 en N462b, Kasteeldreef, tijdens de periode van aankomst en vertrek van kinderen door middel van een variabele signalisatie. 
+                                    Buiten de periode van aankomst en vertrek van kinderen wordt een zone 50km/u afgebakend door dezelfde variabele zonale signalisatie. 
+                                    Deze signalisatie is als volgt opgesteld: 
+                                    Voor de rijrichting Zottegem: begin variabel 30 of 50km/u aan N462b klp 0.190 en einde variabel 30 of 50km/u aan N462 klp 23.100 
+                                    Voor de rijrichting Brakel: begin variabel 30 of 50km/u aan N462 klp 23.100 en einde variabel 30 of 50km/u aan N462b klp 0.190. 
+                                    §5 Volgende straten worden opgenomen in een zone 50 
+                                    Twaalfbunderstraat, Kerkhofstraat (vanaf einde bebouwde kom), ruilverkavelingsweg, Herthuizen, Steenstraat, Valkenbergstraat, Valkenstraat, Schoolstraat, Kunnenbergstraat, Schoolstraat (met uitzondering zone 30), Lozelandstraat, Knoopsweg, Neerhofstraat, Kouterstraat (met uitzondering zone 30 en bebouwde kom), Lindeberm, Vredeweg, Romeinseweg en Oorloge 
+                                    §6  De in deze titel getroffen maatregelen worden als volgt gesignaleerd met : - A en B : de borden C43 max.50km/u - C : de borden F4a (begin zone 30) waarbij verkeersbord A23 wordt toegevoegd en F4b (einde zone 30) - D : de variabele borden F4a (begin zone 30) waarbij het verkeersbord A23 wordt gevoegd en de variabele zonale signalisatie F4b (einde zone 30 of 50km/u). 
+                                    TITEL 5 AFBAKENING BEBOUWDE KOM 
+                                    Artikel 7 De bebouwde kom in de deelgemeenten van Brakel wordt afgebakend met de borden F1a en F3a en zullen aangebracht worden op de volgende plaatsen: 
+                                    §1 Parike: 
+                                    1° Gewestweg N493, vak Steenweg aan kilometerpaal 6.500, even voor de aansluiting met Fayte;2° Gewestweg N493, vak Steenweg aan kilometerpaal 5.465, even voor de gemeenteschool;3° Koestraat bij zijn aansluiting met de Steenweg tot aan huisnummer 14;4° Fayte bij zijn aansluiting met de Steenweg tot aan huisnummer 12;5° Hollebeekstraat aan woning nr 96 en verlengde Hollebeekstraat aan woning nr 77;6° Matrouwstraat vanaf de Hollebeekstraat tot even voorbij woning nr 30;7° Rameiveld 75m voorbij het domein van de gemeenteschool; 
+                                    §2 Nederbrakel: 
+                                    1° Gewestweg N8, vak Jaegerstraat, aan kilometerpaal 43.500, even voor de aansluiting met de Meerbeekstraat en Hayershoek;2° Gewestweg N493, vak Geraardsbergsestraat, aan kilometerpaal 7.900, even voorbij de aansluiting met de Termergelstraat;3° Gewestweg N462, vak Watermolenstraat en Moriaanstraat, aan kilometerpaal 1.296, even voorbij de aansluiting met de Neerhofstraat;4° Gewestweg N48, vak Ronsesestraat, aan kilometerpaal 0.682;5° Gewestweg N8, vak Brusselsestraat, aan kilometerpaal 41.000, even voor de Top-Bronnen;6° Haeyershoek aan de aansluiting met Riebeke;7° Leizemooie bij zijn aansluiting met de Jagerstraat;8° Kruisstraat aan woning nr.121;9° Stoktstraat even voorbij de aansluiting met de Hoevestraat;10° Vijverdal even voorbij het voetbalplein;11° Toepkapelstraat tot 50 meter voorbij de aansluiting met de Kruisstraat;12° Kouterstraat aan woning n°32;13° Kerkhofstraat aan woning n°87;14° Molenhoekstraat aan de aansluiting met de Oude Blekerijstraat; 15° Wijnstraat aan de aansluiting met de gewestweg Geraardsbergsestraat;16° Driestenbroeke aan de aansluiting met Evensveldstraat;17° Meerbeekstraat18° Lindeplein19° Wielendaalstraat20° Driehoekstraat21° Nederstenkouter22° Veldstraat23° Papestraat24° Suttermeers25° Marktplein26° Serpentestraat27° Theo Brakelstraat28° Brugstraat29° Dam30° St-Pieterwijk31° Spoorwegstraat32° Vunkweg33° Roensveldstraat34° Stationsplein35° Stationsstraat36° Industrielaan37° Katsijnenhoek38° Tenbossestraat39° Warande40° Ekkouterweg41° Hoevestraat42° Dr. De Drijverestraat43° Wijmeersstraat44° Parkweg45° Voorpad46° Stegewerk47° H. De Coenestraat48° Vijverweg49° Hoge Zavel50° Olifantstraat51° Kasteelstraat52° Hoogstraat53° Neerstraat54° Beekstraat55° Gauwstraat56° Tirseparking57° Ekeveldstraat58° Brusselsestraat (gemeenteweg)59° Abeelpad zijn opgenomen binnen de bebouwde kom; 
+                                    §3 Elst: 
+                                    1° Lepelstraat vanaf de aansluiting met de Genstsestraat tot aan woning n° 67;2° Sint-Apolloniaplein, Sint-Apolloniastraat, Geutelingenstraat, Bassegem, Muizeveld, Keuzelweg en Noordhoek maken deel uit van de bebouwde kom;3° Ommegangstraat vanaf de aansluiting met de Gentsestraat;4° Terwalle tot even voorbij de private weg naar woning n° 13;5° Molenkouterweg, en Winkelweg bij hun aansluiting met de Lepelstraat;6° Heringstraat7° Klein Kapittel 
+                                    §4 Michelbeke: 
+                                    1° Lepelstraat tot aan woning n° 70;2° Nieuwstraat tot aan de aansluiting met de Boekendries;3° Meierij tot aan woning n° 68;4° Heksteelstraat tot aan woning n° 32, even voorbij de tweede toegang naar Hovendaal;5° Berendries tot aan woning n° 5;6° Groenstraat, Guido Gezellestraat, het Sint-Sebastiaanplein, Kerkwegel, Burgweg, Kammeland, Riedeplein, Hovendaal en Rozenhoek maken deel uit van de bebouwde kom; 
+                                    §5 Zegelsem: 
+                                    1° Sint-Ursmarsstraat vanaf de aansluiting met de Oudenaardsestraat;2° Teirlinckstraat vanaf de aansluiting met de Oudenaardsestraat tot aan de aansluiting met Leberg;3° Holweg en Kloosterpad worden afgesloten bij hun aansluiting met de Teirlinckstraat; 
+                                    §6 Opbrakel: 
+                                    1° Sint Martenstraat vanaf de aansluiting met de Ronsesestraat tot aan de Sint-Lietbertusdreef;2° Sint-Franciscustraat tot aan woning n°22;3° Opbrakelstraat vanaf de aansluiting met de Ronsesestraat;4° Holenbroek5° Edgard Tinelstraat6° Baneike zijn opgenomen in de bebouwde kom; 
+                                    §7 Everbeek-Beneden: 
+                                    1° Lessensestraat tot aansluiting met de Mierenhoek;2° Spinele tot aan woning nr 3;3° Tamelbroekstraat en Plaatsbeek tot aan de aansluiting met Plankkouter;4° Reepstraat en Klaaie tot aan woning Klaaie nr 10;5° Cordenuitstraat tot even voorbij buurthuis Cordenuit;6° Nestor de Beckstraat, Everbeekplaats, Koreelweg7° Dries vallen binnen de bebouwde kom; 
+                                    §8 Everbeek-Boven: 
+                                    1° Nieuwpoort tot even voorbij de aansluiting met de Oolstraat;2° Maandagstraat tot aan de aansluiting met Pevenage;3° Steenberg tot even voorbij de aansluiting met de Koestraat;4° Bergstraat tot aan woning n°16;5° Hoogbos tot even voorbij de aansluiting met Schudewee;6° Koestraat vanaf de aansluiting met Steenberg tot aan huisnummer 14;7° Fayte vanaf de aansluiting met de Steenberg tot aan huisnummer 12;8° zijweg Fayte naar Galgestraat wordt afgebakend ter hoogte van de aansluiting hoofdweg Fayte;9° Stechelmansdries, Schudewee, Steneplein, Poerensweg, Muiterij, Kroonstraat en Oolstraat vallen binnen de bebouwde kom; 
+                                    Deze maatregel zal gesignaleerd worden met de borden F1a en F3a; 
+                                    TITEL 6 DORPSKERN NEDERBRAKEL 
+                                    Artikel 8, §1 Er wordt een zone erf ingevoerd waartoe volgende straten behoren 
+                                    1° Hoogstraat 
+                                    2° Neerstraat tussen Hoogstraat en woning nr 3 
+                                    3° Marktplein 
+                                    4° Serpentestraat tussen Marktplein en Brugstraat 
+                                    5° Brugstraat 
+                                    6° Tirse tussen Markplein en parking 
+                                    7° binnengebied woonwijk Tirse 
+                                    De maatregel wordt aangeduid met de borden F12a en F12b. 
+                                    §2 Er worden geordende parkeerplaatsen voorzien: 
+                                    1° In de Neerstraat en Serpentestraat tussen Brugstraat en Theo Brakelstraat : aangeduid met het bord E9a + onderbord parkeerschijf Type VIIb + waar nodig pijl begin en pijl einde 
+                                    2° Hoogstraat, Serpentestraat tussen Markplein en Brugstraat : aangeduid met het bord E9a aangevuld met “uitgezonderd op woensdag van 5u tot 14u” + onderbord parkeerschijf Type VIIb + waar nodig “pijl begin” en “pijl einde” 
+                                    3° Marktplein : in het midden waarbij de parkeerplaatsen worden afgebakend met wegmarkeringen en waarop de letter P + symbool parkeerschijf Type VIIb is aangebracht. Ter hoogte van de kerk, tussen linker en midden deur, wordt een parkeerplaats voorzien voor ceremoniewagens. Deze plaatsen worden aangeduid met het verkeersbord E9a met onderbord type IV “uitgezonderd cerenomiewagens” 
+                                    §3 Er wordt elke woensdag van 5 tot 14u verboden parkeren en doorgang ingevoerd op het Marktplein. De maatregel wordt aangeduid met het bord E3 met onderbord “woensdag van 5 tot 14u” 
+                                    §4 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van fietsers en bromfietsers klasse : 
+                                    1° in de Serpentestraat, vanaf het Marktplein tot aan en in de richting van de Theo Brakelstraat 
+                                    2° in de Brugstraat vanaf de Wielendaalstraat in de richting Serpentestraat 
+                                    3° in de Wielendaalstraat vanaf de Serpentestraat in de richting van het kruispunt met de Hoogstraat/Kasteelstraat 
+                                    De maatregelen worden aangeduid met de borden C1 en F19 met onderbord “uitgezonderd fietsers 
+                                    4° op het Marktplein : vanaf kruispunt Hoogstraat/Neerstraat tot aan en de richting Serpentestraat. Op het plein wordt het verkeer rond de parkeerplaatsen geregeld volgens richting klokwijzers. 
+                                    De maatregelen worden aangeduid met de borden C1 en F19 met onderbord “uitgezonderd fietsers en bromfietsers klasse A” en D1 
+                                    §5 Er wordt verboden doorgang ingevoerd elke woensdag van 5 tot 14u in de Hoogstraat, Neerstraat tussen Hoogstraat en Vierschaar, Marktplein en Serpentestraat. 
+                                    TITEL 7 BUURTWEGEN 
+                                    Artikel 9, §1 De toegangen tot de buurtwegen nummers 36, 60 en 104, worden in beide richtingen verboden voor alle verkeer. 
+                                    1° buurtweg 36 tussen woning nr 11 Donkerstraat en Bergstraat : verboden doorgang  
+                                    2° buurtweg 60 tussen buurtweg nr 36 en Plankouter : verboden doorgang met uitzondering tussen Plankouter en de versmalling weg (begin bos) voor aangelanden, landbouw-en dienstvoertuigen 
+                                    3° buurtweg nr 15 : verboden doorgang met uitzondering van aangelanden, landbouw-en dienstvoertuigen tussen buurtweg nr 22 en woning nr 12 Kleine Gastenhoek;  
+                                    Deze maatregel zal gesignaleerd worden met het verkeersbord C3 en waar nodig aangevuld met onderbord type IV "aangelanden, landbouw- en dienstvoertuigen" .  
+                                    §2 Volgende verkeersmaatregelen inzake beperken gemotoriseerd verkeer op buurtwegen worden genomen: 
+                                    1° art. 22 octies uit de wegcode van toepassing op buurtweg 17 gelegen te Michelbeke tussen de Berendries en Boterhoek(toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden)2° art. 22 octies uit de wegcode van toepassing op buurtweg 21 gelegen te Zegelsem tussen Perreveld en Groenstraat te Horebeke (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                    3° art. 22 octies uit de wegcode van toepassing op buurtweg 24 gelegen te Zegelsem tussen Rovorst en Boekkouter (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                    4° art. 22 octies uit de wegcode van toepassing op buurtweg 10 gelegen te Zegelsem tussen Rovorst en Kanakkendries (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                    5° art. 22 octies uit de wegcode van toepassing op Herenhof gelegen te Opbrakel tussen Sint-Liebertusdreef en Leinstraat (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                    6° art. 22 octies uit de wegcode van toepassing op buurtweg 12 gelegen te Zegelsem tussen Ijskelderweg en Wolfskerke (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                    7° art. 22 octies uit de wegcode van toepassing op buurtweg 37 gelegen te Elst tussen Groot-Kapittel en Dorrebeekstraat (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                    8° art. 22 octies uit de wegcode van toepassing op buurtweg Laaistok gelegen te Opbrakel tussen het kruispunt Steenpaal-Willemsveld en de Ronsesestraat 
+                                    9° art. 22 octies uit de wegcode van toepassing op buurtweg Lange Haag (buurtweg nr 60) gelegen te Opbrakel tussen Fransbeke en de Heinestraat 
+                                    10° art. 22 octies uit de wegcode van toepassing op buurtweg Hutte gelegen te Opbrakel tussen Hutte en de Ronsesestraat 
+                                    11° art. 22 octies uit de wegcode van toepassing op buurtweg 12 gelegen te Everbeek tussen Lobe en Trimpont. 
+                                    12° art. 22 octies uit de wegcode van toepassing op buurtweg Hofveld gelegen te Opbrakel tussen Ronsesestraat en Boekkouter 
+                                    13° art. 22 octies uit de wegcode van toepassing op buurtweg 28 Donkweg gelegen te Zegelsem tussen Hauwstraat en Oudenaardsestraat 
+                                    14° art. 22 octies uit de wegcode van toepassing op Perlinckweg gelegen te Zegelsem 
+                                    15° art. 22 octies uit de wegcode van toepassing op Okkerbeke gelegen te Opbrakel 
+                                    16° art. 22 octies uit de wegcode van toepassing op buurtweg 44 gelegen te Zegelsem tussen Perreveld en Leierwaarde 
+                                    17° art. 22 octies uit de wegcode van toepassing op buurtwegen 29 en 40 gelegen te Zegelsem tussen Hauwstraat en Leierwaarde 
+                                    18° art. 22 octies uit de wegcode van toepassing op buurtweg Ceutericklos gelegen te Michelbeke tussen Kuiterlos en Berendries 
+                                    19° art. 22 octies uit de wegcode van toepassing op buurtweg Hollebeekstraat tussen Hollebeekstraat huisnr. 77 en Breebijl (grondgebied Lierde) 
+                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden: 
+                                    1°  het begin van buurtweg 17 wordt aangeduid met het verkeersbord F99c.2° het einde van buurtweg 17 met het verkeersbord F101c.3° het begin van buurtweg 21 met het verkeersbord F99c. 
+                                    4° het einde van buurtweg 21 met het verkeersbord F101c. 
+                                    5° het begin van buurtweg 24 met het verkeersbord F99c. 
+                                    6° het einde van buurtweg 24 met verkeersbord F101c. 
+                                    7° het begin van buurtweg 10 met het verkeersbord F99c. 
+                                    8° het einde van buurtweg 10 met het verkeersbord F101c. 
+                                    9° het begin van buurtweg Herenhof tussen Sint-Liebertusdreef en Leinstraat met het verkeersbord F99c. 
+                                    10° het einde van buurtweg Herenhof tussen Sint-Liebertusdreef en Leinstraat met het verkeersbord F101c. 
+                                    11° het begin van buurtweg 12 met het verkeersbord F99c. 
+                                    12° het einde van buurtweg 12 met het verkeersbord F101c. 
+                                    13° het begin van buurtweg 37 met het verkeersbord F99c. 
+                                    14° het einde van buurtweg 37 met het verkeersbord F101c. 
+                                    15° het begin van buurtweg Laaistok gelegen te Opbrakel tussen het kruispunt Steenpaal-Willemsveld en de Ronsesestraat met het verkeersbord F99c. 
+                                    16° het einde van buurtweg Laaistok gelegen te Opbrakel tussen het kruispunt Steenpaal-Willemsveld en de Ronsesestraat met het verkeersbord F101c. 
+                                    17° het begin van buurtweg 60 (Lange Haag) te Opbrakel tussen Fransbeke en de Heinestraat met het verkeersbord F99c. 
+                                    18° het einde van buurtweg 60 (Lange Haag) te Opbrakel tussen Fransbeke en de Heinestraat met het verkeersbord F101c. 
+                                    19° het begin van buurtweg Hutte gelegen te Opbrakel tussen Hutte en de Ronsesestraat met het verkeersbord F99c. 
+                                    20° het einde van buurtweg Hutte gelegen te Opbrakel tussen Hutte en de Ronsesestraat met het verkeersbord F101c. 
+                                    21° het begin van buurtweg 12 gelegen te Everbeek tussen Lobe en Trimpont met het verkeersbord F99c. 
+                                    22° het einde van buurtweg 12 gelegen te Everbeek tussen Lobe en Trimpont met het verkeersbord F101c. 
+                                    23° het begin van buurtweg Hofveld gelegen te Opbrakel tussen Ronsesestraat en Boekkouter met het verkeersbord F99c. 
+                                    24° het einde van buurtweg Hofveld gelegen te Opbrakel tussen Ronsesestraat en Boekkouter met het verkeersbord F101c. 
+                                    25° het begin van buurtweg 28 Donkweg gelegen te Zegelsem tussen Hauwstraat en Oudenaardsestraat met het verkeersbord F99c. 
+                                    26° het einde van buurtweg 28 Donkweg gelegen te Zegelsem tussen Hauwstraat en Oudenaardsestraat met het verkeersbord F101c. 
+                                    27° het begin van Perlinkweg gelegen te Zegelsem tussen Keiweg en Pottenberg met het verkeersbord F99c. 
+                                    28° het einde van Perlinkweg gelegen te Zegelsem tussen Keiweg en Pottenberg met het verkeersbord F101c. 
+                                    29° het begin van Okkerbeke gelegen te Opbrakel tussen Lange Haag en Tenbergen met het verkeersbord F99c. 
+                                    30° het einde van Okkerbeke gelegen te Opbrakel tussen Lange Haag en Tenbergen met het verkeersbord F101c. 
+                                    31° het begin van buurtweg 44 gelegen te Zegelsem tussen Perreveld en Leierwaarde met het verkeersbord F99c. 
+                                    32° het einde van buurtweg 44 gelegen te Zegelsem tussen Perreveld en Leierwaarde met het verkeersbord F101c. 
+                                    33° het begin van buurtwegen 29 en 40 gelegen te Zegelsem tussen Leierwaarde en Hauwstraat met het verkeersbord F99c. 
+                                    34° het begin van buurtwegen 29 en 40 gelegen te Zegelsem tussen Leierwaarde en Hauwstraat met het verkeersbord F101c. 
+                                    35° het begin van Ceutericklos gelegen te Michelbeke tussen Kuiterlos en Boterhoek met het verkeersbord F99c. 
+                                    36° het einde van Ceutericklos gelegen te Michelbeke tussen Kuiterlos en Boterhoek met het verkeersbord F101c. 
+                                    37° het begin van Hollebeekstraat gelegen te Parike tussen Hollebeekstraat 77 en Breebijl (gemeente Lierde) met het verkeersbord F99c. 
+                                    38° het einde van Hollebeekstraat gelegen te Parike tussen Hollebeekstraat 77 en Breebijl (gemeente Lierde) met het verkeersbord F101c. 
+                                    TITEL 8 TRACTORSLUIS 
+                                    Artikel 10. 
+                                    §1 Op volgende locaties is een tractorsluis aangebracht: 
+                                    1° Molenhoekstraat tussen Moriaanstraat en Molenhoekstraat: art. 22 octies uit de wegcode 
+                                    2° Hollebeekstraat tussen Hollebeekstraat en Breebijl (gemeente Lierde): art. 22 octies uit de wegcode 
+                                    3° Kleistraat tussen Kleibergstraat en Langakkerstraat: art. 22 octies uit de wegcode 
+                                    4° Driestenbroekestraat tussen Vunkstraat en Evensveldstraat: art. 22 octies uit de wegcode 
+                                    §2 Deze maatregel zal gesignaleerd worden met volgende verkeersborden:  
+                                    1° het begin van deze wegen wordt aangeduid met het verkeersbord F99c. 
+                                    2° het einde met het verkeersbord F101c. 
+                                    3° de tractorsluis dient langs beide kanten aangekondigd worden door middel van het gevaarsbord A51 met onderborden 
+                                    TITEL 9 VRIJSTELLING VOOR HET PARKEREN VAN BEPAALDE DEELAUTO'S IN DE BLAUWE ZONES 
+                                    Artikel 11 De gemeente Brakel verleent een vrijstelling voor het parkeren in een blauwe zone van deelauto's van erkende autdeelorganisaties door afgifte van een (digitale) gemeentelijke parkeerkaart 'autodelen' onder volgende voorwaarde en modaliteiten:  
+                                            1° Er wordt 1 kaart per auto en nummerplaat toegestaan 
+                                    2° Een kaart is geldig voor een periode van 1 jaar 
+                                    3° Voorbehouden plaatsen autodelen : Enkel geregistreerde voertuigen van door gemeente Brakel erkende autodeelorganisaties met eigen vloot die werken met vaste standplaatsen kunnen zonder beperking van de parkeertijd gebruik maken van voorbehouden parkeerplaatsen, te herkennen aan het verkeersbord E9a of E9b met onderbord 'autodelen'. 
+                                    TITEL 10: WEGMARKERINGEN MET VERPLICHTEND KARAKTER 
+                                    Artikel 12:  
+                                    §1 Zebrapaden 
+                                    1° deelgemeente Nederbrakel: 
+                                           a) Neerstraat thv huisnr. 97 
+                                           b) Neerstraat thv huisnr. 75 
+                                           c) Neerstraat thv huisnr. 31 
+                                           d) Hoogstraat thv huisnr. 19 
+                                           e) Kasteelstraat thv huisnr. 4 
+                                           f) Kasteelstraat thv huisnr. 30 
+                                           g) Kasteelstraat thv huisnr. 42 
+                                           h) Kasteelstraat thv huisnr. 50 
+                                           i) Kasteelstraat thv huisnr. 60 
+                                           j) Kasteelstaat thv huisnr. 96 
+                                           k) Rondplein thv huisnr. 7 
+                                           l) Rondplein thv huisnr.  8 
+                                           m) Geraadsbergsestraat thv huisnr. 2  
+                                           n) Geraadsbergsestraat thv huisnr. 20 
+                                           o) Stationsplein thv huisnr. 7 
+                                           p) Stationsplein thv huisnr. 14 
+                                           q) Spoorwegstraat thv huisnr. 2 
+                                           r) Rondweg thv Tenbossestraat nr. 2 
+                                           s) Stationsstraat thv huisnr. 1 
+                                           t) Wielendaalstraat thv huisnr. 3 
+                                           u) Wielendaalstraat thv huisnr. 62 
+                                           v) Meerbeekstraat thv huisnr. 2 
+                                           w) Kerkhofstraat thv huisnr. 2 
+                                           x) Driehoekstraat thv huisnr. 8 
+                                           y) Driehoekstraat thv huisnr. 42 
+                                           z) Driehoekstraat thv huisnr. 42a 
+                                           aa) Tirse thv huisnr. 5 
+                                           ab) Watermolenstraat thv huisnr. 36 
+                                           ac) Neerstraat thv huisnr. 48 
+                                    2° deelgemeente Opbrakel 
+                                           a) St. Martensstraat thv huisnr. 3 
+                                           b) St. Martensstraat thv huisnr. 7 
+                                           c) Opbrakelsestraat thv huisnr. 127 
+                                           d) Ronsesestraat thv huisnr. 128 
+                                    3° deelgemeente Zegelsem 
+                                           a) Teirlinckstraat thv huisnr. 22 
+                                    4° deelgemeente Elst 
+                                           a) Terwalle thv huisnr. 24 
+                                           b) St. Apolloniastraat thv huisnr. 1 
+                                           c) St. Apolloniastraat thv huisnr. 11 
+                                           d) St. Apolloniaplein thv huisnr. 2 
+                                           e) St. Apolloniastraat thv huisnr. 22 
+                                           f) Lepelstraat thv huisnr. 78 
+                                           g) Lepelstraat thv huisrn. 82 
+                                    5° deelgemeente Michelbeke 
+                                           a) G. Gezellestraat thv huisnr. 1 
+                                           b) G. Gezellestraat thv huisnr. 10 
+                                           c) G. Gezellestraat thv huisnr. 15 
+                                           d) St.-Sebastiaansplein thv huisnr. 1 
+                                           e) Groenstraat thv huisnr. 18 
+                                    f) Groenstraat thv huisnr. 34 
+                                    6° deelgemeente Parike 
+                                           a) Steenweg thv huisnr. 72 
+                                    7° deelgemeente Everbeek-Boven 
+                                           a) Muiterij thv huisnr. 4 
+                                           b) Muiterij thv huisnr. 12 
+                                    8° deelgemeente Everbeek-Beneden 
+                                           a) Everbeekplaats thv huisnr. 11 
+                                           b) Everbeekplaats thv huisnr. 14 
+                                    § 2 Oversteekplaatsen voor fietsers en tweewielige bromfietsen 
+                                    1° deelgemeente Nederbrakel 
+                                    a) Stationsplein thv huisnr. 15 
+                                    b) Rondweg thv Warande nr. 1 
+                                    c) Rondweg thv Warende nr. 2 
+                                    d) Rondweg thv Parkweg 
+                                    e) Brusselsestraat thv huisnr. 49 
+                                    f) Geraardsbergsestraat thv huisnr. 43 
+                                    g) Geraardsbergsestraat thv huisnr. 34 
+                                    h) Geraardsbergsestraat thv huisnr. 31 
+                                    i) Geraardsbergsestraat thv huisnr. 147 
+                                    j) Tenbossestraat thv huisnr. 2 
+                                    2° deelgemeente Michelbeke 
+                                    a) Groenstraat thv huisnr. 25 
+                                    3° deelgemeente Elst 
+                                    a) Oudenaardsestraat thv huisnr. 7 
+                                    b) Oudenaardsestraat thv huisnr. 7 (overzijde) 
+                                    c) Oudenaardsestraat thv huisnr. 11 
+                                    4° deelgemeente Opbrakel 
+                                    a) Ronsesestraat thv huisnr. 158 
+                                    b) Ronsesestraat thv huisnr. 279  
+                                    § 3 Witte markeringen bakenen op de hierna vermelde plaatsen de parkeerzones af: 
+                                    1° deelgemeente Nederbrakel 
+                                    a) Hoogstraatb) Stationspleinc) Kasteelstraatd) Spoorwegstraate) St.-Pieterswijkf) Neerstraatg) Watermolenstraath) Beekstraati) Brusselsestraatj) Gauwstraatk) Vierschaarl) Damm) Meerbeekstraatn) Wielendaalstraato) Serpentestraatp) Theo Brakelstraatq) Marktpleinr) Tirses) Kerkhofstraatt) Kruisstraatu) Rondplein (3 parkeerplaatsen) 
+                                    2° deelgemeente Parike 
+                                    a) Hollebeekstraatb) Steenweg 
+                                    3° deelgemeente Opbrakel 
+                                    a) St. Martensstraatb) Leinstraat 
+                                    4° deelgemeente Zegelsem 
+                                    a) Perreveldb) Teirlinckstraat 
+                                    5° deelgemeente Elst 
+                                    a) Lepelstraatb) St. Apolloniapleinc) St. Apolloniastraat 
+                                    6° deelgemeente Everbeek-Beneden 
+                                    a) Reepstraat 
+                                    7° deelgemeente Everbeek-Boven 
+                                    a) Muiterijb) Manitobastraat 
+                                    8° deelgemeente Michelbeke 
+                                    a) Pontwegb) Ruiterijc) St. Sebastiaanspleind) Guido Gezellestraate) Riedepleinf) Kammelandg) Hovendaal 
+                                    § 4 Stopstrepen op volgende kruispunten 
+                                    1° deelgemeente Nederbrakel 
+                                    a) Oude Blekerijstraat met Brusselsestraatb) Kokerbergstraat met Brusselsestraatc) Watermolenstraat met Brusselsestraatd) Gauwstraat met Rondwege) Warande met Rondweg f) Industrielaang) Haeyershoek met Kleibergstraath) Meerbeekstraat met Kleibergstraati) Driestenbroekestraat met Geraardsbergsestraatj) Termergelstraat met Geraardsbergsestraatk) Stationsstraat met Kasteelstraat 
+                                    2° deelgemeente Zegelsem 
+                                    a) Gentsestraat met Oudenaardsestraatb) Teirlinckstraat met Oudenaardsestraat 
+                                    3° deelgemeente Sint-Maria-Oudenhove 
+                                    a) Berendries met Kasteeldreefb) Heyveld met Brusselsestraat 
+                                    4° deelgemeente Parike 
+                                    a) Hollebeekstraat met Steenwegb) Koestraat met Steenwegc) Brouwierstraat met Steenwegd) Molenstraat met Steenweg 
+                                    5° deelgemeente Opbrakel 
+                                    a) Maaistraat met Ronsesestraat 
+                                    § 5 Witte driehoeken (haaientanden) op volgende kruispunten 
+                                    1° deelgemeente Nederbrakel 
+                                    a) Brusselsestraat met Rondwegb) Parkweg met Rondwegc) Hoge Zavel met Rondwegd) Geraardsbergsestraat met Rondwege) Industrielaan met Geraardsbergsestraatf) Spoorwegstraat met Geraardsbergsestraatg) Abeelpad met Herreweg h) Leizemooie met Herrewegi) Oorloge met Kleibergstraatj) Romeinseweg met Kleibergstraat k) Kleistraat met Kleibergstraat l) Molenhoekstraat met Moriaanstraatm) Molenhoekstraat met Moriaanstraatn) Driehoekstraat met Watermolenstraato) Herman De Coenestraat met Watermolenstraatp) Watermolenstraat met Beekstraatq) Beekstraat met Brusselsestraatr) Vunkstraat met Geraardsbergsestraats) Olifantstraat met Geraardsbergsestraatt) Wijnstraat met Geraardsbergsestraat u) Langenbroekweg met Geraardsbergsestraatv) Opbrakelsestraat met Ronsesestraatw) Ekeveldstraat met Ronsesestraatx) Parkweg met Wijmeersstraat 
+                                    2° deelgemeente Elst 
+                                    a) Gentsestraat met Kleibergstraatb) Hauwstraat met Oudenaardsestraatc) Kluisweg met Oudenaardsestraatd) Loofweg met Oudenaardsestraate) Gentsestraat met Gentsestraatf) Smisstraat met Gentsestraatg) Rosbos met Gentsestraath) Kleine Gastenhoek met Gentsestraati) Pottenberg met Gentsestraatj) Lepelstraat met Gentsestraatk) Boekelstraat met Gentsestraatl) Molenkouterstraat met Gentsestraatm) Vissegem met Gentsestraatn) Blomveld met Gentsestraato) Heuvelgem met Gentsestraat 
+                                    3° deelgemeente Zegelsem 
+                                    a) Donkweg met Oudenaardsestraatb) Leierwaarde met Oudenaardsestraatc) Perreveld met Oudenaardsestraatd) St. Ursmarsstraat met Oudenaardsestraat 
+                                    4° deelgemeente Sint-Maria-Oudenhove 
+                                    a) Kapittel met Kasteeldreefb) Elverenberg met Kasteeldreefc) Kraaiestee met Molenbergd) Bieststraat met Molenberge) Zwalmbeekweg met Molenbergf) Neerhofstraat met Molenberg 
+                                    5° deelgemeente Parike 
+                                    a) Zesdagwandweg met Steenwegb) Pachtweg met Steenwegc) Fayte met Steenwegd) Paperendaalwijk met Steenwege) Matrouwstraat met Steenwegf) Rameiveld met Steenweg 
+                                    6° deelgemeente Opbrakel 
+                                    a) St. Martensstraat met Ronsesestraatb) Riebeke met Ronsesestraatc) Herenhof met Ronsesestraatd) Kimpestraat met Ronsesestraate) Landuitweg met Ronsesestraatf) Hutte met Ronsesestraatg) Pieter Hoelmanstraat 
+                                    7° deelgemeente Michelbeke 
+                                    a) Kammeland met Groenstraat 
+                                    § 6 Witte markeringen om fietspaden af te bakenen in volgende straten:  
+                                    1° deelgemeente Elst 
+                                    a) Lepelstraat t.h.v. de verkeerseilanden (huisnummer 67) 
+                                    2° deelgemeente Michelbeke 
+                                    a) Lepelstraat t.h.v. de verkeerseilanden (huisnummer 29) 
+                                    3° deelgemeente Everbeek-Boven 
+                                    a) Steenberg t.h.v. de verkeerseilanden (huisnummer 27) 
+                                    4° deelgemeente Everbeek-Beneden 
+                                    a) Klaaie t.h.v. de verkeerseilanden (huisnummer 10) 
+                                    b) Klaaie t.h.v. de verkeerseilanden (huisnummer 36a) 
+                                    TITEL 11: AANWIJZINGSBORDEN VOOR BEDRIJVEN, OVERNACHTINGSGELEGENHEDEN EN RESTAURANTS 
+                                    Artikel 13: Algemene bepalingen 
+                                    1° De plaatsing van aanwijzingsborden voor bedrijven (F33a en F34a), overnachtingsgelegenheden (F37) en restaurants (F37) op de openbare weg is onderworpen aan een voorafgaande en schriftelijke vergunning van het college van burgemeester en schepenen. 
+                                    2° De vergunning vervalt van rechtswege indien er gedurende 6 maanden geen gebruik van werd gemaakt. 
+                                    3° De vergunning kan afhankelijk gesteld worden van het advies van de wegbeheerder. 
+                                    Artikel 14: De aanvraag wordt gericht aan het college van burgemeester en schepenen en vermeldt: 
+                                    1° De ligging van het bedrijf, de overnachtingsgelegenheid of het restaurant;2° Voor bedrijven: de mate waarin het bedrijf veel verkeer genereert;3° Maximaal 2 bewegwijzerde routes. 
+                                    Artikel 15: Buiten de industrieparken komen enkel producerende bedrijven met een grote logistieke verkeersstroom in aanmerking voor de plaatsing van aanwijzingsborden. 
+                                    Artikel 16: Het college van burgemeester en schepenen verleent de vergunning op basis van noodzakelijkheid. 
+                                    Artikel 17: De aanwijzingsborden zijn naar model, materiaal, gegevens, plaats en aantal in overeenstemming te zijn met het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg;het ministerieel besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens;en het ministerieel besluit van 1 februari 1991 betreffende signalisatie van de plaatsen en instellingen van algemeen belang of van toeristische aard. 
+                                    Artikel 18: Voor de toepassing van voorgaand artikel geldt als definitie van een weg van doorgaand verkeer: elke weg die in het gemeentelijk mobiliteitsplan werd aangeduid als primaire weg, secundaire weg of lokale weg type I en II. 
+                                    Artikel 19: 
+                                    1° Alleenstaande bedrijven buiten de bebouwde kom, belangrijke industrieparken en commerciële centra kunnen met het bord F33a bewegwijzerd worden op voorwaarde dat: 
+                                    a) ze veel verkeer met zich meebrengen;b) de bewegwijzering noodzakelijk is om de meest geschikte reisroute aan te duiden.Buiten de industrieparken komen enkel producerende bedrijven met een grote logistieke verkeersstroom in aanmerking.De bewegwijzering mag:1. maximaal 2 reisroutes bevatten vanaf een autosnelweg of een belangrijke weg van doorgaand verkeer;2. maximum een afstand van 5 kilometer omvatten;3. uitgezonderd de alleenstaande bedrijven, geen namen van bedrijven of winkels vermelden. 
+                                    2° Alleenstaande bedrijven binnen de bebouwde kom, industrieparken en commerciële centra van minder belang kunnen met het bord F34a bewegwijzerd worden op voorwaarde dat: 
+                                    a) de bewegwijzering noodzakelijk is om de meest geschikte reisroute aan te duiden.Buiten de industrieparken komen enkel producerende bedrijven met een grote logistieke verkeersstroom in aanmerking.De bewegwijzering mag:1. maximaal 2 reisroutes bevatten vanaf een weg van doorgaand verkeer;2. maximum een afstand van 2 kilometer omvatten;3. binnen de industrieparken of commerciële centra de naam van bedrijven en winkels bevatten, en binnen de bebouwde kom de naam van alleenstaande bedrijven bevatten. 
+                                    3° Overnachtingsgelegenheden kunnen met een bord F37 bewegwijzerd worden. 
+                                    De bewegwijzering mag maximaal 2 reisroutes bevatten vanaf de dichtsbijzijnde weg van doorgaand verkeer. 
+                                    4° Restaurants kunnen met het bord F37 bewegwijzerd worden op voorwaarde dat ze buiten de bebouwde kom gelegen zijn. 
+                                    De bewegwijzering mag maximaal 2 reisroutes bevatten vanaf de dichtsbijzijnde weg van doorgaand verkeer. 
+                                    Artikel 20: 
+                                    De vergunninghouder staat in voor: 
+                                    1° De betaling van de aanwijzingsborden, ook bij vervanging; 
+                                    2° Het onderhoud van de aanwijzingsborden. 
+                                    De gemeente staat in voor: 
+                                    1° De levering en plaatsing van de aanwijzingsborden en de paal; 
+                                    2° De plaatsing, vervanging en wegname van de aanwijzingsborden. 
+                                    Artikel 21: Indien de aanwijzingsborden zich niet meer in behoorlijke staat bevinden, stuurt de burgemeester een aanmaning tot onderhoud of herstel van de aanwijzingsborden. Indien binnen de 30 kalenderdagen geen gevolg wordt gegeven aan de aanmaning worden de aanwijzingsborden ambtshalve weggenomen en vernietigd. 
+                                    Artikel 22: De vergunninghouder die zijn bedrijvigheid stopt dient, neemt de aanwijzingsborden weg. Indien binnen de 30 kalenderdagen na het staken van de bedrijvigheid de aanwijzingsborden niet werden weggenomen worden de aanwijzingsborden ambtshalve weggenomen en vernietigd. 
+                                    Artikel 23: Aanwijzingsborden die zonder vergunning werden geplaatst worden ambtshalve weggenomen en vernietigd. 
+                                    TITEL 12: VERHOOGDE INRICHTINGEN EN WEGVERSMALLINGEN 
+                                    Artikel 24. 
+                                    § 1 Op de hierna vermelde gemeentewegen zijn wegversmallingen aangebracht en aangeduid door de verkeersborden B19 en B21: 
+                                    1) Deelgemeente Elst 
+                                    a) Lepelstraat  
+                                    2) Deelgemeente Everbeek-Beneden 
+                                    a) Klaaie 
+                                    3) Deelgemeente Everbeek-Boven 
+                                    a) Steenberg 
+                                    b) Priemstraat 
+                                    4) Deelgemeente Michelbeke 
+                                    a) Lepelstraat 
+                                    § 2 Op de hierna vermelde gemeentewegen zijn verhoogde inrichtingen aangebracht en aangeduid door de verkeersborden A14 en F87 
+                                    1) Deelgemeente Nederbrakel 
+                                    a) Driehoekstraat 
+                                    b) Neerstraat 
+                                    2) Deelgemeente Elst 
+                                    a) Terwalle 
+                                    § 3 Op de hierna vermelde gemeentewegen zijn rotondes aangebracht en aangeduid door de verkeersborden B1, D1d, D5 en dwarsstrepen gevormd door omgekeerde driehoeken 
+                                    1) Deelgemeente Everbeek-Boven 
+                                    a) Priemstraat / Klaaie 
+                                    2) Deelgemeente Elst 
+                                    a) Lepelstraat / St. Apolloniastraat 
+                                    3) Deelgemeente Nederbrakel 
+                                    a) Lindeplein 
+                                    TITEL 13: INWERKINGTREDING, BEKENDMAKING EN OVERGANGSBEPALINGEN  
+                                    Inwerkingtreding 
+                                    Artikel 25: Dit algemeen aanvullend verkeersreglement treedt in werking op 15 januari 2025. 
+                                    Overgangsbepalingen 
+                                    Artikel 26: Onderstaande aanvullende verkeersreglementen worden opgeheven op 15 januari 2025: 
+                                    1° Besluit Gemeenteraad dd. 04/11/2024 betreffende "Mobiliteit. Algemeen aanvullend verkeersreglement."  
+                                    Bekendmaking 
+                                    Artikel 27: Afschrift van dit besluit wordt overgemaakt: 
+                                    1° aan de bestendige deputatie van de provincieraad 
+                                    2° aan de griffie van de rechtbank van eerste aanleg en aan die van de politierechtbank 
+                                    3° aan de toezichthoudende overheid overeenkomstig de relevante bepalingen van het decreet Lokaal Bestuur (titel 7: Het bestuurlijk toezicht). 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    ALGEMEEN AANVULLEND VERKEERSREGLEMENT 
+                                                                    TITEL 1 - PARKEREN 
+                                                                    Hoofdstuk 1 - Parkeren gemeentewegen 
+                                                                    Artikel 1: Gemeentewegen 
+                                                                    §1 . BEURTELINGS PARKEREN : halfmaandelijks 
+                                                                    1° Sint-Martensstraat : gezien vanuit de richting kerk naar Vloesberg: 
+                                                                    a) rechts, vanaf huisnr 16 tot aan huisnr 36 en vanaf huisnr 40 tot aan huisnr 54;b) links, vanaf de aansluiting met de Zure Veldwegel tot aan de eigendom van huisnr 31 en vanaf huisnr 37 tot 15m vòòr de bushalte; 
+                                                                    2° Dr. De Drijverestraat3° Tenbossestraat4° Spoorwegstraat vanaf huisnummer 41 tot huisnummer 65 
+                                                                    §2 VERBODEN PARKEREN : Voor elke voertuig 
+                                                                    1° Tamelbroekstraat vanaf de Nestor De Beckstraat over een afstand van 15m; 
+                                                                    2° Groenstraat vanaf en langsheen huisnr 20 tot aan huisnr 30;3° Nestor De Beckstraat tussen Lessensestraat en Tamelbroekstraat langs beide zijden;4° Lessensestraat over een afstand van 40m vanaf de Nestor De Beckstraat langs beide zijden;5° Sint-Martensstraat 
+                                                                    a) tussen huisnr 36 en 40 langsheen beide zijden van de weg;b) vanaf huisnr 7 tot huisnr 9 links in de richting Vloesberg 
+                                                                    6° Stationsstraat: 
+                                                                    a) tussen huisnrs 71 en 81 op werkdagen tussen 8u en 17u30;b) vanaf de Hoogstraat langs de onpare huisnrs over een afstand van 16 
+                                                                    7° Hollebeekstraat langs de huisnrs 1 en 3;8° Serpentestraat vanaf kruispunt Wielendaalstraat langs zijkant huisnr Wielendaalstraat 30 over een afstand van 15m9° Sint-Sebastiaanplein ter hoogte van huisnr 410° Teirlinckstraat tussen huisnr 11 en 1711° Suttermeers op het einde langsheen het voetpad loodrecht op de straat12° Tenbossestraat : thv huisnrs 19 en 21, en 7 m vanaf huisnr 19 richting Dr. De Dryverestraat13° Kulkadetstraat op het verharde stuk openbaar domein buiten de rijbaan naast huisnr 614° Hul over een afstand van 80m. vanaf de Rovorst langs beide zijden;15° Kraaiestee ter hoogte van huisnummer 10 over een afstand van 30;16° Nieuwstraat langsheen huisnrs 67 en 69;17° Sint-Franciscusstraat rechts vanaf de Holenbroek tot aan en in de richting van de Opbrakelsestraat;18° Industrielaan, gezien vanaf Geraardsbergsestraat : 
+                                                                    a) links vanaf huisnummer 1 tot voorbij huisnummer 25 (pijpekop)    links vanaf huisnummer 54 tot huisnummer 58    links vanaf huisnummer 42 tot huisnummer 48 (pijpekop) 
+                                                                    b) rechts vanaf Geraardsbergsestraat vanaf huisnummer 4 tot huisnummer 8    1e zijweg over de volledige rechterzijderechts na 1e zijweg over een lengte van 25m  
+                                                                    c) pijpekoppen   
+                                                                    19° Baneike:  thv huisnr 29 over een lengte van 17 meter;20° Parking Tirse: Er wordt elke zondag van 7u tot 14u verboden parkeren en doorgang ingevoerd op de derde rij van parking Tirse. De maatregel wordt aangeduid met het bord E3 met onderbord “zondag van 7u tot 14u”21° Parkweg tussen huisnummer 6 en tot aan de voetbalkantine (aan de linkerzijde gezien vanuit de Rondweg) 
+                                                                    §3 STILSTAAN EN PARKEREN VERBODEN 
+                                                                    1° Everbeekplaats: tussen de achterzijde van de kerk en het vakantiehuis over een afstand van 25 meter langsheen beide zijden van de weg, alsmede rechts in de rijrichting van de kerk vanaf de Lessensestraat tot een 10-tal meter voorbij het daar aangelegd zebrapad. 
+                                                                    2° inrit recreatiedomein De Rijdt via parking Abeelpad (toegang verlenen voor brandweer) 
+                                                                    3° parking sporthal De Rijdt: doorgang aan de achterzijde van sporthal + doorgang naar jeugdhuis, IBO, speeltuin... 
+                                                                    §4  VOORBEHOUDEN PARKEERPLAATSEN 
+                                                                    1° Andersvaliden 
+                                                                    a) Deelgemeente Nederbrakel 
+                                                                    1) Markplein : parkeerplaatsen ter hoogte van woningen nr 2, 10 (parkeerplaats het dichts bij de bibliotheek), 12;2) parking Tirse : gezien vanuit de richting van het Marktplein* de laatste twee parkeerplaatsen van de parkeerstroken gelegen langs de service flats,* de eerste twee parkeerplaatsen op de derde rij van de parking,;3) Vierschaar : * de eerste twee parkeerplaatsen vanaf kruispunt met de Neerstraat, * de eerste twee parkeerplaatsen van de vierde rij op de parking, * de tweede parkeerplaats linkerzijde gezien vanaf ingang gebouw nummer 21, * 2 parkeerplaatsen rechts achteraan gezien vanaf ingang gebouw nummer 21, * 1 parkeerplaats op de rijweg t.h.v. huisnummer 254) Neerstraat : eerste parkeerplaats links vanaf uitrit Marktplein richting Brusselsestraat5) Stationsplein : eerste twee parkeerplaatsen op de 3de parkeerzone6) Dam : 1ste parkeerplaats rechts gezien vanaf Meerbeekstraat;7) parking sporthal : eerste twee parkeerplaatsen links naast ingang sporthal8) Hoogstraat : parkeerplaats ter hoogte van woning nr 39) Kerkhofstraat : parkeerplaats ter hoogte van woning nr 5110) Serpentestraat: parkeerplaats ter hoogte van woning nr 1411) Warande: parkeerplaats ter hoogte van woning nr 2112) verbindingsweg Tirse: parkeerplaats t.h.v. kinderdagverblijf Zwalmnestje13) Watermolenstraat: laatste parkeerplaats t.h.v. huisnummer 2414) Kruisstraat t.h.v. huisnummer 8015) Wielendaalstraat t.h.v. huisnummer 62 
+                                                                    b) Deelgemeente Parike 
+                                                                    1) Hollebeekstraat : eerste twee parkeerplaatsen rechts vanaf Steenweg; 
+                                                                    c) Deelgemeente Opbrakel 
+                                                                    1) Sint-Martensstraat : * laatste parkeerplaats op de parkeerstrook gelegen rechts vanaf de Ronsesestraat * parkeerplaats links van de ingang van de kerk; 
+                                                                    d) Deelgemeente Zegelsem 
+                                                                    1) Sint-Ursmarsstraat : parkeerplaats rechts ingang kerk2) Teirlinckstraat : parkeerplaats rechts en rechtover Buurthuis 
+                                                                    e) Deelgemeente Elst 
+                                                                    1) Sint-Apolloniaplein : eerste twee parkeerplaatsen rechts ingang kerk 
+                                                                    f) Deelgemeente Everbeek 
+                                                                    1) Everbeekplaats: 
+                                                                    * eerste twee parkeerplaatsen links ingang kerk, * laatste parkeerplaats van de parkeerstrook onmiddellijk rechts ingang kerk2) Muiterijstraat : * eerste links ingang kerk, * eerste parkeerplaats van laatste rij links ingang kerk 
+                                                                    g) Deelgemeente Michelbeke : 
+                                                                    1) Sint-Sebastiaanplein : eerste parkeerplaats naast de kerk,2) Guido Gezellestraat : parkeerplaats naast bushalte,3) Riedeplein : eerste twee parkeerplaatsen links vanaf Groenstraat4) Groenstraat: parkeerplaats t.h.v. huisnummer 39 
+                                                                    2° Bussen  
+                                                                    a)Groenstraat over een afstand van 20m vanaf ingang en langs Stella Matutina tijdens de schooldagen: 
+                                                                    1) van 7u30 tot 9u van maandag tot vrijdag;2) van 16u tot 17 van maandag tot vrijdag uitgezonderd op woensdag3) van 11u45 tot 12u30 op woensdag 
+                                                                    3° Cerenomiewagens 
+                                                                    a) Everbeekplaats voor de ingang van de kerk over een afstand van 15m;b) Muiterij voor de ingang van de kerk over een afstand van 15mc) Marktplein thv van de deur links van de kerk 
+                                                                    4° Alle voertuigen 
+                                                                    a) Industrielaan gezien uit de richting van de Geraardsbergsestraat: 
+                                                                    1) rechts vanaf 30m voorbij de eerste zijweg rechts tot 15m voor de bocht naar rechts2) buiten de rijbaan gelegen gedeelte rechtover ingang gebouw nr 28 
+                                                                    b) Lepelstraat gezien uit de richting van G.Gezellestraat: 
+                                                                    1) rechts tussen huisnummer 2 en 162) rechts tussen huisnummer 46 en 66 
+                                                                    5°  Personenwagens, auto’s dubbel gebruik en minibussen : 
+                                                                    a) Parking Tirseb) Everbeekplaats;c) Dam met inbegrip van parkingd) Muiterij op de parking thv gemeentelijke kleuterschoole) Sint-Sebastiaanpleinf) parking sporthalg) Vierschaarh) Sint-Pieterswijki) Peperendaalwijkj) Hovendaalk) Ruiterijl) Nederstenkouter + Veldstraatm) Theo Brakelstraatn) Brusselsestraat thv woning nr 38o) Neerstraat langs beide zijden van huisnummer 3 tot en met huisnummer 13 p) Serpentestraat, tussen Brugstraat en Theo Brakelstraatq) Edg. Tinelstraatr) Noordhoeks) uitgezonderd op woensdag tussen 5u en 14u,a. Marktpleinb. Serpentestraat tussen Marktplein en Brugstraatc. Hoogstraatt) H. De Coenestraatu) Suttermeersv) Bovenhoekw) Toepzichtx) Manitobastraaty) Parking Dam met uitzondering van de parkeerplaatsen voor mobilhomes en elektrische wagens 
+                                                                    6° Elektrische voertuigen : Oplaadplaatsen 
+                                                                    a) 2 parkeerplaatsen op de parking Vierschaarb) 2 parkeerplaatsen op de parking Tirsec) 2 parkeerplaatsen op de parking gemeentelijke sporthald) 2 parkeerplaatsen op de parking St.-Apolloniapleine) 2 parkeerplaatsen op de parking Muiterijf) 2 parkeerplaatsen op de parking in de Kerkhofstraat (t.h.v. het kerkhof)g) 2 parkeerplaatsen op de parking Everbeekplaatsh) 2 parkeerplaatsen op Steenweg t.h.v. de kerki) 2 parkeerplaatsen op Warande t.h.v. huisnummer 138j) 2 parkeerplaatsen op Warande t.h.v. huisnummer 20k) 2 parkeerplaatsen in de Dr. De Drijverestraat t.h.v. huisnummer 2l) 2 parkeerplaatsen in de Olifantstraat t.h.v. huisnummer 33m) 2 parkeerplaatsen in de St.-Martensstraat t.h.v. huisnummer 7n) 2 parkeerplaatsen in de St.-Martensstraat t.h.v. huisnummer 51o) 2 parkeerplaatsen in de Spoorwegstraat t.h.v. huisnummer 20p) 2 parkeerplaatsen in de Kasteelstraat t.h.v. huisnummer 79q) 2 parkeerplaatsen in de Driehoekstraat t.h.v. huisnummer 108r) 2 parkeerplaatsen in de Watermolenstraat (parking t.h.v. huisnummer 22)s) 2 parkeerplaatsen op de parking van het voetbalplein Michelbeket) 2 parkeerplaatsen in de G.Gezellestraatu) 2 parkeerplaatsen op het Riedepleinv) 2 parkeerplaatsen in de St.-Ursmarsstraat t.h.v. huisnummer 33w) 2 parkeerplaatsen op parking Dam 
+                                                                    7° Deelauto's: 
+                                                                    a) 2 parkeerplaatsen op de parking Stationsplein 
+                                                                     8° Mobilhomes: 
+                                                                    a) 4 parkeerplaatsen op de parking Dam met beperkte parkeerduur van 72u 
+                                                                    §5 BEPERKTE PARKEERTIJD max 30 min 
+                                                                    1° Buiten blauwe zone 
+                                                                    a) Brusselsestraat thv woning nr 38 
+                                                                    2° Binnen blauwe zone 
+                                                                    a) Hoogstraat, met uitzondering van de parkeerplaats voor andersvalidenb) Neerstraat van huisnr 5 tot 13 en van 24 tot 34, met uitzondering van de parkeerplaats voor andersvaliden 
+                                                                    §6  ZONALE REGELING 
+                                                                    1° Blauwe zone 
+                                                                    a) Neerstraat b) Stationsstraat;b) Wielendaalstraat;d) Serpentestraat;e) Brugstraat;f) Markplein;g) Tirse langs beide zijden van de rijweg gelegen tussen gebouw bibliotheek en T.Brakelstraat; h) Kasteelstraat vanaf kruispunt Stationsstraat-Hoogstraat-Wielendaalstraat tot en met woning nummer 26;i)  Vierschaar vanaf Neerstraat tot parking;j) Beekstraat: op de parking gelegen langsheen het handelspand ter hoogte van het kruispunt Beekstraat-Brusselsestraatk) Lindeplein: parkeerstrook op het Lindeplein  
+                                                                    §7 PARKEREN OP HET VOETPAD 
+                                                                    1° Wijnstraat gedeeltelijk langs de kant van de pare huisnummers 
+                                                                    §8 De in deze titel getroffen maatregelen worden als volgt gesignaleerd met 
+                                                                    §1. : verkeersborden E5 en E7 met de pijlen Type X a, b en d;§2.1 tot §2.5, §2.6b tot §2.12 : gele onderbroken lijn§2.13 : verkeersbord E1§2.6a, §2.14, §2.15, §2.16, §2.17, §2.19, §2.21 : verkeersbord E1 met onderborden Xa en Xb§2.18: verkeersborden E1 met onderborden Xa en Xb behalve de pijpekoppen met verkeersborden Z E1 en Z E1/§2.20: het bord E3 met onderbord “zondag van 7u tot 14u  §3: borden E3§4.1 : borden E9A met onderbord Type VIId (symbool voor andersvaliden)§4.2 : verkeersborden E9d met onderborden aanduiding uren + Xa en Xb§4.3 : het verkeersbord E9a (waar nodig met pijlen Xa en Xb) met onderbord type IV “uitgezonderd cerenomiewagens”§4.4 : verkeersbord E9 met onderborden Xa en Xb§4.5.a tot 4.5.r : verkeersbord E9b§4.5.s : verkeersbord E9b met onderbord "uitgezonderd op woensdag van 5u en 14"§4.5.u tot 4.5.x: verkeersbord E9b§4.6 : verkeersbord E9a met pictogram of onderbord “elektrische voertuigen” + onderbord VIIb§4.7: verkeersbord E9a met pictogram of onderbord "deelwagen" §5 : onderbord max 30 min§6.1 : de verkeersboren begin en einde blauwe zon met afbeelding E9a en parkeerschijf§7 : de verkeersborden E9f§8 : de verkeersborden E9h met pictogram en met onderbord type VIIc 'max 24u' 
+                                                                      
+                                                                    Hoofdstuk 2 - Parkeren gewestwegen 
+                                                                    Artikel 2: Enkel parkeren toegelaten voor personenauto's, auto's dubbel gebruik, minibus 
+                                                                    a) Geraardsbergsestraat tussen Rondplein en Industrielaan. De maatregelen wordt gesignaleerd met het verkeersborden E9e 
+                                                                    b) Ronsesestraat tussen Rondplein en St.-Martensstraat aan de rechterzijde gezien vanaf het Rondplein. De maatregelen worden gesignaleerd met de verkeersborden E9e. 
+                                                                    TITEL 2 - VERBODSBORDEN 
+                                                                    Hoofdstuk 1 - Eenrichtingsverkeer 
+                                                                    Artikel 3: 
+                                                                    §1 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van het verkeer van fietsers, bromfietsers klasse A en speed pedelecs (welke in beide richtingen mogen) in volgende straten: 
+                                                                    1° In de Warande vanaf het kruispunt met de Eikkouterweg tot aan en in de richting van de Kruisstraat 
+                                                                    2° Tirse vanaf het Marktplein en in de richting van de parking Tirse 
+                                                                    3° In de Serpentestraat vanaf de Theo Brakelstraat tot aan en in de richting van het Marktplein 
+                                                                    4° In de Wielendaalstraat vanaf het kruispunt met de Kasteelstraat tot aan en in de richting van Tirse 
+                                                                    5° In de Stationsstraat vanaf het kruispunt met het Stationsplein in de richting van de Kasteelstraat 
+                                                                    6° In de Brugstraat vanaf de Serpentestraat en in de richting van de Wielendaalstraat 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C1 en F19 met onderbord M12 “uitgezonderd + symbolen fietsers, bromfietsers klasse A en speed pedelecs". 
+                                                                    §2 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van het verkeer van fietsers in volgende straten: 
+                                                                    1° In de Teirlinckstraat tussen de Oudenaardsestraat en de Sint-Ursmarsstraat 
+                                                                    2° In de Gauwstraat vanaf het kruispunt met de Neerstraat in de richting van ringweg N8c 
+                                                                    3° In de Driestenbroekestraat vanaf huisnummer 8 tot 20 meter voor en in de richting van de Vunkstraat 
+                                                                    4° In de Schoolstraat vanaf huisnummer huisnummer 1 tot aan en in de richting van de Kunnenbergstraat 
+                                                                    5° In de Vierschaar vanaf huisnummer 23 tot aan en in de richting van de Gauwstraat 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden F19 met onderbord M4 en in tegenovergesteld richting C1 met onderbord M2. 
+                                                                    §3 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van het verkeer van fietsers, van voertuigen van geregelde openbare diensten en van voertuigen bestemd voor het ophalen van leerlingen in volgende straten: 
+                                                                    1° In de Watermolenstraat vanaf het kruispunt met de Neerstraat tot aan en in de richting van woning Watermolenstraat nr. 13 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden F17 waarin, in het rijvak waar de bussen en de fietsers worden toegelaten in de tegenstelde rijrichting, het symbool van een fiets en het woord "BUS". Ter hoogte van Watermolenstraat nr. 13 wordt een C1 met onderbord "uitgezonderd bus" en onderbord M2 (uitgezonderd fietsers) geplaatst. Aan de overzijde van woning Watermolenstraat nr. 13 wordt in de richting van de Beekstraat het bord A39 geplaatst.  
+                                                                    §4 Er wordt eenrichtingsverkeer ingevoerd in volgende straten: 
+                                                                    1° Op het kruispunt Hollebeekstraat / Matrouwstraat is het verboden links van de verkeersgeleider te rijden 
+                                                                    2° In de Ruiterij is het verboden links van de middenbermen te rijden (komende vanuit de Meierij). 
+                                                                    3° Op de parking Tirse in tegenwijzerszin komende vanuit de Theo Brakelstraat. 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C1 en D1d. 
+                                                                    4° Everbeekplaats in de richting van de Cordenuitstraat 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C1 en F19. 
+                                                                    Hoofdstuk 2 - Verboden doorgang 
+                                                                    Artikel 4 
+                                                                    §1 Verboden toegang, in beide richtingen, voor iedere bestuurder 
+                                                                    1° buurtweg n°33, Meersweg, vanaf de aansluiting met de weg n°11, Pullem, tot aan de afslag naar de enige woning in de Meersweg 
+                                                                    2° buurtweg n°28 te Everbeek, vanaf achter de woning n°7 in de Hayestraat richting Vloesberg tot aan de aansluiting met de voetweg n°37 
+                                                                    3° buurtweg n°37 te Everbeek, vanaf de aansluiting met buurtweg n° 172 en de grens met Vloesberg 
+                                                                    4° buurtweg n°172 te Everbeek, vanaf de Kroonstraat tot aan de Hayestraat 
+                                                                    5° buurtweg n°36 te Everbeek, tussen woning 11 Donkerstraat en Bergstraat 
+                                                                    6° voetweg n°85 vanaf de Pieter Hoelmanstraat tot aan de Meersweg 
+                                                                    Deze maatregel zal gesingaleerd worden met volgende verkeersborden C3 
+                                                                    §2 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd plaatselijk verkeer in volgende straten: 
+                                                                    1° Buurtweg n°5 Brakelbos 
+                                                                    2° Burgweg 
+                                                                    3° Voetwegel n°27 te Michelbeke tussen Groenstraat en Burgweg 
+                                                                    4° Kammeland 
+                                                                    5° Mijnwerkerspad over een strook van 25m vanaf de Molenhoekstraat richting Brusselsestraat 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 aangevuld met onderbord met de vermelding "Uitgezonderd plaatselijk verkeer". 
+                                                                    §3 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd fietsers in volgende straten: 
+                                                                    1° Torenpad 
+                                                                    2° H. De Coenestraat tussen Driehoekstraat en uiteinde H. Decoenestraat 
+                                                                    3° Sadonespad tussen Ronsesestraat en Sint-Martensstraat 
+                                                                    4° Vanaf het Stationsplein richting N8c 
+                                                                    5° Vanaf de N8c richting Tenbossestraat 
+                                                                    6° Voetweg n° 81 (tussen Toepweg en Toepkapelstraat) 
+                                                                    7° Voetweg n° 82 (tussen Toepweg en Kruisstraat) 
+                                                                    8° Voetweg n° 84 (deel Toepweg) 
+                                                                    9° Voetweg n° 86 (Zavelpad - tussen Kruisstraat, Warande en Tenbossestraat) 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 aangevuld met onderbord M2 (uitgezonderd fietsers). 
+                                                                    §4 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd plaatselijk verkeer, fietsers, bromfietsers klasse A en speed pedelecs in volgende straten: 
+                                                                    1° Kouterstraat 
+                                                                    2° Oorloge 
+                                                                    3° Kuiterlos 
+                                                                    4° Koestraat 
+                                                                    5° Abeelpad 
+                                                                    6° Parkweg 
+                                                                    7° Baneike 
+                                                                    8° Loofweg 
+                                                                    9° Galgestraat en het gedeelte van de Faytestraat in het verlengde van de Galgestraat tot het T-kruispunt thv huisnr. 4 
+                                                                    10° Kiekenstraat 
+                                                                    11° Kapittel 
+                                                                    12° Hogezavel 
+                                                                    13° Berendries zijstraat thv huisnummer 32 
+                                                                    14° Molenkouterweg 
+                                                                    15° Matrouwstraat, gedeelte tussen Matrouwstraat n°19 en Steenweg  
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 met onderbord met de vermelding "Uitgezonderd plaatselijk verkeer" + onderbord M12 
+                                                                    §5 Verboden toegang, in beide richtingen, voor iedere bestuurder uitgezonderd fietsers en ruiters in volgende straten: 
+                                                                    1° Mijnwerkerspad tussen Boembeke en Livierenstraat 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersbroden C3 met onderbord M2 en onderbord uitgezonderd ruiters 
+                                                                    §6 Verboden toegang voor ruiters in volgende straten: 
+                                                                    1° Voetweg nr 71 deel tussen Livierenstraat en Tenbergen 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C13. 
+                                                                    §7 Verboden toegang met uitzondering van landbouwvoertuigen in volgende straten: 
+                                                                    1° ruilverkavelingsweg tussen de Steenstraat en tot op 40m voor de aansluiting met de Twaalfunderstraat 
+                                                                    2° buurtweg n°60 te Everbeek, tussen buurtweg n°36 en Plankkouter 
+                                                                    3° buurtweg n°15 te Zegelsem, tussen buurtweg n°16 en Kleine Gastenhoek 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 met onderbord type IV “uitgezonderd landbouwersgebruik” alsook een voorsignalisatie C3 met onderbord type IV “uitgezonderd landbouwersgebruik en onderbord type Ia “350m” en “40m” voor de ruilverkavelingsweg. 
+                                                                    §8 Verboden toegang voor motorvoertuigen met uitzondering van voertuigen van begrafenisondernemers en gemeentediensten. Andere voertuigen mits toelating gemeentelijke overheid: 
+                                                                    1° Kerkhoven gemeente Brakel  
+                                                                    2° Voor de begraafplaatsen van Nederbrakel en Opbrakel uitzondering voor personenauto's op woensdag van 13.00 uur tot 16.00 uur 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden C3 aangebracht met onderbord: ”Behalve voertuigen begrafenisondernemers en gemeentediensten. Andere voertuigen mits toelating gemeentelijke overheid”. 
+                                                                    Voor de begraafplaatsen van Nederbrakel en Opbrakel wordt op het onderbord bijkomend vermeld "personenauto's op woensdag 13.00u tot 16.00u. 
+                                                                    §9 Verboden toegang voor motorvoertuigen met uitzondering van voertuigen van "De Lijn": 
+                                                                    1° Stationsplein op de in- en afritten van en op het terrein van het busstation van "De Lijn" 
+                                                                    Hoofdstuk 3 - Verboden rechts inslaan  
+                                                                    §1 Verboden rechts inslaan 
+                                                                    1° Kleistraat ter hoogte van het kruispunt met de Kleibergstraat 
+                                                                    Deze maatregel zal gesignaleerd worden met het verkeersbord C31b 
+                                                                    TITEL 3 - TONNAGEBEPERKING 
+                                                                    Artikel 5: 
+                                                                    §1 Er wordt een tonnagebeperking ingevoerd uitgezonderd laden en lossen, en bussen, voor voertuigen waarvan de massa in beladen toestand hoger is: 
+                                                                    1° 3,5 ton: 
+                                                                    a) Berendries 
+                                                                    b) Groenstraat 
+                                                                    c) Pontweg 
+                                                                    d) Strichtstraat 
+                                                                    e) Wijnstraat 
+                                                                    f) Zonale geldigheid 3,5 ton: Wielendaalstraat, Tirse, Serpentestraat, Brugstraat, Marktplein, Kasteelstraat, Hoogstraat, Neerstraat, Spoorwegstraat, St-Pieterswijk, Stationsstraat, Stationsplein, Gauwstraat, Brusselsestraat deel tussen Beekstraat en Neerstraat, en Watermolenstraat, deel tussen Beekstraat en Neerstraat, Rekestraat (aansluitend op stad Geraardsbergen) 
+                                                                    2° 7,5 ton: 
+                                                                    a) Lessensestraat 
+                                                                    b) Klaaie 
+                                                                    c) Priem 
+                                                                    d) Brouwierstraat 
+                                                                    e) Molenstraat 
+                                                                    f) Kloosterstraat 
+                                                                    g) Gelategemstraat 
+                                                                    §2 De in deze titel getroffen maatregelen worden gesignaleerd met de verkeersborden : - C21 (3,5 ton of 7,5 ton) met onderbord uitgezonderd laden en lossen, en bussen - zonale geldigheid type C21 (3,5 ton), met opschrift uitgezonderd laden en lossen, en bussen. 
+                                                                    TITEL 4 - SNELHEIDSBEPERKINGEN 
+                                                                    Artikel 6: 
+                                                                    §1 Op volgende gemeentewegen wordt in beide rijrichtingen een snelheidsbeperking van 50km/u ingevoerd: 
+                                                                    1° bebouwde kommen 
+                                                                    2° Kleistraat (tussen Langakkerstraat en Riebeke) en Riebeke 
+                                                                    3° Berendries 
+                                                                    4° Hauwstraat 
+                                                                    5° Gelategemstraat 
+                                                                    6° Brakelbosstraat 
+                                                                    7° Leinstraat, vanaf het kruispunt met de Sint-Liebertusdreef tot aan de aansluiting met Tenbergen 
+                                                                    8° Priemstraat, vanaf 200m voor de aansluiting met de Plankkouter tot aan de bebouwde kom van Everbeek-Boven 
+                                                                    9° Nieuwstraat, vanaf 200 m vóór het rustoord "De Vlaamse Ardennen" tot aan de aansluiting met Taalman 
+                                                                    10° Kruisstraat, vanaf de Lierenhoek (Lierde) tot aan bebouwde kom van Nederbrakel 
+                                                                    11° Heyveld, tussen de Lierenhoek en Holderbeke (Lierde) 
+                                                                    12° Matrouwstraat, vanaf de Stratendries (Lierde) tot aan de bebouwde kom van Parike 
+                                                                    13° Hollebekestraat, vanaf de Boshoekstraat (Lierde) tot aan de bebouwde kom van Parike 
+                                                                    14° Boekelstraat 
+                                                                    15° Arme Kleie 
+                                                                    16° Heuvelgem 
+                                                                    17° Rekelberg 
+                                                                    18° Steenland 
+                                                                    19° Lessensestraat 
+                                                                    20° Meierij tussen huisnummer 23 en huisnummer 57 (begin bebouwde kom) 
+                                                                    §2 Op volgende gewestwegen wordt een snelheidsbeperking van 50km/u ingevoerd: 
+                                                                    1° bebouwde kommen 
+                                                                    2° Langsheen de N8 vak Kleibergstraat, in beide richtingen, vanaf het einde van de bebouwde kom, klmpunt 43.500 tot aan de aansluiting met de Gentsestraat, klmpunt 45.150 
+                                                                    3° Langsheen de N462b vak Molenberg, Moriaanstraat, wordt in beide richtingen, vanaf klmpunt 1.000 tot aan het kruispunt met de Neerhofstraat, klmpunt 1.296 (begin bebouwde kom), een snelheidsbeperking van 50km/h ingevoerd 
+                                                                    4° Er wordt langsheen de N462 in de richting van Brakel, als aanloop, een snelheidsbeperking ingevoerd van 50 km/u vanaf 200m voor het variabel bord “begin 30 of 50km/u”, zijnde aan klmpunt 22.900 
+                                                                    5° Er wordt langsheen de N462b in de richting van Zottegem, als aanloop, een snelheidsbeperking ingevoerd van 50km/u vanaf 200m voor het variabel bord “begin 30 of 50km/u”, zijnde aan klmpunt 0.390 
+                                                                    6° Er wordt in de rijrichting Brakel, als aanloop, langsheen de N493, Steenweg een snelheidsbeperking ingevoerd van 50 km/u vanaf 200m voor het begin van het variabel bord Z30 zijnde aan klp 5.280 
+                                                                    §3 Volgende zone 30 worden ingevoerd: 
+                                                                    1° woonwijken: 
+                                                                    a) Sint-Pieterswijk 
+                                                                    b) Nederstenkouter en Veldstraat 
+                                                                    c) Suttermeers 
+                                                                    d) Vierschaar 
+                                                                    e) Ruiterij 
+                                                                    f) Hovendaal 
+                                                                    g) Peperendaalwijk 
+                                                                    h) Edgard Tinelstraat 
+                                                                    i) Noordhoek 
+                                                                    j) Bovenhoek 
+                                                                    k) Toepzicht 
+                                                                    l) Manitobastraat 
+                                                                    2° Schoolomgevingen / dorpscentrum: 
+                                                                    a) omgeving van de vrije lagere school in de Sint-Franciscusstraat : vanaf woning nr. 2 tot aan woning nr. 10 en in de Holenbroek vanaf de aansluiting met de Sint-Franciscusstraat tot aan woning nr. 5 
+                                                                    b) omgeving van de gemeentelijke kleuterschool in de deelgemeente Everbeek waarin een deel van de Muiterij (vanaf woning nr 17 tot woning nr 62) en een deel van de Maandagstraat (vanaf kruispunt Muiterij tot en met woning nr 18) 
+                                                                    c) dorpscentrum Nederbrakel : Meerbeekstraat, Vijfdagwandweg, Dam, Wielendaalstraat, Lindeplein, Kerkhofstraat tussen Lindeplein en huisnummer 63, Theo Brakelstraat, Tirse met uitzondering gedeelte Tirse tussen parking en Marktplein, Brusselsestraat tussen Beekstraat en Neerstraat, Serpentestraat tussen Theo Brakelstraat en Brugstraat, Kasteelstraat, Neerstraat, Gauwstraat, Driehoekstraat, Papestraat, Watermolenstraat tussen Brusselsestraat en Beekstraat, Herman De Coenestraat Kouterstraat tussen Meerbeekstraat en huisnummer 17,  Spoorwegstraat, Stationsstraat, Stationsplein  
+                                                                    d) omgeving van de vrije lagere school Lilare en de middelbare school Stella Matutina in de deelgemeente Michelbeke waarin de Groenstraat, Kammeland, Riedeplein, St-Sebastiaansplein, Guido Gezellestraat (bushalte), een deel van de Nieuwstraat (30m vanaf kruispunt met Meierij) en een deel van de Meierij (bushalte) (65m vanaf kruispunt met Nieuwstraat)  
+                                                                    e) omgeving van de de vrije lagere school Lilare in de deelgemeente Elst ter hoogte van Terwalle waarin een deel van Terwalle (vanaf kruispunt Ommegangstraat tot en met woning nr 22) en deel Ommegangstraat (vanaf kruispunt Terwalle tot woning nr 6), St-Appoloniastraat (bushalte) (vanaf Ommengangstraat tot woning nr 1) en het St-Apolloniaplein (vanaf Sint-Apolloniastraat tot en met woning nr 5)  
+                                                                    f) omgeving van de vrije lagere school in Lilare in de deelgemeente Michelbeke waarin een deel van de Teirlinckstraat en de St-Ursmarsstraat  
+                                                                    g) omgeving van de kleuterschool gelegen langsheen de Schoolstraat, waarin een deel van de Schoolstraat wordt in opgenomen 
+                                                                    h) omgeving van de vrije lagere school Lilare in de deelgemeente Zegelsem waarin de Teirlinckstraat vanaf kruispunt Oudenaardesestraat tot woning nr 28 en deel Sint-Ursmarsstraat (vanaf kruipunt Teirlinckstraat tot woning nr 18)  
+                                                                    i) omgeving van het buurthuis Cordenuit: Cordenuitstraat vanaf huisnummer 4 tot aan Everbeekplaats, Lessensestraat vanaf huisnummer 5 tot aan Everbeekplaats, Nestor Debeckstraat vanaf huisnummer 7 tot aan Everbeekplaats, Everbeekplaats, Reepstraat vanaf huisnummer 48 tot aan Everbeekplaats 
+                                                                    §4  Variabele zone 30km en 50 km/u 
+                                                                    1° rond de gemeenteschool van Parike gelegen langsheen de gewestweg N493, Steenweg, tussen klp 5.480 en klp 5.682 alsook in de gemeenteweg Rameiveld vanaf 50m voor de aansluiting met de Steenweg 
+                                                                    2° rond het St-Franciscusinstituut gelegen langsheen de gewestweg N462 en N462b, Kasteeldreef, tijdens de periode van aankomst en vertrek van kinderen door middel van een variabele signalisatie. 
+                                                                    Buiten de periode van aankomst en vertrek van kinderen wordt een zone 50km/u afgebakend door dezelfde variabele zonale signalisatie. 
+                                                                    Deze signalisatie is als volgt opgesteld: 
+                                                                    Voor de rijrichting Zottegem: begin variabel 30 of 50km/u aan N462b klp 0.190 en einde variabel 30 of 50km/u aan N462 klp 23.100 
+                                                                    Voor de rijrichting Brakel: begin variabel 30 of 50km/u aan N462 klp 23.100 en einde variabel 30 of 50km/u aan N462b klp 0.190. 
+                                                                    §5 Volgende straten worden opgenomen in een zone 50 
+                                                                    Twaalfbunderstraat, Kerkhofstraat (vanaf einde bebouwde kom), ruilverkavelingsweg, Herthuizen, Steenstraat, Valkenbergstraat, Valkenstraat, Schoolstraat, Kunnenbergstraat, Schoolstraat (met uitzondering zone 30), Lozelandstraat, Knoopsweg, Neerhofstraat, Kouterstraat (met uitzondering zone 30 en bebouwde kom), Lindeberm, Vredeweg, Romeinseweg en Oorloge 
+                                                                    §6  De in deze titel getroffen maatregelen worden als volgt gesignaleerd met : - A en B : de borden C43 max.50km/u - C : de borden F4a (begin zone 30) waarbij verkeersbord A23 wordt toegevoegd en F4b (einde zone 30) - D : de variabele borden F4a (begin zone 30) waarbij het verkeersbord A23 wordt gevoegd en de variabele zonale signalisatie F4b (einde zone 30 of 50km/u). 
+                                                                    TITEL 5 AFBAKENING BEBOUWDE KOM 
+                                                                    Artikel 7 De bebouwde kom in de deelgemeenten van Brakel wordt afgebakend met de borden F1a en F3a en zullen aangebracht worden op de volgende plaatsen: 
+                                                                    §1 Parike: 
+                                                                    1° Gewestweg N493, vak Steenweg aan kilometerpaal 6.500, even voor de aansluiting met Fayte;2° Gewestweg N493, vak Steenweg aan kilometerpaal 5.465, even voor de gemeenteschool;3° Koestraat bij zijn aansluiting met de Steenweg tot aan huisnummer 14;4° Fayte bij zijn aansluiting met de Steenweg tot aan huisnummer 12;5° Hollebeekstraat aan woning nr 96 en verlengde Hollebeekstraat aan woning nr 77;6° Matrouwstraat vanaf de Hollebeekstraat tot even voorbij woning nr 30;7° Rameiveld 75m voorbij het domein van de gemeenteschool; 
+                                                                    §2 Nederbrakel: 
+                                                                    1° Gewestweg N8, vak Jaegerstraat, aan kilometerpaal 43.500, even voor de aansluiting met de Meerbeekstraat en Hayershoek;2° Gewestweg N493, vak Geraardsbergsestraat, aan kilometerpaal 7.900, even voorbij de aansluiting met de Termergelstraat;3° Gewestweg N462, vak Watermolenstraat en Moriaanstraat, aan kilometerpaal 1.296, even voorbij de aansluiting met de Neerhofstraat;4° Gewestweg N48, vak Ronsesestraat, aan kilometerpaal 0.682;5° Gewestweg N8, vak Brusselsestraat, aan kilometerpaal 41.000, even voor de Top-Bronnen;6° Haeyershoek aan de aansluiting met Riebeke;7° Leizemooie bij zijn aansluiting met de Jagerstraat;8° Kruisstraat aan woning nr.121;9° Stoktstraat even voorbij de aansluiting met de Hoevestraat;10° Vijverdal even voorbij het voetbalplein;11° Toepkapelstraat tot 50 meter voorbij de aansluiting met de Kruisstraat;12° Kouterstraat aan woning n°32;13° Kerkhofstraat aan woning n°87;14° Molenhoekstraat aan de aansluiting met de Oude Blekerijstraat; 15° Wijnstraat aan de aansluiting met de gewestweg Geraardsbergsestraat;16° Driestenbroeke aan de aansluiting met Evensveldstraat;17° Meerbeekstraat18° Lindeplein19° Wielendaalstraat20° Driehoekstraat21° Nederstenkouter22° Veldstraat23° Papestraat24° Suttermeers25° Marktplein26° Serpentestraat27° Theo Brakelstraat28° Brugstraat29° Dam30° St-Pieterwijk31° Spoorwegstraat32° Vunkweg33° Roensveldstraat34° Stationsplein35° Stationsstraat36° Industrielaan37° Katsijnenhoek38° Tenbossestraat39° Warande40° Ekkouterweg41° Hoevestraat42° Dr. De Drijverestraat43° Wijmeersstraat44° Parkweg45° Voorpad46° Stegewerk47° H. De Coenestraat48° Vijverweg49° Hoge Zavel50° Olifantstraat51° Kasteelstraat52° Hoogstraat53° Neerstraat54° Beekstraat55° Gauwstraat56° Tirseparking57° Ekeveldstraat58° Brusselsestraat (gemeenteweg)59° Abeelpad zijn opgenomen binnen de bebouwde kom; 
+                                                                    §3 Elst: 
+                                                                    1° Lepelstraat vanaf de aansluiting met de Genstsestraat tot aan woning n° 67;2° Sint-Apolloniaplein, Sint-Apolloniastraat, Geutelingenstraat, Bassegem, Muizeveld, Keuzelweg en Noordhoek maken deel uit van de bebouwde kom;3° Ommegangstraat vanaf de aansluiting met de Gentsestraat;4° Terwalle tot even voorbij de private weg naar woning n° 13;5° Molenkouterweg, en Winkelweg bij hun aansluiting met de Lepelstraat;6° Heringstraat7° Klein Kapittel 
+                                                                    §4 Michelbeke: 
+                                                                    1° Lepelstraat tot aan woning n° 70;2° Nieuwstraat tot aan de aansluiting met de Boekendries;3° Meierij tot aan woning n° 68;4° Heksteelstraat tot aan woning n° 32, even voorbij de tweede toegang naar Hovendaal;5° Berendries tot aan woning n° 5;6° Groenstraat, Guido Gezellestraat, het Sint-Sebastiaanplein, Kerkwegel, Burgweg, Kammeland, Riedeplein, Hovendaal en Rozenhoek maken deel uit van de bebouwde kom; 
+                                                                    §5 Zegelsem: 
+                                                                    1° Sint-Ursmarsstraat vanaf de aansluiting met de Oudenaardsestraat;2° Teirlinckstraat vanaf de aansluiting met de Oudenaardsestraat tot aan de aansluiting met Leberg;3° Holweg en Kloosterpad worden afgesloten bij hun aansluiting met de Teirlinckstraat; 
+                                                                    §6 Opbrakel: 
+                                                                    1° Sint Martenstraat vanaf de aansluiting met de Ronsesestraat tot aan de Sint-Lietbertusdreef;2° Sint-Franciscustraat tot aan woning n°22;3° Opbrakelstraat vanaf de aansluiting met de Ronsesestraat;4° Holenbroek5° Edgard Tinelstraat6° Baneike zijn opgenomen in de bebouwde kom; 
+                                                                    §7 Everbeek-Beneden: 
+                                                                    1° Lessensestraat tot aansluiting met de Mierenhoek;2° Spinele tot aan woning nr 3;3° Tamelbroekstraat en Plaatsbeek tot aan de aansluiting met Plankkouter;4° Reepstraat en Klaaie tot aan woning Klaaie nr 10;5° Cordenuitstraat tot even voorbij buurthuis Cordenuit;6° Nestor de Beckstraat, Everbeekplaats, Koreelweg7° Dries vallen binnen de bebouwde kom; 
+                                                                    §8 Everbeek-Boven: 
+                                                                    1° Nieuwpoort tot even voorbij de aansluiting met de Oolstraat;2° Maandagstraat tot aan de aansluiting met Pevenage;3° Steenberg tot even voorbij de aansluiting met de Koestraat;4° Bergstraat tot aan woning n°16;5° Hoogbos tot even voorbij de aansluiting met Schudewee;6° Koestraat vanaf de aansluiting met Steenberg tot aan huisnummer 14;7° Fayte vanaf de aansluiting met de Steenberg tot aan huisnummer 12;8° zijweg Fayte naar Galgestraat wordt afgebakend ter hoogte van de aansluiting hoofdweg Fayte;9° Stechelmansdries, Schudewee, Steneplein, Poerensweg, Muiterij, Kroonstraat en Oolstraat vallen binnen de bebouwde kom; 
+                                                                    Deze maatregel zal gesignaleerd worden met de borden F1a en F3a; 
+                                                                    TITEL 6 DORPSKERN NEDERBRAKEL 
+                                                                    Artikel 8, §1 Er wordt een zone erf ingevoerd waartoe volgende straten behoren 
+                                                                    1° Hoogstraat 
+                                                                    2° Neerstraat tussen Hoogstraat en woning nr 3 
+                                                                    3° Marktplein 
+                                                                    4° Serpentestraat tussen Marktplein en Brugstraat 
+                                                                    5° Brugstraat 
+                                                                    6° Tirse tussen Markplein en parking 
+                                                                    7° binnengebied woonwijk Tirse 
+                                                                    De maatregel wordt aangeduid met de borden F12a en F12b. 
+                                                                    §2 Er worden geordende parkeerplaatsen voorzien: 
+                                                                    1° In de Neerstraat en Serpentestraat tussen Brugstraat en Theo Brakelstraat : aangeduid met het bord E9a + onderbord parkeerschijf Type VIIb + waar nodig pijl begin en pijl einde 
+                                                                    2° Hoogstraat, Serpentestraat tussen Markplein en Brugstraat : aangeduid met het bord E9a aangevuld met “uitgezonderd op woensdag van 5u tot 14u” + onderbord parkeerschijf Type VIIb + waar nodig “pijl begin” en “pijl einde” 
+                                                                    3° Marktplein : in het midden waarbij de parkeerplaatsen worden afgebakend met wegmarkeringen en waarop de letter P + symbool parkeerschijf Type VIIb is aangebracht. Ter hoogte van de kerk, tussen linker en midden deur, wordt een parkeerplaats voorzien voor ceremoniewagens. Deze plaatsen worden aangeduid met het verkeersbord E9a met onderbord type IV “uitgezonderd cerenomiewagens” 
+                                                                    §3 Er wordt elke woensdag van 5 tot 14u verboden parkeren en doorgang ingevoerd op het Marktplein. De maatregel wordt aangeduid met het bord E3 met onderbord “woensdag van 5 tot 14u” 
+                                                                    §4 Er wordt eenrichtingsverkeer ingevoerd met uitzondering van fietsers en bromfietsers klasse : 
+                                                                    1° in de Serpentestraat, vanaf het Marktplein tot aan en in de richting van de Theo Brakelstraat 
+                                                                    2° in de Brugstraat vanaf de Wielendaalstraat in de richting Serpentestraat 
+                                                                    3° in de Wielendaalstraat vanaf de Serpentestraat in de richting van het kruispunt met de Hoogstraat/Kasteelstraat 
+                                                                    De maatregelen worden aangeduid met de borden C1 en F19 met onderbord “uitgezonderd fietsers 
+                                                                    4° op het Marktplein : vanaf kruispunt Hoogstraat/Neerstraat tot aan en de richting Serpentestraat. Op het plein wordt het verkeer rond de parkeerplaatsen geregeld volgens richting klokwijzers. 
+                                                                    De maatregelen worden aangeduid met de borden C1 en F19 met onderbord “uitgezonderd fietsers en bromfietsers klasse A” en D1 
+                                                                    §5 Er wordt verboden doorgang ingevoerd elke woensdag van 5 tot 14u in de Hoogstraat, Neerstraat tussen Hoogstraat en Vierschaar, Marktplein en Serpentestraat. 
+                                                                    TITEL 7 BUURTWEGEN 
+                                                                    Artikel 9, §1 De toegangen tot de buurtwegen nummers 36, 60 en 104, worden in beide richtingen verboden voor alle verkeer. 
+                                                                    1° buurtweg 36 tussen woning nr 11 Donkerstraat en Bergstraat : verboden doorgang  
+                                                                    2° buurtweg 60 tussen buurtweg nr 36 en Plankouter : verboden doorgang met uitzondering tussen Plankouter en de versmalling weg (begin bos) voor aangelanden, landbouw-en dienstvoertuigen 
+                                                                    3° buurtweg nr 15 : verboden doorgang met uitzondering van aangelanden, landbouw-en dienstvoertuigen tussen buurtweg nr 22 en woning nr 12 Kleine Gastenhoek;  
+                                                                    Deze maatregel zal gesignaleerd worden met het verkeersbord C3 en waar nodig aangevuld met onderbord type IV "aangelanden, landbouw- en dienstvoertuigen" .  
+                                                                    §2 Volgende verkeersmaatregelen inzake beperken gemotoriseerd verkeer op buurtwegen worden genomen: 
+                                                                    1° art. 22 octies uit de wegcode van toepassing op buurtweg 17 gelegen te Michelbeke tussen de Berendries en Boterhoek(toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden)2° art. 22 octies uit de wegcode van toepassing op buurtweg 21 gelegen te Zegelsem tussen Perreveld en Groenstraat te Horebeke (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                                                    3° art. 22 octies uit de wegcode van toepassing op buurtweg 24 gelegen te Zegelsem tussen Rovorst en Boekkouter (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                                                    4° art. 22 octies uit de wegcode van toepassing op buurtweg 10 gelegen te Zegelsem tussen Rovorst en Kanakkendries (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                                                    5° art. 22 octies uit de wegcode van toepassing op Herenhof gelegen te Opbrakel tussen Sint-Liebertusdreef en Leinstraat (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                                                    6° art. 22 octies uit de wegcode van toepassing op buurtweg 12 gelegen te Zegelsem tussen Ijskelderweg en Wolfskerke (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                                                    7° art. 22 octies uit de wegcode van toepassing op buurtweg 37 gelegen te Elst tussen Groot-Kapittel en Dorrebeekstraat (toegankelijk voor wandelaars, fietsers, ruiters, landbouwvoertuigen en aangelanden) 
+                                                                    8° art. 22 octies uit de wegcode van toepassing op buurtweg Laaistok gelegen te Opbrakel tussen het kruispunt Steenpaal-Willemsveld en de Ronsesestraat 
+                                                                    9° art. 22 octies uit de wegcode van toepassing op buurtweg Lange Haag (buurtweg nr 60) gelegen te Opbrakel tussen Fransbeke en de Heinestraat 
+                                                                    10° art. 22 octies uit de wegcode van toepassing op buurtweg Hutte gelegen te Opbrakel tussen Hutte en de Ronsesestraat 
+                                                                    11° art. 22 octies uit de wegcode van toepassing op buurtweg 12 gelegen te Everbeek tussen Lobe en Trimpont. 
+                                                                    12° art. 22 octies uit de wegcode van toepassing op buurtweg Hofveld gelegen te Opbrakel tussen Ronsesestraat en Boekkouter 
+                                                                    13° art. 22 octies uit de wegcode van toepassing op buurtweg 28 Donkweg gelegen te Zegelsem tussen Hauwstraat en Oudenaardsestraat 
+                                                                    14° art. 22 octies uit de wegcode van toepassing op Perlinckweg gelegen te Zegelsem 
+                                                                    15° art. 22 octies uit de wegcode van toepassing op Okkerbeke gelegen te Opbrakel 
+                                                                    16° art. 22 octies uit de wegcode van toepassing op buurtweg 44 gelegen te Zegelsem tussen Perreveld en Leierwaarde 
+                                                                    17° art. 22 octies uit de wegcode van toepassing op buurtwegen 29 en 40 gelegen te Zegelsem tussen Hauwstraat en Leierwaarde 
+                                                                    18° art. 22 octies uit de wegcode van toepassing op buurtweg Ceutericklos gelegen te Michelbeke tussen Kuiterlos en Berendries 
+                                                                    19° art. 22 octies uit de wegcode van toepassing op buurtweg Hollebeekstraat tussen Hollebeekstraat huisnr. 77 en Breebijl (grondgebied Lierde) 
+                                                                    Deze maatregel zal gesignaleerd worden met volgende verkeersborden: 
+                                                                    1°  het begin van buurtweg 17 wordt aangeduid met het verkeersbord F99c.2° het einde van buurtweg 17 met het verkeersbord F101c.3° het begin van buurtweg 21 met het verkeersbord F99c. 
+                                                                    4° het einde van buurtweg 21 met het verkeersbord F101c. 
+                                                                    5° het begin van buurtweg 24 met het verkeersbord F99c. 
+                                                                    6° het einde van buurtweg 24 met verkeersbord F101c. 
+                                                                    7° het begin van buurtweg 10 met het verkeersbord F99c. 
+                                                                    8° het einde van buurtweg 10 met het verkeersbord F101c. 
+                                                                    9° het begin van buurtweg Herenhof tussen Sint-Liebertusdreef en Leinstraat met het verkeersbord F99c. 
+                                                                    10° het einde van buurtweg Herenhof tussen Sint-Liebertusdreef en Leinstraat met het verkeersbord F101c. 
+                                                                    11° het begin van buurtweg 12 met het verkeersbord F99c. 
+                                                                    12° het einde van buurtweg 12 met het verkeersbord F101c. 
+                                                                    13° het begin van buurtweg 37 met het verkeersbord F99c. 
+                                                                    14° het einde van buurtweg 37 met het verkeersbord F101c. 
+                                                                    15° het begin van buurtweg Laaistok gelegen te Opbrakel tussen het kruispunt Steenpaal-Willemsveld en de Ronsesestraat met het verkeersbord F99c. 
+                                                                    16° het einde van buurtweg Laaistok gelegen te Opbrakel tussen het kruispunt Steenpaal-Willemsveld en de Ronsesestraat met het verkeersbord F101c. 
+                                                                    17° het begin van buurtweg 60 (Lange Haag) te Opbrakel tussen Fransbeke en de Heinestraat met het verkeersbord F99c. 
+                                                                    18° het einde van buurtweg 60 (Lange Haag) te Opbrakel tussen Fransbeke en de Heinestraat met het verkeersbord F101c. 
+                                                                    19° het begin van buurtweg Hutte gelegen te Opbrakel tussen Hutte en de Ronsesestraat met het verkeersbord F99c. 
+                                                                    20° het einde van buurtweg Hutte gelegen te Opbrakel tussen Hutte en de Ronsesestraat met het verkeersbord F101c. 
+                                                                    21° het begin van buurtweg 12 gelegen te Everbeek tussen Lobe en Trimpont met het verkeersbord F99c. 
+                                                                    22° het einde van buurtweg 12 gelegen te Everbeek tussen Lobe en Trimpont met het verkeersbord F101c. 
+                                                                    23° het begin van buurtweg Hofveld gelegen te Opbrakel tussen Ronsesestraat en Boekkouter met het verkeersbord F99c. 
+                                                                    24° het einde van buurtweg Hofveld gelegen te Opbrakel tussen Ronsesestraat en Boekkouter met het verkeersbord F101c. 
+                                                                    25° het begin van buurtweg 28 Donkweg gelegen te Zegelsem tussen Hauwstraat en Oudenaardsestraat met het verkeersbord F99c. 
+                                                                    26° het einde van buurtweg 28 Donkweg gelegen te Zegelsem tussen Hauwstraat en Oudenaardsestraat met het verkeersbord F101c. 
+                                                                    27° het begin van Perlinkweg gelegen te Zegelsem tussen Keiweg en Pottenberg met het verkeersbord F99c. 
+                                                                    28° het einde van Perlinkweg gelegen te Zegelsem tussen Keiweg en Pottenberg met het verkeersbord F101c. 
+                                                                    29° het begin van Okkerbeke gelegen te Opbrakel tussen Lange Haag en Tenbergen met het verkeersbord F99c. 
+                                                                    30° het einde van Okkerbeke gelegen te Opbrakel tussen Lange Haag en Tenbergen met het verkeersbord F101c. 
+                                                                    31° het begin van buurtweg 44 gelegen te Zegelsem tussen Perreveld en Leierwaarde met het verkeersbord F99c. 
+                                                                    32° het einde van buurtweg 44 gelegen te Zegelsem tussen Perreveld en Leierwaarde met het verkeersbord F101c. 
+                                                                    33° het begin van buurtwegen 29 en 40 gelegen te Zegelsem tussen Leierwaarde en Hauwstraat met het verkeersbord F99c. 
+                                                                    34° het begin van buurtwegen 29 en 40 gelegen te Zegelsem tussen Leierwaarde en Hauwstraat met het verkeersbord F101c. 
+                                                                    35° het begin van Ceutericklos gelegen te Michelbeke tussen Kuiterlos en Boterhoek met het verkeersbord F99c. 
+                                                                    36° het einde van Ceutericklos gelegen te Michelbeke tussen Kuiterlos en Boterhoek met het verkeersbord F101c. 
+                                                                    37° het begin van Hollebeekstraat gelegen te Parike tussen Hollebeekstraat 77 en Breebijl (gemeente Lierde) met het verkeersbord F99c. 
+                                                                    38° het einde van Hollebeekstraat gelegen te Parike tussen Hollebeekstraat 77 en Breebijl (gemeente Lierde) met het verkeersbord F101c. 
+                                                                    TITEL 8 TRACTORSLUIS 
+                                                                    Artikel 10. 
+                                                                    §1 Op volgende locaties is een tractorsluis aangebracht: 
+                                                                    1° Molenhoekstraat tussen Moriaanstraat en Molenhoekstraat: art. 22 octies uit de wegcode 
+                                                                    2° Hollebeekstraat tussen Hollebeekstraat en Breebijl (gemeente Lierde): art. 22 octies uit de wegcode 
+                                                                    3° Kleistraat tussen Kleibergstraat en Langakkerstraat: art. 22 octies uit de wegcode 
+                                                                    4° Driestenbroekestraat tussen Vunkstraat en Evensveldstraat: art. 22 octies uit de wegcode 
+                                                                    §2 Deze maatregel zal gesignaleerd worden met volgende verkeersborden:  
+                                                                    1° het begin van deze wegen wordt aangeduid met het verkeersbord F99c. 
+                                                                    2° het einde met het verkeersbord F101c. 
+                                                                    3° de tractorsluis dient langs beide kanten aangekondigd worden door middel van het gevaarsbord A51 met onderborden 
+                                                                    TITEL 9 VRIJSTELLING VOOR HET PARKEREN VAN BEPAALDE DEELAUTO'S IN DE BLAUWE ZONES 
+                                                                    Artikel 11 De gemeente Brakel verleent een vrijstelling voor het parkeren in een blauwe zone van deelauto's van erkende autdeelorganisaties door afgifte van een (digitale) gemeentelijke parkeerkaart 'autodelen' onder volgende voorwaarde en modaliteiten:  
+                                                                            1° Er wordt 1 kaart per auto en nummerplaat toegestaan 
+                                                                    2° Een kaart is geldig voor een periode van 1 jaar 
+                                                                    3° Voorbehouden plaatsen autodelen : Enkel geregistreerde voertuigen van door gemeente Brakel erkende autodeelorganisaties met eigen vloot die werken met vaste standplaatsen kunnen zonder beperking van de parkeertijd gebruik maken van voorbehouden parkeerplaatsen, te herkennen aan het verkeersbord E9a of E9b met onderbord 'autodelen'. 
+                                                                    TITEL 10: WEGMARKERINGEN MET VERPLICHTEND KARAKTER 
+                                                                    Artikel 12:  
+                                                                    §1 Zebrapaden 
+                                                                    1° deelgemeente Nederbrakel: 
+                                                                           a) Neerstraat thv huisnr. 97 
+                                                                           b) Neerstraat thv huisnr. 75 
+                                                                           c) Neerstraat thv huisnr. 31 
+                                                                           d) Hoogstraat thv huisnr. 19 
+                                                                           e) Kasteelstraat thv huisnr. 4 
+                                                                           f) Kasteelstraat thv huisnr. 30 
+                                                                           g) Kasteelstraat thv huisnr. 42 
+                                                                           h) Kasteelstraat thv huisnr. 50 
+                                                                           i) Kasteelstraat thv huisnr. 60 
+                                                                           j) Kasteelstaat thv huisnr. 96 
+                                                                           k) Rondplein thv huisnr. 7 
+                                                                           l) Rondplein thv huisnr.  8 
+                                                                           m) Geraadsbergsestraat thv huisnr. 2  
+                                                                           n) Geraadsbergsestraat thv huisnr. 20 
+                                                                           o) Stationsplein thv huisnr. 7 
+                                                                           p) Stationsplein thv huisnr. 14 
+                                                                           q) Spoorwegstraat thv huisnr. 2 
+                                                                           r) Rondweg thv Tenbossestraat nr. 2 
+                                                                           s) Stationsstraat thv huisnr. 1 
+                                                                           t) Wielendaalstraat thv huisnr. 3 
+                                                                           u) Wielendaalstraat thv huisnr. 62 
+                                                                           v) Meerbeekstraat thv huisnr. 2 
+                                                                           w) Kerkhofstraat thv huisnr. 2 
+                                                                           x) Driehoekstraat thv huisnr. 8 
+                                                                           y) Driehoekstraat thv huisnr. 42 
+                                                                           z) Driehoekstraat thv huisnr. 42a 
+                                                                           aa) Tirse thv huisnr. 5 
+                                                                           ab) Watermolenstraat thv huisnr. 36 
+                                                                           ac) Neerstraat thv huisnr. 48 
+                                                                    2° deelgemeente Opbrakel 
+                                                                           a) St. Martensstraat thv huisnr. 3 
+                                                                           b) St. Martensstraat thv huisnr. 7 
+                                                                           c) Opbrakelsestraat thv huisnr. 127 
+                                                                           d) Ronsesestraat thv huisnr. 128 
+                                                                    3° deelgemeente Zegelsem 
+                                                                           a) Teirlinckstraat thv huisnr. 22 
+                                                                    4° deelgemeente Elst 
+                                                                           a) Terwalle thv huisnr. 24 
+                                                                           b) St. Apolloniastraat thv huisnr. 1 
+                                                                           c) St. Apolloniastraat thv huisnr. 11 
+                                                                           d) St. Apolloniaplein thv huisnr. 2 
+                                                                           e) St. Apolloniastraat thv huisnr. 22 
+                                                                           f) Lepelstraat thv huisnr. 78 
+                                                                           g) Lepelstraat thv huisrn. 82 
+                                                                    5° deelgemeente Michelbeke 
+                                                                           a) G. Gezellestraat thv huisnr. 1 
+                                                                           b) G. Gezellestraat thv huisnr. 10 
+                                                                           c) G. Gezellestraat thv huisnr. 15 
+                                                                           d) St.-Sebastiaansplein thv huisnr. 1 
+                                                                           e) Groenstraat thv huisnr. 18 
+                                                                    f) Groenstraat thv huisnr. 34 
+                                                                    6° deelgemeente Parike 
+                                                                           a) Steenweg thv huisnr. 72 
+                                                                    7° deelgemeente Everbeek-Boven 
+                                                                           a) Muiterij thv huisnr. 4 
+                                                                           b) Muiterij thv huisnr. 12 
+                                                                    8° deelgemeente Everbeek-Beneden 
+                                                                           a) Everbeekplaats thv huisnr. 11 
+                                                                           b) Everbeekplaats thv huisnr. 14 
+                                                                    § 2 Oversteekplaatsen voor fietsers en tweewielige bromfietsen 
+                                                                    1° deelgemeente Nederbrakel 
+                                                                    a) Stationsplein thv huisnr. 15 
+                                                                    b) Rondweg thv Warande nr. 1 
+                                                                    c) Rondweg thv Warende nr. 2 
+                                                                    d) Rondweg thv Parkweg 
+                                                                    e) Brusselsestraat thv huisnr. 49 
+                                                                    f) Geraardsbergsestraat thv huisnr. 43 
+                                                                    g) Geraardsbergsestraat thv huisnr. 34 
+                                                                    h) Geraardsbergsestraat thv huisnr. 31 
+                                                                    i) Geraardsbergsestraat thv huisnr. 147 
+                                                                    j) Tenbossestraat thv huisnr. 2 
+                                                                    2° deelgemeente Michelbeke 
+                                                                    a) Groenstraat thv huisnr. 25 
+                                                                    3° deelgemeente Elst 
+                                                                    a) Oudenaardsestraat thv huisnr. 7 
+                                                                    b) Oudenaardsestraat thv huisnr. 7 (overzijde) 
+                                                                    c) Oudenaardsestraat thv huisnr. 11 
+                                                                    4° deelgemeente Opbrakel 
+                                                                    a) Ronsesestraat thv huisnr. 158 
+                                                                    b) Ronsesestraat thv huisnr. 279  
+                                                                    § 3 Witte markeringen bakenen op de hierna vermelde plaatsen de parkeerzones af: 
+                                                                    1° deelgemeente Nederbrakel 
+                                                                    a) Hoogstraatb) Stationspleinc) Kasteelstraatd) Spoorwegstraate) St.-Pieterswijkf) Neerstraatg) Watermolenstraath) Beekstraati) Brusselsestraatj) Gauwstraatk) Vierschaarl) Damm) Meerbeekstraatn) Wielendaalstraato) Serpentestraatp) Theo Brakelstraatq) Marktpleinr) Tirses) Kerkhofstraatt) Kruisstraatu) Rondplein (3 parkeerplaatsen) 
+                                                                    2° deelgemeente Parike 
+                                                                    a) Hollebeekstraatb) Steenweg 
+                                                                    3° deelgemeente Opbrakel 
+                                                                    a) St. Martensstraatb) Leinstraat 
+                                                                    4° deelgemeente Zegelsem 
+                                                                    a) Perreveldb) Teirlinckstraat 
+                                                                    5° deelgemeente Elst 
+                                                                    a) Lepelstraatb) St. Apolloniapleinc) St. Apolloniastraat 
+                                                                    6° deelgemeente Everbeek-Beneden 
+                                                                    a) Reepstraat 
+                                                                    7° deelgemeente Everbeek-Boven 
+                                                                    a) Muiterijb) Manitobastraat 
+                                                                    8° deelgemeente Michelbeke 
+                                                                    a) Pontwegb) Ruiterijc) St. Sebastiaanspleind) Guido Gezellestraate) Riedepleinf) Kammelandg) Hovendaal 
+                                                                    § 4 Stopstrepen op volgende kruispunten 
+                                                                    1° deelgemeente Nederbrakel 
+                                                                    a) Oude Blekerijstraat met Brusselsestraatb) Kokerbergstraat met Brusselsestraatc) Watermolenstraat met Brusselsestraatd) Gauwstraat met Rondwege) Warande met Rondweg f) Industrielaang) Haeyershoek met Kleibergstraath) Meerbeekstraat met Kleibergstraati) Driestenbroekestraat met Geraardsbergsestraatj) Termergelstraat met Geraardsbergsestraatk) Stationsstraat met Kasteelstraat 
+                                                                    2° deelgemeente Zegelsem 
+                                                                    a) Gentsestraat met Oudenaardsestraatb) Teirlinckstraat met Oudenaardsestraat 
+                                                                    3° deelgemeente Sint-Maria-Oudenhove 
+                                                                    a) Berendries met Kasteeldreefb) Heyveld met Brusselsestraat 
+                                                                    4° deelgemeente Parike 
+                                                                    a) Hollebeekstraat met Steenwegb) Koestraat met Steenwegc) Brouwierstraat met Steenwegd) Molenstraat met Steenweg 
+                                                                    5° deelgemeente Opbrakel 
+                                                                    a) Maaistraat met Ronsesestraat 
+                                                                    § 5 Witte driehoeken (haaientanden) op volgende kruispunten 
+                                                                    1° deelgemeente Nederbrakel 
+                                                                    a) Brusselsestraat met Rondwegb) Parkweg met Rondwegc) Hoge Zavel met Rondwegd) Geraardsbergsestraat met Rondwege) Industrielaan met Geraardsbergsestraatf) Spoorwegstraat met Geraardsbergsestraatg) Abeelpad met Herreweg h) Leizemooie met Herrewegi) Oorloge met Kleibergstraatj) Romeinseweg met Kleibergstraat k) Kleistraat met Kleibergstraat l) Molenhoekstraat met Moriaanstraatm) Molenhoekstraat met Moriaanstraatn) Driehoekstraat met Watermolenstraato) Herman De Coenestraat met Watermolenstraatp) Watermolenstraat met Beekstraatq) Beekstraat met Brusselsestraatr) Vunkstraat met Geraardsbergsestraats) Olifantstraat met Geraardsbergsestraatt) Wijnstraat met Geraardsbergsestraat u) Langenbroekweg met Geraardsbergsestraatv) Opbrakelsestraat met Ronsesestraatw) Ekeveldstraat met Ronsesestraatx) Parkweg met Wijmeersstraat 
+                                                                    2° deelgemeente Elst 
+                                                                    a) Gentsestraat met Kleibergstraatb) Hauwstraat met Oudenaardsestraatc) Kluisweg met Oudenaardsestraatd) Loofweg met Oudenaardsestraate) Gentsestraat met Gentsestraatf) Smisstraat met Gentsestraatg) Rosbos met Gentsestraath) Kleine Gastenhoek met Gentsestraati) Pottenberg met Gentsestraatj) Lepelstraat met Gentsestraatk) Boekelstraat met Gentsestraatl) Molenkouterstraat met Gentsestraatm) Vissegem met Gentsestraatn) Blomveld met Gentsestraato) Heuvelgem met Gentsestraat 
+                                                                    3° deelgemeente Zegelsem 
+                                                                    a) Donkweg met Oudenaardsestraatb) Leierwaarde met Oudenaardsestraatc) Perreveld met Oudenaardsestraatd) St. Ursmarsstraat met Oudenaardsestraat 
+                                                                    4° deelgemeente Sint-Maria-Oudenhove 
+                                                                    a) Kapittel met Kasteeldreefb) Elverenberg met Kasteeldreefc) Kraaiestee met Molenbergd) Bieststraat met Molenberge) Zwalmbeekweg met Molenbergf) Neerhofstraat met Molenberg 
+                                                                    5° deelgemeente Parike 
+                                                                    a) Zesdagwandweg met Steenwegb) Pachtweg met Steenwegc) Fayte met Steenwegd) Paperendaalwijk met Steenwege) Matrouwstraat met Steenwegf) Rameiveld met Steenweg 
+                                                                    6° deelgemeente Opbrakel 
+                                                                    a) St. Martensstraat met Ronsesestraatb) Riebeke met Ronsesestraatc) Herenhof met Ronsesestraatd) Kimpestraat met Ronsesestraate) Landuitweg met Ronsesestraatf) Hutte met Ronsesestraatg) Pieter Hoelmanstraat 
+                                                                    7° deelgemeente Michelbeke 
+                                                                    a) Kammeland met Groenstraat 
+                                                                    § 6 Witte markeringen om fietspaden af te bakenen in volgende straten:  
+                                                                    1° deelgemeente Elst 
+                                                                    a) Lepelstraat t.h.v. de verkeerseilanden (huisnummer 67) 
+                                                                    2° deelgemeente Michelbeke 
+                                                                    a) Lepelstraat t.h.v. de verkeerseilanden (huisnummer 29) 
+                                                                    3° deelgemeente Everbeek-Boven 
+                                                                    a) Steenberg t.h.v. de verkeerseilanden (huisnummer 27) 
+                                                                    4° deelgemeente Everbeek-Beneden 
+                                                                    a) Klaaie t.h.v. de verkeerseilanden (huisnummer 10) 
+                                                                    b) Klaaie t.h.v. de verkeerseilanden (huisnummer 36a) 
+                                                                    TITEL 11: AANWIJZINGSBORDEN VOOR BEDRIJVEN, OVERNACHTINGSGELEGENHEDEN EN RESTAURANTS 
+                                                                    Artikel 13: Algemene bepalingen 
+                                                                    1° De plaatsing van aanwijzingsborden voor bedrijven (F33a en F34a), overnachtingsgelegenheden (F37) en restaurants (F37) op de openbare weg is onderworpen aan een voorafgaande en schriftelijke vergunning van het college van burgemeester en schepenen. 
+                                                                    2° De vergunning vervalt van rechtswege indien er gedurende 6 maanden geen gebruik van werd gemaakt. 
+                                                                    3° De vergunning kan afhankelijk gesteld worden van het advies van de wegbeheerder. 
+                                                                    Artikel 14: De aanvraag wordt gericht aan het college van burgemeester en schepenen en vermeldt: 
+                                                                    1° De ligging van het bedrijf, de overnachtingsgelegenheid of het restaurant;2° Voor bedrijven: de mate waarin het bedrijf veel verkeer genereert;3° Maximaal 2 bewegwijzerde routes. 
+                                                                    Artikel 15: Buiten de industrieparken komen enkel producerende bedrijven met een grote logistieke verkeersstroom in aanmerking voor de plaatsing van aanwijzingsborden. 
+                                                                    Artikel 16: Het college van burgemeester en schepenen verleent de vergunning op basis van noodzakelijkheid. 
+                                                                    Artikel 17: De aanwijzingsborden zijn naar model, materiaal, gegevens, plaats en aantal in overeenstemming te zijn met het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg;het ministerieel besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens;en het ministerieel besluit van 1 februari 1991 betreffende signalisatie van de plaatsen en instellingen van algemeen belang of van toeristische aard. 
+                                                                    Artikel 18: Voor de toepassing van voorgaand artikel geldt als definitie van een weg van doorgaand verkeer: elke weg die in het gemeentelijk mobiliteitsplan werd aangeduid als primaire weg, secundaire weg of lokale weg type I en II. 
+                                                                    Artikel 19: 
+                                                                    1° Alleenstaande bedrijven buiten de bebouwde kom, belangrijke industrieparken en commerciële centra kunnen met het bord F33a bewegwijzerd worden op voorwaarde dat: 
+                                                                    a) ze veel verkeer met zich meebrengen;b) de bewegwijzering noodzakelijk is om de meest geschikte reisroute aan te duiden.Buiten de industrieparken komen enkel producerende bedrijven met een grote logistieke verkeersstroom in aanmerking.De bewegwijzering mag:1. maximaal 2 reisroutes bevatten vanaf een autosnelweg of een belangrijke weg van doorgaand verkeer;2. maximum een afstand van 5 kilometer omvatten;3. uitgezonderd de alleenstaande bedrijven, geen namen van bedrijven of winkels vermelden. 
+                                                                    2° Alleenstaande bedrijven binnen de bebouwde kom, industrieparken en commerciële centra van minder belang kunnen met het bord F34a bewegwijzerd worden op voorwaarde dat: 
+                                                                    a) de bewegwijzering noodzakelijk is om de meest geschikte reisroute aan te duiden.Buiten de industrieparken komen enkel producerende bedrijven met een grote logistieke verkeersstroom in aanmerking.De bewegwijzering mag:1. maximaal 2 reisroutes bevatten vanaf een weg van doorgaand verkeer;2. maximum een afstand van 2 kilometer omvatten;3. binnen de industrieparken of commerciële centra de naam van bedrijven en winkels bevatten, en binnen de bebouwde kom de naam van alleenstaande bedrijven bevatten. 
+                                                                    3° Overnachtingsgelegenheden kunnen met een bord F37 bewegwijzerd worden. 
+                                                                    De bewegwijzering mag maximaal 2 reisroutes bevatten vanaf de dichtsbijzijnde weg van doorgaand verkeer. 
+                                                                    4° Restaurants kunnen met het bord F37 bewegwijzerd worden op voorwaarde dat ze buiten de bebouwde kom gelegen zijn. 
+                                                                    De bewegwijzering mag maximaal 2 reisroutes bevatten vanaf de dichtsbijzijnde weg van doorgaand verkeer. 
+                                                                    Artikel 20: 
+                                                                    De vergunninghouder staat in voor: 
+                                                                    1° De betaling van de aanwijzingsborden, ook bij vervanging; 
+                                                                    2° Het onderhoud van de aanwijzingsborden. 
+                                                                    De gemeente staat in voor: 
+                                                                    1° De levering en plaatsing van de aanwijzingsborden en de paal; 
+                                                                    2° De plaatsing, vervanging en wegname van de aanwijzingsborden. 
+                                                                    Artikel 21: Indien de aanwijzingsborden zich niet meer in behoorlijke staat bevinden, stuurt de burgemeester een aanmaning tot onderhoud of herstel van de aanwijzingsborden. Indien binnen de 30 kalenderdagen geen gevolg wordt gegeven aan de aanmaning worden de aanwijzingsborden ambtshalve weggenomen en vernietigd. 
+                                                                    Artikel 22: De vergunninghouder die zijn bedrijvigheid stopt dient, neemt de aanwijzingsborden weg. Indien binnen de 30 kalenderdagen na het staken van de bedrijvigheid de aanwijzingsborden niet werden weggenomen worden de aanwijzingsborden ambtshalve weggenomen en vernietigd. 
+                                                                    Artikel 23: Aanwijzingsborden die zonder vergunning werden geplaatst worden ambtshalve weggenomen en vernietigd. 
+                                                                    TITEL 12: VERHOOGDE INRICHTINGEN EN WEGVERSMALLINGEN 
+                                                                    Artikel 24. 
+                                                                    § 1 Op de hierna vermelde gemeentewegen zijn wegversmallingen aangebracht en aangeduid door de verkeersborden B19 en B21: 
+                                                                    1) Deelgemeente Elst 
+                                                                    a) Lepelstraat  
+                                                                    2) Deelgemeente Everbeek-Beneden 
+                                                                    a) Klaaie 
+                                                                    3) Deelgemeente Everbeek-Boven 
+                                                                    a) Steenberg 
+                                                                    b) Priemstraat 
+                                                                    4) Deelgemeente Michelbeke 
+                                                                    a) Lepelstraat 
+                                                                    § 2 Op de hierna vermelde gemeentewegen zijn verhoogde inrichtingen aangebracht en aangeduid door de verkeersborden A14 en F87 
+                                                                    1) Deelgemeente Nederbrakel 
+                                                                    a) Driehoekstraat 
+                                                                    b) Neerstraat 
+                                                                    2) Deelgemeente Elst 
+                                                                    a) Terwalle 
+                                                                    § 3 Op de hierna vermelde gemeentewegen zijn rotondes aangebracht en aangeduid door de verkeersborden B1, D1d, D5 en dwarsstrepen gevormd door omgekeerde driehoeken 
+                                                                    1) Deelgemeente Everbeek-Boven 
+                                                                    a) Priemstraat / Klaaie 
+                                                                    2) Deelgemeente Elst 
+                                                                    a) Lepelstraat / St. Apolloniastraat 
+                                                                    3) Deelgemeente Nederbrakel 
+                                                                    a) Lindeplein 
+                                                                    TITEL 13: INWERKINGTREDING, BEKENDMAKING EN OVERGANGSBEPALINGEN  
+                                                                    Inwerkingtreding 
+                                                                    Artikel 25: Dit algemeen aanvullend verkeersreglement treedt in werking op 15 januari 2025. 
+                                                                    Overgangsbepalingen 
+                                                                    Artikel 26: Onderstaande aanvullende verkeersreglementen worden opgeheven op 15 januari 2025: 
+                                                                    1° Besluit Gemeenteraad dd. 04/11/2024 betreffende "Mobiliteit. Algemeen aanvullend verkeersreglement."  
+                                                                    Bekendmaking 
+                                                                    Artikel 27: Afschrift van dit besluit wordt overgemaakt: 
+                                                                    1° aan de bestendige deputatie van de provincieraad 
+                                                                    2° aan de griffie van de rechtbank van eerste aanleg en aan die van de politierechtbank 
+                                                                    3° aan de toezichthoudende overheid overeenkomstig de relevante bepalingen van het decreet Lokaal Bestuur (titel 7: Het bestuurlijk toezicht). 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/206b1e47-7070-4de1-9949-502ffbea9ffe> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "64009580-c830-11ef-9218-6931664218fe" ;
+    dcterms:title "Algemeen aanvullend verkeersreglement." .
+

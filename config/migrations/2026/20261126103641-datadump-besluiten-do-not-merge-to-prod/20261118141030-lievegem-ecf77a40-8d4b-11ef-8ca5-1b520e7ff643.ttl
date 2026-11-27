@@ -1,0 +1,105 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/21f47f21-a173-47a0-b2f4-d95f790b4244> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0b965221-8c5e-49bc-95a6-7574127c467b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/16759837-7972-417a-a138-afe54a5a70df>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/195dd6f6-6ad9-470a-b053-95af60d3b500>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1aea8d6e-f7fd-4090-9dbd-70ec75756e16>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1ded11ac-693d-4560-9f87-24f6b13329b9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/206d6928-5356-4680-8768-4279f51175f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/23ac9a53-7024-429f-a003-c86ba05666cf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/25e127f2-f3e8-4d4c-baba-29cc54cfef98>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/36079b91-057f-455f-958d-20c69f371f4e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/38db0822-ac66-4829-89af-773fd1e27f58>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3a576056-f3d0-4cc3-b298-ce46465f34eb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c5aaf5a-ee0b-461b-8e1c-f3245690729f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4dc86f1d-d2f7-4a13-97ff-81a0434f9020>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e505485-0bc1-489b-a69c-29c873956a65>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/529f368c-337c-46c1-a917-a8c042cceefe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/57ed44f2-72d5-4266-8859-c70adb4be31f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8a0291b-3682-4681-9c55-0e508430a151>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d67855d8-d103-4842-9df6-64c01bae85a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6d40194-8092-4d34-9ee0-f1fc027fd461> ;
+    ns3:geplandeStart "2022-10-19T20:00:00+02:00"^^xsd:dateTime ;
+    ns3:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/27dbbceb-0f73-43eb-89e4-b1cbed418e35> ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/9d9523f0-20b5-46d5-9ca7-129967d63cdc> ;
+    ns3:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/896f98c9-1b33-46b2-bc71-4303868bc33c> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ecf668d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-10-19T21:57:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-10-19T20:06:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/25934110-a4ac-49c2-ac21-5dfd07a95688> ;
+    ns3:openbaar true ;
+    ns2:uuid "fe8b7270-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3e28531a-b2c8-454b-84f2-dc722e7a17f1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3e28531a-b2c8-454b-84f2-dc722e7a17f1> a ns3:Besluit ;
+    ns1:description """ 
+                                                    De verrekening wordt goedgekeurd. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Lostraat - heraanleg fietspad -  verrekening omwille van meerwerken na wijziging opdracht: goedkeuring",
+        "Lostraat - heraanleg fietspad - verrekening omwille van meerwerken na wijziging opdracht: goedkeuring" ;
+    ns3:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikel 42, betreffende de bevoegdheden van de gemeenteraad. 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen. 
+                                                            Het Bestuursdecreet van 7 december 2018. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikelen 326 tot en met 341 betreffende het bestuurlijk toezicht. 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen. 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 42, § 1, 1° a) (de goed te keuren uitgave excl. btw bereikt de drempel van 140.000,00 euro niet). 
+                                                            Het KB van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het KB van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen, meer bepaald artikel 90, 1 
+                                                            Het besluit van de gemeenteraad van 16 december 2020 houdende vaststelling van de opdrachten voor werken, leveringen en diensten die kunnen beschouwd worden als opdrachten van dagelijks bestuur. 
+                                                            Het besluit van de gemeenteraad van 22 december 2021 over de Meerjarenplanaanpassing 2020 - 2025 deel gemeente Lievegem: vaststelling waarbij de nominatieve investeringen werden goedgekeurd, inzonderheid Actie 494 - Lostraat (tussen grens Merendree en Lovaart) - affrezen beton en heraanleg met asfalt  
+                                                            Het besluit van het college van burgemeester en schepenen van 29 maart 2022 over Lostraat - heraanleg fietspad - lastvoorwaarden, gunningswijze en uit te nodigen firma's 
+                                                            Het besluit van het college van burgemeester en schepenen van 13 september 2022 over de principiële goedkeuring van de verrekening omwille van meerwerken na wijziging opdracht 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            In het kader van de opdracht “ Lostraat (deel tussen grens Merendree en Lostraat 120): affrezen beton en heraanleg met asfalt” werd een bestek met nr. 2022/Lostraat opgesteld door Team wegen, groen en mobiliteit. 
+                                                            De uitgave voor deze opdracht werd geraamd op 64.613,28 euro excl. btw of 78.182,07 euro incl. 21% btw. 
+                                                            Het college van burgemeester en schepenen besliste op 10 mei 2022 deze opdracht te gunnen aan De Meulemeester BV (DM-Roadbuilding), Reukenstraat 20 te 9500 Geraardsbergen tegen het nagerekende en verbeterde offertebedrag van 54.490,13 euro excl. btw of 65.933,06 euro incl. 21% btw. 
+                                                            Bij de voorbereiding van de werken werd gevraagd om ook het fietspad in de Lostraat aan de kant van Lovaart aan te pakken. Dit deel van het fietspad was niet voorzien in het oorspronkelijke dossier. Dit bijkomend deel heeft een totale lengte van ongeveer 450 meter wat overeenstemt met een oppervlakte van 900m² fietspad dat extra moet worden afgefreesd en met nieuwe asfalt moet worden aangelegd. Omwille van de grote niveauverschillen tussen het fietspad en de naastliggende kasseigreppel moet ook de kasseigreppel (lengte 222 meter / breedte: 60cm) worden aangepakt. 
+                                                            Door de aard van de werken was het aangewezen om beide deelopdrachten in één geheel uit te voeren. 
+                                                            Door de aannemer werd voor deze werken een verrekening opgemaakt. 
+                                                            Deze verrekening werd op 13 september 2022 principieel goedgekeurd door het college van burgemeester en schepenen. Omdat de meeruitgave door wijziging aan de opdracht, conform het door de raad vastgesteld begrip dagelijks bestuur, meer is dan 25.000 euro en ook meer dan 10 % hoger dan het gunningsbedrag,  is de goedkeuring van de gemeenteraad vereist. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De verrekening bedraagt 33.016,90 euro excl. BTW (of 39.950,45 euro incl. BTW) waardoor de totale uitgave 87.507,03 euro excl. btw of 105.883,51 euro incl. 21% btw bedraagt. 
+                                                            Dit bedrag is deels voorzien in het investeringsbudget van 2022, op jaarbudgetrekening 2022/ACT-494/0200-00/2240007/GEMEENTE/CBS/IP-GEEN: 93.000 euro. Het tekort aan budget kan via interne kredietaanpassing worden toegevoegd van uit het budget 'Drie trajectcontroles (Durmstraat-Jagerpad-Zoutweg)' (artikel 2022/ACT-374/0490-00/2300000/GEMEENTE/CBS/IP-GEEN met beschikbaar budget van 81.887,60 euro). 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ecf77a40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad verleent de goedkeuring aan de verrekening voor de herstelwerken aan een bijkomend stuk fietspad. De kostprijs bedraagt 33.016,90 euro excl. BTW (of 39.950,45 euro incl. BTW) 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3e28531a-b2c8-454b-84f2-dc722e7a17f1> a ns3:Agendapunt ;
+    ns3:geplandOpenbaar true ;
+    ns2:uuid "f2229130-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Lostraat - heraanleg fietspad - verrekening omwille van meerwerken na wijziging opdracht: goedkeuring" .
+

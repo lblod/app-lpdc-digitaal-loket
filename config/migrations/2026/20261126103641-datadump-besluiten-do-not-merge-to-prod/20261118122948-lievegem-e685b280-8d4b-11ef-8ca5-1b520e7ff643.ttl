@@ -1,0 +1,123 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3027bbce-6e1b-47b4-bc0b-f53c72f1f9d2> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1b0c2c7b-0314-444b-ba38-6b1f25637bc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27e0c4db-269e-409a-8d55-33db7daf7c9b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/34930146-fe00-40e7-b2ab-da9614be07cc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52a32c20-365d-4ec1-84c3-b1abbd90e765>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/61467cc7-df6b-44fa-9a12-7aa8b6da5bc9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/727e49d0-e835-41b7-a845-a99d752ce10a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/74297a28-b422-4447-a55c-1b5a8a5c2d7d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/814b0c26-3095-484f-9c8d-5de8ee0c9a60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/91e1ac3b-1fbb-4380-a260-eeded72cbbdb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/98504bc9-8262-4192-8cba-1fcd50f0800a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/aac60983-db3c-4247-b27f-4860f02157a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b47e54f5-341d-458d-904e-8e8e667ef997>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ba5489da-e01f-4521-be10-56c4a038e97d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d6f26eb7-74ad-4e5a-bcb3-b89aa65ac7b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d84d3931-b8bf-4253-ad24-7fabe8331040>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e73baa50-db6e-4a3e-89de-7cb98ecdf5ef>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f6446375-946b-4c3d-9dcc-c3cf171303a1> ;
+    ns1:geplandeStart "2020-09-09T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e04bbeb0-1e3c-48c6-86c0-2e3a8995ae98> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/619a64f0-35fa-41f1-9895-5360cd9bf16b> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2cf19f34-4e9d-4ca2-9af9-b8280d2d4efc> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e687ae50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2020-09-09T23:00:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-09-09T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/061dda49-e5a1-452f-9eae-df818ba2741d> ;
+    ns1:openbaar true ;
+    ns3:uuid "efe23e20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns2:description """ 
+                                                    De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 23 juni 2020 over de vaststelling van het retributiereglement op de inrichting van culturele activiteiten door het team Cultuur. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Retributiereglement op de inrichting van culturele activiteiten door het team Cultuur - collegebeslissing 23 juni 2020: bekrachtiging" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Jeroen Van Acker, schepen van cultuur 
+                                 
+                                 
+                                    Regelgeving 
+                                    De nieuwe gemeentewet, artikel 135 § 2, 5°Het decreet lokaal bestuur, artikel 40 §3 en 41, 14°.Ministerieel besluit van 23 maart 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperken, wijziging 24 maart, 27 maart, 3 april, 17 april, 30 april, 8, 15, 27, 30 mei, 2, 5 en 30 juni, 10, 24 en 28 juli 2020.Beslissing van de Nationale Veiligheidsraad van 6 mei 2020 omtrent Coronavirus: geleidelijke heropstart vanaf 10 mei 2020, aangevuld op 13 mei, 3 en 24 juni 2020Beslissing van het college van burgemeester en schepenen van 23 juni 2020 over de vaststelling van het retributiereglement op de inrichting van culturele activiteiten door het team Cultuur 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Door de coronacrisis en de maatregelen die daaraan verbonden zijn, moet het gemeentelijk zomeraanbod dit jaar op een andere manier georganiseerd worden: beperkte bubbelwerking voor jeugd- en sportkampen en gemeentelijke kinderopvang. Om het zomeraanbod toch zo maximaal mogelijk te houden voor ouders en kinderen werd de mogelijkheid bekeken om het zomeraanbod uit te breiden met een aantal cultuurkampjes. 
+                                    Het basisprotocol Cultuur voor een veilige opstart van de cultuursector, opgemaakt door minister Jambon, met de maatregelen rond de organisatie van cultuurkampen verscheen pas op 10 juni 2020. Pas dan kon gestart worden met de effectieve uitrol van dit extra aanbod. Gezien de cultuurkampjes reeds in de zomervakantie georganiseerd worden, was de vaststelling van een retributiereglement dringend noodzakelijk. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Voor de inkomsten worden volgende jaarbudgetrekeningen aangemaakt: 
+                                     
+                                         Voor “occasionele activiteiten”, “occasionele uitstappen” en “cultuurkampen”: 2020/GBB-JGDBKO/0709-00/7010002/GEMEENTE/CBS/IP-GEEN (Inschrijvingsgelden) - 3.428 euro 
+                                        Voor verkoop van eigen publicatie: 020/GBB-JGDBKO/0709-00/7000008/GEMEENTE/CBS/IP-GEEN (verkoop van infobrochures) - 0 euro 
+                                     
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en aan ABB via het digitaal loket.Team financiën. 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Jeroen Van Acker, schepen van cultuur 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            De nieuwe gemeentewet, artikel 135 § 2, 5°Het decreet lokaal bestuur, artikel 40 §3 en 41, 14°.Ministerieel besluit van 23 maart 2020 houdende dringende maatregelen om de verspreiding van het coronavirus COVID-19 te beperken, wijziging 24 maart, 27 maart, 3 april, 17 april, 30 april, 8, 15, 27, 30 mei, 2, 5 en 30 juni, 10, 24 en 28 juli 2020.Beslissing van de Nationale Veiligheidsraad van 6 mei 2020 omtrent Coronavirus: geleidelijke heropstart vanaf 10 mei 2020, aangevuld op 13 mei, 3 en 24 juni 2020Beslissing van het college van burgemeester en schepenen van 23 juni 2020 over de vaststelling van het retributiereglement op de inrichting van culturele activiteiten door het team Cultuur 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Door de coronacrisis en de maatregelen die daaraan verbonden zijn, moet het gemeentelijk zomeraanbod dit jaar op een andere manier georganiseerd worden: beperkte bubbelwerking voor jeugd- en sportkampen en gemeentelijke kinderopvang. Om het zomeraanbod toch zo maximaal mogelijk te houden voor ouders en kinderen werd de mogelijkheid bekeken om het zomeraanbod uit te breiden met een aantal cultuurkampjes. 
+                                                            Het basisprotocol Cultuur voor een veilige opstart van de cultuursector, opgemaakt door minister Jambon, met de maatregelen rond de organisatie van cultuurkampen verscheen pas op 10 juni 2020. Pas dan kon gestart worden met de effectieve uitrol van dit extra aanbod. Gezien de cultuurkampjes reeds in de zomervakantie georganiseerd worden, was de vaststelling van een retributiereglement dringend noodzakelijk. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Voor de inkomsten worden volgende jaarbudgetrekeningen aangemaakt: 
+                                                             
+                                                                 Voor “occasionele activiteiten”, “occasionele uitstappen” en “cultuurkampen”: 2020/GBB-JGDBKO/0709-00/7010002/GEMEENTE/CBS/IP-GEEN (Inschrijvingsgelden) - 3.428 euro 
+                                                                Voor verkoop van eigen publicatie: 020/GBB-JGDBKO/0709-00/7000008/GEMEENTE/CBS/IP-GEEN (verkoop van infobrochures) - 0 euro 
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "e685b280-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Enig artikel 
+                                    De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 23 juni 2020 over de vaststelling van het retributiereglement op de inrichting van culturele activiteiten door het team Cultuur. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad bekrachtigt de beslissing van het college van burgemeester en schepenen van 23 juni 2020 over de vaststelling van het retributiereglement op de inrichting van culturele activiteiten door het team Cultuur. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2069b87e-3ae1-4eec-8af6-9e65b2aa7eae> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "efe439f0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Retributiereglement op de inrichting van culturele activiteiten door het team Cultuur - collegebeslissing 23 juni 2020: bekrachtiging" .
+

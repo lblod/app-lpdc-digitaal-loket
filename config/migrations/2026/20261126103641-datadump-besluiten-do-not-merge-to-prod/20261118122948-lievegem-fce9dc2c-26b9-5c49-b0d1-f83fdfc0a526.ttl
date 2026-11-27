@@ -1,0 +1,150 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/366a22d9-05fc-4cba-8330-184e5b618873> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b63c980-ba61-4e9f-a84c-dd7b0fd12f97> ;
+    ns2:geplandeStart "2026-10-20T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c1a3da0d-2b32-480a-9fb2-58223509b22a> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "f953afee-05f3-554d-862a-9b04be1cc085" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-10-20T13:42:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8b63c980-ba61-4e9f-a84c-dd7b0fd12f97> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e2d69aa1-8c0b-45db-b663-c501d4732c90> ;
+    ns2:openbaar false ;
+    ns1:uuid "731aa1ae-befa-55ce-9581-3d1a883bb728" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b63c980-ba61-4e9f-a84c-dd7b0fd12f97> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8b63c980-ba61-4e9f-a84c-dd7b0fd12f97> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/8b63c980-ba61-4e9f-a84c-dd7b0fd12f97> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement van 'Winterkermis Zomergem 2026' vanaf maandag 9 november 2026 13.00 uur tot en met maandag 16 november 2026 6.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van 'Winterkermis Zomergem 2026': vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 20 oktober 2026 over de aanvraag Winterkermis Zomergem 2026 - organisatie kinderuurtje - standplaatsen spektakelattracties en kermisgastronomie: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen - gemeente Lievegem organiseert 'Winterkermis Zomergem 2026' van woensdag 11 november 2026 tot en met zondag 15 november 2026.Er werd op 22 september 2026 een aanvraag ingediend door team evenementen - gemeente Lievegem om tijdens de kermis verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "fce9dc2c-26b9-5c49-b0d1-f83fdfc0a526" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Winterkermis Zomergem 2026' vanaf maandag 9 november 2026 13.00 uur tot en met maandag 16 november 2026 6.00 uur wordt vastgesteld als volgt: 
+                                      
+                                     
+                                        Kermisattracties: 
+                                     
+                                     
+                                        
+                                            1. Stilstaan- en parkeerverbod op het marktplein, de parking achter het gemeentehuis in Zomerlaan en de parkeerstrook ter hoogte van Markt 12.
+                                         
+                                        
+                                            2. Stilstaan- en parkeerverbod op de parking aan Toursport, Bevrijdingstraat 25A, uitgezonderd foorkramers.
+                                            3. Stilstaan- en parkeerverbod ter hoogte van Karel Lodewijk Ledeganckstraat 2-8 van woensdag 11 november 2026 15.00 uur tot en met zondag 15 november 2026 24.00 uur.
+                                         
+                                        
+                                            4. Afsluiten centrum Zomergem voor alle verkeer vanaf kruispunt met Luitenant Dobbelaerestraat tot kruispunt met Maarten Steyaertplein en een parkeerverbod ter hoogte van Markt 3 - 6 tijdens de openingsuren van de kermisattracties:
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            - woensdag 11 november 2026 van 15.00 uur tot en met 24.00 uur
+                                         
+                                        
+                                            - donderdag 12 november 2026 van 17.00 uur tot en met 24.00 uur
+                                         
+                                        
+                                            - vrijdag 13 november 2026 van 17.00 uur tot en met 24.00 uur
+                                         
+                                        
+                                            - zaterdag 14 november 2026 van 15.00 uur tot en met 24.00 uur
+                                            - zondag 15 november 2026 van 15.00 uur tot en met 24.00 uur
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Centrum Zomergem (en handelaars) blijven hierbij bereikbaar via Maarten Steyaertplein en Dreef.
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        5. Eénrichtingsverkeer in Luitenant Dobbelaerestraat vanaf Markt tot aan Hofbouwstraat.
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                             
+                                                Wekelijkse markt - aangepaste locatie naar aanleiding van kermis: 
+                                             
+                                         
+                                        
+                                            1. Stilstaan- en parkeerverbod op dinsdag 10 november 2026 vanaf 5.00 uur tot en met 13.00 uur ter hoogte van Markt 3 - 6.
+                                         
+                                        
+                                            2. Afsluiten centrum Zomergem voor alle verkeer op dinsdag 10 november 2026 vanaf 5.00 uur tot en met 13.00 uur.
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Omleiding tijdens openingsuren kermisattracties en tijdens wekelijkse markt: 
+                                         
+                                        
+                                            1. Voertuigen komende van Kruisstraat/Langeboeken en rijdend richting Brugge worden omgeleid via Moerstraat, Durmstraat, Ter Wal en Guido Gezellestraat.
+                                            2. Voertuigen komende van Kruisstraat en rijdend richting Eeklo worden omgeleid via Azaleastraat.
+                                            3. Voertuigen komende van Koning Leopold III laan en rijdend richting Gent worden omgeleid via Guido Gezellestraat, Ter Wal en Durmstraat.
+                                            4. Voertuigen komende van Koning Leopold III laan en rijdend richting Eeklo worden omgeleid via Guido Gezellestraat, Ter Wal, Boven, Hendrik Claeysstraat, Zandstraat, Motje en Azaleastraat.
+                                            5. Voertuigen komende van Burg. Henri Ryckaertstraat en rijdend richting Gent worden omgeleid via Daalmstraat, Azaleastraat, Motje.
+                                         
+                                     
+                                    
+                                        6. Tegenstrijdige borden worden afgedekt.
+                                     
+                                    
+                                        7. plaatsing van borden met voorsignalisatie (dagen + uren waarop centrum Zomergem is afgesloten) op de invalswegen.
+                                     
+                                    
+                                        8. plaatsing van informatiebord voor vervoer +3,5 ton, ter hoogte van Lobrug/Koning Leopoldstraat en Durmstraat/Moerstraat.
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt gesignaleerd volgens de plannen in bijlage. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8b63c980-ba61-4e9f-a84c-dd7b0fd12f97> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b63c980-ba61-4e9f-a84c-dd7b0fd12f97> a ns2:Agendapunt ;
+    ns1:uuid "7e8142fc-b6bb-5114-a574-55907e0d476b" .
+

@@ -1,0 +1,91 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/d424cf8f-85ae-4c7f-b1c5-377bde43fb34> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/01836431-9d81-4de5-92cc-a357e07baa6b>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/56ea51da-044d-4abe-a690-6f30b69a709f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9fe7cf44-005f-4896-a498-91cc86365d4f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/c8291ebf-66ae-4475-bb11-648d3acd039d>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/ebc36766-0621-4f90-82ca-f1276dc8b94f>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f3cd7bdf-fce9-4704-9a0c-7cb9af0e787b> ;
+    ns1:geplandeStart "2025-05-26T15:10:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/0e627fd7-9f7d-4214-b8cf-940a6debd277> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "c8a7198e-939d-5fed-ada8-7afe153a3c6d" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-26T15:05:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ebc36766-0621-4f90-82ca-f1276dc8b94f> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/01836431-9d81-4de5-92cc-a357e07baa6b> ;
+    ns1:openbaar false ;
+    ns2:uuid "bc47243d-93d6-51bb-80d5-965843f677c8" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/ebc36766-0621-4f90-82ca-f1276dc8b94f> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/ebc36766-0621-4f90-82ca-f1276dc8b94f> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/ebc36766-0621-4f90-82ca-f1276dc8b94f> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de opendeurdag op 1/06 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Opendeur Mersch Agri Solutions - 1/06" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "77fa75a6-56da-5604-ab79-213dbb7d432d" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van opendeurdag op 1/06 worden volgende beperkingsmaatregelen voor het verkeer genomen vanaf 08u t.e.m. 22u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                             
+                                                Eénrichtingsverkeer (fig. C1 - fig F19) op: 
+                                                 
+                                                    Schepdaelstraat tussen Druimerenstraat en Salsenbergstraat, toegelaten rijrichting komende van Druimerenstraat richting Salsenbergstraat. 
+                                                 
+                                             
+                                         
+                                        
+                                             
+                                         
+                                         
+                                             
+                                                Verboden af te slaan op volgend kruispunt in de richting door de pijl aangegeven (fig. C31a/b) op: 
+                                                 
+                                                    Salsenbergstraat, verboden rijrichting Schepdaelstraat richting Druimerenstraat 
+                                                 
+                                             
+                                          
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ebc36766-0621-4f90-82ca-f1276dc8b94f> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/ebc36766-0621-4f90-82ca-f1276dc8b94f> a ns1:Agendapunt ;
+    ns2:uuid "d8b016dc-f99d-5dea-90a2-30ff5d1870ce" .
+

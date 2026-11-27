@@ -1,0 +1,110 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/13531b75-2b97-49e6-95b5-0130577929ca> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0a3b8c32-bc76-4553-b8fa-c22add4f0bf1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12c0ebbd-5e1f-41bd-b51b-7ed7377c140c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3087dcaf-8404-4313-8c4d-cf86d7068e89>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bb2de83-7c88-42cf-b8ae-300e6a8f9c60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/756d9ce0-0a90-4125-8bad-bf797fbf4599>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7efebe89-fd26-4810-98b4-03f1fe2f3c03>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/83a14952-629a-43a4-a2cb-b19f5696b3e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a30d7bc6-05d9-4de8-974b-534fa6b5534a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ab469946-0bdc-48fe-8dcf-2c84b719be81>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b11927eb-1bef-4718-bdb3-8a26d2d317a9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bd29baaf-49e9-47b4-aba1-00bdef4c9670>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c20b968b-3927-43ce-8b6f-7fe5018f7d18>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e7de92-a36c-4219-9e13-c69071e37e4c> ;
+    ns1:geplandeStart "2022-03-30T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5072526b-b5d4-4d2b-ba68-1047063dac6e> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6062ed9f-3a18-4da2-b571-465c2cc37207> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6b4a4077-779d-4b4b-9f0b-f39d932e61c9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ec275900-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-03-30T21:10:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-03-30T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/8c82efe5-4ef1-4543-9122-86d87b246e3d> ;
+    ns1:openbaar true ;
+    ns2:uuid "ed1bcb20-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/42260152-6730-4c31-ae7e-d11b2487d3a9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/42260152-6730-4c31-ae7e-d11b2487d3a9> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:description """ 
+                                                    Het aanvullend reglement op het verkeer voor het invoeren van éénrichtingsverkeer met aangepaste voorrangsregeling wordt vastgesteld. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Aanvullend reglement op het verkeer - éénrichtingsverkeer in de Hendrik Claeysstraat, Alfons Sifferstraat en Adolf Lievensstraat en voorrangsregeling Boven-Molenbergstraat, Boven-Hendrik Claeysstraat-Ter Wal en Hendrik Claeysstraat-Dekenijstraat-Zandstraat: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bis 
+                                    Decreet lokaal bestuur van 22 december 2017, artikel 286 
+                                    Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeer 
+                                    Koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                    Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    De gemeenteraad is bevoegd om politiereglementen op de gemeentewegen vast te stellen.Om de verkeersstroom in de centrumstraten van Zomergem (Dekenijstraat,...) te verkleinen en in voorbereiding van de aanleg van bredere voetpaden in de Hendrik Claeysstraat, wordt voorgesteld om éénrichtingsverkeer in te voeren in de Hendrik Claeysstraat vanaf het kruispunt met Boven tot aan Dekenijstraat/Zandstraat. Het autoverkeer moet hierbij de richting van Boven naar Zandstraat/Dekenijstraat volgen. Er wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs. Om het sluipverkeer in de Adolf Lievensstraat en Alfons Sifferstraat te beperken wordt ook in deze (smalle) straten éénrichtingsverkeer ingevoerd waarbij het autoverkeer de richting van de dorpskern naar Guido Gezellestraat / Ter Wal moet volgen. Ook hier wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs.Gelijktijdig wordt de voorrangsregeling op de kruispunten Boven-Molenbergstraat, Boven-Hendrik Claeysstraat-Ter Wal en Hendrik Claeysstraat-Dekenijstraat-Zandstraat aangepast zodat de as Durmstraat-Boven-Ter Wal en de as Boven-Hendrik Claeysstraat-Dekenijstraat de 2 hoofdverkeersassen worden die voorrang hebben ten opzichte van de zijstraten. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Lievo, Bpost, IVM, de inwoners en betrokken handelaars.ABB via digitaal loket 
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Nieuwe gemeentewet, inzonderheid artikel 130 bis 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 286 
+                                                            Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeer 
+                                                            Koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg 
+                                                            Ministerieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad is bevoegd om politiereglementen op de gemeentewegen vast te stellen.Om de verkeersstroom in de centrumstraten van Zomergem (Dekenijstraat,...) te verkleinen en in voorbereiding van de aanleg van bredere voetpaden in de Hendrik Claeysstraat, wordt voorgesteld om éénrichtingsverkeer in te voeren in de Hendrik Claeysstraat vanaf het kruispunt met Boven tot aan Dekenijstraat/Zandstraat. Het autoverkeer moet hierbij de richting van Boven naar Zandstraat/Dekenijstraat volgen. Er wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs. Om het sluipverkeer in de Adolf Lievensstraat en Alfons Sifferstraat te beperken wordt ook in deze (smalle) straten éénrichtingsverkeer ingevoerd waarbij het autoverkeer de richting van de dorpskern naar Guido Gezellestraat / Ter Wal moet volgen. Ook hier wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs.Gelijktijdig wordt de voorrangsregeling op de kruispunten Boven-Molenbergstraat, Boven-Hendrik Claeysstraat-Ter Wal en Hendrik Claeysstraat-Dekenijstraat-Zandstraat aangepast zodat de as Durmstraat-Boven-Ter Wal en de as Boven-Hendrik Claeysstraat-Dekenijstraat de 2 hoofdverkeersassen worden die voorrang hebben ten opzichte van de zijstraten. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ec289180-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1De gemeenteraad beslist volgend aanvullend reglement op het wegverkeer vast te stellen :•    éénrichtingsverkeer in de Hendrik Claeysstraat vanaf het kruispunt met Boven tot aan Dekenijstraat/Zandstraat. Het autoverkeer moet hierbij de richting van Boven naar Zandstraat/Dekenijstraat volgen. Er wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs.•    éénrichtingsverkeer in de Adolf Lievensstraat en Alfons Sifferstraat. Het autoverkeer moet hierbij de richting van de dorpskern naar Guido Gezellestraat / Ter Wal volgen. Er wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs.•    de as Durmstraat-Boven-Ter Wal en de as Boven-Hendrik Claeysstraat-Dekenijstraat hebben voorrang ten opzichte van de zijstraten:     o    kruispunt Boven-Molenbergstraat: Molenbergstraat moet voorrang geven ten opzichte van Boven     o    Boven-Hendrik Claeysstraat-Ter Wal: Boven-Ter Wal is de voorrangsweg en uitkomend ((brom)fiets)verkeer komende van de Hendrik Claeysstraat moet voorrang geven     o    Hendrik Claeysstraat-Dekenijstraat-Zandstraat: Hendrik Claeysstraat - Dekenijstraat is de voorrangsweg en verkeer komende van de Zandstraat moet voorrang geven. 
+                                    Artikel 2Deze verkeersmaatregel wordt als volgt gesignaleerd:•    éénrichtingsverkeer in de Hendrik Claeysstraat vanaf het kruispunt met Boven tot aan Dekenijstraat/Zandstraat:     o    F19 met onderbord M18 ter hoogte van Boven 1a     o    F19 met onderbord M18 ter hoogte van Hendrik Claeysstraat 5     o    C1 met onderbord M12 ter hoogte van Dekenijstraat 36 (kant Hendrik Claeysstraat)     o    C1 met onderbord M12 ter hoogte van Blauwersstraat (kant Hendrik Claeysstraat)•    éénrichtingsverkeer in de Adolf Lievensstraat vanaf het kruispunt met Zomerlaan tot aan Guido Gezellestraat     o    F19 met onderbord M18 ter hoogte van Adolf Lievensstraat 2     o    F19 met onderbord M18 ter hoogte van Adolf Lievensstraat 10 (thv Westeling)     o    C1 met onderbord M12 ter hoogte van Guido Gezelestraat 16 (kant Adolf Lievensstraat)     o    C1 met onderbord M12 ter hoogte van Adolf Lievensstraat 11 (thv Westeling)•    éénrichtingsverkeer in de Alfons Sifferstraat vanaf het kruispunt met Dekenijstraat tot aan Guido Gezellestraat / Ter Wal     o    F19 met onderbord M18 ter hoogte van Alfons Sifferstraat 2     o    F19 met onderbord M18 ter hoogte van Alfons Sifferstraat 32 (thv Westeling)     o    C1 met onderbord M12 ter hoogte van Alfons Sifferstraat 47     o    C1 met onderbord M12 ter hoogte van Alfons Sifferstraat 13 (thv Westeling)•    de as Durmstraat-Boven-Ter Wal en de as Boven-Hendrik Claeysstraat-Dekenijstraat hebben voorrang ten opzichte van de zijstraten:     o    kruispunt Boven-Molenbergstraat: Molenbergstraat: B1 in Molenbergstraat met bord B15 in Boven     o    Boven-Hendrik Claeysstraat-Ter Wal: B1 in Hendrik Claeysstraat met borden B15 in Ter Wal en Boven     o    Hendrik Claeysstraat-Dekenijstraat-Zandstraat:          - B1 met bord 'verplicht naar rechts' + M12 in Zandstraat          - B1 met bord 'verplicht naar links' + M12 in Dekenijstraat          - aanduidingsbord 'voorrangsbaan' ter hoogte van Hendrik Claeysstraat.Artikel 3Dit aanvullend reglement op het verkeer gaat in voege vanaf 1 juni 2022. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De gemeenteraad beslist volgend aanvullend reglement op het wegverkeer vast te stellen :•    éénrichtingsverkeer in de Hendrik Claeysstraat vanaf het kruispunt met Boven tot aan Dekenijstraat/Zandstraat. Het autoverkeer moet hierbij de richting van Boven naar Zandstraat/Dekenijstraat volgen. Er wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs.•    éénrichtingsverkeer in de Adolf Lievensstraat en Alfons Sifferstraat. Het autoverkeer moet hierbij de richting van de dorpskern naar Guido Gezellestraat / Ter Wal volgen. Er wordt een uitzondering gemaakt voor fietsers, bromfietsers klasse A en speedpedelecs.•    de as Durmstraat-Boven-Ter Wal en de as Boven-Hendrik Claeysstraat-Dekenijstraat hebben voorrang ten opzichte van de zijstraten:     o    kruispunt Boven-Molenbergstraat: Molenbergstraat moet voorrang geven ten opzichte van Boven     o    Boven-Hendrik Claeysstraat-Ter Wal: Boven-Ter Wal is de voorrangsweg en uitkomend ((brom)fiets)verkeer komende van de Hendrik Claeysstraat moet voorrang geven     o    Hendrik Claeysstraat-Dekenijstraat-Zandstraat: Hendrik Claeysstraat - Dekenijstraat is de voorrangsweg en verkeer komende van de Zandstraat moet voorrang geven. 
+                                                            Artikel 2Deze verkeersmaatregel wordt als volgt gesignaleerd:•    éénrichtingsverkeer in de Hendrik Claeysstraat vanaf het kruispunt met Boven tot aan Dekenijstraat/Zandstraat:     o    F19 met onderbord M18 ter hoogte van Boven 1a     o    F19 met onderbord M18 ter hoogte van Hendrik Claeysstraat 5     o    C1 met onderbord M12 ter hoogte van Dekenijstraat 36 (kant Hendrik Claeysstraat)     o    C1 met onderbord M12 ter hoogte van Blauwersstraat (kant Hendrik Claeysstraat)•    éénrichtingsverkeer in de Adolf Lievensstraat vanaf het kruispunt met Zomerlaan tot aan Guido Gezellestraat     o    F19 met onderbord M18 ter hoogte van Adolf Lievensstraat 2     o    F19 met onderbord M18 ter hoogte van Adolf Lievensstraat 10 (thv Westeling)     o    C1 met onderbord M12 ter hoogte van Guido Gezelestraat 16 (kant Adolf Lievensstraat)     o    C1 met onderbord M12 ter hoogte van Adolf Lievensstraat 11 (thv Westeling)•    éénrichtingsverkeer in de Alfons Sifferstraat vanaf het kruispunt met Dekenijstraat tot aan Guido Gezellestraat / Ter Wal     o    F19 met onderbord M18 ter hoogte van Alfons Sifferstraat 2     o    F19 met onderbord M18 ter hoogte van Alfons Sifferstraat 32 (thv Westeling)     o    C1 met onderbord M12 ter hoogte van Alfons Sifferstraat 47     o    C1 met onderbord M12 ter hoogte van Alfons Sifferstraat 13 (thv Westeling)•    de as Durmstraat-Boven-Ter Wal en de as Boven-Hendrik Claeysstraat-Dekenijstraat hebben voorrang ten opzichte van de zijstraten:     o    kruispunt Boven-Molenbergstraat: Molenbergstraat: B1 in Molenbergstraat met bord B15 in Boven     o    Boven-Hendrik Claeysstraat-Ter Wal: B1 in Hendrik Claeysstraat met borden B15 in Ter Wal en Boven     o    Hendrik Claeysstraat-Dekenijstraat-Zandstraat:          - B1 met bord 'verplicht naar rechts' + M12 in Zandstraat          - B1 met bord 'verplicht naar links' + M12 in Dekenijstraat          - aanduidingsbord 'voorrangsbaan' ter hoogte van Hendrik Claeysstraat.Artikel 3Dit aanvullend reglement op het verkeer gaat in voege vanaf 1 juni 2022. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/42260152-6730-4c31-ae7e-d11b2487d3a9> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "ed190c00-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Aanvullend reglement op het verkeer - éénrichtingsverkeer in de Hendrik Claeysstraat, Alfons Sifferstraat en Adolf Lievensstraat en voorrangsregeling Boven-Molenbergstraat, Boven-Hendrik Claeysstraat-Ter Wal en Hendrik Claeysstraat-Dekenijstraat-Zandstraat: vaststelling" .
+

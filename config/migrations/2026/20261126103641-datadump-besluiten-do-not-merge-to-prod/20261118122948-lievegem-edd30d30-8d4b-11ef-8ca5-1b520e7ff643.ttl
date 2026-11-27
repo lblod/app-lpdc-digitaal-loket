@@ -1,0 +1,124 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/a475ad5f-6791-4297-b104-79b3c207fb16> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/066e2ed1-d9f6-493c-9c6f-4f18e5ab7658>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40881b55-0d07-4b9c-8159-1126726726c8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4c93144e-5a19-470b-93d1-7e2659266b01>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/72e3a1c9-366e-4989-9414-3d302437f58d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85a89a89-4741-4921-9222-96054c5df5f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b409ab7a-e18e-4363-aa87-5a90fcc43155>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4219de6-3f0a-40e3-b839-fe356c608d46>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e6c5218a-0543-416e-b1cb-38efde0f155e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4b04b57-aa85-4dd8-ad0e-2255f5e9d903> ;
+    ns1:geplandeStart "2021-02-24T20:00:00+01:00"^^xsd:dateTime,
+        "2021-02-24T20:10:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/aef4a100-7c5a-43bb-ad04-e15ab2f79936> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2832f3bc-d9ee-461a-b6bf-1931195b87b8> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/94ff0768-e35c-4879-93c9-b68206f2669e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "edcea060-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-02-24T21:05:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-02-24T20:10:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/85a89a89-4741-4921-9222-96054c5df5f9> ;
+    ns1:openbaar true ;
+    ns2:uuid "f12f5790-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad neemt kennis van het nieuwe "Memorandum van Samenwerking en Partnerschap" tussen de Interlokale Vereniging Stedenband Lievegem/Deinze/KeMoPoDi en de KeMoPoDi-Intercommunale. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Nieuw samenwerkingsmemorandum Stedenband Lievegem/Deinze met KeMoPoDi: kennisname" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Hilde De Graeve, schepen  
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het decreet van 22 december 2017 over het lokaal bestuur, artikel 40 
+                                                            Het bestuursdecreet van 7 december 2018 
+                                                            Gemeenteraadsbesluit van 18 december 2019 over de verderzetting van de Stedenband Lievegem/Deinze/KeMoPoDi - goedkeuren statuten 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Op 11 maart 2011 werd het eerste Stedenbandmemorandum tussen LoWaZoNe (Lovendegem, Waarschoot, Zomergem, Nevele) en KeMoPoDi (Keur Moussa, Pout, Diender) ondertekend. Omwille van de nieuwe structuren na de fusies, met de oprichting van een nieuwe Interlokale Vereniging (BIJLAGE 1: Besluit GR Verderzetting Stedenband), werd een nieuw samenwerkingsmemorandum opgemaakt (BIJLAGE 2 a & b). Het nieuwe memorandum is een overeenkomst tussen de Interlokale Vereniging Stedenband Lievegem/Deinze/KeMoPoDi en de nieuwe KeMoPoDi-intercommunale. 
+                                                            Deze intercommunale krijgt extra middelen van de Senegalese overheid, bovenop de gemeentelijke ondersteuning, en heeft als doelstelling een beleid uit te bouwen voor de KeMoPoDi-regio rond gezondheid, milieu, educatie en internationale samenwerking. Het is de eerste intercommunale in Senegal die zo ver staat in het officialiseringsproces, andere intercommunale structuren in Senegal zijn informele structuren, en houden vaak na enige tijd op te bestaan. 
+                                                            De KeMoPoDi-intercommunale zal voor de bevoegde beleidsdomeinen beleidsprogramma's uitwerken, met daaraan gekoppeld een budget. Ook voor internationale samenwerking, onze stedenband, wil men naar de toekomst toe een budget voorzien. Beleidsprogramma's uitwerken, de 3 lokale besturen met de neuzen in dezelfde richting krijgen, financiële middelen delen, is niet evident voor lokale besturen en vraagt een duidelijk aanwijsbare meerwaarde voor de 3 partners. Met het Federaal Programma 2022 -2026 waar we nu voor de eerste keer aan zullen deelnemen, en die in volle voorbereiding is, zullen we vanuit onze expertise (met de andere Vlaamse stedenbanden & VVSG), ervaringen kunnen delen en ondersteunen, het programma dat we nu aan het uitwerken zijn heeft betrekking op duurzaam afvalbeheer, en is voor de nieuwe KeMoPoDi-intercommunale een mooie casestudie om uit te leren voor de uitbouw en uitvoering van de andere beleidsprogramma's. 
+                                                            Waar onze samenwerking zich tot nu toe vooral toespitste op een samenwerking met het middenveld, met name rond het thema afval, de gezondheidszorg, microkredieten en de samenwerking tussen scholen, ligt de nadruk van het nieuwe memorandum nu meer op het werken aan bestuurskrachtversterking en een directe samenwerking met de lokale besturen, rond de beleidsdomeinen lokaal leefmilieu, gezondheidszorg, onderwijs en gendergelijkheid (Artikel 2 Memorandum). Dit zijn ook de doelstellingen die beschreven zijn in de nieuwe Statuten van de Interlokale Vereniging Stedenband Lievegem/Deinze/KeMoPoDi (BIJLAGE 3). 
+                                                            De IV Stedenband werkt nauw samen met de Intergemeenelijke Stedenbandraad van vrijwilligers van Lievegem en Deinze (BIJLAGE 4 : Huishoudelijk Reglement Stedenbandraad)  onder de vorm van "participatieve cocreatie". Het is de bedoeling dat ook onze KeMoPoDi-partners een samenwerking uitbouwen waarbij het middenveld actief participeert aan de uitbouw van samenwerkingsprogramma. 
+                                                            Onderwijs en lokaal leefmilieu zullen de thema's zijn waar we met ons partnerschap het meest zullen rond samenwerken, we hebben al heel wat ervaring kunnen opbouwen door de 6 bestaande scholenbanden en  jarenlange samenwerking rond het thema afval. Maar ook ondersteuning van de lokale besturen voor het beleidsprogramma rond de gezondheidszorg krijgt nu voor het eerst een plaats in het samenwerkingsverband. Hiervoor zijn de vrijwilligers van de 4e pijler "Vrienden van KeMoPoDi" een belangrijke samenwerkingspartner in de stedenbandraad. Door hun jarenlange ervaring in projecten in de gezondheidsposten en -centra, hebben ze veel contacten opgebouwd in de gezondheidssector en een inzicht opgebouwd over de noden die er zijn en de mogelijke ondersteuning die de nieuwe KeMoPoDi-intercommunale kan bieden. De Vrienden zijn eveneens overtuigd dat het belangrijk is om de lokale besturen te betrekken voor wat betreft hun projectwerking in de gezondheidszorg. Met de nieuwe structuren die de intercommunale heeft opgericht, zullen zij voor nieuwe projecten en de uitvoering ervan rechtstreeks terugkoppelen met het "adviesorgaan gezondheid", waardoor de betrokken actoren uit de gezondheidszorg en het bestuur samen advies kan geven en op de hoogte blijven. Dit is nieuw en een belangrijke stap voorwaarts. Artikel 5 vermeldt dat beide partijen stedenbandcoördinator aanduiden. 
+                                                            Voor de Interlokale Vereniging Stedenband is al een halftijds coördinator aangesteld (Art. 19 Statuten IV Stedenband. Vanaf 1 maart zal een nieuwe stedenbandprogrammacoördinator van de KeMoPoDi-intercommunale ook minstens halftijds starten, die aangesteld wordt met een selectieprocedure waarbij de IV Stedenband ook betrokken wordt. 
+                                                            Eveneens zullen dit jaar ook de contactpersonen (ambtelijk, politiek, middenveld) aangeduid worden voor de 4 vooropgestelde werkgebieden (onderwijs, milieu, gezondheid, gender) (Art. 5). Dit betekent concreet dat er ook contactpersonen zullen aangeduid worden uit Lievegem & Deinze voor het mee opvolgen van de opmaak, uitvoering en evaluatie van het stedenbandprogramma voor hun specifieke werkgebied. Op die manier werken we aan een collega tot collega benadering, waar collega's concreet expertise uitwisselen. 
+                                                            De ondertekening van het eerste Memorandum was een groot moment, en gebeurde in 2011 tijdens een werkreis naar KeMoPoDi, waarbij ook in LoWaZoNe het moment van ondertekening digitaal gevolgd kon worden. Omwille van corona kunnen werkreizen nu niet doorgaan, en zal er een online bekrachtigingsmoment met de 5 burgemeesters, de betrokken schepenen en de vrijwilligers georganiseerd worden. Dit zal vermoedelijk in maart georganiseerd worden. 
+                                                            De werkingsmiddelen om dit programma te realiseren staan beschreven onder Art. 7 van de Statuten IV Stedenband. Voor Lievegem betekent dit een financiële inbreng van:1) Het betalen van de jaarlijkse lidmaatschapsbijdrage. Volgens het officiële bevolkingsaantal op 1 januari van het kalenderjaar voorafgaand aan het werkjaar bedraagt deze bijdrage:o Lievegem: 0,12 euro per inwoner2) Het jaarlijks doorstorten van de door de deelnemende gemeenten ontvangen (in het gemeentefonds geïncorporeerde) sectorale subsidie ‘gemeentelijke ontwikkelings-samenwerking’:o Lievegem: 13.854,38 euro (1/2e van de ontvangen sectorale subsidie) 
+                                                            Deze bijdragen worden binnen het eerste kwartaal van het boekjaar gestort op het rekeningnummer BE06 0910 0027 0922 van de beherende gemeente, Stad Deinze. 
+                                                              
+                                                            Hieronder samengevat de voornaamste afspraken in het nieuwe memorandum: 
+                                                            "Alle partners geloven dat uit deze samenwerking wederzijdse mogelijkheden zullen ontstaan die zullen bijdragen tot het verhogen van het welzijn en de ontplooiing (cultureel, sociaal) van de inwoners van alle betrokken gemeenten. 
+                                                            Alle partners bevestigen dat zij akkoord gaan met het belangrijkste doel van het samenwerkingsverband, namelijk het wederzijds versterken van de lokale besturen en de dienstverlening naar de bevolking.Deze versterking zal tot stand komen door uitwisseling van ervaring, expertise en kennis. 
+                                                            Hierbij zal voorrang gegeven worden aan initiatieven die de lokale democratie ten goede komen en die de participatie van de burgers in het beleid bevorderen. Er zal gestreefd worden naar het creëren van een breed draagvlak voor de stedenband bij de bevolking." 
+                                                             
+                                                            "ARTIKEL 2: ONDERWERP VAN HET MEMORANDUM VAN SAMENWERKING EN PARTNERSCHAP 
+                                                            De uitwisseling en de samenwerking zullen zich hoofdzakelijk toespitsen op• Onderwijs;o Samenwerking rond de uitbouw van een degelijk onderwijsbeleid waar de scholen over de noodzakelijke infrastructuur, middelen en personeel beschikken om te voorzien in kwaliteitsvol onderwijs in de verschillende opleidingsniveaus. 
+                                                            o Stimuleren en faciliteren van samenwerking en uitwisseling van kennis en expertise tussen de verschillende onderwijsinstellingen van Lievegem/Deinze en van KeMoPoDi die participeren in het samenwerkingsverband. 
+                                                            o Stimuleren van de uitwisseling van culturele aspecten en menselijke waarden tussen de verschillende partners. 
+                                                            o Stimuleren van onderlinge ondersteuning en samenwerking tussen de deelnemende scholen. 
+                                                            • Lokale Leefmilieu;o Samenwerking rond de uitbouw van een degelijk intercommunaal afvalbeleid (opmaak beleidsplan, implementatie, monitoring, communicatie en sensibilisering van de bevolking)o Het opzetten van pilootprojecten om een effectieve aanpak uit te testen. 
+                                                            • Gezondheidszorg;o Samenwerking rond de uitbouw van een kwalitatief lokaal gezondheidsbeleid in samenwerking met de bestaande structuren en betrokkenen 
+                                                            • Gendergelijkheid;o Er wordt in de samenwerking voldoende aandacht besteed aan een gendergelijke aanpak in de verschillende bovengenoemde terreinen. 
+                                                            Binnen de gekozen samenwerkingsgebieden zal de focus liggen op de versterking van de verschillende diensten van de Intercommunale KeMoPoDi en van daaruit op de versterking van de diensten van de betrokken lokale besturen. 
+                                                            De 17 Strategische Ontwikkelingsdoelen bepaald door de VN zullen een belangrijk kader vormen binnen de samenwerking en de opmaak van meerjarenplannen." 
+                                                             
+                                                            "ARTIKEL 4: ENGAGEMENTEN VAN DE PARTIJENBeide partijen engageren zich tot het toetreden in een partnerschap met als belangrijk doel het versterken van de lokale bestuurskracht, het lokale beslissingsproces, de lokale democratie en het dynamiseren van de effectieve participatie van de bevolking in het beleid.Voor de gebieden van samenwerking zoals beschreven in dit memorandum gaan beide partijen akkoord om samen een meerjarenprogramma uit te werken voor de uitvoering, opvolging, evaluatie en bijsturing van de resultaten van het partnerschap.Beide partijen engageren zich om zich maximaal in te zetten om dit partnerschap succesvol uit te bouwen in de overtuiging dat dit zal bijdragen tot een duurzame ontwikkeling van hun gemeenten en ten goede zal komen aan hun bevolking." 
+                                                             
+                                                            "ARTIKEL 5: WERKINGSMODALITEITENBeide partijen duiden een contactpersoon aan die instaat voor de algemene coördinatie van de samenwerking (=stedenbandcoördinator).Beide partijen duiden eveneens contactpersonen aan (ambtelijk, politiek, middenveld) voor de 4 vooropgestelde werkgebieden. Deze contactpersonen volgen de opmaak, uitvoering en evaluatie van het stedenbandprogramma voor hun specifieke werkgebied mee op en participeren actief, verlenen advies, delen hun expertise en kennis, helpen mee om het draagvlak voor de stedenbandwerking binnen hun werkgebied te verruimen." 
+                                                             
+                                                            "ARTIKEL 6: FINANCIERINGDit memorandum zal worden gefinancierd op basis van wederkerigheid en binnen de financiële mogelijkheden van alle partijen. De bepalingen hierrond zullen omschreven worden in het financieel plan bij het meerjarenprogramma." 
+                                                             
+                                                            "ARTIKEL 7: EVALUATIEJaarlijkse evaluaties, een midterm na (2,5 jaar) evaluatie en eindevaluatie (na 5 jaar) zullen toelaten de stand van zaken, bekomen resultaten, evolutie en de impact van het partnerschap voor de 5 lokale gemeenschappen in kaart te brengen. 
+                                                             
+                                                            ARTIKEL 8: WIJZIGINGENHet memorandum staat open voor wijzigingen en/of herzieningen. Wijzigingen en/of herzieningen moeten onderhandeld worden en mits akkoord van beide partijen toegevoegd worden aan dit memorandum bij wijze van addendum, zonder dat dit kan leiden tot het in vraag stellen van het onderwerp zoals gedefinieerd. 
+                                                             
+                                                            ARTIKEL 9: REGELING VAN GESCHILLENDe onenigheden als gevolg van de uitvoering of de interpretatie van dit memorandum zullen worden opgelost in wederzijds akkoord door onderhandeling en/of bemiddeling. 
+                                                             
+                                                            ARTIKEL 10: DUURTIJDDit memorandum zal lopen over vijf jaar (2021-2025) en kan mits onderling akkoord door beide partijen na een grondige evaluatie terug hernieuwd worden voor opeenvolgende periodes.Wanneer de vooropgestelde doelstellingen niet voldoende verwezenlijkt kunnen worden is het mogelijk de samenwerking stop te zetten in onderling akkoord.Het memorandum gaat in op de datum van ondertekening door alle partijen." 
+                                                             
+                                                             
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Het krediet om deze beslissing uit te voeren is voorzien op beleidsitem 016010 IV Stedenband Lievegem/Deinze/KeMoPoDi / AR 614030 Technische benodigdheden - projecten van beherende gemeente Stad Deinze. 
+                                                            In Lievegem is de subsidie aan IV Stedenband Lievegem/Deinze/KeMoPoDi voorzien op jaarbudgetrekening 2021/GBB-WELZYN/0909-00/6494000/GEMEENTE/CBS/IP-GEEN 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "edd30d30-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad neemt kennis van het nieuwe "Memorandum van Samenwerking en Partnerschap" tussen de Interlokale Vereniging Stedenband Lievegem/Deinze/KeMoPoDi en de KeMoPoDi-Intercommunale. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f12fa5b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Nieuw samenwerkingsmemorandum Stedenband Lievegem/Deinze met KeMoPoDi: kennisname" .
+

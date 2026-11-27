@@ -1,0 +1,138 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/zittingen/cfbddb14-330c-4dde-9831-dcf70d590ce7> a ns1:Zitting ;
+    ns1:behandelt <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/1dab154a-d61d-4182-9dfa-21ce7c270c50>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/2b82967a-f473-4c45-941b-ddbba6b28726>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/334420f8-c049-404d-94cc-9f217326ee6d>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/35d28f58-7c50-4aac-9176-6cc4d1c44fbc>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/46090dfd-9e4c-499a-96f9-6d2ae414ab11>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/48781d8c-2037-4abc-adf6-41b1315a06e8>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/66374e2e-db31-4231-979d-2effe59f050f>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6655e332-7503-4a9b-8be4-8f5b98a53f45>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/66d2d354-8e6c-4595-97b5-f6299aa9bd70>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6f0bedf5-5e6f-4bcd-8358-49adfd010b6e>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6f2c8669-db78-42a6-a4ee-e240e83241b8>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/72f5c5d8-222f-4114-9dcf-05c00ad3c548>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/95ca1b54-42cc-4640-912d-e2958d13e3da>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/a87e0fa8-f841-4588-a734-7d2a71b52a30>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/abede7d1-03b2-4ece-b0c0-b653da300707>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/be813223-d4f6-476a-a9b2-76cd9792da01>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c1ab823c-714d-465f-8567-c3e9dd1f46b8>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/c68d9d97-09f5-4d46-b41b-9949e73ad8dd>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d56787cd-1c24-402b-a546-c0f12dc839e6>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d712d52d-0176-4c45-a619-b61700d6b298>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/d9d15bf4-d37f-49bb-bb95-9d22288140f4>,
+        <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/e94b0d67-ef14-42ff-95e0-b51feab95568> ;
+    ns1:geplandeStart "2025-03-10T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://brakel-echo.cipalschaubroeck.be/id/documenten/8d6fe0df-c4ce-49d9-9706-dc10039c83a0>,
+        <https://brakel-echo.cipalschaubroeck.be/id/documenten/da3b72ae-01da-4780-a058-3b40177b14be> ;
+    ns1:heeftBesluitenlijst <https://brakel-echo.cipalschaubroeck.be/id/documenten/1f81c1ef-32bf-4176-8aec-1f42fbbe2065> ;
+    ns1:heeftNotulen <https://brakel-echo.cipalschaubroeck.be/id/documenten/06f689fd-b378-4f12-969b-2baa64da58bb> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns2:uuid "67e86c37-c40b-5f32-8756-b188e67d8bf1" ;
+    prov:atLocation "Bibliotheek" ;
+    prov:startedAtTime "2025-03-10T20:01:00+01:00"^^xsd:dateTime .
+
+<https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6655e332-7503-4a9b-8be4-8f5b98a53f45> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/be813223-d4f6-476a-a9b2-76cd9792da01> ;
+    ns1:openbaar true ;
+    ns2:uuid "9c454a89-d9e3-536e-8bbf-4e15cd462b67" ;
+    dcterms:description """ 
+                             
+                                Op zaterdag 25 januari 2025 diende de kerkfabriek Sint-Marie - deelgemeente Everbeek-Beneden haar meerjarenplanwijziging 2025 in. 
+                                
+                                     
+                                 
+                             
+                        """,
+        """ 
+                                                             
+                                                                Op zaterdag 25 januari 2025 diende de kerkfabriek Sint-Marie - deelgemeente Everbeek-Beneden haar meerjarenplanwijziging 2025 in. 
+                                                                
+                                                                     
+                                                                 
+                                                             
+                                                        """ ;
+    dcterms:subject <https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6655e332-7503-4a9b-8be4-8f5b98a53f45> ;
+    prov:generated <https://brakel-echo.cipalschaubroeck.be/id/besluiten/6655e332-7503-4a9b-8be4-8f5b98a53f45> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/besluiten/6655e332-7503-4a9b-8be4-8f5b98a53f45> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/3fcf7dba-2e5b-4955-a489-6dd8285c013b> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/59b1dacf1caa0dd64b2a30cb8cea4c20ec24ea245289789b3dcb24ecb4e272c8> ;
+    ns3:title "Kerkfabrieken. Sint-Marie - deelgemeente Everbeek-Beneden. Budgetwijziging 2025 en meerjarenplanwijziging 2025. Beslissing." ;
+    ns1:motivering """ 
+                                 
+                                    Regelgeving en bevoegdheid 
+                                    Decreet van 7/05/2004 betreffende de materiële organisatie en werking van de erkende erediensten; 
+                                    Decreet van 6 juli 2012 tot wijziging van diverse bepalingen van het decreet van 7 mei 2004 betreffende de materiële organisatie en werking van de erkende erediensten; 
+                                    Besluit van de Vlaamse regering van 13/10/2006 houdende het algemeen reglement op de boekhouding van de besturen van de erkende erediensten en van de centrale besturen van de erkende erediensten; 
+                                    Ministerieel besluit van 27/11/2006 tot vaststelling van de modellen van de boekhouding van de besturen van de eredienst ter uitvoering van artikel 46 van voormeld besluit van 13/10/2006; 
+                                    Ministeriële omzendbrief BB-2007/01, d.d. 12/01/2007 betreffende de boekhouding van de besturen van de eredienst; 
+                                    Decreet lokaal bestuur 22 december 2017; 
+                                    
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Op zaterdag 25 januari 2025 diende de kerkfabriek Sint-Marie - deelgemeente Everbeek-Beneden haar budgetwijziging 2025 en bijhorende meerjarenplanwijziging 2025 in. 
+                                    - de exploitatietoelage blijft ongewijzigd. 
+                                    - de investeringstoelage (toelage hoofdgebouw eredienst) stijgt met 50 402,45 euro. 
+                                      
+                                    De BW en MJPW maken het voorwerp uit van 2 wijzigingen aan de investeringen 
+                                    1e) de dringende beveiligingswerken aan de torenromp die na overleg met de gemeente nu worden gebudgetteerd. 
+                                    2e) de bliksembeveiliging die in de BW 2024 werd goedgekeurd is niet uitgevoerd en wordt verschoven naar 2025. 
+                                 
+                            """@nl,
+        """ 
+                                                                 
+                                                                    Regelgeving en bevoegdheid 
+                                                                    Decreet van 7/05/2004 betreffende de materiële organisatie en werking van de erkende erediensten; 
+                                                                    Decreet van 6 juli 2012 tot wijziging van diverse bepalingen van het decreet van 7 mei 2004 betreffende de materiële organisatie en werking van de erkende erediensten; 
+                                                                    Besluit van de Vlaamse regering van 13/10/2006 houdende het algemeen reglement op de boekhouding van de besturen van de erkende erediensten en van de centrale besturen van de erkende erediensten; 
+                                                                    Ministerieel besluit van 27/11/2006 tot vaststelling van de modellen van de boekhouding van de besturen van de eredienst ter uitvoering van artikel 46 van voormeld besluit van 13/10/2006; 
+                                                                    Ministeriële omzendbrief BB-2007/01, d.d. 12/01/2007 betreffende de boekhouding van de besturen van de eredienst; 
+                                                                    Decreet lokaal bestuur 22 december 2017; 
+                                                                    
+                                                                         
+                                                                     
+                                                                 
+                                                                 
+                                                                    Feiten, context en argumentatie 
+                                                                    Op zaterdag 25 januari 2025 diende de kerkfabriek Sint-Marie - deelgemeente Everbeek-Beneden haar budgetwijziging 2025 en bijhorende meerjarenplanwijziging 2025 in. 
+                                                                    - de exploitatietoelage blijft ongewijzigd. 
+                                                                    - de investeringstoelage (toelage hoofdgebouw eredienst) stijgt met 50 402,45 euro. 
+                                                                      
+                                                                    De BW en MJPW maken het voorwerp uit van 2 wijzigingen aan de investeringen 
+                                                                    1e) de dringende beveiligingswerken aan de torenromp die na overleg met de gemeente nu worden gebudgetteerd. 
+                                                                    2e) de bliksembeveiliging die in de BW 2024 werd goedgekeurd is niet uitgevoerd en wordt verschoven naar 2025. 
+                                                                 
+                                                            """@nl ;
+    ns2:uuid "5056323f-2a90-59c3-af60-594befb72cd8" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Art. 1 : De raad beslist goedkeuring te geven aan de budgetwijziging 2025 en bijhorende meerjarenplanwijziging 2025 van de kerkfabriek St.-Marie. 
+                                    Art. 2 : Afschrift van deze beslissing zal toegestuurd worden aan : - de heer Gouverneur van Oost-Vlaanderen; - de voorzitter van het centraal bestuur; 
+                                 
+                            """,
+        """ 
+                                                                 
+                                                                    Besluit 
+                                                                    Art. 1 : De raad beslist goedkeuring te geven aan de budgetwijziging 2025 en bijhorende meerjarenplanwijziging 2025 van de kerkfabriek St.-Marie. 
+                                                                    Art. 2 : Afschrift van deze beslissing zal toegestuurd worden aan : - de heer Gouverneur van Oost-Vlaanderen; - de voorzitter van het centraal bestuur; 
+                                                                 
+                                                            """ ;
+    prov:wasGeneratedBy <https://brakel-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/6655e332-7503-4a9b-8be4-8f5b98a53f45> .
+
+<https://brakel-echo.cipalschaubroeck.be/id/agendapunten/6655e332-7503-4a9b-8be4-8f5b98a53f45> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "4a4db94c-1cef-5e29-b2f4-d346a1bbbb9c" ;
+    dcterms:title "Kerkfabrieken. Sint-Marie - deelgemeente Everbeek-Beneden. Budgetwijziging 2025 en meerjarenplanwijziging 2025. Beslissing." .
+

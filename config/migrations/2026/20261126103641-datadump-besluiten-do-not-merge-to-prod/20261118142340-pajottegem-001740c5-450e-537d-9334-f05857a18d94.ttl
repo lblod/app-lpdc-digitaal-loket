@@ -1,0 +1,97 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/455a7885-bde0-4b82-b73a-84916e9125f2> a ns1:Zitting ;
+    ns1:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/77348598-5cde-4671-892a-5d4a99530213>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/93d91df2-318c-42df-9887-7c6ef9a9a384>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/beaff4bd-b345-472c-8a72-ecdea2b978b5> ;
+    ns1:geplandeStart "2025-03-31T14:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/d7a00009-4f1c-4e59-a15a-d7197bb10dcb> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "9750c509-34ea-5d78-8e76-afe4d2de550e" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-31T12:52:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/93d91df2-318c-42df-9887-7c6ef9a9a384> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/5b8d9639-1595-498a-afc5-d813ab3ad55f> ;
+    ns1:openbaar true ;
+    ns2:uuid "d211e65d-3ca1-5ecb-b40f-464773aa25e5" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/93d91df2-318c-42df-9887-7c6ef9a9a384> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/93d91df2-318c-42df-9887-7c6ef9a9a384> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/93d91df2-318c-42df-9887-7c6ef9a9a384> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Paas-TD tussen zondag 20 april 2025 en maandag 21 april 2025 goed. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:title "Politieverordening: Paas-TD - Zondag 20 april 2025 en maandag 21 april 2025" ;
+    ns1:motivering """ 
+                            """@nl ;
+    ns2:uuid "001740c5-450e-537d-9334-f05857a18d94" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van Paas-TD op Zondag 20 april 2025 - 12u tot maandag 21 april 2025 - 14u worden volgende beperkingsmaatregelen voor het verkeer genomen:
+                                     
+                                     
+                                         
+                                            
+                                                 
+                                             
+                                            
+                                                Op de Wolvenstraat vanaf het kruispunt met de Processiestraat in de richting van de Strijlandstraat geldt:  
+                                             
+                                             
+                                                Op de Processiestraat vanaf het kruispunt met de Strijlandstraat in de richting van de Wolvenstraat geldt:  
+                                                  verboden rijrichting voor iedere bestuurder;   
+                                                  de maatregel geldt niet voor fietsers.  In de tegenovergestelde richting geldt:    toegelaten rijrichting op de openbare weg met eenrichtingsverkeer;    fietsers mogen in beide richtingen rijden.  Dit wordt gesignaleerd door: - verkeersborden C1 - de verkeersborden worden aangevuld met onderborden M2 - verkeersborden F19 - de verkeersborden worden aangevuld met onderborden M4  
+                                             
+                                             
+                                                Op de Processiestraat ter hoogte van de parking 1 en 2 Sportcentrum Koornmolen geldt:  
+                                             
+                                              de bestuurders zijn verplicht links af te slaan. Dit wordt gesignaleerd door:- verkeersborden D1  
+                                            Op de Wolvenstraat ter hoogte van de parking voetbalcentrum geldt:  
+                                              de bestuurders zijn verplicht rechts af te slaan.  
+                                         
+                                        Dit wordt gesignaleerd door:- verkeersborden D1  
+                                         
+                                            Op de Wolvenstraat en de Processiestraat t.h.v. de uitwijkstroken geldt: 
+                                            
+                                                  het stilstaan en parkeren is verboden; 
+                                                  het einde van de parkeerreglementering wordt aangeduid; 
+                                                  het begin van de parkeerreglementering wordt aangeduid. 
+                                             
+                                            
+                                                  de parkeerreglementering geldt over een afstand van meer dan 300 meter. 
+                                                Dit wordt gesignaleerd door:
+                                                - verkeersborden E3 
+                                                - de verkeersborden worden aangevuld met x-borden Xb, Xa, Xd
+                                             
+                                         
+                                        
+                                             
+                                         
+                                     
+                                    
+                                        Artikel 3 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel van de lokale politiezone Pajottenland, overeenkomstig de wettelijke voorschriften.
+                                     
+                                     
+                                        Artikel 4 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk  voorziene verkeersborden en hekkens dienen door de organisatoren volgens het voorstel van de Lokale Politiezone Pajottenland, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/93d91df2-318c-42df-9887-7c6ef9a9a384> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/93d91df2-318c-42df-9887-7c6ef9a9a384> a ns1:Agendapunt ;
+    ns2:uuid "66ebcbfc-d90d-5471-977d-0e2e09de69e1" .
+

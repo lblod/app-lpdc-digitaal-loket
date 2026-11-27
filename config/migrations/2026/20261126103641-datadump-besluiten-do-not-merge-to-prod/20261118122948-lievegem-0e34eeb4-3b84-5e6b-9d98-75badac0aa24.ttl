@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4bfd5f31-9f05-4e07-ae32-657c3014dd46> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/067a1fc2-c6c1-4393-8872-07329184ea10>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3bab0302-d693-4a21-b77e-4560f44c5ab9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9fe89a38-fa7b-431c-8ccb-b240d5427a88> ;
+    ns2:geplandeStart "2026-01-27T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e4ce5e8f-137d-4814-ba89-01eeab9ef4cf> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "2f1d18d1-7b05-58f4-8b38-e6eec3b92b93" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-01-27T13:30:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9fe89a38-fa7b-431c-8ccb-b240d5427a88> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1adacc92-3c45-426e-b4d1-4f1da05ad986> ;
+    ns2:openbaar false ;
+    ns3:uuid "68fa574a-24b5-5001-b0f6-c6865af7e94d" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9fe89a38-fa7b-431c-8ccb-b240d5427a88> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9fe89a38-fa7b-431c-8ccb-b240d5427a88> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/9fe89a38-fa7b-431c-8ccb-b240d5427a88> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Beats Of Love' van zaterdag 21 maart 2026 22.00 uur tot en met zondag 22 maart 2026 4.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Beats Of Love' - KLJ Zomergem: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 27 januari 2026 over de aanvraag evenement Beats of Love - KLJ Zomergem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Quinten Van de Walle, namens KLJ Zomergem, organiseert 'Beats Of Love' van zaterdag 21 maart 2026 22.00 uur tot en met zondag 22 maart 2026 4.00 uur.Er werd op 28 november 2025  een aanvraag ingediend door Quinten Van de Walle, namens KLJ Zomergem, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Dit evenement werd geregistreerd in GIPOD met nummer 19406345. 
+                                    Er werd op 20 januari 2026 advies en toestemming gevraagd aan gemeente Aalter voor het plaatsen van signalisatie op hun grondgebied. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Gemeente Aalter 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "0e34eeb4-3b84-5e6b-9d98-75badac0aa24" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Beats Of Love' van zaterdag 21 maart 2026 22.00 uur tot en met zondag 22 maart 2026 4.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Invoeren van éérichtingsverkeer in Hoetsel en Bellemstraat 
+                                        Omleiding voorzien via Berkenstraat -  Eksterstraat - Pauwelsbos - Zuttershoek - Spinhoutstraat 
+                                        Parkeerverbod in Hoestel tussen Nekke en Bellemstraat + 200tal meter voorbij deze kruispunten in Nekke, Hoetsel en Bellemstraat 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd 
+                                     
+                                        - Bord F19 + M4 op volgende kruispunten: Nekke/Hoetsel, Hoetsel/Bellemstraat en Hoetsel/Hoetsel (3x)- Bord C1 + M2 op volgende kruispunten: Berkenstraat/Hoetselstraat, Bellemstraat/Zuttershoek, Bellemstraat/Hoetsel, Hoetsel/Hoetsel (3x)- Bord 'Evenement' op het kruispunt Nekke/Hoetsel- Bord C31a op 2 kruispunten Hoetsel/Hoetsel- Bord C31b op 1 kruispunt Hoetsel/Hoetsel- Bord D1e (2x) en D1f (2x) aan de uitritten van de parkings 
+                                        Borden F41 op volgende kruispunten: Berkenstraat/Hoetselstraat, Berkensstraat/Eksterstraat, Bellemstraat/Zuttershoek, Zuttershoek/Spinhoutstraat 
+                                        Borden E3 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/9fe89a38-fa7b-431c-8ccb-b240d5427a88> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9fe89a38-fa7b-431c-8ccb-b240d5427a88> a ns2:Agendapunt ;
+    ns3:uuid "e59cb690-4f37-51f8-afd4-a5384a9fd41a" .
+

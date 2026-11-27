@@ -1,0 +1,59 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/000d80ac-be60-48e0-ad27-c06a22600f53> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/0a5a007c-fb17-4a23-a065-454e2e4fdf41>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/5f243214-b148-4b17-8380-5ad85a15e978>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6d6eb68b-c3a8-40d1-97a5-76d30911d037>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/6e5f1a5a-eb66-4933-9224-af883fa707f7>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/7928caa8-0ecc-4beb-86ba-9e1ed594b223>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/82f151c1-b201-4463-9b75-750782dc3e29>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/a69813ce-5cab-4d5b-9201-0153dbb9c9f8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b2461d80-32da-4724-a430-978db06afc30>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/b58d39dd-9fb8-44a6-8a00-8bb3cf627996>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/d36866ca-f0b1-4e33-8381-a7222d0fbaa8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/db5ebefc-1246-48fa-9747-850d7e3235d3>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f48cbf2b-04b0-4577-b69b-bab91efc0c5a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/fbe06e1f-0382-4f93-a00c-fb4cb58d239c> ;
+    ns2:geplandeStart "2025-05-19T17:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/95c356e8-8f0f-4f5f-ac9b-89ff4dbd2255> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "e0b51ac0-832d-55e0-b5e3-cd07cfcb7a09" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-05-19T16:34:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/993f27e5-0a02-4e2a-bacc-47d6cba70ab9> ;
+    ns2:openbaar false ;
+    ns3:uuid "1465fe47-45f1-5207-9824-214afe834d72" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/65868f20-fc0e-48f8-8621-3ff9de5319e3> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/65868f20-fc0e-48f8-8621-3ff9de5319e3> a ns2:Besluit ;
+    ns1:description """ 
+                                                    Het college van burgemeester en schepenen bekrachtigt de politieverordening bij hoogdringendheid, genomen door de burgemeester op 13 mei 2025 voor de organisatie van Carwash KLJ Strijland op 18 mei 2025. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Bekrachtiging politieverordening bij hoogdringendheid voor de organisatie van Carwash KLJ Strijland op 18 mei 2025" ;
+    ns2:motivering """ 
+                                 
+                                    Aan het college van burgemeester en schepenen wordt gevraagd de politieverordening bij hoogdringendheid, genomen door de burgemeester op 13 mei 2025, te bekrachtigen. 
+                                 
+                            """@nl ;
+    ns3:uuid "354feed2-36f2-5de8-bc55-b74d8a492193" ;
+    prov:value """ 
+                                 
+                                    Artikel 1 - Het college van burgemeester en schepenen bekrachtigt de politieverordening bij hoogdringendheid, genomen door de burgemeester op 13 mei 2025 voor de organisatie van Carwash KLJ Strijland op 18 mei 2025. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/65868f20-fc0e-48f8-8621-3ff9de5319e3> a ns2:Agendapunt ;
+    ns3:uuid "935e8c90-bc0c-575e-953d-ada0e80f24c1" .
+

@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/6219e70b-a11d-41ee-932f-1de6fab63f66> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/056ce378-80ad-465c-a6ff-9e7f427b43dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/06808dec-0883-41a9-932f-4e1dbfce464f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0abcbb76-5af1-48ea-830c-ba2a413b2167>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/21dd7ca5-0fbf-4795-80c5-34655d129dc1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3c887814-196c-4d14-8103-1b4b9b9f3ad2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5e8d9624-6fc9-4220-acdb-affac1d4f5bc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7f654238-f574-483d-b87b-d76ea4db3f04>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8b55312b-f388-42d7-913b-1b7fa2fe03d4>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8ec3bba5-e4a0-474f-90a7-cb3a57c38804>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc1d2c8-5d20-4607-ab4b-a96ad7d3adc2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b50e7bb5-a505-44ae-8207-2fb21ca780d5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c251bdc4-9793-405e-8b78-c3e0ee673f9d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c451ff4b-94fa-477b-8baa-81e0be4bd852>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/cec759f6-1f78-4c21-8314-2aff4bd2401f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4c0bf94-9863-4204-bf32-7c7993067dae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0d592ac-a567-4638-9ba8-411d725bfa74>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f2855dc5-1bda-4127-9e37-67f9c96edd0c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ff83b9b0-0723-48bf-9870-b6fa200fc786> ;
+    ns2:geplandeStart "2023-09-14T20:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/a816a351-bad7-4bdf-893d-8c0a30fd5f67> ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3477a3ff-0a8d-4b85-bf05-16027e5dd5f5> ;
+    ns2:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fcf42403-2747-4b3b-a2b4-cffcfa393785> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "e72ca0e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2023-09-14T21:26:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2023-09-14T20:01:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3443dacf-d38e-4dd0-b98d-2c998fae978b> ;
+    ns2:openbaar true ;
+    ns3:uuid "eedeb0d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7c74f54c-b462-4a69-9d11-92d78ad5b82d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/7c74f54c-b462-4a69-9d11-92d78ad5b82d> a ns2:Besluit ;
+    ns1:description """ 
+                                                    De gemeenteraad keurt de ontwerpakte voor de aankoop van het onroerend goed te Krakeelhoek 8, 9950 Lievegem goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns1:title "Patrimonium – verwerving Krakeelhoek 8 - akte aankoop: goedkeuring" ;
+    ns2:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepenFreddy Haegeman, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet van 22 december 2017 over het lokaal bestuur, artikel 41 tweede lid, 11°Besluit van het college van 24 januari 2023 over de aanvraag tot schatting door de dienst Vastgoedtransacties van het onroerend goed te Krakeelhoek 8Besluit van het college van 21 februari 2023 met de gunning van de opmaak van het schattingsverslag van het onroerend goed te Krakeelhoek 8 aan schatter-expert Danny DemoorBesluit van het college van 14 maart 2023 over de goedkeuring van het schattingsverslag van het onroerend goed te Krakeelhoek 8 en van de interne kredietverschuiving 2023-11Besluit van de gemeenteraad van 29 maart 2023 over de machtiging aan het college voor het bieden op het onroerend goed te Krakeelhoek 8Besluit van het college van 9 mei 2023 over de goedkeuring van het bod voor de aankoop van het onroerend goed te Krakeelhoek 8Besluit van het college van 6 juni 2023 over de goedkeuring van de aankoopbelofte en het vrijmaken van gebruik van het onroerend goed te Krakeelhoek 8 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het gemeenschapsonderwijs GO! verkoopt het onroerend goed in de Krakeelhoek 8 te 9950 Lievegem bij opbod via de dienst Vastgoedtransacties.Het college werd door de gemeenteraad gemachtigd om maximaal te bieden tot de verkoopwaarde bepaald in het schattingsverslag van 6 maart 2023, opgemaakt door schatter-expert Danny Demoor (zie schattingsverslag met kadastrale situering en luchtfoto van het perceel in bijlage). Het college bracht op 15 mei 2023 een geldig bod van 250.000,00 euro uit om toegang te krijgen tot de gesloten verkoopzitting op 22 mei 2023. Aangezien de gemeente de enige kandidaat koper was, heeft de gesloten mondelinge zitting op 22 mei 2023 niet plaatsgevonden en werd er rechtstreeks overgegaan tot de ondertekening van de aankoopbelofte (zie bijlage).De dienst Vastgoedtransacties maakte een ontwerp akte voor de aankoop van dit onroerend goed met dossiernr. 14008-001 (zie bijlage). Deze akte wordt aan de gemeenteraad ter goedkeuring voorgelegd. De gemeenteraad is bevoegd voor het stellen van daden van beschikking. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Deze uitgave zal geboekt worden in het meerjarenplan op jaarbudgetrekening 2023/ACT-396/0680-00/2200000/GEMEENTE/CBS/IP-GEEN - Aankoop en inrichten groene (speel)ruimte in de dorpskernen. Na de goedkeuring door het college van burgemeester en schepenen van interne kredietverschuiving 2023-11 zijn hiervoor voldoende kredieten beschikbaar. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "eede3ba0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1 De gemeenteraad keurt de akte voor de aankoop van het onroerend goed tussen het Gemeenschapsonderwijs, het GO! onderwijs van de Vlaamse Gemeenschap enerzijds en de gemeente Lievegem anderzijds, opgemaakt door Lynn Timmerman, Vlaams commissaris bij de dienst Vastgoedtransacties, gelegen te Krakeelhoek 8, 9950 Lievegem, kadastraal gekend als afdeling 4, sectie C, nummer 1391C met een oppervlakte van 2.464 m² goed. 
+                                                            Artikel 2De gemeente verwerft het in artikel 1 bedoeld goed:- voor de prijs van in totaal 250.000,00 euro.- onder de voorwaarden vastgelegd in de bij deze beslissing en als dusdanig deel uitmakend van deze beslissing gevoegde akte verkoop onroerend goed met dossiernummer 14008-001 opgemaakt door Lynn Timmerman, Vlaams commissaris bij de dienst Vastgoedtransacties. 
+                                                             
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7c74f54c-b462-4a69-9d11-92d78ad5b82d> a ns2:Agendapunt ;
+    ns2:geplandOpenbaar true ;
+    ns3:uuid "e72a08d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Patrimonium – verwerving Krakeelhoek 8 - akte aankoop: goedkeuring" .
+

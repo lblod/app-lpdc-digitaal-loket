@@ -1,0 +1,165 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/95dbc1a1-d62c-48a1-8260-c6e3de42bc7a> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/24de6323-dd23-4126-af9e-de6bdf7c9199>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/b7f6da87-4a30-45b5-80ee-c808d2ff1f7c> ;
+    ns1:geplandeStart "2026-01-20T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/5ea7f311-1236-4fac-b2d3-d2654e49a56f> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:uuid "513db5ae-2c98-5473-bd45-758b6903d6d1" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2026-01-20T20:16:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/24de6323-dd23-4126-af9e-de6bdf7c9199> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/a8a5ee56-66f9-429d-a374-3bd447e2efa9> ;
+    ns1:openbaar false ;
+    ns3:uuid "d6118b04-f513-5cd4-983a-d36364f73c1a" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/24de6323-dd23-4126-af9e-de6bdf7c9199> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/24de6323-dd23-4126-af9e-de6bdf7c9199> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/24de6323-dd23-4126-af9e-de6bdf7c9199> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:title "Tijdelijke politieverordening op het wegverkeer - Hooiveld - Violetstraat - Palingstraat - Verlenging" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Omwille van de heraanleg van de site rondom de sport- en evenementenhal, het nieuw gemeentehuis, CC Binder en het bredeschoolgebouw zal er meer vrachtverkeer van en naar de site rijden. Om dit in goede banen te leiden en om een degelijke en veilige verkeersdoorstroming te garanderen werd er beslist om Hooiveld enkelrichting te maken, Violetstraat blijft enkelrichting maar de richting wordt omgedraaid, de toegang tot de Hondsmarkt wordt afgesloten en is enkel toegankelijk voor voetgangers, fietsers en vrachtverkeer voorzien van toezicht op de zwakke weggebruiker.. De Palingstraat wordt voorzien van bijkomende parkeerverboden. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond 
+                                             
+                                                Decreet Lokaal Bestuur, artikel 56 §2 in samenhang met de Nieuwe Gemeentewet van 24 juni 1988, artikel 130 bis 
+                                             
+                                         
+                                     
+                                     
+                                        Toepasselijke regelgeving:  
+                                         
+                                            De wet van 16 maart 1968 betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk bestuur van 16 maart 1968; 
+                                            Het koninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer, en latere wijzigingen; 
+                                            Het koninklijk besluit van 11 oktober 1976 houdende de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens, en latere wijzigingen; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Hooiveld wordt enkelrichting, enkelrichting in Violetstraat wordt omgedraaid, de verbinding tussen Hondsmarkt en Hooiveld wordt afgesloten. Palingstraat wordt voorzien van extra parkeerverbod 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 3. 
+                                 
+                            """@nl ;
+    ns3:uuid "d52650aa-60d5-538d-8888-0e563628a4fa" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Het college van burgemeester en schepenen keurt de verlenging van de tijdelijke politieverordening “Hooiveld - Violetstraat - Palingstraat” te Puurs tijdens de duur van de heraanleg rondom de site van het nieuw gemeentehuis tot 31/12/2026. 
+                                    Artikel 2: Hooiveld: 
+                                    Hooiveld 85: toegelaten rijrichting op de openbare weg met eenrichtingsverkeer; fietsers en bestuurders van tweewielige bromfietsen klasse A mogen in de twee richtingen rijden.Hooiveld 86: verboden rijrichting voor iedere bestuurder; de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A. 
+                                    Hooiveld 75: toegelaten rijrichting op de openbare weg met eenrichtingsverkeer; fietsers en bestuurders van tweewielige bromfietsen klasse A mogen in de twee richtingen rijden.Hooiveld 66: verboden rijrichting voor iedere bestuurder; de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A. 
+                                    Hooiveld 59: toegelaten rijrichting op de openbare weg met eenrichtingsverkeer; fietsers en bestuurders van tweewielige bromfietsen klasse A mogen in de twee richtingen rijden.Hooiveld 2: verboden rijrichting voor iedere bestuurder; de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A. 
+                                    
+                                        
+                                        
+                                         
+                                         
+                                            Dit wordt aangeduid door verkeerstekens: 
+                                             
+                                                 C1 - M3 - F19  
+                                             
+                                         
+                                     
+                                     
+                                        Artikel 2: Violetstraat: 
+                                        Violetstraat 37: toegelaten rijrichting op de openbare weg met eenrichtingsverkeer; fietsers en bestuurders van tweewielige bromfietsen klasse A mogen in de twee richtingen rijden.Violetstraat (kruispunt Palingstraat 14) : verboden rijrichting voor iedere bestuurder; de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A.Dit wordt aangeduid door verkeerstekens: 
+                                         
+                                             
+                                                 C1 - F19 - M3  
+                                             
+                                            
+                                                Violetstraat (kruispunt Palingstraat 14): bestuurders moeten stoppen en voorrang verlenen.
+                                             
+                                            
+                                                Dit wordt aangeduid door verkeerstekens:
+                                             
+                                             
+                                                 
+                                                     C1 - WM 76.1  
+                                                 Artikel 3: Palingstraat
+                                             
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Palingstraat 14: het is verboden rechts af te slaan; de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A.
+                                     
+                                     
+                                        
+                                            Dit wordt aangeduid door verkeerstekens:
+                                         
+                                         
+                                             C31b - M3  
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                        
+                                            Palingstraat 19: het is verboden links af te slaan; de maatregel geldt niet voor fietsers en bestuurders van tweewielige bromfietsen klasse A.
+                                         
+                                         
+                                             
+                                                
+                                                    Dit wordt aangeduid door verkeerstekens:
+                                                 
+                                                 
+                                                     C31a - M3  
+                                                 
+                                                
+                                                    Palingstraat vanaf kruispunt Eeuwfeeststraat 1 tot Palingstraat 41: het stilstaan en parkeren is verboden; het begin en einde van de parkeerreglementering wordt aangeduid. 
+                                                    
+                                                        Palingstraat 27 tot Palingstraat 19: het stilstaan en parkeren is verboden; het begin en einde van de parkeerreglementering wordt aangeduid.
+                                                     
+                                                    
+                                                        Palingstraat 101 tot Palingstraat 93: het stilstaan en parkeren is verboden; het begin en einde van de parkeerreglementering wordt aangeduid.
+                                                     
+                                                     
+                                                         
+                                                            Dit wordt aangeduid door verkeerstekens: 
+                                                             
+                                                                 E3 - GXa - GXb  
+                                                             
+                                                         
+                                                     
+                                                 
+                                             
+                                         
+                                     
+                                    
+                                        Artikel 4: Overtreding van dit reglement wordt bestraft overeenkomstig de verkeerswet.
+                                     
+                                    Artikel 5: Dit reglement wordt bekendgemaakt overeenkomstig artikel 286 van het decreet over het lokaal bestuur. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/24de6323-dd23-4126-af9e-de6bdf7c9199> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/24de6323-dd23-4126-af9e-de6bdf7c9199> a ns1:Agendapunt ;
+    ns3:uuid "16c60dca-f0f7-50f9-b204-669cde62bf6f" .
+

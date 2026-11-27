@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/455a7885-bde0-4b82-b73a-84916e9125f2> a ns2:Zitting ;
+    ns2:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/77348598-5cde-4671-892a-5d4a99530213>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/93d91df2-318c-42df-9887-7c6ef9a9a384>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/beaff4bd-b345-472c-8a72-ecdea2b978b5> ;
+    ns2:geplandeStart "2025-03-31T14:00:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/d7a00009-4f1c-4e59-a15a-d7197bb10dcb> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns3:uuid "9750c509-34ea-5d78-8e76-afe4d2de550e" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2025-03-31T12:52:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/77348598-5cde-4671-892a-5d4a99530213> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/beaff4bd-b345-472c-8a72-ecdea2b978b5> ;
+    ns2:openbaar false ;
+    ns3:uuid "970fe1a7-45fc-53ae-ae8e-fe440a2579a4" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/77348598-5cde-4671-892a-5d4a99530213> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/77348598-5cde-4671-892a-5d4a99530213> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/77348598-5cde-4671-892a-5d4a99530213> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor de Voorstelling op zaterdag 5 en zondag 6 april goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: ",
+        "Politieverordening: \"Marleen heeft de groep verlaten\" - zaterdag 5 en zondag 6 april" ;
+    ns2:motivering """ 
+                            """@nl ;
+    ns3:uuid "040410a1-44f4-5a6e-9794-2b59a4f3b1ae" ;
+    prov:value """ 
+                                 
+                                    
+                                         
+                                     
+                                    
+                                        Artikel 1 - Ter gelegenheid van een voorstelling op zaterdag 5 en zondag 6 april worden volgende beperkingsmaatregelen voor het verkeer genomen tussen 10u en 22u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        Afsluiten van de rijweg (nader + C3 + type IV 'uitgezonderd plaatselijk verkeer) op volgende straten:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         Hazelaarswijk t.h.v. huisnummer 31
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten volgens het voorstel, overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren, overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/77348598-5cde-4671-892a-5d4a99530213> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/77348598-5cde-4671-892a-5d4a99530213> a ns2:Agendapunt ;
+    ns3:uuid "674f3846-b11a-5085-a4c2-48535a40990d" .
+

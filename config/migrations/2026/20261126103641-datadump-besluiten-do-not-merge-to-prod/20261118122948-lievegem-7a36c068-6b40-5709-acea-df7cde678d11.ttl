@@ -1,0 +1,83 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/bbdd9ce6-ffba-4919-9d1f-a53e1d73ee91> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/908e8c8c-7d96-49d1-8959-33ec4d6ecfe0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ded24987-512c-499d-99cd-2a3c8a11b632> ;
+    ns1:geplandeStart "2025-04-01T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/ac429d08-f10f-4773-a028-1ce653858549> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "881dece1-c93d-51a9-b1bd-d69456379a64" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-04-01T15:37:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ded24987-512c-499d-99cd-2a3c8a11b632> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b29202e4-a0d5-4195-afc4-8b5bac3e81f1> ;
+    ns1:openbaar false ;
+    ns3:uuid "3e63b8aa-539b-53d6-a3d7-cfb84b015ee3" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ded24987-512c-499d-99cd-2a3c8a11b632> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ded24987-512c-499d-99cd-2a3c8a11b632> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/ded24987-512c-499d-99cd-2a3c8a11b632> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Urban Trail' op 9 mei 2025 van 19.00 uur tot en met 22.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van Urban Trail - Basisschool Twinkel: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 1 april 2025 over de aanvraag evenement Urban Trail - Basisschool Twinkel: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Pieter Van Hecke namens Basisschool Twinkel, organiseert 'Urban Trail' op 9 mei 2025 van 19.00 uur tot en met 22.00 uur. 
+                                    Er werd op 17 februari 2025 een aanvraag ingediend door Pieter Van Hecke, namens Basisschool Twinkel, om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    In de periode van 22 april 2025 tot en met 13 mei 2025 zullen er door de firma Besix Connect te Baaikensstraat 21, 9240 Zele werken (graafwerk voor laagspanning in opdracht van Fluvius) worden uitgevoerd ter hoogte van Oostwinkeldorp 36-46 en Langestraat 4-24, 9931 Lievegem: 
+                                     
+                                        In de Langestraat zullen de 350 meter werken worden uitgevoerd in 9 delen van 39 meter. De doorsteek zal er gebeuren in 2 delen met alternerend verkeer. 
+                                        In Oostwinkeldorp zal er gewerkt worden met verkeerslichten met een tussenafstand van 130 meter. 
+                                     
+                                    Deze werken kunnen hinder geven voor de 'Urban Trail'. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "7a36c068-6b40-5709-acea-df7cde678d11" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Urban Trail' op 9 mei 2025 van 19.00 uur tot en met 22.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        Waarschuwingsborden op de invalswegen naar Oostwinkel 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        Borden A51 + 'evenement' net vóór de kruispunten Kruipuit/Leendreef, Langestraat/Leendreef en Leischoot/Mostmolen 
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/ded24987-512c-499d-99cd-2a3c8a11b632> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ded24987-512c-499d-99cd-2a3c8a11b632> a ns1:Agendapunt ;
+    ns3:uuid "dc788091-3803-5e8a-a785-e2e0b761cd15" .
+

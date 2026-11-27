@@ -1,0 +1,152 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/b89f118e-2091-41c1-a6bf-65d234c6fbae> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/30325ff1-46d0-4883-adc8-1d9a57dfee60>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92fdade3-455b-4506-9529-bb4f2dec8743>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e150eb1e-3040-403c-8d1d-767bcecfb342>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/fb841645-ccfc-40b7-9752-3e4911266cc7> ;
+    ns2:geplandeStart "2026-05-12T13:30:00+02:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c361b4df-4500-40e7-b7f7-0df843072a8c> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "0fdb9a9d-80e5-5510-a3c3-f97cca00ed75" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-05-12T13:37:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e150eb1e-3040-403c-8d1d-767bcecfb342> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/529bd00a-a95a-45ba-a10d-40503d2f40ec> ;
+    ns2:openbaar false ;
+    ns3:uuid "75c78780-6c0e-574b-9827-10089598f154" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e150eb1e-3040-403c-8d1d-767bcecfb342> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/e150eb1e-3040-403c-8d1d-767bcecfb342> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/e150eb1e-3040-403c-8d1d-767bcecfb342> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van 'Vlaanderen Zingt' wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van 'Vlaanderen Zingt' - Landelijke Gilde Waarschoot: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 12 mei 2026 over de aanvraag evenement Vlaanderen Zingt - Landelijke Gilde Waarschoot: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Nick Van Hulle, namens Landelijke Gilde Waarschoot, organiseert 'Vlaanderen Zingt' op zaterdag 11 juli 2026 van 17.00 uur tot en met 24.00 uur.Er werd op 22 februari 2026 een aanvraag ingediend door Nick Van Hulle, namens Landelijke Gilde Waarschoot, om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze minstens één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                    De Lijn: Omleidingen.vvrgentstreek@delijn.be 
+                                 
+                            """@nl ;
+    ns3:uuid "d79a54f2-458d-5369-9dd1-09238dd5d086" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Vlaanderen Zingt' op 11 juli 2026 wordt vastgesteld als volgt: 
+                                    1. Vanaf 10 juli 2026 8.00 uur tot en met 13 juli 2026 16.00 uur: 
+                                     
+                                        inname zone voor gemeentehuis voor plaatsing mobiel podium, Waarschootdorp 1-3, 9920 Lievegem. 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Op 11 juli 2026 vanaf 9.00 uur tot en met 12 juli 2026 1.00 uur:
+                                     
+                                     
+                                         
+                                            Stilstaan- en parkeerverbod op 10 parkeerplaatsen ter hoogte van Kerkstraat 3-5, 9950 Lievegem 
+                                            Stilstaan- en parkeerverbod ter hoogte van Waarschootdorp 1 tot en met Stationsstraat 18, 9950 Lievegem aan beide zijden van de weg 
+                                            Stilstaan- en parkeerverbod op de dwarse parkeerplaatsen ter hoogte van Waarschootdorp 8-12, 9950 Lievegem 
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            3. Op 11 juli 2026 vanaf 12.00 uur tot en met 12 juli 2026 1.00 uur:
+                                         
+                                     
+                                     
+                                        Afsluiten voor doorgaand verkeer vanaf Waarschootdorp 1 tot en met Stationsstraat 18 (hoek Metaalstraat). De fietspaden blijven toegankelijk tot start van het evenement om 17.00 uur 
+                                        wegomlegging via Gastelstraat - Hovingen - Kouterweg en Molenstraat 
+                                        wegomlegging via Nijverheidsstraat en Stationsplein 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        4. Op 11 juli 2026 vanaf 16.00 uur tot en met 12 juli 2026 1.00 uur:
+                                     
+                                     
+                                        bijkomend afsluiten voor doorgaand verkeer vanaf Waarschootdorp 4 en vanaf Waarschootdorp 12. De fietspaden blijven nog steeds toegankelijk tot start van het evenement om 17.00 uur. 
+                                        wegomlegging via Gastelstraat - Hovingen - Kouterweg en Molenstraat 
+                                        wegomlegging via Nijverheidsstraat en Stationsplein 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Vanaf 10 juli 2026 8.00 uur tot en met 13 juli 2026 16.00 uur: 
+                                     
+                                        geen signalisatie nodig 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        2. Vanaf 11 juli 2026 9.00 uur tot en met 12 juli 2026 1.00 uur:
+                                     
+                                     
+                                         
+                                            Borden E3 
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            3. Vanaf 11 juli 2026 12.00 uur tot en met 12 juli 2026 1.00 uur:
+                                         
+                                     
+                                     
+                                        Nadar + C3 aan volgende kruispunten: Waarschootdorp/Kerkstraat en Stationsstraat/Metaalstraat 
+                                        Borden F41 aan volgende kruispunten: Waarschootdorp/Kerkstraat, Kerkstraat/Gastelstraat, Hovingen/Kouterweg, Kouterweg/Molenstraat en Stationsstraat/Molenstraat 
+                                        Afdekken borden 'verboden +3,5 ton' in Gastelstraat en Kouterweg 
+                                        Bord F45L + 'verboden +3,5 ton' op kruispunt Kerkstraat/Gastelstraat 
+                                        Nadar + C3 + F45L + 'uitgezonderd plaatselijk verkeer' aan het kruispunt Stationsstraat/Molenstraat 
+                                        Borden F41 aan volgende kruispunten: Waarschootdorp/Kerkstraat, Schoolstraat/Nijverheidsstraat, Stationsplein/Stationsstraat 
+                                        Afdekken borden 'verboden +3,5 ton' in Nieuwstraat, Tuinbouwstraat en Stationsplein 
+                                        Borden 'evenement' op de invalswegen 
+                                     
+                                      
+                                    4. Aanpassingen vanaf 11 juli 2026 16.00 uur tot en met 12 juli 2026 1.00 uur:  
+                                     
+                                        Nadar + C3 te verplaatsen ter hoogte van Waarschootdorp 4 en Waarschootdorp 12 
+                                        Borden F41 weg te nemen aan kruispunt Waarschootdorp/Kerkstraat 
+                                        Bord C3 + F45 + 'uitgezonderd plaatselijk verkeer' op kruispunt Kerkstraat/Gastelstraat 
+                                        Bord C3 + F45 + 'uitgezonderd plaatselijk verkeer' op kruispunt Schoolstraat/Nijverheidsstraat 
+                                     
+                                     
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden.  
+                                    De borden voor parkeerverbod en wegomlegging worden al op de juiste plaats gezet door de gemeentediensten. Bij aanvang en einde van het evenement zal de organisator zelf de overige borden voor het afsluiten van de feestzone op straat plaatsen en terug.  
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/e150eb1e-3040-403c-8d1d-767bcecfb342> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e150eb1e-3040-403c-8d1d-767bcecfb342> a ns2:Agendapunt ;
+    ns3:uuid "9bb8819e-2c5f-5d81-a4e1-4d60e2a24801" .
+

@@ -1,0 +1,99 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5d5624e2-2689-4edf-b826-ed418eb8d726> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02e461d8-9457-4462-bcf3-ae9023038d39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/040ff837-f912-4527-be10-576e2c21a3a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31b086ce-f5b3-4d7b-a538-37d4d8dfcf50>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/773db485-658a-4e7b-be39-7eb511439f54>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/abf4bd6c-18b8-4950-b6ea-4a095b5588ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b7b1954e-16fc-4c28-90dc-447f69613bab>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be3ac6b4-2bd2-4c0b-8d37-55465a918a48>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d731f175-4cda-45fd-9950-b5a6ece1a56c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee440fb1-4741-4901-b091-77c89026b892> ;
+    ns1:geplandeStart "2021-01-27T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e450014f-53c6-44fd-bda7-4ddded313fd6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/02348813-41ac-4562-bf38-c82d5a645439> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0e90d608-db5c-42ea-a422-18032aca2b7a> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ed452510-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-01-27T21:08:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-01-27T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d731f175-4cda-45fd-9950-b5a6ece1a56c> ;
+    ns1:openbaar true ;
+    ns3:uuid "f68268e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/533f8376-4185-47ab-82ab-ba4427a13a0e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/533f8376-4185-47ab-82ab-ba4427a13a0e> a ns1:Besluit ;
+    ns2:description """ 
+                                                    Goedkeuring wordt verleend aan het ontwerp met bestek en raming. De werken te gunnen via de onderhandelingsprocedure zonder voorafgaande bekendmaking. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Klaverstraatje - heraanleg rijbaan - ontwerp, bestek, raming en gunningswijze : goedkeuring" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikel 41, 10° waarbij wordt bepaald dat de gemeenteraad bevoegd is voor de vaststelling van de plaatsingsprocedure en de voorwaarden van overheidsopdrachten als het gaat om een opdracht die niet is opgenomen in de lijst van dagelijks bestuur. 
+                                                            De wet van 29 juli 1991 betreffende de uitdrukkelijke motiveringsplicht van bestuurshandelingen, en latere wijzigingen. 
+                                                            Het Decreet Lokaal Bestuur van 22 december 2017, meer bepaald artikels 326 tot en met 341 betreffende het bestuurlijk toezicht. 
+                                                            De wet van 17 juni 2013 betreffende de motivering, de informatie en de rechtsmiddelen inzake overheidsopdrachten, bepaalde opdrachten voor werken, leveringen en diensten en concessies, en latere wijzigingen. 
+                                                            De wet van 17 juni 2016 inzake overheidsopdrachten, meer bepaald artikel 42, § 1, 1° a) (de goed te keuren uitgave excl. btw bereikt de drempel van € 139.000,00 niet). 
+                                                            Het KB van 14 januari 2013 tot bepaling van de algemene uitvoeringsregels van de overheidsopdrachten, en latere wijzigingen. 
+                                                            Het KB van 18 april 2017 betreffende plaatsing overheidsopdrachten klassieke sectoren, en latere wijzigingen, meer bepaald artikel 90, 1°. 
+                                                            Het decreet van 26 maart 2004 betreffende de openbaarheid van bestuur. 
+                                                            Het besluit van de gemeenteraad van 30 januari 2019 over de vaststelling van het begrip 'dagelijks bestuur' waarbij het college bevoegd is voor alle investeringskredieten die nominatief zijn opgenomen in de beleidsplanning. 
+                                                            Het besluit van de gemeenteraad van 16 december 2020 over het Meerjarenplan 2020 - 2025 deel gemeente Lievegem: vaststelling waarbij de nominatieve investeringen werden goedgekeurd, inzonderheid: 
+                                                             
+                                                                actie 160 ‘Klaverstraatje (“Huizegaver”) – heraanleg asfalt’: 120.000 euro 
+                                                                actie 005 ‘Onderhoud van bestaande en aanleg van nieuwe trage wegen’: 20.000 euro 
+                                                             
+                                                            Het besluit van het college van burgemeester en schepenen van 11 augustus 2020 over Klaverstraatje + Lembeeckstraat: heraanleg rijbaan - aanstellen ontwerper: gunning deel Klaverstraatje 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het college van burgemeester en schepenen besliste in zitting van 11 augustus 2020 studiebureau AWP Architecture & Engineering bv, Kerkstraat 1 te 9950 Lievegem, aan te stellen als ontwerper voor de opdracht heraanleg rijbaan Klavertraatje. 
+                                                            In het kader van dit project werd een ontwerp met bestek en raming opgesteld door studiebureau AWP Architecture & Engineering uit Waarschoot. Uit de raming blijkt dat de totale kostprijs van dit project wordt geraamd op € 139.912,30 incl. BTW. 
+                                                            Er wordt voorgesteld de opdracht te gunnen bij wijze van de onderhandelingsprocedure zonder voorafgaande bekendmaking.Omdat er momenteel onvoldoende budget voorzien is in het Meerjarenplan 2020 - 2025 (zie ook lijst nominatieve investeringen) kan het niet beschouwd worden als een overheidsopdracht vallend onder dagelijks bestuur en wordt het dossier voorgelegd aan de gemeenteraad. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            De uitgave voor deze opdracht is voorzien in het financieel meerjarenplan: 
+                                                             
+                                                                2021/ACT-160/0200-00/2240007/GEMEENTE/CBS/IP-GEEN: ‘Klaverstraatje (“Huizegaver”) – heraanleg asfalt’: 120.000 euro 
+                                                                2021/ACT-005/0200-00/2240007/GEMEENTE/CBS/IP-GEEN: ‘Onderhoud van bestaande en aanleg van nieuwe trage wegen’: 20.000 euro 
+                                                             
+                                                            Deze uitgave wordt geraamd op 139.912,30 euro incl. BTW. 
+                                                            Het totale budget bedraagt hierdoor (studiekost ontwerper 7,5% - 10.493,42 + uitvoeringskost aannemer 139.912,30 euro ) 150.405,72 euro. Het voorziene krediet zal verhoogd worden via een interne kredietverschuiving of bij de volgende aanpassing van het meerjarenplan. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ed4720e0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1  De gemeenteraad keurt het ontwerp met bestek en raming, opgesteld door studiebureau AWP Architecture & Engineering bv, Kerkstraat 1 te 9950 Lievegem, goed. De lastvoorwaarden worden vastgesteld zoals voorzien in het bestek en zoals opgenomen in de algemene uitvoeringsregels van de overheidsopdrachten voor aannemingen van werken, leveringen en diensten. De raming bedraagt € 139.912,30, incl. BTW. 
+                                                            Artikel 2 De werken te gunnen via de onderhandelingsprocedure zonder voorafgaande bekendmaking 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f6863970-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Klaverstraatje - heraanleg rijbaan - ontwerp, bestek, raming en gunningswijze : goedkeuring" .
+

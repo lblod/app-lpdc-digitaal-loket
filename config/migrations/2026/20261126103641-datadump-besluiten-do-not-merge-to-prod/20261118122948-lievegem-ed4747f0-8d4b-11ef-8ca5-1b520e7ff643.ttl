@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5d5624e2-2689-4edf-b826-ed418eb8d726> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02e461d8-9457-4462-bcf3-ae9023038d39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/040ff837-f912-4527-be10-576e2c21a3a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31b086ce-f5b3-4d7b-a538-37d4d8dfcf50>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/773db485-658a-4e7b-be39-7eb511439f54>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/abf4bd6c-18b8-4950-b6ea-4a095b5588ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b7b1954e-16fc-4c28-90dc-447f69613bab>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be3ac6b4-2bd2-4c0b-8d37-55465a918a48>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d731f175-4cda-45fd-9950-b5a6ece1a56c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee440fb1-4741-4901-b091-77c89026b892> ;
+    ns1:geplandeStart "2021-01-27T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e450014f-53c6-44fd-bda7-4ddded313fd6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/02348813-41ac-4562-bf38-c82d5a645439> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0e90d608-db5c-42ea-a422-18032aca2b7a> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "ed452510-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-01-27T21:08:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-01-27T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e> ;
+    ns1:openbaar true ;
+    ns2:uuid "f6821ac0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/35227b05-ac20-4325-b51e-5f094b2c04de> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/35227b05-ac20-4325-b51e-5f094b2c04de> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad neemt kennis van het besluit en van het verslag van de vergadering van de politieke vervoerregioraad op 11 december 2020 over de definitieve vaststelling van dit openbaar vervoerplan. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Mobiliteit - openbaar vervoerplan 2021 - besluit Vervoerregioraad 11 december 2020 over de definitieve vaststelling: kennisname" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 40 
+                                                            Het Decreet over het lokaal bestuur van 22 december 2017, artikel 2 waarin wordt bepaald dat de gemeenten beogen om op het lokale niveau duurzaam bij te dragen aan het welzijn van de burgers en waarbij ze, overeenkomstig artikel 41 van de Grondwet, bevoegd zijn voor de aangelegenheden van gemeentelijk belang. Voor de verwezenlijking daarvan kunnen ze alle initiatieven nemen. Ze beogen om bij te dragen aan de duurzame ontwikkeling van het gemeentelijk gebied. 
+                                                            Het Decreet betreffende de basisbereikbaarheid van 26 april 2019, artikel 8 waarin wordt bepaald dat de vervoerregioraad verantwoordelijk is voor het voorbereiden, opmaken, opvolgen, evalueren en, in voorkomend geval, herzien van het regionaal mobiliteitsplan. Binnen de krijtlijnen van het regionaal mobiliteitsplan heeft de vervoerregioraad, ondersteund door de mobiliteitsregie, onder andere de volgende taak: het aanvullend net en het vervoer op maat bepalen en advies geven over het treinnet en het kernnet. 
+                                                            Gemeenteraadsbesluit van 9 september 2020 over mobilitiet - openbaar vervoersplan 2021 - voorlopige vaststelling door de Vervoersregioraad op 13 mei 2020 
+                                                            Collegebesluit van 28 april 2020 over vervoerregioraad - aanbod openbaar vervoer: kennisname verslag consultatiemoment 26 maart 2020 + presentatie bijkomend overlegmoment 16 april 2020 
+                                                            Collegebesluit van 5 mei 2020 over mobiliteit - openbaar vervoerplan korte termijn 
+                                                            Collegebesluit van 24 november 2020 over mobiliteit - Addendum Nieuw Openbaar Vervoerplan 2021 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Het Decreet Basisbereikbaarheid omschrijft de werking van de 15 vervoerregio’s en legt de taken vast van de vervoerregioraad. Met de inrichting van vervoerregio’s, vervoerregioraden en regionale mobiliteitsplannen creëerde de Vlaamse overheid een kader voor steden en gemeenten waarbinnen ze kunnen samenwerken aan mobiliteitsuitdagingen. Binnen elke vervoerregio wordt een regionaal mobiliteitsplan opgesteld. Dat plan legt de gezamenlijke mobiliteitsvisie van de lokale besturen voor alle vervoersmiddelen op lange termijn vast. Het speelt in op de huidige en toekomstige mobiliteitsuitdagingen van de regio, tekent het openbaar vervoersnetwerk uit, legt de link met het ruimtelijk beleid en stelt maatregelen voor de verbetering van de doorstroming, de verkeersveiligheid en het fietsbeleid voor. 
+                                                            Ook de Vervoerregio Gent is gestart met het opstellen van dit plan waarin de gezamenlijke mobiliteitsvisie van de lokale besturen voor alle vervoersmiddelen op lange termijn wordt vastgelegd. Voor dit regionaal mobiliteitsplan is momenteel de Oriëntatienota opgesteld. 
+                                                            Daarnaast heeft de vervoerregio ook de opdracht een Nieuw Openbaar Vervoerplan (OV-plan) te ontwikkelen. Dit voorliggende plan maakt deel uit van het proces waarin binnen de Vervoerregio’s een regionaal mobiliteitsplan wordt opgesteld. Echter het Nieuw Openbaar Vervoerplan loopt in tijd vooruit op het regionaal mobiliteitsplan: de implementatie ervan is voorzien in januari 2022. 
+                                                            Het Openbaar Vervoerplan omvat een plan voor het kernnet (KN), het aanvullend net (AN) en het Vervoer op Maat (VoM). De gemeenten hebben een adviserende rol voor wat betreft het kernnet en een beslissende rol voor het aanvullende net en Vervoer op Maat: 
+                                                             
+                                                                Advies omtrent het netwerk kernnet voor het streeknet en het stadsnet Gent op niveau van verbindingen en indeling in het net 
+                                                                Beslissing omtrent het netwerk aanvullend net voor het streeknet en het stadsnet Gent op niveau van verbindingen en indeling in het net 
+                                                                Beslissing omtrent het voorstel VoM maatregelen 
+                                                             
+                                                            Het Nieuw Openbaar Vervoerplan 2021 werd in de loop van 2019 en begin 2020 voorbereid door de verschillende organen van de vervoerregioraad: de ambtelijke werkgroep, de vervoerregioraad en het dagelijks bestuur van de Vervoerregio Gent. 
+                                                            Er zijn bilaterale overlegmomenten geweest tussen vertegenwoordigers van het departement Mobiliteit & Openbare Werken en de gemeente op 27 september 2019, 26 maart 2020 en een bijkomend overlegmoment op donderdag 16 april 2020. 
+                                                            Voorgaand procesverloop, onderzoeken en overlegmomenten hebben geresulteerd in een document dat op 11 december 2020 werd goedgekeurd door de vervoerregioraad. 
+                                                            
+                                                                Op 28 april 2020 heeft het college kennis genomen van het verslag van het consultatiemoment van 26 maart 2020 en van de aangepaste presentatie naar aanleiding van het bijkomend consultatiemoment op 16 april 2020.
+                                                             
+                                                            
+                                                                Op 5 mei 2020 heeft het college het openbaar vervoerplan korte termijn goedgekeurd.
+                                                             
+                                                            
+                                                                Op 13 mei werd het openbaar vervoerplan 2021 voorlopig vastgesteld door de politieke vervoerregioraad.
+                                                             
+                                                            Op 2 juni en 8 juni hebben er 2 online informatiemomenten plaatsgevonden voor de gemeenteraadsleden en stakeholders waarna vragen konden worden gesteld. Deze vragen werden gebundeld in een document 'Questions & Answers' 
+                                                            Op 9 september 2020 heeft de Gemeenteraad kennis genomen van het openbaar vervoerplan 2021 en van het verslag van de vergadering van de politieke vervoerregioraad op 13 mei 2020 over de voorlopige vaststelling van dit openbaar vervoerplan. 
+                                                            Op 24 november 2020 heeft het college kennis genomen van het Addendum Nieuw Openbaar Vervoerplan 2021. 
+                                                            Op 11 december 2020 werd het openbaar vervoerplan korte termijn definitief vastgesteld door de vervoerregioraad. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ed4747f0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad neemt kennis van het besluit en van het verslag van de vergadering van de politieke vervoerregioraad op 11 december 2020 over de definitieve vaststelling van dit openbaar vervoerplan. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "f6806d10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Mobiliteit - openbaar vervoerplan 2021 - besluit Vervoerregioraad 11 december 2020 over de definitieve vaststelling: kennisname" .
+

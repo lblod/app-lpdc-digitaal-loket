@@ -1,0 +1,157 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/da2cba85-6f33-41f4-b1e3-2fccf197935a> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/02f6e5f9-69a9-4d6c-a367-6936971227f2>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3a48c9cd-20fe-4749-b368-14aa2e222db1>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/81952368-0ac8-418e-88d1-844fcaf4b8ea>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/93008696-a202-4b8f-9100-25fcb82389f3>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/9f8afe0c-51a6-4b02-8c56-604f3dc26b5e>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/d3c27850-0be9-4c27-bd69-045081ebb499>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/d720336a-c17e-4a7f-9a08-d462b4911d8f> ;
+    ns1:geplandeStart "2025-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/afe2c7b0-dad2-4308-bf99-ed9cd1277fe9> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "91c6b172-d888-51e4-86d1-f419000cdb13" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-12-16T20:38:00+01:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/93008696-a202-4b8f-9100-25fcb82389f3> ;
+    ns1:openbaar true ;
+    ns2:uuid "1915c381-290f-5d68-b985-bddd2ebae7d7" ;
+    dcterms:description """ 
+                             
+                                De gemeenteraad heeft in vergadering van 24 november 2025 het retributiereglement voor standplaatsen openbare markten en gebruik elektriciteit vastgesteld voor de periode van 1 januari 2026 tot en met 31 december 2031. Artikel 9 van dit reglement voorziet dat het college van burgemeester en schepenen gemachtigd is om deze tarieven vast te stellen.  
+                                De argumentatie tot differentiatie in de tarieven is opgenomen in het kaderbesluit. 
+                                Aan het college van burgemeester en schepenen wordt gevraagd de tarieven vast te stellen met ingang van 1 januari 2026. 
+                                 
+                             
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/ba5922c9-cfad-4b2e-b203-36479219ba56> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Tarieven retributiereglement standplaatsen openbare markten en gebruik elektriciteit - Vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    De gemeenteraad heeft in vergadering van 24 november 2025 het retributiereglement voor standplaatsen openbare markten en gebruik elektriciteit vastgesteld voor de periode van 1 januari 2026 tot en met 31 december 2031.  
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                        Volgende bevoegdheidsgrond en regelgeving is van toepassing: 
+                                        Bevoegdheidsgrond 
+                                     
+                                     
+                                         
+                                             Het Decreet over het lokaal bestuur van 22 december 2017, artikelen 56 en 177 en latere wijzigingen;  
+                                         Toepasselijke regelgeving 
+                                         
+                                         
+                                             De Omzendbrief KB/ABB 2019/2 van 15 februari 2019 betreffende de gemeentefiscaliteit;  
+                                             De gemeenteraadsbeslissing van 24 november 2025 m.b.t. de vaststelling van het retributiereglement voor standplaatsen openbare markten en gebruik elektriciteit;  
+                                         
+                                     
+                                 
+                                 
+                                    Adviezen 
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    De gemeenteraad heeft in vergadering van 24 november 2025 het retributiereglement voor standplaatsen openbare markten en gebruik elektriciteit vastgesteld voor de periode van 1 januari 2026 tot en met 31 december 2031. Artikel 9 van dit reglement voorziet dat het college van burgemeester en schepenen gemachtigd is om deze tarieven vast te stellen.  
+                                    De argumentatie tot differentiatie in de tarieven is opgenomen in het kaderbesluit.  
+                                    Aan het college van burgemeester en schepenen wordt gevraagd de tarieven vast te stellen met ingang van 1 januari 2026. 
+                                 
+                                 
+                                    Financiële weerslag 
+                                    De inkomsten zijn voorzien in het meerjarenplan onder budgetsleutels: 0500-00/70050000 - Retributie op standplaatsen op openbare plaatsen en markten en 0500-00/70050100 - Retributie afname van elektriciteit markten en openbare plaatsten. 
+                                 
+                            """@nl ;
+    ns2:uuid "8c31dac6-e074-51b6-b5c1-c3a0bac91c58" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                     
+                                        Enig artikel: Het college van burgemeester en schepenen stelt de tarieven van het retributiereglement voor standplaatsen openbare markten en gebruik van elektriciteit vast:  
+                                        Artikel 1: Tarieven 
+                                        Voor een termijn van 1 januari 2026 tot en met 31 december 2031 worden de retributies voor standplaatsen openbare markten en het gebruik van elektriciteit als volgt vastgesteld:  
+                                        1.1. voor de inname van de openbare ruimte:  
+                                        - 1,00 euro per strekkende meter en per dag; 
+                                        - voor jaarabonnementen: 52,00 euro per strekkende meter en per jaar; 
+                                        Afwezigheid van één of van meerdere opeenvolgende beurten zonder reden, geeft in geen geval aanleiding tot terugbetaling. 
+                                        Wanneer de retributieplichtige, bij inbreuk op één van de wettelijke of reglementaire bepalingen ter zake, van de markt wordt verwijderd, hetzij tijdelijk, hetzij definitief of wanneer hij zonder geldige redenen afwezig blijft, zal het abonnementsgeld in geen geval, noch geheel, noch gedeeltelijk worden terugbetaald.  
+                                        Het gestorte abonnementsgeld wordt, in verhouding met de nog te lopen weken, terugbetaald, indien de retributieplichtige de markt wegens overmacht, onafhankelijk van zijn wil, niet meer kan bezoeken. Het college van burgemeester en schepenen oordeelt over de geldigheid van de aangevoerde reden. 
+                                     
+                                     
+                                        
+                                            1.2. voor afname van elektriciteit:
+                                         
+                                        
+                                            
+                                         
+                                         
+                                             
+                                                 
+                                                     
+                                                         Tarief Elektriciteit  
+                                                        2026 
+                                                        2027 
+                                                        2028 
+                                                        2029 
+                                                        2030 
+                                                        2031 
+                                                     
+                                                     
+                                                         Kraam met koeling (inclusief airco) of verwarming (per jaar) 
+                                                         200 euro 
+                                                         203 euro 
+                                                         206 euro 
+                                                         209 euro 
+                                                         212 euro 
+                                                         215 euro 
+                                                     
+                                                     
+                                                         Kraam met enkel verlichting (per jaar) 
+                                                          65 euro 
+                                                          66 euro 
+                                                          67 euro 
+                                                          68 euro 
+                                                          69 euro 
+                                                          70 euro 
+                                                     
+                                                     
+                                                         Losse marktkramer (per dag) 
+                                                            6 euro 
+                                                            6 euro 
+                                                            6 euro 
+                                                            7 euro 
+                                                            7 euro 
+                                                             7 euro  
+                                                     
+                                                 
+                                             
+                                             
+                                            Artikel 3: Deze beslissing wordt bekendgemaakt overeenkomstig de artikelen 285 t.e.m. 288 van het decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen.  
+                                         
+                                     
+                                     
+                                        De bekendmaking van dit reglement wordt aan de toezichthoudende overheid ter kennis gebracht overeenkomstig artikel 330 van het decreet over het lokaal bestuur van 22 december 2017 en latere wijzigingen. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/57a96f9e-67ba-4cee-9cfb-ffb03fd12221> a ns1:Agendapunt ;
+    ns2:uuid "0c46394b-9c69-507f-a81d-248952eea65b" .
+

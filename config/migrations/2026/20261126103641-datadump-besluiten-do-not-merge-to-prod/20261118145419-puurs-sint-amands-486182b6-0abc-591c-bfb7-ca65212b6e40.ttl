@@ -1,0 +1,85 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/zittingen/847ce091-8555-49bb-9e43-aec67718809a> a ns1:Zitting ;
+    ns1:behandelt <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0d73927f-786c-4989-8807-ce3636fbaa42>,
+        <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/3c47e156-7626-4ad6-bea7-3f2d6df908bc> ;
+    ns1:geplandeStart "2025-05-20T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/documenten/a4b59847-fda2-41a0-a0dd-f88dd6d3e1a6> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns2:uuid "804e2990-f2e0-5286-8ca4-3203f2d26423" ;
+    prov:atLocation "De Pit" ;
+    prov:startedAtTime "2025-05-20T20:13:00+02:00"^^xsd:dateTime .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0d73927f-786c-4989-8807-ce3636fbaa42> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4f23d624-ede2-4f3a-84eb-17b92f6de3de> ;
+    ns1:openbaar false ;
+    ns2:uuid "591406be-9ecf-5487-9eb4-4deceb511171" ;
+    dcterms:description """ 
+                        """ ;
+    dcterms:subject <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0d73927f-786c-4989-8807-ce3636fbaa42> ;
+    prov:generated <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/0d73927f-786c-4989-8807-ce3636fbaa42> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/besluiten/0d73927f-786c-4989-8807-ce3636fbaa42> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/4d8f678a-6fa4-4d5f-a2a1-80974e43bf34> ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/2e5c95ecec50764ebb1b6b35d655a246117522a7e6c0e118a88766874dd78acb> ;
+    ns3:title "Aanvullend verkeersreglement - Coolhemstraat: oversteekplaats voor voetgangers" ;
+    ns1:motivering """ 
+                                 
+                                    Aanleiding 
+                                    Op vraag van de scouts Kalfort  werd de piste voor een zebrapad onderzocht ter hoogte Coolhemstraat 53. Aangezien dit ook een toegangsweg is voor het toekomstige parkgebied en eveneens gebruikt kan worden in functie van de nieuwe ligging voor Chiro Kalfort, willen we de oversteekplaats zo veilig mogelijk faciliteren. 
+                                 
+                                 
+                                    Juridische grond 
+                                     
+                                         
+                                            Volgende bevoegdheidsgrond en regelgeving is van toepassing:  
+                                         
+                                         
+                                            Bevoegdheidsgrond  
+                                             
+                                                Het Decreet over het lokaal bestuur van 22 december 2017, artikel 56, §2 
+                                                Het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens, artikel 4; 
+                                                Gemeenteraadsbeslissing van 27 januari 2025: Gemeentelijke aanvullende reglementen op de politie over het wegverkeer - Delegatie van de bevoegdheid aan het college van burgemeester en schepenen; 
+                                             
+                                            Toepasselijke regelgeving 
+                                         
+                                     
+                                     
+                                         
+                                            de wet betreffende de politie over het wegverkeer, gecoördineerd bij koninklijk besluit van 16 maart 1968; 
+                                            het koninklijk besluit van 1 december 1975 houdende algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare weg; 
+                                            het ministerieel besluit van 11 oktober 1976 waarbij de minimumafmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaald; 
+                                            het decreet van 16 mei 2008 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            het uitvoeringsbesluit van 23 januari 2009 betreffende de aanvullende reglementen op het wegverkeer en de plaatsing en bekostiging van de verkeerstekens; 
+                                            de omzendbrief MOB/2009/1 van 3 april 2009; 
+                                            de nieuwe gemeentewet van 24 juni 1988; 
+                                         
+                                     
+                                 
+                                 
+                                    Feiten, context en argumentatie 
+                                    Op vraag van de scouts Kalfort werd de piste voor een zebrapad onderzocht ter hoogte Coolhemstraat 53. Aangezien dit ook een toegangsweg is voor het toekomstige parkgebied en eveneens gebruikt kan worden in functie van de nieuwe ligging voor Chiro Kalfort, willen we de oversteekplaats zo veilig mogelijk faciliteren. 
+                                    De hiërarchie der wegen zoals vastgelegd in het gemeentelijk mobiliteitsplan, verbreed en verdiept door het mobiliteitsplan Klein-Brabant, waarbij de straten het statuut kregen van lokale wegen type 2. 
+                                 
+                            """@nl ;
+    ns2:uuid "486182b6-0abc-591c-bfb7-ca65212b6e40" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1: Thv Coolhemstraat nr.53 wordt volgende maatregel ingevoerd: een oversteekplaats voor voetgangers 
+                                    Artikel 2: De oversteekplaats voor voetgangers wordt aangeduid voor verkeerstekens: 
+                                    -       WM76.3 (zebrapad) 
+                                    Artikel 3: Dit aanvullend verkeersreglement wordt overgemaakt aan het Departement Mobiliteit en Openbare Werken (MOW) via het loket lokale besturen. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://puurs-sint-amands-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/0d73927f-786c-4989-8807-ce3636fbaa42> .
+
+<https://puurs-sint-amands-echo.cipalschaubroeck.be/id/agendapunten/0d73927f-786c-4989-8807-ce3636fbaa42> a ns1:Agendapunt ;
+    ns2:uuid "c9e86f80-bd7f-54bd-98fb-978e2355defa" .
+

@@ -1,0 +1,86 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/zittingen/3eacf95f-c615-435a-afb2-4e09f6ce753d> a ns3:Zitting ;
+    ns3:behandelt <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/164e0894-fdef-4554-a1b0-248dbd03e90c>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/2a9946b6-a439-4632-91c6-aa8ab0f9a05a>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/57521252-5353-4002-9f0e-f81953928189>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/816c0985-4100-4fde-9b2f-9cbf37118a8e>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/820acd86-7f8c-4d7b-83e8-0fa82259cc99>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/88df4786-ce31-45d8-8118-b1415cdf6dc8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/97ac18fd-8e6f-4bd2-99db-a78a89043813>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/9c6b9ddb-e654-41a9-9e8a-d90702bbe137>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/eb17bf5e-9540-44b0-85f7-02f3018030a8>,
+        <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/f5bc4eb3-166a-40c7-ad99-ffeb7b3fce4c> ;
+    ns3:geplandeStart "2026-06-08T14:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://pajottegem-echo.cipalschaubroeck.be/id/documenten/de583c7f-afac-4106-b216-dcfb95db0a8f> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns2:uuid "c92494d7-4d42-5cee-b621-26af04c40ab9" ;
+    prov:atLocation "Schepenzaal Administratief Huis Galmaarden" ;
+    prov:startedAtTime "2026-06-08T14:12:00+02:00"^^xsd:dateTime .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/816c0985-4100-4fde-9b2f-9cbf37118a8e> ;
+    ns3:openbaar false ;
+    ns2:uuid "67610282-809a-570c-8fd0-683e0dade0e0" ;
+    dcterms:subject <https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5> ;
+    prov:generated <https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/besluiten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                    Het college keurt de politieverordening met tijdelijke verkeersmaatregelen voor een buurtfeest op 27 juni van 17u tot 28 juni 2026 om 3u goed. 
+                                                """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/1cd382ca-87a9-4693-8216-a4e5e16af3fa> ;
+    ns1:title "Politieverordening: buurtfeest: Havifeesten te Havilandstraat, Leerbeek - 27 juni van 17u tot 28 juni 2026 om 3u" ;
+    ns3:motivering """ 
+                            """@nl ;
+    ns2:uuid "74dfa303-d9bd-5917-a50f-6d517abf0ed2" ;
+    prov:value """ 
+                                 
+                                    
+                                        Artikel 1 - Ter gelegenheid van buurtfeest op 27 juni en 28 juni 2026  worden volgende beperkingsmaatregelen voor het verkeer genomen van 12u t.e.m. 9u:
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Verboden toegang voor iedere bestuurder, in beide richtingen (Fig. C3) op Havilandstraat, tussen kruispunt met Winnepenninckxstraat en kruispunt met Tramstraat. 
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 2 - De signalisatie zal worden aangeleverd door de gemeentediensten overeenkomstig de wettelijke voorschriften. 
+                                         
+                                        Artikel 3 - Te voorzien door de organisatoren: 
+                                         
+                                             De bewoners langsheen de straten waar er verkeersmaatregelen worden ingevoerd, moeten minstens 48 uur op voorhand schriftelijk op de hoogte worden gebracht van het evenement en van de verkeersmaatregelen.  
+                                             Alle tijdelijk voorziene verkeersborden en hekkens dienen door de organisatoren overeenkomstig de wettelijke voorschriften voor het evenement geplaatst en onmiddellijk na het evenement te worden verwijderd of afgedekt.  
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://pajottegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5> .
+
+<https://pajottegem-echo.cipalschaubroeck.be/id/agendapunten/3cfd8065-9b6c-410d-b7b2-72a8e05f77e5> a ns3:Agendapunt ;
+    ns2:uuid "8f1a888f-d07d-58ec-9a4d-e5f9e3f512f6" .
+

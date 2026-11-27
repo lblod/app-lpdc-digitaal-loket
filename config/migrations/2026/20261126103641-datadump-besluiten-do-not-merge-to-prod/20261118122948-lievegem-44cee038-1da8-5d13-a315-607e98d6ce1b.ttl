@@ -1,0 +1,103 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/4f58f9f2-7e36-4286-912c-71911e3827c8> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47339979-2bce-4780-9ddf-2779e12ea0bb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6351146d-79a7-475b-8d33-3e6f2f086e57>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8888d687-20fe-4d34-8c9f-a113201f04f3>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b0cc5bec-27ee-4ede-988e-8197da864396>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b228826a-81ca-4ed9-8af3-61472ca20a9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bcf0280f-6977-48e1-abbc-9cc519c0ade6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d17bf848-75a4-4510-9f5b-869672c3585c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5952146-37b7-4e7c-be07-c00de69716b5>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d7c6f5fc-c065-4f9e-a000-7ca51c56645d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d85cfaf3-80e6-4ae9-96ed-e0db3280de12>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4e7fc5c-ca3e-44c9-96c4-c391254b016e> ;
+    ns1:geplandeStart "2025-06-17T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/92945e55-df84-492e-9588-2ace4efc835e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:uuid "1bdec71a-97b1-5797-a638-9c1f26c3f3f0" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-06-17T13:39:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d5952146-37b7-4e7c-be07-c00de69716b5> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/b0cc5bec-27ee-4ede-988e-8197da864396> ;
+    ns1:openbaar false ;
+    ns2:uuid "78b7514b-6b13-5bda-b9bd-fd2a08a43f93" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5952146-37b7-4e7c-be07-c00de69716b5> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d5952146-37b7-4e7c-be07-c00de69716b5> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d5952146-37b7-4e7c-be07-c00de69716b5> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns3:description """ 
+                                                            Het tijdelijk politiereglement voor het inrichten van een speelstraat in Mimosastraat, 9920 Lievegem vanaf 1 juli 2025 tot en met 31 augustus 2025 en dit telkens vanaf 10.00 uur tot 20.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:title "Tijdelijk politiereglement naar aanleiding van het inrichten van een speelstraat in Mimosastraat, 9920 Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet gemeenteraadsbesluit van 27 maart 2019 inzake de inrichting van speelstraten.Het besluit van het college van burgemeester en schepenen van 17 juni 2025 over de aanvraag tot het inrichten van een speelstraat in de Mimosastraat vanaf huisnummer 13 tot en met 17, van 1 juli tot en met 31 augustus: goedkeuringHet besluit van het college van burgemeester en schepenen van 17 juni 2025 over de aanvraag vergunning tot toegang speelstraten voor ophalen restafval, PMD - papier en karton en glas: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen. 
+                                    Er werd op 4 mei 2025 een aanvraag ingediend bij team jeugd gemeente Lievegem om in Mimosastraat, 9920 Lievegem een speelstraat in te richten vanaf 1 juli 2025 tot en met 31 augustus 2025 en dit telkens vanaf 10.00 uur tot 20.00 uur. 
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    De straat voldoet aan alle voorwaarden om in aanmerking te komen voor een speelstraat: 
+                                     
+                                        Mimosastraat is een straat of wijk met een overheersend woonkarakter, zonder doorgaand verkeer, met een snelheidsbeperking van 30km/u en zonder openbaar vervoer. In deze straat zijn geen publieke parkings of handelszaken (tenzij er een schriftelijk akkoord is met de betreffende handelaar). 
+                                        De aangevraagde uren bevinden zich binnen het toegestane tijdslot (10.00 - 20.00 uur). 
+                                        Na controle van de bewonersenquête bleek 97% van de bewoonde huizen akkoord met de inrichting van een speelstraat, wat hoger ligt dan de gevraagde 75% uit het reglement rond de inrichting van de speelstraten 
+                                        De politie gaf positief advies op 21 mei 2025. 
+                                     
+                                    Deze speelstraat werd ingebracht in GIPOD met nummer 18306702. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo en LVZ 
+                                    Team jeugd 
+                                    De inwoners en betrokken handelaars (via team jeugd) 
+                                 
+                            """@nl ;
+    ns2:uuid "44cee038-1da8-5d13-a315-607e98d6ce1b" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement voor het inrichten van een speelstraat in Mimosastraat, 9920 Lievegem vanaf 1 juli 2025 tot en met 31 augustus 2025 en dit telkens vanaf 10.00 uur tot 20.00 uur wordt vastgesteld als volgt: 
+                                     
+                                        inrichten van een speelstraat in Mimosastraat vanaf huisnummer 13 tot en met huisnummer 17, 9920 Lievegem. 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                     
+                                        inrichten speelstraat: 
+                                     
+                                     
+                                         
+                                            Nadar + C3 + 'Speelstraat' + onderbord met de speelstraaturen ter hoogte van huisnummer 13 en huisnummer 17. 
+                                         
+                                     
+                                     
+                                         
+                                            Artikel 3 
+                                            De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van de speeldag.
+                                         
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d5952146-37b7-4e7c-be07-c00de69716b5> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d5952146-37b7-4e7c-be07-c00de69716b5> a ns1:Agendapunt ;
+    ns2:uuid "85c17591-fc9b-5441-8df4-665c15b794be" .
+

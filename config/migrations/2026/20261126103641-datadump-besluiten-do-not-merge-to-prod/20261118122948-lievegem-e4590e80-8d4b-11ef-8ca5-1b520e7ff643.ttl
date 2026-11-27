@@ -1,0 +1,162 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/3fda0863-f795-4bc3-9512-74c822d1bc00> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02c6c85c-d201-4232-847b-20c0cd218a8c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0778dda2-835e-4438-aeef-c460a716255b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/07c03beb-8b45-4932-ab6d-a3cb94b216a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/0f79e1be-d44e-4be7-886c-e6c7241b00dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/12ef2361-f648-4184-9062-92668802f70d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/253a30f7-608c-4bda-9869-866f423a8a19>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/2b0fb234-707d-4f0e-9798-0dcf63dda4dd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b4df9c1-d5f6-43cf-aa86-145fdb6476c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4e25cdd4-cc7e-4a75-b282-08df9b482e8f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/52d9dbbe-2c9b-4a62-9332-e687ae865f84>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5bd81705-73eb-45f9-bea5-43b54ac5d208>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/75bc95f3-815d-44a1-8ff9-fbd34bfdda2d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7ea8c51e-b47f-4803-9dcf-1776c3d704dc>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/889a8e90-7251-4747-8eff-55442d49caae>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c59356dc-a09e-43bb-979d-b3953cd9ef78>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/caa490b9-6ca9-4348-a7a6-fd431797a243>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d0372ebb-b2cd-407e-a293-6f73470919fd>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d18b79c0-32ac-48b9-8e4a-63595359a82b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8c24b56-3c39-4dcf-8196-e17248a76e76>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f0b0e00f-7500-4978-8fc8-f3d19c1bd01b>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f5e44759-8dc3-47f8-814c-6b8029d186a8> ;
+    ns1:geplandeStart "2022-06-29T20:00:00+02:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/7f03f5a8-e9d3-41ea-b1bc-9bc359733ac0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/documenten/fa751e19-538b-4adf-b9ec-9469748e08e6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/046f0362-14b7-46bb-8bc0-3b3ee8c8ac22> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/eb2e6d0f-dfe7-45c7-ac19-63d29136384e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e44d9cd0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem" ;
+    prov:endedAtTime "2022-06-29T21:39:00+02:00"^^xsd:dateTime ;
+    prov:startedAtTime "2022-06-29T20:00:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/253a30f7-608c-4bda-9869-866f423a8a19> ;
+    ns1:openbaar true ;
+    ns2:uuid "e45983b0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/e44c535d-4339-4d15-bdbf-d4be6046de2c> ;
+    ns3:description """ 
+                                                    De gemeenteraad stelt de jaarrekening 2021 deel gemeente vast. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Jaarrekening 2021 deel gemeente Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Kim Martens, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Het Decreet van 22 december 2017 over het lokaal bestuur, artikelen 41, 3°, 249, 250, 260 en 262  
+                                    Besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale en provinciale besturen 
+                                    Ministerieel besluit van 26 juni 2018 over de beleids- en beheerscyclus 
+                                    Gemeenteraadsbesluit van 18 december 2019 houdende vaststelling meerjarenplan 2020 - 2025 deel gemeente Lievegem 
+                                    Gemeenteraadsbesluit van 18 december 2019 houdende goedkeuring meerjarenplan 2020 - 2025 deel OCMW Lievegem 
+                                    Gemeenteraadsbesluit van 16 december 2020 houdende vaststelling meerjarenplan 2020 - 2025 - aanpassing 1 deel gemeente Lievegem 
+                                    Gemeenteraadsbesluit van 16 december 2020 houdende goedkeuring meerjarenplan 2020 - 2025 - aanpassing 1 deel OCMW Lievegem 
+                                    Gemeenteraadsbesluit van 22 december 2021 houdende vaststelling meerjarenplan 2020 - 2025 - aanpassing 2 deel gemeente Lievegem 
+                                    Gemeenteraadsbesluit van 22 december 2021 houdende goedkeuring meerjarenplan 2020 - 2025 - aanpassing 2 deel OCMW Lievegem 
+                                    Besluit van het college van burgemeester en schepenen van 7 juni 2022 over de jaarrekening 2021: kennisname ontwerp 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Overeenkomstig artikel 260 , tweede en derde lid, van het Decreet Lokaal Bestuur bestaat de jaarrekening uit een beleidsevaluatie, een financiële nota en een toelichting en wordt deze vastgesteld voor 30 juni van het boekjaar dat volgt op het boekjaar waarop de rekening betrekking heeft. 
+                                    De jaarrekening werd 14 dagen voor de gemeenteraadszitting via het notuleringsprogramma ter beschikking gesteld van de raadsleden. 
+                                    Conform artikel 249 § 3 van het Decreet Lokaal Bestuur stemmen de gemeenteraad en de raad voor maatschappelijk welzijn hun deel van elk beleidsrapport.  Nadat de raden zo het beleidsrapport elk voor hun deel hebben vastgesteld, keurt de gemeenteraad het deel van het beleidsrapport zoals vastgesteld door de raad voor maatschappelijk welzijn goed. Door die goedkeuring wordt het beleidsrapport in zijn geheel geacht definitief vastgesteld te zijn. 
+                                 
+                                 
+                                    Financiële impact 
+                                    Het boekjaar sluit per 31 december 2021 af met volgende kerncijfers : 
+                                    Evenwichtscriteria 
+                                     
+                                     
+                                    Balans op 31 december 2021 
+                                     
+                                     
+                                    Staat van opbrengsten en kosten op 31 december 2021 
+                                     
+                                      
+                                    Na opmaak van de jaarrekening 2021 blijkt het “beschikbaar budgettair resultaat” 11.765.148 euro beter te zijn in vergelijking met wat voor boekjaar 2021 was vooropgesteld in het initieel meerjarenplan 2020 - 2025.Er moet echter nog rekening worden gehouden met de overdracht van investeringskredieten van 2021 naar 2022 (cfr. decreet lokaal bestuur, art. 258) op basis van het collegebesluit van 22 februari 2022 waarbij voor 925.524 euro aan kredieten voor investeringsontvangsten en 9.508.242 euro aan kredieten voor investeringsuitgaven werden overgedragen.Bij het beoordelen van het beschikbaar budgettair resultaat voor het boekjaar 2021 moet dus rekening worden gehouden met een nog te financieren saldo van 8.582.718 euro (in boekjaar 2022) waardoor het beschikbaar budgettair resultaat in jaarrekening 2021 in principe 10.884.631 euro bedraagt.Rekening houdend met de overgedragen investeringskredieten, wordt het meerjarenplan 2020 – 2025 door de inbreng van het rekeningresultaat 2021 uiteindelijk positief beïnvloed met een bedrag van 3.182.430 euro. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Publicatie op de gemeentelijke website. 
+                                    Deze publicatie wordt gemeld aan de toezichthoudende overheid en digitaal gerapporteerd aan de Vlaamse Regering. 
+                                     
+                                 
+                            """@nl,
+        """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet van 22 december 2017 over het lokaal bestuur, artikelen 41, 3°, 249, 250, 260 en 262  
+                                                            Besluit van de Vlaamse Regering van 30 maart 2018 over de beleids- en beheerscyclus van de lokale en provinciale besturen 
+                                                            Ministerieel besluit van 26 juni 2018 over de beleids- en beheerscyclus 
+                                                            Gemeenteraadsbesluit van 18 december 2019 houdende vaststelling meerjarenplan 2020 - 2025 deel gemeente Lievegem 
+                                                            Gemeenteraadsbesluit van 18 december 2019 houdende goedkeuring meerjarenplan 2020 - 2025 deel OCMW Lievegem 
+                                                            Gemeenteraadsbesluit van 16 december 2020 houdende vaststelling meerjarenplan 2020 - 2025 - aanpassing 1 deel gemeente Lievegem 
+                                                            Gemeenteraadsbesluit van 16 december 2020 houdende goedkeuring meerjarenplan 2020 - 2025 - aanpassing 1 deel OCMW Lievegem 
+                                                            Gemeenteraadsbesluit van 22 december 2021 houdende vaststelling meerjarenplan 2020 - 2025 - aanpassing 2 deel gemeente Lievegem 
+                                                            Gemeenteraadsbesluit van 22 december 2021 houdende goedkeuring meerjarenplan 2020 - 2025 - aanpassing 2 deel OCMW Lievegem 
+                                                            Besluit van het college van burgemeester en schepenen van 7 juni 2022 over de jaarrekening 2021: kennisname ontwerp 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Overeenkomstig artikel 260 , tweede en derde lid, van het Decreet Lokaal Bestuur bestaat de jaarrekening uit een beleidsevaluatie, een financiële nota en een toelichting en wordt deze vastgesteld voor 30 juni van het boekjaar dat volgt op het boekjaar waarop de rekening betrekking heeft. 
+                                                            De jaarrekening werd 14 dagen voor de gemeenteraadszitting via het notuleringsprogramma ter beschikking gesteld van de raadsleden. 
+                                                            Conform artikel 249 § 3 van het Decreet Lokaal Bestuur stemmen de gemeenteraad en de raad voor maatschappelijk welzijn hun deel van elk beleidsrapport.  Nadat de raden zo het beleidsrapport elk voor hun deel hebben vastgesteld, keurt de gemeenteraad het deel van het beleidsrapport zoals vastgesteld door de raad voor maatschappelijk welzijn goed. Door die goedkeuring wordt het beleidsrapport in zijn geheel geacht definitief vastgesteld te zijn. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Het boekjaar sluit per 31 december 2021 af met volgende kerncijfers : 
+                                                            Evenwichtscriteria 
+                                                             
+                                                             
+                                                            Balans op 31 december 2021 
+                                                             
+                                                             
+                                                            Staat van opbrengsten en kosten op 31 december 2021 
+                                                             
+                                                              
+                                                            Na opmaak van de jaarrekening 2021 blijkt het “beschikbaar budgettair resultaat” 11.765.148 euro beter te zijn in vergelijking met wat voor boekjaar 2021 was vooropgesteld in het initieel meerjarenplan 2020 - 2025.Er moet echter nog rekening worden gehouden met de overdracht van investeringskredieten van 2021 naar 2022 (cfr. decreet lokaal bestuur, art. 258) op basis van het collegebesluit van 22 februari 2022 waarbij voor 925.524 euro aan kredieten voor investeringsontvangsten en 9.508.242 euro aan kredieten voor investeringsuitgaven werden overgedragen.Bij het beoordelen van het beschikbaar budgettair resultaat voor het boekjaar 2021 moet dus rekening worden gehouden met een nog te financieren saldo van 8.582.718 euro (in boekjaar 2022) waardoor het beschikbaar budgettair resultaat in jaarrekening 2021 in principe 10.884.631 euro bedraagt.Rekening houdend met de overgedragen investeringskredieten, wordt het meerjarenplan 2020 – 2025 door de inbreng van het rekeningresultaat 2021 uiteindelijk positief beïnvloed met een bedrag van 3.182.430 euro. 
+                                                         
+                                                    """@nl ;
+    ns2:uuid "e4590e80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Enig artikel  
+                                    De gemeenteraad stelt de jaarrekening 2021, deel gemeente Lievegem, vast zoals terug te vinden in bijlage en als dusdanig deel uitmakend van dit besluit. 
+                                 
+                            """,
+        """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel  
+                                                            De gemeenteraad stelt de jaarrekening 2021, deel gemeente Lievegem, vast zoals terug te vinden in bijlage en als dusdanig deel uitmakend van dit besluit. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8af0e18-0e71-4f51-a0ea-8b4ffccad580> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e4516d60-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Jaarrekening 2021 deel gemeente Lievegem: vaststelling" .
+

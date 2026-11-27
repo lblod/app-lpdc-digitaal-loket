@@ -1,0 +1,101 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/a475ad5f-6791-4297-b104-79b3c207fb16> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/066e2ed1-d9f6-493c-9c6f-4f18e5ab7658>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f92d8f7-7c5f-45c5-a82d-b0a4c06e9917>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40881b55-0d07-4b9c-8159-1126726726c8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/4c93144e-5a19-470b-93d1-7e2659266b01>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/524205b0-9ac4-477d-a35d-f37ddf02551f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/72e3a1c9-366e-4989-9414-3d302437f58d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/78c62ef7-6703-4f57-9eb2-a5eb7d5c10e9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85a89a89-4741-4921-9222-96054c5df5f9>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/92e77576-213f-47ae-8c6d-5f46b9b68c9a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b409ab7a-e18e-4363-aa87-5a90fcc43155>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d4219de6-3f0a-40e3-b839-fe356c608d46>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e6c5218a-0543-416e-b1cb-38efde0f155e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/f4b04b57-aa85-4dd8-ad0e-2255f5e9d903> ;
+    ns1:geplandeStart "2021-02-24T20:00:00+01:00"^^xsd:dateTime,
+        "2021-02-24T20:10:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/aef4a100-7c5a-43bb-ad04-e15ab2f79936> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/2832f3bc-d9ee-461a-b6bf-1931195b87b8> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/94ff0768-e35c-4879-93c9-b68206f2669e> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "edcea060-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-02-24T21:05:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-02-24T20:10:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/40881b55-0d07-4b9c-8159-1126726726c8> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/f4b04b57-aa85-4dd8-ad0e-2255f5e9d903> ;
+    ns1:openbaar true ;
+    ns3:uuid "f12ff3d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40881b55-0d07-4b9c-8159-1126726726c8> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/40881b55-0d07-4b9c-8159-1126726726c8> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/40881b55-0d07-4b9c-8159-1126726726c8> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad legt de aangepaste samenstelling (vervangen van afgevaardigde politieke fractie NV-A) van de toeristische adviesraad Lievegem vast. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Toeristische Adviesraad Lievegem (TAL) - aangepaste samenstelling inzonderheid nieuwe afgevaardigde politieke fractie N-VA: kennisname" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Guy De Neve, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Het Decreet lokaal bestuur van 22 december 2017, artikel 304 §3. Onder voorbehoud van de wettelijke en decretale bepalingen die op dit gebied gelden, kan alleen de gemeenteraad overgaan tot de organisatie van raden en overlegstructuren die als opdracht hebben op regelmatige en systematische wijze het gemeentebestuur te adviseren.  Ten hoogste twee derde van de leden van de raden en de overlegstructuren, vermeld in het eerste lid, is van hetzelfde geslacht.  Als dat niet het geval is, kan niet op rechtsgeldige wijze advies worden uitgebracht.  Gemeenteraadsleden en leden van het CBS kunnen geen stemgerechtigd lid zijn van de raden en de overlegstructuren, vermeld in het eerste lid. 
+                                                            En § 5 De gemeenteraad bepaalt bij reglement de wijze waarop concreet vorm gegeven wordt aan de inspraak, vermeld in paragraaf 1 tot en met 4, voor de gemeente en haar organen. 
+                                                            Het besluit van de gemeenteraad van 27 maart 2019 houdende het vaststellen van de statuten van de toeristische adviesraad Lievegem (TAL)Het besluit van de gemeenteraad van 3 juli 2019 houdende de goedkeuring van de samenstelling van de toeristische adviesraad Lievegem (TAL)Het besluit van de gemeenteraad van 29 januari 2020 houdende de goedkeuring van de aangepaste samenstelling van de toeristische adviesraad Lievegem (TAL) 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De statuten van de toeristische adviesraad Lievegem stellen het volgende: 
+                                                            De TAL bestaat uit stemgerechtigde, niet – stemgerechtigde leden en deskundigen. 
+                                                            De stemgerechtigde leden bekleden geen politiek mandaat.  
+                                                            Mannen en vrouwen zijn voor tenminste 1/3 vertegenwoordigd.  
+                                                            Niet - stemgerechtigde leden kunnen deelnemen aan de discussies. Deze personen kunnen geenszins drukken op het formuleren van het advies.  
+                                                            We streven naar een evenredige verdeling tussen de vertegenwoordigers van Lovendegem, Waarschoot en Zomergem.  
+                                                            De adviesraad moet representatief zijn voor het lokale toeristische veld.  
+                                                            Stemqerechtiqde leden  
+                                                            Stemgerechtigde leden zijn deskundigen, geïnteresseerde inwoners en afgevaardigden, van verenigingen, instelling en andere organisaties die actief zijn in de toeristische sector te Lievegem. Zij zijn minimum 18 jaar oud.Elke vereniging, instelling of andere organisatie kan 1 afgevaardigde en 1 plaatsvervanger aanduiden. De afgevaardigde kan slechts 1 vereniging, instelling of  andere organisatie vertegenwoordigen.Niet stemgerechtigde leden    • de schepen van toerisme;    • een ambtenaar aangesteld door het college van burgemeester en schepenen;    • een door elke fractie in de gemeenteraad aangewezen persoon. 
+                                                            Nieuwe niet-stemgerechtigd lid 
+                                                            
+                                                                Michel Parmentier nam zijn ontslag als raadslid.  Hierdoor moet een nieuwe afgevaardigde voor de politieke fractie N-VA worden voorgesteld.
+                                                             
+                                                            
+                                                                Véronique Mussche wordt voorgesteld als afgevaardigde voor de politieke fractie N-VA.
+                                                                
+                                                                De gemeenteraad neemt hier kennis van.
+                                                             
+                                                            
+                                                                 
+                                                             
+                                                            
+                                                                Voor de administratieve duidelijkheid wordt het besluit volledig hernomen.
+                                                             
+                                                         
+                                                    """@nl ;
+    ns3:uuid "edd04e10-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Artikel 1De raad neemt kennis van de vernieuwde samenstelling van de Toeristische Adviesraad Lievegem (TAL) : 
+                                                            Stemgerechtigde leden:- Roos De Mey (Reigerstappers Vinderhoute)- Christel Van Vooren (Netelvuur) - Eric De Clerck (Natuurpunt)- Nicolas Sanmodesto (Lievo)- Peter Swankaert (Beke Ons Dorp)- Frank Bauwens (Bedrijfsgilde)- Piet De Schepper- Muriel Geldhof- Marleen Vermeersch- Marino De Raedemaeker (B & B Cygnalis)- Luc Lampaert- Marleen Vermeersch- Freddy Madou- Elien Clemminck- Bart De Vriendt - Alexander Deene- Michiel Claeys- Guido Engels Niet-stemgerechtigde leden:•    Schepen bevoegd voor toerisme:      Guy De Neve•    Ambtenaar aangesteld door het college van burgemeester en schepenen:      Tine De Walsche•    politieke mandatarissen:      CD&V: Judith De Muynck      Open VLD: Vincent Laroy      sp.a: /      N-VA: Véronique Mussche      GROEN: Ivan Van Laere 
+                                                            Artikel 2Plaatsvervangers voor:•    Reigerstrappers: Luc Moentjens•    LIEVO: Thomas Latomme•    B & B Cygnalis: Annelies Van Vlaenderen•    Bedrijfsgilde: Davy Van de Walle 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/40881b55-0d07-4b9c-8159-1126726726c8> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/40881b55-0d07-4b9c-8159-1126726726c8> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f12ebb50-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Toeristische Adviesraad Lievegem (TAL) - aangepaste samenstelling inzonderheid nieuwe afgevaardigde politieke fractie N-VA: kennisname" .
+

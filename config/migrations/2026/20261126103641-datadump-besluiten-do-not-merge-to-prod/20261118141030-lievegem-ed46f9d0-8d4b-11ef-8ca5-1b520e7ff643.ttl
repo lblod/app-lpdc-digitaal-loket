@@ -1,0 +1,73 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/5d5624e2-2689-4edf-b826-ed418eb8d726> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/02e461d8-9457-4462-bcf3-ae9023038d39>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/040ff837-f912-4527-be10-576e2c21a3a0>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/31b086ce-f5b3-4d7b-a538-37d4d8dfcf50>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/35227b05-ac20-4325-b51e-5f094b2c04de>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/533f8376-4185-47ab-82ab-ba4427a13a0e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6af5537a-b678-4ddc-9a1c-ef219245d66d>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/773db485-658a-4e7b-be39-7eb511439f54>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/abf4bd6c-18b8-4950-b6ea-4a095b5588ce>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b7b1954e-16fc-4c28-90dc-447f69613bab>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/be3ac6b4-2bd2-4c0b-8d37-55465a918a48>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d731f175-4cda-45fd-9950-b5a6ece1a56c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ee440fb1-4741-4901-b091-77c89026b892> ;
+    ns1:geplandeStart "2021-01-27T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/e450014f-53c6-44fd-bda7-4ddded313fd6> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/02348813-41ac-4562-bf38-c82d5a645439> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/0e90d608-db5c-42ea-a422-18032aca2b7a> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:uuid "ed452510-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "digitale vergadering" ;
+    prov:endedAtTime "2021-01-27T21:08:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2021-01-27T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/773db485-658a-4e7b-be39-7eb511439f54> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/040ff837-f912-4527-be10-576e2c21a3a0> ;
+    ns1:openbaar true ;
+    ns3:uuid "f6835340-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/773db485-658a-4e7b-be39-7eb511439f54> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/773db485-658a-4e7b-be39-7eb511439f54> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/773db485-658a-4e7b-be39-7eb511439f54> a ns1:Besluit ;
+    ns2:description """ 
+                                                    De gemeenteraad neemt kennis van de beslissing van de gouverneur van 27 november 2020 tot goedkeuring van de jaarrekening 2019 van de gemeente Lievegem. 
+                                                """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:title "Jaarrekening 2019 van de gemeente - besluit van de gouverneur tot goedkeuring: kennisname" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Kim Martens, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Decreet lokaal bestuur van 22 december 2017, artikel 332, §1, derde lidGemeenteraadsbesluit van 1 juli 2020 over de vaststelling van de jaarrekening 2019 van de gemeenteBesluit van de gouverneur van 27 november 2020 tot goedkeuring van de jaarrekening 2019 van de gemeente Lievegem 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            De gemeenteraad heeft op 1 juli 2020 de jaarrekening 2019 van de gemeente vastgesteld en ter goedkeuring overgemaakt aan de toezichthoudende overheid, zijnde de gouverneur.Het besluit van de gouverneur tot goedkeuring van de jaarrekening wordt ter kennis gebracht op de eerstvolgende vergadering van de gemeenteraad. 
+                                                         
+                                                    """@nl ;
+    ns3:uuid "ed46f9d0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad neemt kennis van de beslissing van de gouverneur van 27 november 2020 tot goedkeuring van de jaarrekening 2019 van de gemeente Lievegem. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/773db485-658a-4e7b-be39-7eb511439f54> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/773db485-658a-4e7b-be39-7eb511439f54> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns3:uuid "f6848bc0-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Jaarrekening 2019 van de gemeente - besluit van de gouverneur tot goedkeuring: kennisname" .
+

@@ -1,0 +1,92 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/d360f6f3-093d-457a-addf-3dc1f2e63593> a ns3:Zitting ;
+    ns3:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1f1a27d2-c637-4f1c-a32c-f4cba74341c2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3395fc24-53e2-41b6-89fc-a0f3890a7412>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7b0a32b0-0abf-4376-956b-a4503fd0e1b2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8c51c884-fcc8-4116-a95f-dfeea232bc19> ;
+    ns3:geplandeStart "2026-06-02T13:30:00+02:00"^^xsd:dateTime ;
+    ns3:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/3d7b419c-b00b-43f6-b62b-6dad4358438b> ;
+    ns3:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:uuid "f49cc4b5-4ff1-58c2-a5c2-234e891070d5" ;
+    prov:atLocation "Warandestraat 34 te 1755 Pajottegem" ;
+    prov:startedAtTime "2026-06-02T13:32:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3395fc24-53e2-41b6-89fc-a0f3890a7412> a ns3:BehandelingVanAgendapunt ;
+    ns3:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/2890d0ba-ad72-452a-905c-5c0c0f91b977> ;
+    ns3:openbaar false ;
+    ns1:uuid "67265b25-fad0-53ba-aea2-3bbad26bf718" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3395fc24-53e2-41b6-89fc-a0f3890a7412> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3395fc24-53e2-41b6-89fc-a0f3890a7412> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/3395fc24-53e2-41b6-89fc-a0f3890a7412> a ns3:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van Wielerwedstrijd 'Zomergem Koerst' op 26 juni 2026 van 16.00 uur tot en met 23.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van Wielerwedstrijd Zomergem Koerst - De Vrolijke Velovrienden op 26 juni 2026: vaststelling" ;
+    ns3:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 2 juni 2026 over de aanvraag vergunning wielerwedstrijd Zomergem Koerst 2026 - De Vrolijke Vélovrienden: goedkeuringHet besluit van het college van burgemeester en schepenen van 2 juni 2026 over het tijdelijk politiereglement naar aanleiding van Zomerkermis Zomergem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Franky Hautekeete, namens De Vrolijke Velovrienden organiseert Wielerwedstrijd 'Zomergem Koerst' op 26 juni 2026 van 18.45 uur tot en met 22.00 uur.Er werd op 17 maart 2026 een aanvraag ingediend door Franky Hautekeete, namens De Vrolijke Velovrienden om tijdens deze organisatie verkeersmaatregelen te treffen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners, worden deze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns1:uuid "7b5c8101-bd78-5c86-9d00-05c94da21e30" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Wielerwedstrijd 'Zomergem Koerst' op 26 juni 2026 wordt vastgesteld als volgt: 
+                                    Van 16.00 uur tot en met 23.00 uur: 
+                                     
+                                        Stilstaan- en parkeerverbod langs het parcours in volgende straten: Lt. Dobbelaerestraat - Markt - Zomerlaan - Rijvers - Daalmstraat - Daalmen - Azaleastraat (tussen Daalmstraat en Lt. Dobbelaerestraat) 
+                                     
+                                    
+                                        Van 17.00 uur tot en met 23.00 uur:
+                                     
+                                     
+                                        Éénrichtingsverkeer in volgende straten: Lt. Dobbelaerestraat - Markt - Zomerlaan - Rijvers - Daalmstraat - Daalmen - Azaleastraat (tussen Daalmstraat en Lt. Dobbelaerestraat). In Markt zal links rond de kerk gereden worden 
+                                        Azaleastraat wordt doodlopend vanaf kruispunt met Dreef tot aan kruispunt met Lt. Dobbelaerestraat 
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    Van 16.00 uur tot en met 23.00 uur: 
+                                     
+                                        Borden E3 
+                                     
+                                    Van 17.00 uur tot en met 23.00 uur: 
+                                    1. - Bord C1 - F19 en C31b op volgende kruispunten: Hofbouwstraat/Lt. Dobbelaerestraat, Adolf Lievensstraat/Zomerlaan, Slokstraatje/Rijvers, Burg. Henri Ryckaertstraat/Daalmstraat, Daalmen/Azaleastraat, Lt. Dobbelaerestraat/Sportlaan, Den Boer/Lt. Dobbelaerestraat     - Bord C1 - F19 en C31a op volgende kruispunten: Ter Straten/Zomerlaan, Geetdam/Rijvers, Rijversmeersen/Rijvers, Park Ter Daelmen/Daalmstraat, fietswegel Park Ter Daelmen/Daalmstraat, Lt. Dobbelaerestraat/Park Ter Daelmen en Lt. Dobbelaerestraat/Azijnwegel    - Bord C31a op kruispunt Kleitstraat/Daalmstraat    - Bord C1 - F19 en D1e op kruispunten Azaleastraat/Lt. Dobbelaerestraat, Koning Leopold III laan/Rijvers en Rijvers/Daalmstraat 
+                                        - Bord C1  - F19 op kruispunten Markt/Lt. Dobbelaerestraat en Markt/Zomerlaan 
+                                    2. Borden F45 (doodlopende straat) op volgende kruispunten: Azaleastraat/Dreef, Azaleastraat/Chrysantenstraat, Azaleastraat/Hofbouwstraat en Azaleastraat/Den Boer. Het bord F41 'wegomlegging naar Eeklo' wordt afgedekt gedurende de wielerwedstrijd. 
+                                    3. extra borden F41 'wegomlegging +3,5 ton' bijplaatsen om zwaar verkeer om te leiden. 
+                                      
+                                    Artikel 3 
+                                    De signalisatie wordt aangeleverd door de gemeentediensten. De nodige signalisatie zal vooraf klaargezet worden en moet door de organisator op straat geplaatst worden bij aanvang en terug bij einde van het evenement. 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/3395fc24-53e2-41b6-89fc-a0f3890a7412> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3395fc24-53e2-41b6-89fc-a0f3890a7412> a ns3:Agendapunt ;
+    ns1:uuid "36d35708-1351-5635-ac80-33146fd807b8" .
+

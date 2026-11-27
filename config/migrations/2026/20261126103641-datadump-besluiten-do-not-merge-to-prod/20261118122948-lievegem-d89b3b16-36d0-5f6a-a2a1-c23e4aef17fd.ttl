@@ -1,0 +1,77 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://data.europa.eu/eli/ontology#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/68d15233-c58f-4b8b-aed2-6b834d9e4627> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85b62563-dcbf-4cbc-9542-be3aae8a11fe>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ccddc7c9-4563-4fb2-8fbd-72539627bcc7> ;
+    ns1:geplandeStart "2026-09-01T13:30:00+02:00"^^xsd:dateTime ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/beafc91e-f79b-483b-a88f-9864e3ce8185> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "a4bbd44b-ec83-5363-a074-a4ce93065fa6" ;
+    prov:atLocation "De Kale, Centrumstraat 42 te 9920 Lievegem" ;
+    prov:startedAtTime "2026-09-01T13:30:00+02:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/85b62563-dcbf-4cbc-9542-be3aae8a11fe> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/c6f17f1e-2cfb-479b-93e7-4acaa11cbbec> ;
+    ns1:openbaar false ;
+    ns3:uuid "b7c05965-ea2c-5671-a7bd-ae71787fb2e7" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85b62563-dcbf-4cbc-9542-be3aae8a11fe> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/85b62563-dcbf-4cbc-9542-be3aae8a11fe> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/85b62563-dcbf-4cbc-9542-be3aae8a11fe> a ns1:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns2:description """ 
+                                                            Het tijdelijk politiereglement van 'Septemberkermis Waarschoot 2026' van maandag 7 september 2026 8.00 uur tot en met dinsdag 15 september 2026 12.00 uur wordt vastgesteld. 
+                                                        """ ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns2:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns2:title "Tijdelijk politiereglement naar aanleiding van 'Septemberkermis Waarschoot 2026' - gemeente Lievegem: vaststelling" ;
+    ns1:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisKoninklijk besluit van 16 maart 1968 tot coördinatie van de wetten over de politie over het wegverkeerKoninklijk besluit van 1 december 1975 over het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldDecreet lokaal bestuur van 22 december 2017, artikel 286Het besluit van het college van burgemeester en schepenen van 1 september 2026 over de aanvraag Septemberkermis Waarschoot 2026 - organisatie kinderuurtje - standplaatsen spektakelattracties en kermisgastronomie: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen - gemeente Lievegem organiseert 'Septemberkermis Waarschoot 2026' vanaf vrijdag 11 september 2026 tot en met maandag 14 september 2026.Er werd op 6 augustus 2026 een aanvraag ingediend door team evenementen - gemeente Lievegem om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    Het betreft het plaatsen van attracties op het dorpsplein voor de kerk (opbouw vanaf woensdag 9 september 2026 8.00 tot afbouw dinsdag 15 september 2026 12.00 uur) en de inname van (een deel van) de parking aan de begraafplaats te Hovingen.De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                    Deze inname is in GIPOD geregistreerd met het nummer 20575098. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Indien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement per brief verwittigd. 
+                                 
+                            """@nl ;
+    ns3:uuid "d89b3b16-36d0-5f6a-a2a1-c23e4aef17fd" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van 'Septemberkermis Waarschoot 2026' van maandag 6 september 2026 8.00 uur tot en met dinsdag 15 september 2026 12.00 uur wordt vastgesteld als volgt: 
+                                    1. Van woensdag 9 september 2026 8.00 uur tot en met dinsdag 15 september 2026 12.00 uur:- inname dorpsplein voor de kerk voor het plaatsen van de kermisattracties, inclusief fietspad aan de kant van Waarschootdorp. Fietsers die afslaan richting Schoolstraat komen hierbij even op de rijbaan.- Het fietspad aan de kant van Stationsstraat blijft vrij voor de fietsers.- Omleiding voor de fietsers via Nieuwstraat - wegel langs parking kerk/kerk            + Invoeren 'fietsen in beide richtingen toegestaan' in Waarschootdorp van nummer 8 tot 14.- Zone 30 vanaf kruispunt Nieuwstraat/Stationsstraat tot en met Kerkstraat 4, 9950 Lievegem- Zone 30 vanaf Kerkstraat 5B tot en met het kruispunt Stationsstraat/Metaalstraat, 9950 Lievegem 
+                                      
+                                    2. Van maandag 7 september 2026 8.00 uur tot en met dinsdag 15 september 2026 12.00 uur:- stilstaan- en parkeerverbod op de parking aan de begraafplaats in Hovingen, uitgezonderd foorkramers op de aangeduide plaatsen. Er blijven nog enkele parkeerplaatsen vrij voor bezoekers van de begraafplaats.- De parkeerplaatsen voor personen met een handicap en voorbehouden voor elektrisch laden moeten vrij blijven. 
+                                     3. Op zaterdag 12 september 2026 van 7.00 uur tot en met 13.30 uur: 
+                                    - bijkomend parkeerverbod op de parking aan de begraafplaats in Hovingen, voor ambulante handel Joma BVBA. Er blijven daarnaast nog enkele parkeerplaatsen vrij voor bezoekers van de begraafplaats. 
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                    1. Nadar + D1 + bord 'fietsers op de rijbaan' op de plaats waar het fietspad onderbroken is + borden 'evenement' op de 3 invalswegen    Borden F41 (voor fietsers) aan volgende kruispunten: Stationsstraat/Nieuwstraat, Nieuwstraat/wegel langs parking kerk, Kerkstraat/Waarschootdorp    Borden F4a (begin zone 30) ter hoogte van Kerkstraat 5B, 9950 Lievegem en ter hoogte van kruispunt Nieuwstraat/Stationsstraat    Borden F4b (einde zone 30) ter hoogte van Kerkstraat 4, 9950 Lievegem en ter hoogte van kruispunt Stationsstraat/Metaalstraat    Afdekken bord F4b (einde zone 30) ter hoogte van kruispunt Waarschootdorp, 9950 Lievegem 
+                                    2. Borden E33. Borden E3 
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/85b62563-dcbf-4cbc-9542-be3aae8a11fe> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/85b62563-dcbf-4cbc-9542-be3aae8a11fe> a ns1:Agendapunt ;
+    ns3:uuid "022faed1-f1da-53cd-94d8-6412ade12e62" .
+

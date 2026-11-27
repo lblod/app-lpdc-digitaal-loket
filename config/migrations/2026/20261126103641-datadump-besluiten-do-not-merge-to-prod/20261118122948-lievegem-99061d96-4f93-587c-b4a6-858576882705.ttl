@@ -1,0 +1,145 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.europa.eu/eli/ontology#> .
+@prefix ns2: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns3: <http://mu.semte.ch/vocabularies/core/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/14168cd1-e91d-4f63-bc54-c54fcbd48961> a ns2:Zitting ;
+    ns2:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bdf20d8c-6b55-4d2b-a930-fea281478153> ;
+    ns2:geplandeStart "2025-02-18T13:30:00+01:00"^^xsd:dateTime ;
+    ns2:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/5db4bd05-aaa2-49b6-b175-5969cf0f14ce> ;
+    ns2:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns3:uuid "a3184ad5-0390-54c8-b759-cc15dd9f3104" ;
+    prov:atLocation "Trouwzaal, Centrumstraat 45 te 9920 Lievegem" ;
+    prov:startedAtTime "2025-02-18T13:31:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bdf20d8c-6b55-4d2b-a930-fea281478153> a ns2:BehandelingVanAgendapunt ;
+    ns2:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/4bed028c-f0e2-4a5a-9721-3f996dc286fa> ;
+    ns2:openbaar false ;
+    ns3:uuid "dbac5f12-c4eb-552a-993d-596514188443" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bdf20d8c-6b55-4d2b-a930-fea281478153> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/bdf20d8c-6b55-4d2b-a930-fea281478153> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/bdf20d8c-6b55-4d2b-a930-fea281478153> a ns2:Besluit,
+        <https://data.vlaanderen.be/id/concept/BesluitType/256bd04a-b74b-4f2a-8f5d-14dda4765af9> ;
+    ns1:description """ 
+                                                            Het tijdelijk politiereglement van Vette Veemarkt op 30 maart 2025 wordt vastgesteld. 
+                                                        """ ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns1:passed_by <http://data.lblod.info/id/bestuursorganen/124c0492e17611868aba66fc34d1fa5400514a5dcaa65fb172d970064196a694> ;
+    ns1:title "Tijdelijk politiereglement naar aanleiding van Vette Veemarkt 2025: vaststelling" ;
+    ns2:motivering """ 
+                                 
+                                    Bevoegd lid 
+                                    Chris De Wispelaere, schepen 
+                                 
+                                 
+                                    Regelgeving 
+                                    Nieuwe gemeentewet, inzonderheid artikel 130 bisDecreet lokaal bestuur van 22 december 2017, artikel 286Koninklijk besluit van 16 maart 1968 tot coördinatie van de wetten betreffende de politie over het wegverkeerKoninklijk besluit van 1 december 1975 houdende het algemeen reglement op de politie van het wegverkeer en van het gebruik van de openbare wegMinisterieel besluit van 11 oktober 1976 waarbij de minimum afmetingen en de bijzondere plaatsingsvoorwaarden van de verkeerstekens worden bepaaldHet besluit van het college van burgemeester en schepenen van 14 januari 2025 over de aanvraag signalisatievergunning Lamote BV - Dekenijstraat - Hendrik Claeysstraat - Blauwersstraat, 9930 Lievegem: goedkeuringHet besluit van het college van burgemeester en schepenen van 18 februari 2025 over de aanvraag evenement Vette Veemarkt - Team evenementen ism Feestcomité Centrum Zomergem: goedkeuring 
+                                 
+                                 
+                                    Feiten en motivering 
+                                    Het college van burgemeester en schepenen is bevoegd om de tijdelijke politiereglementen op de gemeentewegen vast te stellen.Team evenementen van de gemeente Lievegem organiseert in samenwerking met Feestcomité Centrum Zomergem 'Vette Veemarkt 2025' op 30 maart 2025 van 7.00 uur tot en met 17.00 uur.Er werd op 18 december 2024 een aanvraag ingediend door team evenementen - gemeente Lievegem om tijdens deze organisatie verkeersmaatregelen te treffen. 
+                                    Op dit moment worden er ook nutswerken uitgevoerd in de zone Dekenijstraat - Hendrik Claeysstraat - Blauwersstraat. Tegen eind maart zal de aannemer -volgens de huidige planning- aan het werk zijn in Blauwersstraat.  
+                                    Er is afgesproken met de aannemer dat zij in de week voor Vette Veemarkt zoveel mogelijk sleuven zullen dichtmaken, zodat de hinder minimaal is. Het zal mogelijk zijn om veewagens te laten parkeren in Dekenijstraat, maar enkel tussen Maarten Steyaertplein en Blauwersstraat, zodat de aannemer verderop nog materiaal kan stockeren. 
+                                      
+                                    De uitgewerkte verkeersregeling komt de verkeersveiligheid ten goede. 
+                                 
+                                 
+                                    Bekendmaking 
+                                    Dit besluit wordt bekendgemaakt op de gemeentelijke website en opgestuurd naar de aanvrager, gouverneur, de griffie van de politierechtbank en van de rechtbank van eerste aanleg, de lokale politie Deinze-Zulte-Lievegem, Hulpverleningszone Centrum en de noodcentrale (enkel bij wegomleggingen), De Lijn (indien route), Bpost, IVM, Lievo, Unizo, LVZ en de inwoners en betrokken handelaars. 
+                                    Aangezien het politiereglement hinder met zich meebrengt voor de inwoners worden ze één week voor de aanvang van het evenement door de organisatie per brief verwittigd.  
+                                 
+                            """@nl ;
+    ns3:uuid "99061d96-4f93-587c-b4a6-858576882705" ;
+    prov:value """ 
+                                 
+                                    Besluit 
+                                    Artikel 1 
+                                    Het tijdelijk politiereglement van Vette Veemarkt 2025 ter hoogte van Markt en Maarten Steyaertplein op 30 maart 2025 wordt vastgesteld als volgt: 
+                                      
+                                    - Het centrum van Zomergem wordt afgesloten voor alle verkeer op zondag 30 maart 2025 van 9.00 uur tot en met 18.00 uur: 
+                                     
+                                        In Zomerlaan ter hoogte van huisnummers 5 en 6. Zomerlaan wordt doodlopend vanaf Adolf Lievensstraat. 
+                                        In Maarten Steyaertplein ter hoogte van huisnummers 6 en 9. Plaatselijk verkeer in Dekenijstraat en van Dekenijstraat naar Alfons Sifferstraat blijft mogelijk door passage links het monument, met aandacht voor het vrijhouden van de ingang naar de garageboxen ter hoogte van Dekenijstraat 3. 
+                                        Ter hoogte van kruispunt Markt/Dreef. Dreef wordt doodlopend vanaf Kruisdreef. 
+                                        Ter hoogte van kruispunt Luitenant Dobbelaerestraat/Hofbouwstraat. 
+                                        Ter hoogte van kruispunt Markt/Kleitstraat. Kleitstraat wordt doodlopend vanaf het kruispunt met K. L. Ledeganckstraat. 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        - Een parkeerverbod van vrijdag 28 maart 2025 8.00 uur tot en met zondag 30 maart 2025 19.00 uur op 2 parkeerstroken op het marktplein en op 2 parkeerplaatsen aan de zijkant van het gemeentehuis (zijde Zomerlaan).
+                                     
+                                    
+                                         
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        - Een parkeerverbod op zondag 30 maart 2025 van 5.00 uur tot en met 18.00 uur op volgende locaties:
+                                     
+                                     
+                                        Op de derde parkeerstrook op het marktplein en op alle parkeerplaatsen rond de kerk. 
+                                        In Maarten Steyaertplein. 
+                                        Op de parkeerplaatsen ter hoogte van Dekenijstraat  2-4. 
+                                        In Luitenant Dobbelaerestraat tussen Markt en Hofbouwstraat. 
+                                        Op de parking in Kleitstraat ter hoogte van huisnummers 21-25 (parking aan de linkerzijde komende van Markt). Deze parking wordt voorbehouden voor de kleine veewagens van de deelnemers. 
+                                        In Dekenijstraat vanaf Maarten Steyaertplein tot aan Blauwersstraat. Deze zone wordt voorbehouden voor de veewagens van de deelnemers. 
+                                        Op het linkerdeel van de parking van Den Boer, naast huisnummer 16. Ook deze parking wordt voorbehouden voor de grote veewagens van de deelnemers. 
+                                        Tegenstrijdige borden worden afgedekt. 
+                                     
+                                    
+                                         
+                                     
+                                    
+                                        - Een parkeerverbod op zondag 30 maart 2025 van 9.00 uur tot en met 18.00 uur in volgende straten:
+                                     
+                                    
+                                         
+                                            Guido Gezellestraat tussen Adolf Lievensstraat en Alfons Sifferstraat aan 1 zijde van de weg (even huisnummers). 
+                                            Ter Wal aan beide zijden van de weg. 
+                                            Hendrik Claeysstraat aan 1 zijde van de weg (oneven huisnummers). 
+                                            Zandstraat tussen Dekenijstraat en Bevrijdingstraat aan 1 zijde van de weg (even nummers). 
+                                         
+                                        
+                                             
+                                         
+                                        
+                                            - Omleidingen:
+                                         
+                                     
+                                    
+                                         
+                                            Voertuigen komende van Kruisstraat/ Langeboeken en rijdend richting Brugge worden omgeleid via Moerstraat, Durmstraat, Ter Wal en Guido Gezellestraat. 
+                                            Voertuigen komende van Kruisstraat en rijdend richting Eeklo worden omgeleid via de Azaleastraat. 
+                                            Voertuigen komende van Koning Leopold III laan en rijdend richting Gent worden omgeleid via de Guido Gezellestraat, Ter Wal en Durmstraat. 
+                                            Voertuigen komende van Koning Leopold III laan en rijdend richting Eeklo worden omgeleid via Guido Gezellestraat, Ter Wal, Boven, Hendrick Claeysstraat, Zandstraat, Motje en Azaleastraat. 
+                                            Voertuigen komende van Burg. Henri Ryckaertstraat en rijdend richting Gent worden omgeleid via de Daalmstraat,  Azaleastraat, Motje. 
+                                            Voertuigen komende van Burg. Henri Ryckaertstraat en rijdend richting Brugge worden omgeleid via de Daalmstraat en Rijvers. 
+                                        
+                                     
+                                     
+                                    Artikel 2 
+                                    Het tijdelijk politiereglement wordt als volgt gesignaleerd: 
+                                      
+                                     
+                                        Borden E3 
+                                        Borden E3 + onderbord 'uitgezonderd veewagens' op de parking in Kleitstraat, in Dekenijstraat en op het linkerdeel van de parking van Den Boer. 
+                                        Nadar + borden C3 op volgende locaties: Zomerlaan ter hoogte van huisnummers 5-6, Maarten Steyaertplein ter hoogte van huisnummers 8-9, kruispunt Dreef/Markt, kruispunt Luitenant Dobbelaerestraat/Hofbouwstraat, kruispunt Kleitstraat/Markt. 
+                                        Borden C3 + onderbord 'uitgezonderd plaatselijk verkeer' + F45 op volgende kruispunten: Motje/Dreef, Burg. Henri Ryckaertstraat/Daalmstraat, Koning Leopold III laan/Guido Gezellestraat, Zandstraat/Bevrijdingsstraat, Zandstraat/Dekenijstraat, Dekenijstraat/Blauwersstraat, Dreef/Kloosterstraat, Dreef/Kruisdreef, Luitenant Dobbelaerestraat/Den Boer, Kleitstraat/Reeuwstro, Kleitstraat/Kleitstraat, Kleitstraat/ K. L. Ledeganckstraat, Koning Leopold III laan/Rijvers en Zomerlaan/Adolf Lievensstraat. 
+                                        Borden F39 'Evenement' + informatiebord 'Vette Veemarkt' op volgende kruispunten: Motje/Zandstraat, Motje/Dreef, Burg. Henri Ryckaertstraat/Daalmstraat, Koning Leopold III laan/Guido Gezellestraat, Durmstraat/Weldadigheidstraat en Kruisstraat/Langeboeken. 
+                                        Bord A51 met bord 'Evenement' in de bocht ter hoogte van Koning Leopold III laan 1(K). 
+                                        Borden F41 op volgende kruispunten: Motje/Dreef, Azaleastraat/Hofbouwstraat, Azaleastraat/Daalmstraat, Luitenant Dobbelaerestraat/Hofbouwstraat, Burg. Henri Ryckaertstraat/Daalmstraat, Daalmstraat/Rijvers, Koning Leopold III laan/Rijvers, Koning Leopold III laan/Guido Gezellestraat, Boven/Hendrik Claeysstraat, Zandstraat/Bevrijdingstraat, Bevrijdingstraat/Weldadigheidstraat, Motje/Zandstraat, Durmstraat/Moerstraat en Kruisstraat/Langeboeken. 
+                                        Informatiebord voor vervoer + 3,5 ton, ter hoogte van Lobrug/Koning Leopoldstraat en Durmstraat/Moerstraat. 
+                                     
+                                 
+                            """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/bdf20d8c-6b55-4d2b-a930-fea281478153> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/bdf20d8c-6b55-4d2b-a930-fea281478153> a ns2:Agendapunt ;
+    ns3:uuid "299e56fb-1646-5462-8b16-e48f3b35c4df" .
+

@@ -1,0 +1,110 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://data.vlaanderen.be/ns/besluit#> .
+@prefix ns2: <http://mu.semte.ch/vocabularies/core/> .
+@prefix ns3: <http://data.europa.eu/eli/ontology#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/zittingen/11e83d25-b34b-43bf-b7ac-267e2e2653c9> a ns1:Zitting ;
+    ns1:behandelt <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/1cdf7f24-7ed6-4acc-a870-c711e47e6425>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/27ff93e8-c856-4a52-95a9-b6f07e90c955>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/366dfd39-c175-47bf-a7b0-19d7b772b14c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3857eab8-1b72-420e-b519-be56da7e5271>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3b2994a8-1023-4519-b9de-9831e14504b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/3f504181-3e4e-4c37-88bf-b34e0c6682e2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/47127532-ded2-46de-997e-50051fa35986>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/50a29260-0050-440e-9909-d54da24c7929>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/532ac830-9560-410b-b393-b17640f67b23>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/5aadef59-d3e6-45f1-9466-8b7e204f6a5c>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/6a5d27ef-f1a0-47cc-b3b9-0c6e762cb236>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/7935fe5d-e07e-4875-a4c2-90220762a037>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/8f1add06-c47b-4982-8ffe-f63d866db7f8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/97cd1496-f865-497f-a08c-5c997954f886>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/9ef2e0d5-66a0-4900-be92-ed7a4e37a8a1>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/a5269f7d-e9c9-46f7-9e41-ab270d7d10a7>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ad9c0333-c8da-4022-b118-b698fc3cbc62>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/ada82eb4-e257-402d-9b30-2eb719ec6d34>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/afc20f71-589f-4f06-8bfc-5e2739269971>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b183e1e8-9922-465b-8dd2-937d680b64bf>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b5020c77-fe26-4a87-ad10-6eb42d4cd4cb>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/b9560f04-0264-4507-963a-e85c4f1f2eb2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0222ef9-d5c5-4787-95e1-9a557dff72b6>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c0ee0fac-73bb-42eb-b9b8-2b3654cabe2e>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c8252045-e3a1-4732-a0d7-d22c6852e75a>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/c95b3623-70f1-4edd-be65-c73671b2cf1f>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d2a0ae0f-3454-483e-8906-32934b955fd8>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d32f4130-eadf-44fa-9bef-82ff9512fc70>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d9762833-509e-441b-9a03-a616253f8b24>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/e0619127-972d-4e72-94da-584e031779d2>,
+        <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/eeae90fe-dcc6-4351-ac06-90d9158f3671> ;
+    ns1:geplandeStart "2020-12-16T20:00:00+01:00"^^xsd:dateTime ;
+    ns1:heeftAgenda <https://lievegem-echo.cipalschaubroeck.be/id/documenten/09e568bf-c4e5-4027-b009-408084ccec2d> ;
+    ns1:heeftBesluitenlijst <https://lievegem-echo.cipalschaubroeck.be/id/documenten/6e36e371-9db3-436b-a820-ef696436b998> ;
+    ns1:heeftNotulen <https://lievegem-echo.cipalschaubroeck.be/id/documenten/c79bfe99-0a1c-4e9b-b59f-c61bcb99f3c1> ;
+    ns1:isGehoudenDoor <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns2:uuid "e7fd3750-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:atLocation "Grote vergaderzaal, Kasteeldreef 72 te 9920 Lievegem",
+        "digitale vergadering" ;
+    prov:endedAtTime "2020-12-16T22:54:00+01:00"^^xsd:dateTime ;
+    prov:startedAtTime "2020-12-16T20:00:00+01:00"^^xsd:dateTime .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee> a ns1:BehandelingVanAgendapunt ;
+    ns1:gebeurtNa <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/1482bed5-c133-4c9a-aaa1-6b6c5baa48a6> ;
+    ns1:openbaar true ;
+    ns2:uuid "ffbe9b40-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:subject <https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee> ;
+    prov:generated <https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8504eb4-8181-4466-bc19-f018eeea48ee> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/besluiten/d8504eb4-8181-4466-bc19-f018eeea48ee> a ns1:Besluit ;
+    ns3:description """ 
+                                                    De gemeenteraad geeft gunstig advies aan de raming voor de vooropgestelde werken voor 2021 voor onbevaarbare waterlopen van derde categorie van de watering Wagemakersstroom. 
+                                                """ ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/NLD> ;
+    ns3:passed_by <http://data.lblod.info/id/bestuursorganen/15081fa9-4889-4e4d-a7cc-9708549e4847> ;
+    ns3:title "Watering Wagemakersstroom - ruimings-, onderhouds- en herstellingswerken aan onbevaarbare waterlopen van derde categorie op grondgebied Lievegem - raming 2021: advies" ;
+    ns1:motivering """ 
+                                                         
+                                                            Bevoegd lid 
+                                                            Chris De Wispelaere, schepen 
+                                                         
+                                                         
+                                                            Regelgeving 
+                                                            Wet van 28 december 1967 over de onbevaarbare waterlopen, artikel 8Decreet Lokaal bestuur van 22 december 2017, artikel 40Besluit van het college van burgemeester en schepenen van 24 november over de kennisname van de uit te voeren werken 2021 door Watering De Burggravenstroom, Watering De Lieve, Watering Oude Kale en Meirebeek en Watering De Wagemakerstroom 
+                                                         
+                                                         
+                                                            Feiten en motivering 
+                                                            Brief van de Watering Wagemakersstroom van 23 november 2020 over de raming van de onderhoudswerking aan waterlopen van 3e categorie in het dienstjaar 2021.Over de raming van Watering Wagemakersstroom voor gewone ruimings-, onderhouds- en herstellingswerken aan onbevaarbare waterlopen van 3" categorie op grondgebied Lievegem moet advies verleend worden. 
+                                                         
+                                                         
+                                                            Financiële impact 
+                                                            Er is hiervoor € 38.016 voorzien op 2021/GBB-INFRA/0319-00/6494000/GEMEENTE/CBS/IP-GEEN 
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                             
+                                                         
+                                                         
+                                                            Adviezen 
+                                                             
+                                                                 Visum financieel beheerderHet visum van de financieel directeur wordt toegekend aan deze verbintenis. Daarmee bevestig ik dat ik geen enkele aanwijzing heb gevonden dat deze uitgave onwettig, onregelmatig of zonder krediet op het budget zou worden aangegaan. In het ontwerp aanpassing 1 meerjarenplan 2020-2025 is hiervoor € 38.016 voorzien op 2021/GBB-INFRA/0319-00/6494000/GEMEENTE/CBS/IP-GEEN. Gunstig visum 2020/190 van Bart Van Petegem van 26 november 2020  
+                                                             
+                                                         
+                                                    """@nl ;
+    ns2:uuid "ffbf1070-8d4b-11ef-8ca5-1b520e7ff643" ;
+    prov:value """ 
+                                                         
+                                                            Besluit 
+                                                            Enig artikel 
+                                                            De gemeenteraad geeft gunstig advies aan de raming voor de vooropgestelde werken voor 2021 voor onbevaarbare waterlopen van derde categorie van de watering Wagemakersstroom voor een totaal bedrag van € 38.015,20. 
+                                                         
+                                                    """ ;
+    prov:wasGeneratedBy <https://lievegem-echo.cipalschaubroeck.be/id/behandelingen-van-agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee> .
+
+<https://lievegem-echo.cipalschaubroeck.be/id/agendapunten/d8504eb4-8181-4466-bc19-f018eeea48ee> a ns1:Agendapunt ;
+    ns1:geplandOpenbaar true ;
+    ns2:uuid "e8028e80-8d4b-11ef-8ca5-1b520e7ff643" ;
+    dcterms:title "Watering Wagemakersstroom - ruimings-, onderhouds- en herstellingswerken aan onbevaarbare waterlopen van derde categorie op grondgebied Lievegem - raming 2021: advies" .
+
