@@ -195,8 +195,8 @@ defmodule Dispatcher do
     forward conn, path, "http://resource/resolutions/"
   end
 
-  match "/sessions/*path", @json do
-    forward conn, path, "http://resource/sessions/"
+  match "/zittingen/*path", @json do
+    forward conn, path, "http://resource/zittingen/"
   end
 
   #################################################################
