@@ -78,4 +78,3 @@
 (add-prefix "pera" "http://publications.europa.eu/resource/authority/")
 (add-prefix "ext" "http://mu.semte.ch/vocabularies/ext/")
 (add-prefix "mandaat" "http://data.vlaanderen.be/ns/mandaat#")
-(add-prefix "generiek" "https://data.vlaanderen.be/ns/generiek#")
