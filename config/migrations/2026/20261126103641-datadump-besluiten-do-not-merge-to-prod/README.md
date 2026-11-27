@@ -10,9 +10,10 @@ before merging to production.
 - 902 `.graph` files that point to `http://mu.semte.ch/graphs/public`.
 - 479 decisions come from agenda items with `besluit:openbaar false`.
 
-The dump has no bestuursorganen or bestuurseenheden. They are read from
-`http://mu.semte.ch/graphs/landing-zone/op-public`, which the authorization
-config allows for the public group.
+The dump has no bestuursorganen or bestuurseenheden. The OP consumer mapping
+and the `sync-bestuursorganen-from-op` migration copy the bestuursorganen from
+`http://mu.semte.ch/graphs/landing-zone/op-public` to
+`http://mu.semte.ch/graphs/public`.
 
 ## Closed agenda items
 
