@@ -1,4 +1,5 @@
 ## Unreleased
+- Add decisions (besluit) to the data model and API [LPDC-1819]
 - Update frontend:
   - [v0.36.1](https://github.com/lblod/frontend-lpdc/blob/0285bedb7af6cde5579b1e9ed4e20b36b44674f2/CHANGELOG.md#v0361-2026-11-04) [LDPC-1311]
   - [v0.36.0](https://github.com/lblod/frontend-lpdc/blob/64095bb4b5d89891741fd10ff3ea9f210a762435/CHANGELOG.md#v0360-2026-11-02) [LDPC-1311] [LPDC-1731] [LPDC-1783]
